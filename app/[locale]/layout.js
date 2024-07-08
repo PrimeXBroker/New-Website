@@ -2,6 +2,8 @@ import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 export const metadata = {
   title: "Create Next App",
@@ -15,7 +17,9 @@ export default async function LocaleLayout({ children, params: { locale } }) {
       <body>
         <NextUIProvider>
           <NextIntlClientProvider messages={messages}>
+            <Header />
             {children}
+            <Footer />
           </NextIntlClientProvider>
         </NextUIProvider>
       </body>

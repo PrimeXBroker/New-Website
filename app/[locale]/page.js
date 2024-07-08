@@ -1,3 +1,4 @@
+import Hero from "@/pages/home/Hero";
 import { useTranslations } from "next-intl";
 
 export default function Home() {
@@ -5,7 +6,7 @@ export default function Home() {
 
   return (
     <>
-      <h1 className="text-6xl text-center my-5">This is the Home Page</h1>
+      <Hero />
     </>
   );
 }
