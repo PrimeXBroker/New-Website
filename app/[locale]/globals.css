@@ -11,4 +11,10 @@
   .container {
     @apply max-w-[1200px] mx-auto px-3;
   }
+  .sectionHeading{
+    @apply text-3xl md:text-4xl text-secondary font-semibold mb-2 text-center;
+  }
+  .sectionPara{
+    @apply text-lg md:text-lg text-secondary mb-2;
+  }
 }
