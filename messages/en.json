@@ -1,5 +1,8 @@
 {
-  "Index":{
-    "test":"Hello"
+  "Index": {
+    "home": {
+      "title": "The Next Generation Of Trading",
+      "description":"Welcome to PrimeX Broker, where innovation drives success. Join us and experience a trading platform built for the future."
+    }
   }
 }

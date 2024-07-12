@@ -1,17 +1,18 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
 const Hero = () => {
+  const t = useTranslations("Index.home");
   return (
     <section className="bg-accent h-[70vh] rounded-b-[7%] md:rounded-b-[7%] relative">
       <div className="container mx-auto flex flex-col">
         <div className="md:max-w-2xl flex flex-col items-center md:items-start gap-5 pt-5 md:pt-28">
           <h1 className="text-secondary text-2xl md:text-4xl font-[800] text-center md:text-left">
-            The Next Generation Of Trading
+            {t("title")}
           </h1>
           <p className="text-secondary font-medium font-montserrat text-center md:text-left pb-4 md:pb-0">
-            Welcome to PrimeX Broker, where innovation drives success. Join us
-            and experience a trading platform built for the future.
+            {t("description")}
           </p>
         </div>
         <div className="md:absolute container bottom-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pb-8 md:border-t-2 border-solid border-gray-400 md:pt-16">

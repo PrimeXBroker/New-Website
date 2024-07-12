@@ -12,11 +12,12 @@ export const metadata = {
 
 export default async function LocaleLayout({ children, params: { locale } }) {
   const messages = await getMessages();
+  const direction = locale === "ar" ? "rtl" : "ltr";
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={direction}>
       <body>
         <NextUIProvider>
-          <NextIntlClientProvider messages={messages}>
+          <NextIntlClientProvider locale={locale} messages={messages}>
             <Header />
             {children}
             <Footer />
