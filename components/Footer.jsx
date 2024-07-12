@@ -128,13 +128,13 @@ const Footer = () => {
         </div>
         <div className="py-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border-b border-b-accent sm:text-left text-center">
           {footerLinks.map((el, index) => (
-            <div>
+            <div key={index}>
               <p className="text-primary font-semibold md:pt-0 pt-5">
                 {el.column.heading}
               </p>
               <ul className="pt-0 md:pt-2">
                 {el.column.links.map((el, index) => (
-                  <Link href={el.href}>
+                  <Link key={index} href={el.href}>
                     <li className="text-white py-1">{el.name}</li>
                   </Link>
                 ))}

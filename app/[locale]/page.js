@@ -1,18 +1,15 @@
 import BonusCalculator from "@/components/BonusCallculator";
-import Academy from "@/pages/home/Academy";
-import AdvancedPlatforms from "@/pages/home/AdvancedPlatforms";
-import BecomeIB from "@/pages/home/BecomeIB";
-import CustomerCare from "@/pages/home/CustomerCare";
-import GetStarted from "@/pages/home/GetStarted";
-import Hero from "@/pages/home/Hero";
-import OurRecognition from "@/pages/home/OurRecognition";
-import Rewards from "@/pages/home/Rewards";
-import TradingOpportunities from "@/pages/home/TradingOpportunities";
-import { useTranslations } from "next-intl";
+import Academy from "@/our_pages/home/Academy";
+import AdvancedPlatforms from "@/our_pages/home/AdvancedPlatforms";
+import BecomeIB from "@/our_pages/home/BecomeIB";
+import CustomerCare from "@/our_pages/home/CustomerCare";
+import GetStarted from "@/our_pages/home/GetStarted";
+import Hero from "@/our_pages/home/Hero";
+import OurRecognition from "@/our_pages/home/OurRecognition";
+import Rewards from "@/our_pages/home/Rewards";
+import TradingOpportunities from "@/our_pages/home/TradingOpportunities";
 
 export default function Home() {
-  const t = useTranslations("Index");
-
   return (
     <>
       <Hero />

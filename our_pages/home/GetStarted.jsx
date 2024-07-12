@@ -1,12 +1,15 @@
+"use client";
 import { Button } from "@nextui-org/button";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 const GetStarted = () => {
+  const t = useTranslations("getStarted");
   return (
     <section className="my-12 container bg-secondary flex p-10 flex-col md:flex-row">
       <div className="md:w-[60%] w-full mb-5 md:mb-0">
         <h1 className="sectionHeading text-3xl text-white font-semibold text-center md:text-left">
-          Get Started with PrimeX
+          {t("title")}
         </h1>
         <p className="sectionPara  text-white text-center md:text-left">
           Ready to elevate your trading experience? Join PrimeX Broker and
