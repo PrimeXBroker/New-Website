@@ -8,8 +8,8 @@ const Academy = () => {
       <p className="sectionPara text-center">
         Boost your trading skills with our extensive educational resources.
       </p>
-      <div className="grid grid-cols-3 mt-12 gap-12">
-        <div className="bg-accent rounded-lg shadow-xl shadow-black p-8">
+      <div className="flex flex-row mt-12 gap-12 justify-center flex-wrap">
+        <div className="bg-accent rounded-lg shadow-2xl border-b-5 border-black hover:border-primary p-8 w-[300px]">
           <div className="flex justify-end">
             <Image
               src="/images/academy_icon1.svg"
@@ -26,7 +26,7 @@ const Academy = () => {
             Join live sessions with <br /> industry experts
           </p>
         </div>
-        <div className="bg-accent rounded-lg shadow-xl shadow-black p-8">
+        <div className="bg-accent rounded-lg shadow-2xl border-b-5 border-black hover:border-primary p-8 w-[300px]">
           <div className="flex justify-end">
             <Image
               src="/images/academy_icon2.svg"
@@ -44,7 +44,7 @@ const Academy = () => {
             experts
           </p>
         </div>
-        <div className="bg-accent rounded-lg shadow-xl shadow-black p-8">
+        <div className="bg-accent rounded-lg shadow-2xl border-b-5 border-black hover:border-primary  p-8 w-[300px]">
           <div className="flex justify-end">
             <Image
               src="/images/academy_icon1.svg"

@@ -18,3 +18,16 @@
     @apply text-lg md:text-lg text-secondary mb-2;
   }
 }
+.swiper-pagination{
+  position:  relative !important;
+  padding-top: 1rem;
+}
+.swiper-pagination-bullet{
+  height: 5px !important;
+  width: 12px !important;
+  border-radius: 0 !important;
+}
+.swiper-pagination-bullet-active{
+  background: #FFD000 !important;
+  border: 1px solid #000;
+}

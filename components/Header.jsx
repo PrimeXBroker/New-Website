@@ -53,7 +53,7 @@ const Header = () => {
   return (
     <Navbar
       maxWidth="xl"
-      disableAnimation={true}
+      // disableAnimation={true}
       onMenuOpenChange={setIsMenuOpen}
       isBordered
       className="py-5"
@@ -61,13 +61,13 @@ const Header = () => {
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
+          className="lg:hidden"
         />
         <NavbarBrand>
-          <Image width="150" src={Logo} alt="Logo Image" />
+          <Image width="150" height={150} src={Logo} alt="Logo Image" />
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden lg:flex gap-4" justify="center">
         <NavbarItem>
           <Link color="foreground" href="/">
             Home
@@ -98,6 +98,11 @@ const Header = () => {
         <NavbarItem>
           <Link className="bg-primary px-4 py-2 rounded-2xl" href="#">
             Register
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link className="bg-primary px-4 py-2 rounded-2xl" href="#">
+            Login
           </Link>
         </NavbarItem>
         <NavbarItem>

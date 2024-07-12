@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const CustomerCare = () => {
   return (
-    <section className="container mb-8 grid grid-cols-3 border-b-2 border-b-accent">
+    <section className="container mb-8 flex flex-wrap justify-between border-b-2 border-b-accent">
       <div className="flex flex-col justify-center">
         <h1 className="sectionHeading text-left mb-8">
           Always Here <br /> for You
