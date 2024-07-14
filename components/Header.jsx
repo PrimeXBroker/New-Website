@@ -17,7 +17,7 @@ import { usePathname } from "next/navigation";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { useTranslations } from "next-intl";
 const Header = () => {
-  const t = useTranslations("menu");
+  const t = useTranslations("home.menu");
   const pathname = usePathname();
   const [buttonText, setButtonText] = useState("EN");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
