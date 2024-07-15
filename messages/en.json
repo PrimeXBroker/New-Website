@@ -4,6 +4,24 @@
       "title": "PrimeX Broker | Home",
       "description": "Trade and dream Bigger with PrimeX Broker"
     },
+    "hero": {
+      "title1": "TRUSTED",
+      "desc1": "Solidifying global leadership in financial derivatives, with sustained growth and unwavering customer focus, earning worldwide trust.",
+      "title2": "REGULATED",
+      "desc2": "PrimeX Broker prioritizes global regulatory adherence, fostering trust and accountability across diverse international arenas.",
+      "title3": "GLOBAL",
+      "desc3": "Servicing +500,000 clients globally, we offer diverse products, ensuring financial stability across +100 countries.",
+      "liveAccount": "OPEN LIVE ACCOUNT",
+      "partnerAccount": "BECOME A PARTNER",
+      "fact_no1": "500,000",
+      "fact_desc1": "Served Clients",
+      "fact_no2": "120,000",
+      "fact_desc2": "Introducing Broker",
+      "fact_no3": "Million",
+      "fact_desc3": "Paid-up Capital",
+      "fact_no4": "Billion",
+      "fact_desc4": "Daily trades"
+    },
     "menu": {
       "register": "Register"
     },

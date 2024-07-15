@@ -13,7 +13,7 @@ const AdvancedPlatforms = () => {
         <Image
           width="800"
           height="200"
-          className="mx-auto"
+          className="mx-auto animate-up-down"
           src="/images/platform_image.webp"
           alt="platform image"
         />

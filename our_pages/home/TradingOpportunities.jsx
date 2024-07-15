@@ -1,5 +1,7 @@
 "use client";
 import { Tabs, Tab } from "@nextui-org/tabs";
+import Script from "next/script";
+
 const TradingOpportunities = () => {
   return (
     <section className="py-12">
@@ -9,21 +11,56 @@ const TradingOpportunities = () => {
         commodities, cryptocurrencies, and stocks
       </p>
       <div className="text-center mt-8">
-        <Tabs radius="full" color="primary">
+        <Tabs radius="full" color="primary" className="tabs_custom">
           <Tab title="Forex">
-            <div className="py-24 text-xl">Forex Ticker Heree</div>
+            <div className="pt-8 text-xl">
+              <iframe
+                src="https://fxpricing.com/fx-widget/ticker-tape-widget.php?id=1,2,3,5,14,20&border=show&speed=50&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=00000013&by-cr=28A745&sl-cr=DC3545&flags=circle&d_mode=compact-name&column=ask,bid,spread&lang=en&font=Arial, sans-serif"
+                width="100%"
+                height="85"
+                style={{ border: "unset" }}
+              ></iframe>
+            </div>
           </Tab>
           <Tab title="Indicies">
-            <div className="py-24 text-xl">Indicies Ticker Heree</div>
+            <div className="pt-8 text-xl">
+              <iframe
+                src="https://fxpricing.com/fx-widget/ticker-tape-widget.php?id=1,2,3,5,14,20&border=show&speed=50&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=00000013&by-cr=28A745&sl-cr=DC3545&flags=circle&d_mode=compact-name&column=ask,bid,spread&lang=en&font=Arial, sans-serif"
+                width="100%"
+                height="85"
+                style={{ border: "unset" }}
+              ></iframe>
+            </div>
           </Tab>
           <Tab title="Commodities">
-            <div className="py-24 text-xl">Commodities Ticker Heree</div>
+            <div className="pt-8 text-xl">
+              <iframe
+                src="https://fxpricing.com/fx-widget/ticker-tape-widget.php?id=1,2,3,5,14,20&border=show&speed=50&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=00000013&by-cr=28A745&sl-cr=DC3545&flags=circle&d_mode=compact-name&column=ask,bid,spread&lang=en&font=Arial, sans-serif"
+                width="100%"
+                height="85"
+                style={{ border: "unset" }}
+              ></iframe>
+            </div>
           </Tab>
           <Tab title="Stocks">
-            <div className="py-24 text-xl">Stocks Ticker Heree</div>
+            <div className="pt-8 text-xl">
+              <iframe
+                src="https://fxpricing.com/fx-widget/ticker-tape-widget.php?id=1,2,3,5,14,20&border=show&speed=50&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=00000013&by-cr=28A745&sl-cr=DC3545&flags=circle&d_mode=compact-name&column=ask,bid,spread&lang=en&font=Arial, sans-serif"
+                width="100%"
+                height="85"
+                style={{ border: "unset" }}
+              ></iframe>
+            </div>
           </Tab>
           <Tab title="Crypto">
-            <div className="py-24 text-xl">Crypto Ticker Heree</div>
+            <div className="pt-8 text-xl">
+              <iframe
+                src="https://fxpricing.com/fx-widget/ticker-tape-widget.php?id=1,2,3,5,14,20&border=show&speed=50&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=00000013&by-cr=28A745&sl-cr=DC3545&flags=circle&d_mode=compact-name&column=ask,bid,spread&lang=en&font=Arial, sans-serif"
+                width="100%"
+                height="85"
+                style={{ border: "unset" }}
+              ></iframe>
+            </div>
           </Tab>
         </Tabs>
       </div>

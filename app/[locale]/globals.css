@@ -18,17 +18,24 @@
     @apply text-lg md:text-lg text-secondary mb-2;
   }
 }
+
+.tabs_custom div{
+flex-wrap: wrap !important;
+justify-content: center !important;
+background: transparent !important;
+}
+.tabs_custom div button{
+  width: fit-content;
+  }
 .swiper-pagination{
   position:  relative !important;
   padding-top: 1rem;
 }
 .swiper-pagination-bullet{
-  height: 5px !important;
-  width: 12px !important;
-  border-radius: 0 !important;
+
 }
 .swiper-pagination-bullet-active{
-  background: #FFD000 !important;
+  background: gray !important;
   border: 1px solid #000;
 }
 
@@ -78,3 +85,8 @@
 .dropdown:hover .arrow {
   transform: rotate(180deg);
 }
+
+.fcs-brand{
+  display: none !important;
+}
+
