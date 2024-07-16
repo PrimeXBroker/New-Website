@@ -56,6 +56,8 @@ const Header = () => {
     },
   ];
 
+  const NavHoverEffect= `relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center`
+
   const currentLocale = pathname.split("/")[1];
   const isLocaleOnly = pathname === `/${currentLocale}`;
   const restOfPath = isLocaleOnly ? "" : pathname.split("/").slice(2).join("/");
@@ -92,27 +94,27 @@ const Header = () => {
       </NavbarContent>
       <NavbarContent className="hidden lg:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="/">
+          <Link className={NavHoverEffect} color="foreground" href="/">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <LocaleLink href="/trading">Trading</LocaleLink>
+          <LocaleLink href="/trading" className={NavHoverEffect}>Trading</LocaleLink>
         </NavbarItem>
         <NavbarItem>
-          <LocaleLink href="/platform">Platform</LocaleLink>
+          <LocaleLink href="/platform" className={NavHoverEffect}>Platform</LocaleLink>
         </NavbarItem>
         <NavbarItem>
-          <LocaleLink href="/partners">Partners</LocaleLink>
+          <LocaleLink href="/partners" className={NavHoverEffect}>Partners</LocaleLink>
         </NavbarItem>
         <NavbarItem>
-          <LocaleLink href="/trade-to-Win">Trade To Win</LocaleLink>
+          <LocaleLink href="/trade-to-Win" className={NavHoverEffect}>Trade To Win</LocaleLink>
         </NavbarItem>
         <NavbarItem>
-          <LocaleLink href="/education">Education</LocaleLink>
+          <LocaleLink href="/education" className={NavHoverEffect}>Education</LocaleLink>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="#" className={NavHoverEffect}>
             Gift Account
           </Link>
         </NavbarItem>
