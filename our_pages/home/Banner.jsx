@@ -32,19 +32,19 @@ const Banner = () => {
         autoPlay
         loop
         muted
-        className="hidden lg:block absolute inset-0 w-full h-full object-cover opacity-25"
+        className="block absolute inset-0 w-full h-full object-cover opacity-80"
       >
         <source src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/videos/banner_video_v1.webm" type="video/webm" />
       </video>
-      <div
+      {/* <div
         className="lg:hidden absolute inset-0 w-full h-full bg-cover bg-center bg-opacity-20 py-16"
         style={{
           backgroundImage: "url('/images/ibprogram2.webp')",
         }}
-      ></div>
+      ></div> */}
       <div className="container relative z-10">
         <div className="text-center pb-16 lg:pb-6 xl:pb-12 2xl:pb-28 3xl:pb-36">
-          <Swiper
+          {/* <Swiper
             spaceBetween={30}
             loop
             effect={"fade"}
@@ -74,7 +74,7 @@ const Banner = () => {
                 </p>
               </SwiperSlide>
             ))}
-          </Swiper>
+          </Swiper> */}
         </div>
       </div>
     </section>
