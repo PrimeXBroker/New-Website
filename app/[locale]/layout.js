@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import localFont from "@next/font/local";
 import Cookies from "@/components/Cookies";
+import "aos/dist/aos.css";
 
 const montserrat = localFont({
   src: [
@@ -54,7 +55,7 @@ export default async function layout({ children, params: { locale } }) {
       <body>
         <NextUIProvider>
           <NextIntlClientProvider messages={messages}>
-            <Header />
+            <Header locale={locale} />
             {children}
             <Footer />
             <Cookies />

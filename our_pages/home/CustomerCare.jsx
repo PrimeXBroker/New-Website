@@ -4,7 +4,12 @@ import Image from "next/image";
 const CustomerCare = () => {
   return (
     <section className="container mb-8 flex flex-wrap justify-between border-b-2 border-b-accent">
-      <div className="flex flex-col justify-center">
+      <div
+        className="flex flex-col justify-center"
+        data-aos-easing="ease-out"
+        data-aos-duration={1000}
+        data-aos="slide-right"
+      >
         <h1 className="sectionHeading text-left mb-8">
           Always Here <br /> for You
         </h1>
@@ -19,13 +24,21 @@ const CustomerCare = () => {
       </div>
       <div>
         <Image
+          data-aos-easing="ease-out"
+          data-aos-duration={1000}
+          data-aos="slide-up"
           src="/images/customer_care.webp"
           alt="customer care"
           width="300"
           height="300"
         />{" "}
       </div>
-      <div className="flex flex-col justify-center gap-8">
+      <div
+        className="flex flex-col justify-center gap-8"
+        data-aos-easing="ease-out"
+        data-aos-duration={1000}
+        data-aos="slide-left"
+      >
         <div className="flex gap-2">
           <Image
             src="/images/cc_icon1.svg"

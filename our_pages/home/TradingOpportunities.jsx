@@ -5,8 +5,20 @@ import Script from "next/script";
 const TradingOpportunities = () => {
   return (
     <section className="py-12">
-      <h1 className="sectionHeading">Explore 500+ Trading Opportunities</h1>
-      <p className="sectionPara text-center py-4">
+      <h1
+        className="sectionHeading"
+        data-aos-easing="ease-out"
+        data-aos-duration={1000}
+        data-aos="slide-up"
+      >
+        Explore 500+ Trading Opportunities
+      </h1>
+      <p
+        className="sectionPara text-center py-4"
+        data-aos-easing="ease-out"
+        data-aos-duration={1000}
+        data-aos="slide-up"
+      >
         Dive into a diverse array of assets including forex, indices,
         commodities, cryptocurrencies, and stocks
       </p>

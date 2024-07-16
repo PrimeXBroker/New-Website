@@ -3,7 +3,12 @@ import React from "react";
 
 const BecomeIB = () => {
   return (
-    <section className="bg-accent container flex flex-col md:flex-row border-b-5 border-b-primary gap-5 py-4 px-8 shadow-lg">
+    <section
+      className="bg-accent container flex flex-col md:flex-row border-b-5 border-b-primary gap-5 py-4 px-8 shadow-lg"
+      data-aos-easing="ease-out"
+      data-aos-duration={1000}
+      data-aos="slide-up"
+    >
       <div className="w-full md:w-[60%] flex flex-col justify-center">
         <h1 className="sectionHeading text-center md:text-left">
           <span className="font-normal">Become a</span> PrimeX

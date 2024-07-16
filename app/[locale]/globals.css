@@ -4,6 +4,7 @@
 
 @layer base {
   html {
+    scroll-behavior: smooth;
     font-family: "Montserrat", sans-serif;
   }
 }
@@ -30,9 +31,6 @@ background: transparent !important;
 .swiper-pagination{
   position:  relative !important;
   padding-top: 1rem;
-}
-.swiper-pagination-bullet{
-
 }
 .swiper-pagination-bullet-active{
   background: gray !important;
@@ -81,12 +79,12 @@ background: transparent !important;
 .arrow {
   transition: transform 0.3s ease;
 }
-
 .dropdown:hover .arrow {
   transform: rotate(180deg);
 }
-
-.fcs-brand{
-  display: none !important;
+.active_link{
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 800;
 }
-

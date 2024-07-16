@@ -62,10 +62,13 @@ const CompanyStats = ({ stats }) => {
               <div
                 key={index}
                 className="flex flex-col md:flex-row items-center justify-center md:gap-1"
+                data-aos-easing="ease-out"
+                data-aos-duration={3000}
+                data-aos="zoom-in"
               >
                 <p className="text-secondary md:text-lg xl:text-xl 3xl:text-[24px] text-base  m-0 p-0 text-center font-bold">
                   {displayValue}
-                  <b className="text-secondary font-normal md:text-[20px] text-base ">
+                  <b className="text-secondary font-normal md:text-[20px] text-base">
                     {stat.bold}{" "}
                   </b>
                 </p>
