@@ -34,7 +34,7 @@ const Banner = () => {
         muted
         className="hidden lg:block absolute inset-0 w-full h-full object-cover opacity-25"
       >
-        <source src="/video_header.mp4" type="video/mp4" />
+        <source src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/videos/banner_video_v1.webm" type="video/webm" />
       </video>
       <div
         className="lg:hidden absolute inset-0 w-full h-full bg-cover bg-center bg-opacity-20 py-16"

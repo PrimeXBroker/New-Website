@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
-const useCounter = (targetValue, duration = 2000) => {
+const useCounter = (targetValue, duration = 3000) => {
   const [value, setValue] = useState(0);
 
   useEffect(() => {
