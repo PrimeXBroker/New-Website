@@ -1,7 +1,12 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const Academy = () => {
+  useEffect(() => {
+    Aos.init({ disable: "mobile" });
+  }, []);
   return (
     <section className="py-12 container">
       <div

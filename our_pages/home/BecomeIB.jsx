@@ -1,7 +1,12 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const BecomeIB = () => {
+  useEffect(() => {
+    Aos.init({ disable: "mobile" });
+  }, []);
   return (
     <section
       className="bg-accent container flex flex-col md:flex-row border-b-5 border-b-primary gap-5 py-4 px-8 shadow-lg"

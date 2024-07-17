@@ -1,14 +1,20 @@
+"use client";
+import Aos from "aos";
 import { Button } from "@nextui-org/button";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const CustomerCare = () => {
+  useEffect(() => {
+    Aos.init({ disable: "mobile" });
+  }, []);
   return (
     <section className="container mb-8 flex flex-wrap justify-between border-b-2 border-b-accent">
       <div
         className="flex flex-col justify-center"
         data-aos-easing="ease-out"
         data-aos-duration={1000}
-        data-aos="slide-right"
+        data-aos="slide-up"
       >
         <h1 className="sectionHeading text-left mb-8">
           Always Here <br /> for You
@@ -37,7 +43,7 @@ const CustomerCare = () => {
         className="flex flex-col justify-center gap-8"
         data-aos-easing="ease-out"
         data-aos-duration={1000}
-        data-aos="slide-left"
+        data-aos="slide-up"
       >
         <div className="flex gap-2">
           <Image

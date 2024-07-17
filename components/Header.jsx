@@ -30,9 +30,9 @@ const Header = ({ locale }) => {
   const t = useTranslations("home.menu");
   const pathname = usePathname();
   const pathnameWithoutLocale = pathname.replace(`/${locale}`, "");
-  console.log(pathnameWithoutLocale);
   const [buttonText, setButtonText] = useState("EN");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isRotated, setIsRotated] = useState(false);
   const menuItems = [
     {
       name: "Home",
@@ -84,13 +84,16 @@ const Header = ({ locale }) => {
     setButtonText(language);
     localStorage.setItem("language", language);
   };
+  const handleButtonClick = () => {
+    setIsRotated(!isRotated);
+  };
 
   return (
     <Navbar
       maxWidth="xl"
       onMenuOpenChange={setIsMenuOpen}
       isBordered
-      className="py-5"
+      // className="py-5"
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -104,7 +107,7 @@ const Header = ({ locale }) => {
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden lg:flex gap-4" justify="center">
-        <NavbarItem>
+        <NavbarItem className="text-sm">
           <Link
             className={`${
               pathnameWithoutLocale === "" ? "active_link" : ""
@@ -117,12 +120,18 @@ const Header = ({ locale }) => {
         </NavbarItem>
 
         <Dropdown>
-          <NavbarItem>
+          <NavbarItem className="text-sm">
             <DropdownTrigger>
               <Button
+                onClick={handleButtonClick}
                 disableRipple
-                className="p-0 bg-transparent data-[hover=true]:bg-transparent gap-0"
-                endContent={<RiArrowDownSLine size={25} />}
+                className={`p-0 bg-transparent data-[hover]:bg-transparent gap-0 rotatableIcon`}
+                endContent={
+                  <RiArrowDownSLine
+                    size={25}
+                    className={isRotated ? "rotated" : ""}
+                  />
+                }
                 radius="sm"
                 variant="light"
               >
@@ -131,13 +140,45 @@ const Header = ({ locale }) => {
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu>
-            <DropdownItem
-              key="autoscaling"
-              description="ACME scales apps to meet user demand, automagically, based on load."
-            ></DropdownItem>
+            <DropdownItem>
+              <div className="flex w-[100%] h-[300px] justify-between cursor-default hover:bg-transparent text-[16px] pt-5">
+                <ul className="w-[30%]">
+                  <p className="font-semibold pb-4">Instruments</p>
+                  <div className="flex flex-col gap-3">
+                    <li>Forex</li>
+                    <li>Metals</li>
+                    <li>Indicies</li>
+                    <li>Commodities</li>
+                    <li>Stocks</li>
+                    <li>Cryptocurrencies</li>
+                  </div>
+                </ul>
+                <ul className="w-[30%]">
+                  <p className="font-semibold pb-4"> Account Types</p>
+                  <div className="flex flex-col gap-3">
+                    <li>Standard Account</li>
+                    <li>Narrow Account</li>
+                    <li>Zero Account</li>
+                    <li>Crypto Account</li>
+                    <li>Delete Account Request</li>
+                  </div>
+                </ul>
+                <ul className="w-[30%]">
+                  <p className="font-semibold pb-4"> Learn The Trading</p>
+                  <div className="flex flex-col gap-3 text-wrap">
+                    <li>First Step:Introduction to financial market</li>
+                    <li>
+                      Second Step:Basic Info about broker and technical and
+                      fundamental analysis
+                    </li>
+                    <li>Third Step:Proffesional Strategies for Trading</li>
+                  </div>
+                </ul>
+              </div>
+            </DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <NavbarItem>
+        <NavbarItem className="text-sm">
           <LocaleLink
             href="/platform"
             className={`${
@@ -147,7 +188,7 @@ const Header = ({ locale }) => {
             Platform
           </LocaleLink>
         </NavbarItem>
-        <NavbarItem>
+        <NavbarItem className="text-sm">
           <LocaleLink
             href="/partners"
             className={`${
@@ -157,7 +198,7 @@ const Header = ({ locale }) => {
             Partners
           </LocaleLink>
         </NavbarItem>
-        <NavbarItem>
+        <NavbarItem className="text-sm">
           <LocaleLink
             href="/trade-to-Win"
             className={`${
@@ -167,7 +208,7 @@ const Header = ({ locale }) => {
             Trade To Win
           </LocaleLink>
         </NavbarItem>
-        <NavbarItem>
+        <NavbarItem className="text-sm">
           <LocaleLink
             href="/education"
             className={`${
@@ -177,7 +218,7 @@ const Header = ({ locale }) => {
             Education
           </LocaleLink>
         </NavbarItem>
-        <NavbarItem>
+        <NavbarItem className="text-sm">
           <LocaleLink
             color="foreground"
             href="/gift-account"
@@ -190,10 +231,10 @@ const Header = ({ locale }) => {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem>
+        <NavbarItem className="text-sm">
           <GradiantButton name="Register" />
         </NavbarItem>
-        <NavbarItem>
+        <NavbarItem className="text-sm">
           <GradiantButton name="Login" />
         </NavbarItem>
         <NavbarItem>

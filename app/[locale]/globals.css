@@ -88,3 +88,9 @@ background: transparent !important;
   display: inline-block;
   font-weight: 800;
 }
+.rotatableIcon {
+  transition: transform 1s ease; /* Smooth transition for rotation */
+}
+.rotated {
+  transform: rotate(180deg); /* Rotate the icon 180 degrees when 'rotated' class is applied */
+}

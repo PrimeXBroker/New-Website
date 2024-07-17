@@ -1,8 +1,13 @@
+"use client";
 import { Button } from "@nextui-org/react";
 import Image from "next/image";
-import React from "react";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const Rewards = () => {
+  useEffect(() => {
+    Aos.init({ disable: "mobile" });
+  }, []);
   return (
     <section className="py-12">
       <h1
@@ -18,7 +23,7 @@ const Rewards = () => {
           className="flex flex-col-reverse sm:flex-row bg-accent p-8 w-full lg:w-[50%] justify-evenly"
           data-aos-easing="ease-out"
           data-aos-duration={1100}
-          data-aos="slide-right"
+          data-aos="slide-up"
         >
           <div className="flex flex-col">
             <h1 className="sectionHeading">
@@ -52,7 +57,7 @@ const Rewards = () => {
           className="flex flex-col-reverse sm:flex-row bg-secondary p-8 w-full lg:w-[50%] justify-evenly"
           data-aos-easing="ease-out"
           data-aos-duration={1100}
-          data-aos="slide-left"
+          data-aos="slide-up"
         >
           <div>
             <h1 className="sectionHeading text-white sm:text-left text-center pt-4 sm:pt-0">
