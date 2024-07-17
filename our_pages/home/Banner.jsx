@@ -27,7 +27,7 @@ const Banner = () => {
   const path = usePathname();
   const isAr = path.includes("/ar");
   return (
-    <section className="relative lg:h-[55vh] xl:h-[62vh] 2xl:h-[68vh] 3xl:h-[65vh] py-10 lg:py-16 xl:py-16 2xl:py-20 3xl:pt-40 4xl:pt-48 5xl:py-56">
+    <section className="relative h-[55vh] lg:h-[55vh] xl:h-[62vh] 2xl:h-[68vh] 3xl:h-[65vh] py-10 lg:py-16 xl:py-16 2xl:py-20 3xl:pt-40 4xl:pt-48 5xl:py-56">
       <video
         autoPlay
         loop
