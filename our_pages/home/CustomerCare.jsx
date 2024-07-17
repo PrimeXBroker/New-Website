@@ -27,7 +27,7 @@ const CustomerCare = () => {
           data-aos-easing="ease-out"
           data-aos-duration={1000}
           data-aos="slide-up"
-          src="/images/customer_care.webp"
+          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/customer_care.webp"
           alt="customer care"
           width="300"
           height="300"

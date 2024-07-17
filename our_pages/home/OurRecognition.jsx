@@ -4,6 +4,22 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
 import { Autoplay, Pagination } from "swiper/modules";
+
+const awardsURLS = [
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/award1.svg",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/award2.svg",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/award3.svg",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/award4.svg",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/awards-04.svg",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/awards-05.svg",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/awards-06.svg",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/awards-07.svg",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/awards-08.svg",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/awards-09.svg",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/awards-10.svg",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/awards-11.svg",
+];
+
 const OurRecognition = () => {
   return (
     <section className="py-12">
@@ -56,114 +72,17 @@ const OurRecognition = () => {
           }}
           modules={[Autoplay, Pagination]}
         >
-          <SwiperSlide>
-            <Image
-              className="block mx-auto"
-              src="/images/award1.svg"
-              alt="award"
-              height="300"
-              width="220"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              className="block mx-auto"
-              src="/images/award2.svg"
-              alt="award"
-              height="200"
-              width="220"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              className="block mx-auto"
-              src="/images/award3.svg"
-              alt="award"
-              height="200"
-              width="220"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              className="block mx-auto"
-              src="/images/award4.svg"
-              alt="award"
-              height="200"
-              width="220"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              className="block mx-auto"
-              src="/images/award1.svg"
-              alt="award"
-              height="200"
-              width="220"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              className="block mx-auto"
-              src="/images/award2.svg"
-              alt="award"
-              height="200"
-              width="220"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              className="block mx-auto"
-              src="/images/award3.svg"
-              alt="award"
-              height="200"
-              width="220"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              className="block mx-auto"
-              src="/images/award4.svg"
-              alt="award"
-              height="200"
-              width="220"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              className="block mx-auto"
-              src="/images/award1.svg"
-              alt="award"
-              height="200"
-              width="220"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              className="block mx-auto"
-              src="/images/award2.svg"
-              alt="award"
-              height="200"
-              width="220"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              className="block mx-auto"
-              src="/images/award3.svg"
-              alt="award"
-              height="200"
-              width="220"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              className="block mx-auto"
-              src="/images/award4.svg"
-              alt="award"
-              height="200"
-              width="220"
-            />
-          </SwiperSlide>
+          {awardsURLS.map((el) => (
+            <SwiperSlide>
+              <Image
+                className="block mx-auto"
+                src={el}
+                alt="award"
+                height="300"
+                width="220"
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>

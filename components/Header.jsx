@@ -8,6 +8,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/navbar";
+
 import Logo from "@/public/images/logos/logo.webp";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,6 +18,13 @@ import { usePathname } from "next/navigation";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { useTranslations } from "next-intl";
 import GradiantButton from "./GradiantButton";
+import {
+  DropdownTrigger,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
+} from "@nextui-org/dropdown";
+import { Button } from "@nextui-org/react";
 
 const Header = ({ locale }) => {
   const t = useTranslations("home.menu");
@@ -107,16 +115,28 @@ const Header = ({ locale }) => {
             Home
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <LocaleLink
-            href="/trading"
-            className={`${
-              pathnameWithoutLocale === "/trading" ? "active_link" : ""
-            } ${NavHoverEffect}`}
-          >
-            Trading
-          </LocaleLink>
-        </NavbarItem>
+
+        <Dropdown>
+          <NavbarItem>
+            <DropdownTrigger>
+              <Button
+                disableRipple
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent gap-0"
+                endContent={<RiArrowDownSLine size={25} />}
+                radius="sm"
+                variant="light"
+              >
+                Trading
+              </Button>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu>
+            <DropdownItem
+              key="autoscaling"
+              description="ACME scales apps to meet user demand, automagically, based on load."
+            ></DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
         <NavbarItem>
           <LocaleLink
             href="/platform"

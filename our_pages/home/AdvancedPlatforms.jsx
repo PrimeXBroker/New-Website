@@ -21,14 +21,32 @@ const AdvancedPlatforms = () => {
         experience.
       </p>
 
-      <div className="my-8">
+      <div className="my-8 relative">
         <Image
-          width="800"
+          width="900"
           height="200"
-          className="mx-auto"
-          src="/images/platform_image.webp"
+          className="mx-auto z-0"
+          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/platform_image.webp"
           alt="platform image"
         />
+        <div className="absolute z-10 right-[1%] bottom-[35%] cursor-pointer bg-transparent hover:bg-black hover:text-white transition duration-500 hover:translate-y-[-5px]">
+          <Image
+            width={280}
+            height={200}
+            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/meta_trader5.svg"
+            alt="mt5"
+            className="block"
+          />
+        </div>
+        <div className="absolute z-10 bottom-[50%] cursor-pointer bg-transparent hover:bg-black hover:text-white transition duration-500 hover:translate-y-[-5px]">
+          <Image
+            className="block"
+            width="250"
+            height="200"
+            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/multi_device.svg"
+            alt="mt5"
+          />
+        </div>
       </div>
     </section>
   );
