@@ -115,6 +115,7 @@ const Header = () => {
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#" className={NavHoverEffect}>
+          
             Gift Account
           </Link>
         </NavbarItem>
