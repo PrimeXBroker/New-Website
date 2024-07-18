@@ -32,7 +32,7 @@ const Academy = () => {
               alt="academy icon"
               width="80"
               height="80"
-              className="block mx-0"
+              className="block mx-0 academy_img"
             />
           </div>
           <h1 className="sectionHeading text-2xl text-left mb-6">
