@@ -8,31 +8,44 @@
     font-family: "Montserrat", sans-serif;
   }
 }
+
 @layer components {
   .container {
     @apply max-w-[1200px] mx-auto px-3;
   }
-  .sectionHeading{
+
+  .sectionHeading {
     @apply text-3xl md:text-4xl text-secondary font-semibold mb-2 text-center;
   }
-  .sectionPara{
+
+  .sectionPara {
     @apply text-lg md:text-lg text-secondary mb-2;
+  }
+
+  .underline-custom::after {
+    @apply block w-full h-2 bg-primary mt-3;
+    content: "";
   }
 }
 
-.tabs_custom div{
-flex-wrap: wrap !important;
-justify-content: center !important;
-background: transparent !important;
+.tabs_custom div {
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  background: transparent !important;
 }
-.tabs_custom div button{
+
+.tabs_custom div button {
   width: fit-content;
-  }
-.swiper-pagination{
-  position:  relative !important;
+}
+
+.swiper-pagination {
+  position: relative !important;
   padding-top: 1rem;
 }
-.swiper-pagination-bullet-active{
+
+
+
+.swiper-pagination-bullet-active {
   background: gray !important;
   border: 1px solid #000;
 }
@@ -59,7 +72,7 @@ background: transparent !important;
   position: absolute;
   background-color: #f1f1f1;
   min-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -72,27 +85,38 @@ background: transparent !important;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 .arrow {
   transition: transform 0.3s ease;
 }
+
 .dropdown:hover .arrow {
   transform: rotate(180deg);
 }
-.active_link{
+
+.active_link {
   position: relative;
   text-decoration: none;
   display: inline-block;
   font-weight: 800;
 }
+
 .rotatableIcon {
-  transition: transform 1s ease; /* Smooth transition for rotation */
+  transition: transform 1s ease;
+  /* Smooth transition for rotation */
 }
+
 .rotated {
-  transform: rotate(180deg); /* Rotate the icon 180 degrees when 'rotated' class is applied */
+  transform: rotate(180deg);
+  /* Rotate the icon 180 degrees when 'rotated' class is applied */
 }
 
 /* Flip Card */
@@ -117,8 +141,9 @@ background: transparent !important;
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
-  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+.flip-card-front,
+.flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -131,11 +156,15 @@ background: transparent !important;
 }
 
 .flip-card-front {
-  background:#E4E5E6;
+  background: #E4E5E6;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.fcs-brand {
+  display: none !important;
 }
 
 .flip-card-back {
@@ -147,3 +176,68 @@ background: transparent !important;
 /*End Of Flip Card */
 
 
+.account-swiper-carousel .swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+
+.account-swiper-carousel .swiper-slide {
+  width: 400px;
+  min-height: 710px;
+  filter: blur(3px);
+  background: #3e403c;
+  border-radius: 24px;
+}
+
+.account-swiper-carousel .swiper-slide-active {
+  filter: blur(0px);
+}
+
+.account-swiper-carousel .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.swiper-account-title-box {
+  background: linear-gradient(to bottom, #585857 0%, #2d292a 50%, #231f20 100%);
+}
+
+.swiper-account-angle {
+  z-index: -1;
+  border-left: 76px solid transparent;
+  border-right: 76px solid transparent;
+  border-top: 35px solid #231f20;
+}
+
+.swiper-account-box {
+  background: linear-gradient(to bottom,
+      #565655 10%,
+      #373435 50%,
+      #323030 100%);
+}
+
+.account-swiper-carousel .swiper-slide-next {
+  transform: translate3d(0px, 0px, -354px) rotateX(0deg) rotateY(0deg) scale(1) !important;
+}
+
+.account-swiper-carousel .swiper-slide-prev {
+  transform: translate3d(0px, 0px, -354px) rotateX(0deg) rotateY(0deg) scale(1) !important;
+}
+
+.account-swiper-carousel .swiper-button-next,
+.account-swiper-carousel .swiper-button-prev {
+  background: linear-gradient(to right, #585857 0%, #2d292a 100%);
+  width: 44px;
+  height: 44px;
+}
+
+.account-swiper-carousel .swiper-button-next svg,
+.account-swiper-carousel .swiper-button-prev svg {
+  width: 20px;
+}
+
+.account-swiper-carousel .swiper-button-next::after,
+.account-swiper-carousel .swiper-button-prev::after {
+  display: none !important;
+}
