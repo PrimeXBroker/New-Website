@@ -33,7 +33,7 @@ return(
         <h1 className="sectionHeading">Account Types</h1>
         <div className="grid justify-center place-items-center gap-6 grid-cols-1 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-4 pt-12">
             {accountTypes.map((account,index)=>(
-                <div key={index} class="flip-card cursor-pointer">
+                <div key={index} className="flip-card cursor-pointer">
                 <div className="flip-card-inner">
                     <div className="flip-card-front">
                         <Image src={account.imageUrl} width='50' height='100' alt="account logo"/>
@@ -41,8 +41,8 @@ return(
                         
                     </div>
                     <div className="flip-card-back">
-                        <p className="text-sm text-secondary text-center px-2 pb-3">{account.description}</p>
-                        <Link href={account.btnHref} className="underline text-sm text-secondary">Learn More</Link>
+                        <p className="text-sm text-[#FFF] text-center px-2 pb-3">{account.description}</p>
+                        <Link href={account.btnHref} className="underline text-sm text-[#FFD000]">Learn More</Link>
                     </div>
                 </div>
             </div>
