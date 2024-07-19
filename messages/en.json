@@ -144,5 +144,18 @@
       "reg_now": "Registered already?",
       "login_here": "Login Here"
     }
+  },
+  "gift": {
+    "header": {
+      "celeb_l1": "Celebrate our ",
+      "celeb_l2": "2nd Anniversary ",
+      "celeb_l3": "with a",
+      "title": "$30 Gift Account",
+      "subtitle_l1": "Avail your free ",
+      "subtitle_l2": "and receive ",
+      "subtitle_l3": "$30 Live Account today",
+      "subtitle_l4": "No deposit required!",
+      "btnTxt": "Open Live Account"
+    }
   }
 }
