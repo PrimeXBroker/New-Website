@@ -241,3 +241,6 @@
 .account-swiper-carousel .swiper-button-prev::after {
   display: none !important;
 }
+.ag-row-odd{
+  background-color: #E4E5E6 !important;
+}
