@@ -25,6 +25,7 @@ import {
   DropdownItem,
 } from "@nextui-org/dropdown";
 import { Button } from "@nextui-org/react";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = ({ locale }) => {
   const t = useTranslations("home.menu");
@@ -272,6 +273,9 @@ const Header = ({ locale }) => {
               </Link>
             </div>
           </div>
+        </NavbarItem>
+        <NavbarItem>
+          <ThemeToggle />
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu className="h-56 !important">
