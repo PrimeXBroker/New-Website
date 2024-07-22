@@ -9,6 +9,7 @@ import Cards from "@/components/Cards";
 const page = () => {
   const locale = useLocale();
   const t = useTranslations("accountTypes");
+  const b = useTranslations("regBtn");
 
   const cardContents = [
     {
@@ -38,8 +39,8 @@ const page = () => {
     imgAr: "/images/advantage-ar.webp",
     mainTitle1: t("advantages.adv_h2"),
     mainTitle2: t("advantages.adv_h2_1"),
-    btnTxt: t("header.btnTxt"),
-    regNow: t("advantages.reg_now"),
+    btnTxt: b("btnTxt"),
+    regNow: b("reg_now"),
     loginHere: t("advantages.login_here"),
     regLink: `https://client.primexbroker.com/${locale}/register`,
     loginLink: `https://client.primexbroker.com/${locale}/auth/sign-in`,

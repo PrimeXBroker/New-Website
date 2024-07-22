@@ -253,7 +253,12 @@ const Header = ({ locale }) => {
                 onClick={() => handleClick("EN")}
               >
                 <div className="flex gap-2">
-                  <Image src="/images/flags/gb.svg" width="30" height="8" />
+                  <Image
+                    src="/images/flags/gb.svg"
+                    width="30"
+                    height="8"
+                    alt="img"
+                  />
                   <p>EN</p>
                 </div>
               </Link>
@@ -266,7 +271,12 @@ const Header = ({ locale }) => {
                 onClick={() => handleClick("AR")}
               >
                 <div className="flex gap-2">
-                  <Image src="/images/flags/arab.svg" width="30" height="8" />
+                  <Image
+                    src="/images/flags/arab.svg"
+                    width="30"
+                    height="8"
+                    alt="img"
+                  />
                   <p>AR</p>
                 </div>
               </Link>

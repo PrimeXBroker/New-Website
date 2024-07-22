@@ -3,23 +3,26 @@ import Image from "next/image";
 
 const Cards = ({ items }) => {
   return (
-    <section className="py-12">
+    <section className="py-20">
       <div className="flex flex-row mt-12 gap-12 justify-center flex-wrap">
-        {items.map((item) => {
+        {items.map((item, index) => {
           return (
-            <div className="bg-secondary rounded-lg shadow-2xl border-b-5 border-primary hover:border-primary p-8 w-[300px] transform transition-transform duration-300 hover:scale-105 group">
+            <div
+              className="bg-secondary rounded-3xl shadow-2xl shadow-secondary hover:border-b-5 hover:border-primary p-8 w-[300px] transform transition-transform duration-300 hover:scale-105 group"
+              key={index}
+            >
               <div className="flex justify-center">
                 <Image
                   src={item.img}
-                  alt="academy icon"
                   width="56"
                   height="56"
+                  alt="img"
                   className="block mx-0"
                 />
               </div>
-              <h1 className="sectionHeading text-2xl text-center my-4 text-accent group-hover:text-primary">
+              <h2 className="sectionHeading text-2xl text-center my-4 text-accent group-hover:text-primary">
                 {item.title}
-              </h1>
+              </h2>
               <p className="text-base text-center text-accent">
                 {item.description}
               </p>

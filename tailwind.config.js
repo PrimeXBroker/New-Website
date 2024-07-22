@@ -12,11 +12,16 @@ module.exports = {
     extend: {
       animation: {
         "up-down": "upDown 2s ease-in-out infinite",
+        "float-bob": "floatBob 2s linear infinite",
       },
       keyframes: {
         upDown: {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
+        },
+        floatBob: {
+          "0%, 100%": { transform: "translateY(-30px)" },
+          "50%": { transform: "translateY(-15px)" },
         },
       },
       backgroundImage: {

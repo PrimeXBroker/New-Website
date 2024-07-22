@@ -40,13 +40,13 @@
       "btnTxt": "Open Live Account"
     },
     "card": {
-      "account1-title": "Standard Account",
+      "account1-title": "Standard",
       "account1-desc": "The Standard Account is a top choice among traders due to its no-swap commissions, offering cost-efficiency by eliminating these fees.",
-      "account2-title": "Narrow Account",
+      "account2-title": "Narrow",
       "account2-desc": "This account is tailored for scalpers, featuring the lowest spread to maximize profits from short-term market movements.",
-      "account3-title": "Zero Account",
+      "account3-title": "Zero",
       "account3-desc": "The Zero Account is designed for professional traders, offering a 'zero spread' for an unmatched trading experience.",
-      "account4-title": "Crypto Account",
+      "account4-title": "Crypto",
       "account4-desc": "This account caters to digital currency traders, offering cryptocurrency pairs and leverage with a $100 deposit, ideal for those seeking high returns despite volatility."
     },
     "chooseAccount": {
@@ -144,5 +144,115 @@
       "reg_now": "Registered already?",
       "login_here": "Login Here"
     }
+  },
+  "gift": {
+    "header": {
+      "celeb_l1": "Celebrate our ",
+      "celeb_l2": "2nd Anniversary ",
+      "celeb_l3": "with a",
+      "title": "$30 Gift Account",
+      "subtitle_l1": "Avail your free",
+      "subtitle_l2": "$30 Live Account today",
+      "subtitle_l3": "No deposit required!"
+    },
+    "steps": {
+      "title": "How to avail your",
+      "title_2": "$30 Gift Account?",
+      "new_client_title": "New Clients",
+      "step1": "Register",
+      "step2": "Verify",
+      "step3": "Open Gift Account",
+      "new_client_valid": "Valid Between (1st July - 15th August)",
+      "existing_client_title": "Existing Clients",
+      "step4": "Login",
+      "existing_client_valid": "Valid Between (1st July - 31st July)"
+    },
+    "instruments": {
+      "title": "Access",
+      "title_2": "500+ Instruments",
+      "instruments_0_h": "Forex",
+      "instruments_1_h": "Metals",
+      "instruments_2_h": "Indices",
+      "instruments_3_h": "Commodities",
+      "instruments_4_h": "Stocks",
+      "instruments_5_h": "Cryptocurrencies",
+      "ins1_card_para_1": "Trade ",
+      "ins1_card_para_2": "over 97 currency pairs",
+      "ins1_card_para_3": ", including major, minor, and exotic pairs.",
+      "ins2_card_para_3": "Invest in ",
+      "ins2_card_para_1": "precious metals ",
+      "ins2_card_para_2": "such as gold, silver, platinum, and palladium.",
+      "ins3_card_para_1": "Diversify your portfolio with the world's top ",
+      "ins3_card_para_2": "14 stock indices.",
+      "ins4_card_para_1": "Gain exposure to a ",
+      "ins4_card_para_2": "wide range of commodities ",
+      "ins4_card_para_3": "markets.",
+      "ins5_card_para_1": "Buy and sell ",
+      "ins5_card_para_2": "top-performing shares ",
+      "ins5_card_para_3": "from across various sectors.",
+      "ins6_card_para_1": "Trade crypto with the ",
+      "ins6_card_para_2": "largest provider of crypto ",
+      "ins6_card_para_3": "instruments in MENA."
+    },
+    "terms": {
+      "title": "Download to learn more about Gift Account T&Cs",
+      "btnTxt": "Download T&Cs"
+    }
+  },
+  "bonus": {
+    "header": {
+      "title_l1": "30%",
+      "title_l2": "Profit Bonus",
+      "subtitle_l1": "Supercharge Your",
+      "subtitle_l2": "Tradings With a ",
+      "subtitle_l3": "30% Bonus ",
+      "subtitle_l4": "on Your ",
+      "subtitle_l5": "Trading ",
+      "subtitle_l6": "Profits!",
+      "tc": "terms & conditions apply",
+      "btnTxt": "Open Live Account",
+      "reg_now": "Registered already?",
+      "login_here": "Login Here"
+    },
+    "claim": {
+      "title1": "How to Claim Your",
+      "title2": " Profit Bonus",
+      "claim_li1": "Trade for Profits",
+      "claim_li1_p": "Any profits from trading are valid.",
+      "claim_li2": "Apply for Bonus",
+      "claim_li2_p": "Based on your profit amount, apply for a 30% Bonus.",
+      "claim_li3": "Receive Your Bonus",
+      "claim_li3_p": " Get a 30% bonus only on the profit credited to your new account."
+    },
+    "promotion": {
+      "title1": "Promotion",
+      "title2": "Applicable On"
+    },
+    "maximize": {
+      "maximize_title_1": "Maximize",
+      "maximize_title_2": "Your Profits Now!"
+    },
+    "terms": {
+      "title": "Download T&C's",
+      "condition_1": " This offer is available exclusively to ",
+      "condition_2": "existing clients PrimeX ",
+      "condition_3": "with trading profits in their accounts."
+    },
+    "form": {
+      "title1": "Claim Your ",
+      "title2": "Profit Bonus",
+      "name": "Name",
+      "profit_number": "Profit Amount",
+      "email": "Email",
+      "account_number": "Account Number",
+      "condition1": "I have read and agree to the ",
+      "condition2": "terms and conditions",
+      "form_btn": "Claim Now"
+    }
+  },
+  "regBtn": {
+    "btnTxt": "Open Live Account",
+    "reg_now": "Registered already?",
+    "login_here": "Login Here"
   }
 }
