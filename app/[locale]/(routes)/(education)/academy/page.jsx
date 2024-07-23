@@ -1,6 +1,7 @@
 import Banner from "@/our_pages/education/academy/Banner";
 import Featured from "@/our_pages/education/academy/Featured";
 import PrivateSessions from "@/our_pages/education/academy/PrivateSessions";
+import SuccessStories from "@/our_pages/education/academy/SuccessStories";
 import React from "react";
 
 const cardsData = [
@@ -35,6 +36,7 @@ const Academy = () => {
       <Banner />
       <Featured cardsData={cardsData} title="" />
       <PrivateSessions />
+      <SuccessStories />
     </>
   );
 };
