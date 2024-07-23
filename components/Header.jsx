@@ -40,10 +40,6 @@ const Header = ({ locale }) => {
       link: "/",
     },
     {
-      name: "Home",
-      link: "/",
-    },
-    {
       name: "Trading",
       link: "/trading",
     },
@@ -232,10 +228,10 @@ const Header = ({ locale }) => {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem className="text-sm">
+        <NavbarItem className="text-sm hidden lg:block">
           <GradiantButton name="Register" />
         </NavbarItem>
-        <NavbarItem className="text-sm">
+        <NavbarItem className="text-sm hidden lg:block">
           <GradiantButton name="Login" />
         </NavbarItem>
         <NavbarItem>
@@ -286,6 +282,12 @@ const Header = ({ locale }) => {
             </LocaleLink>
           </NavbarMenuItem>
         ))}
+        <NavbarMenuItem>
+          <div className="flex gap-4">
+            <GradiantButton name="Register" />
+            <GradiantButton name="Login" />
+          </div>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );
