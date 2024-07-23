@@ -11,37 +11,14 @@ import React, { useState } from "react";
 
 const Forex = () => {
   const [icon1Hovered, setIcon1Hovered] = useState(false);
-  const [icon2Hovered, setIcon2Hovered] = useState(false);
-  const [icon3Hovered, setIcon3Hovered] = useState(false);
-  const [icon4Hovered, setIcon4Hovered] = useState(false);
+ 
   const handleIcon1Enter = () => {
     setIcon1Hovered(true);
   };
   const handleIcon1Leave = () => {
     setIcon1Hovered(false);
   };
-  const handleIcon2Enter = () => {
-    setIcon2Hovered(true);
-  };
 
-  const handleIcon2Leave = () => {
-    setIcon2Hovered(false);
-  };
-
-  const handleIcon3Enter = () => {
-    setIcon3Hovered(true);
-  };
-
-  const handleIcon3Leave = () => {
-    setIcon3Hovered(false);
-  };
-  const handleIcon4Enter = () => {
-    setIcon4Hovered(true);
-  };
-
-  const handleIcon4Leave = () => {
-    setIcon4Hovered(false);
-  };
 
   const cardsData = [
     {

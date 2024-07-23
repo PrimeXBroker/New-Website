@@ -11,10 +11,10 @@ const Featured = ({
   icon1Hovered,
 }) => {
   return (
-    <section className="bg-[#e4e5e6] xl:h-[45vh] pb-10 xl:pb-0">
+    <section className="bg-[#e4e5e6] xl:h-[60vh] pt-8 pb-10 xl:pb-0">
       <div className="container">
         <h1 className="sectionHeading">{title}</h1>
-        <div className="flex flex-row mt-16 gap-12 justify-center flex-wrap xl:flex-wrap">
+        <div className="flex flex-row mt-10 gap-12 justify-center flex-wrap xl:flex-wrap">
           {cardsData.map((card, index) => (
             <div
               onMouseEnter={handleIcon1Enter}
