@@ -1,7 +1,9 @@
 import Banner from "@/our_pages/education/academy/Banner";
 import Featured from "@/our_pages/education/academy/Featured";
+import JoinAcademy from "@/our_pages/education/academy/JoinAcademy";
 import PrivateSessions from "@/our_pages/education/academy/PrivateSessions";
 import SuccessStories from "@/our_pages/education/academy/SuccessStories";
+import WebinarLibrary from "@/our_pages/education/academy/WebinarLibrary";
 import React from "react";
 
 const cardsData = [
@@ -34,8 +36,10 @@ const Academy = () => {
   return (
     <>
       <Banner />
-      <Featured cardsData={cardsData} title="" />
+      <Featured cardsData={cardsData}/>
       <PrivateSessions />
+      <JoinAcademy/>
+      <WebinarLibrary/>
       <SuccessStories />
     </>
   );

@@ -244,3 +244,13 @@
 .ag-row-odd{
   background-color: #E4E5E6 !important;
 }
+.webinar_slider{
+  padding-top: 1rem !important;
+}
+.webinar_slider .swiper-pagination{
+  display: block;
+}
+.webinar_slider_slide{
+  display: flex !important;
+  justify-content: center !important;
+}

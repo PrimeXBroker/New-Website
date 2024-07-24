@@ -4,12 +4,12 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <section className="h-screen">
+    <section className="">
       <div className="bg-secondary">
-        <div className="container flex justify-around py-16">
-          <div className="max-w-2xl flex flex-col justify-center items-start gap-6">
+        <div className="container flex flex-col md:flex-row justify-around py-16">
+          <div className="max-w-2xl flex flex-col justify-center items-start gap-6 md:w-[70%]">
             <h1
-              className="text-primary md:text-3xl font-semibold"
+              className="text-primary text-xl md:text-3xl text-center md:text-left font-semibold"
               style={{ lineHeight: "45px", letterSpacing: "1px" }}
             >
               Welcome to the academy of PrimeX Capital -{" "}
@@ -19,19 +19,20 @@ const Banner = () => {
               </span>
             </h1>
             <p
-              className="text-white md:text-lg text-medium max-w-xl"
+              className="text-white md:text-lg text-medium md:max-w-xl text-center md:text-left"
               style={{ letterSpacing: "0.7px" }}
             >
               A Wealth Of Knowledge At Your Fingertips, including the lastest
               market news, insightful blogs, and personalized one-on-one
               sessions
             </p>
-            <button className="bg-primary px-4 py-4 rounded-full w-[200px] shadow-xl">
+            <button className="bg-primary px-4 py-4 rounded-full w-[200px] shadow-xl block md:m-0 mx-auto">
               Join Now!
             </button>
           </div>
-          <div>
+          <div className="flex">
             <Image
+              className="mx-auto md:m-0 block"
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/banner_img.webp"
               alt="Banner Image"
               width="550"

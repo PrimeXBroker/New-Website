@@ -35,7 +35,7 @@ const PrivateSessions = () => {
         For Clients with active balance of over $10,000 - 4 Free private session
         per month !
       </p>
-      <div className="absolute flex flex-row justify-center items-center right-0 left-0 bottom-[-60%]">
+      <div className="absolute flex flex-row justify-center items-center right-0 left-0 md:bottom-[-60%]">
         {expertCards.map((card, index) => (
           <div
             key={index}
