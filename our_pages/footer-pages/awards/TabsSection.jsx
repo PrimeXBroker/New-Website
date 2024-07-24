@@ -189,16 +189,18 @@ const TabsSection = () => {
         >
           {awardsData.map((tab) => (
             <Tab key={tab.year} title={tab.year} className={`awards_tab`}>
-              <div className="flex flex-wrap gap-4 justify-center mt-4 space-y-6">
+              <div className="flex flex-wrap gap-4 justify-center mt-12">
                 {tab.awards.map((award, index) => (
                   <div
                     key={index}
-                    className={`flex flex-col items-center p-4 
+                    className={`flex flex-col shadow-lg items-center p-4 
                       border border-gray-300
                        hover:bg-secondary rounded-2xl
                         border-b-3
                         hover:border-b-3
-                        hover:border-b-primary group cursor-pointer w-[250px]`}
+                        hover:border-b-primary group cursor-pointer w-[250px] h-[300px]
+                        transition-transform hover:translate-y-[-0.5rem] duration-500
+                        `}
                   >
                     <Image
                       src={award.imgSrc}
