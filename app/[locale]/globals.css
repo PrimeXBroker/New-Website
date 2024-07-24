@@ -254,3 +254,8 @@
   display: flex !important;
   justify-content: center !important;
 }
+.awards_tab span{
+  border-top-left-radius: 200% !important;
+  border-top-right-radius: 200% !important;
+  border:2px solid #FFD000;
+}
