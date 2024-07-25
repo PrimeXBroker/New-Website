@@ -136,18 +136,17 @@ const Header = ({ locale }) => {
               </Button>
             </DropdownTrigger>
           </NavbarItem>
-          <DropdownMenu>
+          <DropdownMenu variant="light">
             <DropdownItem>
               <div className="flex w-[100%] h-[300px] justify-between cursor-default hover:bg-transparent text-[16px] pt-5">
                 <ul className="w-[30%]">
                   <p className="font-semibold pb-4">Instruments</p>
                   <div className="flex flex-col gap-3">
-                    <li>Forex</li>
-                    <li>Metals</li>
-                    <li>Indicies</li>
-                    <li>Commodities</li>
-                    <li>Stocks</li>
-                    <li>Cryptocurrencies</li>
+                    <LocaleLink href="/forex">Forex</LocaleLink>
+                    <LocaleLink href="/metals">Metals</LocaleLink>
+                    <LocaleLink href="/indices">Indices</LocaleLink>
+                    <LocaleLink href="/commodities">Commodities</LocaleLink>
+                    <LocaleLink href="/stocks">Stocks</LocaleLink>
                   </div>
                 </ul>
                 <ul className="w-[30%]">
