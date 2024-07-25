@@ -34,6 +34,8 @@ module.exports = {
         secondary: "#3F3F3E",
         accent: "#E4E5E6",
         neutral: "#315d89",
+        dark: "#3F3F3E",
+        medium: "E4E5E6",
       },
       fontFamily: {
         montserrat: ["var(--font-montserrat)"],

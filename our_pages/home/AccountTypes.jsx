@@ -27,6 +27,7 @@ const AccountTtpes = () => {
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/account_types/zero.svg",
       btnHref: "#",
     },
+<<<<<<< HEAD
     {
       title: "Crypto",
       description:
@@ -35,13 +36,21 @@ const AccountTtpes = () => {
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/account_types/crypto.svg",
       btnHref: "#",
     },
+=======
+>>>>>>> b2a20dbdd9c3cfcecdc69d16311e3e9b426965c1
   ];
   return (
     <section className="pt-12 pb-8 container">
       <h1 className="sectionHeading">Account Types</h1>
+<<<<<<< HEAD
       <div className="grid justify-center place-items-center gap-6 grid-cols-1 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-4 pt-12">
         {accountTypes.map((account, index) => (
           <div key={index} class="flip-card cursor-pointer">
+=======
+      <div className="grid justify-center place-items-center gap-6 grid-cols-1 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-4 pt-12">
+        {accountTypes.map((account, index) => (
+          <div key={index} className="flip-card cursor-pointer">
+>>>>>>> b2a20dbdd9c3cfcecdc69d16311e3e9b426965c1
             <div className="flip-card-inner">
               <div className="flip-card-front">
                 <Image
@@ -55,12 +64,20 @@ const AccountTtpes = () => {
                 </p>
               </div>
               <div className="flip-card-back">
+<<<<<<< HEAD
                 <p className="text-sm text-secondary text-center px-2 pb-3">
+=======
+                <p className="text-sm text-[#FFF] text-center px-2 pb-3">
+>>>>>>> b2a20dbdd9c3cfcecdc69d16311e3e9b426965c1
                   {account.description}
                 </p>
                 <Link
                   href={account.btnHref}
+<<<<<<< HEAD
                   className="underline text-sm text-secondary"
+=======
+                  className="underline text-sm text-[#FFD000]"
+>>>>>>> b2a20dbdd9c3cfcecdc69d16311e3e9b426965c1
                 >
                   Learn More
                 </Link>

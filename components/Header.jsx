@@ -25,6 +25,7 @@ import {
   DropdownItem,
 } from "@nextui-org/dropdown";
 import { Button } from "@nextui-org/react";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = ({ locale }) => {
   const t = useTranslations("home.menu");
@@ -34,10 +35,6 @@ const Header = ({ locale }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isRotated, setIsRotated] = useState(false);
   const menuItems = [
-    {
-      name: "Home",
-      link: "/",
-    },
     {
       name: "Home",
       link: "/",
@@ -231,10 +228,10 @@ const Header = ({ locale }) => {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem className="text-sm">
+        <NavbarItem className="text-sm hidden lg:block">
           <GradiantButton name="Register" />
         </NavbarItem>
-        <NavbarItem className="text-sm">
+        <NavbarItem className="text-sm hidden lg:block">
           <GradiantButton name="Login" />
         </NavbarItem>
         <NavbarItem>
@@ -283,6 +280,9 @@ const Header = ({ locale }) => {
             </div>
           </div>
         </NavbarItem>
+        <NavbarItem>
+          <ThemeToggle />
+        </NavbarItem>
       </NavbarContent>
       <NavbarMenu className="h-56 !important">
         {menuItems.map((item, index) => (
@@ -292,6 +292,12 @@ const Header = ({ locale }) => {
             </LocaleLink>
           </NavbarMenuItem>
         ))}
+        <NavbarMenuItem>
+          <div className="flex gap-4">
+            <GradiantButton name="Register" />
+            <GradiantButton name="Login" />
+          </div>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );
