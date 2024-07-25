@@ -34,6 +34,10 @@ module.exports = {
         montserrat: ["var(--font-montserrat)"],
         kufi: ["var(--font-kufi)"],
       },
+
+      height: {
+        '850': '850px',
+      },
     },
   },
   darkMode: "class",

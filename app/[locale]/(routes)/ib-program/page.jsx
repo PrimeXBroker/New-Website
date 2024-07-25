@@ -1,17 +1,16 @@
 // "use client"
 import Banner from "@/our_pages/ib/Banner";
 import React from "react";
-import { useLocale, useTranslations } from "next-intl"
-
+import PartnerShip from "./partnership";
 const page = () => {
-  const locale = useLocale()
-  console.log(locale, "hell");
-  const t = useTranslations("ib")
-  
+
+
   return (
     <>
-    { t("header.title") }
-      {/* <Banner /> */}
+      {/* {t("header.title")} */}
+    
+      <Banner />
+      <PartnerShip />
     </>
   );
 };
