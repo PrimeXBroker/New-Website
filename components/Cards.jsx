@@ -8,7 +8,7 @@ const Cards = ({ items }) => {
         {items.map((item, index) => {
           return (
             <div
-              className="bg-secondary rounded-3xl shadow-2xl shadow-secondary hover:border-b-5 hover:border-primary p-8 w-[300px] transform transition-transform duration-300 hover:scale-105 group"
+              className="bg-secondary rounded-lg shadow-2xl border-b-5 border-primary hover:border-primary p-8 w-[300px] transform transition-transform duration-300 hover:scale-105 group"
               key={index}
             >
               <div className="flex justify-center">

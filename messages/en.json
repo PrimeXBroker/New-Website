@@ -145,108 +145,17 @@
       "login_here": "Login Here"
     }
   },
-  "regBtn": {
-    "btnTxt": "Open Live Account",
-    "reg_now": "Registered already?",
-    "login_here": "Login Here"
-  },
-  "ib": {
+  "gift": {
     "header": {
-      "title1": "Become an",
-      "title2": "Introducing Broker",
-      "subtitle_1": "an ",
-      "subtitle_2": "earn ",
-      "subtitle_3": "up to",
-      "subtitle_4": "$23 per lot",
-      "btnTxt": "SIGN UP NOW"
-    },
-    "partnership": {
-      "title": "Partnership Perks",
-      "adv1_h3": "Lucrative",
-      "adv1_h3_1": "Commissions",
-      "adv1_p": "Earn up to $23 per lot traded",
-      "adv2_h3": "Advanced",
-      "adv2_h3_1": "Trading Platform",
-      "adv2_p": "Access to cutting-edge technology and trading tools",
-      "adv3_h3": "Comprehensive",
-      "adv3_h3_1": " Marketing Support",
-      "adv3_p": "Utilize our resources to attract and retain clients",
-      "adv4_h3": "Dedicated IB",
-      "adv4_h3_1": "Support Team",
-      "adv4_p": "Receive personalized assistance and guidance",
-      "adv5_h3": "Flexible Payout",
-      "adv5_h3_1": "Options",
-      "adv5_p": "Choose from multiple payment methods to suit your needs",
-      "adv6_h3": "Transparent",
-      "adv6_h3_1": "Reporting",
-      "adv6_p": "Monitor your client's performance with detailed and transparent reports",
-      "btnTxt": "BECOME IB NOW"
-    },
-    "steps": {
-      "title1": "3 ",
-      "title2": "Easy Steps ",
-      "title3": "To Start",
-      "join_li1": "Register",
-      "join_li1_p": "Complete our online registration form with your details.",
-      "join_li2": "Promote",
-      "join_li2_p": "Use our marketing tools and resources to attract clients.",
-      "join_li3": "Earn",
-      "join_li3_p": "Start earning commissions on every lot traded by your clients."
-    },
-    "form": {
-      "title": "IB Registration Form",
-      "f_name": "First Name",
-      "l_name": "Last Name",
-      "email": "Email Address",
-      "phone_number": "Phone Number",
-      "form_btn": "Submit"
-    },
-    "rewards": {
-      "title": " IB Program Rewards",
-      "subtitle_1": "Earn More ",
-      "subtitle_2": "with PrimeX",
-      "description": "As a valued IB partner, you’ll enjoy attractive rewards and bonuses in addition to your regular commissions. Our tiered reward system ensures that the more you bring, the more you earn."
-    },
-    "cards": {
-      "reward_tab1": "Cash $1000",
-      "reward_tab2": "iPhone",
-      "reward_tab3": "Mac Book",
-      "reward_tab4": "Cash 5000$",
-      "reward_tab5": "Trip to Maldives",
-      "reward_tab6": "Cash 20,000$",
-      "reward_tab7": "Family Trip",
-      "reward_tab8": "Mercedes",
-      "reward_tab9": " Bentley Bentayga",
-      "reward_tab10": "1 BHK Apartment",
-      "reward_li1": "Cash Prize 1000$",
-      "reward_li1_title1": "Trip to Maldives ",
-      "reward_li1_title2": "for 2 (All Sponsor)",
-      "reward_li1_subtitle1": "No. of Lots ",
-      "reward_li1_subtitle2": "10,000",
-      "reward_li2": " iPhone",
-      "reward_li3": " Mac Book Pro M3 - 16",
-      "reward_li4": "Cash Prize 5000$",
-      "reward_li5": "Trip to Maldive",
-      "reward_li6": "Cash Prize 20,000$",
-      "reward_li7": "Family Trip to Europe | 5 Pax",
-      "reward_li8": "Mercedes C200 Coupe",
-      "reward_li9": "Bentley Bentayga",
-      "reward_li10": "1 BHK Apartment in Dubai"
-    },
-    "tabs": {
-      "title1": "Your ",
-      "title2": "Client Satisfaction",
-      "title3": "is ",
-      "title4": "Guaranteed ",
-      "title5": "as They,",
-      "li1_title1": "... explore our ",
-      "li1_title2": "Signals Center",
-      "li1_1": "Real-time market insights",
-      "li1_2": "Integrated to your MT5",
-      "li1_3": "Unlimited features"
-    },
-    "becomeIb": {
-      "btnTxt": "BECOME AN IB NOW"
+      "celeb_l1": "Celebrate our ",
+      "celeb_l2": "2nd Anniversary ",
+      "celeb_l3": "with a",
+      "title": "$30 Gift Account",
+      "subtitle_l1": "Avail your free ",
+      "subtitle_l2": "and receive ",
+      "subtitle_l3": "$30 Live Account today",
+      "subtitle_l4": "No deposit required!",
+      "btnTxt": "Open Live Account"
     }
   }
 }
