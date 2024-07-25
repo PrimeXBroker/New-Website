@@ -48,32 +48,32 @@ const page = () => {
 
   const advantagesContent = [
     {
-      img: "/images/adv-logo1.svg",
-      hoveredImg: "/images/adv-logo1-hover.svg",
+      img: "/images/account-types/adv-logo1.svg",
+      hoveredImg: "/images/account-types/adv-logo1-hover.svg",
       title: t("advantages.adv1_h3"),
       description: t("advantages.adv1_p"),
     },
     {
-      img: "/images/adv-logo2.svg",
-      hoveredImg: "/images/adv-logo2-hover.svg",
+      img: "/images/account-types/adv-logo2.svg",
+      hoveredImg: "/images/account-types/adv-logo2-hover.svg",
       title: t("advantages.adv2_h3"),
       description: t("advantages.adv2_p"),
     },
     {
-      img: "/images/adv-logo3.svg",
-      hoveredImg: "/images/adv-logo3-hover.svg",
+      img: "/images/account-types/adv-logo3.svg",
+      hoveredImg: "/images/account-types/adv-logo3-hover.svg",
       title: t("advantages.adv3_h3"),
       description: t("advantages.adv3_p"),
     },
     {
-      img: "/images/adv-logo4.svg",
-      hoveredImg: "/images/adv-logo4-hover.svg",
+      img: "/images/account-types/adv-logo4.svg",
+      hoveredImg: "/images/account-types/adv-logo4-hover.svg",
       title: t("advantages.adv4_h3"),
       description: t("advantages.adv4_p"),
     },
     {
-      img: "/images/adv-logo5.svg",
-      hoveredImg: "/images/adv-logo5-hover.svg",
+      img: "/images/account-types/adv-logo5.svg",
+      hoveredImg: "/images/account-types/adv-logo5-hover.svg",
       title: t("advantages.adv5_h3"),
       description: t("advantages.adv5_p"),
     },

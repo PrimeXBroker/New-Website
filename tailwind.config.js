@@ -39,6 +39,9 @@ module.exports = {
         montserrat: ["var(--font-montserrat)"],
         kufi: ["var(--font-kufi)"],
       },
+      screens: {
+        xs: { max: "639px" },
+      },
     },
   },
   darkMode: "class",

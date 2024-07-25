@@ -1,0 +1,211 @@
+"use client";
+import React, { useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
+
+const RewardCards = () => {
+  const locale = useLocale();
+  const t = useTranslations("ib");
+  const [activeTab, setActiveTab] = useState(4);
+
+  const tabsContent = [
+    {
+      title: t("cards.reward_tab1"),
+    },
+    {
+      title: t("cards.reward_tab2"),
+    },
+    {
+      title: t("cards.reward_tab3"),
+    },
+    {
+      title: t("cards.reward_tab4"),
+    },
+    {
+      title: t("cards.reward_tab5"),
+    },
+    {
+      title: t("cards.reward_tab6"),
+    },
+    {
+      title: t("cards.reward_tab7"),
+    },
+    {
+      title: t("cards.reward_tab8"),
+    },
+    {
+      title: t("cards.reward_tab9"),
+    },
+    {
+      title: t("cards.reward_tab10"),
+    },
+  ];
+
+  const rewardsContent = [
+    {
+      title: t("cards.reward_li1"),
+      innerTitle1: t("cards.reward_li1_title1"),
+      innerTitle2: t("cards.reward_li1_title2"),
+      innerSubTitle1: t("cards.reward_li1_subtitle1"),
+      innerSubTitle2: t("cards.reward_li1_subtitle2"),
+      img: "/images/ib/ib-reward-li1.webp",
+    },
+    {
+      title: t("cards.reward_li2"),
+      innerTitle1: t("cards.reward_li1_title1"),
+      innerTitle2: t("cards.reward_li1_title2"),
+      innerSubTitle1: t("cards.reward_li1_subtitle1"),
+      innerSubTitle2: t("cards.reward_li1_subtitle2"),
+      img: "/images/ib/ib-reward-li2.webp",
+    },
+    {
+      title: t("cards.reward_li3"),
+      innerTitle1: t("cards.reward_li1_title1"),
+      innerTitle2: t("cards.reward_li1_title2"),
+      innerSubTitle1: t("cards.reward_li1_subtitle1"),
+      innerSubTitle2: t("cards.reward_li1_subtitle2"),
+      img: "/images/ib/ib-reward-li3.webp",
+    },
+    {
+      title: t("cards.reward_li4"),
+      innerTitle1: t("cards.reward_li1_title1"),
+      innerTitle2: t("cards.reward_li1_title2"),
+      innerSubTitle1: t("cards.reward_li1_subtitle1"),
+      innerSubTitle2: t("cards.reward_li1_subtitle2"),
+      img: "/images/ib/ib-reward-li4.webp",
+    },
+    {
+      title: t("cards.reward_li5"),
+      innerTitle1: t("cards.reward_li1_title1"),
+      innerTitle2: t("cards.reward_li1_title2"),
+      innerSubTitle1: t("cards.reward_li1_subtitle1"),
+      innerSubTitle2: t("cards.reward_li1_subtitle2"),
+      img: "/images/ib/ib-reward-li5.webp",
+    },
+    {
+      title: t("cards.reward_li6"),
+      innerTitle1: t("cards.reward_li1_title1"),
+      innerTitle2: t("cards.reward_li1_title2"),
+      innerSubTitle1: t("cards.reward_li1_subtitle1"),
+      innerSubTitle2: t("cards.reward_li1_subtitle2"),
+      img: "/images/ib/ib-reward-li6.webp",
+    },
+    {
+      title: t("cards.reward_li7"),
+      innerTitle1: t("cards.reward_li1_title1"),
+      innerTitle2: t("cards.reward_li1_title2"),
+      innerSubTitle1: t("cards.reward_li1_subtitle1"),
+      innerSubTitle2: t("cards.reward_li1_subtitle2"),
+      img: "/images/ib/ib-reward-li7.webp",
+    },
+    {
+      title: t("cards.reward_li8"),
+      innerTitle1: t("cards.reward_li1_title1"),
+      innerTitle2: t("cards.reward_li1_title2"),
+      innerSubTitle1: t("cards.reward_li1_subtitle1"),
+      innerSubTitle2: t("cards.reward_li1_subtitle2"),
+      img: "/images/ib/ib-reward-li8.webp",
+    },
+    {
+      title: t("cards.reward_li9"),
+      innerTitle1: t("cards.reward_li1_title1"),
+      innerTitle2: t("cards.reward_li1_title2"),
+      innerSubTitle1: t("cards.reward_li1_subtitle1"),
+      innerSubTitle2: t("cards.reward_li1_subtitle2"),
+      img: "/images/ib/ib-reward-li9.webp",
+    },
+    {
+      title: t("cards.reward_li10"),
+      innerTitle1: t("cards.reward_li1_title1"),
+      innerTitle2: t("cards.reward_li1_title2"),
+      innerSubTitle1: t("cards.reward_li1_subtitle1"),
+      innerSubTitle2: t("cards.reward_li1_subtitle2"),
+      img: "/images/ib/ib-reward-li10.webp",
+    },
+  ];
+
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+  };
+
+  return (
+    <section className="mb-20 mt-16">
+      <div className="container">
+        <div className="grid grid-cols-12">
+          <div className="col-span-12">
+            <div>
+              <div className="flex flex-row flex-wrap items-center justify-center mb-12 gap-3.5 lg:hidden">
+                {tabsContent.map((tab, index) => (
+                  <button
+                    key={index}
+                    className={`text-center text-white rounded-full py-3.5 px-7 outline-none ${
+                      activeTab === index
+                        ? "bg-yellow-400 border-yellow-400"
+                        : "bg-yellow-300"
+                    } transition-all duration-100 ease-linear`}
+                    onMouseEnter={() => handleTabClick(index)}
+                  >
+                    {tab.title}
+                  </button>
+                ))}
+              </div>
+              <div className="flex justify-center gap-3.5 p-0">
+                {rewardsContent.map((content, index) => (
+                  <div
+                    key={index}
+                    className={`${
+                      activeTab === index
+                        ? "w-full sm:max-w-[650px] lg:max-w-[400px] lg:h-[400px] p-[24px] relative overflow-hidden rounded-3xl"
+                        : "relative max-w-[70px] w-[100%] max-h-[400px] bg-accent rounded-3xl transition duration-150 ease-in hidden lg:block"
+                    } bg-accent`}
+                    onMouseEnter={() => handleTabClick(index)}
+                  >
+                    <div className="relative">
+                      <div
+                        className={`flex flex-col items-center justify-center cursor-pointer h-[400px] ${
+                          activeTab === index ? "hidden" : "block"
+                        }`}
+                      >
+                        <div className="-rotate-90">
+                          <h3 className="text-center text-xl font-semibold mb-0 text-secondary w-[350px]">
+                            {content.title}
+                          </h3>
+                        </div>
+                      </div>
+                      <div
+                        className={`${
+                          activeTab === index ? "block" : "hidden"
+                        } opacity-1 transition-opacity duration-300`}
+                      >
+                        <Image
+                          src={content.img}
+                          unoptimized={true}
+                          width="100"
+                          height="100"
+                          alt="img"
+                          className="w-full"
+                        />
+                        <h2 className="text-center text-3xl font-bold mt-4 text-secondary">
+                          {content.innerTitle1} <br />
+                          {content.innerTitle2}
+                        </h2>
+                        <h3 className="text-center text-xl font-light mt-3 text-secondary">
+                          {content.innerSubTitle1}
+                          <span className="font-bold">
+                            {content.innerSubTitle2}
+                          </span>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default RewardCards;
