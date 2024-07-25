@@ -27,14 +27,17 @@ const Banner = () => {
   const path = usePathname();
   const isAr = path.includes("/ar");
   return (
-    <section className="relative lg:h-[55vh] xl:h-[62vh] 2xl:h-[68vh] 3xl:h-[65vh] py-10 lg:py-16 xl:py-16 2xl:py-20 3xl:pt-40 4xl:pt-48 5xl:py-56">
+    <section className="relative h-[100vh] lg:h-[100vh] xl:h-[100vh] 2xl:h-[100vh] 3xl:h-[100vh] py-10 lg:py-16 xl:py-16 2xl:py-20 3xl:pt-40 4xl:pt-48 5xl:py-56">
       <video
         autoPlay
         loop
         muted
         className="block absolute inset-0 w-full h-full object-cover opacity-80"
       >
-        <source src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/videos/banner_video_v1.webm" type="video/webm" />
+        <source
+          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/videos/banner_video_v4.webm"
+          type="video/webm"
+        />
       </video>
       {/* <div
         className="lg:hidden absolute inset-0 w-full h-full bg-cover bg-center bg-opacity-20 py-16"

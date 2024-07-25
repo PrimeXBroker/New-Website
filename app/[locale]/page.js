@@ -1,5 +1,6 @@
 import BonusCalculator from "@/components/BonusCallculator";
 import Academy from "@/our_pages/home/Academy";
+import AccountTtpes from "@/our_pages/home/AccountTypes";
 import AdvancedPlatforms from "@/our_pages/home/AdvancedPlatforms";
 import Banner from "@/our_pages/home/Banner";
 import BecomeIB from "@/our_pages/home/BecomeIB";
@@ -37,8 +38,8 @@ export default function Home() {
     <>
       <Banner />
       <CompanyStats stats={statsOne} />
-      {/* <Hero /> */}
       <TradingOpportunities />
+      <AccountTtpes/>
       <AdvancedPlatforms />
       <BecomeIB />
       <Rewards />

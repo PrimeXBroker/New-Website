@@ -1,13 +1,30 @@
+"use client";
 import { Button } from "@nextui-org/react";
 import Image from "next/image";
-import React from "react";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const Rewards = () => {
+  useEffect(() => {
+    Aos.init({ disable: "mobile" });
+  }, []);
   return (
     <section className="py-12">
-      <h1 className="sectionHeading mt-8">Exciting Promotions & Rewards</h1>
+      <h1
+        className="sectionHeading mt-8"
+        data-aos-easing="ease-out"
+        data-aos-duration={1100}
+        data-aos="slide-up"
+      >
+        Exciting Promotions & Rewards
+      </h1>
       <div className="container mx-auto flex flex-col lg:flex-row my-12">
-        <div className="flex flex-col-reverse sm:flex-row bg-accent p-8 w-full lg:w-[50%] justify-evenly">
+        <div
+          className="flex flex-col-reverse sm:flex-row bg-accent p-8 w-full lg:w-[50%] justify-evenly"
+          data-aos-easing="ease-out"
+          data-aos-duration={1100}
+          data-aos="slide-up"
+        >
           <div className="flex flex-col">
             <h1 className="sectionHeading">
               $30
@@ -36,7 +53,12 @@ const Rewards = () => {
             />{" "}
           </div>
         </div>
-        <div className="flex flex-col-reverse sm:flex-row bg-secondary p-8 w-full lg:w-[50%] justify-evenly">
+        <div
+          className="flex flex-col-reverse sm:flex-row bg-secondary p-8 w-full lg:w-[50%] justify-evenly"
+          data-aos-easing="ease-out"
+          data-aos-duration={1100}
+          data-aos="slide-up"
+        >
           <div>
             <h1 className="sectionHeading text-white sm:text-left text-center pt-4 sm:pt-0">
               Trade to

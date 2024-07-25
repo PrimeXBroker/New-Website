@@ -145,7 +145,7 @@ const Footer = () => {
         <div className="py-10 flex flex-col md:flex-row">
           <div className="md:w-[30%] w-full flex flex-col justify-between">
             <div>
-              <p className="text-white text-center md:text-left text-md font-semibold">
+              <p className="text-white text-center md:text-left text-[13px] font-semibold">
                 We Accept:
               </p>
               <div className="flex flex-col items-center sm:justify-center sm:flex-row md:flex-col md:items-start md:pb-0 pb-4">
@@ -181,7 +181,7 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <p className="pb-5 text-white text-md md:text-left">
+              <p className="pb-5 text-white text-[13px] md:text-left">
                 Trading CFDs and FX Options <br className="hidden md:block" />{" "}
                 entail risk and could result in{" "}
                 <br className="hidden md:block" /> the loss of your capital
@@ -191,10 +191,10 @@ const Footer = () => {
           <div className="w-full md:w-[70%]">
             {footerNotice.map((el, index) => (
               <div key={index} className="pb-4">
-                <h2 className="text-primary text-lg font-semibold">
+                <h2 className="text-primary text-[15px] font-semibold">
                   {el.heading}
                 </h2>
-                <p className="text-white text-md">{el.paragraph}</p>
+                <p className="text-white text-[13px]">{el.paragraph}</p>
               </div>
             ))}
           </div>

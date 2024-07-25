@@ -6,7 +6,12 @@ import React from "react";
 const GetStarted = () => {
   const t = useTranslations("home.getStarted");
   return (
-    <section className="my-12 container bg-secondary flex p-10 flex-col md:flex-row">
+    <section
+      className="my-12 container bg-secondary flex p-10 flex-col md:flex-row"
+      data-aos-easing="ease-out"
+      data-aos-duration={1000}
+      data-aos="slide-up"
+    >
       <div className="md:w-[60%] w-full mb-5 md:mb-0">
         <h1 className="sectionHeading text-3xl text-white font-semibold text-center md:text-left">
           {t("title")}

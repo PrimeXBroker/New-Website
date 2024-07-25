@@ -12,11 +12,16 @@ module.exports = {
     extend: {
       animation: {
         "up-down": "upDown 2s ease-in-out infinite",
+        "float-bob": "floatBob 2s linear infinite",
       },
       keyframes: {
         upDown: {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
+        },
+        floatBob: {
+          "0%, 100%": { transform: "translateY(-30px)" },
+          "50%": { transform: "translateY(-15px)" },
         },
       },
       backgroundImage: {
@@ -29,14 +34,15 @@ module.exports = {
         secondary: "#3F3F3E",
         accent: "#E4E5E6",
         neutral: "#315d89",
+        dark: "#3F3F3E",
+        medium: "E4E5E6",
       },
       fontFamily: {
         montserrat: ["var(--font-montserrat)"],
         kufi: ["var(--font-kufi)"],
       },
-
-      height: {
-        '850': '850px',
+      screens: {
+        xs: { max: "639px" },
       },
     },
   },

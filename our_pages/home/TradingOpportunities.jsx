@@ -4,9 +4,21 @@ import Script from "next/script";
 
 const TradingOpportunities = () => {
   return (
-    <section className="py-12">
-      <h1 className="sectionHeading">Explore 500+ Trading Opportunities</h1>
-      <p className="sectionPara text-center py-4">
+    <section className="py-12 bg-accent relative">
+      <h1
+        className="sectionHeading"
+        data-aos-easing="ease-out"
+        data-aos-duration={1000}
+        data-aos="slide-up"
+      >
+        Explore 500+ Trading Opportunities
+      </h1>
+      <p
+        className="sectionPara text-center py-4"
+        data-aos-easing="ease-out"
+        data-aos-duration={1000}
+        data-aos="slide-up"
+      >
         Dive into a diverse array of assets including forex, indices,
         commodities, cryptocurrencies, and stocks
       </p>
@@ -18,7 +30,7 @@ const TradingOpportunities = () => {
                 src="https://fxpricing.com/fx-widget/ticker-tape-widget.php?id=1,2,3,5,14,20&border=show&speed=50&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=00000013&by-cr=28A745&sl-cr=DC3545&flags=circle&d_mode=compact-name&column=ask,bid,spread&lang=en&font=Arial, sans-serif"
                 width="100%"
                 height="85"
-                style={{ border: "unset" }}
+                style={{ border: "unset", position: "absolute", bottom: "0" }}
               ></iframe>
             </div>
           </Tab>
@@ -28,7 +40,7 @@ const TradingOpportunities = () => {
                 src="https://fxpricing.com/fx-widget/ticker-tape-widget.php?id=1,2,3,5,14,20&border=show&speed=50&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=00000013&by-cr=28A745&sl-cr=DC3545&flags=circle&d_mode=compact-name&column=ask,bid,spread&lang=en&font=Arial, sans-serif"
                 width="100%"
                 height="85"
-                style={{ border: "unset" }}
+                style={{ border: "unset", position: "absolute", bottom: "0" }}
               ></iframe>
             </div>
           </Tab>
@@ -38,7 +50,7 @@ const TradingOpportunities = () => {
                 src="https://fxpricing.com/fx-widget/ticker-tape-widget.php?id=1,2,3,5,14,20&border=show&speed=50&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=00000013&by-cr=28A745&sl-cr=DC3545&flags=circle&d_mode=compact-name&column=ask,bid,spread&lang=en&font=Arial, sans-serif"
                 width="100%"
                 height="85"
-                style={{ border: "unset" }}
+                style={{ border: "unset", position: "absolute", bottom: "0" }}
               ></iframe>
             </div>
           </Tab>
@@ -48,7 +60,7 @@ const TradingOpportunities = () => {
                 src="https://fxpricing.com/fx-widget/ticker-tape-widget.php?id=1,2,3,5,14,20&border=show&speed=50&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=00000013&by-cr=28A745&sl-cr=DC3545&flags=circle&d_mode=compact-name&column=ask,bid,spread&lang=en&font=Arial, sans-serif"
                 width="100%"
                 height="85"
-                style={{ border: "unset" }}
+                style={{ border: "unset", position: "absolute", bottom: "0" }}
               ></iframe>
             </div>
           </Tab>
@@ -58,7 +70,7 @@ const TradingOpportunities = () => {
                 src="https://fxpricing.com/fx-widget/ticker-tape-widget.php?id=1,2,3,5,14,20&border=show&speed=50&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=00000013&by-cr=28A745&sl-cr=DC3545&flags=circle&d_mode=compact-name&column=ask,bid,spread&lang=en&font=Arial, sans-serif"
                 width="100%"
                 height="85"
-                style={{ border: "unset" }}
+                style={{ border: "unset", position: "absolute", bottom: "0" }}
               ></iframe>
             </div>
           </Tab>

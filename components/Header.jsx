@@ -8,6 +8,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/navbar";
+
 import Logo from "@/public/images/logos/logo.webp";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,16 +17,24 @@ import LocaleLink from "./LocaleLink";
 import { usePathname } from "next/navigation";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { useTranslations } from "next-intl";
-const Header = () => {
+import GradiantButton from "./GradiantButton";
+import {
+  DropdownTrigger,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
+} from "@nextui-org/dropdown";
+import { Button } from "@nextui-org/react";
+import ThemeToggle from "./ThemeToggle";
+
+const Header = ({ locale }) => {
   const t = useTranslations("home.menu");
   const pathname = usePathname();
+  const pathnameWithoutLocale = pathname.replace(`/${locale}`, "");
   const [buttonText, setButtonText] = useState("EN");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isRotated, setIsRotated] = useState(false);
   const menuItems = [
-    {
-      name: "Home",
-      link: "/",
-    },
     {
       name: "Home",
       link: "/",
@@ -56,8 +65,7 @@ const Header = () => {
     },
   ];
 
-  const NavHoverEffect= `relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center`
-
+  const NavHoverEffect = `relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center`;
   const currentLocale = pathname.split("/")[1];
   const isLocaleOnly = pathname === `/${currentLocale}`;
   const restOfPath = isLocaleOnly ? "" : pathname.split("/").slice(2).join("/");
@@ -73,13 +81,16 @@ const Header = () => {
     setButtonText(language);
     localStorage.setItem("language", language);
   };
+  const handleButtonClick = () => {
+    setIsRotated(!isRotated);
+  };
 
   return (
     <Navbar
       maxWidth="xl"
       onMenuOpenChange={setIsMenuOpen}
       isBordered
-      className="py-5"
+      // className="py-5"
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -93,53 +104,135 @@ const Header = () => {
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden lg:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link className={NavHoverEffect} color="foreground" href="/">
+        <NavbarItem className="text-sm">
+          <Link
+            className={`${
+              pathnameWithoutLocale === "" ? "active_link" : ""
+            } ${NavHoverEffect}`}
+            color="foreground"
+            href="/"
+          >
             Home
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <LocaleLink href="/trading" className={NavHoverEffect}>Trading</LocaleLink>
+
+        <Dropdown>
+          <NavbarItem className="text-sm">
+            <DropdownTrigger>
+              <Button
+                onClick={handleButtonClick}
+                disableRipple
+                className={`p-0 bg-transparent data-[hover]:bg-transparent gap-0 rotatableIcon`}
+                endContent={
+                  <RiArrowDownSLine
+                    size={25}
+                    className={isRotated ? "rotated" : ""}
+                  />
+                }
+                radius="sm"
+                variant="light"
+              >
+                Trading
+              </Button>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu>
+            <DropdownItem>
+              <div className="flex w-[100%] h-[300px] justify-between cursor-default hover:bg-transparent text-[16px] pt-5">
+                <ul className="w-[30%]">
+                  <p className="font-semibold pb-4">Instruments</p>
+                  <div className="flex flex-col gap-3">
+                    <li>Forex</li>
+                    <li>Metals</li>
+                    <li>Indicies</li>
+                    <li>Commodities</li>
+                    <li>Stocks</li>
+                    <li>Cryptocurrencies</li>
+                  </div>
+                </ul>
+                <ul className="w-[30%]">
+                  <p className="font-semibold pb-4"> Account Types</p>
+                  <div className="flex flex-col gap-3">
+                    <li>Standard Account</li>
+                    <li>Narrow Account</li>
+                    <li>Zero Account</li>
+                    <li>Crypto Account</li>
+                    <li>Delete Account Request</li>
+                  </div>
+                </ul>
+                <ul className="w-[30%]">
+                  <p className="font-semibold pb-4"> Learn The Trading</p>
+                  <div className="flex flex-col gap-3 text-wrap">
+                    <li>First Step:Introduction to financial market</li>
+                    <li>
+                      Second Step:Basic Info about broker and technical and
+                      fundamental analysis
+                    </li>
+                    <li>Third Step:Proffesional Strategies for Trading</li>
+                  </div>
+                </ul>
+              </div>
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+        <NavbarItem className="text-sm">
+          <LocaleLink
+            href="/platform"
+            className={`${
+              pathnameWithoutLocale === "/platform" ? "active_link" : ""
+            } ${NavHoverEffect}`}
+          >
+            Platform
+          </LocaleLink>
         </NavbarItem>
-        <NavbarItem>
-          <LocaleLink href="/platform" className={NavHoverEffect}>Platform</LocaleLink>
+        <NavbarItem className="text-sm">
+          <LocaleLink
+            href="/partners"
+            className={`${
+              pathnameWithoutLocale === "/partners" ? "active_link" : ""
+            } ${NavHoverEffect}`}
+          >
+            Partners
+          </LocaleLink>
         </NavbarItem>
-        <NavbarItem>
-          <LocaleLink href="/partners" className={NavHoverEffect}>Partners</LocaleLink>
+        <NavbarItem className="text-sm">
+          <LocaleLink
+            href="/trade-to-Win"
+            className={`${
+              pathnameWithoutLocale === "/trade-to-Win" ? "active_link" : ""
+            } ${NavHoverEffect}`}
+          >
+            Trade To Win
+          </LocaleLink>
         </NavbarItem>
-        <NavbarItem>
-          <LocaleLink href="/trade-to-Win" className={NavHoverEffect}>Trade To Win</LocaleLink>
+        <NavbarItem className="text-sm">
+          <LocaleLink
+            href="/education"
+            className={`${
+              pathnameWithoutLocale === "/education" ? "active_link" : ""
+            } ${NavHoverEffect}`}
+          >
+            Education
+          </LocaleLink>
         </NavbarItem>
-        <NavbarItem>
-          <LocaleLink href="/education" className={NavHoverEffect}>Education</LocaleLink>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#" className={NavHoverEffect}>
-          
+        <NavbarItem className="text-sm">
+          <LocaleLink
+            color="foreground"
+            href="/gift-account"
+            className={`${
+              pathnameWithoutLocale === "/gift-account" ? "active_link" : ""
+            } ${NavHoverEffect}`}
+          >
             Gift Account
-          </Link>
+          </LocaleLink>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem>
-          <Link href="#">
-            <button className="group rounded-full relative min-h-[40px] w-32 overflow-hidden border border-[#3F3F3E] bg-secondary text-[#FFD000] shadow-2xl transition-all before:absolute before:left-0 before:top-0 before:h-0 before:w-1/4 before:bg-[#FFD000] before:duration-500 after:absolute after:bottom-0 after:right-0 after:h-0 after:w-1/4 after:bg-[#FFD000] after:duration-500 hover:text-white hover:before:h-full hover:after:h-full">
-              <span className="top-0 flex h-full w-full items-center justify-center before:absolute before:bottom-0 before:left-1/4 before:z-0 before:h-0 before:w-1/4 before:bg-[#FFD000] before:duration-500 after:absolute after:right-1/4 after:top-0 after:z-0 after:h-0 after:w-1/4 after:bg-[#FFD000] after:duration-500 hover:text-secondary hover:font-semibold group-hover:before:h-full group-hover:after:h-full"></span>
-              <span className="absolute bottom-0 left-0 right-0 top-0 z-10 flex h-full w-full items-center justify-center group-hover:text-secondary group-hover:font-semibold">
-                {t("register")}
-              </span>
-            </button>
-          </Link>
+        <NavbarItem className="text-sm hidden lg:block">
+          <GradiantButton name="Register" />
         </NavbarItem>
-        <NavbarItem>
-          <Link href="#">
-            <button className="group rounded-full relative min-h-[40px] w-32 overflow-hidden border border-[#3F3F3E] bg-secondary text-[#FFD000] shadow-2xl transition-all before:absolute before:left-0 before:top-0 before:h-0 before:w-1/4 before:bg-[#FFD000] before:duration-500 after:absolute after:bottom-0 after:right-0 after:h-0 after:w-1/4 after:bg-[#FFD000] after:duration-500 hover:text-white hover:before:h-full hover:after:h-full">
-              <span className="top-0 flex h-full w-full items-center justify-center before:absolute before:bottom-0 before:left-1/4 before:z-0 before:h-0 before:w-1/4 before:bg-[#FFD000] before:duration-500 after:absolute after:right-1/4 after:top-0 after:z-0 after:h-0 after:w-1/4 after:bg-[#FFD000] after:duration-500 hover:text-secondary hover:font-semibold group-hover:before:h-full group-hover:after:h-full"></span>
-              <span className="absolute bottom-0 left-0 right-0 top-0 z-10 flex h-full w-full items-center justify-center group-hover:text-secondary group-hover:font-semibold">
-                Login
-              </span>
-            </button>
-          </Link>
+        <NavbarItem className="text-sm hidden lg:block">
+          <GradiantButton name="Login" />
         </NavbarItem>
         <NavbarItem>
           <div className="dropdown">
@@ -157,7 +250,12 @@ const Header = () => {
                 onClick={() => handleClick("EN")}
               >
                 <div className="flex gap-2">
-                  <Image src="/images/flags/gb.svg" width="30" height="8" />
+                  <Image
+                    src="/images/flags/gb.svg"
+                    width="30"
+                    height="8"
+                    alt="img"
+                  />
                   <p>EN</p>
                 </div>
               </Link>
@@ -170,12 +268,20 @@ const Header = () => {
                 onClick={() => handleClick("AR")}
               >
                 <div className="flex gap-2">
-                  <Image src="/images/flags/arab.svg" width="30" height="8" />
+                  <Image
+                    src="/images/flags/arab.svg"
+                    width="30"
+                    height="8"
+                    alt="img"
+                  />
                   <p>AR</p>
                 </div>
               </Link>
             </div>
           </div>
+        </NavbarItem>
+        <NavbarItem>
+          <ThemeToggle />
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu className="h-56 !important">
@@ -186,6 +292,12 @@ const Header = () => {
             </LocaleLink>
           </NavbarMenuItem>
         ))}
+        <NavbarMenuItem>
+          <div className="flex gap-4">
+            <GradiantButton name="Register" />
+            <GradiantButton name="Login" />
+          </div>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );
