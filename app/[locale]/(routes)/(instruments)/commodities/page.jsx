@@ -68,33 +68,28 @@ const Commodities = () => {
   const forexFaqs = [
     {
       key: 1,
-      question: "What Does it Mean to Trade an Index?",
-      answer:
-        "Trading an index involves buying or selling a specific stock market index, which measures the performance of a group of stocks within a particular market.",
+      question: t("faq.question_1"),
+      answer: t("faq.answer_1"),
     },
     {
       key: 2,
-      question: "Can I Profit from Index Trading?",
-      answer:
-        "Yes, you can profit from index trading, but there is also the potential for losses, similar to trading other instruments.",
+      question: t("faq.question_2"),
+      answer: t("faq.answer_2"),
     },
     {
       key: 3,
-      question: "Which Are the Most Popular Stock Indices?",
-      answer:
-        "Popular stock indices include the S&P 500, Nasdaq, Dow Jones, FTSE 100, Nifty 50, and Nikkei 225.",
+      question: t("faq.question_3"),
+      answer: t("faq.answer_3"),
     },
     {
       key: 4,
-      question: "What Moves the Index Price?",
-      answer:
-        "Index prices are influenced by the price changes of the index's constituent stocks.",
+      question: t("faq.question_4"),
+      answer: t("faq.answer_4"),
     },
     {
       key: 5,
-      question: "What is the Best Time to Trade Indices?",
-      answer:
-        "The best time to trade indices is during the respective market's trading hours. For example, trade the Nasdaq when the US markets are open. Whether to trade stocks or indices depends on an individual's risk appetite and financial goals. There is no universal answer.",
+      question: t("faq.question_5"),
+      answer: t("faq.answer_5"),
     },
   ];
   return (

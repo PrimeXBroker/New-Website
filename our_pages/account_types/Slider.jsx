@@ -264,8 +264,8 @@ const Slider = () => {
               {accountsTable.map((acc, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <Link href={acc.accountLink} target="_blank">
-                      <a href={acc.accountLink} target="_blank">
+                    <Link legacyBehavior href={acc.accountLink} target="_blank">
+                      <a legacyBehavior href={acc.accountLink} target="_blank">
                         <div className="relative z-5 mb-12 flex h-24 items-center justify-center rounded-3xl swiper-account-title-box">
                           <div className="text-3xl text-center text-white font-semibold">
                             <h3 className="mt-0">{acc.title}</h3>

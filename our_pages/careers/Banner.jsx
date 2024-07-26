@@ -1,7 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const Banner = () => {
+  const t = useTranslations("careers.hero");
+
   return (
     <section className="">
       <div className="bg-secondary">
@@ -11,17 +14,16 @@ const Banner = () => {
               className="text-primary text-4xl md:text-5xl text-center md:text-left font-semibold"
               style={{ lineHeight: "45px", letterSpacing: "1px" }}
             >
-              Careers
+              {t("title")}
             </h1>
             <p
               className="text-white md:text-lg text-medium md:max-w-xl text-center md:text-left"
               style={{ letterSpacing: "0.7px" }}
             >
-              If you're passionate about trading, innovation, and making an
-              impact, you've come to the right place.
+              {t("description")}
             </p>
             <button className="bg-primary px-4 py-4 font-semibold rounded-full w-[200px] shadow-xl block md:m-0 mx-auto">
-              Apply Now
+              {t("apply_btn")}
             </button>
           </div>
           <div className="flex">

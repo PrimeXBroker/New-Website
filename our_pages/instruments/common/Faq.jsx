@@ -1,9 +1,12 @@
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
+import { useTranslations } from "next-intl";
 
 const Faq = ({ forexFaqs }) => {
+  const t = useTranslations("commodities.faq");
+
   return (
     <section className="container py-12">
-      <h1 className="sectionHeading mb-12">Frequently Asked Questions</h1>
+      <h1 className="sectionHeading mb-12">{t("title")}</h1>
       <Accordion
         variant="bordered"
         itemClasses={{
