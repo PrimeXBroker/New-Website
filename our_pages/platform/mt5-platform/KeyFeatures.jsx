@@ -19,7 +19,6 @@ const KeyFeatures = () => {
           description: "Intuitive and easy-to-navigate interface suitable for traders of all levels.",
           imgUrl:"/images/platform/mt-5/user.svg",
           imgHoverUrl:"/images/platform/mt-5/user.svg"
-
         },
         {
           title: "Algorithmic Trading",
@@ -47,10 +46,10 @@ const KeyFeatures = () => {
     <div className="flex flex-col items-center justify-center bg-secondary text-white">
       <div className="flex items-center flex-col justify-center space-x-6">
         <div>
-          <p className="text-xl font-semibold pb-8">Key Features of MT5</p>
+          <h1 className="sectionHeading text-white p-12">Key Features of MT5</h1>
           
         </div>
-        <div className="flex space-x-6">
+        <div className="flex space-x-6 flex-wrap">
           {features.map((feature, index) => (
              <div
              onMouseEnter={() => handleIconEnter(index)}

@@ -278,3 +278,15 @@
 .satisfaction-tabs [data-slot="cursor"] {
   border-radius: 100px;
 }
+.phone-number-input .PhoneInputCountrySelect {
+  background-color: #fff;
+  border: none;
+  outline: none;
+}
+.PhoneInputInput{
+  border-radius: 3px;
+  color: #3f3f3e;
+  outline: none;
+  border:none; 
+ padding: 8px 16px;
+}
