@@ -24,9 +24,9 @@ const ContactForm = () => {
       first_name: "",
       last_name: "",
       email: "",
-      phone: "",
+      contact: "",
       country: "",
-      question_type: "",
+      qtype: "",
       message: "",
     },
     validationSchema: Yup.object({
@@ -46,18 +46,26 @@ const ContactForm = () => {
         .email("Invalid email address")
         .required("email is required!"),
       country: Yup.string().required("country is required!"),
-      question_type: Yup.string().required("question type is required!"),
+      qtype: Yup.string().required("question type is required!"),
       message: Yup.string().required("message is required!"),
     }),
     validate: (values) => {
       const errors = {};
-      if (!values.phone) {
-        errors.phone = "phone is required";
+      if (!values.contact) {
+        errors.contact = "phone is required";
       }
       return errors;
     },
     onSubmit: async (values) => {
-      console.log(values);
+      const updatedValues = {
+        name: `${values.first_name} ${values.last_name}`,
+        email: values.email,
+        contact: values.contact,
+        country: values.country,
+        qtype: values.qtype,
+        message: values.message
+      }
+      console.log(updatedValues);
     },
   });
   return (
@@ -124,10 +132,10 @@ const ContactForm = () => {
           </div>
           <div className="flex items-center gap-2">
             <PhoneInput
-              onChange={(value) => formik.setFieldValue("phone", value)}
+              onChange={(value) => formik.setFieldValue("contact", value)}
               onBlur={formik.handleBlur}
-              name="phone"
-              value={formik.values.phone}
+              name="contact"
+              value={formik.values.contact}
               defaultCountry={originCountry}
               className="w-[100%]"
             />
@@ -157,12 +165,12 @@ const ContactForm = () => {
           </div>
           <div className="flex flex-cols-1">
                   <select
-                    className={`bg-white text-secondary w-full placeholder:text-accent capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[5px] ${formik.touched.question_type && formik.errors.question_type
+                    className={`bg-white text-secondary w-full placeholder:text-accent capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[5px] ${formik.touched.qtype && formik.errors.qtype
                       ? "border-2 border-red-600"
                       : ""
                       }`}
-                    name="question_type"
-                    value={formik.values.question_type}
+                    name="qtype"
+                    value={formik.values.qtype}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                   >
