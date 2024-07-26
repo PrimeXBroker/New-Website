@@ -135,7 +135,7 @@ const ContactForm = () => {
           <div className="grid grid-cols-1">
                 <div className="flex flex-col">
                   <select
-                    className={`bg-white text-secondary placeholder:text-accent capitalize  py-2 px-4 rounded-[3  px] ${formik.touched.country && formik.errors.country
+                    className={`bg-white text-secondary placeholder:text-accent capitalize  py-2 px-4 rounded-[5px] ${formik.touched.country && formik.errors.country
                       ? "border-2 border-red-600"
                       : ""
                       }`}
@@ -157,12 +157,12 @@ const ContactForm = () => {
           </div>
           <div className="flex flex-cols-1">
                   <select
-                    className={`bg-white text-secondary w-full placeholder:text-accent capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[3px] ${formik.touched.platform && formik.errors.platform
+                    className={`bg-white text-secondary w-full placeholder:text-accent capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[5px] ${formik.touched.question_type && formik.errors.question_type
                       ? "border-2 border-red-600"
                       : ""
                       }`}
                     name="question_type"
-                    value={formik.values.platform}
+                    value={formik.values.question_type}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                   >
@@ -177,7 +177,22 @@ const ContactForm = () => {
                   </select>
           </div>
           <div className="flex flex-col-1">
-            <textarea placeholder="Message" rows='8' cols='24' className="w-full outline-none border-none px-4 py-2 rounded-md"/>          
+            <textarea 
+            name="message" 
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.message}
+            placeholder="Message" 
+            rows='8' 
+            cols='24' 
+            className={`w-full outline-none border-none px-4 py-2 rounded-md ${
+              formik.touched.message && formik.errors.message
+                ? "border-2 border-red-600"
+                : ""
+            }  `}  />          
+          </div>
+          <div className="text-center">
+            <button className="bg-primary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg">submit</button>
           </div>
         </form>
       </div>
