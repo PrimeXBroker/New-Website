@@ -45,7 +45,7 @@ const Header = ({ locale }) => {
     },
     {
       name: "Platform",
-      link: "/platform",
+      link: "/platform/mt5-platform",
     },
     {
       name: "Partners",
@@ -136,9 +136,9 @@ const Header = ({ locale }) => {
               </Button>
             </DropdownTrigger>
           </NavbarItem>
-          <DropdownMenu>
-            <DropdownItem>
-              <div className="flex w-[100%] h-[300px] justify-between cursor-default hover:bg-transparent text-[16px] pt-5">
+          <DropdownMenu className="hover:bg-transparent">
+            <DropdownItem className="hover:bg-transparent">
+              <div className="flex w-[100%] h-[300px] justify-between cursor-default hover:bg-white bg:border-0  text-[16px] pt-5">
                 <ul className="w-[30%]">
                   <p className="font-semibold pb-4">Instruments</p>
                   <div className="flex flex-col gap-3">
@@ -177,9 +177,9 @@ const Header = ({ locale }) => {
         </Dropdown>
         <NavbarItem className="text-sm">
           <LocaleLink
-            href="/platform"
+            href="/platform/mt5-platform"
             className={`${
-              pathnameWithoutLocale === "/platform" ? "active_link" : ""
+              pathnameWithoutLocale === "/platform/mt5-platform" ? "active_link" : ""
             } ${NavHoverEffect}`}
           >
             Platform
@@ -187,7 +187,7 @@ const Header = ({ locale }) => {
         </NavbarItem>
         <NavbarItem className="text-sm">
           <LocaleLink
-            href="/partners"
+            href="/ib-program"
             className={`${
               pathnameWithoutLocale === "/partners" ? "active_link" : ""
             } ${NavHoverEffect}`}

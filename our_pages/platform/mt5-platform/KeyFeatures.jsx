@@ -46,7 +46,7 @@ const KeyFeatures = () => {
     <div className="flex flex-col items-center justify-center bg-secondary text-white">
       <div className="flex items-center flex-col justify-center space-x-6">
         <div>
-          <p className="text-xl font-semibold pb-8">Key Features of MT5</p>
+          <h1 className="sectionHeading text-white p-12">Key Features of MT5</h1>
           
         </div>
         <div className="flex space-x-6 flex-wrap">
