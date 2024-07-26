@@ -43,7 +43,7 @@ const HaveQuestion = () => {
     },
   ];
   return (
-    <section className="bg-accent py-12 ">
+    <section className="bg-accent pt-12 pb-24">
       <div className="max-w-2xl mx-auto">
         <h1
           className="text-secondary md:text-2xl text-lg font-semibold text-center"

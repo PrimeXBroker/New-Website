@@ -1,72 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import {
   FaFacebook,
   FaYoutube,
   FaLinkedinIn,
   FaInstagram,
   FaTelegram,
+  FaRegEye,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-
-const footerLinks = [
-  {
-    column: {
-      heading: "Company",
-      links: [
-        { name: "about us", href: "#" },
-        { name: "Contact us", href: "#" },
-        { name: "Awards", href: "#" },
-        { name: "Press release", href: "#" },
-        { name: "Careers", href: "#" },
-      ],
-    },
-  },
-  {
-    column: {
-      heading: "Rules",
-      links: [
-        { name: "Privacy Policy", href: "#" },
-        { name: "Risk Disclosure", href: "#" },
-        { name: "Client Agreement", href: "#" },
-        { name: "Terms and Conditions", href: "#" },
-      ],
-    },
-  },
-  {
-    column: {
-      heading: "Services",
-      links: [
-        { name: "Account Types", href: "#" },
-        { name: "Introducing Brokers", href: "#" },
-        { name: "Instrumentsy", href: "#" },
-      ],
-    },
-  },
-  {
-    column: {
-      heading: "Platform",
-      links: [
-        { name: "MT5 for Desktop", href: "#" },
-        { name: "MT5 for Android", href: "#" },
-        { name: "MT5 for IOS", href: "#" },
-      ],
-    },
-  },
-  {
-    column: {
-      heading: "Location",
-      links: [
-        {
-          name: "South Africa HQ: Suit no 8 , First floor, Katherine and West building ,114 West Street, Sandown ,Sandton 2196, South Africa.",
-          href: "#",
-        },
-        { name: "UAE Rep. Office: Office 2401, Westburry Tower", href: "#" },
-        { name: "1, Business Bay, Dubai, UAE.", href: "#" },
-      ],
-    },
-  },
-];
+import { FaDownload } from "react-icons/fa6";
+import CustomModal from "./Modal";
+import { Button } from "@nextui-org/button";
+import LocaleLink from "./LocaleLink";
 
 const footerNotice = [
   {
@@ -92,8 +41,81 @@ const footerNotice = [
 ];
 
 const Footer = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = (e) => {
+    e.preventDefault();
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+  const handleModalOpenChange = (isOpen) => {
+    setIsModalOpen(isOpen);
+  };
+  const footerLinks = [
+    {
+      column: {
+        heading: "Company",
+        links: [
+          { name: "about us", href: "#" },
+          { name: "Contact us", href: "/contact" },
+          { name: "Awards", href: "/awards" },
+          { name: "Press release", href: "#" },
+          { name: "Careers", href: "/careers" },
+        ],
+      },
+    },
+    {
+      column: {
+        heading: "Rules",
+        links: [
+          { name: "Privacy Policy", href: "#" },
+          { name: "Risk Disclosure", href: "#" },
+          { name: "Client Agreement", href: "#" },
+          { name: "Terms and Conditions", href: "#" },
+        ],
+      },
+    },
+    {
+      column: {
+        heading: "Services",
+        links: [
+          { name: "Account Types", href: "/account-types" },
+          { name: "Introducing Brokers", href: "/ib-program" },
+          { name: "Instrumentsy", href: "#" },
+        ],
+      },
+    },
+    {
+      column: {
+        heading: "Platform",
+        links: [
+          { name: "MT5 for Desktop", href: "#" },
+          { name: "MT5 for Android", href: "#" },
+          { name: "MT5 for IOS", href: "#" },
+        ],
+      },
+    },
+    {
+      column: {
+        heading: "Location",
+        links: [
+          {
+            name: "South Africa HQ: Suit no 8 , First floor, Katherine and West building ,114 West Street, Sandown ,Sandton 2196, South Africa.",
+            href: "#",
+          },
+          { name: "UAE Rep. Office: Office 2401, Westburry Tower", href: "#" },
+          { name: "1, Business Bay, Dubai, UAE.", href: "#" },
+        ],
+      },
+    },
+  ];
+
   return (
     <footer className="bg-secondary">
+      <button onClick={handleOpenModal}>Open Modal</button>
       <div className="container flex flex-col pt-10">
         <div className="flex flex-col sm:flex-row justify-between pb-10 border-b border-b-accent">
           <div>
@@ -133,11 +155,19 @@ const Footer = () => {
                 {el.column.heading}
               </p>
               <ul className="pt-0 md:pt-2">
-                {el.column.links.map((el, index) => (
-                  <Link key={index} href={el.href}>
-                    <li className="text-white py-1">{el.name}</li>
-                  </Link>
-                ))}
+                {el.column.links.map((link, linkIndex) =>
+                  link.name === "Client Agreement" ? (
+                    <li key={linkIndex} className="text-white py-1">
+                      <Link href={link.href} onClick={handleOpenModal}>
+                        {link.name}
+                      </Link>
+                    </li>
+                  ) : (
+                    <li key={linkIndex} className="text-white py-1">
+                      <LocaleLink href={link.href}>{link.name}</LocaleLink>
+                    </li>
+                  )
+                )}
               </ul>
             </div>
           ))}
@@ -200,6 +230,30 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <CustomModal
+        isOpen={isModalOpen}
+        onOpen={handleOpenModal}
+        onClose={handleCloseModal}
+        onOpenChange={handleModalOpenChange}
+        modalPlacement="auto"
+      >
+        <div className="flex justify-evenly">
+          <Button
+            as="a"
+            href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/client_agreement.pdf"
+            endContent={<FaDownload size={20} />}
+          >
+            Download as PDF
+          </Button>
+          <Button
+            as="a"
+            href="https://drive.google.com/file/d/1mNGtSnTp8h11o8exI8dVqfxsfQGD41MU/view?usp=sharing"
+            endContent={<FaRegEye size={20} target="_blank" />}
+          >
+            View Document
+          </Button>
+        </div>
+      </CustomModal>
     </footer>
   );
 };

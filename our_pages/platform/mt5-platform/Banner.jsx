@@ -3,8 +3,8 @@ import React from 'react'
 
 const Banner = () => {
   return (
-    <section className='bg-secondary '>
-      <div className="container flex flex-col md:flex-row justify-center items-center py-12 lg:md:text-left text-center h-[80vh]">
+    <section className="bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/background.jpg')]  bg-cover bg-no-repeat">
+      <div className="container flex flex-col md:flex-row justify-center items-center py-12 lg:md:text-left text-center h-[80vh] ">
         <div className='md:w-[40%]'>
           <h1 className='text-primary md:text-3xl font-semibold mb-5' style={{letterSpacing:'1px'}}>MetaTrader 5 (MT5)</h1>
           <p className='text-white text-lg font-[500]' style={{letterSpacing:'1.4px'}}>The Ultimate Trading Platform</p>
