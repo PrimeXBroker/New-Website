@@ -92,9 +92,9 @@ const Footer = () => {
       column: {
         heading: "Platform",
         links: [
-          { name: "MT5 for Desktop", href: "#" },
-          { name: "MT5 for Android", href: "#" },
-          { name: "MT5 for IOS", href: "#" },
+          { name: "MT5 for Desktop", target: "_blank", href: "https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe" },
+          { name: "MT5 for Android", target: "_blank", href: "https://download.mql5.com/cdn/mobile/mt5/android?server=PrimeXBroker-Demo,PrimeXBroker-Live" },
+          { name: "MT5 for IOS", target: "_blank", href: "https://download.mql5.com/cdn/mobile/mt5/ios?server=PrimeXBroker-Live" },
         ],
       },
     },
@@ -112,6 +112,7 @@ const Footer = () => {
       },
     },
   ];
+
 
   return (
     <footer className="bg-secondary">
@@ -154,21 +155,38 @@ const Footer = () => {
               <p className="text-primary font-semibold md:pt-0 pt-5">
                 {el.column.heading}
               </p>
-              <ul className="pt-0 md:pt-2">
-                {el.column.links.map((link, linkIndex) =>
-                  link.name === "Client Agreement" ? (
-                    <li key={linkIndex} className="text-white py-1">
-                      <Link href={link.href} onClick={handleOpenModal}>
-                        {link.name}
-                      </Link>
-                    </li>
-                  ) : (
-                    <li key={linkIndex} className="text-white py-1">
-                      <LocaleLink href={link.href}>{link.name}</LocaleLink>
-                    </li>
-                  )
-                )}
-              </ul>
+
+              {
+                el.column.heading === "Platform" ?
+                  <ul className="pt-0 md:pt-2">
+                    {console.log(el.column.heading, "el.column.heading")}
+                    {el.column.links.map((link, linkIndex) => {
+                      console.log("el.column.heading -----");
+                      return <li key={linkIndex} className="text-white py-1">
+                        <a target="_blank" href={link.href}>{link.name}</a>
+                      </li>
+                    }
+
+                    )}
+                  </ul> :
+                  <ul className="pt-0 md:pt-2">
+                    {el.column.links.map((link, linkIndex) =>
+                      link.name === "Client Agreement" ? (
+                        <li key={linkIndex} className="text-white py-1">
+                          <Link href={link.href} onClick={handleOpenModal}>
+                            {link.name}
+                          </Link>
+                        </li>
+                      ) : (
+                        <li key={linkIndex} className="text-white py-1">
+                          <LocaleLink href={link.href}>{link.name}</LocaleLink>
+                        </li>
+                      )
+                    )}
+                  </ul>
+
+              }
+
             </div>
           ))}
         </div>
