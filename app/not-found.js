@@ -1,10 +1,10 @@
-import { createTranslator } from "next-intl";
+// import { createTranslator } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-
+// import { notFound } from "next/navigation"
 export async function generateMetadata({params:{locale}}){
-  const messages = (await import(`./../messages/${locale}.json`)).default;
-  const t = createTranslator({ locale, messages });
+  // const messages = (await import(`../messages/${locale}.json`)).default;
+  // const t = createTranslator({ locale, messages });
   // const url =
   // locale != "en"
   //   ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/15-deposit-bonus`
