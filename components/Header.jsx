@@ -45,7 +45,7 @@ const Header = ({ locale }) => {
     },
     {
       name: "Platform",
-      link: "/platform",
+      link: "/platform/mt5-platform",
     },
     {
       name: "Partners",
@@ -176,9 +176,9 @@ const Header = ({ locale }) => {
         </Dropdown>
         <NavbarItem className="text-sm">
           <LocaleLink
-            href="/platform"
+            href="/platform/mt5-platform"
             className={`${
-              pathnameWithoutLocale === "/platform" ? "active_link" : ""
+              pathnameWithoutLocale === "/platform/mt5-platform" ? "active_link" : ""
             } ${NavHoverEffect}`}
           >
             Platform
@@ -186,7 +186,7 @@ const Header = ({ locale }) => {
         </NavbarItem>
         <NavbarItem className="text-sm">
           <LocaleLink
-            href="/partners"
+            href="/ib-program"
             className={`${
               pathnameWithoutLocale === "/partners" ? "active_link" : ""
             } ${NavHoverEffect}`}

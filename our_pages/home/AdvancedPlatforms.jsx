@@ -2,8 +2,11 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
 import Aos from "aos";
+import { useTranslations } from "next-intl";
 
 const AdvancedPlatforms = () => {
+  const t = useTranslations("home.advancedPlatforms");
+
   useEffect(() => {
     Aos.init({ disable: "mobile" });
   }, []);
@@ -14,11 +17,13 @@ const AdvancedPlatforms = () => {
       data-aos-duration={2000}
       data-aos="slide-up"
     >
-      <h1 className="sectionHeading"><span className="font-light">Advanced</span> Platform for Modern Traders</h1>
+      <h1 className="sectionHeading">
+        <span className="font-light">{t("advance_platform_title_1")} </span>
+        {t("advance_platform_title_2")}
+      </h1>
 
       <p className="sectionPara text-center py-4">
-        Harness the power of MetaTrader 5 for an unparalleled trading
-        experience.
+        {t("advanced_platform_desc")}
       </p>
 
       <div className="my-8 relative">
@@ -29,12 +34,14 @@ const AdvancedPlatforms = () => {
           src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/platform_image.webp"
           alt="platform image"
         />
-        <div className="absolute z-10 lg:w-fit right-[1%] bottom-[35%] w-[30%]
+        <div
+          className="absolute z-10 lg:w-fit right-[1%] bottom-[35%] w-[30%]
          cursor-pointer bg-transparent hover:bg-black hover:text-white
-          transition duration-500 hover:translate-y-[-5px]">
+          transition duration-500 hover:translate-y-[-5px]"
+        >
           <Image
-            width='250'
-            height='200'
+            width="250"
+            height="200"
             src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/meta_trader5.svg"
             alt="mt5"
             className="block"

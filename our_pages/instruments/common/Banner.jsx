@@ -1,7 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const Banner = ({ title, description, imgUrl }) => {
+  const t = useTranslations("commodities.hero");
+
   return (
     <section className="lg:h-[70vh] bg-gradient-to-b from-[#3f3f3e] to-[#e4e5e6]">
       <div className="container flex flex-col lg:flex-row py-12 justify-around">
@@ -13,7 +16,7 @@ const Banner = ({ title, description, imgUrl }) => {
             {description}
           </p>
           <button className="bg-primary rounded-full text-secondary font-semibold px-4 py-2 w-[250px] mx-auto lg:m-0  lg:block">
-            Start Now!
+            {t("start_now_btn")}
           </button>
         </div>
         <div className="flex justify-center items-center lg:mt-0 mt-8">

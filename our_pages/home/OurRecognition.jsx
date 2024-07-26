@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
 import { Autoplay, Pagination } from "swiper/modules";
+import { useTranslations } from "next-intl";
 
 const awardsURLS = [
   "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/awards-04.svg",
@@ -17,13 +18,11 @@ const awardsURLS = [
 ];
 
 const OurRecognition = () => {
+  const t = useTranslations("home.ourRecognition");
   return (
     <section className="py-12">
-      <h1 className="sectionHeading">Our Recognition</h1>
-      <p className="sectionPara text-center">
-        We’re honored to receive industry accolades for our excellence and
-        innovation
-      </p>
+      <h1 className="sectionHeading">{t("our_recognition_title")}</h1>
+      <p className="sectionPara text-center">{t("our_recognition_desc")}</p>
       <div className="mt-12">
         <Swiper
           breakpoints={{

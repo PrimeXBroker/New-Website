@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const sectionData = [
   {
@@ -18,40 +19,40 @@ const sectionData = [
 ];
 
 const JoinAcademy = () => {
+  const t = useTranslations("academy.joinAcademy");
+
   return (
     <section className="bg-accent container flex flex-col justify-center md:gap-24 gap-4  md:flex-row py-12 shadow-lg my-12">
       <div className="flex-1 md:max-w-sm">
         <h1 className="md:text-2xl text-secondary text-center md:text-left font-semibold pb-4">
-          Share Your Expertise With Academy of PrimeX Capital
+          {t("share_expertise_title")}
         </h1>
         <p className="md:text-lg text-secondary font-[600] text-center md:text-left">
-          Ready to make an impact?
+          {t("share_expertise_subtitle")}
         </p>
         <p className="md:text-lg text-secondary font-[400] text-center md:text-left">
-          Join our team of instructors and share your expertise with Academy of
-          PrimeX Capital today!
+          {t("share_expertise_desc")}
         </p>
         <button className="bg-primary font-semibold px-4 py-2 w-[200px] rounded-full shadow-xl mt-6 mx-auto block md:m-0">
-          Become An Instructor
+          {t("become_instructor_btn")}
         </button>
       </div>
       <div className="border-r border-r-primary"></div>
       <div className="flex-1 md:max-w-sm">
         <h1 className="md:text-2xl text-secondary text-center md:text-right font-semibold pb-4">
-          Join Academy of PrimeX Capital To Trade
+          {t("join_academy_title")}
         </h1>
         <p className="md:text-lg text-secondary font-[600] text-center md:text-right">
-          Ready to take your trading skills to the next level?
+          {t("join_academy_subtitle")}
         </p>
         <p className="md:text-lg text-secondary font-[400] text-center md:text-right">
-          Sign up now and embark on your journey with the Academy of PrimeX
-          Capital!
+          {t("join_academy_desc")}
         </p>
         <div className="flex justify-end">
           {" "}
           {/* Flex container to align items to the end (right) */}
           <button className="bg-primary font-semibold px-4 py-2 w-[200px] rounded-full shadow-xl text-center mt-6 mx-auto block md:m-0">
-            Sign Up
+            {t("sign_up_btn")}
           </button>{" "}
           {/* Adjusted padding for better button appearance */}
         </div>
