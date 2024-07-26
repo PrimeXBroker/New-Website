@@ -1,8 +1,11 @@
 "use client";
 import { Tabs, Tab } from "@nextui-org/tabs";
 import Script from "next/script";
+import { useTranslations } from "next-intl";
 
 const TradingOpportunities = () => {
+  const t = useTranslations("home.tradingOpportunities");
+
   return (
     <section className="py-12 bg-accent relative">
       <h1
@@ -11,7 +14,7 @@ const TradingOpportunities = () => {
         data-aos-duration={1000}
         data-aos="slide-up"
       >
-        Explore 500+ Trading Opportunities
+        {t("trading_opportunities_title")}
       </h1>
       <p
         className="sectionPara text-center py-4"
@@ -19,12 +22,11 @@ const TradingOpportunities = () => {
         data-aos-duration={1000}
         data-aos="slide-up"
       >
-        Dive into a diverse array of assets including forex, indices,
-        commodities, cryptocurrencies, and stocks
+        {t("trading_opportunities_desc")}
       </p>
       <div className="text-center mt-8">
         <Tabs radius="full" color="primary" className="tabs_custom">
-          <Tab title="Forex">
+          <Tab title={t("trading_opportunities_tab1")}>
             <div className="pt-8 text-xl">
               <iframe
                 src="https://fxpricing.com/fx-widget/ticker-tape-widget.php?id=1,2,3,5,14,20&border=show&speed=50&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=00000013&by-cr=28A745&sl-cr=DC3545&flags=circle&d_mode=compact-name&column=ask,bid,spread&lang=en&font=Arial, sans-serif"
@@ -34,7 +36,7 @@ const TradingOpportunities = () => {
               ></iframe>
             </div>
           </Tab>
-          <Tab title="Indicies">
+          <Tab title={t("trading_opportunities_tab2")}>
             <div className="pt-8 text-xl">
               <iframe
                 src="https://fxpricing.com/fx-widget/ticker-tape-widget.php?id=1,2,3,5,14,20&border=show&speed=50&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=00000013&by-cr=28A745&sl-cr=DC3545&flags=circle&d_mode=compact-name&column=ask,bid,spread&lang=en&font=Arial, sans-serif"
@@ -44,7 +46,7 @@ const TradingOpportunities = () => {
               ></iframe>
             </div>
           </Tab>
-          <Tab title="Commodities">
+          <Tab title={t("trading_opportunities_tab3")}>
             <div className="pt-8 text-xl">
               <iframe
                 src="https://fxpricing.com/fx-widget/ticker-tape-widget.php?id=1,2,3,5,14,20&border=show&speed=50&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=00000013&by-cr=28A745&sl-cr=DC3545&flags=circle&d_mode=compact-name&column=ask,bid,spread&lang=en&font=Arial, sans-serif"
@@ -54,7 +56,7 @@ const TradingOpportunities = () => {
               ></iframe>
             </div>
           </Tab>
-          <Tab title="Stocks">
+          <Tab title={t("trading_opportunities_tab4")}>
             <div className="pt-8 text-xl">
               <iframe
                 src="https://fxpricing.com/fx-widget/ticker-tape-widget.php?id=1,2,3,5,14,20&border=show&speed=50&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=00000013&by-cr=28A745&sl-cr=DC3545&flags=circle&d_mode=compact-name&column=ask,bid,spread&lang=en&font=Arial, sans-serif"
@@ -64,7 +66,7 @@ const TradingOpportunities = () => {
               ></iframe>
             </div>
           </Tab>
-          <Tab title="Crypto">
+          <Tab title={t("trading_opportunities_tab5")}>
             <div className="pt-8 text-xl">
               <iframe
                 src="https://fxpricing.com/fx-widget/ticker-tape-widget.php?id=1,2,3,5,14,20&border=show&speed=50&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=00000013&by-cr=28A745&sl-cr=DC3545&flags=circle&d_mode=compact-name&column=ask,bid,spread&lang=en&font=Arial, sans-serif"

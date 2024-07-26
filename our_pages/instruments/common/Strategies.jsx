@@ -1,10 +1,13 @@
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const Strategies = ({ tipsData }) => {
+  const t = useTranslations("commodities.strategies");
+
   return (
     <section className="pt-12 pb-8 container">
-      <h1 className="sectionHeading pb-8">Tips And Strategies</h1>
+      <h1 className="sectionHeading pb-8">{t("title")}</h1>
       <div className="grid justify-center place-items-center gap-6 grid-cols-1 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-4 pt-12 pb-8">
         {tipsData.map((tip, index) => (
           <div key={index} className="flip-card cursor-pointer">

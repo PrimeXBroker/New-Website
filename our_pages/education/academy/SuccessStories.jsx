@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const successData = [
   {
@@ -25,14 +26,15 @@ const successData = [
 ];
 
 const SuccessStories = () => {
+  const t = useTranslations("academy.successStories");
+
   return (
     <section className="container py-12">
       <h1 className="text-secondary text-3xl font-semibold text-center mb-6">
-        Success Stories
+        {t("title")}
       </h1>
       <p className="text-secondary text-lg text-center max-w-xl mx-auto">
-        Read inspiring Testimonials And Discover How Our Students Have succeeded
-        with Academy of PrimeX Capital
+        {t("description")}
       </p>
       <div className="grid grid-cols-4 pt-6">
         {successData.map((el) => (

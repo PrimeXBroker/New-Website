@@ -2,8 +2,11 @@
 import Image from "next/image";
 import { useEffect } from "react";
 import Aos from "aos";
+import { useTranslations } from "next-intl";
 
 const BecomeIB = () => {
+  const t = useTranslations("home.becomeIB");
+
   useEffect(() => {
     Aos.init({ disable: "mobile" });
   }, []);
@@ -16,15 +19,15 @@ const BecomeIB = () => {
     >
       <div className="w-full md:w-[60%] flex flex-col justify-center space-y-4">
         <h1 className="sectionHeading text-center md:text-left">
-          <span className="font-normal">Become a</span> PrimeX
-          Introducing Broker
+          <span className="font-normal">{t("become_ib_title_1")} </span>
+          {t("become_ib_title_2")}
         </h1>
         <p className="sectionPara md:max-w-xl text-center md:text-left">
-          Join our IB Program and turn your network into a source of income.
-          Connect traders with PrimeX and earn commissions while enjoying
-          exclusive tools, marketing support, and competitive rewards.
+          {t("become_ib_desc")}
         </p>
-        <button className="block text-left w-fit px-4 py-2 rounded-full shadow-xl bg-accent text-secondary border-3 border-secondary ">Become a Partner Now</button>
+        <button className="block text-left w-fit px-4 py-2 rounded-full shadow-xl bg-accent text-secondary border-3 border-secondary ">
+          {t("become_ib_btn")}
+        </button>
       </div>
       <div className="w-full md:w-[40%]">
         <Image

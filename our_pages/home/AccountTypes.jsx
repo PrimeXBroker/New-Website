@@ -1,28 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const AccountTtpes = () => {
+  const t = useTranslations("home.accountTypes");
+
   const accountTypes = [
     {
-      title: "Standard",
-      description:
-        "The Standard Account is a top choice among traders due to its no-swap commissions, offering cost-efficiency by eliminating these fees.",
+      title: t("account_types_card_1_title"),
+      description: t("account_types_card_1_desc"),
       imageUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/account_types/standard.svg",
       btnHref: "#",
     },
     {
-      title: "Narrow",
-      description:
-        "This account is tailored for scalpers, featuring the lowest spread to maximize profits from short-term market movements.",
+      title: t("account_types_card_2_title"),
+      description: t("account_types_card_2_desc"),
       imageUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/account_types/narrow.svg",
       btnHref: "#",
     },
     {
-      title: "Zero",
-      description:
-        "The Zero Account is designed for professional traders, offering a 'zero spread' for an unmatched trading experience.",
+      title: t("account_types_card_3_title"),
+      description: t("account_types_card_3_desc"),
       imageUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/account_types/zero.svg",
       btnHref: "#",
@@ -30,7 +30,7 @@ const AccountTtpes = () => {
   ];
   return (
     <section className="pt-12 pb-8 container">
-      <h1 className="sectionHeading">Account Types</h1>
+      <h1 className="sectionHeading">{t("account_types_title")}</h1>
       <div className="grid justify-center place-items-center gap-6 grid-cols-1 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-4 pt-12">
         {accountTypes.map((account, index) => (
           <div key={index} className="flip-card cursor-pointer">
@@ -54,7 +54,7 @@ const AccountTtpes = () => {
                   href={account.btnHref}
                   className="underline text-sm text-[#FFD000]"
                 >
-                  Learn More
+                  {t("account_types_learn_btn")}
                 </Link>
               </div>
             </div>

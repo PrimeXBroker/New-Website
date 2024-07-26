@@ -22,15 +22,206 @@
       "fact_no4": "Billion",
       "fact_desc4": "Daily trades"
     },
+    "tradingOpportunities": {
+      "trading_opportunities_title": "Explore 500+ Trading Opportunities",
+      "trading_opportunities_desc": "Dive into a diverse array of assets including forex, indices, commodities, cryptocurrencies, and stocks",
+      "trading_opportunities_tab1": "Forex",
+      "trading_opportunities_tab2": "Indicies",
+      "trading_opportunities_tab3": "Commodities",
+      "trading_opportunities_tab4": "Stocks",
+      "trading_opportunities_tab5": "Crypto"
+    },
+    "accountTypes": {
+      "account_types_title": "Account Types",
+      "account_types_card_1_title": "Standard",
+      "account_types_card_1_desc": "The Standard Account is a top choice among traders due to its no-swap commissions, offering cost-efficiency by eliminating these fees.",
+      "account_types_card_2_title": "Narrow",
+      "account_types_card_2_desc": "This account is tailored for scalpers, featuring the lowest spread to maximize profits from short-term market movements.",
+      "account_types_card_3_title": "Zero",
+      "account_types_card_3_desc": "The Zero Account is designed for professional traders, offering a 'zero spread' for an unmatched trading experience.",
+      "account_types_learn_btn": "Learn More"
+    },
+    "advancedPlatforms": {
+      "advance_platform_title_1": "Advanced",
+      "advance_platform_title_2": "Platform for Modern Traders",
+      "advanced_platform_desc": "Harness the power of MetaTrader 5 for an unparalleled trading experience."
+    },
+    "becomeIB": {
+      "become_ib_title_1": "Become a",
+      "become_ib_title_2": "PrimeX Introducing Broker",
+      "become_ib_desc": "Join our IB Program and turn your network into a source of income. Connect traders with PrimeX and earn commissions while enjoying exclusive tools, marketing support, and competitive rewards.",
+      "become_ib_btn": "Become a Partner Now"
+    },
+    "rewards": {
+      "rewards_title": "Exciting Promotions & Rewards",
+      "rewards_gift_title_1": "$30",
+      "rewards_gift_title_2": "Welcome",
+      "rewards_gift_title_3": "Gift",
+      "rewards_gift_desc_1": "Start with a $30 gift when",
+      "rewards_gift_desc_2": "you verify your account.",
+      "rewards_gift_btn": "Claim your Gift",
+      "rewards_trade_win_title_1": "Trade to",
+      "rewards_trade_win_title_2": "Win",
+      "rewards_trade_win_desc_1": "Enter our competition and",
+      "rewards_trade_win_desc_2": "compete for amazing prizes",
+      "rewards_trade_win_desc_3": "based on your trading",
+      "rewards_trade_win_desc_4": "performance",
+      "rewards_trade_win_btn": "Join Now"
+    },
+    "customerCare": {
+      "customer_care_title_1": "Always Here",
+      "customer_care_title_2": "for You",
+      "customer_care_li1_title": "24/7 Customer Care",
+      "customer_care_li1_desc": "Always ready to assist",
+      "customer_care_li2_title": "Multilingual Support",
+      "customer_care_li2_desc": "Help available in multiple languages",
+      "customer_care_btn": "Contact Us"
+    },
+    "academy": {
+      "academy_title": "PrimeX Academy: Learn & Grow",
+      "academy_desc": "Boost your trading skills with our extensive educational resources.",
+      "academy_card_1_title_1": "Free",
+      "academy_card_1_title_2": "Webinars",
+      "academy_card_1_desc_1": "Join live sessions with",
+      "academy_card_1_desc_2": "industry experts",
+      "academy_card_2_title_1": "One-on-One",
+      "academy_card_2_title_2": "Coaching",
+      "academy_card_2_desc_1": "Personalized guidance for",
+      "academy_card_2_desc_2": "your trading journey industry experts",
+      "academy_card_3_title_1": "Expert Market",
+      "academy_card_3_title_2": "Analysis",
+      "academy_card_3_desc_1": "Stay informed with the",
+      "academy_card_3_desc_2": "latest insights and trends"
+    },
     "menu": {
       "register": "Register"
     },
     "getStarted": {
-      "title": "Get Started with PrimeX"
+      "get_started_title": "Get Started with PrimeX",
+      "get_started_desc_1": "Ready to elevate your trading experience? Join PrimeX Broker and",
+      "get_started_desc_2": "explore our advanced trading features and special offers.",
+      "get_started_btn": "Open Your Account"
+    },
+    "ourRecognition": {
+      "our_recognition_title": "Our Recognition",
+      "our_recognition_desc": "We’re honored to receive industry accolades for our excellence and innovation"
     },
     "cookie": {
       "text": "By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
       "btnTxt": "Accept All Cookies"
+    }
+  },
+  "academy": {
+    "hero": {
+      "title_1": "Welcome to the academy of PrimeX Capital - ",
+      "title_2": "Your Ultimate Resource Hub For Staying Ahead In The Dynamic World Of Trading",
+      "description": "A Wealth Of Knowledge At Your Fingertips, including the latest market news, insightful blogs, and personalized one-on-one sessions",
+      "join_btn": "Join Now!"
+    },
+    "unlimitedFeatures": {
+      "title": "Explore The Unlimited Features Of PrimeX Signals Center",
+      "description": "Real-time market insights, unlimited daily signals, and much more seamlessly integrated within your MT5 trading Platform",
+      "download_btn": "Download",
+      "link_title_part_1": "Don't have ",
+      "link_title_part_2": "MT5 ",
+      "link_title_part_3": "yet? ",
+      "download_link_text": "Download here",
+      "powered_by": "Provided by Acuity"
+    },
+    "featured": {
+      "card_1_title": "Fundamental Analysis",
+      "card_1_desc": "Rose Shawish",
+      "card_2_title": "Technical Analysis",
+      "card_2_desc": "Ahmed Alsajadi",
+      "card_3_title": "Market News",
+      "card_3_desc": "Our Experts",
+      "card_4_title": "Starting Gateway",
+      "card_4_desc": "Hafsa Munir"
+    },
+    "privateSessions": {
+      "title": "Private Sessions",
+      "description": "Get Free Exclusive Private Sessions With Our Experts Every Month!",
+      "eligibility_criteria_li1": "For Clients with active balance of $1000 - $10,000 - 1 Free private session per month !",
+      "eligibility_criteria_li2": "For Clients with active balance of over $10,000 - 4 Free private session per month !",
+      "expert_1_name": "Rose Shawish",
+      "expert_1_position": "Fundamental Analyst",
+      "expert_2_name": "Ahmed Alsajadi",
+      "expert_2_position": "Technical Analyst",
+      "book_session_btn": "Book a Session"
+    },
+    "joinAcademy": {
+      "share_expertise_title": "Share Your Expertise With Academy of PrimeX Capital",
+      "share_expertise_subtitle": "Ready to make an impact?",
+      "share_expertise_desc": "Join our team of instructors and share your expertise with Academy of PrimeX Capital today!",
+      "become_instructor_btn": "Become An Instructor",
+      "join_academy_title": "Join Academy of PrimeX Capital To Trade",
+      "join_academy_subtitle": "Ready to take your trading skills to the next level?",
+      "join_academy_desc": "Sign up now and embark on your journey with the Academy of PrimeX Capital!",
+      "sign_up_btn": "Sign Up"
+    },
+    "webinarLibrary": {
+      "title": "Webinar Library",
+      "description": "Missed Out On The Live Session? No Worries, Catch Up With Our Webinar Library And Stay Ahead Of The Curve",
+      "webinar_topic_1": "Safe Investment",
+      "presenter_1": "By Mustafa Riad",
+      "webinar_topic_2": "History Of Gold",
+      "presenter_2": "By Hussein Al-Mehna",
+      "webinar_topic_3": "Volume Profile",
+      "presenter_3": "By Rasul Al-Musawi"
+    },
+    "successStories": {
+      "title": "Success Stories",
+      "description": "Read inspiring Testimonials And Discover How Our Students Have succeeded with Academy of PrimeX Capital"
+    }
+  },
+  "commodities": {
+    "hero": {
+      "title": "Immerse Yourself in New Trading Avenues and",
+      "description": "Explore Growth with Commodities!"
+    },
+    "keyFeatures": {
+      "title": "Key Features",
+      "feature_1_title": "Diverse Metal Options",
+      "feature_1_desc": "Trade precious metals like gold and silver or explore industrial metals.",
+      "feature_2_title": "Tight Spreads",
+      "feature_2_desc": "Enjoy tight spreads and high trading volumes.",
+      "feature_3_title": "Global Market",
+      "feature_3_desc": "Access a broad range of metal markets from around the world.",
+      "feature_4_title": "Flexible Trading Conditions",
+      "feature_4_desc": "Benefit from competitive spreads and various trading options."
+    },
+    "whyTrade": {
+      "title": "Why Trade Commodities?",
+      "description": "Commodities trading offers opportunities based on supply and demand factors, geopolitical events, and market trends. Explore the potential for profit through strategic trading and market analysis."
+    },
+    "steps": {
+      "title": "How to Get Started",
+      "step_1": "1",
+      "step_1_title_part_1": "Open a",
+      "step_1_title_part_2": "PrimeX Account",
+      "step_2": "2",
+      "step_2_title_part_1": "Deposit",
+      "step_2_title_part_2": "Funds",
+      "step_3": "3",
+      "step_3_title_part_1": "Choose your",
+      "step_3_title_part_2": "Currency Pairs",
+      "step_4": "4",
+      "step_4_title_part_1": "Start",
+      "step_4_title_part_2": "Trading"
+    },
+    "strategies": {
+      "title": "Tips And Strategies",
+      "tip_1_title": "Analyze Supply and Demand",
+      "tip_1_desc": "Understand factors affecting commodity prices.",
+      "tip_2_title": "Stay Informed",
+      "tip_2_desc": "Keep up with market news and events impacting commodities.",
+      "tip_3_title": "Use Risk Management Tools",
+      "tip_3_desc": "Protect your trades with stop-loss and take-profit orders."
+    },
+    "readyToDive": {
+      "title": "Explore the world of commodities trading with PrimeX!",
+      "description": "Join Us and start your trading journey.",
+      "open_account_btn": ""
     }
   },
   "accountTypes": {

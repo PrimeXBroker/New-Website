@@ -1,17 +1,20 @@
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const PrivateSessions = () => {
+  const t = useTranslations("academy.privateSessions");
+
   const expertCards = [
     {
-      name: "Rose Shawish",
-      position: "Fundamental Analyst",
+      name: t("expert_1_name"),
+      position: t("expert_1_position"),
       imgUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/rose.webp",
     },
     {
-      name: "Ahmed Alsajadi",
-      position: "Technical Analyst",
+      name: t("expert_2_name"),
+      position: t("expert_2_position"),
       imgUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/ahmed.webp",
     },
@@ -22,19 +25,11 @@ const PrivateSessions = () => {
         className="text-secondary text-2xl font-semibold"
         style={{ letterSpacing: "1px", lineHeight: "50px" }}
       >
-        Private Sessions
+        {t("title")}
       </h1>
-      <p className="text-secondary text-lg pb-6">
-        Get Free Exclusive Private Sessions With Our Experts Every Month!
-      </p>
-      <p className="text-secondary text-sm">
-        For Clients with active balance of $1000 - $10,000 - 1 Free private
-        session per month !{" "}
-      </p>
-      <p className="text-secondary text-sm">
-        For Clients with active balance of over $10,000 - 4 Free private session
-        per month !
-      </p>
+      <p className="text-secondary text-lg pb-6">{t("description")}</p>
+      <p className="text-secondary text-sm">{t("eligibility_criteria_li1")}</p>
+      <p className="text-secondary text-sm">{t("eligibility_criteria_li2")}</p>
       <div className="absolute flex flex-row justify-center items-center right-0 left-0 md:bottom-[-60%]">
         {expertCards.map((card, index) => (
           <div
@@ -52,7 +47,7 @@ const PrivateSessions = () => {
               {card.position}
             </h4>
             <button className="bg-primary py-2 rounded-full w-[150px] shadow-xl text-secondary text-sm mx-auto block mt-4">
-              Book a Session
+              {t("book_session_btn")}
             </button>
           </div>
         ))}

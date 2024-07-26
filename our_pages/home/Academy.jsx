@@ -2,8 +2,10 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Aos from "aos";
+import { useTranslations } from "next-intl";
 
 const Academy = () => {
+  const t = useTranslations("home.academy");
   const [icon1Hovered, setIcon1Hovered] = useState(false);
   const [icon2Hovered, setIcon2Hovered] = useState(false);
   const [icon3Hovered, setIcon3Hovered] = useState(false);
@@ -40,10 +42,8 @@ const Academy = () => {
         data-aos-duration={800}
         data-aos="slide-up"
       >
-        <h1 className="sectionHeading">PrimeX Academy: Learn & Grow</h1>
-        <p className="sectionPara text-center">
-          Boost your trading skills with our extensive educational resources.
-        </p>
+        <h1 className="sectionHeading">{t("academy_title")}</h1>
+        <p className="sectionPara text-center">{t("academy_desc")}</p>
       </div>
       <div className="flex flex-row mt-12 gap-12 justify-center flex-wrap">
         <div
@@ -57,9 +57,11 @@ const Academy = () => {
         >
           <div className="flex justify-end">
             <Image
-              src={icon1Hovered ? 
-                'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon1_yellow.svg' : 
-                'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon1_black.svg'}
+              src={
+                icon1Hovered
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon1_yellow.svg"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon1_black.svg"
+              }
               alt="academy icon"
               width="80"
               height="80"
@@ -67,10 +69,10 @@ const Academy = () => {
             />
           </div>
           <h1 className="sectionHeading text-2xl text-left mb-6 group-hover:text-white">
-            Free <br /> Webinars
+            {t("academy_card_1_title_1")} <br /> {t("academy_card_1_title_2")}
           </h1>
           <p className="sectionPara text-left group-hover:text-white">
-            Join live sessions with <br /> industry experts
+            {t("academy_card_1_desc_1")} <br /> {t("academy_card_1_desc_2")}
           </p>
         </div>
         <div
@@ -84,9 +86,11 @@ const Academy = () => {
         >
           <div className="flex justify-end">
             <Image
-                src={icon2Hovered ? 
-                  'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon2_yellow.svg' : 
-                  'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon2_black.svg'}
+              src={
+                icon2Hovered
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon2_yellow.svg"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon2_black.svg"
+              }
               alt="academy icon"
               width="80"
               height="80"
@@ -94,11 +98,10 @@ const Academy = () => {
             />
           </div>
           <h1 className="sectionHeading group-hover:text-white text-2xl text-left mb-6">
-            One-on-One <br /> Coaching
+            {t("academy_card_2_title_1")} <br /> {t("academy_card_2_title_2")}
           </h1>
           <p className="sectionPara text-left group-hover:text-white">
-            Personalized guidance for <br /> your trading journey industry
-            experts
+            {t("academy_card_2_desc_1")} <br /> {t("academy_card_2_desc_2")}
           </p>
         </div>
         <div
@@ -112,9 +115,11 @@ const Academy = () => {
         >
           <div className="flex justify-end">
             <Image
-              src={icon3Hovered ? 
-                'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon3_yellow.svg' : 
-                'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon3_black.svg'}
+              src={
+                icon3Hovered
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon3_yellow.svg"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon3_black.svg"
+              }
               alt="academy icon"
               width="80"
               height="80"
@@ -122,10 +127,11 @@ const Academy = () => {
             />
           </div>
           <h1 className="sectionHeading text-2xl text-left mb-6 group-hover:text-white">
-            Expert Market <br /> Analysis
+            {t("academy_card_3_title_1")}
+            <br /> {t("academy_card_3_title_2")}
           </h1>
           <p className="sectionPara text-left group-hover:text-white">
-            Stay informed with the <br /> latest insights and trends
+            {t("academy_card_3_desc_1")} <br /> {t("academy_card_3_desc_2")}
           </p>
         </div>
       </div>

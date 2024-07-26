@@ -1,8 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const Banner = () => {
+  const h = useTranslations("academy.hero");
+  const f = useTranslations("academy.unlimitedFeatures");
+
   return (
     <section className="">
       <div className="bg-secondary">
@@ -12,22 +16,19 @@ const Banner = () => {
               className="text-primary text-xl md:text-3xl text-center md:text-left font-semibold"
               style={{ lineHeight: "45px", letterSpacing: "1px" }}
             >
-              Welcome to the academy of PrimeX Capital -{" "}
+              {h("title_1")}
               <span className="text-white md:text-2xl font-semibold">
-                Your Ultimate Resource Hub For Staying Ahead In The Dynamic
-                World Of Trading
+                {h("title_2")}
               </span>
             </h1>
             <p
               className="text-white md:text-lg text-medium md:max-w-xl text-center md:text-left"
               style={{ letterSpacing: "0.7px" }}
             >
-              A Wealth Of Knowledge At Your Fingertips, including the lastest
-              market news, insightful blogs, and personalized one-on-one
-              sessions
+              {h("description")}
             </p>
             <button className="bg-primary px-4 py-4 rounded-full w-[200px] shadow-xl block md:m-0 mx-auto">
-              Join Now!
+              {h("join_btn")}
             </button>
           </div>
           <div className="flex">
@@ -46,26 +47,27 @@ const Banner = () => {
           className="md:text-3xl text-secondary font-semibold text-center"
           style={{ lineHeight: "50px", letterSpacing: "1px" }}
         >
-          Explore The Ulimited Features Of PrimeX Signals Center
+          {f("title")}
         </h1>
         <p
           className="text-center text-secondary md:text-medium"
           style={{ lineHeight: "30px", letterSpacing: "0.8px" }}
         >
-          Real-time market insights, unlimited daily signals, and much more
-          seamlessly integrated within your MT5 trading Platform
+          {f("description")}
         </p>
         <button className="bg-primary px-4 py-4 rounded-full w-[200px] mx-auto block shadow-xl mb-8">
-          Download
+          {f("download_btn")}
         </button>
         <p className="text-secondary text-lg text-center">
-          Don't have <span className="font-[700]">MT5</span> yet?
+          {f("link_title_part_1")}
+          <span className="font-[700]">{f("link_title_part_2")}</span>
+          {f("link_title_part_3")}
           <Link className="text-primary appearance-none pl-2" href="#">
-            Download here
+            {f("download_link_text")}
           </Link>
         </p>
 
-        <p className="text-secondary text-lg text-center">Provided by Acuity</p>
+        <p className="text-secondary text-lg text-center">{f("powered_by")}</p>
       </div>
     </section>
   );

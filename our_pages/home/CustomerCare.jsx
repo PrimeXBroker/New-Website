@@ -3,8 +3,10 @@ import Aos from "aos";
 import { Button } from "@nextui-org/button";
 import Image from "next/image";
 import { useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 const CustomerCare = () => {
+  const t = useTranslations("home.customerCare");
   useEffect(() => {
     Aos.init({ disable: "mobile" });
   }, []);
@@ -17,7 +19,7 @@ const CustomerCare = () => {
         data-aos="slide-up"
       >
         <h1 className="sectionHeading text-left mb-8">
-          Always Here <br /> for You
+          {t("customer_care_title_1")} <br /> {t("customer_care_title_2")}
         </h1>
         <Button
           variant="solid"
@@ -25,7 +27,9 @@ const CustomerCare = () => {
           color="primary"
           className="w-[13rem]"
         >
-          <p className="text-secondary font-semibold">Contact Us</p>
+          <p className="text-secondary font-semibold">
+            {t("customer_care_btn")}
+          </p>
         </Button>
       </div>
       <div>
@@ -54,9 +58,9 @@ const CustomerCare = () => {
           />
           <div>
             <h1 className="secttionHeading text-lg font-semibold">
-              24/7 Customer Care
+              {t("customer_care_li1_title")}
             </h1>
-            <p>Always ready to assist</p>
+            <p>{t("customer_care_li1_desc")}</p>
           </div>
         </div>
         <div className="flex gap-2">
@@ -68,9 +72,9 @@ const CustomerCare = () => {
           />
           <div>
             <h1 className="secttionHeading text-lg font-semibold">
-              Multilingual Support
+              {t("customer_care_li2_title")}
             </h1>
-            <p>Help available in multiple languages</p>
+            <p>{t("customer_care_li2_desc")}</p>
           </div>
         </div>
       </div>
