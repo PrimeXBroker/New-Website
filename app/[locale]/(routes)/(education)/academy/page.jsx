@@ -1,3 +1,6 @@
+"use client";
+import LocationContextProvider from "@/context/location-context";
+import AcademyForm from "@/our_pages/education/academy/AcademyForm";
 import Banner from "@/our_pages/education/academy/Banner";
 import Featured from "@/our_pages/education/academy/Featured";
 import JoinAcademy from "@/our_pages/education/academy/JoinAcademy";
@@ -39,12 +42,15 @@ const Academy = () => {
 
   return (
     <>
+    <LocationContextProvider>
       <Banner />
       <Featured cardsData={cardsData} />
+      <AcademyForm/>
       <PrivateSessions />
       <JoinAcademy />
       <WebinarLibrary />
       <SuccessStories />
+      </LocationContextProvider>
     </>
   );
 };

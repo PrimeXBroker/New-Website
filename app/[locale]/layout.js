@@ -1,6 +1,8 @@
 import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { getMessages } from "next-intl/server";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -56,6 +58,7 @@ export default async function layout({ children, params: { locale } }) {
         <NextUIProvider>
           <NextIntlClientProvider messages={messages}>
             <Header locale={locale} />
+            <ToastContainer autoClose={3000} />
             {children}
             <Footer />
             <Cookies />

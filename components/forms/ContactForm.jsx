@@ -6,19 +6,21 @@ import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import nationality from '../../public/assets/data/nationality.json';
 import { LocationContext } from "@/context/location-context";
-import { useContext } from "react";
-
+import { useContext, useState } from "react";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const questionTypes = [
   { id: 1, name: "General Inquiry", value: "general" },
   { id: 2, name: "Account Funding", value: "account_funding" },
   { id: 3, name: "Withdrawal Query", value: "withdrawal_query" },
-  { id: 3, name: "Deposit Query", value: "deposit_query" }
+  { id: 4, name: "Deposit Query", value: "deposit_query" }
 ];
 
 
 const ContactForm = () => {
   const { country: originCountry, ip: originIp } = useContext(LocationContext);
+  const [loading, setLoading] = useState(false);
   const formik = useFormik({
     initialValues: {
       first_name: "",
@@ -65,7 +67,17 @@ const ContactForm = () => {
         qtype: values.qtype,
         message: values.message
       }
-      console.log(updatedValues);
+      try {
+        setLoading(true);
+          const response = await axios.post(`https://primexbroker.com/api/contact`, JSON.stringify(updatedValues));
+          console.log("Response", response);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+        toast("Thanks for contacting us our support will be in touch");
+        formik.resetForm();
+      }
     },
   });
   return (
@@ -200,7 +212,9 @@ const ContactForm = () => {
             }  `}  />          
           </div>
           <div className="text-center">
-            <button className="bg-primary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg">submit</button>
+            <button className="bg-primary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg">
+            <div className="flex gap-1 items-center justify-center">{loading && <div className="spinner inline-block"></div>} {loading ? <span className="text-center">Sending...</span> : <span>Submit</span>}</div>
+            </button>
           </div>
         </form>
       </div>
