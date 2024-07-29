@@ -11,8 +11,8 @@ import "react-phone-number-input/style.css";
 import { LocationContext } from "@/context/location-context";
 
 const webinarTypes = [
-  { id: 1, name: "General Inquiry", value: "general" },
-  { id: 2, name: "Account Funding", value: "account_funding" }  
+  { id: 1, name: "Fundamental Analysis", value: "fundamental" },
+  { id: 2, name: "Technical Analysis", value: "Technical" }  
 ];
 
 const AcademyForm = () => {
@@ -73,13 +73,13 @@ const AcademyForm = () => {
           <Tab
             title={
               <span className="flex justify-center items-center gap-2">
-                <PiSignInFill size={25} /> Signin{" "}
+                <PiSignInFill size={25} /> Signin
               </span>
             }
           >
-            <form className="flex flex-col justify-center items-center">
-              <PiUserSquareThin className="opacity-50" size={60} />
-              <div className="mb-4">
+            <form onSubmit={formik.handleSubmit} className="flex flex-col justify-center items-center relative gap-4">
+              <PiUserSquareThin className="opacity-50" size={80} />
+              <div className="mb-4 w-[60%]">
                 <input
                   type="text"
                   name="full_name"
@@ -87,10 +87,14 @@ const AcademyForm = () => {
                   onBlur={formik.handleBlur}
                   value={formik.values.full_name}
                   placeholder={"Full name"}
-                  className="appearance-none border-b rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+                  formik.touched.full_name && formik.errors.full_name
+                    ? "border-b border-red-600"
+                    : ""
+                }`}
                 />
               </div>
-              <div className="mb-4">
+              <div className="mb-4 w-[60%]">
                 <input
                   type="email"
                   name="email"
@@ -98,24 +102,32 @@ const AcademyForm = () => {
                   onBlur={formik.handleBlur}
                   value={formik.values.email}
                   placeholder={"email"}
-                  className="appearance-none border-b rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+                  formik.touched.email && formik.errors.email
+                    ? "border-b border-red-600"
+                    : ""
+                }`}
                 />
               </div>
-              <div className="mb-4">
+              <div className="mb-4 w-[60%]">
                 <PhoneInput
                   onChange={(value) => formik.setFieldValue("contact", value)}
                   onBlur={formik.handleBlur}
                   name="contact"
                   value={formik.values.contact}
                   defaultCountry={originCountry}
-                  className="w-[100%]"
+                  className={`w-[100%] academy_phoneinput ${
+                  formik.touched.contact && formik.errors.contact
+                    ? "border-b border-red-600"
+                    : ""
+                }`}
                 />
               </div>
-              <div className="mb-4">
+              <div className="mb-10 w-[60%]">
                 <select
-                  className={`bg-white text-secondary w-full placeholder:text-accent capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[5px] ${
-                    formik.touched.qtype && formik.errors.qtype
-                      ? "border-2 border-red-600"
+                  className={`bg-white text-gray-400 w-full placeholder:text-gray-300 outline-none border-b border-b- capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[5px] ${
+                    formik.touched.wtype && formik.errors.wtype
+                      ? "border-b border-red-600"
                       : ""
                   }`}
                   name="wtype"
@@ -133,17 +145,89 @@ const AcademyForm = () => {
                   })}
                 </select>
               </div>
+              <button className="bg-primary shadow-xl rounded-full font-semibold px-3 py-2 text-secondary w-[150px] absolute bottom-[-30px] mx-auto">
+                Register
+              </button>
             </form>
           </Tab>
           <Tab
             title={
-              <span className="flex justify-center items-center gap-2">
-                <FaUserPlus size={25} /> Register{" "}
+              <span className="flex justify-center items-center gap-2 text-secondary font-semibold">
+                <FaUserPlus size={25} /> Register
               </span>
             }
           >
-            <form className="flex flex-col justify-center items-center">
-              <PiUserSquareThin size={60} className="opacity-50" />
+            <form className="flex flex-col justify-center items-center gap-4 relative">
+              <PiUserSquareThin size={80} className="opacity-50" />
+              <div className="mb-4 w-[60%]">
+                <input
+                  type="text"
+                  name="full_name"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.full_name}
+                  placeholder={"Full name"}
+                  className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+                  formik.touched.full_name && formik.errors.full_name
+                    ? "border-b border-red-600"
+                    : ""
+                }`}
+                />
+              </div>
+              <div className="mb-4 w-[60%]">
+                <input
+                  type="email"
+                  name="email"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.email}
+                  placeholder={"email"}
+                  className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+                  formik.touched.email && formik.errors.email
+                    ? "border-b border-red-600"
+                    : ""
+                }`}
+                />
+              </div>
+              <div className="mb-4 w-[60%]">
+                <PhoneInput
+                  onChange={(value) => formik.setFieldValue("contact", value)}
+                  onBlur={formik.handleBlur}
+                  name="contact"
+                  value={formik.values.contact}
+                  defaultCountry={originCountry}
+                  className={`w-[100%] academy_phoneinput ${
+                  formik.touched.contact && formik.errors.contact
+                    ? "border-b border-red-600"
+                    : ""
+                }`}
+                />
+              </div>
+              <div className="mb-10 w-[60%]">
+                <select
+                  className={`bg-white text-gray-400 w-full placeholder:text-gray-300 outline-none border-b border-b- capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[5px] ${
+                    formik.touched.wtype && formik.errors.wtype
+                      ? "border-b border-red-600"
+                      : ""
+                  }`}
+                  name="wtype"
+                  value={formik.values.wtype}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                >
+                  <option value="">{"Select webinar Category"}</option>
+                  {webinarTypes.map((query, el) => {
+                    return (
+                      <option key={query.id} value={query.value}>
+                        {query.name}
+                      </option>
+                    );
+                  })}
+                </select>
+              </div>
+              <button className="bg-primary shadow-xl rounded-full font-semibold px-3 py-2 text-secondary w-[150px] absolute bottom-[-30px] mx-auto">
+                Register
+              </button>
             </form>
           </Tab>
         </Tabs>

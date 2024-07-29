@@ -14,7 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import LocaleLink from "./LocaleLink";
-import { usePathname } from "next/navigation";
+import { usePathname,useRouter } from "next/navigation";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { useTranslations } from "next-intl";
 import GradiantButton from "./GradiantButton";
@@ -85,17 +85,24 @@ const Header = ({ locale }) => {
   const handleButtonClick = () => {
     setIsRotated(!isRotated);
   };
+  const handleTradingMenuItemClick = () => {
+    setIsRotated(false);
+  };
 
   const handleButtonClickPlatform = ( ) => {
     setIsRotatedPlatform(!isRotatedPlatform);
   }
 
+  const handlePlatformMenuItemClick=()=>{
+    setIsRotatedPlatform(false)
+  }
+  
+const router = useRouter()
   return (
     <Navbar
       maxWidth="xl"
       onMenuOpenChange={setIsMenuOpen}
       isBordered
-    // className="py-5"
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -141,19 +148,19 @@ const Header = ({ locale }) => {
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu variant="light">
-            <DropdownItem className="hover:bg-primary ">
+            <DropdownItem className="hover:bg-primary" onClick={handleTradingMenuItemClick}>
               <LocaleLink href="/forex">Forex</LocaleLink>
             </DropdownItem>
-            <DropdownItem className="hover:bg-primary"> 
+            <DropdownItem className="hover:bg-primary" onClick={handleTradingMenuItemClick}> 
             <LocaleLink href="/metals">Metals</LocaleLink>
             </DropdownItem>
-            <DropdownItem className="hover:bg-primary">
+            <DropdownItem className="hover:bg-primary" onClick={handleTradingMenuItemClick}>
             <LocaleLink href="/indices">Indices</LocaleLink>
             </DropdownItem>
-            <DropdownItem className="hover:bg-primary">
+            <DropdownItem className="hover:bg-primary" onClick={handleTradingMenuItemClick}>
             <LocaleLink href="/commodities">Commodities</LocaleLink>
             </DropdownItem>
-            <DropdownItem className="hover:bg-primary">
+            <DropdownItem className="hover:bg-primary" onClick={handleTradingMenuItemClick}>
             <LocaleLink href="/stocks">Stocks</LocaleLink>
             </DropdownItem>
             {/* <DropdownItem>
@@ -194,7 +201,7 @@ const Header = ({ locale }) => {
           </DropdownMenu>
         </Dropdown>
 
-
+              
         <Dropdown>
           <NavbarItem className="text-sm">
             <DropdownTrigger>
@@ -216,13 +223,21 @@ const Header = ({ locale }) => {
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu variant="light">
-            <DropdownItem className="hover:bg-primary ">
+            <DropdownItem className="hover:bg-primary" onClick={handlePlatformMenuItemClick}>
               <LocaleLink href="/platform/mt5-platform">MetaTrader 5</LocaleLink>
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
 
-
+        <NavbarItem className="text-sm">
+          <LocaleLink
+            href="/account-types"
+            className={`${pathnameWithoutLocale === "/account-types" ? "active_link" : ""
+              } ${NavHoverEffect}`}
+          >
+            Accounts
+          </LocaleLink>
+        </NavbarItem>      
         <Dropdown>
           <NavbarItem className="text-sm">
             <DropdownTrigger>
@@ -259,13 +274,14 @@ const Header = ({ locale }) => {
             Education
           </LocaleLink>
         </NavbarItem>
+
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="text-sm hidden lg:block">
-          <GradiantButton name="Register" />
+          <GradiantButton onClick={()=>router.push('https://client.primexbroker.com/en/register')} name="Register" />
         </NavbarItem>
         <NavbarItem className="text-sm hidden lg:block">
-          <GradiantButton name="Login" />
+          <GradiantButton onClick={()=>router.push('https://client.primexbroker.com/en/login')} name="Login" />
         </NavbarItem>
         <NavbarItem>
           <div className="dropdown">
@@ -314,7 +330,7 @@ const Header = ({ locale }) => {
           </div>
         </NavbarItem>
         <NavbarItem>
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu className="h-56 !important">

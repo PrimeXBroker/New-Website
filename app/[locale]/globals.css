@@ -307,3 +307,6 @@
     transform: rotate(360deg);
   }
 }
+.academy_phoneinput{
+  border-bottom: 1px solid #E4E5E6;
+}

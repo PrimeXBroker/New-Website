@@ -9,6 +9,7 @@ import { LocationContext } from "@/context/location-context";
 import { useContext, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useTranslations } from "next-intl";
 
 const questionTypes = [
   { id: 1, name: "General Inquiry", value: "general" },

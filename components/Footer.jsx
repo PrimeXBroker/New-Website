@@ -59,7 +59,7 @@ const Footer = () => {
       column: {
         heading: "Company",
         links: [
-          { name: "about us", href: "#" },
+          { name: "about us", href: "/about" },
           { name: "Contact us", href: "/contact" },
           { name: "Awards", href: "/awards" },
           { name: "Press release", href: "#" },

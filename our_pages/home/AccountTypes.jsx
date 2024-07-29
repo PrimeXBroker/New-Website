@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import LocaleLink from "@/components/LocaleLink";
 
 const AccountTtpes = () => {
   const t = useTranslations("home.accountTypes");
@@ -11,21 +12,21 @@ const AccountTtpes = () => {
       description: t("account_types_card_1_desc"),
       imageUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/account_types/standard.svg",
-      btnHref: "#",
+      btnHref: "/account-types",
     },
     {
       title: t("account_types_card_2_title"),
       description: t("account_types_card_2_desc"),
       imageUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/account_types/narrow.svg",
-      btnHref: "#",
+      btnHref: "/account-types",
     },
     {
       title: t("account_types_card_3_title"),
       description: t("account_types_card_3_desc"),
       imageUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/account_types/zero.svg",
-      btnHref: "#",
+      btnHref: "/account-types",
     },
   ];
   return (
@@ -50,12 +51,12 @@ const AccountTtpes = () => {
                 <p className="text-sm text-[#FFF] text-center px-2 pb-3">
                   {account.description}
                 </p>
-                <Link
+                <LocaleLink
                   href={account.btnHref}
                   className="underline text-sm text-[#FFD000]"
                 >
                   {t("account_types_learn_btn")}
-                </Link>
+                </LocaleLink>
               </div>
             </div>
           </div>

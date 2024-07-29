@@ -3,6 +3,8 @@ import Image from "next/image";
 import { useEffect } from "react";
 import Aos from "aos";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 
 const BecomeIB = () => {
   const t = useTranslations("home.becomeIB");
@@ -25,9 +27,9 @@ const BecomeIB = () => {
         <p className="sectionPara md:max-w-xl text-center md:text-left">
           {t("become_ib_desc")}
         </p>
-        <button className="block text-left w-fit px-4 py-2 rounded-full shadow-xl bg-accent text-secondary border-3 border-secondary ">
+        <LocaleLink href='/ib-program'  className="block text-left w-fit px-4 py-2 rounded-full shadow-xl bg-accent text-secondary border-3 border-secondary ">
           {t("become_ib_btn")}
-        </button>
+        </LocaleLink>
       </div>
       <div className="w-full md:w-[40%]">
         <Image

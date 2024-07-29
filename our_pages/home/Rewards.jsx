@@ -21,7 +21,7 @@ const Rewards = () => {
       >
         {t("rewards_title")}
       </h1>
-      <div className="container mx-auto flex flex-col lg:flex-row my-12">
+      <div className="mx-auto flex flex-col lg:flex-row my-12">
         <div
           className="flex flex-col-reverse sm:flex-row bg-accent p-8 w-full lg:w-[50%] justify-evenly"
           data-aos-easing="ease-out"
