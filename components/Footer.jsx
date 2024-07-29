@@ -115,6 +115,44 @@ const Footer = () => {
     },
   ];
 
+  const paymentOptions = [
+    {
+      id: 1,
+      name: "master",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/master.webp",
+    },
+    {
+      id: 2,
+      name: "visa",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/visa.webp",
+    },
+    {
+      id: 3,
+      name: "tether",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/tether.webp",
+    },
+    {
+      id: 4,
+      name: "amex",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/amex.webp",
+    },
+    {
+      id: 5,
+      name: "adv_cash",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/adv_cash.webp",
+    },
+    {
+      id: 6,
+      name: "perfect_money",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/perfect_money.webp",
+    },
+  ];
 
   return (
     <footer className="bg-secondary">
