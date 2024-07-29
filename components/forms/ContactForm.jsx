@@ -9,15 +9,16 @@ import { LocationContext } from "@/context/location-context";
 import { useContext } from "react";
 import { useTranslations } from "next-intl";
 
-const questionTypes = [
-  { id: 1, name: "General Inquiry", value: "general" },
-  { id: 2, name: "Account Funding", value: "account_funding" },
-  { id: 3, name: "Withdrawal Query", value: "withdrawal_query" },
-  { id: 3, name: "Deposit Query", value: "deposit_query" },
-];
-
 const ContactForm = () => {
   const t = useTranslations("contact.contactForm");
+
+  const questionTypes = [
+    { id: 1, name: t("general_inquiry"), value: "general" },
+    { id: 2, name: t("account_funding"), value: "account_funding" },
+    { id: 3, name: t("withdrawal_query"), value: "withdrawal_query" },
+    { id: 3, name: t("deposit_query"), value: "deposit_query" },
+  ];
+
   const { country: originCountry, ip: originIp } = useContext(LocationContext);
   const formik = useFormik({
     initialValues: {
@@ -33,26 +34,26 @@ const ContactForm = () => {
       first_name: Yup.string()
         .matches(
           /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-          "first name can only contain letters."
+          t("first_name_validation_error")
         )
-        .required("first name is required!"),
+        .required(t("first_name_required_error")),
       last_name: Yup.string()
         .matches(
           /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-          "last name can only contain letters."
+          t("last_name_validation_error")
         )
-        .required("last name is required!"),
+        .required(t("last_name_required_error")),
       email: Yup.string()
-        .email("Invalid email address")
-        .required("email is required!"),
-      country: Yup.string().required("country is required!"),
-      qtype: Yup.string().required("question type is required!"),
-      message: Yup.string().required("message is required!"),
+        .email(t("email_validation_error"))
+        .required(t("email_required_error")),
+      country: Yup.string().required(t("country_required_error")),
+      qtype: Yup.string().required(t("query_required_error")),
+      message: Yup.string().required(t("message_required_error")),
     }),
     validate: (values) => {
       const errors = {};
       if (!values.contact) {
-        errors.contact = "phone is required";
+        errors.contact = t("phone_required_error");
       }
       return errors;
     },
@@ -91,7 +92,7 @@ const ContactForm = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.first_name}
-                placeholder={"first name"}
+                placeholder={t("first_name")}
               />
             </div>
             <div className="flex flex-col">
@@ -106,7 +107,7 @@ const ContactForm = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.last_name}
-                placeholder="last name"
+                placeholder={t("last_name")}
               />
             </div>
           </div>
@@ -124,7 +125,7 @@ const ContactForm = () => {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value={formik.values.email}
-                  placeholder={"email"}
+                  placeholder={t("email")}
                 />
               </div>
             </div>
@@ -152,7 +153,7 @@ const ContactForm = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
               >
-                <option value="">{"Select your Country"}</option>
+                <option value="">{t("country")}</option>
                 {nationality.map((country, index) => {
                   return (
                     <option key={index} value={country.en_short_name}>
@@ -175,7 +176,7 @@ const ContactForm = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             >
-              <option value="">{"Select Query Category"}</option>
+              <option value="">{t("query_category")}</option>
               {questionTypes.map((query, el) => {
                 return (
                   <option key={query.id} value={query.value}>
@@ -191,7 +192,7 @@ const ContactForm = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.message}
-              placeholder="Message"
+              placeholder={t("message")}
               rows="8"
               cols="24"
               className={`w-full outline-none border-none px-4 py-2 rounded-md ${
@@ -203,7 +204,7 @@ const ContactForm = () => {
           </div>
           <div className="text-center">
             <button className="bg-primary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg">
-              submit
+              {t("submit_btn")}
             </button>
           </div>
         </form>

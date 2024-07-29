@@ -4,175 +4,176 @@ import Image from "next/image";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 
-const awardsData = [
-  {
-    id: 1,
-    year: "2024",
-    awards: [
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award1.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-      },
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award2.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-        highlighted: true,
-      },
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award3.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-      },
-    ],
-  },
-  {
-    id: 2,
-    year: "2023",
-    awards: [
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award1.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-      },
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award2.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-        highlighted: true,
-      },
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award3.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-      },
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award4.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-      },
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award5.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-        highlighted: true,
-      },
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award6.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-      },
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award1.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-      },
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award2.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-        highlighted: true,
-      },
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award3.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-      },
-    ],
-  },
-  {
-    id: 3,
-    year: "2022",
-    awards: [
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award4.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-      },
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award5.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-        highlighted: true,
-      },
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award6.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-      },
-    ],
-  },
-  {
-    id: 4,
-    year: "2021",
-    awards: [
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award1.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-      },
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award2.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-        highlighted: true,
-      },
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award3.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-      },
-    ],
-  },
-  {
-    id: 5,
-    year: "2020",
-    awards: [
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award4.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-      },
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award5.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-        highlighted: true,
-      },
-      {
-        imgSrc:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award6.webp",
-        title: "Best Copy Trading Program",
-        location: "UAE 2023",
-      },
-    ],
-  },
-];
-
 const TabsSection = () => {
   const t = useTranslations("awards.tabs");
   const [selected, setSelected] = useState("2023");
+
+  const awardsData = [
+    {
+      id: 1,
+      year: t("award_year_1"),
+      awards: [
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award1.webp",
+          title: t("award_1_title"),
+          location: t("award_1_location"),
+        },
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award2.webp",
+          title: t("award_2_title"),
+          location: t("award_2_location"),
+          highlighted: true,
+        },
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award3.webp",
+          title: t("award_3_title"),
+          location: t("award_3_location"),
+        },
+      ],
+    },
+    {
+      id: 2,
+      year: t("award_year_2"),
+      awards: [
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award1.webp",
+          title: t("award_1_title"),
+          location: t("award_1_location"),
+        },
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award2.webp",
+          title: t("award_2_title"),
+          location: t("award_2_location"),
+          highlighted: true,
+        },
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award3.webp",
+          title: t("award_3_title"),
+          location: t("award_3_location"),
+        },
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award4.webp",
+          title: t("award_4_title"),
+          location: t("award_4_location"),
+        },
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award5.webp",
+          title: t("award_5_title"),
+          location: t("award_5_location"),
+          highlighted: true,
+        },
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award6.webp",
+          title: t("award_6_title"),
+          location: t("award_6_location"),
+        },
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award1.webp",
+          title: t("award_1_title"),
+          location: t("award_1_location"),
+        },
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award2.webp",
+          title: t("award_2_title"),
+          location: t("award_2_location"),
+          highlighted: true,
+        },
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award3.webp",
+          title: t("award_3_title"),
+          location: t("award_3_location"),
+        },
+      ],
+    },
+    {
+      id: 3,
+      year: t("award_year_3"),
+      awards: [
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award4.webp",
+          title: t("award_1_title"),
+          location: t("award_1_location"),
+        },
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award5.webp",
+          title: t("award_2_title"),
+          location: t("award_2_location"),
+          highlighted: true,
+        },
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award6.webp",
+          title: t("award_3_title"),
+          location: t("award_3_location"),
+        },
+      ],
+    },
+    {
+      id: 4,
+      year: t("award_year_4"),
+      awards: [
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award1.webp",
+          title: t("award_1_title"),
+          location: t("award_1_location"),
+        },
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award2.webp",
+          title: t("award_2_title"),
+          location: t("award_2_location"),
+          highlighted: true,
+        },
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award3.webp",
+          title: t("award_3_title"),
+          location: t("award_3_location"),
+        },
+      ],
+    },
+    {
+      id: 5,
+      year: t("award_year_5"),
+      awards: [
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award4.webp",
+          title: t("award_1_title"),
+          location: t("award_1_location"),
+        },
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award5.webp",
+          title: t("award_2_title"),
+          location: t("award_2_location"),
+          highlighted: true,
+        },
+        {
+          imgSrc:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award6.webp",
+          title: t("award_3_title"),
+          location: t("award_3_location"),
+        },
+      ],
+    },
+  ];
+
   return (
     <section className="bg-accent py-12">
       <div className="container text-center">
