@@ -2,6 +2,7 @@
 import { Tabs, Tab } from "@nextui-org/tabs";
 import Image from "next/image";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const awardsData = [
   {
@@ -170,6 +171,7 @@ const awardsData = [
 ];
 
 const TabsSection = () => {
+  const t = useTranslations("awards.tabs");
   const [selected, setSelected] = useState("2023");
   return (
     <section className="bg-accent py-12">

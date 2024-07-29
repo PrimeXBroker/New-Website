@@ -1,7 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const AboutBanner = () => {
+  const t = useTranslations("about.hero");
+
   return (
     <section className={`bg-secondary`}>
       <div className="container flex flex-col md:flex-row justify-evenly gap-10 items-center py-12">
@@ -10,18 +13,13 @@ const AboutBanner = () => {
             className={`text-primary text-xl md:text-3xl font-semibold mb-5 md:text-left text-center`}
             style={{ letterSpacing: "4px" }}
           >
-            Revolutionizing Your Trading Experience
+            {t("title")}
           </h1>
           <p
             className={`text-white text-[15px] font-[500] md:text-left text-center`}
             style={{ letterSpacing: "1px" }}
           >
-            At PrimeX Capital we are dedicated to transforming the trading
-            experience. Established with a vision to provide innovative and
-            reliable trading solutions. We offer a platform where traders of all
-            levels can thrive. Our mission is to deliver advanced technology,
-            diverse trading instruments, and exceptional support to empower your
-            trading journey.
+            {t("description")}
           </p>
         </div>
         <div>

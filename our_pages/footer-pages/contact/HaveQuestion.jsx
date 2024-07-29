@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const HaveQuestion = () => {
+  const t = useTranslations("contact.haveQuestion");
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleIconEnter = (index) => {
@@ -14,30 +16,26 @@ const HaveQuestion = () => {
   };
   const cardsData = [
     {
-      title: "Help Center:",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
+      title: t("help_li1_title"),
+      description: t("help_li1_desc"),
       imgUrl: "/images/contact/chat.svg",
       imgHoverUrl: "/images/contact/chat_hover.svg",
     },
     {
-      title: "Email:",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
+      title: t("help_li2_title"),
+      description: t("help_li2_desc"),
       imgUrl: "/images/contact/email.svg",
       imgHoverUrl: "/images/contact/email_hover.svg",
     },
     {
-      title: "Live Chat:",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
+      title: t("help_li3_title"),
+      description: t("help_li3_desc"),
       imgUrl: "/images/contact/headphone.svg",
       imgHoverUrl: "/images/contact/headphone_hover.svg",
     },
     {
-      title: "Phone:",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
+      title: t("help_li4_title"),
+      description: t("help_li4_desc"),
       imgUrl: "/images/contact/phone.svg",
       imgHoverUrl: "/images/contact/phone_hover.svg",
     },
@@ -49,13 +47,13 @@ const HaveQuestion = () => {
           className="text-secondary md:text-2xl text-lg font-semibold text-center"
           style={{ lineHeight: "50px", letterSpacing: "1px" }}
         >
-          Have a Question?
+          {t("title")}
         </h1>
         <p
           className="text-secondary md:text-lg text-md font-light text-center"
           style={{ lineHeight: "30px", letterSpacing: "1px" }}
         >
-          PrimeX offers flexible funding options to get you trading faster
+          {t("description")}
         </p>
       </div>
       <div className="container grid grid-cols-2 gap-12 justify-center flex-wrap xl:flex-wrap mt-8 ">

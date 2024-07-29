@@ -4,20 +4,20 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-import nationality from '../../public/assets/data/nationality.json';
+import nationality from "../../public/assets/data/nationality.json";
 import { LocationContext } from "@/context/location-context";
 import { useContext } from "react";
-
+import { useTranslations } from "next-intl";
 
 const questionTypes = [
   { id: 1, name: "General Inquiry", value: "general" },
   { id: 2, name: "Account Funding", value: "account_funding" },
   { id: 3, name: "Withdrawal Query", value: "withdrawal_query" },
-  { id: 3, name: "Deposit Query", value: "deposit_query" }
+  { id: 3, name: "Deposit Query", value: "deposit_query" },
 ];
 
-
 const ContactForm = () => {
+  const t = useTranslations("contact.contactForm");
   const { country: originCountry, ip: originIp } = useContext(LocationContext);
   const formik = useFormik({
     initialValues: {
@@ -63,19 +63,18 @@ const ContactForm = () => {
         contact: values.contact,
         country: values.country,
         qtype: values.qtype,
-        message: values.message
-      }
+        message: values.message,
+      };
       console.log(updatedValues);
     },
   });
   return (
     <section className="bg-accent">
       <h1 className="text-secondary text-lg md:text-2xl text-center font-semibold mb-5">
-        Send Us A Message
+        {t("title")}
       </h1>
       <p className="text-secondary text-md md:text-lg text-center font-light max-w-xl mx-auto">
-        You may also leave your contact information here, and a Primex
-        representative will contact you within 1 working day
+        {t("description")}
       </p>
       <div className="contact_form_wrapper container py-8">
         <form onSubmit={formik.handleSubmit} className="flex flex-col gap-4">
@@ -141,66 +140,71 @@ const ContactForm = () => {
             />
           </div>
           <div className="grid grid-cols-1">
-                <div className="flex flex-col">
-                  <select
-                    className={`bg-white text-secondary placeholder:text-accent capitalize  py-2 px-4 rounded-[5px] ${formik.touched.country && formik.errors.country
-                      ? "border-2 border-red-600"
-                      : ""
-                      }`}
-                    name="country"
-                    value={formik.values.country}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                  >
-                    <option value="">{"Select your Country"}</option>
-                    {nationality.map((country, index) => {
-                      return (
-                        <option key={index} value={country.en_short_name}>
-                          {country.en_short_name}
-                        </option>
-                      );
-                    })}
-                  </select>
-                </div>
+            <div className="flex flex-col">
+              <select
+                className={`bg-white text-secondary placeholder:text-accent capitalize  py-2 px-4 rounded-[5px] ${
+                  formik.touched.country && formik.errors.country
+                    ? "border-2 border-red-600"
+                    : ""
+                }`}
+                name="country"
+                value={formik.values.country}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              >
+                <option value="">{"Select your Country"}</option>
+                {nationality.map((country, index) => {
+                  return (
+                    <option key={index} value={country.en_short_name}>
+                      {country.en_short_name}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
           </div>
           <div className="flex flex-cols-1">
-                  <select
-                    className={`bg-white text-secondary w-full placeholder:text-accent capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[5px] ${formik.touched.qtype && formik.errors.qtype
-                      ? "border-2 border-red-600"
-                      : ""
-                      }`}
-                    name="qtype"
-                    value={formik.values.qtype}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                  >
-                    <option value="">{"Select Query Category"}</option>
-                    {questionTypes.map((query, el) => {
-                      return (
-                        <option key={query.id} value={query.value}>
-                          {query.name}
-                        </option>
-                      );
-                    })}
-                  </select>
+            <select
+              className={`bg-white text-secondary w-full placeholder:text-accent capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[5px] ${
+                formik.touched.qtype && formik.errors.qtype
+                  ? "border-2 border-red-600"
+                  : ""
+              }`}
+              name="qtype"
+              value={formik.values.qtype}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            >
+              <option value="">{"Select Query Category"}</option>
+              {questionTypes.map((query, el) => {
+                return (
+                  <option key={query.id} value={query.value}>
+                    {query.name}
+                  </option>
+                );
+              })}
+            </select>
           </div>
           <div className="flex flex-col-1">
-            <textarea 
-            name="message" 
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.message}
-            placeholder="Message" 
-            rows='8' 
-            cols='24' 
-            className={`w-full outline-none border-none px-4 py-2 rounded-md ${
-              formik.touched.message && formik.errors.message
-                ? "border-2 border-red-600"
-                : ""
-            }  `}  />          
+            <textarea
+              name="message"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.message}
+              placeholder="Message"
+              rows="8"
+              cols="24"
+              className={`w-full outline-none border-none px-4 py-2 rounded-md ${
+                formik.touched.message && formik.errors.message
+                  ? "border-2 border-red-600"
+                  : ""
+              }  `}
+            />
           </div>
           <div className="text-center">
-            <button className="bg-primary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg">submit</button>
+            <button className="bg-primary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg">
+              submit
+            </button>
           </div>
         </form>
       </div>
