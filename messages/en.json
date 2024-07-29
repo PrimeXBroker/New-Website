@@ -475,7 +475,24 @@
     },
     "careersForm": {
       "title": "Be A Part of PrimeX Capital",
-      "description": "Join us and be a part of a forward-thinking company where your skills and ambitions can thrive."
+      "description": "Join us and be a part of a forward-thinking company where your skills and ambitions can thrive.",
+      "first_name": "first name*",
+      "last_name": "last name*",
+      "email": "email*",
+      "country": "Country*",
+      "upload_resume": "Upload Resume*",
+      "upload_portfolio": "Link to your portfolio*",
+      "submit_btn": "submit",
+      "first_name_validation_error": "first name can only contain letters.",
+      "first_name_required_error": "first name is required!",
+      "last_name_validation_error": "last name can only contain letters.",
+      "last_name_required_error": "last name is required!",
+      "email_validation_error": "Invalid email address",
+      "email_required_error": "email is required!",
+      "phone_required_error": "phone is required!",
+      "country_required_error": "country is required!",
+      "resume_required_error": "resume is required!",
+      "portfolio_required_error": "portfolio is required!"
     }
   },
   "about": {
