@@ -34,6 +34,8 @@ const Header = ({ locale }) => {
   const [buttonText, setButtonText] = useState("EN");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isRotated, setIsRotated] = useState(false);
+  const [isRotatedPartners, setIsRotatedPartners] = useState(false);
+  const [isRotatedPlatform, setIsRotatedPlatform] = useState(false);
   const menuItems = [
     {
       name: "Home",
@@ -50,10 +52,6 @@ const Header = ({ locale }) => {
     {
       name: "Partners",
       link: `/partners`,
-    },
-    {
-      name: "Trade To Win",
-      link: "/trade-to-win",
     },
     {
       name: "Education",
@@ -81,16 +79,23 @@ const Header = ({ locale }) => {
     setButtonText(language);
     localStorage.setItem("language", language);
   };
+  const handleButtonClickPartners = () => {
+    setIsRotatedPartners(!isRotatedPartners);
+  };
   const handleButtonClick = () => {
     setIsRotated(!isRotated);
   };
+
+  const handleButtonClickPlatform = ( ) => {
+    setIsRotatedPlatform(!isRotatedPlatform);
+  }
 
   return (
     <Navbar
       maxWidth="xl"
       onMenuOpenChange={setIsMenuOpen}
       isBordered
-      // className="py-5"
+    // className="py-5"
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -106,9 +111,8 @@ const Header = ({ locale }) => {
       <NavbarContent className="hidden lg:flex gap-4" justify="center">
         <NavbarItem className="text-sm">
           <Link
-            className={`${
-              pathnameWithoutLocale === "" ? "active_link" : ""
-            } ${NavHoverEffect}`}
+            className={`${pathnameWithoutLocale === "" ? "active_link" : ""
+              } ${NavHoverEffect}`}
             color="foreground"
             href="/"
           >
@@ -122,7 +126,7 @@ const Header = ({ locale }) => {
               <Button
                 onClick={handleButtonClick}
                 disableRipple
-                className={`p-0 bg-transparent data-[hover]:bg-transparent gap-0 rotatableIcon`}
+                className={`p-0 bg-transparent  gap-0 rotatableIcon`}
                 endContent={
                   <RiArrowDownSLine
                     size={25}
@@ -137,7 +141,22 @@ const Header = ({ locale }) => {
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu variant="light">
-            <DropdownItem>
+            <DropdownItem className="hover:bg-primary ">
+              <LocaleLink href="/forex">Forex</LocaleLink>
+            </DropdownItem>
+            <DropdownItem className="hover:bg-primary"> 
+            <LocaleLink href="/metals">Metals</LocaleLink>
+            </DropdownItem>
+            <DropdownItem className="hover:bg-primary">
+            <LocaleLink href="/indices">Indices</LocaleLink>
+            </DropdownItem>
+            <DropdownItem className="hover:bg-primary">
+            <LocaleLink href="/commodities">Commodities</LocaleLink>
+            </DropdownItem>
+            <DropdownItem className="hover:bg-primary">
+            <LocaleLink href="/stocks">Stocks</LocaleLink>
+            </DropdownItem>
+            {/* <DropdownItem>
               <div className="flex w-[100%] h-[300px] justify-between cursor-default hover:bg-transparent text-[16px] pt-5">
                 <ul className="w-[30%]">
                   <p className="font-semibold pb-4">Instruments</p>
@@ -171,58 +190,73 @@ const Header = ({ locale }) => {
                   </div>
                 </ul>
               </div>
+            </DropdownItem> */}
+          </DropdownMenu>
+        </Dropdown>
+
+
+        <Dropdown>
+          <NavbarItem className="text-sm">
+            <DropdownTrigger>
+              <Button
+                onClick={handleButtonClickPlatform}
+                disableRipple
+                className={`p-0 bg-transparent  gap-0 rotatableIcon`}
+                endContent={
+                  <RiArrowDownSLine
+                    size={25}
+                    className={isRotatedPlatform ? "rotated" : ""}
+                  />
+                }
+                radius="sm"
+                variant="light"
+              >
+                Platform
+              </Button>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu variant="light">
+            <DropdownItem className="hover:bg-primary ">
+              <LocaleLink href="/platform/mt5-platform">MetaTrader 5</LocaleLink>
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
+
+
+        <Dropdown>
+          <NavbarItem className="text-sm">
+            <DropdownTrigger>
+              <Button
+                onClick={handleButtonClickPartners}
+                disableRipple
+                className={`p-0 bg-transparent  gap-0 rotatableIcon`}
+                endContent={
+                  <RiArrowDownSLine
+                    size={25}
+                    className={isRotatedPartners ? "rotated" : ""}
+                  />
+                }
+                radius="sm"
+                variant="light"
+              >
+                Partners
+              </Button>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu variant="light">
+            <DropdownItem className="hover:bg-primary ">
+              <LocaleLink href="/ib-program">IB Program</LocaleLink>
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+
         <NavbarItem className="text-sm">
           <LocaleLink
-            href="/platform/mt5-platform"
-            className={`${
-              pathnameWithoutLocale === "/platform/mt5-platform" ? "active_link" : ""
-            } ${NavHoverEffect}`}
-          >
-            Platform
-          </LocaleLink>
-        </NavbarItem>
-        <NavbarItem className="text-sm">
-          <LocaleLink
-            href="/ib-program"
-            className={`${
-              pathnameWithoutLocale === "/partners" ? "active_link" : ""
-            } ${NavHoverEffect}`}
-          >
-            Partners
-          </LocaleLink>
-        </NavbarItem>
-        <NavbarItem className="text-sm">
-          <LocaleLink
-            href="/trade-to-Win"
-            className={`${
-              pathnameWithoutLocale === "/trade-to-Win" ? "active_link" : ""
-            } ${NavHoverEffect}`}
-          >
-            Trade To Win
-          </LocaleLink>
-        </NavbarItem>
-        <NavbarItem className="text-sm">
-          <LocaleLink
-            href="/education"
-            className={`${
-              pathnameWithoutLocale === "/education" ? "active_link" : ""
-            } ${NavHoverEffect}`}
+            href="/academy"
+            className={`${pathnameWithoutLocale === "/academy" ? "active_link" : ""
+              } ${NavHoverEffect}`}
           >
             Education
-          </LocaleLink>
-        </NavbarItem>
-        <NavbarItem className="text-sm">
-          <LocaleLink
-            color="foreground"
-            href="/gift-account"
-            className={`${
-              pathnameWithoutLocale === "/gift-account" ? "active_link" : ""
-            } ${NavHoverEffect}`}
-          >
-            Gift Account
           </LocaleLink>
         </NavbarItem>
       </NavbarContent>
