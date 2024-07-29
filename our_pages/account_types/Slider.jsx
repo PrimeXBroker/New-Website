@@ -551,6 +551,7 @@ const Slider = () => {
                       </a>
                     </Link>
                   </SwiperSlide>
+                  
                 );
               })}
             </Swiper>
