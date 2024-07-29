@@ -475,7 +475,116 @@
     },
     "careersForm": {
       "title": "Be A Part of PrimeX Capital",
-      "description": "Join us and be a part of a forward-thinking company where your skills and ambitions can thrive."
+      "description": "Join us and be a part of a forward-thinking company where your skills and ambitions can thrive.",
+      "first_name": "first name*",
+      "last_name": "last name*",
+      "email": "email*",
+      "country": "Country*",
+      "upload_resume": "Upload Resume*",
+      "upload_portfolio": "Link to your portfolio*",
+      "submit_btn": "submit",
+      "first_name_validation_error": "first name can only contain letters.",
+      "first_name_required_error": "first name is required!",
+      "last_name_validation_error": "last name can only contain letters.",
+      "last_name_required_error": "last name is required!",
+      "email_validation_error": "Invalid email address",
+      "email_required_error": "email is required!",
+      "phone_required_error": "phone is required!",
+      "country_required_error": "country is required!",
+      "resume_required_error": "resume is required!",
+      "portfolio_required_error": "portfolio is required!"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Revolutionizing Your Trading Experience",
+      "description": "At PrimeX Capital we are dedicated to transforming the trading experience. Established with a vision to provide innovative and reliable trading solutions. We offer a platform where traders of all levels can thrive. Our mission is to deliver advanced technology, diverse trading instruments, and exceptional support to empower your trading journey."
+    },
+    "mission": {
+      "mission_title": "Mission",
+      "mission_desc": "To offer a cutting-edge trading environment that support traders with advanced tools, exceptional service, and diverse opportunities for financial success",
+      "vision_title": "Vision",
+      "vision_desc": "To be the leading choice for traders worldwide by continualy innovating and expanding our offerings to meet the evolving needs of the global trading community"
+    },
+    "coreValues": {
+      "title": "Core Values",
+      "value_1_title": "Integrity",
+      "value_1_desc": "Upholding the highest standards of transparency and fairness",
+      "value_2_title": "Innovation",
+      "value_2_desc": "pioneering advancements in trading technology and services",
+      "value_3_title": "Customer Focus",
+      "value_3_desc": "Providing exceptional support and personalized solutions",
+      "value_4_title": "Excellence",
+      "value_4_desc": "committed to delivering top-quality trading experience"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "description": "A global network of customer service experts from diverse regions ensures round-the-clock, multilingual, premium support",
+      "visit_help_btn": "Visit Help Center"
+    },
+    "haveQuestion": {
+      "title": "Have a Question?",
+      "description": "PrimeX offers flexible funding options to get you trading faster",
+      "help_li1_title": "Help Center:",
+      "help_li1_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
+      "help_li2_title": "Email:",
+      "help_li2_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
+      "help_li3_title": "Live Chat:",
+      "help_li3_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
+      "help_li4_title": "Phone:",
+      "help_li4_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum"
+    },
+    "contactForm": {
+      "title": "Send Us A Message",
+      "description": "You may also leave your contact information here, and a PrimeX representative will contact you within 1 working day",
+      "first_name": "first name",
+      "last_name": "last name",
+      "email": "email",
+      "country": "Select your Country",
+      "query_category": "Select Query Category",
+      "general_inquiry": "General Inquiry",
+      "account_funding": "Account Funding",
+      "withdrawal_query": "Withdrawal Query",
+      "deposit_query": "Deposit Query",
+      "message": "Message",
+      "submit_btn": "submit",
+      "first_name_validation_error": "first name can only contain letters.",
+      "first_name_required_error": "first name is required!",
+      "last_name_validation_error": "last name can only contain letters.",
+      "last_name_required_error": "last name is required!",
+      "email_validation_error": "Invalid email address",
+      "email_required_error": "email is required!",
+      "phone_required_error": "phone is required",
+      "country_required_error": "country is required!",
+      "query_required_error": "question type is required!",
+      "message_required_error": "message is required!"
+    }
+  },
+  "awards": {
+    "hero": {
+      "title": "We Are, Where Excellence Is Recognized!",
+      "description": "Explore our award-winning achievements that set us apart as a leading forex brokerage house"
+    },
+    "tabs": {
+      "award_year_1": "2024",
+      "award_year_2": "2023",
+      "award_year_3": "2022",
+      "award_year_4": "2021",
+      "award_year_5": "2020",
+      "award_1_title": "Best Copy Trading Program",
+      "award_1_location": "UAE 2023",
+      "award_2_title": "Best Copy Trading Program",
+      "award_2_location": "UAE 2023",
+      "award_3_title": "Best Copy Trading Program",
+      "award_3_location": "UAE 2023",
+      "award_4_title": "Best Copy Trading Program",
+      "award_4_location": "UAE 2023",
+      "award_5_title": "Best Copy Trading Program",
+      "award_5_location": "UAE 2023",
+      "award_6_title": "Best Copy Trading Program",
+      "award_6_location": "UAE 2023"
     }
   },
   "accountTypes": {
@@ -692,6 +801,111 @@
     },
     "becomeIb": {
       "btnTxt": "BECOME AN IB NOW"
+    }
+  },
+  "bonus": {
+    "header": {
+      "title_l1": "30%",
+      "title_l2": "Profit Bonus",
+      "subtitle_l1": "Supercharge Your",
+      "subtitle_l2": "Tradings With a ",
+      "subtitle_l3": "30% Bonus ",
+      "subtitle_l4": "on Your ",
+      "subtitle_l5": "Trading ",
+      "subtitle_l6": "Profits!",
+      "tc": "terms & conditions apply",
+      "btnTxt": "Open Live Account",
+      "reg_now": "Registered already?",
+      "login_here": "Login Here"
+    },
+    "claim": {
+      "title1": "How to Claim Your",
+      "title2": " Profit Bonus",
+      "claim_li1": "Trade for Profits",
+      "claim_li1_p": "Any profits from trading are valid.",
+      "claim_li2": "Apply for Bonus",
+      "claim_li2_p": "Based on your profit amount, apply for a 30% Bonus.",
+      "claim_li3": "Receive Your Bonus",
+      "claim_li3_p": " Get a 30% bonus only on the profit credited to your new account."
+    },
+    "promotion": {
+      "title1": "Promotion",
+      "title2": "Applicable On"
+    },
+    "maximize": {
+      "maximize_title_1": "Maximize",
+      "maximize_title_2": "Your Profits Now!"
+    },
+    "terms": {
+      "title": "Download T&C's",
+      "condition_1": " This offer is available exclusively to ",
+      "condition_2": "existing clients PrimeX ",
+      "condition_3": "with trading profits in their accounts."
+    },
+    "form": {
+      "title1": "Claim Your ",
+      "title2": "Profit Bonus",
+      "name": "Name",
+      "profit_number": "Profit Amount",
+      "email": "Email",
+      "account_number": "Account Number",
+      "condition1": "I have read and agree to the ",
+      "condition2": "terms and conditions",
+      "form_btn": "Claim Now"
+    }
+  },
+  "gift": {
+    "header": {
+      "celeb_l1": "Celebrate our ",
+      "celeb_l2": "2nd Anniversary ",
+      "celeb_l3": "with a",
+      "title": "$30 Gift Account",
+      "subtitle_l1": "Avail your free",
+      "subtitle_l2": "$30 Live Account today",
+      "subtitle_l3": "No deposit required!"
+    },
+    "steps": {
+      "title": "How to avail your",
+      "title_2": "$30 Gift Account?",
+      "new_client_title": "New Clients",
+      "step1": "Register",
+      "step2": "Verify",
+      "step3": "Open Gift Account",
+      "new_client_valid": "Valid Between (1st July - 15th August)",
+      "existing_client_title": "Existing Clients",
+      "step4": "Login",
+      "existing_client_valid": "Valid Between (1st July - 31st July)"
+    },
+    "instruments": {
+      "title": "Access",
+      "title_2": "500+ Instruments",
+      "instruments_0_h": "Forex",
+      "instruments_1_h": "Metals",
+      "instruments_2_h": "Indices",
+      "instruments_3_h": "Commodities",
+      "instruments_4_h": "Stocks",
+      "instruments_5_h": "Cryptocurrencies",
+      "ins1_card_para_1": "Trade ",
+      "ins1_card_para_2": "over 97 currency pairs",
+      "ins1_card_para_3": ", including major, minor, and exotic pairs.",
+      "ins2_card_para_3": "Invest in ",
+      "ins2_card_para_1": "precious metals ",
+      "ins2_card_para_2": "such as gold, silver, platinum, and palladium.",
+      "ins3_card_para_1": "Diversify your portfolio with the world's top ",
+      "ins3_card_para_2": "14 stock indices.",
+      "ins4_card_para_1": "Gain exposure to a ",
+      "ins4_card_para_2": "wide range of commodities ",
+      "ins4_card_para_3": "markets.",
+      "ins5_card_para_1": "Buy and sell ",
+      "ins5_card_para_2": "top-performing shares ",
+      "ins5_card_para_3": "from across various sectors.",
+      "ins6_card_para_1": "Trade crypto with the ",
+      "ins6_card_para_2": "largest provider of crypto ",
+      "ins6_card_para_3": "instruments in MENA."
+    },
+    "terms": {
+      "title": "Download to learn more about Gift Account T&Cs",
+      "btnTxt": "Download T&Cs"
     }
   }
 }

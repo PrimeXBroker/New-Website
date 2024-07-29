@@ -1,7 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const ContactBanner = () => {
+  const t = useTranslations("contact.hero");
+
   return (
     <section className={`bg-secondary`}>
       <div className="container flex flex-col md:flex-row justify-evenly gap-10 items-center py-12">
@@ -10,18 +13,17 @@ const ContactBanner = () => {
             className={`text-primary text-xl md:text-3xl font-semibold mb-5 md:text-left text-center`}
             style={{ letterSpacing: "1px" }}
           >
-            Contact Us
+            {t("title")}
           </h1>
           <p
             className={`text-white text-lg font-[500] md:text-left text-center`}
             style={{ letterSpacing: "1.4px" }}
           >
-            A global network of customer service experts from diverse regions
-            ensures round-the-clock, multilingual, premium support
+            {t("description")}
           </p>
           <div className="mt-10">
             <button className="bg-primary w-[200px] px-2 py-3 rounded-full text-secondary">
-              Visit Help Center
+              {t("visit_help_btn")}
             </button>
           </div>
         </div>

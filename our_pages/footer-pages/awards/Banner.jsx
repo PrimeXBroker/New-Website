@@ -1,13 +1,16 @@
 import React from "react";
 import Banner from "@/components/Banner";
+import { useTranslations } from "next-intl";
 
 const AwardsBanner = () => {
+  const t = useTranslations("awards.hero");
+
   return (
     <>
       <Banner
         background="bg-accent"
-        title="We Are, Where Excellence Is Recognized!"
-        description="Explore our award-winning achievements that set us apart as a leading forex brokerage house"
+        title={t("title")}
+        description={t("description")}
         imgUrl="https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/Banner.webp"
         imgWidth="150"
         imgHeight="300"

@@ -1,40 +1,42 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-
-const valuesCards = [
-  {
-    id: 1,
-    title: "Integrity",
-    description: "Upholding the highest standards of transparency and fairness",
-    imgUrl: "/images/about/integrity.svg",
-    imgHoverUrl: "/images/about/integrity_hover.svg",
-  },
-  {
-    id: 1,
-    title: "Inovation",
-    description: "pioneering advancements in trading technology and services",
-    imgUrl: "/images/about/innovation.svg",
-    imgHoverUrl: "/images/about/innovation_hover.svg",
-  },
-  {
-    id: 3,
-    title: "Customer Focus",
-    description: "Providing exceptional support and personalized solutions",
-    imgUrl: "/images/about/customer.svg",
-    imgHoverUrl: "/images/about/customer_hover.svg",
-  },
-  {
-    id: 4,
-    title: "Excellence",
-    description: "committed to delivering top-quality trading experience",
-    imgUrl: "/images/about/excellence.svg",
-    imgHoverUrl: "/images/about/excellence_hover.svg",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const Values = () => {
+  const t = useTranslations("about.coreValues");
   const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const valuesCards = [
+    {
+      id: 1,
+      title: t("value_1_title"),
+      description: t("value_1_desc"),
+      imgUrl: "/images/about/integrity.svg",
+      imgHoverUrl: "/images/about/integrity_hover.svg",
+    },
+    {
+      id: 1,
+      title: t("value_2_title"),
+      description: t("value_2_desc"),
+      imgUrl: "/images/about/innovation.svg",
+      imgHoverUrl: "/images/about/innovation_hover.svg",
+    },
+    {
+      id: 3,
+      title: t("value_3_title"),
+      description: t("value_3_desc"),
+      imgUrl: "/images/about/customer.svg",
+      imgHoverUrl: "/images/about/customer_hover.svg",
+    },
+    {
+      id: 4,
+      title: t("value_4_title"),
+      description: t("value_4_desc"),
+      imgUrl: "/images/about/excellence.svg",
+      imgHoverUrl: "/images/about/excellence_hover.svg",
+    },
+  ];
 
   const handleIconEnter = (index) => {
     setHoveredIndex(index);
@@ -45,7 +47,7 @@ const Values = () => {
   return (
     <section className="container pt-6 pb-12">
       <h1 className="text-center text-secondary font-bold text-3xl pb-8 md:pb-12">
-        Core Values
+        {t("title")}
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 items-center justify-center">
         {valuesCards.map((card, index) => (
