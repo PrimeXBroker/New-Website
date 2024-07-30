@@ -34,10 +34,8 @@ const TermsCondition = () => {
                 : "text-center md:text-left"
             }`}
           >
-            {t("condition_1")}{" "}
-            <span className="font-semibold">{t("condition_2")}</span>
-            <br />
-            {t("condition_3")}
+            {t("desc_part_1")} <br />
+            {t("desc_part_2")}
           </p>
         </div>
         <div className="w-full md:w-[30%] flex justify-center md:justify-end items-center">
