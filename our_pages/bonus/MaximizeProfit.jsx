@@ -9,8 +9,9 @@ const MaximizeProfit = () => {
 
   const customStyle = {
     btnColor: "secondary",
-    txtColor: "text-primary",
+    txtColor1: "text-primary",
     txtColor2: "text-secondary",
+    txtColor3: "text-secondary",
     borderColor: "border-transparent",
   };
 

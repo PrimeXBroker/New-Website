@@ -49,17 +49,11 @@ const Banner = () => {
                 <h3 className="text-2xl sm:text-3xl xl:text-4xl	font-light text-white px-10 sm:px-20 md:px-40 lg:px-0 mt-8">
                   {t("subtitle_l1")} <br />
                   {t("subtitle_l2")}
-                  <span className="text-primary font-semibold leading-[54px]">
+                  <span className="leading-[54px] text-primary font-semibold">
                     {t("subtitle_l3")}
                   </span>
-                  <br />
-                  {t("subtitle_l4")}
-                  <span className="text-white font-semibold">
-                    {t("subtitle_l5")}
-                  </span>
-                  <span className="text-primary font-semibold">
-                    {t("subtitle_l6")}
-                  </span>
+                  {t("subtitle_l4")} <br />
+                  <span className="text-primary">{t("subtitle_l5")}</span>
                 </h3>
               </div>
               <div
@@ -80,7 +74,7 @@ const Banner = () => {
                 alt="img"
                 className=" w-[70%] sm:w-[50%] md:w-[40%] lg:w-[80%]"
               />
-              <div className="relative top-10 lg:top-20">
+              <div className="relative top-10 lg:top-0">
                 <p>
                   <span className="text-white">*</span>
                   <span className="text-sm text-white italic font-normal">
