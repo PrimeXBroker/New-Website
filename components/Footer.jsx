@@ -84,7 +84,6 @@ const Footer = () => {
         links: [
           { name: "Account Types", href: "/account-types" },
           { name: "Introducing Brokers", href: "/ib-program" },
-          { name: "Instrumentsy", href: "#" },
         ],
       },
     },

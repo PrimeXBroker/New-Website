@@ -63,7 +63,7 @@ const AcademyForm = () => {
   });
   return (
     <section className="py-12 container">
-      <div className="shadow-xl border-accent border w-[40%] mx-auto rounded-2xl">
+      <div className="shadow-xl border-accent border xl:w-[40%] xl:mx-auto lg:w-[40%] lg:mx-auto md:w-[50%] md:mx-auto sm:w-[70%] sm:mx-auto w-[80%] mx-auto rounded-2xl">
         <Tabs
           className="justify-center w-full"
           classNames={{
