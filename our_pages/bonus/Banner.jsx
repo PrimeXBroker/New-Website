@@ -53,7 +53,9 @@ const Banner = () => {
                     {t("subtitle_l3")}
                   </span>
                   {t("subtitle_l4")} <br />
-                  <span className="text-primary">{t("subtitle_l5")}</span>
+                  <span className="text-primary font-semibold">
+                    {t("subtitle_l5")}
+                  </span>
                 </h3>
               </div>
               <div
