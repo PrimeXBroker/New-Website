@@ -4,6 +4,7 @@ import { Button } from "@nextui-org/button";
 import Image from "next/image";
 import { useEffect } from "react";
 import { useTranslations } from "next-intl";
+import LocaleLink from "@/components/LocaleLink";
 
 const CustomerCare = () => {
   const t = useTranslations("home.customerCare");
@@ -22,6 +23,8 @@ const CustomerCare = () => {
           {t("customer_care_title_1")} <br /> {t("customer_care_title_2")}
         </h1>
         <Button
+          href="/contact"
+          as={LocaleLink}
           variant="solid"
           radius="full"
           color="primary"

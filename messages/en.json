@@ -37,8 +37,8 @@
       "account_types_card_1_desc": "The Standard Account is a top choice among traders due to its no-swap commissions, offering cost-efficiency by eliminating these fees.",
       "account_types_card_2_title": "Narrow",
       "account_types_card_2_desc": "This account is tailored for scalpers, featuring the lowest spread to maximize profits from short-term market movements.",
-      "account_types_card_3_title": "Zero",
-      "account_types_card_3_desc": "The Zero Account is designed for professional traders, offering a 'zero spread' for an unmatched trading experience.",
+      "account_types_card_3_title": "Raw",
+      "account_types_card_3_desc": "The Raw Account is designed for professional traders, offering a 'zero spread' for an unmatched trading experience.",
       "account_types_learn_btn": "Learn More"
     },
     "advancedPlatforms": {
@@ -598,8 +598,8 @@
       "account1-desc": "The Standard Account is a top choice among traders due to its no-swap commissions, offering cost-efficiency by eliminating these fees.",
       "account2-title": "Narrow",
       "account2-desc": "This account is tailored for scalpers, featuring the lowest spread to maximize profits from short-term market movements.",
-      "account3-title": "Zero",
-      "account3-desc": "The Zero Account is designed for professional traders, offering a 'zero spread' for an unmatched trading experience.",
+      "account3-title": "Raw",
+      "account3-desc": "The Raw Account is designed for professional traders, offering a 'zero spread' for an unmatched trading experience.",
       "account4-title": "Crypto",
       "account4-desc": "This account caters to digital currency traders, offering cryptocurrency pairs and leverage with a $100 deposit, ideal for those seeking high returns despite volatility."
     },
@@ -677,7 +677,7 @@
       "account_t_row_17_5": "Above $1,000",
       "accounts_apply_title_1": "Open Standard Account Now!",
       "accounts_apply_title_2": "Open Narrow Account Now!",
-      "accounts_apply_title_3": "Open Zero Account Now!",
+      "accounts_apply_title_3": "Open Raw Account Now!",
       "accounts_apply_title_4": "Open Crypto Account Now!",
       "badgeTxt": "Limited Time Offer"
     },

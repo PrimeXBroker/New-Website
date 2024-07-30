@@ -1,6 +1,8 @@
 "use client";
+import LocaleLink from "@/components/LocaleLink";
 import { Button } from "@nextui-org/button";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import React from "react";
 
 const GetStarted = () => {
@@ -23,7 +25,7 @@ const GetStarted = () => {
         </p>
       </div>
       <div className="w-full md:w-[30%] flex justify-center items-center">
-        <Button radius="full" size="lg" color="primary">
+        <Button as={Link} href="https://client.primexbroker.com/en/register" radius="full" size="lg" color="primary">
           <p className="text-secondary font-semibold">{t("get_started_btn")}</p>
         </Button>
       </div>

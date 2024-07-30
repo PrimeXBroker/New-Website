@@ -11,7 +11,7 @@ const LocaleLink = ({ href, children, ...props }) => {
     : `/${currentLocale}${href}`;
 
   return (
-    <Link href={localizedHref} {...props}>
+    <Link className="w-full flex" href={localizedHref} {...props}>
       {children}
     </Link>
   );
