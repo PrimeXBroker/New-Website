@@ -10,19 +10,19 @@ const PromotionApplicable = () => {
   const instrumentsContent = [
     {
       title: i("instruments_0_h"),
-      img: "/images/forex1.webp",
+      img: "/images/bonus/forex1.webp",
     },
     {
       title: i("instruments_3_h"),
-      img: "/images/commodities.webp",
+      img: "/images/bonus/commodities.webp",
     },
     {
       title: i("instruments_1_h"),
-      img: "/images/metals.webp",
+      img: "/images/bonus/metals.webp",
     },
     {
       title: i("instruments_2_h"),
-      img: "/images/indices.webp",
+      img: "/images/bonus/indices.webp",
     },
   ];
   return (
