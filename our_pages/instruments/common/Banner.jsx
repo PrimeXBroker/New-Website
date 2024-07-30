@@ -6,7 +6,7 @@ const Banner = ({ title, description, imgUrl }) => {
   const t = useTranslations("commodities.hero");
 
   return (
-    <section className="lg:h-[70vh] bg-gradient-to-b from-[#3f3f3e] to-[#e4e5e6]">
+    <section className="bg-gradient-to-b from-[#3f3f3e] to-[#e4e5e6]">
       <div className="container flex flex-col lg:flex-row py-12 justify-around">
         <div className="w-full lg:max-w-xl flex flex-col justify-center">
           <h1 className="sectionHeading text-primary text-center lg:text-left">

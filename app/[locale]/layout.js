@@ -1,15 +1,15 @@
 import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
-// import { ToastContainer } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
 import { getMessages } from "next-intl/server";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import localFont from "@next/font/local";
 import Cookies from "@/components/Cookies";
 import "aos/dist/aos.css";
-import Transition from "@/components/Transition";
+import { Suspense } from "react";
+import { Toaster } from "react-hot-toast";
+
 
 
 const montserrat = localFont({
@@ -50,7 +50,9 @@ export async function generateMetadata({ params: { locale } }) {
     },
   };
 }
-
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "ar" }];
+}
 export default async function layout({ children, params: { locale } }) {
   const messages = await getMessages();
   const direction = locale === "ar" ? "rtl" : "ltr";
@@ -60,10 +62,14 @@ export default async function layout({ children, params: { locale } }) {
         <NextUIProvider>
           <NextIntlClientProvider messages={messages}>
             <Header locale={locale} />
-            <Transition>
-            {/* <ToastContainer autoClose={3000} /> */}
+            <Suspense fallback={null}>
             {children}
-            </Transition>
+            <Toaster
+            toastOptions={{
+              duration:5000
+            }}
+            />
+            </Suspense>
             <Footer />
             <Cookies />
           </NextIntlClientProvider>

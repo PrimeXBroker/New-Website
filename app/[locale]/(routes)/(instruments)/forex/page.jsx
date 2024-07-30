@@ -6,7 +6,6 @@ import ReadyToDive from "@/our_pages/instruments/common/ReadyToDive";
 import Steps from "@/our_pages/instruments/common/Steps";
 import Strategies from "@/our_pages/instruments/common/Strategies";
 import WhyTrade from "@/our_pages/instruments/common/WhyTrade";
-import ForexTable from "@/our_pages/instruments/forex/ForexTable";
 import React, { useState } from "react";
 import { useTranslations } from "next-intl";
 

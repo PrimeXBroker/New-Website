@@ -8,18 +8,20 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import toast from "react-hot-toast";
+
 
 const BonusForm = () => {
   const [loading, setLoading] = useState(false);
   const locale = useLocale();
   const t = useTranslations("bonus.form");
-  const [isSelected, setIsSelected] = useState(false);
   const formik = useFormik({
     initialValues:{
       name:"",
       amount:"",
       email:"",
-      account_id:""
+      account_id:"",
+      terms:false
     },
     validationSchema:Yup.object({
       name:Yup.string()
@@ -33,9 +35,19 @@ const BonusForm = () => {
       .required("email is required"),
       account_id: Yup.string().required("Account id required!"),
       amount: Yup.string().required("amount is required!"),
+      terms: Yup.bool().oneOf([true], 'Please agree to the terms and conditions to proceed.'),
     }),
     onSubmit:(values)=>{
-      console.log(values);
+      try{
+        setLoading(true)
+        console.log(values);
+      }catch(err){
+        console.log(err);
+      }finally{
+        setLoading(false);
+        formik.resetForm();
+        toast.success('Submitted Successfully')
+      }
     }
   })
   return (
@@ -138,11 +150,13 @@ const BonusForm = () => {
                 <div className="col-span-12 sm:col-span-10 md:col-span-8 lg:col-span-6 bonus-claim-form-mbl">
                   <div className="w-[90%] m-auto">
                     <Checkbox
-                      isSelected={isSelected}
-                      onValueChange={setIsSelected}
-                      color="accent"
+                     name="terms"
+                     id="terms"
+                     onChange={formik.handleChange}
+                     onBlur={formik.handleBlur}
+                     value="checked"
                     >
-                      <span className="text-white">{t("condition1")}</span>
+                      <span className={`${formik.touched.terms && formik.errors.terms ? 'text-danger':'text-white'}`}>{t("condition1")}</span>
                       <Link href={""} className="text-primary">
                         {t("condition2")}
                       </Link>
@@ -152,12 +166,14 @@ const BonusForm = () => {
                 <div className="col-span-12 mt-3">
                   <div className="text-center">
                     <Button
+                      disabled={loading}
+                      type="submit"
                       className="text-secondary font-semibold h-12 px-10"
                       radius="full"
                       size="lg"
                       color="primary"
                     >
-                      {t("form_btn")}
+                      <div className="flex gap-1 items-center">{loading && <div className="spinner inline-block"></div>} {loading ? <span className="text-center">Sending...</span> : <span>Submit</span>}</div>
                     </Button>
                   </div>
                 </div>
