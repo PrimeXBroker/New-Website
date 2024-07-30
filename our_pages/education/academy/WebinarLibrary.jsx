@@ -77,11 +77,11 @@ const WebinarLibrary = () => {
               spaceBetween: 0,
             },
             400: {
-              slidesPerView: 3,
+              slidesPerView: 2,
               spaceBetween: 10,
             },
             640: {
-              slidesPerView: 3,
+              slidesPerView: 2,
               spaceBetween: 10,
             },
             768: {
@@ -90,7 +90,7 @@ const WebinarLibrary = () => {
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 10,
+              spaceBetween: 50,
             },
             1440: {
               slidesPerView: 3,
@@ -110,15 +110,15 @@ const WebinarLibrary = () => {
           modules={[Autoplay, Pagination]}
         >
           {webinarCards.map((card, index) => (
-            <SwiperSlide className="webinar_slider_slide" key={index}>
+            <SwiperSlide className="text-center mx-auto block" key={index}>
               <div
                 onMouseEnter={() => handleIconEnter(index)}
                 onMouseLeave={handleIconLeave}
                 key={index}
-                className="flex flex-col justify-center bg-accent cursor-pointer rounded-2xl border-b-5 w-[250px] h-[250px] group
+                className="mt-4 flex flex-col justify-center items-center bg-accent cursor-pointer rounded-2xl border-b-5 w-[200px] md:w-[250px] h-[250px] group
                  hover:bg-[#3F3F3E] border-black hover:border-primary transform translate-y-[0] hover:translate-y-[-1rem] transition-transform duration-500"
               >
-                <div className="flex justify-start mb-4">
+                <div className="mb-4">
                   <Image
                     src={
                       hoveredIndex === index ? card.iconHoverUrl : card.iconUrl
@@ -126,7 +126,7 @@ const WebinarLibrary = () => {
                     alt="academy icon"
                     width="100"
                     height="70"
-                    className="block mx-0 academy_img"
+                    className="academy_img"
                   />
                 </div>
                 <h1 className="pl-4 sectionHeading text-xl text-left group-hover:text-white">

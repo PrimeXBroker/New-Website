@@ -33,9 +33,11 @@ const JoinAcademy = () => {
         <p className="md:text-lg text-secondary font-[400] text-center md:text-left">
           {t("share_expertise_desc")}
         </p>
-        <button className="bg-primary font-semibold px-4 py-2 w-[200px] rounded-full shadow-xl mt-6 mx-auto block md:m-0">
+        <div className="mt-6">
+        <button className="bg-primary font-semibold px-4 py-2 w-[200px] rounded-full shadow-xl mx-auto block md:m-0">
           {t("become_instructor_btn")}
         </button>
+        </div>
       </div>
       <div className="border-r border-r-primary"></div>
       <div className="flex-1 md:max-w-sm">
@@ -48,8 +50,7 @@ const JoinAcademy = () => {
         <p className="md:text-lg text-secondary font-[400] text-center md:text-right">
           {t("join_academy_desc")}
         </p>
-        <div className="flex justify-end">
-          {" "}
+        <div className="flex justify-end mt-6">
           {/* Flex container to align items to the end (right) */}
           <button className="bg-primary font-semibold px-4 py-2 w-[200px] rounded-full shadow-xl text-center mt-6 mx-auto block md:m-0">
             {t("sign_up_btn")}
