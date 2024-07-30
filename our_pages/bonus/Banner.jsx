@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import RegButton from "@/components/RegButton";
+import Link from "next/link";
 
 const Banner = () => {
   const locale = useLocale();
@@ -80,7 +81,7 @@ const Banner = () => {
                 <p>
                   <span className="text-white">*</span>
                   <span className="text-sm text-white italic font-normal">
-                    {t("tc")}
+                   <Link className="text-primary underline" href="#"> {t("tc")}</Link>
                   </span>
                 </p>
               </div>

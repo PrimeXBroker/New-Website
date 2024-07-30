@@ -93,7 +93,7 @@ function BonusCalculator() {
         <div className="flex flex-col justify-center flex-1 space-y-12">
           <h1 className="text-3xl lg:text-5xl text-center text-[#232323]">
             Calculate your
-            <br /> <strong>Profit Bonus</strong>
+            <br /> <strong>Deposit Bonus</strong>
           </h1>
           <h2 className="text-center text-2xl lg:text-3xl text-[#232323]">
             use the form on the right to see how <br /> much bonus you could
@@ -102,7 +102,7 @@ function BonusCalculator() {
           <h2 className="text-center text-2xl lg:text-3xl text-[#232323]">
             Enter your{" "}
             <strong>
-              Profit amount,
+              Deposit amount,
               <br />{" "}
             </strong>
             and watch the <br />
@@ -113,11 +113,11 @@ function BonusCalculator() {
           <h1 className="text-center text-3xl text-[#FFF]">Bonus Calculator</h1>
           <div>
             <label className="w-[70%] mx-auto block px-5 text-[#FFF]">
-              Profit amount:
+              Deposit amount:
             </label>
             <input
-              className="px-5 py-7 rounded-3xl w-[70%] mx-auto block text-[#3f3f3e] text-3xl border-none"
-              placeholder="Enter Profit Amount"
+              className="appearance-none outline-none focus:outline-1 focus:outline-primary px-5 py-3 rounded-2xl w-[70%] mx-auto block text-[#3f3f3e] text-xl border-none"
+              placeholder="Enter Deposit Amount"
               type="text"
               value={profitAmount}
               onChange={handleProfitAmountChange}
@@ -128,7 +128,7 @@ function BonusCalculator() {
               No. of Lots required
             </label>
             <input
-              className="px-5 py-7 rounded-3xl w-[70%] mx-auto block text-[#3f3f3e] text-3xl"
+              className="appearance-none outline-none focus:outline-1 focus:outline-primary px-5 py-3 rounded-2xl w-[70%] mx-auto block text-[#3f3f3e] text-xl"
               placeholder=" No. of Lots required"
               type="text"
               value={numberOfLots}
@@ -141,7 +141,7 @@ function BonusCalculator() {
             </label>
             <input
               onChange={handleBonusChange}
-              className="px-5 py-7 rounded-3xl w-[70%] mx-auto block text-[#3f3f3e] text-3xl"
+              className="appearance-none outline-none focus:outline-1 focus:outline-primary px-5 py-3 rounded-2xl w-[70%] mx-auto block text-[#3f3f3e] text-xl"
               placeholder="Bonus"
               value={bonus === 0 ? "" : bonus}
               type="text"

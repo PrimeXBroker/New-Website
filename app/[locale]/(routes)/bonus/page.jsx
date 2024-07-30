@@ -54,7 +54,7 @@ const page = () => {
       <Steps />
       <StepsMobile />
       <PromotionApplicable />
-      <PremiumAdvantages />
+      <PremiumAdvantages /> 
       <BonusForm />
       <BonusCalculator/>
       <MaximizeProfit />
