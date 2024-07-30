@@ -10,6 +10,7 @@ import TermsCondition from "@/our_pages/bonus/TermsCondition";
 import Faq from "@/our_pages/instruments/common/Faq";
 import React from "react";
 import { useTranslations } from "next-intl";
+import BonusCalculator from "@/components/BonusCallculator";
 
 const page = () => {
   const t = useTranslations("bonus.faq");
@@ -55,6 +56,7 @@ const page = () => {
       <PromotionApplicable />
       <PremiumAdvantages />
       <BonusForm />
+      <BonusCalculator/>
       <MaximizeProfit />
       <TermsCondition />
       <Faq forexFaqs={forexFaqs} />

@@ -38,7 +38,7 @@ function BonusCalculator() {
   useEffect(() => {
     if (lastChanged === "profitAmount") {
       if (profitAmount !== "") {
-        const newBonus = parseFloat(profitAmount) * 0.3;
+        const newBonus = parseFloat(profitAmount) * 0.2;
         setBonus(newBonus.toFixed(2));
       } else {
         setBonus("");
@@ -50,7 +50,7 @@ function BonusCalculator() {
   useEffect(() => {
     if (lastChanged === "bonus") {
       if (bonus !== "") {
-        const newProfitAmount = parseFloat(bonus) / 0.3;
+        const newProfitAmount = parseFloat(bonus) / 0.2;
         setProfitAmount(newProfitAmount.toFixed(2));
       } else {
         setProfitAmount("");
@@ -61,7 +61,7 @@ function BonusCalculator() {
   // Update numberOfLots whenever bonus changes
   useEffect(() => {
     if (bonus !== "") {
-      setNumberOfLots(parseFloat(bonus) / 6);
+      setNumberOfLots(parseFloat(bonus) / 4);
     } else {
       setNumberOfLots(0);
     }
@@ -88,18 +88,18 @@ function BonusCalculator() {
   };
 
   return (
-    <section className="py-12 font-sans mt-[100rem]">
-      <div className="flex container bg-[#e4e5e6] py-12">
+    <section className="py-8 font-sans">
+      <div className="flex flex-col gap-8 lg:gap-0 container bg-[#e4e5e6] lg:flex-row py-8">
         <div className="flex flex-col justify-center flex-1 space-y-12">
-          <h1 className="text-5xl text-center text-[#232323]">
+          <h1 className="text-3xl lg:text-5xl text-center text-[#232323]">
             Calculate your
             <br /> <strong>Profit Bonus</strong>
           </h1>
-          <h2 className="text-center text-3xl text-[#232323]">
+          <h2 className="text-center text-2xl lg:text-3xl text-[#232323]">
             use the form on the right to see how <br /> much bonus you could
             earn
           </h2>
-          <h2 className="text-center text-3xl text-[#232323]">
+          <h2 className="text-center text-2xl lg:text-3xl text-[#232323]">
             Enter your{" "}
             <strong>
               Profit amount,
