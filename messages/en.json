@@ -1,14 +1,14 @@
 {
   "home": {
     "metaData": {
-      "title": "PrimeX Broker | Home",
-      "description": "Trade and dream Bigger with PrimeX Broker"
+      "title": "PrimeX Capital | Home",
+      "description": "Trade and dream Bigger with PrimeX Capital"
     },
     "hero": {
       "title1": "TRUSTED",
       "desc1": "Solidifying global leadership in financial derivatives, with sustained growth and unwavering customer focus, earning worldwide trust.",
       "title2": "REGULATED",
-      "desc2": "PrimeX Broker prioritizes global regulatory adherence, fostering trust and accountability across diverse international arenas.",
+      "desc2": "PrimeX Capital prioritizes global regulatory adherence, fostering trust and accountability across diverse international arenas.",
       "title3": "GLOBAL",
       "desc3": "Servicing +500,000 clients globally, we offer diverse products, ensuring financial stability across +100 countries.",
       "liveAccount": "OPEN LIVE ACCOUNT",
@@ -98,7 +98,7 @@
     },
     "getStarted": {
       "get_started_title": "Get Started with PrimeX",
-      "get_started_desc_1": "Ready to elevate your trading experience? Join PrimeX Broker and",
+      "get_started_desc_1": "Ready to elevate your trading experience? Join PrimeX Capital and",
       "get_started_desc_2": "explore our advanced trading features and special offers.",
       "get_started_btn": "Open Your Account"
     },
@@ -881,7 +881,7 @@
       "title1": "How to Claim Your",
       "title2": " Deposit Bonus",
       "claim_li1": " Open a Live Account",
-      "claim_li1_p": " Open a standard account with PrimeX Capital.",
+      "claim_li1_p": " Open a standard Plus account with PrimeX Capital.",
       "claim_li2": " Deposit",
       "claim_li2_p": "Start with a deposit of Minimum $500.",
       "claim_li3": " Receive Your Bonus",

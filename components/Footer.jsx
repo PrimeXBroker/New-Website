@@ -16,6 +16,8 @@ import { FaDownload } from "react-icons/fa6";
 import CustomModal from "./Modal";
 import { Button } from "@nextui-org/button";
 import LocaleLink from "./LocaleLink";
+import { useTranslations } from "next-intl";
+
 
 const footerNotice = [
   {
@@ -41,6 +43,7 @@ const footerNotice = [
 ];
 
 const Footer = () => {
+  const t = useTranslations("home.getStarted");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = (e) => {
@@ -154,6 +157,34 @@ const Footer = () => {
   ];
 
   return (
+    <>
+     <section
+      className="bg-primary relative z-0">
+      <div className="container flex p-10 flex-col md:flex-row">
+      <div className="md:w-[60%] w-full mb-5 md:mb-0">
+        <h1 className="sectionHeading text-3xl text-secondary font-semibold text-center md:text-left">
+          {t("get_started_title")}
+        </h1>
+        <p className="sectionPara  text-secondary text-center md:text-left">
+          {t("get_started_desc_1")}
+          <br />
+          {t("get_started_desc_2")}
+        </p>
+      </div>
+      <div className="w-full md:w-[30%] flex justify-center items-center">
+        <Button as={Link} href="https://client.primexbroker.com/en/register" radius="full" size="lg" color="secondary">
+          <p className="text-white font-semibold">Open Live Account</p>
+        </Button>
+      </div>
+      </div>
+      <Image 
+      src='https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/x-transparent.svg' 
+      width='210' 
+      height='200' 
+      alt="logo coin"
+      className="absolute xl:right-[25%] lg:right-[20%] md:right-[20%] right-[50%] top-0 -z-10"
+      />
+    </section>
     <footer className="bg-secondary">
       <div className="container flex flex-col pt-12">
         <div className="flex flex-row justify-center lg:gap-0 gap-5 lg:justify-around items-center border-b border-b-gray-500 pb-12 flex-wrap">
@@ -309,6 +340,7 @@ const Footer = () => {
         &copy; 2022 - 2024 Primex Broker (PTY) LTD all rights reserved.{" "}
       </p>
     </footer>
+    </>
   );
 };
 
