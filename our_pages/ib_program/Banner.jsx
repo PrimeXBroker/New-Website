@@ -14,8 +14,8 @@ const Banner = () => {
       <div
         className={`relative h-[1000px] md:h-[650px] xl:h-[750px] bg-no-repeat bg-cover bg-center ${
           locale === "ar"
-            ? "md:bg-[url(/images/ib/ib-new-header-ar.webp)] bg-[url(/images/ib/ib-new-header-mbl.webp)]"
-            : "md:bg-[url(/images/ib/ib-new-header.webp)] bg-[url(/images/ib/ib-new-header-mbl.webp)]"
+            ? "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-header-mbl.webp)] md:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-header-ar.webp)]"
+            : "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-header-mbl.webp)] md:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-header.webp)]"
         }`}
       >
         <div className="container mx-auto md:px-10 xl:px-4 pt-20 xl:pt-32">
@@ -73,7 +73,7 @@ const Banner = () => {
                   color="primary"
                 >
                   <Link
-                    href='#ib-form'
+                    href="#ib-form"
                     className="inline-flex gap-3 items-center justify-center text-xl"
                   >
                     {t("btnTxt")}

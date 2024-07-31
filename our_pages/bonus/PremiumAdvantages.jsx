@@ -10,8 +10,10 @@ const PremiumAdvantages = () => {
   const t = useTranslations("accountTypes");
 
   const advantagesData = {
-    imgEn: "/images/advantage-en.webp",
-    imgAr: "/images/advantage-ar.webp",
+    imgEn:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/advantage-en.webp",
+    imgAr:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/advantage-ar.webp",
     mainTitle1: t("advantages.adv_h2"),
     mainTitle2: t("advantages.adv_h2_1"),
     btnTxt: t("header.btnTxt"),
@@ -23,32 +25,37 @@ const PremiumAdvantages = () => {
 
   const advantagesContent = [
     {
-      img: "/images/account-types/adv-logo1.svg",
-      hoveredImg: "/images/account-types/adv-logo1-hover.svg",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo1.svg",
+      hoveredImg:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo1-hover.svg",
       title: t("advantages.adv1_h3"),
       description: t("advantages.adv1_p"),
     },
     {
-      img: "/images/account-types/adv-logo2.svg",
-      hoveredImg: "/images/account-types/adv-logo2-hover.svg",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo2.svg",
+      hoveredImg:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo2-hover.svg",
       title: t("advantages.adv2_h3"),
       description: t("advantages.adv2_p"),
     },
     {
-      img: "/images/account-types/adv-logo3.svg",
-      hoveredImg: "/images/account-types/adv-logo3-hover.svg",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo3.svg",
+      hoveredImg:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo3-hover.svg",
       title: t("advantages.adv3_h3"),
       description: t("advantages.adv3_p"),
     },
     {
-      img: "/images/account-types/adv-logo4.svg",
-      hoveredImg: "/images/account-types/adv-logo4-hover.svg",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo4.svg",
+      hoveredImg:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo4-hover.svg",
       title: t("advantages.adv4_h3"),
       description: t("advantages.adv4_p"),
     },
     {
-      img: "/images/account-types/adv-logo5.svg",
-      hoveredImg: "/images/account-types/adv-logo5-hover.svg",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo5.svg",
+      hoveredImg:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo5-hover.svg",
       title: t("advantages.adv5_h3"),
       description: t("advantages.adv5_p"),
     },
@@ -120,7 +127,7 @@ const PremiumAdvantages = () => {
           </div>
           <div className="col-span-12 lg:col-span-6 mt-10 lg:mt-0">
             <Image
-              src="/images/bonus/premium-adv.webp"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/premium-adv.webp"
               width="600"
               height="300"
               alt="img"

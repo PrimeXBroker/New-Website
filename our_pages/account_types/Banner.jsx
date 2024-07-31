@@ -20,8 +20,8 @@ const Banner = () => {
       <div
         className={`relative h-[900px] lg:h-[600px] bg-no-repeat bg-cover bg-center ${
           locale === "ar"
-            ? "bg-[url(/images/account-types/acc-type-header-ar.webp)]"
-            : "bg-[url(/images/account-types/acc-type-header.webp)]"
+            ? "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/acc-type-header-ar.webp)]"
+            : "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/acc-type-header.webp)]"
         }`}
       >
         <div className="container mx-auto lg:px-10 xl:px-4 pt-20 lg:pt-10">
@@ -61,7 +61,7 @@ const Banner = () => {
             </div>
             <div className="lg:col-span-6 flex justify-center lg:justify-end mt-10 lg:mt-0">
               <Image
-                src="/images/account-types/acc-banner.webp"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/acc-banner.webp"
                 width="600"
                 height="300"
                 alt="img"

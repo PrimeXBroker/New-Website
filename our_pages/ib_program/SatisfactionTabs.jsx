@@ -94,7 +94,7 @@ const SatisfactionTabs = () => {
                   <div className="mt-10">
                     <div className="flex items-center gap-4 mb-6">
                       <Image
-                        src="/images/ib/ib-new-menu.webp"
+                        src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-menu.webp"
                         unoptimized={true}
                         width="100"
                         height="100"
@@ -109,7 +109,7 @@ const SatisfactionTabs = () => {
                     </div>
                     <div className="flex items-center gap-4 mb-6">
                       <Image
-                        src="/images/ib/ib-new-menu.webp"
+                        src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-menu.webp"
                         unoptimized={true}
                         width="100"
                         height="100"
@@ -124,7 +124,7 @@ const SatisfactionTabs = () => {
                     </div>
                     <div className="flex items-center gap-4 mb-6">
                       <Image
-                        src="/images/ib/ib-new-menu.webp"
+                        src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-menu.webp"
                         unoptimized={true}
                         width="100"
                         height="100"
@@ -140,7 +140,7 @@ const SatisfactionTabs = () => {
                     {tab.key === "Discover" || tab.key === "Benefit" ? (
                       <div className="flex items-center gap-4">
                         <Image
-                          src="/images/ib/ib-new-menu.webp"
+                          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-menu.webp"
                           unoptimized={true}
                           width="100"
                           height="100"

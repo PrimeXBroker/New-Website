@@ -15,7 +15,7 @@ const StepsMobile = () => {
         <div className="w-[230px]">
           <div className="w-44 h-44 rounded-full bg-secondary flex justify-end items-center m-auto">
             <Image
-              src="/images/bonus/claim1.svg"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/claim1.svg"
               width={100}
               height={100}
               alt="img"
@@ -34,7 +34,7 @@ const StepsMobile = () => {
         <div className="w-[230px] my-12">
           <div className="w-44 h-44 rounded-full bg-secondary flex justify-end items-center m-auto">
             <Image
-              src="/images/bonus/claim2.svg"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/claim2.svg"
               width={100}
               height={100}
               alt="img"
@@ -53,7 +53,7 @@ const StepsMobile = () => {
         <div className="w-[230px]">
           <div className="w-44 h-44 rounded-full bg-secondary flex justify-end items-center m-auto">
             <Image
-              src="/images/bonus/claim3.svg"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/claim3.svg"
               width={100}
               height={100}
               alt="img"

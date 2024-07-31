@@ -10,19 +10,19 @@ const PromotionApplicable = () => {
   const instrumentsContent = [
     {
       title: i("instruments_0_h"),
-      img: "/images/bonus/forex1.webp",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/forex1.webp",
     },
     {
       title: i("instruments_3_h"),
-      img: "/images/bonus/commodities.webp",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/commodities.webp",
     },
     {
       title: i("instruments_1_h"),
-      img: "/images/bonus/metals.webp",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/metals.webp",
     },
     {
       title: i("instruments_2_h"),
-      img: "/images/bonus/indices.webp",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/indices.webp",
     },
   ];
   return (

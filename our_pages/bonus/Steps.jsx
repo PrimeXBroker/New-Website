@@ -28,7 +28,7 @@ const Steps = () => {
                 }`}
               >
                 <Image
-                  src="/images/bonus/claim1.svg"
+                  src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/claim1.svg"
                   width={100}
                   height={100}
                   alt="img"
@@ -49,7 +49,7 @@ const Steps = () => {
                 }`}
               >
                 <Image
-                  src="/images/bonus/claim2.svg"
+                  src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/claim2.svg"
                   width={100}
                   height={100}
                   alt="img"
@@ -70,7 +70,7 @@ const Steps = () => {
                 }`}
               >
                 <Image
-                  src="/images/bonus/claim3.svg"
+                  src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/claim3.svg"
                   width={100}
                   height={100}
                   alt="img"
@@ -79,7 +79,7 @@ const Steps = () => {
               </div>
             </div>
             <Image
-              src="/images/bonus/bonus-claim-line.svg"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/bonus-claim-line.svg"
               width={900}
               height={300}
               alt="img"

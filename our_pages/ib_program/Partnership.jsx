@@ -11,37 +11,37 @@ const Partnership = () => {
 
   const partnershipContent = [
     {
-      img: "/images/ib/ib-partnership1.webp",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-partnership1.webp",
       title: t("partnership.adv1_h3"),
       title2: t("partnership.adv1_h3_1"),
       description: t("partnership.adv1_p"),
     },
     {
-      img: "/images/ib/ib-partnership2.webp",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-partnership2.webp",
       title: t("partnership.adv2_h3"),
       title2: t("partnership.adv2_h3_1"),
       description: t("partnership.adv2_p"),
     },
     {
-      img: "/images/ib/ib-partnership3.webp",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-partnership3.webp",
       title: t("partnership.adv3_h3"),
       title2: t("partnership.adv3_h3_1"),
       description: t("partnership.adv3_p"),
     },
     {
-      img: "/images/ib/ib-partnership4.webp",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-partnership4.webp",
       title: t("partnership.adv4_h3"),
       title2: t("partnership.adv4_h3_1"),
       description: t("partnership.adv4_p"),
     },
     {
-      img: "/images/ib/ib-partnership5.webp",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-partnership5.webp",
       title: t("partnership.adv5_h3"),
       title2: t("partnership.adv5_h3_1"),
       description: t("partnership.adv5_p"),
     },
     {
-      img: "/images/ib/ib-partnership6.webp",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-partnership6.webp",
       title: t("partnership.adv6_h3"),
       title2: t("partnership.adv6_h3_1"),
       description: t("partnership.adv6_p"),
@@ -54,8 +54,8 @@ const Partnership = () => {
       <div
         className={`mt-16 md:h-[580px] lg:h-[850px] bg-no-repeat bg-cover bg-top ${
           locale === "ar"
-            ? "lg:bg-[url(/images/ib/ib-new-partnership-ar.webp)]"
-            : "lg:bg-[url(/images/ib/ib-new-partnership.webp)]"
+            ? "lg:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-partnership-ar.webp)]"
+            : "lg:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-partnership.webp)]"
         }`}
       >
         <div className="container">
@@ -106,7 +106,7 @@ const Partnership = () => {
                   color="primary"
                 >
                   <Link
-                    href='#ib-form'
+                    href="#ib-form"
                     className="inline-flex gap-3 items-center justify-center text-xl"
                   >
                     {t("partnership.btnTxt")}

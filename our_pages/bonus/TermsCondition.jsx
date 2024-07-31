@@ -7,13 +7,6 @@ const TermsCondition = () => {
   const locale = useLocale();
   const t = useTranslations("bonus.terms");
 
-  const handleDownload = (loc, name) => {
-    const anchor = document.createElement("a");
-    anchor.href = loc;
-    anchor.download = `${name}.pdf`;
-    anchor.click();
-  };
-
   return (
     <section className="container my-20">
       <div className="bg-accent flex p-10 flex-col md:flex-row rounded-3xl">
@@ -46,16 +39,8 @@ const TermsCondition = () => {
             className="h-14 px-14"
           >
             <a
-              onClick={() =>
-                handleDownload(
-                  `${
-                    locale === "ar"
-                      ? "/pdf/30_Bonus_Ar.pdf"
-                      : "/pdf/30_Bonus_En.pdf"
-                  }`,
-                  "Gift Account"
-                )
-              }
+              href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/20%25_deposit_bonus.pdf"
+              target="_blank"
               className="text-secondary font-semibold"
             >
               {t("title")}

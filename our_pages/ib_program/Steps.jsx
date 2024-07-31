@@ -8,17 +8,17 @@ const Steps = () => {
 
   const stepsContent = [
     {
-      img: "/images/ib/ib-step1.webp",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-step1.webp",
       title: t("steps.join_li1"),
       description: t("steps.join_li1_p"),
     },
     {
-      img: "/images/ib/ib-step2.webp",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-step2.webp",
       title: t("steps.join_li2"),
       description: t("steps.join_li2_p"),
     },
     {
-      img: "/images/ib/ib-step3.webp",
+      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-step3.webp",
       title: t("steps.join_li3"),
       description: t("steps.join_li3_p"),
     },
