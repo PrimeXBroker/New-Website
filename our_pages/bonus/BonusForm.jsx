@@ -10,46 +10,48 @@ import * as Yup from "yup";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-
 const BonusForm = () => {
   const [loading, setLoading] = useState(false);
   const locale = useLocale();
   const t = useTranslations("bonus.form");
   const formik = useFormik({
-    initialValues:{
-      name:"",
-      amount:"",
-      email:"",
-      account_id:"",
-      terms:false
+    initialValues: {
+      name: "",
+      amount: "",
+      email: "",
+      account_id: "",
+      terms: false,
     },
-    validationSchema:Yup.object({
-      name:Yup.string()
-      .matches(
-        /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-        "should be only letters"
-      )
-      .required("required!"),
+    validationSchema: Yup.object({
+      name: Yup.string()
+        .matches(
+          /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
+          "should be only letters"
+        )
+        .required("required!"),
       email: Yup.string()
-      .email("provide valid email")
-      .required("email is required"),
+        .email("provide valid email")
+        .required("email is required"),
       account_id: Yup.string().required("Account id required!"),
       amount: Yup.string().required("amount is required!"),
-      terms: Yup.bool().oneOf([true], 'Please agree to the terms and conditions to proceed.'),
+      terms: Yup.bool().oneOf(
+        [true],
+        "Please agree to the terms and conditions to proceed."
+      ),
     }),
-    onSubmit:(values)=>{
-      try{
-        setLoading(true)
+    onSubmit: (values) => {
+      try {
+        setLoading(true);
         console.log(values);
-      }catch(err){
+      } catch (err) {
         console.log(err);
-      }finally{
+      } finally {
         setLoading(false);
         formik.resetForm();
         toast.success('Submitted Successfully');
       }
-    }
-  })
+    },
+  });
   return (
     <section className="container my-20">
       <div className="bg-secondary p-10 rounded-3xl">
@@ -66,13 +68,13 @@ const BonusForm = () => {
                 <div className="col-span-12 sm:col-span-6 bonus-claim-form-mbl">
                   <div className="w-[90%] m-auto">
                     <Input
-                    classNames={{
-                      label:`${
-                        formik.touched.name && formik.errors.name
-                          ? "text-danger"
-                          : "#000"
-                      }`
-                    }}
+                      classNames={{
+                        label: `${
+                          formik.touched.name && formik.errors.name
+                            ? "text-danger"
+                            : "#000"
+                        }`,
+                      }}
                       size="lg"
                       type="text"
                       label={t("name")}
@@ -87,13 +89,13 @@ const BonusForm = () => {
                 <div className="col-span-12 sm:col-span-6 bonus-claim-form-mbl">
                   <div className="w-[90%] m-auto">
                     <Input
-                     classNames={{
-                      label:`${
-                        formik.touched.amount && formik.errors.amount
-                          ? "text-danger"
-                          : "#000"
-                      }`
-                    }}
+                      classNames={{
+                        label: `${
+                          formik.touched.amount && formik.errors.amount
+                            ? "text-danger"
+                            : "#000"
+                        }`,
+                      }}
                       size="lg"
                       type="number"
                       label={t("profit_number")}
@@ -108,13 +110,13 @@ const BonusForm = () => {
                 <div className="col-span-12 sm:col-span-6 bonus-claim-form-mbl">
                   <div className="w-[90%] m-auto">
                     <Input
-                     classNames={{
-                      label:`${
-                        formik.touched.email && formik.errors.email
-                          ? "text-danger"
-                          : "#000"
-                      }`
-                    }}
+                      classNames={{
+                        label: `${
+                          formik.touched.email && formik.errors.email
+                            ? "text-danger"
+                            : "#000"
+                        }`,
+                      }}
                       size="lg"
                       type="email"
                       label={t("email")}
@@ -129,13 +131,13 @@ const BonusForm = () => {
                 <div className="col-span-12 sm:col-span-6 bonus-claim-form-mbl">
                   <div className="w-[90%] m-auto">
                     <Input
-                     classNames={{
-                      label:`${
-                        formik.touched.account_id && formik.errors.account_id
-                          ? "text-danger"
-                          : "#000"
-                      }`
-                    }}
+                      classNames={{
+                        label: `${
+                          formik.touched.account_id && formik.errors.account_id
+                            ? "text-danger"
+                            : "#000"
+                        }`,
+                      }}
                       size="lg"
                       type="number"
                       label={t("account_number")}
@@ -150,13 +152,21 @@ const BonusForm = () => {
                 <div className="col-span-12 sm:col-span-10 md:col-span-8 lg:col-span-6 bonus-claim-form-mbl">
                   <div className="w-[90%] m-auto">
                     <Checkbox
-                     name="terms"
-                     id="terms"
-                     onChange={formik.handleChange}
-                     onBlur={formik.handleBlur}
-                     value="checked"
+                      name="terms"
+                      id="terms"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value="checked"
                     >
-                      <span className={`${formik.touched.terms && formik.errors.terms ? 'text-danger':'text-white'}`}>{t("condition1")}</span>
+                      <span
+                        className={`${
+                          formik.touched.terms && formik.errors.terms
+                            ? "text-danger"
+                            : "text-white"
+                        }`}
+                      >
+                        {t("condition1")}
+                      </span>
                       <Link href={""} className="text-primary">
                         {t("condition2")}
                       </Link>
@@ -173,7 +183,16 @@ const BonusForm = () => {
                       size="lg"
                       color="primary"
                     >
-                      <div className="flex gap-1 items-center">{loading && <div className="spinner inline-block"></div>} {loading ? <span className="text-center">Sending...</span> : <span>Submit</span>}</div>
+                      <div className="flex gap-1 items-center">
+                        {loading && (
+                          <div className="spinner inline-block"></div>
+                        )}{" "}
+                        {loading ? (
+                          <span className="text-center">Sending...</span>
+                        ) : (
+                          <span>Submit</span>
+                        )}
+                      </div>
                     </Button>
                   </div>
                 </div>

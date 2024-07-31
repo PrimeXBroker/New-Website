@@ -752,8 +752,15 @@
       "f_name": "First Name",
       "l_name": "Last Name",
       "email": "Email Address",
-      "phone_number": "Phone Number",
-      "form_btn": "Submit"
+      "contact": "Phone Number",
+      "form_btn": "Submit",
+      "first_name_validation_error": "first name can only contain letters.",
+      "first_name_required_error": "first name is required!",
+      "last_name_validation_error": "last name can only contain letters.",
+      "last_name_required_error": "last name is required!",
+      "email_validation_error": "Invalid email address",
+      "email_required_error": "email is required!",
+      "contact_required_error": "phone is required!"
     },
     "rewards": {
       "title": " IB Program Rewards",
