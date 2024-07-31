@@ -17,38 +17,49 @@ const BonusForm = () => {
   const formik = useFormik({
     initialValues: {
       name: "",
-      amount: "",
+      requestedAmount: "",
       email: "",
-      account_id: "",
+      accountId: "",
       terms: false,
     },
     validationSchema: Yup.object({
       name: Yup.string()
         .matches(
           /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-          "should be only letters"
+          "name can only contain letters."
         )
-        .required("required!"),
+        .required("full name is required!"),
       email: Yup.string()
         .email("provide valid email")
         .required("email is required"),
-      account_id: Yup.string().required("Account id required!"),
-      amount: Yup.string().required("amount is required!"),
+      accountId: Yup.string().required("account id required!"),
+      requestedAmount: Yup.string().required("deposit amount is required!"),
       terms: Yup.bool().oneOf(
         [true],
         "Please agree to the terms and conditions to proceed."
       ),
     }),
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
+      const updatedValues = {
+        name: values.name,
+        requestedAmount: values.requestedAmount,
+        email: values.email,
+        accountId: values.accountId,
+      };
       try {
         setLoading(true);
-        console.log(values);
-      } catch (err) {
-        console.log(err);
+        const response = await axios.post(
+          `https://primexbroker.com/api/create/bonus/request`,
+          // JSON.stringify(updatedValues)
+          updatedValues
+        );
+        console.log("Response", response);
+      } catch (error) {
+        console.log(error);
       } finally {
         setLoading(false);
+        toast.success("Submitted Successfully");
         formik.resetForm();
-        toast.success('Submitted Successfully');
       }
     },
   });
@@ -78,7 +89,6 @@ const BonusForm = () => {
                       size="lg"
                       type="text"
                       label={t("name")}
-                      errorMessage="Please enter a name"
                       name="name"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
@@ -91,7 +101,8 @@ const BonusForm = () => {
                     <Input
                       classNames={{
                         label: `${
-                          formik.touched.amount && formik.errors.amount
+                          formik.touched.requestedAmount &&
+                          formik.errors.requestedAmount
                             ? "text-danger"
                             : "#000"
                         }`,
@@ -99,11 +110,10 @@ const BonusForm = () => {
                       size="lg"
                       type="number"
                       label={t("profit_number")}
-                      errorMessage="Please enter a profit amount"
-                      name="amount"
+                      name="requestedAmount"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      value={formik.values.amount}
+                      value={formik.values.requestedAmount}
                     />
                   </div>
                 </div>
@@ -120,7 +130,6 @@ const BonusForm = () => {
                       size="lg"
                       type="email"
                       label={t("email")}
-                      errorMessage="Please enter an email"
                       name="email"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
@@ -133,7 +142,7 @@ const BonusForm = () => {
                     <Input
                       classNames={{
                         label: `${
-                          formik.touched.account_id && formik.errors.account_id
+                          formik.touched.accountId && formik.errors.accountId
                             ? "text-danger"
                             : "#000"
                         }`,
@@ -141,11 +150,10 @@ const BonusForm = () => {
                       size="lg"
                       type="number"
                       label={t("account_number")}
-                      errorMessage="Please enter a account number"
-                      name="account_id"
+                      name="accountId"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      value={formik.values.account_id}
+                      value={formik.values.accountId}
                     />
                   </div>
                 </div>

@@ -90,11 +90,13 @@ const IbForm = () => {
                       size="lg"
                       type="text"
                       label={t("f_name")}
-                      className={`${
-                        formik.touched.first_name && formik.errors.first_name
-                          ? "border-2 border-red-600"
-                          : ""
-                      }`}
+                      classNames={{
+                        label: `${
+                          formik.touched.first_name && formik.errors.first_name
+                            ? "text-danger"
+                            : "#000"
+                        }`,
+                      }}
                       name="first_name"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
@@ -108,11 +110,13 @@ const IbForm = () => {
                       size="lg"
                       type="text"
                       label={t("l_name")}
-                      className={`${
-                        formik.touched.last_name && formik.errors.last_name
-                          ? "border-2 border-red-600"
-                          : ""
-                      }`}
+                      classNames={{
+                        label: `${
+                          formik.touched.last_name && formik.errors.last_name
+                            ? "text-danger"
+                            : "#000"
+                        }`,
+                      }}
                       name="last_name"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
@@ -126,11 +130,13 @@ const IbForm = () => {
                       size="lg"
                       type="email"
                       label={t("email")}
-                      className={`${
-                        formik.touched.email && formik.errors.email
-                          ? "border-2 border-red-600"
-                          : ""
-                      }`}
+                      classNames={{
+                        label: `${
+                          formik.touched.email && formik.errors.email
+                            ? "text-danger"
+                            : "#000"
+                        }`,
+                      }}
                       name="email"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
@@ -144,11 +150,13 @@ const IbForm = () => {
                       size="lg"
                       type="number"
                       label={t("contact")}
-                      className={`${
-                        formik.touched.contact && formik.errors.contact
-                          ? "border-2 border-red-600"
-                          : ""
-                      }`}
+                      classNames={{
+                        label: `${
+                          formik.touched.contact && formik.errors.contact
+                            ? "text-danger"
+                            : "#000"
+                        }`,
+                      }}
                       name="contact"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}

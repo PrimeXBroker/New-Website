@@ -266,8 +266,8 @@ const Slider = () => {
                   <SwiperSlide key={index}>
                     <Link legacyBehavior href={acc.accountLink} target="_blank">
                       <a legacyBehavior href={acc.accountLink} target="_blank">
-                        <div className="relative z-5 mb-12 flex h-24 items-center justify-center rounded-3xl swiper-account-title-box">
-                          <div className="text-3xl text-center text-white font-semibold">
+                        <div className="relative z-5 mb-12 flex h-20 items-center justify-center rounded-3xl swiper-account-title-box">
+                          <div className="text-2xl text-center text-white font-semibold">
                             <h3 className="mt-0">{acc.title}</h3>
                           </div>
                           <div className="absolute bottom-[-18px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[76px] border-r-[76px] border-l-transparent border-r-transparent swiper-account-angle"></div>
@@ -276,7 +276,7 @@ const Slider = () => {
                           <div className="container-fluid">
                             <div className="grid grid-cols-12">
                               <div className="col-span-7">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p className={`flex`}>
                                     <IoIosCheckmarkCircle
                                       className={`text-primary text-lg me-2`}
@@ -286,7 +286,7 @@ const Slider = () => {
                                 </div>
                               </div>
                               <div className="col-span-5">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   {acc.showBadge && (
                                     <span
                                       className={`absolute rounded-full bg-red-800 px-2 py-1 text-xs text-white ring-1 ring-inset ring-red-600/10 ${
@@ -304,7 +304,7 @@ const Slider = () => {
                             </div>
                             <div className="grid grid-cols-12">
                               <div className="col-span-7">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p className="flex">
                                     <IoIosCheckmarkCircle
                                       className={`text-primary text-lg me-2`}
@@ -314,14 +314,14 @@ const Slider = () => {
                                 </div>
                               </div>
                               <div className="col-span-5">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p>{acc.spreads}</p>
                                 </div>
                               </div>
                             </div>
                             <div className="grid grid-cols-12">
                               <div className="col-span-7">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p className="flex">
                                     <IoIosCheckmarkCircle
                                       className={`text-primary text-lg me-2 `}
@@ -331,14 +331,14 @@ const Slider = () => {
                                 </div>
                               </div>
                               <div className="col-span-5">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p>{acc.commissions}</p>
                                 </div>
                               </div>
                             </div>
                             <div className="grid grid-cols-12">
                               <div className="col-span-7">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p className="flex">
                                     <IoIosCheckmarkCircle
                                       className={`text-primary text-lg me-2`}
@@ -348,14 +348,14 @@ const Slider = () => {
                                 </div>
                               </div>
                               <div className="col-span-5">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p>{acc.leverage}</p>
                                 </div>
                               </div>
                             </div>
                             <div className="grid grid-cols-12">
                               <div className="col-span-7">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p className="flex">
                                     <IoIosCheckmarkCircle
                                       className={`text-primary text-lg me-2`}
@@ -365,14 +365,14 @@ const Slider = () => {
                                 </div>
                               </div>
                               <div className="col-span-5">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p>{acc.marginRequired}</p>
                                 </div>
                               </div>
                             </div>
                             <div className="grid grid-cols-12">
                               <div className="col-span-7">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p className="flex">
                                     <IoIosCheckmarkCircle
                                       className={`text-primary text-lg me-2`}
@@ -382,14 +382,14 @@ const Slider = () => {
                                 </div>
                               </div>
                               <div className="col-span-5">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p>{acc.lotSize}</p>
                                 </div>
                               </div>
                             </div>
                             <div className="grid grid-cols-12">
                               <div className="col-span-7">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p className="flex">
                                     <IoIosCheckmarkCircle
                                       className={`text-primary text-lg me-2`}
@@ -399,14 +399,14 @@ const Slider = () => {
                                 </div>
                               </div>
                               <div className="col-span-5">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p>{acc.stopLevel}</p>
                                 </div>
                               </div>
                             </div>
                             <div className="grid grid-cols-12">
                               <div className="col-span-7">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p className="flex">
                                     <IoIosCheckmarkCircle
                                       className={`text-primary text-lg me-2`}
@@ -416,14 +416,14 @@ const Slider = () => {
                                 </div>
                               </div>
                               <div className="col-span-5">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p>{acc.marginCall}</p>
                                 </div>
                               </div>
                             </div>
                             <div className="grid grid-cols-12">
                               <div className="col-span-7">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p className="flex">
                                     <IoIosCheckmarkCircle
                                       className={`text-primary text-lg me-2`}
@@ -433,14 +433,14 @@ const Slider = () => {
                                 </div>
                               </div>
                               <div className="col-span-5">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p>{acc.executionType}</p>
                                 </div>
                               </div>
                             </div>
                             <div className="grid grid-cols-12">
                               <div className="col-span-7">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p className="flex">
                                     <IoIosCheckmarkCircle
                                       className={`text-primary text-lg me-2`}
@@ -450,14 +450,14 @@ const Slider = () => {
                                 </div>
                               </div>
                               <div className="col-span-5">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   {acc.automaticTrading}
                                 </div>
                               </div>
                             </div>
                             <div className="grid grid-cols-12">
                               <div className="col-span-7">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p className="flex">
                                     <IoIosCheckmarkCircle
                                       className={`text-primary text-lg me-2`}
@@ -467,14 +467,14 @@ const Slider = () => {
                                 </div>
                               </div>
                               <div className="col-span-5">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   {acc.vps}
                                 </div>
                               </div>
                             </div>
                             <div className="grid grid-cols-12">
                               <div className="col-span-7">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p className="flex">
                                     <IoIosCheckmarkCircle
                                       className={`text-primary text-lg me-2`}
@@ -484,14 +484,14 @@ const Slider = () => {
                                 </div>
                               </div>
                               <div className="col-span-5">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   {acc.metatrader}
                                 </div>
                               </div>
                             </div>
                             <div className="grid grid-cols-12">
                               <div className="col-span-7">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p className="flex">
                                     <IoIosCheckmarkCircle
                                       className={`text-primary text-lg me-2`}
@@ -501,14 +501,14 @@ const Slider = () => {
                                 </div>
                               </div>
                               <div className="col-span-5">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p>{acc.webinars}</p>
                                 </div>
                               </div>
                             </div>
                             <div className="grid grid-cols-12">
                               <div className="col-span-7">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p className="flex">
                                     <IoIosCheckmarkCircle
                                       className={`text-primary text-lg me-2`}
@@ -519,14 +519,14 @@ const Slider = () => {
                               </div>
                               <div className="col-span-5">
                                 {" "}
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p>{acc.expertAdvice}</p>
                                 </div>
                               </div>
                             </div>
                             <div className="grid grid-cols-12">
                               <div className="col-span-7">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p className="flex">
                                     <IoIosCheckmarkCircle
                                       className={`text-primary text-lg me-2`}
@@ -536,7 +536,7 @@ const Slider = () => {
                                 </div>
                               </div>
                               <div className="col-span-5">
-                                <div className="text-sm	text-white mb-3">
+                                <div className="text-sm	text-white mb-2">
                                   <p>{acc.swap}</p>
                                 </div>
                               </div>
@@ -551,7 +551,6 @@ const Slider = () => {
                       </a>
                     </Link>
                   </SwiperSlide>
-                  
                 );
               })}
             </Swiper>
