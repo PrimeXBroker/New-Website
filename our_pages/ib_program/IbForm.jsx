@@ -1,11 +1,66 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const IbForm = () => {
   const locale = useLocale();
-  const t = useTranslations("ib");
+  const t = useTranslations("ib.form");
+  const [loading, setLoading] = useState(false);
+
+  const formik = useFormik({
+    initialValues: {
+      first_name: "",
+      last_name: "",
+      email: "",
+      contact: "",
+    },
+    validationSchema: Yup.object({
+      first_name: Yup.string()
+        .matches(
+          /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
+          t("first_name_validation_error")
+        )
+        .required(t("first_name_required_error")),
+      last_name: Yup.string()
+        .matches(
+          /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
+          t("last_name_validation_error")
+        )
+        .required(t("last_name_required_error")),
+      email: Yup.string()
+        .email(t("email_validation_error"))
+        .required(t("email_required_error")),
+      contact: Yup.string().required(t("contact_required_error")),
+    }),
+    onSubmit: async (values) => {
+      const updatedValues = {
+        first_name: values.first_name,
+        last_name: values.last_name,
+        email: values.email,
+        contact: values.contact,
+      };
+      try {
+        setLoading(true);
+        const response = await axios.post(
+          `https://primexbroker.com/api/ib_form`,
+          JSON.stringify(updatedValues)
+        );
+        console.log("Response", response);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+        toast("Thanks for contacting us our support will be in touch");
+        formik.resetForm();
+      }
+    },
+  });
 
   return (
     <section className="my-20">
@@ -21,9 +76,12 @@ const IbForm = () => {
             ></div>
           </div>
           <div className="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-5 xl:col-span-4 flex justify-center md:justify-end">
-            <form className="bg-secondary h-[auto] px-8 py-10 rounded-3xl w-[394px]">
+            <form
+              onSubmit={formik.handleSubmit}
+              className="bg-secondary h-[auto] px-8 py-10 rounded-3xl w-[394px]"
+            >
               <h2 className="text-3xl mb-10 text-accent font-semibold text-center">
-                {t("form.title")}
+                {t("title")}
               </h2>
               <div className="grid grid-cols-12 gap-y-4">
                 <div className="col-span-12 bonus-claim-form-mbl">
@@ -31,8 +89,16 @@ const IbForm = () => {
                     <Input
                       size="lg"
                       type="text"
-                      label={t("form.f_name")}
-                      errorMessage="Please enter a first name"
+                      label={t("f_name")}
+                      className={`${
+                        formik.touched.first_name && formik.errors.first_name
+                          ? "border-2 border-red-600"
+                          : ""
+                      }`}
+                      name="first_name"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.first_name}
                     />
                   </div>
                 </div>
@@ -41,8 +107,16 @@ const IbForm = () => {
                     <Input
                       size="lg"
                       type="text"
-                      label={t("form.l_name")}
-                      errorMessage="Please enter a last name"
+                      label={t("l_name")}
+                      className={`${
+                        formik.touched.last_name && formik.errors.last_name
+                          ? "border-2 border-red-600"
+                          : ""
+                      }`}
+                      name="last_name"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.last_name}
                     />
                   </div>
                 </div>
@@ -51,8 +125,16 @@ const IbForm = () => {
                     <Input
                       size="lg"
                       type="email"
-                      label={t("form.email")}
-                      errorMessage="Please enter an email address"
+                      label={t("email")}
+                      className={`${
+                        formik.touched.email && formik.errors.email
+                          ? "border-2 border-red-600"
+                          : ""
+                      }`}
+                      name="email"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.email}
                     />
                   </div>
                 </div>
@@ -61,20 +143,39 @@ const IbForm = () => {
                     <Input
                       size="lg"
                       type="number"
-                      label={t("form.phone_number")}
-                      errorMessage="Please enter a phone number"
+                      label={t("contact")}
+                      className={`${
+                        formik.touched.contact && formik.errors.contact
+                          ? "border-2 border-red-600"
+                          : ""
+                      }`}
+                      name="contact"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.contact}
                     />
                   </div>
                 </div>
                 <div className="col-span-12">
                   <div className="text-center">
                     <Button
+                      disabled={loading}
+                      type="submit"
                       className="text-secondary font-semibold h-12 px-10"
                       radius="full"
                       size="lg"
                       color="primary"
                     >
-                      {t("form.form_btn")}
+                      <div className="flex gap-1 items-center">
+                        {loading && (
+                          <div className="spinner inline-block"></div>
+                        )}{" "}
+                        {loading ? (
+                          <span className="text-center">Sending...</span>
+                        ) : (
+                          <span>{t("form_btn")}</span>
+                        )}
+                      </div>
                     </Button>
                   </div>
                 </div>
