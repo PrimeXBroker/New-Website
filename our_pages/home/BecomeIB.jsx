@@ -59,8 +59,7 @@ const BecomeIB = () => {
           ))}
           </div>
           <p className="text-secondary text-md">Seize the opportunity For Financial Freedom.</p>
-        <LocaleLink href='/ib-program'  className="block text-left w-fit px-4 py-2 rounded-full shadow-xl bg-accent text-secondary border-3 border-secondary ">
-        
+        <LocaleLink href='/ib-program'  className="block text-left w-fit px-4 py-2 rounded-full shadow-xl bg-accent text-secondary border-3 border-secondary hover:bg-secondary hover:text-primary transition-colors duration-300 hover:border-primary">
           {t("become_ib_btn")}
         </LocaleLink>
       </div>

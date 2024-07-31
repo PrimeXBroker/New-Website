@@ -10,17 +10,17 @@ const AdvancedPlatforms = () => {
   const list = [
     {
       id:1,
-      text:"Harness The power of MetaTrader 5 for an unparaleled trading experience.",
+      text:"Harness the Power of MetaTrader 5 for an unparalleled trading experience.",
       icon:'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/x-Icon.svg'
     },
     {
       id:2,
-      text:"Some other Text here...lorem ipsum machako",
+      text:"Comprehensive Market Analysis: Utilize advanced charting tools, multiple timeframes, and a variety of technical indicators to make informed trading decisions.",
       icon:'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/x-Icon.svg'
     },
     {
       id:3,
-      text:"Some other Text here...lorem ipsum machako",
+      text:"Automated Trading Capabilities: Leverage the power of Expert Advisors (EAs) to automate your trading strategies and stay ahead of the market 24/7.",
       icon:'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/x-Icon.svg'
     }
   ]
@@ -44,7 +44,7 @@ const AdvancedPlatforms = () => {
       </h1>
       <ul className="mb-5">
       {list.map((el)=>(
-        <li key={el.id} className="flex items-center gap-2 py-1"><Image width='20' height='20' alt="icon" src={el.icon}/><p className="text-white text-lg font-[500]">{el.text}</p></li>
+        <li key={el.id} className="flex items-start my-3 gap-2"><Image width='20' height='20' alt="icon" src={el.icon}/><p className="text-white text-lg font-[500]">{el.text}</p></li>
       ))}
       </ul>
       <Link 

@@ -45,7 +45,7 @@ export default function Home() {
       <Rewards />
       <CustomerCare />
       <Academy />
-      <GetStarted />
+      {/* <GetStarted /> */}
       <OurRecognition />
     </>
   );
