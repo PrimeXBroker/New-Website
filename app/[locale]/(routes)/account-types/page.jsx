@@ -35,8 +35,8 @@ const page = () => {
   ];
 
   const advantagesData = {
-    imgEn: "/images/advantage-en.webp",
-    imgAr: "/images/advantage-ar.webp",
+    imgEn: "/images/account-types/advantage-en.webp",
+    imgAr: "/images/account-types/advantage-ar.webp",
     mainTitle1: t("advantages.adv_h2"),
     mainTitle2: t("advantages.adv_h2_1"),
     btnTxt: b("btnTxt"),
