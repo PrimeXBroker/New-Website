@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const Banner = ({ title, description, imgUrl }) => {
   const t = useTranslations("commodities.hero");
@@ -15,9 +16,11 @@ const Banner = ({ title, description, imgUrl }) => {
           <p className="sectionPara text-accent text-center lg:text-left pb-4">
             {description}
           </p>
-          <button className="bg-primary rounded-full text-secondary font-semibold px-4 py-2 w-[250px] mx-auto lg:m-0  lg:block">
+          <Link 
+          href='https://client.primexbroker.com/en/register'
+          className="bg-primary rounded-full text-secondary text-center font-semibold px-4 py-2 w-[250px] mx-auto lg:m-0  lg:block">
             {t("start_now_btn")}
-          </button>
+          </Link>
         </div>
         <div className="flex justify-center items-center lg:mt-0 mt-8">
           <Image src={imgUrl} alt="banner img" width="300" height="600" />

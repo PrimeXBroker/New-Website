@@ -106,8 +106,7 @@ const Partnership = () => {
                   color="primary"
                 >
                   <Link
-                    href={`https://client.primexbroker.com/${locale}/register`}
-                    target="_blank"
+                    href='#ib-form'
                     className="inline-flex gap-3 items-center justify-center text-xl"
                   >
                     {t("partnership.btnTxt")}

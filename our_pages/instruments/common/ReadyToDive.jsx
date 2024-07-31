@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const ReadyToDive = ({ title, description }) => {
   const t = useTranslations("commodities.readyToDive");
@@ -12,9 +13,11 @@ const ReadyToDive = ({ title, description }) => {
         </h1>
         <p className="sectionpara text-center md:text-left">{description}</p>
       </div>
-      <button className="bg-primary rounded-full text-secondary font-semibold px-4 py-4 w-[250px]">
+      <Link
+      href='https://client.primexbroker.com/en/register' 
+      className="bg-primary rounded-full text-secondary text-center font-semibold px-4 py-4 w-[250px]">
         {t("open_account_btn")}
-      </button>
+      </Link>
     </section>
   );
 };

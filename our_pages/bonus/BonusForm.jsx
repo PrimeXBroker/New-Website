@@ -46,7 +46,7 @@ const BonusForm = () => {
       }finally{
         setLoading(false);
         formik.resetForm();
-        toast.success('Submitted Successfully')
+        toast.success('Submitted Successfully');
       }
     }
   })

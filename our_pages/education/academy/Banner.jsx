@@ -27,9 +27,9 @@ const Banner = () => {
             >
               {h("description")}
             </p>
-            <button className="bg-primary px-4 py-4 rounded-full w-[200px] shadow-xl block md:m-0 mx-auto">
+            <Link href='#academy-form' className="bg-primary text-center px-4 py-4 rounded-full w-[200px] shadow-xl block md:m-0 mx-auto">
               {h("join_btn")}
-            </button>
+            </Link>
           </div>
           <div className="flex">
             <Image
@@ -55,14 +55,16 @@ const Banner = () => {
         >
           {f("description")}
         </p>
-        <button className="bg-primary px-4 py-4 rounded-full w-[200px] mx-auto block shadow-xl mb-8">
+        <Link 
+         href='https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe' 
+         className="bg-primary text-center px-4 py-4 rounded-full w-[200px] mx-auto block shadow-xl mb-8">
           {f("download_btn")}
-        </button>
+        </Link>
         <p className="text-secondary text-lg text-center">
           {f("link_title_part_1")}
           <span className="font-[700]">{f("link_title_part_2")}</span>
           {f("link_title_part_3")}
-          <Link className="text-primary appearance-none pl-2" href="#">
+          <Link className="text-primary appearance-none pl-2" href="https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe">
             {f("download_link_text")}
           </Link>
         </p>

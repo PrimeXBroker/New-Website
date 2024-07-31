@@ -8,7 +8,7 @@ const IbForm = () => {
   const t = useTranslations("ib");
 
   return (
-    <section className="my-20">
+    <section id="ib-form" className="py-20">
       <div className="container">
         <div className="grid grid-cols-12 relative">
           <div className="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-7 xl:col-span-8 flex flex-col justify-center">

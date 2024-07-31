@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const Banner = () => {
   const t = useTranslations("metaTrader5.hero");
@@ -28,12 +29,13 @@ const Banner = () => {
             {t("desc_2")}
           </p>
           <div className="pt-5">
-            <button
-              className="bg-primary rounded-full text-[13px] font-semibold text-secondary px-2 py-2 w-[150px]"
+            <Link
+              href='https://client.primexbroker.com/en/register'
+              className="bg-primary rounded-full text-[13px]  text-center font-semibold text-secondary px-10 py-3"
               style={{ letterSpacing: "0.9px" }}
             >
               {t("start_now_btn")}
-            </button>
+            </Link> 
           </div>
         </div>
         <div>

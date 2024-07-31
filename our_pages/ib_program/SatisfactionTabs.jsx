@@ -82,7 +82,7 @@ const SatisfactionTabs = () => {
           <Tabs aria-label="Options" color="primary">
             {tabData.map((tab, index) => (
               <Tab key={index} title={tab.tabTitle}>
-                <div className="border-1 border-accent rounded-3xl p-9 min-h-[300px] w-full sm:w-[450px] md:w-[550px] lg:w-[650px]">
+                <div className="border-1 border-accent rounded-3xl p-9 min-h-[420px] w-full sm:w-[450px] md:w-[550px] lg:w-[650px]">
                   <div>
                     <h3 className="text-2xl md:text-2xl text-primary font-semibold">
                       {tab.contentTitle1}

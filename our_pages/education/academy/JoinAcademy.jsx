@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const sectionData = [
   {
@@ -34,9 +35,12 @@ const JoinAcademy = () => {
           {t("share_expertise_desc")}
         </p>
         <div className="mt-6">
-        <button className="bg-primary font-semibold px-4 py-2 w-[200px] rounded-full shadow-xl mx-auto block md:m-0">
+        <Link 
+        className="bg-primary font-semibold px-4 py-2 w-[200px] rounded-full shadow-xl mx-auto block md:m-0"
+        href='#academy-form'
+        >
           {t("become_instructor_btn")}
-        </button>
+        </Link>
         </div>
       </div>
       <div className="border-r border-r-primary"></div>
@@ -52,9 +56,11 @@ const JoinAcademy = () => {
         </p>
         <div className="flex justify-end mt-6">
           {/* Flex container to align items to the end (right) */}
-          <button className="bg-primary font-semibold px-4 py-2 w-[200px] rounded-full shadow-xl text-center mt-6 mx-auto block md:m-0">
+          <Link 
+          href='#academy-form'
+          className="bg-primary font-semibold px-4 py-2 w-[200px] rounded-full shadow-xl text-center mt-6 mx-auto block md:m-0">
             {t("sign_up_btn")}
-          </button>{" "}
+          </Link>{" "}
           {/* Adjusted padding for better button appearance */}
         </div>
       </div>

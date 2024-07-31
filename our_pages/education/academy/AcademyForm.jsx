@@ -9,6 +9,8 @@ import { PiSignInFill, PiUserSquareThin } from "react-icons/pi";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { LocationContext } from "@/context/location-context";
+import toast from "react-hot-toast";
+
 
 const webinarTypes = [
   { id: 1, name: "Fundamental Analysis", value: "fundamental" },
@@ -56,13 +58,13 @@ const AcademyForm = () => {
         console.log(error);
       } finally {
         setLoading(false);
-        toast("Thanks for contacting us our support will be in touch");
+        toast.success('Form Submitted Successfully')
         formik.resetForm();
       }
     },
   });
   return (
-    <section className="py-12 container">
+    <section id="academy-form" className="py-12 container">
       <div className="shadow-xl border-accent border xl:w-[40%] xl:mx-auto lg:w-[40%] lg:mx-auto md:w-[50%] md:mx-auto sm:w-[70%] sm:mx-auto w-[80%] mx-auto rounded-2xl">
         <Tabs
           className="justify-center w-full"
