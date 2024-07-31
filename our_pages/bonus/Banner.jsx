@@ -21,8 +21,8 @@ const Banner = () => {
       <div
         className={`relative h-[1140px] lg:h-[750px] bg-no-repeat bg-cover bg-center ${
           locale === "ar"
-            ? "bg-[url(/images/bonus/header-bg-ar.webp)]"
-            : "bg-[url(/images/bonus/header-bg.webp)]"
+            ? "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/header-bg-ar.webp)]"
+            : "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/header-bg.webp)]"
         }`}
       >
         <div className="container mx-auto lg:px-10 xl:px-4 pt-16 xl:pt-12">
@@ -71,7 +71,7 @@ const Banner = () => {
             </div>
             <div className="lg:col-span-6 flex flex-col items-center lg:items-end mt-10 lg:mt-0">
               <Image
-                src="/images/bonus/bonus-top.webp"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/bonus-top.webp"
                 width="500"
                 height="500"
                 alt="img"
@@ -81,7 +81,14 @@ const Banner = () => {
                 <p>
                   <span className="text-white">*</span>
                   <span className="text-sm text-white italic font-normal">
-                   <Link className="text-primary underline" href="#"> {t("tc")}</Link>
+                    <Link
+                      className="text-primary"
+                      href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/20%25_deposit_bonus.pdf"
+                      target="_blank"
+                    >
+                      {" "}
+                      {t("tc")}
+                    </Link>
                   </span>
                 </p>
               </div>

@@ -22,7 +22,7 @@ const Rewards = () => {
           <div className="col-span-12 sm:col-span-12 md:col-span-6 mt-5">
             <div className="flex justify-center md:justify-end">
               <Image
-                src="/images/ib/ib-new-reward.webp"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-reward.webp"
                 width="500"
                 height="500"
                 alt="img"

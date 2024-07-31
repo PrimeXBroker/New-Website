@@ -67,13 +67,7 @@ const IbForm = () => {
       <div className="container">
         <div className="grid grid-cols-12 relative">
           <div className="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-7 xl:col-span-8 flex flex-col justify-center">
-            <div
-              className={`h-[500px] bg-no-repeat bg-cover bg-center sm:bg-inherit ${
-                locale === "ar"
-                  ? "bg-[url(/images/ib/ib-new-form.webp)]"
-                  : "bg-[url(/images/ib/ib-new-form.webp)]"
-              }`}
-            ></div>
+            <div className="h-[500px] bg-no-repeat bg-cover bg-center sm:bg-inherit bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-form.webp)]"></div>
           </div>
           <div className="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-5 xl:col-span-4 flex justify-center md:justify-end">
             <form

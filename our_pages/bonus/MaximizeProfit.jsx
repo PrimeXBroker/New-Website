@@ -48,7 +48,7 @@ const MaximizeProfit = () => {
         </div>
         <div className="col-span-12 lg:col-span-4 flex flex-col items-center mt-10 lg:mt-0 mb-14 lg:mb-0">
           <Image
-            src="/images/bonus/bonus-maximize.webp"
+            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/bonus-maximize.webp"
             width="400"
             height="400"
             alt="img"
