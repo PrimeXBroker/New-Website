@@ -42,7 +42,7 @@
       "fact_desc3": "+ million Paid-up Capital ",
       "fact_million": "+ million",
       "fact_no4": "Billion",
-      "fact_desc4": "Daily trades"
+      "fact_desc4": "+ Billion Daily trades"
     },
     "stats": {
       "value_1": "250000",
@@ -154,6 +154,13 @@
     "cookie": {
       "text": "By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
       "btnTxt": "Accept All Cookies"
+    },
+    "modal":{
+      "title":"Dear Valued Customers,",
+      "para1":"We are pleased to inform you that we are now PrimeX Capital and our new website is ",
+      "para2":"Please update your bookmarks.",
+      "para3":"Happy Trading!",
+      "acknowledged":"Acknowledged"
     }
   },
   "academy": {
