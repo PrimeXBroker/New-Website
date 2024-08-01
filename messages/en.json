@@ -1,4 +1,25 @@
 {
+  "menu":{
+    "home":"Home",
+    "trading":"Trading",
+    "platform":"Platform",
+    "accounts":"Accounts",
+    "partners":"Partners",
+    "education":"Education",
+    "academy":"Academy",
+    "deposit":"20% Deposit",
+    "login":"Login",
+    "register":"Register",
+    "forex":"Forex",
+    "stocks":"Stocks",
+    "commodities":"commodities",
+    "shares":"Shares",
+    "metals":"Metals",
+    "indices":"Indices",
+    "mt5":"MetaTrader 5",
+    "ib_program":"IB Program"
+
+  },
   "home": {
     "metaData": {
       "title": "PrimeX Capital | Home",
@@ -118,9 +139,6 @@
       "academy_card_3_title_2": "Analysis",
       "academy_card_3_desc_1": "Stay informed with the",
       "academy_card_3_desc_2": "latest insights and trends"
-    },
-    "menu": {
-      "register": "Register"
     },
     "getStarted": {
       "get_started_title": "Get Started with PrimeX Capital",
@@ -612,9 +630,9 @@
       "help_li1_title": "Help Center:",
       "help_li1_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
       "help_li2_title": "Email:",
-      "help_li2_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
+      "help_li2_desc": "For detailed inquiries, reach out to us at support@primexcapital.com, and our team will respond promptly.",
       "help_li3_title": "Live Chat:",
-      "help_li3_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
+      "help_li3_desc": "Get immediate assistance through our live chat feature, available 24/7 for your convenience.",
       "help_li4_title": "Phone:",
       "help_li4_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum"
     },

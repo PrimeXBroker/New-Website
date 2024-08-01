@@ -1,3 +1,4 @@
+"use client";
 import BonusCalculator from "@/components/BonusCallculator";
 import Academy from "@/our_pages/home/Academy";
 import AccountTtpes from "@/our_pages/home/AccountTypes";
@@ -14,37 +15,35 @@ import TradingOpportunities from "@/our_pages/home/TradingOpportunities";
 import { useTranslations } from "next-intl";
 
 export default function Home() {
-  const t = useTranslations("home.stats");
-
+  const t = useTranslations("home.hero");
   const statsOne = [
     {
-      value: t("value_1"),
-      description: t("desc_1"),
+      value: 250000,
+      description: t("fact_desc1"),
       symbol: "+",
       prepend: false,
     },
     {
-      value: t("value_2"),
-      description: t("desc_2"),
+      value: 5000,
+      description: t("fact_no3"),
       symbol: "+",
       prepend: false,
     },
     {
-      value: t("value_3"),
-      description: t("desc_3"),
+      value: 300,
+      description: t("fact_desc3"),
       symbol: "$",
       prepend: "true",
-      suffix: t("suffix_3"), // Adding suffix
+      suffix: " Million+", // Adding suffix
     },
     {
-      value: t("value_4"),
-      description: t("desc_4"),
+      value: 7,
+      description: t("fact_desc4"),
       symbol: " $",
       prepend: "true",
-      suffix: t("suffix_4"),
+      suffix: " Billion+",
     },
   ];
-
   return (
     <>
       <Banner />
