@@ -217,7 +217,7 @@ const BonusForm = () => {
         </div>
       </div>
 </section>
-<Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+<Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="center">
         <ModalContent>
           {(onClose) => (
             <>

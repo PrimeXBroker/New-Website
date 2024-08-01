@@ -35,7 +35,7 @@ const Banner = () => {
         className="block absolute inset-0 w-full h-full object-cover opacity-80"
       >
         <source
-          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/videos/banner_video_v4.webm"
+          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/videos/banner_video_v2.1.webm"
           type="video/webm"
         />
       </video>

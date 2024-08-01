@@ -107,7 +107,7 @@
       "register": "Register"
     },
     "getStarted": {
-      "get_started_title": "Get Started with PrimeX",
+      "get_started_title": "Get Started with PrimeX Capital",
       "get_started_desc_1": "Ready to elevate your trading experience? Join PrimeX Capital and",
       "get_started_desc_2": "explore our advanced trading features and special offers.",
       "get_started_btn": "Open Your Account"
@@ -606,7 +606,7 @@
   "accountTypes": {
     "header": {
       "title": "Account Types",
-      "text": "PrimeX has carefully curated our account types to meet your individual trading needs.",
+      "text": "PrimeX Capital has carefully curated our account types to meet your individual trading needs.",
       "btnTxt": "Open Live Account"
     },
     "card": {
@@ -913,7 +913,7 @@
     },
     "terms": {
       "title": "Download T&C's",
-      "desc_part_1": "This offer is available for all new and existing",
+      "desc_part_1": "This offer is available for all new and existing ",
       "desc_part_2": "clients of PrimeX Capital."
     },
     "form": {
@@ -929,15 +929,15 @@
     },
     "faq": {
       "question_1": "How do I qualify for the 20% Deposit Bonus?",
-      "answer_1": "To qualify for the 20% Deposit Bonus, you must have a PrimeX Standard Account and make a minimum deposit of $500. The bonus can be claimed multiple times, but remember, the total maximum bonus you can receive is capped at $25,000.",
+      "answer_1": "To qualify for the 20% Deposit Bonus, you must have a PrimeX Standard Plus Account and make a minimum deposit of $500. The bonus can be claimed multiple times, but remember, the total maximum bonus you can receive is capped at $25,000.",
       "question_2": "Can I claim the bonus more than once?",
       "answer_2": "Yes, you can claim the 20% Deposit Bonus multiple times during the promotion period. However, please note that if any amount is withdrawn from the capital, the entire bonus amount will be retracted.",
       "question_3": " How do I claim the bonus as a new client?",
-      "answer_3": "As a new client, you need to open a Standard Account and make the qualifying deposit of at least $500. Then, complete the form on our webpage. Once your deposit is verified, the bonus will be credited to your account.",
+      "answer_3": "As a new client, you need to open a Standard Plus Account and make the qualifying deposit of at least $500. Then, complete the form on our webpage. Once your deposit is verified, the bonus will be credited to your account.",
       "question_4": "How do I claim the bonus as an existing client?",
-      "answer_4": " If you are an existing client with a Standard Account, simply deposit a new amount into your account and fill out the form on our webpage. After verification of your deposit, the bonus will be credited to your account.",
+      "answer_4": " If you are an existing client with a Standard Plus Account, simply deposit a new amount into your account and fill out the form on our webpage. After verification of your deposit, the bonus will be credited to your account.",
       "question_5": "When will the bonus be credited to my account?",
-      "answer_5": "The bonus will be automatically credited to your Standard Account upon verification of the form you submitted on the landing page and confirmation of the deposit amount. You will receive a notification confirming the bonus credit.",
+      "answer_5": "The bonus will be automatically credited to your Standard Plus Account upon verification of the form you submitted on the landing page and confirmation of the deposit amount. You will receive a notification confirming the bonus credit.",
       "question_6": "What are the conditions for withdrawing the bonus?",
       "answer_6": "To withdraw the bonus, you must fulfill the required trading lot size, which is calculated using the formula: Bonus Amount ÷ 4. For example, if you receive a $100 bonus, you need to trade 25 lots. Please note that stocks and crypto pairs are excluded from this campaign."
     }

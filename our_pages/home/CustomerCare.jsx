@@ -13,11 +13,11 @@ const CustomerCare = () => {
     Aos.init({ disable: "mobile" });
   }, []);
   return (
-    <section className="container pb-8 flex flex-col justify-center items-center lg:flex-row lg:justify-around border-b-2 border-b-accent">
+    <section className="container my-8 flex flex-col justify-center items-center lg:flex-row lg:justify-around border-b-2 border-b-accent">
      <div className="pb-7 lg:pb-0">
       <Image 
       src='https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/customer_care.webp' 
-      width='300' 
+      width='350' 
       height='300' 
       alt="customer care"/>
      </div>
@@ -39,7 +39,7 @@ const CustomerCare = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center pt-8">
+      <div className="flex items-center justify-center pt-8 mb-6">
       <LocaleLink className=" bg-primary text-center block text-secondary font-semibold text-medium px-4 py-3 w-[200px] rounded-full shadow-xl" href='/contact'>
         Contact Us
       </LocaleLink>
