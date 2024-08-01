@@ -74,10 +74,10 @@ const Footer = () => {
       column: {
         heading: "Rules",
         links: [
-          { name: "Privacy Policy", href: "#" },
+          { name: "Privacy Policy", href: "/privacy-policy" },
           { name: "Risk Disclosure", href: "#" },
-          { name: "Client Agreement", href: "#" },
-          { name: "Terms and Conditions", href: "#" },
+          { name: "Client Agreement", href: "client-agreement" },
+          { name: "Terms and Conditions", href: "/terms" },
         ],
       },
     },
