@@ -26,7 +26,7 @@ const page = () => {
       img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/zero-acc.webp",
       title: t("card.account3-title"),
       description: t("card.account3-desc"),
-    }
+    },
   ];
 
   const advantagesData = {
