@@ -84,11 +84,11 @@ const Footer = () => {
         heading: "Location",
         links: [
           {
-            name: "South Africa HQ: Suit no 8 , First floor, Katherine and West building ,114 West Street, Sandown ,Sandton 2196, South Africa.",
+            name: t("Location.title_part5_link1"),
             href: "#",
           },
           {
-            name: "UAE Rep. Office: Office 2401, Westburry Tower 1, Business Bay, Dubai, UAE.",
+            name: t("Location.title_part5_link2"),
             href: "#",
           },
         ],
