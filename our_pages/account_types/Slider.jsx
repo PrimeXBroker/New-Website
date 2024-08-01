@@ -105,30 +105,30 @@ const Slider = () => {
       showBadge: true,
       accountLink: `https://client.primexbroker.com/${locale}/register`,
     },
+    // {
+    //   id: 4,
+    //   title: t("card.account4-title"),
+    //   deposition: t("slider.account_t_row_1_5"),
+    //   spreads: t("slider.account_t_row_2_5"),
+    //   commissions: t("slider.account_t_row_3_5"),
+    //   leverage: t("slider.account_t_row_4_5"),
+    //   marginRequired: t("slider.account_t_row_5_5"),
+    //   lotSize: t("slider.account_t_row_6_5"),
+    //   stopLevel: t("slider.account_t_row_7_5"),
+    //   marginCall: t("slider.account_t_row_8_5"),
+    //   executionType: t("slider.account_t_row_9_5"),
+    //   webinars: t("slider.account_t_row_16_5"),
+    //   expertAdvice: t("slider.account_t_row_17_5"),
+    //   swap: t("slider.account_t_row_10_5"),
+    //   automaticTrading: <ImCheckmark className="text-xl text-primary" />,
+    //   vps: <ImCheckmark className="text-xl text-primary" />,
+    //   metatrader: <ImCheckmark className="text-xl text-primary" />,
+    //   applyTitle: t("slider.accounts_apply_title_4"),
+    //   showBadge: false,
+    //   accountLink: `https://client.primexbroker.com/${locale}/register`,
+    // },
     {
       id: 4,
-      title: t("card.account4-title"),
-      deposition: t("slider.account_t_row_1_5"),
-      spreads: t("slider.account_t_row_2_5"),
-      commissions: t("slider.account_t_row_3_5"),
-      leverage: t("slider.account_t_row_4_5"),
-      marginRequired: t("slider.account_t_row_5_5"),
-      lotSize: t("slider.account_t_row_6_5"),
-      stopLevel: t("slider.account_t_row_7_5"),
-      marginCall: t("slider.account_t_row_8_5"),
-      executionType: t("slider.account_t_row_9_5"),
-      webinars: t("slider.account_t_row_16_5"),
-      expertAdvice: t("slider.account_t_row_17_5"),
-      swap: t("slider.account_t_row_10_5"),
-      automaticTrading: <ImCheckmark className="text-xl text-primary" />,
-      vps: <ImCheckmark className="text-xl text-primary" />,
-      metatrader: <ImCheckmark className="text-xl text-primary" />,
-      applyTitle: t("slider.accounts_apply_title_4"),
-      showBadge: false,
-      accountLink: `https://client.primexbroker.com/${locale}/register`,
-    },
-    {
-      id: 5,
       title: t("card.account1-title"),
       deposition: t("slider.account_t_row_1_2"),
       spreads: t("slider.account_t_row_2_2"),
@@ -150,7 +150,7 @@ const Slider = () => {
       accountLink: `https://client.primexbroker.com/${locale}/register`,
     },
     {
-      id: 6,
+      id: 5,
       title: t("card.account2-title"),
       deposition: (
         <>
@@ -181,7 +181,7 @@ const Slider = () => {
       accountLink: `https://client.primexbroker.com/${locale}/register`,
     },
     {
-      id: 7,
+      id: 6,
       title: t("card.account3-title"),
       deposition: (
         <>
@@ -211,26 +211,110 @@ const Slider = () => {
       showBadge: true,
       accountLink: `https://client.primexbroker.com/${locale}/register`,
     },
+    // {
+    //   id: 8,
+    //   title: t("card.account4-title"),
+    //   deposition: t("slider.account_t_row_1_5"),
+    //   spreads: t("slider.account_t_row_2_5"),
+    //   commissions: t("slider.account_t_row_3_5"),
+    //   leverage: t("slider.account_t_row_4_5"),
+    //   marginRequired: t("slider.account_t_row_5_5"),
+    //   lotSize: t("slider.account_t_row_6_5"),
+    //   stopLevel: t("slider.account_t_row_7_5"),
+    //   marginCall: t("slider.account_t_row_8_5"),
+    //   executionType: t("slider.account_t_row_9_5"),
+    //   webinars: t("slider.account_t_row_16_5"),
+    //   expertAdvice: t("slider.account_t_row_17_5"),
+    //   swap: t("slider.account_t_row_10_5"),
+    //   automaticTrading: <ImCheckmark className="text-xl text-primary" />,
+    //   vps: <ImCheckmark className="text-xl text-primary" />,
+    //   metatrader: <ImCheckmark className="text-xl text-primary" />,
+    //   applyTitle: t("slider.accounts_apply_title_4"),
+    //   showBadge: false,
+    //   accountLink: `https://client.primexbroker.com/${locale}/register`,
+    // },
     {
-      id: 8,
-      title: t("card.account4-title"),
-      deposition: t("slider.account_t_row_1_5"),
-      spreads: t("slider.account_t_row_2_5"),
-      commissions: t("slider.account_t_row_3_5"),
-      leverage: t("slider.account_t_row_4_5"),
-      marginRequired: t("slider.account_t_row_5_5"),
-      lotSize: t("slider.account_t_row_6_5"),
-      stopLevel: t("slider.account_t_row_7_5"),
-      marginCall: t("slider.account_t_row_8_5"),
-      executionType: t("slider.account_t_row_9_5"),
-      webinars: t("slider.account_t_row_16_5"),
-      expertAdvice: t("slider.account_t_row_17_5"),
-      swap: t("slider.account_t_row_10_5"),
+      id: 7,
+      title: t("card.account1-title"),
+      deposition: t("slider.account_t_row_1_2"),
+      spreads: t("slider.account_t_row_2_2"),
+      commissions: t("slider.account_t_row_3_2"),
+      leverage: t("slider.account_t_row_4_2"),
+      marginRequired: t("slider.account_t_row_5_2"),
+      lotSize: t("slider.account_t_row_6_2"),
+      stopLevel: t("slider.account_t_row_7_2"),
+      marginCall: t("slider.account_t_row_8_2"),
+      executionType: t("slider.account_t_row_9_2"),
+      webinars: t("slider.account_t_row_16_2"),
+      expertAdvice: t("slider.account_t_row_17_2"),
+      swap: t("slider.account_t_row_10_2"),
       automaticTrading: <ImCheckmark className="text-xl text-primary" />,
       vps: <ImCheckmark className="text-xl text-primary" />,
       metatrader: <ImCheckmark className="text-xl text-primary" />,
-      applyTitle: t("slider.accounts_apply_title_4"),
+      applyTitle: t("slider.accounts_apply_title_1"),
       showBadge: false,
+      accountLink: `https://client.primexbroker.com/${locale}/register`,
+    },
+    {
+      id: 8,
+      title: t("card.account2-title"),
+      deposition: (
+        <>
+          <del className="relative inline-block line-through decoration-2">
+            {t("slider.account_t_row_1_3")}
+          </del>{" "}
+          <ins className={`no-underline ${locale === "ar" ? "mr-1" : "ml-1"}`}>
+            {t("slider.account_ins_row_1_3")}
+          </ins>
+        </>
+      ),
+      spreads: t("slider.account_t_row_2_3"),
+      commissions: t("slider.account_t_row_3_3"),
+      leverage: t("slider.account_t_row_4_3"),
+      marginRequired: t("slider.account_t_row_5_3"),
+      lotSize: t("slider.account_t_row_6_3"),
+      stopLevel: t("slider.account_t_row_7_3"),
+      marginCall: t("slider.account_t_row_8_3"),
+      executionType: t("slider.account_t_row_9_3"),
+      webinars: t("slider.account_t_row_16_3"),
+      expertAdvice: t("slider.account_t_row_17_3"),
+      swap: t("slider.account_t_row_10_3"),
+      automaticTrading: <ImCheckmark className="text-xl text-primary" />,
+      vps: <ImCheckmark className="text-xl text-primary" />,
+      metatrader: <ImCheckmark className="text-xl text-primary" />,
+      applyTitle: t("slider.accounts_apply_title_2"),
+      showBadge: true,
+      accountLink: `https://client.primexbroker.com/${locale}/register`,
+    },
+    {
+      id: 9,
+      title: t("card.account3-title"),
+      deposition: (
+        <>
+          <del className="relative inline-block line-through decoration-2">
+            {t("slider.account_t_row_1_4")}
+          </del>{" "}
+          <ins className={`no-underline ${locale === "ar" ? "mr-1" : "ml-1"}`}>
+            {t("slider.account_ins_row_1_4")}
+          </ins>
+        </>
+      ),
+      spreads: t("slider.account_t_row_2_4"),
+      commissions: t("slider.account_t_row_3_4"),
+      leverage: t("slider.account_t_row_4_4"),
+      marginRequired: t("slider.account_t_row_5_4"),
+      lotSize: t("slider.account_t_row_6_4"),
+      stopLevel: t("slider.account_t_row_7_4"),
+      marginCall: t("slider.account_t_row_8_4"),
+      executionType: t("slider.account_t_row_9_4"),
+      webinars: t("slider.account_t_row_16_4"),
+      expertAdvice: t("slider.account_t_row_17_4"),
+      swap: t("slider.account_t_row_10_4"),
+      automaticTrading: <ImCheckmark className="text-xl text-primary" />,
+      vps: <ImCheckmark className="text-xl text-primary" />,
+      metatrader: <ImCheckmark className="text-xl text-primary" />,
+      applyTitle: t("slider.accounts_apply_title_3"),
+      showBadge: true,
       accountLink: `https://client.primexbroker.com/${locale}/register`,
     },
   ];
@@ -291,8 +375,8 @@ const Slider = () => {
                                     <span
                                       className={`absolute rounded-full bg-red-800 px-2 py-1 text-xs text-white ring-1 ring-inset ring-red-600/10 ${
                                         locale === "ar"
-                                          ? "top-28 left-12"
-                                          : "top-28 right-12"
+                                          ? "top-24 left-12"
+                                          : "top-24 right-12"
                                       }`}
                                     >
                                       {t("slider.badgeTxt")}
