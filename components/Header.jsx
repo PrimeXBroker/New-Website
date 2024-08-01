@@ -163,44 +163,8 @@ const router = useRouter()
             <DropdownItem className="hover:bg-primary" onClick={handleTradingMenuItemClick}>
             <LocaleLink href="/stocks">Stocks</LocaleLink>
             </DropdownItem>
-            {/* <DropdownItem>
-              <div className="flex w-[100%] h-[300px] justify-between cursor-default hover:bg-transparent text-[16px] pt-5">
-                <ul className="w-[30%]">
-                  <p className="font-semibold pb-4">Instruments</p>
-                  <div className="flex flex-col gap-3">
-                    <LocaleLink href="/forex">Forex</LocaleLink>
-                    <LocaleLink href="/metals">Metals</LocaleLink>
-                    <LocaleLink href="/indices">Indices</LocaleLink>
-                    <LocaleLink href="/commodities">Commodities</LocaleLink>
-                    <LocaleLink href="/stocks">Stocks</LocaleLink>
-                  </div>
-                </ul>
-                <ul className="w-[30%]">
-                  <p className="font-semibold pb-4"> Account Types</p>
-                  <div className="flex flex-col gap-3">
-                    <li>Standard Account</li>
-                    <li>Narrow Account</li>
-                    <li>Zero Account</li>
-                    <li>Crypto Account</li>
-                    <li>Delete Account Request</li>
-                  </div>
-                </ul>
-                <ul className="w-[30%]">
-                  <p className="font-semibold pb-4"> Learn The Trading</p>
-                  <div className="flex flex-col gap-3 text-wrap">
-                    <li>First Step:Introduction to financial market</li>
-                    <li>
-                      Second Step:Basic Info about broker and technical and
-                      fundamental analysis
-                    </li>
-                    <li>Third Step:Proffesional Strategies for Trading</li>
-                  </div>
-                </ul>
-              </div>
-            </DropdownItem> */}
           </DropdownMenu>
         </Dropdown>
-
               
         <Dropdown>
           <NavbarItem className="text-sm">

@@ -1,7 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
 import Aos from "aos";
-const useCounter = (targetValue, duration = 3000) => {
+import "aos/dist/aos.css"; // Ensure to import AOS CSS
+
+const useCounter = (targetValue, duration = 5000) => {
   const [value, setValue] = useState(0);
 
   useEffect(() => {
@@ -26,7 +28,6 @@ const useCounter = (targetValue, duration = 3000) => {
 };
 
 const CompanyStats = ({ stats }) => {
-  const displayStats = stats || statsOne;
   useEffect(() => {
     Aos.init({ disable: "mobile" });
   }, []);
@@ -42,13 +43,18 @@ const CompanyStats = ({ stats }) => {
       : value;
 
     let formattedValue = formattedNumber;
-    if (stat.symbol) {
-      formattedValue = stat.prepend
-        ? `${stat.symbol}${formattedNumber}`
-        : `${formattedNumber}${stat.symbol}`;
+
+    if (stat.symbol && stat.prepend) {
+      formattedValue = `${stat.symbol}${formattedValue}`;
+    } else if (stat.symbol) {
+      formattedValue = `${formattedValue}${stat.symbol}`;
     }
+
     if (stat.prefix) {
-      formattedValue = `${stat.prefix}${formattedNumber}`; // Apply the prefix
+      formattedValue = `${stat.prefix}${formattedValue}`; // Apply the prefix
+    }
+    if (stat.suffix) {
+      formattedValue = `${formattedValue}${stat.suffix}`; // Apply the suffix
     }
     return formattedValue;
   };
@@ -57,7 +63,7 @@ const CompanyStats = ({ stats }) => {
     <section className="stat-counter absolute right-0 left-0 bottom-5">
       <div className="py-8 md:py-12 container max-w-[1440px]">
         <div className="grid md:grid-cols-4 grid-cols-2 gap-2">
-          {displayStats.map((stat, index) => {
+          {stats.map((stat, index) => {
             const animatedValue = useCounter(stat.value);
             const displayValue = formatValue(animatedValue, stat);
 
@@ -65,9 +71,6 @@ const CompanyStats = ({ stats }) => {
               <div
                 key={index}
                 className="flex flex-col md:flex-row items-center justify-center md:gap-1"
-                // data-aos-easing="ease-out"
-                // data-aos-duration={3000}
-                // data-aos="zoom-in"
               >
                 <p className="text-primary md:text-lg xl:text-xl 3xl:text-[24px] text-base  m-0 p-0 text-center font-bold">
                   {displayValue}

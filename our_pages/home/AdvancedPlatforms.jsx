@@ -34,8 +34,18 @@ const AdvancedPlatforms = () => {
       data-aos-duration={2000}
       data-aos="slide-up"
     >
-      <div>
-        <Image src='https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/advanced_platforms.webp' width='400' height='300' alt="platform Image"/>
+      <div className="relative w-[300px] h-[230px]">
+      <video
+        autoPlay
+        loop
+        muted
+        className="block absolute inset-0 w-full h-full object-cover opacity-100"
+      >
+        <source
+          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/video22.mp4"
+          type="video/mp4"
+        />
+      </video>
       </div>
       <div className="max-w-2xl">
       <h1 className="text-white text-lg md:text-3xl font-semibold pb-4">

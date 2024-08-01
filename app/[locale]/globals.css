@@ -184,6 +184,25 @@
 
 /*End Of Flip Card */
 
+/*Begin Of Home_swiper*/
+
+.home_swiper .swiper{
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.home_swiper .swiper-slide{
+  width: 400px;
+  filter: blur(3px);
+  background: #3e403c;
+}
+.home_swiper .swiper-slide-active {
+  filter: blur(0px);
+}
+
+/*End of home_swiper*/
+
 .account-swiper-carousel .swiper {
   width: 100%;
   padding-top: 50px;

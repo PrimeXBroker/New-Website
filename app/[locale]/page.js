@@ -13,24 +13,26 @@ import Rewards from "@/our_pages/home/Rewards";
 import TradingOpportunities from "@/our_pages/home/TradingOpportunities";
 
 const statsOne = [
-  { value: 895000, description: "Served Clients" },
+  { value: 250000, description: "Served Clients",symbol:"+",prepend:false},
   {
-    value: 85000,
+    value: 5000,
     description: "Introducing Broker",
-    symbol: "",
+    symbol: "+",
     prepend: false,
   },
   {
     value: 300,
     description: "Paid-up Capital",
-    symbol: " $",
-    prepend: true,
+    symbol: "$",
+    prepend: "true",
+    suffix: " Million+", // Adding suffix
   },
   {
-    value: 28,
+    value: 7,
     description: "Daily trades",
     symbol: " $",
     prepend: "true",
+    suffix:" Billion+"
   },
 ];
 export default function Home() {
