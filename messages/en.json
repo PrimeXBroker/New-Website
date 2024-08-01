@@ -7,7 +7,7 @@
     "partners":"Partners",
     "education":"Education",
     "academy":"Academy",
-    "deposit":"20% Deposit",
+    "deposit":"20% Bonus",
     "login":"Login",
     "register":"Register",
     "forex":"Forex",
@@ -180,7 +180,7 @@
       "card_3_title": "Market News",
       "card_3_desc": "Our Experts",
       "card_4_title": "Starting Gateway",
-      "card_4_desc": "Hafsa Munir"
+      "card_4_desc": " Our Experts"
     },
     "academyForm": {
       "login_title": "Signin",
@@ -626,7 +626,7 @@
     },
     "haveQuestion": {
       "title": "Have a Question?",
-      "description": "PrimeX offers flexible funding options to get you trading faster",
+      "description": "PrimeX offers easy ways for you to contact with us",
       "help_li1_title": "Help Center:",
       "help_li1_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
       "help_li2_title": "Email:",
