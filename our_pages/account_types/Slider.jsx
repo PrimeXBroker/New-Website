@@ -375,8 +375,8 @@ const Slider = () => {
                                     <span
                                       className={`absolute rounded-full bg-red-800 px-2 py-1 text-xs text-white ring-1 ring-inset ring-red-600/10 ${
                                         locale === "ar"
-                                          ? "top-28 left-12"
-                                          : "top-28 right-12"
+                                          ? "top-24 left-12"
+                                          : "top-24 right-12"
                                       }`}
                                     >
                                       {t("slider.badgeTxt")}
