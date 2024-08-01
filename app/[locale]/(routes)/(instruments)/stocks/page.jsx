@@ -96,7 +96,7 @@ const Stocks = () => {
       />
       <Featured
         cardsData={cardsData}
-        title="Key Features"
+        title={t("keyFeatures.title")}
         icon1Hovered={icon1Hovered}
         handleIcon1Enter={handleIcon1Enter}
         handleIcon1Leave={handleIcon1Leave}

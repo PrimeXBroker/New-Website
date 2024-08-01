@@ -103,7 +103,7 @@ const KeyFeatures = () => {
   return (
     <div className="bg-accent pt-14">
       <div className="container">
-        <h1 className="sectionHeading text-secondary">{t("title")}5</h1>
+        <h1 className="sectionHeading text-secondary">{t("title")}</h1>
         <div className="grid grid-cols-12 mt-14">
           {featuresData.map((item, index) => {
             return (
