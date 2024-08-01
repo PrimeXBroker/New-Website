@@ -29,7 +29,7 @@ import { Button } from "@nextui-org/react";
 import ThemeToggle from "./ThemeToggle";
 
 const Header = ({ locale }) => {
-  const t = useTranslations("home.menu");
+  const t = useTranslations("menu");
   const pathname = usePathname();
   const pathnameWithoutLocale = pathname.replace(`/${locale}`, "");
   const [buttonText, setButtonText] = useState("EN");
@@ -39,7 +39,7 @@ const Header = ({ locale }) => {
   const [isRotatedPlatform, setIsRotatedPlatform] = useState(false);
   const menuItems = [
     {
-      name: "Home",
+      name: t("home"),
       link: "/",
     },
     // {
@@ -47,19 +47,19 @@ const Header = ({ locale }) => {
     //   link: "/trading",
     // },
     {
-      name: "Platform",
+      name:t("platform"),
       link: "/platform/mt5-platform",
     },
     {
-      name: "Partners",
+      name: t("partners"),
       link: `/ib-program`,
     },
     {
-      name: "Education",
+      name: t("education"),
       link: "/academy",
     },
     {
-      name: "20% Deposit Bonus",
+      name: t("deposit"),
       link: "/bonus",
     },
   ];
@@ -124,7 +124,7 @@ const router = useRouter()
             color="foreground"
             href="/"
           >
-            Home
+           {t("home")}
           </Link>
         </NavbarItem>
 
@@ -144,25 +144,25 @@ const router = useRouter()
                 radius="sm"
                 variant="light"
               >
-                Trading
+                {t("trading")}
               </Button>
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu variant="light">
             <DropdownItem className="hover:bg-primary" onClick={handleTradingMenuItemClick}>
-              <LocaleLink href="/forex">Forex</LocaleLink>
+              <LocaleLink href="/forex">{t("forex")}</LocaleLink>
             </DropdownItem>
             <DropdownItem className="hover:bg-primary" onClick={handleTradingMenuItemClick}> 
-            <LocaleLink href="/metals">Metals</LocaleLink>
+            <LocaleLink href="/metals">{t("metals")}</LocaleLink>
             </DropdownItem>
             <DropdownItem className="hover:bg-primary" onClick={handleTradingMenuItemClick}>
-            <LocaleLink href="/indices">Indices</LocaleLink>
+            <LocaleLink href="/indices">{t("indices")}</LocaleLink>
             </DropdownItem>
             <DropdownItem className="hover:bg-primary" onClick={handleTradingMenuItemClick}>
-            <LocaleLink href="/commodities">Commodities</LocaleLink>
+            <LocaleLink href="/commodities">{t("commodities")}</LocaleLink>
             </DropdownItem>
             <DropdownItem className="hover:bg-primary" onClick={handleTradingMenuItemClick}>
-            <LocaleLink href="/stocks">Stocks</LocaleLink>
+            <LocaleLink href="/stocks">{t("stocks")}</LocaleLink>
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
@@ -183,13 +183,13 @@ const router = useRouter()
                 radius="sm"
                 variant="light"
               >
-                Platform
+                {t("platform")}
               </Button>
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu variant="light">
             <DropdownItem className="hover:bg-primary" onClick={handlePlatformMenuItemClick}>
-              <LocaleLink href="/platform/mt5-platform">MetaTrader 5</LocaleLink>
+              <LocaleLink href="/platform/mt5-platform">{t("mt5")}</LocaleLink>
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
@@ -200,7 +200,7 @@ const router = useRouter()
             className={`${pathnameWithoutLocale === "/account-types" ? "active_link" : ""
               } ${NavHoverEffect}`}
           >
-            Accounts
+            {t("accounts")}
           </LocaleLink>
         </NavbarItem>      
         <Dropdown>
@@ -219,13 +219,13 @@ const router = useRouter()
                 radius="sm"
                 variant="light"
               >
-                Partners
+                {t("partners")}
               </Button>
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu variant="light">
             <DropdownItem className="hover:bg-primary ">
-              <LocaleLink href="/ib-program">IB Program</LocaleLink>
+              <LocaleLink href="/ib-program">{t("ib_program")}</LocaleLink>
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
@@ -236,7 +236,7 @@ const router = useRouter()
             className={`${pathnameWithoutLocale === "/academy" ? "active_link" : ""
               } ${NavHoverEffect}`}
           >
-            Education
+            {t("education")}
           </LocaleLink>
         </NavbarItem>
         <NavbarItem className="text-sm">
@@ -246,7 +246,7 @@ const router = useRouter()
             className={`${pathnameWithoutLocale === "/bonus" ? "active_link" : ""
               } ${NavHoverEffect}`}
           >
-            20% Deposit
+            {t("deposit")}
           </LocaleLink>
           </Badge>
         </NavbarItem>
@@ -254,10 +254,10 @@ const router = useRouter()
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="text-sm hidden lg:block">
-          <GradiantButton onClick={()=>router.push('https://client.primexbroker.com/en/register')} name="Register" />
+          <GradiantButton onClick={()=>router.push('https://client.primexbroker.com/en/register')} name={t("register")} />
         </NavbarItem>
         <NavbarItem className="text-sm hidden lg:block">
-          <GradiantButton onClick={()=>router.push('https://client.primexbroker.com/en/login')} name="Login" />
+          <GradiantButton onClick={()=>router.push('https://client.primexbroker.com/en/login')} name={t("login" )} />
         </NavbarItem>
         <NavbarItem>
           <div className="dropdown">

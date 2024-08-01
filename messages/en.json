@@ -1,4 +1,25 @@
 {
+  "menu":{
+    "home":"Home",
+    "trading":"Trading",
+    "platform":"Platform",
+    "accounts":"Accounts",
+    "partners":"Partners",
+    "education":"Education",
+    "academy":"Academy",
+    "deposit":"20% Deposit",
+    "login":"Login",
+    "register":"Register",
+    "forex":"Forex",
+    "stocks":"Stocks",
+    "commodities":"commodities",
+    "shares":"Shares",
+    "metals":"Metals",
+    "indices":"Indices",
+    "mt5":"MetaTrader 5",
+    "ib_program":"IB Program"
+
+  },
   "home": {
     "metaData": {
       "title": "PrimeX Capital | Home",
@@ -102,9 +123,6 @@
       "academy_card_3_title_2": "Analysis",
       "academy_card_3_desc_1": "Stay informed with the",
       "academy_card_3_desc_2": "latest insights and trends"
-    },
-    "menu": {
-      "register": "Register"
     },
     "getStarted": {
       "get_started_title": "Get Started with PrimeX Capital",
