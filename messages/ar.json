@@ -22,6 +22,18 @@
       "fact_no4": "مليار",
       "fact_desc4": "صفقات يومية"
     },
+    "stats": {
+      "value_1": "250000",
+      "desc_1": "العملاء الذين تم خدمتهم",
+      "value_2": "5000",
+      "desc_2": "الوسطاء المعرفون",
+      "value_3": "300",
+      "desc_3": "رأس المال المدفوع",
+      "suffix_3": "مليون دولار+",
+      "value_4": "7",
+      "desc_4": "التداولات اليومية",
+      "suffix_4": "مليار دولار+"
+    },
     "tradingOpportunities": {
       "trading_opportunities_title": "استكشف أكثر من 500 فرصة للتداول",
       "trading_opportunities_desc": "انغمس في مجموعة متنوعة من الأدوات المالية بما في ذلك الفوركس، المؤشرات، السلع، العملات الرقمية، والأسهم.",
@@ -44,13 +56,28 @@
     "advancedPlatforms": {
       "advance_platform_title_1": "منصة",
       "advance_platform_title_2": "متقدمة للمتداولين العصريين",
-      "advanced_platform_desc": "استغل قوة MetaTrader 5 لتجربة تداول لا مثيل لها."
+      "advanced_platform_desc": "استغل قوة MetaTrader 5 لتجربة تداول لا مثيل لها.",
+      "title": "منصة متقدمة للمتداولين المعاصرين",
+      "li1": "أدوات تحليلية متقدمة",
+      "li2": "منصة متعددة الأصول",
+      "li3": "التداول الآلي",
+      "li4": "تنفيذ أوامر أفضل",
+      "li5": "واجهة مستخدم وتجربة محسنة",
+      "li6": "توصيات تداول متقدمة",
+      "li7": "تقويم اقتصادي مدمج",
+      "li8": "قدرات رسم بياني متفوقة",
+      "btnTxt": "تعلم المزيد"
     },
     "becomeIB": {
-      "become_ib_title_1": "كن",
-      "become_ib_title_2": "وسيطاً مقدمًا لـ برايم اكس كابيتال",
-      "become_ib_desc": "انضم إلى برنامج الوسيط المعرف لدينا وحول شبكتك إلى مصدر دخل. قم بربط المتداولين بـ برايم اكس كابيتال واكسب عمولات بينما تستمتع بأدوات حصرية، دعم تسويقي، ومكافآت تنافسية.",
-      "become_ib_btn": "كن شريكاً الآن"
+      "become_ib_title_1": "رايم اكس كابيتال",
+      "become_ib_title_2": "برنامج شراكة",
+      "become_ib_desc_1": "حول شبكتك إلى مشروع مربح من خلال أن تصبح شريكًا لـ برايم اكس",
+      "become_ib_desc_2": "اغتنم الفرصة للحرية المالية",
+      "become_ib_li1": "برنامج الوسيط المعرف",
+      "become_ib_li2": "برنامج الشريك المميز",
+      "become_ib_li3": "السيولة المؤسسية",
+      "become_ib_li4": "برنامج الامتياز",
+      "become_ib_btn": "كن شريكًا الآن"
     },
     "rewards": {
       "rewards_title": "عروض ومكافآت محمسة",
@@ -69,13 +96,12 @@
       "rewards_trade_win_btn": "Join Now"
     },
     "customerCare": {
-      "customer_care_title_1": "نحن دائمًا",
-      "customer_care_title_2": "هنا من أجلك",
-      "customer_care_li1_title": "العناية بالعملاء 24/7",
+      "customer_care_title": "- دائمًا هنا من أجلك",
+      "customer_care_li1_title": "رعاية العملاء على مدار الساعة",
       "customer_care_li1_desc": "دائمًا جاهزون للمساعدة",
-      "customer_care_li2_title": "الدعم المتعدد اللغات",
-      "customer_care_li2_desc": "المساعدة متاحة بلغات متعددة",
-      "customer_care_btn": "تواصل معنا"
+      "customer_care_li2_title": "دعم متعدد اللغات",
+      "customer_care_li2_desc": "المساعدة متاحة بعدة لغات",
+      "customer_care_btn": "اتصل بنا"
     },
     "academy": {
       "academy_title": "أكاديمية برايم اكس كابيتال : تعلم وانمو",
@@ -137,6 +163,20 @@
       "card_3_desc": "خبرائنا",
       "card_4_title": "بوابتك للبداية",
       "card_4_desc": "حفصة منير"
+    },
+    "academyForm": {
+      "login_title": "Signin",
+      "register_title": "Register",
+      "form_full_name": "Full Name",
+      "form_email": "Email",
+      "form_category": "Select webinar Category",
+      "form_form_btn": "Register",
+      "full_name_validation_error": "full name can only contain letters.",
+      "full_name_required_error": "full name is required!",
+      "email_validation_error": "Invalid email address",
+      "email_required_error": "email is required!",
+      "contact_required_error": "phone is required!",
+      "webinar_required_error": "webinar type is required!"
     },
     "privateSessions": {
       "title": "جلسات خاصة",
@@ -971,6 +1011,23 @@
     "terms": {
       "title": "Download to learn more about Gift Account T&Cs",
       "btnTxt": "تنزيل الشروط والأحكام"
+    }
+  },
+  "footer": {
+    "clientAgreement": {
+      "title_part1": "Client",
+      "title_part2": "Agreement",
+      "view_btn": "Click to View",
+      "download_btn": "Download PDF"
+    },
+    "privacyPolicy": {
+      "title_part1": "Privacy",
+      "title_part2": "Policy"
+    },
+    "termsCondition": {
+      "title_part1": "Terms &",
+      "title_part2": "Conditions",
+      "description": "This section outlines the legal Terms and conditions that Apply to Your Use of Our Services, including Trading, Account Management, and More."
     }
   }
 }

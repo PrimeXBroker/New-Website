@@ -1,7 +1,10 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from "next/image";
+import React from "react";
+import { useLocale, useTranslations } from "next-intl";
 
 const Banner = () => {
+  const t = useTranslations("footer.termsCondition");
+
   return (
     <section className={`bg-secondary`}>
       <div className="container flex flex-col md:flex-row justify-evenly gap-10 items-center py-12">
@@ -10,11 +13,9 @@ const Banner = () => {
             className={`text-primary text-xl md:text-6xl font-semibold mb-5 md:text-left text-center`}
             style={{ letterSpacing: "1px" }}
           >
-            Terms & <br/> Conditions
+            {t("title_part1")} <br /> {t("title_part2")}
           </h1>
-          <p className='text-white text-lg'>
-            This section outlines the legal Terms and conditions that Apply to Your Use of Our Services, including Trading, Account Management, and More.
-          </p>
+          <p className="text-white text-lg">{t("description")}</p>
         </div>
         <div>
           <Image
@@ -26,7 +27,7 @@ const Banner = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;

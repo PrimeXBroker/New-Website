@@ -2,8 +2,10 @@ import { Button } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useLocale, useTranslations } from "next-intl";
 
 const Banner = () => {
+  const t = useTranslations("footer.clientAgreement");
   return (
     <section className={`bg-secondary`}>
       <div className="container flex flex-col md:flex-row justify-evenly gap-10 items-center py-12">
@@ -12,7 +14,7 @@ const Banner = () => {
             className={`text-primary text-xl md:text-6xl font-semibold mb-5 md:text-left text-center`}
             style={{ letterSpacing: "1px" }}
           >
-            Client <br /> Agreement
+            {t("title_part1")} <br /> {t("title_part2")}
           </h1>
         </div>
         <div>
@@ -41,7 +43,7 @@ const Banner = () => {
             />
           }
         >
-          Click to View
+          {t("view_btn")}
         </Button>
         <Button
           title="Click to View"
@@ -59,7 +61,7 @@ const Banner = () => {
             />
           }
         >
-          Download PDF
+          {t("download_btn")}
         </Button>
       </div>
     </section>

@@ -11,37 +11,46 @@ import Hero from "@/our_pages/home/Hero";
 import OurRecognition from "@/our_pages/home/OurRecognition";
 import Rewards from "@/our_pages/home/Rewards";
 import TradingOpportunities from "@/our_pages/home/TradingOpportunities";
+import { useTranslations } from "next-intl";
 
-const statsOne = [
-  { value: 250000, description: "Served Clients",symbol:"+",prepend:false},
-  {
-    value: 5000,
-    description: "Introducing Broker",
-    symbol: "+",
-    prepend: false,
-  },
-  {
-    value: 300,
-    description: "Paid-up Capital",
-    symbol: "$",
-    prepend: "true",
-    suffix: " Million+", // Adding suffix
-  },
-  {
-    value: 7,
-    description: "Daily trades",
-    symbol: " $",
-    prepend: "true",
-    suffix:" Billion+"
-  },
-];
 export default function Home() {
+  const t = useTranslations("home.stats");
+
+  const statsOne = [
+    {
+      value: t("value_1"),
+      description: t("desc_1"),
+      symbol: "+",
+      prepend: false,
+    },
+    {
+      value: t("value_2"),
+      description: t("desc_2"),
+      symbol: "+",
+      prepend: false,
+    },
+    {
+      value: t("value_3"),
+      description: t("desc_3"),
+      symbol: "$",
+      prepend: "true",
+      suffix: t("suffix_3"), // Adding suffix
+    },
+    {
+      value: t("value_4"),
+      description: t("desc_4"),
+      symbol: " $",
+      prepend: "true",
+      suffix: t("suffix_4"),
+    },
+  ];
+
   return (
     <>
       <Banner />
       <CompanyStats stats={statsOne} />
       <TradingOpportunities />
-      <AccountTtpes/>
+      <AccountTtpes />
       <AdvancedPlatforms />
       <BecomeIB />
       {/* <Rewards /> */}

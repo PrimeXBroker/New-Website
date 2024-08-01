@@ -22,6 +22,18 @@
       "fact_no4": "Billion",
       "fact_desc4": "Daily trades"
     },
+    "stats": {
+      "value_1": "250000",
+      "desc_1": "Served Clients",
+      "value_2": "5000",
+      "desc_2": "Introducing Broker",
+      "value_3": "300",
+      "desc_3": "Paid-up Capital",
+      "suffix_3": "Million+",
+      "value_4": "7",
+      "desc_4": "Daily trades",
+      "suffix_4": "Billion+"
+    },
     "tradingOpportunities": {
       "trading_opportunities_title": "Explore 500+ Trading Opportunities",
       "trading_opportunities_desc": "Dive into a diverse array of assets including forex, indices, commodities, cryptocurrencies, and stocks",
@@ -57,9 +69,14 @@
       "btnTxt": "Learn More"
     },
     "becomeIB": {
-      "become_ib_title_1": "Become a",
-      "become_ib_title_2": "PrimeX Introducing Broker",
-      "become_ib_desc": "Join our IB Program and turn your network into a source of income. Connect traders with PrimeX and earn commissions while enjoying exclusive tools, marketing support, and competitive rewards.",
+      "become_ib_title_1": "PrimeX Capital",
+      "become_ib_title_2": "Parntership Program",
+      "become_ib_desc_1": "Transform your network into a Profitable venture By Becoming a PrimeX Partner",
+      "become_ib_desc_2": "Seize the opportunity For Financial Freedom.",
+      "become_ib_li1": "Intorducing Broker Program",
+      "become_ib_li2": "Premium Partner Program",
+      "become_ib_li3": "Insitutional Liquidity",
+      "become_ib_li4": "Franchise Program",
       "become_ib_btn": "Become a Partner Now"
     },
     "rewards": {
@@ -79,12 +96,11 @@
       "rewards_trade_win_btn": "Join Now"
     },
     "customerCare": {
-      "customer_care_title_1": "Always Here",
-      "customer_care_title_2": "for You",
+      "customer_care_title": "Always Here for You",
       "customer_care_li1_title": "24/7 Customer Care",
       "customer_care_li1_desc": "Always ready to assist",
       "customer_care_li2_title": "Multilingual Support",
-      "customer_care_li2_desc": "Multiple languages available",
+      "customer_care_li2_desc": "Help available in multiple languages",
       "customer_care_btn": "Contact Us"
     },
     "academy": {
@@ -147,6 +163,20 @@
       "card_3_desc": "Our Experts",
       "card_4_title": "Starting Gateway",
       "card_4_desc": "Hafsa Munir"
+    },
+    "academyForm": {
+      "login_title": "Signin",
+      "register_title": "Register",
+      "form_full_name": "Full Name",
+      "form_email": "Email",
+      "form_category": "Select webinar Category",
+      "form_form_btn": "Register",
+      "full_name_validation_error": "full name can only contain letters.",
+      "full_name_required_error": "full name is required!",
+      "email_validation_error": "Invalid email address",
+      "email_required_error": "email is required!",
+      "contact_required_error": "phone is required!",
+      "webinar_required_error": "webinar type is required!"
     },
     "privateSessions": {
       "title": "Private Sessions",
@@ -1030,6 +1060,23 @@
     "terms": {
       "title": "Download to learn more about Gift Account T&Cs",
       "btnTxt": "Download T&Cs"
+    }
+  },
+  "footer": {
+    "clientAgreement": {
+      "title_part1": "Client",
+      "title_part2": "Agreement",
+      "view_btn": "Click to View",
+      "download_btn": "Download PDF"
+    },
+    "privacyPolicy": {
+      "title_part1": "Privacy",
+      "title_part2": "Policy"
+    },
+    "termsCondition": {
+      "title_part1": "Terms &",
+      "title_part2": "Conditions",
+      "description": "This section outlines the legal Terms and conditions that Apply to Your Use of Our Services, including Trading, Account Management, and More."
     }
   }
 }
