@@ -15,12 +15,12 @@ const HaveQuestion = () => {
     setHoveredIndex(null);
   };
   const cardsData = [
-    {
-      title: t("help_li1_title"),
-      description: t("help_li1_desc"),
-      imgUrl: "/images/contact/chat.svg",
-      imgHoverUrl: "/images/contact/chat_hover.svg",
-    },
+    // {
+    //   title: t("help_li1_title"),
+    //   description: t("help_li1_desc"),
+    //   imgUrl: "/images/contact/chat.svg",
+    //   imgHoverUrl: "/images/contact/chat_hover.svg",
+    // },
     {
       title: t("help_li2_title"),
       description: t("help_li2_desc"),
@@ -33,12 +33,12 @@ const HaveQuestion = () => {
       imgUrl: "/images/contact/headphone.svg",
       imgHoverUrl: "/images/contact/headphone_hover.svg",
     },
-    {
-      title: t("help_li4_title"),
-      description: t("help_li4_desc"),
-      imgUrl: "/images/contact/phone.svg",
-      imgHoverUrl: "/images/contact/phone_hover.svg",
-    },
+    // {
+    //   title: t("help_li4_title"),
+    //   description: t("help_li4_desc"),
+    //   imgUrl: "/images/contact/phone.svg",
+    //   imgHoverUrl: "/images/contact/phone_hover.svg",
+    // },
   ];
   return (
     <section className="bg-accent pt-12 pb-24">
@@ -69,7 +69,7 @@ const HaveQuestion = () => {
               <Image
                 src={hoveredIndex === index ? card.imgHoverUrl : card.imgUrl}
                 alt="academy icon"
-                width="100"
+                width="80"
                 height="70"
                 className="block mx-0 academy_img"
               />
