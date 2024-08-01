@@ -21,8 +21,8 @@ const Banner = () => {
       <div
         className={`relative h-[1140px] lg:h-[750px] bg-no-repeat bg-cover bg-center ${
           locale === "ar"
-            ? "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/header-bg-ar.webp)]"
-            : "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/header-bg.webp)]"
+            ? "bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/header-bg-ar.webp')]"
+            : "bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/header-bg.webp')]"
         }`}
       >
         <div className="container mx-auto lg:px-10 xl:px-4 pt-16 xl:pt-12">

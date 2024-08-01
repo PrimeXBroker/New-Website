@@ -441,7 +441,13 @@
       "feature_2_title": "Algorithmic Trading",
       "feature_2_desc": "Utilize Expert Advisors (EAs) to automate your trading strategies.",
       "feature_3_title": "Mobile Trading",
-      "feature_3_desc": "Stay connected to the markets with the MT5 mobile app, available for both iOS and Android devices."
+      "feature_3_desc": "Stay connected to the markets with the MT5 mobile app, available for both iOS and Android devices.",
+      "feature_4_title": "Hedging and Netting",
+      "feature_4_desc": "Choose between hedging and netting options to manage your risk effectively.",
+      "feature_5_title": "Multiple Timeframes",
+      "feature_5_desc": "Analyze markets with multiple timeframes, from one minute to one month.",
+      "feature_6_title": "Economic Calender",
+      "feature_6_desc": "Access a built-in economics calender to stay informed about key market events and news."
     },
     "processTimeline": {
       "title_part_1": "How to Get Started With",
