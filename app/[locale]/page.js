@@ -13,7 +13,6 @@ import OurRecognition from "@/our_pages/home/OurRecognition";
 import Rewards from "@/our_pages/home/Rewards";
 import TradingOpportunities from "@/our_pages/home/TradingOpportunities";
 import { useTranslations } from "next-intl";
-
 export default function Home() {
   const t = useTranslations("home.hero");
   const statsOne = [
@@ -34,14 +33,14 @@ export default function Home() {
       description: t("fact_desc3"),
       symbol: "$",
       prepend: "true",
-      suffix: " Million+", // Adding suffix
+      // suffix: t(""), // Adding suffix
     },
     {
       value: 7,
       description: t("fact_desc4"),
       symbol: " $",
       prepend: "true",
-      suffix: " Billion+",
+      suffix: t("fact_no4"),
     },
   ];
   return (

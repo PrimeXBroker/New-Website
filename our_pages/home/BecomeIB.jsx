@@ -19,21 +19,21 @@ const BecomeIB = () => {
       title: t("become_ib_li1"),
       href: "#",
     },
-    {
-      id: 2,
-      title: t("become_ib_li2"),
-      href: "#",
-    },
-    {
-      id: 3,
-      title: t("become_ib_li3"),
-      href: "#",
-    },
-    {
-      id: 4,
-      title: t("become_ib_li4"),
-      href: "#",
-    },
+    // {
+    //   id: 2,
+    //   title: t("become_ib_li2"),
+    //   href: "#",
+    // },
+    // {
+    //   id: 3,
+    //   title: t("become_ib_li3"),
+    //   href: "#",
+    // },
+    // {
+    //   id: 4,
+    //   title: t("become_ib_li4"),
+    //   href: "#",
+    // },
   ];
   return (
     <section

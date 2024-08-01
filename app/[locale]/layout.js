@@ -10,6 +10,7 @@ import "aos/dist/aos.css";
 import { Suspense } from "react";
 import { Toaster } from "react-hot-toast";
 import Head from "next/head";
+import Script from 'next/script';
 
 
 
@@ -61,9 +62,12 @@ export default async function layout({ children, params: { locale } }) {
   return (
     <html className={montserrat.variable} lang={locale} dir={direction}>
       <Head>
-
-        {/* <link rel="stylesheet" href="https://primexbroker.online/static/css/main.css" /> */}
-
+        <style>{`
+          #chat_app_container * {
+            all: unset;
+            all: revert;
+          }
+        `}</style>
       </Head>
       <body>
         <NextUIProvider>
@@ -81,9 +85,13 @@ export default async function layout({ children, params: { locale } }) {
             <Cookies />
           </NextIntlClientProvider>
         </NextUIProvider>
-        {/* <div id="chat_app"></div>
-        <script src="https://primexbroker.online/static/js/main.js"></script> */}
         
+
+        <div id="chat_app_container">
+          <div id="chat_app"></div>
+        </div>
+        <Script src="https://primexbroker.online/static/js/main.js" strategy="lazyOnload" />
+        <link rel="stylesheet" href="https://primexbroker.online/static/css/main.css" />
       </body>
     </html>
   );

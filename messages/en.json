@@ -38,8 +38,9 @@
       "fact_desc1": "Served Clients",
       "fact_no2": "120,000",
       "fact_desc2": "Introducing Broker",
-      "fact_no3": "Million",
-      "fact_desc3": "Paid-up Capital",
+      "fact_no3": " IB",
+      "fact_desc3": "+ million Paid-up Capital ",
+      "fact_million": "+ million",
       "fact_no4": "Billion",
       "fact_desc4": "Daily trades"
     },

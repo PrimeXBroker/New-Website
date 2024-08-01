@@ -138,7 +138,7 @@ const router = useRouter()
                 endContent={
                   <RiArrowDownSLine
                     size={25}
-                    className={isRotated ? "rotated" : ""}
+                    // className={isRotated ? "rotated" : ""}
                   />
                 }
                 radius="sm"
@@ -177,7 +177,7 @@ const router = useRouter()
                 endContent={
                   <RiArrowDownSLine
                     size={25}
-                    className={isRotatedPlatform ? "rotated" : ""}
+                    // className={isRotatedPlatform ? "rotated" : ""}
                   />
                 }
                 radius="sm"
@@ -213,7 +213,7 @@ const router = useRouter()
                 endContent={
                   <RiArrowDownSLine
                     size={25}
-                    className={isRotatedPartners ? "rotated" : ""}
+                    // className={isRotatedPartners ? "rotated" : ""}
                   />
                 }
                 radius="sm"

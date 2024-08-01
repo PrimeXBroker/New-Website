@@ -118,9 +118,9 @@ const AdvancedPlatforms = () => {
             radius="full"
             variant="solid"
             color="primary"
-            className="w-[190px] h-[60px]"
+            className="w-[190px] h-[60px] text-center mt-2"
           >
-            <p className="text-secondary text-lg font-semibold">{t("btnTxt")}</p>
+            <p className="text-secondary text-lg font-semibold mt-4">{t("btnTxt")}</p>
           </Button>
         </div>
       </div>

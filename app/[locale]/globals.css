@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* a{
+  text-decoration: none !important;
+  color: #000 !important;
+} */
 @layer base {
   html {
     scroll-behavior: smooth;

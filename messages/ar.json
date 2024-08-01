@@ -38,9 +38,9 @@
       "fact_no2": 120000,
       "fact_desc2": "Introducing Broker",
       "fact_no3": "وسيط معرف",
-      "fact_desc3": "مليون",
-      "fact_no4": "مليار",
-      "fact_desc4": "صفقات يومية"
+      "fact_desc3": "+ مليون حجم السحوبات",
+      "fact_no4": "+ مليار",
+      "fact_desc4": "حجم الصفقات اليومية"
     },
     "stats": {
       "value_1": "250000",
