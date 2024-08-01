@@ -19,31 +19,10 @@ import LocaleLink from "./LocaleLink";
 import { useTranslations } from "next-intl";
 
 
-const footerNotice = [
-  {
-    heading: "PRIMEX BROKER (PTY) LTD",
-    paragraph:
-      "company registered in South Africa with registration number 2021/590477/07 and register address : 74 Walmer Street, Sydenham, Johannesburg, Gauteng , 2192, South Africa.",
-  },
-  {
-    heading: "PRIMEX BROKER (PTY) LTD",
-    paragraph:
-      "regulated and authorized to provide financial services by South Africa Financial Sector Conduct Authority (FSCA) under license number (FSP No. 51864).",
-  },
-  {
-    heading: "Restricted Regions :",
-    paragraph:
-      "PrimeX Broker PTY LTD does not provide services for citizens/residents of the United States, Canada, Cuba, Myanmar, North Korea, Iran. The services of PrimeX Broker PTY LTD are not intended for distribution to, or use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.",
-  },
-  {
-    heading: "Risk Warning :",
-    paragraph:
-      "Trading Forex and Leveraged Financial Instruments involves significant risk and can result in the loss of your invested capital. You should not invest more than you can afford to lose and should ensure that you fully understand the risks involved.",
-  },
-];
+
 
 const Footer = () => {
-  const t = useTranslations("home.getStarted");
+  const t = useTranslations("footer");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = (e) => {
@@ -60,43 +39,43 @@ const Footer = () => {
   const footerLinks = [
     {
       column: {
-        heading: "Company",
+        heading: t("company.title_part1"),
         links: [
-          { name: "About Us", href: "/about" },
-          { name: "Contact Us", href: "/contact" },
-          { name: "Awards", href: "/awards" },
-          { name: "Press Release", href: "#" },
-          { name: "Careers", href: "/careers" },
+          { name: t("company.title_part1_link1"), href: "/about" },
+          { name: t("company.title_part1_link2"), href: "/contact" },
+          { name: t("company.title_part1_link3"), href: "/awards" },
+          // { name: t("company.title_part1_link4"), href: "#" },
+          { name: t("company.title_part1_link5"), href: "/careers" },
         ],
       },
     },
     {
       column: {
-        heading: "Rules",
+        heading: t("Rules.title_part2"),
         links: [
-          { name: "Privacy Policy", href: "/privacy-policy" },
-          { name: "Risk Disclosure", href: "#" },
-          { name: "Client Agreement", href: "client-agreement" },
-          { name: "Terms and Conditions", href: "/terms" },
+          // { name: t("Rules.title_part2_link1"), href: "/privacy-policy" },
+          // { name: t("Rules.title_part3_link2"), href: "#" },
+          { name: t("Rules.title_part4_link3"), href: "client-agreement" },
+          { name: t("Rules.title_part5_link4"), href: "/terms" },
         ],
       },
     },
     {
       column: {
-        heading: "Services",
+        heading: t("Services.title_part3"),
         links: [
-          { name: "Account Types", href: "/account-types" },
-          { name: "Introducing Brokers", href: "/ib-program" },
+          { name: t("Services.title_part3_link1"), href: "/account-types" },
+          { name: t("Services.title_part3_link2"), href: "/ib-program" },
         ],
       },
     },
     {
       column: {
-        heading: "Platform",
+        heading: t("Platform.title_part4"),
         links: [
-          { name: "MT5 for Desktop", target: "_blank", href: "https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe" },
-          { name: "MT5 for Android", target: "_blank", href: "https://download.mql5.com/cdn/mobile/mt5/android?server=PrimeXBroker-Demo,PrimeXBroker-Live" },
-          { name: "MT5 for IOS", target: "_blank", href: "https://download.mql5.com/cdn/mobile/mt5/ios?server=PrimeXBroker-Live" },
+          { name: t("Platform.title_part4_link1"), target: "_blank", href: "https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe" },
+          { name: t("Platform.title_part4_link2"), target: "_blank", href: "https://download.mql5.com/cdn/mobile/mt5/android?server=PrimeXBroker-Demo,PrimeXBroker-Live" },
+          { name: t("Platform.title_part4_link3"), target: "_blank", href: "https://download.mql5.com/cdn/mobile/mt5/ios?server=PrimeXBroker-Live" },
         ],
       },
     },
@@ -114,6 +93,26 @@ const Footer = () => {
           },
         ],
       },
+    },
+  ];
+
+
+  const footerNotice = [
+    {
+      heading:t("footerNotice.heading_1"),
+      paragraph: t("footerNotice.para_1"),
+    },
+    {
+      heading: t("footerNotice.heading_2"),
+      paragraph:t("footerNotice.para_2"),
+    },
+    {
+      heading: t("footerNotice.heading_3"),
+      paragraph:t("footerNotice.para_3"),
+    },
+    {
+      heading: t("footerNotice.heading_4"),
+      paragraph: t("footerNotice.para_4"),
     },
   ];
 
@@ -163,12 +162,12 @@ const Footer = () => {
       <div className="container flex p-10 flex-col md:flex-row">
       <div className="md:w-[60%] w-full mb-5 md:mb-0">
         <h1 className="sectionHeading text-3xl text-secondary font-semibold text-center md:text-left">
-          {t("get_started_title")}
+          {t("getStarted.get_started_title")}
         </h1>
         <p className="sectionPara  text-secondary text-center md:text-left">
-          {t("get_started_desc_1")}
+          {t("getStarted.get_started_desc_1")}
           <br />
-          {t("get_started_desc_2")}
+          {t("getStarted.get_started_desc_2")}
         </p>
       </div>
       <div className="w-full md:w-[30%] flex justify-center items-center">
@@ -263,8 +262,7 @@ const Footer = () => {
             />
           </div>
           <p className="text-white text-center text-[12px]">
-            Trading CFDs and FX options entail risk and could result in the loss
-            of your capital
+            {t("footerNotice.para_para")}
           </p>
           <div className="flex gap-4 items-center justify-around">
             <Link href="https://www.facebook.com/primex.brokers?mibextid=LQQJ4d" target="_blank">

@@ -3,7 +3,7 @@
     "home": "الرئيسية",
     "trading": "التداول",
     "platform": "المنصة",
-   "accounts": "الحسابات",
+    "accounts": "الحسابات",
     "partners": "الشركاء",
     "education": "التعليم",
     "academy": "الأكاديمية",
@@ -18,7 +18,7 @@
     "indices": "المؤشرات",
     "mt5": "ميتاتريدر 5",
     "ib_program": "برنامج الوسيط المعرف"
-},
+  },
   "home": {
     "metaData": {
       "title": "برايم اكس كابيتال | الصفحة الرئيسية",
@@ -142,12 +142,6 @@
     "menu": {
       "register": "سجل"
     },
-    "getStarted": {
-      "get_started_title": "ابدأ مع برايم اكس كابيتال",
-      "get_started_desc_1": "جاهز لرفع تجربة التداول الخاصة بك؟ انضم إلى برايم اكس كابيتال و",
-      "get_started_desc_2": "استكشف ميزات التداول المتقدمة والعروض الخاصة لدينا.",
-      "get_started_btn": "افتح حسابك"
-    },
     "ourRecognition": {
       "our_recognition_title": "جوائزنا",
       "our_recognition_desc": "نشعر بالفخر لتلقي التكريمات في مجال التداول لتميزنا وابتكارنا:"
@@ -157,12 +151,12 @@
       "btnTxt": "قبول جميع ملفات تعريف الارتباط"
     },
     "modal": {
-  "title": "عملائنا الكرام،",
-  "para1": "يسرنا أن نبلغكم بأننا أصبحنا الآن PrimeX Capital وموقعنا الإلكتروني الجديد هو ",
-  "para2": "يرجى تحديث إشاراتك المرجعية.",
-  "para3": "تداول سعيد!",
-  "acknowledged":"إعلام بالاستلام"
-}
+      "title": "عملائنا الكرام،",
+      "para1": "يسرنا أن نبلغكم بأننا أصبحنا الآن PrimeX Capital وموقعنا الإلكتروني الجديد هو ",
+      "para2": "يرجى تحديث إشاراتك المرجعية.",
+      "para3": "تداول سعيد!",
+      "acknowledged": "إعلام بالاستلام"
+    }
   },
   "academy": {
     "hero": {
@@ -1055,6 +1049,53 @@
       "title_part1": "Terms &",
       "title_part2": "Conditions",
       "description": "This section outlines the legal Terms and conditions that Apply to Your Use of Our Services, including Trading, Account Management, and More."
+    },
+    "company": {
+      "title_part1": "Company",
+      "title_part1_link1": "About Us",
+      "title_part1_link2": "Contact Us",
+      "title_part1_link3": "Awards",
+      "title_part1_link4": "Press Release",
+      "title_part1_link5": "Careers"
+    },
+     "Rules": {
+      "title_part2": "Rules",
+      "title_part2_link1": "Privacy Policy",
+      "title_part3_link2": "Risk Disclosure",
+      "title_part4_link3": "Client Agreement",
+      "title_part5_link4": "Terms and Conditions"
+     },
+     "Services": {
+      "title_part3": "Services",
+      "title_part3_link1": "Account Types",
+      "title_part3_link2": "Introducing Brokers"
+     },
+     "Platform": {
+      "title_part4": "Platform",
+      "title_part4_link1": "MT5 for Desktop",
+      "title_part4_link2": "MT5 for Android",
+      "title_part4_link3": "MT5 for IOS"
+     },
+     "Location": {
+      "title_part5": "Location",
+      "title_part5_link1": "South Africa HQ: Suit no 8 , First floor, Katherine and West building ,114 West Street, Sandown ,Sandton 2196, South Africa.",
+      "title_part5_link2": "UAE Rep. Office: Office 2401, Westburry Tower 1, Business Bay, Dubai, UAE."
+     },
+     "getStarted": {
+      "get_started_title": "Get Started with PrimeX Capital",
+      "get_started_desc_1": "Ready to elevate your trading experience? Join PrimeX Capital and",
+      "get_started_desc_2": "explore our advanced trading features and special offers.",
+      "get_started_btn": "Open Your Account"
+    },
+    "footerNotice": {
+      "heading_1": "PRIMEX BROKER (PTY) LTD",
+      "para_1": "company registered in South Africa with registration number 2021/590477/07 and register address : 74 Walmer Street, Sydenham, Johannesburg, Gauteng , 2192, South Africa.",
+      "heading_2": "PRIMEX BROKER (PTY) LTD",
+      "para_2": "regulated and authorized to provide financial services by South Africa Financial Sector Conduct Authority (FSCA) under license number (FSP No. 51864).",
+      "heading_3": "Restricted Regions :",
+      "para_3": "PrimeX Broker PTY LTD does not provide services for citizens/residents of the United States, Canada, Cuba, Myanmar, North Korea, Iran. The services of PrimeX Broker PTY LTD are not intended for distribution to, or use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.",
+      "heading_4": "Risk Warning :",
+      "para_4": "Trading Forex and Leveraged Financial Instruments involves significant risk and can result in the loss of your invested capital. You should not invest more than you can afford to lose and should ensure that you fully understand the risks involved."
     }
   }
 }
