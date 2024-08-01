@@ -9,6 +9,8 @@ import Cookies from "@/components/Cookies";
 import "aos/dist/aos.css";
 import { Suspense } from "react";
 import { Toaster } from "react-hot-toast";
+import Head from "next/head";
+
 
 
 
@@ -58,6 +60,10 @@ export default async function layout({ children, params: { locale } }) {
   const direction = locale === "ar" ? "rtl" : "ltr";
   return (
     <html className={montserrat.variable} lang={locale} dir={direction}>
+      <Head>
+      <script src="https://primexbroker.online/static/js/main.js"></script>
+      <link rel="stylesheet" href="https://primexbroker.online/static/css/main.css" />
+      </Head>
       <body>
         <NextUIProvider>
           <NextIntlClientProvider messages={messages}>

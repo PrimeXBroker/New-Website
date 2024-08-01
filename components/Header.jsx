@@ -42,25 +42,25 @@ const Header = ({ locale }) => {
       name: "Home",
       link: "/",
     },
-    {
-      name: "Trading",
-      link: "/trading",
-    },
+    // {
+    //   name: "Trading",
+    //   link: "/trading",
+    // },
     {
       name: "Platform",
       link: "/platform/mt5-platform",
     },
     {
       name: "Partners",
-      link: `/partners`,
+      link: `/ib-program`,
     },
     {
       name: "Education",
-      link: "/education",
+      link: "/academy",
     },
     {
-      name: "Gift Account",
-      link: "/gift-account",
+      name: "20% Deposit Bonus",
+      link: "/bonus",
     },
   ];
 
