@@ -267,42 +267,42 @@ const Footer = () => {
             of your capital
           </p>
           <div className="flex gap-4 items-center justify-around">
-            <Link href="#">
+            <Link href="https://www.facebook.com/primex.brokers?mibextid=LQQJ4d" target="_blank">
               <FaFacebook
                 color="#FFF"
                 size={30}
                 className="hover:fill-blue-600 transition-all hover:translate-y-[-5px] duration-500"
               />
             </Link>
-            <Link href="#">
+            <Link href="https://x.com/PrimeXCapital" target="_blank">
               <FaXTwitter
                 color="#FFF"
                 size={30}
                 className="hover:fill-black transition-all hover:translate-y-[-5px] duration-500"
               />
             </Link>
-            <Link href="#">
+            <Link href="https://www.youtube.com/channel/UC_B3x7k-gNQpDW7YEB8Lg0g" target="_blank">
               <FaYoutube
                 color="#FFF"
                 size={30}
                 className="hover:fill-red-700 transition-all hover:translate-y-[-5px] duration-500"
               />
             </Link>
-            <Link href="#">
+            <Link href="https://www.linkedin.com/company/primex-broker" target="_blank">
               <FaLinkedinIn
                 color="#FFF"
                 size={30}
                 className="hover:fill-blue-700 transition-all hover:translate-y-[-5px] duration-500"
               />
             </Link>
-            <Link href="#">
+            <Link href="https://www.instagram.com/primexcapital.en?igsh=empvdXJ3aDRlZTBn" target="_blank">
               <FaInstagram
                 color="#FFF"
                 size={30}
                 className="hover:fill-purple-500 transition-all hover:translate-y-[-5px] duration-500"
               />
             </Link>
-            <Link href="#">
+            <Link href="https://t.me/PrimeX_Broker" target="_blank">
               <FaTelegram
                 color="#FFF"
                 size={30}
