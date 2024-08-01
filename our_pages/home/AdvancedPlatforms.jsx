@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@nextui-org/react";
 import { VscTriangleRight } from "react-icons/vsc";
+import { VscTriangleLeft } from "react-icons/vsc";
 
 const AdvancedPlatforms = () => {
   const t = useTranslations("home.advancedPlatforms");
@@ -70,14 +71,14 @@ const AdvancedPlatforms = () => {
           <div>
             {leftList.map((item, index) => {
               return (
-                <div className="flex flex-row items-center mb-5 group">
+                <div className="relative flex flex-row items-center mb-5 group">
                   <div
-                    className="bg-accent hover:bg-secondary hover:text-white min-h-[90px] w-[254px] border-2 border-dashed border-secondary  rounded-xl py-4 px-9 text-xl font-semibold flex justify-center items-center text-center"
+                    className="bg-accent hover:bg-secondary hover:text-white min-h-[90px] w-[280px] border-2 border-dashed border-secondary  rounded-xl py-4 px-9 text-xl font-semibold flex justify-center items-center text-center"
                     key={index}
                   >
                     {item.text}
                   </div>
-                  <VscTriangleRight className="text-4xl text-primary group-hover:block hidden" />
+                  <VscTriangleRight className="absolute right-[-40px] text-4xl text-primary group-hover:block hidden" />
                 </div>
               );
             })}
@@ -99,14 +100,14 @@ const AdvancedPlatforms = () => {
           <div>
             {rightList.map((item, index) => {
               return (
-                <div className="flex flex-row items-center mb-5 group">
+                <div className="relative flex flex-row items-center mb-5 group">
+                  <VscTriangleLeft className="absolute left-[-40px] text-4xl text-primary group-hover:block hidden" />
                   <div
-                    className="bg-accent hover:bg-secondary hover:text-white min-h-[90px] w-[254px] border-2 border-dashed border-secondary  rounded-xl py-4 px-2 text-xl font-semibold flex justify-center items-center text-center"
+                    className="bg-accent hover:bg-secondary hover:text-white min-h-[90px] w-[280px] border-2 border-dashed border-secondary  rounded-xl py-4 px-2 text-xl font-semibold flex justify-center items-center text-center"
                     key={index}
                   >
                     {item.text}
                   </div>
-                  <VscTriangleRight className="text-4xl text-primary group-hover:block hidden" />
                 </div>
               );
             })}
