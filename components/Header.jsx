@@ -104,6 +104,7 @@ const router = useRouter()
       maxWidth="xl"
       onMenuOpenChange={setIsMenuOpen}
       isBordered
+      className="navbar"
     >
       <NavbarContent>
         <NavbarMenuToggle

@@ -99,6 +99,8 @@ function chat() {
   //   return () => clearTimeout(timer);
   // }, []);
 
+  
+
   useEffect(() => {
     const hasGreeted = sessionStorage.getItem("hasGreeted");
 

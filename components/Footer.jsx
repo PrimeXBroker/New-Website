@@ -158,7 +158,7 @@ const Footer = () => {
   return (
     <>
      <section
-      className="bg-primary relative z-0">
+      className="bg-primary relative z-0 ">
       <div className="container flex p-10 flex-col md:flex-row">
       <div className="md:w-[60%] w-full mb-5 md:mb-0">
         <h1 className="sectionHeading text-3xl text-secondary font-semibold text-center md:text-left">
@@ -200,7 +200,7 @@ const Footer = () => {
         </div>
         <div className="py-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border-b border-b-gray-500 sm:text-left text-center">
           {footerLinks.map((el, index) => (
-            <div key={index}>
+            <div key={index} className="footer">
               <p className="text-primary font-semibold md:pt-0 pt-5">
                 {el.column.heading}
               </p>
@@ -218,7 +218,7 @@ const Footer = () => {
 
                     )}
                   </ul> :
-                  <ul className="pt-0 md:pt-2">
+                  <ul className="pt-0 md:pt-2 footer">
                     {el.column.links.map((link, linkIndex) =>
                       link.name === "Client Agreement" ? (
                         <li key={linkIndex} className="text-white py-1">
@@ -239,7 +239,7 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="py-10 flex flex-col md:flex-row border-b border-b-gray-500">
+        <div className="py-10 flex flex-col md:flex-row border-b border-b-gray-500 ">
           <div className="w-full md:w-[100%]">
             {footerNotice.map((el, index) => (
               <div key={index} className="pb-4">

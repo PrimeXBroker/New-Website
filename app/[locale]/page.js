@@ -1,4 +1,5 @@
 "use client";
+
 import Academy from "@/our_pages/home/Academy";
 import AccountTtpes from "@/our_pages/home/AccountTypes";
 import AdvancedPlatforms from "@/our_pages/home/AdvancedPlatforms";
