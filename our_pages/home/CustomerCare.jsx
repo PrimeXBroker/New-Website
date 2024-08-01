@@ -39,6 +39,11 @@ const CustomerCare = () => {
           </div>
         </div>
       </div>
+      <div className="flex items-center justify-center pt-8">
+      <LocaleLink className=" bg-primary text-center block text-secondary font-semibold text-medium px-4 py-3 w-[200px] rounded-full shadow-xl" href='/contact'>
+        Contact Us
+      </LocaleLink>
+      </div>
      </div>
     </section>
   );
