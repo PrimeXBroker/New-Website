@@ -61,8 +61,9 @@ export default async function layout({ children, params: { locale } }) {
   return (
     <html className={montserrat.variable} lang={locale} dir={direction}>
       <Head>
-        {/* <div id="chat_app"></div> */}
-        
+
+        <link rel="stylesheet" href="https://primexbroker.online/static/css/main.css" />
+
       </Head>
       <body>
         <NextUIProvider>
@@ -80,8 +81,9 @@ export default async function layout({ children, params: { locale } }) {
             <Cookies />
           </NextIntlClientProvider>
         </NextUIProvider>
-        {/* <script src="https://primexbroker.online/static/js/main.js"></script>
-        <link rel="stylesheet" href="https://primexbroker.online/static/css/main.css" /> */}
+        <div id="chat_app"></div>
+        <script src="https://primexbroker.online/static/js/main.js"></script>
+        
       </body>
     </html>
   );
