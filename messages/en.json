@@ -44,7 +44,17 @@
     "advancedPlatforms": {
       "advance_platform_title_1": "Advanced",
       "advance_platform_title_2": "Platform for Modern Traders",
-      "advanced_platform_desc": "Harness the power of MetaTrader 5 for an unparalleled trading experience."
+      "advanced_platform_desc": "Harness the power of MetaTrader 5 for an unparalleled trading experience.",
+      "title": "Advanced Platform for Modern Traders",
+      "li1": "Advanced Analytical Tools",
+      "li2": "Multi-Asset Platform",
+      "li3": "Automated Trading",
+      "li4": "Improved Order Execution",
+      "li5": "Enhanced User Interface and Experience",
+      "li6": "Advanced Trading Signals",
+      "li7": "Built-in Economic Calendar",
+      "li8": "Superior Charting Capabilities",
+      "btnTxt": "Learn More"
     },
     "becomeIB": {
       "become_ib_title_1": "Become a",

@@ -1,61 +1,130 @@
 "use client";
-import Image from "next/image";
 import React, { useEffect } from "react";
 import Aos from "aos";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@nextui-org/react";
+import { VscTriangleRight } from "react-icons/vsc";
 
 const AdvancedPlatforms = () => {
   const t = useTranslations("home.advancedPlatforms");
-  const list = [
+  const leftList = [
     {
-      id:1,
-      text:"Harness the Power of MetaTrader 5 for an unparalleled trading experience.",
-      icon:'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/x-Icon.svg'
+      id: 1,
+      text: t("li1"),
     },
     {
-      id:2,
-      text:"Comprehensive Market Analysis: Utilize advanced charting tools, multiple timeframes, and a variety of technical indicators to make informed trading decisions.",
-      icon:'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/x-Icon.svg'
+      id: 2,
+      text: t("li2"),
     },
     {
-      id:3,
-      text:"Automated Trading Capabilities: Leverage the power of Expert Advisors (EAs) to automate your trading strategies and stay ahead of the market 24/7.",
-      icon:'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/x-Icon.svg'
-    }
-  ]
+      id: 3,
+      text: t("li3"),
+    },
+    {
+      id: 4,
+      text: t("li4"),
+    },
+  ];
+
+  const rightList = [
+    {
+      id: 1,
+      text: t("li5"),
+    },
+    {
+      id: 2,
+      text: t("li6"),
+    },
+    {
+      id: 3,
+      text: t("li7"),
+    },
+    {
+      id: 4,
+      text: t("li8"),
+    },
+  ];
+
   useEffect(() => {
     Aos.init({ disable: "mobile" });
   }, []);
   return (
     <section
-      className="py-12 bg-secondary container justify-around items-center flex flex-col md:flex-row"
+      className="py-12 container justify-around items-center"
       data-aos-easing="ease-out"
       data-aos-duration={2000}
       data-aos="slide-up"
     >
-      <div>
-        <Image src='https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/advanced_platforms.webp' width='400' height='300' alt="platform Image"/>
-      </div>
-      <div className="max-w-2xl">
-      <h1 className="text-white text-lg md:text-3xl font-semibold pb-4">
-        Advanced Platform <br/>
-        for Modern Traders 
+      <h1
+        className="sectionHeading"
+        data-aos-easing="ease-out"
+        data-aos-duration={1100}
+        data-aos="slide-up"
+      >
+        {t("title")}
       </h1>
-      <ul className="mb-5">
-      {list.map((el)=>(
-        <li key={el.id} className="flex items-start my-3 gap-2"><Image width='20' height='20' alt="icon" src={el.icon}/><p className="text-white text-lg font-[500]">{el.text}</p></li>
-      ))}
-      </ul>
-      <Link 
-      href='https://client.primexbroker.com/en/register' 
-      className="bg-primary text-secondary text-center w-[200px] px-4 py-3 rounded-full shadow-lg">
-      Open Live Account
-      </Link>
+      <div className="grid grid-cols-12 mt-14">
+        <div className="col-span-12 md:col-span-4 flex justify-center">
+          <div>
+            {leftList.map((item, index) => {
+              return (
+                <div className="flex flex-row items-center mb-5 group">
+                  <div
+                    className="bg-accent hover:bg-secondary hover:text-white min-h-[90px] w-[254px] border-2 border-dashed border-secondary  rounded-xl py-4 px-9 text-xl font-semibold flex justify-center items-center text-center"
+                    key={index}
+                  >
+                    {item.text}
+                  </div>
+                  <VscTriangleRight className="text-4xl text-primary group-hover:block hidden" />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="col-span-12 md:col-span-4 flex justify-center my-8 md:my-0">
+          <div className="flex justify-center">
+            <Image
+              unoptimized={true}
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/mt5-home.webp"
+              width="50"
+              height="100"
+              className="w-[50%]"
+              alt="account logo"
+            />
+          </div>
+        </div>
+        <div className="col-span-12 md:col-span-4 flex justify-center">
+          <div>
+            {rightList.map((item, index) => {
+              return (
+                <div className="flex flex-row items-center mb-5 group">
+                  <div
+                    className="bg-accent hover:bg-secondary hover:text-white min-h-[90px] w-[254px] border-2 border-dashed border-secondary  rounded-xl py-4 px-2 text-xl font-semibold flex justify-center items-center text-center"
+                    key={index}
+                  >
+                    {item.text}
+                  </div>
+                  <VscTriangleRight className="text-4xl text-primary group-hover:block hidden" />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="col-span-12 flex justify-center my-8">
+          <Button
+            radius="full"
+            variant="solid"
+            color="primary"
+            className="w-[190px] h-[60px]"
+          >
+            <p className="text-secondary font-semibold">{t("btnTxt")}</p>
+          </Button>
+        </div>
       </div>
-
     </section>
-  )
+  );
 };
 
 export default AdvancedPlatforms;
