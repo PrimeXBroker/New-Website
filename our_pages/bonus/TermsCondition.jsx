@@ -27,7 +27,7 @@ const TermsCondition = () => {
                 : "text-center md:text-left"
             }`}
           >
-            {t("desc_part_1")} <br />
+            {t("desc_part_1")}
             {t("desc_part_2")}
           </p>
         </div>

@@ -62,10 +62,10 @@ const Footer = () => {
       column: {
         heading: "Company",
         links: [
-          { name: "about us", href: "/about" },
-          { name: "Contact us", href: "/contact" },
+          { name: "About Us", href: "/about" },
+          { name: "Contact Us", href: "/contact" },
           { name: "Awards", href: "/awards" },
-          { name: "Press release", href: "#" },
+          { name: "Press Release", href: "#" },
           { name: "Careers", href: "/careers" },
         ],
       },
@@ -256,7 +256,7 @@ const Footer = () => {
           <div>
             <Image
               className="block sm:mx-0 mx-auto pb-6 sm:pb-0"
-              src="/images/logos/logo.svg"
+              src="/images/logos/logo2.2.svg"
               alt="footer logo"
               width="150"
               height="200"

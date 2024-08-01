@@ -8,8 +8,9 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/navbar";
+import {Badge} from "@nextui-org/badge";
 
-import Logo from "@/public/images/logos/logo.webp";
+import Logo from "@/public/images/logos/logo2.1.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -111,7 +112,7 @@ const router = useRouter()
         />
         <NavbarBrand>
           <LocaleLink href="/">
-            <Image width="150" height={150} src={Logo} alt="Logo Image" />
+            <Image width="250" height={150} src={Logo} alt="Logo Image" />
           </LocaleLink>
         </NavbarBrand>
       </NavbarContent>
@@ -237,6 +238,17 @@ const router = useRouter()
           >
             Education
           </LocaleLink>
+        </NavbarItem>
+        <NavbarItem className="text-sm">
+        <Badge content="new" color="danger" size="sm" className="translate-y-[-100%]">
+          <LocaleLink
+            href="/bonus"
+            className={`${pathnameWithoutLocale === "/bonus" ? "active_link" : ""
+              } ${NavHoverEffect}`}
+          >
+            20% Deposit
+          </LocaleLink>
+          </Badge>
         </NavbarItem>
 
       </NavbarContent>
