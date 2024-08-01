@@ -44,7 +44,7 @@ export default function Home() {
       <AccountTtpes/>
       <AdvancedPlatforms />
       <BecomeIB />
-      <Rewards />
+      {/* <Rewards /> */}
       <CustomerCare />
       <Academy />
       {/* <GetStarted /> */}

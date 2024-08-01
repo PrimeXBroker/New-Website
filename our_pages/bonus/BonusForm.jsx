@@ -1,6 +1,5 @@
 "use client";
 import { useLocale, useTranslations } from "next-intl";
-import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/react";
 import { Checkbox } from "@nextui-org/react";
 import Link from "next/link";
@@ -9,8 +8,10 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import toast from "react-hot-toast";
+import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react";
 
 const BonusForm = () => {
+  const {isOpen, onOpen, onOpenChange} = useDisclosure();
   const [loading, setLoading] = useState(false);
   const locale = useLocale();
   const t = useTranslations("bonus.form");
@@ -60,10 +61,12 @@ const BonusForm = () => {
         setLoading(false);
         toast.success("Submitted Successfully");
         formik.resetForm();
+        onOpen();
       }
     },
   });
   return (
+    <>
     <section className="container my-20">
       <div className="bg-secondary p-10 rounded-3xl">
         <div className="grid grid-cols-12">
@@ -213,7 +216,32 @@ const BonusForm = () => {
           </div>
         </div>
       </div>
-    </section>
+</section>
+<Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">Success</ModalHeader>
+              <ModalBody>
+                <p> 
+                Our team will review your application and contact you within the next 24 hours
+                to proceed with your 20% Deposit Bonus.
+                </p>
+                <p>Thank you for choosing PrimeX Capital</p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  Close
+                </Button>
+                {/* <Button color="primary" onPress={onClose}>
+                  Action
+                </Button> */}
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+      </>
   );
 };
 
