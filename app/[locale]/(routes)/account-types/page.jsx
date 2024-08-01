@@ -27,11 +27,6 @@ const page = () => {
       title: t("card.account3-title"),
       description: t("card.account3-desc"),
     },
-    {
-      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/crypto-acc.webp",
-      title: t("card.account4-title"),
-      description: t("card.account4-desc"),
-    },
   ];
 
   const advantagesData = {

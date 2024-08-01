@@ -1,187 +1,155 @@
 "use client";
-import Image from "next/image";
 import React, { useState } from "react";
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { FaArrowLeft } from "react-icons/fa";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const KeyFeatures = () => {
   const t = useTranslations("metaTrader5.keyFeatures");
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [activeFeature, setActiveFeature] = useState(null);
 
-  const handleIconEnter = (index) => {
-    setHoveredIndex(index);
-  };
-  const handleIconLeave = () => {
-    setHoveredIndex(null);
-  };
-  const [activeIndex, setActiveIndex] = useState(0);
-  const features = [
+  const featuresData = [
     {
-      title: t("feature_1_title"),
-      description: t("feature_1_desc"),
-      imgUrl: "/images/platform/mt-5/user.svg",
-      imgHoverUrl: "/images/platform/mt-5/user.svg",
+      key: 1,
+      tabTitle: t("feature_1_tab_title"),
+      subTitle1: t("feature_1_subTitle1"),
+      desc1: t("feature_1_desc1"),
+      subTitle2: t("feature_1_subTitle2"),
+      desc2: t("feature_1_desc2"),
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/MT5+Page-02.svg",
     },
     {
-      title: t("feature_2_title"),
-      description: t("feature_2_desc"),
-      imgUrl: "/images/platform/mt-5/trading.svg",
-      imgHoverUrl: "/images/platform/mt-5/trading.svg",
+      key: 2,
+      tabTitle: t("feature_2_tab_title"),
+      subTitle1: t("feature_2_subTitle1"),
+      desc1: t("feature_2_desc1"),
+      subTitle2: t("feature_2_subTitle2"),
+      desc2: t("feature_2_desc2"),
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/MT5+Page-03.svg",
     },
     {
-      title: t("feature_3_title"),
-      description: t("feature_3_desc"),
-      imgUrl: "/images/platform/mt-5/mobile.svg",
-      imgHoverUrl: "/images/platform/mt-5/mobile.svg",
+      key: 3,
+      tabTitle: t("feature_3_tab_title"),
+      subTitle1: t("feature_3_subTitle1"),
+      desc1: t("feature_3_desc1"),
+      subTitle2: t("feature_3_subTitle2"),
+      desc2: t("feature_3_desc2"),
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/MT5+Page-04.svg",
     },
     {
-      title: t("feature_4_title"),
-      description: t("feature_4_desc"),
-      imgUrl: "/images/platform/mt-5/netting.svg",
-      imgHoverUrl: "/images/platform/mt-5/netting.svg",
+      key: 4,
+      tabTitle: t("feature_9_tab_title"),
+      subTitle1: t("feature_9_subTitle1"),
+      desc1: t("feature_9_desc1"),
+      subTitle2: t("feature_9_subTitle2"),
+      desc2: t("feature_9_desc2"),
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/Customer+and+Support.svg",
     },
     {
-      title: t("feature_5_title"),
-      description: t("feature_5_desc"),
-      imgUrl: "/images/platform/mt-5/timeframe.svg",
-      imgHoverUrl: "/images/platform/mt-5/timeframe.svg",
+      key: 5,
+      tabTitle: t("feature_6_tab_title"),
+      subTitle1: t("feature_6_subTitle1"),
+      desc1: t("feature_6_desc1"),
+      subTitle2: t("feature_6_subTitle2"),
+      desc2: t("feature_6_desc2"),
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/MT5+Page-10.svg",
     },
     {
-      title: t("feature_6_title"),
-      description: t("feature_6_desc"),
-      imgUrl: "/images/platform/mt-5/calender.svg",
-      imgHoverUrl: "/images/platform/mt-5/calender.svg",
+      key: 6,
+      tabTitle: t("feature_4_tab_title"),
+      subTitle1: t("feature_4_subTitle1"),
+      desc1: t("feature_4_desc1"),
+      subTitle2: t("feature_4_subTitle2"),
+      desc2: t("feature_4_desc2"),
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/MT5+Page-09.svg",
+    },
+    {
+      key: 7,
+      tabTitle: t("feature_8_tab_title"),
+      subTitle1: t("feature_8_subTitle1"),
+      desc1: t("feature_8_desc1"),
+      subTitle2: t("feature_8_subTitle2"),
+      desc2: t("feature_8_desc2"),
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/MT5+Page-08.svg",
+    },
+    {
+      key: 8,
+      tabTitle: t("feature_5_tab_title"),
+      subTitle1: t("feature_5_subTitle1"),
+      desc1: t("feature_5_desc1"),
+      subTitle2: t("feature_5_subTitle2"),
+      desc2: t("feature_5_desc2"),
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/MT5+Page-07.svg",
+    },
+    {
+      key: 9,
+      tabTitle: t("feature_7_tab_title"),
+      subTitle1: t("feature_7_subTitle1"),
+      desc1: t("feature_7_desc1"),
+      subTitle2: t("feature_7_subTitle2"),
+      desc2: t("feature_7_desc2"),
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/MT5+Page-06.svg",
     },
   ];
 
-  const nextFeature = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % features.length);
-  };
-
-  const prevFeature = () => {
-    setActiveIndex(
-      (prevIndex) => (prevIndex - 1 + features.length) % features.length
-    );
-  };
-
   return (
-    <div className="bg-secondary text-white py-8 mt5-key-features">
-      <div className="grid grid-cols-12 items-center">
-        <div className="col-span-6 sm-col-span-4 lg:col-span-2">
-          <div>
-            <h1 className="sectionHeading text-white px-12 text-left">
-              {t("title")}
-            </h1>
-          </div>
-          <div className="px-12 pt-5 relative">
-            <div className="absolute left-[16%] right-auto">
-              <FaArrowAltCircleLeft
-                className="cursor-pointer  fill-white hover:fill-primary hover:transition-colors hover:duration-500 swiper-button-prev"
-                onClick={prevFeature}
-                size={40}
-              />
-            </div>
-            <div className="absolute right-[44%] left-auto">
-              <FaArrowAltCircleRight
-                className="cursor-pointer fill-white hover:fill-primary hover:transition-colors hover:duration-500 swiper-button-next"
-                onClick={nextFeature}
-                size={40}
-              />
-            </div>
-          </div>
-        </div>
-        <div className="col-span-6 sm-col-span-8 lg:col-span-10">
-          <Swiper
-            breakpoints={{
-              200: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-              },
-              300: {
-                slidesPerView: 1,
-                spaceBetween: 0,
-              },
-              400: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-              },
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 10,
-              },
-              1440: {
-                slidesPerView: 5,
-                spaceBetween: 10,
-              },
-            }}
-            spaceBetween={5}
-            slidesPerView={5}
-            loop
-            pagination={false}
-            navigation={{
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            }}
-            modules={[Pagination, Navigation]}
-            className="mySwiper"
-          >
-            {features.map((feature, index) => {
-              return (
-                <SwiperSlide>
-                  <div
-                    onMouseEnter={() => handleIconEnter(index)}
-                    onMouseLeave={handleIconLeave}
-                    key={index}
-                    className={`flex flex-col justify-center bg-[#3F3F3E] cursor-pointer rounded-2xl shadow-2xl border-b-5 md:w-[200px] h-[250px] group
-                      hover:bg-[#3F3F3E] border-black hover:border-primary transform translate-y-[0]
-             ${
-               index === activeIndex
-                 ? "border-primary translate-y-[-1rem] transition-transform duration-500"
-                 : "border-white"
-             }`}
+    <div className="bg-accent pt-14">
+      <div className="container">
+        <h1 className="sectionHeading text-secondary">{t("title")}5</h1>
+        <div className="grid grid-cols-12 mt-14">
+          {featuresData.map((item, index) => {
+            return (
+              <div
+                className="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col items-center relative mb-16"
+                key={index}
+              >
+                <div
+                  className={`h-[80px] w-[320px] rounded-full flex justify-center items-center gap-2 px-6 cursor-pointer ${
+                    activeFeature === item.key
+                      ? "bg-primary border-1 border-primary z-30"
+                      : "bg-transparent border-1 border-secondary z-10"
+                  }`}
+                  onClick={() =>
+                    setActiveFeature(
+                      activeFeature === item.key ? null : item.key
+                    )
+                  }
+                >
+                  <Image src={item.imgUrl} width="50" height="50" alt="img" />
+                  <span
+                    className="text-lg font-bold"
+                    style={{ lineHeight: "1.3rem" }}
                   >
-                    <div className="flex justify-end mb-4">
-                      <Image
-                        src={
-                          hoveredIndex === index
-                            ? feature.imgHoverUrl
-                            : feature.imgUrl
-                        }
-                        alt="academy icon"
-                        width="70"
-                        height="70"
-                        className="block mx-0 academy_img"
-                      />
-                    </div>
-                    <h1
-                      className={`pl-4 sectionHeading md:text-xl text-left text-[14px] ${
-                        index === activeIndex ? "text-primary" : "text-white"
-                      }`}
-                    >
-                      {feature.title}
+                    {item.tabTitle}
+                  </span>
+                </div>
+                {activeFeature === item.key && (
+                  <div className="flex flex-col justify-center items-center mb-4 h-[330px] w-[270px] bg-secondary absolute top-4 pt-16 px-5 rounded-3xl z-20">
+                    <h1 className="sectionHeading text-primary mb-1 text-center text-base">
+                      {item.subTitle1}
                     </h1>
-                    <p className="pl-4 sectionPara text-left text-sm text-white">
-                      {feature.description}
+                    <p className="sectionPara text-center text-xs text-white">
+                      {item.desc1}
+                    </p>
+                    <h1 className="sectionHeading text-primary mb-1 text-center text-base mt-5">
+                      {item.subTitle2}
+                    </h1>
+                    <p className="sectionPara text-center text-xs text-white">
+                      {item.desc2}
                     </p>
                   </div>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

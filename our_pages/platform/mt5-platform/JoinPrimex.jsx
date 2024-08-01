@@ -29,15 +29,17 @@ const JoinPrimex = () => {
             target="_blank"
             className="relative group  mb-2"
           >
-            {/* <img src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/icon-09.svg" className="w-12 absolute left-[-10px]" /> */}
-            <div className="bg-secondary  w-12 h-12 absolute left-[-10px] rounded-3xl group-hover:bg-primary ">
-              {" "}
-              <div className=" h-[100%]  flex items-center justify-center text-[#fff] group-hover:text-secondary">
-                <SiMicrosoftstore />
-              </div>{" "}
-            </div>
-            <button className="border-2 border-secondary rounded-full border-opacity-75  text-[13px] font-semibold text-secondary px-2 py-3 pl-10 ">
-              {t("download_window_btn")}
+            <button className="rounded-xl text-left border-opacity-75 text-[13px] font-semibold text-secondary px-6 py-3 bg-accent flex justify-center items-center gap-3">
+              <img
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/window.svg"
+                className="w-8"
+              />
+              <span style={{ lineHeight: "18px" }}>
+                {t("download_window_btn_part1")} <br />
+                <span className="text-[18px] font-semibold block">
+                  {t("download_window_btn_part2")}
+                </span>
+              </span>
             </button>
           </a>
           <a
@@ -45,15 +47,17 @@ const JoinPrimex = () => {
             target="_blank"
             className="relative mb-2 group"
           >
-            {/* <img src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/icon-08.svg"  className="w-12 absolute left-[-10px]" /> */}
-            <div className="bg-secondary w-12 h-12 absolute left-[-10px] rounded-3xl group-hover:bg-primary">
-              {" "}
-              <div className=" h-[100%]  flex items-center justify-center text-[#fff] group-hover:text-secondary">
-                <IoLogoGooglePlaystore />
-              </div>{" "}
-            </div>
-            <button className="border-2 border-secondary rounded-full border-opacity-75 text-[13px] font-semibold text-secondary px-2 py-3 pl-10">
-              {t("google_play-btn")}
+            <button className="rounded-xl text-left border-opacity-75 text-[13px] font-semibold text-secondary px-6 py-3 bg-accent flex justify-center items-center gap-3">
+              <img
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/playstore.svg"
+                className="w-8"
+              />
+              <span style={{ lineHeight: "18px" }}>
+                {t("google_play-btn_part1")} <br />
+                <span className="text-[18px] font-semibold block">
+                  {t("google_play-btn_part2")}
+                </span>
+              </span>
             </button>
           </a>
           <a
@@ -61,15 +65,17 @@ const JoinPrimex = () => {
             target="_blank"
             className="relative group"
           >
-            {/* <img src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/icon-09.svg" className="w-12 absolute left-[-10px]" /> */}
-            <div className="bg-secondary w-12 h-12 absolute left-[-10px] rounded-3xl group-hover:bg-primary">
-              {" "}
-              <div className=" h-[100%]  flex items-center justify-center text-[#fff] group-hover:text-secondary">
-                <FaApple />
-              </div>{" "}
-            </div>
-            <button className="border-2 border-secondary rounded-full border-opacity-75 text-[13px] font-semibold text-secondary px-2 py-3 pl-10">
-              {t("app_store_btn")}
+            <button className="rounded-xl text-left border-opacity-75 text-[13px] font-semibold text-secondary px-6 py-3 bg-accent flex justify-center items-center gap-3">
+              <img
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/apple.svg"
+                className="w-8"
+              />
+              <span style={{ lineHeight: "18px" }}>
+                {t("app_store_btn_part1")} <br />
+                <span className="text-[18px] font-semibold block">
+                  {t("app_store_btn_part1")}{" "}
+                </span>
+              </span>
             </button>
           </a>
         </div>
