@@ -50,9 +50,9 @@ export async function generateMetadata({ params: { locale } }) {
     },
   };
 }
-export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "ar" }];
-}
+// export function generateStaticParams() {
+//   return [{ locale: "en" }, { locale: "ar" }];
+// }
 export default async function layout({ children, params: { locale } }) {
   const messages = await getMessages();
   const direction = locale === "ar" ? "rtl" : "ltr";

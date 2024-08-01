@@ -8,7 +8,6 @@ import nationality from "../../public/assets/data/nationality.json";
 import { LocationContext } from "@/context/location-context";
 import { useContext, useState } from "react";
 import axios from "axios";
-import { toast } from "react-toastify";
 import { useTranslations } from "next-intl";
 
 const questionTypes = [
@@ -85,7 +84,6 @@ const ContactForm = () => {
         console.log(error);
       } finally {
         setLoading(false);
-        toast("Thanks for contacting us our support will be in touch");
         formik.resetForm();
       }
     },
