@@ -121,7 +121,7 @@ const TabsSection = () => {
           location: t("award_3_location"),
         },
       ],
-    }
+    },
   ];
 
   return (

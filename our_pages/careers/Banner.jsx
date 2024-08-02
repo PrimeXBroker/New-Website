@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const Banner = () => {
   const t = useTranslations("careers.hero");
+  const locale = useLocale();
 
   return (
     <section className="">
@@ -11,13 +12,21 @@ const Banner = () => {
         <div className="container flex flex-col md:flex-row justify-around py-16">
           <div className="md:max-w-2xl flex flex-col justify-center items-center md:items-start gap-6 md:w-[70%]">
             <h1
-              className="text-primary text-4xl md:text-5xl text-center md:text-left font-semibold"
+              className={`text-primary text-4xl md:text-5xl font-semibold ${
+                locale === "ar"
+                  ? "text-center md:text-right"
+                  : "text-center md:text-left"
+              }`}
               style={{ lineHeight: "45px", letterSpacing: "1px" }}
             >
               {t("title")}
             </h1>
             <p
-              className="text-white md:text-lg text-medium md:max-w-xl text-center md:text-left"
+              className={`text-white md:text-lg text-medium md:max-w-xl ${
+                locale === "ar"
+                  ? "text-center md:text-right"
+                  : "text-center md:text-left"
+              }`}
               style={{ letterSpacing: "0.7px" }}
             >
               {t("description")}

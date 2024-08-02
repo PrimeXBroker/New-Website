@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
+import { useLocale } from "next-intl";
 
 const Featured = ({ title, cardsData }) => {
+  const locale = useLocale();
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleIconEnter = (index) => {
@@ -33,10 +35,18 @@ const Featured = ({ title, cardsData }) => {
                   className="block mx-0 academy_img"
                 />
               </div>
-              <h1 className="pl-4 sectionHeading text-xl text-left group-hover:text-white">
+              <h1
+                className={`sectionHeading text-xl group-hover:text-white ${
+                  locale === "ar" ? "text-right pr-4" : "text-left pl-4"
+                }`}
+              >
                 {card.title}
               </h1>
-              <p className="pl-4 sectionPara text-left text-sm group-hover:text-white">
+              <p
+                className={`sectionPara text-sm group-hover:text-white ${
+                  locale === "ar" ? "text-right pr-4" : "text-left pl-4"
+                }`}
+              >
                 {card.description}
               </p>
             </div>

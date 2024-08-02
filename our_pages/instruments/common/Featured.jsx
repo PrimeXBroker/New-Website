@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
+import { useLocale } from "next-intl";
 
 const Featured = ({ title, cardsData }) => {
+  const locale = useLocale();
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleIconEnter = (index) => {
@@ -25,7 +27,11 @@ const Featured = ({ title, cardsData }) => {
               className="bg-accent cursor-pointer rounded-2xl shadow-2xl border-b-5 w-[250px] h-[250px] group
            hover:bg-[#3F3F3E] border-black hover:border-primary p-4 transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500"
             >
-              <div className="flex justify-end mb-4">
+              <div
+                className={`flex mb-4 ${
+                  locale === "ar" ? "justify-right" : "justify-left"
+                }`}
+              >
                 <Image
                   src={hoveredIndex === index ? card.imgHoverUrl : card.imgUrl}
                   alt="academy icon"
@@ -34,10 +40,18 @@ const Featured = ({ title, cardsData }) => {
                   className="block mx-0 academy_img"
                 />
               </div>
-              <h1 className="sectionHeading text-xl text-left group-hover:text-white">
+              <h1
+                className={`sectionHeading text-xl group-hover:text-white ${
+                  locale === "ar" ? "text-right" : "text-left"
+                }`}
+              >
                 {card.title}
               </h1>
-              <p className="sectionPara text-left text-sm group-hover:text-white">
+              <p
+                className={`sectionPara text-sm group-hover:text-white ${
+                  locale === "ar" ? "text-right" : "text-left"
+                }`}
+              >
                 {card.description}
               </p>
             </div>

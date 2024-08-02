@@ -14,9 +14,8 @@ const questionTypes = [
   { id: 1, name: "General Inquiry", value: "general" },
   { id: 2, name: "Account Funding", value: "account_funding" },
   { id: 3, name: "Withdrawal Query", value: "withdrawal_query" },
-  { id: 4, name: "Deposit Query", value: "deposit_query" }
+  { id: 4, name: "Deposit Query", value: "deposit_query" },
 ];
-
 
 const ContactForm = () => {
   const t = useTranslations("contact.contactForm");
@@ -78,8 +77,11 @@ const ContactForm = () => {
       };
       try {
         setLoading(true);
-          const response = await axios.post(`https://primexbroker.com/api/contact`, JSON.stringify(updatedValues));
-          console.log("Response", response);
+        const response = await axios.post(
+          `https://primexbroker.com/api/contact`,
+          JSON.stringify(updatedValues)
+        );
+        console.log("Response", response);
       } catch (error) {
         console.log(error);
       } finally {
@@ -223,7 +225,14 @@ const ContactForm = () => {
           </div>
           <div className="text-center">
             <button className="bg-primary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg">
-            <div className="flex gap-1 items-center justify-center">{loading && <div className="spinner inline-block"></div>} {loading ? <span className="text-center">Sending...</span> : <span>Submit</span>}</div>
+              <div className="flex gap-1 items-center justify-center">
+                {loading && <div className="spinner inline-block"></div>}{" "}
+                {loading ? (
+                  <span className="text-center">Sending...</span>
+                ) : (
+                  <span>{t("submit_btn")}</span>
+                )}
+              </div>
             </button>
           </div>
         </form>

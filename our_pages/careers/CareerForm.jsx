@@ -7,9 +7,10 @@ import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import nationality from "../../public/assets/data/nationality.json";
 import { LocationContext } from "@/context/location-context";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const CareerForm = () => {
+  const locale = useLocale();
   const t = useTranslations("careers.careersForm");
   const [resumeName, setResumeName] = useState("");
   const [portfolioName, setPortfolioName] = useState("");
@@ -198,7 +199,9 @@ const CareerForm = () => {
                 <button
                   type="button"
                   onClick={() => handleButtonClick("resume")}
-                  className="bg-white text-secondary py-2 px-4 capitalize rounded-md cursor-pointer shadow-sm w-full text-left"
+                  className={`bg-white text-secondary py-2 px-4 capitalize rounded-md cursor-pointer shadow-sm w-full ${
+                    locale === "ar" ? "text-right" : "text-left"
+                  }`}
                 >
                   {resumeName || t("upload_resume")}
                 </button>
@@ -219,7 +222,9 @@ const CareerForm = () => {
                 <button
                   type="button"
                   onClick={() => handleButtonClick("portfolio")}
-                  className="bg-white text-secondary py-2 px-4 capitalize rounded-md cursor-pointer shadow-sm w-full text-left"
+                  className={`bg-white text-secondary py-2 px-4 capitalize rounded-md cursor-pointer shadow-sm w-full ${
+                    locale === "ar" ? "text-right" : "text-left"
+                  }`}
                 >
                   {portfolioName || t("upload_portfolio")}
                 </button>

@@ -12,10 +12,22 @@ const Rewards = () => {
         <h1 className="sectionHeading">{t("rewards.title")}</h1>
         <div className="grid grid-cols-12 mt-16 items-center">
           <div className="col-span-12 sm:col-start-3 sm:col-span-8 md:col-span-6">
-            <h2 className="sectionHeading font-normal text-center md:text-left">
+            <h2
+              className={`sectionHeading font-normal ${
+                locale === "ar"
+                  ? "text-center md:text-right"
+                  : "text-center md:text-left"
+              }`}
+            >
               {t("rewards.subtitle_1")} <br /> {t("rewards.subtitle_2")}
             </h2>
-            <p className="sectionPara md:max-w-xl text-center md:text-left">
+            <p
+              className={`sectionPara md:max-w-xl ${
+                locale === "ar"
+                  ? "text-center md:text-right"
+                  : "text-center md:text-left"
+              }`}
+            >
               {t("rewards.description")}
             </p>
           </div>
