@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -19,6 +18,8 @@ import LocaleLink from "./LocaleLink";
 import { useTranslations, useLocale } from "next-intl";
 
 const Footer = () => {
+  const language = useLocale();
+  console.log(language);
   const t = useTranslations("footer");
   const locale = useLocale();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -241,7 +242,6 @@ const Footer = () => {
                   <ul className={`pt-0 md:pt-2`}>
                     {console.log(el.column.heading, "el.column.heading")}
                     {el.column.links.map((link, linkIndex) => {
-                      console.log("el.column.heading -----");
                       return (
                         <li key={linkIndex} className="text-white py-1">
                           <a target="_blank" href={link.href}>
@@ -265,7 +265,7 @@ const Footer = () => {
                           </Link>
                         </li>
                       ) : (
-                        <li key={linkIndex} className="text-white py-1">
+                        <li key={linkIndex} className={`text-white py-1 ${language === 'ar'?'text-right':'text-left'}`}>
                           <LocaleLink href={link.href}>{link.name}</LocaleLink>
                         </li>
                       )

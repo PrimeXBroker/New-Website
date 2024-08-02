@@ -32,7 +32,7 @@ const Header = ({ locale }) => {
   const t = useTranslations("menu");
   const pathname = usePathname();
   const pathnameWithoutLocale = pathname.replace(`/${locale}`, "");
-  const [buttonText, setButtonText] = useState("EN");
+  const [buttonText, setButtonText] = useState("English");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isRotated, setIsRotated] = useState(false);
   const [isRotatedPartners, setIsRotatedPartners] = useState(false);
@@ -309,16 +309,16 @@ const Header = ({ locale }) => {
                     ? `/${currentLocale}/${restOfPath}`
                     : `/en/${restOfPath}`
                 }
-                onClick={() => handleClick("EN")}
+                onClick={() => handleClick("English")}
               >
                 <div className="flex gap-2">
-                  <Image
+                  {/* <Image
                     src="/images/flags/gb.svg"
                     width="30"
                     height="8"
                     alt="img"
-                  />
-                  <p>EN</p>
+                  /> */}
+                  <p>English</p>
                 </div>
               </Link>
               <Link
@@ -327,22 +327,24 @@ const Header = ({ locale }) => {
                     ? `/${currentLocale}/${restOfPath}`
                     : `/ar/${restOfPath}`
                 }
-                onClick={() => handleClick("AR")}
+                onClick={() => handleClick("العربية")}
               >
                 <div className="flex gap-2">
-                  <Image
+                  {/* <Image
                     src="/images/flags/arab.svg"
                     width="30"
                     height="8"
                     alt="img"
-                  />
+                  /> */}
                   <p>عربي</p>
                 </div>
               </Link>
             </div>
           </div>
         </NavbarItem>
-        <NavbarItem>{/* <ThemeToggle /> */}</NavbarItem>
+        <NavbarItem>
+           {/* <ThemeToggle /> */}
+      </NavbarItem>
       </NavbarContent>
       <NavbarMenu className="h-56 !important">
         {menuItems.map((item, index) => (
