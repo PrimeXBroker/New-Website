@@ -565,7 +565,13 @@
       "description": "اكتشف مستقبل التداول مع MetaTrader 5 في برايم اكس. سواء كنت مبتدئًا أو متداولًا متمرسًا، فإن MT5 يوفر الأدوات والميزات التي تحتاجها للنجاح في الأسواق المالية. انضم إلينا اليوم وارفع مستوى تجربتك في التداول.",
       "download_window_btn": "تحميل لسطح المكتب",
       "google_play-btn": "احصل عليه من Google Play",
-      "app_store_btn": "تحميل من App Store"
+      "app_store_btn": "تحميل من App Store",
+      "download_window_btn_part1": "احصل عليه من",
+      "download_window_btn_part2": "Microsoft",
+      "google_play-btn_part1": "احصل عليه من",
+      "google_play-btn_part2": "Google Play",
+      "app_store_btn_part1": "قم بتنزيله من",
+      "app_store_btn_part2": "App Store"
     }
   },
   "careers": {
