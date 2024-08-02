@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 
 const Banner = () => {
+  const locale = useLocale();
   const t = useTranslations("metaTrader5.hero");
 
   return (
@@ -11,31 +12,39 @@ const Banner = () => {
       <div className="container flex flex-col md:flex-row justify-center items-center py-12 lg:md:text-left text-center h-[80vh] ">
         <div className="md:w-[40%]">
           <h1
-            className="text-primary md:text-3xl font-semibold mb-5"
+            className={`text-primary md:text-3xl font-semibold mb-5 ${
+              locale === "ar" ? "text-right" : "text-left"
+            }`}
             style={{ letterSpacing: "1px" }}
           >
             {t("title")}
           </h1>
           <p
-            className="text-white text-lg font-[500]"
+            className={`text-white text-lg font-[500] ${
+              locale === "ar" ? "text-right" : "text-left"
+            }`}
             style={{ letterSpacing: "1.4px" }}
           >
             {t("desc_1")}
           </p>
           <p
-            className="text-white text-lg font-[700]"
+            className={`text-white text-lg font-[700] ${
+              locale === "ar" ? "text-right" : "text-left"
+            }`}
             style={{ letterSpacing: "0.9px" }}
           >
             {t("desc_2")}
           </p>
-          <div className="pt-5">
+          <div
+            className={`pt-5 ${locale === "ar" ? "text-right" : "text-left"}`}
+          >
             <Link
-              href='https://client.primexbroker.com/en/register'
+              href="https://client.primexbroker.com/en/register"
               className="bg-primary rounded-full text-[13px]  text-center font-semibold text-secondary px-10 py-3"
               style={{ letterSpacing: "0.9px" }}
             >
               {t("start_now_btn")}
-            </Link> 
+            </Link>
           </div>
         </div>
         <div>
