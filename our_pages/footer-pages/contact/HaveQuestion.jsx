@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const HaveQuestion = () => {
+  const locale = useLocale();
   const t = useTranslations("contact.haveQuestion");
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -44,7 +45,7 @@ const HaveQuestion = () => {
     <section className="bg-accent pt-12 pb-24">
       <div className="max-w-2xl mx-auto">
         <h1
-          className="text-secondary md:text-2xl text-lg font-semibold text-center"
+          className={`text-secondary md:text-2xl text-lg font-semibold text-center`}
           style={{ lineHeight: "50px", letterSpacing: "1px" }}
         >
           {t("title")}
@@ -65,7 +66,11 @@ const HaveQuestion = () => {
             className="flex flex-col justify-center bg-accent cursor-pointer rounded-2xl shadow-2xl border-b-5 h-auto group
            hover:bg-[#3F3F3E] border-black hover:border-primary transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500"
           >
-            <div className="flex justify-end">
+            <div
+              className={`flex ${
+                locale === "ar" ? "justify-right" : "justify-end"
+              }`}
+            >
               <Image
                 src={hoveredIndex === index ? card.imgHoverUrl : card.imgUrl}
                 alt="academy icon"
@@ -74,10 +79,18 @@ const HaveQuestion = () => {
                 className="block mx-0 academy_img"
               />
             </div>
-            <h1 className="pl-4 sectionHeading text-xl text-left group-hover:text-primary">
+            <h1
+              className={`sectionHeading text-xl group-hover:text-primary ${
+                locale === "ar" ? "text-right pr-4" : "text-left pl-4 "
+              }`}
+            >
               {card.title}
             </h1>
-            <p className="pl-4 sectionPara text-left text-sm group-hover:text-white">
+            <p
+              className={`sectionPara text-sm group-hover:text-white ${
+                locale === "ar" ? "text-right pr-4" : "text-left pl-4 "
+              }`}
+            >
               {card.description}
             </p>
           </div>

@@ -13,12 +13,12 @@ import Rewards from "@/our_pages/home/Rewards";
 import TradingOpportunities from "@/our_pages/home/TradingOpportunities";
 import { useTranslations } from "next-intl";
 import {
-  Modal, 
-  ModalContent, 
-  ModalHeader, 
-  ModalBody, 
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
   ModalFooter,
-  useDisclosure
+  useDisclosure,
 } from "@nextui-org/modal";
 import Link from "next/link";
 import { HiBellAlert } from "react-icons/hi2";
@@ -27,7 +27,7 @@ import { Button } from "@nextui-org/button";
 
 export default function Home() {
   const t = useTranslations("home");
-  const {isOpen, onOpen, onOpenChange,onClose} = useDisclosure();
+  const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
   useEffect(() => {
     // Open the modal when the component mounts
     onOpen();
@@ -69,7 +69,7 @@ export default function Home() {
       // suffix: t("fact_no4"),
     },
   ];
-  
+
   return (
     <>
       <Banner />
@@ -83,25 +83,49 @@ export default function Home() {
       <Academy />
       {/* <GetStarted /> */}
       <OurRecognition />
-      <Modal className="overflow-auto"  isOpen={isOpen} onOpenChange={onOpenChange}>
-        <ModalContent className="overflow-visible bg-accent" >
+      <Modal
+        className="overflow-auto"
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+      >
+        <ModalContent className="overflow-visible bg-accent">
           {(onClose) => (
             <>
-              <ModalHeader 
-              className="relative overflow-visible">
-                <HiBellAlert color="#FFD000" className="absolute top-[-25px] right-[50%] translate-x-[50%]" size={60}/>
-                </ModalHeader>
+              <ModalHeader className="relative overflow-visible">
+                <HiBellAlert
+                  color="#FFD000"
+                  className="absolute top-[-25px] right-[50%] translate-x-[50%]"
+                  size={60}
+                />
+              </ModalHeader>
               <ModalBody>
                 <div className="px-10">
-                <h1 className="text-secondary font-semibold text-center pt-5 pb-6">{t("modal.title")}</h1>
-                <p className="text-secondary text-center">{t("modal.para1")}<Link className="underline decoration-primary" href='https://www.primexcapital.com'>www.primexcapital.com</Link></p>
-                <p className="text-center text-secondary pt-6">{t("modal.para2")}</p>
-                <p className="text-secondary text-center">{t("modal.para3")}</p>
+                  <h1 className="text-secondary font-semibold text-center pt-5 pb-6">
+                    {t("modal.title")}
+                  </h1>
+                  <p className="text-secondary text-center">
+                    {t("modal.para1")}
+                    <Link
+                      className="underline decoration-primary"
+                      href="https://www.primexcapital.com"
+                    >
+                      www.primexcapital.com
+                    </Link>
+                  </p>
+                  <p className="text-center text-secondary pt-6">
+                    {t("modal.para2")}
+                  </p>
+                  <p className="text-secondary text-center">
+                    {t("modal.para3")}
+                  </p>
                 </div>
               </ModalBody>
               <ModalFooter>
-                <Button className="bg-primary text-secondary font-semibold mx-auto"   onPress={onClose}>
-               {t("modal.acknowledged")}
+                <Button
+                  className="bg-primary text-secondary font-semibold mx-auto"
+                  onPress={onClose}
+                >
+                  {t("modal.acknowledged")}
                 </Button>
               </ModalFooter>
             </>

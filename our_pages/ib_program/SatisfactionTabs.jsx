@@ -11,7 +11,7 @@ const SatisfactionTabs = () => {
   const tabData = [
     {
       key: "Explore",
-      tabTitle: "Explore",
+      tabTitle: t("tabs.tab_title1"),
       contentTitle1: t("tabs.li1_title1"),
       contentTitle2: t("tabs.li1_title2"),
       contentPoint1: t("tabs.li1_1"),
@@ -20,7 +20,7 @@ const SatisfactionTabs = () => {
     },
     {
       key: "Discover",
-      tabTitle: "Discover",
+      tabTitle: t("tabs.tab_title2"),
       contentTitle1: t("tabs.li2_title1"),
       contentTitle2: t("tabs.li2_title2"),
       contentPoint1: t("tabs.li2_1"),
@@ -30,7 +30,7 @@ const SatisfactionTabs = () => {
     },
     {
       key: "Benefit",
-      tabTitle: "Benefit",
+      tabTitle: t("tabs.tab_title3"),
       contentTitle1: t("tabs.li3_title1"),
       contentTitle2: t("tabs.li3_title2"),
       contentPoint1: t("tabs.li3_1"),
@@ -40,7 +40,7 @@ const SatisfactionTabs = () => {
     },
     {
       key: "Experience",
-      tabTitle: "Experience",
+      tabTitle: t("tabs.tab_title4"),
       contentTitle1: t("tabs.li4_title1"),
       contentTitle2: t("tabs.li4_title2"),
       contentPoint1: t("tabs.li4_1"),
@@ -49,7 +49,7 @@ const SatisfactionTabs = () => {
     },
     {
       key: "Enjoy",
-      tabTitle: "Enjoy",
+      tabTitle: t("tabs.tab_title5"),
       contentTitle1: t("tabs.li5_title1"),
       contentTitle2: t("tabs.li5_title2"),
       contentPoint1: t("tabs.li5_1"),
@@ -58,7 +58,7 @@ const SatisfactionTabs = () => {
     },
     {
       key: "Count",
-      tabTitle: "Count on",
+      tabTitle: t("tabs.tab_title6"),
       contentTitle1: t("tabs.li6_title1"),
       contentTitle2: t("tabs.li6_title2"),
       contentPoint1: t("tabs.li6_1"),

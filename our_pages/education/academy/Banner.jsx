@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const Banner = () => {
+  const locale = useLocale();
   const h = useTranslations("academy.hero");
   const f = useTranslations("academy.unlimitedFeatures");
 
@@ -13,7 +14,11 @@ const Banner = () => {
         <div className="container flex flex-col md:flex-row justify-around py-16">
           <div className="max-w-2xl flex flex-col justify-center items-start gap-6 md:w-[70%]">
             <h1
-              className="text-primary text-xl md:text-3xl text-center md:text-left font-semibold"
+              className={`text-primary text-xl md:text-3xl font-semibold ${
+                locale === "ar"
+                  ? "text-center md:text-right"
+                  : "text-center md:text-left"
+              }`}
               style={{ lineHeight: "45px", letterSpacing: "1px" }}
             >
               {h("title_1")}
@@ -22,12 +27,19 @@ const Banner = () => {
               </span>
             </h1>
             <p
-              className="text-white md:text-lg text-medium md:max-w-xl text-center md:text-left"
+              className={`text-white md:text-lg text-medium md:max-w-xl ${
+                locale === "ar"
+                  ? "text-center md:text-right"
+                  : "text-center md:text-left"
+              }`}
               style={{ letterSpacing: "0.7px" }}
             >
               {h("description")}
             </p>
-            <Link href='#academy-form' className="bg-primary text-center px-4 py-4 rounded-full w-[200px] shadow-xl block md:m-0 mx-auto">
+            <Link
+              href="#academy-form"
+              className="bg-primary text-center px-4 py-4 rounded-full w-[200px] shadow-xl block md:m-0 mx-auto"
+            >
               {h("join_btn")}
             </Link>
           </div>
@@ -55,16 +67,20 @@ const Banner = () => {
         >
           {f("description")}
         </p>
-        <Link 
-         href='https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe' 
-         className="bg-primary text-center px-4 py-4 rounded-full w-[200px] mx-auto block shadow-xl mb-8">
+        <Link
+          href="https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe"
+          className="bg-primary text-center px-4 py-4 rounded-full w-[200px] mx-auto block shadow-xl mb-8"
+        >
           {f("download_btn")}
         </Link>
-        <p className="text-secondary text-lg text-center">
+        <p className="text-secondary text-lg text-center" dir="ltr">
           {f("link_title_part_1")}
           <span className="font-[700]">{f("link_title_part_2")}</span>
           {f("link_title_part_3")}
-          <Link className="text-primary appearance-none pl-2" href="https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe">
+          <Link
+            className="text-primary appearance-none pl-2"
+            href="https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe"
+          >
             {f("download_link_text")}
           </Link>
         </p>

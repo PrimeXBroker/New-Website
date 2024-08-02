@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const ContactBanner = () => {
+  const locale = useLocale();
   const t = useTranslations("contact.hero");
 
   return (
@@ -10,13 +11,21 @@ const ContactBanner = () => {
       <div className="container flex flex-col md:flex-row justify-evenly gap-10 items-center py-12">
         <div className="md:w-[45%]">
           <h1
-            className={`text-primary text-xl md:text-3xl font-semibold mb-5 md:text-left text-center`}
+            className={`text-primary text-xl md:text-3xl font-semibold mb-5 ${
+              locale === "ar"
+                ? "md:text-right text-center"
+                : "md:text-left text-center"
+            }`}
             style={{ letterSpacing: "1px" }}
           >
             {t("title")}
           </h1>
           <p
-            className={`text-white text-lg font-[500] md:text-left text-center`}
+            className={`text-white text-lg font-[500] ${
+              locale === "ar"
+                ? "md:text-right text-center"
+                : "md:text-left text-center"
+            }`}
             style={{ letterSpacing: "1.4px" }}
           >
             {t("description")}

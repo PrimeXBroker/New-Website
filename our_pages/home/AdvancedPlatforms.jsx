@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import Aos from "aos";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@nextui-org/react";
@@ -9,6 +9,7 @@ import { VscTriangleRight } from "react-icons/vsc";
 import { VscTriangleLeft } from "react-icons/vsc";
 
 const AdvancedPlatforms = () => {
+  const locale = useLocale();
   const t = useTranslations("home.advancedPlatforms");
   const leftList = [
     {

@@ -16,10 +16,11 @@ import { FaDownload } from "react-icons/fa6";
 import CustomModal from "./Modal";
 import { Button } from "@nextui-org/button";
 import LocaleLink from "./LocaleLink";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const Footer = () => {
   const t = useTranslations("footer");
+  const locale = useLocale();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = (e) => {
@@ -90,7 +91,7 @@ const Footer = () => {
     },
     {
       column: {
-        heading: "Location",
+        heading: t("Location.title_part5"),
         links: [
           {
             name: t("Location.title_part5_link1"),
@@ -168,10 +169,22 @@ const Footer = () => {
       <section className="bg-primary relative z-0 ">
         <div className="container flex p-10 flex-col md:flex-row">
           <div className="md:w-[60%] w-full mb-5 md:mb-0">
-            <h1 className="sectionHeading text-3xl text-secondary font-semibold text-center md:text-left">
+            <h1
+              className={`sectionHeading text-3xl text-secondary font-semibold ${
+                locale === "ar"
+                  ? "text-center md:text-right"
+                  : "text-center md:text-left"
+              }`}
+            >
               {t("getStarted.get_started_title")}
             </h1>
-            <p className="sectionPara  text-secondary text-center md:text-left">
+            <p
+              className={`sectionPara  text-secondary ${
+                locale === "ar"
+                  ? "text-center md:text-right"
+                  : "text-center md:text-left"
+              }`}
+            >
               {t("getStarted.get_started_desc_1")}
               <br />
               {t("getStarted.get_started_desc_2")}
@@ -202,7 +215,7 @@ const Footer = () => {
       <footer className="bg-secondary">
         <div className="container flex flex-col pt-12">
           <div className="flex flex-row justify-center lg:gap-0 gap-5 lg:justify-around items-center border-b border-b-gray-500 pb-12 flex-wrap">
-            <p className="text-white text-sm font-[200]">We Accept:</p>
+            <p className="text-white text-sm font-[200]">{t("logos.title")}</p>
             {paymentOptions.map((el) => (
               <Image
                 key={el.id}
@@ -216,12 +229,16 @@ const Footer = () => {
           <div className="py-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border-b border-b-gray-500 sm:text-left text-center">
             {footerLinks.map((el, index) => (
               <div key={index} className="footer">
-                <p className="text-primary font-semibold md:pt-0 pt-5">
+                <p
+                  className={`text-primary font-semibold md:pt-0 pt-5 ${
+                    locale === "ar" ? "text-right" : "text-left"
+                  }`}
+                >
                   {el.column.heading}
                 </p>
 
                 {el.column.heading === "Platform" ? (
-                  <ul className="pt-0 md:pt-2">
+                  <ul className={`pt-0 md:pt-2`}>
                     {console.log(el.column.heading, "el.column.heading")}
                     {el.column.links.map((link, linkIndex) => {
                       console.log("el.column.heading -----");
@@ -235,7 +252,11 @@ const Footer = () => {
                     })}
                   </ul>
                 ) : (
-                  <ul className="pt-0 md:pt-2 footer">
+                  <ul
+                    className={`pt-0 md:pt-2 footer ${
+                      locale === "ar" ? "text-right" : "text-left"
+                    }`}
+                  >
                     {el.column.links.map((link, linkIndex) =>
                       link.name === "Client Agreement" ? (
                         <li key={linkIndex} className="text-white py-1">

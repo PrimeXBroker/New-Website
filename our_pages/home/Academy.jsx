@@ -2,10 +2,11 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Aos from "aos";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const Academy = () => {
   const t = useTranslations("home.academy");
+  const locale = useLocale();
   const [icon1Hovered, setIcon1Hovered] = useState(false);
   const [icon2Hovered, setIcon2Hovered] = useState(false);
   const [icon3Hovered, setIcon3Hovered] = useState(false);
@@ -55,7 +56,11 @@ const Academy = () => {
           onMouseEnter={handleIcon1Enter}
           onMouseLeave={handleIcon1Leave}
         >
-          <div className="flex justify-end">
+          <div
+            className={`flex ${
+              locale === "ar" ? "justify-right" : "justify-left"
+            }`}
+          >
             <Image
               src={
                 icon1Hovered
@@ -68,10 +73,18 @@ const Academy = () => {
               className="block mx-0 academy_img"
             />
           </div>
-          <h1 className="sectionHeading text-2xl text-left mb-6 group-hover:text-white">
+          <h1
+            className={`sectionHeading text-2xl mb-6 group-hover:text-white ${
+              locale === "ar" ? "text-right" : "text-left"
+            }`}
+          >
             {t("academy_card_1_title_1")} <br /> {t("academy_card_1_title_2")}
           </h1>
-          <p className="sectionPara text-left group-hover:text-white">
+          <p
+            className={`sectionPara group-hover:text-white ${
+              locale === "ar" ? "text-right" : "text-left"
+            }`}
+          >
             {t("academy_card_1_desc_1")} <br /> {t("academy_card_1_desc_2")}
           </p>
         </div>
@@ -84,7 +97,11 @@ const Academy = () => {
           onMouseEnter={handleIcon2Enter}
           onMouseLeave={handleIcon2Leave}
         >
-          <div className="flex justify-end">
+          <div
+            className={`flex ${
+              locale === "ar" ? "justify-right" : "justify-left"
+            }`}
+          >
             <Image
               src={
                 icon2Hovered
@@ -97,10 +114,18 @@ const Academy = () => {
               className="block mx-0"
             />
           </div>
-          <h1 className="sectionHeading group-hover:text-white text-2xl text-left mb-6">
+          <h1
+            className={`sectionHeading group-hover:text-white text-2xl mb-6 ${
+              locale === "ar" ? "text-right" : "text-left"
+            }`}
+          >
             {t("academy_card_2_title_1")} <br /> {t("academy_card_2_title_2")}
           </h1>
-          <p className="sectionPara text-left group-hover:text-white">
+          <p
+            className={`sectionPara group-hover:text-white ${
+              locale === "ar" ? "text-right" : "text-left"
+            }`}
+          >
             {t("academy_card_2_desc_1")} <br /> {t("academy_card_2_desc_2")}
           </p>
         </div>
@@ -113,7 +138,11 @@ const Academy = () => {
           onMouseEnter={handleIcon3Enter}
           onMouseLeave={handleIcon3Leave}
         >
-          <div className="flex justify-end">
+          <div
+            className={`flex ${
+              locale === "ar" ? "justify-right" : "justify-left"
+            }`}
+          >
             <Image
               src={
                 icon3Hovered
@@ -126,11 +155,19 @@ const Academy = () => {
               className="block mx-0"
             />
           </div>
-          <h1 className="sectionHeading text-2xl text-left mb-6 group-hover:text-white">
+          <h1
+            className={`sectionHeading text-2xl mb-6 group-hover:text-white ${
+              locale === "ar" ? "text-right" : "text-left"
+            }`}
+          >
             {t("academy_card_3_title_1")}
             <br /> {t("academy_card_3_title_2")}
           </h1>
-          <p className="sectionPara text-left group-hover:text-white">
+          <p
+            className={`sectionPara group-hover:text-white ${
+              locale === "ar" ? "text-right" : "text-left"
+            }`}
+          >
             {t("academy_card_3_desc_1")} <br /> {t("academy_card_3_desc_2")}
           </p>
         </div>
