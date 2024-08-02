@@ -32,7 +32,7 @@ const Header = ({ locale }) => {
   const t = useTranslations("menu");
   const pathname = usePathname();
   const pathnameWithoutLocale = pathname.replace(`/${locale}`, "");
-  const [buttonText, setButtonText] = useState("EN");
+  const [buttonText, setButtonText] = useState("English");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isRotated, setIsRotated] = useState(false);
   const [isRotatedPartners, setIsRotatedPartners] = useState(false);
@@ -273,16 +273,16 @@ const router = useRouter()
                     ? `/${currentLocale}/${restOfPath}`
                     : `/en/${restOfPath}`
                 }
-                onClick={() => handleClick("EN")}
+                onClick={() => handleClick("English")}
               >
                 <div className="flex gap-2">
-                  <Image
+                  {/* <Image
                     src="/images/flags/gb.svg"
                     width="30"
                     height="8"
                     alt="img"
-                  />
-                  <p>EN</p>
+                  /> */}
+                  <p>English</p>
                 </div>
               </Link>
               <Link
@@ -291,16 +291,16 @@ const router = useRouter()
                     ? `/${currentLocale}/${restOfPath}`
                     : `/ar/${restOfPath}`
                 }
-                onClick={() => handleClick("AR")}
+                onClick={() => handleClick("العربية")}
               >
                 <div className="flex gap-2">
-                  <Image
+                  {/* <Image
                     src="/images/flags/arab.svg"
                     width="30"
                     height="8"
                     alt="img"
-                  />
-                  <p>AR</p>
+                  /> */}
+                  <p>العربية</p>
                 </div>
               </Link>
             </div>

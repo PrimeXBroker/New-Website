@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -16,9 +15,11 @@ import { FaDownload } from "react-icons/fa6";
 import CustomModal from "./Modal";
 import { Button } from "@nextui-org/button";
 import LocaleLink from "./LocaleLink";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const Footer = () => {
+  const language = useLocale();
+  console.log(language);
   const t = useTranslations("footer");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -90,7 +91,7 @@ const Footer = () => {
     },
     {
       column: {
-        heading: "Location",
+        heading: t("Location.title_part5"),
         links: [
           {
             name: t("Location.title_part5_link1"),
@@ -168,10 +169,10 @@ const Footer = () => {
       <section className="bg-primary relative z-0 ">
         <div className="container flex p-10 flex-col md:flex-row">
           <div className="md:w-[60%] w-full mb-5 md:mb-0">
-            <h1 className="sectionHeading text-3xl text-secondary font-semibold text-center md:text-left">
+            <h1 className={`sectionHeading text-3xl text-secondary font-semibold text-center ${language === "ar"?'md:text-right':"md:text-left"}`}>
               {t("getStarted.get_started_title")}
             </h1>
-            <p className="sectionPara  text-secondary text-center md:text-left">
+            <p className={`sectionPara  text-secondary text-center ${language === "ar"?'md:text-right':"md:text-left"}`}>
               {t("getStarted.get_started_desc_1")}
               <br />
               {t("getStarted.get_started_desc_2")}
@@ -216,15 +217,13 @@ const Footer = () => {
           <div className="py-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border-b border-b-gray-500 sm:text-left text-center">
             {footerLinks.map((el, index) => (
               <div key={index} className="footer">
-                <p className="text-primary font-semibold md:pt-0 pt-5">
+                <p className={`text-primary font-semibold md:pt-0 pt-5 ${language === 'ar'?'text-right':'text-left'}`}>
                   {el.column.heading}
                 </p>
 
                 {el.column.heading === "Platform" ? (
                   <ul className="pt-0 md:pt-2">
-                    {console.log(el.column.heading, "el.column.heading")}
                     {el.column.links.map((link, linkIndex) => {
-                      console.log("el.column.heading -----");
                       return (
                         <li key={linkIndex} className="text-white py-1">
                           <a target="_blank" href={link.href}>
@@ -244,7 +243,7 @@ const Footer = () => {
                           </Link>
                         </li>
                       ) : (
-                        <li key={linkIndex} className="text-white py-1">
+                        <li key={linkIndex} className={`text-white py-1 ${language === 'ar'?'text-right':'text-left'}`}>
                           <LocaleLink href={link.href}>{link.name}</LocaleLink>
                         </li>
                       )
