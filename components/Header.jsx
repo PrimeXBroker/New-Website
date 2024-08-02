@@ -335,14 +335,16 @@ const Header = ({ locale }) => {
                     width="30"
                     height="8"
                     alt="img"
-                  />
+                  /> */}
                   <p>عربي</p>
                 </div>
               </Link>
             </div>
           </div>
         </NavbarItem>
-        <NavbarItem>{/* <ThemeToggle /> */}</NavbarItem>
+        <NavbarItem>
+           {/* <ThemeToggle /> */}
+      </NavbarItem>
       </NavbarContent>
       <NavbarMenu className="h-56 !important">
         {menuItems.map((item, index) => (
