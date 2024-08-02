@@ -74,7 +74,7 @@ const AdvancedPlatforms = () => {
               return (
                 <div className="relative flex flex-row items-center mb-5 group">
                   <div
-                    className="bg-accent hover:bg-secondary hover:text-white min-h-[90px] w-[280px] border border-solid border-secondary  rounded-xl py-4 px-9 text-xl font-semibold flex justify-center items-center text-center"
+                    className="bg-secondary text-primary hover:bg-accent hover:text-secondary min-h-[90px] w-[280px] border border-solid border-secondary  rounded-xl py-4 px-9 text-xl font-semibold flex justify-center items-center text-center"
                     key={index}
                   >
                     {item.text}
@@ -104,7 +104,7 @@ const AdvancedPlatforms = () => {
                 <div className="relative flex flex-row items-center mb-5 group">
                   <VscTriangleLeft className="absolute left-[-40px] text-4xl text-primary group-hover:block hidden" />
                   <div
-                    className="bg-accent hover:bg-secondary hover:text-white min-h-[90px] w-[280px] border border-solid border-secondary  rounded-xl py-4 px-2 text-xl font-semibold flex justify-center items-center text-center"
+                    className="bg-secondary text-primary  hover:bg-accent hover:text-secondary min-h-[90px] w-[280px] border border-solid border-secondary  rounded-xl py-4 px-2 text-xl font-semibold flex justify-center items-center text-center"
                     key={index}
                   >
                     {item.text}
