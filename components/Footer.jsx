@@ -18,9 +18,6 @@ import { Button } from "@nextui-org/button";
 import LocaleLink from "./LocaleLink";
 import { useTranslations } from "next-intl";
 
-
-
-
 const Footer = () => {
   const t = useTranslations("footer");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -73,9 +70,21 @@ const Footer = () => {
       column: {
         heading: t("Platform.title_part4"),
         links: [
-          { name: t("Platform.title_part4_link1"), target: "_blank", href: "https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe" },
-          { name: t("Platform.title_part4_link2"), target: "_blank", href: "https://download.mql5.com/cdn/mobile/mt5/android?server=PrimeXBroker-Demo,PrimeXBroker-Live" },
-          { name: t("Platform.title_part4_link3"), target: "_blank", href: "https://download.mql5.com/cdn/mobile/mt5/ios?server=PrimeXBroker-Live" },
+          {
+            name: t("Platform.title_part4_link1"),
+            target: "_blank",
+            href: "https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe",
+          },
+          {
+            name: t("Platform.title_part4_link2"),
+            target: "_blank",
+            href: "https://download.mql5.com/cdn/mobile/mt5/android?server=PrimeXBroker-Demo,PrimeXBroker-Live",
+          },
+          {
+            name: t("Platform.title_part4_link3"),
+            target: "_blank",
+            href: "https://download.mql5.com/cdn/mobile/mt5/ios?server=PrimeXBroker-Live",
+          },
         ],
       },
     },
@@ -96,19 +105,18 @@ const Footer = () => {
     },
   ];
 
-
   const footerNotice = [
     {
-      heading:t("footerNotice.heading_1"),
+      heading: t("footerNotice.heading_1"),
       paragraph: t("footerNotice.para_1"),
     },
     {
       heading: t("footerNotice.heading_2"),
-      paragraph:t("footerNotice.para_2"),
+      paragraph: t("footerNotice.para_2"),
     },
     {
       heading: t("footerNotice.heading_3"),
-      paragraph:t("footerNotice.para_3"),
+      paragraph: t("footerNotice.para_3"),
     },
     {
       heading: t("footerNotice.heading_4"),
@@ -157,67 +165,76 @@ const Footer = () => {
 
   return (
     <>
-     <section
-      className="bg-primary relative z-0 ">
-      <div className="container flex p-10 flex-col md:flex-row">
-      <div className="md:w-[60%] w-full mb-5 md:mb-0">
-        <h1 className="sectionHeading text-3xl text-secondary font-semibold text-center md:text-left">
-          {t("getStarted.get_started_title")}
-        </h1>
-        <p className="sectionPara  text-secondary text-center md:text-left">
-          {t("getStarted.get_started_desc_1")}
-          <br />
-          {t("getStarted.get_started_desc_2")}
-        </p>
-      </div>
-      <div className="w-full md:w-[30%] flex justify-center items-center">
-        <Button as={Link} href="https://client.primexbroker.com/en/register" radius="full" size="lg" color="secondary">
-          <p className="text-white font-semibold">Open Live Account</p>
-        </Button>
-      </div>
-      </div>
-      <Image 
-      src='https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/x-transparent.svg' 
-      width='210' 
-      height='200' 
-      alt="logo coin"
-      className="absolute xl:right-[25%] lg:right-[20%] md:right-[20%] right-[50%] top-0 -z-10"
-      />
-    </section>
-    <footer className="bg-secondary">
-      <div className="container flex flex-col pt-12">
-        <div className="flex flex-row justify-center lg:gap-0 gap-5 lg:justify-around items-center border-b border-b-gray-500 pb-12 flex-wrap">
-          <p className="text-white text-sm font-[200]">We Accept:</p>
-          {paymentOptions.map((el) => (
-            <Image
-              key={el.id}
-              src={el.imgUrl}
-              alt={el.name}
-              width={120}
-              height={100}
-            />
-          ))}
-        </div>
-        <div className="py-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border-b border-b-gray-500 sm:text-left text-center">
-          {footerLinks.map((el, index) => (
-            <div key={index} className="footer">
-              <p className="text-primary font-semibold md:pt-0 pt-5">
-                {el.column.heading}
+      <section className="bg-primary relative z-0 ">
+        <div className="container flex p-10 flex-col md:flex-row">
+          <div className="md:w-[60%] w-full mb-5 md:mb-0">
+            <h1 className="sectionHeading text-3xl text-secondary font-semibold text-center md:text-left">
+              {t("getStarted.get_started_title")}
+            </h1>
+            <p className="sectionPara  text-secondary text-center md:text-left">
+              {t("getStarted.get_started_desc_1")}
+              <br />
+              {t("getStarted.get_started_desc_2")}
+            </p>
+          </div>
+          <div className="w-full md:w-[30%] flex justify-center items-center">
+            <Button
+              as={Link}
+              href="https://client.primexbroker.com/en/register"
+              radius="full"
+              size="lg"
+              color="secondary"
+            >
+              <p className="text-white font-semibold">
+                {t("getStarted.get_started_btn")}
               </p>
+            </Button>
+          </div>
+        </div>
+        <Image
+          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/x-transparent.svg"
+          width="210"
+          height="200"
+          alt="logo coin"
+          className="absolute xl:right-[25%] lg:right-[20%] md:right-[20%] right-[50%] top-0 -z-10"
+        />
+      </section>
+      <footer className="bg-secondary">
+        <div className="container flex flex-col pt-12">
+          <div className="flex flex-row justify-center lg:gap-0 gap-5 lg:justify-around items-center border-b border-b-gray-500 pb-12 flex-wrap">
+            <p className="text-white text-sm font-[200]">We Accept:</p>
+            {paymentOptions.map((el) => (
+              <Image
+                key={el.id}
+                src={el.imgUrl}
+                alt={el.name}
+                width={120}
+                height={100}
+              />
+            ))}
+          </div>
+          <div className="py-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border-b border-b-gray-500 sm:text-left text-center">
+            {footerLinks.map((el, index) => (
+              <div key={index} className="footer">
+                <p className="text-primary font-semibold md:pt-0 pt-5">
+                  {el.column.heading}
+                </p>
 
-              {
-                el.column.heading === "Platform" ?
+                {el.column.heading === "Platform" ? (
                   <ul className="pt-0 md:pt-2">
                     {console.log(el.column.heading, "el.column.heading")}
                     {el.column.links.map((link, linkIndex) => {
                       console.log("el.column.heading -----");
-                      return <li key={linkIndex} className="text-white py-1">
-                        <a target="_blank" href={link.href}>{link.name}</a>
-                      </li>
-                    }
-
-                    )}
-                  </ul> :
+                      return (
+                        <li key={linkIndex} className="text-white py-1">
+                          <a target="_blank" href={link.href}>
+                            {link.name}
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                ) : (
                   <ul className="pt-0 md:pt-2 footer">
                     {el.column.links.map((link, linkIndex) =>
                       link.name === "Client Agreement" ? (
@@ -233,111 +250,121 @@ const Footer = () => {
                       )
                     )}
                   </ul>
-
-              }
-
-            </div>
-          ))}
-        </div>
-        <div className="py-10 flex flex-col md:flex-row border-b border-b-gray-500 ">
-          <div className="w-full md:w-[100%]">
-            {footerNotice.map((el, index) => (
-              <div key={index} className="pb-4">
-                <span className="text-white text-[14px] font-semibold pr-2">
-                  {el.heading}
-                </span>
-                <span className="text-white text-[14px]">{el.paragraph}</span>
+                )}
               </div>
             ))}
           </div>
-        </div>
-        <div className="flex flex-col gap-5 lg:flex-row lg:gap-0 justify-between items-center py-12 flex-wrap">
-          <div>
-            <Image
-              className="block sm:mx-0 mx-auto pb-6 sm:pb-0"
-              src="/images/logos/logo2.2.svg"
-              alt="footer logo"
-              width="150"
-              height="200"
-            />
+          <div className="py-10 flex flex-col md:flex-row border-b border-b-gray-500 ">
+            <div className="w-full md:w-[100%]">
+              {footerNotice.map((el, index) => (
+                <div key={index} className="pb-4">
+                  <span className="text-white text-[14px] font-semibold pr-2">
+                    {el.heading}
+                  </span>
+                  <span className="text-white text-[14px]">{el.paragraph}</span>
+                </div>
+              ))}
+            </div>
           </div>
-          <p className="text-white text-center text-[12px]">
-            {t("footerNotice.para_para")}
-          </p>
-          <div className="flex gap-4 items-center justify-around">
-            <Link href="https://www.facebook.com/primex.brokers?mibextid=LQQJ4d" target="_blank">
-              <FaFacebook
-                color="#FFF"
-                size={30}
-                className="hover:fill-blue-600 transition-all hover:translate-y-[-5px] duration-500"
+          <div className="flex flex-col gap-5 lg:flex-row lg:gap-0 justify-between items-center py-12 flex-wrap">
+            <div>
+              <Image
+                className="block sm:mx-0 mx-auto pb-6 sm:pb-0"
+                src="/images/logos/logo2.2.svg"
+                alt="footer logo"
+                width="150"
+                height="200"
               />
-            </Link>
-            <Link href="https://x.com/PrimeXCapital" target="_blank">
-              <FaXTwitter
-                color="#FFF"
-                size={30}
-                className="hover:fill-black transition-all hover:translate-y-[-5px] duration-500"
-              />
-            </Link>
-            <Link href="https://www.youtube.com/channel/UC_B3x7k-gNQpDW7YEB8Lg0g" target="_blank">
-              <FaYoutube
-                color="#FFF"
-                size={30}
-                className="hover:fill-red-700 transition-all hover:translate-y-[-5px] duration-500"
-              />
-            </Link>
-            <Link href="https://www.linkedin.com/company/primex-broker" target="_blank">
-              <FaLinkedinIn
-                color="#FFF"
-                size={30}
-                className="hover:fill-blue-700 transition-all hover:translate-y-[-5px] duration-500"
-              />
-            </Link>
-            <Link href="https://www.instagram.com/primexcapital.en?igsh=empvdXJ3aDRlZTBn" target="_blank">
-              <FaInstagram
-                color="#FFF"
-                size={30}
-                className="hover:fill-purple-500 transition-all hover:translate-y-[-5px] duration-500"
-              />
-            </Link>
-            <Link href="https://t.me/PrimeX_Broker" target="_blank">
-              <FaTelegram
-                color="#FFF"
-                size={30}
-                className="hover:fill-blue-400 transition-all hover:translate-y-[-5px] duration-500"
-              />
-            </Link>
+            </div>
+            <p className="text-white text-center text-[12px]">
+              {t("footerNotice.para_para")}
+            </p>
+            <div className="flex gap-4 items-center justify-around">
+              <Link
+                href="https://www.facebook.com/primex.brokers?mibextid=LQQJ4d"
+                target="_blank"
+              >
+                <FaFacebook
+                  color="#FFF"
+                  size={30}
+                  className="hover:fill-blue-600 transition-all hover:translate-y-[-5px] duration-500"
+                />
+              </Link>
+              <Link href="https://x.com/PrimeXCapital" target="_blank">
+                <FaXTwitter
+                  color="#FFF"
+                  size={30}
+                  className="hover:fill-black transition-all hover:translate-y-[-5px] duration-500"
+                />
+              </Link>
+              <Link
+                href="https://www.youtube.com/channel/UC_B3x7k-gNQpDW7YEB8Lg0g"
+                target="_blank"
+              >
+                <FaYoutube
+                  color="#FFF"
+                  size={30}
+                  className="hover:fill-red-700 transition-all hover:translate-y-[-5px] duration-500"
+                />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/primex-broker"
+                target="_blank"
+              >
+                <FaLinkedinIn
+                  color="#FFF"
+                  size={30}
+                  className="hover:fill-blue-700 transition-all hover:translate-y-[-5px] duration-500"
+                />
+              </Link>
+              <Link
+                href="https://www.instagram.com/primexcapital.en?igsh=empvdXJ3aDRlZTBn"
+                target="_blank"
+              >
+                <FaInstagram
+                  color="#FFF"
+                  size={30}
+                  className="hover:fill-purple-500 transition-all hover:translate-y-[-5px] duration-500"
+                />
+              </Link>
+              <Link href="https://t.me/PrimeX_Broker" target="_blank">
+                <FaTelegram
+                  color="#FFF"
+                  size={30}
+                  className="hover:fill-blue-400 transition-all hover:translate-y-[-5px] duration-500"
+                />
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-      <CustomModal
-        isOpen={isModalOpen}
-        onOpen={handleOpenModal}
-        onClose={handleCloseModal}
-        onOpenChange={handleModalOpenChange}
-        modalPlacement="auto"
-      >
-        <div className="flex justify-evenly">
-          <Button
-            as="a"
-            href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/client_agreement.pdf"
-            endContent={<FaDownload size={20} />}
-          >
-            Download as PDF
-          </Button>
-          <Button
-            as="a"
-            href="https://drive.google.com/file/d/1mNGtSnTp8h11o8exI8dVqfxsfQGD41MU/view?usp=sharing"
-            endContent={<FaRegEye size={20} target="_blank" />}
-          >
-            View Document
-          </Button>
-        </div>
-      </CustomModal>
-      <p className="bg-accent text-secondary text-sm py-3 text-center font-semibold drop-shadow-sm">
-        &copy; 2022 - 2024 Primex Broker (PTY) LTD all rights reserved.{" "}
-      </p>
-    </footer>
+        <CustomModal
+          isOpen={isModalOpen}
+          onOpen={handleOpenModal}
+          onClose={handleCloseModal}
+          onOpenChange={handleModalOpenChange}
+          modalPlacement="auto"
+        >
+          <div className="flex justify-evenly">
+            <Button
+              as="a"
+              href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/client_agreement.pdf"
+              endContent={<FaDownload size={20} />}
+            >
+              Download as PDF
+            </Button>
+            <Button
+              as="a"
+              href="https://drive.google.com/file/d/1mNGtSnTp8h11o8exI8dVqfxsfQGD41MU/view?usp=sharing"
+              endContent={<FaRegEye size={20} target="_blank" />}
+            >
+              View Document
+            </Button>
+          </div>
+        </CustomModal>
+        <p className="bg-accent text-secondary text-sm py-3 text-center font-semibold drop-shadow-sm">
+          &copy; 2022 - 2024 Primex Broker (PTY) LTD all rights reserved.{" "}
+        </p>
+      </footer>
     </>
   );
 };
