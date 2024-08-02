@@ -73,7 +73,7 @@ const JoinPrimex = () => {
               <span style={{ lineHeight: "18px" }}>
                 {t("app_store_btn_part1")} <br />
                 <span className="text-[18px] font-semibold block">
-                  {t("app_store_btn_part1")}{" "}
+                  {t("app_store_btn_part2")}{" "}
                 </span>
               </span>
             </button>

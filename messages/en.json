@@ -1,24 +1,23 @@
 {
-  "menu":{
-    "home":"Home",
-    "trading":"Trading",
-    "platform":"Platform",
-    "accounts":"Accounts",
-    "partners":"Partners",
-    "education":"Education",
-    "academy":"Academy",
-    "deposit":"20% Bonus",
-    "login":"Login",
-    "register":"Register",
-    "forex":"Forex",
-    "stocks":"Stocks",
-    "commodities":"commodities",
-    "shares":"Shares",
-    "metals":"Metals",
-    "indices":"Indices",
-    "mt5":"MetaTrader 5",
-    "ib_program":"IB Program"
-
+  "menu": {
+    "home": "Home",
+    "trading": "Trading",
+    "platform": "Platform",
+    "accounts": "Accounts",
+    "partners": "Partners",
+    "education": "Education",
+    "academy": "Academy",
+    "deposit": "20% Bonus",
+    "login": "Login",
+    "register": "Register",
+    "forex": "Forex",
+    "stocks": "Stocks",
+    "commodities": "commodities",
+    "shares": "Shares",
+    "metals": "Metals",
+    "indices": "Indices",
+    "mt5": "MetaTrader 5",
+    "ib_program": "IB Program"
   },
   "home": {
     "metaData": {
@@ -150,12 +149,12 @@
       "text": "By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
       "btnTxt": "Accept All Cookies"
     },
-    "modal":{
-      "title":"Dear Valued Customers,",
-      "para1":"We are pleased to inform you that we are now PrimeX Capital and our new website is ",
-      "para2":"Please update your bookmarks.",
-      "para3":"Happy Trading!",
-      "acknowledged":"Acknowledged"
+    "modal": {
+      "title": "Dear Valued Customers,",
+      "para1": "We are pleased to inform you that we are now PrimeX Capital and our new website is ",
+      "para2": "Please update your bookmarks.",
+      "para3": "Happy Trading!",
+      "acknowledged": "Acknowledged"
     }
   },
   "academy": {
@@ -567,7 +566,7 @@
       "google_play-btn_part1": "Get it on",
       "google_play-btn_part2": "Google Play",
       "app_store_btn_part1": "Download on the",
-      "app_store_btn_part2": "Apple Store"
+      "app_store_btn_part2": "App Store"
     }
   },
   "careers": {
@@ -1107,30 +1106,30 @@
       "title_part1_link4": "Press Release",
       "title_part1_link5": "Careers"
     },
-     "Rules": {
+    "Rules": {
       "title_part2": "Rules",
       "title_part2_link1": "Privacy Policy",
       "title_part3_link2": "Risk Disclosure",
       "title_part4_link3": "Client Agreement",
       "title_part5_link4": "Terms and Conditions"
-     },
-     "Services": {
+    },
+    "Services": {
       "title_part3": "Services",
       "title_part3_link1": "Account Types",
       "title_part3_link2": "Introducing Brokers"
-     },
-     "Platform": {
+    },
+    "Platform": {
       "title_part4": "Platform",
       "title_part4_link1": "MT5 for Desktop",
       "title_part4_link2": "MT5 for Android",
       "title_part4_link3": "MT5 for IOS"
-     },
-     "Location": {
+    },
+    "Location": {
       "title_part5": "Location",
       "title_part5_link1": "South Africa HQ: Suit no 8 , First floor, Katherine and West building ,114 West Street, Sandown ,Sandton 2196, South Africa.",
       "title_part5_link2": "UAE Rep. Office: Office 2401, Westburry Tower 1, Business Bay, Dubai, UAE."
-     },
-     "getStarted": {
+    },
+    "getStarted": {
       "get_started_title": "Get Started with PrimeX Capital",
       "get_started_desc_1": "Ready to elevate your trading experience? Join PrimeX Capital and",
       "get_started_desc_2": "explore our advanced trading features and special offers.",
