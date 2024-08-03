@@ -3,26 +3,6 @@
 @tailwind utilities;
 
 
-/* .navbar a{
-  text-decoration: none !important;
-  color: #000 !important;
-}
-
-.footer a{
-  text-decoration: none !important;
-  color: #fff !important;
-} */
-/*
-.primary{
-color: #FFD000 !important;
-}
-
-.white{
-  color: #fff !important;
-}
-p{
-  color: #fff !important;
-} */
 
 @layer base {
   html {
@@ -387,4 +367,8 @@ p{
 }
 #r9{
 overflow: visible !important;
+}
+
+.primex_chat-button-on-not-active {
+  padding-left: 10 16px !important;
 }
