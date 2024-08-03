@@ -1,4 +1,5 @@
 "use client";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -8,6 +9,7 @@ import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 
 const Banner = () => {
+  const homeVideoPlayer = useRef(null);
   const t = useTranslations("home.hero");
   const slideContents = [
     {
@@ -24,15 +26,31 @@ const Banner = () => {
     },
   ];
 
+  const homeVideoClick = () => {
+    if (
+      homeVideoPlayer &&
+      homeVideoPlayer.current &&
+      homeVideoPlayer.current.video
+    ) {
+      homeVideoPlayer.current.video.play();
+    }
+  };
+
   const path = usePathname();
   const isAr = path.includes("/ar");
   return (
-    <section className="relative h-[100vh] lg:h-[100vh] xl:h-[100vh] 2xl:h-[100vh] 3xl:h-[100vh] py-10 lg:py-16 xl:py-16 2xl:py-20 3xl:pt-40 4xl:pt-48 5xl:py-56">
+    <section
+      className="relative h-[100vh] lg:h-[100vh] xl:h-[100vh] 2xl:h-[100vh] 3xl:h-[100vh] py-10 lg:py-16 xl:py-16 2xl:py-20 3xl:pt-40 4xl:pt-48 5xl:py-56"
+      onClick={homeVideoClick}
+    >
       <video
+        ref={homeVideoPlayer}
         autoPlay
         loop
         muted
+        controls={false}
         className="block absolute inset-0 w-full h-full object-cover opacity-80"
+        playsInline
       >
         <source
           src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/videos/banner_video_v2.1.webm"
