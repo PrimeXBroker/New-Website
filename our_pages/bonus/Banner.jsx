@@ -75,9 +75,9 @@ const Banner = () => {
                 width="500"
                 height="500"
                 alt="img"
-                className="w-96"
+                className="w-72 sm:w-96"
               />
-              <div className="relative top-10 lg:-top-7">
+              <div className="relative">
                 <p>
                   <span className="text-white">*</span>
                   <span className="text-sm text-white italic font-normal">
