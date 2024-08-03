@@ -58,7 +58,7 @@ const WebinarLibrary = () => {
   };
   return (
     <section className="py-8 container">
-      <h1 className="md:text-2xl text-secondary text-center font-semibold pb-4">
+      <h1 className="text-xl md:text-3xl text-secondary text-center font-semibold pb-4">
         {t("title")}
       </h1>
       <p className="md:text-lg text-secondary text-center max-w-xl mx-auto">
@@ -110,7 +110,10 @@ const WebinarLibrary = () => {
           modules={[Autoplay, Pagination]}
         >
           {webinarCards.map((card, index) => (
-            <SwiperSlide className="text-center mx-auto block" key={index}>
+            <SwiperSlide
+              className="text-center flex mx-auto justify-center items-center"
+              key={index}
+            >
               <div
                 onMouseEnter={() => handleIconEnter(index)}
                 onMouseLeave={handleIconLeave}

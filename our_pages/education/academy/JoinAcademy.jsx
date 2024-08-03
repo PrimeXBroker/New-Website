@@ -28,7 +28,7 @@ const JoinAcademy = () => {
     <section className="bg-accent container flex flex-col justify-center md:gap-24 gap-4  md:flex-row py-12 shadow-lg my-12">
       <div className="flex-1 md:max-w-sm">
         <h1
-          className={`md:text-2xl text-secondary font-semibold pb-4 ${
+          className={`sectionHeading md:text-2xl text-secondary font-semibold pb-4 ${
             locale === "ar"
               ? "text-center md:text-right"
               : "text-center md:text-left"
@@ -56,7 +56,7 @@ const JoinAcademy = () => {
         </p>
         <div className="mt-6">
           <Link
-            className="bg-primary font-semibold px-4 py-2 w-[200px] rounded-full shadow-xl mx-auto block md:m-0"
+            className="bg-primary text-center font-semibold px-4 py-4 w-[250px] rounded-full shadow-xl mx-auto block md:m-0"
             href="#academy-form"
           >
             {t("become_instructor_btn")}
@@ -66,7 +66,7 @@ const JoinAcademy = () => {
       <div className="border-r border-r-primary"></div>
       <div className="flex-1 md:max-w-sm">
         <h1
-          className={`md:text-2xl text-secondary font-semibold pb-4 ${
+          className={`sectionHeading md:text-2xl text-secondary font-semibold pb-4 ${
             locale === "ar"
               ? "text-center md:text-right"
               : "text-center md:text-right"
@@ -100,7 +100,7 @@ const JoinAcademy = () => {
           {/* Flex container to align items to the end (right) */}
           <Link
             href="#academy-form"
-            className="bg-primary font-semibold px-4 py-2 w-[200px] rounded-full shadow-xl text-center mt-6 mx-auto block md:m-0"
+            className="bg-primary font-semibold px-4 py-4 w-[250px] rounded-full shadow-xl text-center mt-6 mx-auto block md:m-0"
           >
             {t("sign_up_btn")}
           </Link>{" "}

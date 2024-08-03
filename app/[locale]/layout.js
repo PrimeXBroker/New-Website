@@ -10,8 +10,7 @@ import "aos/dist/aos.css";
 import { Suspense } from "react";
 import { Toaster } from "react-hot-toast";
 import Head from "next/head";
-import Script from 'next/script';
-
+import Script from "next/script";
 
 const montserrat = localFont({
   src: [
@@ -57,12 +56,17 @@ export async function generateMetadata({ params: { locale } }) {
 export default async function layout({ children, params: { locale } }) {
   const messages = await getMessages();
   const direction = locale === "ar" ? "rtl" : "ltr";
+
   return (
-    <html className={montserrat.variable} lang={locale} dir={direction}>
+    <html
+      className={`direction_layout ${montserrat.variable}`}
+      lang={locale}
+      dir={direction}
+    >
       {/* <Head>
         <link rel="stylesheet" href="https://primexbroker.online/static/css/main.css" />
       </Head> */}
-      <body>
+      <body className="direction_layout">
         <NextUIProvider>
           <NextIntlClientProvider messages={messages}>
             <Header locale={locale} />
@@ -70,7 +74,7 @@ export default async function layout({ children, params: { locale } }) {
               {children}
               <Toaster
                 toastOptions={{
-                  duration: 5000
+                  duration: 5000,
                 }}
               />
             </Suspense>
@@ -79,11 +83,16 @@ export default async function layout({ children, params: { locale } }) {
           </NextIntlClientProvider>
         </NextUIProvider>
 
-        <link rel="stylesheet" href="https://primexbroker.online/static/css/main.css" />
+        <link
+          rel="stylesheet"
+          href="https://primexbroker.online/static/css/main.css"
+        />
         {/* <div id="chat_app"></div> */}
-        
-        <Script src="https://primexbroker.online/static/js/main.js" strategy="lazyOnload" />
 
+        <Script
+          src="https://primexbroker.online/static/js/main.js"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );

@@ -80,7 +80,7 @@ export default function Home() {
       <AccountTypes1 />
       <AdvancedPlatforms />
       <BecomeIB />
-      {/* <Rewards /> */}
+      <Rewards />
       <CustomerCare />
       <Academy />
       {/* <GetStarted /> */}

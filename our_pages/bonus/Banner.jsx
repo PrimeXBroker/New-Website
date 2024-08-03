@@ -19,13 +19,13 @@ const Banner = () => {
   return (
     <section>
       <div
-        className={`relative h-[1140px] lg:h-[750px] bg-no-repeat bg-cover bg-center ${
+        className={`relative bg-no-repeat bg-cover bg-center py-12 ${
           locale === "ar"
             ? "bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/20_deposit_bonus/header-bg-ar.webp')]"
             : "bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/20_deposit_bonus/header-bg.webp')]"
         }`}
       >
-        <div className="container mx-auto lg:px-10 xl:px-4 pt-16 xl:pt-12">
+        <div className="container mx-auto lg:px-10 xl:px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center h-full">
             <div className="lg:col-span-6 flex flex-col justify-center">
               <div
@@ -35,7 +35,7 @@ const Banner = () => {
                     : "text-center lg:text-left"
                 }`}
               >
-                <h1 className="text-5xl sm:text-6xl xl:text-7xl text-white inline-block font-extrabold underline-custom">
+                <h1 className="text-4xl sm:text-5xl xl:text-7xl text-white inline-block font-extrabold underline-custom">
                   <span className="text-primary">{t("title_l1")}</span> <br />
                   {t("title_l2")}
                 </h1>
@@ -47,10 +47,10 @@ const Banner = () => {
                     : "text-center lg:text-left"
                 }`}
               >
-                <h3 className="text-2xl sm:text-3xl xl:text-4xl	font-light text-white px-10 sm:px-20 md:px-40 lg:px-0 mt-8">
+                <h3 className="text-xl sm:text-3xl xl:text-4xl	font-light text-white px-10 sm:px-20 md:px-40 lg:px-0 mt-8">
                   {t("subtitle_l1")} <br />
                   {t("subtitle_l2")}
-                  <span className="leading-[54px] text-primary font-semibold">
+                  <span className="sm:leading-[54px] text-primary font-semibold">
                     {t("subtitle_l3")}
                   </span>
                   {t("subtitle_l4")} <br />
@@ -75,9 +75,9 @@ const Banner = () => {
                 width="500"
                 height="500"
                 alt="img"
-                className=" w-[70%] sm:w-[50%] md:w-[40%] lg:w-[80%]"
+                className="w-72 sm:w-96"
               />
-              <div className="relative top-10 lg:top-0">
+              <div className="relative">
                 <p>
                   <span className="text-white">*</span>
                   <span className="text-sm text-white italic font-normal">

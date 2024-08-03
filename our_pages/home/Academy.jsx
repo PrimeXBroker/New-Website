@@ -74,7 +74,7 @@ const Academy = () => {
             />
           </div>
           <h1
-            className={`sectionHeading text-white text-2xl mb-6 group-hover:text-secondary ${
+            className={`sectionHeading text-white text-xl mb-6 mt-2 group-hover:text-secondary ${
               locale === "ar" ? "text-right" : "text-left"
             }`}
           >
@@ -115,7 +115,7 @@ const Academy = () => {
             />
           </div>
           <h1
-            className={`sectionHeading text-white group-hover:text-secondary text-2xl mb-6 ${
+            className={`sectionHeading text-white group-hover:text-secondary text-xl mb-6 mt-2 ${
               locale === "ar" ? "text-right" : "text-left"
             }`}
           >
@@ -156,7 +156,7 @@ const Academy = () => {
             />
           </div>
           <h1
-            className={`sectionHeading text-white text-2xl mb-6 group-hover:text-secondary ${
+            className={`sectionHeading text-white text-xl mb-6 mt-2 group-hover:text-secondary ${
               locale === "ar" ? "text-right" : "text-left"
             }`}
           >

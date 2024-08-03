@@ -16,7 +16,7 @@ const MaximizeProfit = () => {
   };
 
   return (
-    <section className="container pt-20">
+    <section className="container">
       <div className="grid grid-cols-12 justify-center items-center">
         <div
           className={`col-span-12 lg:col-span-5 ${

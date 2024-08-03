@@ -9,11 +9,13 @@ const Banner = () => {
 
   return (
     <section className="bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/background.jpg')]  bg-cover bg-no-repeat">
-      <div className="container flex flex-col md:flex-row justify-center items-center py-12 lg:md:text-left text-center h-[80vh] ">
+      <div className="container flex flex-col md:flex-row justify-center items-center py-12 lg:md:text-left text-center h-[80vh]">
         <div className="md:w-[40%]">
           <h1
-            className={`text-primary md:text-3xl font-semibold mb-5 ${
-              locale === "ar" ? "text-right" : "text-left"
+            className={`text-primary text-3xl font-semibold mb-5 ${
+              locale === "ar"
+                ? "text-center md:text-right"
+                : "text-center md:text-left"
             }`}
             style={{ letterSpacing: "1px" }}
           >
@@ -21,7 +23,9 @@ const Banner = () => {
           </h1>
           <p
             className={`text-white text-lg font-[500] ${
-              locale === "ar" ? "text-right" : "text-left"
+              locale === "ar"
+                ? "text-center md:text-right"
+                : "text-center md:text-left"
             }`}
             style={{ letterSpacing: "1.4px" }}
           >
@@ -29,14 +33,20 @@ const Banner = () => {
           </p>
           <p
             className={`text-white text-lg font-[700] ${
-              locale === "ar" ? "text-right" : "text-left"
+              locale === "ar"
+                ? "text-center md:text-right"
+                : "text-center md:text-left"
             }`}
             style={{ letterSpacing: "0.9px" }}
           >
             {t("desc_2")}
           </p>
           <div
-            className={`pt-5 ${locale === "ar" ? "text-right" : "text-left"}`}
+            className={`pt-5 ${
+              locale === "ar"
+                ? "text-center md:text-right"
+                : "text-center md:text-left"
+            }`}
           >
             <Link
               href="https://client.primexbroker.com/en/register"
@@ -47,7 +57,7 @@ const Banner = () => {
             </Link>
           </div>
         </div>
-        <div>
+        <div className="mt-8 md:mt-0">
           <Image
             src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/Banner.webp"
             width="250"

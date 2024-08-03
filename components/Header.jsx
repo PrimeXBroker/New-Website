@@ -354,8 +354,8 @@ const Header = ({ locale }) => {
         ))}
         <NavbarMenuItem>
           <div className="flex gap-4">
-            <GradiantButton name="Register" />
-            <GradiantButton name="Login" />
+            <GradiantButton name={t("register")} />
+            <GradiantButton name={t("login")} />
           </div>
         </NavbarMenuItem>
       </NavbarMenu>

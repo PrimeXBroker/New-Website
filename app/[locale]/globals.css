@@ -2,28 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* .navbar a{
-  text-decoration: none !important;
-  color: #000 !important;
-}
-
-.footer a{
-  text-decoration: none !important;
-  color: #fff !important;
-} */
-/*
-.primary{
-color: #FFD000 !important;
-}
-
-.white{
-  color: #fff !important;
-}
-p{
-  color: #fff !important;
-} */
-
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -37,11 +15,11 @@ p{
   }
 
   .sectionHeading {
-    @apply text-3xl md:text-4xl text-secondary font-semibold mb-2 text-center;
+    @apply text-xl md:text-4xl text-secondary font-semibold mb-2 text-center;
   }
 
   .sectionPara {
-    @apply text-lg md:text-lg text-secondary mb-2;
+    @apply text-[1rem] md:text-lg text-secondary mb-2;
   }
 
   .underline-custom::after {
@@ -59,6 +37,14 @@ p{
       @apply w-[30%];
     }
   }
+}
+
+.direction_layout {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .tabs_custom div {
@@ -187,7 +173,7 @@ p{
 }
 
 .flip-card-front {
-  background: #3F3F3E;
+  background: #3f3f3e;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -208,16 +194,16 @@ p{
 
 /*Begin Of Home_swiper*/
 
-.home_swiper .swiper{
+.home_swiper .swiper {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 20px;
 }
 
-.home_swiper .swiper-slide{
+.home_swiper .swiper-slide {
   width: 400px;
+  height: 500px;
   filter: blur(3px);
-  background: #3e403c;
 }
 .home_swiper .swiper-slide-active {
   filter: blur(0px);
