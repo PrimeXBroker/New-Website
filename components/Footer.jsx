@@ -243,7 +243,12 @@ const Footer = () => {
                     {console.log(el.column.heading, "el.column.heading")}
                     {el.column.links.map((link, linkIndex) => {
                       return (
-                        <li key={linkIndex} className="text-white py-1">
+                        <li
+                          key={linkIndex}
+                          className={`text-white py-1 ${
+                            language === "ar" ? "text-right" : "text-left"
+                          }`}
+                        >
                           <a target="_blank" href={link.href}>
                             {link.name}
                           </a>
@@ -259,13 +264,23 @@ const Footer = () => {
                   >
                     {el.column.links.map((link, linkIndex) =>
                       link.name === "Client Agreement" ? (
-                        <li key={linkIndex} className="text-white py-1">
+                        <li
+                          key={linkIndex}
+                          className={`text-white py-1 ${
+                            language === "ar" ? "text-right" : "text-left"
+                          }`}
+                        >
                           <Link href={link.href} onClick={handleOpenModal}>
                             {link.name}
                           </Link>
                         </li>
                       ) : (
-                        <li key={linkIndex} className={`text-white py-1 ${language === 'ar'?'text-right':'text-left'}`}>
+                        <li
+                          key={linkIndex}
+                          className={`text-white py-1 ${
+                            language === "ar" ? "text-right" : "text-left"
+                          }`}
+                        >
                           <LocaleLink href={link.href}>{link.name}</LocaleLink>
                         </li>
                       )

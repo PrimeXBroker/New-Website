@@ -24,6 +24,7 @@ import Link from "next/link";
 import { HiBellAlert } from "react-icons/hi2";
 import { useEffect } from "react";
 import { Button } from "@nextui-org/button";
+import AccountTypes1 from "@/components/AccountTypes1";
 
 export default function Home() {
   const t = useTranslations("home");
@@ -75,7 +76,8 @@ export default function Home() {
       <Banner />
       <CompanyStats stats={statsOne} />
       <TradingOpportunities />
-      <AccountTtpes />
+      {/* <AccountTtpes /> */}
+      <AccountTypes1 />
       <AdvancedPlatforms />
       <BecomeIB />
       {/* <Rewards /> */}
