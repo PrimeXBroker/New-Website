@@ -298,7 +298,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-white text-center text-[12px]">
-              {t("footerNotice.para_para")}
+              {t("footerNotice.para_5")}
             </p>
             <div className="flex gap-4 items-center justify-around">
               <Link

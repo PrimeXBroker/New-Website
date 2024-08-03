@@ -13,7 +13,7 @@ const CustomerCare = () => {
     Aos.init({ disable: "mobile" });
   }, []);
   return (
-    <section className="container my-8 flex flex-col justify-center items-center lg:flex-row lg:justify-around border-b-2 border-b-accent">
+    <section className="container pt-12 my-8 flex flex-col justify-center items-center lg:flex-row lg:justify-around border-b-2 border-b-accent">
       <div className="pb-7 lg:pb-0">
         <Image
           src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/customer_care.webp"

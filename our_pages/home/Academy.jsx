@@ -48,8 +48,8 @@ const Academy = () => {
       </div>
       <div className="flex flex-row mt-12 gap-12 justify-center flex-wrap">
         <div
-          className="bg-accent cursor-pointer rounded-lg shadow-2xl border-b-5 group
-           hover:bg-[#3F3F3E] border-black hover:border-primary p-8 w-[300px]"
+          className="bg-secondary cursor-pointer rounded-lg shadow-2xl border-b-5 group
+           hover:bg-accent border-black hover:border-primary p-8 w-[300px]"
           data-aos-easing="ease-out"
           data-aos-duration={2500}
           data-aos="slide-up"
@@ -64,8 +64,8 @@ const Academy = () => {
             <Image
               src={
                 icon1Hovered
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon1_yellow.svg"
-                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon1_black.svg"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon1_black.svg"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon1_yellow.svg"
               }
               alt="academy icon"
               width="80"
@@ -74,14 +74,14 @@ const Academy = () => {
             />
           </div>
           <h1
-            className={`sectionHeading text-2xl mb-6 group-hover:text-white ${
+            className={`sectionHeading text-white text-2xl mb-6 group-hover:text-secondary ${
               locale === "ar" ? "text-right" : "text-left"
             }`}
           >
             {t("academy_card_1_title_1")} <br /> {t("academy_card_1_title_2")}
           </h1>
           <p
-            className={`sectionPara group-hover:text-white ${
+            className={`sectionPara text-white group-hover:text-secondary ${
               locale === "ar" ? "text-right" : "text-left"
             }`}
           >
@@ -89,8 +89,8 @@ const Academy = () => {
           </p>
         </div>
         <div
-          className="bg-accent rounded-lg shadow-2xl border-b-5 cursor-pointer group
-           hover:bg-[#3F3F3E] border-black hover:border-primary p-8 w-[300px]"
+          className="bg-secondary rounded-lg shadow-2xl border-b-5 cursor-pointer group
+           hover:bg-accent border-black hover:border-primary p-8 w-[300px]"
           data-aos-easing="ease-out"
           data-aos-duration={1500}
           data-aos="slide-up"
@@ -105,8 +105,8 @@ const Academy = () => {
             <Image
               src={
                 icon2Hovered
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon2_yellow.svg"
-                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon2_black.svg"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon2_black.svg"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon2_yellow.svg"
               }
               alt="academy icon"
               width="80"
@@ -115,14 +115,14 @@ const Academy = () => {
             />
           </div>
           <h1
-            className={`sectionHeading group-hover:text-white text-2xl mb-6 ${
+            className={`sectionHeading text-white group-hover:text-secondary text-2xl mb-6 ${
               locale === "ar" ? "text-right" : "text-left"
             }`}
           >
             {t("academy_card_2_title_1")} <br /> {t("academy_card_2_title_2")}
           </h1>
           <p
-            className={`sectionPara group-hover:text-white ${
+            className={`sectionPara text-white group-hover:text-secondary ${
               locale === "ar" ? "text-right" : "text-left"
             }`}
           >
@@ -130,8 +130,8 @@ const Academy = () => {
           </p>
         </div>
         <div
-          className="bg-accent rounded-lg shadow-2xl border-b-5 cursor-pointer group 
-          hover:bg-[#3F3F3E] border-black hover:border-primary  p-8 w-[300px]"
+          className="bg-secondary rounded-lg shadow-2xl border-b-5 cursor-pointer group 
+          hover:bg-accent border-black hover:border-primary  p-8 w-[300px]"
           data-aos-easing="ease-out"
           data-aos-duration={500}
           data-aos="slide-up"
@@ -146,8 +146,8 @@ const Academy = () => {
             <Image
               src={
                 icon3Hovered
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon3_yellow.svg"
-                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon3_black.svg"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon3_black.svg"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon3_yellow.svg"
               }
               alt="academy icon"
               width="80"
@@ -156,7 +156,7 @@ const Academy = () => {
             />
           </div>
           <h1
-            className={`sectionHeading text-2xl mb-6 group-hover:text-white ${
+            className={`sectionHeading text-white text-2xl mb-6 group-hover:text-secondary ${
               locale === "ar" ? "text-right" : "text-left"
             }`}
           >
@@ -164,7 +164,7 @@ const Academy = () => {
             <br /> {t("academy_card_3_title_2")}
           </h1>
           <p
-            className={`sectionPara group-hover:text-white ${
+            className={`sectionPara text-white group-hover:text-secondary ${
               locale === "ar" ? "text-right" : "text-left"
             }`}
           >

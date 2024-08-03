@@ -11,21 +11,21 @@ const AccountTtpes = () => {
       title: t("account_types_card_1_title"),
       description: t("account_types_card_1_desc"),
       imageUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/account_types/standard.svg",
+        "images/accounts/standard.svg",
       btnHref: "/account-types",
     },
     {
       title: t("account_types_card_2_title"),
       description: t("account_types_card_2_desc"),
       imageUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/account_types/narrow.svg",
+        "images/accounts/narrow.svg",
       btnHref: "/account-types",
     },
     {
       title: t("account_types_card_3_title"),
       description: t("account_types_card_3_desc"),
       imageUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/account_types/zero.svg",
+        "images/accounts/raw.svg",
       btnHref: "/account-types",
     },
   ];
@@ -43,7 +43,7 @@ const AccountTtpes = () => {
                   height="100"
                   alt="account logo"
                 />
-                <p className="text-lg md:text-2xl font-semibold text-secondary pt-5">
+                <p className="text-lg md:text-2xl font-semibold text-white pt-5">
                   {account.title}
                 </p>
               </div>

@@ -49,7 +49,7 @@ const BecomeIB = () => {
           </h1>
           <p className="text-secondary text-md">{t("become_ib_desc_1")}</p>
           <div className="flex justify-start gap-2">
-            {buttons.map((btn) => (
+            {/* {buttons.map((btn) => (
               <Link
                 key={btn.id}
                 href={btn.href}
@@ -57,15 +57,17 @@ const BecomeIB = () => {
               >
                 {btn.title}
               </Link>
-            ))}
+            ))} */}
           </div>
           <p className="text-secondary text-md">{t("become_ib_desc_2")}</p>
+          <div className="mt-[2rem]">
           <LocaleLink
             href="/ib-program"
             className="block text-left w-fit px-4 py-2 rounded-full shadow-xl bg-accent text-secondary border-3 border-secondary hover:bg-secondary hover:text-primary transition-colors duration-300 hover:border-primary"
           >
             {t("become_ib_btn")}
           </LocaleLink>
+          </div>
         </div>
         <div className="w-full md:w-[50%]">
           <Image
