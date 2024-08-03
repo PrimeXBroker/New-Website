@@ -342,9 +342,7 @@ const Header = ({ locale }) => {
             </div>
           </div>
         </NavbarItem>
-        <NavbarItem>
-           {/* <ThemeToggle /> */}
-      </NavbarItem>
+        <NavbarItem>{/* <ThemeToggle /> */}</NavbarItem>
       </NavbarContent>
       <NavbarMenu className="h-56 !important">
         {menuItems.map((item, index) => (
@@ -356,8 +354,8 @@ const Header = ({ locale }) => {
         ))}
         <NavbarMenuItem>
           <div className="flex gap-4">
-            <GradiantButton name="Register" />
-            <GradiantButton name="Login" />
+            <GradiantButton name={t("register")} />
+            <GradiantButton name={t("login")} />
           </div>
         </NavbarMenuItem>
       </NavbarMenu>

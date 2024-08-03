@@ -265,7 +265,12 @@ const Footer = () => {
                           </Link>
                         </li>
                       ) : (
-                        <li key={linkIndex} className={`text-white py-1 ${language === 'ar'?'text-right':'text-left'}`}>
+                        <li
+                          key={linkIndex}
+                          className={`text-white py-1 ${
+                            language === "ar" ? "text-right" : "text-left"
+                          }`}
+                        >
                           <LocaleLink href={link.href}>{link.name}</LocaleLink>
                         </li>
                       )

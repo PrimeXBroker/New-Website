@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* .navbar a{
   text-decoration: none !important;
   color: #000 !important;
@@ -59,6 +58,14 @@ p{
       @apply w-[30%];
     }
   }
+}
+
+.direction_layout {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .tabs_custom div {
@@ -187,7 +194,7 @@ p{
 }
 
 .flip-card-front {
-  background: #3F3F3E;
+  background: #3f3f3e;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -208,13 +215,13 @@ p{
 
 /*Begin Of Home_swiper*/
 
-.home_swiper .swiper{
+.home_swiper .swiper {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 20px;
 }
 
-.home_swiper .swiper-slide{
+.home_swiper .swiper-slide {
   width: 400px;
   filter: blur(3px);
   background: #3e403c;
@@ -385,6 +392,6 @@ p{
 .hidden {
   display: none;
 }
-#r9{
-overflow: visible !important;
+#r9 {
+  overflow: visible !important;
 }
