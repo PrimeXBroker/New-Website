@@ -247,7 +247,8 @@ const Header = ({ locale }) => {
                       className="hover:bg-primary"
                       onClick={handleMobileMenuItemClick}
                     >
-                      <LocaleLink href={option.link}>{option.name}</LocaleLink>
+                      <LocaleLink className="w-full" size="lg"
+                        href={option.link}>{option.name}</LocaleLink>
                     </DropdownItem>
                   ))}
                 </DropdownMenu>
@@ -256,7 +257,7 @@ const Header = ({ locale }) => {
               <LocaleLink
                 className="w-full"
                 href={item.link}
-                size="lg"
+                size="xl"
                 onClick={handleMobileMenuItemClick}
               >
                 {item.name}
