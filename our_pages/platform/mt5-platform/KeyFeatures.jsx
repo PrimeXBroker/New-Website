@@ -108,7 +108,7 @@ const KeyFeatures = () => {
           {featuresData.map((item, index) => {
             return (
               <div
-                className="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col items-center relative mb-16"
+                className="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col items-center relative mb-10 lg:mb-16"
                 key={index}
               >
                 <div

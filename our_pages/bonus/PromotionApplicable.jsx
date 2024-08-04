@@ -40,7 +40,7 @@ const PromotionApplicable = () => {
             {t("title2")}
           </h2>
         </div>
-        <div className="sm:w-[100%] md:w-[65%] lg:w-[70%] xl:w-[75%] flex flex-col md:flex-row justify-center md:justify-end items-center gap-10 md:gap-6 lg:gap-12 xl:gap-20">
+        <div className="w-full md:w-[65%] lg:w-[70%] xl:w-[75%] flex flex-wrap md:flex-nowrap flex-row justify-around md:justify-end items-center gap-10 md:gap-6 lg:gap-12 xl:gap-20">
           {instrumentsContent.map((inst, index) => {
             return (
               <div
@@ -53,10 +53,10 @@ const PromotionApplicable = () => {
                     width="58"
                     height="58"
                     alt="img"
-                    className="w-[58px ]sm:w-[48px] md:w-[42px] lg:w-[48px] xl:w-[58px] [h-58px] sm:h-[48px] md:h-[42px] lg:h-[48px] xl:h-[58px]"
+                    className="w-[58px] sm:w-[58px] md:w-[42px] lg:w-[48px] xl:w-[58px] [h-58px] sm:h-[58px] md:h-[42px] lg:h-[48px] xl:h-[58px]"
                   />
                 </div>
-                <h3 className="lg:text-xl xl-text-2xl text-white group-hover:text-primary font-semibold text-center mt-2">
+                <h3 className="text-xl xl-text-2xl text-white group-hover:text-primary font-semibold text-center mt-5 md:mt-2">
                   {inst.title}
                 </h3>
               </div>

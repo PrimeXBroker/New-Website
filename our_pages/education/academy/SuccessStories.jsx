@@ -30,16 +30,22 @@ const SuccessStories = () => {
 
   return (
     <section className="container py-12">
-      <h1 className="text-secondary text-3xl font-semibold text-center mb-6">
+      <h1 className="text-secondary md:text-3xl text-2xl font-semibold text-center mb-6">
         {t("title")}
       </h1>
-      <p className="text-secondary text-lg text-center max-w-xl mx-auto">
+      <p className="text-secondary text-[1rem] md:text-lg text-center max-w-xl mx-auto">
         {t("description")}
       </p>
-      <div className="grid grid-cols-4 pt-6">
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 place-content-center items-center place-items-center pt-6">
         {successData.map((el) => (
           <div key={el.id}>
-            <Image src={el.imgUrl} width="350" height="100" alt="users" />
+            <Image
+              src={el.imgUrl}
+              width="350"
+              height="100"
+              alt="users"
+              className="md:w-[100%] "
+            />
           </div>
         ))}
       </div>

@@ -13,6 +13,51 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import { useEffect } from "react";
 import Aos from "aos";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
+
+const campaignList = [
+  {
+    id: 1,
+    title1: "Greater Gains,",
+    title2: "Lower Deposits",
+    imgUrlEn:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/raw_account_en.webp",
+    imgUrlAr:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/raw_account_ar.webp",
+    isExpired: false,
+  },
+  {
+    id: 2,
+    title1: "Unlock a 20% Deposit Bonus",
+    title2: "Get Up to $25,000",
+    imgUrlEn:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/trade_now_en.webp",
+    imgUrlAr:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/trade_now_ar.webp",
+    isExpired: false,
+  },
+  {
+    id: 3,
+    title1: "$30 Welcome Gift",
+    title2: "Start with a $30 gift when you verify your account",
+    imgUrlEn:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/campaign01.webp",
+    imgUrlAr:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/campaign01.webp",
+    isExpired: true,
+  },
+  {
+    id: 4,
+    title1: "Trade to win",
+    title2: "Enter our competetion and compete for Amazing Prizes",
+    imgUrlEn:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/campaign02.webp",
+    imgUrlAr:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/campaign02.webp",
+    isExpired: true,
+  },
+];
 
 const Rewards = () => {
   const t = useTranslations("home.rewards");
@@ -30,82 +75,6 @@ const Rewards = () => {
       >
         {t("rewards_title")}
       </h1>
-      {/* <div className="mx-auto flex flex-col lg:flex-row my-12">
-        <div
-          className="flex flex-col-reverse sm:flex-row bg-accent p-8 w-full lg:w-[50%] justify-evenly"
-          data-aos-easing="ease-out"
-          data-aos-duration={1100}
-          data-aos="slide-up"
-        >
-          <div className="flex flex-col">
-            <h1 className="sectionHeading">
-              {t("rewards_gift_title_1")}
-              <br className="hidden sm:block" /> {t("rewards_gift_title_2")}
-              <br className="hidden sm:block" /> {t("rewards_gift_title_3")}
-            </h1>
-            <p className="sectionPara mb-5 sm:text-left text-center">
-              {t("rewards_gift_desc_1")}
-              <br className="hidden sm:block" /> {t("rewards_gift_desc_2")}
-            </p>
-            <Button
-              radius="full"
-              variant="solid"
-              color="primary"
-              className="w-[250px] mx-auto sm:mx-0 sm:w-full"
-            >
-              <p className="text-secondary font-semibold">
-                {t("rewards_gift_btn")}
-              </p>
-            </Button>
-          </div>
-          <div className="flex justify-center items-center">
-            <Image
-              src="/images/campaign01.webp"
-              alt="campaign1"
-              width="230"
-              height="300"
-            />{" "}
-          </div>
-        </div>
-        <div
-          className="flex flex-col-reverse sm:flex-row bg-secondary p-8 w-full lg:w-[50%] justify-evenly"
-          data-aos-easing="ease-out"
-          data-aos-duration={1100}
-          data-aos="slide-up"
-        >
-          <div>
-            <h1 className="sectionHeading text-white sm:text-left text-center pt-4 sm:pt-0">
-              {t("rewards_trade_win_title_1")}
-              <br className="hidden sm:block" />
-              {t("rewards_trade_win_title_2")}
-            </h1>
-            <p className="sectionPara text-white mb-5 text-center sm:text-left">
-              {t("rewards_trade_win_desc_1")} <br className="hidden sm:block" />
-              {t("rewards_trade_win_desc_2")} <br />
-              {t("rewards_trade_win_desc_3")}
-              <br className="hidden sm:block" />
-              {t("rewards_trade_win_desc_4")}
-            </p>
-            <Button
-              radius="full"
-              variant="solid"
-              className="bg-accent sm:w-[13rem] block sm:mx-0 mx-auto w-[250px]"
-            >
-              <p className="text-secondary font-semibold">
-                {t("rewards_trade_win_btn")}
-              </p>
-            </Button>
-          </div>
-          <div className="flex justify-center items-center">
-            <Image
-              src="/images/campaign02.webp"
-              alt="campaign2"
-              width="230"
-              height="300"
-            />
-          </div>
-        </div>
-      </div> */}
       <div className="container">
         <Swiper
           effect={"coverflow"}
@@ -128,197 +97,41 @@ const Rewards = () => {
           modules={[EffectCoverflow, Pagination, Navigation]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <div className="flex flex-col-reverse sm:flex-row bg-accent p-8 w-full justify-evenly">
-              <div className="flex flex-col">
-                <h1 className="sectionHeading">
-                  {t("rewards_gift_title_1")}
-                  <br className="hidden sm:block" /> {t("rewards_gift_title_2")}
-                  <br className="hidden sm:block" /> {t("rewards_gift_title_3")}
-                </h1>
-                <p className="sectionPara mb-5 sm:text-left text-center">
-                  {t("rewards_gift_desc_1")}
-                  <br className="hidden sm:block" /> {t("rewards_gift_desc_2")}
-                </p>
-                {/* <Button
-                  radius="full"
-                  variant="solid"
-                  color="primary"
-                  className="w-[250px] mx-auto sm:mx-0 sm:w-full"
-                >
-                  <p className="text-secondary font-semibold">
-                    {t("rewards_gift_btn")}
-                  </p>
-                </Button> */}
-                <p className="text-danger text-sm text-center">
-              This Promotion has ended. Stay tuned for more exciting promotions
-            </p>
-              </div>
-              <div className="flex justify-center items-center">
-                <Image
-                  src="/images/campaign01.webp"
-                  alt="campaign1"
-                  width="300"
-                  height="300"
-                />{" "}
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col-reverse sm:flex-row bg-secondary p-8 w-full justify-evenly">
-              <div>
-                <h1 className="sectionHeading text-white sm:text-left text-center pt-4 sm:pt-0">
-                  {t("rewards_trade_win_title_1")}
-                  <br className="hidden sm:block" />
-                  {t("rewards_trade_win_title_2")}
-                </h1>
-                <p className="sectionPara text-white mb-5 text-center sm:text-left">
-                  {t("rewards_trade_win_desc_1")}{" "}
-                  <br className="hidden sm:block" />
-                  {t("rewards_trade_win_desc_2")} <br />
-                  {t("rewards_trade_win_desc_3")}
-                  <br className="hidden sm:block" />
-                  {t("rewards_trade_win_desc_4")}
-                </p>
-                {/* <Button
-                  radius="full"
-                  variant="solid"
-                  className="bg-accent sm:w-[13rem] block sm:mx-0 mx-auto w-[250px]"
-                >
-                  <p className="text-secondary font-semibold">
-                    {t("rewards_trade_win_btn")}
-                  </p>
-                </Button> */}
-                <p className="text-danger text-sm text-center">
-              This Promotion has ended. Stay tuned for more exciting promotions
-            </p>
-              </div>
-              <div className="flex justify-center items-center">
-                <Image
-                  src="/images/campaign02.webp"
-                  alt="campaign2"
-                  width="230"
-                  height="300"
-                />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col-reverse sm:flex-row bg-accent p-8 w-full justify-evenly">
-              <div className="flex flex-col">
-                <h1 className="sectionHeading">
-                  {t("rewards_gift_title_1")}
-                  <br className="hidden sm:block" /> {t("rewards_gift_title_2")}
-                  <br className="hidden sm:block" /> {t("rewards_gift_title_3")}
-                </h1>
-                <p className="sectionPara mb-5 sm:text-left text-center">
-                  {t("rewards_gift_desc_1")}
-                  <br className="hidden sm:block" /> {t("rewards_gift_desc_2")}
-                </p>
-                {/* <Button
-                  radius="full"
-                  variant="solid"
-                  color="primary"
-                  className="w-[250px] mx-auto sm:mx-0 sm:w-full"
-                >
-                  <p className="text-secondary font-semibold">
-                    {t("rewards_gift_btn")}
-                  </p>
-                </Button> */}
-                <p className="text-danger text-sm text-center">
-                  This Promotion has ended. Stay tuned for more exciting promotions
-                </p>
-              </div>
-              <div className="flex justify-center items-center">
-                <Image
-                  src="/images/campaign01.webp"
-                  alt="campaign1"
-                  width="300"
-                  height="300"
-                />{" "}
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col-reverse sm:flex-row bg-secondary p-8 w-full justify-evenly">
-              <div>
-                <h1 className="sectionHeading text-white sm:text-left text-center pt-4 sm:pt-0">
-                  {t("rewards_trade_win_title_1")}
-                  <br className="hidden sm:block" />
-                  {t("rewards_trade_win_title_2")}
-                </h1>
-                <p className="sectionPara text-white mb-5 text-center sm:text-left">
-                  {t("rewards_trade_win_desc_1")}{" "}
-                  <br className="hidden sm:block" />
-                  {t("rewards_trade_win_desc_2")} <br />
-                  {t("rewards_trade_win_desc_3")}
-                  <br className="hidden sm:block" />
-                  {t("rewards_trade_win_desc_4")}
-                </p>
-                {/* <Button
-              radius="full"
-              variant="solid"
-              className="bg-accent sm:w-[13rem] block sm:mx-0 mx-auto w-[250px]"
-            >
-              <p className="text-secondary font-semibold">
-                {t("rewards_trade_win_btn")}
-              </p>
-            </Button> */}
-                <p className="text-danger text-sm text-center">
-                  This Promotion has ended. Stay tuned for more exciting
-                  promotions
-                </p>
-              </div>
-
-              <div className="flex justify-center items-center">
-                <Image
-                  src="/images/campaign02.webp"
-                  alt="campaign2"
-                  width="230"
-                  height="300"
-                />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col-reverse sm:flex-row bg-accent p-8 w-full justify-evenly">
-              <div className="flex flex-col">
-                <h1 className="sectionHeading">
-                  {t("rewards_gift_title_1")}
-                  <br className="hidden sm:block" /> {t("rewards_gift_title_2")}
-                  <br className="hidden sm:block" /> {t("rewards_gift_title_3")}
-                </h1>
-                <p className="sectionPara mb-5 sm:text-left text-center">
-                  {t("rewards_gift_desc_1")}
-                  <br className="hidden sm:block" /> {t("rewards_gift_desc_2")}
-                </p>
-
-                {/* <Button
-                radius="full"
-                variant="solid"
-                color="primary"
-                className="w-[250px] mx-auto sm:mx-0 sm:w-full"
+          {campaignList.map((card, index) => (
+            <SwiperSlide className="rounded-xl">
+              <div
+                key={index}
+                className="flex flex-col bg-accent p-8 rounded-xl h-[500px]"
               >
-                <p className="text-secondary font-semibold">
-                  {t("rewards_gift_btn")}
-                </p>
-              </Button> */}
-                <p className="text-danger text-sm text-center">
-                  This Promotion has ended. Stay tuned for more exciting
-                  promotions
-                </p>
-              </div>
-
-              <div className="flex justify-center items-center">
+                <h1 className="text-secondary text-xl text-center bg-primary rounded-lg w-fit mx-auto p-1">
+                  {card.title1}
+                </h1>
+                <h2 className="text-secondary text-2xl font-semibold text-center">
+                  {card.title2}
+                </h2>
                 <Image
-                  src="/images/campaign01.webp"
-                  alt="campaign1"
-                  width="300"
-                  height="300"
-                />{" "}
+                  className="block mx-auto"
+                  src={card.imgUrlEn}
+                  width={card.id === 3 ? "250" : card.id === 4 ? "200" : "350"}
+                  height="200"
+                  alt={card.title1}
+                />
+                <div className="text-center mt-5">
+                  {card.isExpired == false ? (
+                    <Button className="bg-secondary text-primary font-semibold w-[200px] rounded-full shadow-xl text-center mx-auto hover:bg-primary hover:text-secondary hover:border-2 hover:border-secondary">
+                      Trade Now
+                    </Button>
+                  ) : (
+                    <p className="text-sm text-center text-red-600">
+                      this promotion has ended. Stay tuned for more exciting
+                      promotions
+                    </p>
+                  )}
+                </div>
+                {/* <div class="absolute top-[40%] left-0 w-full h-[600px] opacity-10 bg-center bg-contain bg-no-repeat bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/background2.svg')]"></div> */}
               </div>
-            </div>
-          </SwiperSlide>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>

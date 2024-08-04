@@ -20,7 +20,7 @@ const PremiumAdvantages = ({ items, data }) => {
     <section className="container my-20">
       <div className="bg-accent border-b-5 border-b-primary rounded-3xl pb-8 md:pb-4 pt-12 ps-8 pe-0 shadow-lg">
         <div className="grid grid-cols-12">
-          <div className="col-span-6">
+          <div className="col-span-12 md:col-span-6">
             <div>
               <h2
                 className={`sectionHeading inline-block underline-custom ${
@@ -32,7 +32,7 @@ const PremiumAdvantages = ({ items, data }) => {
               </h2>
             </div>
           </div>
-          <div className="col-span-6">
+          <div className="col-span-12 md:col-span-6 mt-8 md:mt-0">
             <div className="flex justify-end">
               <Image
                 src={locale === "ar" ? data.imgAr : data.imgEn}

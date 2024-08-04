@@ -71,13 +71,15 @@ const PremiumAdvantages = () => {
 
   return (
     <section className="container">
-      <div className="border-2 border-secondary rounded-3xl p-12 shadow-lg">
+      <div className="border-2 border-secondary rounded-3xl p-8 sm:p-12 shadow-lg">
         <div className="grid grid-cols-12 mb-10">
           <div className="col-span-12">
             <div>
               <h2
                 className={`sectionHeading inline-block ${
-                  locale === "ar" ? "text-right" : "text-left"
+                  locale === "ar"
+                    ? "text-center sm:text-right"
+                    : "text-center sm:text-left"
                 }`}
               >
                 {advantagesData.mainTitle1}
