@@ -344,7 +344,7 @@ const Header = ({ locale }) => {
         </NavbarItem>
         <NavbarItem>{/* <ThemeToggle /> */}</NavbarItem>
       </NavbarContent>
-      <NavbarMenu className="h-56 !important bg-accent">
+      <NavbarMenu className="h-[400px] bg-white gap-[2rem]">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <LocaleLink className="w-full" href={item.link} size="lg">

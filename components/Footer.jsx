@@ -171,7 +171,7 @@ const Footer = () => {
         <div className="container flex p-10 flex-col md:flex-row">
           <div className="md:w-[60%] w-full mb-5 md:mb-0">
             <h1
-              className={`sectionHeading text-3xl text-secondary font-semibold ${
+              className={`sectionHeading text-xl text-secondary font-semibold ${
                 locale === "ar"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
@@ -247,7 +247,12 @@ const Footer = () => {
                     {console.log(el.column.heading, "el.column.heading")}
                     {el.column.links.map((link, linkIndex) => {
                       return (
-                        <li key={linkIndex} className="text-white py-1">
+                        <li
+                          key={linkIndex}
+                          className={`text-white py-1 ${
+                            language === "ar" ? "text-right" : "text-left"
+                          }`}
+                        >
                           <a target="_blank" href={link.href}>
                             {link.name}
                           </a>
@@ -263,7 +268,12 @@ const Footer = () => {
                   >
                     {el.column.links.map((link, linkIndex) =>
                       link.name === "Client Agreement" ? (
-                        <li key={linkIndex} className="text-white py-1">
+                        <li
+                          key={linkIndex}
+                          className={`text-white py-1 ${
+                            language === "ar" ? "text-right" : "text-left"
+                          }`}
+                        >
                           <Link href={link.href} onClick={handleOpenModal}>
                             {link.name}
                           </Link>

@@ -56,7 +56,7 @@ const Banner = () => {
       </div>
       <div className="container py-16 max-w-xl flex flex-col gap-12">
         <h1
-          className="md:text-3xl text-secondary font-semibold text-center"
+          className="md:text-3xl text-xl text-secondary font-semibold text-center"
           style={{ lineHeight: "50px", letterSpacing: "1px" }}
         >
           {f("title")}

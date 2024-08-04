@@ -74,7 +74,7 @@ const AdvancedPlatforms = () => {
               return (
                 <div className="relative flex flex-row items-center mb-5 group">
                   <div
-                    className="bg-secondary text-primary hover:bg-accent hover:text-secondary min-h-[90px] w-[280px] border border-solid border-secondary  rounded-xl py-4 px-9 text-xl font-semibold flex justify-center items-center text-center"
+                    className="bg-secondary text-primary hover:bg-accent hover:text-secondary min-h-[90px] w-[280px] border border-solid border-secondary  rounded-xl py-4 px-9 text-[1rem] md:text-xl font-semibold flex justify-center items-center text-center"
                     key={index}
                   >
                     {item.text}
@@ -92,7 +92,7 @@ const AdvancedPlatforms = () => {
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/mt5-home.webp"
               width="50"
               height="100"
-              className="w-[50%]"
+              className="w-[30%] md:w-[50%]"
               alt="account logo"
             />
           </div>
@@ -104,7 +104,7 @@ const AdvancedPlatforms = () => {
                 <div className="relative flex flex-row items-center mb-5 group">
                   <VscTriangleLeft className="absolute left-[-40px] text-4xl text-primary group-hover:block hidden" />
                   <div
-                    className="bg-secondary text-primary  hover:bg-accent hover:text-secondary min-h-[90px] w-[280px] border border-solid border-secondary  rounded-xl py-4 px-2 text-xl font-semibold flex justify-center items-center text-center"
+                    className="bg-secondary text-primary  hover:bg-accent hover:text-secondary min-h-[90px] w-[280px] border border-solid border-secondary  rounded-xl py-4 px-2 text-[1rem] md:text-xl font-semibold flex justify-center items-center text-center"
                     key={index}
                   >
                     {item.text}

@@ -36,7 +36,7 @@ const Featured = ({ title, cardsData }) => {
                 />
               </div>
               <h1
-                className={`sectionHeading text-xl group-hover:text-white ${
+                className={`sectionHeading text-[1rem] md:text-xl group-hover:text-white ${
                   locale === "ar" ? "text-right pr-4" : "text-left pl-4"
                 }`}
               >
