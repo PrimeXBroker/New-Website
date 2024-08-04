@@ -42,12 +42,12 @@ const BecomeIB = () => {
       data-aos-duration={1000}
       data-aos="slide-up"
     >
-      <div className="container flex flex-col md:flex-row">
-        <div className="w-full md:w-[50%] flex flex-col justify-center space-y-4 py-9">
+      <div className="container flex flex-col md:flex-row ">
+        <div className="w-full md:w-[50%] flex flex-col justify-center space-y-4 py-9 ">
           <h1 className="text-secondary text-xl md:text-2xl font-semibold border-b-4 border-b-primary w-fit">
             {t("become_ib_title_1")}
           </h1>
-          <p className="text-secondary text-md">{t("become_ib_desc_1")}</p>
+          <p className="text-secondary text-md sm:text-center">{t("become_ib_desc_1")}</p>
           <div className="flex justify-start gap-2">
             {/* {buttons.map((btn) => (
               <Link
