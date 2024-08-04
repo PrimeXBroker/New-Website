@@ -44,33 +44,11 @@ const BecomeIB = () => {
       data-aos="slide-up"
     >
       <div className="container flex flex-col md:flex-row">
-<<<<<<< HEAD
-        <div
-          className={`w-full md:w-[50%] flex flex-col justify-center space-y-4 py-9 ${
-            locale === "ar"
-              ? "items-center md:items-start"
-              : "items-center md:items-start"
-          }`}
-        >
-          <h1
-            className={`text-secondary text-xl md:text-2xl font-semibold border-b-4 border-b-primary w-fit`}
-          >
-            {t("become_ib_title_1")}
-          </h1>
-          <p
-            className={`text-secondary text-md ${
-              locale === "ar"
-                ? "text-center md:text-right"
-                : "text-center md:text-left"
-            }`}
-          >
-=======
         <div className="w-full md:w-[50%] flex flex-col md:items-start items-center justify-center space-y-4 py-9">
           <h1 className="text-secondary text-xl md:text-2xl font-semibold border-b-4 border-b-primary w-fit">
             {t("become_ib_title_1")}
           </h1>
           <p className="text-secondary text-md text-center md:text-left pt-4">
->>>>>>> 49aac53bb04d22031884e6e1538b51ef6178a488
             {t("become_ib_desc_1")}
           </p>
           <div className="flex justify-start gap-2">
@@ -84,27 +62,11 @@ const BecomeIB = () => {
               </Link>
             ))} */}
           </div>
-<<<<<<< HEAD
-          <p
-            className={`text-secondary text-md ${
-              locale === "ar"
-                ? "text-center md:text-right"
-                : "text-center md:text-left"
-            }`}
-          >
-            {t("become_ib_desc_2")}
-          </p>
-          <div className="mt-[2rem]">
-            <LocaleLink
-              href="/ib-program"
-              className="block text-left w-fit px-4 py-2 rounded-full shadow-xl bg-accent text-secondary border-3 border-secondary hover:bg-secondary hover:text-primary transition-colors duration-300 hover:border-primary"
-=======
           <p className="text-secondary text-md">{t("become_ib_desc_2")}</p>
           <div className="mt-[2rem]">
             <LocaleLink
               href="/ib-program"
               className="block w-fit px-4 py-2 rounded-full mx-auto md:mx-0 shadow-xl bg-accent text-secondary border-3 border-secondary hover:bg-secondary hover:text-primary transition-colors duration-300 hover:border-primary"
->>>>>>> 49aac53bb04d22031884e6e1538b51ef6178a488
             >
               {t("become_ib_btn")}
             </LocaleLink>
