@@ -30,7 +30,13 @@ const ContactBanner = () => {
           >
             {t("description")}
           </p>
-          <div className="mt-10">
+          <div
+            className={`mt-10 ${
+              locale === "ar"
+                ? "text-center md:text-right"
+                : "text-center md:text-left"
+            }`}
+          >
             <button className="bg-primary w-[200px] px-2 py-3 rounded-full text-secondary">
               {t("visit_help_btn")}
             </button>

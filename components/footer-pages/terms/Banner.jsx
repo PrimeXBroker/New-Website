@@ -20,7 +20,15 @@ const Banner = () => {
           >
             {t("title_part1")} <br /> {t("title_part2")}
           </h1>
-          <p className="text-white text-lg">{t("description")}</p>
+          <p
+            className={`text-white text-lg ${
+              locale === "ar"
+                ? "md:text-right text-center"
+                : "md:text-left text-center"
+            }`}
+          >
+            {t("description")}
+          </p>
         </div>
         <div>
           <Image

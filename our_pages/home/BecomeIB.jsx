@@ -2,11 +2,12 @@
 import Image from "next/image";
 import { useEffect } from "react";
 import Aos from "aos";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import LocaleLink from "@/components/LocaleLink";
 
 const BecomeIB = () => {
+  const locale = useLocale();
   const t = useTranslations("home.becomeIB");
 
   useEffect(() => {
@@ -43,11 +44,27 @@ const BecomeIB = () => {
       data-aos="slide-up"
     >
       <div className="container flex flex-col md:flex-row">
-        <div className="w-full md:w-[50%] flex flex-col justify-center space-y-4 py-9">
-          <h1 className="text-secondary text-xl md:text-2xl font-semibold border-b-4 border-b-primary w-fit">
+        <div
+          className={`w-full md:w-[50%] flex flex-col justify-center space-y-4 py-9 ${
+            locale === "ar"
+              ? "items-center md:items-start"
+              : "items-center md:items-start"
+          }`}
+        >
+          <h1
+            className={`text-secondary text-xl md:text-2xl font-semibold border-b-4 border-b-primary w-fit`}
+          >
             {t("become_ib_title_1")}
           </h1>
-          <p className="text-secondary text-md">{t("become_ib_desc_1")}</p>
+          <p
+            className={`text-secondary text-md ${
+              locale === "ar"
+                ? "text-center md:text-right"
+                : "text-center md:text-left"
+            }`}
+          >
+            {t("become_ib_desc_1")}
+          </p>
           <div className="flex justify-start gap-2">
             {/* {buttons.map((btn) => (
               <Link
@@ -59,14 +76,22 @@ const BecomeIB = () => {
               </Link>
             ))} */}
           </div>
-          <p className="text-secondary text-md">{t("become_ib_desc_2")}</p>
-          <div className="mt-[2rem]">
-          <LocaleLink
-            href="/ib-program"
-            className="block text-left w-fit px-4 py-2 rounded-full shadow-xl bg-accent text-secondary border-3 border-secondary hover:bg-secondary hover:text-primary transition-colors duration-300 hover:border-primary"
+          <p
+            className={`text-secondary text-md ${
+              locale === "ar"
+                ? "text-center md:text-right"
+                : "text-center md:text-left"
+            }`}
           >
-            {t("become_ib_btn")}
-          </LocaleLink>
+            {t("become_ib_desc_2")}
+          </p>
+          <div className="mt-[2rem]">
+            <LocaleLink
+              href="/ib-program"
+              className="block text-left w-fit px-4 py-2 rounded-full shadow-xl bg-accent text-secondary border-3 border-secondary hover:bg-secondary hover:text-primary transition-colors duration-300 hover:border-primary"
+            >
+              {t("become_ib_btn")}
+            </LocaleLink>
           </div>
         </div>
         <div className="w-full md:w-[50%]">

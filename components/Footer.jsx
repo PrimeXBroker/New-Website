@@ -227,7 +227,7 @@ const Footer = () => {
               />
             ))}
           </div>
-          <div className="py-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border-b border-b-gray-500 sm:text-left text-center">
+          <div className="py-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-4 md:gap-y-8 lg:gap-y-0 border-b border-b-gray-500 sm:text-left text-center">
             {footerLinks.map((el, index) => (
               <div key={index} className="footer">
                 <p
@@ -239,7 +239,11 @@ const Footer = () => {
                 </p>
 
                 {el.column.heading === "Platform" ? (
-                  <ul className={`pt-0 md:pt-2`}>
+                  <ul
+                    className={`pt-0 md:pt-2 ${
+                      locale === "ar" ? "text-right" : "text-left"
+                    }`}
+                  >
                     {console.log(el.column.heading, "el.column.heading")}
                     {el.column.links.map((link, linkIndex) => {
                       return (
