@@ -192,6 +192,8 @@
     },
     "academyForm": {
       "login_title": "تسجيل الدخول",
+      "drop_field_1": "تحليلات أساسية",
+      "drop_field_2": "تحليلات فنية",
       "register_title": "تسجيل",
       "form_full_name": "الاسم الكامل",
       "form_email": "البريد الإلكتروني",

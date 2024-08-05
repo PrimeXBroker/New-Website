@@ -17,13 +17,13 @@ const Featured = ({ title, cardsData }) => {
   return (
     <section className="bg-[#e4e5e6] pt-12 pb-16">
       <div className="container">
-        <div className="flex flex-row gap-12 justify-center flex-wrap xl:flex-wrap">
+        <div className="flex flex-row gap-8 justify-center flex-wrap xl:flex-wrap">
           {cardsData.map((card, index) => (
             <div
               onMouseEnter={() => handleIconEnter(index)}
               onMouseLeave={handleIconLeave}
               key={index}
-              className="flex flex-col justify-center bg-accent cursor-pointer rounded-2xl shadow-2xl border-b-5 w-[250px] h-[250px] group
+              className="flex flex-col justify-center bg-accent cursor-pointer rounded-2xl shadow-2xl border-b-5 w-[45%] h-fit group
            hover:bg-[#3F3F3E] border-black hover:border-primary transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500"
             >
               <div className="flex justify-start mb-4">
@@ -36,16 +36,14 @@ const Featured = ({ title, cardsData }) => {
                 />
               </div>
               <h1
-                className={`sectionHeading text-[1rem] md:text-xl group-hover:text-white ${
-                  locale === "ar" ? "text-right pr-4" : "text-left pl-4"
-                }`}
+                className={`sectionHeading text-[1rem] md:text-xl group-hover:text-white ${locale === "ar" ? "text-right pr-4" : "text-left pl-4"
+                  }`}
               >
                 {card.title}
               </h1>
               <p
-                className={`sectionPara text-sm group-hover:text-white ${
-                  locale === "ar" ? "text-right pr-4" : "text-left pl-4"
-                }`}
+                className={`sectionPara text-sm group-hover:text-white ${locale === "ar" ? "text-right pr-4" : "text-left pl-4"
+                  }`}
               >
                 {card.description}
               </p>

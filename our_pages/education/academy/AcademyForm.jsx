@@ -12,15 +12,18 @@ import { LocationContext } from "@/context/location-context";
 import toast from "react-hot-toast";
 import { useLocale, useTranslations } from "next-intl";
 
-const webinarTypes = [
-  { id: 1, name: "Fundamental Analysis", value: "fundamental" },
-  { id: 2, name: "Technical Analysis", value: "Technical" },
-];
+
 
 const AcademyForm = () => {
   const { country: originCountry, ip: originIp } = useContext(LocationContext);
   const [loading, setLoading] = useState(false);
   const t = useTranslations("academy.academyForm");
+
+
+  const webinarTypes = [
+    { id: 1, name: t("drop_field_1"), value: "fundamental" },
+    { id: 2, name: t("drop_field_2"), value: "Technical" },
+  ];
 
   const formik = useFormik({
     initialValues: {
@@ -66,15 +69,16 @@ const AcademyForm = () => {
     },
   });
   return (
-    <section id="academy-form" className="py-12 container">
-      <div className="shadow-xl border-accent border xl:w-[40%] xl:mx-auto lg:w-[40%] lg:mx-auto md:w-[50%] md:mx-auto sm:w-[70%] sm:mx-auto w-[80%] mx-auto rounded-2xl">
+    <section id="academy-form" className="py-12 container bg-[#E4E5E6] ">
+      <div className="shadow-xl bg-[#fff] border-accent border xl:w-[40%] xl:mx-auto lg:w-[40%] lg:mx-auto md:w-[50%] md:mx-auto sm:w-[90%] sm:mx-auto w-[90%] mx-auto rounded-2xl">
         <Tabs
-          className="justify-center w-full"
+          className="justify-center w-full "
           classNames={{
             tabList: "w-full",
+            
           }}
         >
-          {/* <Tab
+          <Tab
             title={
               <span className="flex justify-center items-center gap-2">
                 <PiSignInFill size={25} /> {t("login_title")}
@@ -156,15 +160,15 @@ const AcademyForm = () => {
                 {t("form_form_btn")}
               </button>
             </form>
-          </Tab> */}
+          </Tab>
           <Tab
             title={
-              <span className="flex justify-center p-5 items-center gap-2 text-secondary font-semibold">
+              <span className="flex justify-center py-2 items-center gap-2 text-secondary font-semibold">
                 <FaUserPlus size={25} /> {t("register_title")}
               </span>
             }
           >
-            <form className="flex flex-col justify-center items-center gap-4 relative">
+            <form className="flex flex-col justify-center items-center gap-4 relative bg-[#fff]">
               <PiUserSquareThin size={80} className="opacity-50" />
               <div className="mb-4 w-[60%]">
                 <input
