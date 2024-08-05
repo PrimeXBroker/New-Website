@@ -114,7 +114,7 @@ const Header = ({ locale }) => {
       maxWidth="xl"
       onMenuOpenChange={setIsMenuOpen}
       isBordered
-      className="navbar"
+      className="navbar bg-white"
       isMenuOpen={isMenuOpen}
     >
       <NavbarContent>
@@ -454,7 +454,7 @@ const Header = ({ locale }) => {
                   <Button
                     onClick={handleButtonClickPlatform}
                     disableRipple
-                    className={`p-0 bg-transparent gap-0 rotatableIcon`}
+                    className={`p-0 bg-transparent gap-0 rotatableIcon text-lg h-auto`}
                     endContent={<RiArrowDownSLine size={25} />}
                     radius="sm"
                     variant="light"
@@ -470,7 +470,7 @@ const Header = ({ locale }) => {
                       onClick={handleMobileMenuItemClick}
                     >
                       <LocaleLink
-                        className="w-full"
+                        className="w-full text-lg"
                         size="lg"
                         href={option.link}
                       >

@@ -58,15 +58,11 @@ export default async function layout({ children, params: { locale } }) {
   const direction = locale === "ar" ? "rtl" : "ltr";
 
   return (
-    <html
-      className={`direction_layout ${montserrat.variable}`}
-      lang={locale}
-      dir={direction}
-    >
+    <html className={`${montserrat.variable}`} lang={locale} dir={direction}>
       {/* <Head>
         <link rel="stylesheet" href="https://primexbroker.online/static/css/main.css" />
       </Head> */}
-      <body className="direction_layout">
+      <body>
         <NextUIProvider>
           <NextIntlClientProvider messages={messages}>
             <Header locale={locale} />

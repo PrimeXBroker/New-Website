@@ -123,7 +123,7 @@ const Rewards = () => {
                     </Button>
                   ) : (
                     <p className="text-sm text-center text-red-600">
-                      this promotion has ended. Stay tuned for more exciting
+                      This promotion has ended. Stay tuned for more exciting
                       promotions
                     </p>
                   )}
