@@ -9,8 +9,8 @@ import Cookies from "@/components/Cookies";
 import "aos/dist/aos.css";
 import { Suspense } from "react";
 import { Toaster } from "react-hot-toast";
-import Head from "next/head";
 import Script from "next/script";
+import ChatWidget from "@/components/ChatWidget";
 
 const montserrat = localFont({
   src: [
@@ -58,38 +58,32 @@ export default async function layout({ children, params: { locale } }) {
   const direction = locale === "ar" ? "rtl" : "ltr";
 
   return (
-    <html className={`${montserrat.variable}`} lang={locale} dir={direction}>
-      {/* <Head>
-        <link rel="stylesheet" href="https://primexbroker.online/static/css/main.css" />
-      </Head> */}
-      <body>
-        <NextUIProvider>
-          <NextIntlClientProvider messages={messages}>
-            <Header locale={locale} />
-            <Suspense fallback={null}>
-              {children}
-              <Toaster
-                toastOptions={{
-                  duration: 5000,
-                }}
-              />
-            </Suspense>
-            <Footer />
-            <Cookies />
-          </NextIntlClientProvider>
-        </NextUIProvider>
+    <html
+      className={`direction_layout ${montserrat.variable}`}
+      lang={locale}
 
-        <link
-          rel="stylesheet"
-          href="https://primexbroker.online/static/css/main.css"
-        />
-        {/* <div id="chat_app"></div> */}
-
-        <Script
-          src="https://primexbroker.online/static/js/main.js"
-          strategy="lazyOnload"
-        />
+    >
+      <body className="direction_layout" >
+        <div dir={direction}>
+          <NextUIProvider>
+            <NextIntlClientProvider messages={messages}>
+              <Header locale={locale} />
+              <Suspense fallback={null}>
+                {children}
+                <Toaster
+                  toastOptions={{
+                    duration: 5000,
+                  }}
+                />
+              </Suspense>
+              <Footer />
+              <Cookies />
+            </NextIntlClientProvider>
+          </NextUIProvider>
+        </div>
+        <ChatWidget />
       </body>
+
     </html>
   );
 }
