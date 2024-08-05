@@ -2,17 +2,17 @@
 import { Tabs, Tab } from "@nextui-org/tabs";
 import Script from "next/script";
 import { useTranslations } from "next-intl";
-import Indices from "./widgets/Indices"
-import Forex from "./widgets/forex"
-import Commodities from "./widgets/Commodities"
+import Indices from "./widgets/Indices";
+import Forex from "./widgets/forex";
+import Commodities from "./widgets/Commodities";
 import Stocks from "./widgets/Stocks";
-import Crypto from "./widgets/Crypto"
+import Crypto from "./widgets/Crypto";
 
 const TradingOpportunities = () => {
   const t = useTranslations("home.tradingOpportunities");
 
   return (
-    <section className="py-12 bg-accent relative">
+    <section className="pt-12 bg-accent relative">
       <h1
         className="sectionHeading"
         data-aos-easing="ease-out"
@@ -43,17 +43,17 @@ const TradingOpportunities = () => {
           </Tab>
           <Tab title={t("trading_opportunities_tab3")}>
             <div className="pt-8 text-xl">
-            <Commodities/>
+              <Commodities />
             </div>
           </Tab>
           <Tab title={t("trading_opportunities_tab4")}>
             <div className="pt-8 text-xl">
-            <Stocks/>
+              <Stocks />
             </div>
           </Tab>
           <Tab title={t("trading_opportunities_tab5")}>
             <div className="pt-8 text-xl">
-             <Crypto/>
+              <Crypto />
             </div>
           </Tab>
         </Tabs>

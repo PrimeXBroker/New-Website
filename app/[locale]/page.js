@@ -71,20 +71,16 @@ export default function Home() {
       <Banner />
       <CompanyStats stats={statsOne} />
       <TradingOpportunities />
-      {/* <AccountTtpes /> */}
       <AccountTypes1 />
       <AdvancedPlatforms />
       <BecomeIB />
       <Rewards />
       <CustomerCare />
       <Academy />
-      {/* <GetStarted /> */}
       <OurRecognition />
       <Modal
         classNames={{
-          closeButton:'z-50',
-          
-          
+          closeButton: "z-50",
         }}
         className="overflow-auto"
         isOpen={isOpen}

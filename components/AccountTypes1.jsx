@@ -43,7 +43,7 @@ const AccountTypes1 = () => {
 
               <div class="content">
                 <p
-                  className="text-white text-lg"
+                  className="text-white text-[14px] md:text-lg"
                   style={{ lineHeight: "30px" }}
                 >
                   {account.description}

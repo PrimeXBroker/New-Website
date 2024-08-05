@@ -415,8 +415,11 @@
   padding-bottom: 10px;
 }
 .card .content p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 25px;
+  @media screen and (max-width:'678px') {
+    font-size: 14px !important;
+  }
 }
 .card .content {
   transform: translateY(100%);
@@ -583,4 +586,26 @@
 }
 .dropdown:hover .dropdown-menu {
   display: block;
+}
+
+@keyframes randomMovement {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, -10px);
+  }
+  50% {
+    transform: translate(-10px, 10px);
+  }
+  75% {
+    transform: translate(15px, -15px);
+  }
+  100% {
+    transform: translate(-15px, 15px);
+  }
+}
+.animated_image{
+    animation: randomMovement 10s infinite linear;
+    animation-fill-mode: both;
 }

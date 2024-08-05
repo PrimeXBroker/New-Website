@@ -12,6 +12,7 @@ import { Toaster } from "react-hot-toast";
 import Script from "next/script";
 import ChatWidget from "@/components/ChatWidget";
 import { FacebookPixelEvents } from "@/utilities/pixelEvent";
+import FallbackLoader from "@/components/LoadingSpinner";
 
 const montserrat = localFont({
   src: [
@@ -59,26 +60,25 @@ export default async function layout({ children, params: { locale } }) {
   return (
     <html className={`direction_layout ${montserrat.variable}`} lang={locale}>
       <body className="direction_layout">
-        <div dir={direction}>
-          <NextUIProvider>
-            <NextIntlClientProvider messages={messages}>
-              <Header locale={locale} />
-
-              {children}
-              <Toaster
-                toastOptions={{
-                  duration: 5000,
-                }}
-              />
-              <Suspense fallback={null}>
+        <Suspense fallback={<FallbackLoader />}>
+          <div dir={direction}>
+            <NextUIProvider>
+              <NextIntlClientProvider messages={messages}>
+                <Header locale={locale} />
+                {children}
+                <Toaster
+                  toastOptions={{
+                    duration: 5000,
+                  }}
+                />
                 <FacebookPixelEvents />
-              </Suspense>
-              <Footer />
-              <Cookies />
-            </NextIntlClientProvider>
-          </NextUIProvider>
-        </div>
-        <ChatWidget />
+                <Footer />
+                <Cookies />
+              </NextIntlClientProvider>
+            </NextUIProvider>
+          </div>
+          <ChatWidget />
+        </Suspense>
       </body>
     </html>
   );
