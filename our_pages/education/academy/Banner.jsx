@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { useTranslations, useLocale } from "next-intl";
+import local from "@next/font/local";
 
 const Banner = () => {
   const locale = useLocale();
@@ -46,7 +47,7 @@ const Banner = () => {
           <div className="flex">
             <Image
               className="mx-auto md:m-0 block"
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/banner_img.webp"
+              src={ locale === "en" ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/banner_img.webp" : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/academy/20240805-171521.png"}
               alt="Banner Image"
               width="550"
               height="500"

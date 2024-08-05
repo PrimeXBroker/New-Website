@@ -190,8 +190,10 @@
       "card_4_desc": " Our Experts"
     },
     "academyForm": {
-      "login_title": "Signin",
-      "register_title": "Register",
+      "login_title": "Sign Up for Webinar",
+      "drop_field_1": "Fundamental Analysis",
+      "drop_field_2": "Technical Analysis",
+      "register_title": "Be An Instructor",
       "form_full_name": "Full Name",
       "form_email": "Email",
       "form_category": "Select webinar Category",
