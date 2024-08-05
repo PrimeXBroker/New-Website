@@ -40,7 +40,7 @@ const Banner = () => {
   const isAr = path.includes("/ar");
   return (
     <section
-      className="relative h-[100vh] lg:h-[100vh] xl:h-[100vh] 2xl:h-[100vh] 3xl:h-[100vh] py-10 lg:py-16 xl:py-16 2xl:py-20 3xl:pt-40 4xl:pt-48 5xl:py-56"
+      className="relative h-[50vh] md:h-[100vh] lg:h-[100vh] xl:h-[100vh] 2xl:h-[100vh] 3xl:h-[100vh] py-10 lg:py-16 xl:py-16 2xl:py-20 3xl:pt-40 4xl:pt-48 5xl:py-56"
       onClick={homeVideoClick}
     >
       <video

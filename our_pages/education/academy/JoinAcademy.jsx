@@ -69,7 +69,7 @@ const JoinAcademy = () => {
           className={`sectionHeading md:text-2xl text-secondary font-semibold pb-4 ${
             locale === "ar"
               ? "text-center md:text-right"
-              : "text-center md:text-right"
+              : "text-center md:text-left"
           }`}
         >
           {t("join_academy_title")}
@@ -78,7 +78,7 @@ const JoinAcademy = () => {
           className={`md:text-lg text-secondary font-[600] ${
             locale === "ar"
               ? "text-center md:text-right"
-              : "text-center md:text-right"
+              : "text-center md:text-left"
           }`}
         >
           {t("join_academy_subtitle")}
@@ -87,14 +87,14 @@ const JoinAcademy = () => {
           className={`md:text-lg text-secondary font-[400] ${
             locale === "ar"
               ? "text-center md:text-right"
-              : "text-center md:text-right"
+              : "text-center md:text-left"
           }`}
         >
           {t("join_academy_desc")}
         </p>
         <div
           className={`flex mt-6 ${
-            locale === "ar" ? "justify-right" : "justify-end"
+            locale === "ar" ? "justify-right" : "justify-left"
           }`}
         >
           {/* Flex container to align items to the end (right) */}

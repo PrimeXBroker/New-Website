@@ -102,23 +102,23 @@
     },
     "rewards": {
       "rewards_title": "Promotions and Offers",
-      "trade_now":"Trade Now",
-      "expired_promotion":"This promotion has ended. Stay Tuned for more exciting promotions",
-      "20_deposit_bonus":{
-        "title1_1":"Unlock a 20% Deposit Bonus",
-        "title1_2":"Get Up to $25,000"
+      "trade_now": "Trade Now",
+      "expired_promotion": "This promotion has ended. Stay Tuned for more exciting promotions",
+      "20_deposit_bonus": {
+        "title1_1": "Unlock a 20% Deposit Bonus",
+        "title1_2": "Get Up to $25,000"
       },
-      "lower_deposits":{
-        "title1_1":"Greater Gains,",
-        "title1_2":"Lower Deposits"
+      "lower_deposits": {
+        "title1_1": "Greater Gains,",
+        "title1_2": "Lower Deposits"
       },
-      "trade_to_win":{
-        "title1_1":"Trade to win",
-        "title1_2":"Enter our competetion and compete for Amazing Prizes"
+      "trade_to_win": {
+        "title1_1": "Trade to win",
+        "title1_2": "Enter our competetion and compete for Amazing Prizes"
       },
-      "30_welcome_git":{
-        "title1_1":"$30 Welcome Gift",
-        "title1_2":"Start with a $30 gift when you verify your account"
+      "30_welcome_gift": {
+        "title1_1": "$30 Welcome Gift",
+        "title1_2": "Start with a $30 gift when you verify your account"
       }
     },
     "customerCare": {
@@ -309,7 +309,7 @@
     "readyToDive": {
       "title": "Explore the world of commodities trading with PrimeX!",
       "description": "Join Us and start your trading journey.",
-      "open_account_btn": "Open Your Account"
+      "open_account_btn": "Open Live Account"
     },
     "faq": {
       "title": "Frequently Asked Questions",
@@ -501,7 +501,7 @@
     },
     "readyToDive": {
       "title": "Get started with shares trading today at PrimeX!",
-      "description": "Open Your Account and explore our range of stock options."
+      "description": "Open Live Account and explore our range of stock options."
     },
     "faq": {
       "question_1": "What are Stock CFDs?",
@@ -999,6 +999,10 @@
     }
   },
   "bonus": {
+    "metaData": {
+      "title": "20% Deposit Bonus | Primex Capital",
+      "description": "Get a 20% deposit bonus at PrimeX Capital! Supercharge your trading with extra funds. Sign up now and claim your bonus!"
+    },
     "header": {
       "title_l1": "20%",
       "title_l2": "Deposit Bonus",
@@ -1046,20 +1050,20 @@
       "condition2": "terms and conditions",
       "form_btn": "Claim Now"
     },
-    "calculator":{
-      "title1_1":"Calculate your",
-      "title1_2":"Deposit Bonus",
-      "para1_1":"use the form on the right to see how much bonus you could earn",
-      "para2_1":"Enter your",
-      "para2_2":"Deposit amount,",
-      "para2_3":"and watch the",
-      "para2_4":"numbers add up.",
-      "deposit_amount:":"Deposit amount:",
-      "deposit_amount":"Deposit amount",
-      "enter_deposit_amount":"Enter Deposit Amount",
-      "no_of_lots":" No. of Lots required",
-      "bonus_amount":"Bonus amount",
-      "bonus":"Bonus"
+    "calculator": {
+      "title1_1": "Calculate your",
+      "title1_2": "Deposit Bonus",
+      "para1_1": "use the form on the right to see how much bonus you could earn",
+      "para2_1": "Enter your",
+      "para2_2": "Deposit amount,",
+      "para2_3": "and watch the",
+      "para2_4": "numbers add up.",
+      "deposit_calculator:": "Deposit Calculator:",
+      "deposit_amount": "Deposit amount",
+      "enter_deposit_amount": "Enter Deposit Amount",
+      "no_of_lots": " No. of Lots required",
+      "bonus_amount": "Bonus amount",
+      "bonus": "Bonus"
     },
     "faq": {
       "question_1": "How do I qualify for the 20% Deposit Bonus?",
@@ -1181,7 +1185,7 @@
       "get_started_title": "Get Started with PrimeX Capital",
       "get_started_desc_1": "Ready to elevate your trading experience? Join PrimeX Capital and",
       "get_started_desc_2": "explore our advanced trading features and special offers.",
-      "get_started_btn": "Open Your Account"
+      "get_started_btn": "Open Live Account"
     },
     "footerNotice": {
       "heading_1": "PRIMEX BROKER (PTY) LTD",
