@@ -129,8 +129,63 @@ const Header = ({ locale }) => {
             {t("home")}
           </Link>
         </NavbarItem>
-
-        <Dropdown>
+        <NavbarItem>
+          <div className="dropdown inline-block relative">
+            <button className="bg-white text-secondary text-sm py-2 rounded inline-flex items-center">
+              <span>{t("trading")}</span>
+              <svg
+                className="fill-current h-5 w-5 arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+              </svg>
+            </button>
+            <ul className="dropdown-menu absolute hidden text-secondary pt-3">
+              <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/forex"
+                >
+                  {t("forex")}
+                </LocaleLink>
+              </li>
+              <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/metals"
+                >
+                  {t("metals")}
+                </LocaleLink>
+              </li>
+              <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/indices"
+                >
+                  {t("indices")}
+                </LocaleLink>
+              </li>
+              <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/commodities"
+                >
+                  {t("commodities")}
+                </LocaleLink>
+              </li>
+              <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/stocks"
+                >
+                  {t("stocks")}
+                </LocaleLink>
+              </li>
+            </ul>
+          </div>
+        </NavbarItem>
+        {/* <Dropdown>
           <NavbarItem className="text-sm">
             <DropdownTrigger>
               <Button
@@ -182,39 +237,63 @@ const Header = ({ locale }) => {
               <LocaleLink href="/stocks">{t("stocks")}</LocaleLink>
             </DropdownItem>
           </DropdownMenu>
-        </Dropdown>
-
-        <Dropdown>
-          <NavbarItem className="text-sm">
-            <DropdownTrigger>
-              <Button
-                onClick={handleButtonClickPlatform}
-                disableRipple
-                className={`p-0 bg-transparent  gap-0 rotatableIcon`}
-                endContent={
-                  <RiArrowDownSLine
-                    size={25}
-                    // className={isRotatedPlatform ? "rotated" : ""}
-                  />
-                }
-                radius="sm"
-                variant="light"
+        </Dropdown> */}
+        <NavbarItem>
+          {/* <Dropdown>
+            <NavbarItem className="text-sm">
+              <DropdownTrigger>
+                <Button
+                  onClick={handleButtonClickPlatform}
+                  disableRipple
+                  className={`p-0 bg-transparent  gap-0 rotatableIcon`}
+                  endContent={
+                    <RiArrowDownSLine
+                      size={25}
+                      // className={isRotatedPlatform ? "rotated" : ""}
+                    />
+                  }
+                  radius="sm"
+                  variant="light"
+                >
+                  {t("platform")}
+                </Button>
+              </DropdownTrigger>
+            </NavbarItem>
+            <DropdownMenu variant="light">
+              <DropdownItem
+                className="hover:bg-primary"
+                onClick={handlePlatformMenuItemClick}
               >
-                {t("platform")}
-              </Button>
-            </DropdownTrigger>
-          </NavbarItem>
-          <DropdownMenu variant="light">
-            <DropdownItem
-              className="hover:bg-primary"
-              onClick={handlePlatformMenuItemClick}
-            >
-              <LocaleLink href="/platform/mt5-platform">{t("mt5")}</LocaleLink>
-            </DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
-
-        <NavbarItem className="text-sm">
+                <LocaleLink href="/platform/mt5-platform">
+                  {t("mt5")}
+                </LocaleLink>
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown> */}
+          <div className="dropdown inline-block relative">
+            <button className="bg-white text-secondary text-sm py-2 rounded inline-flex items-center">
+              <span>{t("platform")}</span>
+              <svg
+                className="fill-current h-5 w-5 arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+              </svg>
+            </button>
+            <ul className="dropdown-menu absolute hidden text-secondary pt-3">
+              <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/platform/mt5-platform"
+                >
+                  {t("mt5")}
+                </LocaleLink>
+              </li>
+            </ul>
+          </div>
+        </NavbarItem>
+        <NavbarItem className="text-sm hover:bg-white">
           <LocaleLink
             href="/account-types"
             className={`${
@@ -224,42 +303,53 @@ const Header = ({ locale }) => {
             {t("accounts")}
           </LocaleLink>
         </NavbarItem>
-        <Dropdown>
-          <NavbarItem className="text-sm">
-            <DropdownTrigger>
-              <Button
-                onClick={handleButtonClickPartners}
-                disableRipple
-                className={`p-0 bg-transparent  gap-0 rotatableIcon`}
-                endContent={
-                  <RiArrowDownSLine
-                    size={25}
-                    // className={isRotatedPartners ? "rotated" : ""}
-                  />
-                }
-                radius="sm"
-                variant="light"
+        <NavbarItem>
+          <div className="dropdown inline-block relative">
+            <button className="bg-white text-secondary text-sm py-2 rounded inline-flex items-center">
+              <span>{t("partners")}</span>
+              <svg
+                className="fill-current h-5 w-5 arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
               >
-                {t("partners")}
-              </Button>
-            </DropdownTrigger>
-          </NavbarItem>
-          <DropdownMenu variant="light">
-            <DropdownItem className="hover:bg-primary ">
-              <LocaleLink href="/ib-program">{t("ib_program")}</LocaleLink>
-            </DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
-
-        <NavbarItem className="text-sm">
-          <LocaleLink
-            href="/academy"
-            className={`${
-              pathnameWithoutLocale === "/academy" ? "active_link" : ""
-            } ${NavHoverEffect}`}
-          >
-            {t("education")}
-          </LocaleLink>
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+              </svg>
+            </button>
+            <ul className="dropdown-menu absolute hidden text-secondary pt-3">
+              <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/ib-program"
+                >
+                  {t("ib_program")}
+                </LocaleLink>
+              </li>
+            </ul>
+          </div>
+        </NavbarItem>
+        <NavbarItem>
+          <div className="dropdown inline-block relative">
+            <button className="bg-white text-secondary text-sm py-2 rounded inline-flex items-center">
+              <span>{t("education")}</span>
+              <svg
+                className="fill-current h-5 w-5 arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+              </svg>
+            </button>
+            <ul className="dropdown-menu absolute hidden text-secondary pt-3">
+              <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/academy"
+                >
+                  {t("academy")}
+                </LocaleLink>
+              </li>
+            </ul>
+          </div>
         </NavbarItem>
         <NavbarItem className="text-sm">
           <Badge
@@ -300,7 +390,7 @@ const Header = ({ locale }) => {
           <div className="dropdown">
             <button className="dropbtn">
               {buttonText}
-              <RiArrowDownSLine size={30} className="arrow" />
+              <RiArrowDownSLine size={25} className="arrow" />
             </button>
             <div className="dropdown-content">
               <Link
@@ -311,14 +401,14 @@ const Header = ({ locale }) => {
                 }
                 onClick={() => handleClick("English")}
               >
-                <div className="flex gap-2">
+                <div>
                   {/* <Image
                     src="/images/flags/gb.svg"
                     width="30"
                     height="8"
                     alt="img"
                   /> */}
-                  <p>English</p>
+                  <p className="text-md text-secondary text-center">English</p>
                 </div>
               </Link>
               <Link
@@ -329,14 +419,14 @@ const Header = ({ locale }) => {
                 }
                 onClick={() => handleClick("العربية")}
               >
-                <div className="flex gap-2">
+                <div>
                   {/* <Image
                     src="/images/flags/arab.svg"
                     width="30"
                     height="8"
                     alt="img"
                   /> */}
-                  <p>عربي</p>
+                  <p className="text-md text-secondary text-center">عربي</p>
                 </div>
               </Link>
             </div>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Aos from "aos";
 import { useTranslations, useLocale } from "next-intl";
-
+import { MdKeyboardArrowDown } from "react-icons/md";
 const Academy = () => {
   const t = useTranslations("home.academy");
   const locale = useLocale();
@@ -36,8 +36,34 @@ const Academy = () => {
   const handleIcon3Leave = () => {
     setIcon3Hovered(false);
   };
+  const academyCards = [
+    {
+      imageUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon1_yellow.svg",
+      title1_1: t("academy_card_1_title_1"),
+      title1_2: t("academy_card_1_title_2"),
+      description1: t("academy_card_1_desc_1"),
+      description2: t("academy_card_1_desc_2"),
+    },
+    {
+      imageUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon2_yellow.svg",
+      title1_1: t("academy_card_2_title_1"),
+      title1_2: t("academy_card_2_title_2"),
+      description1: t("academy_card_2_desc_1"),
+      description2: t("academy_card_2_desc_2"),
+    },
+    {
+      imageUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/academy/icon3_yellow.svg",
+      title1_1: t("academy_card_3_title_1"),
+      title1_2: t("academy_card_3_title_2"),
+      description1: t("academy_card_3_desc_1"),
+      description2: t("academy_card_3_desc_2"),
+    },
+  ];
   return (
-    <section className="py-12 container">
+    <section className="pt-12 container">
       <div
         data-aos-easing="ease-out"
         data-aos-duration={800}
@@ -47,7 +73,43 @@ const Academy = () => {
         <p className="sectionPara text-center">{t("academy_desc")}</p>
       </div>
       <div className="flex flex-row mt-12 gap-12 justify-center flex-wrap">
-        <div
+        {academyCards.map((card, index) => (
+          <div className="cards_container">
+            <div className="custom_card">
+              <div className="slide slide1">
+                <div className="content">
+                  <div className="icon">
+                    <Image
+                      src={card.imageUrl}
+                      width="80"
+                      height="80"
+                      alt="image icon"
+                      className="custom_image"
+                    />
+                    <p className="custom_title">
+                      {card.title1_1} <br />
+                      {card.title1_2}
+                    </p>
+                    <MdKeyboardArrowDown
+                      size={25}
+                      color="#FFD000"
+                      className="arrow"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="slide slide2">
+                <div className="content">
+                  <h3>{card.description1}</h3>
+
+                  <p>{card.description2}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+        {/* <div
           className="bg-secondary cursor-pointer rounded-lg shadow-2xl border-b-5 group
            hover:bg-accent border-black hover:border-primary p-8 w-[300px]"
           data-aos-easing="ease-out"
@@ -170,7 +232,7 @@ const Academy = () => {
           >
             {t("academy_card_3_desc_1")} <br /> {t("academy_card_3_desc_2")}
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );
