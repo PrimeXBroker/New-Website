@@ -41,7 +41,6 @@ const Slider = () => {
       metatrader: <ImCheckmark className="text-xl text-primary" />,
       applyTitle: t("slider.accounts_apply_title_1"),
       showBadge: false,
-      accountLink: `https://client.primexbroker.com/${locale}/register`,
     },
     {
       id: 2,
@@ -72,7 +71,6 @@ const Slider = () => {
       metatrader: <ImCheckmark className="text-xl text-primary" />,
       applyTitle: t("slider.accounts_apply_title_2"),
       showBadge: true,
-      accountLink: `https://client.primexbroker.com/${locale}/register`,
     },
     {
       id: 3,
@@ -103,7 +101,6 @@ const Slider = () => {
       metatrader: <ImCheckmark className="text-xl text-primary" />,
       applyTitle: t("slider.accounts_apply_title_3"),
       showBadge: true,
-      accountLink: `https://client.primexbroker.com/${locale}/register`,
     },
     // {
     //   id: 4,
@@ -147,7 +144,6 @@ const Slider = () => {
       metatrader: <ImCheckmark className="text-xl text-primary" />,
       applyTitle: t("slider.accounts_apply_title_1"),
       showBadge: false,
-      accountLink: `https://client.primexbroker.com/${locale}/register`,
     },
     {
       id: 5,
@@ -178,7 +174,6 @@ const Slider = () => {
       metatrader: <ImCheckmark className="text-xl text-primary" />,
       applyTitle: t("slider.accounts_apply_title_2"),
       showBadge: true,
-      accountLink: `https://client.primexbroker.com/${locale}/register`,
     },
     {
       id: 6,
@@ -209,7 +204,6 @@ const Slider = () => {
       metatrader: <ImCheckmark className="text-xl text-primary" />,
       applyTitle: t("slider.accounts_apply_title_3"),
       showBadge: true,
-      accountLink: `https://client.primexbroker.com/${locale}/register`,
     },
     // {
     //   id: 8,
@@ -253,7 +247,6 @@ const Slider = () => {
       metatrader: <ImCheckmark className="text-xl text-primary" />,
       applyTitle: t("slider.accounts_apply_title_1"),
       showBadge: false,
-      accountLink: `https://client.primexbroker.com/${locale}/register`,
     },
     {
       id: 8,
@@ -284,7 +277,6 @@ const Slider = () => {
       metatrader: <ImCheckmark className="text-xl text-primary" />,
       applyTitle: t("slider.accounts_apply_title_2"),
       showBadge: true,
-      accountLink: `https://client.primexbroker.com/${locale}/register`,
     },
     {
       id: 9,
@@ -315,7 +307,6 @@ const Slider = () => {
       metatrader: <ImCheckmark className="text-xl text-primary" />,
       applyTitle: t("slider.accounts_apply_title_3"),
       showBadge: true,
-      accountLink: `https://client.primexbroker.com/${locale}/register`,
     },
   ];
 
@@ -348,291 +339,292 @@ const Slider = () => {
               {accountsTable.map((acc, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <Link legacyBehavior href={acc.accountLink} target="_blank">
-                      <a legacyBehavior href={acc.accountLink} target="_blank">
-                        <div className="relative z-5 mb-12 flex h-20 items-center justify-center rounded-3xl swiper-account-title-box">
-                          <div className="text-2xl text-center text-white font-semibold">
-                            <h3 className="mt-0">{acc.title}</h3>
+                    <div className="relative z-5 mb-8 flex h-20 items-center justify-center rounded-3xl swiper-account-title-box">
+                      <div className="text-2xl text-center text-white font-semibold">
+                        <h3 className="mt-0">{acc.title}</h3>
+                      </div>
+                      <div className="absolute bottom-[-18px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[76px] border-r-[76px] border-l-transparent border-r-transparent swiper-account-angle"></div>
+                    </div>
+                    <div className="px-6 py-0">
+                      <div className="container-fluid">
+                        <div className="grid grid-cols-12">
+                          <div className="col-span-7">
+                            <div className="text-sm	text-white mb-2">
+                              <p className={`flex`}>
+                                <IoIosCheckmarkCircle
+                                  className={`text-primary text-lg me-2`}
+                                />
+                                {t("slider.account_t_row_1_1")}
+                              </p>
+                            </div>
                           </div>
-                          <div className="absolute bottom-[-18px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[76px] border-r-[76px] border-l-transparent border-r-transparent swiper-account-angle"></div>
-                        </div>
-                        <div className="px-6 py-0">
-                          <div className="container-fluid">
-                            <div className="grid grid-cols-12">
-                              <div className="col-span-7">
-                                <div className="text-sm	text-white mb-2">
-                                  <p className={`flex`}>
-                                    <IoIosCheckmarkCircle
-                                      className={`text-primary text-lg me-2`}
-                                    />
-                                    {t("slider.account_t_row_1_1")}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-span-5">
-                                <div className="text-sm	text-white mb-2">
-                                  {acc.showBadge && (
-                                    <span
-                                      className={`absolute rounded-full bg-red-800 px-2 py-1 text-xs text-white ring-1 ring-inset ring-red-600/10 ${
-                                        locale === "ar"
-                                          ? "top-24 left-12"
-                                          : "top-24 right-12"
-                                      }`}
-                                    >
-                                      {t("slider.badgeTxt")}
-                                    </span>
-                                  )}
-                                  <p className={``}>{acc.deposition}</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="grid grid-cols-12">
-                              <div className="col-span-7">
-                                <div className="text-sm	text-white mb-2">
-                                  <p className="flex">
-                                    <IoIosCheckmarkCircle
-                                      className={`text-primary text-lg me-2`}
-                                    />
-                                    {t("slider.account_t_row_2_1")}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-span-5">
-                                <div className="text-sm	text-white mb-2">
-                                  <p>{acc.spreads}</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="grid grid-cols-12">
-                              <div className="col-span-7">
-                                <div className="text-sm	text-white mb-2">
-                                  <p className="flex">
-                                    <IoIosCheckmarkCircle
-                                      className={`text-primary text-lg me-2 `}
-                                    />
-                                    {t("slider.account_t_row_3_1")}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-span-5">
-                                <div className="text-sm	text-white mb-2">
-                                  <p>{acc.commissions}</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="grid grid-cols-12">
-                              <div className="col-span-7">
-                                <div className="text-sm	text-white mb-2">
-                                  <p className="flex">
-                                    <IoIosCheckmarkCircle
-                                      className={`text-primary text-lg me-2`}
-                                    />
-                                    {t("slider.account_t_row_4_1")}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-span-5">
-                                <div className="text-sm	text-white mb-2">
-                                  <p>{acc.leverage}</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="grid grid-cols-12">
-                              <div className="col-span-7">
-                                <div className="text-sm	text-white mb-2">
-                                  <p className="flex">
-                                    <IoIosCheckmarkCircle
-                                      className={`text-primary text-lg me-2`}
-                                    />
-                                    {t("slider.account_t_row_5_1")}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-span-5">
-                                <div className="text-sm	text-white mb-2">
-                                  <p>{acc.marginRequired}</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="grid grid-cols-12">
-                              <div className="col-span-7">
-                                <div className="text-sm	text-white mb-2">
-                                  <p className="flex">
-                                    <IoIosCheckmarkCircle
-                                      className={`text-primary text-lg me-2`}
-                                    />
-                                    {t("slider.account_t_row_6_1")}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-span-5">
-                                <div className="text-sm	text-white mb-2">
-                                  <p>{acc.lotSize}</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="grid grid-cols-12">
-                              <div className="col-span-7">
-                                <div className="text-sm	text-white mb-2">
-                                  <p className="flex">
-                                    <IoIosCheckmarkCircle
-                                      className={`text-primary text-lg me-2`}
-                                    />
-                                    {t("slider.account_t_row_7_1")}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-span-5">
-                                <div className="text-sm	text-white mb-2">
-                                  <p>{acc.stopLevel}</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="grid grid-cols-12">
-                              <div className="col-span-7">
-                                <div className="text-sm	text-white mb-2">
-                                  <p className="flex">
-                                    <IoIosCheckmarkCircle
-                                      className={`text-primary text-lg me-2`}
-                                    />
-                                    {t("slider.account_t_row_8_1")}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-span-5">
-                                <div className="text-sm	text-white mb-2">
-                                  <p>{acc.marginCall}</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="grid grid-cols-12">
-                              <div className="col-span-7">
-                                <div className="text-sm	text-white mb-2">
-                                  <p className="flex">
-                                    <IoIosCheckmarkCircle
-                                      className={`text-primary text-lg me-2`}
-                                    />
-                                    {t("slider.account_t_row_9_1")}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-span-5">
-                                <div className="text-sm	text-white mb-2">
-                                  <p>{acc.executionType}</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="grid grid-cols-12">
-                              <div className="col-span-7">
-                                <div className="text-sm	text-white mb-2">
-                                  <p className="flex">
-                                    <IoIosCheckmarkCircle
-                                      className={`text-primary text-lg me-2`}
-                                    />
-                                    {t("slider.account_t_row_13_1")}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-span-5">
-                                <div className="text-sm	text-white mb-2">
-                                  {acc.automaticTrading}
-                                </div>
-                              </div>
-                            </div>
-                            <div className="grid grid-cols-12">
-                              <div className="col-span-7">
-                                <div className="text-sm	text-white mb-2">
-                                  <p className="flex">
-                                    <IoIosCheckmarkCircle
-                                      className={`text-primary text-lg me-2`}
-                                    />
-                                    {t("slider.account_t_row_14_1")}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-span-5">
-                                <div className="text-sm	text-white mb-2">
-                                  {acc.vps}
-                                </div>
-                              </div>
-                            </div>
-                            <div className="grid grid-cols-12">
-                              <div className="col-span-7">
-                                <div className="text-sm	text-white mb-2">
-                                  <p className="flex">
-                                    <IoIosCheckmarkCircle
-                                      className={`text-primary text-lg me-2`}
-                                    />
-                                    {t("slider.account_t_row_12_1")}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-span-5">
-                                <div className="text-sm	text-white mb-2">
-                                  {acc.metatrader}
-                                </div>
-                              </div>
-                            </div>
-                            <div className="grid grid-cols-12">
-                              <div className="col-span-7">
-                                <div className="text-sm	text-white mb-2">
-                                  <p className="flex">
-                                    <IoIosCheckmarkCircle
-                                      className={`text-primary text-lg me-2`}
-                                    />
-                                    {t("slider.account_t_row_16_1")}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-span-5">
-                                <div className="text-sm	text-white mb-2">
-                                  <p>{acc.webinars}</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="grid grid-cols-12">
-                              <div className="col-span-7">
-                                <div className="text-sm	text-white mb-2">
-                                  <p className="flex">
-                                    <IoIosCheckmarkCircle
-                                      className={`text-primary text-lg me-2`}
-                                    />
-                                    {t("slider.account_t_row_17_1")}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-span-5">
-                                {" "}
-                                <div className="text-sm	text-white mb-2">
-                                  <p>{acc.expertAdvice}</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="grid grid-cols-12">
-                              <div className="col-span-7">
-                                <div className="text-sm	text-white mb-2">
-                                  <p className="flex">
-                                    <IoIosCheckmarkCircle
-                                      className={`text-primary text-lg me-2`}
-                                    />
-                                    {t("slider.account_t_row_10_1")}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-span-5">
-                                <div className="text-sm	text-white mb-2">
-                                  <p>{acc.swap}</p>
-                                </div>
-                              </div>
+                          <div className="col-span-5">
+                            <div className="text-sm	text-white mb-2">
+                              {acc.showBadge && (
+                                <span
+                                  className={`absolute rounded-full bg-red-800 px-2 py-0 text-white ring-1 ring-inset ring-red-600/10 ${
+                                    locale === "ar"
+                                      ? "top-[88px] left-12"
+                                      : "top-[88px] right-12"
+                                  }`}
+                                  style={{ fontSize: "10px" }}
+                                >
+                                  {t("slider.badgeTxt")}
+                                </span>
+                              )}
+                              <p className={``}>{acc.deposition}</p>
                             </div>
                           </div>
                         </div>
-                        <div className="flex justify-center items-center absolute -bottom-5 left-10 rounded-full w-80 h-12 swiper-account-box ">
-                          <div className="text-center text-primary font-semibold">
-                            <h6 className="mt-0">{acc.applyTitle}</h6>
+                        <div className="grid grid-cols-12">
+                          <div className="col-span-7">
+                            <div className="text-sm	text-white mb-2">
+                              <p className="flex">
+                                <IoIosCheckmarkCircle
+                                  className={`text-primary text-lg me-2`}
+                                />
+                                {t("slider.account_t_row_2_1")}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-span-5">
+                            <div className="text-sm	text-white mb-2">
+                              <p>{acc.spreads}</p>
+                            </div>
                           </div>
                         </div>
-                      </a>
+                        <div className="grid grid-cols-12">
+                          <div className="col-span-7">
+                            <div className="text-sm	text-white mb-2">
+                              <p className="flex">
+                                <IoIosCheckmarkCircle
+                                  className={`text-primary text-lg me-2 `}
+                                />
+                                {t("slider.account_t_row_3_1")}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-span-5">
+                            <div className="text-sm	text-white mb-2">
+                              <p>{acc.commissions}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-12">
+                          <div className="col-span-7">
+                            <div className="text-sm	text-white mb-2">
+                              <p className="flex">
+                                <IoIosCheckmarkCircle
+                                  className={`text-primary text-lg me-2`}
+                                />
+                                {t("slider.account_t_row_4_1")}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-span-5">
+                            <div className="text-sm	text-white mb-2">
+                              <p>{acc.leverage}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-12">
+                          <div className="col-span-7">
+                            <div className="text-sm	text-white mb-2">
+                              <p className="flex">
+                                <IoIosCheckmarkCircle
+                                  className={`text-primary text-lg me-2`}
+                                />
+                                {t("slider.account_t_row_5_1")}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-span-5">
+                            <div className="text-sm	text-white mb-2">
+                              <p>{acc.marginRequired}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-12">
+                          <div className="col-span-7">
+                            <div className="text-sm	text-white mb-2">
+                              <p className="flex">
+                                <IoIosCheckmarkCircle
+                                  className={`text-primary text-lg me-2`}
+                                />
+                                {t("slider.account_t_row_6_1")}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-span-5">
+                            <div className="text-sm	text-white mb-2">
+                              <p>{acc.lotSize}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-12">
+                          <div className="col-span-7">
+                            <div className="text-sm	text-white mb-2">
+                              <p className="flex">
+                                <IoIosCheckmarkCircle
+                                  className={`text-primary text-lg me-2`}
+                                />
+                                {t("slider.account_t_row_7_1")}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-span-5">
+                            <div className="text-sm	text-white mb-2">
+                              <p>{acc.stopLevel}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-12">
+                          <div className="col-span-7">
+                            <div className="text-sm	text-white mb-2">
+                              <p className="flex">
+                                <IoIosCheckmarkCircle
+                                  className={`text-primary text-lg me-2`}
+                                />
+                                {t("slider.account_t_row_8_1")}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-span-5">
+                            <div className="text-sm	text-white mb-2">
+                              <p>{acc.marginCall}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-12">
+                          <div className="col-span-7">
+                            <div className="text-sm	text-white mb-2">
+                              <p className="flex">
+                                <IoIosCheckmarkCircle
+                                  className={`text-primary text-lg me-2`}
+                                />
+                                {t("slider.account_t_row_9_1")}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-span-5">
+                            <div className="text-sm	text-white mb-2">
+                              <p>{acc.executionType}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-12">
+                          <div className="col-span-7">
+                            <div className="text-sm	text-white mb-2">
+                              <p className="flex">
+                                <IoIosCheckmarkCircle
+                                  className={`text-primary text-lg me-2`}
+                                />
+                                {t("slider.account_t_row_13_1")}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-span-5">
+                            <div className="text-sm	text-white mb-2">
+                              {acc.automaticTrading}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-12">
+                          <div className="col-span-7">
+                            <div className="text-sm	text-white mb-2">
+                              <p className="flex">
+                                <IoIosCheckmarkCircle
+                                  className={`text-primary text-lg me-2`}
+                                />
+                                {t("slider.account_t_row_14_1")}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-span-5">
+                            <div className="text-sm	text-white mb-2">
+                              {acc.vps}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-12">
+                          <div className="col-span-7">
+                            <div className="text-sm	text-white mb-2">
+                              <p className="flex">
+                                <IoIosCheckmarkCircle
+                                  className={`text-primary text-lg me-2`}
+                                />
+                                {t("slider.account_t_row_12_1")}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-span-5">
+                            <div className="text-sm	text-white mb-2">
+                              {acc.metatrader}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-12">
+                          <div className="col-span-7">
+                            <div className="text-sm	text-white mb-2">
+                              <p className="flex">
+                                <IoIosCheckmarkCircle
+                                  className={`text-primary text-lg me-2`}
+                                />
+                                {t("slider.account_t_row_16_1")}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-span-5">
+                            <div className="text-sm	text-white mb-2">
+                              <p>{acc.webinars}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-12">
+                          <div className="col-span-7">
+                            <div className="text-sm	text-white mb-2">
+                              <p className="flex">
+                                <IoIosCheckmarkCircle
+                                  className={`text-primary text-lg me-2`}
+                                />
+                                {t("slider.account_t_row_17_1")}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-span-5">
+                            {" "}
+                            <div className="text-sm	text-white mb-2">
+                              <p>{acc.expertAdvice}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-12">
+                          <div className="col-span-7">
+                            <div className="text-sm	text-white mb-2">
+                              <p className="flex">
+                                <IoIosCheckmarkCircle
+                                  className={`text-primary text-lg me-2`}
+                                />
+                                {t("slider.account_t_row_10_1")}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-span-5">
+                            <div className="text-sm	text-white mb-2">
+                              <p>{acc.swap}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <Link
+                      href={`https://client.primexbroker.com/${locale}/register`}
+                      target="_blank"
+                      className="flex justify-center items-center absolute -bottom-5 left-10 rounded-full w-80 h-12 swiper-account-box "
+                    >
+                      <div className="text-center text-primary font-semibold">
+                        <h6 className="mt-0">{acc.applyTitle}</h6>
+                      </div>
                     </Link>
                   </SwiperSlide>
                 );
