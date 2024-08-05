@@ -56,7 +56,7 @@ const page = () => {
       <PromotionApplicable />
       <PremiumAdvantages /> 
       <BonusForm />
-      {/* <BonusCalculator/> */}
+      <BonusCalculator/>
       <MaximizeProfit />
       <TermsCondition />
       <Faq forexFaqs={forexFaqs} />

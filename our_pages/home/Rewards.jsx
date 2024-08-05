@@ -16,52 +16,52 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import LocaleLink from "@/components/LocaleLink";
 
-const campaignList = [
-  {
-    id: 1,
-    title1: "Greater Gains,",
-    title2: "Lower Deposits",
-    imgUrlEn:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/raw_account_en.webp",
-    imgUrlAr:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/raw_account_ar.webp",
-    isExpired: false,
-  },
-  {
-    id: 2,
-    title1: "Unlock a 20% Deposit Bonus",
-    title2: "Get Up to $25,000",
-    imgUrlEn:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/trade_now_en.webp",
-    imgUrlAr:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/trade_now_ar.webp",
-    isExpired: false,
-  },
-  {
-    id: 3,
-    title1: "$30 Welcome Gift",
-    title2: "Start with a $30 gift when you verify your account",
-    imgUrlEn:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/campaign01.webp",
-    imgUrlAr:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/campaign01.webp",
-    isExpired: true,
-  },
-  {
-    id: 4,
-    title1: "Trade to win",
-    title2: "Enter our competetion and compete for Amazing Prizes",
-    imgUrlEn:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/campaign02.webp",
-    imgUrlAr:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/campaign02.webp",
-    isExpired: true,
-  },
-];
+
 
 const Rewards = () => {
   const t = useTranslations("home.rewards");
-
+  const campaignList = [
+    {
+      id: 1,
+      title1: t("lower_deposits.title1_1"),
+      title2: t("lower_deposits.title1_2"),
+      imgUrlEn:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/raw_account_en.webp",
+      imgUrlAr:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/raw_account_ar.webp",
+      isExpired: false,
+    },
+    {
+      id: 2,
+      title1: t("20_deposit_bonus.title1_1"),
+      title2: t("20_deposit_bonus.title1_2"),
+      imgUrlEn:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/trade_now_en.webp",
+      imgUrlAr:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/trade_now_ar.webp",
+      isExpired: false,
+    },
+    {
+      id: 3,
+      title1: t("30_welcome_gift.title1_1"),
+      title2: t("30_welcome_gift.title1_2"),
+      imgUrlEn:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/campaign01.webp",
+      imgUrlAr:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/campaign01.webp",
+      isExpired: true,
+    },
+    {
+      id: 4,
+      title1: t("trade_to_win.title1_1"),
+      title2: t("trade_to_win.title1_2"),
+      imgUrlEn:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/campaign02.webp",
+      imgUrlAr:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/campaign02.webp",
+      isExpired: true,
+    },
+  ];
   useEffect(() => {
     Aos.init({ disable: "mobile" });
   }, []);
@@ -118,17 +118,15 @@ const Rewards = () => {
                 />
                 <div className="text-center mt-5">
                   {card.isExpired == false ? (
-                    <Button className="bg-secondary text-primary font-semibold w-[200px] rounded-full shadow-xl text-center mx-auto hover:bg-primary hover:text-secondary hover:border-2 hover:border-secondary">
-                      Trade Now
+                    <Button className="bg-secondary absolute right-0 left-0 bottom-[-15px] text-primary font-semibold w-[200px] rounded-full shadow-md text-center mx-auto hover:bg-primary hover:text-secondary hover:border-2 hover:border-secondary">
+                      {t("trade_now")}
                     </Button>
                   ) : (
                     <p className="text-sm text-center text-red-600">
-                      this promotion has ended. Stay tuned for more exciting
-                      promotions
+                      {t("expired_promotion")}
                     </p>
                   )}
                 </div>
-                {/* <div class="absolute top-[40%] left-0 w-full h-[600px] opacity-10 bg-center bg-contain bg-no-repeat bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/background2.svg')]"></div> */}
               </div>
             </SwiperSlide>
           ))}

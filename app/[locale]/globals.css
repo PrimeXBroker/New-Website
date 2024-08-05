@@ -385,8 +385,8 @@
 }
 .card {
   position: absolute;
-  width: 97%;
-  height: 98%;
+  width: 99%;
+  height: 99%;
   background: #3F3F3E;
   border-radius: 20px;
   z-index: 5;
@@ -448,7 +448,7 @@ background: -webkit-linear-gradient(to right, #FFD000, #FF8C00, #40E0D0);
 background: linear-gradient(to right, #FFD000, #FF8C00, #FFD000);
   animation: glowing01 5s linear infinite;
   transform-origin: center;
-  animation: glowing 5s linear infinite;
+  animation: glowing 20s linear infinite;
 }
 
 @keyframes glowing {
