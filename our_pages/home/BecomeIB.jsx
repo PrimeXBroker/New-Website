@@ -30,7 +30,7 @@ const BecomeIB = () => {
     >
       <div className="container flex flex-col md:flex-row">
         <div className="w-full md:w-[60%] flex flex-col md:items-start items-center justify-center py-9">
-          <h1 className="text-secondary text-xl md:text-[2rem] font-semibold w-fit">
+          <h1 className="text-secondary md:text-left text-center text-xl md:text-[2rem] font-semibold w-fit">
             {t("become_ib_title_1")}
           </h1>
           <p className="text-secondary text-[14px] text-center md:text-left pt-4">
