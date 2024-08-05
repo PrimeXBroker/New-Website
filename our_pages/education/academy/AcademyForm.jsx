@@ -74,7 +74,7 @@ const AcademyForm = () => {
             tabList: "w-full",
           }}
         >
-          <Tab
+          {/* <Tab
             title={
               <span className="flex justify-center items-center gap-2">
                 <PiSignInFill size={25} /> {t("login_title")}
@@ -156,10 +156,10 @@ const AcademyForm = () => {
                 {t("form_form_btn")}
               </button>
             </form>
-          </Tab>
+          </Tab> */}
           <Tab
             title={
-              <span className="flex justify-center items-center gap-2 text-secondary font-semibold">
+              <span className="flex justify-center p-5 items-center gap-2 text-secondary font-semibold">
                 <FaUserPlus size={25} /> {t("register_title")}
               </span>
             }
