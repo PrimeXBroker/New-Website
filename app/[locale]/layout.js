@@ -11,6 +11,7 @@ import { Suspense } from "react";
 import { Toaster } from "react-hot-toast";
 import Script from "next/script";
 import ChatWidget from "@/components/ChatWidget";
+import { FacebookPixelEvents } from "@/utilities/pixelEvent";
 
 const montserrat = localFont({
   src: [
@@ -68,13 +69,15 @@ export default async function layout({ children, params: { locale } }) {
           <NextUIProvider>
             <NextIntlClientProvider messages={messages}>
               <Header locale={locale} />
-              <Suspense fallback={null}>
+              
                 {children}
                 <Toaster
                   toastOptions={{
                     duration: 5000,
                   }}
                 />
+              <Suspense fallback={null}>
+              <FacebookPixelEvents />
               </Suspense>
               <Footer />
               <Cookies />
