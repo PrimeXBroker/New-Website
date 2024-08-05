@@ -51,33 +51,27 @@ export async function generateMetadata({ params: { locale } }) {
     },
   };
 }
-// export function generateStaticParams() {
-//   return [{ locale: "en" }, { locale: "ar" }];
-// }
+
 export default async function layout({ children, params: { locale } }) {
   const messages = await getMessages();
   const direction = locale === "ar" ? "rtl" : "ltr";
 
   return (
-    <html
-      className={`direction_layout ${montserrat.variable}`}
-      lang={locale}
-
-    >
-      <body className="direction_layout" >
+    <html className={`direction_layout ${montserrat.variable}`} lang={locale}>
+      <body className="direction_layout">
         <div dir={direction}>
           <NextUIProvider>
             <NextIntlClientProvider messages={messages}>
               <Header locale={locale} />
-              
-                {children}
-                <Toaster
-                  toastOptions={{
-                    duration: 5000,
-                  }}
-                />
+
+              {children}
+              <Toaster
+                toastOptions={{
+                  duration: 5000,
+                }}
+              />
               <Suspense fallback={null}>
-              <FacebookPixelEvents />
+                <FacebookPixelEvents />
               </Suspense>
               <Footer />
               <Cookies />
@@ -86,7 +80,6 @@ export default async function layout({ children, params: { locale } }) {
         </div>
         <ChatWidget />
       </body>
-
     </html>
   );
 }
