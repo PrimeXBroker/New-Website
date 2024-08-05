@@ -68,7 +68,7 @@ const SuccessStories = () => {
         {t("description")}
       </p>
 
-      <div className="grid lg:grid-cols-4 md:grid-cols-3 place-content-center items-center place-items-center mt-5">
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 place-content-center items-center place-items-center mt-5 gap-2">
         {
           reviews.map((review, index) => (
             <div className="max-w-sm mx-auto bg-[#F3F3F3] rounded-lg shadow-md p-4">
