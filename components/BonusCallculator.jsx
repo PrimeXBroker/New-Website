@@ -86,6 +86,9 @@ function BonusCalculator() {
       setLastChanged("bonus");
     }
   };
+  const handleNumberOfLotsChange = ()=>{
+    console.log('Changed');
+  }
 
   return (
     <section className="py-8 font-sans">
@@ -109,7 +112,7 @@ function BonusCalculator() {
           </h2>
         </div>
         <div className="flex flex-col flex-1 gap-12 justify-between bg-[#3f3f3e] py-12 rounded-3xl">
-          <h1 className="text-center text-3xl text-[#FFF]">{t("deposit_amount:")}</h1>
+          <h1 className="text-center text-3xl text-[#FFF]">{t("deposit_calculator:")}</h1>
           <div>
             <label className="w-[70%] mx-auto block px-5 text-[#FFF]">
              {t("deposit_amount")}
@@ -131,7 +134,7 @@ function BonusCalculator() {
               placeholder={t("no_of_lots")}
               type="text"
               value={numberOfLots}
-              // onChange={handleNumberOfLotsChange}
+              onChange={handleNumberOfLotsChange}
             />
           </div>
           <div>
