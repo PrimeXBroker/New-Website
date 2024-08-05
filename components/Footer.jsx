@@ -167,7 +167,7 @@ const Footer = () => {
 
   return (
     <>
-      <section className="bg-primary relative z-0 ">
+      <section className="bg-primary relative z-0 overflow-hidden">
         <div className="container flex p-10 flex-col md:flex-row">
           <div className="md:w-[60%] w-full mb-5 md:mb-0">
             <h1
