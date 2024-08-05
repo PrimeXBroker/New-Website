@@ -57,7 +57,7 @@ const HaveQuestion = () => {
           {t("description")}
         </p>
       </div>
-      <div className="container grid grid-cols-2 gap-12 justify-center flex-wrap xl:flex-wrap mt-8 ">
+      <div className="container grid grid-cols-1 sm:grid-cols-2 gap-12 justify-center flex-wrap xl:flex-wrap mt-8 ">
         {cardsData.map((card, index) => (
           <div
             onMouseEnter={() => handleIconEnter(index)}

@@ -42,13 +42,19 @@ const Header = ({ locale }) => {
       name: t("home"),
       link: "/",
     },
-    // {
-    //   name: "Trading",
-    //   link: "/trading",
-    // },
+    {
+      name: "Trading",
+      options: [
+        { name: t("forex"), link: "/forex" },
+        { name: t("metals"), link: "/metals" },
+        { name: t("indices"), link: "/indices" },
+        { name: t("commodities"), link: "/commodities" },
+        { name: t("stocks"), link: "/stocks" },
+      ],
+    },
     {
       name: t("platform"),
-      link: "/platform/mt5-platform",
+      options: [{ name: t("mt5"), link: "/platform/mt5-platform" }],
     },
     {
       name: t("partners"),
@@ -63,6 +69,10 @@ const Header = ({ locale }) => {
       link: "/bonus",
     },
   ];
+
+  const handleMobileMenuItemClick = () => {
+    setIsMenuOpen(false);
+  };
 
   const NavHoverEffect = `relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center`;
   const currentLocale = pathname.split("/")[1];
@@ -105,6 +115,7 @@ const Header = ({ locale }) => {
       onMenuOpenChange={setIsMenuOpen}
       isBordered
       className="navbar"
+      isMenuOpen={isMenuOpen}
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -436,16 +447,61 @@ const Header = ({ locale }) => {
       </NavbarContent>
       <NavbarMenu className="h-[400px] bg-white gap-[2rem]">
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <LocaleLink className="w-full" href={item.link} size="lg">
-              {item.name}
-            </LocaleLink>
+          <NavbarMenuItem key={`${item.name}-${index}`}>
+            {item.options ? (
+              <Dropdown>
+                <DropdownTrigger>
+                  <Button
+                    onClick={handleButtonClickPlatform}
+                    disableRipple
+                    className={`p-0 bg-transparent gap-0 rotatableIcon`}
+                    endContent={<RiArrowDownSLine size={25} />}
+                    radius="sm"
+                    variant="light"
+                  >
+                    {item.name}
+                  </Button>
+                </DropdownTrigger>
+                <DropdownMenu variant="light">
+                  {item.options.map((option, idx) => (
+                    <DropdownItem
+                      key={`${option.name}-${idx}`}
+                      className="hover:bg-primary"
+                      onClick={handleMobileMenuItemClick}
+                    >
+                      <LocaleLink
+                        className="w-full"
+                        size="lg"
+                        href={option.link}
+                      >
+                        {option.name}
+                      </LocaleLink>
+                    </DropdownItem>
+                  ))}
+                </DropdownMenu>
+              </Dropdown>
+            ) : (
+              <LocaleLink
+                className="w-full"
+                href={item.link}
+                size="xl"
+                onClick={handleMobileMenuItemClick}
+              >
+                {item.name}
+              </LocaleLink>
+            )}
           </NavbarMenuItem>
         ))}
         <NavbarMenuItem>
           <div className="flex gap-4">
-            <GradiantButton name={t("register")} />
-            <GradiantButton name={t("login")} />
+            <GradiantButton
+              name={t("register")}
+              onClick={handleMobileMenuItemClick}
+            />
+            <GradiantButton
+              name={t("login")}
+              onClick={handleMobileMenuItemClick}
+            />
           </div>
         </NavbarMenuItem>
       </NavbarMenu>

@@ -2,11 +2,12 @@
 import Image from "next/image";
 import { useEffect } from "react";
 import Aos from "aos";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import LocaleLink from "@/components/LocaleLink";
 
 const BecomeIB = () => {
+  const locale = useLocale();
   const t = useTranslations("home.becomeIB");
 
   useEffect(() => {

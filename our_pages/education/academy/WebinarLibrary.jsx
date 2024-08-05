@@ -132,10 +132,10 @@ const WebinarLibrary = () => {
                     className="academy_img"
                   />
                 </div>
-                <h1 className="pl-4 sectionHeading text-xl text-left group-hover:text-white">
+                <h1 className="sectionHeading text-xl text-left group-hover:text-white">
                   {card.title}
                 </h1>
-                <p className="pl-4 sectionPara text-left text-sm group-hover:text-white">
+                <p className="sectionPara text-left text-sm group-hover:text-white">
                   {card.name}
                 </p>
               </div>
