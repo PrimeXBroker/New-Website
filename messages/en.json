@@ -236,7 +236,27 @@
     },
     "successStories": {
       "title": "Success Stories",
-      "description": "Read inspiring Testimonials And Discover How Our Students Have succeeded with Academy of PrimeX Capital"
+      "description": "Read inspiring Testimonials And Discover How Our Students Have succeeded with Academy of PrimeX Capital",
+      "review_name_1": "Rahim",
+      "review_title_1": "Instant Withdrawals",
+      "review_description_1": "I've been with PrimeX Capital for a while now, and their instant withdrawals are a game changer. I can access my funds whenever I need them, and it's super quick. Highly recommend!",
+      "review_country_1": "IQ",
+      "review_date_1": "April 17, 2024",
+      "review_name_2": "Hassan",
+      "review_title_2": "24/7 Customer Support",
+      "review_description_2": "The 24/7 customer support at PrimeX Capital is amazing! Anytime I have a question or issue, they're always there to help me out without making me wait. Love the service!",
+      "review_country_2": "AE",
+      "review_date_2": "june 12, 2024",
+      "review_name_3": "Ahmed",
+      "review_title_3": "Best Platform",
+      "review_description_3": "PrimeX Capital is hands down the best trading platform I've used. Everything is so clear and easy to understand. Plus, their support team is super helpful. Couldn't be happier!",
+      "review_country_3": "IQ",
+      "review_date_3": "march 19, 2024",
+      "review_name_4": "Ali",
+      "review_title_4": "Exceptional Customer Service",
+      "review_description_4": "Joining PrimeX Capital was one of the best decisions I've made. Their customer service is always ready to help, and I never have to wait long. They genuinely care about their clients.",
+      "review_country_4": "KSA",
+      "review_date_4": "January 17, 2024"
     }
   },
   "commodities": {
@@ -1175,6 +1195,5 @@
     "logos": {
       "title": "We Accept:"
     }
-  },
-  "successStories": {}
+  }
 }

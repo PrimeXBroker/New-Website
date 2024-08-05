@@ -1,63 +1,40 @@
-import Image from "next/image";
+"use client"
 import React from "react";
 import { useTranslations } from "next-intl";
 
-const successData = [
-  {
-    id: 1,
-    imgUrl:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/testimonial_1.svg",
-  },
-  {
-    id: 2,
-    imgUrl:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/testimonial_2.svg",
-  },
-  {
-    id: 3,
-    imgUrl:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/testimonial_3.svg",
-  },
-  {
-    id: 4,
-    imgUrl:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/testimonial_4.svg",
-  },
-];
-
-const reviews = [
-  {
-    name: "Rahimmm",
-    title: "It's one of the best platforms o",
-    description: " It’s one of the best platforms of trading and I like the service customers and Nour Al Ganna she helped me very much thanks PrimeX.",
-    country: "🇩🇿 DZ",
-    date: "April 17, 2024"
-  },
-  {
-    name: "Hassan",
-    title: "It's one of the best platforms o",
-    description: " It’s one of the best platforms of trading and I like the service customers and Nour Al Ganna she helped me very much thanks PrimeX.",
-    country: "🇩🇿 DZ",
-    date: "April 17, 2024"
-  },
-  {
-    name: "AHmed",
-    title: "It's one of the best platforms o",
-    description: " It’s one of the best platforms of trading and I like the service customers and Nour Al Ganna she helped me very much thanks PrimeX.",
-    country: "🇩🇿 DZ",
-    date: "April 17, 2024"
-  },
-  {
-    name: "Ali",
-    title: "It's one of the best platforms o",
-    description: " It’s one of the best platforms of trading and I like the service customers and Nour Al Ganna she helped me very much thanks PrimeX.",
-    country: "🇩🇿 DZ",
-    date: "April 17, 2024"
-  },
-]
-
 const SuccessStories = () => {
   const t = useTranslations("academy.successStories");
+
+  const reviews = [
+    {
+      name: t("review_name_1"),
+      title: t("review_title_1"),
+      description: t("review_description_1"),
+      country: t("review_country_1"),
+      date: t("review_date_1")
+    },
+    {
+      name: t("review_name_2"),
+      title: t("review_title_2"),
+      description: t("review_description_2"),
+      country: t("review_country_2"),
+      date: t("review_date_2")
+    },
+    {
+      name: t("review_name_3"),
+      title: t("review_title_3"),
+      description: t("review_description_3"),
+      country: t("review_country_3"),
+      date: t("review_date_3")
+    },
+    {
+      name: t("review_name_4"),
+      title: t("review_title_4"),
+      description: t("review_description_4"),
+      country: t("review_country_4"),
+      date: t("review_date_4")
+    },
+  ]
 
   return (
     <section className="container py-12">
@@ -78,7 +55,7 @@ const SuccessStories = () => {
                 </div>
                 <div className="ml-4">
                   <div className="font-semibold">{review.name}</div>
-                  <div className="text-sm text-gray-500">1 review <span className="ml-2">{review.country}</span></div>
+                  <div className="text-sm text-gray-500"> <span className="ml-2">{review.country}</span></div>
                 </div>
               </div>
               <div className="flex items-center mb-4">
