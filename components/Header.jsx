@@ -116,7 +116,6 @@ const Header = ({ locale }) => {
       isBordered
       className="navbar"
       isMenuOpen={isMenuOpen}
-
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -130,45 +129,256 @@ const Header = ({ locale }) => {
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden lg:flex gap-4" justify="center">
-        {menuItems.map((item, index) => (
-          <NavbarItem key={index} className="text-sm">
-            {item.options ? (
-              <Dropdown>
-                <DropdownTrigger>
-                  <Button
-                    onClick={handleButtonClickPlatform}
-                    disableRipple
-                    className={`p-0 bg-transparent gap-0 rotatableIcon`}
-                    endContent={<RiArrowDownSLine size={25} />}
-                    radius="sm"
-                    variant="light"
-                  >
-                    {item.name}
-                  </Button>
-                </DropdownTrigger>
-                <DropdownMenu variant="light">
-                  {item.options.map((option, idx) => (
-                    <DropdownItem
-                      key={`${option.name}-${idx}`}
-                      className="hover:bg-primary"
-                      onClick={handlePlatformMenuItemClick}
-                    >
-                      <LocaleLink href={option.link}>{option.name}</LocaleLink>
-                    </DropdownItem>
-                  ))}
-                </DropdownMenu>
-              </Dropdown>
-            ) : (
-              <LocaleLink
-                className={`w-full ${NavHoverEffect}`}
-                href={item.link}
-                size="lg"
+        <NavbarItem className="text-sm">
+          <Link
+            className={`${
+              pathnameWithoutLocale === "" ? "active_link" : ""
+            } ${NavHoverEffect}`}
+            color="foreground"
+            href="/"
+          >
+            {t("home")}
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <div className="dropdown inline-block relative">
+            <button className="bg-white text-secondary text-sm py-2 rounded inline-flex items-center">
+              <span>{t("trading")}</span>
+              <svg
+                className="fill-current h-5 w-5 arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
               >
-                {item.name}
-              </LocaleLink>
-            )}
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+              </svg>
+            </button>
+            <ul className="dropdown-menu absolute hidden text-secondary pt-3">
+              <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/forex"
+                >
+                  {t("forex")}
+                </LocaleLink>
+              </li>
+              <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/metals"
+                >
+                  {t("metals")}
+                </LocaleLink>
+              </li>
+              <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/indices"
+                >
+                  {t("indices")}
+                </LocaleLink>
+              </li>
+              <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/commodities"
+                >
+                  {t("commodities")}
+                </LocaleLink>
+              </li>
+              <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/stocks"
+                >
+                  {t("stocks")}
+                </LocaleLink>
+              </li>
+            </ul>
+          </div>
+        </NavbarItem>
+        {/* <Dropdown>
+          <NavbarItem className="text-sm">
+            <DropdownTrigger>
+              <Button
+                onClick={handleButtonClick}
+                disableRipple
+                className={`p-0 bg-transparent  gap-0 rotatableIcon`}
+                endContent={
+                  <RiArrowDownSLine
+                    size={25}
+                    // className={isRotated ? "rotated" : ""}
+                  />
+                }
+                radius="sm"
+                variant="light"
+              >
+                {t("trading")}
+              </Button>
+            </DropdownTrigger>
           </NavbarItem>
-        ))}
+          <DropdownMenu variant="light">
+            <DropdownItem
+              className="hover:bg-primary"
+              onClick={handleTradingMenuItemClick}
+            >
+              <LocaleLink href="/forex">{t("forex")}</LocaleLink>
+            </DropdownItem>
+            <DropdownItem
+              className="hover:bg-primary"
+              onClick={handleTradingMenuItemClick}
+            >
+              <LocaleLink href="/metals">{t("metals")}</LocaleLink>
+            </DropdownItem>
+            <DropdownItem
+              className="hover:bg-primary"
+              onClick={handleTradingMenuItemClick}
+            >
+              <LocaleLink href="/indices">{t("indices")}</LocaleLink>
+            </DropdownItem>
+            <DropdownItem
+              className="hover:bg-primary"
+              onClick={handleTradingMenuItemClick}
+            >
+              <LocaleLink href="/commodities">{t("commodities")}</LocaleLink>
+            </DropdownItem>
+            <DropdownItem
+              className="hover:bg-primary"
+              onClick={handleTradingMenuItemClick}
+            >
+              <LocaleLink href="/stocks">{t("stocks")}</LocaleLink>
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown> */}
+        <NavbarItem>
+          {/* <Dropdown>
+            <NavbarItem className="text-sm">
+              <DropdownTrigger>
+                <Button
+                  onClick={handleButtonClickPlatform}
+                  disableRipple
+                  className={`p-0 bg-transparent  gap-0 rotatableIcon`}
+                  endContent={
+                    <RiArrowDownSLine
+                      size={25}
+                      // className={isRotatedPlatform ? "rotated" : ""}
+                    />
+                  }
+                  radius="sm"
+                  variant="light"
+                >
+                  {t("platform")}
+                </Button>
+              </DropdownTrigger>
+            </NavbarItem>
+            <DropdownMenu variant="light">
+              <DropdownItem
+                className="hover:bg-primary"
+                onClick={handlePlatformMenuItemClick}
+              >
+                <LocaleLink href="/platform/mt5-platform">
+                  {t("mt5")}
+                </LocaleLink>
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown> */}
+          <div className="dropdown inline-block relative">
+            <button className="bg-white text-secondary text-sm py-2 rounded inline-flex items-center">
+              <span>{t("platform")}</span>
+              <svg
+                className="fill-current h-5 w-5 arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+              </svg>
+            </button>
+            <ul className="dropdown-menu absolute hidden text-secondary pt-3">
+              <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/platform/mt5-platform"
+                >
+                  {t("mt5")}
+                </LocaleLink>
+              </li>
+            </ul>
+          </div>
+        </NavbarItem>
+        <NavbarItem className="text-sm hover:bg-white">
+          <LocaleLink
+            href="/account-types"
+            className={`${
+              pathnameWithoutLocale === "/account-types" ? "active_link" : ""
+            } ${NavHoverEffect}`}
+          >
+            {t("accounts")}
+          </LocaleLink>
+        </NavbarItem>
+        <NavbarItem>
+          <div className="dropdown inline-block relative">
+            <button className="bg-white text-secondary text-sm py-2 rounded inline-flex items-center">
+              <span>{t("partners")}</span>
+              <svg
+                className="fill-current h-5 w-5 arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+              </svg>
+            </button>
+            <ul className="dropdown-menu absolute hidden text-secondary pt-3">
+              <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/ib-program"
+                >
+                  {t("ib_program")}
+                </LocaleLink>
+              </li>
+            </ul>
+          </div>
+        </NavbarItem>
+        <NavbarItem>
+          <div className="dropdown inline-block relative">
+            <button className="bg-white text-secondary text-sm py-2 rounded inline-flex items-center">
+              <span>{t("education")}</span>
+              <svg
+                className="fill-current h-5 w-5 arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+              </svg>
+            </button>
+            <ul className="dropdown-menu absolute hidden text-secondary pt-3">
+              <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/academy"
+                >
+                  {t("academy")}
+                </LocaleLink>
+              </li>
+            </ul>
+          </div>
+        </NavbarItem>
+        <NavbarItem className="text-sm">
+          <Badge
+            content={t("badge_text")}
+            color="danger"
+            size="sm"
+            className="translate-y-[-100%]"
+          >
+            <LocaleLink
+              href="/bonus"
+              className={`${
+                pathnameWithoutLocale === "/bonus" ? "active_link" : ""
+              } ${NavHoverEffect}`}
+            >
+              {t("deposit")}
+            </LocaleLink>
+          </Badge>
+        </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="text-sm hidden lg:block">
@@ -191,7 +401,7 @@ const Header = ({ locale }) => {
           <div className="dropdown">
             <button className="dropbtn">
               {buttonText}
-              <RiArrowDownSLine size={30} className="arrow" />
+              <RiArrowDownSLine size={25} className="arrow" />
             </button>
             <div className="dropdown-content">
               <Link
@@ -202,8 +412,14 @@ const Header = ({ locale }) => {
                 }
                 onClick={() => handleClick("English")}
               >
-                <div className="flex gap-2">
-                  <p>English</p>
+                <div>
+                  {/* <Image
+                    src="/images/flags/gb.svg"
+                    width="30"
+                    height="8"
+                    alt="img"
+                  /> */}
+                  <p className="text-md text-secondary text-center">English</p>
                 </div>
               </Link>
               <Link
@@ -214,8 +430,14 @@ const Header = ({ locale }) => {
                 }
                 onClick={() => handleClick("العربية")}
               >
-                <div className="flex gap-2">
-                  <p>عربي</p>
+                <div>
+                  {/* <Image
+                    src="/images/flags/arab.svg"
+                    width="30"
+                    height="8"
+                    alt="img"
+                  /> */}
+                  <p className="text-md text-secondary text-center">عربي</p>
                 </div>
               </Link>
             </div>
@@ -247,8 +469,13 @@ const Header = ({ locale }) => {
                       className="hover:bg-primary"
                       onClick={handleMobileMenuItemClick}
                     >
-                      <LocaleLink className="w-full" size="lg"
-                        href={option.link}>{option.name}</LocaleLink>
+                      <LocaleLink
+                        className="w-full"
+                        size="lg"
+                        href={option.link}
+                      >
+                        {option.name}
+                      </LocaleLink>
                     </DropdownItem>
                   ))}
                 </DropdownMenu>
