@@ -1,5 +1,5 @@
 "use client";
-
+import { useTranslations } from "next-intl";
 import React, { useState, useEffect } from "react";
 
 function BonusCalculator() {
@@ -29,7 +29,7 @@ function BonusCalculator() {
   //     setBonus("");
   //   }
   // }, [profitAmount, numberOfLots]);
-
+  const t = useTranslations('bonus.calculator');
   const [profitAmount, setProfitAmount] = useState("");
   const [bonus, setBonus] = useState("");
   const [numberOfLots, setNumberOfLots] = useState("");
@@ -92,32 +92,31 @@ function BonusCalculator() {
       <div className="flex flex-col gap-8 lg:gap-0 container bg-[#e4e5e6] lg:flex-row py-8">
         <div className="flex flex-col justify-center flex-1 space-y-12">
           <h1 className="text-3xl lg:text-5xl text-center text-[#232323]">
-            Calculate your
-            <br /> <strong>Deposit Bonus</strong>
+            {t("title1_1")}
+            <br /> <strong>{t("title1_2")}</strong>
           </h1>
           <h2 className="text-center text-2xl lg:text-3xl text-[#232323]">
-            use the form on the right to see how <br /> much bonus you could
-            earn
+            {t("para1_1")}
           </h2>
           <h2 className="text-center text-2xl lg:text-3xl text-[#232323]">
-            Enter your{" "}
+           {t("para2_1")}{" "}
             <strong>
-              Deposit amount,
+            {t("para2_2")}
               <br />{" "}
             </strong>
-            and watch the <br />
-            numbers add up.
+            {t("para2_3")} <br />
+            {t("para2_4")}
           </h2>
         </div>
         <div className="flex flex-col flex-1 gap-12 justify-between bg-[#3f3f3e] py-12 rounded-3xl">
-          <h1 className="text-center text-3xl text-[#FFF]">Bonus Calculator</h1>
+          <h1 className="text-center text-3xl text-[#FFF]">{t("deposit_amount:")}</h1>
           <div>
             <label className="w-[70%] mx-auto block px-5 text-[#FFF]">
-              Deposit amount:
+             {t("deposit_amount")}
             </label>
             <input
               className="appearance-none outline-none focus:outline-1 focus:outline-primary px-5 py-3 rounded-2xl w-[70%] mx-auto block text-[#3f3f3e] text-xl border-none"
-              placeholder="Enter Deposit Amount"
+              placeholder={t("enter_deposit_amount")}
               type="text"
               value={profitAmount}
               onChange={handleProfitAmountChange}
@@ -125,11 +124,11 @@ function BonusCalculator() {
           </div>
           <div>
             <label className="w-[70%] mx-auto block px-5 text-[#FFF]">
-              No. of Lots required
+             {t("no_of_lots")}
             </label>
             <input
               className="appearance-none outline-none focus:outline-1 focus:outline-primary px-5 py-3 rounded-2xl w-[70%] mx-auto block text-[#3f3f3e] text-xl"
-              placeholder=" No. of Lots required"
+              placeholder={t("no_of_lots")}
               type="text"
               value={numberOfLots}
               // onChange={handleNumberOfLotsChange}
@@ -137,12 +136,12 @@ function BonusCalculator() {
           </div>
           <div>
             <label className="w-[70%] mx-auto block px-5 text-[#FFF]">
-              Bonus amount
+             {t("bonus_amount")}
             </label>
             <input
               onChange={handleBonusChange}
               className="appearance-none outline-none focus:outline-1 focus:outline-primary px-5 py-3 rounded-2xl w-[70%] mx-auto block text-[#3f3f3e] text-xl"
-              placeholder="Bonus"
+              placeholder={t("bonus")}
               value={bonus === 0 ? "" : bonus}
               type="text"
             />

@@ -36,7 +36,7 @@ export default function Home() {
     // Set a timer to close the modal after 10 seconds
     const timer = setTimeout(() => {
       onClose();
-    }, 10000);
+    }, 1000000);
 
     // Clean up the timer when the component unmounts
     return () => clearTimeout(timer);
@@ -86,6 +86,9 @@ export default function Home() {
       {/* <GetStarted /> */}
       <OurRecognition />
       <Modal
+        classNames={{
+          closeButton:'z-50'
+        }}
         className="overflow-auto"
         isOpen={isOpen}
         onOpenChange={onOpenChange}

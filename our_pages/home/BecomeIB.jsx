@@ -19,22 +19,7 @@ const BecomeIB = () => {
       id: 1,
       title: t("become_ib_li1"),
       href: "#",
-    },
-    // {
-    //   id: 2,
-    //   title: t("become_ib_li2"),
-    //   href: "#",
-    // },
-    // {
-    //   id: 3,
-    //   title: t("become_ib_li3"),
-    //   href: "#",
-    // },
-    // {
-    //   id: 4,
-    //   title: t("become_ib_li4"),
-    //   href: "#",
-    // },
+    }
   ];
   return (
     <section
@@ -52,15 +37,6 @@ const BecomeIB = () => {
             {t("become_ib_desc_1")}
           </p>
           <div className="flex justify-start gap-2">
-            {/* {buttons.map((btn) => (
-              <Link
-                key={btn.id}
-                href={btn.href}
-                className="bg-secondary text-white w-[150px] text-center rounded-lg px-2 py-2 shadow-xl border border-transparent hover:text-primary hover:border hover:border-primary transition-colors duration-300 "
-              >
-                {btn.title}
-              </Link>
-            ))} */}
           </div>
           <p className="text-secondary text-md">{t("become_ib_desc_2")}</p>
           <div className="mt-[2rem]">

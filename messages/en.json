@@ -102,19 +102,24 @@
     },
     "rewards": {
       "rewards_title": "Promotions and Offers",
-      "rewards_gift_title_1": "$30",
-      "rewards_gift_title_2": "Welcome",
-      "rewards_gift_title_3": "Gift",
-      "rewards_gift_desc_1": "Start with a $30 gift when",
-      "rewards_gift_desc_2": "you verify your account.",
-      "rewards_gift_btn": "Claim your Gift",
-      "rewards_trade_win_title_1": "Trade to",
-      "rewards_trade_win_title_2": "Win",
-      "rewards_trade_win_desc_1": "Enter our competition and",
-      "rewards_trade_win_desc_2": "compete for amazing prizes",
-      "rewards_trade_win_desc_3": "based on your trading",
-      "rewards_trade_win_desc_4": "performance",
-      "rewards_trade_win_btn": "Join Now"
+      "trade_now":"Trade Now",
+      "expired_promotion":"This promotion has ended. Stay Tuned for more exciting promotions",
+      "20_deposit_bonus":{
+        "title1_1":"Unlock a 20% Deposit Bonus",
+        "title1_2":"Get Up to $25,000"
+      },
+      "lower_deposits":{
+        "title1_1":"Greater Gains,",
+        "title1_2":"Lower Deposits"
+      },
+      "trade_to_win":{
+        "title1_1":"Trade to win",
+        "title1_2":"Enter our competetion and compete for Amazing Prizes"
+      },
+      "30_welcome_git":{
+        "title1_1":"$30 Welcome Gift",
+        "title1_2":"Start with a $30 gift when you verify your account"
+      }
     },
     "customerCare": {
       "customer_care_title": "Always Here for You",
@@ -1038,6 +1043,21 @@
       "condition1": "I have read and agree to the ",
       "condition2": "terms and conditions",
       "form_btn": "Claim Now"
+    },
+    "calculator":{
+      "title1_1":"Calculate your",
+      "title1_2":"Deposit Bonus",
+      "para1_1":"use the form on the right to see how much bonus you could earn",
+      "para2_1":"Enter your",
+      "para2_2":"Deposit amount,",
+      "para2_3":"and watch the",
+      "para2_4":"numbers add up.",
+      "deposit_amount:":"Deposit amount:",
+      "deposit_amount":"Deposit amount",
+      "enter_deposit_amount":"Enter Deposit Amount",
+      "no_of_lots":" No. of Lots required",
+      "bonus_amount":"Bonus amount",
+      "bonus":"Bonus"
     },
     "faq": {
       "question_1": "How do I qualify for the 20% Deposit Bonus?",

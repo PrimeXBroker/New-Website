@@ -100,20 +100,25 @@
       "become_ib_btn": "كن شريكًا الآن"
     },
     "rewards": {
-      "rewards_title": "عروض ومكافآت محمسة",
-      "rewards_gift_title_1": "30",
-      "rewards_gift_title_2": "Welcome",
-      "rewards_gift_title_3": "Gift",
-      "rewards_gift_desc_1": "Start with a $30 gift when",
-      "rewards_gift_desc_2": "you verify your account.",
-      "rewards_gift_btn": "Claim your Gift",
-      "rewards_trade_win_title_1": "Trade to",
-      "rewards_trade_win_title_2": "Win",
-      "rewards_trade_win_desc_1": "Enter our competition and",
-      "rewards_trade_win_desc_2": "compete for amazing prizes",
-      "rewards_trade_win_desc_3": "based on your trading",
-      "rewards_trade_win_desc_4": "performance",
-      "rewards_trade_win_btn": "Join Now"
+      "rewards_title": "Promotions and Offers",
+      "trade_now": "تداول الآن",
+    "expired_promotion": "انتهى هذا العرض. تابعنا لمزيد من العروض المثيرة",
+    "20_deposit_bonus": {
+      "title1_1": "افتح مكافأة إيداع بنسبة 20%",
+      "title1_2": "احصل على ما يصل إلى 25,000 دولار"
+    },
+    "lower_deposits": {
+      "title1_1": "مكاسب أكبر،",
+      "title1_2": "إيداعات أقل"
+    },
+    "trade_to_win": {
+      "title1_1": "تداول للفوز",
+      "title1_2": "ادخل في مسابقاتنا وتنافس على جوائز رائعة"
+    },
+    "30_welcome_gift": {
+      "title1_1": "هدية ترحيب بقيمة 30 دولار",
+      "title1_2": "ابدأ بهدية بقيمة 30 دولار عند التحقق من حسابك"
+    }
     },
     "customerCare": {
       "customer_care_title": "- دائمًا هنا من أجلك",
@@ -1043,6 +1048,21 @@
       "condition2": " الشروط و الأحكام ",
       "form_btn": "احصل عليهاالآن"
     },
+    "calculator": {
+    "title1_1": "احسب",
+    "title1_2": "مكافأة الإيداع الخاصة بك",
+    "para1_1": "استخدم النموذج على اليمين لمعرفة مقدار المكافأة التي يمكنك كسبها",
+    "para2_1": "أدخل",
+    "para2_2": "مبلغ الإيداع،",
+    "para2_3": "وشاهد",
+    "para2_4": "الأرقام تتزايد.",
+    "deposit_amount:": "مبلغ الإيداع:",
+    "deposit_amount": "مبلغ الإيداع",
+    "enter_deposit_amount": "أدخل مبلغ الإيداع",
+    "no_of_lots": "عدد العقود المطلوبة",
+    "bonus_amount": "مبلغ المكافأة",
+    "bonus": "مكافأة"
+  },
     "faq": {
       "question_1": "كيف يمكنني التأهل للحصول على بونص الإيداع بنسبة 20%؟",
       "answer_1": "للتأهل للحصول على بونص الإيداع بنسبة 20%، يجب أن يكون لديك حساب برايم اكس ستاندرد بلس وأن تقوم بإيداع حد أدنى قدره 500 دولار. يمكن المطالبة بالبونص عدة مرات، ولكن تذكر أن إجمالي الحد الأقصى للبونص التي يمكنك الحصول عليها يبلغ 25000 دولار.",
