@@ -60,7 +60,7 @@ const CompanyStats = ({ stats }) => {
   };
 
   return (
-    <section className="stat-counter absolute right-0 left-0 top-[15rem] md:top-auto md:bottom-5">
+    <section className="stat-counter absolute right-0 left-0 top-[19.5rem] md:top-auto md:bottom-5">
       <div className="py-8 md:py-12 container max-w-[1440px]">
         <div className="grid md:grid-cols-4 grid-cols-2 gap-2">
           {stats.map((stat, index) => {
