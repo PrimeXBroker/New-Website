@@ -521,7 +521,7 @@
       "feature_5_desc1": "Users can tailor the platform’s layout to suit their trading style, with detachable charts and customizable toolbars.",
       "feature_5_subTitle2": "Economic Calendar",
       "feature_5_desc2": "Integrated economic calendar provides real-time updates on economic events, helping traders make informed decisions based on market news.",
-      "feature_6_tab_title": "Advanced Trading Signals:",
+      "feature_6_tab_title": "Advanced Trading Signals",
       "feature_6_subTitle1": "Copy Trading",
       "feature_6_desc1": "MT5 allows traders to subscribe to trading signals from successful traders and automatically copy their trades.",
       "feature_6_subTitle2": "Signal Marketplace",
@@ -1156,7 +1156,5 @@
       "title": "We Accept:"
     }
   },
-  "successStories": {
-    
-  }
+  "successStories": {}
 }
