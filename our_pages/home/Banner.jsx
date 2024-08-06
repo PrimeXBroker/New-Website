@@ -90,7 +90,7 @@ const Banner = () => {
       <div
         className="md:hidden absolute inset-0 w-full h-full bg-cover bg-center bg-opacity-20 py-16"
         style={{
-          backgroundImage: "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/mobile_bg.png')",
+          backgroundImage: "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg.webp')",
         }}
       ></div>
       <div className="container relative z-10 md:hidden pt-[2rem]">
