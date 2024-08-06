@@ -69,7 +69,6 @@ export default function Home() {
   return (
     <>
       <Banner />
-      <CompanyStats stats={statsOne} />
       <TradingOpportunities />
       <AccountTypes1 />
       <AdvancedPlatforms />
