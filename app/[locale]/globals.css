@@ -619,3 +619,12 @@ background: linear-gradient(to right, #FFD000, #FF8C00, #FFD000);
     animation: randomMovement 10s infinite linear;
     animation-fill-mode: both;
 }
+
+/* .academy-forms .tabs_custom div{
+  color: white !important;
+}
+
+
+.academy-forms div div button :active {
+  color: #000  !important;
+} */

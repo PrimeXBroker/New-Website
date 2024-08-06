@@ -4,7 +4,7 @@ import React from "react";
 import { useTranslations, useLocale } from "next-intl";
 import local from "@next/font/local";
 
-const Banner = () => {
+const Banner = ({setActive}) => {
   const locale = useLocale();
   const h = useTranslations("academy.hero");
   const f = useTranslations("academy.unlimitedFeatures");
@@ -39,6 +39,7 @@ const Banner = () => {
             </p>
             <Link
               href="#academy-form"
+              onClick={()=>setActive("Webinars")}
               className="bg-primary text-center px-4 py-4 rounded-full w-[200px] shadow-xl block md:m-0 mx-auto"
             >
               {h("join_btn")}
