@@ -13,7 +13,7 @@ import FormWrapper from "@/our_pages/education/academy/FromWarapper"
 
 const Academy = () => {
   const t = useTranslations("academy.featured");
-  const [ active, setActive ] = useState("Instructor")
+  const [ active, setActive ] = useState("Webinars")
   const cardsData = [
     {
       title: t("card_1_title"),
