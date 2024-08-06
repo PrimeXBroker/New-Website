@@ -215,7 +215,9 @@ const Footer = () => {
       </section>
       <footer className="bg-secondary">
         <div className="container flex flex-col pt-8">
-          <h6 className="text-center pb-4 text-[#fff] text-xl" >Mutiple Payment Options</h6>
+          <h6 className="text-center pb-4 text-[#fff] text-xl">
+            Mutiple Payment Options
+          </h6>
           <div className="flex flex-row justify-center lg:gap-0 gap-5 lg:justify-around items-center border-b border-b-gray-500 pb-12 flex-wrap">
             {/* <p className="text-white text-sm font-[200]">{t("logos.title")}</p> */}
             {paymentOptions.map((el) => (
@@ -403,7 +405,7 @@ const Footer = () => {
           </div>
         </CustomModal>
         <p className="bg-accent text-secondary text-sm py-3 text-center font-semibold drop-shadow-sm">
-          &copy; 2022 - 2024 Primex Broker (PTY) LTD all rights reserved.{" "}
+          &copy; {t("rights.description")}
         </p>
       </footer>
     </>
