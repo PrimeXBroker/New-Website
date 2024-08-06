@@ -9,11 +9,10 @@ import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
 import "swiper/css/effect-creative";
 import "swiper/css/effect-coverflow";
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import { EffectCoverflow, Pagination, Navigation,Autoplay } from "swiper/modules";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
-import { useEffect,useState } from "react";
-import Aos from "aos";
+import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 
@@ -27,7 +26,6 @@ const Rewards = () => {
   const language = useLocale();
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.activeIndex);
-    console.log(activeIndex);
   };
   const campaignList = [
     {
@@ -71,16 +69,10 @@ const Rewards = () => {
       isExpired: true,
     },
   ];
-  useEffect(() => {
-    Aos.init({ disable: "mobile" });
-  }, []);
   return (
     <section className="py-12 home_swiper">
       <h1
         className="sectionHeading mt-8"
-        data-aos-easing="ease-out"
-        data-aos-duration={1100}
-        data-aos="slide-up"
       >
         {t("rewards_title")}
       </h1>
@@ -89,22 +81,26 @@ const Rewards = () => {
           centeredSlides={true}
           onSlideChange={handleSlideChange}
           effect={"coverflow"}
-          grabCursor={false}
+          grabCursor={true}
           slidesPerView={"auto"}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 2,
-            slideShadows: true,
-          }}
+          // coverflowEffect={{
+          //   rotate: 0,
+          //   stretch: 0,
+          //   depth: 100,
+          //   modifier: 2,
+          //   slideShadows: true,
+          // }}
           loop={true}
           pagination={false}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           }}
-          modules={[EffectCoverflow, Pagination, Navigation]}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          modules={[EffectCoverflow, Pagination, Navigation,Autoplay]}
           className="rewards_swiper"
           >
           {campaignList.map((card, index) => (
@@ -129,9 +125,9 @@ const Rewards = () => {
                 <div className="text-center mt-5">
                   {card.isExpired == false ? (
                     <Button
+                    hidden={index !== activeIndex}
                     as={Link}
                     href="https://client.primexbroker.com/en/register"
-                    disabled={index != activeIndex} 
                     className={`bg-secondary absolute right-0 left-0 bottom-[-15px] 
                     text-primary font-semibold w-[200px] rounded-full shadow-md text-center 
                     mx-auto hover:bg-primary hover:text-secondary hover:border-2 hover:border-secondary`}>

@@ -57,7 +57,7 @@ const WebinarLibrary = () => {
     setHoveredIndex(null);
   };
   return (
-    <section className="py-8 container">
+    <section className="py-8 container webinar_slider">
       <h1 className="text-xl md:text-3xl text-secondary text-center font-semibold pb-4">
         {t("title")}
       </h1>
@@ -66,7 +66,6 @@ const WebinarLibrary = () => {
       </p>
       <div className="mt-12">
         <Swiper
-          className="webinar_slider"
           breakpoints={{
             200: {
               slidesPerView: 1,
@@ -77,7 +76,7 @@ const WebinarLibrary = () => {
               spaceBetween: 0,
             },
             400: {
-              slidesPerView: 2,
+              slidesPerView: 1,
               spaceBetween: 10,
             },
             640: {
@@ -85,7 +84,7 @@ const WebinarLibrary = () => {
               spaceBetween: 10,
             },
             768: {
-              slidesPerView: 3,
+              slidesPerView: 2,
               spaceBetween: 10,
             },
             1024: {
@@ -97,12 +96,12 @@ const WebinarLibrary = () => {
               spaceBetween: 10,
             },
           }}
+          centeredSlides={true}
           autoplay={{
             delay: 1500,
             disableOnInteraction: false,
           }}
           spaceBetween={20}
-          slidesPerView={3}
           loop
           pagination={{
             clickable: true,
@@ -111,15 +110,15 @@ const WebinarLibrary = () => {
         >
           {webinarCards.map((card, index) => (
             <SwiperSlide
-              className="text-center flex mx-auto justify-center items-center"
+              className="text-center w-[250px] flex mx-auto justify-center items-center"
               key={index}
             >
               <div
                 onMouseEnter={() => handleIconEnter(index)}
                 onMouseLeave={handleIconLeave}
                 key={index}
-                className="mt-4 flex flex-col justify-center items-center bg-accent cursor-pointer rounded-2xl border-b-5 w-[200px] md:w-[250px] h-[250px] group
-                 hover:bg-[#3F3F3E] border-black hover:border-primary transform translate-y-[0] hover:translate-y-[-1rem] transition-transform duration-500"
+                className="mt-4 flex flex-col justify-center items-center bg-accent cursor-pointer rounded-2xl border-b-5 w-[250px] md:w-[270px] h-[250px] group
+                 hover:bg-[#3F3F3E] border-black hover:border-primary text-center mx-auto transform translate-y-[0] hover:translate-y-[-1rem] transition-transform duration-500"
               >
                 <div className="mb-4">
                   <Image

@@ -19,7 +19,6 @@ import { useTranslations, useLocale } from "next-intl";
 
 const Footer = () => {
   const language = useLocale();
-  console.log(language);
   const t = useTranslations("footer");
   const locale = useLocale();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -247,7 +246,6 @@ const Footer = () => {
                       locale === "ar" ? "text-right" : "text-left"
                     }`}
                   >
-                    {console.log(el.column.heading, "el.column.heading")}
                     {el.column.links.map((link, linkIndex) => {
                       return (
                         <li

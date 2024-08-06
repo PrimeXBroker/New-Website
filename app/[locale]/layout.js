@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import localFont from "@next/font/local";
 import Cookies from "@/components/Cookies";
-import "aos/dist/aos.css";
+// import "aos/dist/aos.css";
 import { Suspense } from "react";
 import { Toaster } from "react-hot-toast";
 import Script from "next/script";
@@ -66,11 +66,11 @@ export default async function layout({ children, params: { locale } }) {
               <NextIntlClientProvider messages={messages}>
                 <Header locale={locale} />
                 {children}
-                <Toaster
+                {/* <Toaster
                   toastOptions={{
                     duration: 5000,
                   }}
-                />
+                /> */}
                 <FacebookPixelEvents />
                 <Footer />
                 <Cookies />

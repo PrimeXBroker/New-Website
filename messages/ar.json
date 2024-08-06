@@ -39,9 +39,10 @@
       "fact_no2": "120000",
       "fact_desc2": "وسيط معرف",
       "fact_no3": "وسيط معرف",
-      "fact_desc3": " مليون + رأس المال المدفوع ",
-      "fact_no4": "مليار",
-      "fact_desc4": "+ مليار صفقات يومية"
+      "fact_desc3": " رأس المال المدفوع ",
+      "fact_no4": " مليار دولار ",
+      "fact_million": "  مليون دولار ",
+      "fact_desc4": "صفقات يومية"
     },
     "stats": {
       "value_1": "250000",
@@ -52,8 +53,10 @@
       "desc_3": "رأس المال المدفوع",
       "suffix_3": "مليون دولار+",
       "value_4": "7",
+      "fact_million": " Million+",
+      "fact_no4": " Billion+",
       "desc_4": "التداولات اليومية",
-      "suffix_4": "مليار دولار+"
+      "suffix_4": "مليار دولار"
     },
     "tradingOpportunities": {
       "trading_opportunities_title": "استكشف أكثر من 500 فرصة للتداول",
