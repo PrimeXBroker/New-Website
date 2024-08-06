@@ -10,10 +10,11 @@ import "swiper/css/effect-fade";
 import "swiper/css/effect-creative";
 import "swiper/css/effect-coverflow";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { useEffect,useState } from "react";
 import Aos from "aos";
 import { useLocale, useTranslations } from "next-intl";
-import LocaleLink from "@/components/LocaleLink";
 import Link from "next/link";
 
 
@@ -83,12 +84,12 @@ const Rewards = () => {
       >
         {t("rewards_title")}
       </h1>
-      <div className="container">
+      <div className="container relative">
         <Swiper
+          centeredSlides={true}
           onSlideChange={handleSlideChange}
           effect={"coverflow"}
           grabCursor={false}
-          centeredSlides={true}
           slidesPerView={"auto"}
           coverflowEffect={{
             rotate: 0,
@@ -104,8 +105,8 @@ const Rewards = () => {
             prevEl: ".swiper-button-prev",
           }}
           modules={[EffectCoverflow, Pagination, Navigation]}
-          className="mySwiper"
-        >
+          className="rewards_swiper"
+          >
           {campaignList.map((card, index) => (
             <SwiperSlide className="rounded-xl">
               <div
@@ -147,6 +148,18 @@ const Rewards = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className="">
+              <div className="absolute bottom-[50%] right-[5%]">
+                <div className="flex justify-center items-center text-lg rounded-full text-white cursor-pointer z-10 -mt-6 h-11 w-11 bg-secondary swiper-button-next">
+                  <FaArrowRight color="#FFD000" className="items-center justify-center text-white hidden" />
+                </div>
+              </div>
+              <div className="absolute bottom-[50%] left-[5%]">
+                <div className="flex justify-center items-center text-lg rounded-full text-white cursor-pointer z-10 -mt-6 h-11 w-11 bg-secondary swiper-button-prev">
+                  <FaArrowLeft className="hidden items-center justify-center text-white" />
+                </div>
+              </div>
+        </div>
       </div>
     </section>
   );

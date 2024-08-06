@@ -209,6 +209,15 @@
   filter: blur(0px);
 }
 
+.home_swiper .swiper-button-next{
+  color: #FFD000;
+  background: transparent;
+}
+.home_swiper .swiper-button-prev{
+  color: #FFD000;
+  background: transparent;
+}
+
 /*End of home_swiper*/
 
 .account-swiper-carousel .swiper {
@@ -616,6 +625,9 @@
 .animated_image {
   animation: randomMovement 10s infinite linear;
   animation-fill-mode: both;
+}
+.banner_swiper .swiper-pagination .swiper-pagination-bullet-active{
+  background: white !important;
 }
 
 .feature-content {
