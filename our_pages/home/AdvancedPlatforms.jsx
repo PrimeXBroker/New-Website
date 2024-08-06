@@ -57,25 +57,25 @@ const AdvancedPlatforms = () => {
 
   const iconsLeftList = [
     {
-      text: "Advanced Analytical Tools",
+      text: t("li1"),
       id: 1,
       iconUrl: "/images/home/advanced_tools_white.svg",
       iconUrlHover: "/images/home/advanced_tools_white.svg",
     },
     {
-      text: "Community and Support",
+      text: t("li5"),
       id: 2,
       iconUrl: "/images/home/community_white.svg",
       iconUrlHover: "/images/home/community_white.svg",
     },
     {
-      text: "Superior Charting Capabilities",
+      text: t("li8"),
       id: 3,
       iconUrl: "/images/home/superior_white.svg",
       iconUrlHover: "/images/home/superior_white.svg",
     },
     {
-      text: "Advanced Trading Signals",
+      text: t("li6"),
       id: 4,
       iconUrl: "/images/home/advanced_signals_white.svg",
       iconUrlHover: "/images/home/advanced_signals_white.svg",
@@ -84,25 +84,25 @@ const AdvancedPlatforms = () => {
 
   const iconsRightList = [
     {
-      text: "Multi Asset Platform",
+      text: t("li2"),
       id: 1,
       iconUrl: "/images/home/multi_asset_white.svg",
       iconUrlHover: "/images/home/multi_asset_white.svg",
     },
     {
-      text: "Automated Trading",
+      text: t("li3"),
       id: 2,
       iconUrl: "/images/home/automated_white.svg",
       iconUrlHover: "/images/home/automated_white.svg",
     },
     {
-      text: "Improved Order Execution",
+      text: t("li4"),
       id: 3,
       iconUrl: "/images/home/improved_white.svg",
       iconUrlHover: "/images/home/improved_white.svg",
     },
     {
-      text: "Built In Economic Calendar",
+      text: t("li7"),
       id: 4,
       iconUrl: "/images/home/built_in_white.svg",
       iconUrlHover: "/images/home/built_in_white.svg",
@@ -275,7 +275,7 @@ const AdvancedPlatforms = () => {
         href="/mt5-platform"
         className="bg-primary rounded-full px-6 py-4 w-[160px] mx-auto block my-12 h-auto font-semibold text-center transition-all duration-250 hover:scale-110"
       >
-        Learn More
+        {t("btnTxt")}
       </Button>
     </section>
   );
