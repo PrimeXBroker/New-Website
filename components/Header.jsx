@@ -116,6 +116,7 @@ const Header = ({ locale }) => {
       isBordered
       className="navbar bg-white"
       isMenuOpen={isMenuOpen}
+      position="sticky"
     >
       <NavbarContent>
         <NavbarMenuToggle
