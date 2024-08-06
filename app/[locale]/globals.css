@@ -380,7 +380,6 @@
   display: none;
 }
 
-
 .cardBox {
   width: 300px;
   height: 400px;
@@ -392,11 +391,11 @@
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px,
     rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
 
- @media screen and (max-width:678px)  {
-  width: 230px;
-  height: 300px;
-  font-size: 16px;
- }   
+  @media screen and (max-width: 678px) {
+    width: 230px;
+    height: 300px;
+    font-size: 16px;
+  }
 }
 .card {
   position: absolute;
@@ -428,7 +427,6 @@
   opacity: 1;
 }
 
-
 .card .content h3 {
   font-size: 3rem;
   padding-bottom: 10px;
@@ -436,7 +434,7 @@
 .card .content p {
   font-size: 1rem;
   line-height: 25px;
-  @media screen and (max-width:'678px') {
+  @media screen and (max-width: "678px") {
     font-size: 14px !important;
   }
 }
@@ -451,7 +449,7 @@
   opacity: 1;
 }
 
-.card:hover h2, 
+.card:hover h2,
 .card:hover span {
   opacity: 0;
 }
@@ -461,9 +459,9 @@
   position: absolute;
   width: 40%;
   height: 150%;
-  background: #40E0D0;
-background: -webkit-linear-gradient(to right, #FFD000, #FF8C00, #40E0D0);
-background: linear-gradient(to right, #FFD000, #FF8C00, #FFD000);
+  background: #40e0d0;
+  background: -webkit-linear-gradient(to right, #ffd000, #ff8c00, #40e0d0);
+  background: linear-gradient(to right, #ffd000, #ff8c00, #ffd000);
   animation: glowing01 5s linear infinite;
   transform-origin: center;
   animation: glowing 5s linear infinite;
@@ -484,7 +482,7 @@ background: linear-gradient(to right, #FFD000, #FF8C00, #FFD000);
   left: 0;
   width: 100%;
   height: 100%;
-  background: #3F3F3E;
+  background: #3f3f3e;
 }
 
 .cards_container .custom_card .icon .custom_image {
@@ -504,7 +502,7 @@ background: linear-gradient(to right, #FFD000, #FF8C00, #FFD000);
   font-size: 22px;
   width: 100%;
   text-align: center;
-  color: #FFD000;
+  color: #ffd000;
   font-weight: 700;
   padding-bottom: 20px;
 }
@@ -517,7 +515,7 @@ background: linear-gradient(to right, #FFD000, #FF8C00, #FFD000);
   font-size: 22px;
   width: 100%;
   text-align: center;
-  color: #FFD000;
+  color: #ffd000;
   font-weight: 700;
   padding-bottom: 20px;
 }
@@ -541,12 +539,12 @@ background: linear-gradient(to right, #FFD000, #FF8C00, #FFD000);
   justify-content: center;
   align-items: center;
   z-index: 1;
-  transition: .7s;
+  transition: 0.7s;
   transform: translateY(100px);
   border-radius: 20px;
 }
 
-.cards_container .custom_card:hover .slide.slide1{
+.cards_container .custom_card:hover .slide.slide1 {
   transform: translateY(0px);
 }
 
@@ -557,16 +555,16 @@ background: linear-gradient(to right, #FFD000, #FF8C00, #FFD000);
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  transition: .8s;
+  transition: 0.8s;
   transform: translateY(-100px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.cards_container .custom_card:hover .slide.slide2{
+.cards_container .custom_card:hover .slide.slide2 {
   transform: translateY(0);
 }
 
-.cards_container .custom_card .slide.slide2::after{
+.cards_container .custom_card .slide.slide2::after {
   content: "";
   position: absolute;
   width: 30px;
@@ -574,14 +572,14 @@ background: linear-gradient(to right, #FFD000, #FF8C00, #FFD000);
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-  background: #3F3F3E;
+  background: #3f3f3e;
 }
 
 .cards_container .custom_card .slide.slide2 .content p {
   margin: 0;
   padding: 0;
   text-align: center;
-  color: #3F3F3E;
+  color: #3f3f3e;
   font-size: 24px;
 }
 
@@ -590,8 +588,8 @@ background: linear-gradient(to right, #FFD000, #FF8C00, #FFD000);
   padding: 0;
   font-size: 16px;
   text-align: center;
-  color: #3F3F3E;
-} 
+  color: #3f3f3e;
+}
 @keyframes upAndDown {
   0% {
     transform: translateY(0);
@@ -624,10 +622,25 @@ background: linear-gradient(to right, #FFD000, #FF8C00, #FFD000);
     transform: translate(-15px, 15px);
   }
 }
-.animated_image{
-    animation: randomMovement 10s infinite linear;
-    animation-fill-mode: both;
+.animated_image {
+  animation: randomMovement 10s infinite linear;
+  animation-fill-mode: both;
 }
 .banner_swiper .swiper-pagination .swiper-pagination-bullet-active{
   background: white !important;
+}
+
+.feature-content {
+  animation: fadeDown 0.8s ease-in-out;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
