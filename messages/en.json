@@ -1045,7 +1045,7 @@
       "name": "Name",
       "profit_number": "Deposit Amount",
       "email": "Email",
-      "account_number": "Account ID",
+      "account_number": "Account Number",
       "condition1": "I have read and agree to the ",
       "condition2": "terms and conditions",
       "form_btn": "Claim Now"
