@@ -112,10 +112,11 @@ const Header = ({ locale }) => {
   return (
     <Navbar
       maxWidth="xl"
-      // onMenuOpenChange={setIsMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
       isBordered
-      className=" bg-white"
-      // isMenuOpen={isMenuOpen}
+      className="navbar bg-white"
+      isMenuOpen={isMenuOpen}
+      position="sticky"
     >
       <NavbarContent>
         <NavbarMenuToggle
