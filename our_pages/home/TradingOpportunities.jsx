@@ -30,7 +30,9 @@ const TradingOpportunities = () => {
         {t("trading_opportunities_desc")}
       </p>
       <div className="text-center mt-8">
-        <Tabs radius="full" color="primary" className="tabs_custom">
+        <Tabs classNames={{
+          panel:'p-0',
+        }} radius="full" color="primary" className="tabs_custom">
           <Tab title={t("trading_opportunities_tab1")}>
             <div className="pt-8 text-xl">
               <Forex />

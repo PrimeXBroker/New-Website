@@ -10,16 +10,25 @@ import "swiper/css/effect-fade";
 import "swiper/css/effect-creative";
 import "swiper/css/effect-coverflow";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
-import { useEffect } from "react";
+import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
+import { useEffect,useState } from "react";
 import Aos from "aos";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
-import LocaleLink from "@/components/LocaleLink";
+
+
 
 
 
 const Rewards = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
   const t = useTranslations("home.rewards");
+  const language = useLocale();
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.activeIndex);
+    console.log(activeIndex);
+  };
   const campaignList = [
     {
       id: 1,
@@ -75,11 +84,12 @@ const Rewards = () => {
       >
         {t("rewards_title")}
       </h1>
-      <div className="container">
+      <div className="container relative">
         <Swiper
+          centeredSlides={true}
+          onSlideChange={handleSlideChange}
           effect={"coverflow"}
           grabCursor={false}
-          centeredSlides={true}
           slidesPerView={"auto"}
           coverflowEffect={{
             rotate: 0,
@@ -95,8 +105,8 @@ const Rewards = () => {
             prevEl: ".swiper-button-prev",
           }}
           modules={[EffectCoverflow, Pagination, Navigation]}
-          className="mySwiper"
-        >
+          className="rewards_swiper"
+          >
           {campaignList.map((card, index) => (
             <SwiperSlide className="rounded-xl">
               <div
@@ -111,15 +121,22 @@ const Rewards = () => {
                 </h2>
                 <Image
                   className="block mx-auto"
-                  src={card.imgUrlEn}
+                  src={language === "ar"?card.imgUrlAr:card.imgUrlEn}
                   width={card.id === 3 ? "250" : card.id === 4 ? "200" : "350"}
                   height="200"
                   alt={card.title1}
                 />
                 <div className="text-center mt-5">
                   {card.isExpired == false ? (
-                    <Button className="bg-secondary absolute right-0 left-0 bottom-[-15px] text-primary font-semibold w-[200px] rounded-full shadow-md text-center mx-auto hover:bg-primary hover:text-secondary hover:border-2 hover:border-secondary">
+                    <Button
+                    as={Link}
+                    href="https://client.primexbroker.com/en/register"
+                    disabled={index != activeIndex} 
+                    className={`bg-secondary absolute right-0 left-0 bottom-[-15px] 
+                    text-primary font-semibold w-[200px] rounded-full shadow-md text-center 
+                    mx-auto hover:bg-primary hover:text-secondary hover:border-2 hover:border-secondary`}>
                       {t("trade_now")}
+                    
                     </Button>
                   ) : (
                     <p className="text-sm text-center text-red-600">
@@ -131,6 +148,18 @@ const Rewards = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className="">
+              <div className="absolute bottom-[50%] right-[5%]">
+                <div className="flex justify-center items-center text-lg rounded-full text-white cursor-pointer z-10 -mt-6 h-11 w-11 bg-secondary swiper-button-next">
+                  <FaArrowRight color="#FFD000" className="items-center justify-center text-white hidden" />
+                </div>
+              </div>
+              <div className="absolute bottom-[50%] left-[5%]">
+                <div className="flex justify-center items-center text-lg rounded-full text-white cursor-pointer z-10 -mt-6 h-11 w-11 bg-secondary swiper-button-prev">
+                  <FaArrowLeft className="hidden items-center justify-center text-white" />
+                </div>
+              </div>
+        </div>
       </div>
     </section>
   );

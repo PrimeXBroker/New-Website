@@ -116,6 +116,7 @@ const Header = ({ locale }) => {
       isBordered
       className="navbar bg-white"
       isMenuOpen={isMenuOpen}
+      position="sticky"
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -428,7 +429,7 @@ const Header = ({ locale }) => {
                     ? `/${currentLocale}/${restOfPath}`
                     : `/ar/${restOfPath}`
                 }
-                onClick={() => handleClick("العربية")}
+                onClick={() => handleClick("عربي")}
               >
                 <div>
                   {/* <Image

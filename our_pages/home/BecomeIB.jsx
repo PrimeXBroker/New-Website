@@ -23,14 +23,14 @@ const BecomeIB = () => {
   ];
   return (
     <section
-      className="bg-primary container gap-4 py-8 mt-14 shadow-lg"
+      className="relative container gap-4 py-8 mt-14 shadow-lg"
       data-aos-easing="ease-out"
       data-aos-duration={1000}
       data-aos="slide-up"
     >
-      <div className="container flex flex-col md:flex-row">
-        <div className="w-full md:w-[60%] flex flex-col md:items-start items-center justify-center py-9">
-          <h1 className="text-secondary md:text-left text-center text-xl md:text-[2rem] font-semibold w-fit">
+      <div className="container  flex flex-col md:flex-row">
+        <div className="w-full md:w-[60%] flex flex-col md:items-start items-center justify-center p-9 z-10">
+          <h1 className="text-secondary md:text-left text-center text-2xl md:text-[2.5rem] font-semibold w-fit">
             {t("become_ib_title_1")}
           </h1>
           <p className="text-secondary text-[14px] text-center md:text-left pt-4">
@@ -53,7 +53,7 @@ const BecomeIB = () => {
             </LocaleLink>
           </div>
         </div>
-        <div className="w-full md:w-[40%]">
+        {/* <div className="w-full md:w-[40%]">
           <Image
             src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/partners.webp"
             width="600"
@@ -61,8 +61,14 @@ const BecomeIB = () => {
             alt="become ib"
             className="mx-auto md:mx-0"
           />
-        </div>
+        </div> */}
       </div>
+      <div
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-opacity-100 py-16"
+        style={{
+          backgroundImage: "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/ib_home_bg.webp')",
+        }}
+      ></div>
     </section>
   );
 };

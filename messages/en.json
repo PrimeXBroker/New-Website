@@ -31,7 +31,7 @@
       "title2": "REGULATED",
       "desc2": "PrimeX Capital prioritizes global regulatory adherence, fostering trust and accountability across diverse international arenas.",
       "title3": "GLOBAL",
-      "desc3": "Servicing +500,000 clients globally, we offer diverse products, ensuring financial stability across +100 countries.",
+      "desc3": "Servicing 250,000+ clients globally, we offer diverse products, ensuring financial stability across +100 countries.",
       "liveAccount": "OPEN LIVE ACCOUNT",
       "partnerAccount": "BECOME A PARTNER",
       "fact_no1": "500,000",
@@ -84,14 +84,14 @@
       "li2": "Multi-Asset Platform",
       "li3": "Automated Trading",
       "li4": "Improved Order Execution",
-      "li5": "Enhanced User Interface and Experience",
+      "li5": "Community and Support",
       "li6": "Advanced Trading Signals",
       "li7": "Built-in Economic Calendar",
       "li8": "Superior Charting Capabilities",
       "btnTxt": "Learn More"
     },
     "becomeIB": {
-      "become_ib_title_1": "PrimeX Capital Partnership Program",
+      "become_ib_title_1": "Partnership Program",
       "become_ib_desc_1": "Transform your network into a Profitable venture by becoming a PrimeX Partner",
       "become_ib_desc_2": "Seize the opportunity For Financial Freedom.",
       "become_ib_li1": "Intorducing Broker Program",
@@ -1045,7 +1045,7 @@
       "name": "Name",
       "profit_number": "Deposit Amount",
       "email": "Email",
-      "account_number": "Account ID",
+      "account_number": "Account Number",
       "condition1": "I have read and agree to the ",
       "condition2": "terms and conditions",
       "form_btn": "Claim Now"
@@ -1199,7 +1199,9 @@
       "para_5": "Trading CFDs and FX Options entails risk and could result in the loss of your capital"
     },
     "logos": {
-      "title": "We Accept:"
-    }
+      "title": "We Accept:",
+      "payment_options":"Multiple Payment Options"
+    },
+    "copy-right":"2022 - 2024 PrimeX Broker (PTY) LTD all rights reserved."
   }
 }

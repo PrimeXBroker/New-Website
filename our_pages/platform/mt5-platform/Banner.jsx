@@ -9,10 +9,10 @@ const Banner = () => {
 
   return (
     <section className="bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/background.jpg')]  bg-cover bg-no-repeat">
-      <div className="container flex flex-col md:flex-row justify-center items-center py-12 lg:md:text-left text-center h-[80vh]">
+      <div className="container flex flex-col md:flex-row justify-around items-center py-12 lg:md:text-left text-center md:h-[80vh]">
         <div className="md:w-[40%]">
           <h1
-            className={`text-primary text-3xl font-semibold mb-5 ${
+            className={`text-primary text-3xl lg:text:4xl xl:text-5xl font-semibold mb-8 ${
               locale === "ar"
                 ? "text-center md:text-right"
                 : "text-center md:text-left"
@@ -22,7 +22,7 @@ const Banner = () => {
             {t("title")}
           </h1>
           <p
-            className={`text-white text-lg font-[500] ${
+            className={`text-white md:text-base lg:text-xl font-[500] ${
               locale === "ar"
                 ? "text-center md:text-right"
                 : "text-center md:text-left"
@@ -32,7 +32,7 @@ const Banner = () => {
             {t("desc_1")}
           </p>
           <p
-            className={`text-white text-lg font-[700] ${
+            className={`text-white md:text-base lg:text-xl font-[700] ${
               locale === "ar"
                 ? "text-center md:text-right"
                 : "text-center md:text-left"
@@ -42,7 +42,7 @@ const Banner = () => {
             {t("desc_2")}
           </p>
           <div
-            className={`pt-5 ${
+            className={`pt-10 ${
               locale === "ar"
                 ? "text-center md:text-right"
                 : "text-center md:text-left"
@@ -60,9 +60,10 @@ const Banner = () => {
         <div className="mt-8 md:mt-0">
           <Image
             src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/Banner.webp"
-            width="250"
+            width="350"
             height="300"
             alt="banner Image"
+            className="md:w-[300px] lg:w-[350px]"
           />
         </div>
       </div>

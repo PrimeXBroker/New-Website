@@ -60,7 +60,7 @@ const CompanyStats = ({ stats }) => {
   };
 
   return (
-    <section className="stat-counter absolute right-0 left-0 top-[19.5rem] md:top-auto md:bottom-5">
+    <section className="stat-counter absolute right-0 left-0 md:top-auto bottom-0">
       <div className="py-8 md:py-12 container max-w-[1440px]">
         <div className="grid md:grid-cols-4 grid-cols-2 gap-2">
           {stats.map((stat, index) => {
@@ -72,13 +72,13 @@ const CompanyStats = ({ stats }) => {
                 key={index}
                 className="flex flex-col md:flex-row items-center justify-center md:gap-1"
               >
-                <p className="text-primary leading-3 text-[0.75rem] md:text-lg xl:text-xl 3xl:text-[24px] m-0 p-0 text-center font-bold primary">
+                <p className="text-primary leading-6 text-[1.125rem] md:text-lg xl:text-xl 3xl:text-[24px] m-0 p-0 text-center font-bold primary">
                   {displayValue}
-                  <b className="text-primary leading-3 font-normal text-[0.75rem] md:text-[20px] text-base">
+                  <b className="text-primary leading-6 font-normal text-[1.125rem] md:text-[20px] text-base">
                     {stat.bold}{" "}
                   </b>
                 </p>
-                <p className="text-[#FFF] text-[0.75rem] md:text-base xl:text-lg 3xl:text-[20px] text-sm  font-[300] m-0 text-center white">
+                <p className="text-[#FFF] text-[1rem] md:text-base xl:text-lg 3xl:text-[20px] text-sm  font-[300] m-0 text-center white">
                   {stat.description}
                 </p>
               </div>
