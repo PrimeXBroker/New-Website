@@ -630,7 +630,7 @@ const Slider = () => {
                 );
               })}
             </Swiper>
-            <div className="">
+            <div>
               <div
                 className={`absolute top-[708px] sm:top-1/2 left-[30%] sm:-left-[9px] md:left-[0] lg:left-[18px] xl:left-[-30px] 2xl:left-[-84px]`}
               >

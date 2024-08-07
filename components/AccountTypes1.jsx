@@ -29,8 +29,8 @@ const AccountTypes1 = () => {
       <h1 className="sectionHeading">{t("account_types_title")}</h1>
       <div className="grid justify-center place-items-center gap-6 grid-cols-1 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-4 pt-12">
         {accountTypes.map((account, index) => (
-          <div class="cardBox">
-            <div class="card">
+          <div key={index} className="cardBox">
+            <div className="card">
               <span className="my_span">
                 <Image
                   src={account.imageUrl}
@@ -41,7 +41,7 @@ const AccountTypes1 = () => {
                 <p className="text-white text-lg pt-5">{account.title}</p>
               </span>
 
-              <div class="content">
+              <div className="content">
                 <p
                   className="text-white text-[14px] md:text-lg"
                   style={{ lineHeight: "30px" }}

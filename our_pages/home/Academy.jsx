@@ -74,7 +74,7 @@ const Academy = () => {
       </div>
       <div className="flex flex-row  gap-12 justify-center flex-wrap ">
         {academyCards.map((card, index) => (
-          <div className="cards_container" >
+          <div key={index} className="cards_container" >
             <div className="custom_card" style={{  height: 260 }} >
               <div className="slide slide1"  >
                 <div className="content">

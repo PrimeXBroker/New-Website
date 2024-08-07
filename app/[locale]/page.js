@@ -1,13 +1,10 @@
 "use client";
 
 import Academy from "@/our_pages/home/Academy";
-import AccountTtpes from "@/our_pages/home/AccountTypes";
 import AdvancedPlatforms from "@/our_pages/home/AdvancedPlatforms";
 import Banner from "@/our_pages/home/Banner";
 import BecomeIB from "@/our_pages/home/BecomeIB";
-import CompanyStats from "@/our_pages/home/CompanyStats";
 import CustomerCare from "@/our_pages/home/CustomerCare";
-import GetStarted from "@/our_pages/home/GetStarted";
 import OurRecognition from "@/our_pages/home/OurRecognition";
 import Rewards from "@/our_pages/home/Rewards";
 import TradingOpportunities from "@/our_pages/home/TradingOpportunities";
@@ -25,8 +22,21 @@ import { HiBellAlert } from "react-icons/hi2";
 import { useEffect } from "react";
 import { Button } from "@nextui-org/button";
 import AccountTypes1 from "@/components/AccountTypes1";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  // const router = useRouter();
+  // useEffect(() => {
+  //   const handleRouteChange = (url) => {
+  //     window.gtag('config', 'G-F4WWRCT0TN', {
+  //       page_path: url,
+  //     });
+  //   };
+  //   router.events.on('routeChangeComplete', handleRouteChange);
+  //   return () => {
+  //     router.events.off('routeChangeComplete', handleRouteChange);
+  //   };
+  // }, [router.events]);
   const t = useTranslations("home");
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
   useEffect(() => {
@@ -65,6 +75,8 @@ export default function Home() {
       // suffix: t("fact_no4"),
     },
   ];
+
+
 
   return (
     <>

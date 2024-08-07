@@ -6,13 +6,15 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import localFont from "@next/font/local";
 import Cookies from "@/components/Cookies";
-// import "aos/dist/aos.css";
+import "aos/dist/aos.css";
 import { Suspense } from "react";
 import { Toaster } from "react-hot-toast";
-import Script from "next/script";
 import ChatWidget from "@/components/ChatWidget";
 import { FacebookPixelEvents } from "@/utilities/pixelEvent";
 import FallbackLoader from "@/components/LoadingSpinner";
+import Head from "next/head";
+import Script from "next/script";
+import GoogleAnalytics from "@/utilities/GoogleAnalytics";
 
 const montserrat = localFont({
   src: [
@@ -59,6 +61,7 @@ export default async function layout({ children, params: { locale } }) {
 
   return (
     <html className={`${montserrat.variable}`} lang={locale}>
+      <GoogleAnalytics />
       <body>
         <Suspense fallback={<FallbackLoader />}>
           <div dir={direction}>
@@ -66,19 +69,34 @@ export default async function layout({ children, params: { locale } }) {
               <NextIntlClientProvider messages={messages}>
                 <Header locale={locale} />
                 {children}
-                {/* <Toaster
+                <Toaster
                   toastOptions={{
                     duration: 5000,
                   }}
-                /> */}
+                />
                 <FacebookPixelEvents />
                 <Footer />
                 <Cookies />
               </NextIntlClientProvider>
             </NextUIProvider>
           </div>
-          {/* <ChatWidget /> */}
+          <ChatWidget />
         </Suspense>
+        <Script id="gtm" strategy="afterInteractive">
+      {`
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M3KSBZMM');
+      `}
+    </Script>
+    <noscript
+        dangerouslySetInnerHTML={{
+        __html: ` <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3KSBZMM"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>`
+        }} 
+    	/>
       </body>
     </html>
   );
