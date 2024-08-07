@@ -1,10 +1,12 @@
 import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 const Strategies = ({ tipsData }) => {
   const t = useTranslations("commodities.strategies");
-
+  const path = usePathname();
+  console.log();
   return (
     <section className="pt-12 pb-8 container">
       <h1 className="sectionHeading pb-8">{t("title")}</h1>
@@ -15,7 +17,7 @@ const Strategies = ({ tipsData }) => {
               <div className="flip-card-front" style={{ background: "#FFF" }}>
                 <Image
                   src={tip.imgUrl}
-                  width="50"
+                  width={path.split('/')[2] === "indices"?'120':path.split('/')[2]==='commodities'?'80':'50'}
                   height="100"
                   alt="account logo"
                 />

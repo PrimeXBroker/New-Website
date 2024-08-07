@@ -8,11 +8,12 @@ import PrivateSessions from "@/our_pages/education/academy/PrivateSessions";
 import SuccessStories from "@/our_pages/education/academy/SuccessStories";
 import WebinarLibrary from "@/our_pages/education/academy/WebinarLibrary";
 import { useTranslations } from "next-intl";
-import React from "react";
+import React, { useState } from "react";
+import FormWrapper from "@/our_pages/education/academy/FromWarapper"
 
 const Academy = () => {
   const t = useTranslations("academy.featured");
-
+  const [ active, setActive ] = useState("Webinars")
   const cardsData = [
     {
       title: t("card_1_title"),
@@ -41,13 +42,16 @@ const Academy = () => {
   ];
 
   return (
+
+    
     <>
     <LocationContextProvider>
-      <Banner />
+      <Banner setActive={setActive} />
       <Featured cardsData={cardsData} />
-      <AcademyForm/>
-      <PrivateSessions />
-      <JoinAcademy />
+      <FormWrapper active={active} setActive={setActive} />
+      {/* <AcademyForm/> */}
+      <PrivateSessions setActive={setActive} />
+      <JoinAcademy setActive={setActive} />
       <WebinarLibrary />
       <SuccessStories />
       </LocationContextProvider>

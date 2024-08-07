@@ -20,7 +20,7 @@ const sectionData = [
   },
 ];
 
-const JoinAcademy = () => {
+const JoinAcademy = ({ setActive }) => {
   const t = useTranslations("academy.joinAcademy");
   const locale = useLocale();
 
@@ -58,6 +58,7 @@ const JoinAcademy = () => {
           <Link
             className="bg-primary text-center font-semibold px-4 py-4 w-[250px] rounded-full shadow-xl mx-auto block md:m-0"
             href="#academy-form"
+            onClick={()=> setActive("Instructor")}
           >
             {t("become_instructor_btn")}
           </Link>
@@ -100,6 +101,7 @@ const JoinAcademy = () => {
           {/* Flex container to align items to the end (right) */}
           <Link
             href="#academy-form"
+            onClick={()=> setActive("Webinars")}
             className="bg-primary font-semibold px-4 py-4 w-[250px] rounded-full shadow-xl text-center mt-6 mx-auto block md:m-0"
           >
             {t("sign_up_btn")}

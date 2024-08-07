@@ -39,10 +39,10 @@
       "fact_no2": "120,000",
       "fact_desc2": "Introducing Broker",
       "fact_no3": " IB",
-      "fact_desc3": "+ million Paid-up Capital ",
-      "fact_million": "+ million",
-      "fact_no4": "Billion",
-      "fact_desc4": "+ Billion Daily trades"
+      "fact_desc3": "Paid-up Capital ",
+      "fact_million": " Million+",
+      "fact_no4": " Billion+",
+      "fact_desc4": "Daily trades"
     },
     "stats": {
       "value_1": "250000",
@@ -1199,10 +1199,9 @@
       "para_5": "Trading CFDs and FX Options entails risk and could result in the loss of your capital"
     },
     "logos": {
-      "title": "We Accept:"
+      "title": "We Accept:",
+      "payment_options":"Multiple Payment Options"
     },
-    "rights": {
-      "description": "2022 - 2024 PrimeX Broker (PTY) LTD all rights reserved."
-    }
+    "copy-right":"2022 - 2024 PrimeX Broker (PTY) LTD all rights reserved."
   }
 }

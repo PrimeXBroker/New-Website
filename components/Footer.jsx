@@ -19,7 +19,6 @@ import { useTranslations, useLocale } from "next-intl";
 
 const Footer = () => {
   const language = useLocale();
-  console.log(language);
   const t = useTranslations("footer");
   const locale = useLocale();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -187,7 +186,7 @@ const Footer = () => {
               }`}
             >
               {t("getStarted.get_started_desc_1")}
-              <br />
+             
               {t("getStarted.get_started_desc_2")}
             </p>
           </div>
@@ -216,7 +215,7 @@ const Footer = () => {
       <footer className="bg-secondary">
         <div className="container flex flex-col pt-8">
           <h6 className="text-center pb-4 text-[#fff] text-xl">
-            Mutiple Payment Options
+            {t("logos.payment_options")}
           </h6>
           <div className="flex flex-row justify-center lg:gap-0 gap-5 lg:justify-around items-center border-b border-b-gray-500 pb-12 flex-wrap">
             {/* <p className="text-white text-sm font-[200]">{t("logos.title")}</p> */}
@@ -247,7 +246,6 @@ const Footer = () => {
                       locale === "ar" ? "text-right" : "text-left"
                     }`}
                   >
-                    {console.log(el.column.heading, "el.column.heading")}
                     {el.column.links.map((link, linkIndex) => {
                       return (
                         <li
@@ -405,7 +403,7 @@ const Footer = () => {
           </div>
         </CustomModal>
         <p className="bg-accent text-secondary text-sm py-3 text-center font-semibold drop-shadow-sm">
-          &copy; {t("rights.description")}
+           &copy; {t("copy-right")}
         </p>
       </footer>
     </>

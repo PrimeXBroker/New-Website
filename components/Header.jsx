@@ -429,7 +429,7 @@ const Header = ({ locale }) => {
                     ? `/${currentLocale}/${restOfPath}`
                     : `/ar/${restOfPath}`
                 }
-                onClick={() => handleClick("العربية")}
+                onClick={() => handleClick("عربي")}
               >
                 <div>
                   {/* <Image

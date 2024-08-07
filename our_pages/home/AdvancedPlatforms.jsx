@@ -206,7 +206,7 @@ const AdvancedPlatforms = () => {
         {t("title")}
       </h1>
       <div className="flex flex-col md:flex-row justify-evenly items-center container">
-        <div className="flex md:flex-col flex-row flex-wrap items-center justify-center gap-8">
+        <div className="flex md:flex-col flex-row flex-wrap items-center justify-center gap-8 md:gap-4">
           {iconsLeftList.map((item, index) => (
             <div
               onMouseEnter={() => handleIconEnter1(index)}

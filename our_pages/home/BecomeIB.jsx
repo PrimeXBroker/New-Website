@@ -29,7 +29,7 @@ const BecomeIB = () => {
       data-aos="slide-up"
     >
       <div className="container  flex flex-col md:flex-row">
-        <div className="w-full md:w-[60%] flex flex-col md:items-start items-center justify-center py-9 z-10">
+        <div className="w-full md:w-[60%] flex flex-col md:items-start items-center justify-center p-9 z-10">
           <h1 className="text-secondary md:text-left text-center text-2xl md:text-[2.5rem] font-semibold w-fit">
             {t("become_ib_title_1")}
           </h1>

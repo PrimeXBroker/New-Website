@@ -62,7 +62,7 @@ const JoinPrimex = () => {
                   src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/playstore.svg"
                   className="w-8"
                 />
-                <span style={{ lineHeight: "18px" }}>
+                <span className={`${locale === "ar"? 'text-right':'text-left'}`} style={{ lineHeight: "18px" }}>
                   {t("google_play-btn_part1")} <br />
                   <span className="text-[18px] font-semibold block">
                     {t("google_play-btn_part2")}
@@ -80,7 +80,9 @@ const JoinPrimex = () => {
                   src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/apple.svg"
                   className="w-8"
                 />
-                <span style={{ lineHeight: "18px" }}>
+                <span
+                className={`${locale === "ar"? 'text-right':'text-left'}`}
+                style={{ lineHeight: "18px" }}>
                   {t("app_store_btn_part1")} <br />
                   <span className="text-[18px] font-semibold block">
                     {t("app_store_btn_part2")}{" "}

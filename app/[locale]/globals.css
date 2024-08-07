@@ -476,6 +476,7 @@
 }
 
 .cards_container .custom_card .icon {
+  border-radius: 20px;
   position: absolute;
   top: 0;
   left: 0;
@@ -557,6 +558,7 @@
   transition: 0.8s;
   transform: translateY(-100px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+ border-radius: 20px;
 }
 
 .cards_container .custom_card:hover .slide.slide2 {

@@ -1,9 +1,10 @@
 import Image from "next/image";
-import React from "react";
+import React,{ useState } from "react";
 import { useTranslations } from "next-intl";
-
-const PrivateSessions = () => {
+import Link from "next/link";
+const PrivateSessions = ({ setActive }) => {
   const t = useTranslations("academy.privateSessions");
+  const [loading, setLoading] = useState(false);
 
   const expertCards = [
     {
@@ -46,9 +47,9 @@ const PrivateSessions = () => {
             <h4 className="text-secondary text-center text-sm">
               {card.position}
             </h4>
-            <button className="bg-primary py-2 rounded-full w-[150px] shadow-xl text-secondary text-sm mx-auto block mt-4">
+            <Link href="#academy-form" onClick={()=> setActive("Session")} className="bg-primary py-2 px-6 rounded-full w-[150px] shadow-xl text-secondary text-sm mx-auto block mt-4">
               {t("book_session_btn")}
-            </button>
+            </Link>
           </div>
         ))}
       </div>

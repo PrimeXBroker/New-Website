@@ -5,11 +5,13 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import CompanyStats from "./CompanyStats";
 
+
 const Banner = () => {
+  const locale = useLocale();
   const homeVideoPlayer = useRef(null);
   const t = useTranslations("home.hero");
   const slideContents = [
@@ -53,16 +55,16 @@ const Banner = () => {
     {
       value: 300,
       description: t("fact_desc3"),
-      symbol: "$",
-      prepend: "true",
-      // suffix: t(""), // Adding suffix
+      symbol: locale === "en"?'$':'',
+      prepend: "false",
+      suffix: t("fact_million") // Adding suffix
     },
     {
       value: 7,
       description: t("fact_desc4"),
-      symbol: "$",
+      symbol: locale === "en"?'$':'',
       prepend: "true",
-      // suffix: t("fact_no4"),
+      suffix: t("fact_no4"),
     },
   ];
 
@@ -70,7 +72,7 @@ const Banner = () => {
   const isAr = path.includes("/ar");
   return (
     <section
-      className="relative h-[70vh] md:h-[60vh] lg:h-[100vh] xl:h-[100vh] 2xl:h-[100vh] 3xl:h-[100vh] py-10 lg:py-16 xl:py-16 2xl:py-20 3xl:pt-40 4xl:pt-48 5xl:py-56"
+      className="relative h-[70vh] md:h-[60vh] lg:h-[90vh] xl:h-[90vh] 2xl:h-[90vh] 3xl:h-[90vh] py-10 lg:py-16 xl:py-16 2xl:py-20 3xl:pt-40 4xl:pt-48 5xl:py-56"
       onClick={homeVideoClick}
     >
       <video
@@ -79,7 +81,7 @@ const Banner = () => {
         loop
         muted
         controls={false}
-        className="hidden md:block absolute inset-0 w-full h-full object-cover opacity-80"
+        className="block absolute inset-0 w-full h-full object-cover opacity-80"
         playsInline
       >
         <source
@@ -87,12 +89,12 @@ const Banner = () => {
           type="video/webm"
         />
       </video>
-      <div
+      {/* <div
         className="md:hidden absolute inset-0 w-full h-full bg-cover bg-center bg-opacity-20 py-16"
         style={{
-          backgroundImage: "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/mobile_bg.png')",
+          backgroundImage: "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg.webp')",
         }}
-      ></div>
+      ></div> */}
       <div className="container relative z-10 md:hidden pt-[2rem]">
         <div className="text-center pb-16 lg:pb-6 xl:pb-12 2xl:pb-28 3xl:pb-36">
           <Swiper
