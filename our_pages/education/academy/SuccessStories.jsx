@@ -48,7 +48,7 @@ const SuccessStories = () => {
       <div className="grid lg:grid-cols-4 md:grid-cols-3 place-content-center items-center place-items-center mt-5 gap-2">
         {
           reviews.map((review, index) => (
-            <div className="max-w-sm mx-auto bg-[#F3F3F3] rounded-lg shadow-md p-4">
+            <div key={index} className="max-w-sm mx-auto bg-[#F3F3F3] rounded-lg shadow-md p-4">
               <div className="flex items-center mb-4">
                 <div className="w-10 h-10 p-4 rounded-full bg-white flex items-center justify-center text-xl font-bold">
                   RA
@@ -61,7 +61,7 @@ const SuccessStories = () => {
               <div className="flex items-center mb-4">
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, index) => (
-                    <div className="bg-[#53B07F] p-1">
+                    <div key={index} className="bg-[#53B07F] p-1">
                       <svg
                         key={index}
                         className="w-4 h-4 text-[#fff]"

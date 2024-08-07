@@ -49,7 +49,7 @@ const Faq = ({ forexFaqs }) => {
           },
         }}
       >
-        {forexFaqs.map((faq, index) => (
+        {forexFaqs.map((faq) => (
           <AccordionItem key={faq.key} title={faq.question}>
             {faq.answer}
           </AccordionItem>

@@ -104,7 +104,7 @@ const Rewards = () => {
           className="rewards_swiper"
           >
           {campaignList.map((card, index) => (
-            <SwiperSlide className="rounded-xl">
+            <SwiperSlide key={index} className="rounded-xl">
               <div
                 key={index}
                 className="flex flex-col bg-accent p-8 rounded-xl h-[500px]"
