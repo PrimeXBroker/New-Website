@@ -9,7 +9,6 @@ import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import CompanyStats from "./CompanyStats";
 
-
 const Banner = () => {
   const locale = useLocale();
   const homeVideoPlayer = useRef(null);
@@ -55,14 +54,14 @@ const Banner = () => {
     {
       value: 300,
       description: t("fact_desc3"),
-      symbol: locale === "en"?'$':'',
+      symbol: locale === "en" ? "$" : "",
       prepend: "false",
-      suffix: t("fact_million") // Adding suffix
+      suffix: t("fact_million"), // Adding suffix
     },
     {
       value: 7,
       description: t("fact_desc4"),
-      symbol: locale === "en"?'$':'',
+      symbol: locale === "en" ? "$" : "",
       prepend: "true",
       suffix: t("fact_no4"),
     },
@@ -72,7 +71,7 @@ const Banner = () => {
   const isAr = path.includes("/ar");
   return (
     <section
-      className="relative h-[70vh] md:h-[60vh] lg:h-[90vh] xl:h-[90vh] 2xl:h-[90vh] 3xl:h-[90vh] py-10 lg:py-16 xl:py-16 2xl:py-20 3xl:pt-40 4xl:pt-48 5xl:py-56"
+      className="relative h-[60vh] md:h-[60vh] lg:h-[90vh] xl:h-[90vh] 2xl:h-[90vh] 3xl:h-[90vh] py-10 lg:py-16 xl:py-16 2xl:py-20 3xl:pt-40 4xl:pt-48 5xl:py-56"
       onClick={homeVideoClick}
     >
       <video
@@ -85,7 +84,11 @@ const Banner = () => {
         playsInline
       >
         <source
-          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/videos/banner_video_v2.1.webm"
+          src={
+            locale === "ar"
+              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/videos/arabic/banner_video_ar_v1.webm"
+              : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/videos/banner_video_v2.1.webm"
+          }
           type="video/webm"
         />
       </video>
@@ -95,7 +98,7 @@ const Banner = () => {
           backgroundImage: "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg.webp')",
         }}
       ></div> */}
-      <div className="container relative z-10 md:hidden pt-[2rem]">
+      <div className="container relative z-10 md:hidden">
         <div className="text-center pb-16 lg:pb-6 xl:pb-12 2xl:pb-28 3xl:pb-36">
           <Swiper
             className="banner_swiper"
@@ -131,7 +134,7 @@ const Banner = () => {
           </Swiper>
         </div>
       </div>
-      <CompanyStats stats={statsOne}/>
+      <CompanyStats stats={statsOne} />
     </section>
   );
 };
