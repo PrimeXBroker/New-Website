@@ -39,14 +39,6 @@
   }
 }
 
-.direction_layout {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
 .tabs_custom div {
   flex-wrap: wrap !important;
   justify-content: center !important;
@@ -558,7 +550,7 @@
   transition: 0.8s;
   transform: translateY(-100px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
- border-radius: 20px;
+  border-radius: 20px;
 }
 
 .cards_container .custom_card:hover .slide.slide2 {
@@ -645,5 +637,3 @@
     transform: translateY(0);
   }
 }
-
-

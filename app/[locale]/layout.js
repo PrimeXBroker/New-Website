@@ -58,8 +58,8 @@ export default async function layout({ children, params: { locale } }) {
   const direction = locale === "ar" ? "rtl" : "ltr";
 
   return (
-    <html className={`direction_layout ${montserrat.variable}`} lang={locale}>
-      <body className="direction_layout">
+    <html className={`${montserrat.variable}`} lang={locale}>
+      <body>
         <Suspense fallback={<FallbackLoader />}>
           <div dir={direction}>
             <NextUIProvider>
