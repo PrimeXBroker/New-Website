@@ -92,7 +92,7 @@ function BookSession() {
                     className="flex flex-col justify-center items-center relative gap-4"
                 >
                     <PiUserSquareThin className="opacity-50" size={80} />
-                    <div className="mb-4 w-[60%]">
+                    <div className="mb-4 w-[80%]">
                         <input
                             type="text"
                             name="fullName"
@@ -106,7 +106,7 @@ function BookSession() {
                                 }`}
                         />
                     </div>
-                    <div className="mb-4 w-[60%]">
+                    <div className="mb-4 w-[80%]">
                         <input
                             type="email"
                             name="email"
@@ -120,7 +120,7 @@ function BookSession() {
                                 }`}
                         />
                     </div>
-                    <div className="mb-4 w-[60%]">
+                    <div className="mb-4 w-[80%]">
                         <PhoneInput
                             onChange={(value) => formik.setFieldValue("phoneNumber", value)}
                             onBlur={formik.handleBlur}
@@ -134,7 +134,7 @@ function BookSession() {
                         />
                     </div>
 
-                    <div className="mb-4 w-[60%]">
+                    <div className="mb-4 w-[80%]">
                         <input
                             type="text"
                             name="accountId"
@@ -149,7 +149,7 @@ function BookSession() {
                         />
                     </div>
 
-                    <div className="mb-10 w-[60%]">
+                    <div className="mb-10 w-[80%]">
                         <select
                             className={`bg-white text-gray-400 w-full placeholder:text-gray-300 outline-none border-b border-b- capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[5px] ${formik.touched.time && formik.errors.time
                                 ? "border-b border-red-600"

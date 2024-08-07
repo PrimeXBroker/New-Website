@@ -77,7 +77,7 @@ export default async function layout({ children, params: { locale } }) {
               </NextIntlClientProvider>
             </NextUIProvider>
           </div>
-          <ChatWidget />
+          {/* <ChatWidget /> */}
         </Suspense>
       </body>
     </html>
