@@ -6,14 +6,13 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import localFont from "@next/font/local";
 import Cookies from "@/components/Cookies";
-// import "aos/dist/aos.css";
+import "aos/dist/aos.css";
 import { Suspense } from "react";
 import { Toaster } from "react-hot-toast";
-import Script from "next/script";
 import ChatWidget from "@/components/ChatWidget";
 import { FacebookPixelEvents } from "@/utilities/pixelEvent";
 import FallbackLoader from "@/components/LoadingSpinner";
-
+import Head from "next/head";
 const montserrat = localFont({
   src: [
     {
@@ -59,6 +58,18 @@ export default async function layout({ children, params: { locale } }) {
 
   return (
     <html className={`${montserrat.variable}`} lang={locale}>
+       <Head>
+        {/* Google Analytics */}
+        <script async={true} src="https://www.googletagmanager.com/gtag/js?id=G-F4WWRCT0TN"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-F4WWRCT0TN');
+          `,
+        }} />
+      </Head>
       <body>
         <Suspense fallback={<FallbackLoader />}>
           <div dir={direction}>
@@ -66,11 +77,11 @@ export default async function layout({ children, params: { locale } }) {
               <NextIntlClientProvider messages={messages}>
                 <Header locale={locale} />
                 {children}
-                {/* <Toaster
+                <Toaster
                   toastOptions={{
                     duration: 5000,
                   }}
-                /> */}
+                />
                 <FacebookPixelEvents />
                 <Footer />
                 <Cookies />
