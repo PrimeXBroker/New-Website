@@ -17,7 +17,7 @@ const PremiumAdvantages = ({ items, data }) => {
   };
 
   return (
-    <section className="container my-20">
+    <section className="container mb-20">
       <div className="bg-accent border-b-5 border-b-primary rounded-3xl pb-8 md:pb-4 pt-12 ps-8 pe-0 shadow-lg">
         <div className="grid grid-cols-12">
           <div className="col-span-12 md:col-span-6">
@@ -80,9 +80,6 @@ const PremiumAdvantages = ({ items, data }) => {
               </div>
             );
           })}
-          <div className="col-span-12 md:col-span-6 pe-8 md:pe-0">
-            <RegButton customStyle={customStyle} />
-          </div>
         </div>
       </div>
     </section>

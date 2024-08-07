@@ -209,19 +209,18 @@
   filter: blur(0px);
 }
 
-.home_swiper .swiper-button-next{
-  color: #FFD000;
+.home_swiper .swiper-button-next {
+  color: #ffd000;
   background: transparent;
 }
-.home_swiper .swiper-button-prev{
-  color: #FFD000;
+.home_swiper .swiper-button-prev {
+  color: #ffd000;
   background: transparent;
 }
 
 /*End of home_swiper*/
 
 .account-swiper-carousel .swiper {
-  width: 100%;
   padding-top: 50px;
   padding-bottom: 150px;
 }
@@ -626,7 +625,7 @@
   animation: randomMovement 10s infinite linear;
   animation-fill-mode: both;
 }
-.banner_swiper .swiper-pagination .swiper-pagination-bullet-active{
+.banner_swiper .swiper-pagination .swiper-pagination-bullet-active {
   background: white !important;
 }
 

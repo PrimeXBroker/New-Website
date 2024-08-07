@@ -334,7 +334,7 @@ const Slider = () => {
                 prevEl: ".swiper-button-prev",
               }}
               modules={[EffectCoverflow, Pagination, Navigation]}
-              className="mySwiper"
+              className="mySwiper sm:w-[80%] xl:w-[90%] 2xl:w-[100%]"
             >
               {accountsTable.map((acc, index) => {
                 return (
@@ -631,14 +631,18 @@ const Slider = () => {
               })}
             </Swiper>
             <div className="">
-              <div className="absolute bottom-14 right-[30%] sm:right-[38%] md:right-[40%] lg:right-[42%]">
-                <div className="flex justify-center items-center text-lg rounded-full text-white cursor-pointer z-10 -mt-6 h-11 w-11 bg-secondary swiper-button-next">
-                  <FaArrowRight className="flex items-center justify-center text-white" />
-                </div>
-              </div>
-              <div className="absolute bottom-14 left-[30%] sm:left-[38%] md:left-[40%] lg:left-[42%]">
+              <div
+                className={`absolute top-[708px] sm:top-1/2 left-[30%] sm:-left-[9px] md:left-[0] lg:left-[18px] xl:left-[-30px] 2xl:left-[-84px]`}
+              >
                 <div className="flex justify-center items-center text-lg rounded-full text-white cursor-pointer z-10 -mt-6 h-11 w-11 bg-secondary swiper-button-prev">
                   <FaArrowLeft className="flex items-center justify-center text-white" />
+                </div>
+              </div>
+              <div
+                className={`absolute top-[708px] sm:top-1/2 right-[30%] sm:-right-[9px] md:right-[0] lg:right-[18px] xl:right-[-30px] 2xl:right-[-84px]`}
+              >
+                <div className="flex justify-center items-center text-lg rounded-full text-white cursor-pointer z-10 -mt-6 h-11 w-11 bg-secondary swiper-button-next">
+                  <FaArrowRight className="flex items-center justify-center text-white" />
                 </div>
               </div>
             </div>
