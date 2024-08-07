@@ -13,6 +13,9 @@ import ChatWidget from "@/components/ChatWidget";
 import { FacebookPixelEvents } from "@/utilities/pixelEvent";
 import FallbackLoader from "@/components/LoadingSpinner";
 import Head from "next/head";
+import Script from "next/script";
+import GoogleAnalytics from "@/utilities/GoogleAnalytics";
+
 const montserrat = localFont({
   src: [
     {
@@ -58,18 +61,7 @@ export default async function layout({ children, params: { locale } }) {
 
   return (
     <html className={`${montserrat.variable}`} lang={locale}>
-       <Head>
-        {/* Google Analytics */}
-        <script async={true} src="https://www.googletagmanager.com/gtag/js?id=G-F4WWRCT0TN"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-F4WWRCT0TN');
-          `,
-        }} />
-      </Head>
+      <GoogleAnalytics />
       <body>
         <Suspense fallback={<FallbackLoader />}>
           <div dir={direction}>
@@ -90,6 +82,28 @@ export default async function layout({ children, params: { locale } }) {
           </div>
           <ChatWidget />
         </Suspense>
+        <Script
+      strategy="afterInteractive"
+      dangerouslySetInnerHTML={{
+        __html:`
+        function gtag_report_conversion(url) {
+          var callback = function () {
+            if (typeof(url) != 'undefined') {
+              window.location = url;
+            }
+          };
+          gtag('event', 'conversion', {
+              'send_to': 'AW-10835048699/LUb0CNmY5OsYEPvxxq4o',
+              'event_callback': callback
+          });
+          return false;
+        }
+           document.addEventListener("wpcf7submit", function(event){
+            gtag_report_conversion();
+          }, false);
+        `
+      }}
+      />
       </body>
     </html>
   );
