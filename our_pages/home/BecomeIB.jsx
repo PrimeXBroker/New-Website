@@ -66,7 +66,10 @@ const BecomeIB = () => {
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-opacity-100 py-16"
         style={{
-          backgroundImage: "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/ib_home_bg.webp')",
+          backgroundImage:
+            locale === "ar"
+              ? "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/ib_home_bg_ar.webp')"
+              : "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/ib_home_bg.webp')",
         }}
       ></div>
     </section>
