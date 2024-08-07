@@ -16,8 +16,15 @@ function ChatWidget() {
                 document.body.appendChild(chatWidgetContainer);
 
                 // Load the chat widget script
+                const cssLink = document.createElement('link');
+                cssLink.rel = 'stylesheet';
+                cssLink.href = 'https://primexbroker.online/static/css/main.css'; // URL to your CSS file
+                cssLink.type = 'text/css';
+                document.head.appendChild(cssLink);
+                
+                // Load the JS file
                 const script = document.createElement('script');
-                script.src = 'https://primexbroker.online/static/js/main.js';
+                script.src = 'https://primexbroker.online/static/js/main.js'; // URL to your JS file
                 script.async = true;
                 document.body.appendChild(script);
             }
@@ -27,13 +34,9 @@ function ChatWidget() {
 
     }, []);
     return (
-        <div>
-                <link
-                    rel="stylesheet"
-                    href="https://primexbroker.online/static/css/main.css"
-                />
+        <>
 
-        </div>
+        </>
     )
 }
 
