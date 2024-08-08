@@ -637,3 +637,40 @@
     transform: translateY(0);
   }
 }
+
+.widget-title h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -13px;
+  width: 80px;
+  height: 3px;
+  background: #aec6ef;
+}
+
+.widget-title h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 39px !important;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #fccd0a;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: MOVE-BG;
+}
+
+@keyframes MOVE-BG {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  100% {
+    left: 80px;
+    top: 0px;
+  }
+}
