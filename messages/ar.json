@@ -193,11 +193,17 @@
       "card_4_title": "بوابتك للبداية",
       "card_4_desc": "خبرائنا "
     },
+    "upcomingWebinars": {
+      "title": "الندوات المجانية القادمة عبر الإنترنت"
+    },
     "academyForm": {
       "login_title": "تسجيل الدخول",
       "drop_field_1": "تحليلات أساسية",
       "drop_field_2": "تحليلات فنية",
       "form_btn": "تسجيل",
+      "webinar_form_title": "Webinars",
+      "instructor_form_title": "Instructor",
+      "session_form_title": "Session",
       "first_name": "الاسم الأول",
       "last_name": "الاسم الأخير",
       "first_name_validation_error": "يجب أن يحتوي الاسم الأول على أحرف أبجدية فقط.",

@@ -22,6 +22,7 @@ function BookSession() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const { country: originCountry, ip: originIp } = useContext(LocationContext);
   const t = useTranslations("academy.academyForm");
+  const locale = useLocale();
   const [loading, setLoading] = useState(false);
 
   const webinarTypes = [
@@ -98,14 +99,20 @@ function BookSession() {
     },
   });
   return (
-    <section id="academy-form" className="pb-12 container bg-[#E4E5E6] ">
-      <div className="shadow-xl bg-[#fff] border-accent border xl:w-[40%] xl:mx-auto lg:w-[40%] lg:mx-auto md:w-[50%] md:mx-auto sm:w-[90%] sm:mx-auto w-[90%] mx-auto rounded-2xl">
+    <section id="academy-form" className="container px-0">
+      <div
+        className={`shadow-xl bg-[#fff] border-accent border sm:w-[74%] md:w-[64%] lg:w-[94%] ${
+          locale === "ar"
+            ? "mr-auto my-0 ml-auto lg:mr-auto lg:my-0 lg:ml-0"
+            : "ml-auto my-0 mr-auto lg:ml-auto lg:my-0 lg:mr-0"
+        } rounded-3xl`}
+      >
         <form
           onSubmit={formik.handleSubmit}
           className="flex flex-col justify-center items-center relative gap-4"
         >
-          <PiUserSquareThin className="opacity-50" size={80} />
-          <div className="mb-4 w-[80%]">
+          <PiUserSquareThin className="opacity-50 mt-6" size={80} />
+          <div className="mb-1 w-[80%]">
             <input
               type="text"
               name="fullName"
@@ -113,14 +120,14 @@ function BookSession() {
               onBlur={formik.handleBlur}
               value={formik.values.fullName}
               placeholder={t("full_name")}
-              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none text-sm ${
                 formik.touched.fullName && formik.errors.fullName
                   ? "border-b border-red-600"
                   : ""
               }`}
             />
           </div>
-          <div className="mb-4 w-[80%]">
+          <div className="mb-1 w-[80%]">
             <input
               type="email"
               name="email"
@@ -128,14 +135,14 @@ function BookSession() {
               onBlur={formik.handleBlur}
               value={formik.values.email}
               placeholder={t("email")}
-              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none text-sm ${
                 formik.touched.email && formik.errors.email
                   ? "border-b border-red-600"
                   : ""
               }`}
             />
           </div>
-          <div className="mb-4 w-[80%]">
+          <div className="mb-1 w-[80%]">
             <PhoneInput
               onChange={(value) => formik.setFieldValue("phoneNumber", value)}
               onBlur={formik.handleBlur}
@@ -150,7 +157,7 @@ function BookSession() {
             />
           </div>
 
-          <div className="mb-4 w-[80%]">
+          <div className="mb-1 w-[80%]">
             <input
               type="text"
               name="accountId"
@@ -158,7 +165,7 @@ function BookSession() {
               onBlur={formik.handleBlur}
               value={formik.values.accountId}
               placeholder={t("account_number")}
-              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none text-sm ${
                 formik.touched.accountId && formik.errors.accountId
                   ? "border-b border-red-600"
                   : ""
@@ -168,7 +175,7 @@ function BookSession() {
 
           <div className="mb-10 w-[80%]">
             <select
-              className={`bg-white text-gray-400 w-full placeholder:text-gray-300 outline-none border-b border-b- capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[5px] ${
+              className={`bg-white text-gray-400 w-full placeholder:text-gray-300 outline-none border-b border-b- capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[5px] text-sm ${
                 formik.touched.time && formik.errors.time
                   ? "border-b border-red-600"
                   : ""
@@ -189,7 +196,7 @@ function BookSession() {
             </select>
           </div>
           <button
-            className="bg-primary shadow-xl rounded-full font-semibold py-2 text-secondary w-[150px] absolute bottom-[-30px] mx-auto"
+            className="bg-primary shadow-xl rounded-full font-semibold py-2 text-secondary w-[150px] absolute bottom-[-20px] ml-auto my-0 mr-0"
             disabled={loading}
           >
             <div className="flex gap-3 items-center text-center justify-center">

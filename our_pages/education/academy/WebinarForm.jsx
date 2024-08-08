@@ -43,7 +43,7 @@ function WebinarForm() {
         res.data.data.map((web, i) => {
           return {
             id: web._id,
-            name: web.agenda,
+            name: locale === "ar" ? web.agendaAr : web.agenda,
             value: web.id,
           };
         })
@@ -117,14 +117,20 @@ function WebinarForm() {
     },
   });
   return (
-    <section id="academy-form" className="pb-12 container bg-[#E4E5E6] ">
-      <div className="shadow-xl bg-[#fff] border-accent border w-[100%] mx-auto rounded-2xl">
+    <section id="academy-form" className="container px-0">
+      <div
+        className={`shadow-xl bg-[#fff] border-accent border sm:w-[74%] md:w-[64%] lg:w-[94%] rounded-3xl ${
+          locale === "ar"
+            ? "mr-auto my-0 ml-auto lg:mr-auto lg:my-0 lg:ml-0"
+            : "ml-auto my-0 mr-auto lg:ml-auto lg:my-0 lg:mr-0"
+        }`}
+      >
         <form
           onSubmit={formik.handleSubmit}
           className="flex flex-col justify-center items-center relative gap-4"
         >
-          <PiUserSquareThin className="opacity-50" size={80} />
-          <div className="mb-4 w-[80%]">
+          <PiUserSquareThin className="opacity-50 mt-6" size={80} />
+          <div className="mb-1 w-[80%]">
             <input
               type="text"
               name="first_name"
@@ -132,14 +138,14 @@ function WebinarForm() {
               onBlur={formik.handleBlur}
               value={formik.values.first_name}
               placeholder={t("first_name")}
-              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none text-sm ${
                 formik.touched.full_name && formik.errors.full_name
                   ? "border-b border-red-600"
                   : ""
               }`}
             />
           </div>
-          <div className="mb-4 w-[80%]">
+          <div className="mb-1 w-[80%]">
             <input
               type="text"
               name="last_name"
@@ -147,14 +153,14 @@ function WebinarForm() {
               onBlur={formik.handleBlur}
               value={formik.values.last_name}
               placeholder={t("last_name")}
-              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none text-sm ${
                 formik.touched.full_name && formik.errors.full_name
                   ? "border-b border-red-600"
                   : ""
               }`}
             />
           </div>
-          <div className="mb-4 w-[80%]">
+          <div className="mb-1 w-[80%]">
             <input
               type="email"
               name="email"
@@ -162,21 +168,21 @@ function WebinarForm() {
               onBlur={formik.handleBlur}
               value={formik.values.email}
               placeholder={t("email")}
-              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none text-sm ${
                 formik.touched.email && formik.errors.email
                   ? "border-b border-red-600"
                   : ""
               }`}
             />
           </div>
-          <div className="mb-4 w-[80%]">
+          <div className="mb-1 w-[80%]">
             <PhoneInput
               onChange={(value) => formik.setFieldValue("phoneNumber", value)}
               onBlur={formik.handleBlur}
               name="phoneNumber"
               value={formik.values.phoneNumber}
               defaultCountry={originCountry}
-              className={`w-[100%] academy_phoneinput ${
+              className={`w-[100%] academy_phoneinput text-sm ${
                 formik.touched.phoneNumber && formik.errors.phoneNumber
                   ? "border-b border-red-600"
                   : ""
@@ -185,7 +191,7 @@ function WebinarForm() {
           </div>
           <div className="mb-10 w-[80%]">
             <select
-              className={`bg-white text-gray-400 w-full placeholder:text-gray-300 outline-none border-b border-b- capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[5px] ${
+              className={`bg-white text-gray-400 w-full text-sm placeholder:text-gray-300 outline-none border-b border-b- capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[5px] ${
                 formik.touched.webinarId && formik.errors.webinarId
                   ? "border-b border-red-600"
                   : ""
@@ -205,7 +211,7 @@ function WebinarForm() {
               })}
             </select>
           </div>
-          <button className="bg-primary shadow-xl rounded-full font-semibold py-2 text-secondary w-[150px] absolute bottom-[-30px] mx-auto">
+          <button className="bg-primary shadow-xl rounded-full font-semibold py-2 text-secondary w-[150px] absolute bottom-[-20px] mx-auto">
             <div className="flex gap-3 items-center justify-center">
               {loading && <div className="spinner inline-block "></div>}
               {t("form_btn")}

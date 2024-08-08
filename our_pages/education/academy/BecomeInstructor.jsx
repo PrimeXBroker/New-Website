@@ -24,6 +24,7 @@ function BecomeInstructor() {
   const [loading, setLoading] = useState(false);
   const { country: originCountry, ip: originIp } = useContext(LocationContext);
   const t = useTranslations("academy.academyForm");
+  const locale = useLocale();
 
   const workedBefore = [
     { label: "Yes", value: "Yes" },
@@ -89,14 +90,20 @@ function BecomeInstructor() {
     },
   });
   return (
-    <section id="academy-form" className="pb-12 container bg-[#E4E5E6] ">
-      <div className="shadow-xl bg-[#fff] border-accent border xl:w-[40%] xl:mx-auto lg:w-[40%] lg:mx-auto md:w-[50%] md:mx-auto sm:w-[90%] sm:mx-auto w-[90%] mx-auto rounded-2xl">
+    <section id="academy-form" className="container px-0">
+      <div
+        className={`shadow-xl bg-[#fff] border-accent border sm:w-[74%] md:w-[64%] lg:w-[94%] ${
+          locale === "ar"
+            ? "mr-auto my-0 ml-auto lg:mr-auto lg:my-0 lg:ml-0"
+            : "ml-auto my-0 mr-auto lg:ml-auto lg:my-0 lg:mr-0"
+        } rounded-3xl`}
+      >
         <form
           onSubmit={formik.handleSubmit}
           className="flex flex-col justify-center items-center relative gap-4"
         >
-          <PiUserSquareThin className="opacity-50" size={80} />
-          <div className="mb-4 w-[80%]">
+          <PiUserSquareThin className="opacity-50 mt-6" size={80} />
+          <div className="mb-1 w-[80%]">
             <input
               type="text"
               name="fullName"
@@ -104,14 +111,14 @@ function BecomeInstructor() {
               onBlur={formik.handleBlur}
               value={formik.values.fullName}
               placeholder={t("full_name")}
-              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none text-sm ${
                 formik.touched.fullName && formik.errors.fullName
                   ? "border-b border-red-600"
                   : ""
               }`}
             />
           </div>
-          <div className="mb-4 w-[80%]">
+          <div className="mb-1 w-[80%]">
             <input
               type="email"
               name="email"
@@ -119,21 +126,21 @@ function BecomeInstructor() {
               onBlur={formik.handleBlur}
               value={formik.values.email}
               placeholder={t("email")}
-              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none text-sm ${
                 formik.touched.email && formik.errors.email
                   ? "border-b border-red-600"
                   : ""
               }`}
             />
           </div>
-          <div className="mb-4 w-[80%]">
+          <div className="mb-1 w-[80%]">
             <PhoneInput
               onChange={(value) => formik.setFieldValue("number", value)}
               onBlur={formik.handleBlur}
               name="number"
               value={formik.values.number}
               defaultCountry={originCountry}
-              className={`w-[100%] academy_phoneinput ${
+              className={`w-[100%] academy_phoneinput text-sm ${
                 formik.touched.number && formik.errors.number
                   ? "border-b border-red-600"
                   : ""
@@ -141,7 +148,7 @@ function BecomeInstructor() {
             />
           </div>
 
-          <div className="mb-4 w-[80%]">
+          <div className="mb-1 w-[80%]">
             <input
               type="number"
               name="experience"
@@ -149,7 +156,7 @@ function BecomeInstructor() {
               onBlur={formik.handleBlur}
               value={formik.values.experience}
               placeholder={t("experience_year")}
-              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none text-sm ${
                 formik.touched.experience && formik.errors.experience
                   ? "border-b border-red-600"
                   : ""
@@ -157,7 +164,7 @@ function BecomeInstructor() {
             />
           </div>
 
-          <div className="mb-4 w-[80%]">
+          <div className="mb-1 w-[80%]">
             <input
               type="text"
               name="specialty"
@@ -165,7 +172,7 @@ function BecomeInstructor() {
               onBlur={formik.handleBlur}
               value={formik.values.specialty}
               placeholder={t("speciality")}
-              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none text-sm ${
                 formik.touched.specialty && formik.errors.specialty
                   ? "border-b border-red-600"
                   : ""
@@ -173,7 +180,7 @@ function BecomeInstructor() {
             />
           </div>
 
-          <div className="mb-4 w-[80%]">
+          <div className="mb-1 w-[80%]">
             <textarea
               name="advantages"
               onChange={formik.handleChange}
@@ -181,7 +188,7 @@ function BecomeInstructor() {
               value={formik.values.advantages}
               rows="4"
               placeholder={t("advantages")}
-              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+              className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none text-sm ${
                 formik.touched.advantages && formik.errors.advantages
                   ? "border-b border-red-600"
                   : ""
@@ -189,10 +196,16 @@ function BecomeInstructor() {
             />
           </div>
 
-          <div className=" w-[80%] appearance-none border-b rounded w-full py-2 px-3 text-[#9CA3AF] text-lg">
-            <label className="block  mb-2">{t("workedWithCompanies")}</label>
+          <div className="w-[80%] appearance-none border-b rounded py-2 px-3 text-[#9CA3AF]">
+            <label
+              className={`block mb-2 text-sm ${
+                locale === "ar" ? "text-right" : "text-left"
+              }`}
+            >
+              {t("workedWithCompanies")}
+            </label>
             {workedBefore.map((option) => (
-              <div key={option.value} className="flex items-center mb-2 ml-8">
+              <div key={option.value} className="flex items-center mb-2">
                 <input
                   type="radio"
                   id={`workedWithCompanies${option.value}`}
@@ -201,9 +214,12 @@ function BecomeInstructor() {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   checked={formik.values.workedWithCompanies === option.value}
-                  className="mr-2"
+                  className={`${locale === "ar" ? "ml-2" : "mr-2"} text-sm`}
                 />
-                <label htmlFor={`workedWithCompanies${option.value}`}>
+                <label
+                  htmlFor={`workedWithCompanies${option.value}`}
+                  className="text-sm"
+                >
                   {option.label}
                 </label>
               </div>
@@ -216,12 +232,16 @@ function BecomeInstructor() {
             ) : null}
           </div>
 
-          <div className="mb-4 w-[80%] appearance-none border-b rounded w-full py-2 px-3 text-[#9CA3AF] text-lg ">
-            <label className="block text-start  mb-2  px-7">
+          <div className="mb-10 w-[80%] appearance-none border-b rounded py-2 px-3 text-[#9CA3AF]">
+            <label
+              className={`block mb-2 text-sm ${
+                locale === "ar" ? "text-right" : "text-left"
+              }`}
+            >
               {t("doneWebinar")}
             </label>
             {workedBefore.map((option) => (
-              <div key={option.value} className="flex items-center mb-2 ml-8">
+              <div key={option.value} className="flex items-center mb-2">
                 <input
                   type="radio"
                   id={`doneWebinar${option.value}`}
@@ -230,9 +250,11 @@ function BecomeInstructor() {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   checked={formik.values.doneWebinar === option.value}
-                  className="mr-2"
+                  className={`${locale === "ar" ? "ml-2" : "mr-2"} text-sm`}
                 />
-                <label htmlFor={`webinar${option.value}`}>{option.label}</label>
+                <label htmlFor={`webinar${option.value}`} className="text-sm">
+                  {option.label}
+                </label>
               </div>
             ))}
             {formik.touched.doneWebinar && formik.errors.doneWebinar ? (
@@ -240,7 +262,7 @@ function BecomeInstructor() {
             ) : null}
           </div>
 
-          <button className="bg-primary shadow-xl rounded-full font-semibold py-2 text-secondary w-[150px] absolute bottom-[-30px] mx-auto">
+          <button className="bg-primary shadow-xl rounded-full font-semibold py-2 text-secondary w-[150px] absolute bottom-[-20px] mx-auto">
             <div className="flex gap-3 items-center text-center justify-center">
               {loading && <div className="spinner inline-block"></div>}
               {t("form_btn")}
