@@ -27,8 +27,8 @@ function BecomeInstructor() {
   const locale = useLocale();
 
   const workedBefore = [
-    { label: "Yes", value: "Yes" },
-    { label: "No", value: "No" },
+    { label: t("radio_option_1"), value: "Yes" },
+    { label: t("radio_option_2"), value: "No" },
   ];
 
   const formik = useFormik({
