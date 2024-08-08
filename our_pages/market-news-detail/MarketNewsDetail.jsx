@@ -1,11 +1,19 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import Link from "next/link";
+import NewsBody from "./NewsBody";
 
-const MarketNewsDetail = () => {
+const MarketNewsDetail = ({slug}) => {
+
+  useEffect(()=>{
+
+  },[])
   return (
     <section className="container py-20">
       <div className="grid grid-cols-12">
-        <div className="col-span-8"></div>
+        <div className="col-span-8">
+          <NewsBody slug={slug} />
+        </div>
         <div className="col-span-4 px-6">
           <div className="border-1 border-accent p-[30px]">
             <div className="flex justify-center">
