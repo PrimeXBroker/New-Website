@@ -38,6 +38,28 @@ const montserrat = localFont({
   variable: "--font-montserrat",
 });
 
+const portada = localFont({
+  src:[
+    {
+      path: "../../public/fonts/Portada/Portada-Light.ttf",
+      weight: "400",
+    },
+    {
+      path: "../../public/fonts/Portada/Portada-Regular.ttf",
+      weight: "500",
+    },
+    {
+      path: "../../public/fonts/Portada/Portada-Bold.ttf",
+      weight: "700",
+    },
+    {
+      path: "../../public/fonts/Portada/Portada-Extrabold.ttf",
+      weight: "900",
+    },
+  ],
+ variable: "--font-portada",
+}) 
+
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../messages/${locale}.json`)).default;
   const t = createTranslator({ locale, messages });
@@ -60,7 +82,11 @@ export default async function layout({ children, params: { locale } }) {
   const direction = locale === "ar" ? "rtl" : "ltr";
 
   return (
-    <html className={`${montserrat.variable}`} lang={locale}>
+    <html className={`${
+      locale === "ar-AE"
+        ? `${portada.variable} font-portada`
+        : `${montserrat.variable} font-montserrat`
+    } `} lang={locale}>
       <GoogleAnalytics />
       <body>
         <Suspense fallback={<FallbackLoader />}>
