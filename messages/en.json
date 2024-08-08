@@ -22,8 +22,8 @@
   },
   "home": {
     "metaData": {
-      "title": "PrimeX Capital | Home",
-      "description": "Trade and dream Bigger with PrimeX Capital"
+      "title": "Trade Forex Stocks Indices CFD Metals | PrimeX Capital",
+      "description": "TTrade Forex, stocks, indices, CFDs, and metals with PrimeX Capital. Access top trading tools and insights. Learn more and start trading today!"
     },
     "hero": {
       "title1": "TRUSTED",
@@ -163,6 +163,10 @@
     }
   },
   "academy": {
+    "metaData": {
+      "title": "Academy | PrimeX Capital",
+      "description": "Master your trading skills with PrimeX Capital's Academy. We offer free webinars, blogs, market news, and private 1-1 education sessions. Click to learn more!"
+    },
     "hero": {
       "title_1": "Welcome to the academy of PrimeX Capital - ",
       "title_2": "Your Ultimate Resource Hub For Staying Ahead In The Dynamic World Of Trading",
@@ -296,6 +300,10 @@
     }
   },
   "commodities": {
+    "metaData": {
+      "title": "Commodity Trading Online | Trade Commodities Online | PrimeX Capital",
+      "description": "Trade commodities online with PrimeX Capital, featuring markets like gold, oil, and natural gas. arjoy competitive spreads and leverage options. Click to trade now!"
+    },
     "hero": {
       "title": "Immerse Yourself in New Trading Avenues and",
       "description": "Explore Growth with Commodities!",
@@ -360,6 +368,10 @@
     }
   },
   "forex": {
+    "metaData": {
+      "title": "Trade Forex Online | PrimeX Capital",
+      "description": "Trade Forex online with PrimeX Capital for a seamless and efficiart trading experiarce. Access advanced tools and strategies. Start trading today!"
+    },
     "hero": {
       "title": "Experience The World’s Largest & Most Liquid Financial Market",
       "description": "Where Unmatched Opportunities Are Available"
@@ -407,6 +419,10 @@
     }
   },
   "indices": {
+    "metaData": {
+      "title": "Trade Indices Online | Indices CFDs | PrimeX Capital",
+      "description": "Trade indices and CFDs online with PrimeX Capital. Access a wide range of indices and advanced trading tools. Start trading today!"
+    },
     "hero": {
       "title": "Experience the excitement of indices trading and",
       "description": "take advantage of a range of opportunities to grow your investment portfolio!"
@@ -455,6 +471,10 @@
     }
   },
   "metals": {
+    "metaData": {
+      "title": "Metals Trading Online Platform | PrimeX Capital",
+      "description": "Trade metals online with PrimeX Capital's robust platform. Access advanced tools and insights for effective trading. Click to learn more and start trading today!"
+    },
     "hero": {
       "title": "Diversify With PrimeX And Explore The Vast Opportunities In Metals Trading",
       "description": "Dabble With Gold, Silver, And Platinum, Key Commodities With Both Investment And Industrial Applications!"
@@ -503,6 +523,10 @@
     }
   },
   "stocks": {
+    "metaData": {
+      "title": "Invest Stocks| Trade Stocks Online | PrimeX Capital",
+      "description": "Invest in and trade stocks online with PrimeX Capital. Access powerful tools and insights for smarter stock trading. Learn more and start investing today!"
+    },
     "hero": {
       "title": "Discover How Stocks trading with us Can Open Doors",
       "description": "To Exciting Investment opportunities for you!"
@@ -549,6 +573,10 @@
     }
   },
   "metaTrader5": {
+    "metaData": {
+      "title": "Trade Seamlessly with MetaTrader 5 | MT5 | PrimeX Capital",
+      "description": "Experiarce advanced trading with PrimeX Capital's MetaTrader 5 (MT5) platform. arjoy cutting-edge tools and seamless execution. Click to learn more and start trading!"
+    },
     "hero": {
       "title": "MetaTrader 5 (MT5)",
       "desc_1": "The Ultimate Trading Platform",
@@ -631,6 +659,10 @@
     }
   },
   "careers": {
+    "metaData": {
+      "title": "Careers | PrimeX Capital",
+      "description": "Explore career opportunities at PrimeX Capital. Join a dynamic team and advance your career in the finance industry. Click to learn more and apply today!"
+    },
     "hero": {
       "title": "Careers",
       "description": "If you're passionate about trading, innovation, and making an impact, you've come to the right place.",
@@ -659,6 +691,10 @@
     }
   },
   "about": {
+    "metaData": {
+      "title": "About Us | PrimeX Capital",
+      "description": "Learn about PrimeX Capital, your trusted partner in trading. Discover our mission, values, and commitmart to excellarce. Click to learn more!"
+    },
     "hero": {
       "title": "Revolutionizing Your Trading Experience",
       "description": "At PrimeX Capital we are dedicated to transforming the trading experience. Established with a vision to provide innovative and reliable trading solutions. We offer a platform where traders of all levels can thrive. Our mission is to deliver advanced technology, diverse trading instruments, and exceptional support to empower your trading journey."
@@ -682,6 +718,10 @@
     }
   },
   "contact": {
+    "metaData": {
+      "title": "Contact Us | PrimeX Capital",
+      "description": "Get in touch with PrimeX Capital for any inquiries or support. We're here to assist you with your trading needs. Click to contact us and get help today!"
+    },
     "hero": {
       "title": "Contact Us",
       "description": "A global network of customer service experts from diverse regions ensures round-the-clock, multilingual, premium support",
@@ -726,6 +766,10 @@
     }
   },
   "awards": {
+    "metaData": {
+      "title": "Awards and Recognitions | PrimeX Capital",
+      "description": "Discover the latest awards and recognitions of PrimeX Capital, celebrating excellarce in financial services. Learn more about our achievemarts and join us today!"
+    },
     "hero": {
       "title": "We Are, Where Excellence Is Recognized!",
       "description": "Explore our award-winning achievements that set us apart as a leading forex brokerage house"
@@ -751,6 +795,10 @@
     }
   },
   "accountTypes": {
+    "metaData": {
+      "title": "Account Types | PrimeX Capital",
+      "description": "Explore the diverse account types at PrimeX Capital, designed to meet all your trading needs. Find the perfect account for you. Click to trade now"
+    },
     "header": {
       "title": "Account Types",
       "text": "PrimeX Capital has carefully curated our account types to meet your individual trading needs.",
@@ -868,6 +916,10 @@
     "login_here": "Login Here"
   },
   "ib": {
+    "metaData": {
+      "title": "Introducing Broker (IB) Program | PrimeX Capital",
+      "description": "Join PrimeX Capital's Introducing Broker (IB) Program and earn commissions by referring cliarts. arjoy top-tier support and resources. Click to learn more"
+    },
     "header": {
       "title1": "Become an",
       "title2": "Introducing Broker",

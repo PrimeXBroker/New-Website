@@ -1,93 +1,29 @@
-import React from "react";
-import PremiumAdvantages from "@/components/PremiumAdvantages";
-import Banner from "@/our_pages/account_types/Banner";
-import ChooseAccount from "@/our_pages/account_types/ChooseAccount";
-import Slider from "@/our_pages/account_types/Slider";
-import { useLocale, useTranslations } from "next-intl";
-import Cards from "@/components/Cards";
+import AccountTypesPage from "@/our_pages/account_types/AccountTypesPage";
+import { createTranslator } from "next-intl";
+
+export async function generateMetadata({ params: { locale } }) {
+  const messages = (await import(`../../../../messages/${locale}.json`)).default;
+  const t = createTranslator({ locale, messages });
+  const url =
+  locale != "en"
+    ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/account-types`
+    : `${process.env.NEXT_PUBLIC_BASE_URL}/account-types`;
+
+
+  return {
+    title: t("accountTypes.metaData.title"),
+    description: t("accountTypes.metaData.description"),
+    alternates: {
+      canonical: url,
+    },
+  };
+}
+
 
 const page = () => {
-  const locale = useLocale();
-  const t = useTranslations("accountTypes");
-  const b = useTranslations("regBtn");
-
-  const cardContents = [
-    {
-      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/standard-acc.webp",
-      title: t("card.account1-title"),
-      description: t("card.account1-desc"),
-    },
-    {
-      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/narrow-acc.webp",
-      title: t("card.account2-title"),
-      description: t("card.account2-desc"),
-    },
-    {
-      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/zero-acc.webp",
-      title: t("card.account3-title"),
-      description: t("card.account3-desc"),
-    },
-  ];
-
-  const advantagesData = {
-    imgEn:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/advantage-en.webp",
-    imgAr:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/advantage-ar.webp",
-    mainTitle1: t("advantages.adv_h2"),
-    mainTitle2: t("advantages.adv_h2_1"),
-    btnTxt: b("btnTxt"),
-    regNow: b("reg_now"),
-    loginHere: t("advantages.login_here"),
-    regLink: `https://client.primexbroker.com/${locale}/register`,
-    loginLink: `https://client.primexbroker.com/${locale}/auth/sign-in`,
-  };
-
-  const advantagesContent = [
-    {
-      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo1.svg",
-      hoveredImg:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo1-hover.svg",
-      title: t("advantages.adv1_h3"),
-      description: t("advantages.adv1_p"),
-    },
-    {
-      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo2.svg",
-      hoveredImg:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo2-hover.svg",
-      title: t("advantages.adv2_h3"),
-      description: t("advantages.adv2_p"),
-    },
-    {
-      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo3.svg",
-      hoveredImg:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo3-hover.svg",
-      title: t("advantages.adv3_h3"),
-      description: t("advantages.adv3_p"),
-    },
-    {
-      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo4.svg",
-      hoveredImg:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo4-hover.svg",
-      title: t("advantages.adv4_h3"),
-      description: t("advantages.adv4_p"),
-    },
-    {
-      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo5.svg",
-      hoveredImg:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo5-hover.svg",
-      title: t("advantages.adv5_h3"),
-      description: t("advantages.adv5_p"),
-    },
-  ];
-
   return (
     <>
-      <Banner />
-      <Cards items={cardContents} />
-      <ChooseAccount />
-      <Slider />
-      <PremiumAdvantages items={advantagesContent} data={advantagesData} />
+      <AccountTypesPage />
     </>
   );
 };
