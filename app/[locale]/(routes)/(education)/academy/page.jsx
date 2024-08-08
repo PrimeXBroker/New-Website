@@ -47,7 +47,7 @@ const Academy = () => {
       <LocationContextProvider>
         <Banner setActive={setActive} />
         <Featured cardsData={cardsData} />
-        <Webinars />
+        <Webinars active={active} setActive={setActive} />
         {/* <FormWrapper active={active} setActive={setActive} /> */}
         {/* <AcademyForm/> */}
         <PrivateSessions setActive={setActive} />

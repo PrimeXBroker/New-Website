@@ -28,7 +28,7 @@ function FromWarapper({ active, setActive }) {
   ];
 
   return (
-    <section id="academy-forms" className="relative container">
+    <section  className="relative container">
       <div className="tabs-container text-center">
         <div
           className={`tabs-navigation bg-accent rounded-3xl px-[8%] py-3 mb-2 flex justify-around items-center sm:w-[74%] md:w-[64%] lg:w-[94%] ${

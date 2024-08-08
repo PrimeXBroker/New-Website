@@ -4,11 +4,11 @@ import Image from "next/image";
 import FromWarapper from "./FromWarapper";
 import axios from "axios";
 
-const Webinars = () => {
+const Webinars = ({ active, setActive }) => {
   const locale = useLocale();
   const t = useTranslations("academy.upcomingWebinars");
   const [activeTab, setActiveTab] = useState(0);
-  const [formActive, setFormActive] = useState("Webinars");
+  // const [formActive, setFormActive] = useState( active );
   const [upcoming, setUpcoming] = useState([]);
 
   const fetchUpcomingWebinars = async () => {
@@ -25,7 +25,7 @@ const Webinars = () => {
   }, []);
 
   return (
-    <section className="bg-secondary py-20">
+    <section id="academy-form" className="bg-secondary py-20">
       <div className="container">
         <div className="grid grid-cols-12">
           <div className="col-span-12 lg:col-span-7 flex flex-col items-center lg:items-start">
@@ -127,7 +127,7 @@ const Webinars = () => {
             </div>
           </div>
           <div className="col-span-12 lg:col-span-5 flex items-center lg:items-end mt-20 lg:mt-0">
-            <FromWarapper active={formActive} setActive={setFormActive} />
+            <FromWarapper active={active} setActive={setActive} />
           </div>
         </div>
       </div>

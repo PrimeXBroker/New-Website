@@ -99,7 +99,7 @@ function BookSession() {
     },
   });
   return (
-    <section id="academy-form" className="container px-0">
+    <section  className="container px-0">
       <div
         className={`shadow-xl bg-[#fff] border-accent border sm:w-[74%] md:w-[64%] lg:w-[94%] ${
           locale === "ar"
