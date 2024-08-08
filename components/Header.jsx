@@ -10,7 +10,7 @@ import {
 } from "@nextui-org/navbar";
 import { Badge } from "@nextui-org/badge";
 
-import Logo from "@/public/images/logos/logo2.1.svg";
+import Logo from "@/public/images/logos/logo_black_v2.2.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -125,7 +125,7 @@ const Header = ({ locale }) => {
         />
         <NavbarBrand>
           <LocaleLink href="/">
-            <Image width="250" height={150} src={Logo} alt="Logo Image" />
+            <Image width="130" height={150} src={Logo} alt="Logo Image" />
           </LocaleLink>
         </NavbarBrand>
       </NavbarContent>

@@ -43,9 +43,9 @@ const BecomeIB = () => {
           <div className="mt-[2rem]">
             <LocaleLink
               href="/ib-program"
-              className="block w-fit px-4 py-3 rounded-full mx-auto md:mx-0 shadow-xl
+              className="text-sm md:text-[16px] block w-fit px-4 py-3 rounded-full mx-auto md:mx-0 shadow-xl
               bg-secondary text-white border-3 border-white hover:bg-accent
-              hover:text-secondary transition-all duration-300 hover:border-secondary
+              hover:text-secondary text-center transition-all duration-300 hover:border-secondary
               hover:scale-105
               "
             >
@@ -53,15 +53,6 @@ const BecomeIB = () => {
             </LocaleLink>
           </div>
         </div>
-        {/* <div className="w-full md:w-[40%]">
-          <Image
-            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/partners.webp"
-            width="600"
-            height="300"
-            alt="become ib"
-            className="mx-auto md:mx-0"
-          />
-        </div> */}
       </div>
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-opacity-100 py-16"

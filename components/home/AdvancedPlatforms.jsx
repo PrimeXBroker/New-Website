@@ -272,7 +272,7 @@ const AdvancedPlatforms = () => {
       </div>
       <Button
         as={LocaleLink}
-        href="/mt5-platform"
+        href="/platform/mt5-platform"
         className="bg-primary rounded-full px-6 py-4 w-[160px] mx-auto block my-12 h-auto font-semibold text-center transition-all duration-250 hover:scale-110"
       >
         {t("btnTxt")}
