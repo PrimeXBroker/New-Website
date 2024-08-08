@@ -1289,5 +1289,15 @@
       "payment_options": "Multiple Payment Options"
     },
     "copy-right": "2022 - 2024 PrimeX Broker (PTY) LTD all rights reserved."
+  },
+  "marketNews": {
+    "hero": {
+      "title": "Market News"
+    }
+  },
+  "marketNewsDetail": {
+    "hero": {
+      "title": "Market News Detail"
+    }
   }
 }
