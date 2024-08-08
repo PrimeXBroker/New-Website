@@ -9,11 +9,12 @@ import SuccessStories from "@/our_pages/education/academy/SuccessStories";
 import WebinarLibrary from "@/our_pages/education/academy/WebinarLibrary";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
-import FormWrapper from "@/our_pages/education/academy/FromWarapper"
+import FormWrapper from "@/our_pages/education/academy/FromWarapper";
+import Webinars from "@/our_pages/education/academy/Webinars";
 
 const Academy = () => {
   const t = useTranslations("academy.featured");
-  const [ active, setActive ] = useState("Webinars")
+  const [active, setActive] = useState("Webinars");
   const cardsData = [
     {
       title: t("card_1_title"),
@@ -42,18 +43,17 @@ const Academy = () => {
   ];
 
   return (
-
-    
     <>
-    <LocationContextProvider>
-      <Banner setActive={setActive} />
-      <Featured cardsData={cardsData} />
-      <FormWrapper active={active} setActive={setActive} />
-      {/* <AcademyForm/> */}
-      <PrivateSessions setActive={setActive} />
-      <JoinAcademy setActive={setActive} />
-      <WebinarLibrary />
-      <SuccessStories />
+      <LocationContextProvider>
+        <Banner setActive={setActive} />
+        <Featured cardsData={cardsData} />
+        <Webinars active={active} setActive={setActive} />
+        {/* <FormWrapper active={active} setActive={setActive} /> */}
+        {/* <AcademyForm/> */}
+        <PrivateSessions setActive={setActive} />
+        <JoinAcademy setActive={setActive} />
+        <WebinarLibrary />
+        <SuccessStories />
       </LocationContextProvider>
     </>
   );
