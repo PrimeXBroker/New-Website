@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-import nationality from "../../public/assets/data/nationality.json";
+import nationality from "@/public/assets/data/nationality.json";
 import { LocationContext } from "@/context/location-context";
 import { useTranslations, useLocale } from "next-intl";
 

@@ -177,7 +177,7 @@
       "title": "اكتشف الميزات غير المحدودة لمركز توصيات برايم اكس",
       "description": "رؤى السوق في الوقت الحقيقي، وتوصيات يومية غير محدودة، وأكثر من ذلك بكثير مدمجة بسلاسة في منصة التداول MT5 الخاصة بك",
       "download_btn": "تحميل",
-      "link_title_part_1":  "ليس لديك ",
+      "link_title_part_1": "ليس لديك ",
       "link_title_part_2": "ميتا  5",
       "link_title_part_3": " بعد",
       "download_link_text": " قم بالتحميل هنا",
@@ -193,21 +193,52 @@
       "card_4_title": "بوابتك للبداية",
       "card_4_desc": "خبرائنا "
     },
+    "upcomingWebinars": {
+      "title": "الندوات المجانية القادمة عبر الإنترنت"
+    },
     "academyForm": {
       "login_title": "تسجيل الدخول",
       "drop_field_1": "تحليلات أساسية",
       "drop_field_2": "تحليلات فنية",
-      "register_title": "تسجيل",
-      "form_full_name": "الاسم الكامل",
-      "form_email": "البريد الإلكتروني",
-      "form_category": "اختر فئة الويبينار",
-      "form_form_btn": "تسجيل",
-      "full_name_validation_error": "يمكن أن يحتوي الاسم الكامل على حروف فقط.",
-      "full_name_required_error": "الاسم الكامل مطلوب!",
-      "email_validation_error": "عنوان البريد الإلكتروني غير صالح",
-      "email_required_error": "البريد الإلكتروني مطلوب!",
-      "contact_required_error": "الهاتف مطلوب!",
-      "webinar_required_error": "نوع الويبينار مطلوب!"
+      "form_btn": "تسجيل",
+      "webinar_form_title": "Webinars",
+      "instructor_form_title": "Instructor",
+      "session_form_title": "Session",
+      "first_name": "الاسم الأول",
+      "last_name": "الاسم الأخير",
+      "first_name_validation_error": "يجب أن يحتوي الاسم الأول على أحرف أبجدية فقط.",
+      "first_name_required_error": "يرجى تقديم الاسم الأول.",
+      "last_name_validation_error": "يجب أن يحتوي الاسم الأخير على أحرف أبجدية فقط.",
+      "last_name_required_error": "يرجى تقديم الاسم الأخير.",
+      "email": "البريد الإلكتروني",
+      "email_validation_error": "يرجى إدخال عنوان بريد إلكتروني صالح.",
+      "email_required_error": "البريد الإلكتروني مطلوب.",
+      "category": "اختر فئة الويبينار",
+      "webinar_required_error": "يرجى اختيار فئة الويبينار.",
+      "contact_required_error": "رقم الاتصال مطلوب.",
+      "full_name": "الاسم الكامل",
+      "full_name_validation_error": "يجب أن يحتوي الاسم الكامل على أحرف أبجدية فقط.",
+      "full_name_required_error": "يرجى تقديم الاسم الكامل.",
+      "experience_year": "سنوات الخبرة",
+      "experience_year_error": "يرجى تحديد سنوات الخبرة الخاصة بك.",
+      "speciality": "التخصص",
+      "speciality_error": "التخصص مطلوب.",
+      "advantages": "يرجى كتابة أي ميزات أخرى لديك (مثل: إذا كان لديك قناة تيليجرام أو صفحات على وسائل التواصل الاجتماعي)",
+      "advantages_error": "اذكر مؤهلاتك الإضافية مطلوب.",
+      "workedWithCompanies": "هل سبق لك العمل مع شركات من قبل؟",
+      "workedWithCompanies_error": "يرجى الإشارة إذا كنت قد عملت مع أي شركات.",
+      "doneWebinar": "هل سبق لك أن قدمت ويبينار؟",
+      "doneWebinar_error": "يرجى الإشارة إذا كنت قد قمت بتقديم ويبينار.",
+      "account_number": "رقم الحساب",
+      "account_number_error": "رقم الحساب مطلوب.",
+      "availability": "متوفر",
+      "availability_error": "يرجى تقديم مدى توفرك.",
+      "success_title": "نجاح",
+      "webinar_success_desc": "شكراً لاشتراكك في أكاديمية برايم اكس كابيتال",
+      "close_btn": "إغلاق",
+      "instructor_success_desc": "شكراً لاهتمامك بالانضمام إلى برايم اكس كابيتال. سيقوم فريقنا بمراجعة طلبك بعناية والتواصل معك.",
+      "session_success_desc1": "تم إرسال طلبك لجدولة الويبينار المجاني بنجاح.",
+      "session_success_desc2": "شكراً لاختيارك برايم اكس كابيتال"
     },
     "privateSessions": {
       "title": "جلسات خاصة",
@@ -1207,8 +1238,8 @@
     },
     "logos": {
       "title": "نحن نقبل",
-      "payment_options":"طرق دفع متعددة"
+      "payment_options": "طرق دفع متعددة"
     },
-    "copy-right":"PrimeX Broker (PTY) LTD جميع الحقوق محفوظة 2024 - 2022"
+    "copy-right": "PrimeX Broker (PTY) LTD جميع الحقوق محفوظة 2024 - 2022"
   }
 }
