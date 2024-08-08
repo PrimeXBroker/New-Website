@@ -68,8 +68,9 @@ function BookSession() {
                 //     JSON.stringify(values)
                 // );
                 setLoading(true)
+                const res = await axios.post("http://localhost:4002/api/book-schedule", values) 
 
-                const res = await axios.post("https://primexbroker.com/api/book-schedule", values) 
+                // const res = await axios.post("https://primexbroker.com/api/book-schedule", values) 
                 if ( res.data.success ) {
                     formik.resetForm();
                     setLoading(false)
