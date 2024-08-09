@@ -100,6 +100,7 @@ const MarketNewsDetail = ({ slug }) => {
                 {t("relatedBlogs.title")}
               </h2>
             </div>
+            
             <div  >
               {
                 related.map((blog, i) => (
