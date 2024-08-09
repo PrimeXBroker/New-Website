@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { useTranslations, useLocale } from "next-intl";
 
-const Banner = () => {
+const Banner = ({ slug }) => {
   const locale = useLocale();
   const t = useTranslations("marketNewsDetail.hero");
 
@@ -18,7 +18,7 @@ const Banner = () => {
             }`}
             style={{ letterSpacing: "1px" }}
           >
-            {t("title")}
+            {/* {t("title")} */} {slug}
           </h1>
         </div>
         <div className="mt-8 md:mt-0">

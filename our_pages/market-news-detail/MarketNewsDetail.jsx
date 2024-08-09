@@ -1,12 +1,21 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Link from "next/link";
+import NewsBody from "./NewsBody";
+import { useLocale, useTranslations } from "next-intl";
 
-const MarketNewsDetail = () => {
+const MarketNewsDetail = ({ slug }) => {
+  const locale = useLocale();
+  const t = useTranslations("marketNewsDetail");
+
+  useEffect(() => {}, []);
   return (
     <section className="container py-20">
       <div className="grid grid-cols-12">
-        <div className="col-span-8"></div>
-        <div className="col-span-4 px-6">
+        <div className=" lg:col-span-8 md:col-span-12 col-span-12">
+          <NewsBody slug={slug} />
+        </div>
+        <div className="lg:col-span-4 col-span-12 px-6">
           <div className="border-1 border-accent p-[30px]">
             <div className="flex justify-center">
               <img
@@ -17,17 +26,21 @@ const MarketNewsDetail = () => {
             </div>
             <div className="mt-5">
               <h6 className="text-center text-base font-semibold text-black">
-                Ready to Invest?
+                {t("readyToInvest.title")}
               </h6>
             </div>
             <div className="blog-invest-box-text mt-4">
               <p className="text-center text-sm">
-                Open live account & Start investing NOW! Trade 500+ global
-                assets hassle-free.
+                {t("readyToInvest.description")}
               </p>
             </div>
             <button className="bg-primary w-full h-10 rounded-xl mt-6 text-secondary font-semibold">
-              GET STARTED
+              <Link
+                href={`https://client.primexbroker.com/${locale}/register`}
+                target="_blank"
+              >
+                {t("readyToInvest.btnText")}
+              </Link>
             </button>
           </div>
           <div
@@ -36,7 +49,7 @@ const MarketNewsDetail = () => {
           >
             <div className="widget-title relative mb-10">
               <h2 className="text-2xl text-black font-semibold">
-                Related Blogs
+                {t("relatedBlogs.title")}
               </h2>
             </div>
             <Link href={``} className="group">

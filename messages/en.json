@@ -1298,6 +1298,14 @@
   "marketNewsDetail": {
     "hero": {
       "title": "Market News Detail"
+    },
+    "readyToInvest": {
+      "title": "Ready to Invest",
+      "description": "Open live account & Start investing NOW! Trade 500+ global assets hassle-free.",
+      "btnText": "GET STARTED"
+    },
+    "relatedBlogs": {
+      "title": "Related Blogs"
     }
   }
 }

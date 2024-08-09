@@ -1295,5 +1295,23 @@
       "payment_options": "طرق دفع متعددة"
     },
     "copy-right": "PrimeX Broker (PTY) LTD جميع الحقوق محفوظة 2024 - 2022"
+  },
+  "marketNews": {
+    "hero": {
+      "title": "أخبار السوق"
+    }
+  },
+  "marketNewsDetail": {
+    "hero": {
+      "title": "Market News Detail"
+    },
+    "readyToInvest": {
+      "title": "هل أنت مستعد للاستثمار؟",
+      "description": "افتح حسابًا حقيقيًا وابدأ الاستثمار الآن! تداول أكثر من 500 من الأدوات المالية العالمية دون أي متاعب.",
+      "btnText": "ابدأ"
+    },
+    "relatedBlogs": {
+      "title": "مقالات ذات صلة"
+    }
   }
 }
