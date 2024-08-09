@@ -1,13 +1,14 @@
-"use client"
+"use client";
 import React, { useEffect } from "react";
 import Link from "next/link";
 import NewsBody from "./NewsBody";
+import { useLocale, useTranslations } from "next-intl";
 
-const MarketNewsDetail = ({slug}) => {
+const MarketNewsDetail = ({ slug }) => {
+  const locale = useLocale();
+  const t = useTranslations("marketNewsDetail");
 
-  useEffect(()=>{
-
-  },[])
+  useEffect(() => {}, []);
   return (
     <section className="container py-20">
       <div className="grid grid-cols-12">
@@ -25,17 +26,21 @@ const MarketNewsDetail = ({slug}) => {
             </div>
             <div className="mt-5">
               <h6 className="text-center text-base font-semibold text-black">
-                Ready to Invest?
+                {t("readyToInvest.title")}
               </h6>
             </div>
             <div className="blog-invest-box-text mt-4">
               <p className="text-center text-sm">
-                Open live account & Start investing NOW! Trade 500+ global
-                assets hassle-free.
+                {t("readyToInvest.description")}
               </p>
             </div>
             <button className="bg-primary w-full h-10 rounded-xl mt-6 text-secondary font-semibold">
-              GET STARTED
+              <Link
+                href={`https://client.primexbroker.com/${locale}/register`}
+                target="_blank"
+              >
+                {t("readyToInvest.btnText")}
+              </Link>
             </button>
           </div>
           <div
@@ -44,7 +49,7 @@ const MarketNewsDetail = ({slug}) => {
           >
             <div className="widget-title relative mb-10">
               <h2 className="text-2xl text-black font-semibold">
-                Related Blogs
+                {t("relatedBlogs.title")}
               </h2>
             </div>
             <Link href={``} className="group">
