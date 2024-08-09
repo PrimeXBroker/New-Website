@@ -1,14 +1,62 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import NewsBody from "./NewsBody";
 import { useLocale, useTranslations } from "next-intl";
-
+import axios from "axios";
+import Moment from "react-moment";
 const MarketNewsDetail = ({ slug }) => {
+
   const locale = useLocale();
   const t = useTranslations("marketNewsDetail");
+  const [detail, setDetail] = useState(null)
+  const [related, setRelated] = useState([])
 
-  useEffect(() => {}, []);
+  const fetchRelatedBlogs = async () => {
+
+    const res = await axios.get(
+      `https://primexbroker.com/api/fetch/publish/related/blogs/1/3/${detail.category._id}/${detail._id}`
+    );
+    if (res?.data?.success) {
+      console.log(res?.data?.data, "blogfryyy");
+      setRelated(res?.data?.data);
+      // setLoading2(false);
+    }
+
+  }
+
+  const fetchdetails = async () => {
+    // setLoading(true);
+    try {
+      const res = await axios.get(
+        `https://primexbroker.com/api/fetch/one/blog/${slug}`,
+        { cache: "no-store" }
+      );
+      if (res?.data?.success) {
+        console.log(res?.data, "parsing");
+        setDetail(res?.data?.data);
+
+      }
+    } catch (error) {
+      // setLoading(false);
+      console.log(error);
+    }
+  };
+
+  console.log("slug content", slug);
+
+  useEffect(() => {
+    fetchdetails();
+
+  }, []);
+
+  useEffect(() => {
+    if (detail) {
+      fetchRelatedBlogs()
+    }
+  }, [detail])
+
+  console.log(detail, "<----- detail");
   return (
     <section className="container py-20">
       <div className="grid grid-cols-12">
@@ -52,29 +100,40 @@ const MarketNewsDetail = ({ slug }) => {
                 {t("relatedBlogs.title")}
               </h2>
             </div>
-            <Link href={``} className="group">
-              <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out">
-                <div>
-                  <img
-                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/market-news/blog.jpg"
-                    alt=""
-                    className="w-full overflow-hidden transition duration-700 ease-in-out transform group-hover:scale-110"
-                  />
-                </div>
-                <div className="px-3 py-5 group-hover:bg-secondary transition duration-700 ease-in-out">
-                  <div className="mb-3">
-                    <p className="text-black text-sm group-hover:text-white transition duration-700 ease-in-out">
-                      7th August, 2024
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-black group-hover:text-primary transition duration-700 ease-in-out">
-                      Meta Platforms Surges 4% on a Strong Q2 Results
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </Link>
+            <div  >
+              {
+                related.map((blog, i) => (
+                  <Link href={`/${locale}/market-news/${blog.slug}`} key={i} >
+                    <div className="single-blog-thumb group overflow-hidden transition duration-700  mb-2 ease-in-out">
+                      <div key={i} mb-2>
+                        <img
+                          src={blog.image}
+                          alt="PrimeX Capital"
+                          className="w-full overflow-hidden transition duration-700 ease-in-out transform group-hover:scale-110"
+                        />
+                      </div>
+                      <div className="px-3 py-5 group-hover:bg-secondary transition duration-700 ease-in-out">
+                        <div className="mb-3">
+                          <p className="text-black text-sm group-hover:text-white transition duration-700 ease-in-out">
+                            <Moment
+                              date={blog?.createdOn}
+                              format="Do MMMM YYYY"
+                            />
+                          </p>
+                        </div>
+                        <div>
+                          <h4 className="text-xl font-semibold text-black group-hover:text-primary transition duration-700 ease-in-out">
+                            {blog.title}
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+
+                  </Link>
+                ))
+              }
+
+            </div>
           </div>
         </div>
       </div>

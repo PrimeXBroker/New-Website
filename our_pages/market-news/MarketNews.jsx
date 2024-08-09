@@ -32,6 +32,7 @@ const MarketNews = () => {
     fetchNews()
   }, [page])
 
+
   if (loading) {
     return (
       <div className="flex items-center justify-center my-48">
