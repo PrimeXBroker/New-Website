@@ -2,6 +2,7 @@ import { useLocale, useTranslations } from "next-intl";
 import CompanyStats1 from "./CompanyStats1";
 import Link from "next/link";
 import ParticlesBackground from "../ParticlesBackground";
+import Image from "next/image";
 
 const NewBanner = () => {
 
@@ -76,12 +77,16 @@ const NewBanner = () => {
         <CompanyStats1 stats={statsOne}/>
         </div>
       </div>
-      <div  className="lg:hidden absolute inset-0 w-full h-full bg-cover sm:bg-center bg-opacity-100 z-0"
-        style={{
-          backgroundImage:"url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_mobile.webp')",
-        }}>
-     
-      </div>
+      <div className="lg:hidden absolute inset-0 w-full h-full bg-opacity-100 z-0">
+      <Image
+        src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_mobile.webp"
+        alt="Background Image"
+        layout="fill"
+        objectFit="cover"
+        quality={75} // Adjust as needed, lower for smaller file size
+        priority={true} // Ensures it's loaded ASAP
+      />
+    </div>
       <div
         className="hidden lg:block absolute inset-0 w-full h-full bg-cover bg-center bg-opacity-100"
         style={{
