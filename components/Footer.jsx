@@ -231,7 +231,14 @@ const Footer = () => {
           </div>
           <div className="py-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-4 md:gap-y-8 lg:gap-y-0 border-b border-b-gray-500 sm:text-left text-center">
             {footerLinks.map((el, index) => (
-              <div key={index} className="footer">
+              <div
+                key={index}
+                className={`footer ${
+                  el.column.heading === t("Location.title_part5")
+                    ? "col-span-2 sm:col-span-1 xs:col-span-2"
+                    : ""
+                }`}
+              >
                 <p
                   className={`text-primary font-semibold md:pt-0 pt-5 ${
                     locale === "ar" ? "text-right" : "text-left"

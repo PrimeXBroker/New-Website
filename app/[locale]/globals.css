@@ -40,6 +40,10 @@
       width: 290px !important;
       height: 290px !important;
     }
+    .flip-card {
+      width: 320px !important;
+      height: 320px !important;
+    }
   }
 }
 
