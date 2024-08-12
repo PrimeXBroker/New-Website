@@ -632,7 +632,9 @@
 }
 
 .feature-content {
-  animation: fadeDown 0.8s ease-in-out;
+  animation: fadeDown 1s ease-in-out;
+  background-color: initial;
+  transition: background-color 1s ease-in-out;
 }
 
 @keyframes fadeDown {
@@ -644,6 +646,31 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.feature-content-active {
+  background-color: #3f3f3e;
+  transition: background-color 1s ease-in-out;
+}
+
+.mt5-tabs {
+  transition: background-color 0.8s ease-in-out, border-color 0.8s ease-in-out;
+}
+
+.mt5-tabs.bg-primary {
+  background-color: #fccd0a; /* Replace with your primary color */
+}
+
+.mt5-tabs.bg-transparent {
+  background-color: transparent;
+}
+
+.mt5-tabs.border-primary {
+  border-color: #fccd0a; /* Replace with your primary color */
+}
+
+.mt5-tabs.border-secondary {
+  border-color: #3f3f3e; /* Replace with your secondary color */
 }
 
 .widget-title h2::before {

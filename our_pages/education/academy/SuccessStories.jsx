@@ -38,6 +38,41 @@ const SuccessStories = () => {
       country: t("review_country_4"),
       date: t("review_date_4"),
     },
+    {
+      name: t("review_name_5"),
+      title: t("review_title_5"),
+      description: t("review_description_5"),
+      country: t("review_country_5"),
+      date: t("review_date_5"),
+    },
+    {
+      name: t("review_name_6"),
+      title: t("review_title_6"),
+      description: t("review_description_6"),
+      country: t("review_country_6"),
+      date: t("review_date_6"),
+    },
+    {
+      name: t("review_name_7"),
+      title: t("review_title_7"),
+      description: t("review_description_7"),
+      country: t("review_country_7"),
+      date: t("review_date_7"),
+    },
+    {
+      name: t("review_name_8"),
+      title: t("review_title_8"),
+      description: t("review_description_8"),
+      country: t("review_country_8"),
+      date: t("review_date_8"),
+    },
+    {
+      name: t("review_name_9"),
+      title: t("review_title_9"),
+      description: t("review_description_9"),
+      country: t("review_country_9"),
+      date: t("review_date_9"),
+    },
   ];
 
   return (
@@ -76,7 +111,7 @@ const SuccessStories = () => {
           },
           1440: {
             slidesPerView: 3,
-            spaceBetween: 70,
+            spaceBetween: 40,
           },
         }}
         centeredSlides={true}
