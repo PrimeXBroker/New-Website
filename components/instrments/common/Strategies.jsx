@@ -17,7 +17,13 @@ const Strategies = ({ tipsData }) => {
               <div className="flip-card-front" style={{ background: "#FFF" }}>
                 <Image
                   src={tip.imgUrl}
-                  width={path.split('/')[2] === "indices"?'120':path.split('/')[2]==='commodities'?'80':'50'}
+                  width={
+                    path.split("/")[2] === "indices"
+                      ? "120"
+                      : path.split("/")[2] === "commodities"
+                      ? "80"
+                      : "50"
+                  }
                   height="100"
                   alt="account logo"
                 />

@@ -72,11 +72,11 @@ const Academy = () => {
         <h1 className="sectionHeading">{t("academy_title")}</h1>
         <p className="sectionPara text-center">{t("academy_desc")}</p>
       </div>
-      <div className="flex flex-row  gap-12 justify-center flex-wrap ">
+      <div className="flex flex-row gap-12 justify-center flex-wrap ">
         {academyCards.map((card, index) => (
-          <div key={index} className="cards_container" >
-            <div className="custom_card" style={{  height: 260 }} >
-              <div className="slide slide1"  >
+          <div key={index} className="cards_container">
+            <div className="custom_card" style={{ height: 260 }}>
+              <div className="slide slide1">
                 <div className="content">
                   <div className="icon">
                     <Image
