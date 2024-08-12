@@ -40,7 +40,7 @@ const NewBanner = () => {
     <section className="relative lg:h-[92vh] h-screen">
       <div className="container h-screen flex flex-col pt-5 lg:pt-[10rem] z-10">
         <h1
-          className="text-white z-10 text-2xl md:text-[36px] lg:text-[52px] font-semibold mb-5 md:leading-[50px] text-center lg:text-left"
+          className={`text-white z-10 text-2xl md:text-[36px] lg:text-[52px] font-semibold mb-5 md:leading-[50px] text-center lg:text-left ${locale === 'ar' ? 'lg:text-right':'lg:text-left'}`}
           style={{ letterSpacing: "1.2px" }}
         >
           The{" "}
@@ -50,7 +50,7 @@ const NewBanner = () => {
           of World
           <br className="hidden sm:block" /> Class Traders!
         </h1>
-        <p className="z-10 text-white text-center lg:text-left text-[15px] md:text-[17px] font-light">
+        <p className={`z-10 text-white text-center lg:text-left text-[15px] md:text-[17px] font-light ${locale === 'ar' ? 'lg:text-right':'lg:text-left'}`}>
           Step into the Future of Trading with PrimeX. Dive into a World of{" "}
           <br className="hidden sm:block" />
           Abundant Liquidity, Seamless Execution, and Fair Opportunities for
@@ -58,19 +58,19 @@ const NewBanner = () => {
           <br className="hidden sm:block" /> Financial Growth.{" "}
           <strong>Join the Trading Revolution Today.</strong>
         </p>
-        <div className="z-10 mt-4 sm:mt-10 gap-4 sm:space-x-6 mx-auto lg:mx-0 flex sm:flex-row md:block">
+        <div className="z-10 mt-4 sm:mt-10 gap-4  mx-auto lg:mx-0 flex sm:flex-row">
           <Link 
           href='https://client.primexbroker.com/en/register'
           className="bg-primary text-secondary rounded-full w-[155px] sm:w-[200px] h-[50px]
            shadow-xl text-center z-10 py-3 px-4 sm:text-[16px] text-[14px]">
-            Open Account
+          { t("btn1_txt")}
           </Link>
           <Link 
           href='https://client.primexbroker.com/en/register'
           className="bg-transparent border border-primary text-white rounded-full w-[155px] sm:w-[200px]
            shadow-xl text-center z-10 py-3 px-4 hover:bg-primary hover:text-secondary 
            transition-all hover:scale-105 duration-300 sm:text-[16px] text-[14px]">
-            Try Free Demo
+            { t("btn2_txt")}
           </Link>
         </div>
         <div className="block lg:hidden z-10">
