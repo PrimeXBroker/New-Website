@@ -93,7 +93,7 @@ const CareerDetails = ({ id }) => {
   }, [id]);
 
   return (
-    <section className="container py-20">
+    <section className="container py-20" dir="ltr">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {loading ? (
           <div className="col-span-12 flex items-center justify-center h-60">
