@@ -38,25 +38,24 @@ const NewBanner = () => {
   ];
   return (
     <section className="relative lg:h-[92vh] h-screen">
-      <div className="container h-screen flex flex-col pt-5 lg:pt-[10rem] z-10">
+      <div className={`container h-screen flex flex-col pt-5 z-10 ${locale === 'ar'? 'lg:pt-[6rem]':'lg:pt-[10rem]'}`}>
         <h1
-          className={`text-white z-10 text-2xl md:text-[36px] lg:text-[52px] font-semibold mb-5 md:leading-[50px] text-center lg:text-left ${locale === 'ar' ? 'lg:text-right':'lg:text-left'}`}
+          className={`text-white z-10 text-2xl md:text-[36px] lg:text-[52px] font-semibold mb-5  text-center lg:text-left ${locale === 'ar' ? 'lg:text-right md:leading-[60px] lg:text-[42px]':'lg:text-left md:leading-[50px]'}`}
           style={{ letterSpacing: "1.2px" }}
         >
-          The{" "}
+          {t("new_title1_1")}
           <span className="text-primary mr-2">
-            No.1 <br className="hidden sm:block" /> Choice
+          {t("new_title1_3")} <br className="hidden sm:block" /> {t("new_title1_2")}
           </span>
-          of World
-          <br className="hidden sm:block" /> Class Traders!
+          {t("new_title1_4")}
+          <br className="hidden sm:block" /> {t("new_title1_5")}
         </h1>
         <p className={`z-10 text-white text-center lg:text-left text-[15px] md:text-[17px] font-light ${locale === 'ar' ? 'lg:text-right':'lg:text-left'}`}>
-          Step into the Future of Trading with PrimeX. Dive into a World of{" "}
+          {t("new_desc1_1")}{" "}
           <br className="hidden sm:block" />
-          Abundant Liquidity, Seamless Execution, and Fair Opportunities for
-          Your
-          <br className="hidden sm:block" /> Financial Growth.{" "}
-          <strong>Join the Trading Revolution Today.</strong>
+          {t("new_desc1_2")}
+          <br className="hidden sm:block" />{t("new_desc1_3")}{" "}
+          <strong>{t("new_desc1_4")}</strong>
         </p>
         <div className="z-10 mt-4 sm:mt-10 gap-4  mx-auto lg:mx-0 flex sm:flex-row">
           <Link 
