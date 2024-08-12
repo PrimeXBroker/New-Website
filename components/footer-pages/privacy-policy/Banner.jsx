@@ -7,7 +7,7 @@ const Banner = () => {
   const t = useTranslations("footer.privacyPolicy");
 
   return (
-    <section className={`bg-secondary`}>
+    <section className={`bg-secondary md:h-screen`}>
       <div className="container flex flex-col md:flex-row justify-evenly gap-10 items-center py-12">
         <div className="md:w-[45%]">
           <h1

@@ -203,7 +203,7 @@ const CareerDetails = ({ id }) => {
           onOpenChange={handleModalOpenChange}
           placement="center"
           backdrop="blur"
-          size="4xl"
+          size="2xl"
         >
           <ModalContent className="bg-accent">
             {(onClose) => (

@@ -37,7 +37,14 @@ const Banner = ({ title, description, imgUrl }) => {
           </Link>
         </div>
         <div className="flex justify-center items-center lg:mt-0 mt-8">
-          <Image src={imgUrl} alt="banner img" width="300" height="600" />
+          <Image
+            src={imgUrl}
+            alt="banner img"
+            width="300"
+            height="600"
+            quality={75}
+            priority={true}
+          />
         </div>
       </div>
     </section>
