@@ -87,6 +87,11 @@ export default async function layout({ children, params: { locale } }) {
         ? `${portada.variable} font-portada`
         : `${montserrat.variable} font-montserrat`
     } `} lang={locale}>
+      <Head>
+      <link rel="preload" href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_mobile.webp" as="image" />
+      <link rel="preload" href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_desktop_ar.webp" as="image" />
+      <link rel="preload" href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_desktop_en.webp" as="image" />
+      </Head>
       <GoogleAnalytics />
       <body>
         <Suspense fallback={<FallbackLoader />}>

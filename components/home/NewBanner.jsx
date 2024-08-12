@@ -55,8 +55,6 @@ const NewBanner = () => {
           {t("new_desc1_1")}{" "}
           <br className="hidden sm:block" />
           {t("new_desc1_2")}
-          {/* <br className="hidden sm:block" />{t("new_desc1_3")}{" "}
-          <strong>{t("new_desc1_4")}</strong> */}
         </p>
         <div className="z-10 mt-4 sm:mt-10 gap-4  mx-auto lg:mx-0 flex sm:flex-row">
           <Link 
@@ -87,15 +85,17 @@ const NewBanner = () => {
         priority={true} // Ensures it's loaded ASAP
       />
     </div>
-      <div
-        className="hidden lg:block absolute inset-0 w-full h-full bg-cover bg-center bg-opacity-100"
-        style={{
-          backgroundImage:
-            locale === "ar"
-              ? "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_desktop_ar.webp')"
-              : "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_desktop_en.webp')",
-        }}
-      ></div>
+    <div className="hidden lg:block absolute inset-0 w-full h-full bg-opacity-100 z-0">
+      <Image
+        src={locale === "ar"? 'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_desktop_ar.webp':
+        'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_desktop_en.webp'}
+        alt="Background Image"
+        layout="fill"
+        objectFit="cover"
+        quality={75} // Adjust quality as needed
+        priority={true} // Prioritize this image for loading
+      />
+    </div>
       <div
         className="hidden lg:block absolute z-20 bg-center bottom-0 h-[6.5rem] w-full bg-no-repeat"
         style={{
