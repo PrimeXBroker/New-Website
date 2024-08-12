@@ -40,6 +40,10 @@
       width: 290px !important;
       height: 290px !important;
     }
+    .flip-card {
+      width: 320px !important;
+      height: 320px !important;
+    }
   }
 }
 
@@ -707,9 +711,4 @@
 }
 .heart {
   animation: heartBeat 2s ease 0s infinite normal none;
-}
-
-
-.custom-placeholder::placeholder {
-  color: #3F3F3E !important; /* Example color (gray-400) */
 }

@@ -4,7 +4,7 @@ import React from "react";
 import { useTranslations, useLocale } from "next-intl";
 import local from "@next/font/local";
 
-const Banner = ({setActive}) => {
+const Banner = ({ setActive }) => {
   const locale = useLocale();
   const h = useTranslations("academy.hero");
   const f = useTranslations("academy.unlimitedFeatures");
@@ -39,7 +39,7 @@ const Banner = ({setActive}) => {
             </p>
             <Link
               href="#academy-form"
-              onClick={()=>setActive("Webinars")}
+              onClick={() => setActive("Webinars")}
               className="bg-primary text-center px-4 py-4 rounded-full w-[200px] shadow-xl block md:m-0 mx-auto"
             >
               {h("join_btn")}
@@ -48,7 +48,11 @@ const Banner = ({setActive}) => {
           <div className="flex">
             <Image
               className="mx-auto md:m-0 block"
-              src={ locale === "en" ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/banner_img.webp" : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/academy/20240805-171521.png"}
+              src={
+                locale === "en"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/banner_img.webp"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/academy/20240805-171521.png"
+              }
               alt="Banner Image"
               width="550"
               height="500"
@@ -56,7 +60,7 @@ const Banner = ({setActive}) => {
           </div>
         </div>
       </div>
-      <div className="container py-16 max-w-xl flex flex-col gap-12">
+      <div className="container py-16 max-w-xl flex flex-col gap-5 sm:gap-12">
         <h1
           className="md:text-3xl text-xl text-secondary font-semibold text-center"
           style={{ lineHeight: "50px", letterSpacing: "1px" }}
@@ -71,7 +75,7 @@ const Banner = ({setActive}) => {
         </p>
         <Link
           href="https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe"
-          className="bg-primary text-center px-4 py-4 rounded-full w-[200px] mx-auto block shadow-xl mb-8"
+          className="bg-primary text-center px-4 py-4 rounded-full w-[200px] mx-auto block shadow-xl mb-3 sm:mb-8"
         >
           {f("download_btn")}
         </Link>
@@ -86,7 +90,6 @@ const Banner = ({setActive}) => {
             {f("download_link_text")}
           </Link>
         </p>
-
         <p className="text-secondary text-lg text-center">{f("powered_by")}</p>
       </div>
     </section>

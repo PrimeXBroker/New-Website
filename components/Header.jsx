@@ -57,12 +57,16 @@ const Header = ({ locale }) => {
       options: [{ name: t("mt5"), link: "/platform/mt5-platform" }],
     },
     {
+      name: t("accounts"),
+      link: "/account-types",
+    },
+    {
       name: t("partners"),
-      link: `/ib-program`,
+      options: [{ name: t("ib_program"), link: "/ib-program" }],
     },
     {
       name: t("education"),
-      link: "/academy",
+      options: [{ name: t("academy"), link: "/academy" }],
     },
     {
       name: t("deposit"),

@@ -27,12 +27,12 @@
     },
     "hero": {
       "new_title1_1":"The",
-      "new_title1_2":"No.1",
-      "new_title1_3":"Choice",
-      "new_title1_4":" of World",
+      "new_title1_2":"Choice",
+      "new_title1_3":" #1",
+      "new_title1_4":"of World",
       "new_title1_5":"Class Traders!",
-      "new_desc1_1":" Step into the Future of Trading with PrimeX. Dive into a World of",
-      "new_desc1_2":" Abundant Liquidity, Seamless Execution, and Fair Opportunities for Your",
+      "new_desc1_1":"Trade with low commissions and raw spreads",
+      "new_desc1_2":"Instant Withdrawal | Ultra-fast Execution",
       "new_desc1_3":"Financial Growth.",
       "new_desc1_4":"Join the Trading Revolution Today.",
       "btn1_txt":"Open Account",
@@ -1240,12 +1240,16 @@
     },
     "privacyPolicy": {
       "title_part1": "Privacy",
-      "title_part2": "Policy"
+      "title_part2": "Policy",
+      "view_btn": "Click to View",
+      "download_btn": "Download PDF"
     },
     "termsCondition": {
       "title_part1": "Terms &",
       "title_part2": "Conditions",
-      "description": "This section outlines the legal Terms and conditions that Apply to Your Use of Our Services, including Trading, Account Management, and More."
+      "description": "This section outlines the legal Terms and conditions that Apply to Your Use of Our Services, including Trading, Account Management, and More.",
+      "view_btn": "Click to View",
+      "download_btn": "Download PDF"
     },
     "company": {
       "title_part1": "Company",
@@ -1260,7 +1264,9 @@
       "title_part2_link1": "Privacy Policy",
       "title_part3_link2": "Risk Disclosure",
       "title_part4_link3": "Client Agreement",
-      "title_part5_link4": "Terms and Conditions"
+      "title_part5_link4": "Terms and Conditions",
+      "view_btn": "Click to View",
+      "download_btn": "Download PDF"
     },
     "Services": {
       "title_part3": "Services",

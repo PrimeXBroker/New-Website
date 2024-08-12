@@ -8,7 +8,7 @@ const Banner = () => {
   const locale = useLocale();
   const t = useTranslations("footer.clientAgreement");
   return (
-    <section className={`bg-secondary`}>
+    <section className={`bg-secondary  md:h-screen`}>
       <div className="container flex flex-col md:flex-row justify-evenly gap-10 items-center py-12">
         <div className="md:w-[45%]">
           <h1
@@ -31,11 +31,11 @@ const Banner = () => {
           />
         </div>
       </div>
-      <div className="container py-8 flex justify-center gap-10">
+      <div className="container py-8 flex flex-col md:flex-row items-center justify-center gap-10">
         <Button
           title="Click to View"
           as="a"
-          href="https://drive.google.com/file/d/1mNGtSnTp8h11o8exI8dVqfxsfQGD41MU/view?usp=sharing"
+          href="https://drive.google.com/file/d/1mNGtSnTp8h11o8exI8dVqfxsfQGD41MU/view"
           color="white"
           className="relative text-white text-center flex h-[70px] rounded-full w-[250px] bg-secondary border border-accent shadow-2xl"
           endContent={
@@ -48,7 +48,7 @@ const Banner = () => {
             />
           }
         >
-          {t("view_btn")}
+        <span className="absolute right-0 left-8 text-[14px] md:text-[16px]">  {t("view_btn")}</span>
         </Button>
         <Button
           title="Click to View"
@@ -66,7 +66,7 @@ const Banner = () => {
             />
           }
         >
-          {t("download_btn")}
+         <span className="absolute right-0 left-8 text-[14px] md:text-[16px]">{t("download_btn")}</span>
         </Button>
       </div>
     </section>

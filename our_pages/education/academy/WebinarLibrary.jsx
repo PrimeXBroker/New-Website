@@ -117,7 +117,7 @@ const WebinarLibrary = () => {
                 onMouseEnter={() => handleIconEnter(index)}
                 onMouseLeave={handleIconLeave}
                 key={index}
-                className="mt-4 flex flex-col justify-center items-center bg-accent cursor-pointer rounded-2xl border-b-5 w-[250px] md:w-[270px] h-[250px] group
+                className="mt-4 flex flex-col justify-center items-center bg-accent cursor-pointer rounded-2xl border-b-5 w-[320px] sm:w-[250px] md:w-[270px] h-[250px] group
                  hover:bg-[#3F3F3E] border-black hover:border-primary text-center mx-auto transform translate-y-[0] hover:translate-y-[-1rem] transition-transform duration-500"
               >
                 <div className="mb-4">

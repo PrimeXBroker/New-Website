@@ -44,7 +44,12 @@ const JoinPrimex = () => {
                   src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/window.svg"
                   className="w-8"
                 />
-                <span style={{ lineHeight: "18px" }}>
+                <span
+                  className={`text-xs ${
+                    locale === "ar" ? "text-right" : "text-left"
+                  }`}
+                  style={{ lineHeight: "18px" }}
+                >
                   {t("download_window_btn_part1")} <br />
                   <span className="text-[18px] font-semibold block">
                     {t("download_window_btn_part2")}
@@ -62,7 +67,12 @@ const JoinPrimex = () => {
                   src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/playstore.svg"
                   className="w-8"
                 />
-                <span className={`${locale === "ar"? 'text-right':'text-left'}`} style={{ lineHeight: "18px" }}>
+                <span
+                  className={`text-xs ${
+                    locale === "ar" ? "text-right" : "text-left"
+                  }`}
+                  style={{ lineHeight: "18px" }}
+                >
                   {t("google_play-btn_part1")} <br />
                   <span className="text-[18px] font-semibold block">
                     {t("google_play-btn_part2")}
@@ -81,8 +91,11 @@ const JoinPrimex = () => {
                   className="w-8"
                 />
                 <span
-                className={`${locale === "ar"? 'text-right':'text-left'}`}
-                style={{ lineHeight: "18px" }}>
+                  className={`text-xs ${
+                    locale === "ar" ? "text-right" : "text-left"
+                  }`}
+                  style={{ lineHeight: "18px" }}
+                >
                   {t("app_store_btn_part1")} <br />
                   <span className="text-[18px] font-semibold block">
                     {t("app_store_btn_part2")}{" "}
