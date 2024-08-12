@@ -77,7 +77,7 @@ const NewBanner = () => {
       </div>
       <div className="lg:hidden absolute inset-0 w-full h-full bg-opacity-100 z-0">
       <Image
-        src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_mobile.webp"
+        src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_mobile2.webp"
         alt="Background Image"
         layout="fill"
         objectFit="cover"
@@ -87,8 +87,8 @@ const NewBanner = () => {
     </div>
     <div className="hidden lg:block absolute inset-0 w-full h-full bg-opacity-100 z-0">
       <Image
-        src={locale === "ar"? 'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_desktop_ar.webp':
-        'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_desktop_en.webp'}
+        src={locale === "ar"? 'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_desktop_ar2.webp':
+        'https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_desktop_en2.webp'}
         alt="Background Image"
         layout="fill"
         objectFit="cover"
