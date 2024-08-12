@@ -123,7 +123,7 @@ const JobList = () => {
   );
 
   return (
-    <section className="container my-20">
+    <section className="container my-20" dir="ltr">
       <div className="grid grid-cols-12 px-8 md:bg-accent mb-32 sm:mb-20 md:mb-12 h-14 rounded-2xl">
         <div className="col-span-12 md:col-span-9 flex items-center justify-center md:justify-start">
           <div className="flex justify-center md:justify-start flex-wrap items-center gap-4 md:gap-6 lg:gap-12">
