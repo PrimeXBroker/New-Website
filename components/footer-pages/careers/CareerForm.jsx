@@ -71,9 +71,6 @@ const CareerForm = () => {
       if (fileType === "resume") {
         setResumeName(file.name);
         formik.setFieldValue("resume", file);
-      } else if (fileType === "portfolio") {
-        setPortfolioName(file.name);
-        formik.setFieldValue("portfolio", file);
       }
     }
   };
@@ -210,25 +207,19 @@ const CareerForm = () => {
           </div>
           <div className="grid grid-cols-1">
             <div className="flex flex-col">
-              <div className="flex items-center gap-2">
-                <input
-                  id="portfolio"
-                  type="file"
-                  name="portfolio"
-                  className="hiddenInput"
-                  onChange={handleFileChange("portfolio")}
-                  style={{ display: "none" }}
-                />
-                <button
-                  type="button"
-                  onClick={() => handleButtonClick("portfolio")}
-                  className={`bg-white text-secondary py-2 px-4 capitalize rounded-md cursor-pointer shadow-sm w-full ${
-                    locale === "ar" ? "text-right" : "text-left"
-                  }`}
-                >
-                  {portfolioName || t("upload_portfolio")}
-                </button>
-              </div>
+              <input
+                className={`bg-white text-secondary placeholder:text-accent py-2 px-4 capitalize rounded-md ${
+                  formik.touched.portfolio && formik.errors.portfolio
+                    ? "border-2 border-red-600"
+                    : ""
+                }`}
+                type="text"
+                name="portfolio"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.portfolio}
+                placeholder={t("upload_portfolio")}
+              />
             </div>
           </div>
           <div className="text-center">

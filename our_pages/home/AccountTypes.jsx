@@ -10,22 +10,19 @@ const AccountTtpes = () => {
     {
       title: t("account_types_card_1_title"),
       description: t("account_types_card_1_desc"),
-      imageUrl:
-        "images/accounts/standard.svg",
+      imageUrl: "images/accounts/standard.svg",
       btnHref: "/account-types",
     },
     {
       title: t("account_types_card_2_title"),
       description: t("account_types_card_2_desc"),
-      imageUrl:
-        "images/accounts/narrow.svg",
+      imageUrl: "images/accounts/narrow.svg",
       btnHref: "/account-types",
     },
     {
       title: t("account_types_card_3_title"),
       description: t("account_types_card_3_desc"),
-      imageUrl:
-        "images/accounts/raw.svg",
+      imageUrl: "images/accounts/raw.svg",
       btnHref: "/account-types",
     },
   ];

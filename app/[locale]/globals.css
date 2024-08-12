@@ -36,6 +36,10 @@
     .satisfaction-tabs [data-slot="tab"] {
       @apply w-[30%];
     }
+    .cardBox {
+      width: 290px !important;
+      height: 290px !important;
+    }
   }
 }
 
@@ -676,31 +680,31 @@
 }
 @keyframes heartBeat {
   0% {
-	animation-timing-function: ease-out;
-	transform: scale(1);
-	transform-origin: center center;
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
   }
 
   10% {
-	animation-timing-function: ease-in;
-	transform: scale(0.91);
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
   }
 
   17% {
-	animation-timing-function: ease-out;
-	transform: scale(0.98);
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
   }
 
   33% {
-	animation-timing-function: ease-in;
-	transform: scale(0.87);
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
   }
 
   45% {
-	animation-timing-function: ease-out;
-	transform: scale(1);
+    animation-timing-function: ease-out;
+    transform: scale(1);
   }
 }
-.heart{
+.heart {
   animation: heartBeat 2s ease 0s infinite normal none;
 }
