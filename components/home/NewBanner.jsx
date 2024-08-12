@@ -1,7 +1,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import CompanyStats1 from "./CompanyStats1";
 import Link from "next/link";
-// import YellowButton from "../YellowButton";
+import ParticlesBackground from "../ParticlesBackground";
 
 const NewBanner = () => {
 
@@ -54,8 +54,8 @@ const NewBanner = () => {
           {t("new_desc1_1")}{" "}
           <br className="hidden sm:block" />
           {t("new_desc1_2")}
-          <br className="hidden sm:block" />{t("new_desc1_3")}{" "}
-          <strong>{t("new_desc1_4")}</strong>
+          {/* <br className="hidden sm:block" />{t("new_desc1_3")}{" "}
+          <strong>{t("new_desc1_4")}</strong> */}
         </p>
         <div className="z-10 mt-4 sm:mt-10 gap-4  mx-auto lg:mx-0 flex sm:flex-row">
           <Link 
@@ -100,7 +100,7 @@ const NewBanner = () => {
       >
        <CompanyStats1 stats={statsOne}/>
       </div>
-    </section>
+    </section>  
   );
 };
 

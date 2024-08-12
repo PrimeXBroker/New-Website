@@ -11,6 +11,7 @@
   "dependencies": {
     "@next/font": "^14.2.5",
     "@nextui-org/react": "^2.4.2",
+    "@tsparticles/react": "^3.0.0",
     "ag-grid-community": "^32.0.2",
     "ag-grid-react": "^32.0.2",
     "aos": "^2.3.4",
@@ -33,6 +34,7 @@
     "react-phone-number-input": "^3.4.4",
     "sharp": "^0.33.4",
     "swiper": "^11.1.4",
+    "tsparticles": "^3.5.0",
     "yup": "^1.4.0"
   },
   "devDependencies": {

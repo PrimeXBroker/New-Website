@@ -64,7 +64,7 @@ const Banner = () => {
             height="300"
             alt="banner Image"
             className="md:w-[300px] lg:w-[350px]"
-          />
+            priority={true}          />
         </div>
       </div>
     </section>

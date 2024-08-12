@@ -53,7 +53,7 @@ const Footer = () => {
         links: [
           // { name: t("Rules.title_part2_link1"), href: "/privacy-policy" },
           // { name: t("Rules.title_part3_link2"), href: "#" },
-          { name: t("Rules.title_part4_link3"), href: "client-agreement" },
+          { name: t("Rules.title_part4_link3"), href: "/client-agreement" },
           { name: t("Rules.title_part5_link4"), href: "/terms" },
         ],
       },
@@ -268,18 +268,6 @@ const Footer = () => {
                     }`}
                   >
                     {el.column.links.map((link, linkIndex) =>
-                      link.name === "Client Agreement" ? (
-                        <li
-                          key={linkIndex}
-                          className={`text-white py-1 ${
-                            language === "ar" ? "text-right" : "text-left"
-                          }`}
-                        >
-                          <Link href={link.href} onClick={handleOpenModal}>
-                            {link.name}
-                          </Link>
-                        </li>
-                      ) : (
                         <li
                           key={linkIndex}
                           className={`text-white py-1 ${
@@ -288,7 +276,6 @@ const Footer = () => {
                         >
                           <LocaleLink href={link.href}>{link.name}</LocaleLink>
                         </li>
-                      )
                     )}
                   </ul>
                 )}
