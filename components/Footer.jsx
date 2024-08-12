@@ -42,7 +42,7 @@ const Footer = () => {
           { name: t("company.title_part1_link1"), href: "/about" },
           { name: t("company.title_part1_link2"), href: "/contact" },
           { name: t("company.title_part1_link3"), href: "/awards" },
-          // { name: t("company.title_part1_link4"), href: "#" },
+          { name: t("company.title_part1_link4"), href: "/market-news" },
           { name: t("company.title_part1_link5"), href: "/careers" },
         ],
       },
@@ -186,7 +186,7 @@ const Footer = () => {
               }`}
             >
               {t("getStarted.get_started_desc_1")}
-             
+
               {t("getStarted.get_started_desc_2")}
             </p>
           </div>
@@ -403,7 +403,7 @@ const Footer = () => {
           </div>
         </CustomModal>
         <p className="bg-accent text-secondary text-sm py-3 text-center font-semibold drop-shadow-sm">
-           &copy; {t("copy-right")}
+          &copy; {t("copy-right")}
         </p>
       </footer>
     </>
