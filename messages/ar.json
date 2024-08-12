@@ -691,7 +691,7 @@
       "first_name": "الاسم الأول",
       "last_name": "الاسم الأخير",
       "email": "البريد الإلكتروني",
-      "country": "البلد",
+      "country": "الجنسية",
       "upload_resume": "حمل السيرة الذاتية",
       "upload_portfolio": "رابط إلى معرض الأعمال",
       "submit_btn": "تقديم",

@@ -685,7 +685,7 @@
       "first_name": "first name*",
       "last_name": "last name*",
       "email": "email*",
-      "country": "Country*",
+      "country": "Nationality*",
       "upload_resume": "Upload Resume*",
       "upload_portfolio": "Link to your portfolio*",
       "submit_btn": "submit",
