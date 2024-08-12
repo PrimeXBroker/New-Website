@@ -8,6 +8,7 @@ import "react-phone-number-input/style.css";
 import nationality from "@/public/assets/data/nationality.json";
 import { LocationContext } from "@/context/location-context";
 import { useTranslations, useLocale } from "next-intl";
+import axios from "axios";
 
 const CareerForm = () => {
   const locale = useLocale();
@@ -22,6 +23,10 @@ const CareerForm = () => {
       email: "",
       contact: "",
       country: "",
+      current_salary: "",
+      expected_salary: "",
+      years_of_experience: "",
+      current_designation: "",
       resume: null,
       portfolio: null,
     },
@@ -44,6 +49,10 @@ const CareerForm = () => {
       country: Yup.string().required(t("country_required_error")),
       resume: Yup.mixed().required(t("resume_required_error")),
       portfolio: Yup.mixed().required(t("portfolio_required_error")),
+      current_salary: Yup.number().required(t("portfolio_required_error")),
+      expected_salary: Yup.number().required(t("portfolio_required_error")),
+      years_of_experience: Yup.number().required(t("portfolio_required_error")),
+      current_designation: Yup.string().required(t("country_required_error")),
     }),
     validate: (values) => {
       const errors = {};
@@ -58,20 +67,45 @@ const CareerForm = () => {
         email: values.email,
         contact: values.contact,
         country: values.country,
+        current_salary: values.current_salary,
+        expected_salary: values.expected_salary,
+        years_of_experience: values.years_of_experience,
+        current_designation: values.current_designation,
         resume: values.resume,
-        portfolio: values.resume,
+        portfolio: values.portfolio,
       };
-      console.log(updatedValues);
+      const res = await axios.post(`http://localhost:4002/api/add/candidate`, updatedValues)
+      if (res.data.success) {
+        console.log("done");
+      }
     },
   });
 
-  const handleFileChange = (fileType) => (event) => {
-    const file = event.currentTarget.files[0];
+  const handleFileChange = async (file) => {
     if (file) {
-      if (fileType === "resume") {
-        setResumeName(file.name);
-        formik.setFieldValue("resume", file);
+      setResumeName(file.name);
+      const _id = "1"; // Assuming this is a placeholder or test value
+      const formData = new FormData();
+      formData.append("action", "attachments");
+      formData.append("_id", _id);
+      formData.append("files[]", file);
+
+      try {
+        const imageSendRes = await axios.post(
+          `http://localhost:4002/api/upload`,
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+        formik.setFieldValue("resume", imageSendRes.data.result.file_path);
       }
+      catch (err) {
+        console.log(err.message);
+      }
+
     }
   };
 
@@ -100,11 +134,10 @@ const CareerForm = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
             <div className="flex flex-col">
               <input
-                className={`bg-white text-secondary placeholder:text-accent py-2 px-4 capitalize rounded-md ${
-                  formik.touched.first_name && formik.errors.first_name
-                    ? "border-2 border-red-600"
-                    : ""
-                }`}
+                className={`bg-white text-secondary placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-md ${formik.touched.first_name && formik.errors.first_name
+                  ? "border-2 border-red-600"
+                  : ""
+                  }`}
                 type="text"
                 name="first_name"
                 onChange={formik.handleChange}
@@ -115,11 +148,10 @@ const CareerForm = () => {
             </div>
             <div className="flex flex-col">
               <input
-                className={`bg-white text-secondary  placeholder:text-accent capitalize py-2 px-4 rounded-md ${
-                  formik.touched.last_name && formik.errors.last_name
-                    ? "border-2 border-red-600"
-                    : ""
-                } `}
+                className={`bg-white text-secondary  placeholder:text-[#A0A7B2] capitalize py-2 px-4 rounded-md ${formik.touched.last_name && formik.errors.last_name
+                  ? "border-2 border-red-600"
+                  : ""
+                  } `}
                 type="text"
                 name="last_name"
                 onChange={formik.handleChange}
@@ -133,11 +165,10 @@ const CareerForm = () => {
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
                 <input
-                  className={`bg-white text-secondary   placeholder:text-accent py-2 px-4 capitalize rounded-[3px] w-full ${
-                    formik.touched.email && formik.errors.email
-                      ? "border-2 border-red-600"
-                      : ""
-                  }`}
+                  className={`bg-white text-secondary   placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-[3px] w-full ${formik.touched.email && formik.errors.email
+                    ? "border-2 border-red-600"
+                    : ""
+                    }`}
                   type="email"
                   name="email"
                   onChange={formik.handleChange}
@@ -148,24 +179,93 @@ const CareerForm = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className={`flex items-center gap-2 bg-white px-5 placeholder:text-[#A0A7B2] ${formik.touched.contact && formik.errors.contact
+            ? "border-2 border-red-600"
+            : ""
+            }`} >
             <PhoneInput
               onChange={(value) => formik.setFieldValue("contact", value)}
               onBlur={formik.handleBlur}
               name="contact"
               value={formik.values.contact}
               defaultCountry={originCountry}
-              className="w-[100%]"
+              className="w-[100%] custom-placeholder"
+              placeholder="Phone Number"
             />
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
+            <div className="flex flex-col">
+              <input
+                className={`bg-white text-secondary placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-md ${formik.touched.current_salary && formik.errors.current_salary
+                  ? "border-2 border-red-600"
+                  : ""
+                  }`}
+                type="number"
+                name="current_salary"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.current_salary}
+                placeholder={"Current Salary*"}
+              />
+            </div>
+            <div className="flex flex-col">
+              <input
+                className={`bg-white text-secondary  placeholder:text-[#A0A7B2] capitalize py-2 px-4 rounded-md ${formik.touched.expected_salary && formik.errors.expected_salary
+                  ? "border-2 border-red-600"
+                  : ""
+                  } `}
+                type="number"
+                name="expected_salary"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.expected_salary}
+                placeholder={"Expected Salary*"}
+              />
+            </div>
+          </div>
+
           <div className="grid grid-cols-1">
             <div className="flex flex-col">
+              <input
+                className={`bg-white text-[#A0A7B2] placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-md ${formik.touched.current_designation && formik.errors.current_designation
+                  ? "border-2 border-red-600"
+                  : ""
+                  }`}
+                type="text"
+                name="current_designation"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.current_designation}
+                placeholder={"Current Designation*"}
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1">
+            <div className="flex flex-col">
+              <input
+                className={`bg-white text-[#A0A7B2] placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-md ${formik.touched.years_of_experience && formik.errors.years_of_experience
+                  ? "border-2 border-red-600"
+                  : ""
+                  }`}
+                type="number"
+                name="years_of_experience"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.years_of_experience}
+                placeholder={"Years Of Experience*"}
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 ">
+            <div className={`flex flex-col pr-5 bg-white ${formik.touched.country && formik.errors.country
+              ? "border-2 border-red-600"
+              : ""
+              } `}>
               <select
-                className={`bg-white text-secondary placeholder:text-accent capitalize  py-2 px-4 rounded-[5px] ${
-                  formik.touched.country && formik.errors.country
-                    ? "border-2 border-red-600"
-                    : ""
-                }`}
+                className={`bg-white text-[#A0A7B2] placeholder:text-[#A0A7B2] capitalize  py-2 px-4  rounded-[5px]`}
                 name="country"
                 value={formik.values.country}
                 onChange={formik.handleChange}
@@ -184,21 +284,24 @@ const CareerForm = () => {
           </div>
           <div className="grid grid-cols-1">
             <div className="flex flex-col">
-              <div className="flex items-center gap-2">
+              <div className={`flex items-center gap-2   ${formik.touched.resume && formik.errors.resume
+                ? "border-2 border-red-600"
+                : ""
+                } `}>
                 <input
                   id="resume"
                   type="file"
                   name="resume"
                   className="hiddenInput"
-                  onChange={handleFileChange("resume")}
+                  onChange={(event) => handleFileChange(event.target.files[0])}
                   style={{ display: "none" }}
+                  accept=".pdf"
                 />
                 <button
                   type="button"
                   onClick={() => handleButtonClick("resume")}
-                  className={`bg-white text-secondary py-2 px-4 capitalize rounded-md cursor-pointer shadow-sm w-full ${
-                    locale === "ar" ? "text-right" : "text-left"
-                  }`}
+                  className={`bg-white text-[#A0A7B2] py-2 px-4 capitalize rounded-md cursor-pointer shadow-sm w-full ${locale === "ar" ? "text-right" : "text-left"
+                    }`}
                 >
                   {resumeName || t("upload_resume")}
                 </button>
@@ -208,17 +311,17 @@ const CareerForm = () => {
           <div className="grid grid-cols-1">
             <div className="flex flex-col">
               <input
-                className={`bg-white text-secondary placeholder:text-accent py-2 px-4 capitalize rounded-md ${
-                  formik.touched.portfolio && formik.errors.portfolio
-                    ? "border-2 border-red-600"
-                    : ""
-                }`}
+                className={`bg-white text-[#A0A7B2] placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-md ${formik.touched.portfolio && formik.errors.portfolio
+                  ? "border-2 border-red-600"
+                  : ""
+                  }`}
                 type="text"
                 name="portfolio"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.portfolio}
                 placeholder={t("upload_portfolio")}
+
               />
             </div>
           </div>
