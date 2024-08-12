@@ -19,6 +19,14 @@ import GoogleAnalytics from "@/utilities/GoogleAnalytics";
 const montserrat = localFont({
   src: [
     {
+      path: "../../public/fonts/Montserrat/Montserrat-ExtraLight.ttf",
+      weight: "200",
+    },
+    {
+      path: "../../public/fonts/Montserrat/Montserrat-Light.ttf",
+      weight: "300",
+    },
+    {
       path: "../../public/fonts/Montserrat/Montserrat-Regular.ttf",
       weight: "400",
     },
