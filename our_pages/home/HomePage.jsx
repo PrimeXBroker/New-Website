@@ -21,6 +21,7 @@ import {
   import Link from "next/link";
   import { HiBellAlert } from "react-icons/hi2";
   import { Button } from "@nextui-org/button";
+import NewBanner from "@/components/home/NewBanner";
 
 const HomePage = () => {
     const t = useTranslations("home");
@@ -64,7 +65,8 @@ const HomePage = () => {
 
   return (
     <>
-    <Banner/>
+    <NewBanner/>
+    {/* <Banner/> */}
     <TradingOpportunities />
       <AccountTypes1 />
       <AdvancedPlatforms />

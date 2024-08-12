@@ -101,7 +101,7 @@ const MarketNewsDetail = ({ slug }) => {
               </h2>
             </div>
             
-            <div  >
+            <div>
               {
                 related.map((blog, i) => (
                   <Link href={`/${locale}/market-news/${blog.slug}`} key={i} >

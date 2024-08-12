@@ -112,7 +112,7 @@ const KeyFeatures = () => {
                 key={index}
               >
                 <div
-                  className={`h-[80px] w-[320px] rounded-full flex justify-center items-center gap-2 px-6 cursor-pointer ${
+                  className={`mt5-tabs h-[80px] w-[320px] rounded-full flex justify-center items-center gap-2 px-6 cursor-pointer ${
                     activeFeature === item.key
                       ? "bg-primary border-1 border-primary z-30"
                       : "bg-transparent border-1 border-secondary z-10"
@@ -132,7 +132,7 @@ const KeyFeatures = () => {
                   </span>
                 </div>
                 {activeFeature === item.key && (
-                  <div className="feature-content flex flex-col justify-center items-center mb-4 h-[330px] w-[270px] bg-secondary relative top-4 pt-16 px-5 rounded-3xl z-20 mt-[-88px]">
+                  <div className="feature-content feature-content-active flex flex-col justify-center items-center mb-4 h-[330px] w-[270px] bg-secondary relative top-4 pt-16 px-5 rounded-3xl z-20 mt-[-88px]">
                     <h1 className="sectionHeading text-primary mb-1 text-center text-base">
                       {item.subTitle1}
                     </h1>

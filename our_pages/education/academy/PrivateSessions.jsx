@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 const PrivateSessions = ({ setActive }) => {
@@ -47,7 +47,11 @@ const PrivateSessions = ({ setActive }) => {
             <h4 className="text-secondary text-center text-sm">
               {card.position}
             </h4>
-            <Link href="#academy-form" onClick={()=> setActive("Session")} className="bg-primary py-2 px-6 rounded-full w-[150px] shadow-xl text-secondary text-sm mx-auto block mt-4">
+            <Link
+              href="#academy-form"
+              onClick={() => setActive("Session")}
+              className="bg-primary py-2 px-6 rounded-full w-[160px] shadow-xl text-secondary text-sm mx-auto block mt-4"
+            >
               {t("book_session_btn")}
             </Link>
           </div>

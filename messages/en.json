@@ -26,6 +26,17 @@
       "description": "TTrade Forex, stocks, indices, CFDs, and metals with PrimeX Capital. Access top trading tools and insights. Learn more and start trading today!"
     },
     "hero": {
+      "new_title1_1": "The",
+      "new_title1_2": "Choice",
+      "new_title1_3": " #1",
+      "new_title1_4": "of World",
+      "new_title1_5": "Class Traders!",
+      "new_desc1_1": "Trade with low commissions and raw spreads",
+      "new_desc1_2": "Instant Withdrawal | Ultra-fast Execution",
+      "new_desc1_3": "Financial Growth.",
+      "new_desc1_4": "Join the Trading Revolution Today.",
+      "btn1_txt": "Open Account",
+      "btn2_txt": "Try Free Demo",
       "title1": "TRUSTED",
       "desc1": "Solidifying global leadership in financial derivatives, with sustained growth and unwavering customer focus, earning worldwide trust.",
       "title2": "REGULATED",
@@ -117,7 +128,7 @@
         "title1_2": "Enter our competetion and compete for Amazing Prizes"
       },
       "30_welcome_gift": {
-        "title1_1": "$30 Welcome Gift",
+        "title1_1": "$30 Gift Account",
         "title1_2": "Start with a $30 gift when you verify your account"
       }
     },
@@ -296,7 +307,32 @@
       "review_title_4": "Exceptional Customer Service",
       "review_description_4": "Joining PrimeX Capital was one of the best decisions I've made. Their customer service is always ready to help, and I never have to wait long. They genuinely care about their clients.",
       "review_country_4": "KSA",
-      "review_date_4": "January 17, 2024"
+      "review_date_4": "January 17, 2024",
+      "review_name_5": "Ameer",
+      "review_title_5": "Transform Your Trading Skills with PrimeX Academy",
+      "review_description_5": "PrimeX Academy transformed my trading skills. The in-depth courses and personalized coaching sessions have given me the confidence to navigate the markets like a pro. Highly recommend it to anyone serious about trading!",
+      "review_country_5": "IQ",
+      "review_date_5": "August 01, 2024",
+      "review_name_6": "Yousef",
+      "review_title_6": "The Best Decision for My Trading Journey",
+      "review_description_6": "For my trading journey, enrolling in PrimeX Academy was the best choice I could have made. The expert insights and hands-on guidance have been invaluable. I’ve seen significant improvements in my strategies and results.",
+      "review_country_6": "UAE",
+      "review_date_6": "July 29, 2024",
+      "review_name_7": "Hussain",
+      "review_title_7": "Unlock Your Trading Potential with PrimeX Academy",
+      "review_description_7": "Thanks to PrimeX Academy, I’ve unlocked my potential as a trader. The knowledge and support provided here are unmatched. It’s not just an academy; it’s a community that drives success.",
+      "review_country_7": "Kuwait",
+      "review_date_7": "June, 15, 2024",
+      "review_name_8": "Hani",
+      "review_title_8": "Webinars and Seminars That Make a Difference",
+      "review_description_8": "PrimeX Academy’s webinars and seminars have been a game-changer for me. The real-world examples and expert analysis helped me refine my strategies and achieve better outcomes in my trades",
+      "review_country_8": "IQ",
+      "review_date_8": "April 20, 2024",
+      "review_name_9": "Faisal",
+      "review_title_9": "Gain Confidence and Skills to Excel in Trading",
+      "review_description_9": "The level of detail and expertise at PrimeX Academy is phenomenal. It’s more than just learning; it’s about gaining the skills and confidence to excel in the trading world. I couldn’t be happier with my experience.",
+      "review_country_9": "KSA",
+      "review_date_9": "August 10, 2024"
     }
   },
   "commodities": {
@@ -674,7 +710,7 @@
       "first_name": "first name*",
       "last_name": "last name*",
       "email": "email*",
-      "country": "Country*",
+      "country": "Nationality*",
       "upload_resume": "Upload Resume*",
       "upload_portfolio": "Link to your portfolio*",
       "submit_btn": "submit",
@@ -687,7 +723,8 @@
       "phone_required_error": "phone is required!",
       "country_required_error": "country is required!",
       "resume_required_error": "resume is required!",
-      "portfolio_required_error": "portfolio is required!"
+      "portfolio_required_error": "portfolio is required!",
+      "success_message": "Thank you for your application. We have successfully received your submission. Our team will review your application and get back to you shortly."
     }
   },
   "about": {
@@ -782,16 +819,16 @@
       "award_year_5": "2020",
       "award_1_title": "Best Copy Trading Program",
       "award_1_location": "UAE 2023",
-      "award_2_title": "Best Copy Trading Program",
-      "award_2_location": "UAE 2023",
-      "award_3_title": "Best Copy Trading Program",
+      "award_2_title": "Best Copy Trading Forex Broker",
+      "award_2_location": "Africa 2023",
+      "award_3_title": "The Most Trusted ECN Broker",
       "award_3_location": "UAE 2023",
-      "award_4_title": "Best Copy Trading Program",
-      "award_4_location": "UAE 2023",
-      "award_5_title": "Best Copy Trading Program",
-      "award_5_location": "UAE 2023",
-      "award_6_title": "Best Copy Trading Program",
-      "award_6_location": "UAE 2023"
+      "award_4_title": "Most Reliable Forex Broker",
+      "award_4_location": "Middle East 2023",
+      "award_5_title": "Best ECN Broker",
+      "award_5_location": "India Financial Expo 2023",
+      "award_6_title": "Best Forex ECN Broker",
+      "award_6_location": "Expo Dubai 2023"
     }
   },
   "accountTypes": {
@@ -1229,12 +1266,16 @@
     },
     "privacyPolicy": {
       "title_part1": "Privacy",
-      "title_part2": "Policy"
+      "title_part2": "Policy",
+      "view_btn": "Click to View",
+      "download_btn": "Download PDF"
     },
     "termsCondition": {
       "title_part1": "Terms &",
       "title_part2": "Conditions",
-      "description": "This section outlines the legal Terms and conditions that Apply to Your Use of Our Services, including Trading, Account Management, and More."
+      "description": "This section outlines the legal Terms and conditions that Apply to Your Use of Our Services, including Trading, Account Management, and More.",
+      "view_btn": "Click to View",
+      "download_btn": "Download PDF"
     },
     "company": {
       "title_part1": "Company",
@@ -1249,7 +1290,9 @@
       "title_part2_link1": "Privacy Policy",
       "title_part3_link2": "Risk Disclosure",
       "title_part4_link3": "Client Agreement",
-      "title_part5_link4": "Terms and Conditions"
+      "title_part5_link4": "Terms and Conditions",
+      "view_btn": "Click to View",
+      "download_btn": "Download PDF"
     },
     "Services": {
       "title_part3": "Services",

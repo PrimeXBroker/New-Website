@@ -12,15 +12,15 @@ const Banner = () => {
   return (
     <section>
       <div
-        className={`relative h-[1000px] md:h-[650px] xl:h-[750px] bg-no-repeat bg-cover bg-center ${
+        className={`relative sm:h-[1000px] md:h-[650px] xl:h-[750px] bg-no-repeat bg-cover bg-center ${
           locale === "ar"
             ? "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-header-mbl.webp)] md:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-header-ar.webp)]"
             : "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-header-mbl.webp)] md:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-header.webp)]"
         }`}
       >
-        <div className="container mx-auto md:px-10 xl:px-4 pt-20 xl:pt-32">
+        <div className="container mx-auto md:px-10 xl:px-4 sm:pt-20 xl:pt-32">
           <div className="grid grid-cols-12 gap-4 items-center h-full">
-            <div className="col-span-12 md:col-span-7 lg:col-span-6 flex flex-col justify-center mt-[430px] md:mt-0">
+            <div className="col-span-12 md:col-span-7 lg:col-span-6 flex flex-col justify-center mt-[380px] sm:mt-[430px] md:mt-0">
               <div
                 className={`${
                   locale === "ar"
@@ -60,7 +60,7 @@ const Banner = () => {
                 </h3>
               </div>
               <div
-                className={`mt-16 ${
+                className={`mt-16 mb-10 mb:sm-0 ${
                   locale === "ar"
                     ? "text-center md:text-right"
                     : "text-center md:text-left"
