@@ -38,39 +38,38 @@ const NewBanner = () => {
   ];
   return (
     <section className="relative lg:h-[92vh] h-screen">
-      <div className="container h-screen flex flex-col pt-5 lg:pt-[10rem] z-10">
+      <div className={`container h-screen flex flex-col pt-5 z-10 ${locale === 'ar'? 'lg:pt-[6rem]':'lg:pt-[10rem]'}`}>
         <h1
-          className="text-white z-10 text-2xl md:text-[36px] lg:text-[52px] font-semibold mb-5 md:leading-[50px] text-center lg:text-left"
+          className={`text-white z-10 text-2xl md:text-[36px] lg:text-[52px] font-semibold mb-5  text-center lg:text-left ${locale === 'ar' ? 'lg:text-right md:leading-[60px] lg:text-[42px]':'lg:text-left md:leading-[50px]'}`}
           style={{ letterSpacing: "1.2px" }}
         >
-          The{" "}
+          {t("new_title1_1")}
           <span className="text-primary mr-2">
-            No.1 <br className="hidden sm:block" /> Choice
+          {t("new_title1_3")} <br className="hidden sm:block" /> {t("new_title1_2")}
           </span>
-          of World
-          <br className="hidden sm:block" /> Class Traders!
+          {t("new_title1_4")}
+          <br className="hidden sm:block" /> {t("new_title1_5")}
         </h1>
-        <p className="z-10 text-white text-center lg:text-left text-[15px] md:text-[17px] font-light">
-          Step into the Future of Trading with PrimeX. Dive into a World of{" "}
+        <p className={`z-10 text-white text-center lg:text-left text-[15px] md:text-[17px] font-light ${locale === 'ar' ? 'lg:text-right':'lg:text-left'}`}>
+          {t("new_desc1_1")}{" "}
           <br className="hidden sm:block" />
-          Abundant Liquidity, Seamless Execution, and Fair Opportunities for
-          Your
-          <br className="hidden sm:block" /> Financial Growth.{" "}
-          <strong>Join the Trading Revolution Today.</strong>
+          {t("new_desc1_2")}
+          <br className="hidden sm:block" />{t("new_desc1_3")}{" "}
+          <strong>{t("new_desc1_4")}</strong>
         </p>
-        <div className="z-10 mt-4 sm:mt-10 gap-4 sm:space-x-6 mx-auto lg:mx-0 flex sm:flex-row md:block">
+        <div className="z-10 mt-4 sm:mt-10 gap-4  mx-auto lg:mx-0 flex sm:flex-row">
           <Link 
           href='https://client.primexbroker.com/en/register'
           className="bg-primary text-secondary rounded-full w-[155px] sm:w-[200px] h-[50px]
            shadow-xl text-center z-10 py-3 px-4 sm:text-[16px] text-[14px]">
-            Open Account
+          { t("btn1_txt")}
           </Link>
           <Link 
           href='https://client.primexbroker.com/en/register'
           className="bg-transparent border border-primary text-white rounded-full w-[155px] sm:w-[200px]
            shadow-xl text-center z-10 py-3 px-4 hover:bg-primary hover:text-secondary 
            transition-all hover:scale-105 duration-300 sm:text-[16px] text-[14px]">
-            Try Free Demo
+            { t("btn2_txt")}
           </Link>
         </div>
         <div className="block lg:hidden z-10">
