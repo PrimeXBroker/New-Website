@@ -83,8 +83,8 @@ const CareerForm = () => {
   };
 
   return (
-    <section className="bg-accent py-20">
-      <div className="container py-16 max-w-xl flex flex-col gap-2">
+    <section className="bg-accent">
+      <div className="container pt-8 max-w-xl flex flex-col gap-2">
         <h1
           className="text-2xl md:text-3xl text-secondary font-semibold text-center"
           style={{ lineHeight: "50px", letterSpacing: "1px" }}
