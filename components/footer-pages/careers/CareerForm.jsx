@@ -13,6 +13,8 @@ import axios from "axios";
 const CareerForm = () => {
   const locale = useLocale();
   const t = useTranslations("careers.careersForm");
+  const [loading, setLoading] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const [resumeName, setResumeName] = useState("");
   const [portfolioName, setPortfolioName] = useState("");
   const { country: originCountry, ip: originIp } = useContext(LocationContext);
@@ -28,7 +30,7 @@ const CareerForm = () => {
       years_of_experience: "",
       current_designation: "",
       resume: null,
-      portfolio: null,
+      portfolio: "",
     },
     validationSchema: Yup.object({
       first_name: Yup.string()
@@ -74,9 +76,21 @@ const CareerForm = () => {
         resume: values.resume,
         portfolio: values.portfolio,
       };
-      const res = await axios.post(`http://localhost:4002/api/add/candidate`, updatedValues)
-      if (res.data.success) {
-        console.log("done");
+      try {
+        setLoading(true);
+        const res = await axios.post(
+          `https://primexbroker.com/api/add/candidate`,
+          updatedValues
+        );
+        if (res.data.success) {
+          setFormSubmitted(true);
+        }
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+        formik.resetForm();
+        setResumeName("");
       }
     },
   });
@@ -92,7 +106,7 @@ const CareerForm = () => {
 
       try {
         const imageSendRes = await axios.post(
-          `http://localhost:4002/api/upload`,
+          `https://primexbroker.com/api/upload`,
           formData,
           {
             headers: {
@@ -101,11 +115,9 @@ const CareerForm = () => {
           }
         );
         formik.setFieldValue("resume", imageSendRes.data.result.file_path);
-      }
-      catch (err) {
+      } catch (err) {
         console.log(err.message);
       }
-
     }
   };
 
@@ -130,207 +142,241 @@ const CareerForm = () => {
         </p>
       </div>
       <div className="careers_form_wrapper container py-8">
-        <form onSubmit={formik.handleSubmit} className="flex flex-col gap-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
-            <div className="flex flex-col">
-              <input
-                className={`bg-white text-secondary placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-md ${formik.touched.first_name && formik.errors.first_name
-                  ? "border-2 border-red-600"
-                  : ""
-                  }`}
-                type="text"
-                name="first_name"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.first_name}
-                placeholder={t("first_name")}
-              />
-            </div>
-            <div className="flex flex-col">
-              <input
-                className={`bg-white text-secondary  placeholder:text-[#A0A7B2] capitalize py-2 px-4 rounded-md ${formik.touched.last_name && formik.errors.last_name
-                  ? "border-2 border-red-600"
-                  : ""
-                  } `}
-                type="text"
-                name="last_name"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.last_name}
-                placeholder={t("last_name")}
-              />
-            </div>
-          </div>
-          <div className="grid grid-cols-1">
-            <div className="flex flex-col">
-              <div className="flex items-center gap-2">
+        {formSubmitted ? (
+          <div className="text-center text-lg">{t("success_message")}</div>
+        ) : (
+          <form onSubmit={formik.handleSubmit} className="flex flex-col gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
+              <div className="flex flex-col">
                 <input
-                  className={`bg-white text-secondary   placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-[3px] w-full ${formik.touched.email && formik.errors.email
-                    ? "border-2 border-red-600"
-                    : ""
-                    }`}
-                  type="email"
-                  name="email"
+                  className={`bg-white text-[#A0A7B2] placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-md ${
+                    formik.touched.first_name && formik.errors.first_name
+                      ? "border-2 border-red-600"
+                      : ""
+                  }`}
+                  type="text"
+                  name="first_name"
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  value={formik.values.email}
-                  placeholder={t("email")}
+                  value={formik.values.first_name}
+                  placeholder={t("first_name")}
                 />
               </div>
-            </div>
-          </div>
-          <div className={`flex items-center gap-2 bg-white px-5 placeholder:text-[#A0A7B2] ${formik.touched.contact && formik.errors.contact
-            ? "border-2 border-red-600"
-            : ""
-            }`} >
-            <PhoneInput
-              onChange={(value) => formik.setFieldValue("contact", value)}
-              onBlur={formik.handleBlur}
-              name="contact"
-              value={formik.values.contact}
-              defaultCountry={originCountry}
-              className="w-[100%] custom-placeholder"
-              placeholder="Phone Number"
-            />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
-            <div className="flex flex-col">
-              <input
-                className={`bg-white text-secondary placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-md ${formik.touched.current_salary && formik.errors.current_salary
-                  ? "border-2 border-red-600"
-                  : ""
-                  }`}
-                type="number"
-                name="current_salary"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.current_salary}
-                placeholder={"Current Salary*"}
-              />
-            </div>
-            <div className="flex flex-col">
-              <input
-                className={`bg-white text-secondary  placeholder:text-[#A0A7B2] capitalize py-2 px-4 rounded-md ${formik.touched.expected_salary && formik.errors.expected_salary
-                  ? "border-2 border-red-600"
-                  : ""
-                  } `}
-                type="number"
-                name="expected_salary"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.expected_salary}
-                placeholder={"Expected Salary*"}
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1">
-            <div className="flex flex-col">
-              <input
-                className={`bg-white text-[#A0A7B2] placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-md ${formik.touched.current_designation && formik.errors.current_designation
-                  ? "border-2 border-red-600"
-                  : ""
-                  }`}
-                type="text"
-                name="current_designation"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.current_designation}
-                placeholder={"Current Designation*"}
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1">
-            <div className="flex flex-col">
-              <input
-                className={`bg-white text-[#A0A7B2] placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-md ${formik.touched.years_of_experience && formik.errors.years_of_experience
-                  ? "border-2 border-red-600"
-                  : ""
-                  }`}
-                type="number"
-                name="years_of_experience"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.years_of_experience}
-                placeholder={"Years Of Experience*"}
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 ">
-            <div className={`flex flex-col pr-5 bg-white ${formik.touched.country && formik.errors.country
-              ? "border-2 border-red-600"
-              : ""
-              } `}>
-              <select
-                className={`bg-white text-[#A0A7B2] placeholder:text-[#A0A7B2] capitalize  py-2 px-4  rounded-[5px]`}
-                name="country"
-                value={formik.values.country}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              >
-                <option value="">{t("country")}</option>
-                {nationality.map((country, index) => {
-                  return (
-                    <option key={index} value={country.en_short_name}>
-                      {country.en_short_name}
-                    </option>
-                  );
-                })}
-              </select>
-            </div>
-          </div>
-          <div className="grid grid-cols-1">
-            <div className="flex flex-col">
-              <div className={`flex items-center gap-2   ${formik.touched.resume && formik.errors.resume
-                ? "border-2 border-red-600"
-                : ""
-                } `}>
+              <div className="flex flex-col">
                 <input
-                  id="resume"
-                  type="file"
-                  name="resume"
-                  className="hiddenInput"
-                  onChange={(event) => handleFileChange(event.target.files[0])}
-                  style={{ display: "none" }}
-                  accept=".pdf"
+                  className={`bg-white text-[#A0A7B2]  placeholder:text-[#A0A7B2] capitalize py-2 px-4 rounded-md ${
+                    formik.touched.last_name && formik.errors.last_name
+                      ? "border-2 border-red-600"
+                      : ""
+                  } `}
+                  type="text"
+                  name="last_name"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.last_name}
+                  placeholder={t("last_name")}
                 />
-                <button
-                  type="button"
-                  onClick={() => handleButtonClick("resume")}
-                  className={`bg-white text-[#A0A7B2] py-2 px-4 capitalize rounded-md cursor-pointer shadow-sm w-full ${locale === "ar" ? "text-right" : "text-left"
-                    }`}
-                >
-                  {resumeName || t("upload_resume")}
-                </button>
               </div>
             </div>
-          </div>
-          <div className="grid grid-cols-1">
-            <div className="flex flex-col">
-              <input
-                className={`bg-white text-[#A0A7B2] placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-md ${formik.touched.portfolio && formik.errors.portfolio
+            <div className="grid grid-cols-1">
+              <div className="flex flex-col">
+                <div className="flex items-center gap-2">
+                  <input
+                    className={`bg-white text-[#A0A7B2] placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-[3px] w-full ${
+                      formik.touched.email && formik.errors.email
+                        ? "border-2 border-red-600"
+                        : ""
+                    }`}
+                    type="email"
+                    name="email"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.email}
+                    placeholder={t("email")}
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className={`flex items-center gap-2 bg-white px-5 placeholder:text-[#A0A7B2] ${
+                formik.touched.contact && formik.errors.contact
                   ? "border-2 border-red-600"
                   : ""
-                  }`}
-                type="text"
-                name="portfolio"
-                onChange={formik.handleChange}
+              }`}
+            >
+              <PhoneInput
+                onChange={(value) => formik.setFieldValue("contact", value)}
                 onBlur={formik.handleBlur}
-                value={formik.values.portfolio}
-                placeholder={t("upload_portfolio")}
-
+                name="contact"
+                value={formik.values.contact}
+                defaultCountry={originCountry}
+                className="w-[100%] custom-placeholder"
+                placeholder="Phone Number"
               />
             </div>
-          </div>
-          <div className="text-center">
-            <button className="bg-primary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg">
-              {t("submit_btn")}
-            </button>
-          </div>
-        </form>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
+              <div className="flex flex-col">
+                <input
+                  className={`bg-white text-[#A0A7B2] placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-md ${
+                    formik.touched.current_salary &&
+                    formik.errors.current_salary
+                      ? "border-2 border-red-600"
+                      : ""
+                  }`}
+                  type="number"
+                  name="current_salary"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.current_salary}
+                  placeholder={"Current Salary*"}
+                />
+              </div>
+              <div className="flex flex-col">
+                <input
+                  className={`bg-white text-[#A0A7B2]  placeholder:text-[#A0A7B2] capitalize py-2 px-4 rounded-md ${
+                    formik.touched.expected_salary &&
+                    formik.errors.expected_salary
+                      ? "border-2 border-red-600"
+                      : ""
+                  } `}
+                  type="number"
+                  name="expected_salary"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.expected_salary}
+                  placeholder={"Expected Salary*"}
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1">
+              <div className="flex flex-col">
+                <input
+                  className={`bg-white text-[#A0A7B2] placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-md ${
+                    formik.touched.current_designation &&
+                    formik.errors.current_designation
+                      ? "border-2 border-red-600"
+                      : ""
+                  }`}
+                  type="text"
+                  name="current_designation"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.current_designation}
+                  placeholder={"Current Designation*"}
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1">
+              <div className="flex flex-col">
+                <input
+                  className={`bg-white text-[#A0A7B2] placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-md ${
+                    formik.touched.years_of_experience &&
+                    formik.errors.years_of_experience
+                      ? "border-2 border-red-600"
+                      : ""
+                  }`}
+                  type="number"
+                  name="years_of_experience"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.years_of_experience}
+                  placeholder={"Years Of Experience*"}
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 ">
+              <div
+                className={`flex flex-col pr-5 bg-white ${
+                  formik.touched.country && formik.errors.country
+                    ? "border-2 border-red-600"
+                    : ""
+                } `}
+              >
+                <select
+                  className={`bg-white text-[#A0A7B2] placeholder:text-[#A0A7B2] capitalize  py-2 px-4  rounded-[5px]`}
+                  name="country"
+                  value={formik.values.country}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                >
+                  <option value="">{t("country")}</option>
+                  {nationality.map((country, index) => {
+                    return (
+                      <option key={index} value={country.en_short_name}>
+                        {country.en_short_name}
+                      </option>
+                    );
+                  })}
+                </select>
+              </div>
+            </div>
+            <div className="grid grid-cols-1">
+              <div className="flex flex-col">
+                <div
+                  className={`flex items-center gap-2   ${
+                    formik.touched.resume && formik.errors.resume
+                      ? "border-2 border-red-600"
+                      : ""
+                  } `}
+                >
+                  <input
+                    id="resume"
+                    type="file"
+                    name="resume"
+                    className="hiddenInput"
+                    onChange={(event) =>
+                      handleFileChange(event.target.files[0])
+                    }
+                    style={{ display: "none" }}
+                    accept=".pdf"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => handleButtonClick("resume")}
+                    className={`bg-white text-[#A0A7B2] py-2 px-4 capitalize rounded-md cursor-pointer shadow-sm w-full ${
+                      locale === "ar" ? "text-right" : "text-left"
+                    }`}
+                  >
+                    {resumeName || t("upload_resume")}
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="grid grid-cols-1">
+              <div className="flex flex-col">
+                <input
+                  className={`bg-white text-[#A0A7B2] placeholder:text-[#A0A7B2] py-2 px-4 capitalize rounded-md ${
+                    formik.touched.portfolio && formik.errors.portfolio
+                      ? "border-2 border-red-600"
+                      : ""
+                  }`}
+                  type="text"
+                  name="portfolio"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.portfolio}
+                  placeholder={t("upload_portfolio")}
+                />
+              </div>
+            </div>
+            <div className="text-center">
+              <button className="bg-primary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg">
+                <div className="flex gap-1 items-center justify-center">
+                  {loading && <div className="spinner inline-block"></div>}{" "}
+                  {loading ? (
+                    <span className="text-center">Sending...</span>
+                  ) : (
+                    <span>{t("submit_btn")}</span>
+                  )}
+                </div>
+              </button>
+            </div>
+          </form>
+        )}
       </div>
     </section>
   );

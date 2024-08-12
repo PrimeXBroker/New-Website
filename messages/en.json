@@ -723,7 +723,8 @@
       "phone_required_error": "phone is required!",
       "country_required_error": "country is required!",
       "resume_required_error": "resume is required!",
-      "portfolio_required_error": "portfolio is required!"
+      "portfolio_required_error": "portfolio is required!",
+      "success_message": "Thank you for your application. We have successfully received your submission. Our team will review your application and get back to you shortly."
     }
   },
   "about": {
