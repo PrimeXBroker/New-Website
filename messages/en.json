@@ -337,6 +337,24 @@
       "review_date_9": "August 10, 2024"
     }
   },
+  "webinar":{
+    "metaData":{
+      "title":"Dear Valued Customers",
+      "description":"Dear Valued Customers"
+    },
+    "banner":{
+      "title1_1":"Join Our Experts",
+      "title1_2":"for Insightful and",
+      "title1_3":"Enriching Webinars",
+      "desc1_1":"Each Webinar Is Meticulously Tailored To Enhance Your Knowledge",
+      "desc1_2":"And Skills In Trading Regardless Of Traders Of All Expertise Levels"
+    },
+    "signup":{
+      "title":"Ready to elevate your trading game?",
+      "btnTxt":"Sign Up For Our Free Webinars Today!",
+      "desc":"Gain access to exclusive content, expert insights, and a supportive community of fellow traders committed to growth and success."
+    }
+  },
   "commodities": {
     "metaData": {
       "title": "Commodity Trading Online | Trade Commodities Online | PrimeX Capital",
