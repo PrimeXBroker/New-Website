@@ -16,15 +16,24 @@ const Banner = () => {
     borderColor: "border-accent",
   };
 
+  const desktopImageUrl = locale === "ar"
+    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/20_deposit_bonus/header-bg-ar.webp"
+    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/20_deposit_bonus/header-bg.webp";
+
   return (
-    <section>
-      <div
-        className={`relative bg-no-repeat bg-cover bg-center py-12 ${
-          locale === "ar"
-            ? "bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/20_deposit_bonus/header-bg-ar.webp')]"
-            : "bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/20_deposit_bonus/header-bg.webp')]"
-        }`}
-      >
+    <section className="relative">
+      {/* Background Image */}
+      <Image
+        src={desktopImageUrl}
+        alt="Background"
+        layout="fill"
+        objectFit="cover"
+        className="absolute inset-0 -z-10"
+        priority={true}
+      />
+
+      {/* Content */}
+      <div className="relative py-12">
         <div className="container mx-auto lg:px-10 xl:px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center h-full">
             <div className="lg:col-span-6 flex flex-col justify-center">
