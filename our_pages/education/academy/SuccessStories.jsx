@@ -111,7 +111,7 @@ const SuccessStories = () => {
           },
           1440: {
             slidesPerView: 3,
-            spaceBetween: 40,
+            spaceBetween: 20,
           },
         }}
         centeredSlides={true}
@@ -129,7 +129,7 @@ const SuccessStories = () => {
       >
         {reviews.map((review, index) => (
           <SwiperSlide key={index}>
-            <div className="max-w-sm mx-auto bg-[#F3F3F3] rounded-lg shadow-md p-4">
+            <div className="max-w-sm mx-auto bg-[#F3F3F3] rounded-lg shadow-md p-4 min-h-[288px]">
               <div className="flex items-center mb-4">
                 <div className="w-10 h-10 p-4 rounded-full bg-white flex items-center justify-center text-xl font-bold">
                   RA
