@@ -144,14 +144,14 @@ const CareerDetails = ({ id }) => {
                           </span>
                         </td>
                       </tr>
-                      <tr className="border-b">
+                      {/* <tr className="border-b">
                         <td className="font-semibold py-3">Posted Date</td>
                         <td className="py-3 font-normal">
                           <Moment format="Do MMMM YYYY">
                             {detail.createdAt}
                           </Moment>
                         </td>
-                      </tr>
+                      </tr> */}
                       <tr className="border-b">
                         <td className="font-semibold py-3">Posted By</td>
                         <td className="py-3 font-normal">{detail.postedBy}</td>

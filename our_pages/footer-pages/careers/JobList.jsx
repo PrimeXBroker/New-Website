@@ -335,15 +335,15 @@ const JobList = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="flex justify-between items-center mt-6">
-                      <div className="text-xs" style={{ color: textColor }}>
+                    <div className="flex justify-end items-center mt-6">
+                      {/* <div className="text-xs" style={{ color: textColor }}>
                         Posted:
                         <Moment
                           date={job.createdAt}
                           format="Do MMM YYYY"
                           className="ml-1"
                         />
-                      </div>
+                      </div> */}
                       <div>
                         <div className="flex items-center gap-2">
                           <BsArrowDownRight style={{ color: lineColor }} />
