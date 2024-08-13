@@ -118,19 +118,19 @@ const CareerDetails = ({ id }) => {
                     <tbody>
                       <tr className="border-b">
                         <td className="font-semibold py-3">Job Title</td>
-                        <td className="py-3 font-thin">{detail.title}</td>
+                        <td className="py-3 font-normal">{detail.title}</td>
                       </tr>
                       <tr className="border-b">
                         <td className="font-semibold py-3">Experience</td>
-                        <td className="py-3 font-thin">{`${detail.experience} Years`}</td>
+                        <td className="py-3 font-normal">{`${detail.experience} Years`}</td>
                       </tr>
                       <tr className="border-b">
                         <td className="font-semibold py-3">Position</td>
-                        <td className="py-3 font-thin">{detail.position}</td>
+                        <td className="py-3 font-normal">{detail.position}</td>
                       </tr>
                       <tr className="border-b">
                         <td className="font-semibold py-3">Job Type</td>
-                        <td className="py-3 font-thin text-xs">
+                        <td className="py-3 font-normal text-xs">
                           <span className="bg-[#daf4eb] text-[#34c38f] text-xs inline-block py-[.25em] px-[.4em] text-center align-baseline rounded-[.25rem]">
                             {detail.type}
                           </span>
@@ -138,7 +138,7 @@ const CareerDetails = ({ id }) => {
                       </tr>
                       <tr className="border-b">
                         <td className="font-semibold py-3">Status</td>
-                        <td className="py-3 font-thin text-xs">
+                        <td className="py-3 font-normal text-xs">
                           <span className="bg-[#dfeffc] text-[#50a5f1] text-xs inline-block py-[.25em] px-[.4em] text-center align-baseline rounded-[.25rem]">
                             {detail.status}
                           </span>
@@ -146,7 +146,7 @@ const CareerDetails = ({ id }) => {
                       </tr>
                       <tr className="border-b">
                         <td className="font-semibold py-3">Posted Date</td>
-                        <td className="py-3 font-thin">
+                        <td className="py-3 font-normal">
                           <Moment format="Do MMMM YYYY">
                             {detail.createdAt}
                           </Moment>
@@ -154,7 +154,7 @@ const CareerDetails = ({ id }) => {
                       </tr>
                       <tr className="border-b">
                         <td className="font-semibold py-3">Posted By</td>
-                        <td className="py-3 font-thin">{detail.postedBy}</td>
+                        <td className="py-3 font-normal">{detail.postedBy}</td>
                       </tr>
                     </tbody>
                   </table>

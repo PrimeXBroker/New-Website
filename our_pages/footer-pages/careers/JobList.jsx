@@ -253,7 +253,7 @@ const JobList = () => {
                         style={{ backgroundColor: lineColor }}
                       ></div>
                       <div
-                        className="text-white text-xs font-thin px-3 py-1 rounded-full"
+                        className="text-white text-xs font-normal px-3 py-1 rounded-full"
                         style={{
                           color: textBadgeColor,
                           backgroundColor: badgeBackgroundColor,
@@ -291,7 +291,7 @@ const JobList = () => {
                     >
                       <div>
                         <div
-                          className="flex items-center gap-1 text-xs font-thin mb-2"
+                          className="flex items-center gap-1 text-xs font-normal mb-2"
                           style={{ color: textColor }}
                         >
                           <IoLocationSharp />
@@ -306,7 +306,7 @@ const JobList = () => {
                       </div>
                       <div>
                         <div
-                          className="flex items-center gap-1 text-xs font-thin mb-2"
+                          className="flex items-center gap-1 text-xs font-normal mb-2"
                           style={{ color: textColor }}
                         >
                           <GiMoneyStack />
@@ -321,7 +321,7 @@ const JobList = () => {
                       </div>
                       <div>
                         <div
-                          className="flex items-center gap-1 text-xs font-thin mb-2"
+                          className="flex items-center gap-1 text-xs font-normal mb-2"
                           style={{ color: textColor }}
                         >
                           <MdWork />
@@ -347,7 +347,7 @@ const JobList = () => {
                       <div>
                         <div className="flex items-center gap-2">
                           <BsArrowDownRight style={{ color: lineColor }} />
-                          <div className="bg text-xs px-4 py-1 rounded-full text-white bg-[#274192] hover:bg-[#2d51c3] font-thin">
+                          <div className="bg text-xs px-4 py-1 rounded-full text-white bg-[#274192] hover:bg-[#2d51c3] font-normal">
                             <Link
                               href={`/${locale}/careers/${job._id}`}
                               className="flex justify-center items-center gap-1"
