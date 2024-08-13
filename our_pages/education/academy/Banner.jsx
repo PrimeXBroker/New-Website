@@ -22,9 +22,15 @@ const Banner = ({ setActive }) => {
               }`}
               style={{ lineHeight: "45px", letterSpacing: "1px" }}
             >
-              {h("title_1")}
-              <span className="text-white md:text-2xl font-semibold">
-                {h("title_2")}
+              <span className="text-white font-light block text-lg text-2xl">
+                {h("title_1")}
+              </span>
+              {h("title_2")}
+              <span className="text-white text-xl md:text-3xl font-semibold block mt-3">
+                {h("title_3")}
+              </span>
+              <span className="text-white text-xl md:text-3xl font-semibold block mt-1">
+                {h("title_4")}
               </span>
             </h1>
             <p
