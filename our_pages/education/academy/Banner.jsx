@@ -60,7 +60,7 @@ const Banner = ({ setActive }) => {
           </div>
         </div>
       </div>
-      <div className="container py-16 max-w-xl flex flex-col gap-5 sm:gap-12">
+      <div className="container py-16 max-w-xl flex flex-col gap-5 sm:gap-5">
         <h1
           className="md:text-3xl text-xl text-secondary font-semibold text-center"
           style={{ lineHeight: "50px", letterSpacing: "1px" }}
@@ -75,7 +75,7 @@ const Banner = ({ setActive }) => {
         </p>
         <Link
           href="https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe"
-          className="bg-primary text-center px-4 py-4 rounded-full w-[200px] mx-auto block shadow-xl mb-3 sm:mb-8"
+          className="bg-primary text-center px-4 py-4 rounded-full w-[200px] mx-auto block shadow-xl mb-3 sm:mb-2"
         >
           {f("download_btn")}
         </Link>
