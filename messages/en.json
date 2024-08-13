@@ -179,8 +179,10 @@
       "description": "Master your trading skills with PrimeX Capital's Academy. We offer free webinars, blogs, market news, and private 1-1 education sessions. Click to learn more!"
     },
     "hero": {
-      "title_1": "Welcome to the academy of PrimeX Capital - ",
-      "title_2": "Your Ultimate Resource Hub For Staying Ahead In The Dynamic World Of Trading",
+      "title_1": "Welcome to",
+      "title_2": "PrimeX Capital Academy",
+      "title_3": "Your Ultimate Hub for staying ahead",
+      "title_4": "In The Trading World!",
       "description": "A Wealth Of Knowledge At Your Fingertips, including the latest market news, insightful blogs, and personalized one-on-one sessions",
       "join_btn": "Join Now!"
     },
@@ -1317,8 +1319,8 @@
       "get_started_btn": "Open Live Account"
     },
     "footerNotice": {
-      "heading_1": "PRIMEX BROKER (PTY) LTD",
-      "para_1": "company registered in South Africa with registration number 2021/590477/07 and register address : 74 Walmer Street, Sydenham, Johannesburg, Gauteng , 2192, South Africa.",
+      "heading_1": "PrimeX Capital",
+      "para_1": "is the trade name for PrimeX Broker Pty Ltd, registered in South Africa with registration number 2021/590477/07 and registered address: 74 Walmer Street, Sydenham, Johannesburg, Gauteng , 2192, South Africa.",
       "heading_2": "PRIMEX BROKER (PTY) LTD",
       "para_2": "regulated and authorized to provide financial services by South Africa Financial Sector Conduct Authority (FSCA) under license number (FSP No. 51864).",
       "heading_3": "Restricted Regions :",

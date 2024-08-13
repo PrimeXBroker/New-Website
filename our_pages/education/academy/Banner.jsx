@@ -22,9 +22,15 @@ const Banner = ({ setActive }) => {
               }`}
               style={{ lineHeight: "45px", letterSpacing: "1px" }}
             >
-              {h("title_1")}
-              <span className="text-white md:text-2xl font-semibold">
-                {h("title_2")}
+              <span className="text-white font-light block text-lg text-2xl">
+                {h("title_1")}
+              </span>
+              {h("title_2")}
+              <span className="text-white text-xl md:text-3xl font-semibold block mt-3">
+                {h("title_3")}
+              </span>
+              <span className="text-white text-xl md:text-3xl font-semibold block mt-1">
+                {h("title_4")}
               </span>
             </h1>
             <p
@@ -60,7 +66,7 @@ const Banner = ({ setActive }) => {
           </div>
         </div>
       </div>
-      <div className="container py-16 max-w-xl flex flex-col gap-5 sm:gap-12">
+      <div className="container py-16 max-w-xl flex flex-col gap-5 sm:gap-5">
         <h1
           className="md:text-3xl text-xl text-secondary font-semibold text-center"
           style={{ lineHeight: "50px", letterSpacing: "1px" }}
@@ -75,7 +81,7 @@ const Banner = ({ setActive }) => {
         </p>
         <Link
           href="https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe"
-          className="bg-primary text-center px-4 py-4 rounded-full w-[200px] mx-auto block shadow-xl mb-3 sm:mb-8"
+          className="bg-primary text-center px-4 py-4 rounded-full w-[200px] mx-auto block shadow-xl mb-3 sm:mb-2"
         >
           {f("download_btn")}
         </Link>

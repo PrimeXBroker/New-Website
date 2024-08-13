@@ -1,12 +1,13 @@
 "use client";
 import React from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 
 const SuccessStories = () => {
+  const locale = useLocale();
   const t = useTranslations("academy.successStories");
 
   const reviews = [
@@ -111,7 +112,7 @@ const SuccessStories = () => {
           },
           1440: {
             slidesPerView: 3,
-            spaceBetween: 40,
+            spaceBetween: 20,
           },
         }}
         centeredSlides={true}
@@ -129,12 +130,12 @@ const SuccessStories = () => {
       >
         {reviews.map((review, index) => (
           <SwiperSlide key={index}>
-            <div className="max-w-sm mx-auto bg-[#F3F3F3] rounded-lg shadow-md p-4">
+            <div className="max-w-sm mx-auto bg-[#F3F3F3] rounded-lg shadow-md p-4 min-h-[288px]">
               <div className="flex items-center mb-4">
                 <div className="w-10 h-10 p-4 rounded-full bg-white flex items-center justify-center text-xl font-bold">
                   RA
                 </div>
-                <div className="ml-4">
+                <div className={`${locale === "ar" ? "mr-4" : "ml-4"}`}>
                   <div className="font-semibold">{review.name}</div>
                   <div className="text-sm text-gray-500">
                     {" "}
@@ -157,7 +158,11 @@ const SuccessStories = () => {
                     </div>
                   ))}
                 </div>
-                <div className="text-sm text-gray-500 ml-auto">
+                <div
+                  className={`text-sm text-gray-500 ${
+                    locale === "ar" ? "mr-auto" : "ml-auto"
+                  }`}
+                >
                   {review.date}
                 </div>
               </div>
