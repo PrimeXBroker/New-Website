@@ -36,24 +36,24 @@ const expertsInfo = [
         Meet the Minds Behind Our Webinars, Individuals With Extensive Experience and Expertise in the Field of Trading.
         </p>
         </div>
-        <div className='container flex flex-col md:flex-row justify-center items-center gap-5'>
+        <div className='container flex flex-col md:flex-row justify-center items-center gap-5 '>
             {expertsInfo.map((expert)=>(
             <div 
             key={expert.id}
-            className='relative bg-accent rounded-xl w-[45%] h-[320px] shadow-2xl border border-gray-400'
+            className='relative bg-accent rounded-xl md:w-[50%] h-[320px] shadow-2xl border border-gray-400'
             >   
             <Image
             src={expert.imageUrl}
             alt="Background Desktop"
             width={500}
             height={400}    
-            className="absolute right-0 z-10 bottom-0 w-[300px] h-[320px]"
+            className="absolute right-0 z-10 bottom-0 w-[250px] h-[250px] sm:w-[320px] sm:h-[320px] md:w-[220px] md:h-[320px] lg:w-[270px] lg:h-[320px] xl:w-[300px] xl:h-[320px]"
             priority={true}
             />
-             <div className='lg:p-10 max-w-[65%]'>
-                <h2 className='text-secondary font-semibold md:text-3xl text-xl' style={{letterSpacing:'1.25px'}}>{expert.name}</h2>
-                <h5 className='text-secondary font-medium md:text-xl text-[16px]'>{expert.position}</h5>
-                <p className='text-sm font-medium pt-8'>{expert.desc}</p>
+             <div className='flex flex-col h-full justify-center p-5 sm:p-10 md:p-5 lg:p-5 xl:p-10 max-w-[55%] sm:max-w-[55%] md:max-w-[60%] lg:max-w-[60%]'>
+                <h2 className='text-secondary font-semibold xl:text-3xl lg:text-2xl md:text-lg text-xl text-nowrap' style={{letterSpacing:'1.25px'}}>{expert.name}</h2>
+                <h5 className='text-secondary font-medium lg:text-xl md:text-[13px] text-nowrap'>{expert.position}</h5>
+                <p className='text-[12px] md:text-sm font-medium lg:pt-4 xl:pt-8'>{expert.desc}</p>
             </div>
             </div>
             ))}

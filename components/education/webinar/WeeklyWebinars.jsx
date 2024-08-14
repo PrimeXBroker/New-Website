@@ -71,9 +71,9 @@ const WeeklyWebinars = () => {
     return formik.touched[field] && formik.errors[field] ? 'border-red-500' : '';
   };
   return (
-    <section className="py-12 container rounded-t-[7em] flex bg-accent my-12 shadow-xl h-[500px]">
-      <div className="w-full flex flex-row">
-        <div className="flex flex-col w-[50%] items-center pl-[110px] pt-12">
+    <section className="py-12 container rounded-t-[7em] flex bg-accent my-12 shadow-xl">
+      <div className="w-full flex flex-col md:flex-row ">
+        <div className="flex flex-col md:w-[50%] items-center px-5 md:px-0 md:pl-[110px] md:pt-12">
           <div className="flex flex-row justify-center items-center gap-6">
             <Image
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/webinar/mic.webp"
@@ -81,12 +81,13 @@ const WeeklyWebinars = () => {
               height="120"
               alt="mic Image"
               priority={false}
+              className="w-[30%]"
             />
             <h1
               className="text-secondary md:text-[2.5rem] text-lg font-semibold"
               style={{ lineHeight: "45px" }}
             >
-              {t("title1_1")} <br />
+              {t("title1_1")} <br className="hidden md:block" />
               {t("title1_2")}
             </h1>
           </div>
@@ -97,13 +98,13 @@ const WeeklyWebinars = () => {
           </p>
         </div>
 
-        <div className="w-[50%] flex flex-col pt-20">
-          <h1 className="text-secondary text-lg md:text-2xl text-center font-semibold">
+        <div className="md:w-[50%] flex flex-col pt-5 md:pt-16">
+          <h1 className="text-secondary text-lg md:text-2xl text-center font-semibold pb-5">
             Sign Up Now!
           </h1>
           <form
             onSubmit={formik.handleSubmit}
-            className="flex flex-col w-[65%] mx-auto gap-1"
+            className="flex flex-col w-[80%] md:w-[65%] mx-auto gap-1"
           >
             <Input
             startContent={<CiUser size={20}/>}
