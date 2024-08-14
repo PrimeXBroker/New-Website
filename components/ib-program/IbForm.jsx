@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/react";
@@ -12,6 +12,10 @@ const IbForm = () => {
   const locale = useLocale();
   const t = useTranslations("ib.form");
   const [loading, setLoading] = useState(false);
+
+
+
+
 
   const formik = useFormik({
     initialValues: {
@@ -85,11 +89,10 @@ const IbForm = () => {
                       type="text"
                       label={t("f_name")}
                       classNames={{
-                        label: `${
-                          formik.touched.first_name && formik.errors.first_name
-                            ? "text-danger"
-                            : "#000"
-                        }`,
+                        label: `${formik.touched.first_name && formik.errors.first_name
+                          ? "text-danger"
+                          : "#000"
+                          }`,
                       }}
                       name="first_name"
                       onChange={formik.handleChange}
@@ -105,11 +108,10 @@ const IbForm = () => {
                       type="text"
                       label={t("l_name")}
                       classNames={{
-                        label: `${
-                          formik.touched.last_name && formik.errors.last_name
-                            ? "text-danger"
-                            : "#000"
-                        }`,
+                        label: `${formik.touched.last_name && formik.errors.last_name
+                          ? "text-danger"
+                          : "#000"
+                          }`,
                       }}
                       name="last_name"
                       onChange={formik.handleChange}
@@ -125,11 +127,10 @@ const IbForm = () => {
                       type="email"
                       label={t("email")}
                       classNames={{
-                        label: `${
-                          formik.touched.email && formik.errors.email
-                            ? "text-danger"
-                            : "#000"
-                        }`,
+                        label: `${formik.touched.email && formik.errors.email
+                          ? "text-danger"
+                          : "#000"
+                          }`,
                       }}
                       name="email"
                       onChange={formik.handleChange}
@@ -145,11 +146,10 @@ const IbForm = () => {
                       type="number"
                       label={t("contact")}
                       classNames={{
-                        label: `${
-                          formik.touched.contact && formik.errors.contact
-                            ? "text-danger"
-                            : "#000"
-                        }`,
+                        label: `${formik.touched.contact && formik.errors.contact
+                          ? "text-danger"
+                          : "#000"
+                          }`,
                       }}
                       name="contact"
                       onChange={formik.handleChange}
