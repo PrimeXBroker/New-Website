@@ -13,18 +13,7 @@ const IbForm = () => {
   const t = useTranslations("ib.form");
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    if (window) {
-      window.onload = function () {
-        if (window.location.hash) {
-          const target = document.querySelector(window.location.hash);
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-          }
-        }
-      };
-    }
-  }, [])
+
 
 
 
