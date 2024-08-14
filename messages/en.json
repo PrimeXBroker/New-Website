@@ -349,6 +349,21 @@
       "desc1_1":"Each Webinar Is Meticulously Tailored To Enhance Your Knowledge",
       "desc1_2":"And Skills In Trading Regardless Of Traders Of All Expertise Levels"
     },
+    "weeklyWebinars":{
+      "title1_1":"Weekly",
+      "title1_2":"Webinars",
+      "desc1_1":"Our weekly sessions with",
+      "desc1_2":"Rose Shawish and Ahmed Alsajadi",
+      "desc1_3":"will keep you ahead of the curve,offering real-time insights and strategies to capitalize on emerging opportunities and mitigate risks.",
+      "form_title":"Sign Up Now!",
+      "first_name_validation_error":"first name can only contain letters.",
+      "first_name_required_error":"first name is required!",
+      "last_name_validation_error":"last name can only contain letters.",
+      "last_name_required_error":"last name is required!",
+      "email_validation_error":"Invalid email address",
+      "email_required_error":"Email is required.",
+      "phone_required_error":"phone is required!"
+    },
     "signup":{
       "title":"Ready to elevate your trading game?",
       "btnTxt":"Sign Up For Our Free Webinars Today!",
