@@ -72,9 +72,7 @@ const MarketNews = ({ slugEn, slugAr }) => {
         {news.map((blog, index) => (
           <div className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4">
             <Link
-              href={`/${locale}/${formatTitleForURL(catDetail.title)}/${
-                blog.slug
-              }`}
+              href={`/${locale}/market-news/${blog.slug}`}
               className="group"
             >
               <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out">
