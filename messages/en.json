@@ -337,37 +337,37 @@
       "review_date_9": "August 10, 2024"
     }
   },
-  "webinar":{
-    "metaData":{
-      "title":"Dear Valued Customers",
-      "description":"Dear Valued Customers"
+  "webinar": {
+    "metaData": {
+      "title": "Dear Valued Customers",
+      "description": "Dear Valued Customers"
     },
-    "banner":{
-      "title1_1":"Join Our Experts",
-      "title1_2":"for Insightful and",
-      "title1_3":"Enriching Webinars",
-      "desc1_1":"Each Webinar Is Meticulously Tailored To Enhance Your Knowledge",
-      "desc1_2":"And Skills In Trading Regardless Of Traders Of All Expertise Levels"
+    "banner": {
+      "title1_1": "Join Our Experts",
+      "title1_2": "for Insightful and",
+      "title1_3": "Enriching Webinars",
+      "desc1_1": "Each Webinar Is Meticulously Tailored To Enhance Your Knowledge",
+      "desc1_2": "And Skills In Trading Regardless Of Traders Of All Expertise Levels"
     },
-    "weeklyWebinars":{
-      "title1_1":"Weekly",
-      "title1_2":"Webinars",
-      "desc1_1":"Our weekly sessions with",
-      "desc1_2":"Rose Shawish and Ahmed Alsajadi",
-      "desc1_3":"will keep you ahead of the curve,offering real-time insights and strategies to capitalize on emerging opportunities and mitigate risks.",
-      "form_title":"Sign Up Now!",
-      "first_name_validation_error":"first name can only contain letters.",
-      "first_name_required_error":"first name is required!",
-      "last_name_validation_error":"last name can only contain letters.",
-      "last_name_required_error":"last name is required!",
-      "email_validation_error":"Invalid email address",
-      "email_required_error":"Email is required.",
-      "phone_required_error":"phone is required!"
+    "weeklyWebinars": {
+      "title1_1": "Weekly",
+      "title1_2": "Webinars",
+      "desc1_1": "Our weekly sessions with",
+      "desc1_2": "Rose Shawish and Ahmed Alsajadi",
+      "desc1_3": "will keep you ahead of the curve,offering real-time insights and strategies to capitalize on emerging opportunities and mitigate risks.",
+      "form_title": "Sign Up Now!",
+      "first_name_validation_error": "first name can only contain letters.",
+      "first_name_required_error": "first name is required!",
+      "last_name_validation_error": "last name can only contain letters.",
+      "last_name_required_error": "last name is required!",
+      "email_validation_error": "Invalid email address",
+      "email_required_error": "Email is required.",
+      "phone_required_error": "phone is required!"
     },
-    "signup":{
-      "title":"Ready to elevate your trading game?",
-      "btnTxt":"Sign Up For Our Free Webinars Today!",
-      "desc":"Gain access to exclusive content, expert insights, and a supportive community of fellow traders committed to growth and success."
+    "signup": {
+      "title": "Ready to elevate your trading game?",
+      "btnTxt": "Sign Up For Our Free Webinars Today!",
+      "desc": "Gain access to exclusive content, expert insights, and a supportive community of fellow traders committed to growth and success."
     }
   },
   "commodities": {
@@ -894,9 +894,7 @@
       "account_t_row_1_1": "Minimum Deposit",
       "account_t_row_1_2": "$10",
       "account_t_row_1_3": "$1000",
-      "account_ins_row_1_3": "$500",
       "account_t_row_1_4": "$5000",
-      "account_ins_row_1_4": "$1500",
       "account_t_row_1_5": "$100",
       "account_t_row_2_1": "Spreads",
       "account_t_row_2_2": "From 1.2 pips",

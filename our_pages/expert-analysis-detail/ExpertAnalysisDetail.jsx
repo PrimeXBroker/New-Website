@@ -1,40 +1,41 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import NewsBody from "./NewsBody";
 import { useLocale, useTranslations } from "next-intl";
 import axios from "axios";
 import Moment from "react-moment";
-const MarketNewsDetail = ({ slug }) => {
+import AnalysisNewsBody from "./AnalysisNewsBody";
+
+const ExpertAnalysisDetail = ({ slug }) => {
   const locale = useLocale();
   const t = useTranslations("marketNewsDetail");
   const [detail, setDetail] = useState(null);
   const [related, setRelated] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const fetchRelatedBlogs = async () => {
+    console.log(detail._id, "detail_id");
     const res = await axios.get(
-      `https://primexbroker.com/api/fetch/publish/related/blogs/1/3/${detail.category._id}/${detail._id}`
+      `https://primexbroker.com/api/fetch/publish/related/market-news/1/3/${detail._id}`
     );
     if (res?.data?.success) {
-      console.log(res?.data?.data, "blogfryyy");
       setRelated(res?.data?.data);
-      // setLoading2(false);
     }
   };
 
   const fetchdetails = async () => {
-    // setLoading(true);
+    setLoading(true);
     try {
       const res = await axios.get(
-        `https://primexbroker.com/api/fetch/one/blog/${slug}`,
+        `https://primexbroker.com/api/fetch/one/market-news/${slug}`,
         { cache: "no-store" }
       );
       if (res?.data?.success) {
-        console.log(res?.data, "parsing");
         setDetail(res?.data?.data);
+        setLoading(false);
       }
     } catch (error) {
-      // setLoading(false);
+      setLoading(false);
       console.log(error);
     }
   };
@@ -42,8 +43,16 @@ const MarketNewsDetail = ({ slug }) => {
   console.log("slug content", slug);
 
   useEffect(() => {
-    fetchdetails();
+    if (slug) {
+      fetchdetails();
+    }
   }, []);
+
+  useEffect(() => {
+    if (slug) {
+      fetchdetails();
+    }
+  }, [slug]);
 
   useEffect(() => {
     if (detail) {
@@ -51,12 +60,23 @@ const MarketNewsDetail = ({ slug }) => {
     }
   }, [detail]);
 
-  console.log(detail, "<----- detail");
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center my-48">
+        <div className="inline-block h-12 w-12 animate-spin rounded-full border-4 border-solid border-primary border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white">
+          <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
+            Loading...
+          </span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <section className="container py-20">
       <div className="grid grid-cols-12">
-        <div className=" lg:col-span-8 md:col-span-12 col-span-12">
-          <NewsBody slug={slug} />
+        <div className="lg:col-span-8 md:col-span-12 col-span-12">
+          <AnalysisNewsBody slug={slug} />
         </div>
         <div className="lg:col-span-4 col-span-12 px-6">
           <div className="border-1 border-accent p-[30px]">
@@ -95,7 +115,6 @@ const MarketNewsDetail = ({ slug }) => {
                 {t("relatedBlogs.title")}
               </h2>
             </div>
-
             <div>
               {related.map((blog, i) => (
                 <Link href={`/${locale}/market-news/${blog.slug}`} key={i}>
@@ -118,7 +137,7 @@ const MarketNewsDetail = ({ slug }) => {
                       </div>
                       <div>
                         <h4 className="text-xl font-semibold text-black group-hover:text-primary transition duration-700 ease-in-out">
-                          {blog.title}
+                          {locale === "ar" ? blog.titleAr : blog.titleEn}
                         </h4>
                       </div>
                     </div>
@@ -133,4 +152,4 @@ const MarketNewsDetail = ({ slug }) => {
   );
 };
 
-export default MarketNewsDetail;
+export default ExpertAnalysisDetail;

@@ -1,18 +1,32 @@
 "use client";
-import { Input } from "@nextui-org/input";
+import React, { useState } from "react";
+import {
+  Input,
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+} from "@nextui-org/react";
 import Image from "next/image";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useTranslations, useLocale } from "next-intl";
 import { CiUser } from "react-icons/ci";
 import { AiOutlineMail } from "react-icons/ai";
+import axios from "axios";
+import { parsePhoneNumber } from "libphonenumber-js";
 
 const WeeklyWebinars = () => {
   const t = useTranslations("webinar.weeklyWebinars");
+  const locale = useLocale();
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [loading, setLoading] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
   const formik = useFormik({
     initialValues: {
       first_name: "",
@@ -45,30 +59,43 @@ const WeeklyWebinars = () => {
       return errors;
     },
     onSubmit: async (values) => {
+      const phoneNumber = parsePhoneNumber(values.contact);
+      const countryName = phoneNumber?.country;
       const updatedValues = {
-        name: `${values.first_name} ${values.last_name}`,
+        first_name: values.first_name,
+        last_name: values.last_name,
         email: values.email,
         contact: values.contact,
+        country: countryName,
+        language: locale,
       };
       try {
         setLoading(true);
-        // const response = await axios.post(
-        //   `https://primexbroker.com/api/contact`,
-        //   JSON.stringify(updatedValues)
-        // );
-        // console.log("Response", response);
-        console.log(updatedValues);
-        
+        const response = await axios.post(
+          `http://localhost:4002/api/register/webinars`,
+          updatedValues
+        );
+        if (response.data.success) {
+          setModalMessage(
+            "Thank you for registering for our webinar. We have successfully received your information."
+          );
+        }
       } catch (error) {
+        setModalMessage(
+          "An error occurred while submitting your request. Please try again later."
+        );
         console.log(error);
       } finally {
         setLoading(false);
         formik.resetForm();
+        onOpen();
       }
     },
   });
   const getInputBorderClass = (field) => {
-    return formik.touched[field] && formik.errors[field] ? 'border-red-500' : '';
+    return formik.touched[field] && formik.errors[field]
+      ? "border-red-500"
+      : "";
   };
   return (
     <section className="py-12 container rounded-t-[7em] flex bg-accent my-12 shadow-xl h-[500px]">
@@ -106,7 +133,7 @@ const WeeklyWebinars = () => {
             className="flex flex-col w-[65%] mx-auto gap-1"
           >
             <Input
-            startContent={<CiUser size={20}/>}
+              startContent={<CiUser size={20} />}
               variant="underlined"
               label={
                 <span
@@ -127,7 +154,7 @@ const WeeklyWebinars = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.first_name}
-              className={getInputBorderClass('first_name')}         
+              className={getInputBorderClass("first_name")}
               status={
                 formik.touched.first_name && formik.errors.first_name
                   ? "error"
@@ -135,7 +162,7 @@ const WeeklyWebinars = () => {
               }
             />
             <Input
-            startContent={<CiUser size={20}/>}
+              startContent={<CiUser size={20} />}
               variant="underlined"
               label={
                 <span
@@ -156,7 +183,7 @@ const WeeklyWebinars = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.last_name}
-              className={getInputBorderClass('last_name')}
+              className={getInputBorderClass("last_name")}
               status={
                 formik.touched.last_name && formik.errors.last_name
                   ? "error"
@@ -164,7 +191,7 @@ const WeeklyWebinars = () => {
               }
             />
             <Input
-            startContent={<AiOutlineMail size={20}/>}
+              startContent={<AiOutlineMail size={20} />}
               variant="underlined"
               label={
                 <span
@@ -185,7 +212,7 @@ const WeeklyWebinars = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.email}
-              className={getInputBorderClass('email')}
+              className={getInputBorderClass("email")}
               status={
                 formik.touched.email && formik.errors.email ? "error" : ""
               }
@@ -198,13 +225,40 @@ const WeeklyWebinars = () => {
               defaultCountry="AE"
               className="w-[100%] webinar_input"
             />
-            
-            <button type="submit" className="mt-5 px-4 py-3 bg-primary rounded-full shadow-xl text-secondary w-[200px] mx-auto hover:scale-110 duration-300 transition-transform">
-              Submit Now
+            <button
+              disabled={loading}
+              className="mt-5 px-4 py-3 bg-primary rounded-full shadow-xl text-secondary w-[200px] mx-auto hover:scale-110 duration-300 transition-transform"
+            >
+              <div className="flex gap-1 items-center justify-center">
+                {loading ? (
+                  <div className="spinner inline-block"></div>
+                ) : (
+                  <span>Submit Now</span>
+                )}
+              </div>
             </button>
           </form>
         </div>
       </div>
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="center">
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">
+                Response
+              </ModalHeader>
+              <ModalBody>
+                <p>{modalMessage}</p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </section>
   );
 };

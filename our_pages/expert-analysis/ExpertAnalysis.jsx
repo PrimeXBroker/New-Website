@@ -6,40 +6,46 @@ import Moment from "react-moment";
 import { useLocale } from "next-intl";
 import { Pagination } from "@nextui-org/react";
 
-const MarketNews = ({ slugEn, slugAr }) => {
-  const [news, setNews] = useState([]);
+const ExpertAnalysis = ({ id }) => {
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
+  const [blogs, setBlogs] = useState([]);
   const [totalPages, setTotalPages] = useState(1);
-  const [catDetail, setCatDetail] = useState({});
+  const [currentCategory, setCurrentCategory] = useState(null);
   const locale = useLocale();
 
-  const fetchcat = async () => {
-    const res = await axios.get(
-      `https://primexbroker.com/api/fetch/single/category/${
-        locale === "ar" ? slugAr : slugEn
-      }`
-    );
-    console.log(res, "res.data outside");
-    if (res.status === 200) {
-      console.log(res.data.data, "res.data ====");
-      setCatDetail(res.data.data);
+  const fetchCat = async () => {
+    try {
+      const res = await axios.get(
+        `https://primexbroker.com/api/fetch/single/market-news/category/${id}`,
+        { cache: "no-store" }
+      );
+      if (res.data?.success) {
+        const data = {
+          titleAr: res.data.data.titleAr,
+          titleEn: res.data.data.titleEn,
+          id: res.data.data._id,
+          leadBy: res.data.data.leadBy,
+        };
+        setCurrentCategory((prev) => data);
+      }
+    } catch (err) {
+      console.log(err);
     }
   };
 
   useEffect(() => {
-    fetchcat();
-  }, [locale]);
+    fetchCat();
+  }, [id]);
 
-  const fetchNews = async () => {
+  const fetchEnglishBlogs = async () => {
     setLoading(true);
     const res = await axios.get(
-      `https://primexbroker.com/api/fetch/published/blogs/${page}/9/${
-        locale === "ar" ? slugAr : slugEn
-      }/${locale}`
+      `https://primexbroker.com/api/fetch/publish/related/market-news/${page}/9/${currentCategory.id}`
     );
+
     if (res.data.success) {
-      setNews(res.data.data);
+      setBlogs(res.data.data);
       setTotalPages(res.data.pagination.totalPages);
       setLoading(false);
     } else {
@@ -48,11 +54,11 @@ const MarketNews = ({ slugEn, slugAr }) => {
   };
 
   useEffect(() => {
-    fetchNews();
-  }, [page]);
-
-  const formatTitleForURL = (titleEn) =>
-    titleEn.toLowerCase().replace(/\s+/g, "-");
+    if (currentCategory) {
+      setLoading(true);
+      fetchEnglishBlogs();
+    }
+  }, [currentCategory, page, id]);
 
   if (loading) {
     return (
@@ -69,12 +75,10 @@ const MarketNews = ({ slugEn, slugAr }) => {
   return (
     <section className="container py-20">
       <div className="grid grid-cols-12 ">
-        {news.map((blog, index) => (
+        {blogs.map((blog, index) => (
           <div className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4">
             <Link
-              href={`/${locale}/${formatTitleForURL(catDetail.title)}/${
-                blog.slug
-              }`}
+              href={`/${locale}/expert-analysis-detail/${blog.slug}`}
               className="group"
             >
               <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out">
@@ -93,7 +97,7 @@ const MarketNews = ({ slugEn, slugAr }) => {
                   </div>
                   <div>
                     <h4 className="text-2xl font-semibold text-black group-hover:text-primary transition duration-700 ease-in-out">
-                      {blog?.title}
+                      {locale === "ar" ? blog?.titleAr : blog?.titleEn}
                     </h4>
                   </div>
                 </div>
@@ -115,4 +119,4 @@ const MarketNews = ({ slugEn, slugAr }) => {
   );
 };
 
-export default MarketNews;
+export default ExpertAnalysis;

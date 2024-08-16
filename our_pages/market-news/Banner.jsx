@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import { useTranslations, useLocale } from "next-intl";
-import Link from "next/link";
 
 const Banner = () => {
   const locale = useLocale();
