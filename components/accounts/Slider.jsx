@@ -45,16 +45,7 @@ const Slider = () => {
     {
       id: 2,
       title: t("card.account2-title"),
-      deposition: (
-        <>
-          <del className="relative inline-block line-through decoration-2">
-            {t("slider.account_t_row_1_3")}
-          </del>{" "}
-          <ins className={`no-underline ${locale === "ar" ? "mr-1" : "ml-1"}`}>
-            {t("slider.account_ins_row_1_3")}
-          </ins>
-        </>
-      ),
+      deposition: t("slider.account_t_row_1_3"),
       spreads: t("slider.account_t_row_2_3"),
       commissions: t("slider.account_t_row_3_3"),
       leverage: t("slider.account_t_row_4_3"),
@@ -75,16 +66,7 @@ const Slider = () => {
     {
       id: 3,
       title: t("card.account3-title"),
-      deposition: (
-        <>
-          <del className="relative inline-block line-through decoration-2">
-            {t("slider.account_t_row_1_4")}
-          </del>{" "}
-          <ins className={`no-underline ${locale === "ar" ? "mr-1" : "ml-1"}`}>
-            {t("slider.account_ins_row_1_4")}
-          </ins>
-        </>
-      ),
+      deposition: t("slider.account_t_row_1_4"),
       spreads: t("slider.account_t_row_2_4"),
       commissions: t("slider.account_t_row_3_4"),
       leverage: t("slider.account_t_row_4_4"),
@@ -148,16 +130,7 @@ const Slider = () => {
     {
       id: 5,
       title: t("card.account2-title"),
-      deposition: (
-        <>
-          <del className="relative inline-block line-through decoration-2">
-            {t("slider.account_t_row_1_3")}
-          </del>{" "}
-          <ins className={`no-underline ${locale === "ar" ? "mr-1" : "ml-1"}`}>
-            {t("slider.account_ins_row_1_3")}
-          </ins>
-        </>
-      ),
+      deposition: t("slider.account_t_row_1_3"),
       spreads: t("slider.account_t_row_2_3"),
       commissions: t("slider.account_t_row_3_3"),
       leverage: t("slider.account_t_row_4_3"),
@@ -178,16 +151,7 @@ const Slider = () => {
     {
       id: 6,
       title: t("card.account3-title"),
-      deposition: (
-        <>
-          <del className="relative inline-block line-through decoration-2">
-            {t("slider.account_t_row_1_4")}
-          </del>{" "}
-          <ins className={`no-underline ${locale === "ar" ? "mr-1" : "ml-1"}`}>
-            {t("slider.account_ins_row_1_4")}
-          </ins>
-        </>
-      ),
+      deposition: t("slider.account_t_row_1_4"),
       spreads: t("slider.account_t_row_2_4"),
       commissions: t("slider.account_t_row_3_4"),
       leverage: t("slider.account_t_row_4_4"),
@@ -251,16 +215,7 @@ const Slider = () => {
     {
       id: 8,
       title: t("card.account2-title"),
-      deposition: (
-        <>
-          <del className="relative inline-block line-through decoration-2">
-            {t("slider.account_t_row_1_3")}
-          </del>{" "}
-          <ins className={`no-underline ${locale === "ar" ? "mr-1" : "ml-1"}`}>
-            {t("slider.account_ins_row_1_3")}
-          </ins>
-        </>
-      ),
+      deposition: t("slider.account_t_row_1_3"),
       spreads: t("slider.account_t_row_2_3"),
       commissions: t("slider.account_t_row_3_3"),
       leverage: t("slider.account_t_row_4_3"),
@@ -281,16 +236,7 @@ const Slider = () => {
     {
       id: 9,
       title: t("card.account3-title"),
-      deposition: (
-        <>
-          <del className="relative inline-block line-through decoration-2">
-            {t("slider.account_t_row_1_4")}
-          </del>{" "}
-          <ins className={`no-underline ${locale === "ar" ? "mr-1" : "ml-1"}`}>
-            {t("slider.account_ins_row_1_4")}
-          </ins>
-        </>
-      ),
+      deposition: t("slider.account_t_row_1_4"),
       spreads: t("slider.account_t_row_2_4"),
       commissions: t("slider.account_t_row_3_4"),
       leverage: t("slider.account_t_row_4_4"),
@@ -360,18 +306,6 @@ const Slider = () => {
                           </div>
                           <div className="col-span-5">
                             <div className="text-sm	text-white mb-2">
-                              {acc.showBadge && (
-                                <span
-                                  className={`absolute rounded-full bg-red-800 px-2 py-0 text-white ring-1 ring-inset ring-red-600/10 ${
-                                    locale === "ar"
-                                      ? "top-[88px] left-12"
-                                      : "top-[88px] right-12"
-                                  }`}
-                                  style={{ fontSize: "10px" }}
-                                >
-                                  {t("slider.badgeTxt")}
-                                </span>
-                              )}
                               <p className={``}>{acc.deposition}</p>
                             </div>
                           </div>
