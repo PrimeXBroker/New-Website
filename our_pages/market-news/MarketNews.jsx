@@ -51,9 +51,6 @@ const MarketNews = ({ slugEn, slugAr }) => {
     fetchNews();
   }, [page]);
 
-  const formatTitleForURL = (titleEn) =>
-    titleEn.toLowerCase().replace(/\s+/g, "-");
-
   if (loading) {
     return (
       <div className="flex items-center justify-center my-48">
@@ -72,8 +69,9 @@ const MarketNews = ({ slugEn, slugAr }) => {
         {news.map((blog, index) => (
           <div className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4">
             <Link
-              href={`/${locale}/market-news/${blog.slug}`}
+              href={`/${locale}/market-news-detail/${blog.slug}`}
               className="group"
+              key={index}
             >
               <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out">
                 <div>
