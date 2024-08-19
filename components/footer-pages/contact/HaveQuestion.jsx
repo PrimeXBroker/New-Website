@@ -47,8 +47,8 @@ const HaveQuestion = () => {
       imgHoverUrl: "/images/contact/South-Africa.svg",
     },
     {
-      title: t("help_li6_title"),
-      description: t("help_li6_desc"),
+      title: t("help_li7_title"),
+      description: t("help_li7_desc"),
       imgUrl: "/images/contact/UAE.svg",
       imgHoverUrl: "/images/contact/UAE.svg",
     },
@@ -92,20 +92,20 @@ const HaveQuestion = () => {
               />
             </div>
             <div className="">
-            <h1
-              className={`sectionHeading text-xl  ${
-                locale === "ar" ? "text-right pr-4" : "text-left pl-4 "
-              }`}
-            >
-              {card.title}
-            </h1>
-            <p
-              className={`sectionPara text-sm ${
-                locale === "ar" ? "text-right pr-4" : "text-left pl-4 "
-              }`}
-            >
-              {card.description}
-            </p>
+              <h1
+                className={`sectionHeading text-xl  ${
+                  locale === "ar" ? "text-right pr-4" : "text-left pl-4 "
+                }`}
+              >
+                {card.title}
+              </h1>
+              <p
+                className={`sectionPara text-sm ${
+                  locale === "ar" ? "text-right pr-4" : "text-left pl-4 "
+                }`}
+              >
+                {card.description}
+              </p>
             </div>
           </div>
         ))}
