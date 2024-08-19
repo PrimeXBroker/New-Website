@@ -32,7 +32,9 @@ const Header = ({ locale }) => {
   const t = useTranslations("menu");
   const pathname = usePathname();
   const pathnameWithoutLocale = pathname.replace(`/${locale}`, "");
-  const [buttonText, setButtonText] = useState("English");
+  const [buttonText, setButtonText] = useState(
+    locale === "ar" ? "عربي" : "English"
+  );
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isRotated, setIsRotated] = useState(false);
   const [isRotatedPartners, setIsRotatedPartners] = useState(false);
@@ -113,11 +115,6 @@ const Header = ({ locale }) => {
   };
 
   const router = useRouter();
-
-  useEffect(() => {
-    const language = locale === "ar" ? "عربي" : "English";
-    localStorage.setItem("language", language);
-  }, []);
 
   return (
     <Navbar
