@@ -206,7 +206,7 @@ const AdvancedPlatforms = () => {
         {t("title")}
       </h1>
       <div className="flex flex-col md:flex-row justify-evenly items-center container">
-        <div className="flex md:flex-col flex-row flex-wrap items-center justify-center gap-8 md:gap-4">
+        <div className="flex flex-col flex-wrap items-center justify-center gap-8 md:gap-4">
           {iconsLeftList.map((item, index) => (
             <div
               onMouseEnter={() => handleIconEnter1(index)}
@@ -242,7 +242,7 @@ const AdvancedPlatforms = () => {
             className="block mx-auto flex-1 animated_image"
           />
         </div>
-        <div className="flex md:flex-col flex-row flex-wrap items-center justify-center gap-8 md:gap-4">
+        <div className="flex flex-col flex-wrap items-center justify-center gap-8 md:gap-4">
           {iconsRightList.map((item, index) => (
             <div
               onMouseEnter={() => handleIconEnter2(index)}

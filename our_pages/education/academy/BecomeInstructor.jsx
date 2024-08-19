@@ -140,7 +140,7 @@ function BecomeInstructor() {
               name="number"
               value={formik.values.number}
               defaultCountry={originCountry}
-              className={`w-[100%] academy_phoneinput text-sm ${
+              className={`w-[100%] academy_phoneinput text-sm px-3 ${
                 formik.touched.number && formik.errors.number
                   ? "border-b border-red-600"
                   : ""

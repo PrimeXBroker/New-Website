@@ -44,6 +44,9 @@
       width: 320px !important;
       height: 320px !important;
     }
+    .account-swiper-carousel .swiper-slide {
+      width: 320px !important;
+    }
   }
 }
 
@@ -739,15 +742,14 @@
 .heart {
   animation: heartBeat 2s ease 0s infinite normal none;
 }
-.webinar_input input{
-  background-color: #E4E5E6 !important;
+.webinar_input input {
+  background-color: #e4e5e6 !important;
 }
 
-.webinar_input{
+.webinar_input {
   border-bottom: 2px solid #ddd;
   margin-top: 10px;
 }
 .border-red-500 {
-
   border-bottom: 1px solid red;
 }
