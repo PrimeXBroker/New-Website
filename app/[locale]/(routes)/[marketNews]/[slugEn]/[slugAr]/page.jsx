@@ -5,11 +5,15 @@ import { useParams } from "next/navigation";
 import MarketNews from "@/our_pages/market-news/MarketNews";
 
 const page = () => {
-  const { slugEn, slugAr } = useParams();
+  const { marketNews, slugEn, slugAr } = useParams();
+
+  const formattedTitle = marketNews
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
 
   return (
     <>
-      <Banner />
+      <Banner title={formattedTitle} />
       <MarketNews slugEn={slugEn} slugAr={slugAr} />
     </>
   );

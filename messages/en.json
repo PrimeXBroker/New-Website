@@ -207,7 +207,8 @@
       "card_4_desc": " Our Experts"
     },
     "upcomingWebinars": {
-      "title": "Upcoming Free Webinars"
+      "title": "Upcoming Free Webinars",
+      "no_webinars": "No upcoming webinars available at this time. Please check back later."
     },
     "academyForm": {
       "login_title": "Sign Up for Webinar",

@@ -40,25 +40,31 @@ const Webinars = ({ active, setActive }) => {
                 {t("title")}
               </h1>
             </div>
-            <div className="flex w-full my-12 justify-center lg:justify-start">
-              {upcoming.map((webinar, index) => (
-                <button
-                  key={index}
-                  className={`md:px-6 px-3 py-2 font-semibold min-w-[100px] sm:min-w-[196px] md:min-w-[220px] lg:min-w-[196px] xl:min-w-[220px] h-[50px] rounded-t-[39px] transition-all duration-300 ease-in-out ${
-                    activeTab === index
-                      ? "bg-primary text-secondary border-primary min-w-[130px] sm:min-w-[230px] md:min-w-[242px] lg:min-w-[230px] xl:min-w-[242px] -mx-3 z-10"
-                      : "border-[#666666] border-1 text-[#666666]"
-                  }`}
-                  onClick={() => setActiveTab(index)}
-                >
-                  {new Date(webinar.start).toLocaleDateString(locale, {
-                    weekday: "short",
-                    day: "numeric",
-                    month: "short",
-                  })}
-                </button>
-              ))}
-            </div>
+            {upcoming.length > 0 ? (
+              <>
+                <div className="flex w-full my-12 justify-center lg:justify-start">
+                  {upcoming.map((webinar, index) => (
+                    <button
+                      key={index}
+                      className={`md:px-6 px-3 py-2 font-semibold min-w-[100px] sm:min-w-[196px] md:min-w-[220px] lg:min-w-[196px] xl:min-w-[220px] h-[50px] rounded-t-[39px] transition-all duration-300 ease-in-out ${
+                        activeTab === index
+                          ? "bg-primary text-secondary border-primary min-w-[130px] sm:min-w-[230px] md:min-w-[242px] lg:min-w-[230px] xl:min-w-[242px] -mx-3 z-10"
+                          : "border-[#666666] border-1 text-[#666666]"
+                      }`}
+                      onClick={() => setActiveTab(index)}
+                    >
+                      {new Date(webinar.start).toLocaleDateString(locale, {
+                        weekday: "short",
+                        day: "numeric",
+                        month: "short",
+                      })}
+                    </button>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <div className="text-xl text-white py-10">{t("no_webinars")}</div>
+            )}
             <div className="pt-4">
               {upcoming[activeTab] && (
                 <div>
