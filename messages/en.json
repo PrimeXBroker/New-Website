@@ -804,13 +804,17 @@
       "title": "Have a Question?",
       "description": "PrimeX offers easy ways for you to contact with us",
       "help_li1_title": "Help Center:",
-      "help_li1_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
+      "help_li1_desc": "Find your answers within our Help Centre, with comprehensive resources on Vantage trading terminals, fund transactions, and more",
       "help_li2_title": "Email:",
       "help_li2_desc": "For detailed inquiries, reach out to us at support@primexcapital.com, and our team will respond promptly.",
       "help_li3_title": "Live Chat:",
       "help_li3_desc": "Get immediate assistance through our live chat feature, available 24/7 for your convenience.",
       "help_li4_title": "Phone:",
-      "help_li4_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum"
+      "help_li4_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
+      "help_li5_title": "South Africa:",
+      "help_li5_desc": "Suit no 8 , First floor, Katherine and West building, 114 West Street, Sandown, Sandton 2196, South Africa.",
+      "help_li6_title": "United Arab Emirates:",
+      "help_li6_desc": "Office 2401, Westburry Tower 1, Business Bay, Dubai, United Arab Emirates"
     },
     "contactForm": {
       "title": "Send Us A Message",

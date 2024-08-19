@@ -83,7 +83,7 @@ const ContactForm = () => {
       try {
         setLoading(true);
         const response = await axios.post(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/contact`,
+          `https://primexbroker.com/api/contact`,
           JSON.stringify(updatedValues)
         );
         console.log("Response", response);

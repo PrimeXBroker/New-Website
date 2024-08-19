@@ -171,7 +171,7 @@ const Footer = () => {
     <>
       <section className="bg-primary relative z-0 overflow-hidden">
         <div className="container flex p-10 flex-col md:flex-row">
-          <div className="md:w-[60%] w-full mb-5 md:mb-0">
+          <div className="md:w-[60%] w-full mb-5 md:mb-0 mx-auto">
             <h1
               className={`sectionHeading text-xl text-secondary font-semibold ${
                 locale === "ar"

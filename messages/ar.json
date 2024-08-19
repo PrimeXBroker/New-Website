@@ -777,13 +777,17 @@
       "title": "هل لديك سؤال؟",
       "description": "توفر برايم اكس طرقًا سهلة للتواصل معنا ",
       "help_li1_title": "مركز المساعدة:",
-      "help_li1_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
+      "help_li1_desc": "ابحث عن إجاباتك ضمن مركز المساعدة لدينا، مع موارد شاملة حول محطات تداول Vantage، التعاملات المالية، والمزيد.",
       "help_li2_title": "البريد الالكتروني:",
       "help_li2_desc": "للاستفسارات  تواصل معنا على  support@primexcapital.com، وسيقوم فريقنا بالرد على الفور.",
       "help_li3_title": "دردشة مباشرة:",
       "help_li3_desc": "احصل على مساعدة فورية من خلال ميزة الدردشة المباشرة المتوفرة على مدار الساعة طوال أيام الأسبوع لراحتك.",
       "help_li4_title": "الهاتف:",
-      "help_li4_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum"
+      "help_li4_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
+      "help_li5_title": "جنوب أفريقيا:",
+      "help_li5_desc": "الطابق الأول، الوحدة رقم 8، مبنى كاثرين وويست، 114 شارع ويست، سانداون، ساندتون 2196، جنوب أفريقيا.",
+      "help_li6_title": "الإمارات العربية المتحدة:",
+      "help_li6_desc": "المكتب 2401، برج ويستبري 1، الخليج التجاري، دبي، الإمارات العربية المتحدة."
     },
     "contactForm": {
       "title": "أرسل إلينا رسالة:",

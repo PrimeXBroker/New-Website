@@ -145,8 +145,8 @@ const RewardCards = () => {
                     key={index}
                     className={`${
                       activeTab === index
-                        ? "w-full sm:max-w-[650px] lg:max-w-[400px] lg:h-[400px] p-[24px] relative overflow-hidden rounded-3xl"
-                        : "relative max-w-[70px] w-[100%] max-h-[400px] bg-accent rounded-3xl transition duration-150 ease-in hidden lg:block"
+                        ? "w-full sm:max-w-[650px] lg:max-w-[400px] lg:h-[400px] p-[24px] relative duration-700 delay-200overflow-hidden rounded-3xl"
+                        : "relative max-w-[70px] w-[100%] max-h-[400px]  bg-accent rounded-3xl transition  ease-in hidden lg:block"
                     } bg-accent`}
                     onMouseEnter={() => handleTabClick(index)}
                   >
