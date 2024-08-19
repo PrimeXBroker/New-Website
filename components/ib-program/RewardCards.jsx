@@ -124,11 +124,11 @@ const RewardCards = () => {
         <div className="grid grid-cols-12">
           <div className="col-span-12">
             <div>
-              <div className="flex flex-row flex-wrap items-center justify-center mb-12 gap-3.5 lg:hidden">
+              <div className="flex flex-row flex-wrap items-center mb-12 gap-3.5 lg:hidden">
                 {tabsContent.map((tab, index) => (
                   <button
                     key={index}
-                    className={`text-center text-white rounded-full py-3.5 px-7 outline-none ${
+                    className={`text-center text-secondary rounded-full py-3.5 px-7 outline-none ${
                       activeTab === index
                         ? "bg-yellow-400 border-yellow-400"
                         : "bg-yellow-300"

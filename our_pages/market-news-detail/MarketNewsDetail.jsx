@@ -39,8 +39,6 @@ const MarketNewsDetail = ({ slug }) => {
     }
   };
 
-  console.log("slug content", slug);
-
   useEffect(() => {
     fetchdetails();
   }, []);
@@ -51,9 +49,11 @@ const MarketNewsDetail = ({ slug }) => {
     }
   }, [detail]);
 
-  console.log(detail, "<----- detail");
   return (
-    <section className="container py-20">
+    <section
+      className="container py-20"
+      dir={detail?.language === "ar" ? "rtl" : "ltr"}
+    >
       <div className="grid grid-cols-12">
         <div className=" lg:col-span-8 md:col-span-12 col-span-12">
           <NewsBody slug={slug} />
@@ -69,12 +69,16 @@ const MarketNewsDetail = ({ slug }) => {
             </div>
             <div className="mt-5">
               <h6 className="text-center text-base font-semibold text-black">
-                {t("readyToInvest.title")}
+                {detail?.language === "ar"
+                  ? "هل أنت مستعد للاستثمار؟"
+                  : "Ready to Invest"}
               </h6>
             </div>
             <div className="blog-invest-box-text mt-4">
               <p className="text-center text-sm">
-                {t("readyToInvest.description")}
+                {detail?.language === "ar"
+                  ? "افتح حسابًا حقيقيًا وابدأ الاستثمار الآن! تداول أكثر من 500 من الأدوات المالية العالمية دون أي متاعب."
+                  : "Open live account & Start investing NOW! Trade 500+ global assets hassle-free."}
               </p>
             </div>
             <button className="bg-primary w-full h-10 rounded-xl mt-6 text-secondary font-semibold">
@@ -82,7 +86,7 @@ const MarketNewsDetail = ({ slug }) => {
                 href={`https://client.primexbroker.com/${locale}/register`}
                 target="_blank"
               >
-                {t("readyToInvest.btnText")}
+                {detail?.language === "ar" ? "ابدأ" : "GET STARTED"}
               </Link>
             </button>
           </div>
@@ -92,13 +96,16 @@ const MarketNewsDetail = ({ slug }) => {
           >
             <div className="widget-title relative mb-10">
               <h2 className="text-2xl text-black font-semibold">
-                {t("relatedBlogs.title")}
+                {detail?.language === "ar" ? "مقالات ذات صلة" : "Related Blogs"}
               </h2>
             </div>
 
             <div>
               {related.map((blog, i) => (
-                <Link href={`/${locale}/market-news/${blog.slug}`} key={i}>
+                <Link
+                  href={`/${locale}/market-news-detail/${blog.slug}`}
+                  key={i}
+                >
                   <div className="single-blog-thumb group overflow-hidden transition duration-700  mb-2 ease-in-out">
                     <div key={i} mb-2>
                       <img

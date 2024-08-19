@@ -44,6 +44,9 @@
       width: 320px !important;
       height: 320px !important;
     }
+    .account-swiper-carousel .swiper-slide {
+      width: 320px !important;
+    }
   }
 }
 

@@ -29,7 +29,9 @@ const Featured = ({ title, cardsData }) => {
             >
               <div
                 className={`flex mb-4 ${
-                  locale === "ar" ? "justify-right" : "justify-left"
+                  locale === "ar"
+                    ? "justify-center sm:justify-right"
+                    : "justify-center sm:justify-left"
                 }`}
               >
                 <Image
@@ -42,14 +44,18 @@ const Featured = ({ title, cardsData }) => {
               </div>
               <h1
                 className={`sectionHeading text-xl group-hover:text-white ${
-                  locale === "ar" ? "text-right" : "text-left"
+                  locale === "ar"
+                    ? "text-center sm:text-right"
+                    : "text-center sm:text-left"
                 }`}
               >
                 {card.title}
               </h1>
               <p
                 className={`sectionPara text-sm group-hover:text-white ${
-                  locale === "ar" ? "text-right" : "text-left"
+                  locale === "ar"
+                    ? "text-center md:text-right"
+                    : "text-center md:text-left"
                 }`}
               >
                 {card.description}
