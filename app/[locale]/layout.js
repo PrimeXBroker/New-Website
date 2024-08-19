@@ -47,7 +47,7 @@ const montserrat = localFont({
 });
 
 const portada = localFont({
-  src:[
+  src: [
     {
       path: "../../public/fonts/Portada/Portada-Light.ttf",
       weight: "400",
@@ -65,8 +65,8 @@ const portada = localFont({
       weight: "900",
     },
   ],
- variable: "--font-portada",
-}) 
+  variable: "--font-portada",
+});
 
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../messages/${locale}.json`)).default;
@@ -90,15 +90,30 @@ export default async function layout({ children, params: { locale } }) {
   const direction = locale === "ar" ? "rtl" : "ltr";
 
   return (
-    <html className={`${
-      locale === "ar-AE"
-        ? `${portada.variable} font-portada`
-        : `${montserrat.variable} font-montserrat`
-    } `} lang={locale}>
+    <html
+      className={`${
+        locale === "ar-AE"
+          ? `${portada.variable} font-portada`
+          : `${montserrat.variable} font-montserrat`
+      } `}
+      lang={locale}
+    >
       <Head>
-      <link rel="preload" href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_mobile.webp" as="image" />
-      <link rel="preload" href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_desktop_ar.webp" as="image" />
-      <link rel="preload" href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_desktop_en.webp" as="image" />
+        <link
+          rel="preload"
+          href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_mobile.webp"
+          as="image"
+        />
+        <link
+          rel="preload"
+          href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_desktop_ar.webp"
+          as="image"
+        />
+        <link
+          rel="preload"
+          href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_desktop_en.webp"
+          as="image"
+        />
       </Head>
       <GoogleAnalytics />
       <body>
@@ -122,20 +137,20 @@ export default async function layout({ children, params: { locale } }) {
           <ChatWidget />
         </Suspense>
         <Script id="gtm" strategy="afterInteractive">
-      {`
+          {`
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-M3KSBZMM');
       `}
-    </Script>
-    <noscript
-        dangerouslySetInnerHTML={{
-        __html: ` <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3KSBZMM"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe>`
-        }} 
-    	/>
+        </Script>
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: ` <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3KSBZMM"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+          }}
+        />
       </body>
     </html>
   );

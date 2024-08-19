@@ -113,6 +113,12 @@ const Header = ({ locale }) => {
   };
 
   const router = useRouter();
+
+  useEffect(() => {
+    const language = locale === "ar" ? "عربي" : "English";
+    localStorage.setItem("language", language);
+  }, []);
+
   return (
     <Navbar
       maxWidth="xl"
