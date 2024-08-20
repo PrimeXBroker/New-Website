@@ -24,8 +24,8 @@ const Featured = ({ title, cardsData }) => {
               onMouseEnter={() => handleIconEnter(index)}
               onMouseLeave={handleIconLeave}
               key={index}
-              className="bg-accent cursor-pointer rounded-2xl shadow-2xl border-b-5 w-[320px] h-[250px] sm:w-[250px] sm:h-[250px] group
-           hover:bg-[#3F3F3E] border-black hover:border-primary p-4 transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500"
+              className="bg-accent cursor-pointer rounded-2xl shadow-2xl border-b-5 w-[320px] h-[220px] sm:w-[250px] sm:h-[250px] group
+           hover:bg-[#3F3F3E] border-black hover:border-primary px-4 py-7 sm:px-4 sm:py-4 transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500"
             >
               <div
                 className={`flex mb-4 ${
