@@ -53,14 +53,16 @@ const RewardSlider = ({ rewardsContent }) => {
             >
               <div className="relative">
                 <div className={` opacity-1 transition-opacity duration-300`}>
-                  <Image
-                    src={content.img}
-                    unoptimized={true}
-                    width="100"
-                    height="100"
-                    alt="img"
-                    className="w-full"
-                  />
+                  <div className="h-40">
+                    <Image
+                      src={content.img}
+                      unoptimized={true}
+                      width="100"
+                      height="100"
+                      alt="img"
+                      className="w-full"
+                    />
+                  </div>
                   <h2 className="text-center text-3xl font-bold mt-4 text-secondary">
                     {content.innerTitle1} <br />
                     {content.innerTitle2}
@@ -76,13 +78,13 @@ const RewardSlider = ({ rewardsContent }) => {
         ))}
       </Swiper>
       <div className="">
-        <div className="absolute bottom-[50%] right-[3%]">
-          <div className="flex justify-center items-center text-lg rounded-full !text-black cursor-pointer z-10 -mt-6 h-11 w-11 bg-transparent swiper-button-next">
-            <FaArrowRight className="items-center justify-center text-white hidden" />
+        <div className="absolute bottom-[30%] right-[2%]">
+          <div className="flex justify-center items-center text-lg rounded-full !text-black cursor-pointer z-10 -mt-6 bg-transparent swiper-button-next">
+            <FaArrowRight className="hidden items-center justify-center text-white" />
           </div>
         </div>
-        <div className="absolute bottom-[50%] left-[3%]">
-          <div className="flex justify-center items-center text-lg rounded-full !text-black cursor-pointer z-10 -mt-6 h-11 w-11 bg-transparent swiper-button-prev">
+        <div className="absolute bottom-[30%] left-[2%]">
+          <div className="flex justify-center items-center text-lg rounded-full !text-black cursor-pointer z-10 -mt-6 bg-transparent swiper-button-prev">
             <FaArrowLeft className="hidden items-center justify-center text-white" />
           </div>
         </div>
