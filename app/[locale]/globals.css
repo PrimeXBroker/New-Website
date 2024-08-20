@@ -761,3 +761,8 @@
 .border-red-500 {
   border-bottom: 1px solid red;
 }
+
+.navbar-accordion svg {
+  font-size: 15px;
+  margin-top: 2px;
+}
