@@ -320,7 +320,7 @@
 .PhoneInputCountry {
   margin-left: 10px !important;
 }
-.PhoneInputCountry svg {
+.contact-phone-number .PhoneInputCountry svg {
   color: #e4e5e6;
 }
 .phone-number-input .PhoneInputCountrySelect {
