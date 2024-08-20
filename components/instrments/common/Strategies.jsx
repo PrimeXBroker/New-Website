@@ -12,9 +12,9 @@ const Strategies = ({ tipsData }) => {
       <h1 className="sectionHeading pb-8">{t("title")}</h1>
       <div className="grid justify-center place-items-center gap-6 grid-cols-1 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-4 pt-12 pb-8">
         {tipsData.map((tip, index) => (
-          <div key={index} className="flip-card cursor-pointer">
-            <div className="instruments-card">
-              <span className="my_span" style={{ background: "#FFF" }}>
+          <div key={index} className="flip-card cursor-pointe">
+            <div className="instruments-card hover:bg-secondary">
+              <span className="my_span">
                 <Image
                   src={tip.imgUrl}
                   width={
@@ -32,7 +32,7 @@ const Strategies = ({ tipsData }) => {
                 </p>
               </span>
               <div className="content">
-                <p className="text-md text-[#232323] text-center px-6 pb-3">
+                <p className="text-md text-[#fff] text-center px-6 pb-3">
                   {tip.description}
                 </p>
               </div>
