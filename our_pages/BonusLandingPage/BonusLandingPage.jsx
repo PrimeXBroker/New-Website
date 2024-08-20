@@ -1,5 +1,5 @@
 "use client";
-import BonusCalculator from "@/components/BonusCallculator";
+// import BonusCalculator from "@/components/BonusCallculator";
 import Banner from "@/components/promotions/bonus/Banner";
 import BonusForm from "@/components/promotions/bonusLandingPage/BonusForm";
 import MaximizeProfit from "@/components/promotions/bonus/MaximizeProfit";
@@ -10,6 +10,7 @@ import TermsCondition from "@/components/promotions/bonus/TermsCondition";
 import { useTranslations } from "next-intl";
 import React from "react";
 import Faq from "../instruments/common/Faq";
+import Withdraw from "@/components/promotions/bonus/Withdraw";
 
 const BonusLandingPage = () => {
   const t = useTranslations("bonus.faq");
@@ -51,8 +52,9 @@ const BonusLandingPage = () => {
       <Steps />
       <StepsMobile />
       <PromotionApplicable />
+      <Withdraw />
       <BonusForm />
-      <BonusCalculator />
+      {/* <BonusCalculator /> */}
       <MaximizeProfit />
       <TermsCondition />
       <Faq forexFaqs={forexFaqs} />

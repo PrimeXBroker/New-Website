@@ -1311,6 +1311,14 @@
       "answer_5": "The bonus will be automatically credited to your Standard Plus Account upon verification of the form you submitted on the landing page and confirmation of the deposit amount. You will receive a notification confirming the bonus credit.",
       "question_6": "What are the conditions for withdrawing the bonus?",
       "answer_6": "To withdraw the bonus, you must fulfill the required trading lot size, which is calculated using the formula: Bonus Amount ÷ 4. For example, if you receive a $100 bonus, you need to trade 25 lots. Please note that stocks and crypto pairs are excluded from this campaign."
+    },
+    "withdraw": {
+      "title_1": "Withdrawable",
+      "para_1": "Enjoy full access to your bonus.",
+      "title_2": "Tradable",
+      "para_2": "Use your bonus to trade across all available assets.",
+      "title_3": "Losable",
+      "para_3": "bonus funds are subject to the same risk as your deposited funds. "
     }
   },
   "gift": {
