@@ -7,14 +7,13 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { useTranslations } from "next-intl";
 
 const awardsURLS = [
-  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/awards-04.svg",
-  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/awards-05.svg",
-  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/awards-06.svg",
-  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/awards-07.svg",
-  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/awards-08.svg",
-  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/awards-09.svg",
-  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/awards-10.svg",
-  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/awards-11.svg",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/award1.webp",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/award2.webp",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/award3.webp",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/award4.webp",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/award5.webp",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/award6.webp",
+  "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/award7.webp",
 ];
 
 const OurRecognition = () => {
@@ -70,10 +69,11 @@ const OurRecognition = () => {
           {awardsURLS.map((el, index) => (
             <SwiperSlide key={index}>
               <Image
+                unoptimized={true}
                 className="block mx-auto"
                 src={el}
                 alt="award"
-                height="300"
+                height="220"
                 width="220"
               />
             </SwiperSlide>
