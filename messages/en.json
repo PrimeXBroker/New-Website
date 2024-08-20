@@ -1231,6 +1231,88 @@
       "answer_6": "To withdraw the bonus, you must fulfill the required trading lot size, which is calculated using the formula: Bonus Amount ÷ 4. For example, if you receive a $100 bonus, you need to trade 25 lots. Please note that stocks and crypto pairs are excluded from this campaign."
     }
   },
+  "bonus_landing": {
+    "metaData": {
+      "title": "20% Deposit Bonus | Primex Capital",
+      "description": "Get a 20% deposit bonus at PrimeX Capital! Supercharge your trading with extra funds. Sign up now and claim your bonus!"
+    },
+    "header": {
+      "title_l1": "20%",
+      "title_l2": "Deposit Bonus",
+      "subtitle_l1": "Supercharge Your Tradings",
+      "subtitle_l2": "With a ",
+      "subtitle_l3": "20% Bonus ",
+      "subtitle_l4": "on Your",
+      "subtitle_l5": "Deposits!",
+      "tc": "terms & conditions apply",
+      "btnTxt": "Open Live Account",
+      "reg_now": "Registered already?",
+      "login_here": "Login Here"
+    },
+    "claim": {
+      "title1": "How to Claim Your",
+      "title2": " Deposit Bonus",
+      "claim_li1": " Open a Live Account",
+      "claim_li1_p": " Open a standard Plus account with PrimeX Capital.",
+      "claim_li2": " Deposit",
+      "claim_li2_p": "Start with a deposit of Minimum $500.",
+      "claim_li3": " Receive Your Bonus",
+      "claim_li3_p": "Get a 20% bonus only on the Deposit Amount in your Account."
+    },
+    "promotion": {
+      "title1": "Promotion",
+      "title2": "Applicable On"
+    },
+    "maximize": {
+      "maximize_title_1": "Maximize",
+      "maximize_title_2": "Your Profits Now!"
+    },
+    "terms": {
+      "title": "Download T&C's",
+      "desc_part_1": "This offer is available for all new and existing ",
+      "desc_part_2": "clients of PrimeX Capital."
+    },
+    "form": {
+      "title1": "Sign up now and ",
+      "title2": "get expert help",
+      "name": "Name",
+      "profit_number": "Deposit Amount",
+      "email": "Email",
+      "account_number": "Account Number",
+      "condition1": "I have read and agree to the ",
+      "condition2": "terms and conditions",
+      "form_btn": "Claim Now"
+    },
+    "calculator": {
+      "title1_1": "Calculate your",
+      "title1_2": "Deposit Bonus",
+      "para1_1": "use the form on the right to see how much bonus you could earn",
+      "para2_1": "Enter your",
+      "para2_2": "Deposit amount,",
+      "para2_3": "and watch the",
+      "para2_4": "numbers add up.",
+      "deposit_calculator:": "Deposit Calculator:",
+      "deposit_amount": "Deposit amount",
+      "enter_deposit_amount": "Enter Deposit Amount",
+      "no_of_lots": " No. of Lots required",
+      "bonus_amount": "Bonus amount",
+      "bonus": "Bonus"
+    },
+    "faq": {
+      "question_1": "How do I qualify for the 20% Deposit Bonus?",
+      "answer_1": "To qualify for the 20% Deposit Bonus, you must have a PrimeX Standard Plus Account and make a minimum deposit of $500. The bonus can be claimed multiple times, but remember, the total maximum bonus you can receive is capped at $25,000.",
+      "question_2": "Can I claim the bonus more than once?",
+      "answer_2": "Yes, you can claim the 20% Deposit Bonus multiple times during the promotion period. However, please note that if any amount is withdrawn from the capital, the entire bonus amount will be retracted.",
+      "question_3": " How do I claim the bonus as a new client?",
+      "answer_3": "As a new client, you need to open a Standard Plus Account and make the qualifying deposit of at least $500. Then, complete the form on our webpage. Once your deposit is verified, the bonus will be credited to your account.",
+      "question_4": "How do I claim the bonus as an existing client?",
+      "answer_4": " If you are an existing client with a Standard Plus Account, simply deposit a new amount into your account and fill out the form on our webpage. After verification of your deposit, the bonus will be credited to your account.",
+      "question_5": "When will the bonus be credited to my account?",
+      "answer_5": "The bonus will be automatically credited to your Standard Plus Account upon verification of the form you submitted on the landing page and confirmation of the deposit amount. You will receive a notification confirming the bonus credit.",
+      "question_6": "What are the conditions for withdrawing the bonus?",
+      "answer_6": "To withdraw the bonus, you must fulfill the required trading lot size, which is calculated using the formula: Bonus Amount ÷ 4. For example, if you receive a $100 bonus, you need to trade 25 lots. Please note that stocks and crypto pairs are excluded from this campaign."
+    }
+  },
   "gift": {
     "header": {
       "celeb_l1": "Celebrate our ",
