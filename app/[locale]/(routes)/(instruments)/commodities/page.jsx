@@ -11,8 +11,6 @@ export async function generateMetadata({ params: { locale } }) {
   locale != "en"
     ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/commodities`
     : `${process.env.NEXT_PUBLIC_BASE_URL}/commodities`;
-
-
   return {
     title: t("commodities.metaData.title"),
     description: t("commodities.metaData.description"),
