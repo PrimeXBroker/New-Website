@@ -7,15 +7,30 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import toast from "react-hot-toast";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 const IbForm = () => {
   const locale = useLocale();
   const t = useTranslations("ib.form");
   const [loading, setLoading] = useState(false);
+  const [countryCode, setCountryCode] = useState("");
 
-
-
-
+  useEffect(() => {
+    const fetchLocation = async () => {
+      try {
+        const response = await axios.get("https://ipapi.co/country/");
+        if (response.data) {
+          setCountryCode(response.data.toUpperCase());
+        } else {
+          console.error("Failed to fetch country code");
+        }
+      } catch (error) {
+        console.error("Error fetching location", error);
+      }
+    };
+    fetchLocation();
+  }, []);
 
   const formik = useFormik({
     initialValues: {
@@ -40,8 +55,14 @@ const IbForm = () => {
       email: Yup.string()
         .email(t("email_validation_error"))
         .required(t("email_required_error")),
-      contact: Yup.string().required(t("contact_required_error")),
     }),
+    validate: (values) => {
+      const errors = {};
+      if (!values.contact) {
+        errors.contact = t("contact_required_error");
+      }
+      return errors;
+    },
     onSubmit: async (values) => {
       const updatedValues = {
         first_name: values.first_name,
@@ -89,10 +110,11 @@ const IbForm = () => {
                       type="text"
                       label={t("f_name")}
                       classNames={{
-                        label: `${formik.touched.first_name && formik.errors.first_name
-                          ? "text-danger"
-                          : "#000"
-                          }`,
+                        label: `${
+                          formik.touched.first_name && formik.errors.first_name
+                            ? "text-danger"
+                            : "#000"
+                        }`,
                       }}
                       name="first_name"
                       onChange={formik.handleChange}
@@ -108,10 +130,11 @@ const IbForm = () => {
                       type="text"
                       label={t("l_name")}
                       classNames={{
-                        label: `${formik.touched.last_name && formik.errors.last_name
-                          ? "text-danger"
-                          : "#000"
-                          }`,
+                        label: `${
+                          formik.touched.last_name && formik.errors.last_name
+                            ? "text-danger"
+                            : "#000"
+                        }`,
                       }}
                       name="last_name"
                       onChange={formik.handleChange}
@@ -127,10 +150,11 @@ const IbForm = () => {
                       type="email"
                       label={t("email")}
                       classNames={{
-                        label: `${formik.touched.email && formik.errors.email
-                          ? "text-danger"
-                          : "#000"
-                          }`,
+                        label: `${
+                          formik.touched.email && formik.errors.email
+                            ? "text-danger"
+                            : "#000"
+                        }`,
                       }}
                       name="email"
                       onChange={formik.handleChange}
@@ -141,20 +165,32 @@ const IbForm = () => {
                 </div>
                 <div className="col-span-12 bonus-claim-form-mbl">
                   <div>
-                    <Input
+                    {/* <Input
                       size="lg"
                       type="number"
                       label={t("contact")}
                       classNames={{
-                        label: `${formik.touched.contact && formik.errors.contact
-                          ? "text-danger"
-                          : "#000"
-                          }`,
+                        label: `${
+                          formik.touched.contact && formik.errors.contact
+                            ? "text-danger"
+                            : "#000"
+                        }`,
                       }}
                       name="contact"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
                       value={formik.values.contact}
+                    /> */}
+                    <PhoneInput
+                      defaultCountry={countryCode}
+                      onChange={(value) =>
+                        formik.setFieldValue("contact", value)
+                      }
+                      onBlur={formik.handleBlur}
+                      name="contact"
+                      value={formik.values.contact}
+                      className="w-full bg-white h-16 rounded-xl"
+                      placeholder="Phone Number"
                     />
                   </div>
                 </div>
