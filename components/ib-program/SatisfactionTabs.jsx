@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -7,6 +7,8 @@ const SatisfactionTabs = () => {
   const locale = useLocale();
   const t = useTranslations("ib");
   const [activeTab, setActiveTab] = useState("Explore");
+  const [isUserInteracted, setIsUserInteracted] = useState(false);
+  const timerRef = useRef();
 
   const tabData = [
     {
@@ -73,6 +75,25 @@ const SatisfactionTabs = () => {
     },
   ];
 
+  const cycleTabs = () => {
+    const currentIndex = tabData.findIndex((tab) => tab.key === activeTab);
+    const nextIndex = (currentIndex + 1) % tabData.length;
+    setActiveTab(tabData[nextIndex].key);
+  };
+
+  useEffect(() => {
+    if (!isUserInteracted) {
+      timerRef.current = setInterval(cycleTabs, 7000);
+    }
+    return () => clearInterval(timerRef.current);
+  }, [activeTab, isUserInteracted]);
+
+  const handleTabClick = (key) => {
+    setActiveTab(key);
+    setIsUserInteracted(true);
+    clearInterval(timerRef.current);
+  };
+
   return (
     <section className="bg-secondary my-20 py-16 lg:py-28">
       <div className="container">
@@ -86,7 +107,7 @@ const SatisfactionTabs = () => {
               {tabData.map((tab) => (
                 <button
                   key={tab.key}
-                  onClick={() => setActiveTab(tab.key)}
+                  onClick={() => handleTabClick(tab.key)}
                   className={`px-2 sm:px-8 py-2 text-sm sm:text-lg border border-accent ${
                     activeTab === tab.key
                       ? "text-secondary bg-accent font-semibold"
