@@ -96,11 +96,11 @@ const ContactForm = () => {
     },
   });
   return (
-    <section className="!bg-accent py-10 px-2">
-      <h1 className="text-secondary text-lg md:text-2xl text-center font-semibold mb-5">
+    <section className="!bg-[#4c4c4e] py-10 px-2">
+      <h1 className="text-primary text-lg md:text-2xl text-center font-semibold mb-5">
         {t("title")}
       </h1>
-      <p className="text-secondary text-md md:text-lg text-center font-light max-w-xl mx-auto mb-10">
+      <p className="text-white text-md md:text-lg text-center font-light max-w-xl mx-auto mb-10">
         {t("description")}
       </p>
       <div className="contact_form_wrapper container px-4 py-16 md:p-16 bg-white rounded-2xl max-w-4xl relative">
@@ -257,7 +257,7 @@ const ContactForm = () => {
           </div>
           <div className="text-center absolute -bottom-4 left-[32%] md:left-[40%]">
             <button className="bg-primary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg">
-              <div className="flex gap-1 items-center justify-center">
+              <div className="flex gap-1 items-center justify-center text-white">
                 {loading && <div className="spinner inline-block"></div>}{" "}
                 {loading ? (
                   <span className="text-center">Sending...</span>
