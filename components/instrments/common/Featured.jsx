@@ -24,12 +24,14 @@ const Featured = ({ title, cardsData }) => {
               onMouseEnter={() => handleIconEnter(index)}
               onMouseLeave={handleIconLeave}
               key={index}
-              className="bg-accent cursor-pointer rounded-2xl shadow-2xl border-b-5 w-[320px] h-[250px] sm:w-[250px] sm:h-[250px] group
-           hover:bg-[#3F3F3E] border-black hover:border-primary p-4 transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500"
+              className="bg-accent cursor-pointer rounded-2xl shadow-2xl border-b-5 w-[320px] h-[220px] sm:w-[250px] sm:h-[250px] group
+           hover:bg-[#3F3F3E] border-black hover:border-primary px-4 py-7 sm:px-4 sm:py-4 transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500"
             >
               <div
                 className={`flex mb-4 ${
-                  locale === "ar" ? "justify-right" : "justify-left"
+                  locale === "ar"
+                    ? "justify-center sm:justify-right"
+                    : "justify-center sm:justify-left"
                 }`}
               >
                 <Image
@@ -42,14 +44,18 @@ const Featured = ({ title, cardsData }) => {
               </div>
               <h1
                 className={`sectionHeading text-xl group-hover:text-white ${
-                  locale === "ar" ? "text-right" : "text-left"
+                  locale === "ar"
+                    ? "text-center sm:text-right"
+                    : "text-center sm:text-left"
                 }`}
               >
                 {card.title}
               </h1>
               <p
                 className={`sectionPara text-sm group-hover:text-white ${
-                  locale === "ar" ? "text-right" : "text-left"
+                  locale === "ar"
+                    ? "text-center md:text-right"
+                    : "text-center md:text-left"
                 }`}
               >
                 {card.description}

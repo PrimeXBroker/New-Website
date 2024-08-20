@@ -44,6 +44,9 @@
       width: 320px !important;
       height: 320px !important;
     }
+    .account-swiper-carousel .swiper-slide {
+      width: 320px !important;
+    }
   }
 }
 
@@ -313,6 +316,13 @@
 .satisfaction-tabs [data-slot="cursor"] {
   border-radius: 100px;
 }
+
+.PhoneInputCountry {
+  margin-left: 10px !important;
+}
+.PhoneInputCountry svg {
+  color: #e4e5e6;
+}
 .phone-number-input .PhoneInputCountrySelect {
   background-color: #fff;
   border: none;
@@ -324,6 +334,7 @@
   outline: none;
   border: none;
   padding: 8px 16px;
+  padding-left: 10px;
 }
 .spinner {
   border: 4px solid rgba(0, 0, 0, 0.1);
@@ -739,15 +750,19 @@
 .heart {
   animation: heartBeat 2s ease 0s infinite normal none;
 }
-.webinar_input input{
-  background-color: #E4E5E6 !important;
+.webinar_input input {
+  background-color: #e4e5e6 !important;
 }
 
-.webinar_input{
+.webinar_input {
   border-bottom: 2px solid #ddd;
   margin-top: 10px;
 }
 .border-red-500 {
-
   border-bottom: 1px solid red;
+}
+
+.navbar-accordion svg {
+  font-size: 15px;
+  margin-top: 2px;
 }

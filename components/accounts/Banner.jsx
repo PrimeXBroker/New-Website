@@ -18,13 +18,13 @@ const Banner = () => {
   return (
     <section>
       <div
-        className={`relative h-[900px] lg:h-[600px] bg-no-repeat bg-cover bg-center ${
+        className={`relative lg:h-[600px] bg-no-repeat bg-cover bg-center ${
           locale === "ar"
             ? "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/acc-type-header-ar.webp)]"
             : "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/acc-type-header.webp)]"
         }`}
       >
-        <div className="container mx-auto lg:px-10 xl:px-4 pt-20 lg:pt-10">
+        <div className="container mx-auto lg:px-10 xl:px-4 pt-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center h-full">
             <div className="lg:col-span-6 flex flex-col justify-center">
               <div

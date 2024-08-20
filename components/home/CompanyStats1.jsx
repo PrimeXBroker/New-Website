@@ -60,34 +60,36 @@ const CompanyStats1 = ({ stats }) => {
   };
 
   return (
-   
-      <div className="pt-4 container z-10">
-        <div className="flex flex-col sm:flex-row justify-center items-center flex-wrap z-10">
-          {stats.map((stat, index) => {
-            const animatedValue = useCounter(stat.value);
-            const displayValue = formatValue(animatedValue, stat);
+    <div className="pt-4 container z-10">
+      <div className="flex flex-row justify-center items-center flex-wrap z-10">
+        {stats.map((stat, index) => {
+          const animatedValue = useCounter(stat.value);
+          const displayValue = formatValue(animatedValue, stat);
 
-            return (
-              <div
+          return (
+            <div
               key={index}
-              className={`flex relative sm:flex-col items-center sm:gap-0 gap-5 z-10 lg:px-14 sm:px-8 lg:mt-0 mt-5 
-                ${ index !== 3 ? "before:content-[''] before:absolute before:right-0 before:top-0 before:h-full before:w-[1px] before:bg-secondary" : ""}`}
+              className={`flex relative flex-col items-center sm:gap-0 gap-0 z-10 lg:px-14 sm:px-8 lg:mt-0 mt-5 
+                ${
+                  index !== 3
+                    ? "before:content-[''] before:absolute before:right-0 before:top-0 before:h-full before:w-[1px] before:bg-secondary"
+                    : ""
+                }  w-1/2 sm:w-auto`}
             >
-              <p className="heart lg:text-secondary text-primary leading-6 text-[1.125rem] md:text-lg xl:text-xl 3xl:text-[24px] m-0 p-0 text-left sm:text-center font-bold">
+              <p className=" lg:text-secondary text-primary leading-6 text-sm sm:text-[1.125rem] md:text-lg xl:text-xl 3xl:text-[24px] m-0 p-0 text-left sm:text-center font-bold">
                 {displayValue}
-                <b className="text-primary leading-6 font-normal text-[1.125rem] md:text-[20px]">
+                <b className="text-primary leading-6 font-normal text-sm sm:text-[1.125rem] md:text-[20px]">
                   {stat.bold}{" "}
                 </b>
               </p>
-              <p className="lg:text-secondary text-white text-[1rem] xl:text-lg 3xl:text-[20px] text-sm font-extralight m-0 text-center white">
+              <p className="lg:text-secondary text-white text-sm sm:text-[1rem] xl:text-lg 3xl:text-[20px] font-extralight m-0 text-center white">
                 {stat.description}
               </p>
             </div>
-            );
-          })}
-        </div>
+          );
+        })}
       </div>
-   
+    </div>
   );
 };
 

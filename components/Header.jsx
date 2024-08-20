@@ -9,6 +9,7 @@ import {
   NavbarMenuItem,
 } from "@nextui-org/navbar";
 import { Badge } from "@nextui-org/badge";
+import { Accordion, AccordionItem } from "@nextui-org/accordion";
 
 import Logo from "@/public/images/logos/logo_black_v2.2.svg";
 import Image from "next/image";
@@ -32,7 +33,9 @@ const Header = ({ locale }) => {
   const t = useTranslations("menu");
   const pathname = usePathname();
   const pathnameWithoutLocale = pathname.replace(`/${locale}`, "");
-  const [buttonText, setButtonText] = useState("English");
+  const [buttonText, setButtonText] = useState(
+    locale === "ar" ? "عربي" : "English"
+  );
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isRotated, setIsRotated] = useState(false);
   const [isRotatedPartners, setIsRotatedPartners] = useState(false);
@@ -113,6 +116,9 @@ const Header = ({ locale }) => {
   };
 
   const router = useRouter();
+  const defaultContent =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
   return (
     <Navbar
       maxWidth="xl"
@@ -450,44 +456,12 @@ const Header = ({ locale }) => {
         </NavbarItem>
         <NavbarItem>{/* <ThemeToggle /> */}</NavbarItem>
       </NavbarContent>
-      <NavbarMenu className="h-[400px] bg-white gap-[2rem]">
+      <NavbarMenu className="h-[400px] bg-white">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item.name}-${index}`}>
-            {item.options ? (
-              <Dropdown>
-                <DropdownTrigger>
-                  <Button
-                    onClick={handleButtonClickPlatform}
-                    disableRipple
-                    className={`p-0 bg-transparent gap-0 rotatableIcon text-lg h-auto`}
-                    endContent={<RiArrowDownSLine size={25} />}
-                    radius="sm"
-                    variant="light"
-                  >
-                    {item.name}
-                  </Button>
-                </DropdownTrigger>
-                <DropdownMenu variant="light">
-                  {item.options.map((option, idx) => (
-                    <DropdownItem
-                      key={`${option.name}-${idx}`}
-                      className="hover:bg-primary"
-                      onClick={handleMobileMenuItemClick}
-                    >
-                      <LocaleLink
-                        className="w-full text-lg"
-                        size="lg"
-                        href={option.link}
-                      >
-                        {option.name}
-                      </LocaleLink>
-                    </DropdownItem>
-                  ))}
-                </DropdownMenu>
-              </Dropdown>
-            ) : (
+            {!item.options && (
               <LocaleLink
-                className="w-full"
+                className="w-full ml-2"
                 href={item.link}
                 size="xl"
                 onClick={handleMobileMenuItemClick}
@@ -497,6 +471,29 @@ const Header = ({ locale }) => {
             )}
           </NavbarMenuItem>
         ))}
+        <Accordion className="navbar-accordion">
+          {menuItems.map((item, index) => {
+            if (item.options) {
+              return (
+                <AccordionItem key={`${item.name}-${index}`} title={item?.name}>
+                  <div className="grid grid-cols-1">
+                    {item.options?.map((option, idx) => (
+                      <LocaleLink
+                        key={`${option.name}-${idx}`}
+                        className="grid items-center w-full h-10 pl-3 text-md hover:bg-primary"
+                        onClick={handleMobileMenuItemClick}
+                        size="md"
+                        href={option.link}
+                      >
+                        <span>{option.name}</span>
+                      </LocaleLink>
+                    ))}
+                  </div>
+                </AccordionItem>
+              );
+            }
+          })}
+        </Accordion>
         <NavbarMenuItem>
           <div className="flex gap-4">
             <GradiantButton

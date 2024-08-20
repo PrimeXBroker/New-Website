@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import RewardSlider from "./RewardSlider";
 
 const RewardCards = () => {
   const locale = useLocale();
@@ -124,30 +125,18 @@ const RewardCards = () => {
         <div className="grid grid-cols-12">
           <div className="col-span-12">
             <div>
-              <div className="flex flex-row flex-wrap items-center justify-center mb-12 gap-3.5 lg:hidden">
-                {tabsContent.map((tab, index) => (
-                  <button
-                    key={index}
-                    className={`text-center text-white rounded-full py-3.5 px-7 outline-none ${
-                      activeTab === index
-                        ? "bg-yellow-400 border-yellow-400"
-                        : "bg-yellow-300"
-                    } transition-all duration-100 ease-linear`}
-                    onMouseEnter={() => handleTabClick(index)}
-                  >
-                    {tab.title}
-                  </button>
-                ))}
+              <div className="flex flex-row flex-wrap items-center gap-3.5 lg:hidden">
+                <RewardSlider rewardsContent={rewardsContent} />
               </div>
-              <div className="flex justify-center gap-3.5 p-0">
+              <div className="lg:flex justify-center gap-3.5 p-0 hidden">
                 {rewardsContent.map((content, index) => (
                   <div
                     key={index}
                     className={`${
                       activeTab === index
-                        ? "w-full sm:max-w-[650px] lg:max-w-[400px] lg:h-[400px] p-[24px] relative overflow-hidden rounded-3xl"
-                        : "relative max-w-[70px] w-[100%] max-h-[400px] bg-accent rounded-3xl transition duration-150 ease-in hidden lg:block"
-                    } bg-accent`}
+                        ? "w-full sm:max-w-[650px] lg:max-w-[400px] lg:h-[400px] p-[24px] relative overflow-hidden rounded-3xl bg-accent"
+                        : "relative max-w-[70px] w-[100%] max-h-[400px] bg-accent rounded-3xl transition-all duration-300 ease-in-out hidden lg:block"
+                    }`}
                     onMouseEnter={() => handleTabClick(index)}
                   >
                     <div className="relative">
@@ -164,8 +153,10 @@ const RewardCards = () => {
                       </div>
                       <div
                         className={`${
-                          activeTab === index ? "block" : "hidden"
-                        } opacity-1 transition-opacity duration-300`}
+                          activeTab === index
+                            ? "block opacity-100 translate-y-0"
+                            : "opacity-0 translate-y-5"
+                        } transition-opacity transition-transform duration-500 ease-in-out`}
                       >
                         <Image
                           src={content.img}
@@ -175,16 +166,18 @@ const RewardCards = () => {
                           alt="img"
                           className="w-full"
                         />
-                        <h2 className="text-center text-3xl font-bold mt-4 text-secondary">
-                          {content.innerTitle1} <br />
-                          {content.innerTitle2}
-                        </h2>
-                        <h3 className="text-center text-xl font-light mt-3 text-secondary">
-                          {content.innerSubTitle1}
-                          <span className="font-bold">
-                            {content.innerSubTitle2}
-                          </span>
-                        </h3>
+                        <div>
+                          <h2 className="text-center text-3xl font-bold mt-4 text-secondary">
+                            {content.innerTitle1} <br />
+                            {content?.innerTitle2}
+                          </h2>
+                          <h3 className="text-center text-xl font-light mt-3 text-secondary">
+                            {content.innerSubTitle1}
+                            <span className="font-bold">
+                              {content.innerSubTitle2}
+                            </span>
+                          </h3>
+                        </div>
                       </div>
                     </div>
                   </div>
