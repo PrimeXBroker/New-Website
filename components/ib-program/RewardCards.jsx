@@ -134,9 +134,9 @@ const RewardCards = () => {
                     key={index}
                     className={`${
                       activeTab === index
-                        ? "w-full sm:max-w-[650px] lg:max-w-[400px] lg:h-[400px] p-[24px] relative duration-700 delay-200 overflow-hidden rounded-3xl"
-                        : "relative max-w-[70px] w-[100%] max-h-[400px]  bg-accent rounded-3xl transition  ease-in hidden lg:block"
-                    } bg-accent`}
+                        ? "w-full sm:max-w-[650px] lg:max-w-[400px] lg:h-[400px] p-[24px] relative overflow-hidden rounded-3xl bg-accent"
+                        : "relative max-w-[70px] w-[100%] max-h-[400px] bg-accent rounded-3xl transition-all duration-300 ease-in-out hidden lg:block"
+                    }`}
                     onMouseEnter={() => handleTabClick(index)}
                   >
                     <div className="relative">
@@ -153,8 +153,10 @@ const RewardCards = () => {
                       </div>
                       <div
                         className={`${
-                          activeTab === index ? "block" : "hidden"
-                        } opacity-1 transition-opacity duration-300`}
+                          activeTab === index
+                            ? "block opacity-100 translate-y-0"
+                            : "opacity-0 translate-y-5"
+                        } transition-opacity transition-transform duration-500 ease-in-out`}
                       >
                         <Image
                           src={content.img}
@@ -164,16 +166,18 @@ const RewardCards = () => {
                           alt="img"
                           className="w-full"
                         />
-                        <h2 className="text-center text-3xl font-bold mt-4 text-secondary">
-                          {content.innerTitle1} <br />
-                          {content?.innerTitle2}
-                        </h2>
-                        <h3 className="text-center text-xl font-light mt-3 text-secondary">
-                          {content.innerSubTitle1}
-                          <span className="font-bold">
-                            {content.innerSubTitle2}
-                          </span>
-                        </h3>
+                        <div>
+                          <h2 className="text-center text-3xl font-bold mt-4 text-secondary">
+                            {content.innerTitle1} <br />
+                            {content?.innerTitle2}
+                          </h2>
+                          <h3 className="text-center text-xl font-light mt-3 text-secondary">
+                            {content.innerSubTitle1}
+                            <span className="font-bold">
+                              {content.innerSubTitle2}
+                            </span>
+                          </h3>
+                        </div>
                       </div>
                     </div>
                   </div>
