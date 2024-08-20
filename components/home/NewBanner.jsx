@@ -73,14 +73,14 @@ const NewBanner = () => {
           >
             {t("btn1_txt")}
           </Link>
-          <Link
+          {/* <Link
             href="https://client.primexbroker.com/en/register"
             className="bg-transparent border border-primary text-white rounded-full w-[155px] sm:w-[200px]
            shadow-xl text-center z-10 py-3 px-4 hover:bg-primary hover:text-secondary 
            transition-all hover:scale-105 duration-300 sm:text-[16px] text-[14px]"
           >
             {t("btn2_txt")}
-          </Link>
+          </Link> */}
         </div>
         <div className="block lg:hidden z-10 mt-3 sm:mt-0">
           <CompanyStats1 stats={statsOne} />
