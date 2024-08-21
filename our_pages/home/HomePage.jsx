@@ -11,28 +11,28 @@ import TradingOpportunities from "@/components/home/TradingOpportunities";
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import {
-    Modal,
-    ModalContent,
-    ModalHeader,
-    ModalBody,
-    ModalFooter,
-    useDisclosure,
-  } from "@nextui-org/modal";
-  import Link from "next/link";
-  import { HiBellAlert } from "react-icons/hi2";
-  import { Button } from "@nextui-org/button";
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+} from "@nextui-org/modal";
+import Link from "next/link";
+import { HiBellAlert } from "react-icons/hi2";
+import { Button } from "@nextui-org/button";
 import NewBanner from "@/components/home/NewBanner";
 
 const HomePage = () => {
-    const t = useTranslations("home");
+  const t = useTranslations("home");
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
-  useEffect(() => {
-    onOpen();
-    const timer = setTimeout(() => {
-      onClose();
-    }, 10000);
-    return () => clearTimeout(timer);
-  }, [onOpen, onClose]);
+  // useEffect(() => {
+  //   onOpen();
+  //   const timer = setTimeout(() => {
+  //     onClose();
+  //   }, 10000);
+  //   return () => clearTimeout(timer);
+  // }, [onOpen, onClose]);
 
   const statsOne = [
     {
@@ -65,9 +65,9 @@ const HomePage = () => {
 
   return (
     <>
-    <NewBanner/>
-    {/* <Banner/> */}
-    <TradingOpportunities />
+      <NewBanner />
+      {/* <Banner/> */}
+      <TradingOpportunities />
       <AccountTypes1 />
       <AdvancedPlatforms />
       <BecomeIB />
@@ -75,7 +75,7 @@ const HomePage = () => {
       <CustomerCare />
       <Academy />
       <OurRecognition />
-      <Modal
+      {/* <Modal
         classNames={{
           closeButton: "z-50",
         }}
@@ -128,9 +128,9 @@ const HomePage = () => {
             </>
           )}
         </ModalContent>
-      </Modal>
+      </Modal> */}
     </>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
