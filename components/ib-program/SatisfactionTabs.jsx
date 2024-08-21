@@ -95,7 +95,7 @@ const SatisfactionTabs = () => {
   };
 
   return (
-    <section className="bg-secondary my-20 py-16 lg:py-28">
+    <section className="bg-secondary mt-20 py-16 lg:py-28">
       <div className="container">
         <h2 className="sectionHeading font-semibold text-primary">
           {t("tabs.title1")}

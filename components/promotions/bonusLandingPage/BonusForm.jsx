@@ -3,7 +3,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Input } from "@nextui-org/react";
 import { Checkbox } from "@nextui-org/react";
 import Link from "next/link";
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
@@ -25,10 +25,28 @@ const BonusForm = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   // const { country: originCountry, ip: originIp } = useContext(LocationContext);
   const [loading, setLoading] = useState(false);
+  const [countryCode, setCountryCode] = useState("");
   const locale = useLocale();
   console.log(locale, "locale");
 
   const t = useTranslations("bonus_landing.form");
+
+  useEffect(() => {
+    const fetchLocation = async () => {
+      try {
+        const response = await axios.get("https://ipapi.co/country/");
+        if (response.data) {
+          setCountryCode(response.data.toUpperCase());
+        } else {
+          console.error("Failed to fetch country code");
+        }
+      } catch (error) {
+        console.error("Error fetching location", error);
+      }
+    };
+    fetchLocation();
+  }, []);
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -163,13 +181,13 @@ const BonusForm = () => {
                   <div className="col-span-12 sm:col-span-6 bonus-claim-form-mbl">
                     <div className="w-[92%] m-auto p-1">
                       <PhoneInput
+                        defaultCountry={countryCode}
                         onChange={(value) =>
                           formik.setFieldValue("phoneNumber", value)
                         }
                         onBlur={formik.handleBlur}
                         name="phoneNumber"
                         value={formik.values.phoneNumber}
-                        // defaultCountry={originCountry}
                         className="w-full bg-white h-16 rounded-xl"
                         placeholder="Phone Number"
                       />
@@ -238,10 +256,6 @@ const BonusForm = () => {
             <>
               <ModalHeader className="flex flex-col gap-1">Success</ModalHeader>
               <ModalBody>
-                <p>
-                  Our team will review your application and contact you within
-                  the next 24 hours to proceed with your 20% Deposit Bonus.
-                </p>
                 <p>Thank you for choosing PrimeX Capital</p>
               </ModalBody>
               <ModalFooter>

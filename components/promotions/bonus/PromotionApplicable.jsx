@@ -26,7 +26,7 @@ const PromotionApplicable = () => {
     },
   ];
   return (
-    <section className="bg-secondary my-20">
+    <section className="bg-secondary mt-20">
       <div className="container flex flex-col md:flex-row py-20 items-center px-10 xl:px-3">
         <div className="sm:w-[100%] md:w-[35%] lg:w-[30%] xl:w-[25%] mb-14 md:mb-0">
           <h2
