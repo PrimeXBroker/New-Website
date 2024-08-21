@@ -97,6 +97,12 @@ const Header = ({ locale }) => {
     setButtonText(language);
     localStorage.setItem("language", language);
   };
+
+  useEffect(() => {
+    const language = locale === "ar" ? "عربي" : "English";
+    localStorage.setItem("language", language);
+  }, []);
+
   const handleButtonClickPartners = () => {
     setIsRotatedPartners(!isRotatedPartners);
   };

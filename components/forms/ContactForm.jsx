@@ -168,7 +168,7 @@ const ContactForm = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center border-[1px] border-accent p-1 rounded-md relative">
+          <div className="contact-phone-number flex items-center border-[1px] border-accent p-1 rounded-md relative">
             <PhoneInput
               onChange={(value) => formik.setFieldValue("contact", value)}
               onBlur={formik.handleBlur}
