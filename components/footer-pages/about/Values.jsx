@@ -55,7 +55,7 @@ const Values = () => {
             key={card.id}
             onMouseEnter={() => handleIconEnter(index)}
             onMouseLeave={handleIconLeave}
-            className={`flex flex-col justify-center items-center cursor-pointer border-l border-l-gray-300 border-r border-r-gray-300 ${
+            className={`flex flex-col justify-center items-center cursor-pointer border-l border-l-gray-300 border-r border-r-gray-300 px-2 md:px-0 ${
               index === 0
             }`}
           >
