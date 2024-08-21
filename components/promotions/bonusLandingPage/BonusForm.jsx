@@ -57,6 +57,7 @@ const BonusForm = () => {
       lastName: "",
       email: "",
       phoneNumber: "",
+      terms: false,
     },
     validationSchema: Yup.object({
       firstName: Yup.string()
@@ -87,22 +88,26 @@ const BonusForm = () => {
       };
 
       try {
-        setLoading(true);
-        const response = await axios.post(
-          // `http://localhost:4002/api/bonus-landing-page`,
-          `https://primexbroker.com/api/bonus-landing-page`,
-          // JSON.stringify(updatedValues)
-          updatedValues
-        );
-        setLoading(false);
-        setBonusData(updatedValues);
-        console.log("Response", response);
-        if (response?.data?.success) {
+        if (values?.terms) {
+          setLoading(true);
+          const response = await axios.post(
+            // `http://localhost:4002/api/bonus-landing-page`,
+            `https://primexbroker.com/api/bonus-landing-page`,
+            // JSON.stringify(updatedValues)
+            updatedValues
+          );
           setLoading(false);
-          toast.success("OTP sent to your mail");
-          setIsVerified(true);
-          setTimer(300);
-          formik.resetForm();
+          setBonusData(updatedValues);
+          console.log("Response", response);
+          if (response?.data?.success) {
+            setLoading(false);
+            toast.success("OTP sent to your mail");
+            setIsVerified(true);
+            setTimer(300);
+            formik.resetForm();
+          }
+        } else {
+          toast.error("Terms Checkbox is required");
         }
       } catch (error) {
         console.log(error);
