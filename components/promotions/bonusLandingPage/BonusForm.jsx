@@ -101,7 +101,7 @@ const BonusForm = () => {
           setLoading(false);
           toast.success("OTP sent to your mail");
           setIsVerified(true);
-          setTimer(120);
+          setTimer(300);
           formik.resetForm();
         }
       } catch (error) {
