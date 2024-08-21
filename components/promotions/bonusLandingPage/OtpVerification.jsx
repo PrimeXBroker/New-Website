@@ -14,6 +14,7 @@ const OtpVerification = ({
   timer,
 }) => {
   const t = useTranslations("bonus_landing.form");
+  const o = useTranslations("bonus_landing.opt");
   const [otp, setOtp] = useState(new Array(6).fill(""));
   const inputsRef = useRef([]);
 
@@ -92,7 +93,7 @@ const OtpVerification = ({
   return (
     <div className="bg-white p-8 rounded-lg shadow-lg w-full">
       <h2 className="text-2xl font-semibold text-center text-gray-700 mb-6">
-        Enter OTP
+        {o("title")}
       </h2>
       <form action={handleSubmit}>
         <div className="flex justify-center space-x-4">
@@ -120,7 +121,9 @@ const OtpVerification = ({
               <div className="flex gap-1 items-center">
                 {loading && <div className="spinner inline-block"></div>}{" "}
                 {loading ? (
-                  <span className="text-center">Sending...</span>
+                  <span className="text-center">
+                    {locale === "ar" ? "إرسال..." : "Sending..."}
+                  </span>
                 ) : (
                   <span>{t("form_btn")}</span>
                 )}
@@ -130,11 +133,14 @@ const OtpVerification = ({
         </div>
       </form>
       <p className="text-center text-gray-500 mt-4">
-        Didn't receive the code?{" "}
+        {o("expiry_time_p1")}
         <button onClick={sendOtp} disabled={timer > 0}>
-          {timer > 0 ? `Resend OTP in ${formatTime(timer)}` : "Send OTP"}
+          {timer > 0
+            ? `${o("expiry_time_p2")} ${formatTime(timer)}`
+            : "Send OTP"}
         </button>
       </p>
+      <p className="text-center text-gray-500 mt-2">{o("email_check")}</p>
     </div>
   );
 };

@@ -1319,6 +1319,13 @@
       "para_2": "Use your bonus to trade across all available assets.",
       "title_3": "Losable",
       "para_3": "bonus funds are subject to the same risk as your deposited funds. "
+    },
+    "opt": {
+      "title": "Enter OTP",
+      "expiry_time_p1": "Didn't receive the code? ",
+      "expiry_time_p2": "Resend OTP in",
+      "email_check": "Please check your email",
+      "sending_btn": "Sending OTP..."
     }
   },
   "gift": {
