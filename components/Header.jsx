@@ -101,6 +101,7 @@ const Header = ({ locale }) => {
   useEffect(() => {
     const language = locale === "ar" ? "عربي" : "English";
     localStorage.setItem("language", language);
+    setButtonText(language);
   }, []);
 
   const handleButtonClickPartners = () => {
