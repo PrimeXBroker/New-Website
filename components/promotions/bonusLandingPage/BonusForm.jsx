@@ -20,12 +20,17 @@ import {
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { LocationContext } from "@/context/location-context";
+import OtpVerification from "./OtpVerification";
 
 const BonusForm = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   // const { country: originCountry, ip: originIp } = useContext(LocationContext);
   const [loading, setLoading] = useState(false);
+<<<<<<< Updated upstream
   const [countryCode, setCountryCode] = useState("");
+=======
+  const [isVerified, setIsVerified] = useState(false);
+>>>>>>> Stashed changes
   const locale = useLocale();
   console.log(locale, "locale");
 
@@ -53,7 +58,6 @@ const BonusForm = () => {
       lastName: "",
       email: "",
       phoneNumber: "",
-      // country: "",
     },
     validationSchema: Yup.object({
       firstName: Yup.string()
@@ -86,8 +90,8 @@ const BonusForm = () => {
       try {
         setLoading(true);
         const response = await axios.post(
-          // `http://localhost:4002/api/bonus-landing-page`,
-          `https://primexbroker.com/api/bonus-landing-page`,
+          `http://localhost:4002/api/bonus-landing-page`,
+          // `https://primexbroker.com/api/bonus-landing-page`,
           // JSON.stringify(updatedValues)
           updatedValues
         );
@@ -98,9 +102,10 @@ const BonusForm = () => {
         console.log(error);
       } finally {
         setLoading(false);
-        toast.success("Submitted Successfully");
+        toast.success("OTP sent to your mail");
+        setIsVerified(true);
         formik.resetForm();
-        onOpen();
+        // onOpen();
       }
     },
   });
@@ -116,67 +121,70 @@ const BonusForm = () => {
               </h1>
             </div>
             <div className="col-span-12">
-              <form onSubmit={formik.handleSubmit}>
-                <div className="grid grid-cols-12 gap-y-4">
-                  <div className="col-span-12 sm:col-span-6 bonus-claim-form-mbl">
-                    <div className="w-[90%] m-auto">
-                      <Input
-                        classNames={{
-                          label: `${
-                            formik.touched.name && formik.errors.name
-                              ? "text-danger"
-                              : "#000"
-                          }`,
-                        }}
-                        size="lg"
-                        type="text"
-                        label={"First Name"}
-                        name="firstName"
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        value={formik.values.firstName}
-                      />
+              {!isVerified ? (
+                <form onSubmit={formik.handleSubmit}>
+                  <div className="grid grid-cols-12 gap-y-4">
+                    <div className="col-span-12 sm:col-span-6 bonus-claim-form-mbl">
+                      <div className="w-[90%] m-auto">
+                        <Input
+                          classNames={{
+                            label: `${
+                              formik.touched.name && formik.errors.name
+                                ? "text-danger"
+                                : "#000"
+                            }`,
+                          }}
+                          size="lg"
+                          type="text"
+                          label={"First Name"}
+                          name="firstName"
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          value={formik.values.firstName}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-span-12 sm:col-span-6 bonus-claim-form-mbl">
-                    <div className="w-[90%] m-auto">
-                      <Input
-                        classNames={{
-                          label: `${
-                            formik.touched.name && formik.errors.name
-                              ? "text-danger"
-                              : "#000"
-                          }`,
-                        }}
-                        size="lg"
-                        type="text"
-                        label={"Last Name"}
-                        name="lastName"
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        value={formik.values.lastName}
-                      />
+                    <div className="col-span-12 sm:col-span-6 bonus-claim-form-mbl">
+                      <div className="w-[90%] m-auto">
+                        <Input
+                          classNames={{
+                            label: `${
+                              formik.touched.name && formik.errors.name
+                                ? "text-danger"
+                                : "#000"
+                            }`,
+                          }}
+                          size="lg"
+                          type="text"
+                          label={"Last Name"}
+                          name="lastName"
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          value={formik.values.lastName}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-span-12 sm:col-span-6 bonus-claim-form-mbl">
-                    <div className="w-[90%] m-auto">
-                      <Input
-                        classNames={{
-                          label: `${
-                            formik.touched.email && formik.errors.email
-                              ? "text-danger"
-                              : "#000"
-                          }`,
-                        }}
-                        size="lg"
-                        type="email"
-                        label={t("email")}
-                        name="email"
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        value={formik.values.email}
-                      />
+                    <div className="col-span-12 sm:col-span-6 bonus-claim-form-mbl">
+                      <div className="w-[90%] m-auto">
+                        <Input
+                          classNames={{
+                            label: `${
+                              formik.touched.email && formik.errors.email
+                                ? "text-danger"
+                                : "#000"
+                            }`,
+                          }}
+                          size="lg"
+                          type="email"
+                          label={t("email")}
+                          name="email"
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          value={formik.values.email}
+                        />
+                      </div>
                     </div>
+<<<<<<< Updated upstream
                   </div>
                   <div className="col-span-12 sm:col-span-6 bonus-claim-form-mbl">
                     <div className="w-[92%] m-auto p-1">
@@ -191,61 +199,79 @@ const BonusForm = () => {
                         className="w-full bg-white h-16 rounded-xl"
                         placeholder="Phone Number"
                       />
+=======
+                    <div className="col-span-12 sm:col-span-6 bonus-claim-form-mbl">
+                      <div className="w-[92%] m-auto p-1">
+                        <PhoneInput
+                          onChange={(value) =>
+                            formik.setFieldValue("phoneNumber", value)
+                          }
+                          onBlur={formik.handleBlur}
+                          name="phoneNumber"
+                          value={formik.values.phoneNumber}
+                          // defaultCountry={originCountry}
+                          className="w-full bg-white h-16 rounded-xl"
+                          placeholder="Phone Number"
+                        />
+                      </div>
+>>>>>>> Stashed changes
                     </div>
-                  </div>
-                  <div className="col-span-12 sm:col-span-10 md:col-span-8 lg:col-span-6 bonus-claim-form-mbl">
-                    <div className="w-[90%] m-auto">
-                      <Checkbox
-                        name="terms"
-                        id="terms"
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        value="checked"
-                      >
-                        <span
-                          className={`${
-                            formik.touched.terms && formik.errors.terms
-                              ? "text-danger"
-                              : "text-white"
-                          }`}
+                    <div className="col-span-12 sm:col-span-10 md:col-span-8 lg:col-span-6 bonus-claim-form-mbl">
+                      <div className="w-[90%] m-auto">
+                        <Checkbox
+                          name="terms"
+                          id="terms"
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          value="checked"
                         >
-                          {t("condition1")}
-                        </span>
-                        <Link
-                          href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/20%25_deposit_bonus.pdf"
-                          target="_blank"
-                          className="text-primary"
+                          <span
+                            className={`${
+                              formik.touched.terms && formik.errors.terms
+                                ? "text-danger"
+                                : "text-white"
+                            }`}
+                          >
+                            {t("condition1")}
+                          </span>
+                          <Link
+                            href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/20%25_deposit_bonus.pdf"
+                            target="_blank"
+                            className="text-primary"
+                          >
+                            {t("condition2")}
+                          </Link>
+                        </Checkbox>
+                      </div>
+                    </div>
+                    <div className="col-span-12 mt-3">
+                      <div className="text-center">
+                        <Button
+                          disabled={loading}
+                          type="submit"
+                          className="text-secondary font-semibold h-12 px-10"
+                          radius="full"
+                          size="lg"
+                          color="primary"
                         >
-                          {t("condition2")}
-                        </Link>
-                      </Checkbox>
+                          <div className="flex gap-1 items-center">
+                            {loading && (
+                              <div className="spinner inline-block"></div>
+                            )}{" "}
+                            {loading ? (
+                              <span className="text-center">Sending...</span>
+                            ) : (
+                              <span>{t("form_btn")}</span>
+                            )}
+                          </div>
+                        </Button>
+                      </div>
                     </div>
                   </div>
-                  <div className="col-span-12 mt-3">
-                    <div className="text-center">
-                      <Button
-                        disabled={loading}
-                        type="submit"
-                        className="text-secondary font-semibold h-12 px-10"
-                        radius="full"
-                        size="lg"
-                        color="primary"
-                      >
-                        <div className="flex gap-1 items-center">
-                          {loading && (
-                            <div className="spinner inline-block"></div>
-                          )}{" "}
-                          {loading ? (
-                            <span className="text-center">Sending...</span>
-                          ) : (
-                            <span>{t("form_btn")}</span>
-                          )}
-                        </div>
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </form>
+                </form>
+              ) : (
+                <OtpVerification loading={loading} />
+              )}
             </div>
           </div>
         </div>
