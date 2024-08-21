@@ -169,7 +169,7 @@ const Footer = () => {
 
   return (
     <>
-      <section className="bg-primary relative z-0 overflow-hidden">
+      <section className="bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/live-account-gray.webp')] bg-cover bg-no-repeat bg-center relative z-0 overflow-hidden">
         <div className="container flex p-10 flex-col md:flex-row">
           <div className="md:w-[60%] w-full mb-5 md:mb-0 mx-auto">
             <h1
@@ -199,21 +199,21 @@ const Footer = () => {
               href="https://client.primexbroker.com/en/register"
               radius="full"
               size="lg"
-              color="secondary"
+              color="primary"
             >
-              <p className="text-white font-semibold">
+              <p className="text-secondary font-semibold">
                 {t("getStarted.get_started_btn")}
               </p>
             </Button>
           </div>
         </div>
-        <Image
+        {/* <Image
           src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/x-transparent.svg"
           width="210"
           height="200"
           alt="logo coin"
           className="absolute xl:right-[25%] lg:right-[20%] md:right-[20%] right-[50%] top-0 -z-10"
-        />
+        /> */}
       </section>
       <footer className="bg-secondary">
         <div className="container flex flex-col pt-8">
