@@ -51,7 +51,7 @@ const OtpVerification = ({
 
       console.log("Response", response);
       setLoading(false);
-      toast.success("OTP sent to your mail");
+      toast.success("Verified successfully");
       setIsVerified(false);
       onOpen();
     } catch (error) {

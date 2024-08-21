@@ -97,14 +97,17 @@ const BonusForm = () => {
         setLoading(false);
         setBonusData(updatedValues);
         console.log("Response", response);
+        if (response?.data?.success) {
+          setLoading(false);
+          toast.success("OTP sent to your mail");
+          setIsVerified(true);
+          setTimer(120);
+          formik.resetForm();
+        }
       } catch (error) {
         console.log(error);
-      } finally {
         setLoading(false);
-        toast.success("OTP sent to your mail");
-        setIsVerified(true);
-        setTimer(120);
-        formik.resetForm();
+        toast.error("Email not sent. Please try sending again.");
       }
     },
   });
