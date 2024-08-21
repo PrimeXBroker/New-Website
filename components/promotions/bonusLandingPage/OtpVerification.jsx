@@ -1,8 +1,18 @@
 import { Button } from "@nextui-org/react";
+import axios from "axios";
 import { useTranslations } from "next-intl";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import toast from "react-hot-toast";
 
-const OtpVerification = ({ loading }) => {
+const OtpVerification = ({
+  setLoading,
+  loading,
+  onOpen,
+  setIsVerified,
+  bonusData,
+  setTimer,
+  timer,
+}) => {
   const t = useTranslations("bonus_landing.form");
   const [otp, setOtp] = useState(new Array(6).fill(""));
   const inputsRef = useRef([]);
@@ -25,10 +35,52 @@ const OtpVerification = ({ loading }) => {
     }
   };
 
-  const handleSubmit = () => {
-    const otpString = otp.join("");
-    console.log("Entered OTP:", otpString);
+  const handleSubmit = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.post(
+        // `http://localhost:4002/api/bonus-landing-verification`,
+        `https://primexbroker.com/api/bonus-landing-verification`,
+        {
+          email: bonusData?.email,
+          fullName: bonusData?.fullName,
+          otp: otp?.join(""),
+        }
+      );
+      setLoading(false);
+
+      console.log("Response", response);
+      setLoading(false);
+      toast.success("OTP sent to your mail");
+      setIsVerified(false);
+      onOpen();
+    } catch (error) {
+      console.log(error);
+    }
   };
+
+  const sendOtp = async () => {
+    try {
+      const response = await axios.post(
+        // `http://localhost:4002/api/bonus-landing-page`,
+        `https://primexbroker.com/api/bonus-landing-page`,
+        // JSON.stringify(updatedValues)
+        bonusData
+      );
+      toast.success("OTP sent to your mail");
+      setTimer(120);
+    } catch (error) {
+      console.log(error, "error");
+    }
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimer((prevTimer) => (prevTimer > 0 ? prevTimer - 1 : 0));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="bg-white p-8 rounded-lg shadow-lg w-full">
       <h2 className="text-2xl font-semibold text-center text-gray-700 mb-6">
@@ -37,7 +89,7 @@ const OtpVerification = ({ loading }) => {
       <form action={handleSubmit}>
         <div className="flex justify-center space-x-4">
           {[...Array(6)].map((_, index) => (
-            <Input
+            <input
               key={index}
               ref={(el) => (inputsRef.current[index] = el)}
               type="text"
@@ -71,9 +123,9 @@ const OtpVerification = ({ loading }) => {
       </form>
       <p className="text-center text-gray-500 mt-4">
         Didn't receive the code?{" "}
-        <a href="#" className="text-blue-600 hover:underline">
-          Resend OTP
-        </a>
+        <button onClick={sendOtp} disabled={timer > 0}>
+          {timer > 0 ? `Resend OTP in ${timer} seconds` : "Send OTP"}
+        </button>
       </p>
     </div>
   );

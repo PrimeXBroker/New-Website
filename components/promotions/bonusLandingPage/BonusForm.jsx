@@ -24,13 +24,12 @@ import OtpVerification from "./OtpVerification";
 
 const BonusForm = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [timer, setTimer] = useState(0);
   // const { country: originCountry, ip: originIp } = useContext(LocationContext);
   const [loading, setLoading] = useState(false);
-<<<<<<< Updated upstream
   const [countryCode, setCountryCode] = useState("");
-=======
+  const [bonusData, setBonusData] = useState("");
   const [isVerified, setIsVerified] = useState(false);
->>>>>>> Stashed changes
   const locale = useLocale();
   console.log(locale, "locale");
 
@@ -90,13 +89,13 @@ const BonusForm = () => {
       try {
         setLoading(true);
         const response = await axios.post(
-          `http://localhost:4002/api/bonus-landing-page`,
-          // `https://primexbroker.com/api/bonus-landing-page`,
+          // `http://localhost:4002/api/bonus-landing-page`,
+          `https://primexbroker.com/api/bonus-landing-page`,
           // JSON.stringify(updatedValues)
           updatedValues
         );
         setLoading(false);
-
+        setBonusData(updatedValues);
         console.log("Response", response);
       } catch (error) {
         console.log(error);
@@ -104,8 +103,8 @@ const BonusForm = () => {
         setLoading(false);
         toast.success("OTP sent to your mail");
         setIsVerified(true);
+        setTimer(120);
         formik.resetForm();
-        // onOpen();
       }
     },
   });
@@ -184,37 +183,20 @@ const BonusForm = () => {
                         />
                       </div>
                     </div>
-<<<<<<< Updated upstream
-                  </div>
-                  <div className="col-span-12 sm:col-span-6 bonus-claim-form-mbl">
-                    <div className="w-[92%] m-auto p-1">
-                      <PhoneInput
-                        defaultCountry={countryCode}
-                        onChange={(value) =>
-                          formik.setFieldValue("phoneNumber", value)
-                        }
-                        onBlur={formik.handleBlur}
-                        name="phoneNumber"
-                        value={formik.values.phoneNumber}
-                        className="w-full bg-white h-16 rounded-xl"
-                        placeholder="Phone Number"
-                      />
-=======
                     <div className="col-span-12 sm:col-span-6 bonus-claim-form-mbl">
                       <div className="w-[92%] m-auto p-1">
                         <PhoneInput
+                          defaultCountry={countryCode}
                           onChange={(value) =>
                             formik.setFieldValue("phoneNumber", value)
                           }
                           onBlur={formik.handleBlur}
                           name="phoneNumber"
                           value={formik.values.phoneNumber}
-                          // defaultCountry={originCountry}
                           className="w-full bg-white h-16 rounded-xl"
                           placeholder="Phone Number"
                         />
                       </div>
->>>>>>> Stashed changes
                     </div>
                     <div className="col-span-12 sm:col-span-10 md:col-span-8 lg:col-span-6 bonus-claim-form-mbl">
                       <div className="w-[90%] m-auto">
@@ -270,7 +252,15 @@ const BonusForm = () => {
                   </div>
                 </form>
               ) : (
-                <OtpVerification loading={loading} />
+                <OtpVerification
+                  setLoading={setLoading}
+                  loading={loading}
+                  onOpen={onOpen}
+                  setIsVerified={setIsVerified}
+                  bonusData={bonusData}
+                  setTimer={setTimer}
+                  timer={timer}
+                />
               )}
             </div>
           </div>
