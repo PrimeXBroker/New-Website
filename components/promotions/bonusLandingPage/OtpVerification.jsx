@@ -51,7 +51,7 @@ const OtpVerification = ({
 
       console.log("Response", response);
       setLoading(false);
-      toast.success("OTP sent to your mail");
+      toast.success("Verified successfully");
       setIsVerified(false);
       onOpen();
     } catch (error) {
@@ -68,7 +68,7 @@ const OtpVerification = ({
         bonusData
       );
       toast.success("OTP sent to your mail");
-      setTimer(120);
+      setTimer(300);
     } catch (error) {
       console.log(error, "error");
     }
@@ -81,6 +81,14 @@ const OtpVerification = ({
 
     return () => clearInterval(interval);
   }, []);
+
+  const formatTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${String(minutes).padStart(2, "0")}:${String(
+      remainingSeconds
+    ).padStart(2, "0")}`;
+  };
   return (
     <div className="bg-white p-8 rounded-lg shadow-lg w-full">
       <h2 className="text-2xl font-semibold text-center text-gray-700 mb-6">
@@ -124,7 +132,7 @@ const OtpVerification = ({
       <p className="text-center text-gray-500 mt-4">
         Didn't receive the code?{" "}
         <button onClick={sendOtp} disabled={timer > 0}>
-          {timer > 0 ? `Resend OTP in ${timer} seconds` : "Send OTP"}
+          {timer > 0 ? `Resend OTP in ${formatTime(timer)}` : "Send OTP"}
         </button>
       </p>
     </div>
