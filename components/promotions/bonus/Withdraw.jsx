@@ -6,15 +6,15 @@ const Withdraw = () => {
   const t = useTranslations("bonus_landing.withdraw");
 
   return (
-    <section className="bg-gray-100 py-20">
-      <div className="container mx-auto grid grid-cols-1 xl:grid-cols-3 gap-10 2xl:gap-28 justify-center">
+    <section className="bg-accent py-20">
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 2xl:gap-28 justify-center">
         {/* Withdrawable */}
-        <div className="bg-secondary flex items-center p-6 rounded-3xl relative w-full max-w-[340px] mx-auto mb-8 xl:mb-0">
-          <div className="absolute left-[-84px] sm:left-[-64px] md:left-[-72px]">
+        <div className="bg-secondary flex items-center p-6 rounded-3xl relative w-full max-w-[340px] h-[136px] mx-auto">
+          <div className="absolute left-[2px] sm:left-[-64px] md:left-[-72px]">
             <img
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20_deposit_bonus/withdraw.webp"
               alt="Withdrawable"
-              className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px]"
+              className="w-[96px] h-[96px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[140px]"
             />
           </div>
           <div
@@ -28,12 +28,12 @@ const Withdraw = () => {
         </div>
 
         {/* Tradable */}
-        <div className="bg-primary flex items-center p-6 rounded-3xl relative w-full max-w-[340px] mx-auto mb-8 xl:mb-0">
-          <div className="absolute left-[-52px] sm:left-[-42px] md:left-[-52px]">
+        <div className="bg-primary flex items-center p-6 rounded-3xl relative w-full max-w-[340px] h-[136px] mx-auto">
+          <div className="absolute left-[-5px] sm:left-[-42px] md:left-[-52px]">
             <img
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20_deposit_bonus/tradeable.webp"
               alt="Tradable"
-              className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px]"
+              className="w-[96px] h-[96px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[140px]"
             />
           </div>
           <div
@@ -47,12 +47,12 @@ const Withdraw = () => {
         </div>
 
         {/* Losable */}
-        <div className="bg-secondary flex items-center p-6 rounded-3xl relative w-full max-w-[340px] mx-auto">
-          <div className="absolute left-[-70px] sm:left-[-50px] md:left-[-64px]">
+        <div className="bg-secondary flex items-center p-6 rounded-3xl relative w-full max-w-[340px] h-[136px] mx-auto">
+          <div className="absolute left-[-5px] sm:left-[-50px] md:left-[-60px]">
             <img
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20_deposit_bonus/losable.webp"
               alt="Losable"
-              className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px]"
+              className="w-[96px] h-[96px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[140px]"
             />
           </div>
           <div
