@@ -99,7 +99,7 @@ export async function generateMetadata({ params: { locale, slug } }) {
           {
             url: `${process.env.NEXT_PUBLIC_BASE_URL}/default-image.jpg`,
             width: 1200,
-            height: 630,
+            height: 627,
             alt: 'Default Alt Text',
           },
         ],
