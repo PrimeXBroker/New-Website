@@ -19,38 +19,46 @@ const HaveQuestion = () => {
     // {
     //   title: t("help_li1_title"),
     //   description: t("help_li1_desc"),
-    //   imgUrl: "/images/contact/chat.svg",
-    //   imgHoverUrl: "/images/contact/chat_hover.svg",
+    //   imgUrl: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact-us/chat.svg",
+    //   imgHoverUrl: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact-us/chat_hover.svg",
     // },
     {
       title: t("help_li2_title"),
       description: t("help_li2_desc"),
-      imgUrl: "/images/contact/email.svg",
-      imgHoverUrl: "/images/contact/email_hover.svg",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact-us/email.svg",
+      imgHoverUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact-us/email_hover.svg",
     },
     {
       title: t("help_li3_title"),
       description: t("help_li3_desc"),
-      imgUrl: "/images/contact/headphone.svg",
-      imgHoverUrl: "/images/contact/headphone_hover.svg",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact-us/headphone.svg",
+      imgHoverUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact-us/headphone_hover.svg",
     },
     // {
     //   title: t("help_li4_title"),
     //   description: t("help_li4_desc"),
-    //   imgUrl: "/images/contact/phone.svg",
-    //   imgHoverUrl: "/images/contact/phone_hover.svg",
+    //   imgUrl: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact-us/phone.svg",
+    //   imgHoverUrl: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact-us/phone_hover.svg",
     // },
     {
       title: t("help_li5_title"),
       description: t("help_li5_desc"),
-      imgUrl: "/images/contact/South-Africa.svg",
-      imgHoverUrl: "/images/contact/South-Africa.svg",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact-us/South-Africa.svg",
+      imgHoverUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact-us/South-Africa.svg",
     },
     {
       title: t("help_li7_title"),
       description: t("help_li7_desc"),
-      imgUrl: "/images/contact/UAE.svg",
-      imgHoverUrl: "/images/contact/UAE.svg",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact-us/UAE.svg",
+      imgHoverUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact-us/UAE.svg",
     },
   ];
   return (

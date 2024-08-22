@@ -249,7 +249,11 @@ const BonusForm = () => {
                               <div className="spinner inline-block"></div>
                             )}{" "}
                             {loading ? (
-                              <span className="text-center">Sending...</span>
+                              <span className="text-center">
+                                {locale === "ar"
+                                  ? "إرسال الرمز لمرة واحدة..."
+                                  : "Sending OTP..."}
+                              </span>
                             ) : (
                               <span>{t("form_btn")}</span>
                             )}
