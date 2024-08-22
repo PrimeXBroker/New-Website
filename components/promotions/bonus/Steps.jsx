@@ -7,7 +7,7 @@ const Steps = () => {
   const t = useTranslations("bonus.claim");
 
   return (
-    <section className="container pt-20 hidden md:block">
+    <section className="container hidden md:block">
       <h1 className="sectionHeading">
         <span className="font-normal">{t("title1")}</span> <br />
         {t("title2")}

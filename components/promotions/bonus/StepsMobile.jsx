@@ -6,20 +6,20 @@ const StepsMobile = () => {
   const t = useTranslations("bonus.claim");
 
   return (
-    <section className="container pt-20 block md:hidden">
+    <section className="container block md:hidden">
       <h1 className="sectionHeading">
         <span className="font-normal">{t("title1")}</span> <br />
         {t("title2")}
       </h1>
       <div className="flex flex-col justify-center items-center mt-16">
         <div className="w-[230px]">
-          <div className="w-44 h-44 rounded-full bg-secondary flex justify-end items-center m-auto">
+          <div className="w-40 h-40 sm:w-44 sm:h-44 rounded-full bg-secondary flex justify-end items-center m-auto">
             <Image
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/claim1.svg"
               width={100}
               height={100}
               alt="img"
-              className=" w-[90px] h-[90px] m-auto"
+              className="w-[74px] sm:w-[90px] m-auto"
             />
           </div>
           <div>
@@ -32,13 +32,13 @@ const StepsMobile = () => {
           </div>
         </div>
         <div className="w-[230px] my-12">
-          <div className="w-44 h-44 rounded-full bg-secondary flex justify-end items-center m-auto">
+          <div className="w-40 h-40 sm:w-44 sm:h-44 rounded-full bg-secondary flex justify-end items-center m-auto">
             <Image
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/claim2.svg"
               width={100}
               height={100}
               alt="img"
-              className=" w-[90px] h-[90px] m-auto"
+              className="w-[74px] sm:w-[90px] m-auto"
             />
           </div>
           <div>
@@ -51,13 +51,13 @@ const StepsMobile = () => {
           </div>
         </div>
         <div className="w-[230px]">
-          <div className="w-44 h-44 rounded-full bg-secondary flex justify-end items-center m-auto">
+          <div className="w-40 h-40 sm:w-44 sm:h-44 rounded-full bg-secondary flex justify-end items-center m-auto">
             <Image
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/claim3.svg"
               width={100}
               height={100}
               alt="img"
-              className=" w-[90px] h-[90px] m-auto"
+              className="w-[74px] sm:w-[90px] m-auto"
             />
           </div>
           <div>

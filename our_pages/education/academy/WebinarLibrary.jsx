@@ -53,8 +53,10 @@ const WebinarLibrary = () => {
       name: t("presenter_2"),
     },
     {
-      iconUrl: "/images/education/academy/webinar_icon3.svg",
-      iconHoverUrl: "/images/education/academy/webinar_icon3_hover.svg",
+      iconUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/webinar_icon3.svg",
+      iconHoverUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/webinar_icon3_hover.svg",
       title: t("webinar_topic_3"),
       name: t("presenter_3"),
     },

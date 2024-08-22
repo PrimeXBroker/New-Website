@@ -40,23 +40,23 @@ const PromotionApplicable = () => {
             {t("title2")}
           </h2>
         </div>
-        <div className="w-full md:w-[65%] lg:w-[70%] xl:w-[75%] flex flex-wrap md:flex-nowrap flex-row justify-around md:justify-end items-center gap-10 md:gap-6 lg:gap-12 xl:gap-20">
+        <div className="w-[100%] md:w-[65%] lg:w-[70%] xl:w-[75%] flex flex-wrap md:flex-nowrap flex-row justify-around md:justify-end items-center gap-10 md:gap-6 lg:gap-12 xl:gap-20">
           {instrumentsContent.map((inst, index) => {
             return (
               <div
                 className="instrument-box flex flex-col justify-center items-center group"
                 key={index}
               >
-                <div className="w-32 sm-w-24 md:w-20 lg:w-24 xl:w-28 h-32 sm-h-24 md:h-20 lg:h-24 xl:h-28 rounded-full bg-primary group-hover:bg-accent flex justify-center items-center">
+                <div className="w-24 sm-w-24 md:w-20 lg:w-24 xl:w-28 h-24 sm-h-24 md:h-20 lg:h-24 xl:h-28 rounded-full bg-primary group-hover:bg-accent flex justify-center items-center">
                   <Image
                     src={inst.img}
                     width="58"
                     height="58"
                     alt="img"
-                    className="w-[58px] sm:w-[58px] md:w-[42px] lg:w-[48px] xl:w-[58px] [h-58px] sm:h-[58px] md:h-[42px] lg:h-[48px] xl:h-[58px]"
+                    className="w-[44px] sm:w-[58px] md:w-[42px] lg:w-[48px] xl:w-[58px] [h-58px] sm:h-[58px] md:h-[42px] lg:h-[48px] xl:h-[58px]"
                   />
                 </div>
-                <h3 className="text-xl xl-text-2xl text-white group-hover:text-primary font-semibold text-center mt-5 md:mt-2">
+                <h3 className="text-base sm:text-xl xl-text-2xl text-white group-hover:text-primary font-semibold text-center mt-3 sm:mt-5 md:mt-2">
                   {inst.title}
                 </h3>
               </div>

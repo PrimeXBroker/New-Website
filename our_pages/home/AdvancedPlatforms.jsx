@@ -59,26 +59,34 @@ const AdvancedPlatforms = () => {
     {
       text: t("li1"),
       id: 1,
-      iconUrl: "/images/home/advanced_tools_white.svg",
-      iconUrlHover: "/images/home/advanced_tools_white.svg",
+      iconUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/advanced_tools_white.svg",
+      iconUrlHover:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/advanced_tools_white.svg",
     },
     {
       text: t("li5"),
       id: 2,
-      iconUrl: "/images/home/community_white.svg",
-      iconUrlHover: "/images/home/community_white.svg",
+      iconUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/community_white.svg",
+      iconUrlHover:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/community_white.svg",
     },
     {
       text: t("li8"),
       id: 3,
-      iconUrl: "/images/home/superior_white.svg",
-      iconUrlHover: "/images/home/superior_white.svg",
+      iconUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/superior_white.svg",
+      iconUrlHover:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/superior_white.svg",
     },
     {
       text: t("li6"),
       id: 4,
-      iconUrl: "/images/home/advanced_signals_white.svg",
-      iconUrlHover: "/images/home/advanced_signals_white.svg",
+      iconUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/advanced_signals_white.svg",
+      iconUrlHover:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/advanced_signals_white.svg",
     },
   ];
 
@@ -86,26 +94,34 @@ const AdvancedPlatforms = () => {
     {
       text: t("li2"),
       id: 1,
-      iconUrl: "/images/home/multi_asset_white.svg",
-      iconUrlHover: "/images/home/multi_asset_white.svg",
+      iconUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/multi_asset_white.svg",
+      iconUrlHover:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/multi_asset_white.svg",
     },
     {
       text: t("li3"),
       id: 2,
-      iconUrl: "/images/home/automated_white.svg",
-      iconUrlHover: "/images/home/automated_white.svg",
+      iconUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/automated_white.svg",
+      iconUrlHover:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/automated_white.svg",
     },
     {
       text: t("li4"),
       id: 3,
-      iconUrl: "/images/home/improved_white.svg",
-      iconUrlHover: "/images/home/improved_white.svg",
+      iconUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/improved_white.svg",
+      iconUrlHover:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/improved_white.svg",
     },
     {
       text: t("li7"),
       id: 4,
-      iconUrl: "/images/home/built_in_white.svg",
-      iconUrlHover: "/images/home/built_in_white.svg",
+      iconUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/built_in_white.svg",
+      iconUrlHover:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/built_in_white.svg",
     },
   ];
 

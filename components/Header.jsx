@@ -432,7 +432,7 @@ const Header = ({ locale }) => {
               >
                 <div>
                   {/* <Image
-                    src="/images/flags/gb.svg"
+                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/gb.svg"
                     width="30"
                     height="8"
                     alt="img"
@@ -450,7 +450,7 @@ const Header = ({ locale }) => {
               >
                 <div>
                   {/* <Image
-                    src="/images/flags/arab.svg"
+                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/arab.svg"
                     width="30"
                     height="8"
                     alt="img"

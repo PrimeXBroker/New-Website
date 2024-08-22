@@ -49,7 +49,7 @@ const RewardSlider = ({ rewardsContent }) => {
           <SwiperSlide key={index} className="rounded-xl">
             <div
               key={index}
-              className={`${"w-full sm:max-w-[650px] lg:max-w-[400px] lg:h-[400px] p-[24px] relative duration-700 delay-200overflow-hidden rounded-3xl"} bg-accent`}
+              className={`${"w-full sm:max-w-[650px] lg:max-w-[400px] lg:h-[400px] p-[24px] relative duration-700 delay-200overflow-hidden rounded-3xl"} bg-accent mx-auto`}
             >
               <div className="relative">
                 <div className={` opacity-1 transition-opacity duration-300`}>
@@ -63,11 +63,11 @@ const RewardSlider = ({ rewardsContent }) => {
                       className="w-full"
                     />
                   </div>
-                  <h2 className="text-center text-3xl font-bold mt-4 text-secondary">
+                  <h2 className="text-center text-2xl sm:text-3xl font-bold mt-[30px] sm:mt-[180px] md:mt-[190px] text-secondary">
                     {content.innerTitle1} <br />
                     {content.innerTitle2}
                   </h2>
-                  <h3 className="text-center text-xl font-light mt-3 text-secondary">
+                  <h3 className="text-center text-lg sm:text-xl font-light mt-0 sm:mt-3 text-secondary">
                     {content.innerSubTitle1}
                     <span className="font-bold">{content.innerSubTitle2}</span>
                   </h3>

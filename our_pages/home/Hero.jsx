@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="md:absolute container bottom-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pb-8 md:border-t-2 border-solid border-gray-400 md:pt-16">
           <div className="flex flex-col justify-center items-center lg:mb-0 mb-5">
             <Image
-              src="/images/innovative_tools.svg"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/extra/innovative_tools.svg"
               alt="clear pricing"
               width="80"
               height="200"
@@ -32,7 +32,7 @@ const Hero = () => {
           </div>
           <div className="flex flex-col justify-center items-center lg:mb-0 mb-5">
             <Image
-              src="/images/competitive_pricing.svg"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/extra/competitive_pricing.svg"
               alt="clear pricing"
               width="80"
               height="200"
@@ -46,7 +46,7 @@ const Hero = () => {
           </div>
           <div className="flex flex-col justify-center items-center">
             <Image
-              src="/images/fast_execution.svg"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/extra/fast_execution.svg"
               alt="clear pricing"
               width="80"
               height="200"
@@ -61,7 +61,7 @@ const Hero = () => {
           </div>
           <div className="flex flex-col justify-center items-center">
             <Image
-              src="/images/clear_pricing.svg"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/extra/clear_pricing.svg"
               alt="clear pricing"
               width="80"
               height="200"

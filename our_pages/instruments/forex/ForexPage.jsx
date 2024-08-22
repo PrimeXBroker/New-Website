@@ -1,96 +1,104 @@
 "use client";
-import Banner from '@/components/instrments/common/Banner';
-import Faq from '@/components/instrments/common/Faq';
-import Featured from '@/components/instrments/common/Featured';
-import ReadyToDive from '@/components/instrments/common/ReadyToDive';
-import Steps from '@/components/instrments/common/Steps';
-import Strategies from '@/components/instrments/common/Strategies';
-import WhyTrade from '@/components/instrments/common/WhyTrade';
-import { useTranslations } from 'next-intl';
-import React, { useState } from 'react'
+import Banner from "@/components/instrments/common/Banner";
+import Faq from "@/components/instrments/common/Faq";
+import Featured from "@/components/instrments/common/Featured";
+import ReadyToDive from "@/components/instrments/common/ReadyToDive";
+import Steps from "@/components/instrments/common/Steps";
+import Strategies from "@/components/instrments/common/Strategies";
+import WhyTrade from "@/components/instrments/common/WhyTrade";
+import { useTranslations } from "next-intl";
+import React, { useState } from "react";
 
 const ForexPage = () => {
-    const t = useTranslations("forex");
-    const [icon1Hovered, setIcon1Hovered] = useState(false);
-  
-    const handleIcon1Enter = () => {
-      setIcon1Hovered(true);
-    };
-    const handleIcon1Leave = () => {
-      setIcon1Hovered(false);
-    };
-  
-    const cardsData = [
-      {
-        title: t("keyFeatures.feature_1_title"),
-        description: t("keyFeatures.feature_1_desc"),
-        imgUrl: "/images/instruments/forex/global_access.svg",
-        imgHoverUrl: "/images/instruments/forex/global_access_hover.svg",
-      },
-      {
-        title: t("keyFeatures.feature_2_title"),
-        description: t("keyFeatures.feature_2_desc"),
-        imgUrl: "/images/instruments/forex/tight_spreads.svg",
-        imgHoverUrl: "/images/instruments/forex/tight_spreads_hover.svg",
-      },
-      {
-        title: t("keyFeatures.feature_3_title"),
-        description: t("keyFeatures.feature_3_desc"),
-        imgUrl: "/images/instruments/forex/leverage.svg",
-        imgHoverUrl: "/images/instruments/forex/leverage_hover.svg",
-      },
-      {
-        title: t("keyFeatures.feature_4_title"),
-        description: t("keyFeatures.feature_4_desc"),
-        imgUrl: "/images/instruments/forex/customer.svg",
-        imgHoverUrl: "/images/instruments/forex/customer_hover.svg",
-      },
-    ];
-    const tipsData = [
-      {
-        title: t("strategies.tip_1_title"),
-        description: t("strategies.tip_1_desc"),
-        imgUrl:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/instruments/forex/tip1.svg",
-      },
-      {
-        title: t("strategies.tip_2_title"),
-        description: t("strategies.tip_2_desc"),
-        imgUrl:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/instruments/forex/tip2.svg",
-      },
-      {
-        title: t("strategies.tip_3_title"),
-        description: t("strategies.tip_3_desc"),
-        imgUrl:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/instruments/forex/tip3.svg",
-      },
-    ];
-    const forexFaqs = [
-      {
-        key: 1,
-        question: t("faq.question_1"),
-        answer: t("faq.answer_1"),
-      },
-      {
-        key: 2,
-        question: t("faq.question_2"),
-        answer: t("faq.answer_2"),
-      },
-      {
-        key: 3,
-        question: t("faq.question_3"),
-        answer: t("faq.answer_3"),
-      },
-      {
-        key: 4,
-        question: t("faq.question_4"),
-        answer: t("faq.answer_4"),
-      },
-    ];
+  const t = useTranslations("forex");
+  const [icon1Hovered, setIcon1Hovered] = useState(false);
+
+  const handleIcon1Enter = () => {
+    setIcon1Hovered(true);
+  };
+  const handleIcon1Leave = () => {
+    setIcon1Hovered(false);
+  };
+
+  const cardsData = [
+    {
+      title: t("keyFeatures.feature_1_title"),
+      description: t("keyFeatures.feature_1_desc"),
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/instruments/forex/global_access.svg",
+      imgHoverUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/instruments/forex/global_access_hover.svg",
+    },
+    {
+      title: t("keyFeatures.feature_2_title"),
+      description: t("keyFeatures.feature_2_desc"),
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/instruments/forex/tight_spreads.svg",
+      imgHoverUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/instruments/forex/tight_spreads_hover.svg",
+    },
+    {
+      title: t("keyFeatures.feature_3_title"),
+      description: t("keyFeatures.feature_3_desc"),
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/instruments/forex/leverage.svg",
+      imgHoverUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/instruments/forex/leverage_hover.svg",
+    },
+    {
+      title: t("keyFeatures.feature_4_title"),
+      description: t("keyFeatures.feature_4_desc"),
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/instruments/forex/customer.svg",
+      imgHoverUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/instruments/forex/customer_hover.svg",
+    },
+  ];
+  const tipsData = [
+    {
+      title: t("strategies.tip_1_title"),
+      description: t("strategies.tip_1_desc"),
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/instruments/forex/tip1.svg",
+    },
+    {
+      title: t("strategies.tip_2_title"),
+      description: t("strategies.tip_2_desc"),
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/instruments/forex/tip2.svg",
+    },
+    {
+      title: t("strategies.tip_3_title"),
+      description: t("strategies.tip_3_desc"),
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/instruments/forex/tip3.svg",
+    },
+  ];
+  const forexFaqs = [
+    {
+      key: 1,
+      question: t("faq.question_1"),
+      answer: t("faq.answer_1"),
+    },
+    {
+      key: 2,
+      question: t("faq.question_2"),
+      answer: t("faq.answer_2"),
+    },
+    {
+      key: 3,
+      question: t("faq.question_3"),
+      answer: t("faq.answer_3"),
+    },
+    {
+      key: 4,
+      question: t("faq.question_4"),
+      answer: t("faq.answer_4"),
+    },
+  ];
   return (
     <>
-    <Banner
+      <Banner
         title={t("hero.title")}
         description={t("hero.description")}
         imgUrl="https://primexcapital.s3.eu-north-1.amazonaws.com/website/instruments/forex/Banner.webp"
@@ -121,7 +129,7 @@ const ForexPage = () => {
       />
       <Faq forexFaqs={forexFaqs} />
     </>
-  )
-}
+  );
+};
 
-export default ForexPage
+export default ForexPage;

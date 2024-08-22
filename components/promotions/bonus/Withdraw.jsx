@@ -6,7 +6,7 @@ const Withdraw = () => {
   const t = useTranslations("bonus_landing.withdraw");
 
   return (
-    <section className="bg-accent py-20">
+    <section className="bg-accent py-20 mb-20">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 2xl:gap-28 justify-center">
         {/* Withdrawable */}
         <div className="bg-secondary flex items-center p-6 rounded-3xl relative w-full max-w-[340px] h-[136px] mx-auto">

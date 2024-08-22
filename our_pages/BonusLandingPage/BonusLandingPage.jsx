@@ -49,11 +49,11 @@ const BonusLandingPage = () => {
   return (
     <>
       <Banner />
+      <BonusForm />
       <Steps />
       <StepsMobile />
       <PromotionApplicable />
       <Withdraw />
-      <BonusForm />
       {/* <BonusCalculator /> */}
       <MaximizeProfit />
       <TermsCondition />

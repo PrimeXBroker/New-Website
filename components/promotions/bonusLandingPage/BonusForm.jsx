@@ -123,8 +123,7 @@ const BonusForm = () => {
           <div className="grid grid-cols-12">
             <div className="col-span-12 mb-8">
               <h1 className="sectionHeading  text-accent font-semibold text-center">
-                <span className="font-normal">{t("title1")}</span>
-                {t("title2")}
+                {t("title1")}
               </h1>
             </div>
             <div className="col-span-12">
