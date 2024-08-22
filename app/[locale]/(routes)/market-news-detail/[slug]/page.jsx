@@ -50,8 +50,8 @@ export async function generateMetadata({ params: { locale, slug } }) {
     const blo = res?.data?.data;  
     const url =
       locale !== "en"
-        ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/contact`
-        : `${process.env.NEXT_PUBLIC_BASE_URL}/contact`;
+        ? `https://primexcapital.com/${locale}/${slug}`
+        : `https://primexcapital.com/${slug}`;
 
     return {
       title: blo?.title,
