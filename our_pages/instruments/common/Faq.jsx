@@ -1,5 +1,7 @@
+"use-client";
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import { useTranslations } from "next-intl";
+import React, { useState } from "react";
 
 const Faq = ({ forexFaqs }) => {
   const t = useTranslations("commodities.faq");
