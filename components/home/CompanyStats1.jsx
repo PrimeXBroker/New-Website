@@ -60,7 +60,7 @@ const CompanyStats1 = ({ stats }) => {
   };
 
   return (
-    <div className="pt-4 container z-10">
+    <div className="pt-4 container z-10" dir="ltr">
       <div className="flex flex-row justify-center items-center flex-wrap z-10">
         {stats.map((stat, index) => {
           const animatedValue = useCounter(stat.value);
@@ -68,6 +68,7 @@ const CompanyStats1 = ({ stats }) => {
 
           return (
             <div
+            // dir={ locale === "en" ? "ltr": "rtl" }
               key={index}
               className={`flex relative flex-col items-center sm:gap-0 gap-0 z-10 lg:px-14 sm:px-8 lg:mt-0 mt-5 
                 ${
