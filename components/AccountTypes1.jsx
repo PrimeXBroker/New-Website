@@ -8,19 +8,22 @@ const AccountTypes1 = () => {
     {
       title: t("account_types_card_1_title"),
       description: t("account_types_card_1_desc"),
-      imageUrl: "images/accounts/standard.svg",
+      imageUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/standard.svg",
       btnHref: "/account-types",
     },
     {
       title: t("account_types_card_2_title"),
       description: t("account_types_card_2_desc"),
-      imageUrl: "images/accounts/narrow.svg",
+      imageUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/narrow.svg",
       btnHref: "/account-types",
     },
     {
       title: t("account_types_card_3_title"),
       description: t("account_types_card_3_desc"),
-      imageUrl: "images/accounts/raw.svg",
+      imageUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/raw.svg",
       btnHref: "/account-types",
     },
   ];

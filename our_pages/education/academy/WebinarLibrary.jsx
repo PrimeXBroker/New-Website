@@ -13,32 +13,42 @@ const WebinarLibrary = () => {
 
   const webinarCards = [
     {
-      iconUrl: "/images/education/academy/webinar_icon1.svg",
-      iconHoverUrl: "/images/education/academy/webinar_icon1_hover.svg",
+      iconUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/webinar_icon1.svg",
+      iconHoverUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/webinar_icon1_hover.svg",
       title: t("webinar_topic_1"),
       name: t("presenter_1"),
     },
     {
-      iconUrl: "/images/education/academy/webinar_icon2.svg",
-      iconHoverUrl: "/images/education/academy/webinar_icon2_hover.svg",
+      iconUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/webinar_icon2.svg",
+      iconHoverUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/webinar_icon2_hover.svg",
       title: t("webinar_topic_2"),
       name: t("presenter_2"),
     },
     {
-      iconUrl: "/images/education/academy/webinar_icon3.svg",
-      iconHoverUrl: "/images/education/academy/webinar_icon3_hover.svg",
+      iconUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/webinar_icon3.svg",
+      iconHoverUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/webinar_icon3_hover.svg",
       title: t("webinar_topic_3"),
       name: t("presenter_3"),
     },
     {
-      iconUrl: "/images/education/academy/webinar_icon1.svg",
-      iconHoverUrl: "/images/education/academy/webinar_icon1_hover.svg",
+      iconUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/webinar_icon1.svg",
+      iconHoverUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/webinar_icon1_hover.svg",
       title: t("webinar_topic_1"),
       name: t("presenter_1"),
     },
     {
-      iconUrl: "/images/education/academy/webinar_icon2.svg",
-      iconHoverUrl: "/images/education/academy/webinar_icon2_hover.svg",
+      iconUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/webinar_icon2.svg",
+      iconHoverUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/webinar_icon2_hover.svg",
       title: t("webinar_topic_2"),
       name: t("presenter_2"),
     },

@@ -38,7 +38,7 @@ const Banner = () => {
           <div className="flex">
             <Image
               className="mx-auto md:m-0 block"
-              src="/images/careers/careers_img.webp"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/careers_img.webp"
               alt="Banner Image"
               width="550"
               height="500"
