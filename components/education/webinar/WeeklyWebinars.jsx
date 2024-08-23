@@ -72,7 +72,7 @@ const WeeklyWebinars = () => {
       try {
         setLoading(true);
         const response = await axios.post(
-          `http://localhost:4002/api/register/webinars-landing-page`,
+          `https://primexbroker.com/api/register/webinars-landing-page`,
           updatedValues
         );
         if (response.data.success) {
