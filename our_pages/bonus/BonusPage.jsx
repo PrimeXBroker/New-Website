@@ -48,12 +48,18 @@ const BonusPage = () => {
   return (
     <>
       <Banner />
-      <Steps />
-      <StepsMobile />
+      <div className="mt-20">
+        <Steps />
+      </div>
+      <div className="mt-20">
+        <StepsMobile />
+      </div>
       <PromotionApplicable />
       <BonusForm />
       <BonusCalculator />
-      <MaximizeProfit />
+      <div className="mt-20">
+        <MaximizeProfit />
+      </div>
       <TermsCondition />
       <Faq forexFaqs={forexFaqs} />
     </>

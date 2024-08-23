@@ -229,7 +229,7 @@ const CareerForm = () => {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value={formik.values.current_salary}
-                  placeholder={"Current Salary*"}
+                  placeholder={"Current Salary in USD*"}
                 />
               </div>
               <div className="flex flex-col">
@@ -245,7 +245,7 @@ const CareerForm = () => {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value={formik.values.expected_salary}
-                  placeholder={"Expected Salary*"}
+                  placeholder={"Expected Salary in USD*"}
                 />
               </div>
             </div>

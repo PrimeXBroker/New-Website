@@ -357,13 +357,28 @@
       "desc1_2": "Rose Shawish and Ahmed Alsajadi",
       "desc1_3": "will keep you ahead of the curve,offering real-time insights and strategies to capitalize on emerging opportunities and mitigate risks.",
       "form_title": "Sign Up Now!",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "email": "Email Address",
       "first_name_validation_error": "first name can only contain letters.",
       "first_name_required_error": "first name is required!",
       "last_name_validation_error": "last name can only contain letters.",
       "last_name_required_error": "last name is required!",
       "email_validation_error": "Invalid email address",
       "email_required_error": "Email is required.",
-      "phone_required_error": "phone is required!"
+      "phone_required_error": "phone is required!",
+      "submit_btn": "Submit Now",
+      "sign_up_btn": "Sign Up Now!"
+    },
+    "meetExperts": {
+      "title": " Meet Our Webinar Experts",
+      "description": "Meet the Minds Behind Our Webinars, Individuals With Extensive Experience and Expertise in the Field of Trading.",
+      "expert1_name": "Rose Shawish",
+      "expert2_name": "Ahmed Alsajadi",
+      "expert1_position": "Fundamental Analyst",
+      "expert2_position": "Technical Analyst",
+      "expert1_desc": "With years of experience in financial markets,Rose brings a wealth of knowledge and a passion for helping traders succeed. Her insights into market dynamics and trading psychology are invaluable for both novice and seasoned traders alike.",
+      "expert2_desc": "As a seasoned trader and educator, Ahmed is dedicated to empowering traders with the skills and confidence to navigate complex markets. His pragmatic approach and deep understanding of market mechanics make his webinars insightful and engaging."
     },
     "signup": {
       "title": "Ready to elevate your trading game?",

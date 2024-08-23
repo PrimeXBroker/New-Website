@@ -72,13 +72,17 @@ const WeeklyWebinars = () => {
       try {
         setLoading(true);
         const response = await axios.post(
-          `http://localhost:4002/api/register/webinars`,
+          `http://localhost:4002/api/register/webinars-landing-page`,
           updatedValues
         );
         if (response.data.success) {
-          setModalMessage(
-            "Thank you for registering for our webinar. We have successfully received your information."
-          );
+          if (response.data.message === "Registered Already") {
+            setModalMessage("You have already registered for this webinar.");
+          } else {
+            setModalMessage(
+              "Thank you for registering for our webinar. We have successfully received your information."
+            );
+          }
         }
       } catch (error) {
         setModalMessage(
@@ -127,7 +131,7 @@ const WeeklyWebinars = () => {
 
         <div className="md:w-[50%] flex flex-col pt-5 md:pt-16">
           <h1 className="text-secondary text-lg md:text-2xl text-center font-semibold pb-5">
-            Sign Up Now!
+            {t("sign_up_btn")}
           </h1>
           <form
             onSubmit={formik.handleSubmit}
@@ -147,7 +151,7 @@ const WeeklyWebinars = () => {
                 >
                   {formik.touched.first_name && formik.errors.first_name
                     ? formik.errors.first_name
-                    : "First Name"}
+                    : `${t("first_name")}`}
                 </span>
               }
               type="text"
@@ -176,7 +180,7 @@ const WeeklyWebinars = () => {
                 >
                   {formik.touched.last_name && formik.errors.last_name
                     ? formik.errors.last_name
-                    : "Last Name"}
+                    : `${t("last_name")}`}
                 </span>
               }
               type="text"
@@ -205,7 +209,7 @@ const WeeklyWebinars = () => {
                 >
                   {formik.touched.email && formik.errors.email
                     ? formik.errors.email
-                    : "Email Address"}
+                    : `${t("email")}`}
                 </span>
               }
               type="email"
@@ -234,7 +238,7 @@ const WeeklyWebinars = () => {
                 {loading ? (
                   <div className="spinner inline-block"></div>
                 ) : (
-                  <span>Submit Now</span>
+                  <span>{t("submit_btn")}</span>
                 )}
               </div>
             </button>

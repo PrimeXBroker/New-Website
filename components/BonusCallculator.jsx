@@ -29,7 +29,7 @@ function BonusCalculator() {
   //     setBonus("");
   //   }
   // }, [profitAmount, numberOfLots]);
-  const t = useTranslations('bonus.calculator');
+  const t = useTranslations("bonus.calculator");
   const [profitAmount, setProfitAmount] = useState("");
   const [bonus, setBonus] = useState("");
   const [numberOfLots, setNumberOfLots] = useState("");
@@ -86,12 +86,12 @@ function BonusCalculator() {
       setLastChanged("bonus");
     }
   };
-  const handleNumberOfLotsChange = ()=>{
-    console.log('Changed');
-  }
+  const handleNumberOfLotsChange = () => {
+    console.log("Changed");
+  };
 
   return (
-    <section className="py-8 font-sans">
+    <section className="font-sans">
       <div className="flex flex-col gap-8 lg:gap-0 container bg-[#e4e5e6] lg:flex-row py-8">
         <div className="flex flex-col justify-center flex-1 space-y-12">
           <h1 className="text-3xl lg:text-5xl text-center text-[#232323]">
@@ -102,9 +102,9 @@ function BonusCalculator() {
             {t("para1_1")}
           </h2>
           <h2 className="text-center text-2xl lg:text-3xl text-[#232323]">
-           {t("para2_1")}{" "}
+            {t("para2_1")}{" "}
             <strong>
-            {t("para2_2")}
+              {t("para2_2")}
               <br />{" "}
             </strong>
             {t("para2_3")} <br />
@@ -112,10 +112,12 @@ function BonusCalculator() {
           </h2>
         </div>
         <div className="flex flex-col flex-1 gap-12 justify-between bg-[#3f3f3e] py-12 rounded-3xl">
-          <h1 className="text-center text-3xl text-[#FFF]">{t("deposit_calculator:")}</h1>
+          <h1 className="text-center text-3xl text-[#FFF]">
+            {t("deposit_calculator:")}
+          </h1>
           <div>
             <label className="w-[70%] mx-auto block px-5 text-[#FFF]">
-             {t("deposit_amount")}
+              {t("deposit_amount")}
             </label>
             <input
               className="appearance-none outline-none focus:outline-1 focus:outline-primary px-5 py-3 rounded-2xl w-[70%] mx-auto block text-[#3f3f3e] text-xl border-none"
@@ -127,7 +129,7 @@ function BonusCalculator() {
           </div>
           <div>
             <label className="w-[70%] mx-auto block px-5 text-[#FFF]">
-             {t("no_of_lots")}
+              {t("no_of_lots")}
             </label>
             <input
               className="appearance-none outline-none focus:outline-1 focus:outline-primary px-5 py-3 rounded-2xl w-[70%] mx-auto block text-[#3f3f3e] text-xl"
@@ -139,7 +141,7 @@ function BonusCalculator() {
           </div>
           <div>
             <label className="w-[70%] mx-auto block px-5 text-[#FFF]">
-             {t("bonus_amount")}
+              {t("bonus_amount")}
             </label>
             <input
               onChange={handleBonusChange}
