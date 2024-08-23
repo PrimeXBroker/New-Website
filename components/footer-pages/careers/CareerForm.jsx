@@ -18,6 +18,24 @@ const CareerForm = () => {
   const [resumeName, setResumeName] = useState("");
   const [portfolioName, setPortfolioName] = useState("");
   const { country: originCountry, ip: originIp } = useContext(LocationContext);
+  const [countryCode, setCountryCode] = useState("");
+
+  useEffect(() => {
+    const fetchLocation = async () => {
+      try {
+        const response = await axios.get("https://ipapi.co/country/");
+        if (response.data) {
+          setCountryCode(response.data.toUpperCase());
+        } else {
+          console.error("Failed to fetch country code");
+        }
+      } catch (error) {
+        console.error("Error fetching location", error);
+      }
+    };
+    fetchLocation();
+  }, []);
+
   const formik = useFormik({
     initialValues: {
       first_name: "",
@@ -205,11 +223,12 @@ const CareerForm = () => {
               }`}
             >
               <PhoneInput
+                international
+                defaultCountry={country}
                 onChange={(value) => formik.setFieldValue("contact", value)}
                 onBlur={formik.handleBlur}
                 name="contact"
                 value={formik.values.contact}
-                defaultCountry={originCountry}
                 className="w-[100%] custom-placeholder"
                 placeholder="Phone Number"
               />

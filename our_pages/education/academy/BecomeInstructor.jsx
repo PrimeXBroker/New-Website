@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { useLocale, useTranslations } from "next-intl";
 import { PiSignInFill, PiUserSquareThin } from "react-icons/pi";
 import PhoneInput from "react-phone-number-input";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { LocationContext } from "@/context/location-context";
 import { Field } from "formik";
 import axios from "axios";
@@ -24,7 +24,24 @@ function BecomeInstructor() {
   const [loading, setLoading] = useState(false);
   const { country: originCountry, ip: originIp } = useContext(LocationContext);
   const t = useTranslations("academy.academyForm");
+  const [countryCode, setCountryCode] = useState("");
   const locale = useLocale();
+
+  useEffect(() => {
+    const fetchLocation = async () => {
+      try {
+        const response = await axios.get("https://ipapi.co/country/");
+        if (response.data) {
+          setCountryCode(response.data.toUpperCase());
+        } else {
+          console.error("Failed to fetch country code");
+        }
+      } catch (error) {
+        console.error("Error fetching location", error);
+      }
+    };
+    fetchLocation();
+  }, []);
 
   const workedBefore = [
     { label: t("radio_option_1"), value: "Yes" },
@@ -135,11 +152,12 @@ function BecomeInstructor() {
           </div>
           <div className="mb-1 w-[80%]">
             <PhoneInput
+              international
+              defaultCountry={countryCode}
               onChange={(value) => formik.setFieldValue("number", value)}
               onBlur={formik.handleBlur}
               name="number"
               value={formik.values.number}
-              defaultCountry={originCountry}
               className={`w-[100%] academy_phoneinput text-sm px-3 ${
                 formik.touched.number && formik.errors.number
                   ? "border-b border-red-600"

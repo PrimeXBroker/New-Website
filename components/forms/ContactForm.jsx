@@ -6,7 +6,7 @@ import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import nationality from "../../public/assets/data/nationality.json";
 import { LocationContext } from "@/context/location-context";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import axios from "axios";
 import { useTranslations } from "next-intl";
 import { BiUser } from "react-icons/bi";
@@ -24,6 +24,23 @@ const questionTypes = [
 
 const ContactForm = () => {
   const t = useTranslations("contact.contactForm");
+  const [countryCode, setCountryCode] = useState("");
+
+  useEffect(() => {
+    const fetchLocation = async () => {
+      try {
+        const response = await axios.get("https://ipapi.co/country/");
+        if (response.data) {
+          setCountryCode(response.data.toUpperCase());
+        } else {
+          console.error("Failed to fetch country code");
+        }
+      } catch (error) {
+        console.error("Error fetching location", error);
+      }
+    };
+    fetchLocation();
+  }, []);
 
   const questionTypes = [
     { id: 1, name: t("general_inquiry"), value: "general" },
@@ -170,11 +187,12 @@ const ContactForm = () => {
           </div>
           <div className="contact-phone-number flex items-center border-[1px] border-accent p-1 rounded-md relative">
             <PhoneInput
+              international
+              defaultCountry={countryCode}
               onChange={(value) => formik.setFieldValue("contact", value)}
               onBlur={formik.handleBlur}
               name="contact"
               value={formik.values.contact}
-              defaultCountry={originCountry}
               className="w-full"
             />
           </div>

@@ -12,13 +12,27 @@ import { LocationContext } from "@/context/location-context";
 import toast from "react-hot-toast";
 import { useLocale, useTranslations } from "next-intl";
 
-
-
 const AcademyForm = () => {
   const { country: originCountry, ip: originIp } = useContext(LocationContext);
   const [loading, setLoading] = useState(false);
+  const [countryCode, setCountryCode] = useState("");
   const t = useTranslations("academy.academyForm");
 
+  useEffect(() => {
+    const fetchLocation = async () => {
+      try {
+        const response = await axios.get("https://ipapi.co/country/");
+        if (response.data) {
+          setCountryCode(response.data.toUpperCase());
+        } else {
+          console.error("Failed to fetch country code");
+        }
+      } catch (error) {
+        console.error("Error fetching location", error);
+      }
+    };
+    fetchLocation();
+  }, []);
 
   const webinarTypes = [
     { id: 1, name: t("drop_field_1"), value: "fundamental" },
@@ -71,12 +85,10 @@ const AcademyForm = () => {
   return (
     <section id="academy-form" className="py-12 container bg-[#E4E5E6] ">
       <div className="shadow-xl bg-[#fff] border-accent border xl:w-[40%] xl:mx-auto lg:w-[40%] lg:mx-auto md:w-[50%] md:mx-auto sm:w-[90%] sm:mx-auto w-[90%] mx-auto rounded-2xl">
-        
         <Tabs
           className="justify-center w-full "
           classNames={{
             tabList: "w-full",
-
           }}
         >
           <Tab
@@ -99,10 +111,11 @@ const AcademyForm = () => {
                   onBlur={formik.handleBlur}
                   value={formik.values.full_name}
                   placeholder={t("form_full_name")}
-                  className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${formik.touched.full_name && formik.errors.full_name
+                  className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+                    formik.touched.full_name && formik.errors.full_name
                       ? "border-b border-red-600"
                       : ""
-                    }`}
+                  }`}
                 />
               </div>
               <div className="mb-4 w-[60%]">
@@ -113,31 +126,35 @@ const AcademyForm = () => {
                   onBlur={formik.handleBlur}
                   value={formik.values.email}
                   placeholder={t("form_email")}
-                  className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${formik.touched.email && formik.errors.email
+                  className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+                    formik.touched.email && formik.errors.email
                       ? "border-b border-red-600"
                       : ""
-                    }`}
+                  }`}
                 />
               </div>
               <div className="mb-4 w-[60%]">
                 <PhoneInput
+                  international
+                  defaultCountry={countryCode}
                   onChange={(value) => formik.setFieldValue("contact", value)}
                   onBlur={formik.handleBlur}
                   name="contact"
                   value={formik.values.contact}
-                  defaultCountry={originCountry}
-                  className={`w-[100%] academy_phoneinput ${formik.touched.contact && formik.errors.contact
+                  className={`w-[100%] academy_phoneinput ${
+                    formik.touched.contact && formik.errors.contact
                       ? "border-b border-red-600"
                       : ""
-                    }`}
+                  }`}
                 />
               </div>
               <div className="mb-10 w-[60%]">
                 <select
-                  className={`bg-white text-gray-400 w-full placeholder:text-gray-300 outline-none border-b border-b- capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[5px] ${formik.touched.wtype && formik.errors.wtype
+                  className={`bg-white text-gray-400 w-full placeholder:text-gray-300 outline-none border-b border-b- capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[5px] ${
+                    formik.touched.wtype && formik.errors.wtype
                       ? "border-b border-red-600"
                       : ""
-                    }`}
+                  }`}
                   name="wtype"
                   value={formik.values.wtype}
                   onChange={formik.handleChange}
@@ -175,10 +192,11 @@ const AcademyForm = () => {
                   onBlur={formik.handleBlur}
                   value={formik.values.full_name}
                   placeholder={t("form_full_name")}
-                  className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${formik.touched.full_name && formik.errors.full_name
+                  className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+                    formik.touched.full_name && formik.errors.full_name
                       ? "border-b border-red-600"
                       : ""
-                    }`}
+                  }`}
                 />
               </div>
               <div className="mb-4 w-[60%]">
@@ -189,31 +207,35 @@ const AcademyForm = () => {
                   onBlur={formik.handleBlur}
                   value={formik.values.email}
                   placeholder={t("form_email")}
-                  className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${formik.touched.email && formik.errors.email
+                  className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none ${
+                    formik.touched.email && formik.errors.email
                       ? "border-b border-red-600"
                       : ""
-                    }`}
+                  }`}
                 />
               </div>
               <div className="mb-4 w-[60%]">
                 <PhoneInput
+                  international
+                  defaultCountry={countryCode}
                   onChange={(value) => formik.setFieldValue("contact", value)}
                   onBlur={formik.handleBlur}
                   name="contact"
                   value={formik.values.contact}
-                  defaultCountry={originCountry}
-                  className={`w-[100%] academy_phoneinput ${formik.touched.contact && formik.errors.contact
+                  className={`w-[100%] academy_phoneinput ${
+                    formik.touched.contact && formik.errors.contact
                       ? "border-b border-red-600"
                       : ""
-                    }`}
+                  }`}
                 />
               </div>
               <div className="mb-10 w-[60%]">
                 <select
-                  className={`bg-white text-gray-400 w-full placeholder:text-gray-300 outline-none border-b border-b- capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[5px] ${formik.touched.wtype && formik.errors.wtype
+                  className={`bg-white text-gray-400 w-full placeholder:text-gray-300 outline-none border-b border-b- capitalize pt-[12px] pb-[0.5rem] px-4 rounded-[5px] ${
+                    formik.touched.wtype && formik.errors.wtype
                       ? "border-b border-red-600"
                       : ""
-                    }`}
+                  }`}
                   name="wtype"
                   value={formik.values.wtype}
                   onChange={formik.handleChange}

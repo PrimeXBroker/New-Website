@@ -25,7 +25,24 @@ function WebinarForm() {
   const [upcoming, setUpcoming] = useState([]);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [loading, setLoading] = useState(false);
+  const [countryCode, setCountryCode] = useState("");
   const locale = useLocale();
+
+  useEffect(() => {
+    const fetchLocation = async () => {
+      try {
+        const response = await axios.get("https://ipapi.co/country/");
+        if (response.data) {
+          setCountryCode(response.data.toUpperCase());
+        } else {
+          console.error("Failed to fetch country code");
+        }
+      } catch (error) {
+        console.error("Error fetching location", error);
+      }
+    };
+    fetchLocation();
+  }, []);
 
   const webinarTypes = [
     { id: 1, name: t("drop_field_1"), value: "fundamental" },
@@ -177,11 +194,12 @@ function WebinarForm() {
           </div>
           <div className="mb-1 w-[80%]">
             <PhoneInput
+              international
+              defaultCountry={countryCode}
               onChange={(value) => formik.setFieldValue("phoneNumber", value)}
               onBlur={formik.handleBlur}
               name="phoneNumber"
               value={formik.values.phoneNumber}
-              defaultCountry={originCountry}
               className={`w-[100%] academy_phoneinput text-sm px-3 ${
                 formik.touched.phoneNumber && formik.errors.phoneNumber
                   ? "border-b border-red-600"

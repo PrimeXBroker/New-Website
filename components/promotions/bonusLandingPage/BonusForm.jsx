@@ -193,6 +193,7 @@ const BonusForm = () => {
                     <div className="col-span-12 sm:col-span-6 bonus-claim-form-mbl">
                       <div className="w-[92%] m-auto p-1">
                         <PhoneInput
+                          international
                           defaultCountry={countryCode}
                           onChange={(value) =>
                             formik.setFieldValue("phoneNumber", value)

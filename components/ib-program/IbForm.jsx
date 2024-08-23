@@ -182,6 +182,7 @@ const IbForm = () => {
                       value={formik.values.contact}
                     /> */}
                     <PhoneInput
+                      international
                       defaultCountry={countryCode}
                       onChange={(value) =>
                         formik.setFieldValue("contact", value)

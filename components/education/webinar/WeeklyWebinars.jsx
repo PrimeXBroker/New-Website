@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Input,
   Modal,
@@ -27,6 +27,24 @@ const WeeklyWebinars = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [loading, setLoading] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
+  const [countryCode, setCountryCode] = useState("");
+
+  useEffect(() => {
+    const fetchLocation = async () => {
+      try {
+        const response = await axios.get("https://ipapi.co/country/");
+        if (response.data) {
+          setCountryCode(response.data.toUpperCase());
+        } else {
+          console.error("Failed to fetch country code");
+        }
+      } catch (error) {
+        console.error("Error fetching location", error);
+      }
+    };
+    fetchLocation();
+  }, []);
+
   const formik = useFormik({
     initialValues: {
       first_name: "",
@@ -223,11 +241,12 @@ const WeeklyWebinars = () => {
               }
             />
             <PhoneInput
+              international
+              defaultCountry={countryCode}
               onChange={(value) => formik.setFieldValue("contact", value)}
               onBlur={formik.handleBlur}
               name="contact"
               value={formik.values.contact}
-              defaultCountry="AE"
               className="w-[100%] webinar_input"
             />
             <button

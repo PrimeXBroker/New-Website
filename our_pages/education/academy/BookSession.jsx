@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useLocale, useTranslations } from "next-intl";
@@ -24,6 +24,23 @@ function BookSession() {
   const t = useTranslations("academy.academyForm");
   const locale = useLocale();
   const [loading, setLoading] = useState(false);
+  const [countryCode, setCountryCode] = useState("");
+
+  useEffect(() => {
+    const fetchLocation = async () => {
+      try {
+        const response = await axios.get("https://ipapi.co/country/");
+        if (response.data) {
+          setCountryCode(response.data.toUpperCase());
+        } else {
+          console.error("Failed to fetch country code");
+        }
+      } catch (error) {
+        console.error("Error fetching location", error);
+      }
+    };
+    fetchLocation();
+  }, []);
 
   const webinarTypes = [
     {
@@ -144,11 +161,12 @@ function BookSession() {
           </div>
           <div className="mb-1 w-[80%]">
             <PhoneInput
+              international
+              defaultCountry={countryCode}
               onChange={(value) => formik.setFieldValue("phoneNumber", value)}
               onBlur={formik.handleBlur}
               name="phoneNumber"
               value={formik.values.phoneNumber}
-              defaultCountry={originCountry}
               className={`w-[100%] academy_phoneinput px-3 ${
                 formik.touched.phoneNumber && formik.errors.phoneNumber
                   ? "border-b border-red-600"
