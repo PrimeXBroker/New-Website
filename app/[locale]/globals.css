@@ -863,3 +863,7 @@
 .instruments-card:hover span {
   opacity: 0;
 }
+
+.PhoneInputCountry {
+  gap: 5px;
+}

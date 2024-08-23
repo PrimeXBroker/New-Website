@@ -158,7 +158,7 @@ function BecomeInstructor() {
               onBlur={formik.handleBlur}
               name="number"
               value={formik.values.number}
-              className={`w-[100%] academy_phoneinput text-sm px-3 ${
+              className={`w-[100%] academy_phoneinput text-sm px-1 ${
                 formik.touched.number && formik.errors.number
                   ? "border-b border-red-600"
                   : ""

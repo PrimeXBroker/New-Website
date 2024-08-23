@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import PhoneInput from "react-phone-number-input";
@@ -224,7 +224,7 @@ const CareerForm = () => {
             >
               <PhoneInput
                 international
-                defaultCountry={country}
+                defaultCountry={countryCode}
                 onChange={(value) => formik.setFieldValue("contact", value)}
                 onBlur={formik.handleBlur}
                 name="contact"

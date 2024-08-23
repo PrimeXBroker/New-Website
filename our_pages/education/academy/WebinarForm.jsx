@@ -200,7 +200,7 @@ function WebinarForm() {
               onBlur={formik.handleBlur}
               name="phoneNumber"
               value={formik.values.phoneNumber}
-              className={`w-[100%] academy_phoneinput text-sm px-3 ${
+              className={`w-[100%] academy_phoneinput text-sm px-1 ${
                 formik.touched.phoneNumber && formik.errors.phoneNumber
                   ? "border-b border-red-600"
                   : ""
