@@ -190,7 +190,7 @@ const IbForm = () => {
                       onBlur={formik.handleBlur}
                       name="contact"
                       value={formik.values.contact}
-                      className="w-full bg-white h-16 rounded-xl"
+                      className="w-full bg-white h-16 rounded-xl px-1"
                       placeholder="Phone Number"
                     />
                   </div>

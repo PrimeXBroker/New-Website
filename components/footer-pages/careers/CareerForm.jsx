@@ -216,7 +216,7 @@ const CareerForm = () => {
               </div>
             </div>
             <div
-              className={`flex items-center gap-2 bg-white px-5 placeholder:text-[#A0A7B2] ${
+              className={`flex items-center gap-2 bg-white px-2 placeholder:text-[#A0A7B2] ${
                 formik.touched.contact && formik.errors.contact
                   ? "border-2 border-red-600"
                   : ""

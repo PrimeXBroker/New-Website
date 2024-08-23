@@ -115,7 +115,7 @@ const Webinars = ({ active, setActive }) => {
                             : upcoming[activeTab].agenda}
                         </h3>
                         <p
-                          className={`text-white text-base sm:text-lg xl:text-xl font-normal ${
+                          className={`text-white text-base sm:text-lg xl:text-xl font-light ${
                             locale === "ar"
                               ? "text-center sm:text-right"
                               : "text-center sm:text-left"

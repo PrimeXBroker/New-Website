@@ -201,7 +201,7 @@ const BonusForm = () => {
                           onBlur={formik.handleBlur}
                           name="phoneNumber"
                           value={formik.values.phoneNumber}
-                          className="w-full bg-white h-16 rounded-xl"
+                          className="w-full bg-white h-16 rounded-xl px-1"
                           placeholder="Phone Number"
                         />
                       </div>
