@@ -93,7 +93,6 @@ const BonusForm = () => {
           const response = await axios.post(
             // `http://localhost:4002/api/bonus-landing-page`,
             `https://primexbroker.com/api/bonus-landing-page`,
-            // JSON.stringify(updatedValues)
             updatedValues
           );
           setLoading(false);

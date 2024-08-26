@@ -59,7 +59,6 @@ const BonusForm = () => {
         setLoading(true);
         const response = await axios.post(
           `https://primexbroker.com/api/create/bonus/request`,
-          // JSON.stringify(updatedValues)
           updatedValues
         );
         console.log("Response", response);
