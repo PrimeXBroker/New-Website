@@ -46,6 +46,7 @@ const BonusLandingPage = () => {
       answer: t("answer_6"),
     },
   ];
+
   return (
     <>
       <Banner />

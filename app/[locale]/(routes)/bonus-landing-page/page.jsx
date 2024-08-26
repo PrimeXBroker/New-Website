@@ -7,15 +7,30 @@ export async function generateMetadata({ params: { locale } }) {
     .default;
   const t = createTranslator({ locale, messages });
   const url =
-    locale != "en"
-      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/bonus`
-      : `${process.env.NEXT_PUBLIC_BASE_URL}/bonus`;
+    locale !== "en"
+      ? `https://primexcapital.com/${locale}/bonus-landing-page`
+      : `https://primexcapital.com/bonus-landing-page`;
 
   return {
-    title: t("bonus.metaData.title"),
-    description: t("bonus.metaData.description"),
+    title: t("bonus_landing.metaData.title"),
+    description: t("bonus_landing.metaData.description"),
     alternates: {
       canonical: url,
+    },
+    openGraph: {
+      type: "website",
+      locale: locale,
+      url: url,
+      title: t("bonus_landing.metaData.title"),
+      description: t("bonus_landing.metaData.description"),
+      images: [
+        {
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/20_deposit_bonus/header-bg.webp",
+          width: 1200,
+          height: 630,
+          alt: t("bonus_landing.metaData.title"),
+        },
+      ],
     },
   };
 }
