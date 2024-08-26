@@ -74,7 +74,7 @@ const IbForm = () => {
         setLoading(true);
         const response = await axios.post(
           `https://primexbroker.com/api/ib_form`,
-          JSON.stringify(updatedValues)
+          updatedValues
         );
         console.log("Response", response);
       } catch (error) {
