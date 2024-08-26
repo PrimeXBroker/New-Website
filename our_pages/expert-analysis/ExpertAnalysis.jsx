@@ -92,7 +92,10 @@ const ExpertAnalysis = ({ id }) => {
                 <div className="px-3 py-5 group-hover:bg-secondary transition duration-700 ease-in-out">
                   <div className="mb-3">
                     <p className="text-black text-base group-hover:text-white transition duration-700 ease-in-out">
-                      <Moment date={blog?.createdOn} format="DD/MM/YYYY" />
+                      <Moment
+                        date={blog?.createdOn}
+                        format={locale === "ar" ? "YYYY/MM/DD" : "DD/MM/YYYY"}
+                      />
                     </p>
                   </div>
                   <div>
