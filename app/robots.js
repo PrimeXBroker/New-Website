@@ -3,7 +3,7 @@ export default function robots() {
       rules: {
         userAgent: '*',
         allow: '/',
-        
+        crawlDelay: 10,
       },
       sitemap: 'https://www.primexcapital.com/sitemap.xml',
     }
