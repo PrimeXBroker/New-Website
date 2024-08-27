@@ -90,7 +90,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("home.metaData.description"),
       images: [
         {
-          url: "",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/home-metadata.webp",
           width: 1200,
           height: 630,
           alt: t("home.metaData.title"),
