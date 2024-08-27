@@ -1401,7 +1401,11 @@
       "title_part1": "Client",
       "title_part2": "Agreement",
       "view_btn": "Click to View",
-      "download_btn": "Download PDF"
+      "download_btn": "Download PDF",
+      "metaData": {
+        "title": "",
+        "description": ""
+      }
     },
     "privacyPolicy": {
       "title_part1": "Privacy",
@@ -1414,7 +1418,11 @@
       "title_part2": "Conditions",
       "description": "This section outlines the legal Terms and conditions that Apply to Your Use of Our Services, including Trading, Account Management, and More.",
       "view_btn": "Click to View",
-      "download_btn": "Download PDF"
+      "download_btn": "Download PDF",
+      "metaData": {
+        "title": "",
+        "description": ""
+      }
     },
     "company": {
       "title_part1": "Company",

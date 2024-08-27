@@ -16,14 +16,28 @@ export async function generateMetadata({ params: { locale } }) {
     alternates: {
       canonical: url,
     },
+    openGraph: {
+      type: "website",
+      locale: locale,
+      url: url,
+      title: t("ib.metaData.title"),
+      description: t("ib.metaData.description"),
+      images: [
+        {
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-reward.webp",
+          width: 1200,
+          height: 630,
+          alt: t("ib.metaData.title"),
+        },
+      ],
+    },
   };
 }
-
 
 const page = () => {
   return (
     <>
-      <IbPage/>
+      <IbPage />
     </>
   );
 };

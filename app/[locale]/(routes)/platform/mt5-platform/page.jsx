@@ -1,7 +1,6 @@
 import Mt5PlatformPage from "@/our_pages/platform/mt5-platform/Mt5PlatformPage";
 import { createTranslator } from "next-intl";
 
-
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../../messages/${locale}.json`))
     .default;
@@ -16,6 +15,21 @@ export async function generateMetadata({ params: { locale } }) {
     description: t("metaTrader5.metaData.description"),
     alternates: {
       canonical: url,
+    },
+    openGraph: {
+      type: "website",
+      locale: locale,
+      url: url,
+      title: t("metaTrader5.metaData.title"),
+      description: t("metaTrader5.metaData.description"),
+      images: [
+        {
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/Banner.webp",
+          width: 1200,
+          height: 630,
+          alt: t("metaTrader5.metaData.title"),
+        },
+      ],
     },
   };
 }

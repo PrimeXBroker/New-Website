@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { useLocale, useTranslations } from "next-intl";
 import { PiSignInFill, PiUserSquareThin } from "react-icons/pi";
 import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 import { useContext, useState } from "react";
 import { LocationContext } from "@/context/location-context";
 import axios from "axios";

@@ -1,32 +1,46 @@
-"use client";
-import LocationContextProvider from "@/context/location-context";
-import AcademyForm from "@/our_pages/education/academy/AcademyForm";
-import Banner from "@/our_pages/education/academy/Banner";
-import Featured from "@/our_pages/education/academy/Featured";
-import JoinAcademy from "@/our_pages/education/academy/JoinAcademy";
-import PrivateSessions from "@/our_pages/education/academy/PrivateSessions";
-import SuccessStories from "@/our_pages/education/academy/SuccessStories";
-import WebinarLibrary from "@/our_pages/education/academy/WebinarLibrary";
-import React, { useState } from "react";
-import FormWrapper from "@/our_pages/education/academy/FromWarapper";
-import Webinars from "@/our_pages/education/academy/Webinars";
+import AcademyWrapper from "@/our_pages/education/academy/AcademyWrapper";
+import React from "react";
+import { createTranslator } from "next-intl";
+
+export async function generateMetadata({ params: { locale } }) {
+  const messages = (await import(`../../../../../messages/${locale}.json`))
+    .default;
+  const t = createTranslator({ locale, messages });
+  const url =
+    locale != "en"
+      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/academy`
+      : `${process.env.NEXT_PUBLIC_BASE_URL}/academy`;
+  return {
+    title: t("academy.metaData.title"),
+    description: t("academy.metaData.description"),
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      type: "website",
+      locale: locale,
+      url: url,
+      title: t("academy.metaData.title"),
+      description: t("academy.metaData.description"),
+      images: [
+        {
+          url:
+            locale === "ar"
+              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/academy/20240805-171521.png"
+              : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/banner_img.webp",
+          width: 1200,
+          height: 630,
+          alt: t("academy.metaData.title"),
+        },
+      ],
+    },
+  };
+}
 
 const Academy = () => {
-  const [active, setActive] = useState("Webinars");
-
   return (
     <>
-      <LocationContextProvider>
-        <Banner setActive={setActive} />
-        <Featured />
-        <Webinars active={active} setActive={setActive} />
-        {/* <FormWrapper active={active} setActive={setActive} /> */}
-        {/* <AcademyForm/> */}
-        <PrivateSessions setActive={setActive} />
-        <JoinAcademy setActive={setActive} />
-        <WebinarLibrary />
-        <SuccessStories />
-      </LocationContextProvider>
+      <AcademyWrapper />
     </>
   );
 };

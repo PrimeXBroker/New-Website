@@ -1,21 +1,19 @@
 import MarketNewsDetailWrapper from "@/our_pages/market-news-detail/MarketNewsDetailWrapper";
 import React from "react";
-import Head from "next/head";
 import axios from "axios";
 
 // export async function generateMetadata({ params: { locale } }) {
 //   const { slug } = params
 //   const res = await axios.get(
 //     `https://primexbroker.com/api/fetch/one/blog/${slug}`
-//   );  
+//   );
 //   console.log(res, "res");
-  
-//   const blo = res?.data?.data;  
+
+//   const blo = res?.data?.data;
 //   const url =
 //   locale != "en"
 //     ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/contact`
 //     : `${process.env.NEXT_PUBLIC_BASE_URL}/contact`;
-
 
 //   return {
 //     title: blo?.title,
@@ -45,62 +43,64 @@ export async function generateMetadata({ params: { locale, slug } }) {
   try {
     const res = await axios.get(
       `https://primexbroker.com/api/fetch/one/blog/${slug}`
-    );    
+    );
 
-    const blo = res?.data?.data;  
+    const blo = res?.data?.data;
     const url =
       locale !== "en"
-        ? `https://primexcapital.com/${locale}/${slug}`
-        : `https://primexcapital.com/${slug}`;
+        ? `https://primexcapital.com/${locale}/market-news-detail/${slug}`
+        : `https://primexcapital.com/market-news-detail/${slug}`;
 
     return {
       title: blo?.title,
-      description: blo?.description,
+      description: blo?.content,
       alternates: {
         canonical: url,
       },
       openGraph: {
-        type: 'website',
+        type: "website",
         locale: locale,
         url: url,
-        title: blo?.title ,
-        description: blo?.description ,
+        title: blo?.title,
+        description: blo?.content,
         images: [
           {
-            url: blo?.image ,
+            url: blo?.image,
             width: 1200,
             height: 630,
-            alt: blo?.title ,
+            alt: blo?.title,
           },
         ],
       },
     };
   } catch (error) {
-    console.error('Error fetching blog data:', error);
+    console.error("Error fetching blog data:", error);
 
     // Return fallback metadata in case of an error
     return {
-      title: 'Default Title',
-      description: 'Default Description',
+      title: "Default Title",
+      description: "Default Description",
       alternates: {
-        canonical: locale !== "en"
-          ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/contact`
-          : `${process.env.NEXT_PUBLIC_BASE_URL}/contact`,
+        canonical:
+          locale !== "en"
+            ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/contact`
+            : `${process.env.NEXT_PUBLIC_BASE_URL}/contact`,
       },
       openGraph: {
-        type: 'website',
+        type: "website",
         locale: locale,
-        url: locale !== "en"
-          ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/contact`
-          : `${process.env.NEXT_PUBLIC_BASE_URL}/contact`,
-        title: 'Default Title',
-        description: 'Default Description',
+        url:
+          locale !== "en"
+            ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/contact`
+            : `${process.env.NEXT_PUBLIC_BASE_URL}/contact`,
+        title: "Default Title",
+        description: "Default Description",
         images: [
           {
             url: `${process.env.NEXT_PUBLIC_BASE_URL}/default-image.jpg`,
             width: 1200,
             height: 627,
-            alt: 'Default Alt Text',
+            alt: "Default Alt Text",
           },
         ],
       },
@@ -109,7 +109,6 @@ export async function generateMetadata({ params: { locale, slug } }) {
 }
 
 const page = async () => {
-
   return (
     <>
       {/* <Head>
@@ -133,7 +132,5 @@ const page = async () => {
     </>
   );
 };
-
-
 
 export default page;

@@ -17,6 +17,21 @@ export async function generateMetadata({ params: { locale } }) {
     alternates: {
       canonical: url,
     },
+    openGraph: {
+      type: "website",
+      locale: locale,
+      url: url,
+      title: t("bonus.metaData.title"),
+      description: t("bonus.metaData.description"),
+      images: [
+        {
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/bonus-top.webp",
+          width: 1200,
+          height: 630,
+          alt: t("bonus.metaData.title"),
+        },
+      ],
+    },
   };
 }
 

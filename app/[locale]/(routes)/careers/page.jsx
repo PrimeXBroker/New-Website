@@ -16,6 +16,21 @@ export async function generateMetadata({ params: { locale } }) {
     alternates: {
       canonical: url,
     },
+    openGraph: {
+      type: "website",
+      locale: locale,
+      url: url,
+      title: t("careers.metaData.title"),
+      description: t("careers.metaData.description"),
+      images: [
+        {
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/careers_img.webp",
+          width: 1200,
+          height: 630,
+          alt: t("careers.metaData.title"),
+        },
+      ],
+    },
   };
 }
 
