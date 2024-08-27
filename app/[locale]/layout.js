@@ -82,6 +82,21 @@ export async function generateMetadata({ params: { locale } }) {
     alternates: {
       canonical: url,
     },
+    openGraph: {
+      type: "website",
+      locale: locale,
+      url: url,
+      title: t("home.metaData.title"),
+      description: t("home.metaData.description"),
+      images: [
+        {
+          url: "",
+          width: 1200,
+          height: 630,
+          alt: t("home.metaData.title"),
+        },
+      ],
+    },
   };
 }
 
