@@ -48,12 +48,12 @@ export async function generateMetadata({ params: { locale, slug } }) {
     const blo = res?.data?.data;
     const url =
       locale !== "en"
-        ? `https://primexcapital.com/${locale}/market-news-detail/${slug}`
-        : `https://primexcapital.com/market-news-detail/${slug}`;
+        ? `https://primexcapital.com/${locale}/${slug}`
+        : `https://primexcapital.com/${slug}`;
 
     return {
       title: blo?.title,
-      description: blo?.content,
+      description: blo?.description,
       alternates: {
         canonical: url,
       },
@@ -62,7 +62,7 @@ export async function generateMetadata({ params: { locale, slug } }) {
         locale: locale,
         url: url,
         title: blo?.title,
-        description: blo?.content,
+        description: blo?.description,
         images: [
           {
             url: blo?.image,
