@@ -25,7 +25,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("bonus_landing.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/20_deposit_bonus/header-bg.webp",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/bonus-top.webp",
           width: 1200,
           height: 630,
           alt: t("bonus_landing.metaData.title"),
