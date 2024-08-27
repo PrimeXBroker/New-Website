@@ -8,8 +8,8 @@ export async function generateMetadata({ params: { locale } }) {
   const t = createTranslator({ locale, messages });
   const url =
     locale !== "en"
-      ? `https://primexcapital.com/${locale}/bonus-landing-page`
-      : `https://primexcapital.com/bonus-landing-page`;
+      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/bonus-landing-page`
+      : `${process.env.NEXT_PUBLIC_BASE_URL}/bonus-landing-page`;
 
   return {
     title: t("bonus_landing.metaData.title"),
