@@ -132,6 +132,10 @@
         "title1_2": "Start with a $30 gift when you verify your account"
       }
     },
+    "signalsCenter": {
+      "title": "PrimeX Capital Signal Center",
+      "description": "Real-time market insights, seamlessly integrated within your MT5 trading platform."
+    },
     "customerCare": {
       "customer_care_title": "Always Here for You",
       "customer_care_li1_title": "24/7 Customer Care",
@@ -1465,7 +1469,7 @@
     },
     "footerNotice": {
       "heading_1": "PrimeX Capital",
-      "para_1": " is the trade name for PrimeX Broker Pty Ltd, registered in South Africa with registration number 2021/590477/07 and registered address: 74 Walmer Street, Sydenham, Johannesburg, Gauteng , 2192, South Africa.",
+      "para_1": "is the trade name for PrimeX Broker Pty Ltd, registered in South Africa with registration number 2021/590477/07 and registered address: 74 Walmer Street, Sydenham, Johannesburg, Gauteng , 2192, South Africa.",
       "heading_2": "PRIMEX BROKER (PTY) LTD",
       "para_2": "regulated and authorized to provide financial services by South Africa Financial Sector Conduct Authority (FSCA) under license number (FSP No. 51864).",
       "heading_3": "Restricted Regions :",

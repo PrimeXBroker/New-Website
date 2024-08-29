@@ -22,6 +22,7 @@ import Link from "next/link";
 import { HiBellAlert } from "react-icons/hi2";
 import { Button } from "@nextui-org/button";
 import NewBanner from "@/components/home/NewBanner";
+import SignalsCenter from "./SignalsCenter";
 
 const HomePage = () => {
   const t = useTranslations("home");
@@ -72,6 +73,7 @@ const HomePage = () => {
       <AdvancedPlatforms />
       <BecomeIB />
       <Rewards />
+      <SignalsCenter />
       <CustomerCare />
       <Academy />
       <OurRecognition />
