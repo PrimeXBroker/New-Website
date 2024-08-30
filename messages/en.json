@@ -1501,5 +1501,34 @@
     "relatedBlogs": {
       "title": "Related Blogs"
     }
+  },
+  "topTrader": {
+    "traderForm": {
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "first_name_validation_error": "The first name should only include alphabetical characters.",
+      "first_name_required_error": "Please provide a first name.",
+      "last_name_validation_error": "The last name should only include alphabetical characters.",
+      "last_name_required_error": "Please provide a last name.",
+      "email": "Email",
+      "email_validation_error": "Please enter a valid email address.",
+      "email_required_error": "Email is required.",
+      "acc_number": "Account Number",
+      "acc_number_required_error": "Account number is required.",
+      "form_btn": "Submit Now"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "question_1": "What is Lorem Ipsum?",
+      "answer_1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "question_2": "What is Lorem Ipsum?",
+      "answer_2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "question_3": "What is Lorem Ipsum?",
+      "answer_3": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "question_4": "What is Lorem Ipsum?",
+      "answer_4": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "question_5": "What is Lorem Ipsum?",
+      "answer_5": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+    }
   }
 }

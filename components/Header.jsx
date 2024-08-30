@@ -402,7 +402,7 @@ const Header = ({ locale }) => {
         <NavbarItem className="text-sm hidden lg:block">
           <GradiantButton
             onClick={() =>
-              router.push("https://client.primexbroker.com/en/register")
+              window.open("https://client.primexbroker.com/en/register")
             }
             name={t("register")}
           />
@@ -410,7 +410,7 @@ const Header = ({ locale }) => {
         <NavbarItem className="text-sm hidden lg:block">
           <GradiantButton
             onClick={() =>
-              router.push("https://client.primexbroker.com/en/login")
+              window.open("https://client.primexbroker.com/en/login")
             }
             name={t("login")}
           />
@@ -505,11 +505,15 @@ const Header = ({ locale }) => {
           <div className="flex gap-4">
             <GradiantButton
               name={t("register")}
-              onClick={handleMobileMenuItemClick}
+              onClick={() =>
+                router.push("https://client.primexbroker.com/en/register")
+              }
             />
             <GradiantButton
               name={t("login")}
-              onClick={handleMobileMenuItemClick}
+              onClick={() =>
+                router.push("https://client.primexbroker.com/en/login")
+              }
             />
           </div>
         </NavbarMenuItem>
