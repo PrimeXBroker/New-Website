@@ -46,7 +46,7 @@ const Header = ({ locale }) => {
       link: "/",
     },
     {
-      name: "Trading",
+      name: t("trading"),
       options: [
         { name: t("forex"), link: "/forex" },
         { name: t("metals"), link: "/metals" },
