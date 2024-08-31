@@ -1515,6 +1515,9 @@
       "account_btn": "Open an Account Today!",
       "tc": "*T&C applies"
     },
+    "countdown": {
+      "title": "Competition ends in"
+    },
     "participationRequirements": {
       "title1": "Your Chance to Own",
       "title1_part": "the brand-new iPhone today!",

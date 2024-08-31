@@ -6,6 +6,7 @@ import React, { useRef } from "react";
 import { useTranslations } from "next-intl";
 import Faq from "@/components/instrments/common/Faq";
 import Countdown from "@/our_pages/top-trader/Countdown";
+import Widget from "@/our_pages/top-trader/Widget";
 
 const page = () => {
   const t = useTranslations("topTrader");
@@ -39,6 +40,7 @@ const page = () => {
       <Banner formRef={formRef} />
       <Countdown />
       <Requirements />
+      <Widget />
       <div ref={formRef}>
         <TopTraderForm />
       </div>

@@ -25,8 +25,8 @@ const TopTraderForm = () => {
             <div
               className={`flex flex-row items-center gap-2 md:gap-4 absolute top-[6%] md:w-full ${
                 locale === "ar"
-                  ? "right-[27%] lg:right-[20%]"
-                  : "left-[27%] lg:left-[20%]"
+                  ? "right-[27%] lg:right-[27%]"
+                  : "left-[27%] lg:left-[27%]"
               }`}
             >
               <div className="text-4xl sm:text-6xl font-semibold text-secondary">
@@ -42,8 +42,8 @@ const TopTraderForm = () => {
             <div
               className={`flex flex-row items-center gap-2 md:gap-4 absolute top-[43%] md:w-full ${
                 locale === "ar"
-                  ? "right-[27%] lg:right-[20%]"
-                  : "left-[27%] lg:left-[20%]"
+                  ? "right-[27%] lg:right-[27%]"
+                  : "left-[27%] lg:left-[27%]"
               }`}
             >
               <div className="text-4xl sm:text-6xl font-semibold text-white">
@@ -60,8 +60,8 @@ const TopTraderForm = () => {
             <div
               className={`flex flex-row items-center gap-2 md:gap-4 absolute top-[81%] md:w-full ${
                 locale === "ar"
-                  ? "right-[27%] lg:right-[20%]"
-                  : "left-[27%] lg:left-[20%]"
+                  ? "right-[27%] lg:right-[27%]"
+                  : "left-[27%] lg:left-[27%]"
               }`}
             >
               <div className="text-4xl sm:text-6xl font-semibold text-secondary">
