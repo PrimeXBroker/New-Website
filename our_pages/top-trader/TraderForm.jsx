@@ -96,7 +96,7 @@ function TraderForm() {
               value={formik.values.first_name}
               placeholder={t("first_name")}
               className={`appearance-none border-b w-full py-2 px-3 text-accent placeholder:text-[#e5e7eb] focus:outline-none text-sm bg-secondary ${
-                formik.touched.full_name && formik.errors.full_name
+                formik.touched.first_name && formik.errors.first_name
                   ? "border-b border-red-600"
                   : ""
               }`}
@@ -111,7 +111,7 @@ function TraderForm() {
               value={formik.values.last_name}
               placeholder={t("last_name")}
               className={`appearance-none border-b w-full py-2 px-3 text-accent placeholder:text-[#e5e7eb] focus:outline-none text-sm bg-secondary  ${
-                formik.touched.full_name && formik.errors.full_name
+                formik.touched.last_name && formik.errors.last_name
                   ? "border-b border-red-600"
                   : ""
               }`}
