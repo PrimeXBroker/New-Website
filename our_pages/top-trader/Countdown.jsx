@@ -6,33 +6,33 @@ const Countdown = () => {
   const locale = useLocale();
   const t = useTranslations("topTrader.countdown");
   const [timeLeft, setTimeLeft] = useState({
+    days: "00",
     hours: "00",
     minutes: "00",
-    seconds: "00",
   });
 
   useEffect(() => {
-    const targetDate = new Date("September 1, 2024 00:01:00 UTC+4").getTime();
+    const targetDate = new Date("October 1, 2024 00:01:00 UTC+4").getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
       const distance = targetDate - now;
 
       if (distance > 0) {
+        const days = String(
+          Math.floor(distance / (1000 * 60 * 60 * 24))
+        ).padStart(2, "0");
         const hours = String(
           Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
         ).padStart(2, "0");
         const minutes = String(
           Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
         ).padStart(2, "0");
-        const seconds = String(
-          Math.floor((distance % (1000 * 60)) / 1000)
-        ).padStart(2, "0");
 
         setTimeLeft({
+          days,
           hours,
           minutes,
-          seconds,
         });
       } else {
         clearInterval(intervalId);
@@ -46,16 +46,16 @@ const Countdown = () => {
 
   const timeGroups = [
     {
+      label: "DAYS",
+      digits: timeLeft.days.split(""),
+    },
+    {
       label: "HOURS",
       digits: timeLeft.hours.split(""),
     },
     {
       label: "MINUTES",
       digits: timeLeft.minutes.split(""),
-    },
-    {
-      label: "SECONDS",
-      digits: timeLeft.seconds.split(""),
     },
   ];
 
