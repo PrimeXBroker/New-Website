@@ -72,8 +72,11 @@ const Header = ({ locale }) => {
       options: [{ name: t("academy"), link: "/academy" }],
     },
     {
-      name: t("deposit"),
-      link: "/bonus",
+      name: t("promotion"),
+      options: [
+        { name: t("deposit"), link: "/bonus" },
+        // { name: t("tradetowin"), link: "/top-trader" },
+      ],
     },
   ];
 
@@ -380,22 +383,37 @@ const Header = ({ locale }) => {
             </ul>
           </div>
         </NavbarItem>
-        <NavbarItem className="text-sm">
-          <Badge
-            content={t("badge_text")}
-            color="danger"
-            size="sm"
-            className="translate-y-[-100%]"
-          >
-            <LocaleLink
-              href="/bonus"
-              className={`${
-                pathnameWithoutLocale === "/bonus" ? "active_link" : ""
-              } ${NavHoverEffect}`}
-            >
-              {t("deposit")}
-            </LocaleLink>
-          </Badge>
+        <NavbarItem>
+          <div className="dropdown inline-block relative">
+            <button className="bg-white text-secondary text-sm py-2 rounded inline-flex items-center">
+              <span>{t("promotion")}</span>
+              <svg
+                className="fill-current h-5 w-5 arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+              </svg>
+            </button>
+            <ul className="dropdown-menu absolute hidden text-secondary pt-3">
+              <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/bonus"
+                >
+                  {t("deposit")}
+                </LocaleLink>
+              </li>
+              {/* <li>
+                <LocaleLink
+                  className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
+                  href="/top-trader"
+                >
+                  {t("tradetowin")}
+                </LocaleLink>
+              </li> */}
+            </ul>
+          </div>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">

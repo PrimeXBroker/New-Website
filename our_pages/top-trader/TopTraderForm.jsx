@@ -5,13 +5,14 @@ import { useTranslations, useLocale } from "next-intl";
 
 const TopTraderForm = () => {
   const locale = useLocale();
+  const t = useTranslations("topTrader.steps");
 
   return (
     <section className="container">
       <div className="grid grid-cols-12">
-        <div className="col-span-6 flex justify-center">
-          <div className="relative w-[400px] mx-auto md:m-0 block">
-            <div className="absolute top-0 left-0 w-full">
+        <div className="col-span-12 lg:col-span-6 flex justify-center">
+          <div className="relative w-[400px] mx-auto block">
+            <div className="lg:absolute top-0 left-0 w-full">
               <Image
                 unoptimized={true}
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/top-trader/steps.webp"
@@ -22,48 +23,60 @@ const TopTraderForm = () => {
               />
             </div>
             <div
-              className={`flex items-center gap-4 absolute top-[6%] w-full ${
-                locale === "ar" ? "right-[26%]" : "left-[26%]"
+              className={`flex flex-row items-center gap-2 md:gap-4 absolute top-[6%] md:w-full ${
+                locale === "ar"
+                  ? "right-[27%] lg:right-[20%]"
+                  : "left-[27%] lg:left-[20%]"
               }`}
             >
-              <div className="text-6xl font-semibold text-secondary">1</div>
+              <div className="text-4xl sm:text-6xl font-semibold text-secondary">
+                {t("step_1")}
+              </div>
               <div
-                className="text-xl text-secondary font-semibold"
-                style={{ lineHeight: "24px" }}
+                className="text-base sm:text-xl text-secondary font-semibold"
+                style={{ lineHeight: "1.5" }}
               >
-                Open a <br /> Live Account
+                {t("step_1_title_p1")} <br /> {t("step_1_title_p2")}
               </div>
             </div>
             <div
-              className={`flex items-center gap-4 absolute top-[43%] w-full ${
-                locale === "ar" ? "right-[27%]" : "left-[27%]"
+              className={`flex flex-row items-center gap-2 md:gap-4 absolute top-[43%] md:w-full ${
+                locale === "ar"
+                  ? "right-[27%] lg:right-[20%]"
+                  : "left-[27%] lg:left-[20%]"
               }`}
             >
-              <div className="text-6xl font-semibold text-white">2</div>
+              <div className="text-4xl sm:text-6xl font-semibold text-white">
+                {t("step_2")}
+              </div>
               <div
-                className="text-xl text-white font-semibold"
-                style={{ lineHeight: "24px" }}
+                className="text-base sm:text-xl text-white font-semibold"
+                style={{ lineHeight: "1.5" }}
               >
-                Start <br />
-                Trading
+                {t("step_2_title_p1")} <br />
+                {t("step_2_title_p2")}
               </div>
             </div>
             <div
-              className={`flex items-center gap-4 absolute top-[81%] w-full ${
-                locale === "ar" ? "right-[26%]" : "left-[26%]"
+              className={`flex flex-row items-center gap-2 md:gap-4 absolute top-[81%] md:w-full ${
+                locale === "ar"
+                  ? "right-[27%] lg:right-[20%]"
+                  : "left-[27%] lg:left-[20%]"
               }`}
             >
-              <div className="text-6xl font-semibold text-secondary">3</div>
+              <div className="text-4xl sm:text-6xl font-semibold text-secondary">
+                {t("step_3")}
+              </div>
               <div
-                className="text-xl text-secondary font-semibold"
-                style={{ lineHeight: "24px" }}
+                className="text-base sm:text-xl text-secondary font-semibold"
+                style={{ lineHeight: "1.5" }}
               >
-                Fill & Submit <br /> the Form
+                {t("step_3_title_p1")} <br /> {t("step_3_title_p2")}
               </div>
             </div>
           </div>
         </div>
-        <div className="col-span-6">
+        <div className="col-span-12 lg:col-span-6 mt-20 lg:mt-0">
           <TraderForm />
         </div>
       </div>

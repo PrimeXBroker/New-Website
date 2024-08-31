@@ -21,65 +21,17 @@ import {
 } from "@nextui-org/react";
 
 function TraderForm() {
-  //   const { country: originCountry, ip: originIp } = useContext(LocationContext);
   const t = useTranslations("topTrader.traderForm");
-  const [upcoming, setUpcoming] = useState([]);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [loading, setLoading] = useState(false);
-  const [countryCode, setCountryCode] = useState("");
   const locale = useLocale();
-
-  useEffect(() => {
-    const fetchLocation = async () => {
-      try {
-        const response = await axios.get("https://ipapi.co/country/");
-        if (response.data) {
-          setCountryCode(response.data.toUpperCase());
-        } else {
-          console.error("Failed to fetch country code");
-        }
-      } catch (error) {
-        console.error("Error fetching location", error);
-      }
-    };
-    fetchLocation();
-  }, []);
-
-  const webinarTypes = [
-    { id: 1, name: t("drop_field_1"), value: "fundamental" },
-    { id: 2, name: t("drop_field_2"), value: "Technical" },
-  ];
-
-  console.log(upcoming, "upcoming");
-
-  const fetchUpcomingWebinars = async () => {
-    const res = await axios.get(
-      "https://primexbroker.com/api/upcoming-webinars"
-    );
-    if (res.data.success) {
-      setUpcoming(
-        res.data.data.map((web, i) => {
-          return {
-            id: web._id,
-            name: locale === "ar" ? web.agendaAr : web.agenda,
-            value: web.id,
-          };
-        })
-      );
-    }
-  };
-
-  useEffect(() => {
-    fetchUpcomingWebinars();
-  }, []);
 
   const formik = useFormik({
     initialValues: {
       first_name: "",
       last_name: "",
       email: "",
-      phoneNumber: "",
-      webinarId: "",
+      accountId: "",
     },
     validationSchema: Yup.object({
       first_name: Yup.string()
@@ -97,21 +49,20 @@ function TraderForm() {
       email: Yup.string()
         .email(t("email_validation_error"))
         .required(t("email_required_error")),
-      account_number: Yup.string().required(t("acc_number_required_error")),
+      accountId: Yup.string().required(t("acc_number_required_error")),
     }),
     onSubmit: async (values) => {
       setLoading(true);
+      const updatedValues = {
+        email: values.email,
+        first_name: values.first_name,
+        accountId: values.accountId,
+        last_name: values.last_name,
+      };
       try {
-        // setLoading(true);
-        Object.assign(values, {
-          language: locale,
-          country: originCountry,
-          source: "website academy",
-        });
-
         const res = await axios.post(
-          "https://primexbroker.com/api/zoom/register/participant",
-          values
+          "https://primexbroker.com/api/register/trade-to-win",
+          updatedValues
         );
         if (res.data.success) {
           formik.resetForm();
@@ -120,7 +71,6 @@ function TraderForm() {
         } else {
           setLoading(false);
         }
-        // console.log("Response", response);
       } catch (error) {
         setLoading(false);
         console.log(error);
@@ -130,14 +80,14 @@ function TraderForm() {
   return (
     <section className="container px-0">
       <div
-        className={`shadow-xl bg-secondary border-accent border sm:w-[74%] md:w-[64%] lg:w-[74%] rounded-3xl mx-auto`}
+        className={`shadow-xl bg-secondary border-accent border w-full sm:w-[455px] lg:w-[445px] rounded-3xl mx-auto`}
       >
         <form
           onSubmit={formik.handleSubmit}
           className="flex flex-col justify-center items-center relative gap-4"
         >
           <PiUserSquareThin className="mt-6" size={80} fill="#fff" />
-          <div className="mb-1 w-[80%]">
+          <div className="mb-1 w-[90%] md:w-[80%]">
             <input
               type="text"
               name="first_name"
@@ -152,7 +102,7 @@ function TraderForm() {
               }`}
             />
           </div>
-          <div className="mb-1 w-[80%]">
+          <div className="mb-1 w-[90%] md:w-[80%]">
             <input
               type="text"
               name="last_name"
@@ -167,7 +117,7 @@ function TraderForm() {
               }`}
             />
           </div>
-          <div className="mb-1 w-[80%]">
+          <div className="mb-1 w-[90%] md:w-[80%]">
             <input
               type="email"
               name="email"
@@ -182,16 +132,16 @@ function TraderForm() {
               }`}
             />
           </div>
-          <div className="w-[80%]">
+          <div className="w-[90%] md:w-[80%]">
             <input
               type="text"
-              name="account_number"
+              name="accountId"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              value={formik.values.account_number}
+              value={formik.values.accountId}
               placeholder={t("acc_number")}
               className={`appearance-none border-b w-full py-2 px-3 text-accent placeholder:text-[#e5e7eb] focus:outline-none text-sm bg-secondary ${
-                formik.touched.full_name && formik.errors.full_name
+                formik.touched.accountId && formik.errors.accountId
                   ? "border-b border-red-600"
                   : ""
               }`}
@@ -214,16 +164,12 @@ function TraderForm() {
                 {t("success_title")}
               </ModalHeader>
               <ModalBody>
-                <p>{t("webinar_success_desc")}</p>
-                {/* <p>Thank you for choosing PrimeX Capital</p> */}
+                <p>{t("success_desc")}</p>
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
                   {t("close_btn")}
                 </Button>
-                {/* <Button color="primary" onPress={onClose}>
-                  Action
-                </Button> */}
               </ModalFooter>
             </>
           )}

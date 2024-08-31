@@ -7,6 +7,8 @@
     "partners": "Partners",
     "education": "Education",
     "academy": "Academy",
+    "promotion": "Promotions",
+    "tradetowin": "Trade To Win",
     "deposit": "20% Bonus",
     "login": "Login",
     "register": "Register",
@@ -1503,6 +1505,36 @@
     }
   },
   "topTrader": {
+    "banner": {
+      "title": "Compete to become",
+      "subtitle": "Trader of the Month",
+      "description": "Showcase your trading skills, climb the leaderboard, and become PrimeX Capital's Trader of the Month for a chance to win incredible prizes",
+      "already_member": "Already a member?",
+      "join_btn": "Join the Competition Now!",
+      "new_here": "New Here?",
+      "account_btn": "Open an Account Today!",
+      "tc": "*T&C applies"
+    },
+    "participationRequirements": {
+      "title1": "Your Chance to Own",
+      "title1_part": "the brand-new iPhone today!",
+      "title2": "Participation Requirements",
+      "desc_p1": "For both new and existing clients, Being the highest trader",
+      "desc_p2": "within 30 days",
+      "desc_p3": "is all it takes to claim your prize!",
+      "tc_btn": "Terms and Conditions"
+    },
+    "steps": {
+      "step_1": "1",
+      "step_1_title_p1": "Open a",
+      "step_1_title_p2": "Live Account",
+      "step_2": "2",
+      "step_2_title_p1": "Start",
+      "step_2_title_p2": "Trading",
+      "step_3": "3",
+      "step_3_title_p1": "Fill & Submit",
+      "step_3_title_p2": "the Form"
+    },
     "traderForm": {
       "first_name": "First Name",
       "last_name": "Last Name",
@@ -1515,20 +1547,21 @@
       "email_required_error": "Email is required.",
       "acc_number": "Account Number",
       "acc_number_required_error": "Account number is required.",
-      "form_btn": "Submit Now"
+      "form_btn": "Submit Now",
+      "success_title": "Success",
+      "success_desc": "Form Submitted Successfully",
+      "close_btn": "Close"
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "question_1": "What is Lorem Ipsum?",
-      "answer_1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-      "question_2": "What is Lorem Ipsum?",
-      "answer_2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-      "question_3": "What is Lorem Ipsum?",
-      "answer_3": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-      "question_4": "What is Lorem Ipsum?",
-      "answer_4": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-      "question_5": "What is Lorem Ipsum?",
-      "answer_5": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      "question_1": "Who can participate in the Trader of the Month competition?",
+      "answer_1": "Both new and existing PrimeX Capital clients can participate. New clients need to open an account, while existing clients just need to start trading.",
+      "question_2": "How do I enter the competition?",
+      "answer_2": "To enter, open a live account with PrimeX Capital, fill and submit the competition form, and start trading.",
+      "question_3": "What are the competition requirements?",
+      "answer_3": "To win, you must be the highest trader within the 30-day competition period.",
+      "question_4": "Will withdrawing my profits affect my progress in the competition?",
+      "answer_4": "No, withdrawing your profits will not affect your progress. Your standing in the competition is based solely on your trading performance."
     }
   }
 }
