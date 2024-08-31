@@ -104,9 +104,9 @@ const Requirements = () => {
             href="https://client.primexbroker.com/en/register"
             radius="full"
             size="lg"
-            color="primary"
+            color="secondary"
           >
-            <p className="text-secondary font-semibold">{t("tc_btn")}</p>
+            <p className="text-primary font-semibold">{t("tc_btn")}</p>
           </Button>
         </div>
       </div>
