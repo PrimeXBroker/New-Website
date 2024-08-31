@@ -101,7 +101,8 @@ const Requirements = () => {
         <div className="col-span-12 md:col-span-4 flex justify-center md:justify-start items-center mt-6 md:mt-0">
           <Button
             as={Link}
-            href="https://client.primexbroker.com/en/register"
+            href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/Trader_of_the_month_competition.pdf"
+            target="_blank"
             radius="full"
             size="lg"
             color="secondary"

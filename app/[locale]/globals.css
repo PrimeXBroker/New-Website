@@ -47,6 +47,9 @@
     .account-swiper-carousel .swiper-slide {
       width: 320px !important;
     }
+    .custom-height {
+      height: 420px !important;
+    }
   }
 }
 

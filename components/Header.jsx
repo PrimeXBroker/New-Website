@@ -75,7 +75,7 @@ const Header = ({ locale }) => {
       name: t("promotion"),
       options: [
         { name: t("deposit"), link: "/bonus" },
-        // { name: t("tradetowin"), link: "/top-trader" },
+        { name: t("tradetowin"), link: "/top-trader" },
       ],
     },
   ];
@@ -404,14 +404,14 @@ const Header = ({ locale }) => {
                   {t("deposit")}
                 </LocaleLink>
               </li>
-              {/* <li>
+              <li>
                 <LocaleLink
                   className="bg-white hover:bg-primary text-nowrap py-2 px-4 block text-sm"
                   href="/top-trader"
                 >
                   {t("tradetowin")}
                 </LocaleLink>
-              </li> */}
+              </li>
             </ul>
           </div>
         </NavbarItem>

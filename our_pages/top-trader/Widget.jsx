@@ -22,6 +22,7 @@ const Widget = () => {
         src="https://pammratings.primexcapital.com/widgets/ratings?widgetKey=TOM-SEP&theme=light&lang=en"
         scrolling="no"
         frameBorder="0"
+        className="custom-height h-[300px]"
       ></iframe>
     </section>
   );

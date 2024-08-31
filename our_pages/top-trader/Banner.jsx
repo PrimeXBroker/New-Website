@@ -94,7 +94,11 @@ const Banner = ({ setActive, formRef }) => {
                 </Link>
               </div>
             </div>
-            <Link href={""} className="text-secondary">
+            <Link
+              href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/Trader_of_the_month_competition.pdf"
+              target="_blank"
+              className="text-secondary"
+            >
               {t("tc")}
             </Link>
           </div>
