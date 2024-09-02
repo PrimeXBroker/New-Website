@@ -25,6 +25,7 @@ function TraderForm() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [loading, setLoading] = useState(false);
   const locale = useLocale();
+  console.log(locale, "locale");
 
   const formik = useFormik({
     initialValues: {
@@ -58,10 +59,12 @@ function TraderForm() {
         first_name: values.first_name,
         accountId: values.accountId,
         last_name: values.last_name,
+        language: locale,
       };
       try {
         const res = await axios.post(
-          "https://primexbroker.com/api/register/trade-to-win",
+          "https://primexcapital.com/api/register/trade-to-win",
+          // "http://localhost:4002/api/register/trade-to-win",
           updatedValues
         );
         if (res.data.success) {
