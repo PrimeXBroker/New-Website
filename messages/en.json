@@ -1564,7 +1564,9 @@
       "question_3": "What are the competition requirements?",
       "answer_3": "To win, you must be the highest trader within the 30-day competition period.",
       "question_4": "Will withdrawing my profits affect my progress in the competition?",
-      "answer_4": "No, withdrawing your profits will not affect your progress. Your standing in the competition is based solely on your trading performance."
+      "answer_4": "No, withdrawing your profits will not affect your progress. Your standing in the competition is based solely on your trading performance.",
+      "question_5": "Can I participate in the competition with my gift account? ",
+      "answer_5": "No, you can participate with standard, narrow and raw accounts."
     }
   }
 }
