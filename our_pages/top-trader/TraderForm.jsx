@@ -63,7 +63,7 @@ function TraderForm() {
       };
       try {
         const res = await axios.post(
-          "https://primexcapital.com/api/register/trade-to-win",
+          "https://primexbroker.com/api/register/trade-to-win",
           // "http://localhost:4002/api/register/trade-to-win",
           updatedValues
         );
