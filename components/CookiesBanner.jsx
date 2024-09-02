@@ -1,12 +1,29 @@
+"use client";
 import { useState, useEffect, useContext } from "react";
 import { getCookie, setCookie } from "cookies-next";
 import { useTranslations } from "next-intl";
 import { LocationContext } from "@/context/location-context";
+import axios from "axios";
 
 const CookieBanner = () => {
   const t = useTranslations("home.cookie");
   const [show, setShow] = useState(false);
   const location = useContext(LocationContext);
+
+  useEffect(() => {
+    const fetchLocation = async () => {
+      try {
+        const country = await axios.get("https://ipapi.co/country/");
+        if (country === "ZA") {
+          window.location.href = "https://www.primexcapital.co.za";
+        }
+      } catch (error) {
+        console.error("Error fetching location", error);
+      }
+    };
+    fetchLocation();
+  }, []);
+
   useEffect(() => {
     const cookieValue = getCookie("primex_cookie");
     setShow(cookieValue !== "true");
