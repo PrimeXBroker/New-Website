@@ -1439,7 +1439,10 @@
       "tc": "*تطبق الشروط والأحكام"
     },
     "countdown": {
-      "title": "تنتهي المسابقة في"
+      "title": "تنتهي المسابقة في",
+      "days": "أيام",
+      "hours": "ساعات",
+      "minutes": "دقائق"
     },
     "participationRequirements": {
       "title1": "فرصتك للحصول",

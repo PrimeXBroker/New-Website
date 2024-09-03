@@ -1516,7 +1516,10 @@
       "tc": "*T&C applies"
     },
     "countdown": {
-      "title": "Competition ends in"
+      "title": "Competition ends in",
+      "days": "DAYS",
+      "hours": "HOURS",
+      "minutes": "MINUTES"
     },
     "participationRequirements": {
       "title1": "Your Chance to Own",

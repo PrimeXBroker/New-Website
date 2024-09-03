@@ -46,15 +46,15 @@ const Countdown = () => {
 
   const timeGroups = [
     {
-      label: "DAYS",
+      label: t("days"),
       digits: timeLeft.days.split(""),
     },
     {
-      label: "HOURS",
+      label: t("hours"),
       digits: timeLeft.hours.split(""),
     },
     {
-      label: "MINUTES",
+      label: t("minutes"),
       digits: timeLeft.minutes.split(""),
     },
   ];
