@@ -81,7 +81,7 @@ const CompanyStats1 = ({ stats }) => {
             >
               <p
                 className=" lg:text-secondary text-primary leading-6 text-sm sm:text-[1.125rem] md:text-lg xl:text-xl 3xl:text-[24px] m-0 p-0 text-left sm:text-center font-bold"
-                dir={locale === "ar" ? "rtl" : "ltr"}
+                dir={stat.dir || "ltr"}
               >
                 {displayValue}
                 <b className="text-primary leading-6 font-normal text-sm sm:text-[1.125rem] md:text-[20px]">

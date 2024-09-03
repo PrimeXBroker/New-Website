@@ -27,6 +27,7 @@ const NewBanner = () => {
       symbol: locale === "en" ? "$" : "",
       prepend: "false",
       suffix: t("fact_million"), // Adding suffix
+      dir: locale === "ar" ? "rtl" : "ltr",
     },
     {
       value: 7,
@@ -34,25 +35,23 @@ const NewBanner = () => {
       symbol: locale === "en" ? "$" : "",
       prepend: "true",
       suffix: t("fact_no4"),
+      dir: locale === "ar" ? "rtl" : "ltr",
     },
   ];
   return (
     <section className="relative sm:h-screen lg:h-[92vh]">
       <div
-      
         className={`container h-[700px] sm:h-screen flex flex-col pt-14 sm:pt-5 z-10 ${
           locale === "ar" ? "lg:pt-[6rem]" : "lg:pt-[10rem]"
         }`}
       >
         <h1
-        
           className={`text-white z-10 text-2xl md:text-[36px] lg:text-[52px] font-semibold mb-5  text-center lg:text-left ${
             locale === "ar"
               ? "lg:text-right md:leading-[60px] lg:text-[42px]"
               : "lg:text-left md:leading-[50px]"
           }`}
           style={{ letterSpacing: "1.2px" }}
-          
         >
           {t("new_title1_1")}
           <span className="text-primary mr-2">
