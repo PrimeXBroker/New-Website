@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css"; // Ensure to import AOS CSS
+import { useLocale } from "next-intl";
 
 const useCounter = (targetValue, duration = 5000) => {
   const [value, setValue] = useState(0);
@@ -28,6 +29,7 @@ const useCounter = (targetValue, duration = 5000) => {
 };
 
 const CompanyStats1 = ({ stats }) => {
+  const locale = useLocale();
   useEffect(() => {
     Aos.init({ disable: "mobile" });
   }, []);
@@ -68,7 +70,7 @@ const CompanyStats1 = ({ stats }) => {
 
           return (
             <div
-            // dir={ locale === "en" ? "ltr": "rtl" }
+              // dir={ locale === "en" ? "ltr": "rtl" }
               key={index}
               className={`flex relative flex-col items-center sm:gap-0 gap-0 z-10 lg:px-14 sm:px-8 lg:mt-0 mt-5 
                 ${
@@ -77,7 +79,10 @@ const CompanyStats1 = ({ stats }) => {
                     : ""
                 }  w-1/2 sm:w-auto`}
             >
-              <p className=" lg:text-secondary text-primary leading-6 text-sm sm:text-[1.125rem] md:text-lg xl:text-xl 3xl:text-[24px] m-0 p-0 text-left sm:text-center font-bold">
+              <p
+                className=" lg:text-secondary text-primary leading-6 text-sm sm:text-[1.125rem] md:text-lg xl:text-xl 3xl:text-[24px] m-0 p-0 text-left sm:text-center font-bold"
+                dir={locale === "ar" ? "rtl" : "ltr"}
+              >
                 {displayValue}
                 <b className="text-primary leading-6 font-normal text-sm sm:text-[1.125rem] md:text-[20px]">
                   {stat.bold}{" "}
