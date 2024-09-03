@@ -73,7 +73,7 @@ const Countdown = () => {
                   : ""
               } xs:flex-1 xs:flex xs:flex-col xs:items-center`}
             >
-              <div className="flex gap-2">
+              <div className="flex gap-2" dir="ltr">
                 {group.digits.map((digit, index) => (
                   <div
                     key={index}
