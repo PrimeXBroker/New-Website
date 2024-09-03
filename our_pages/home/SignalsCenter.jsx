@@ -32,7 +32,6 @@ const SignalsCenter = () => {
                 ? "text-center md:text-right"
                 : "text-center md:text-left"
             }`}
-            style={{ letterSpacing: "1.4px" }}
           >
             {t("description")}
           </p>
