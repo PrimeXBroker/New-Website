@@ -1,16 +1,16 @@
+import { Button } from "@nextui-org/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Button } from "@nextui-org/react";
 
 const Banner = () => {
   const locale = useLocale();
-  const t = useTranslations("footer.termsCondition");
-
+  const t = useTranslations("footer.complaintsManagement");
   return (
-    <section className={`bg-secondary lg:h-screen`}>
+    <section className={`bg-secondary  md:h-screen`}>
       <div className="container flex flex-col md:flex-row justify-evenly gap-10 items-center py-12">
-        <div className="md:w-[40%]">
+        <div className="md:w-[45%]">
           <h1
             className={`text-primary text-xl md:text-6xl font-semibold mb-5 ${
               locale === "ar"
@@ -33,11 +33,10 @@ const Banner = () => {
         </div>
         <div>
           <Image
-            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/terms/Banner.webp"
+            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/client-agreement/Banner.webp"
             width="300"
             height="300"
             alt="banner Image"
-            priority={true}
           />
         </div>
       </div>
@@ -45,7 +44,7 @@ const Banner = () => {
         <Button
           title="Click to View"
           as="a"
-          href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/PrimeX_Capital_Terms_of_Business.pdf"
+          href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/PrimeX_Capital_Complaints_Management_Policy.pdf"
           color="white"
           className="relative text-white text-center flex h-[70px] rounded-full w-[250px] bg-secondary border border-accent shadow-2xl"
           endContent={
@@ -59,14 +58,13 @@ const Banner = () => {
           }
         >
           <span className="absolute right-0 left-8 text-[14px] md:text-[16px]">
-            {" "}
             {t("view_btn")}
           </span>
         </Button>
         <Button
           title="Click to View"
           as="a"
-          href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/PrimeX_Capital_Terms_of_Business.pdf"
+          href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/PrimeX_Capital_Complaints_Management_Policy.pdf"
           color="white"
           className="relative text-white text-center flex h-[70px] rounded-full w-[250px] bg-secondary border border-accent shadow-2xl"
           endContent={

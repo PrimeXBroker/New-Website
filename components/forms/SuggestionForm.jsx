@@ -22,7 +22,7 @@ const questionTypes = [
   { id: 4, name: "Deposit Query", value: "deposit_query" },
 ];
 
-const ContactForm = () => {
+const SuggestionForm = () => {
   const locale = useLocale();
   const t = useTranslations("contact.contactForm");
   const [countryCode, setCountryCode] = useState("");
@@ -126,7 +126,7 @@ const ContactForm = () => {
               locale === "ar" ? "text-right pl-[100px]" : "text-left pr-[100px]"
             }`}
           >
-            {t("complaints_form_desc")}
+            {t("suggestion_form_desc")}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
             <div className="flex flex-col border-[1px] border-accent p-1 rounded-md relative">
@@ -306,4 +306,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default SuggestionForm;

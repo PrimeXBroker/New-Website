@@ -1316,6 +1316,7 @@
     "clientAgreement": {
       "title_part1": "اتفاقية",
       "title_part2": "العميل",
+      "description": "هنا، نحدد العلاقة التعاقدية بيننا وبين عملائنا، موضحين الواجبات المتبادلة والشروط التي نقدم بموجبها الخدمات.",
       "view_btn": "اضغط للمشاهدة",
       "download_btn": "تحميل الملف"
     },
@@ -1332,6 +1333,61 @@
       "view_btn": "اضغط للمشاهدة",
       "download_btn": "تحميل الملف"
     },
+    "policyStatement": {
+      "title_part1": "سياسة",
+      "title_part2": "البيان",
+      "description": "يقدم هذا القسم نظرة عامة على سياساتنا الأساسية، موضحًا المعايير والممارسات التي تحكم كيفية عملنا وتقديم الخدمات للعملاء.",
+      "view_btn": "انقر للعرض",
+      "download_btn": "تحميل PDF",
+      "metaData": {
+        "title": "",
+        "description": ""
+      }
+    },
+    "riskDisclosure": {
+      "title_part1": "الإفصاح عن",
+      "title_part2": "المخاطر",
+      "description": "في هذا القسم، نشرح المخاطر المتأصلة في التداول والأنشطة المالية الأخرى، لضمان فهم العملاء لهذه المخاطر وقبولهم لها قبل التعامل مع منصتنا.",
+      "view_btn": "انقر للعرض",
+      "download_btn": "تحميل PDF",
+      "metaData": {
+        "title": "",
+        "description": ""
+      }
+    },
+    "complaintsManagement": {
+      "title_part1": "إدارة",
+      "title_part2": "الشكاوى",
+      "description": "يشرح هذا القسم كيفية إدارة الشكاوى المقدمة من العملاء وحلها، موضحًا التزامنا بمعالجة المخاوف بكفاءة وشفافية.",
+      "view_btn": "انقر للعرض",
+      "download_btn": "تحميل PDF",
+      "metaData": {
+        "title": "",
+        "description": ""
+      }
+    },
+    "cookiePolicy": {
+      "title_part1": "سياسة",
+      "title_part2": "الكوكيز",
+      "description": "نوضح في هذا القسم كيفية استخدام ملفات تعريف الارتباط على موقعنا الإلكتروني لجمع البيانات وتحسين تجربة المستخدم، بالإضافة إلى تفاصيل حول كيفية إدارة تفضيلات الكوكيز.",
+      "view_btn": "انقر للعرض",
+      "download_btn": "تحميل PDF",
+      "metaData": {
+        "title": "",
+        "description": ""
+      }
+    },
+    "amlPolicy": {
+      "title_part1": "سياسة",
+      "title_part2": "مكافحة غسيل الأموال",
+      "description": "يوضح هذا القسم الخطوات والضوابط التي لدينا لمنع غسل الأموال وتمويل الإرهاب، لضمان الامتثال لجميع القوانين واللوائح المعمول بها. ",
+      "view_btn": "انقر للعرض",
+      "download_btn": "تحميل PDF",
+      "metaData": {
+        "title": "",
+        "description": ""
+      }
+    },
     "company": {
       "title_part1": "الشركة",
       "title_part1_link1": "من نحن",
@@ -1342,10 +1398,13 @@
     },
     "Rules": {
       "title_part2": "الاحكام",
-      "title_part2_link1": " سياسة الخصوصية",
-      "title_part3_link2": "الكشف عن المخاطر ",
-      "title_part4_link3": "اتفاقية العميل",
-      "title_part5_link4": "الشروط والاحكام",
+      "title_part4_link1": "اتفاقية العميل",
+      "title_part5_link2": "الشروط والاحكام",
+      "title_part2_link3": "بيان السياسة",
+      "title_part2_link4": "الإفصاح عن المخاطر",
+      "title_part2_link5": "إدارة الشكاوى",
+      "title_part2_link6": "سياسة الكوكيز",
+      "title_part2_link7": "سياسة مكافحة غسيل الأموال",
       "view_btn": "اضغط للمشاهدة",
       "download_btn": "تحميل الملف"
     },

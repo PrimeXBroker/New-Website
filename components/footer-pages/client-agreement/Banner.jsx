@@ -21,6 +21,15 @@ const Banner = () => {
           >
             {t("title_part1")} <br /> {t("title_part2")}
           </h1>
+          <p
+            className={`text-white text-[14px] md:text-lg ${
+              locale === "ar"
+                ? "md:text-right text-center"
+                : "md:text-left text-center"
+            }`}
+          >
+            {t("description")}
+          </p>
         </div>
         <div>
           <Image
@@ -35,7 +44,7 @@ const Banner = () => {
         <Button
           title="Click to View"
           as="a"
-          href="https://drive.google.com/file/d/1mNGtSnTp8h11o8exI8dVqfxsfQGD41MU/view"
+          href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/PrimeX_Capital_Client_Agreement.pdf"
           color="white"
           className="relative text-white text-center flex h-[70px] rounded-full w-[250px] bg-secondary border border-accent shadow-2xl"
           endContent={
@@ -48,12 +57,15 @@ const Banner = () => {
             />
           }
         >
-        <span className="absolute right-0 left-8 text-[14px] md:text-[16px]">  {t("view_btn")}</span>
+          <span className="absolute right-0 left-8 text-[14px] md:text-[16px]">
+            {" "}
+            {t("view_btn")}
+          </span>
         </Button>
         <Button
           title="Click to View"
           as="a"
-          href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/client_agreement.pdf"
+          href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/PrimeX_Capital_Client_Agreement.pdf"
           color="white"
           className="relative text-white text-center flex h-[70px] rounded-full w-[250px] bg-secondary border border-accent shadow-2xl"
           endContent={
@@ -66,7 +78,9 @@ const Banner = () => {
             />
           }
         >
-         <span className="absolute right-0 left-8 text-[14px] md:text-[16px]">{t("download_btn")}</span>
+          <span className="absolute right-0 left-8 text-[14px] md:text-[16px]">
+            {t("download_btn")}
+          </span>
         </Button>
       </div>
     </section>

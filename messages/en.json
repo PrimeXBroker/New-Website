@@ -838,8 +838,10 @@
       "help_li7_desc": "Office 2401, Westburry Tower 1, Business Bay, Dubai, United Arab Emirates."
     },
     "contactForm": {
-      "title": "Send Us A Message",
-      "description": "You may also leave your contact information here, and a PrimeX representative will contact you within 1 working day",
+      "title1": "Have any suggestions or complaints?",
+      "title2": "Write us here",
+      "complaints_form_desc": "You may also leave your contact information here, and a PrimeX Capital representative will contact you within 1 working day",
+      "suggestion_form_desc": "Please fill out the complaints form carefully, and click submit",
       "first_name": "first name",
       "last_name": "last name",
       "email": "email",
@@ -851,6 +853,7 @@
       "deposit_query": "Deposit Query",
       "message": "Message",
       "submit_btn": "submit",
+      "reset_btn": "Reset",
       "first_name_validation_error": "first name can only contain letters.",
       "first_name_required_error": "first name is required!",
       "last_name_validation_error": "last name can only contain letters.",
@@ -1406,6 +1409,7 @@
     "clientAgreement": {
       "title_part1": "Client",
       "title_part2": "Agreement",
+      "description": "Here, we define the contractual relationship between our clients and us, specifying the mutual duties, terms, and conditions under which services are provided.",
       "view_btn": "Click to View",
       "download_btn": "Download PDF",
       "metaData": {
@@ -1430,6 +1434,61 @@
         "description": ""
       }
     },
+    "policyStatement": {
+      "title_part1": "Policy",
+      "title_part2": "Statement",
+      "description": "This section provides an overview of our essential policies, outlining the standards and practices that govern how we operate and deliver services to clients.",
+      "view_btn": "Click to View",
+      "download_btn": "Download PDF",
+      "metaData": {
+        "title": "",
+        "description": ""
+      }
+    },
+    "riskDisclosure": {
+      "title_part1": "Risk",
+      "title_part2": "Disclosure",
+      "view_btn": "Click to View",
+      "download_btn": "Download PDF",
+      "description": "In this section, we explain the inherent risks associated with trading and other financial activities, ensuring clients understand and accept these risks before engaging with our platform.",
+      "metaData": {
+        "title": "",
+        "description": ""
+      }
+    },
+    "complaintsManagement": {
+      "title_part1": "Complaints",
+      "title_part2": "Management",
+      "description": "This section explains how we manage and resolve client complaints, detailing our commitment to addressing concerns efficiently and transparently.",
+      "view_btn": "Click to View",
+      "download_btn": "Download PDF",
+      "metaData": {
+        "title": "",
+        "description": ""
+      }
+    },
+    "cookiePolicy": {
+      "title_part1": "Cookie",
+      "title_part2": "Policy",
+      "description": "We describe in this section how cookies are used on our website to collect data and optimize the user experience, along with details about managing cookie preferences.",
+      "view_btn": "Click to View",
+      "download_btn": "Download PDF",
+      "metaData": {
+        "title": "",
+        "description": ""
+      }
+    },
+    "amlPolicy": {
+      "title_part1": "Policy",
+      "title_part2": "of AML",
+      "description": "This section outlines the steps and controls we have in place to prevent money laundering and terrorist financing, ensuring compliance with all applicable legal and regulatory standards.",
+      "view_btn": "Click to View",
+      "download_btn": "Download PDF",
+      "metaData": {
+        "title": "",
+        "description": ""
+      }
+    },
     "company": {
       "title_part1": "Company",
       "title_part1_link1": "About Us",
@@ -1440,10 +1499,13 @@
     },
     "Rules": {
       "title_part2": "Rules",
-      "title_part2_link1": "Privacy Policy",
-      "title_part3_link2": "Risk Disclosure",
-      "title_part4_link3": "Client Agreement",
-      "title_part5_link4": "Terms and Conditions",
+      "title_part2_link1": "Client Agreement",
+      "title_part2_link2": "Terms and Conditions",
+      "title_part2_link3": "Policy Statement",
+      "title_part2_link4": "Risk Disclosure",
+      "title_part2_link5": "Complaints Management",
+      "title_part2_link6": "Cookie Policy",
+      "title_part2_link7": "Policy of AML",
       "view_btn": "Click to View",
       "download_btn": "Download PDF"
     },

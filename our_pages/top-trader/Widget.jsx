@@ -5,7 +5,7 @@ const Widget = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src =
-      "https://pammratings.primexcapital.com/widgets/assets/js/iframeResizer.js";
+      "https://ratings.primexcapital.com/widgets/assets/js/iframeResizer.js";
     script.async = true;
     document.body.appendChild(script);
 
@@ -19,10 +19,18 @@ const Widget = () => {
       <iframe
         id="widgetFrame"
         style={{ minWidth: "100%" }}
-        src="https://pammratings.primexcapital.com/widgets/ratings?widgetKey=TOM-SEP&theme=light&lang=en"
+        src="https://ratings.primexcapital.com/widgets/ratings?widgetKey=TOM-SEP&theme=light&lang=en"
         scrolling="no"
         frameBorder="0"
-        className="custom-height h-[300px]"
+        onLoad={() => {
+          window.iFrameResize(
+            {
+              heightCalculationMethod: "max",
+              checkOrigin: false,
+            },
+            "#widgetFrame"
+          );
+        }}
       ></iframe>
     </section>
   );
