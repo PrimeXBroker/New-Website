@@ -33,7 +33,7 @@ const Banner = () => {
         </div>
         <div>
           <Image
-            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/client-agreement/Banner.webp"
+            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/risk/risk-disclosure.webp"
             width="300"
             height="300"
             alt="banner Image"

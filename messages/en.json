@@ -840,8 +840,8 @@
     "contactForm": {
       "title1": "Have any suggestions or complaints?",
       "title2": "Write us here",
-      "complaints_form_desc": "You may also leave your contact information here, and a PrimeX Capital representative will contact you within 1 working day",
-      "suggestion_form_desc": "Please fill out the complaints form carefully, and click submit",
+      "complaints_form_desc": "You may also leave your contact information here, and a PrimeX Capital representative will contact you within 1 working day.",
+      "suggestion_form_desc": "Please fill out the complaints form carefully, and click submit.",
       "first_name": "first name",
       "last_name": "last name",
       "email": "email",

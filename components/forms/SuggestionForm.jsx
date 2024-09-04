@@ -132,16 +132,16 @@ const SuggestionForm = () => {
             <div className="flex flex-col border-[1px] border-accent p-1 rounded-md relative">
               <input
                 className={`bg-white text-secondary placeholder:text-accent py-2 pl-10 pr-4 capitalize rounded-md w-full ${
-                  formik.touched.first_name && formik.errors.first_name
+                  formik.touched.full_name && formik.errors.full_name
                     ? "border-2 border-red-600"
                     : ""
                 }`}
                 type="text"
-                name="first_name"
+                name="full_name"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                value={formik.values.first_name}
-                placeholder={t("first_name")}
+                value={formik.values.full_name}
+                placeholder={t("full_name")}
               />
               <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
                 <BiUser size={20} className="text-accent" />

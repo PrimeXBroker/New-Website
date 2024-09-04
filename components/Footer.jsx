@@ -56,14 +56,14 @@ const Footer = () => {
         links: [
           { name: t("Rules.title_part2_link1"), href: "/client-agreement" },
           { name: t("Rules.title_part2_link2"), href: "/terms" },
-          // { name: t("Rules.title_part2_link3"), href: "/policy-statement" },
-          // { name: t("Rules.title_part2_link4"), href: "/risk-disclosure" },
-          // {
-          //   name: t("Rules.title_part2_link5"),
-          //   href: "/complaints-management",
-          // },
-          // { name: t("Rules.title_part2_link6"), href: "/cookie-policy" },
-          // { name: t("Rules.title_part2_link7"), href: "/policy-of-aml" },
+          { name: t("Rules.title_part2_link3"), href: "/policy-statement" },
+          { name: t("Rules.title_part2_link4"), href: "/risk-disclosure" },
+          {
+            name: t("Rules.title_part2_link5"),
+            href: "/complaints-management",
+          },
+          { name: t("Rules.title_part2_link6"), href: "/cookie-policy" },
+          { name: t("Rules.title_part2_link7"), href: "/policy-of-aml" },
         ],
       },
     },
