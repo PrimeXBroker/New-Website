@@ -114,195 +114,192 @@ const ContactForm = () => {
     },
   });
   return (
-    <section className="!bg-[#4c4c4e] py-10 px-2">
-      <h1 className="text-white text-lg md:text-2xl text-center font-semibold mb-10">
-        {t("title1")} <br />
-        {t("title2")}
-      </h1>
-      <div className="contact_form_wrapper container px-4 py-16 md:pt-16 md:px-16 md:pb-10 bg-white rounded-2xl max-w-4xl relative">
-        <form onSubmit={formik.handleSubmit} className="flex flex-col gap-4">
-          <p
-            className={`sectionPara text-sm ${
-              locale === "ar" ? "text-right pl-[100px]" : "text-left pr-[100px]"
+    <form onSubmit={formik.handleSubmit} className="flex flex-col gap-4">
+      <p
+        className={`sectionPara text-sm mb-6 ${
+          locale === "ar"
+            ? "text-right md:pl-[100px]"
+            : "text-left md:pr-[100px]"
+        }`}
+      >
+        {t("complaints_form_desc")}
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
+        <div className="flex flex-col p-1 relative">
+          <input
+            className={`bg-white text-secondary placeholder-[#7f7f7f] py-2 pl-10 pr-4 capitalize w-full text-sm focus:outline-none border-b border-accent ${
+              formik.touched.first_name && formik.errors.first_name
+                ? "border-b border-red-600"
+                : ""
             }`}
-          >
-            {t("complaints_form_desc")}
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
-            <div className="flex flex-col border-[1px] border-accent p-1 rounded-md relative">
-              <input
-                className={`bg-white text-secondary placeholder:text-accent py-2 pl-10 pr-4 capitalize rounded-md w-full ${
-                  formik.touched.first_name && formik.errors.first_name
-                    ? "border-2 border-red-600"
-                    : ""
-                }`}
-                type="text"
-                name="first_name"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.first_name}
-                placeholder={t("first_name")}
-              />
-              <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
-                <BiUser size={20} className="text-accent" />
-                <i className="fas fa-user"></i>
-              </span>
-            </div>
-            <div className="flex flex-col border-[1px] border-accent p-1 rounded-md relative">
-              <input
-                className={`bg-white text-secondary  placeholder:text-accent capitalize py-2 pl-10 pr-4 rounded-md w-full ${
-                  formik.touched.last_name && formik.errors.last_name
-                    ? "border-2 border-red-600"
-                    : ""
-                } `}
-                type="text"
-                name="last_name"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.last_name}
-                placeholder={t("last_name")}
-              />
-              <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
-                <BiUser size={20} className="text-accent" />
-                <i className="fas fa-user"></i>
-              </span>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
-            <div className="flex flex-col border-[1px] border-accent p-1 rounded-md relative">
-              <input
-                className={`bg-white text-secondary placeholder:text-accent py-2 pl-10 pr-4 rounded-md w-full ${
-                  formik.touched.email && formik.errors.email
-                    ? "border-2 border-red-600"
-                    : ""
-                }`}
-                type="email"
-                name="email"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.email}
-                placeholder={t("email")}
-              />
-              <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
-                <TfiEmail size={20} className="text-accent" />
-                <i className="fas fa-user"></i>
-              </span>
-            </div>
-            <div className="flex flex-col border-[1px] border-accent p-1 rounded-md relative">
-              <PhoneInput
-                international
-                defaultCountry={countryCode}
-                onChange={(value) => formik.setFieldValue("contact", value)}
-                onBlur={formik.handleBlur}
-                name="contact"
-                value={formik.values.contact}
-                className="w-full"
-              />
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
-            <div className="flex flex-col border-[1px] border-accent p-1 rounded-md relative">
-              <div className="relative">
-                <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
-                  <CiGlobe size={20} className="text-accent" />
-                  <i className="fas fa-globe"></i>
-                </span>
-                <select
-                  className={`bg-white text-accent placeholder:text-accent capitalize p-4 pl-10 rounded-[5px] w-full ${
-                    formik.touched.country && formik.errors.country
-                      ? "border-2 border-red-600"
-                      : ""
-                  }`}
-                  name="country"
-                  value={formik.values.country}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                >
-                  <option value="">{t("country")}</option>
-                  {nationality.map((country, index) => {
-                    return (
-                      <option key={index} value={country.en_short_name}>
-                        {country.en_short_name}
-                      </option>
-                    );
-                  })}
-                </select>
-              </div>
-            </div>
-            <div className="flex flex-col border-[1px] border-accent p-1 rounded-md relative">
-              <div className="relative">
-                <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
-                  <CiGlobe size={20} className="text-accent" />
-                  <i className="fas fa-globe"></i>
-                </span>
-                <select
-                  className={`bg-white text-accent placeholder:text-accent capitalize p-4 pl-10 rounded-lg w-full ${
-                    formik.touched.qtype && formik.errors.qtype
-                      ? "border-2 border-red-600"
-                      : ""
-                  }`}
-                  name="qtype"
-                  value={formik.values.qtype}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                >
-                  <option value="">{t("query_category")}</option>
-                  {questionTypes.map((query, el) => {
-                    return (
-                      <option key={query.id} value={query.value}>
-                        {query.name}
-                      </option>
-                    );
-                  })}
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col border-[1px] border-accent rounded-md relative">
-            <span className="absolute left-0 top-2 flex items-center pl-3 text-gray-500">
-              <AiOutlineMessage size={20} className="text-accent" />
+            type="text"
+            name="first_name"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.first_name}
+            placeholder={t("first_name")}
+          />
+          <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+            <BiUser size={20} className="text-accent" />
+            <i className="fas fa-user"></i>
+          </span>
+        </div>
+        <div className="flex flex-col p-1 relative">
+          <input
+            className={`bg-white text-secondary placeholder-[#7f7f7f] capitalize py-2 pl-10 pr-4 w-full text-sm focus:outline-none border-b border-accent ${
+              formik.touched.last_name && formik.errors.last_name
+                ? "border-b border-red-600"
+                : ""
+            } `}
+            type="text"
+            name="last_name"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.last_name}
+            placeholder={t("last_name")}
+          />
+          <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+            <BiUser size={20} className="text-accent" />
+            <i className="fas fa-user"></i>
+          </span>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
+        <div className="flex flex-col p-1 relative">
+          <input
+            className={`bg-white text-secondary placeholder-[#7f7f7f] py-2 pl-10 pr-4 w-full text-sm focus:outline-none border-b border-accent ${
+              formik.touched.email && formik.errors.email
+                ? "border-b border-red-600"
+                : ""
+            }`}
+            type="email"
+            name="email"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.email}
+            placeholder={t("email")}
+          />
+          <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+            <TfiEmail size={20} className="text-accent" />
+            <i className="fas fa-user"></i>
+          </span>
+        </div>
+        <div className="flex flex-col p-1 relative">
+          <PhoneInput
+            international
+            defaultCountry={countryCode}
+            onChange={(value) => formik.setFieldValue("phoneNumber", value)}
+            onBlur={formik.handleBlur}
+            name="phoneNumber"
+            value={formik.values.phoneNumber}
+            className={`w-full text-sm border-b border-accent ${
+              formik.touched.phoneNumber && formik.errors.phoneNumber
+                ? "border-b border-red-600"
+                : ""
+            }`}
+          />
+        </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
+        <div className="flex flex-col p-1 relative">
+          <div className="relative">
+            <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
+              <CiGlobe size={20} className="text-accent" />
+              <i className="fas fa-globe"></i>
             </span>
-            <textarea
-              name="message"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.message}
-              placeholder={t("message")}
-              rows="8"
-              cols="24"
-              className={`placeholder:text-accent w-full outline-none border-none px-10 py-2 rounded-md ${
-                formik.touched.message && formik.errors.message
-                  ? "border-2 border-red-600"
+            <select
+              className={`bg-white text-accent placeholder-[#7f7f7f] capitalize py-2 pl-10 pr-4 w-full text-sm focus:outline-none border-b border-accent ${
+                formik.touched.country && formik.errors.country
+                  ? "border-b border-red-600"
                   : ""
               }`}
-            />
+              name="country"
+              value={formik.values.country}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            >
+              <option value="">{t("country")}</option>
+              {nationality.map((country, index) => {
+                return (
+                  <option key={index} value={country.en_short_name}>
+                    {country.en_short_name}
+                  </option>
+                );
+              })}
+            </select>
           </div>
-          <div className="text-right mt-6">
-            <button className="bg-transparent border-1 border-secondary hover:bg-secondary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg group">
-              <div className="flex gap-1 items-center justify-center text-secondary group-hover:text-white">
-                {loading && <div className="spinner inline-block"></div>}{" "}
-                {loading ? (
-                  <span className="text-center">Sending...</span>
-                ) : (
-                  <span>{t("reset_btn")}</span>
-                )}
-              </div>
-            </button>
-            <button className="bg-primary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg ml-2">
-              <div className="flex gap-1 items-center justify-center text-white">
-                {loading && <div className="spinner inline-block"></div>}{" "}
-                {loading ? (
-                  <span className="text-center">Sending...</span>
-                ) : (
-                  <span>{t("submit_btn")}</span>
-                )}
-              </div>
-            </button>
+        </div>
+        <div className="flex flex-col p-1 relative">
+          <div className="relative">
+            <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
+              <CiGlobe size={20} className="text-accent" />
+              <i className="fas fa-globe"></i>
+            </span>
+            <select
+              className={`bg-white text-[#7f7f7f] placeholder-[#7f7f7f] capitalize py-2 pl-10 pr-4 w-full text-sm focus:outline-none border-b border-accent ${
+                formik.touched.qtype && formik.errors.qtype
+                  ? "border-b border-red-600"
+                  : ""
+              }`}
+              name="qtype"
+              value={formik.values.qtype}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            >
+              <option value="">{t("query_category")}</option>
+              {questionTypes.map((query, el) => {
+                return (
+                  <option key={query.id} value={query.value}>
+                    {query.name}
+                  </option>
+                );
+              })}
+            </select>
           </div>
-        </form>
+        </div>
       </div>
-    </section>
+      <div className="flex flex-col border-[1px] border-accent rounded-md relative">
+        <span className="absolute left-0 top-2 flex items-center pl-3 text-gray-500">
+          <AiOutlineMessage size={20} className="text-accent" />
+        </span>
+        <textarea
+          name="message"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.message}
+          placeholder={t("message")}
+          rows="8"
+          cols="24"
+          className={`placeholder-[#7f7f7f] w-full outline-none border-none px-10 py-2 rounded-md text-sm ${
+            formik.touched.message && formik.errors.message
+              ? "border-2 border-red-600"
+              : ""
+          }`}
+        />
+      </div>
+      <div className="text-right mt-6">
+        <button className="bg-transparent border-1 border-secondary hover:bg-secondary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg group">
+          <div className="flex gap-1 items-center justify-center text-secondary group-hover:text-white">
+            {loading && <div className="spinner inline-block"></div>}{" "}
+            {loading ? (
+              <span className="text-center">Sending...</span>
+            ) : (
+              <span>{t("reset_btn")}</span>
+            )}
+          </div>
+        </button>
+        <button className="bg-primary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg ml-2">
+          <div className="flex gap-1 items-center justify-center text-white">
+            {loading && <div className="spinner inline-block"></div>}{" "}
+            {loading ? (
+              <span className="text-center">Sending...</span>
+            ) : (
+              <span>{t("submit_btn")}</span>
+            )}
+          </div>
+        </button>
+      </div>
+    </form>
   );
 };
 
