@@ -1,30 +1,32 @@
 "use client";
-
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import nationality from "../../public/assets/data/nationality.json";
-import { LocationContext } from "@/context/location-context";
-import { useContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { useTranslations, useLocale } from "next-intl";
 import { BiUser } from "react-icons/bi";
 import { TfiEmail } from "react-icons/tfi";
-import { IoIosGlobe } from "react-icons/io";
-import { CiGlobe } from "react-icons/ci";
-import { AiOutlineMessage } from "react-icons/ai";
-
-const questionTypes = [
-  { id: 1, name: "General Inquiry", value: "general" },
-  { id: 2, name: "Account Funding", value: "account_funding" },
-  { id: 3, name: "Withdrawal Query", value: "withdrawal_query" },
-  { id: 4, name: "Deposit Query", value: "deposit_query" },
-];
+import { BiCategoryAlt } from "react-icons/bi";
+import { FiMessageSquare } from "react-icons/fi";
+import { TfiWorld } from "react-icons/tfi";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+} from "@nextui-org/react";
 
 const ContactForm = () => {
   const locale = useLocale();
   const t = useTranslations("contact.contactForm");
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [loading, setLoading] = useState(false);
   const [countryCode, setCountryCode] = useState("");
 
   useEffect(() => {
@@ -50,8 +52,6 @@ const ContactForm = () => {
     { id: 3, name: t("deposit_query"), value: "deposit_query" },
   ];
 
-  const { country: originCountry, ip: originIp } = useContext(LocationContext);
-  const [loading, setLoading] = useState(false);
   const formik = useFormik({
     initialValues: {
       first_name: "",
@@ -104,22 +104,21 @@ const ContactForm = () => {
           `https://primexbroker.com/api/contact`,
           updatedValues
         );
-        console.log("Response", response);
+        console.log("ContactResponse", response);
       } catch (error) {
         console.log(error);
       } finally {
         setLoading(false);
         formik.resetForm();
+        onOpen();
       }
     },
   });
   return (
     <form onSubmit={formik.handleSubmit} className="flex flex-col gap-4">
       <p
-        className={`sectionPara text-sm mb-6 ${
-          locale === "ar"
-            ? "text-right md:pl-[100px]"
-            : "text-left md:pr-[100px]"
+        className={`sectionPara text-base mb-6 ${
+          locale === "ar" ? "text-right" : "text-left"
         }`}
       >
         {t("complaints_form_desc")}
@@ -127,7 +126,9 @@ const ContactForm = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
         <div className="flex flex-col p-1 relative">
           <input
-            className={`bg-white text-secondary placeholder-[#7f7f7f] py-2 pl-10 pr-4 capitalize w-full text-sm focus:outline-none border-b border-accent ${
+            className={`bg-white text-secondary placeholder:text-[#7f7f7f] placeholder:opacity-70 py-2 ${
+              locale === "ar" ? "pr-10 pl-4" : "pl-10 pr-4"
+            } capitalize w-full text-sm focus:outline-none border-b border-accent ${
               formik.touched.first_name && formik.errors.first_name
                 ? "border-b border-red-600"
                 : ""
@@ -139,14 +140,20 @@ const ContactForm = () => {
             value={formik.values.first_name}
             placeholder={t("first_name")}
           />
-          <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
-            <BiUser size={20} className="text-accent" />
+          <span
+            className={`absolute ${
+              locale === "ar" ? "right-3" : "left-3"
+            } top-1/2 transform -translate-y-1/2 text-gray-500`}
+          >
+            <BiUser size={18} className="text-[#7f7f7f]" />
             <i className="fas fa-user"></i>
           </span>
         </div>
         <div className="flex flex-col p-1 relative">
           <input
-            className={`bg-white text-secondary placeholder-[#7f7f7f] capitalize py-2 pl-10 pr-4 w-full text-sm focus:outline-none border-b border-accent ${
+            className={`bg-white text-secondary placeholder:text-[#7f7f7f] placeholder:opacity-70 capitalize py-2 ${
+              locale === "ar" ? "pr-10 pl-4" : "pl-10 pr-4"
+            } w-full text-sm focus:outline-none border-b border-accent ${
               formik.touched.last_name && formik.errors.last_name
                 ? "border-b border-red-600"
                 : ""
@@ -158,8 +165,12 @@ const ContactForm = () => {
             value={formik.values.last_name}
             placeholder={t("last_name")}
           />
-          <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
-            <BiUser size={20} className="text-accent" />
+          <span
+            className={`absolute ${
+              locale === "ar" ? "right-3" : "left-3"
+            } top-1/2 transform -translate-y-1/2 text-gray-500`}
+          >
+            <BiUser size={18} className="text-[#7f7f7f]" />
             <i className="fas fa-user"></i>
           </span>
         </div>
@@ -167,7 +178,9 @@ const ContactForm = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
         <div className="flex flex-col p-1 relative">
           <input
-            className={`bg-white text-secondary placeholder-[#7f7f7f] py-2 pl-10 pr-4 w-full text-sm focus:outline-none border-b border-accent ${
+            className={`bg-white text-secondary placeholder:text-[#7f7f7f] placeholder:opacity-70 py-2 ${
+              locale === "ar" ? "pr-10 pl-4" : "pl-10 pr-4"
+            } w-full text-sm focus:outline-none border-b border-accent ${
               formik.touched.email && formik.errors.email
                 ? "border-b border-red-600"
                 : ""
@@ -179,21 +192,25 @@ const ContactForm = () => {
             value={formik.values.email}
             placeholder={t("email")}
           />
-          <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
-            <TfiEmail size={20} className="text-accent" />
+          <span
+            className={`absolute ${
+              locale === "ar" ? "right-3" : "left-3"
+            } top-1/2 transform -translate-y-1/2 text-gray-500`}
+          >
+            <TfiEmail size={18} className="text-[#7f7f7f]" />
             <i className="fas fa-user"></i>
           </span>
         </div>
-        <div className="flex flex-col p-1 relative">
+        <div className="flex flex-col p-1 relative" dir="ltr">
           <PhoneInput
             international
             defaultCountry={countryCode}
-            onChange={(value) => formik.setFieldValue("phoneNumber", value)}
+            onChange={(value) => formik.setFieldValue("contact", value)}
             onBlur={formik.handleBlur}
-            name="phoneNumber"
-            value={formik.values.phoneNumber}
-            className={`w-full text-sm border-b border-accent ${
-              formik.touched.phoneNumber && formik.errors.phoneNumber
+            name="contact"
+            value={formik.values.contact}
+            className={`w-full text-sm text-secondary border-b border-accent ${
+              formik.touched.contact && formik.errors.contact
                 ? "border-b border-red-600"
                 : ""
             }`}
@@ -203,12 +220,22 @@ const ContactForm = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
         <div className="flex flex-col p-1 relative">
           <div className="relative">
-            <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
-              <CiGlobe size={20} className="text-accent" />
+            <span
+              className={`absolute inset-y-0 ${
+                locale === "ar" ? "right-0 pr-3" : "left-0 pl-3"
+              } flex items-center text-gray-500`}
+            >
+              <TfiWorld size={18} className="text-[#7f7f7f]" />
               <i className="fas fa-globe"></i>
             </span>
             <select
-              className={`bg-white text-accent placeholder-[#7f7f7f] capitalize py-2 pl-10 pr-4 w-full text-sm focus:outline-none border-b border-accent ${
+              className={`bg-white  ${
+                formik.values.country
+                  ? "text-secondary"
+                  : "text-[#7f7f7f] text-opacity-70"
+              } capitalize py-2 ${
+                locale === "ar" ? "pr-10 pl-4" : "pl-10 pr-4"
+              } w-full text-sm focus:outline-none border-b border-accent ${
                 formik.touched.country && formik.errors.country
                   ? "border-b border-red-600"
                   : ""
@@ -231,12 +258,22 @@ const ContactForm = () => {
         </div>
         <div className="flex flex-col p-1 relative">
           <div className="relative">
-            <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
-              <CiGlobe size={20} className="text-accent" />
+            <span
+              className={`absolute inset-y-0 ${
+                locale === "ar" ? "right-0 pr-3" : "left-0 pl-3"
+              } flex items-center text-gray-500`}
+            >
+              <BiCategoryAlt size={18} className="text-[#7f7f7f]" />
               <i className="fas fa-globe"></i>
             </span>
             <select
-              className={`bg-white text-[#7f7f7f] placeholder-[#7f7f7f] capitalize py-2 pl-10 pr-4 w-full text-sm focus:outline-none border-b border-accent ${
+              className={`bg-white ${
+                formik.values.qtype
+                  ? "text-secondary"
+                  : "text-[#7f7f7f] text-opacity-70"
+              } capitalize py-2 ${
+                locale === "ar" ? "pr-10 pl-4" : "pl-10 pr-4"
+              } w-full text-sm focus:outline-none border-b border-accent ${
                 formik.touched.qtype && formik.errors.qtype
                   ? "border-b border-red-600"
                   : ""
@@ -259,8 +296,12 @@ const ContactForm = () => {
         </div>
       </div>
       <div className="flex flex-col border-[1px] border-accent rounded-md relative">
-        <span className="absolute left-0 top-2 flex items-center pl-3 text-gray-500">
-          <AiOutlineMessage size={20} className="text-accent" />
+        <span
+          className={`absolute ${
+            locale === "ar" ? "right-0 pr-3" : "left-0 pl-3"
+          } top-2 flex items-center text-gray-500`}
+        >
+          <FiMessageSquare size={18} className="text-[#7f7f7f]" />
         </span>
         <textarea
           name="message"
@@ -270,35 +311,56 @@ const ContactForm = () => {
           placeholder={t("message")}
           rows="8"
           cols="24"
-          className={`placeholder-[#7f7f7f] w-full outline-none border-none px-10 py-2 rounded-md text-sm ${
+          className={`placeholder:text-[#7f7f7f] placeholder:opacity-70 w-full outline-none px-10 py-2 rounded-md text-sm ${
             formik.touched.message && formik.errors.message
-              ? "border-2 border-red-600"
+              ? "border-1 border-red-600"
               : ""
           }`}
         />
       </div>
-      <div className="text-right mt-6">
-        <button className="bg-transparent border-1 border-secondary hover:bg-secondary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg group">
+      <div className="flex justify-center md:justify-end mt-6">
+        <button
+          onClick={() => formik.resetForm()}
+          className="bg-transparent border-1 border-secondary hover:bg-secondary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg group"
+        >
           <div className="flex gap-1 items-center justify-center text-secondary group-hover:text-white">
-            {loading && <div className="spinner inline-block"></div>}{" "}
-            {loading ? (
-              <span className="text-center">Sending...</span>
-            ) : (
-              <span>{t("reset_btn")}</span>
-            )}
+            <span>{t("reset_btn")}</span>
           </div>
         </button>
-        <button className="bg-primary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg ml-2">
+        <button
+          type="submit"
+          className={`bg-primary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg ${
+            locale === "ar" ? "mr-2" : "ml-2"
+          }`}
+        >
           <div className="flex gap-1 items-center justify-center text-white">
-            {loading && <div className="spinner inline-block"></div>}{" "}
             {loading ? (
-              <span className="text-center">Sending...</span>
+              <div className="spinner inline-block"></div>
             ) : (
               <span>{t("submit_btn")}</span>
             )}
           </div>
         </button>
       </div>
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="center">
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">
+                {t("success_title")}
+              </ModalHeader>
+              <ModalBody>
+                <p>{t("success_desc")}</p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  {t("close_btn")}
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </form>
   );
 };

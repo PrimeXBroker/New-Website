@@ -879,7 +879,12 @@
       "query_required_error": "question type is required!",
       "message_required_error": "message is required!",
       "tab1": "Suggestion",
-      "tab2": "Complaint"
+      "tab2": "Complaint",
+      "success_title": "Success",
+      "success_desc": "Form Submitted Successfully",
+      "close_btn": "Close",
+      "choose_file": "Choose File",
+      "no_file_select": "No file chosen"
     }
   },
   "awards": {

@@ -1,20 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import ContactForm from "./ContactForm";
-import SuggestionForm from "./SuggestionForm";
 import { useTranslations, useLocale } from "next-intl";
+import ComplaintForm from "./ComplaintForm";
+import ContactForm from "./ContactForm";
 
 const FormTabs = () => {
-  const [activeTab, setActiveTab] = useState("complaint");
+  const [activeTab, setActiveTab] = useState("suggestion");
   const locale = useLocale();
   const t = useTranslations("contact.contactForm");
 
   const renderForm = () => {
     if (activeTab === "complaint") {
-      return <ContactForm />;
+      return <ComplaintForm />;
     }
-    return <SuggestionForm />;
+    return <ContactForm />;
   };
 
   return (
@@ -48,7 +48,7 @@ const FormTabs = () => {
             {t("tab2")}
           </button>
         </div>
-        <div className="contact_form_wrapper px-4 pt-10 md:px-12 pb-10 bg-white relative rounded-es-2xl rounded-ee-2xl">
+        <div className="contact_form_wrapper px-4 pt-10 md:px-10 pb-10 bg-white relative rounded-es-2xl rounded-ee-2xl">
           {renderForm()}
         </div>
       </div>
