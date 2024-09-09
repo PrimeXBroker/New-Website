@@ -3,7 +3,6 @@ import { NextUIProvider } from "@nextui-org/react";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
 import { getMessages } from "next-intl/server";
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import localFont from "@next/font/local";
 import Cookies from "@/components/Cookies";
 import "aos/dist/aos.css";
@@ -15,6 +14,8 @@ import FallbackLoader from "@/components/LoadingSpinner";
 import Head from "next/head";
 import Script from "next/script";
 import GoogleAnalytics from "@/utilities/GoogleAnalytics";
+import DesktopHeader from "@/components/DesktopHeader";
+import MobileHeader from "@/components/MobileHeader";
 
 const montserrat = localFont({
   src: [
@@ -136,7 +137,8 @@ export default async function layout({ children, params: { locale } }) {
           <div dir={direction}>
             <NextUIProvider>
               <NextIntlClientProvider messages={messages}>
-                <Header locale={locale} />
+                <DesktopHeader locale={locale} />
+                <MobileHeader locale={locale} />
                 {children}
                 <Toaster
                   toastOptions={{

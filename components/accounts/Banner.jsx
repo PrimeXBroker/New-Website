@@ -16,9 +16,9 @@ const Banner = () => {
   };
 
   return (
-    <section>
+    <section className="">
       <div
-        className={`relative lg:h-[600px] bg-no-repeat bg-cover bg-center ${
+        className={`relative lg:h-[600px] bg-no-repeat bg-cover bg-center pt-[60px] lg:pt-0 ${
           locale === "ar"
             ? "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/acc-type-header-ar.webp)]"
             : "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/acc-type-header.webp)]"

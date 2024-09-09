@@ -8,7 +8,7 @@ const Banner = () => {
   const t = useTranslations("footer.termsCondition");
 
   return (
-    <section className={`bg-secondary lg:h-screen`}>
+    <section className={`bg-secondary lg:h-screen pt-[60px] lg:pt-0`}>
       <div className="container flex flex-col md:flex-row justify-evenly gap-10 items-center py-12">
         <div className="md:w-[40%]">
           <h1

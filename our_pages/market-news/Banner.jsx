@@ -43,7 +43,7 @@ const Banner = ({ title }) => {
 
   return (
     <section
-      className={`bg-cover bg-no-repeat bg-center md:bg-center ${backgroundClass}`}
+      className={`bg-cover bg-no-repeat bg-center md:bg-center pt-[60px] lg:pt-0 ${backgroundClass}`}
     >
       <div className="container flex flex-col md:flex-row justify-start items-center py-12 lg:md:text-left text-center h-[50vh]">
         <div className="w-[60%]">

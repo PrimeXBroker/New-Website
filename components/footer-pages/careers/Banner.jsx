@@ -8,7 +8,7 @@ const Banner = () => {
 
   return (
     <section className="">
-      <div className="bg-secondary">
+      <div className="bg-secondary pt-[50px] lg:pt-0">
         <div className="container flex flex-col md:flex-row justify-around py-16">
           <div className="md:max-w-2xl flex flex-col justify-center items-center md:items-start gap-6 md:w-[70%]">
             <h1

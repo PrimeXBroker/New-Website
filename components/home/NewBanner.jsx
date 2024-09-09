@@ -39,7 +39,7 @@ const NewBanner = () => {
     },
   ];
   return (
-    <section className="relative sm:h-screen lg:h-[92vh]">
+    <section className="relative sm:h-screen lg:h-[92vh] pt-[38px] sm:pt-[71px] lg:pt-0">
       <div
         className={`container h-[700px] sm:h-screen flex flex-col pt-14 sm:pt-5 z-10 ${
           locale === "ar" ? "lg:pt-[6rem]" : "lg:pt-[10rem]"

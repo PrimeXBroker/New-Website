@@ -11,7 +11,7 @@ const Banner = ({ setActive }) => {
 
   return (
     <section className="">
-      <div className="bg-secondary">
+      <div className="bg-secondary pt-[40px] lg:pt-0">
         <div className="container flex flex-col md:flex-row justify-around py-16">
           <div className="max-w-2xl flex flex-col justify-center items-start gap-6 md:w-[70%]">
             <h1

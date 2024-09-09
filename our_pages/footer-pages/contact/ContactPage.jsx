@@ -1,6 +1,6 @@
 import ContactBanner from "@/components/footer-pages/contact/Banner";
 import HaveQuestion from "@/components/footer-pages/contact/HaveQuestion";
-// import FormTabs from "@/components/forms/FormTabs";
+import FormTabs from "@/components/forms/FormTabs";
 import LocationContextProvider from "@/context/location-context";
 
 const ContactPage = () => {
@@ -9,7 +9,7 @@ const ContactPage = () => {
       <LocationContextProvider>
         <ContactBanner />
         <HaveQuestion />
-        {/* <FormTabs /> */}
+        <FormTabs />
       </LocationContextProvider>
     </>
   );
