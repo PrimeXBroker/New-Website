@@ -1,5 +1,6 @@
 import Mt5PlatformPage from "@/our_pages/platform/mt5-platform/Mt5PlatformPage";
 import { createTranslator } from "next-intl";
+import Script from "next/script";
 
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../../messages/${locale}.json`))
@@ -37,6 +38,37 @@ export async function generateMetadata({ params: { locale } }) {
 const Mt5Platform = () => {
   return (
     <>
+      <Script
+        type="application/ld+json"
+        id="breadcrumb-schema"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.primexcapital.com/en"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Platform",
+                "item": "https://www.primexcapital.com/en/platform"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "MetaTrader 5",
+                "item": "https://www.primexcapital.com/en/platform/mt5-platform"
+              }
+            ]
+          }),
+        }}
+      />
       <Mt5PlatformPage />
     </>
   );

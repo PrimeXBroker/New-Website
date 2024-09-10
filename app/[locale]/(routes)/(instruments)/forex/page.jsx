@@ -82,6 +82,37 @@ const Forex = () => {
           }),
         }}
       />
+      <Script
+        type="application/ld+json"
+        id="breadcrumb-schema"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.primexcapital.com/en"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Trading",
+                "item": "https://www.primexcapital.com/en/trading"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Forex",
+                "item": "https://www.primexcapital.com/en/forex"
+              }
+            ]
+          }),
+        }}
+      />
       <ForexPage />
     </>
   );
