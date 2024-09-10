@@ -5,7 +5,7 @@ import LocaleLink from "./LocaleLink";
 import { useTranslations } from "next-intl";
 import Logo from "@/public/images/logos/logo_black_v2.2.svg";
 import Image from "next/image";
-import { FaBars, FaChevronDown, FaChevronUp, FaTimes } from "react-icons/fa";
+import { FaBars, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { usePathname, useRouter } from "next/navigation";
 import { RxCross1 } from "react-icons/rx";
 
@@ -17,7 +17,7 @@ const MobileHeader = ({ locale }) => {
   const pathname = usePathname();
   const pathnameWithoutLocale = pathname.replace(`/${locale}`, "");
   const [buttonText, setButtonText] = useState(
-    locale === "ar" ? "عربي" : "English"
+    locale === "ar" ? "عربي" : locale === "cn" ? "中文" : "English"
   );
 
   const toggleDrawer = () => {
@@ -45,10 +45,11 @@ const MobileHeader = ({ locale }) => {
   };
 
   useEffect(() => {
-    const language = locale === "ar" ? "عربي" : "English";
+    const language =
+      locale === "ar" ? "عربي" : locale === "cn" ? "中文" : "English";
     localStorage.setItem("language", language);
     setButtonText(language);
-  }, []);
+  }, [locale]);
 
   return (
     <header className="container w-full z-50 transition-all duration-300 block lg:hidden fixed top-0 left-0">
@@ -294,6 +295,20 @@ const MobileHeader = ({ locale }) => {
                 >
                   عربي
                 </Link>
+                <Link
+                  href={
+                    currentLocale === "cn"
+                      ? `/${currentLocale}/${restOfPath}`
+                      : `/cn/${restOfPath}`
+                  }
+                  onClick={() => {
+                    handleClick("中文");
+                    toggleDrawer();
+                  }}
+                  className="block text-black text-base pt-[16px]"
+                >
+                  中文
+                </Link>
               </div>
             )}
           </div>
@@ -301,7 +316,13 @@ const MobileHeader = ({ locale }) => {
         <div className="flex flex-col items-center mt-6 mb-4">
           <button
             onClick={() =>
-              window.open(`https://client.primexbroker.com/${locale}/login`)
+              window.open(
+                `${
+                  locale === "ar"
+                    ? "https://client.primexbroker.com/ar/login"
+                    : "https://client.primexbroker.com/en/login"
+                }`
+              )
             }
             className="w-[90%] mb-2 py-3 text-black bg-transparent border-2 border-secondary hover:bg-secondary hover:text-primary rounded-full font-semibold"
           >
@@ -309,7 +330,13 @@ const MobileHeader = ({ locale }) => {
           </button>
           <button
             onClick={() =>
-              window.open(`https://client.primexbroker.com/${locale}/register`)
+              window.open(
+                `${
+                  locale === "ar"
+                    ? "https://client.primexbroker.com/ar/register"
+                    : "https://client.primexbroker.com/en/register"
+                }`
+              )
             }
             className="w-[90%] py-3 text-primary bg-secondary border-2 border-secondary rounded-full font-semibold"
           >

@@ -14,10 +14,12 @@ const DesktopHeader = ({ locale }) => {
   const pathnameWithoutLocale = pathname.replace(`/${locale}`, "");
   const [isSticky, setIsSticky] = useState(false);
   const [language, setLanguage] = useState({
-    text: locale === "ar" ? "عربي" : "English",
+    text: locale === "ar" ? "عربي" : locale === "cn" ? "中文" : "English",
     flag:
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
+        : locale === "cn"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
         : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
   });
   const router = useRouter();
@@ -75,10 +77,13 @@ const DesktopHeader = ({ locale }) => {
   };
 
   useEffect(() => {
-    const text = locale === "ar" ? "عربي" : "English";
+    const text =
+      locale === "ar" ? "عربي" : locale === "cn" ? "中文" : "English";
     const flag =
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
+        : locale === "cn"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
         : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg";
     const initialLanguage = { text, flag };
     setLanguage(initialLanguage);
@@ -398,6 +403,32 @@ const DesktopHeader = ({ locale }) => {
                       <span className="ml-[5px]">عربي</span>
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      href={
+                        currentLocale === "cn"
+                          ? `/${currentLocale}/${restOfPath}`
+                          : `/cn/${restOfPath}`
+                      }
+                      onClick={() =>
+                        handleClick(
+                          "中文",
+                          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
+                        )
+                      }
+                      className="px-4 py-2 text-black text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
+                      dir="ltr"
+                    >
+                      <Image
+                        unoptimized={true}
+                        width="15"
+                        height="15"
+                        src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
+                        alt="chinese flag"
+                      />
+                      <span className="ml-[5px]">中文</span>
+                    </Link>
+                  </li>
                 </ul>
               )}
             </li>
@@ -406,7 +437,13 @@ const DesktopHeader = ({ locale }) => {
         <div className="flex gap-2">
           <button
             onClick={() =>
-              window.open(`https://client.primexbroker.com/${locale}/login`)
+              window.open(
+                `${
+                  locale === "ar"
+                    ? "https://client.primexbroker.com/ar/login"
+                    : "https://client.primexbroker.com/en/login"
+                }`
+              )
             }
             className={`group ${
               locale === "ar" ? "w-[140px]" : "w-[120px]"
@@ -419,7 +456,13 @@ const DesktopHeader = ({ locale }) => {
           </button>
           <button
             onClick={() =>
-              window.open(`https://client.primexbroker.com/${locale}/register`)
+              window.open(
+                `${
+                  locale === "ar"
+                    ? "https://client.primexbroker.com/ar/register"
+                    : "https://client.primexbroker.com/en/register"
+                }`
+              )
             }
             className={`group ${
               locale === "ar" ? "w-[140px]" : "w-[120px]"
