@@ -34,7 +34,7 @@ const Banner = () => {
       />
 
       {/* Content */}
-      <div className="relative pt-[90px] lg:pt-12 pb-4 sm:pb-12">
+      <div className="relative pt-[90px] lg:pt-24 pb-4 sm:pb-12">
         <div className="container mx-auto lg:px-10 xl:px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center h-full">
             <div className="lg:col-span-6 flex flex-col justify-center">

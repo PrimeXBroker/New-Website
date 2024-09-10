@@ -7,7 +7,7 @@ const AboutBanner = () => {
   const t = useTranslations("about.hero");
 
   return (
-    <section className={`bg-secondary pt-[60px] lg:pt-0`}>
+    <section className={`bg-secondary pt-[60px] lg:pt-12`}>
       <div className="container flex flex-col md:flex-row justify-evenly gap-10 items-center py-12">
         <div className="md:w-[45%]">
           <h1

@@ -1,7 +1,7 @@
 "use client";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
-const Widget = () => {
+const CompetitionWidget = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src =
@@ -14,25 +14,24 @@ const Widget = () => {
   }, []);
 
   return (
-    <section className="container mb-20">
+    <section className="container mb-12">
       <iframe
         id="widgetFrame"
         style={{ minWidth: "100%" }}
-        src="https://ratings.primexcapital.com/widgets/ratings?widgetKey=TOM-SEP&theme=light&lang=en"
+        src="https://ratings.primexcapital.com/widgets/ratings?widgetKey=fund-oct&theme=light&lang=en"
         scrolling="no"
         frameBorder="0"
         onLoad={() => {
-          window.iFrameResize(
-            {
-              heightCalculationMethod: "max",
-              checkOrigin: false,
-            },
-            "#widgetFrame"
-          );
+          if (window.iFrameResize) {
+            window.iFrameResize(
+              { heightCalculationMethod: "max", checkOrigin: false },
+              "#widgetFrame"
+            );
+          }
         }}
       ></iframe>
     </section>
   );
 };
 
-export default Widget;
+export default CompetitionWidget;

@@ -8,7 +8,7 @@ const ContactBanner = () => {
 
   return (
     <section
-      className={`bg-secondary bg-[url("https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact-us/Main-Banner-Background.webp")] md:h-[373px] h-auto  bg-no-repeat bg-cover pt-[60px] lg:pt-0`}
+      className={`bg-secondary bg-[url("https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact-us/Main-Banner-Background.webp")] md:h-[431px] h-auto  bg-no-repeat bg-cover pt-[60px] lg:pt-18`}
     >
       <div className="container pt-10 md:pt-0 flex flex-col md:flex-row justify-around items-center">
         <div className="md:w-[45%]">

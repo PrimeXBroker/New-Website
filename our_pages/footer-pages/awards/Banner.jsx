@@ -8,7 +8,7 @@ const AwardsBanner = () => {
   return (
     <>
       <Banner
-        background="bg-accent pt-[60px] lg:pt-0"
+        background="bg-accent pt-[60px] lg:pt-18"
         title={t("title")}
         description={t("description")}
         imgUrl="https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/Banner.webp"

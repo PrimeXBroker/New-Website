@@ -832,7 +832,7 @@
       "help_li4_title": "电话：",
       "help_li4_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
       "help_li5_title": "南非：",
-      "help_li5_desc": "第一楼，Katherine和West大楼，114 West Street，Sandown，Sandton 2196，南非，套房8号。",
+      "help_li5_desc": "第一楼，Katherine和West大楼，114 West Street，Sandown，Sandton，南非，套房8号。",
       "help_li7_title": "阿拉伯联合酋长国：",
       "help_li7_desc": "迪拜商业湾，Westburry Tower 1，2401办公室，阿拉伯联合酋长国。"
     },
@@ -1543,7 +1543,7 @@
     },
     "Location": {
       "title_part5": "位置",
-      "title_part5_link1": "南非总部：South Africa HQ: Suit no 8 , First floor, Katherine and West building ,114 West Street, Sandown ,Sandton 2196, South Africa.",
+      "title_part5_link1": "南非总部：South Africa HQ: Suite #8, 1st Floor, Katherine & West Building, 114 West Street, Sandown, Sandton, South Africa.",
       "title_part5_link2": "阿联酋代表处：Office 2401, Westburry Tower 1, Business Bay, Dubai, UAE."
     },
     "getStarted": {
@@ -1653,6 +1653,70 @@
       "answer_4": "不会，提取利润不会影响您的进展。比赛中的排名仅基于您的交易表现。",
       "question_5": "我可以使用我的礼物账户参加比赛吗？",
       "answer_5": "不可以，您可以使用标准账户、窄差账户和零点账户参加比赛。"
+    }
+  },
+  "demoAccount": {
+    "banner": {
+      "title": "无畏交易，自由赢取",
+      "subtitle_p1": "最期待的",
+      "subtitle_p2": "模拟账户竞赛"
+    },
+    "fundedAccount": {
+      "title1": "交易至顶峰，赢得",
+      "title2": "$10,000",
+      "title3": "资金账户！",
+      "step1_count": "01",
+      "step1_desc": "体验真实交易的刺激",
+      "step2_count": "02",
+      "step2_desc": "在市场中测试您的策略",
+      "step3_count": "03",
+      "step3_desc": "赢取令人兴奋的奖励"
+    },
+    "signup": {
+      "title": "今天注册模拟账户并赢取真实奖品。",
+      "desc-p1": "无风险交易，赢取价值",
+      "desc_p2": "$10,000 的资金账户。",
+      "participate_title": "谁可以参加？",
+      "participate_desc": "每个人都可以参加比赛。您只需开设一个模拟账户并开始交易。",
+      "participate_tc": "条款和条件"
+    },
+    "faq": {
+      "title": "常见问题",
+      "question_1": "谁可以参加资金账户竞赛？",
+      "answer_1": "所有人都可以参加。您必须拥有一个模拟账户。",
+      "question_2": "我如何参加比赛？",
+      "answer_2": "要参加比赛，请在PrimeX Capital开设一个模拟账户并开始交易。",
+      "question_3": "比赛要求是什么？",
+      "answer_3": "要获胜，您必须在30天的比赛期间内进入利润最高的前10名。",
+      "question_4": "允许的最大回撤是多少？",
+      "answer_4": "比赛中允许的最大回撤为30%。",
+      "question_5": "提取我的利润会影响我在比赛中的进展吗？",
+      "answer_5": "您可以提取利润，但这会影响您的回撤百分比。"
+    },
+    "participateForm": {
+      "title": "您可以参加",
+      "step1_count": "1",
+      "step1_p1": "开设一个",
+      "step1_p2": "模拟账户",
+      "step2_count": "2",
+      "step2_p1": "开始",
+      "step2_p2": "交易",
+      "first_name": "名字",
+      "last_name": "姓氏",
+      "email": "电子邮件地址",
+      "country": "国家",
+      "submit_btn": "提交",
+      "first_name_validation_error": "名字应仅包含字母字符。",
+      "first_name_required_error": "名字是必需的！",
+      "last_name_validation_error": "姓氏应仅包含字母字符。",
+      "last_name_required_error": "姓氏是必需的！",
+      "email_validation_error": "无效的电子邮件地址",
+      "email_required_error": "电子邮件是必需的！",
+      "phone_required_error": "电话号码是必需的",
+      "country_required_error": "国家是必需的！",
+      "success_title": "成功",
+      "success_desc": "表格提交成功",
+      "close_btn": "关闭"
     }
   }
 }

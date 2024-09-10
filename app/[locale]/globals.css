@@ -870,3 +870,8 @@
 .PhoneInputCountry {
   gap: 5px;
 }
+
+.competition-phone input {
+  background-color: transparent !important;
+  color: #fff !important;
+}

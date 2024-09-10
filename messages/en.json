@@ -832,7 +832,7 @@
       "help_li4_title": "Phone:",
       "help_li4_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
       "help_li5_title": "South Africa:",
-      "help_li5_desc": "Suit no 8 , First floor, Katherine and West building, 114 West Street, Sandown, Sandton 2196, South Africa.",
+      "help_li5_desc": "Suite #8, 1st Floor, Katherine & West Building, 114 West Street, Sandown, Sandton, South Africa.",
       "help_li7_title": "United Arab Emirates:",
       "help_li7_desc": "Office 2401, Westburry Tower 1, Business Bay, Dubai, United Arab Emirates."
     },
@@ -1542,7 +1542,7 @@
     },
     "Location": {
       "title_part5": "Location",
-      "title_part5_link1": "South Africa HQ: Suit no 8 , First floor, Katherine and West building ,114 West Street, Sandown ,Sandton 2196, South Africa.",
+      "title_part5_link1": "South Africa HQ: Suite #8, 1st Floor, Katherine & West Building, 114 West Street, Sandown, Sandton, South Africa.",
       "title_part5_link2": "UAE Rep. Office: Office 2401, Westburry Tower 1, Business Bay, Dubai, UAE."
     },
     "getStarted": {
@@ -1652,6 +1652,70 @@
       "answer_4": "No, withdrawing your profits will not affect your progress. Your standing in the competition is based solely on your trading performance.",
       "question_5": "Can I participate in the competition with my gift account? ",
       "answer_5": "No, you can participate with standard, narrow and raw accounts."
+    }
+  },
+  "demoAccount": {
+    "banner": {
+      "title": "Trade Fearlessly, Win Freely",
+      "subtitle_p1": "With Most Awaited ",
+      "subtitle_p2": "Demo Account Competition"
+    },
+    "fundedAccount": {
+      "title1": "Trade to the top and win a",
+      "title2": "$10,000",
+      "title3": "Funded Account!",
+      "step1_count": "01",
+      "step1_desc": "Experience the Thrill of Real Trading",
+      "step2_count": "02",
+      "step2_desc": "Test your Strategies in the Market",
+      "step3_count": "03",
+      "step3_desc": "Win Exciting Rewards"
+    },
+    "signup": {
+      "title": "Sign Up for a Demo Account Today and Win a Real Prize.",
+      "desc-p1": "Trade riskless and win a funded account worth ",
+      "desc_p2": "$10,000.",
+      "participate_title": "Who can Participate?",
+      "participate_desc": "Everyone can participate in the competition. All you need is to open a demo account and start trading. ",
+      "participate_tc": "Terms and Conditions"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "question_1": "Who can participate in the funded account competition?",
+      "answer_1": "All can participate. It is mandatory for you to have a demo account.",
+      "question_2": "How do I enter the competition?",
+      "answer_2": "To enter, open a demo account with PrimeX Capital and start trading.",
+      "question_3": "What are the competition requirements? ",
+      "answer_3": "To win, you must be in the top 10 with the highest percentage of profits within the 30-day competition period",
+      "question_4": "What is the maximum drawdown allowed?",
+      "answer_4": "The maximum drawdown allowed for the competition is 30 percent.",
+      "question_5": "Will withdrawing my profits affect my progress in the competition?",
+      "answer_5": "You can withdraw your profits, but this will affect your drawdown percentage."
+    },
+    "participateForm": {
+      "title": "You can Participate",
+      "step1_count": "1",
+      "step1_p1": "Open a",
+      "step1_p2": "Demo Account",
+      "step2_count": "2",
+      "step2_p1": "Start",
+      "step2_p2": "Trading",
+      "first_name": "First Name",
+      "last_name": "Last name",
+      "email": "Email Address",
+      "country": "Country",
+      "submit_btn": "Submit",
+      "first_name_validation_error": "first name can only contain letters.",
+      "first_name_required_error": "first name is required!",
+      "last_name_validation_error": "last name can only contain letters.",
+      "last_name_required_error": "last name is required!",
+      "email_validation_error": "Invalid email address",
+      "email_required_error": "email is required!",
+      "phone_required_error": "phone is required",
+      "country_required_error": "country is required!",
+      "success_title": "Success",
+      "success_desc": "Form Submitted Successfully",
+      "close_btn": "Close"
     }
   }
 }

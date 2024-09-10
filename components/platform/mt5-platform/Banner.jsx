@@ -8,7 +8,7 @@ const Banner = () => {
   const t = useTranslations("metaTrader5.hero");
 
   return (
-    <section className="relative pt-[60px] lg:pt-0">
+    <section className="relative pt-[60px] lg:pt-12">
       {/* Background Image */}
       <Image
         src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/background_mt5.webp"
