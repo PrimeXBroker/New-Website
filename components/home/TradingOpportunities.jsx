@@ -13,14 +13,14 @@ const TradingOpportunities = () => {
 
   return (
     <section className="pt-12 bg-accent relative">
-      <h1
+      <h2
         className="sectionHeading px-8 md:px-0"
         data-aos-easing="ease-out"
         data-aos-duration={1000}
         data-aos="slide-up"
       >
         {t("trading_opportunities_title")}
-      </h1>
+      </h2>
       <p
         className="sectionPara text-center py-4 px-8"
         data-aos-easing="ease-out"

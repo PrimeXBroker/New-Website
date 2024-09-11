@@ -29,7 +29,7 @@ const AccountTypes1 = () => {
   ];
   return (
     <section className="container py-12">
-      <h1 className="sectionHeading">{t("account_types_title")}</h1>
+      <h2 className="sectionHeading">{t("account_types_title")}</h2>
       <div className="grid justify-center place-items-center gap-6 grid-cols-1 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-4 pt-12">
         {accountTypes.map((account, index) => (
           <div key={index} className="cardBox">

@@ -299,7 +299,7 @@ const DesktopHeader = ({ locale }) => {
                 </svg>
               </button>
               {activeDropdown === 4 && (
-                <ul className="absolute top-full mt-[4px] bg-[#ffffffdb] shadow-lg p-[10px] min-w-[190px] rounded-[6px]">
+                <ul className="absolute top-full mt-[4px] bg-[#ffffffdb] shadow-lg p-[10px] min-w-[250px] rounded-[6px]">
                   <li>
                     <LocaleLink
                       href="/bonus"
@@ -316,6 +316,15 @@ const DesktopHeader = ({ locale }) => {
                       className="block px-4 py-2 text-black text-[.8em] hover:bg-primary rounded-[6px]"
                     >
                       {t("tradetowin")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
+                      href="/funded-account-competition"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-black text-[.8em] hover:bg-primary rounded-[6px]"
+                    >
+                      {t("funded_account_competition")}
                     </LocaleLink>
                   </li>
                 </ul>

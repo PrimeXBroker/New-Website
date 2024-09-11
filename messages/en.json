@@ -9,6 +9,7 @@
     "academy": "Academy",
     "promotion": "Promotions",
     "tradetowin": "Trader of the Month",
+    "funded_account_competition": "Funded Account Competition",
     "deposit": "20% Bonus",
     "login": "Login",
     "register": "Register",
@@ -1658,7 +1659,7 @@
     "banner": {
       "title": "Trade Fearlessly, Win Freely",
       "subtitle_p1": "With Most Awaited ",
-      "subtitle_p2": "Demo Account Competition"
+      "subtitle_p2": "Funded Account Competition"
     },
     "fundedAccount": {
       "title1": "Trade to the top and win a",
@@ -1693,13 +1694,14 @@
       "answer_5": "You can withdraw your profits, but this will affect your drawdown percentage."
     },
     "participateForm": {
-      "title": "You can Participate",
+      "title": "Start in 2 Easy Steps",
       "step1_count": "1",
-      "step1_p1": "Open a",
-      "step1_p2": "Demo Account",
+      "step1_p1": "Open a Demo",
+      "step1_p2": "Competition Account",
       "step2_count": "2",
       "step2_p1": "Start",
       "step2_p2": "Trading",
+      "start_now_btn": "Start Now",
       "first_name": "First Name",
       "last_name": "Last name",
       "email": "Email Address",

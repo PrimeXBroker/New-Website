@@ -91,7 +91,8 @@ const SignUp = () => {
               {t("participate_desc")}
               <span className="ml-1">
                 <Link
-                  href=""
+                  href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/Funded_Account_Competition.pdf"
+                  target="_blank"
                   className="font-semibold underline hover:text-primary"
                 >
                   {t("participate_tc")}

@@ -1,15 +1,28 @@
 "use client";
 import React from "react";
-import CompetitionForm from "./CompetitionForm";
 import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
+import Image from "next/image";
 
 const ParticipateForm = () => {
   const locale = useLocale();
   const t = useTranslations("demoAccount.participateForm");
   return (
-    <section className="bg-accent py-12">
+    <section className="bg-accent py-20">
       <div className="container mx-auto">
         <div className="grid grid-cols-12 items-center">
+          <div className="col-span-12 sm:col-start-3 lg:col-start-0 sm:col-span-8 lg:col-span-6 mb-8 lg:mb-0">
+            <div>
+              <Image
+                unoptimized={true}
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/demo-account/demo-mobile.webp"
+                width="350"
+                height="300"
+                alt="banner Image"
+                className="w-[400px] mx-auto"
+              />
+            </div>
+          </div>
           <div className="col-span-12 sm:col-start-2 lg:col-start-0 sm:col-span-10 lg:col-span-6 flex flex-col items-center justify-center">
             <h1 className="text-secondary text-3xl font-semibold text-center mb-8">
               {t("title")}
@@ -41,9 +54,19 @@ const ParticipateForm = () => {
                 </p>
               </div>
             </div>
-          </div>
-          <div className="col-span-12 sm:col-start-3 lg:col-start-0 sm:col-span-8 lg:col-span-6 mt-8 lg:mt-0">
-            <CompetitionForm />
+            <Link
+              href={
+                locale === "ar"
+                  ? "https://client.primexbroker.com/ar/register"
+                  : "https://client.primexbroker.com/en/register"
+              }
+              className="text-sm md:text-[16px] block w-[172px] py-3 rounded-full shadow-xl
+              bg-secondary text-primary border-3 border-white hover:bg-accent
+              hover:text-secondary text-center transition-all duration-300 hover:border-secondary
+              hover:scale-105 mt-8 ml-[42px]"
+            >
+              {t("start_now_btn")}
+            </Link>
           </div>
         </div>
       </div>
