@@ -38,7 +38,7 @@ export async function generateMetadata({ params: { locale } }) {
 const page = () => {
   return (
     <>
-          <Script
+      <Script
         type="application/ld+json"
         id="breadcrumb-schema"
         strategy="afterInteractive"
@@ -46,27 +46,33 @@ const page = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
-            "itemListElement": [
+            itemListElement: [
               {
                 "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.primexcapital.com/en"
+                position: 1,
+                name: "Home",
+                item: "https://www.primexcapital.com/en",
               },
               {
                 "@type": "ListItem",
-                "position": 2,
-                "name": "Partners",
-                "item": "https://www.primexcapital.com/en/partners"
+                position: 2,
+                name: "Partners",
+                item: "https://www.primexcapital.com/en/partners",
               },
               {
                 "@type": "ListItem",
-                "position": 3,
-                "name": "IB Program",
-                "item": "https://www.primexcapital.com/en/ib-program"
-              }
-            ]
+                position: 3,
+                name: "IB Program",
+                item: "https://www.primexcapital.com/en/ib-program",
+              },
+            ],
           }),
+        }}
+      />
+      <Script
+        type="text/javascript"
+        dangerouslySetInnerHTML={{
+          __html: `window.lintrk('track', { conversion_id: 18644578 });`,
         }}
       />
       <IbPage />
