@@ -13,10 +13,16 @@ const FundedAccount = () => {
       <div className="container">
         <h2 className="text-secondary text-lg sm:text-xl lg:text-2xl font-semibold text-center pb-16">
           {t("title1")} <br />
-          <span className="text-3xl sm:text-5xl lg:text-6xl block my-1">
+          <span
+            className="text-3xl sm:text-5xl lg:text-6xl block my-1 bg-clip-text text-transparent bg-gradient-to-r from-[#000000] from-40% via-55% via-[#ffd000] to-[#ffd000] to-100%"
+            style={{ fontWeight: "800" }}
+          >
             {t("title2")}
           </span>
-          <span className="text-3xl sm:text-5xl lg:text-6xl">
+          <span
+            className="text-3xl sm:text-5xl lg:text-6xl"
+            style={{ fontWeight: "800" }}
+          >
             {t("title3")}
           </span>
         </h2>
