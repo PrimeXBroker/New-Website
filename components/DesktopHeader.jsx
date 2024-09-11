@@ -318,7 +318,7 @@ const DesktopHeader = ({ locale }) => {
                       {t("tradetowin")}
                     </LocaleLink>
                   </li>
-                  <li>
+                  {/* <li>
                     <LocaleLink
                       href="/funded-account-competition"
                       onClick={closeDropdown}
@@ -326,7 +326,7 @@ const DesktopHeader = ({ locale }) => {
                     >
                       {t("funded_account_competition")}
                     </LocaleLink>
-                  </li>
+                  </li> */}
                 </ul>
               )}
             </li>
