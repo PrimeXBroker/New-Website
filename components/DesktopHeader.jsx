@@ -299,7 +299,7 @@ const DesktopHeader = ({ locale }) => {
                 </svg>
               </button>
               {activeDropdown === 4 && (
-                <ul className="absolute top-full mt-[4px] bg-[#ffffffdb] shadow-lg p-[10px] min-w-[250px] rounded-[6px]">
+                <ul className="absolute top-full mt-[4px] bg-[#ffffffdb] shadow-lg p-[10px] min-w-[190px] rounded-[6px]">
                   <li>
                     <LocaleLink
                       href="/bonus"
