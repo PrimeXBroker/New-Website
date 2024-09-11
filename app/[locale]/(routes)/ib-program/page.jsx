@@ -1,6 +1,7 @@
 import IbPage from "@/our_pages/ib_program/IbPage";
 import { createTranslator } from "next-intl";
 import Script from "next/script";
+import Head from "next/head";
 
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../messages/${locale}.json`))
@@ -38,6 +39,15 @@ export async function generateMetadata({ params: { locale } }) {
 const page = () => {
   return (
     <>
+      <Head>
+        <Script
+          id="linkedin-tracking"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.lintrk('track', { conversion_id: 18644578 });`,
+          }}
+        />
+      </Head>
       <Script
         type="application/ld+json"
         id="breadcrumb-schema"
@@ -67,12 +77,6 @@ const page = () => {
               },
             ],
           }),
-        }}
-      />
-      <Script
-        type="text/javascript"
-        dangerouslySetInnerHTML={{
-          __html: `window.lintrk('track', { conversion_id: 18644578 });`,
         }}
       />
       <IbPage />
