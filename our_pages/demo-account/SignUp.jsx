@@ -35,7 +35,7 @@ const SignUp = () => {
             />
           </div>
           <div className="col-span-12 md:col-span-7 lg:col-span-6 flex flex-col md:pt-[60px] ">
-            <h1
+            <h2
               className={`text-secondary text-2xl md:text-3xl font-semibold mb-5 ${
                 locale === "ar"
                   ? "text-center md:text-right"
@@ -44,7 +44,7 @@ const SignUp = () => {
               style={{ letterSpacing: "1px" }}
             >
               {t("title")}
-            </h1>
+            </h2>
             <p
               className={`text-secondary md:max-w-xl  text-base font-[500] ${
                 locale === "ar"
@@ -71,7 +71,7 @@ const SignUp = () => {
       <section className="container bg-accent ps-0 md:ps-14 mb-8 py-4">
         <div className="grid grid-cols-12 pb-8 md:pt-0 md:pb-0">
           <div className="col-span-12 flex flex-col justify-center">
-            <h1
+            <h2
               className={`text-secondary text-lg font-semibold ${
                 locale === "ar"
                   ? "text-center md:text-right"
@@ -80,7 +80,7 @@ const SignUp = () => {
               style={{ letterSpacing: "1px" }}
             >
               {t("participate_title")}
-            </h1>
+            </h2>
             <p
               className={`text-secondary text-base font-[500] ${
                 locale === "ar"

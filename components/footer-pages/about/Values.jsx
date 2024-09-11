@@ -54,9 +54,9 @@ const Values = () => {
   };
   return (
     <section className="container pt-6 pb-12">
-      <h1 className="text-center text-secondary font-bold text-3xl pb-8 md:pb-12">
+      <h2 className="text-center text-secondary font-bold text-3xl pb-8 md:pb-12">
         {t("title")}
-      </h1>
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 items-center justify-center">
         {valuesCards.map((card, index) => (
           <div
@@ -78,9 +78,9 @@ const Values = () => {
                   : "translate-y-0"
               } `}
             />
-            <h1 className="font-semibold text-secondary text-xl mt-3 mb-2">
+            <h3 className="font-semibold text-secondary text-xl mt-3 mb-2">
               {card.title}
-            </h1>
+            </h3>
             <p className="text-secondary text-center text-sm">
               {card.description}
             </p>

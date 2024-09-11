@@ -30,7 +30,7 @@ const Webinars = ({ active, setActive }) => {
         <div className="grid grid-cols-12">
           <div className="col-span-12 lg:col-span-7 flex flex-col items-center lg:items-start">
             <div className="lg:mt-10">
-              <h1
+              <h2
                 className={`sectionHeading text-2xl sm:text-3xl lg:text-5xl text-primary font-semibold pb-4 ${
                   locale === "ar"
                     ? "text-center lg:text-right"
@@ -38,7 +38,7 @@ const Webinars = ({ active, setActive }) => {
                 }`}
               >
                 {t("title")}
-              </h1>
+              </h2>
             </div>
             {upcoming.length > 0 ? (
               <>

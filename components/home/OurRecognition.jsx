@@ -20,7 +20,7 @@ const OurRecognition = () => {
   const t = useTranslations("home.ourRecognition");
   return (
     <section className="py-12">
-      <h1 className="sectionHeading">{t("our_recognition_title")}</h1>
+      <h2 className="sectionHeading">{t("our_recognition_title")}</h2>
       <p className="sectionPara text-center">{t("our_recognition_desc")}</p>
       <div className="mt-12">
         <Swiper

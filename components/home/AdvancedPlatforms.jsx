@@ -218,9 +218,9 @@ const AdvancedPlatforms = () => {
     // </section>
 
     <section className="py-12 bg-secondary">
-      <h1 className="text-white text-lg md:text-3xl font-semibold text-center pb-12">
+      <h2 className="text-white text-lg md:text-3xl font-semibold text-center pb-12">
         {t("title")}
-      </h1>
+      </h2>
       <div className="flex flex-col md:flex-row justify-evenly items-center container">
         <div className="grid grid-cols-2 md:grid-cols-1 flex-wrap justify-center gap-8 md:gap-4">
           {iconsLeftList.map((item, index) => (

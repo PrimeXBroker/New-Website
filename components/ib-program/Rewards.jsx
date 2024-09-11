@@ -9,7 +9,7 @@ const Rewards = () => {
   return (
     <section>
       <div className="container">
-        <h1 className="sectionHeading">{t("rewards.title")}</h1>
+        <h2 className="sectionHeading">{t("rewards.title")}</h2>
         <div className="grid grid-cols-12 mt-16 items-center">
           <div className="col-span-12 sm:col-start-3 sm:col-span-8 md:col-span-6">
             <h2

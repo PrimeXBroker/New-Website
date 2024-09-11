@@ -11,7 +11,7 @@ const TermsCondition = () => {
     <section className="container my-20">
       <div className="bg-accent flex p-10 flex-col md:flex-row rounded-3xl">
         <div className="md:w-[70%] w-full mb-5 md:mb-0">
-          <h1
+          <h2
             className={`sectionHeading text-3xl text-secondary font-semibold ${
               locale === "ar"
                 ? "text-center md:text-right"
@@ -19,7 +19,7 @@ const TermsCondition = () => {
             }`}
           >
             {t("title")}
-          </h1>
+          </h2>
           <p
             className={`sectionPara text-secondary ${
               locale === "ar"

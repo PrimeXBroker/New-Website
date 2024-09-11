@@ -29,12 +29,12 @@ const Mission = () => {
           className="flex p-8 items-center bg-white shadow-lg border border-accent rounded-2xl hover:bg-secondary group transition-all duration-300 hover:translate-y-[-10px] cursor-pointer"
         >
           <div className="space-y-2">
-            <h1
+            <h2
               className="text-primary text-2xl font-semibold"
               style={{ letterSpacing: "1.2px" }}
             >
               {card.title}
-            </h1>
+            </h2>
             <p className="text-secondary text-[15px] group-hover:text-white">
               {card.description}
             </p>

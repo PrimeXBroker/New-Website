@@ -32,7 +32,7 @@ const Requirements = () => {
         </div>
         <div className="col-span-12 md:col-span-7 flex justify-center items-center mt-8 md:mt-0">
           <div className="text-center md:text-left">
-            <h1
+            <h2
               className={`text-secondary text-2xl md:text-4xl font-semibold ${
                 locale === "ar"
                   ? "text-center md:text-right"
@@ -41,8 +41,8 @@ const Requirements = () => {
               style={{ letterSpacing: "1px" }}
             >
               {t("title1")}
-            </h1>
-            <h1
+            </h2>
+            <h2
               className={`text-secondary text-2xl md:text-2xl font-normal mb-8 md:mb-0 ${
                 locale === "ar"
                   ? "text-center md:text-right"
@@ -51,7 +51,7 @@ const Requirements = () => {
               style={{ letterSpacing: "1px" }}
             >
               {t("title1_part")}
-            </h1>
+            </h2>
           </div>
         </div>
       </div>
@@ -74,7 +74,7 @@ const Requirements = () => {
       <div className="grid grid-cols-12 pt-[45px] sm:pt-[60px] md:pt-[121px] lg:pt-[139px] pb-10 bg-accent px-4 md:px-14">
         <div className="col-span-12 md:col-span-8">
           <div className="flex flex-col justify-center">
-            <h1
+            <h2
               className={`text-secondary text-2xl md:text-3xl font-semibold mb-3 ${
                 locale === "ar"
                   ? "text-center md:text-right"
@@ -83,7 +83,7 @@ const Requirements = () => {
               style={{ letterSpacing: "1px" }}
             >
               {t("title2")}
-            </h1>
+            </h2>
             <p
               className={`text-secondary md:max-w-xl text-base font-[500] ${
                 locale === "ar"

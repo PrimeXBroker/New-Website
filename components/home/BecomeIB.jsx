@@ -30,9 +30,9 @@ const BecomeIB = () => {
     >
       <div className="container  flex flex-col md:flex-row">
         <div className="w-full md:w-[60%] flex flex-col md:items-start items-center justify-center p-9 z-10">
-          <h1 className="text-secondary md:text-left text-center text-2xl md:text-[2.5rem] font-semibold w-fit">
+          <h2 className="text-secondary md:text-left text-center text-2xl md:text-[2.5rem] font-semibold w-fit">
             {t("become_ib_title_1")}
-          </h1>
+          </h2>
           <p className="text-secondary text-[14px] text-center md:text-left pt-4">
             {t("become_ib_desc_1")}
           </p>

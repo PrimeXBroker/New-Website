@@ -8,10 +8,10 @@ const Steps = () => {
 
   return (
     <section className="container hidden md:block">
-      <h1 className="sectionHeading">
+      <h2 className="sectionHeading">
         <span className="font-normal">{t("title1")}</span> <br />
         {t("title2")}
-      </h1>
+      </h2>
       <div className="grid grid-cols-12 mt-36">
         <div className="col-span-12 group">
           <div className="md:w-[700px] lg:w-[900px] m-auto relative">

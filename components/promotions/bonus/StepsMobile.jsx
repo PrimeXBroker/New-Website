@@ -7,10 +7,10 @@ const StepsMobile = () => {
 
   return (
     <section className="container block md:hidden">
-      <h1 className="sectionHeading">
+      <h2 className="sectionHeading">
         <span className="font-normal">{t("title1")}</span> <br />
         {t("title2")}
-      </h1>
+      </h2>
       <div className="flex flex-col justify-center items-center mt-16">
         <div className="w-[230px]">
           <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-secondary flex justify-end items-center m-auto">

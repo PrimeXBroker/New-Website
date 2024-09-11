@@ -22,12 +22,12 @@ const PrivateSessions = ({ setActive }) => {
   ];
   return (
     <section className="relative mt-12 mb-64 container bg-accent px-8 pt-8 pb-40">
-      <h1
+      <h2
         className="text-secondary text-2xl font-semibold"
         style={{ letterSpacing: "1px", lineHeight: "50px" }}
       >
         {t("title")}
-      </h1>
+      </h2>
       <p className="text-secondary text-lg pb-6">{t("description")}</p>
       <p className="text-secondary text-sm">{t("eligibility_criteria_li1")}</p>
       <p className="text-secondary text-sm">{t("eligibility_criteria_li2")}</p>

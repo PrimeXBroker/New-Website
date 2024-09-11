@@ -67,12 +67,12 @@ const Banner = ({ setActive }) => {
         </div>
       </div>
       <div className="container py-16 max-w-xl flex flex-col gap-5 sm:gap-5">
-        <h1
+        <h2
           className="md:text-3xl text-xl text-secondary font-semibold text-center"
           style={{ lineHeight: "50px", letterSpacing: "1px" }}
         >
           {f("title")}
-        </h1>
+        </h2>
         <p
           className="text-center text-secondary md:text-medium"
           style={{ lineHeight: "30px", letterSpacing: "0.8px" }}

@@ -94,10 +94,10 @@ function BonusCalculator() {
     <section className="font-sans">
       <div className="flex flex-col gap-8 lg:gap-0 container bg-[#e4e5e6] lg:flex-row py-8">
         <div className="flex flex-col justify-center flex-1 space-y-12">
-          <h1 className="text-3xl lg:text-5xl text-center text-[#232323]">
+          <h2 className="text-3xl lg:text-5xl text-center text-[#232323]">
             {t("title1_1")}
             <br /> <strong>{t("title1_2")}</strong>
-          </h1>
+          </h2>
           <h2 className="text-center text-2xl lg:text-3xl text-[#232323]">
             {t("para1_1")}
           </h2>
@@ -112,9 +112,9 @@ function BonusCalculator() {
           </h2>
         </div>
         <div className="flex flex-col flex-1 gap-12 justify-between bg-[#3f3f3e] py-12 rounded-3xl">
-          <h1 className="text-center text-3xl text-[#FFF]">
+          <h2 className="text-center text-3xl text-[#FFF]">
             {t("deposit_calculator:")}
-          </h1>
+          </h2>
           <div>
             <label className="w-[70%] mx-auto block px-5 text-[#FFF]">
               {t("deposit_amount")}

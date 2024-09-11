@@ -9,8 +9,8 @@ const Steps = ({ title, title2 }) => {
   return (
     <section className="py-12">
       <div className="container">
-        <h1 className="sectionHeading text-secondary">{title}</h1>
-        <h1 className="sectionHeading text-secondary">{title2}</h1>
+        <h2 className="sectionHeading text-secondary">{title}</h2>
+        <h2 className="sectionHeading text-secondary">{title2}</h2>
         <div className="flex flex-col lg:flex-row mt-12 justify-center items-center">
           <div
             className={`text-white hover:text-black w-[270px] lg:w-[300px] xl:w-[350px] h-[130px] lg:h-[200px] bg-center bg-no-repeat ${

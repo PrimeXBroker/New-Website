@@ -78,9 +78,9 @@ const SuccessStories = () => {
 
   return (
     <section className="container py-12">
-      <h1 className="text-secondary md:text-3xl text-2xl font-semibold text-center mb-6">
+      <h2 className="text-secondary md:text-3xl text-2xl font-semibold text-center mb-6">
         {t("title")}
-      </h1>
+      </h2>
       <p className="text-secondary text-[1rem] md:text-lg text-center max-w-xl mx-auto">
         {t("description")}
       </p>

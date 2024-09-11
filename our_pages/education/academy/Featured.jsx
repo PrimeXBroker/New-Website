@@ -96,7 +96,7 @@ const Featured = () => {
                   })`,
                 }}
               >
-                <h1
+                <h2
                   className={`sectionHeading text-lg md:text-3xl text-white group-hover:text-primary w-[140px] md:w-[234px] ${
                     locale === "ar"
                       ? "text-right pr-4 md:pr-7"
@@ -104,7 +104,7 @@ const Featured = () => {
                   }`}
                 >
                   {locale === "ar" ? analysis?.titleAr : analysis?.titleEn}
-                </h1>
+                </h2>
               </Link>
             ))
           )}
@@ -138,7 +138,7 @@ const Featured = () => {
                     })`,
                   }}
                 >
-                  <h1
+                  <h2
                     className={`sectionHeading text-lg md:text-3xl text-white group-hover:text-primary  w-[100px] md:w-[170px] ${
                       locale === "ar"
                         ? "text-right pr-4 md:pr-7"
@@ -146,7 +146,7 @@ const Featured = () => {
                     }`}
                   >
                     {locale === "ar" ? market?.titleAr : market?.titleEn}
-                  </h1>
+                  </h2>
                 </Link>
               </>
             ))

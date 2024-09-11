@@ -64,12 +64,12 @@ const HaveQuestion = () => {
   return (
     <section className="bg-white pt-12 pb-24">
       <div className="max-w-2xl mx-auto px-2">
-        <h1
+        <h2
           className={`text-secondary md:text-2xl text-lg font-semibold text-center`}
           style={{ lineHeight: "50px", letterSpacing: "1px" }}
         >
           {t("title")}
-        </h1>
+        </h2>
         <p
           className="text-secondary md:text-lg text-md font-light text-center"
           style={{ lineHeight: "30px", letterSpacing: "1px" }}
@@ -100,13 +100,13 @@ const HaveQuestion = () => {
               />
             </div>
             <div className="">
-              <h1
+              <h3
                 className={`sectionHeading text-xl  ${
                   locale === "ar" ? "text-right pr-4" : "text-left pl-4 "
                 }`}
               >
                 {card.title}
-              </h1>
+              </h3>
               <p
                 className={`sectionPara text-sm ${
                   locale === "ar" ? "text-right pr-4" : "text-left pl-4 "

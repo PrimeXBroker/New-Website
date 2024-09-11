@@ -24,9 +24,9 @@ const ParticipateForm = () => {
             </div>
           </div>
           <div className="col-span-12 sm:col-start-2 lg:col-start-0 sm:col-span-10 lg:col-span-6 flex flex-col items-center justify-center">
-            <h1 className="text-secondary text-3xl font-semibold text-center mb-8">
+            <h2 className="text-secondary text-3xl font-semibold text-center mb-8">
               {t("title")}
-            </h1>
+            </h2>
             <div className="relative flex items-center justify-between w-[100%] sm:w-[70%]">
               <div className="flex flex-col items-center z-10">
                 <div className="steps-point bg-yellow-500 text-secondary rounded-full h-[70px] w-[70px] sm:h-[100px] sm:w-[100px] flex justify-center items-center text-3xl sm:text-5xl font-bold border-8 border-secondary">

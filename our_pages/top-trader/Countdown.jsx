@@ -61,7 +61,7 @@ const Countdown = () => {
 
   return (
     <section className="mt-20">
-      <h1 className="sectionHeading px-8 md:px-0 mb-8">{t("title")}</h1>
+      <h2 className="sectionHeading px-8 md:px-0 mb-8">{t("title")}</h2>
       <div className="flex justify-center items-center gap-4">
         <div className="flex justify-center items-center gap-4 xs:flex-row xs:gap-2 sm:gap-8">
           {timeGroups.map((group, groupIndex) => (

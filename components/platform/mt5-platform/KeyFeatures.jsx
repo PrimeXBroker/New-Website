@@ -103,7 +103,7 @@ const KeyFeatures = () => {
   return (
     <div className="bg-accent pt-14">
       <div className="container">
-        <h1 className="sectionHeading text-secondary">{t("title")}</h1>
+        <h2 className="sectionHeading text-secondary">{t("title")}</h2>
         <div className="grid grid-cols-12 mt-14">
           {featuresData.map((item, index) => {
             return (
@@ -133,15 +133,15 @@ const KeyFeatures = () => {
                 </div>
                 {activeFeature === item.key && (
                   <div className="feature-content feature-content-active flex flex-col justify-center items-center mb-4 h-[330px] w-[270px] bg-secondary relative top-4 pt-16 px-5 rounded-3xl z-20 mt-[-88px]">
-                    <h1 className="sectionHeading text-primary mb-1 text-center text-base">
+                    <h2 className="sectionHeading text-primary mb-1 text-center text-base">
                       {item.subTitle1}
-                    </h1>
+                    </h2>
                     <p className="sectionPara text-center text-xs text-white">
                       {item.desc1}
                     </p>
-                    <h1 className="sectionHeading text-primary mb-1 text-center text-base mt-5">
+                    <h3 className="sectionHeading text-primary mb-1 text-center text-base mt-5">
                       {item.subTitle2}
-                    </h1>
+                    </h3>
                     <p className="sectionPara text-center text-xs text-white">
                       {item.desc2}
                     </p>

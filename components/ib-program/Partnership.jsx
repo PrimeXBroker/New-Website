@@ -50,7 +50,7 @@ const Partnership = () => {
 
   return (
     <section className="my-20">
-      <h1 className="sectionHeading">{t("partnership.title")}</h1>
+      <h2 className="sectionHeading">{t("partnership.title")}</h2>
       <div
         className={`mt-16 md:h-[580px] lg:h-[850px] bg-no-repeat bg-cover bg-top ${
           locale === "ar"

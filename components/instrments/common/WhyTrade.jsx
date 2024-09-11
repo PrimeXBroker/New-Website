@@ -9,7 +9,7 @@ const WhyTrade = ({ title, description, imgUrl }) => {
     <section className="py-8">
       <div className="container flex flex-col md:flex-row justify-around items-center">
         <div className="max-w-xl">
-          <h1
+          <h2
             className={`sectionHeading ${
               locale === "ar"
                 ? "text-center md:text-right"
@@ -17,7 +17,7 @@ const WhyTrade = ({ title, description, imgUrl }) => {
             }`}
           >
             {title}
-          </h1>
+          </h2>
           <p
             className={`sectionPara md:text-lg text-sm  ${
               locale === "ar"

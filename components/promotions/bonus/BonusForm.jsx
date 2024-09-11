@@ -78,10 +78,10 @@ const BonusForm = () => {
         <div className="bg-secondary p-6 sm:p-10 rounded-3xl">
           <div className="grid grid-cols-12">
             <div className="col-span-12 mb-8">
-              <h1 className="sectionHeading  text-accent font-semibold text-center">
+              <h2 className="sectionHeading  text-accent font-semibold text-center">
                 <span className="font-normal">{t("title1")}</span>
                 {t("title2")}
-              </h1>
+              </h2>
             </div>
             <div className="col-span-12">
               <form onSubmit={formik.handleSubmit}>

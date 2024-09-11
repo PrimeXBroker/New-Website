@@ -72,7 +72,7 @@ const Rewards = () => {
   ];
   return (
     <section className="py-12 home_swiper">
-      <h1 className="sectionHeading mt-8">{t("rewards_title")}</h1>
+      <h2 className="sectionHeading mt-8">{t("rewards_title")}</h2>
       <div className="container relative">
         <Swiper
           centeredSlides={true}
@@ -106,12 +106,12 @@ const Rewards = () => {
                 key={index}
                 className="flex flex-col bg-accent p-8 rounded-xl h-[500px]"
               >
-                <h1 className="text-secondary text-xl text-center bg-primary rounded-lg w-fit mx-auto p-1">
+                <h2 className="text-secondary text-xl text-center bg-primary rounded-lg w-fit mx-auto p-1">
                   {card.title1}
-                </h1>
-                <h2 className="text-secondary text-2xl font-semibold text-center">
-                  {card.title2}
                 </h2>
+                <h3 className="text-secondary text-2xl font-semibold text-center">
+                  {card.title2}
+                </h3>
                 <Image
                   className="block mx-auto"
                   src={language === "ar" ? card.imgUrlAr : card.imgUrlEn}

@@ -13,7 +13,7 @@ const JoinPrimex = () => {
     <section className="container">
       <div className="grid grid-cols-12 pb-12">
         <div className="col-span-12 md:col-span-7">
-          <h1
+          <h2
             className={`text-secondary md:max-w-sm text-2xl md:text-3xl font-semibold mb-5 ${
               locale === "ar"
                 ? "text-center md:text-right"
@@ -22,7 +22,7 @@ const JoinPrimex = () => {
             style={{ letterSpacing: "1px" }}
           >
             {t("title")}
-          </h1>
+          </h2>
           <p
             className={`text-secondary md:max-w-xl  text-[15px] font-[500] ${
               locale === "ar"

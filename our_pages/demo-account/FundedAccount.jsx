@@ -11,7 +11,7 @@ const FundedAccount = () => {
   return (
     <section className="mt-20 sm:mt-36 mb-20">
       <div className="container">
-        <h1 className="text-secondary text-lg sm:text-xl lg:text-2xl font-semibold text-center pb-16">
+        <h2 className="text-secondary text-lg sm:text-xl lg:text-2xl font-semibold text-center pb-16">
           {t("title1")} <br />
           <span className="text-3xl sm:text-5xl lg:text-6xl block my-1">
             {t("title2")}
@@ -19,7 +19,7 @@ const FundedAccount = () => {
           <span className="text-3xl sm:text-5xl lg:text-6xl">
             {t("title3")}
           </span>
-        </h1>
+        </h2>
         <CompetitionWidget />
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 sm:col-span-6 lg:col-span-4 relative mb-6 sm:mb-0 transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500 group">

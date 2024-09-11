@@ -17,7 +17,7 @@ const Featured = ({ title, cardsData }) => {
   return (
     <section className="bg-[#e4e5e6] pt-8 pb-10">
       <div className="container">
-        <h1 className="sectionHeading">{title}</h1>
+        <h2 className="sectionHeading">{title}</h2>
         <div className="flex flex-row mt-10 gap-12 justify-center flex-wrap xl:flex-wrap">
           {cardsData.map((card, index) => (
             <div
@@ -42,7 +42,7 @@ const Featured = ({ title, cardsData }) => {
                   className="block mx-0 academy_img"
                 />
               </div>
-              <h1
+              <h3
                 className={`sectionHeading text-xl group-hover:text-white ${
                   locale === "ar"
                     ? "text-center sm:text-right"
@@ -50,7 +50,7 @@ const Featured = ({ title, cardsData }) => {
                 }`}
               >
                 {card.title}
-              </h1>
+              </h3>
               <p
                 className={`sectionPara text-sm group-hover:text-white ${
                   locale === "ar"

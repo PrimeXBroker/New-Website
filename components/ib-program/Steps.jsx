@@ -27,11 +27,11 @@ const Steps = () => {
   return (
     <section>
       <div className="container">
-        <h1 className="sectionHeading font-semibold">
+        <h2 className="sectionHeading font-semibold">
           {t("steps.title1")}{" "}
           <span className="font-semibold">{t("steps.title2")}</span>
           <span className="font-light">{t("steps.title3")}</span>
-        </h1>
+        </h2>
         <div className="grid grid-cols-12 justify-center  mt-16">
           {stepsContent.map((item, index) => {
             return (

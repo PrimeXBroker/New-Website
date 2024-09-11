@@ -8,7 +8,7 @@ const Faq = ({ forexFaqs }) => {
 
   return (
     <section className="container py-12">
-      <h1 className="sectionHeading mb-12">{t("title")}</h1>
+      <h2 className="sectionHeading mb-12">{t("title")}</h2>
       <Accordion
         variant="bordered"
         itemClasses={{

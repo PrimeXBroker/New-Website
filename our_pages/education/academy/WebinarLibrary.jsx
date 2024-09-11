@@ -70,9 +70,9 @@ const WebinarLibrary = () => {
   };
   return (
     <section className="py-8 container webinar_slider">
-      <h1 className="text-xl md:text-3xl text-secondary text-center font-semibold pb-4">
+      <h2 className="text-xl md:text-3xl text-secondary text-center font-semibold pb-4">
         {t("title")}
-      </h1>
+      </h2>
       <p className="md:text-lg text-secondary text-center max-w-xl mx-auto">
         {t("description")}
       </p>
@@ -143,9 +143,9 @@ const WebinarLibrary = () => {
                     className="academy_img"
                   />
                 </div>
-                <h1 className="sectionHeading text-xl text-left group-hover:text-white">
+                <h2 className="sectionHeading text-xl text-left group-hover:text-white">
                   {card.title}
-                </h1>
+                </h2>
                 <p className="sectionPara text-left text-sm group-hover:text-white">
                   {card.name}
                 </p>

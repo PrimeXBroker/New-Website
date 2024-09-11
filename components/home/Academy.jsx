@@ -69,7 +69,7 @@ const Academy = () => {
         data-aos-duration={800}
         data-aos="slide-up"
       >
-        <h1 className="sectionHeading">{t("academy_title")}</h1>
+        <h2 className="sectionHeading">{t("academy_title")}</h2>
         <p className="sectionPara text-center">{t("academy_desc")}</p>
       </div>
       <div className="flex flex-row gap-12 justify-center flex-wrap ">
@@ -102,7 +102,6 @@ const Academy = () => {
               <div className="slide slide2">
                 <div className="content">
                   <h3>{card.description1}</h3>
-
                   <p>{card.description2}</p>
                 </div>
               </div>

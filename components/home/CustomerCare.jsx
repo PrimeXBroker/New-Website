@@ -23,9 +23,9 @@ const CustomerCare = () => {
         />
       </div>
       <div>
-        <h1 className="text-center text-xl md:text-4xl font-semibold text-secondary mb-5">
+        <h2 className="text-center text-xl md:text-4xl font-semibold text-secondary mb-5">
           {t("customer_care_title")}
-        </h1>
+        </h2>
         <div className="flex flex-col md:flex-row justify-center gap-8">
           <div className="flex gap-2 items-center">
             <TbClock24 size={50} color="#FFD000" />
