@@ -35,7 +35,7 @@ const JoinPrimex = () => {
           </p>
           <div className="pt-5 flex flex-row md:gap-3 flex-wrap justify-around lg:justify-start mt-8 md:mt-0">
             <a
-              href="https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe"
+              href="https://download.mql5.com/cdn/web/primex.broker.pty/mt5/primexbroker5setup.exe"
               target="_blank"
               className="relative group  mb-2"
             >
@@ -62,7 +62,10 @@ const JoinPrimex = () => {
                   src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/playstore.svg"
                   className="w-8"
                 />
-                <span className={`${locale === "ar"? 'text-right':'text-left'}`} style={{ lineHeight: "18px" }}>
+                <span
+                  className={`${locale === "ar" ? "text-right" : "text-left"}`}
+                  style={{ lineHeight: "18px" }}
+                >
                   {t("google_play-btn_part1")} <br />
                   <span className="text-[18px] font-semibold block">
                     {t("google_play-btn_part2")}
@@ -81,8 +84,9 @@ const JoinPrimex = () => {
                   className="w-8"
                 />
                 <span
-                className={`${locale === "ar"? 'text-right':'text-left'}`}
-                style={{ lineHeight: "18px" }}>
+                  className={`${locale === "ar" ? "text-right" : "text-left"}`}
+                  style={{ lineHeight: "18px" }}
+                >
                   {t("app_store_btn_part1")} <br />
                   <span className="text-[18px] font-semibold block">
                     {t("app_store_btn_part2")}{" "}

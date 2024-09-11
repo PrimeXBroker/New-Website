@@ -50,7 +50,9 @@ function TraderForm() {
       email: Yup.string()
         .email(t("email_validation_error"))
         .required(t("email_required_error")),
-      accountId: Yup.string().required(t("acc_number_required_error")),
+      accountId: Yup.string()
+        .matches(/^\d{7}$/, t("Please write your account number"))
+        .required(t("acc_number_required_error")),
     }),
     onSubmit: async (values) => {
       setLoading(true);
@@ -149,6 +151,18 @@ function TraderForm() {
                   : ""
               }`}
             />
+            {formik.touched.accountId && formik.errors.accountId && (
+              <div className="absolute left-[50px] top-[55%] mt-1">
+                <div className="relative">
+                  <div className="bg-white border border-b-black border-s-black border-e-black text-black p-2 rounded">
+                    <span className="text-xs">
+                      Please write your account number
+                    </span>
+                  </div>
+                  <div className="absolute left-9 -top-[16px] border-[8px] border-transparent border-b-white "></div>
+                </div>
+              </div>
+            )}
           </div>
           <button className="bg-primary shadow-xl rounded-full font-semibold py-2 text-secondary w-[150px] mx-auto mt-5 mb-8">
             <div className="flex gap-3 items-center justify-center">

@@ -83,7 +83,7 @@ const Footer = () => {
           {
             name: t("Platform.title_part4_link1"),
             target: "_blank",
-            href: "https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe",
+            href: "https://download.mql5.com/cdn/web/primex.broker.pty/mt5/primexbroker5setup.exe",
           },
           {
             name: t("Platform.title_part4_link2"),

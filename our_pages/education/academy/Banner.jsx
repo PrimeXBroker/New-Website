@@ -80,7 +80,7 @@ const Banner = ({ setActive }) => {
           {f("description")}
         </p>
         <Link
-          href="https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe"
+          href="https://download.mql5.com/cdn/web/primex.broker.pty/mt5/primexbroker5setup.exe"
           className="bg-primary text-center px-4 py-4 rounded-full w-[200px] mx-auto block shadow-xl mb-3 sm:mb-2"
         >
           {f("download_btn")}
@@ -91,7 +91,7 @@ const Banner = ({ setActive }) => {
           {f("link_title_part_3")}
           <Link
             className="text-primary appearance-none pl-2"
-            href="https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe"
+            href="https://download.mql5.com/cdn/web/primex.broker.pty/mt5/primexbroker5setup.exe"
           >
             {f("download_link_text")}
           </Link>

@@ -35,7 +35,7 @@ const JoinPrimex = () => {
           </p>
           <div className="pt-5 flex flex-row md:gap-3 flex-wrap justify-around lg:justify-start mt-8 md:mt-0">
             <a
-              href="https://download.mql5.com/cdn/web/22640/mt5/primexbroker5setup.exe"
+              href="https://download.mql5.com/cdn/web/primex.broker.pty/mt5/primexbroker5setup.exe"
               target="_blank"
               className="relative group  mb-2"
             >
