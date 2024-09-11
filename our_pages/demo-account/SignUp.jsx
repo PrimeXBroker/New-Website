@@ -41,7 +41,7 @@ const SignUp = () => {
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
-              style={{ letterSpacing: "1px" }}
+              // style={{ letterSpacing: "1px" }}
             >
               {t("title")}
             </h2>
@@ -77,7 +77,7 @@ const SignUp = () => {
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
-              style={{ letterSpacing: "1px" }}
+              // style={{ letterSpacing: "1px" }}
             >
               {t("participate_title")}
             </h2>
