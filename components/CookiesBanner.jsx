@@ -13,7 +13,8 @@ const CookieBanner = () => {
   useEffect(() => {
     const fetchLocation = async () => {
       try {
-        const country = await axios.get("https://ipapi.co/country/");
+        const location = await axios.get("https://ipapi.co/country/");
+        const country = location.data;
         if (country === "ZA") {
           window.location.href = "https://www.primexcapital.co.za";
         }
