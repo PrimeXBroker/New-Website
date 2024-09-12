@@ -51,7 +51,7 @@ function TraderForm() {
         .email(t("email_validation_error"))
         .required(t("email_required_error")),
       accountId: Yup.string()
-        .matches(/^\d{7}$/, t("Please write your account number"))
+        .matches(/^\d{7}$/, t("account_number_exceed"))
         .required(t("acc_number_required_error")),
     }),
     onSubmit: async (values) => {
@@ -156,7 +156,7 @@ function TraderForm() {
                 <div className="relative">
                   <div className="bg-white border border-b-black border-s-black border-e-black text-black p-2 rounded">
                     <span className="text-xs">
-                      Please write your account number
+                      {t("account_number_exceed")}
                     </span>
                   </div>
                   <div className="absolute left-9 -top-[16px] border-[8px] border-transparent border-b-white "></div>

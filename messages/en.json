@@ -1639,7 +1639,8 @@
       "form_btn": "Submit Now",
       "success_title": "Success",
       "success_desc": "Form Submitted Successfully",
-      "close_btn": "Close"
+      "close_btn": "Close",
+      "account_number_exceed": "Please write your account number"
     },
     "faq": {
       "title": "Frequently Asked Questions",

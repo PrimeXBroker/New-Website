@@ -1563,7 +1563,8 @@
       "form_btn": "أرسل الآن",
       "success_title": "النجاح",
       "success_desc": "تم تقديم الاستمارة بنجاح",
-      "close_btn": "اغلاق"
+      "close_btn": "اغلاق",
+      "account_number_exceed": "Please write your account number"
     },
     "faq": {
       "title": "الأسئلة الأكثر شيوعاً",
