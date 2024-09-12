@@ -152,7 +152,7 @@ function TraderForm() {
               }`}
             />
             {formik.touched.accountId && formik.errors.accountId && (
-              <div className="absolute left-[50px] top-[55%] mt-1">
+              <div className="absolute left-[50px] top-[74%] mt-1">
                 <div className="relative">
                   <div className="bg-white border border-b-black border-s-black border-e-black text-black p-2 rounded">
                     <span className="text-xs">
