@@ -130,6 +130,26 @@ export default async function layout({ children, params: { locale } }) {
           href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg_desktop_en.webp"
           as="image"
         />
+        <link
+          rel="alternate"
+          href="https://www.primexcapital.com/en"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://www.primexcapital.com/cn"
+          hreflang="cn"
+        />
+        <link
+          rel="alternate"
+          href="https://www.primexcapital.com/ar"
+          hreflang="ar"
+        />
+        <link
+          rel="alternate"
+          href="https://www.primexcapital.com/en"
+          hreflang="x-default"
+        />
       </Head>
       <GoogleAnalytics />
       <body>
@@ -207,6 +227,29 @@ export default async function layout({ children, params: { locale } }) {
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7629401&fmt=gif" />`,
+          }}
+        />
+        <Script
+          id="gtag-send-event"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Helper function to delay opening a URL until a gtag event is sent.
+              // Call it in response to an action that should navigate to a URL.
+              function gtagSendEvent(url) {
+                var callback = function () {
+                  if (typeof url === 'string') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'GA4', {
+                  'event_callback': callback,
+                  'event_timeout': 2000,
+                  // <event_parameters>
+                });
+                return false;
+              }
+            `,
           }}
         />
       </body>
