@@ -1462,7 +1462,7 @@
       "view_btn": "Click to View",
       "download_btn": "Download PDF",
       "metaData": {
-        "title": "",
+        "title": "Policy Statement | PrimeX Capital",
         "description": ""
       }
     },
@@ -1473,8 +1473,8 @@
       "download_btn": "Download PDF",
       "description": "In this section, we explain the inherent risks associated with trading and other financial activities, ensuring clients understand and accept these risks before engaging with our platform.",
       "metaData": {
-        "title": "",
-        "description": ""
+        "title": "Risk Disclosure | PrimeX Capital",
+        "description": "PrimeX Capital's Risk Disclosure provides an overview of potential risks associated with trading, helping you make informed decisions while trading. Your awareness is important to us."
       }
     },
     "complaintsManagement": {
@@ -1484,8 +1484,8 @@
       "view_btn": "Click to View",
       "download_btn": "Download PDF",
       "metaData": {
-        "title": "",
-        "description": ""
+        "title": "Complaints Management | PrimeX Capital",
+        "description": "PrimeX Capital's Complaints Management policy ensures that all client concerns are addressed promptly and fairly, prioritizing your satisfaction and trust."
       }
     },
     "cookiePolicy": {
@@ -1495,8 +1495,8 @@
       "view_btn": "Click to View",
       "download_btn": "Download PDF",
       "metaData": {
-        "title": "",
-        "description": ""
+        "title": "Cookie Policy | PrimeX Capital",
+        "description": "PrimeX Capital's cookie policy explains how we use cookies to enhance your browsing experience and improve site functionality. Your privacy is our priority."
       }
     },
     "amlPolicy": {
@@ -1506,8 +1506,8 @@
       "view_btn": "Click to View",
       "download_btn": "Download PDF",
       "metaData": {
-        "title": "",
-        "description": ""
+        "title": "Policy of AML | PrimeX Capital",
+        "description": "PrimeX Capital's AML Policy outlines our commitment to preventing money laundering and ensuring compliance with global regulations. Your security is our priority."
       }
     },
     "company": {

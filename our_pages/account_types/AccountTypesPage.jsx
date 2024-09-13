@@ -1,13 +1,12 @@
-import Banner from "@/components/accounts/Banner"
-import ChooseAccount from "@/components/accounts/ChooseAccount"
-import Slider from "@/components/accounts/Slider"
+import Banner from "@/components/accounts/Banner";
+import ChooseAccount from "@/components/accounts/ChooseAccount";
+import Slider from "@/components/accounts/Slider";
 import Cards from "@/components/Cards";
 import PremiumAdvantages from "@/components/PremiumAdvantages";
 import { useLocale, useTranslations } from "next-intl";
 
-
 const AccountTypesPage = () => {
-    const locale = useLocale();
+  const locale = useLocale();
   const t = useTranslations("accountTypes");
   const b = useTranslations("regBtn");
 
@@ -65,13 +64,13 @@ const AccountTypesPage = () => {
       title: t("advantages.adv3_h3"),
       description: t("advantages.adv3_p"),
     },
-    {
-      img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo4.svg",
-      hoveredImg:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo4-hover.svg",
-      title: t("advantages.adv4_h3"),
-      description: t("advantages.adv4_p"),
-    },
+    // {
+    //   img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo4.svg",
+    //   hoveredImg:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo4-hover.svg",
+    //   title: t("advantages.adv4_h3"),
+    //   description: t("advantages.adv4_p"),
+    // },
     {
       img: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/adv-logo5.svg",
       hoveredImg:
@@ -83,13 +82,13 @@ const AccountTypesPage = () => {
 
   return (
     <>
-    <Banner/>
-    <Cards items={cardContents}/>
-    <ChooseAccount/>
-    <Slider/>
-    <PremiumAdvantages items={advantagesContent} data={advantagesData}/>
+      <Banner />
+      <Cards items={cardContents} />
+      <ChooseAccount />
+      <Slider />
+      <PremiumAdvantages items={advantagesContent} data={advantagesData} />
     </>
-  )
-}
+  );
+};
 
-export default AccountTypesPage
+export default AccountTypesPage;
