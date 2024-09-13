@@ -250,13 +250,13 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("tradetowin")}
                 </LocaleLink>
-                {/* <LocaleLink
+                <LocaleLink
                   href="/funded-account-competition"
                   className="block text-black text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("funded_account_competition")}
-                </LocaleLink> */}
+                </LocaleLink>
               </div>
             )}
           </div>
