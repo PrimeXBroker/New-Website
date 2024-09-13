@@ -66,7 +66,7 @@ const Banner = ({ setActive }) => {
           </div>
         </div>
       </div>
-      <div className="container py-16 max-w-xl flex flex-col gap-5 sm:gap-5">
+      {/* <div className="container py-16 max-w-xl flex flex-col gap-5 sm:gap-5">
         <h2
           className="md:text-3xl text-xl text-secondary font-semibold text-center"
           style={{ lineHeight: "50px", letterSpacing: "1px" }}
@@ -97,7 +97,7 @@ const Banner = ({ setActive }) => {
           </Link>
         </p>
         <p className="text-secondary text-lg text-center">{f("powered_by")}</p>
-      </div>
+      </div> */}
     </section>
   );
 };

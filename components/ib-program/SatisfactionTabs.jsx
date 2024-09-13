@@ -6,21 +6,21 @@ import Image from "next/image";
 const SatisfactionTabs = () => {
   const locale = useLocale();
   const t = useTranslations("ib");
-  const [activeTab, setActiveTab] = useState("Explore");
+  const [activeTab, setActiveTab] = useState("Discover");
   const [isUserInteracted, setIsUserInteracted] = useState(false);
   const timerRef = useRef();
 
   const tabData = [
-    {
-      key: "Explore",
-      tabTitle: t("tabs.tab_title1"),
-      contentTitle1: t("tabs.li1_title1"),
-      contentPoint1: t("tabs.li1_1"),
-      contentPoint2: t("tabs.li1_2"),
-      contentPoint3: t("tabs.li1_3"),
-      imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/Uncover.webp",
-    },
+    // {
+    //   key: "Explore",
+    //   tabTitle: t("tabs.tab_title1"),
+    //   contentTitle1: t("tabs.li1_title1"),
+    //   contentPoint1: t("tabs.li1_1"),
+    //   contentPoint2: t("tabs.li1_2"),
+    //   contentPoint3: t("tabs.li1_3"),
+    //   imgUrl:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/Uncover.webp",
+    // },
     {
       key: "Discover",
       tabTitle: t("tabs.tab_title2"),

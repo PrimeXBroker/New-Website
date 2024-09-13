@@ -48,16 +48,16 @@ const KeyFeatures = () => {
       imgUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/Customer+and+Support.svg",
     },
-    {
-      key: 5,
-      tabTitle: t("feature_6_tab_title"),
-      subTitle1: t("feature_6_subTitle1"),
-      desc1: t("feature_6_desc1"),
-      subTitle2: t("feature_6_subTitle2"),
-      desc2: t("feature_6_desc2"),
-      imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/MT5+Page-10.svg",
-    },
+    // {
+    //   key: 5,
+    //   tabTitle: t("feature_6_tab_title"),
+    //   subTitle1: t("feature_6_subTitle1"),
+    //   desc1: t("feature_6_desc1"),
+    //   subTitle2: t("feature_6_subTitle2"),
+    //   desc2: t("feature_6_desc2"),
+    //   imgUrl:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/MT5+Page-10.svg",
+    // },
     {
       key: 6,
       tabTitle: t("feature_4_tab_title"),
