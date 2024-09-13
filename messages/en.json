@@ -1657,6 +1657,10 @@
     }
   },
   "demoAccount": {
+    "metaData": {
+      "title": "Funded Account Competition | PrimeX Capital",
+      "description": "Showcase your trading skills with PrimeX Capital, learn from real-time scenarios, and win incredible prizes. Ready to elevate your trading game? Click to know more."
+    },
     "banner": {
       "title": "Trade Fearlessly, Win Freely",
       "subtitle_p1": "With Most Awaited ",

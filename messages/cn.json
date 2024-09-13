@@ -1658,6 +1658,10 @@
     }
   },
   "demoAccount": {
+    "metaData": {
+      "title": "资金账户竞赛 | PrimeX Capital",
+      "description": "在 PrimeX Capital 展示您的交易技巧，从实时场景中学习，并赢取丰厚奖品。准备提升您的交易水平了吗？点击了解更多信息。"
+    },
     "banner": {
       "title": "无畏交易，自由赢取",
       "subtitle_p1": "最期待的",
