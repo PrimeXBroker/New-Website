@@ -25,11 +25,16 @@ const TradingOpportunities = () => {
 
     if (tokenExpireTime - currentTime < tokenExpirationThreshold) {
       try {
-        const res = await axios.post(`http://localhost:4002/v1/api/price`, {
-          token: "",
-          expire: false,
-          symbol: tab?.symbol,
-        });
+        const res = await axios.post(
+          // `http://localhost:4002/v1/api/price`
+          `https://primexbroker.com/v1/api/price`,
+
+          {
+            token: "",
+            expire: false,
+            symbol: tab?.symbol,
+          }
+        );
         newTokenData = res?.data?.data;
         setSymbolList(res?.data?.data?.feedSymbols);
         dispatch(
@@ -43,10 +48,14 @@ const TradingOpportunities = () => {
       }
     } else {
       try {
-        const res = await axios.post(`http://localhost:4002/v1/api/price`, {
-          ...newTokenData,
-          symbol: tab?.symbol,
-        });
+        const res = await axios.post(
+          // `http://localhost:4002/v1/api/price`
+          `https://primexbroker.com/v1/api/price`,
+          {
+            ...newTokenData,
+            symbol: tab?.symbol,
+          }
+        );
         setSymbolList(res?.data?.data?.feedSymbols);
       } catch (error) {
         console.error("Failed to send request with current token", error);
