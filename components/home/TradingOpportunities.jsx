@@ -27,7 +27,7 @@ const TradingOpportunities = () => {
       try {
         const res = await axios.post(
           // `http://localhost:4002/v1/api/price`
-          `https://primexbroker.com/v1/api/price`,
+          `https://primexbroker.com/api/v1/price`,
 
           {
             token: "",
@@ -50,7 +50,7 @@ const TradingOpportunities = () => {
       try {
         const res = await axios.post(
           // `http://localhost:4002/v1/api/price`
-          `https://primexbroker.com/v1/api/price`,
+          `https://primexbroker.com/api/v1/price`,
           {
             ...newTokenData,
             symbol: tab?.symbol,
