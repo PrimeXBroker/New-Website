@@ -1,0 +1,80 @@
+import {
+  BarChart2,
+  DollarSign,
+  LineChart,
+  Package,
+  TrendingUp,
+} from "lucide-react";
+
+export const tradingTabs = [
+  {
+    name: "Popular",
+    icon: <BarChart2 className="w-4 h-4" />,
+    symbol: [
+      "PrimeX_REST_RA||EONGn.DE||EONGn.DE",
+      "PrimeX_REST_RA||US100.spot||US100.spot",
+      "PrimeX_REST_RA||US30.spot||US30.spot",
+      "PrimeX_REST_RA||XAUUSD||XAUUSD",
+      "PrimeX_REST_RA||EURUSD||EURUSD",
+      "PrimeX_REST_RA||USDJPY||USDJPY",
+      "PrimeX_REST_RA||GBPUSD||GBPUSD",
+      "PrimeX_REST_RA||AUDUSD||AUDUSD",
+    ],
+  },
+  {
+    name: "Equities",
+    icon: <TrendingUp className="w-4 h-4" />,
+    symbol: [
+      "PrimeX_REST_RA||ADS.DE||ADS.DE",
+      "PrimeX_REST_RA||BMW.DE||BMW.DE",
+      "PrimeX_REST_RA||DAI.DE||DAI.DE",
+      "PrimeX_REST_RA||DANO.FR||DANO.FR",
+      "PrimeX_REST_RA||DBKGn.DE||DBKGn.DE",
+      "PrimeX_REST_RA||DPWGn.DE||DPWGn.DE",
+      "PrimeX_REST_RA||FDX.US||FDX.US",
+      "PrimeX_REST_RA||FORD.US||FORD.US",
+    ],
+  },
+  {
+    name: "Crypto",
+    icon: <DollarSign className="w-4 h-4" />,
+    symbol: [
+      "PrimeX_REST_RA||BCHBTC||BCHBTC",
+      "PrimeX_REST_RA||BCHUSD||BCHUSD",
+      "PrimeX_REST_RA||BNBUSD||BNBUSD",
+      "PrimeX_REST_RA||BSVUSD||BSVUSD",
+      "PrimeX_REST_RA||BTCEUR||BTCEUR",
+      "PrimeX_REST_RA||BTCUSD||BTCUSD",
+      "PrimeX_REST_RA||DOGUSD||DOGUSD",
+      "PrimeX_REST_RA||DOTUSD||DOTUSD",
+    ],
+  },
+  {
+    name: "Forex",
+    icon: <Package className="w-4 h-4" />,
+    symbol: [
+      "PrimeX_REST_RA||CADCHF||CADCHF",
+      "PrimeX_REST_RA||CADJPY||CADJPY",
+      "PrimeX_REST_RA||CHFJPY||CHFJPY",
+      "PrimeX_REST_RA||EURAUD||EURAUD",
+      "PrimeX_REST_RA||EURCAD||EURCAD",
+      "PrimeX_REST_RA||EURJPY||EURJPY",
+      "PrimeX_REST_RA||GBPAUD||GBPAUD",
+      "PrimeX_REST_RA||GBPCAD||GBPCAD",
+    ],
+  },
+  {
+    name: "CFD",
+    icon: <LineChart className="w-4 h-4" />,
+    symbol: [
+      "PrimeX_REST_RA||COCOA.spot||COCOA.spot",
+      "PrimeX_REST_RA||COTTON.spot||COTTON.spot",
+      "PrimeX_REST_RA||FRA40.spot||FRA40.spot",
+      "PrimeX_REST_RA||GER30.spot||GER30.spot",
+      "PrimeX_REST_RA||HKIND.spot||HKIND.spot",
+      "PrimeX_REST_RA||SOYBEAN.spot||SOYBEAN.spot",
+      "PrimeX_REST_RA||SPA35.spot||SPA35.spot",
+      "PrimeX_REST_RA||SUGAR.spot||SUGAR.spot",
+    ],
+  },
+];
