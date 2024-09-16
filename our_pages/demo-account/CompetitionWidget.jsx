@@ -14,7 +14,7 @@ const CompetitionWidget = () => {
   }, []);
 
   return (
-    <section className="container mb-12">
+    <section className="container mt-20">
       <iframe
         id="widgetFrame"
         style={{ minWidth: "100%" }}

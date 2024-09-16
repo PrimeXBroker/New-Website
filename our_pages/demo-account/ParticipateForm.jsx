@@ -1,72 +1,85 @@
 "use client";
 import React from "react";
 import { useTranslations, useLocale } from "next-intl";
-import Link from "next/link";
 import Image from "next/image";
 
 const ParticipateForm = () => {
   const locale = useLocale();
   const t = useTranslations("demoAccount.participateForm");
   return (
-    <section className="bg-accent py-20">
+    <section className="my-20">
       <div className="container mx-auto">
         <div className="grid grid-cols-12 items-center">
-          <div className="col-span-12 sm:col-start-3 lg:col-start-0 sm:col-span-8 lg:col-span-6 mb-8 lg:mb-0">
+          <div className="col-span-12 sm:col-start-3 lg:col-start-0 sm:col-span-8 lg:col-span-6 mb-8 lg:mb-0 hidden md:block">
             <div>
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/demo-account/demo-mobile.webp"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/demo-account/fac-mobile.webp"
                 width="350"
                 height="300"
                 alt="banner Image"
-                className="w-[400px] mx-auto"
+                className="w-[500px] mx-auto"
               />
             </div>
           </div>
-          <div className="col-span-12 sm:col-start-2 lg:col-start-0 sm:col-span-10 lg:col-span-6 flex flex-col items-center justify-center">
-            <h2 className="text-secondary text-3xl font-semibold text-center mb-8">
-              {t("title")}
+          <div
+            className={`col-span-12 sm:col-start-2 lg:col-start-0 sm:col-span-10 lg:col-span-6 flex flex-col mx-auto ${
+              locale === "ar"
+                ? "pr-[20px] md:pl-[173px]"
+                : "pr-[20px] md:pr-[173px]"
+            }`}
+          >
+            <h2 className="text-black text-2xl md:text-4xl font-semibold mb-8">
+              {t("title1")} <br />
             </h2>
-            <div className="relative flex items-center justify-between w-[100%] sm:w-[70%]">
-              <div className="flex flex-col items-center z-10">
-                <div className="steps-point bg-yellow-500 text-secondary rounded-full h-[70px] w-[70px] sm:h-[100px] sm:w-[100px] flex justify-center items-center text-3xl sm:text-5xl font-bold border-8 border-secondary">
-                  {t("step1_count")}
+            <div className="flex flex-col space-y-10">
+              <div className="flex items-center gap-4">
+                <div className="relative">
+                  <div className="w-[50px] h-[50px] flex items-center justify-center">
+                    <Image
+                      unoptimized={true}
+                      src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/demo-account/fac-join1.svg"
+                      width="50"
+                      height="50"
+                      alt="Icon 1"
+                    />
+                  </div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 top-full h-10 border-l-2 border-dashed border-black z-0"></div>
                 </div>
-                <p
-                  className="mt-4 text-base font-semibold text-center"
-                  style={{ lineHeight: "19px" }}
-                >
-                  {t("step1_p1")} <br /> {t("step1_p2")}
+                <p className="text-base font-medium text-gray-800">
+                  {t("step1_p1")}
                 </p>
               </div>
-              <div className="absolute top-[37px] sm:top-[55px] transform -translate-y-1/2 left-[90px] right-[64px] sm:left-[104px] sm:right-[94px]">
-                <div className="border-t-8 border-dashed border-secondary w-full"></div>
-              </div>
-              <div className="flex flex-col items-center z-10">
-                <div className="steps-point bg-white text-secondary rounded-full h-[70px] w-[70px] sm:h-[100px] sm:w-[100px] flex justify-center items-center text-3xl sm:text-5xl font-bold border-8 border-secondary">
-                  {t("step2_count")}
+              <div className="flex items-center gap-4">
+                <div className="relative">
+                  <div className="w-[50px] h-[50px] flex items-center justify-center">
+                    <Image
+                      unoptimized={true}
+                      src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/demo-account/fac-join2.svg"
+                      width="50"
+                      height="50"
+                      alt="Icon 2"
+                      className="z-10"
+                    />
+                  </div>
                 </div>
-                <p
-                  className="mt-4 text-base font-semibold text-center"
-                  style={{ lineHeight: "19px" }}
-                >
-                  {t("step2_p1")} <br /> {t("step2_p2")}
+                <p className="text-base font-medium text-gray-800">
+                  {t("step2_p1")}
                 </p>
               </div>
             </div>
-            <Link
-              href={
-                locale === "ar"
-                  ? "https://client.primexbroker.com/ar/register"
-                  : "https://client.primexbroker.com/en/register"
-              }
-              className="text-sm md:text-[16px] block w-[172px] py-3 rounded-full shadow-xl
-              bg-secondary text-primary border-3 border-white hover:bg-accent
-              hover:text-secondary text-center transition-all duration-300 hover:border-secondary
-              hover:scale-105 mt-8 ml-[42px]"
-            >
-              {t("start_now_btn")}
-            </Link>
+          </div>
+          <div className="col-span-12 sm:col-start-3 lg:col-start-0 sm:col-span-8 lg:col-span-6 mb-8 lg:mb-0 block md:hidden mt-8">
+            <div>
+              <Image
+                unoptimized={true}
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/demo-account/fac-mobile.webp"
+                width="350"
+                height="300"
+                alt="banner Image"
+                className="mx-auto"
+              />
+            </div>
           </div>
         </div>
       </div>

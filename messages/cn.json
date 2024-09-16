@@ -86,7 +86,7 @@
       "account_types_card_2_title": "窄差",
       "account_types_card_2_desc": "该账户为短线交易者量身定做，提供最低点差，最大化短期市场运动的利润。",
       "account_types_card_3_title": "原始",
-      "account_types_card_3_desc": "原始账户专为专业交易者设计，提供“零点差”的无与伦比的交易体验。",
+      "account_types_card_3_desc": "原始点差账户专为专业交易者设计，提供“原始点差”，带来无与伦比的交易体验。",
       "account_types_learn_btn": "了解更多"
     },
     "advancedPlatforms": {
@@ -932,7 +932,7 @@
       "account2-title": "窄差",
       "account2-desc": "此账户为剥头皮交易者量身定制，提供最低点差，以最大化短期市场动态的利润。",
       "account3-title": "原始",
-      "account3-desc": "原始账户专为专业交易者设计，提供“零点差”以获得无与伦比的交易体验。",
+      "account3-desc": "原始点差账户专为专业交易者设计，提供“原始点差”，带来无与伦比的交易体验。",
       "account4-title": "加密货币",
       "account4-desc": "此账户针对数字货币交易者，提供加密货币对和杠杆，仅需100美元存款，非常适合寻求高回报的交易者，尽管存在波动性。"
     },
@@ -1663,67 +1663,47 @@
       "description": "在 PrimeX Capital 展示您的交易技巧，从实时场景中学习，并赢取丰厚奖品。准备提升您的交易水平了吗？点击了解更多信息。"
     },
     "banner": {
-      "title": "无畏交易，自由赢取",
-      "subtitle_p1": "最期待的",
-      "subtitle_p2": "资金账户竞赛"
+      "title1": "无畏交易",
+      "title2": "自由赢取",
+      "subtitle_p1": "加入我们最期待的",
+      "subtitle_p2": "资金",
+      "subtitle_p3": "账户竞赛",
+      "start_btn": "立即开始",
+      "rated_title": "评分优秀",
+      "reviewed_title": "2000+用户评价"
     },
     "fundedAccount": {
-      "title1": "交易至顶峰，赢得",
-      "title2": "$10,000",
-      "title3": "资金账户！",
-      "step1_count": "01",
-      "step1_desc": "体验真实交易的刺激",
-      "step2_count": "02",
-      "step2_desc": "在市场中测试您的策略",
-      "step3_count": "03",
-      "step3_desc": "赢取令人兴奋的奖励"
+      "step1_p1": "体验",
+      "step1_p2": "真实交易的刺激",
+      "step2_p1": "测试您的策略",
+      "step2_p2": "在市场中",
+      "step3_p1": "解锁丰厚",
+      "step3_p2": "奖励"
     },
     "signup": {
-      "title": "今天注册模拟账户并赢取真实奖品。",
-      "desc-p1": "无风险交易，赢取价值",
-      "desc_p2": "$10,000 的资金账户。",
-      "participate_title": "谁可以参加？",
-      "participate_desc": "每个人都可以参加比赛。您只需开设一个模拟账户并开始交易。",
-      "participate_tc": "条款和条件"
+      "title": "加入竞赛，赢取$10,000的资金账户",
+      "li1": "免费参加",
+      "li2": "无限制学习",
+      "li3": "无风险交易",
+      "start_btn": "立即开始"
     },
     "faq": {
       "title": "常见问题",
-      "question_1": "我如何参与比赛？",
-      "answer_1": "要参与比赛，只需通过我们的平台注册一个免费的模拟竞赛账户。一旦创建了账户，您就可以在比赛期间开始交易。所有拥有模拟竞赛账户的参与者都有资格参加。",
-      "question_2": "赢得比赛的奖品是什么？",
-      "answer_2": "前10名获胜者将获得价值10,000美元的真实资金交易账户。该账户可用于真实交易，让您继续用真实资金增长您的交易组合。",
-      "question_3": "赢得比赛的标准是什么？",
-      "answer_3": "获胜者是根据他们在比赛期间的交易表现选出的。关键标准包括最高的利润百分比，维持最多30%的最大回撤，并符合比赛规则中规定的其他具体条件。",
-      "question_4": "比赛什么时候开始，注册截止日期是什么时候？",
-      "answer_4": "比赛于10月15日开始，注册的最后日期是10月14日晚上11:59（GMT+3）。",
-      "question_5": "模拟竞赛账户中允许的最大杠杆是多少？",
-      "answer_5": "比赛中允许的最大杠杆为1:400。"
+      "question_1": "谁可以参加资金账户竞赛？",
+      "answer_1": "所有人都可以参加。必须拥有一个模拟比赛账户。",
+      "question_2": "如何参加竞赛？",
+      "answer_2": "要参加，请在PrimeX Capital开设一个模拟比赛账户并开始交易。",
+      "question_3": "竞赛的要求是什么？",
+      "answer_3": "要获胜，您必须在30天的竞赛期间进入利润百分比最高的前10名。",
+      "question_4": "竞赛允许的最大回撤是多少？",
+      "answer_4": "竞赛允许的最大回撤为30%。",
+      "question_5": "提取我的利润会影响我在竞赛中的进展吗？",
+      "answer_5": "您可以提取利润，但这会影响您的回撤百分比。"
     },
     "participateForm": {
-      "title": "两步轻松开始",
-      "step1_count": "1",
-      "step1_p1": "开设一个模拟",
-      "step1_p2": "模拟账户",
-      "step2_count": "2",
-      "step2_p1": "竞赛账户",
-      "step2_p2": "交易",
-      "start_now_btn": "立即开始",
-      "first_name": "名字",
-      "last_name": "姓氏",
-      "email": "电子邮件地址",
-      "country": "国家",
-      "submit_btn": "提交",
-      "first_name_validation_error": "名字应仅包含字母字符。",
-      "first_name_required_error": "名字是必需的！",
-      "last_name_validation_error": "姓氏应仅包含字母字符。",
-      "last_name_required_error": "姓氏是必需的！",
-      "email_validation_error": "无效的电子邮件地址",
-      "email_required_error": "电子邮件是必需的！",
-      "phone_required_error": "电话号码是必需的",
-      "country_required_error": "国家是必需的！",
-      "success_title": "成功",
-      "success_desc": "表格提交成功",
-      "close_btn": "关闭"
+      "title1": "免费加入并立即开始交易",
+      "step1_p1": "免费注册并立即访问您的模拟账户。",
+      "step2_p1": "在真实市场条件下开始交易，无风险。"
     }
   }
 }
