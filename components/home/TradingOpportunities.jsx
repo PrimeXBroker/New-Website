@@ -1,15 +1,69 @@
 "use client";
-import { Tabs, Tab } from "@nextui-org/tabs";
-import Script from "next/script";
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import Indices from "@/our_pages/home/widgets/Indices";
-import Forex from "@/our_pages/home/widgets/forex";
-import Commodities from "@/our_pages/home/widgets/Commodities";
-import Stocks from "@/our_pages/home/widgets/Stocks";
-import Crypto from "@/our_pages/home/widgets/Crypto";
+import { tradingTabs } from "@/utilities/tradingOpportunity";
+import { useAppDispatch, useAppSelector } from "@/redux/store";
+import { setTokenData } from "@/redux/slices/workspaceSlice";
+import axios from "axios";
 
 const TradingOpportunities = () => {
   const t = useTranslations("home.tradingOpportunities");
+  const { tokenData } = useAppSelector((state) => state.auth);
+  const dispatch = useAppDispatch();
+  const [activeTab, setActiveTab] = useState("Popular"); // Set "Popular" tab as default
+  const [symbolList, setSymbolList] = useState([]);
+
+  // Function to handle tab changes and API calls
+  const handleChange = async (tab) => {
+    setActiveTab(tab.name);
+
+    const tokenExpireTime = new Date(tokenData?.expire).getTime();
+    const currentTime = new Date().getTime();
+    const tokenExpirationThreshold = 5 * 60 * 1000;
+
+    let newTokenData = tokenData;
+
+    if (tokenExpireTime - currentTime < tokenExpirationThreshold) {
+      try {
+        const res = await axios.post(`http://localhost:4002/v1/api/price`, {
+          token: "",
+          expire: false,
+          symbol: tab?.symbol,
+        });
+        newTokenData = res?.data?.data;
+        setSymbolList(res?.data?.data?.feedSymbols);
+        dispatch(
+          setTokenData({
+            token: newTokenData?.token,
+            expire: newTokenData?.expire,
+          })
+        );
+      } catch (error) {
+        console.error("Error getting new token and price data:", error);
+      }
+    } else {
+      try {
+        const res = await axios.post(`http://localhost:4002/v1/api/price`, {
+          ...newTokenData,
+          symbol: tab?.symbol,
+        });
+        setSymbolList(res?.data?.data?.feedSymbols);
+      } catch (error) {
+        console.error("Failed to send request with current token", error);
+      }
+    }
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const activeTabData = tradingTabs.find((tab) => tab.name === activeTab);
+      if (activeTabData) {
+        handleChange(activeTabData);
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [activeTab]);
 
   return (
     <section className="pt-12 bg-accent relative">
@@ -29,41 +83,98 @@ const TradingOpportunities = () => {
       >
         {t("trading_opportunities_desc")}
       </p>
-      <div className="text-center mt-8 md:px-0">
-        <Tabs
-          classNames={{
-            panel: "p-0",
-          }}
-          radius="full"
-          color="primary"
-          className="tabs_custom"
-        >
-          <Tab title={t("trading_opportunities_tab1")}>
-            <div className="pt-8 text-xl">
-              <Forex />
+      <div className="bg-white grid grid-cols-1 md:grid-cols-2 items-center px-10 md:px-[10%] py-10">
+        <div>
+          <h1 className=" text-3xl md:text-6xl mb-2">
+            Unlock Diverse Global Markets
+          </h1>
+          <p className="mb-1">
+            Discover trading opportunities with CFDs on commodities like Oil,
+            Gold, and Natural Gas. Explore CFDs in Forex, indices such as S&P
+            500, the Dow, Nasdaq, and seize exposure to equity markets with CFDs
+            on shares in companies like Amazon and Tesla.
+          </p>
+        </div>
+        <div className="bg-black text-white p-6 rounded-xl max-w-3xl mx-auto">
+          <div className="grid grid-cols-3 gap-2 mb-6">
+            {tradingTabs?.map((tab) => (
+              <button
+                key={tab.name}
+                className={`flex items-center justify-center py-2 px-4 rounded-md text-sm ${
+                  activeTab === tab.name
+                    ? "bg-white text-black"
+                    : "bg-gray-800 text-gray-300"
+                }`}
+                onClick={() => handleChange(tab)}
+              >
+                {tab.icon}
+                <span className="ml-2 whitespace-nowrap">{tab.name}</span>
+              </button>
+            ))}
+          </div>
+          <div className="bg-gray-900 rounded-lg p-4 w-auto md:w-[400px] lg:w-[550px]">
+            <div className="hidden md:grid grid-cols-3 gap-4 mb-2 text-gray-400 text-sm">
+              <div>Name</div>
+              <div>Price</div>
+              <div>Spread</div>
             </div>
-          </Tab>
-          <Tab title={t("trading_opportunities_tab2")}>
-            <div className="pt-8 text-xl">
-              <Indices />
-            </div>
-          </Tab>
-          <Tab title={t("trading_opportunities_tab3")}>
-            <div className="pt-8 text-xl">
-              <Commodities />
-            </div>
-          </Tab>
-          <Tab title={t("trading_opportunities_tab4")}>
-            <div className="pt-8 text-xl">
-              <Stocks />
-            </div>
-          </Tab>
-          <Tab title={t("trading_opportunities_tab5")}>
-            <div className="pt-8 text-xl">
-              <Crypto />
-            </div>
-          </Tab>
-        </Tabs>
+            {symbolList?.length
+              ? symbolList?.map((instrument) => (
+                  <div
+                    key={instrument.symbol}
+                    className="flex md:grid md:grid-cols-3 gap-4 py-3 border-t border-gray-800"
+                  >
+                    <>
+                      <div className="hidden md:flex items-center">
+                        <div className="w-8 h-8 bg-gray-600 rounded-full mr-3"></div>
+                        {instrument.symbol}
+                      </div>
+                      <div className="hidden md:block">
+                        {parseFloat(instrument?.bid_price)?.toFixed(3)}
+                      </div>
+                      <div className="hidden md:flex items-center justify-between">
+                        <span
+                          className={`bg-green-500 text-white px-1 rounded`}
+                        >
+                          {(
+                            instrument?.ask_price - instrument.bid_price
+                          )?.toFixed(3)}
+                        </span>
+                        <button className="bg-gray-800 text-white text-xs py-1 px-3 rounded">
+                          {activeTab}
+                        </button>
+                      </div>
+                    </>
+
+                    {/* mobile view  */}
+                    <>
+                      <div className="block md:hidden w-8 h-8 bg-gray-600 rounded-full mr-1"></div>
+                      <div className="flex md:hidden items-center justify-between w-10/12">
+                        <div className="flex flex-col">
+                          <span className="text-sm">{instrument.symbol}</span>
+                          <div className="flex items-center gap-2 text-xs">
+                            <div className="">
+                              {parseFloat(instrument?.bid_price)?.toFixed(3)}
+                            </div>
+                            <span
+                              className={`bg-green-500 text-white px-1 rounded`}
+                            >
+                              {(
+                                instrument?.ask_price - instrument.bid_price
+                              )?.toFixed(3)}
+                            </span>
+                          </div>
+                        </div>
+                        <button className="bg-gray-800 text-white text-xs py-1 px-3 rounded">
+                          {activeTab}
+                        </button>
+                      </div>
+                    </>
+                  </div>
+                ))
+              : null}
+          </div>
+        </div>
       </div>
     </section>
   );
