@@ -101,8 +101,8 @@ const DesktopHeader = ({ locale }) => {
           <LocaleLink href="/" className="logo">
             <Image
               unoptimized={true}
-              width="100"
-              height="100"
+              width="120"
+              height="120"
               src={Logo}
               alt="Logo Image"
             />
