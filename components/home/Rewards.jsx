@@ -125,9 +125,9 @@ const Rewards = () => {
                       hidden={index !== activeIndex}
                       as={Link}
                       href="https://client.primexbroker.com/en/register"
-                      className={`bg-secondary absolute right-0 left-0 bottom-[-15px] 
+                      className={`bg-[#111111] absolute right-0 left-0 bottom-[-15px] 
                     text-primary font-semibold w-[200px] rounded-full shadow-md text-center 
-                    mx-auto hover:bg-primary hover:text-secondary hover:border-2 hover:border-secondary`}
+                    mx-auto hover:bg-primary hover:text-[#111111] hover:border-2 hover:border-[#111111]`}
                     >
                       {t("trade_now")}
                     </Button>

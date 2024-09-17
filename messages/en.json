@@ -71,7 +71,7 @@
       "suffix_4": "Billion+"
     },
     "tradingOpportunities": {
-      "trading_opportunities_title": "Explore 380+ Trading Opportunities",
+      "trading_opportunities_title": "Explore 330+ Trading Opportunities",
       "trading_opportunities_desc": "Dive into a diverse array of assets including forex, indices, commodities, cryptocurrencies, and stocks",
       "trading_opportunities_tab1": "Forex",
       "trading_opportunities_tab2": "Indicies",
@@ -453,7 +453,7 @@
       "question_2": "Can I Profit from Index Trading?",
       "answer_2": "Yes, you can profit from index trading, but there is also the potential for losses, similar to trading other instruments.",
       "question_3": "Which Are the Most Popular Stock Indices?",
-      "answer_3": "Popular stock indices include the S&P 380, Nasdaq, Dow Jones, FTSE 100, Nifty 50, and Nikkei 225.",
+      "answer_3": "Popular stock indices include the S&P 330, Nasdaq, Dow Jones, FTSE 100, Nifty 50, and Nikkei 225.",
       "question_4": "What Moves the Index Price?",
       "answer_4": "Index prices are influenced by the price changes of the index's constituent stocks.",
       "question_5": "What is the Best Time to Trade Indices?",
@@ -556,7 +556,7 @@
       "question_2": "Can I Profit from Index Trading?",
       "answer_2": "Yes, you can profit from index trading, but there is also the potential for losses, similar to trading other instruments.",
       "question_3": "Which Are the Most Popular Stock Indices?",
-      "answer_3": "Popular stock indices include the S&P 380, Nasdaq, Dow Jones, FTSE 100, Nifty 50, and Nikkei 225.",
+      "answer_3": "Popular stock indices include the S&P 330, Nasdaq, Dow Jones, FTSE 100, Nifty 50, and Nikkei 225.",
       "question_4": "What Moves the Index Price?",
       "answer_4": "Index prices are influenced by the price changes of the index's constituent stocks.",
       "question_5": "What is the Best Time to Trade Indices?",
@@ -1168,7 +1168,7 @@
       "li1_2": "Integrated to your MT5",
       "li1_3": "Unlimited features",
       "li2_title1": "discover diverse instruments",
-      "li2_1": "+380 instruments",
+      "li2_1": "+330 instruments",
       "li2_2": "100 forex options",
       "li2_3": "Largest collection of Crypto instruments in MENA",
       "li2_4": "CFDs with leverage options",
@@ -1396,7 +1396,7 @@
     },
     "instruments": {
       "title": "Access",
-      "title_2": "380+ Instruments",
+      "title_2": "330+ Instruments",
       "instruments_0_h": "Forex",
       "instruments_1_h": "Metals",
       "instruments_2_h": "Indices",
@@ -1580,7 +1580,7 @@
     },
     "readyToInvest": {
       "title": "Ready to Invest",
-      "description": "Open live account & Start investing NOW! Trade 380+ global assets hassle-free.",
+      "description": "Open live account & Start investing NOW! Trade 330+ global assets hassle-free.",
       "btnText": "GET STARTED"
     },
     "relatedBlogs": {

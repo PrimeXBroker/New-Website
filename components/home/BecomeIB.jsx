@@ -44,8 +44,8 @@ const BecomeIB = () => {
             <LocaleLink
               href="/ib-program"
               className="text-sm md:text-[16px] block w-fit px-4 py-3 rounded-full mx-auto md:mx-0 shadow-xl
-              bg-secondary text-white border-3 border-white hover:bg-accent
-              hover:text-secondary text-center transition-all duration-300 hover:border-secondary
+              bg-[#111111] text-white border-3 border-white hover:bg-accent
+              hover:text-[#111111] text-center transition-all duration-300 hover:border-[#111111]
               hover:scale-105
               "
             >

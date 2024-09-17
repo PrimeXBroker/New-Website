@@ -78,7 +78,7 @@ const MarketNewsDetail = ({ slug }) => {
               <p className="text-center text-sm">
                 {detail?.language === "ar"
                   ? "افتح حسابًا حقيقيًا وابدأ الاستثمار الآن! تداول أكثر من 500 من الأدوات المالية العالمية دون أي متاعب."
-                  : "Open live account & Start investing NOW! Trade 380+ global assets hassle-free."}
+                  : "Open live account & Start investing NOW! Trade 330+ global assets hassle-free."}
               </p>
             </div>
             <button className="bg-primary w-full h-10 rounded-xl mt-6 text-secondary font-semibold">

@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import LocaleLink from "./LocaleLink";
 import { useTranslations } from "next-intl";
-import Logo from "@/public/images/logos/logo_black_v2.2.svg";
+import Logo from "@/public/images/logos/primex-logo.webp";
 import Image from "next/image";
 import { FaBars, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { usePathname, useRouter } from "next/navigation";
@@ -331,7 +331,7 @@ const MobileHeader = ({ locale }) => {
                 }`
               )
             }
-            className="w-[90%] mb-2 py-3 text-black bg-transparent border-2 border-secondary hover:bg-secondary hover:text-primary rounded-full font-semibold"
+            className="w-[90%] mb-2 py-3 text-[#111111] bg-transparent border-2 border-[#111111] hover:bg-[#111111] hover:text-primary rounded-full font-semibold"
           >
             {t("login")}
           </button>
@@ -345,7 +345,7 @@ const MobileHeader = ({ locale }) => {
                 }`
               )
             }
-            className="w-[90%] py-3 text-primary bg-secondary border-2 border-secondary rounded-full font-semibold"
+            className="w-[90%] py-3 text-primary bg-[#111111] border-2 border-[#111111] rounded-full font-semibold"
           >
             {t("register")}
           </button>

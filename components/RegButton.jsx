@@ -10,10 +10,9 @@ const RegButton = ({ customStyle }) => {
   return (
     <>
       <Button
-        className={`${customStyle.txtColor1} font-semibold border-1 ${customStyle.borderColor} h-14 px-10`}
+        className={`text-primary font-semibold border-1 border-[#111111] h-14 px-10 bg-[#111111] hover:bg-[#111111]`}
         radius="full"
         size="lg"
-        color={customStyle.btnColor}
       >
         <Link
           href={`https://client.primexbroker.com/${locale}/register`}
@@ -25,13 +24,13 @@ const RegButton = ({ customStyle }) => {
         </Link>
       </Button>
       <p className="mt-1 ms-7">
-        <span className={`text-sm italic ${customStyle.txtColor2} me-2`}>
+        <span className={`text-sm italic text-[#111111] me-2`}>
           {t("reg_now")}
         </span>
         <Link
           href={`https://client.primexbroker.com/${locale}/auth/sign-in`}
           target="_blank"
-          className={`text-sm ${customStyle.txtColor3} font-semibold`}
+          className={`text-sm text-[#111111] font-semibold`}
         >
           {t("login_here")}
         </Link>

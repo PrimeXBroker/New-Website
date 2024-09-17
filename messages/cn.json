@@ -71,7 +71,7 @@
       "suffix_4": "十亿+"
     },
     "tradingOpportunities": {
-      "trading_opportunities_title": "探索380+交易机会",
+      "trading_opportunities_title": "探索330+交易机会",
       "trading_opportunities_desc": "深入了解包括外汇、指数、商品、加密货币和股票在内的多样化资产",
       "trading_opportunities_tab1": "外汇",
       "trading_opportunities_tab2": "指数",
@@ -453,7 +453,7 @@
       "question_2": "我可以从指数交易中获利吗？",
       "answer_2": "是的，您可以从指数交易中获利，但也有可能会产生损失，与交易其他工具类似。",
       "question_3": "哪些是最受欢迎的股票指数？",
-      "answer_3": "受欢迎的股票指数包括标普380、纳斯达克、道琼斯、富时100、Nifty 50和日经225。",
+      "answer_3": "受欢迎的股票指数包括标普330、纳斯达克、道琼斯、富时100、Nifty 50和日经225。",
       "question_4": "什么影响指数价格？",
       "answer_4": "指数价格受其构成股票价格变动的影响。",
       "question_5": "交易指数的最佳时间是什么时候？",
@@ -1168,7 +1168,7 @@
       "li1_2": "与您的MT5集成",
       "li1_3": "无限功能",
       "li2_title1": "探索多样化的工具",
-      "li2_1": "380多种工具",
+      "li2_1": "330多种工具",
       "li2_2": "100种外汇选项",
       "li2_3": "MENA地区最大的加密货币工具集",
       "li2_4": "具有杠杆选择的CFDs",
@@ -1396,7 +1396,7 @@
     },
     "instruments": {
       "title": "访问",
-      "title_2": "380+ 种交易工具",
+      "title_2": "330+ 种交易工具",
       "instruments_0_h": "外汇",
       "instruments_1_h": "金属",
       "instruments_2_h": "指数",

@@ -321,9 +321,9 @@ const ContactForm = () => {
       <div className="flex justify-center md:justify-end mt-6">
         <button
           onClick={() => formik.resetForm()}
-          className="bg-transparent border-1 border-secondary hover:bg-secondary rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg group"
+          className="bg-transparent border-1 border-[#111111] hover:bg-[#111111] rounded-full cursor-pointer px-4 py-2 w-[150px] text-center shadow-lg group"
         >
-          <div className="flex gap-1 items-center justify-center text-secondary group-hover:text-white">
+          <div className="flex gap-1 items-center justify-center text-[#111111] group-hover:text-white">
             <span>{t("reset_btn")}</span>
           </div>
         </button>

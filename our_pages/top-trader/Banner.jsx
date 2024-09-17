@@ -72,7 +72,7 @@ const Banner = ({ setActive, formRef }) => {
                 <Link
                   href="#"
                   onClick={handleScrollToForm}
-                  className="bg-secondary text-white border-1 border-secondary text-center text-sm sm:text-base md:text-sm lg:text-base px-4 py-3 rounded-full w-[280px] sm:w-[280px] md:w-[230px] lg:w-[280px] shadow-xl md:m-0 mx-auto"
+                  className="bg-[#111111] text-white border-1 border-[#111111] text-center text-sm sm:text-base md:text-sm lg:text-base px-4 py-3 rounded-full w-[280px] sm:w-[280px] md:w-[230px] lg:w-[280px] shadow-xl md:m-0 mx-auto"
                 >
                   {t("join_btn")}
                 </Link>
@@ -88,7 +88,7 @@ const Banner = ({ setActive, formRef }) => {
                 <Link
                   href={`https://client.primexbroker.com/${locale}/register`}
                   target="_blank"
-                  className="bg-transparent hover:bg-secondary border-1 border-secondary text-secondary hover:text-white text-center text-sm sm:text-base md:text-sm lg:text-base px-4 py-3 rounded-full w-[280px] sm:w-[280px] md:w-[230px] lg:w-[280px] shadow-xl md:m-0 mx-auto"
+                  className="bg-transparent hover:bg-[#111111] border-1 border-[#111111] text-[#111111] hover:text-white text-center text-sm sm:text-base md:text-sm lg:text-base px-4 py-3 rounded-full w-[280px] sm:w-[280px] md:w-[230px] lg:w-[280px] shadow-xl md:m-0 mx-auto"
                 >
                   {t("account_btn")}
                 </Link>

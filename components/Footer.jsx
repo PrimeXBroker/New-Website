@@ -16,6 +16,7 @@ import CustomModal from "./Modal";
 import { Button } from "@nextui-org/button";
 import LocaleLink from "./LocaleLink";
 import { useTranslations, useLocale } from "next-intl";
+import Logo from "@/public/images/logos/logo-white.webp";
 
 const Footer = () => {
   const language = useLocale();
@@ -221,7 +222,7 @@ const Footer = () => {
           className="absolute xl:right-[25%] lg:right-[20%] md:right-[20%] right-[50%] top-0 -z-10"
         /> */}
       </section>
-      <footer className="bg-secondary">
+      <footer className="bg-[#111111]">
         <div className="container flex flex-col pt-8">
           <h6 className="text-center pb-4 text-[#fff] text-xl">
             {t("logos.payment_options")}
@@ -314,7 +315,7 @@ const Footer = () => {
             <div>
               <Image
                 className="block sm:mx-0 mx-auto pb-6 sm:pb-0"
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/logos/logo2.2.svg"
+                src={Logo}
                 alt="footer logo"
                 width="150"
                 height="200"

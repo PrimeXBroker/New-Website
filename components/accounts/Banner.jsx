@@ -7,14 +7,6 @@ const Banner = () => {
   const locale = useLocale();
   const t = useTranslations("accountTypes");
 
-  const customStyle = {
-    btnColor: "secondary",
-    txtColor1: "text-primary",
-    txtColor2: "text-secondary",
-    txtColor3: "text-secondary",
-    borderColor: "border-secondary",
-  };
-
   return (
     <section className="">
       <div
@@ -56,7 +48,7 @@ const Banner = () => {
                     : "text-center lg:text-left"
                 }`}
               >
-                <RegButton customStyle={customStyle} />
+                <RegButton />
               </div>
             </div>
             <div className="lg:col-span-6 flex justify-center lg:justify-end mt-10 lg:mt-0">

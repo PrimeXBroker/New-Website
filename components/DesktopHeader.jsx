@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
-import Logo from "@/public/images/logos/logo_black_v2.2.svg";
+import Logo from "@/public/images/logos/primex-logo.webp";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import LocaleLink from "./LocaleLink";
@@ -99,7 +99,13 @@ const DesktopHeader = ({ locale }) => {
       <div className="container bg-[#ffffffdb] mt-[14px] h-[51px] rounded-full flex items-center justify-between">
         <div className="flex items-center">
           <LocaleLink href="/" className="logo">
-            <Image width="100" height="100" src={Logo} alt="Logo Image" />
+            <Image
+              unoptimized={true}
+              width="100"
+              height="100"
+              src={Logo}
+              alt="Logo Image"
+            />
           </LocaleLink>
         </div>
         <nav className="flex items-center h-full">
@@ -456,7 +462,7 @@ const DesktopHeader = ({ locale }) => {
             }
             className={`group ${
               locale === "ar" ? "w-[140px]" : "w-[120px]"
-            } relative overflow-hidden rounded-full bg-transparent border-2 border-[#3F3F3E] py-[6px] text-[#3F3F3E] hover:text-primary transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-[#3F3F3E] hover:to-[#5B5B5B]`}
+            } relative overflow-hidden rounded-full bg-transparent border-2 border-[#111111] py-[6px] text-[#111111] hover:text-primary transition-all duration-300 ease-out hover:bg-[#111111] `}
           >
             <span className="ease absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-[#e3e4e5] opacity-10 transition-all duration-700 group-hover:-translate-x-40"></span>
             <span className="relative flex items-center justify-center text-[1em]">
@@ -475,7 +481,7 @@ const DesktopHeader = ({ locale }) => {
             }
             className={`group ${
               locale === "ar" ? "w-[140px]" : "w-[120px]"
-            } relative overflow-hidden rounded-full bg-[#3F3F3E] py-[6px] text-[#FFD000] transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-[#3F3F3E] hover:to-[#5B5B5B]`}
+            } relative overflow-hidden rounded-full bg-[#111111] py-[6px] text-[#FFD000] transition-all duration-300 ease-out`}
           >
             <span className="ease absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-[#e3e4e5] opacity-10 transition-all duration-700 group-hover:-translate-x-40"></span>
             <span className="relative flex items-center justify-center text-[1em]">

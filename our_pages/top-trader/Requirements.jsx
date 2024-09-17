@@ -104,7 +104,7 @@ const Requirements = () => {
             target="_blank"
             radius="full"
             size="lg"
-            color="secondary"
+            className="bg-[#111111]"
           >
             <p className="text-primary font-semibold">{t("tc_btn")}</p>
           </Button>
