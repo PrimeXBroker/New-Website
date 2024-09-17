@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useOptimistic } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { tradingTabs } from "@/utilities/tradingOpportunity";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
@@ -11,31 +11,26 @@ const TradingOpportunities = () => {
   const locale = useLocale();
   const { tokenData } = useAppSelector((state) => state.auth);
   const dispatch = useAppDispatch();
-  const [activeTab, setActiveTab] = useState("Popular"); // Set "Popular" tab as default
+  const [activeTab, setActiveTab] = useState("Popular");
   const [symbolList, setSymbolList] = useState([]);
+  const [loading, setLoading] = useOptimistic(true);
 
-  // Function to handle tab changes and API calls
   const handleChange = async (tab) => {
-    setActiveTab(tab.name);
+    setLoading(true);
 
+    setActiveTab(tab.name);
     const tokenExpireTime = new Date(tokenData?.expire).getTime();
     const currentTime = new Date().getTime();
     const tokenExpirationThreshold = 5 * 60 * 1000;
 
     let newTokenData = tokenData;
-
     if (tokenExpireTime - currentTime < tokenExpirationThreshold) {
       try {
-        const res = await axios.post(
-          // `http://localhost:4002/v1/api/price`
-          `https://primexbroker.com/api/v1/price`,
-
-          {
-            token: "",
-            expire: false,
-            symbol: tab?.symbol,
-          }
-        );
+        const res = await axios.post(`https://primexbroker.com/api/v1/price`, {
+          token: "",
+          expire: false,
+          symbol: tab?.symbol,
+        });
         newTokenData = res?.data?.data;
         setSymbolList(res?.data?.data?.feedSymbols);
         dispatch(
@@ -49,30 +44,31 @@ const TradingOpportunities = () => {
       }
     } else {
       try {
-        const res = await axios.post(
-          // `http://localhost:4002/v1/api/price`
-          `https://primexbroker.com/api/v1/price`,
-          {
-            ...newTokenData,
-            symbol: tab?.symbol,
-          }
-        );
+        const res = await axios.post(`https://primexbroker.com/api/v1/price`, {
+          ...newTokenData,
+          symbol: tab?.symbol,
+        });
         setSymbolList(res?.data?.data?.feedSymbols);
       } catch (error) {
         console.error("Failed to send request with current token", error);
       }
     }
+    setLoading(false); // Stop loading when data is fetched
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const fetchData = async () => {
       const activeTabData = tradingTabs.find((tab) => tab.name === activeTab);
       if (activeTabData) {
-        handleChange(activeTabData);
+        await handleChange(activeTabData);
       }
-    }, 1000);
+    };
 
-    return () => clearInterval(interval);
+    fetchData();
+
+    const interval = setInterval(fetchData, 1000); // Refetch data every second
+
+    return () => clearInterval(interval); // Cleanup on component unmount
   }, [activeTab]);
 
   return (
@@ -146,75 +142,92 @@ const TradingOpportunities = () => {
               <div className="w-[80px]">Price</div>
               <div className="w-[134px] text-center">Spread</div>
             </div>
-            {symbolList?.length
-              ? symbolList?.map((instrument) => (
-                  <div
-                    key={instrument.symbol}
-                    className="flex gap-4 px-[14px] py-[8px] border-[1px] bg-[#262525] border-[#333333] text-[#C6C6C6] rounded-[4px] mb-3"
-                  >
-                    <>
+            {loading && !symbolList.length ? (
+              <div className="flex justify-center items-center min-h-[70vh]">
+                <div className="ellipsis">
+                  <span className="dot">.</span>
+                  <span className="dot">.</span>
+                  <span className="dot">.</span>
+                </div>
+              </div>
+            ) : (
+              <>
+                {symbolList?.length
+                  ? symbolList?.map((instrument) => (
                       <div
-                        className="hidden md:flex items-center text-[#ffffff] text-[14px] w-[236px]"
-                        style={{ fontWeight: "500" }}
+                        key={instrument.symbol}
+                        className="flex gap-4 px-[14px] py-[8px] border-[1px] bg-[#262525] border-[#333333] text-[#C6C6C6] rounded-[4px] mb-3"
                       >
-                        <div
-                          className={`w-[40px] h-[40px] bg-[#3C3C3C] rounded-full ${
-                            locale === "ar" ? "ml-3" : "mr-3"
-                          }`}
-                        ></div>
-                        {instrument.symbol}
-                      </div>
-                      <div
-                        className="hidden md:flex items-center text-[#ffffff] text-[14px] w-[80px] justify-center"
-                        style={{ fontWeight: "500" }}
-                      >
-                        {parseFloat(instrument?.bid_price)?.toFixed(3)}
-                      </div>
-                      <div className="hidden md:flex items-center justify-between">
-                        <span
-                          className={`text-[#FED100] text-[14px] w-[134px] flex justify-center`}
-                          style={{ fontWeight: "500" }}
-                        >
-                          {(
-                            instrument?.ask_price - instrument.bid_price
-                          )?.toFixed(3)}
-                        </span>
-                        <button
-                          className="bg-[#333333] text-[#C6C6C6] text-[14px] py-[4px] px-[12px] rounded-[100px]"
-                          style={{ fontWeight: "500" }}
-                        >
-                          {activeTab}
-                        </button>
-                      </div>
-                    </>
-
-                    {/* mobile view  */}
-                    <>
-                      <div className="block md:hidden w-[32px] h-[32px] bg-[#3C3C3C] rounded-full mr-1"></div>
-                      <div className="flex md:hidden items-center justify-between w-10/12">
-                        <div className="flex flex-col">
-                          <span className="text-[14px] text-[#fff]">
+                        <>
+                          <div
+                            className="hidden md:flex items-center text-[#ffffff] text-[14px] w-[236px]"
+                            style={{ fontWeight: "500" }}
+                          >
+                            <div
+                              className={`w-[40px] h-[40px] bg-[#3C3C3C] rounded-full ${
+                                locale === "ar" ? "ml-3" : "mr-3"
+                              }`}
+                            ></div>
                             {instrument.symbol}
-                          </span>
-                          <div className="flex items-center gap-5 text-xs">
-                            <div className="text-[12px] text-[#fff]">
-                              {parseFloat(instrument?.bid_price)?.toFixed(3)}
-                            </div>
-                            <span className={`text-[12px] text-[#FED100]`}>
+                          </div>
+                          <div
+                            className="hidden md:flex items-center text-[#ffffff] text-[14px] w-[80px] justify-center"
+                            style={{ fontWeight: "500" }}
+                          >
+                            {parseFloat(instrument?.bid_price)?.toFixed(3)}
+                          </div>
+                          <div className="hidden md:flex items-center justify-between">
+                            <span
+                              className={`text-[#FED100] text-[14px] w-[134px] flex justify-center`}
+                              style={{ fontWeight: "500" }}
+                            >
                               {(
                                 instrument?.ask_price - instrument.bid_price
                               )?.toFixed(3)}
                             </span>
+                            <button
+                              className="bg-[#333333] text-[#C6C6C6] text-[14px] py-[4px] px-[12px] rounded-[100px]"
+                              style={{ fontWeight: "500" }}
+                            >
+                              {activeTab}
+                            </button>
                           </div>
-                        </div>
-                        <button className="bg-[#333333] text-[#C6C6C6] text-[10px] py-[4px] px-[12px] rounded-[100px]">
-                          {activeTab}
-                        </button>
+                        </>
+
+                        {/* mobile view  */}
+                        <>
+                          <div className="block md:hidden w-[32px] h-[32px] bg-[#3C3C3C] rounded-full mr-1"></div>
+                          <div className="flex md:hidden items-center justify-between w-10/12">
+                            <div className="flex flex-col">
+                              <span className="text-[14px] text-[#fff]">
+                                {instrument.symbol}
+                              </span>
+                              <div className="flex items-center gap-5 text-xs">
+                                <div className="text-[12px] text-[#fff]">
+                                  {parseFloat(instrument?.bid_price)?.toFixed(
+                                    3
+                                  )}
+                                </div>
+                                <span className={`text-[12px] text-[#FED100]`}>
+                                  {(
+                                    instrument?.ask_price - instrument.bid_price
+                                  )?.toFixed(3)}
+                                </span>
+                                <button className="bg-gray-800 text-white text-xs py-1 px-3 rounded">
+                                  {activeTab}
+                                </button>
+                              </div>
+                            </div>
+                            <button className="bg-[#333333] text-[#C6C6C6] text-[10px] py-[4px] px-[12px] rounded-[100px]">
+                              {activeTab}
+                            </button>
+                          </div>
+                        </>
                       </div>
-                    </>
-                  </div>
-                ))
-              : null}
+                    ))
+                  : null}
+              </>
+            )}
           </div>
         </div>
       </div>
