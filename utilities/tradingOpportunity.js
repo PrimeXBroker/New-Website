@@ -9,7 +9,7 @@ import {
 export const tradingTabs = [
   {
     name: "Popular",
-    icon: <BarChart2 className="w-4 h-4" />,
+    icon: <BarChart2 />,
     symbol: [
       "PrimeX_REST_RA||EONGn.DE||EONGn.DE",
       "PrimeX_REST_RA||US100.spot||US100.spot",
@@ -23,7 +23,7 @@ export const tradingTabs = [
   },
   {
     name: "Equities",
-    icon: <TrendingUp className="w-4 h-4" />,
+    icon: <TrendingUp />,
     symbol: [
       "PrimeX_REST_RA||ADS.DE||ADS.DE",
       "PrimeX_REST_RA||BMW.DE||BMW.DE",
@@ -37,7 +37,7 @@ export const tradingTabs = [
   },
   {
     name: "Crypto",
-    icon: <DollarSign className="w-4 h-4" />,
+    icon: <DollarSign />,
     symbol: [
       "PrimeX_REST_RA||BCHBTC||BCHBTC",
       "PrimeX_REST_RA||BCHUSD||BCHUSD",
@@ -51,7 +51,7 @@ export const tradingTabs = [
   },
   {
     name: "Forex",
-    icon: <Package className="w-4 h-4" />,
+    icon: <Package />,
     symbol: [
       "PrimeX_REST_RA||CADCHF||CADCHF",
       "PrimeX_REST_RA||CADJPY||CADJPY",
@@ -65,7 +65,7 @@ export const tradingTabs = [
   },
   {
     name: "CFD",
-    icon: <LineChart className="w-4 h-4" />,
+    icon: <LineChart />,
     symbol: [
       "PrimeX_REST_RA||COCOA.spot||COCOA.spot",
       "PrimeX_REST_RA||COTTON.spot||COTTON.spot",
