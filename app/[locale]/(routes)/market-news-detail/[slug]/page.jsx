@@ -2,43 +2,6 @@ import MarketNewsDetailWrapper from "@/our_pages/market-news-detail/MarketNewsDe
 import React from "react";
 import axios from "axios";
 
-// export async function generateMetadata({ params: { locale } }) {
-//   const { slug } = params
-//   const res = await axios.get(
-//     `https://primexbroker.com/api/fetch/one/blog/${slug}`
-//   );
-//   console.log(res, "res");
-
-//   const blo = res?.data?.data;
-//   const url =
-//   locale != "en"
-//     ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/contact`
-//     : `${process.env.NEXT_PUBLIC_BASE_URL}/contact`;
-
-//   return {
-//     title: blo?.title,
-//     description: blo?.description,
-//     alternates: {
-//       canonical: url,
-//     },
-//     openGraph: {
-//       type: 'website',
-//       locale: locale,
-//       url: url,
-//       title: blo?.title,
-//       description: blo.description,
-//       images: [
-//         {
-//           url: blo?.image,
-//           width: 1200, // Update width
-//           height: 630, // Update height
-//           alt: blo?.title,
-//         },
-//       ],
-//     },
-//   };
-// }
-
 export async function generateMetadata({ params: { locale, slug } }) {
   try {
     const res = await axios.get(

@@ -213,9 +213,6 @@ const TradingOpportunities = () => {
                                     instrument?.ask_price - instrument.bid_price
                                   )?.toFixed(3)}
                                 </span>
-                                <button className="bg-gray-800 text-white text-xs py-1 px-3 rounded">
-                                  {activeTab}
-                                </button>
                               </div>
                             </div>
                             <button className="bg-[#333333] text-[#C6C6C6] text-[10px] py-[4px] px-[12px] rounded-[100px]">
