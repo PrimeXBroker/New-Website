@@ -53,7 +53,7 @@ const MobileHeader = ({ locale }) => {
 
   return (
     <header className="container w-full z-50 transition-all duration-300 block lg:hidden fixed top-0 left-0">
-      <div className="container bg-[#ffffffdb] mt-[14px] h-[51px] rounded-full flex items-center justify-between px-4">
+      <div className="container bg-[#ffffff] mt-[14px] h-[51px] rounded-full flex items-center justify-between px-4">
         <div className="flex items-center">
           <LocaleLink href="/" className="logo" onClick={toggleDrawer}>
             <Image width="100" height="100" src={Logo} alt="Logo Image" />

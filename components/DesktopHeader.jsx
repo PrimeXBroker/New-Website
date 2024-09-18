@@ -96,7 +96,7 @@ const DesktopHeader = ({ locale }) => {
         isSticky ? "fixed top-0 left-0" : "absolute top-0 left-0"
       }`}
     >
-      <div className="container bg-[#ffffffdb] mt-[14px] h-[51px] rounded-full flex items-center justify-between">
+      <div className="container bg-[#ffffff] mt-[14px] h-[51px] rounded-full flex items-center justify-between">
         <div className="flex items-center">
           <LocaleLink href="/" className="logo">
             <Image
@@ -133,7 +133,7 @@ const DesktopHeader = ({ locale }) => {
                 </svg>
               </button>
               {activeDropdown === 0 && (
-                <ul className="absolute top-full mt-[4px] bg-[#ffffffdb] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
+                <ul className="absolute top-full mt-[4px] bg-[#ffffff] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
                   <li>
                     <LocaleLink
                       href="/forex"
@@ -200,7 +200,7 @@ const DesktopHeader = ({ locale }) => {
                 </svg>
               </button>
               {activeDropdown === 1 && (
-                <ul className="absolute top-full mt-[4px] bg-[#ffffffdb] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
+                <ul className="absolute top-full mt-[4px] bg-[#ffffff] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
                   <li>
                     <LocaleLink
                       href="/platform/mt5-platform"
@@ -240,7 +240,7 @@ const DesktopHeader = ({ locale }) => {
               </button>
               {activeDropdown === 2 && (
                 <ul
-                  className={`absolute top-full mt-[4px] bg-[#ffffffdb] shadow-lg p-[10px] ${
+                  className={`absolute top-full mt-[4px] bg-[#ffffff] shadow-lg p-[10px] ${
                     locale === "ar" ? "min-w-[160px]" : "min-w-[150px]"
                   } rounded-[6px]`}
                 >
@@ -274,7 +274,7 @@ const DesktopHeader = ({ locale }) => {
                 </svg>
               </button>
               {activeDropdown === 3 && (
-                <ul className="absolute top-full mt-[4px] bg-[#ffffffdb] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
+                <ul className="absolute top-full mt-[4px] bg-[#ffffff] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
                   <li>
                     <LocaleLink
                       href="/academy"
@@ -305,7 +305,7 @@ const DesktopHeader = ({ locale }) => {
                 </svg>
               </button>
               {activeDropdown === 4 && (
-                <ul className="absolute top-full mt-[4px] bg-[#ffffffdb] shadow-lg p-[10px] min-w-[250px] rounded-[6px]">
+                <ul className="absolute top-full mt-[4px] bg-[#ffffff] shadow-lg p-[10px] min-w-[250px] rounded-[6px]">
                   <li>
                     <LocaleLink
                       href="/bonus"
@@ -365,7 +365,7 @@ const DesktopHeader = ({ locale }) => {
                 </svg>
               </button>
               {activeDropdown === 5 && (
-                <ul className="absolute top-full mt-[4px] bg-[#ffffffdb] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
+                <ul className="absolute top-full mt-[4px] bg-[#ffffff] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
                   <li>
                     <Link
                       href={
