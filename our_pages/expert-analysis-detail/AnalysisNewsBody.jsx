@@ -120,6 +120,9 @@ function AnalysisNewsBody({ slug }) {
     return (
       <div>
         <img src={detail.image} className="mb-4" />
+        <h1 className="text-[25px] mb-0 font-semibold">
+          {locale === "ar" ? detail.titleAr : detail.titleEn}
+        </h1>
         <MyEditor
           editorState={content}
           readOnly={true}
