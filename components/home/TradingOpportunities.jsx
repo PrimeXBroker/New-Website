@@ -5,6 +5,7 @@ import { tradingTabs } from "@/utilities/tradingOpportunity";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { setTokenData } from "@/redux/slices/workspaceSlice";
 import axios from "axios";
+import Image from "next/image";
 
 const TradingOpportunities = () => {
   const t = useTranslations("home.tradingOpportunities");
@@ -164,11 +165,20 @@ const TradingOpportunities = () => {
                             style={{ fontWeight: "500" }}
                           >
                             <div
-                              className={`w-[40px] h-[40px] bg-[#3C3C3C] rounded-full ${
+                              className={`w-[40px] h-[40px] bg-[#3C3C3C] ${
                                 locale === "ar" ? "ml-3" : "mr-3"
                               }`}
-                            ></div>
-                            {instrument.symbol}
+                            >
+                              <Image
+                                unoptimized={true}
+                                src={instrument.image}
+                                width="100"
+                                height="100"
+                                alt="image"
+                                className="w-[100%]"
+                              />
+                            </div>
+                            {instrument.name}
                           </div>
                           <div
                             className="hidden md:flex items-center text-[#ffffff] text-[14px] w-[80px] justify-center"
@@ -196,11 +206,20 @@ const TradingOpportunities = () => {
 
                         {/* mobile view  */}
                         <>
-                          <div className="block md:hidden w-[32px] h-[32px] bg-[#3C3C3C] rounded-full mr-1"></div>
+                          <div className="block md:hidden w-[32px] h-[32px] bg-[#3C3C3C] mr-1">
+                            <Image
+                              unoptimized={true}
+                              src={instrument.image}
+                              width="100"
+                              height="100"
+                              alt="image"
+                              className="w-[100%]"
+                            />
+                          </div>
                           <div className="flex md:hidden items-center justify-between w-10/12">
                             <div className="flex flex-col">
                               <span className="text-[14px] text-[#fff]">
-                                {instrument.symbol}
+                                {instrument.name}
                               </span>
                               <div className="flex items-center gap-5 text-xs">
                                 <div className="text-[12px] text-[#fff]">
