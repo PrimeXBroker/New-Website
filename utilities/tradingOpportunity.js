@@ -11,70 +11,318 @@ export const tradingTabs = [
     name: "Popular",
     icon: <BarChart2 />,
     symbol: [
-      "PrimeX_REST_RA||EONGn.DE||EONGn.DE",
-      "PrimeX_REST_RA||US100.spot||US100.spot",
-      "PrimeX_REST_RA||US30.spot||US30.spot",
-      "PrimeX_REST_RA||XAUUSD||XAUUSD",
-      "PrimeX_REST_RA||EURUSD||EURUSD",
-      "PrimeX_REST_RA||USDJPY||USDJPY",
-      "PrimeX_REST_RA||GBPUSD||GBPUSD",
-      "PrimeX_REST_RA||AUDUSD||AUDUSD",
-    ],
-  },
-  {
-    name: "Equities",
-    icon: <TrendingUp />,
-    symbol: [
-      "PrimeX_REST_RA||ADS.DE||ADS.DE",
-      "PrimeX_REST_RA||BMW.DE||BMW.DE",
-      "PrimeX_REST_RA||DAI.DE||DAI.DE",
-      "PrimeX_REST_RA||DANO.FR||DANO.FR",
-      "PrimeX_REST_RA||DBKGn.DE||DBKGn.DE",
-      "PrimeX_REST_RA||DPWGn.DE||DPWGn.DE",
-      "PrimeX_REST_RA||FDX.US||FDX.US",
-      "PrimeX_REST_RA||FORD.US||FORD.US",
-    ],
-  },
-  {
-    name: "Crypto",
-    icon: <DollarSign />,
-    symbol: [
-      "PrimeX_REST_RA||BCHBTC||BCHBTC",
-      "PrimeX_REST_RA||BCHUSD||BCHUSD",
-      "PrimeX_REST_RA||BNBUSD||BNBUSD",
-      "PrimeX_REST_RA||BSVUSD||BSVUSD",
-      "PrimeX_REST_RA||BTCEUR||BTCEUR",
-      "PrimeX_REST_RA||BTCUSD||BTCUSD",
-      "PrimeX_REST_RA||DOGUSD||DOGUSD",
-      "PrimeX_REST_RA||DOTUSD||DOTUSD",
+      {
+        tradingSymbol: "PrimeX_REST_RA||EURUSD||EURUSD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/EURUSD.svg",
+        name: "EURUSD",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||XAUUSD||XAUUSD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Gold.svg",
+        name: "GOLD",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||US30.spot||US30.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/US30.svg",
+        name: "US30",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||US100.spot||US100.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/US100.svg",
+        name: "US100",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||WTI.spot||WTI.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Oil.svg",
+        name: "Oil",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||NGAS.spot||NGAS.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Natural+Gas.svg",
+        name: "Natural GAS",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||APPLE.US||APPLE.US",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Apple.svg",
+        name: "Apple",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||BTCUSD||BTCUSD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Bitcoin.svg",
+        name: "Bitcoin",
+      },
     ],
   },
   {
     name: "Forex",
     icon: <Package />,
     symbol: [
-      "PrimeX_REST_RA||CADCHF||CADCHF",
-      "PrimeX_REST_RA||CADJPY||CADJPY",
-      "PrimeX_REST_RA||CHFJPY||CHFJPY",
-      "PrimeX_REST_RA||EURAUD||EURAUD",
-      "PrimeX_REST_RA||EURCAD||EURCAD",
-      "PrimeX_REST_RA||EURJPY||EURJPY",
-      "PrimeX_REST_RA||GBPAUD||GBPAUD",
-      "PrimeX_REST_RA||GBPCAD||GBPCAD",
+      {
+        tradingSymbol: "PrimeX_REST_RA||GBPUSD||GBPUSD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/GBPUSD.svg",
+        name: "GBPUSD",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||AUDUSD||AUDUSD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/AUDUSD.svg",
+        name: "AUDUSD",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||USDJPY||USDJPY",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/USDJPY.svg",
+        name: "USDJPY",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||NZDUSD||NZDUSD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/NZDUSD.svg",
+        name: "NZDUSD",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||USDCHF||USDCHF",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/USDCHF.svg",
+        name: "USDCHF",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||USDCAD||USDCAD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/USDCAD.svg",
+        name: "USDCAD",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||GBPJPY||GBPJPY",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/GBPJPY.svg",
+        name: "GBPJPY",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||EURGBP||EURGBP",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/EURGBP.svg",
+        name: "EURGBP",
+      },
     ],
   },
   {
-    name: "CFD",
+    name: "Crypto",
+    icon: <DollarSign />,
+    symbol: [
+      {
+        tradingSymbol: "PrimeX_REST_RA||BTCEUR||BTCEUR",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/BTCEUR.svg",
+        name: "BTCEUR",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||DOGUSD||DOGUSD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/DOGUSD.svg",
+        name: "DOGUSD",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||DOTUSD||DOTUSD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/DOTUSD.svg",
+        name: "DOTUSD",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||ETHUSD||ETHUSD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/ETHUSD.svg",
+        name: "ETHUSD",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||LTCUSD||LTCUSD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/LTCUSD.svg",
+        name: "LTCUSD",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||TRXUSD||TRXUSD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/TRXUSD.svg",
+        name: "TRXUSD",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||XLMUSD||XLMUSD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/XLMUSD.svg",
+        name: "XLMUSD",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||XRPUSD||XRPUSD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/XPRUSD.svg",
+        name: "XRPUSD",
+      },
+    ],
+  },
+  {
+    name: "Metals",
+    icon: <TrendingUp />,
+    symbol: [
+      {
+        tradingSymbol: "PrimeX_REST_RA||XAUUSD||XAUUSD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Gold.svg",
+        name: "GOLD",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||XAGUSD||XAGUSD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Silver.svg",
+        name: "Silver",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||ALUMINIUM||ALUMINIUM",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Aluminum.svg",
+        name: "ALUMINIUM",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||COPPER||COPPER",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Copper.svg",
+        name: "COPPER",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||XPDUSD||XPDUSD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Palladium.svg",
+        name: "Palladium",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||XPTUSD||XPTUSD",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Platinum.svg",
+        name: "Platinum",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||ZINC||ZINC",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/ZINC.svg",
+        name: "ZINC",
+      },
+    ],
+  },
+  {
+    name: "Indices",
     icon: <LineChart />,
     symbol: [
-      "PrimeX_REST_RA||COCOA.spot||COCOA.spot",
-      "PrimeX_REST_RA||COTTON.spot||COTTON.spot",
-      "PrimeX_REST_RA||FRA40.spot||FRA40.spot",
-      "PrimeX_REST_RA||GER30.spot||GER30.spot",
-      "PrimeX_REST_RA||HKIND.spot||HKIND.spot",
-      "PrimeX_REST_RA||SOYBEAN.spot||SOYBEAN.spot",
-      "PrimeX_REST_RA||SPA35.spot||SPA35.spot",
-      "PrimeX_REST_RA||SUGAR.spot||SUGAR.spot",
+      {
+        tradingSymbol: "PrimeX_REST_RA||AUS200.spot||AUS200.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/AUS200.spot.svg",
+        name: "AUS200.spot",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||EU50.spot||EU50.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/EU50.spot.svg",
+        name: "EU50.spot",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||FRA40.spot||FRA40.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/FRA40.svg",
+        name: "FRA40.spot",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||GER30.spot||GER30.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Ger30.svg",
+        name: "GER30.spot",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||ITA40.spot||ITA40.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/ITA40.svg",
+        name: "ITA40.spot",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||JAP225.spot||JAP225.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/JAP225.svg",
+        name: "JAP225.spot",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||UK100.spot||UK100.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/UK100.svg",
+        name: "UK100.spot",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||US500.spot||US500.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/US500.svg",
+        name: "US500.spot",
+      },
+    ],
+  },
+  {
+    name: "Commodities",
+    icon: <LineChart />,
+    symbol: [
+      {
+        tradingSymbol: "PrimeX_REST_RA||BRENT.spot||BRENT.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/BRENT.svg",
+        name: "BRENT",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||COCOA.spot||COCOA.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/COCOA.svg",
+        name: "COCOA",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||COFFEE.spot||COFFEE.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/COFFEE.svg",
+        name: "COFFEE",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||CORN.spot||CORN.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/CORN.svg",
+        name: "CORN",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||COTTON.spot||COTTON.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/COTTON.svg",
+        name: "COTTON",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||SOYBEAN.spot||SOYBEAN.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/SOYBEAN.svg",
+        name: "SOYBEAN",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||SUGAR.spot||SUGAR.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/SUGAR.svg",
+        name: "SUGAR",
+      },
+      {
+        tradingSymbol: "PrimeX_REST_RA||WHEAT.spot||WHEAT.spot",
+        image:
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/WHEAT.svg",
+        name: "WHEAT",
+      },
     ],
   },
 ];
