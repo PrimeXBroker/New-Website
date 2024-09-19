@@ -7,6 +7,7 @@ import Faq from "@/components/instrments/common/Faq";
 import { useTranslations } from "next-intl";
 import ParticipateForm from "@/our_pages/demo-account/ParticipateForm";
 import CompetitionWidget from "./CompetitionWidget";
+import DemoAccountTC from "./DemoAccountTC";
 
 const DemoAccountWrapper = () => {
   const t = useTranslations("demoAccount");
@@ -49,6 +50,7 @@ const DemoAccountWrapper = () => {
       <ParticipateForm />
       <SignUp />
       <Faq forexFaqs={forexFaqs} />
+      <DemoAccountTC />
     </div>
   );
 };

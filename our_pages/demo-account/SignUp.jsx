@@ -10,7 +10,7 @@ const SignUp = () => {
     <section className="container mx-auto">
       <div className="grid grid-cols-12 bg-[#000000] px-8 md:px-14 pt-12 md:pt-0 rounded-xl mb-8 ">
         <div className="col-span-12 md:col-span-7 flex flex-col justify-center">
-          <h2 className={`text-white text-2xl md:text-4xl font-semibold`}>
+          <h2 className={`text-[#ffffff] text-2xl md:text-4xl font-semibold`}>
             {t("title")}
           </h2>
           <ul class="list-none flex flex-col md:flex-row gap-4 text-[#c6c6c6] text-base my-5">

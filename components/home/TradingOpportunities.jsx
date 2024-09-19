@@ -53,7 +53,7 @@ const TradingOpportunities = () => {
         console.error("Failed to send request with current token", error);
       }
     }
-    setLoading(false); // Stop loading when data is fetched
+    setLoading(false);
   };
 
   useEffect(() => {
