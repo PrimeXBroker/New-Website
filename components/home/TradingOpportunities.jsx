@@ -73,7 +73,7 @@ const TradingOpportunities = () => {
   }, [activeTab]);
 
   return (
-    <section className="pt-12 bg-accent relative">
+    <section className="pt-12 bg-white relative">
       <h2
         className="sectionHeading px-8 md:px-0"
         data-aos-easing="ease-out"
