@@ -88,7 +88,7 @@ function Form() {
   return (
     <section className="container px-0">
       <div
-        className={`bg-[#111111] border-[#1d1d1d] border-3 sm:w-[74%] md:w-[64%] lg:w-[100%] rounded-[12px] p-[40px]`}
+        className={`bg-[#111111] border-[#1d1d1d] border-3 sm:w-[74%] md:w-[64%] lg:w-[100%] rounded-[12px] p-[24px] ms:p-[40px]`}
       >
         <form
           onSubmit={formik.handleSubmit}
@@ -118,8 +118,8 @@ function Form() {
               />
             </label>
           </div>
-          <div className="flex w-full justify-between">
-            <div className="w-[48%]">
+          <div className="md:flex w-full justify-between">
+            <div className="w-full md:w-[48%] mb-3 md:mb-0">
               <label className="text-xs text-[#c6c6c6]">
                 {t("first_name_label")}
                 <input
@@ -137,7 +137,7 @@ function Form() {
                 />
               </label>
             </div>
-            <div className="w-[48%]">
+            <div className="w-full md:w-[48%] ">
               <label className="text-xs text-[#c6c6c6]">
                 {t("last_name_label")}
                 <input
@@ -156,8 +156,8 @@ function Form() {
               </label>
             </div>
           </div>
-          <div className="flex w-full justify-between">
-            <div className="w-[48%]">
+          <div className="md:flex w-full justify-between">
+            <div className="w-full md:w-[48%] mb-3 md:mb-0">
               <label className="text-xs text-[#c6c6c6]">
                 {t("occupation_label")}
                 <input
@@ -175,7 +175,7 @@ function Form() {
                 />
               </label>
             </div>
-            <div className="w-[48%]">
+            <div className="w-full md:w-[48%]">
               <label className="text-xs text-[#c6c6c6]">
                 {t("country_label")}
                 <select

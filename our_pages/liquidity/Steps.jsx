@@ -9,8 +9,8 @@ const Steps = () => {
 
   return (
     <section className="bg-[#000000]">
-      <div className="container mx-auto px-4 bg-[#111111] shadow-[#000000] border-2 border-[#1D1D1D] rounded-[20px]">
-        <div className=" p-6 flex flex-col md:flex-row justify-between items-center gap-[18px] md:gap-0 ">
+      <div className="container mx-auto">
+        <div className="p-6 flex flex-col md:flex-row justify-between items-center gap-[18px] md:gap-0 px-4 bg-[#111111] shadow-[#000000] border-2 border-[#1D1D1D] rounded-[20px]">
           <div className="w-full md:w-0 md:flex-1 flex items-center justify-start md:justify-center gap-6 md:gap-3 lg:gap-6 px-2 md:px-0">
             <Image
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/liquidity/fast.svg"

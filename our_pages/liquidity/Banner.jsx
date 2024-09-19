@@ -20,17 +20,17 @@ const Banner = () => {
   }, []);
 
   return (
-    <section className="bg-[#000000] h-[630px] pt-32">
+    <section className="bg-[#000000] md:h-[550px] pt-28 md:pt-32 pb-[32px] md:pb-[0px]">
       <div className="container">
         <div className="grid grid-cols-12">
-          <div className="col-span-6">
-            <h1 className="text-3xl sm:text-5xl xl:text-5xl font-semibold text-[#ffffff] sm:mb-1">
+          <div className="col-span-12 md:col-span-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#ffffff] sm:mb-1">
               {t("title1")}
             </h1>
-            <h2 className="text-3xl sm:text-5xl xl:text-5xl font-semibold text-[#ffffff]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#ffffff]">
               {t("title2")} <span className="text-primary"> {t("title3")}</span>
             </h2>
-            <p className="text-lg sm:text-xl my-4 text-[#C6C6C6]">
+            <p className="text-base sm:text-xl my-4 text-[#C6C6C6]">
               {t("desc")}
             </p>
             <div className="my-6">
@@ -70,8 +70,7 @@ const Banner = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-6 flex justify-center items-center">
-            {/* Lottie Player */}
+          <div className="col-span-12 md:col-span-6 flex justify-center items-center mt-8 md:mt-0">
             <div>
               <dotlottie-player
                 src="/dotlotti/hero-animation.lottie"

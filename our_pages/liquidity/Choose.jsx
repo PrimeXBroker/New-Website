@@ -54,10 +54,12 @@ const Choose = () => {
         {solutions.map((solution, index) => (
           <div
             key={index}
-            className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#ffffff] flex justify-between items-center gap-4"
+            className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#ffffff] flex justify-between items-center gap-4 transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500 group"
           >
             <div className="">
-              <h3 className="text-xl font-bold">{solution.title}</h3>
+              <h3 className="text-xl font-bold group-hover:text-primary">
+                {solution.title}
+              </h3>
               <p className="text-[#c6c6c6] mt-2">{solution.description}</p>
             </div>
             <img
