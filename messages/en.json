@@ -1704,5 +1704,101 @@
       "step1_p1": "Sign Up for Free and Instantly Access Your Demo Account.",
       "step2_p1": "Start Trading in Real Market Conditions, Risk-Free."
     }
+  },
+  "liquidity": {
+    "banner": {
+      "title1": "Unlock World-Class",
+      "title2": "Trading with ",
+      "title3": "PrimeX",
+      "desc": "Experience Seamless Financial Growth!",
+      "contact_btn": "Contact Us",
+      "review_title": "Reviewed by 2k+ Users"
+    },
+    "steps": {
+      "step1_p1": "Lightning-Fast",
+      "step1_p2": "Execution",
+      "step2_p1": "Capital Deep ",
+      "step2_p2": "Liquidity",
+      "step3_p1": "Risk Management",
+      "step3_p2": "Solutions"
+    },
+    "liquiditySolutions": {
+      "main_title1": "Tailored ",
+      "main_title2": "Liquidity",
+      "main_title3": "Solutions",
+      "main_desc": "we specialize in delivering customized liquidity solutions backed by advanced infrastructure and deep expertise.",
+      "title1": "Online Providers",
+      "description1": "PrimeX Capital provides a tailored, comprehensive broker solution aligned with your risk strategy, integrating liquidity and advanced risk management to meet high-quality standards. ",
+      "title2": "Asset & Hedge Fund Managers",
+      "description2": "Our tools offer exceptional performance through a diversified asset portfolio and Tier 1 bank liquidity, supported by 24/7 service to foster a trusted partnership.",
+      "title3": "Professional Clients",
+      "description3": "Experience efficient trading on a unified platform with institutional pricing, competitive margins, and segregated accounts. Our personalized solutions are designed to elevate your portfolio.",
+      "title4": "Trading Desks",
+      "description4": "Benefit from rapid execution and optimal pricing with our low-latency infrastructure, customized Tier 1 liquidity, and advanced reporting tools to track exposure and performance."
+    },
+    "offer": {
+      "main_title1": "What We ",
+      "main_title2": "Offer",
+      "title1": "Liquidity",
+      "description1": "we offer fast, reliable, and customizable liquidity solutions through our white-label MT5 platform. Access deep liquidity across global markets, tailored to your trading needs.",
+      "title2": "Connectivity",
+      "description2": "Gain seamless, low-latency access to global financial markets. Our tools ensure efficient trade execution, connecting you to a vast liquidity pool for major currencies, metals, indices, and more.",
+      "title3": "Risk Management",
+      "description3": "Protect your investments with our comprehensive risk management solutions. We help you mitigate market, credit, and liquidity risks, ensuring secure and successful trading."
+    },
+    "choose": {
+      "main_title1": "Choose ",
+      "main_title2": "PrimeX Capital",
+      "title1": "Globally Trusted Brand",
+      "description1": "Trusted by investors worldwide, our seasoned team ensures reliable, top-tier service.",
+      "title2": "Ultra-Competitive Price",
+      "description2": "Enjoy lower commissions with our exclusive solutions and a minimum monthly fee of $1000.",
+      "title3": "Low Latency Execution",
+      "description3": "Our servers are strategically placed near liquidity sources for ultra-fast trade execution.",
+      "title4": "Deep Liquidity",
+      "description4": "Access deep liquidity across a wide range of tradable assets for seamless trading.",
+      "title5": "Robust Technology",
+      "description5": "Powered by cutting-edge tools, our technology ensures robust, scalable performance.",
+      "title6": "One-Stop-Shop",
+      "description6": "We offer tailored product packages to meet all your trading and investment needs."
+    },
+    "benefits": {
+      "benefit_1": "Agile Onboarding Process ",
+      "benefit_2": "Fast Execution",
+      "benefit_3": "Ultra-Fast Price Feeds ",
+      "benefit_4": "Minimal Spreads",
+      "benefit_5": "Up to 10 Levels of Market Depth ",
+      "benefit_6": "Cutting-edge Integration "
+    },
+    "liquidityForm": {
+      "title": "Drop us a Message",
+      "desc": "Drop your details, we will get in touch with you soon.",
+      "first_name_label": "First Name",
+      "first_name_placeholder": "John",
+      "last_name_label": "Last Name",
+      "last_name_placeholder": "Doe",
+      "email_label": "Email",
+      "email_placeholder": "Johndoe@gmail.com",
+      "occupation_label": "Occupation",
+      "occupation_placeholder": "Assistant Manager",
+      "country_label": "Country",
+      "country_placeholder": "UAE",
+      "question_label": "Question",
+      "question_placeholder": "Write....",
+      "condition": "By submitting this form, you agree to be contacted by our team.",
+      "submit_btn": "Submit",
+      "first_name_validation_error": "The first name should only include alphabetical characters.",
+      "first_name_required_error": "Please provide a first name.",
+      "last_name_validation_error": "The last name should only include alphabetical characters.",
+      "last_name_required_error": "Please provide a last name.",
+      "email_validation_error": "Please enter a valid email address.",
+      "email_required_error": "Email is required.",
+      "country_required_error": "country is required!",
+      "occupation_required_error": "occupation is required!",
+      "question_required_error": "question is required!",
+      "success_title": "Success",
+      "success_desc": "Form Submitted Successfully",
+      "close_btn": "Close"
+    }
   }
 }
