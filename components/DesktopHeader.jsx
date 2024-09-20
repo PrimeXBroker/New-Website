@@ -333,6 +333,15 @@ const DesktopHeader = ({ locale }) => {
                       {t("funded_account_competition")}
                     </LocaleLink>
                   </li>
+                  {/* <li>
+                    <LocaleLink
+                      href="/liquidity"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-black text-[.8em] hover:bg-primary rounded-[6px]"
+                    >
+                      {t("liquidity")}
+                    </LocaleLink>
+                  </li> */}
                 </ul>
               )}
             </li>

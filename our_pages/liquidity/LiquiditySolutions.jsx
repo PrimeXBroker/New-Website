@@ -31,7 +31,7 @@ const LiquiditySolutions = () => {
   ];
 
   return (
-    <div className="bg-[#000000] py-20">
+    <div className="bg-[#000000] py-12 sm:py-20">
       <div className="container mb-7">
         <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff]">
           {t("main_title1")}{" "}

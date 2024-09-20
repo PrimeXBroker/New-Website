@@ -257,6 +257,13 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("funded_account_competition")}
                 </LocaleLink>
+                {/* <LocaleLink
+                  href="/liquidity"
+                  className="block text-black text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("liquidity")}
+                </LocaleLink> */}
               </div>
             )}
           </div>

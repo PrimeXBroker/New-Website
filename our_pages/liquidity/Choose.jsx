@@ -41,7 +41,7 @@ const Choose = () => {
   ];
 
   return (
-    <div className="bg-[#000000] py-20">
+    <div className="bg-[#000000] py-12 sm:py-20">
       <div className="container grid grid-cols-12 mb-7">
         <div className="col-span-6">
           <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff]">
