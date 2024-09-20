@@ -241,7 +241,7 @@ const DesktopHeader = ({ locale }) => {
               {activeDropdown === 2 && (
                 <ul
                   className={`absolute top-full mt-[4px] bg-[#ffffff] shadow-lg p-[10px] ${
-                    locale === "ar" ? "min-w-[160px]" : "min-w-[150px]"
+                    locale === "ar" ? "min-w-[200px]" : "min-w-[200px]"
                   } rounded-[6px]`}
                 >
                   <li>
@@ -251,6 +251,15 @@ const DesktopHeader = ({ locale }) => {
                       className="block px-4 py-2 text-black text-[.8em] hover:bg-primary rounded-[6px]"
                     >
                       {t("ib_program")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
+                      href="/liquidity"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-black text-[.8em] hover:bg-primary rounded-[6px]"
+                    >
+                      {t("liquidity")}
                     </LocaleLink>
                   </li>
                 </ul>
@@ -333,15 +342,6 @@ const DesktopHeader = ({ locale }) => {
                       {t("funded_account_competition")}
                     </LocaleLink>
                   </li>
-                  {/* <li>
-                    <LocaleLink
-                      href="/liquidity"
-                      onClick={closeDropdown}
-                      className="block px-4 py-2 text-black text-[.8em] hover:bg-primary rounded-[6px]"
-                    >
-                      {t("liquidity")}
-                    </LocaleLink>
-                  </li> */}
                 </ul>
               )}
             </li>
