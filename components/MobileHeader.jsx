@@ -195,13 +195,13 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("ib_program")}
                 </LocaleLink>
-                <LocaleLink
+                {/* <LocaleLink
                   href="/liquidity"
                   className="block text-black text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("liquidity")}
-                </LocaleLink>
+                </LocaleLink> */}
               </div>
             )}
           </div>
