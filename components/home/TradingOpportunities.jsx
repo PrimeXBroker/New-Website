@@ -93,14 +93,9 @@ const TradingOpportunities = () => {
       <div className="bg-white grid grid-cols-1 lg:grid-cols-2 items-center px-4 sm:px-10 md:px-[10%] py-10">
         <div className="mb-5">
           <h2 className=" text-xl md:text-4xl lg:text-6xl mb-2 text-secondary font-semibold">
-            Unlock Diverse Global Markets
+            {t("title")}
           </h2>
-          <p className="mb-1">
-            Discover trading opportunities with CFDs on commodities like Oil,
-            Gold, and Natural Gas. Explore CFDs in Forex, indices such as S&P
-            500, the Dow, Nasdaq, and seize exposure to equity markets with CFDs
-            on shares in companies like Amazon and Tesla.
-          </p>
+          <p className="mb-1">{t("description")}</p>
         </div>
         <div className="bg-[#111111] border-[3px] border-[#1D1D1D] py-[22px] px-[10px] sm:px-[24px] sm:py-[32px] rounded-[12px] max-w-3xl w-full md:w-[640px] lg:w-[600px] 2xl:w-[640px] mx-auto text-white">
           <div className="grid grid-cols-3 gap-2 mb-6">

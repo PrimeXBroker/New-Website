@@ -29,6 +29,7 @@
       "title": "Trade Forex Stocks Indices CFD Metals Online UAE | PrimeX Capital",
       "description": "Trade Forex, stocks, indices, CFDs, and metals online UAE with PrimeX Capital. Access top trading tools and insights. Learn more and start trading today!"
     },
+
     "hero": {
       "new_title1_1": "The",
       "new_title1_2": "Choice",
@@ -78,7 +79,9 @@
       "trading_opportunities_tab2": "Indicies",
       "trading_opportunities_tab3": "Commodities",
       "trading_opportunities_tab4": "Stocks",
-      "trading_opportunities_tab5": "Crypto"
+      "trading_opportunities_tab5": "Crypto",
+      "title": "Unlock Diverse Global Markets",
+      "description": "Discover trading opportunities with CFDs on commodities like Oil, Gold, and Natural Gas. Explore CFDs in Forex, indices such as S&P 500, the Dow, Nasdaq, and seize exposure to equity markets with CFDs on shares in companies like Amazon and Tesla."
     },
     "accountTypes": {
       "account_types_title": "Account Types",
@@ -1707,6 +1710,10 @@
     }
   },
   "liquidity": {
+    "metaData": {
+      "title": "Unlock World-Class Trading with PrimeX",
+      "description": "Experience Seamless Financial Growth!"
+    },
     "banner": {
       "title1": "Unlock World-Class",
       "title2": "Trading with ",

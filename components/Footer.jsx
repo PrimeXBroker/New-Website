@@ -187,7 +187,7 @@ const Footer = () => {
       <section
         className={`${
           isLiquidityPage
-            ? "bg-[#1d1d1d]"
+            ? "bg-[#1d1d1d] hidden"
             : "bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/live-account-gray.webp')] bg-cover bg-no-repeat bg-center"
         } relative z-0 overflow-hidden`}
       >
