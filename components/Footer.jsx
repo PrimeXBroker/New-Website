@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useMemo } from "react";
 import {
   FaFacebook,
   FaYoutube,
@@ -17,12 +17,20 @@ import { Button } from "@nextui-org/button";
 import LocaleLink from "./LocaleLink";
 import { useTranslations, useLocale } from "next-intl";
 import Logo from "@/public/images/logos/logo-white.webp";
+import { usePathname, useRouter } from "next/navigation";
 
 const Footer = () => {
+  const router = useRouter();
+  const pathname = usePathname();
   const language = useLocale();
   const t = useTranslations("footer");
   const locale = useLocale();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLiquidityPage, setIsLiquidityPage] = useState(false);
+
+  useEffect(() => {
+    setIsLiquidityPage(pathname.includes("/liquidity"));
+  }, [pathname]);
 
   const handleOpenModal = (e) => {
     e.preventDefault();
@@ -176,11 +184,23 @@ const Footer = () => {
 
   return (
     <>
-      <section className="bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/live-account-gray.webp')] bg-cover bg-no-repeat bg-center relative z-0 overflow-hidden">
-        <div className="container flex p-10 flex-col md:flex-row">
-          <div className="md:w-[60%] w-full mb-5 md:mb-0 mx-auto">
+      <section
+        className={`${
+          isLiquidityPage
+            ? "bg-[#1d1d1d]"
+            : "bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/live-account-gray.webp')] bg-cover bg-no-repeat bg-center"
+        } relative z-0 overflow-hidden`}
+      >
+        <div className={`container flex p-10 flex-col md:flex-row`}>
+          <div
+            className={`${
+              isLiquidityPage ? "md:w-full" : "md:w-[60%]"
+            } w-full mb-5 md:mb-0 mx-auto`}
+          >
             <h1
-              className={`sectionHeading text-xl text-secondary font-semibold ${
+              className={`sectionHeading text-xl ${
+                isLiquidityPage ? "text-[#ffffff]" : "text-secondary"
+              } font-semibold ${
                 locale === "ar"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
@@ -189,14 +209,15 @@ const Footer = () => {
               {t("getStarted.get_started_title")}
             </h1>
             <p
-              className={`sectionPara  text-secondary ${
+              className={`sectionPara ${
+                isLiquidityPage ? "text-[#dfdfdf]" : "text-secondary"
+              } ${
                 locale === "ar"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
             >
               {t("getStarted.get_started_desc_1")}
-
               {t("getStarted.get_started_desc_2")}
             </p>
           </div>
@@ -204,9 +225,11 @@ const Footer = () => {
             <Button
               as={Link}
               href="https://client.primexbroker.com/en/register"
-              radius="full"
               size="lg"
               color="primary"
+              className={`${
+                isLiquidityPage ? "rounded-[12px]" : "rounded-full"
+              }`}
             >
               <p className="text-secondary font-semibold">
                 {t("getStarted.get_started_btn")}
@@ -214,13 +237,6 @@ const Footer = () => {
             </Button>
           </div>
         </div>
-        {/* <Image
-          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/x-transparent.svg"
-          width="210"
-          height="200"
-          alt="logo coin"
-          className="absolute xl:right-[25%] lg:right-[20%] md:right-[20%] right-[50%] top-0 -z-10"
-        /> */}
       </section>
       <footer className="bg-[#111111]">
         <div className="container flex flex-col pt-8">

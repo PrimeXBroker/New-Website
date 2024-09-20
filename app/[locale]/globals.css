@@ -50,6 +50,9 @@
     .custom-height {
       height: 420px !important;
     }
+    .liquidity-bg {
+      background-image: url("https://primexcapital.s3.eu-north-1.amazonaws.com/website/liquidity/liquidity-mbl-bg.png") !important;
+    }
   }
 }
 

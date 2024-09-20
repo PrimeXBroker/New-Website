@@ -1705,5 +1705,101 @@
       "step1_p1": "免费注册并立即访问您的模拟账户。",
       "step2_p1": "在真实市场条件下开始交易，无风险。"
     }
+  },
+  "liquidity": {
+    "banner": {
+      "title1": "解锁世界级的",
+      "title2": "交易体验与",
+      "title3": "PrimeX",
+      "desc": "体验无缝的财务增长！",
+      "contact_btn": "联系我们",
+      "review_title": "超过2k+用户评价"
+    },
+    "steps": {
+      "step1_p1": "闪电般快速的",
+      "step1_p2": "执行",
+      "step2_p1": "深厚的",
+      "step2_p2": "流动性",
+      "step3_p1": "风险管理",
+      "step3_p2": "解决方案"
+    },
+    "liquiditySolutions": {
+      "main_title1": "定制的",
+      "main_title2": "流动性",
+      "main_title3": "解决方案",
+      "main_desc": "我们专注于提供基于先进基础设施和深厚专业知识的定制流动性解决方案。",
+      "title1": "在线供应商",
+      "description1": "PrimeX Capital 提供符合您风险策略的定制化综合经纪解决方案，结合流动性和先进的风险管理以达到高质量标准。",
+      "title2": "资产与对冲基金经理",
+      "description2": "我们的工具通过多元化的资产组合和一级银行流动性提供卓越的表现，并提供24/7服务，促进建立值得信赖的合作关系。",
+      "title3": "专业客户",
+      "description3": "在一个统一的平台上体验高效交易，享受机构定价、竞争性的保证金和独立账户。我们的个性化解决方案旨在提升您的投资组合。",
+      "title4": "交易台",
+      "description4": "借助我们的低延迟基础设施、定制化的一级流动性以及先进的报告工具，跟踪敞口和表现，享受快速执行和最佳定价。"
+    },
+    "offer": {
+      "main_title1": "我们",
+      "main_title2": "提供的服务",
+      "title1": "流动性",
+      "description1": "我们通过我们的白标MT5平台提供快速、可靠且可定制的流动性解决方案。根据您的交易需求，访问全球市场的深度流动性。",
+      "title2": "连接性",
+      "description2": "无缝、低延迟地连接全球金融市场。我们的工具确保高效的交易执行，连接您到广泛的流动池，包括主要货币、金属、指数等。",
+      "title3": "风险管理",
+      "description3": "通过我们全面的风险管理解决方案保护您的投资。我们帮助您降低市场、信用和流动性风险，确保安全和成功的交易。"
+    },
+    "choose": {
+      "main_title1": "选择",
+      "main_title2": "PrimeX Capital",
+      "title1": "全球信赖的品牌",
+      "description1": "获得全球投资者的信赖，我们经验丰富的团队确保可靠的顶级服务。",
+      "title2": "超具竞争力的价格",
+      "description2": "通过我们的独家解决方案享受更低的佣金，最低月费为$1000。",
+      "title3": "低延迟执行",
+      "description3": "我们的服务器战略性地放置在流动性源附近，以实现超快速的交易执行。",
+      "title4": "深度流动性",
+      "description4": "访问广泛的可交易资产的深度流动性，实现无缝交易。",
+      "title5": "强大的技术",
+      "description5": "由尖端工具提供支持，我们的技术确保强大且可扩展的性能。",
+      "title6": "一站式服务",
+      "description6": "我们提供定制的产品包，满足您所有的交易和投资需求。"
+    },
+    "benefits": {
+      "benefit_1": "敏捷的入职流程",
+      "benefit_2": "快速执行",
+      "benefit_3": "超高速价格推送",
+      "benefit_4": "最低点差",
+      "benefit_5": "高达10级的市场深度",
+      "benefit_6": "尖端集成"
+    },
+    "liquidityForm": {
+      "title": "给我们留言",
+      "desc": "留下您的信息，我们将尽快与您联系。",
+      "first_name_label": "名字",
+      "first_name_placeholder": "约翰",
+      "last_name_label": "姓氏",
+      "last_name_placeholder": "多伊",
+      "email_label": "电子邮件",
+      "email_placeholder": "Johndoe@gmail.com",
+      "occupation_label": "职业",
+      "occupation_placeholder": "助理经理",
+      "country_label": "国家",
+      "country_placeholder": "阿联酋",
+      "question_label": "问题",
+      "question_placeholder": "写下....",
+      "condition": "提交此表单即表示您同意我们的团队与您联系。",
+      "submit_btn": "提交",
+      "first_name_validation_error": "名字只能包含字母字符。",
+      "first_name_required_error": "请提供名字。",
+      "last_name_validation_error": "姓氏只能包含字母字符。",
+      "last_name_required_error": "请提供姓氏。",
+      "email_validation_error": "请输入有效的电子邮件地址。",
+      "email_required_error": "需要提供电子邮件。",
+      "country_required_error": "需要提供国家！",
+      "occupation_required_error": "需要提供职业！",
+      "question_required_error": "需要提供问题！",
+      "success_title": "成功",
+      "success_desc": "表单提交成功",
+      "close_btn": "关闭"
+    }
   }
 }

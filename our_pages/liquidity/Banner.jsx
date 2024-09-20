@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 
-const Banner = () => {
+const Banner = ({ scrollToForm }) => {
   const locale = useLocale();
   const t = useTranslations("liquidity.banner");
 
@@ -34,7 +34,10 @@ const Banner = () => {
               {t("desc")}
             </p>
             <div className="my-6">
-              <button className="py-3 bg-primary text-[#000000] rounded-lg hover:bg-[#ffffff] border-2 border-primary hover:border-[#ffffff] w-[100%] md:w-[157px]">
+              <button
+                onClick={scrollToForm}
+                className="py-3 bg-primary text-[#000000] rounded-lg hover:bg-[#ffffff] border-2 border-primary hover:border-[#ffffff] w-[100%] md:w-[157px]"
+              >
                 {t("contact_btn")}
               </button>
             </div>
