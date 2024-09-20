@@ -24,11 +24,12 @@ const Banner = ({ scrollToForm }) => {
       <div className="container">
         <div className="grid grid-cols-12">
           <div className="col-span-12 md:col-span-6">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#ffffff] sm:mb-1">
+            <h1 className="text-2xl sm:text-4xl md:text-2xl xl:text-[42px] font-semibold text-[#ffffff] sm:mb-2 md:mb-0 lg:mb-3">
               {t("title1")}
             </h1>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#ffffff]">
-              {t("title2")} <span className="text-primary"> {t("title3")}</span>
+            <h2 className="text-2xl sm:text-4xl md:text-2xl xl:text-[42px] font-semibold text-[#ffffff]">
+              {t("title2")} <span className="text-primary"> {t("title3")}</span>{" "}
+              {t("title4")}
             </h2>
             <p className="text-base sm:text-xl my-4 text-[#C6C6C6]">
               {t("desc")}

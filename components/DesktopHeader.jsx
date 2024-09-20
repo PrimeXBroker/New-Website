@@ -253,7 +253,7 @@ const DesktopHeader = ({ locale }) => {
                       {t("ib_program")}
                     </LocaleLink>
                   </li>
-                  {/* <li>
+                  <li>
                     <LocaleLink
                       href="/liquidity"
                       onClick={closeDropdown}
@@ -261,7 +261,7 @@ const DesktopHeader = ({ locale }) => {
                     >
                       {t("liquidity")}
                     </LocaleLink>
-                  </li> */}
+                  </li>
                 </ul>
               )}
             </li>
