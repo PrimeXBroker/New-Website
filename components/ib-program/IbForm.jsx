@@ -76,12 +76,21 @@ const IbForm = () => {
           `https://primexbroker.com/api/ib_form`,
           updatedValues
         );
-        console.log("Response", response);
+        toast.success(
+          response.data.message ||
+            "Thanks for contacting us, our support will be in touch."
+        );
       } catch (error) {
-        console.log(error);
+        if (
+          error.response &&
+          error.response.data.message === "Email already exists"
+        ) {
+          toast.error("Email already exists");
+        } else {
+          toast.error("An error occurred, please try again.");
+        }
       } finally {
         setLoading(false);
-        toast("Thanks for contacting us our support will be in touch");
         formik.resetForm();
       }
     },
