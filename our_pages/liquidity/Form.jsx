@@ -88,7 +88,7 @@ function Form() {
   return (
     <section className="container px-0">
       <div
-        className={`bg-[#111111] border-[#1d1d1d] border-3 sm:w-[74%] md:w-[64%] lg:w-[100%] rounded-[12px] p-[24px] ms:p-[40px]`}
+        className={`bg-[#111111] border-[#1d1d1d] border-3 md:w-[74%] lg:w-[100%] rounded-[12px] p-[24px] ms:p-[40px] mx-auto`}
       >
         <form
           onSubmit={formik.handleSubmit}
