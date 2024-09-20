@@ -47,7 +47,7 @@ const CookieBanner = () => {
   return (
     <>
       {show && (
-        <div className="w-full bg-[#111111] z-50 fixed bottom-0 text-white p-2">
+        <div className="w-full bg-[#000000] z-50 fixed bottom-0 text-white p-2">
           <div className="container">
             <div className="grid grid-cols-1 items-center md:grid-cols-12 gap-4">
               <p className="text-[11px] text-center md:ltr:text-left md:rtl:text-right col-span-1 md:col-span-10">
