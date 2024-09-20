@@ -32,6 +32,9 @@ const Offer = () => {
           <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff]">
             {t("main_title1")}
             <span className="text-primary">{t("main_title2")} </span>
+            <span className={`${locale === "ar" ? "inline-block" : "hidden"}`}>
+              {t("main_title3")}
+            </span>
           </h2>
         </div>
       </div>
