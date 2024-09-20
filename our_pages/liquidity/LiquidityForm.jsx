@@ -12,7 +12,7 @@ const LiquidityForm = () => {
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-[#ffffff] mb-2">
             {t("main_title1")}
           </h2>
-          <h2 className="text-2xl md:text-4xl lg:text-5xll font-semibold text-[#ffffff] mb-2">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-[#ffffff] mb-2">
             <span className="text-primary"> {t("main_title2")}</span>{" "}
             {t("main_title3")}
           </h2>
