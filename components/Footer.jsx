@@ -238,7 +238,7 @@ const Footer = () => {
           </div>
         </div>
       </section>
-      <footer className="bg-[#111111]">
+      <footer className="bg-[#000000]">
         <div className="container flex flex-col pt-8">
           <h6 className="text-center pb-4 text-[#fff] text-xl">
             {t("logos.payment_options")}
