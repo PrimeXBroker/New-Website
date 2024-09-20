@@ -80,7 +80,9 @@
       "trading_opportunities_tab2": "المؤشرات",
       "trading_opportunities_tab3": "السلع",
       "trading_opportunities_tab4": "الأسهم",
-      "trading_opportunities_tab5": "العملات الرقمية"
+      "trading_opportunities_tab5": "العملات الرقمية",
+      "title": "افتح أسواق عالمية متنوعة",
+      "description": "اكتشف فرص التداول مع العقود مقابل الفروقات على سلع مثل النفط والذهب والغاز الطبيعي. استكشف العقود مقابل الفروقات في الفوركس والمؤشرات مثل S&P 500 و Dow و Nasdaq واغتنم الفرص لأسواق الأسهم من خلال العقود مقابل الفروقات على الأسهم في شركات مثل Amazon و Tesla."
     },
     "accountTypes": {
       "account_types_title": "أنواع الحسابات",
@@ -1631,6 +1633,10 @@
     }
   },
   "liquidity": {
+    "metaData": {
+      "title": "افتح باب التداول العالمي مع PrimeX",
+      "description": "استمتع بنمو مالي سلس!"
+    },
     "banner": {
       "title1": "افتح عالمًا من الدرجة الأولى",
       "title2": "التداول مع",

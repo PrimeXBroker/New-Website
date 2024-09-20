@@ -78,7 +78,9 @@
       "trading_opportunities_tab2": "指数",
       "trading_opportunities_tab3": "商品",
       "trading_opportunities_tab4": "股票",
-      "trading_opportunities_tab5": "加密货币"
+      "trading_opportunities_tab5": "加密货币",
+      "title": "解锁多样化的全球市场",
+      "description": "通过CFD发现石油、黄金和天然气等大宗商品的交易机会。探索外汇、标普500、道琼斯、纳斯达克等指数的CFD，并通过CFD获得亚马逊、特斯拉等公司股票的市场敞口。"
     },
     "accountTypes": {
       "account_types_title": "账户类型",
@@ -1708,6 +1710,10 @@
     }
   },
   "liquidity": {
+    "metaData": {
+      "title": "解锁世界级的交易体验，尽在PrimeX",
+      "description": "体验无缝的金融增长！"
+    },
     "banner": {
       "title1": "解锁世界级的",
       "title2": "交易体验与",
