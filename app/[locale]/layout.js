@@ -1,4 +1,6 @@
 import "./globals.css";
+// import "../../public/venobox/venobox.css";
+// import "../../public/venobox/magnific-popup.css";
 import { NextUIProvider } from "@nextui-org/react";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -16,6 +18,8 @@ import Script from "next/script";
 import GoogleAnalytics from "@/utilities/GoogleAnalytics";
 import DesktopHeader from "@/components/DesktopHeader";
 import MobileHeader from "@/components/MobileHeader";
+import VideoPopup from "@/components/VideoPopup";
+import ImageView from "@/components/ImageView";
 
 const montserrat = localFont({
   src: [
@@ -164,6 +168,8 @@ export default async function layout({ children, params: { locale } }) {
           <div dir={direction}>
             <NextUIProvider>
               <NextIntlClientProvider messages={messages}>
+                <ImageView />
+                <VideoPopup />
                 <DesktopHeader locale={locale} />
                 <MobileHeader locale={locale} />
                 {children}

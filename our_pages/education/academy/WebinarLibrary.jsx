@@ -109,10 +109,10 @@ const WebinarLibrary = () => {
             },
           }}
           centeredSlides={true}
-          // autoplay={{
-          //   delay: 1500,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 1500,
+            disableOnInteraction: false,
+          }}
           spaceBetween={20}
           loop
           pagination={{
