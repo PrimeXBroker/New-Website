@@ -8,6 +8,7 @@ import PrivateSessions from "./PrivateSessions";
 import JoinAcademy from "./JoinAcademy";
 import WebinarLibrary from "./WebinarLibrary";
 import SuccessStories from "./SuccessStories";
+// import NewWebinarLibrary from "./NewWebinarLibrary";
 
 const AcademyWrapper = () => {
   const [active, setActive] = useState("Webinars");
@@ -22,6 +23,7 @@ const AcademyWrapper = () => {
       <PrivateSessions setActive={setActive} />
       <JoinAcademy setActive={setActive} />
       <WebinarLibrary />
+      {/* <NewWebinarLibrary /> */}
       <SuccessStories />
     </LocationContextProvider>
   );

@@ -33,11 +33,6 @@ const DemoAccountWrapper = () => {
       question: t("faq.question_4"),
       answer: t("faq.answer_4"),
     },
-    {
-      key: 5,
-      question: t("faq.question_5"),
-      answer: t("faq.answer_5"),
-    },
   ];
 
   return (
