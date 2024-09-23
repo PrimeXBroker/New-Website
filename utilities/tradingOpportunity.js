@@ -26,13 +26,13 @@ export const tradingTabs = [
       {
         tradingSymbol: "PrimeX_REST_RA||US30.spot||US30.spot",
         image:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/US30.svg",
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/US30-new.svg",
         name: "US30",
       },
       {
         tradingSymbol: "PrimeX_REST_RA||US100.spot||US100.spot",
         image:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/US100.svg",
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/US100-new.svg",
         name: "US100",
       },
       {
