@@ -120,6 +120,7 @@
     "rewards": {
       "rewards_title": "促销和优惠",
       "trade_now": "立即交易",
+      "start_now": "立即开始",
       "expired_promotion": "此促销已结束。敬请期待更多激动人心的促销活动",
       "20_deposit_bonus": {
         "title1_1": "解锁20%的存款奖金",
@@ -136,6 +137,10 @@
       "30_welcome_gift": {
         "title1_1": "$30礼物账户",
         "title1_2": "验证您的账户后开始获得$30礼物"
+      },
+      "funded_account": {
+        "title1_1": "资金账户竞赛",
+        "title1_2": "交易至巅峰，赢取$10,000账户！"
       }
     },
     "signalsCenter": {

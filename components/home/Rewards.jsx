@@ -67,7 +67,18 @@ const Rewards = () => {
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/campaign02.webp",
       imgUrlAr:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/bonus/campaign02.webp",
+      btnTxt: "Trade Now",
       isExpired: true,
+    },
+    {
+      id: 5,
+      title1: t("funded_account.title1_1"),
+      title2: t("funded_account.title1_2"),
+      imgUrlEn:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/funded-promotions-card.webp",
+      imgUrlAr:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/funded-promotions-card.webp",
+      isExpired: false,
     },
   ];
   return (
@@ -113,7 +124,7 @@ const Rewards = () => {
                   {card.title2}
                 </h3>
                 <Image
-                  className="block mx-auto"
+                  className={`block mx-auto ${card.id === 5 ? "mt-10" : ""}`}
                   src={language === "ar" ? card.imgUrlAr : card.imgUrlEn}
                   width={card.id === 3 ? "250" : card.id === 4 ? "200" : "350"}
                   height="200"
@@ -129,7 +140,7 @@ const Rewards = () => {
                     text-primary font-semibold w-[200px] rounded-full shadow-md text-center 
                     mx-auto hover:bg-primary hover:text-[#111111] hover:border-2 hover:border-[#111111]`}
                     >
-                      {t("trade_now")}
+                      {t("start_now")}
                     </Button>
                   ) : (
                     <p className="text-sm text-center text-red-600">

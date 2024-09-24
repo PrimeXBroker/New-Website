@@ -121,6 +121,7 @@
     "rewards": {
       "rewards_title": "Promotions and Offers",
       "trade_now": "Trade Now",
+      "start_now": "Start Now",
       "expired_promotion": "This promotion has ended. Stay Tuned for more exciting promotions",
       "20_deposit_bonus": {
         "title1_1": "Unlock a 20% Deposit Bonus",
@@ -137,6 +138,10 @@
       "30_welcome_gift": {
         "title1_1": "$30 Gift Account",
         "title1_2": "Start with a $30 gift when you verify your account"
+      },
+      "funded_account": {
+        "title1_1": "Funded Account Competition",
+        "title1_2": "Trade to the Top to Win A $10,000 Account!"
       }
     },
     "signalsCenter": {
