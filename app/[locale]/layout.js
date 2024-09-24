@@ -20,6 +20,7 @@ import DesktopHeader from "@/components/DesktopHeader";
 import MobileHeader from "@/components/MobileHeader";
 import VideoPopup from "@/components/VideoPopup";
 import ImageView from "@/components/ImageView";
+import { GetLocation } from "@/components/GetLocation";
 
 const montserrat = localFont({
   src: [
@@ -76,6 +77,26 @@ const portada = localFont({
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../messages/${locale}.json`)).default;
   const t = createTranslator({ locale, messages });
+
+  const userCountry = await GetLocation();
+  console.log(userCountry, "userCountry");
+  const isInUAE = userCountry === "AE";
+
+  const descriptions = {
+    en: `Trade Forex, stocks, indices, CFDs, and metals online${
+      isInUAE ? " UAE" : ""
+    } with PrimeX Capital. Access top trading tools and insights. Learn more and start trading today!`,
+    ar: `تداول الفوركس والأسهم والمؤشرات وعقود الفروقات والمعادن عبر الإنترنت${
+      isInUAE ? " في الإمارات" : ""
+    } مع برايم اكس كابيتال. احصل على أفضل الأدوات المالية والرؤى. تعلم المزيد وابدأ التداول اليوم!`,
+    cn: `通过PrimeX Capital在线交易外汇、股票、指数、差价合约和金属${
+      isInUAE ? " UAE" : ""
+    }。获取顶级交易工具和见解。了解更多并立即开始交易！`,
+  };
+
+  const description = descriptions[locale] || descriptions["en"];
+  console.log(description, "description");
+
   const url =
     locale != "en"
       ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}`
@@ -83,7 +104,7 @@ export async function generateMetadata({ params: { locale } }) {
 
   return {
     title: t("home.metaData.title"),
-    description: t("home.metaData.description"),
+    description: description,
     alternates: {
       canonical: url,
     },
@@ -92,7 +113,7 @@ export async function generateMetadata({ params: { locale } }) {
       locale: locale,
       url: url,
       title: t("home.metaData.title"),
-      description: t("home.metaData.description"),
+      description: description,
       images: [
         {
           url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/home-metadata.webp",
