@@ -1,6 +1,6 @@
 import "./globals.css";
-// import "../../public/venobox/venobox.css";
-// import "../../public/venobox/magnific-popup.css";
+import "../../public/venobox/venobox.css";
+import "../../public/venobox/magnific-popup.css";
 import { NextUIProvider } from "@nextui-org/react";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
 import { getMessages } from "next-intl/server";

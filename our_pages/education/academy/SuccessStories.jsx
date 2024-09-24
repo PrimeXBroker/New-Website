@@ -117,7 +117,7 @@ const SuccessStories = () => {
         }}
         centeredSlides={true}
         autoplay={{
-          delay: 1500,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         spaceBetween={20}
