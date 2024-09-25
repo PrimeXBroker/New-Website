@@ -37,6 +37,10 @@ module.exports = {
         neutral: "#315d89",
         dark: "#3F3F3E",
         medium: "E4E5E6",
+        white: "#FFFFFF",
+        gray: "#C6C6C6",
+        black: "#111111",
+        brown: "1D1D1D",
       },
       fontFamily: {
         montserrat: ["var(--font-montserrat)"],

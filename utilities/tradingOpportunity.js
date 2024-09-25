@@ -9,7 +9,9 @@ import {
 export const tradingTabs = [
   {
     name: "Popular",
-    icon: <BarChart2 />,
+    icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Popular.svg",
+    iconActive:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Popular-Active.svg",
     symbol: [
       {
         tradingSymbol: "PrimeX_REST_RA||EURUSD||EURUSD",
@@ -63,7 +65,9 @@ export const tradingTabs = [
   },
   {
     name: "Forex",
-    icon: <Package />,
+    icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Forex.svg",
+    iconActive:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Forex-Active.svg",
     symbol: [
       {
         tradingSymbol: "PrimeX_REST_RA||GBPUSD||GBPUSD",
@@ -117,7 +121,9 @@ export const tradingTabs = [
   },
   {
     name: "Crypto",
-    icon: <DollarSign />,
+    icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Crypto.svg",
+    iconActive:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Crypto-Active.svg",
     symbol: [
       {
         tradingSymbol: "PrimeX_REST_RA||BTCEUR||BTCEUR",
@@ -171,7 +177,9 @@ export const tradingTabs = [
   },
   {
     name: "Metals",
-    icon: <TrendingUp />,
+    icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Metals.svg",
+    iconActive:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Metals-Active.svg",
     symbol: [
       {
         tradingSymbol: "PrimeX_REST_RA||XAUUSD||XAUUSD",
@@ -219,7 +227,9 @@ export const tradingTabs = [
   },
   {
     name: "Indices",
-    icon: <LineChart />,
+    icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Indices.svg",
+    iconActive:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Indices-Active.svg",
     symbol: [
       {
         tradingSymbol: "PrimeX_REST_RA||AUS200.spot||AUS200.spot",
@@ -273,7 +283,9 @@ export const tradingTabs = [
   },
   {
     name: "Commodities",
-    icon: <LineChart />,
+    icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Commodities.svg",
+    iconActive:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Commodities-Active.svg",
     symbol: [
       {
         tradingSymbol: "PrimeX_REST_RA||BRENT.spot||BRENT.spot",

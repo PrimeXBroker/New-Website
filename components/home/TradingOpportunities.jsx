@@ -112,11 +112,15 @@ const TradingOpportunities = () => {
                 <span
                   className={`flex items-center justify-center w-[14.77px] h-[14.77px] border-[1px] rounded-[3.6px] ${
                     activeTab === tab.name
-                      ? " bg-[#111111] text-[#F9F9F9]"
-                      : "text-[#262525] bg-[#C6C6C6]"
+                      ? "text-[#F9F9F9]"
+                      : "text-[#262525] "
                   }`}
                 >
-                  {tab.icon}
+                  <img
+                    src={activeTab === tab.name ? tab.iconActive : tab.icon}
+                    alt={`${tab.name} icon`}
+                    className="w-full h-full"
+                  />
                 </span>
                 <span
                   className={`whitespace-nowrap ${
