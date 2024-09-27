@@ -353,7 +353,14 @@ const Footer = () => {
                   className="hover:fill-blue-600 transition-all hover:translate-y-[-5px] duration-500"
                 />
               </Link>
-              <Link href="https://x.com/PrimeXCapital" target="_blank">
+              <Link
+                href={`${
+                  locale === "ar"
+                    ? "https://x.com/PrimeXCapitalAr"
+                    : "https://x.com/PrimeXCapital"
+                }`}
+                target="_blank"
+              >
                 <FaXTwitter
                   color="#FFF"
                   size={30}
@@ -361,7 +368,7 @@ const Footer = () => {
                 />
               </Link>
               <Link
-                href="https://www.youtube.com/channel/UC_B3x7k-gNQpDW7YEB8Lg0g"
+                href="https://www.youtube.com/@primex.capital"
                 target="_blank"
               >
                 <FaYoutube
@@ -371,7 +378,7 @@ const Footer = () => {
                 />
               </Link>
               <Link
-                href="https://www.linkedin.com/company/primex-broker"
+                href="https://www.linkedin.com/company/primexcapital/"
                 target="_blank"
               >
                 <FaLinkedinIn
@@ -381,7 +388,11 @@ const Footer = () => {
                 />
               </Link>
               <Link
-                href="https://www.instagram.com/primexcapital.en?igsh=empvdXJ3aDRlZTBn"
+                href={`${
+                  locale === "ar"
+                    ? "https://www.instagram.com/primexcapital.ar/"
+                    : "https://www.instagram.com/primexcapital.en/"
+                }`}
                 target="_blank"
               >
                 <FaInstagram
@@ -390,7 +401,14 @@ const Footer = () => {
                   className="hover:fill-purple-500 transition-all hover:translate-y-[-5px] duration-500"
                 />
               </Link>
-              <Link href="https://t.me/PrimeX_Broker" target="_blank">
+              <Link
+                href={`${
+                  locale === "ar"
+                    ? "https://t.me/PrimeX_Capital_ar"
+                    : "https://t.me/PrimeX_Capital"
+                }`}
+                target="_blank"
+              >
                 <FaTelegram
                   color="#FFF"
                   size={30}
