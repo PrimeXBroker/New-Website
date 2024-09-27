@@ -1121,6 +1121,8 @@
   position: relative !important;
   left: 0 !important;
   right: 0 !important;
+  top: 0 !important;
+  margin-top: 0 !important;
 }
 
 .review-swiper-navigation-buttons .swiper-button-prev:hover {
@@ -1141,6 +1143,8 @@
   position: relative !important;
   left: 0 !important;
   right: 0 !important;
+  top: 0 !important;
+  margin-top: 0 !important;
 }
 
 .review-swiper-navigation-buttons .swiper-button-next:hover {
@@ -1153,5 +1157,9 @@
 }
 
 .review-swiper-navigation-buttons .swiper-button-next:hover svg {
+  width: 60% !important;
+}
+
+.review-swiper-navigation-buttons .swiper-button-prev:hover svg {
   width: 60% !important;
 }
