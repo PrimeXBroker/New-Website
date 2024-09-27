@@ -302,9 +302,9 @@
       "academy_card_1_title_1": "Free",
       "academy_card_1_title_2": "Webinars",
       "academy_card_1_desc_1": "Join live sessions with industry experts for valuable insights and professional guidance. Stay ahead with the latest trends, strategies, and tools.",
-      "academy_card_2_title_1": "One-on-One",
-      "academy_card_2_title_2": "Coaching",
-      "academy_card_2_desc_1": "Gain Customized Guidance from Leading Industry Experts to Enhance Your Trading Journey with Tailored Strategies and Professional Insights.",
+      "academy_card_2_title_1": "Daily Market",
+      "academy_card_2_title_2": "Updates",
+      "academy_card_2_desc_1": "Stay ahead with daily market news and expert analysis on Forex, Commodities, Economies, and Stocks. Get the insights you need for informed trading decisions.",
       "academy_card_3_title_1": "Expert Market",
       "academy_card_3_title_2": "Analysis",
       "academy_card_3_desc_1": "Keep Yourself Updated with the Latest Insights and Emerging Trends in the Industry to Make Informed and Strategic Decisions for Continued Success."
@@ -1077,7 +1077,9 @@
       "award_5_title": "Best ECN Broker",
       "award_5_location": "India Financial Expo 2023",
       "award_6_title": "Best Forex ECN Broker",
-      "award_6_location": "Expo Dubai 2023"
+      "award_6_location": "Expo Dubai 2023",
+      "award_8_title": "Best Retail FX Broker",
+      "award_8_location": "PROFX Awards Dubai 2024"
     }
   },
   "accountTypes": {
@@ -1350,7 +1352,7 @@
       "li5_2": "100% of your deposit goes to your trading account",
       "li5_3": "Hassle-free funding options",
       "li6_title1": "And count on dedicated Customer Support",
-      "li6_1": "Multi-lingual team",
+      "li6_1": "Multilingual team",
       "li6_2": "Round-the-clock service",
       "li6_3": "Easy to reach"
     },

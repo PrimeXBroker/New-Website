@@ -29,7 +29,7 @@ const TradePlatform = () => {
       iconActive:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Active+-+Superior+Charting+Capabilities.svg",
       image:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Multi-Asset+Platform+mockup.webp",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Superior+Charting+Capabilities+mockup.webp",
     },
     {
       name: t("li4"),

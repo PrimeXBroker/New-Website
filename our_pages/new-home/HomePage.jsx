@@ -56,7 +56,7 @@ const HomePage = () => {
       id: 2,
       title1: c("academy_card_2_title_1"),
       title2: c("academy_card_2_title_2"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/one-on-one+coaching.svg",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Daily+Market+Updates.svg",
       description: c("academy_card_2_desc_1"),
     },
     {

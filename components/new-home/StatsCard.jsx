@@ -16,7 +16,7 @@ const StatsCard = ({ stats }) => {
         {stats.map((stat, index) => (
           <div
             key={index}
-            className={`flex flex-col md:items-center justify-center  border-[#ffffff] border-opacity-[10%] last:border-none px-6 pb-4 md:px-0 md:pb-0 ${
+            className={`flex flex-col md:items-center justify-center  border-[#ffffff] border-opacity-[10%] last:border-none px-20 pb-4 md:px-0 md:pb-0 ${
               locale === "ar"
                 ? "border-b-2 md:border-b-0 md:border-l-2"
                 : "border-b-2 md:border-b-0 md:border-r-2"

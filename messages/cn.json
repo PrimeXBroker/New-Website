@@ -300,9 +300,9 @@
       "academy_card_1_title_1": "免费",
       "academy_card_1_title_2": "网络研讨会",
       "academy_card_1_desc_1": "参加与行业专家的在线课程，获得有价值的见解和专业指导。掌握最新趋势、策略和工具。",
-      "academy_card_2_title_1": "一对一",
-      "academy_card_2_title_2": "辅导",
-      "academy_card_2_desc_1": "通过领先行业专家的定制化指导，提升您的交易之旅，获取量身定制的策略和专业见解。",
+      "academy_card_2_title_1": "每日市场",
+      "academy_card_2_title_2": "更新",
+      "academy_card_2_desc_1": "通过每日市场新闻和外汇、大宗商品、经济和股票的专家分析，保持领先地位。获取您做出明智交易决策所需的见解。",
       "academy_card_3_title_1": "专家市场",
       "academy_card_3_title_2": "分析",
       "academy_card_3_desc_1": "时刻关注最新的行业洞察和新兴趋势，为持续成功制定明智和战略性的决策。"
@@ -1076,7 +1076,9 @@
       "award_5_title": "最佳ECN经纪商",
       "award_5_location": "2023年印度金融博览会",
       "award_6_title": "最佳外汇ECN经纪商",
-      "award_6_location": "2023年迪拜博览会"
+      "award_6_location": "2023年迪拜博览会",
+      "award_8_title": "最佳零售外汇经纪商",
+      "award_8_location": "2024年迪拜PROFX大奖"
     }
   },
   "accountTypes": {

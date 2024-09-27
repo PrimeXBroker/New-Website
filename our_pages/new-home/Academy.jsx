@@ -40,7 +40,14 @@ const Academy = ({ academy }) => {
                   </div>
                   <div>
                     <h3 className="text-lg sm:text-xl font-semibold text-[#ffffff] group-hover:text-[#FED100]">
-                      {acc.title1} <br />
+                      {acc.title1}{" "}
+                      <br
+                        style={
+                          locale === "ar"
+                            ? { display: "none" }
+                            : { display: "block" }
+                        }
+                      />
                       {acc.title2}
                     </h3>
                   </div>
