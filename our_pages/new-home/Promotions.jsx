@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
 
 const Promotions = ({ promotions }) => {
   const locale = useLocale();
@@ -51,12 +52,12 @@ const Promotions = ({ promotions }) => {
                 <p className="text-[#c6c6c6] mb-6 text-sm sm:text-base">
                   {promotion.description}
                 </p>
-                <button
-                  onClick={() => (window.location.href = promotion.link)}
+                <Link
+                  href={promotion.link}
                   className="font-bold py-3 px-6 rounded-xl transition custom-button"
                 >
                   {promotion.buttonText}
-                </button>
+                </Link>
               </div>
             ))}
           </div>

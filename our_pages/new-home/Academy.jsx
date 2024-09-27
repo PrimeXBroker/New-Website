@@ -25,7 +25,7 @@ const Academy = ({ academy }) => {
             key={acc.id}
             className="bg-[#111111] p-6 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500 group"
           >
-            <Link href={`https://primexcapital.com/${locale}/academy`}>
+            <Link href={`/${locale}/academy`}>
               <div className="flex justify-between items-start">
                 <div className="flex items-start gap-3">
                   <div className="w-[58px] h-[58px]">
@@ -45,7 +45,7 @@ const Academy = ({ academy }) => {
                     </h3>
                   </div>
                 </div>
-                <Link href={`https://primexcapital.com/${locale}/academy`}>
+                <Link href={`/${locale}/academy`}>
                   <div className="w-[33px] h-[33px]">
                     <Image
                       unoptimized={true}

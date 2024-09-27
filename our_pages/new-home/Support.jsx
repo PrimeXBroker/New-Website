@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
 
 const Support = () => {
   const locale = useLocale();
@@ -59,14 +60,12 @@ const Support = () => {
               </div>
             </div>
             <div className="text-start md:text-center lg:text-start">
-              <button
-                onClick={() =>
-                  (window.location.href = `https://primexcapital.com/${locale}/contact`)
-                }
+              <Link
+                href={`/${locale}/contact`}
                 className="py-2 px-6 font-semibold w-full md:w-auto custom-button"
               >
                 {t("customer_care_btn")}
-              </button>
+              </Link>
             </div>
           </div>
           <div className="relative">

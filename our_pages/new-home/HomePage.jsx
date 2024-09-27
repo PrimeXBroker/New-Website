@@ -77,7 +77,7 @@ const HomePage = () => {
       buttonText: p("start_btn"),
       iconSrc:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Bonus+Image.svg",
-      link: `https://primexcapital.com/${locale}/bonus`,
+      link: `/${locale}/bonus`,
     },
     {
       title: p("title2_1"),
@@ -87,7 +87,7 @@ const HomePage = () => {
       buttonText: p("start_btn"),
       iconSrc:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Gift+Image.svg",
-      link: `https://primexcapital.com/${locale}/funded-account-competition`,
+      link: `/${locale}/funded-account-competition`,
     },
   ];
 

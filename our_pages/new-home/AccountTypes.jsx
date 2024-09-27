@@ -26,7 +26,7 @@ const AccountTypes = ({ accounts }) => {
             key={account.id}
             className="bg-[#111111] p-6 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500 group"
           >
-            <Link href={`https://primexcapital.com/${locale}/account-types`}>
+            <Link href={`/${locale}/account-types`}>
               <div className="flex justify-between items-start">
                 <div className="flex items-start gap-3">
                   <div className="w-[58px] h-[58px]">
@@ -51,9 +51,7 @@ const AccountTypes = ({ accounts }) => {
                     </p>
                   </div>
                 </div>
-                <Link
-                  href={`https://primexcapital.com/${locale}/account-types`}
-                >
+                <Link href={`/${locale}/account-types`}>
                   <div className="w-[33px] h-[33px]">
                     <Image
                       unoptimized={true}
