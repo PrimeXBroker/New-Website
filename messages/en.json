@@ -1089,7 +1089,7 @@
     },
     "header": {
       "title": "Account Types",
-      "text": "PrimeX Capital has carefully curated our account types to meet your individual trading needs.",
+      "text": "PrimeX Capital offers multiple account types to perfectly match your unique trading needs.",
       "btnTxt": "Open Live Account"
     },
     "card": {
@@ -1705,7 +1705,7 @@
       "title_part4": "Platform",
       "title_part4_link1": "MT5 for Desktop",
       "title_part4_link2": "MT5 for Android",
-      "title_part4_link3": "MT5 for IOS"
+      "title_part4_link3": "MT5 for iOS"
     },
     "Location": {
       "title_part5": "Location",
