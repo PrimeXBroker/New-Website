@@ -12,14 +12,16 @@ const TradingOpportunities = () => {
       <div className="container">
         <div className="bg-[#111111] text-[#ffffff] border-2 border-[#1d1d1d] py-8 px-4 md:px-14 rounded-xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="md:w-1/2">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center md:text-start">
               {t("title1")}{" "}
               <span className="text-[#FED100]">{t("title2")}</span>{" "}
               {t("title3")}
             </h2>
           </div>
           <div className="md:w-1/2 flex flex-col md:items-start space-y-4">
-            <p className="text-[#c6c6c6] py-4">{t("description")}</p>
+            <p className="text-[#c6c6c6] py-4 text-center md:text-start">
+              {t("description")}
+            </p>
             <button
               onClick={() =>
                 window.open(

@@ -101,7 +101,7 @@ const TradePlatform = () => {
           </h2>
           <div className="md:grid md:grid-cols-2 gap-72 p-4">
             <div className="text-white flex flex-col space-y-4 items-center md:items-start">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 block md:hidden lg:block">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 block md:hidden lg:block text-center md:text-start">
                 {t("advance_platform_title_1")}{" "}
                 <br className="hidden lg:block" />
                 <span className="text-yellow-400">
