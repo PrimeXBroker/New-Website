@@ -31,7 +31,7 @@ const Footer = () => {
 
   useEffect(() => {
     setIsLiquidityPage(pathname.includes("/liquidity"));
-    setIsHomePage(pathname.includes("/new-home-page"));
+    setIsHomePage(pathname === `/${locale}` || pathname === `/${locale}/`);
   }, [pathname]);
 
   const handleOpenModal = (e) => {
