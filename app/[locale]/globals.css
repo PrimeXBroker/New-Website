@@ -1106,3 +1106,37 @@
 .custom-button:active {
   transform: scale(0.9);
 }
+
+.review-swiper-navigation-buttons .swiper-button-prev {
+  background: transparent !important;
+  text: #111111 !important;
+  padding: 2px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border: 1px solid #ffffff !important;
+  border-radius: 100px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.review-swiper-navigation-buttons .swiper-button-prev:hover {
+  background: #ffffff !important;
+}
+
+.review-swiper-navigation-buttons .swiper-button-next {
+  background: transparent !important;
+  text: #111111 !important;
+  padding: 2px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border: 1px solid #ffffff !important;
+  border-radius: 100px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.review-swiper-navigation-buttons .swiper-button-next:hover {
+  background: #ffffff !important;
+}

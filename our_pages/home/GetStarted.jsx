@@ -14,7 +14,7 @@ const GetStarted = () => {
     <section className="my-12 bg-primary relative">
       <div className="container flex p-10 flex-col md:flex-row">
         <div className="md:w-[60%] w-full mb-5 md:mb-0">
-          <h1
+          <h2
             className={`sectionHeading text-3xl text-secondary font-semibold ${
               locale === "ar"
                 ? "text-center md:text-right"
@@ -22,7 +22,7 @@ const GetStarted = () => {
             }`}
           >
             {t("get_started_title")}
-          </h1>
+          </h2>
           <p className="sectionPara  text-secondary text-center md:text-left">
             {t("get_started_desc_1")}
             <br />

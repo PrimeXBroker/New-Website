@@ -216,15 +216,15 @@ const Testimonials = () => {
           ))}
         </Swiper>
         <div
-          className={`swiper-navigation-buttons flex gap-4 w-fit ${
+          className={`review-swiper-navigation-buttons flex gap-4 w-fit ${
             locale === "ar" ? "float-left" : "float-right"
           } relative bottom-[37px] z-[10]`}
         >
-          <button className="swiper-button-prev bg-transparent hover:bg-[#ffffff] text-black p-2 w-[40px] h-[40px] border-1 border-[#ffffff] rounded-full flex justify-center items-center group">
+          <button className="swiper-button-prev group">
             <IoMdArrowBack className="text-[#ffffff] group-hover:text-[#111111] text-xl" />
           </button>
 
-          <button className="swiper-button-next bg-transparent hover:bg-[#ffffff] text-black p-2 w-[40px] h-[40px] border-1 border-[#ffffff] rounded-full flex justify-center items-center group">
+          <button className="swiper-button-next group">
             <IoMdArrowForward className="text-[#ffffff] group-hover:text-[#111111] text-xl" />
           </button>
         </div>
