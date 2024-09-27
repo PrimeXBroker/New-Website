@@ -137,16 +137,16 @@ const MobileRecognition = () => {
           ))}
         </Swiper>
         <div
-          className={`swiper-navigation-buttons flex gap-4 w-fit ${
+          className={`review-swiper-navigation-buttons flex gap-4 w-fit ${
             locale === "ar" ? "float-left" : "float-right"
           } relative bottom-[37px] z-[10]`}
         >
-          <button className="swiper-button-prev bg-transparent text-black p-2 w-[40px] h-[40px] border-1 border-[#ffffff] rounded-full flex justify-center items-center">
-            <IoMdArrowBack className="text-[#ffffff] text-xl" />
+          <button className="swiper-button-prev group">
+            <IoMdArrowBack className="text-[#ffffff]" />
           </button>
 
-          <button className="swiper-button-next bg-transparent text-black p-2 w-[40px] h-[40px] border-1 border-[#ffffff] rounded-full flex justify-center items-center">
-            <IoMdArrowForward className="text-[#ffffff] text-xl" />
+          <button className="swiper-button-next group">
+            <IoMdArrowForward className="text-[#ffffff]" />
           </button>
         </div>
       </div>
