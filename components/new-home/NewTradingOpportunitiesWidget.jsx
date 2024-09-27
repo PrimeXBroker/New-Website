@@ -86,7 +86,7 @@ const TradingOpportunitiesWidget = () => {
             <br className="md:hidden lg:block" />
             <span className="text-[#FED100]">{t("title3")}</span>{" "}
             <br className="hidden lg:block" />
-            <span>Markets</span>
+            <span>{t("title4")}</span>
           </h2>
           <p className="mb-1 text-[#c6c6c6] text-sm md:text-base">
             {t("desc")}

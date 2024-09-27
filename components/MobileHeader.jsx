@@ -53,10 +53,15 @@ const MobileHeader = ({ locale }) => {
 
   return (
     <header className="container w-full z-50 transition-all duration-300 block lg:hidden fixed top-0 left-0">
-      <div className="container bg-[#ffffff] mt-[14px] h-[51px] rounded-full flex items-center justify-between px-4">
+      <div className="container bg-[#1d1d1d] mt-[14px] h-[51px] rounded-[8px] flex items-center justify-between px-4">
         <div className="flex items-center">
           <LocaleLink href="/" className="logo" onClick={toggleDrawer}>
-            <Image width="100" height="100" src={Logo} alt="Logo Image" />
+            <Image
+              width="100"
+              height="100"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Logo+.svg"
+              alt="Logo Image"
+            />
           </LocaleLink>
         </div>
         <div className="">
@@ -64,21 +69,26 @@ const MobileHeader = ({ locale }) => {
             className="w-[38px] h-[38px] rounded-full flex justify-center items-center bg-primary opacity-bg-40"
             onClick={toggleDrawer}
           >
-            <FaBars size={20} className="text-secondary" />
+            <FaBars size={20} className="text-[#111111]" />
           </div>
         </div>
       </div>
       <div
-        className={`fixed top-0 right-0 h-full w-full bg-[#fff] text-black z-40 transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-full bg-[#1d1d1d] text-[#ffffff] z-40 transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex justify-between items-center py-7 ps-[6%] pe-[5%]">
-          <Image width="100" height="100" src={Logo} alt="Logo Image" />
+          <Image
+            width="100"
+            height="100"
+            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Logo+.svg"
+            alt="Logo Image"
+          />
           <div className="w-[38px] h-[38px] rounded-full flex justify-center items-center bg-primary opacity-bg-40">
             <RxCross1
               size={16}
-              className="cursor-pointer"
+              className="cursor-pointer text-[#111111]"
               onClick={toggleDrawer}
             />
           </div>
@@ -86,7 +96,7 @@ const MobileHeader = ({ locale }) => {
         <nav className="flex flex-col space-y-4 py-4 ps-[6%] pe-[5%]">
           <LocaleLink
             href="/"
-            className="text-black text-base"
+            className="text-[#ffffff] text-base"
             onClick={toggleDrawer}
           >
             {t("home")}
@@ -94,7 +104,7 @@ const MobileHeader = ({ locale }) => {
           <div>
             <button
               onClick={() => toggleSubMenu(0)}
-              className="text-black text-base flex justify-between items-center w-full pt-[3px]"
+              className="text-[#ffffff] text-base flex justify-between items-center w-full pt-[3px]"
             >
               {t("trading")}
               {openSubMenu === 0 ? (
@@ -107,35 +117,35 @@ const MobileHeader = ({ locale }) => {
               <div className="">
                 <LocaleLink
                   href="/forex"
-                  className="block text-black text-base pt-[16px]"
+                  className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("forex")}
                 </LocaleLink>
                 <LocaleLink
                   href="/metals"
-                  className="block text-black text-base pt-[16px]"
+                  className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("metals")}
                 </LocaleLink>
                 <LocaleLink
                   href="/indices"
-                  className="block text-black text-base pt-[16px]"
+                  className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("indices")}
                 </LocaleLink>
                 <LocaleLink
                   href="/commodities"
-                  className="block text-black text-base pt-[16px]"
+                  className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("commodities")}
                 </LocaleLink>
                 <LocaleLink
                   href="/stocks"
-                  className="block text-black text-base pt-[16px]"
+                  className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("stocks")}
@@ -146,7 +156,7 @@ const MobileHeader = ({ locale }) => {
           <div>
             <button
               onClick={() => toggleSubMenu(1)}
-              className="text-black text-base flex justify-between items-center w-full pt-[3px]"
+              className="text-[#ffffff] text-base flex justify-between items-center w-full pt-[3px]"
             >
               {t("platform")}
               {openSubMenu === 1 ? (
@@ -159,7 +169,7 @@ const MobileHeader = ({ locale }) => {
               <div className="mt-2">
                 <LocaleLink
                   href="/platform/mt5-platform"
-                  className="block text-black text-base pt-[16px]"
+                  className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("mt5")}
@@ -169,7 +179,7 @@ const MobileHeader = ({ locale }) => {
           </div>
           <LocaleLink
             href="/account-types"
-            className="text-black text-base pt-[3px]"
+            className="text-[#ffffff] text-base pt-[3px]"
             onClick={toggleDrawer}
           >
             {t("accounts")}
@@ -177,7 +187,7 @@ const MobileHeader = ({ locale }) => {
           <div>
             <button
               onClick={() => toggleSubMenu(3)}
-              className="text-black text-base flex justify-between items-center w-full pt-[3px]"
+              className="text-[#ffffff] text-base flex justify-between items-center w-full pt-[3px]"
             >
               {t("partners")}
               {openSubMenu === 3 ? (
@@ -190,14 +200,14 @@ const MobileHeader = ({ locale }) => {
               <div className="mt-2">
                 <LocaleLink
                   href="/ib-program"
-                  className="block text-black text-base pt-[16px]"
+                  className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("ib_program")}
                 </LocaleLink>
                 <LocaleLink
                   href="/liquidity"
-                  className="block text-black text-base pt-[16px]"
+                  className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("liquidity")}
@@ -208,7 +218,7 @@ const MobileHeader = ({ locale }) => {
           <div>
             <button
               onClick={() => toggleSubMenu(4)}
-              className="text-black text-base flex justify-between items-center w-full pt-[3px]"
+              className="text-[#ffffff] text-base flex justify-between items-center w-full pt-[3px]"
             >
               {t("education")}
               {openSubMenu === 4 ? (
@@ -221,7 +231,7 @@ const MobileHeader = ({ locale }) => {
               <div className="mt-2">
                 <LocaleLink
                   href="/academy"
-                  className="block text-black text-base pt-[16px]"
+                  className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("academy")}
@@ -232,7 +242,7 @@ const MobileHeader = ({ locale }) => {
           <div>
             <button
               onClick={() => toggleSubMenu(5)}
-              className="text-black text-base flex justify-between items-center w-full pt-[3px]"
+              className="text-[#ffffff] text-base flex justify-between items-center w-full pt-[3px]"
             >
               {t("promotion")}
               {openSubMenu === 5 ? (
@@ -245,21 +255,21 @@ const MobileHeader = ({ locale }) => {
               <div className="mt-2">
                 <LocaleLink
                   href="/bonus"
-                  className="block text-black text-base pt-[16px]"
+                  className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("deposit")}
                 </LocaleLink>
                 <LocaleLink
                   href="/top-trader"
-                  className="block text-black text-base pt-[16px]"
+                  className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("tradetowin")}
                 </LocaleLink>
                 <LocaleLink
                   href="/funded-account-competition"
-                  className="block text-black text-base pt-[16px]"
+                  className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("funded_account_competition")}
@@ -270,7 +280,7 @@ const MobileHeader = ({ locale }) => {
           <div>
             <button
               onClick={() => toggleSubMenu(6)}
-              className="text-black text-base flex justify-between items-center w-full pt-[3px]"
+              className="text-[#ffffff] text-base flex justify-between items-center w-full pt-[3px]"
             >
               {buttonText}
               {openSubMenu === 6 ? (
@@ -291,7 +301,7 @@ const MobileHeader = ({ locale }) => {
                     handleClick("English");
                     toggleDrawer();
                   }}
-                  className="block text-black text-base pt-[16px]"
+                  className="block text-[#ffffff] text-base pt-[16px]"
                 >
                   English
                 </Link>
@@ -305,7 +315,7 @@ const MobileHeader = ({ locale }) => {
                     handleClick("عربي");
                     toggleDrawer();
                   }}
-                  className="block text-black text-base pt-[16px]"
+                  className="block text-[#ffffff] text-base pt-[16px]"
                 >
                   عربي
                 </Link>
@@ -319,7 +329,7 @@ const MobileHeader = ({ locale }) => {
                     handleClick("中文");
                     toggleDrawer();
                   }}
-                  className="block text-black text-base pt-[16px]"
+                  className="block text-[#ffffff] text-base pt-[16px]"
                 >
                   中文
                 </Link>
@@ -338,23 +348,9 @@ const MobileHeader = ({ locale }) => {
                 }`
               )
             }
-            className="w-[90%] mb-2 py-3 text-[#111111] bg-transparent border-2 border-[#111111] hover:bg-[#111111] hover:text-primary rounded-full font-semibold"
+            className="w-[90%] mb-2 py-3 font-semibold custom-button"
           >
             {t("login")}
-          </button>
-          <button
-            onClick={() =>
-              window.open(
-                `${
-                  locale === "ar"
-                    ? "https://client.primexbroker.com/ar/register"
-                    : "https://client.primexbroker.com/en/register"
-                }`
-              )
-            }
-            className="w-[90%] py-3 text-primary bg-[#111111] border-2 border-[#111111] rounded-full font-semibold"
-          >
-            {t("register")}
           </button>
         </div>
       </div>

@@ -191,11 +191,19 @@ const Footer = () => {
           isLiquidityPage
             ? "hidden"
             : isHomePage
-            ? "bg-[#111111]"
+            ? "bg-[#000000]"
             : "bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/live-account-gray.webp')] bg-cover bg-no-repeat bg-center"
         } relative z-0 overflow-hidden`}
       >
-        <div className={`container flex p-10 flex-col md:flex-row`}>
+        <div
+          className={`container flex p-10 flex-col md:flex-row ${
+            isLiquidityPage
+              ? "hidden"
+              : isHomePage
+              ? "bg-[#111111] rounded-xl"
+              : ""
+          }`}
+        >
           <div
             className={`${
               isLiquidityPage ? "md:w-full" : "md:w-[60%]"
@@ -231,7 +239,9 @@ const Footer = () => {
               href="https://client.primexbroker.com/en/register"
               size="lg"
               color="primary"
-              className={`${isHomePage ? "rounded-[12px]" : "rounded-full"}`}
+              className={` custom-button ${
+                isHomePage ? "rounded-[12px]" : "rounded-full"
+              }`}
             >
               <p className="text-secondary font-semibold">
                 {t("getStarted.get_started_btn")}
@@ -340,7 +350,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-white text-center text-[12px]">
-              {t("footerNotice.para_5")}
+              &copy; {t("copy-right")}
             </p>
             <div className="flex gap-4 items-center justify-around">
               <Link
@@ -442,9 +452,6 @@ const Footer = () => {
             </Button>
           </div>
         </CustomModal>
-        <p className="bg-accent text-secondary text-sm py-3 text-center font-semibold drop-shadow-sm">
-          &copy; {t("copy-right")}
-        </p>
       </footer>
     </>
   );

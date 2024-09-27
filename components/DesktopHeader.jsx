@@ -96,14 +96,14 @@ const DesktopHeader = ({ locale }) => {
         isSticky ? "fixed top-0 left-0" : "absolute top-0 left-0"
       }`}
     >
-      <div className="container bg-[#ffffff] mt-[14px] h-[51px] rounded-full flex items-center justify-between">
+      <div className="container bg-[#1d1d1d] mt-[14px] h-[51px] rounded-[8px] flex items-center justify-between">
         <div className="flex items-center">
           <LocaleLink href="/" className="logo">
             <Image
               unoptimized={true}
               width="120"
               height="120"
-              src={Logo}
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Logo+.svg"
               alt="Logo Image"
             />
           </LocaleLink>
@@ -111,7 +111,7 @@ const DesktopHeader = ({ locale }) => {
         <nav className="flex items-center h-full">
           <ul className="flex gap-[16px] h-full">
             <li className="flex items-center h-full">
-              <LocaleLink href="/" className="text-black text-[.8em]">
+              <LocaleLink href="/" className="text-[#ffffff] text-[.8em]">
                 {t("home")}
               </LocaleLink>
             </li>
@@ -120,7 +120,7 @@ const DesktopHeader = ({ locale }) => {
               onMouseEnter={() => openDropdown(0)}
               onMouseLeave={closeDropdown}
             >
-              <button className="text-black text-[.8em] flex items-center">
+              <button className="text-[#ffffff] text-[.8em] flex items-center">
                 {t("trading")}
                 <svg
                   className={`fill-current h-4 w-4 ${
@@ -133,12 +133,12 @@ const DesktopHeader = ({ locale }) => {
                 </svg>
               </button>
               {activeDropdown === 0 && (
-                <ul className="absolute top-full mt-[4px] bg-[#ffffff] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
+                <ul className="absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
                   <li>
                     <LocaleLink
                       href="/forex"
                       onClick={closeDropdown}
-                      className="block p-[10px] text-black text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block p-[10px] text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >
                       {t("forex")}
                     </LocaleLink>
@@ -147,7 +147,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/metals"
                       onClick={closeDropdown}
-                      className="block p-[10px] text-black text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block p-[10px] text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >
                       {t("metals")}
                     </LocaleLink>
@@ -156,7 +156,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/indices"
                       onClick={closeDropdown}
-                      className="block p-[10px] text-black text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block p-[10px] text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >
                       {t("indices")}
                     </LocaleLink>
@@ -165,7 +165,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/commodities"
                       onClick={closeDropdown}
-                      className="block p-[10px] text-black text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block p-[10px] text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >
                       {t("commodities")}
                     </LocaleLink>
@@ -174,7 +174,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/stocks"
                       onClick={closeDropdown}
-                      className="block p-[10px] text-black text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block p-[10px] text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >
                       {t("stocks")}
                     </LocaleLink>
@@ -187,7 +187,7 @@ const DesktopHeader = ({ locale }) => {
               onMouseEnter={() => openDropdown(1)}
               onMouseLeave={closeDropdown}
             >
-              <button className="text-black text-[.8em] flex items-center">
+              <button className="text-[#ffffff] text-[.8em] flex items-center">
                 {t("platform")}
                 <svg
                   className={`fill-current h-4 w-4 ${
@@ -200,12 +200,12 @@ const DesktopHeader = ({ locale }) => {
                 </svg>
               </button>
               {activeDropdown === 1 && (
-                <ul className="absolute top-full mt-[4px] bg-[#ffffff] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
+                <ul className="absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
                   <li>
                     <LocaleLink
                       href="/platform/mt5-platform"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-black text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >
                       {t("mt5")}
                     </LocaleLink>
@@ -216,7 +216,7 @@ const DesktopHeader = ({ locale }) => {
             <li className="flex items-center h-full">
               <LocaleLink
                 href="/account-types"
-                className="text-black text-[.8em]"
+                className="text-[#ffffff] text-[.8em]"
               >
                 {t("accounts")}
               </LocaleLink>
@@ -226,7 +226,7 @@ const DesktopHeader = ({ locale }) => {
               onMouseEnter={() => openDropdown(2)}
               onMouseLeave={closeDropdown}
             >
-              <button className="text-black text-[.8em] flex items-center">
+              <button className="text-[#ffffff] text-[.8em] flex items-center">
                 {t("partners")}
                 <svg
                   className={`fill-current h-4 w-4 ${
@@ -240,7 +240,7 @@ const DesktopHeader = ({ locale }) => {
               </button>
               {activeDropdown === 2 && (
                 <ul
-                  className={`absolute top-full mt-[4px] bg-[#ffffff] shadow-lg p-[10px] ${
+                  className={`absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] ${
                     locale === "ar" ? "min-w-[200px]" : "min-w-[200px]"
                   } rounded-[6px]`}
                 >
@@ -248,7 +248,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/ib-program"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-black text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >
                       {t("ib_program")}
                     </LocaleLink>
@@ -257,7 +257,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/liquidity"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-black text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >
                       {t("liquidity")}
                     </LocaleLink>
@@ -270,7 +270,7 @@ const DesktopHeader = ({ locale }) => {
               onMouseEnter={() => openDropdown(3)}
               onMouseLeave={closeDropdown}
             >
-              <button className="text-black text-[.8em] flex items-center">
+              <button className="text-[#ffffff] text-[.8em] flex items-center">
                 {t("education")}
                 <svg
                   className={`fill-current h-4 w-4 ${
@@ -283,12 +283,12 @@ const DesktopHeader = ({ locale }) => {
                 </svg>
               </button>
               {activeDropdown === 3 && (
-                <ul className="absolute top-full mt-[4px] bg-[#ffffff] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
+                <ul className="absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
                   <li>
                     <LocaleLink
                       href="/academy"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-black text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >
                       {t("academy")}
                     </LocaleLink>
@@ -301,7 +301,7 @@ const DesktopHeader = ({ locale }) => {
               onMouseEnter={() => openDropdown(4)}
               onMouseLeave={closeDropdown}
             >
-              <button className="text-black text-[.8em] flex items-center">
+              <button className="text-[#ffffff] text-[.8em] flex items-center">
                 {t("promotion")}
                 <svg
                   className={`fill-current h-4 w-4 ${
@@ -314,12 +314,12 @@ const DesktopHeader = ({ locale }) => {
                 </svg>
               </button>
               {activeDropdown === 4 && (
-                <ul className="absolute top-full mt-[4px] bg-[#ffffff] shadow-lg p-[10px] min-w-[250px] rounded-[6px]">
+                <ul className="absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[250px] rounded-[6px]">
                   <li>
                     <LocaleLink
                       href="/bonus"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-black text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >
                       {t("deposit")}
                     </LocaleLink>
@@ -328,7 +328,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/top-trader"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-black text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >
                       {t("tradetowin")}
                     </LocaleLink>
@@ -337,7 +337,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/funded-account-competition"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-black text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >
                       {t("funded_account_competition")}
                     </LocaleLink>
@@ -345,12 +345,34 @@ const DesktopHeader = ({ locale }) => {
                 </ul>
               )}
             </li>
+          </ul>
+        </nav>
+        <div className="flex gap-2">
+          <button
+            onClick={() =>
+              window.open(
+                `${
+                  locale === "ar"
+                    ? "https://client.primexbroker.com/ar/login"
+                    : "https://client.primexbroker.com/en/login"
+                }`
+              )
+            }
+            className={`group ${
+              locale === "ar" ? "w-[140px]" : "w-[120px]"
+            }   py-[6px] custom-button`}
+          >
+            {t("login")}
+          </button>
+        </div>
+        <div>
+          <ul className="flex gap-[16px] h-full">
             <li
               className="relative flex items-center h-full"
               onMouseEnter={() => openDropdown(5)}
               onMouseLeave={closeDropdown}
             >
-              <button className="text-black text-[.8em] flex items-center">
+              <button className="text-[#ffffff] text-[.8em] flex items-center">
                 <Image
                   unoptimized={true}
                   width="15"
@@ -374,7 +396,7 @@ const DesktopHeader = ({ locale }) => {
                 </svg>
               </button>
               {activeDropdown === 5 && (
-                <ul className="absolute top-full mt-[4px] bg-[#ffffff] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
+                <ul className="absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
                   <li>
                     <Link
                       href={
@@ -388,7 +410,7 @@ const DesktopHeader = ({ locale }) => {
                           "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg"
                         )
                       }
-                      className="px-4 py-2 text-black text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
+                      className="px-4 py-2 text-[#ffffff] text-[.8em] hover:text-[#111111] hover:bg-primary rounded-[6px] flex items-center"
                       dir="ltr"
                     >
                       <Image
@@ -414,7 +436,7 @@ const DesktopHeader = ({ locale }) => {
                           "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
                         )
                       }
-                      className="px-4 py-2 text-black text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
+                      className="px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
                       dir="ltr"
                     >
                       <Image
@@ -440,7 +462,7 @@ const DesktopHeader = ({ locale }) => {
                           "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
                         )
                       }
-                      className="px-4 py-2 text-black text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
+                      className="px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
                       dir="ltr"
                     >
                       <Image
@@ -457,46 +479,6 @@ const DesktopHeader = ({ locale }) => {
               )}
             </li>
           </ul>
-        </nav>
-        <div className="flex gap-2">
-          <button
-            onClick={() =>
-              window.open(
-                `${
-                  locale === "ar"
-                    ? "https://client.primexbroker.com/ar/login"
-                    : "https://client.primexbroker.com/en/login"
-                }`
-              )
-            }
-            className={`group ${
-              locale === "ar" ? "w-[140px]" : "w-[120px]"
-            } relative overflow-hidden rounded-full bg-transparent border-2 border-[#111111] py-[6px] text-[#111111] hover:text-primary transition-all duration-300 ease-out hover:bg-[#111111] `}
-          >
-            <span className="ease absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-[#e3e4e5] opacity-10 transition-all duration-700 group-hover:-translate-x-40"></span>
-            <span className="relative flex items-center justify-center text-[1em]">
-              {t("login")}
-            </span>
-          </button>
-          <button
-            onClick={() =>
-              window.open(
-                `${
-                  locale === "ar"
-                    ? "https://client.primexbroker.com/ar/register"
-                    : "https://client.primexbroker.com/en/register"
-                }`
-              )
-            }
-            className={`group ${
-              locale === "ar" ? "w-[140px]" : "w-[120px]"
-            } relative overflow-hidden rounded-full bg-[#111111] py-[6px] text-[#FFD000] transition-all duration-300 ease-out`}
-          >
-            <span className="ease absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-[#e3e4e5] opacity-10 transition-all duration-700 group-hover:-translate-x-40"></span>
-            <span className="relative flex items-center justify-center text-[1em]">
-              {t("register")}
-            </span>
-          </button>
         </div>
       </div>
     </header>
