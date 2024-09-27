@@ -142,11 +142,11 @@ const MobileRecognition = () => {
           } relative bottom-[37px] z-[10]`}
         >
           <button className="swiper-button-prev group">
-            <IoMdArrowBack className="text-[#ffffff]" />
+            <IoMdArrowBack className="text-[#FED100] group-hover:text-[#111111]" />
           </button>
 
           <button className="swiper-button-next group">
-            <IoMdArrowForward className="text-[#ffffff]" />
+            <IoMdArrowForward className="text-[#FED100] group-hover:text-[#111111]" />
           </button>
         </div>
       </div>
