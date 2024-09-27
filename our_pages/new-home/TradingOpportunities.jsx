@@ -1,11 +1,11 @@
 "use client";
-import TradingOpportunitiesWidget from "@/components/home/TradingOpportunitiesWidget";
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
+import TradingOpportunitiesWidget from "@/components/new-home/NewTradingOpportunitiesWidget";
 
 const TradingOpportunities = () => {
   const locale = useLocale();
-  const t = useTranslations("home.tradingOpportunities");
+  const t = useTranslations("newHomePage.tradingOpportunities");
 
   return (
     <section className="bg-[#000000] pt-12">
@@ -30,7 +30,7 @@ const TradingOpportunities = () => {
                   }`
                 )
               }
-              className="py-[18px] px-[48px] font-semibold custom-yellow-button"
+              className="py-[18px] px-[48px] font-semibold custom-button"
             >
               {t("btnTxt")}
             </button>

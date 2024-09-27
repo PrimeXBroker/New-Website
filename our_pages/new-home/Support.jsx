@@ -21,7 +21,7 @@ const Support = () => {
                 <div className="w-[52px] h-[52px]">
                   <Image
                     unoptimized={true}
-                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/7+support.svg"
+                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/7-support-new.svg"
                     alt="Support Team"
                     width={300}
                     height={150}
@@ -41,7 +41,7 @@ const Support = () => {
                 <div className="w-[52px] h-[52px]">
                   <Image
                     unoptimized={true}
-                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/multilingual.svg"
+                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/multilingual-new.svg"
                     alt="Support Team"
                     width={300}
                     height={150}
@@ -63,7 +63,7 @@ const Support = () => {
                 onClick={() =>
                   (window.location.href = `https://primexcapital.com/${locale}/contact`)
                 }
-                className="py-2 px-6 font-semibold w-full md:w-auto custom-white-button"
+                className="py-2 px-6 font-semibold w-full md:w-auto custom-button"
               >
                 {t("customer_care_btn")}
               </button>

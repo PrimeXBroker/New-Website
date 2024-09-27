@@ -10,7 +10,7 @@ const Academy = ({ academy }) => {
 
   return (
     <div className="bg-black text-white pt-10 pb-10 px-4">
-      <div className="md:text-center mb-10">
+      <div className="text-center mb-10">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
           <span className="text-white">{c("academy_title1")}</span>
           <span className="text-[#FED100]">{c("academy_title2")}</span>

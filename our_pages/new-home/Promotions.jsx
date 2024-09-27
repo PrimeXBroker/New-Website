@@ -53,7 +53,7 @@ const Promotions = ({ promotions }) => {
                 </p>
                 <button
                   onClick={() => (window.location.href = promotion.link)}
-                  className="font-bold py-3 px-6 rounded-xl transition custom-white-button"
+                  className="font-bold py-3 px-6 rounded-xl transition custom-button"
                 >
                   {promotion.buttonText}
                 </button>

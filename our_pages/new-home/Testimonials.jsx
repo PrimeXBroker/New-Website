@@ -16,6 +16,7 @@ const Testimonials = () => {
 
   const reviews = [
     {
+      profile: "RA",
       name: t("review_name_1"),
       title: t("review_title_1"),
       description: t("review_description_1"),
@@ -23,6 +24,7 @@ const Testimonials = () => {
       date: t("review_date_1"),
     },
     {
+      profile: "HA",
       name: t("review_name_2"),
       title: t("review_title_2"),
       description: t("review_description_2"),
@@ -30,6 +32,7 @@ const Testimonials = () => {
       date: t("review_date_2"),
     },
     {
+      profile: "AH",
       name: t("review_name_3"),
       title: t("review_title_3"),
       description: t("review_description_3"),
@@ -37,6 +40,7 @@ const Testimonials = () => {
       date: t("review_date_3"),
     },
     {
+      profile: "AL",
       name: t("review_name_4"),
       title: t("review_title_4"),
       description: t("review_description_4"),
@@ -44,6 +48,7 @@ const Testimonials = () => {
       date: t("review_date_4"),
     },
     {
+      profile: "AM",
       name: t("review_name_5"),
       title: t("review_title_5"),
       description: t("review_description_5"),
@@ -51,6 +56,7 @@ const Testimonials = () => {
       date: t("review_date_5"),
     },
     {
+      profile: "YO",
       name: t("review_name_6"),
       title: t("review_title_6"),
       description: t("review_description_6"),
@@ -58,6 +64,7 @@ const Testimonials = () => {
       date: t("review_date_6"),
     },
     {
+      profile: "HU",
       name: t("review_name_7"),
       title: t("review_title_7"),
       description: t("review_description_7"),
@@ -65,6 +72,7 @@ const Testimonials = () => {
       date: t("review_date_7"),
     },
     {
+      profile: "HA",
       name: t("review_name_8"),
       title: t("review_title_8"),
       description: t("review_description_8"),
@@ -72,6 +80,7 @@ const Testimonials = () => {
       date: t("review_date_8"),
     },
     {
+      profile: "FA",
       name: t("review_name_9"),
       title: t("review_title_9"),
       description: t("review_description_9"),
@@ -97,7 +106,7 @@ const Testimonials = () => {
   return (
     <section className="py-10 bg-[#000000]">
       <div className="container">
-        <div className="md:text-center mb-10">
+        <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
             <span className="text-[#ffffff]">{r("title1")}</span>
             <span className="text-[#FED100]">{r("title2")}</span>
@@ -159,14 +168,9 @@ const Testimonials = () => {
             <SwiperSlide key={index}>
               <div className="max-w-sm mx-auto bg-[#111111] rounded-lg border-2 border-[#1D1D1D] shadow-md p-4 min-h-[346px] mb-9">
                 <div className="flex items-center mb-4">
-                  <Image
-                    unoptimized={true}
-                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Dummy+Profile.svg"
-                    alt=""
-                    width={100}
-                    height={100}
-                    className="w-[41px]"
-                  />
+                  <div className="w-10 h-10 p-4 rounded-full bg-[#FED100] flex items-center justify-center text-xl font-bold">
+                    {review.profile}
+                  </div>
                   <div className={`${locale === "ar" ? "mr-4" : "ml-4"}`}>
                     <div className="font-semibold text-[#ffffff]">
                       {review.name}

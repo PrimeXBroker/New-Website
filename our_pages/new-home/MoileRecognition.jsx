@@ -62,7 +62,7 @@ const MobileRecognition = () => {
   return (
     <section className="py-10 bg-[#000000]">
       <div className="container">
-        <div className="col-span-1 flex flex-col justify-center">
+        <div className="col-span-1 flex flex-col justify-center text-center">
           <h2 className="text-[#ffffff] text-2xl sm:text-3xl font-bold">
             {t("our_recognition_title1")} <br />
             <span className="text-[#FED100]">

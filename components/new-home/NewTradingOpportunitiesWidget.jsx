@@ -73,10 +73,10 @@ const TradingOpportunitiesWidget = () => {
   }, [activeTab]);
 
   return (
-    <section className="bg-[#000000] pt-20 pb-10 relative">
+    <section className="pt-20 pb-10 relative">
       <div className="container bg-[#000000] grid grid-cols-1 lg:grid-cols-2 items-center">
         <div
-          className={`mb-5 md:text-center block lg:hidden ${
+          className={`mb-5 text-center md:text-center block lg:hidden ${
             locale === "ar" ? "lg:mr-[120px]" : "lg:ml-[120px]"
           }`}
         >

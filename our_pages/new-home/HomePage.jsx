@@ -2,7 +2,6 @@
 
 import Banner from "@/components/new-home/Banner";
 import StatsCard from "@/components/new-home/StatsCard";
-import TradingOpportunitiesWidget from "@/components/new-home/NewTradingOpportunitiesWidget";
 import { useLocale, useTranslations } from "next-intl";
 import AccountTypes from "./AccountTypes";
 import TradePlatform from "./TradePlatform";
@@ -12,6 +11,7 @@ import Support from "./Support";
 import Recognition from "./Recognition";
 import MobileRecognition from "./MoileRecognition";
 import Promotions from "./Promotions";
+import TradingOpportunities from "./TradingOpportunities";
 
 const HomePage = () => {
   const locale = useLocale();
@@ -74,7 +74,7 @@ const HomePage = () => {
       highlight: p("title1_2"),
       title2: p("title1_3"),
       description: p("desc1_1"),
-      buttonText: "Start Now",
+      buttonText: p("start_btn"),
       iconSrc:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Bonus+Image.svg",
       link: `https://primexcapital.com/${locale}/bonus`,
@@ -84,7 +84,7 @@ const HomePage = () => {
       highlight: p("title2_2"),
       title2: p("title2_3"),
       description: p("desc2_1"),
-      buttonText: "Start Now",
+      buttonText: p("start_btn"),
       iconSrc:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Gift+Image.svg",
       link: `https://primexcapital.com/${locale}/funded-account-competition`,
@@ -122,7 +122,7 @@ const HomePage = () => {
       <div className="block md:hidden bg-[#000000] py-10">
         <StatsCard stats={statsData} />
       </div>
-      <TradingOpportunitiesWidget />
+      <TradingOpportunities />
       <AccountTypes accounts={accountTypesData} />
       <TradePlatform />
       <Testimonials />

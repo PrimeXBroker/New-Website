@@ -68,7 +68,7 @@ const Banner = () => {
                 }`
               )
             }
-            className="py-[18px] px-[48px] font-semibold mt-5 w-full md:w-auto custom-white-button"
+            className="py-[18px] px-[48px] font-semibold mt-5 w-full md:w-auto custom-button"
           >
             {t("btnTxt")}
           </button>

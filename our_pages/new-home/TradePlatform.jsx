@@ -92,7 +92,7 @@ const TradePlatform = () => {
   return (
     <section className="bg-[#111111] py-20">
       <div className="container ">
-        <div className="flex flex-col justify-start items-start md:items-center lg:items-start">
+        <div className="flex flex-col justify-start items-center lg:items-start">
           <h2 className="text-white text-3xl lg:text-4xl font-bold mb-4 hidden md:block lg:hidden">
             {t("advance_platform_title_1")} <br className="hidden lg:block" />
             <span className="text-yellow-400">
