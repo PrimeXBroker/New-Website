@@ -26,7 +26,7 @@ const Promotions = ({ promotions }) => {
                     <span className="text-[#FED100]">
                       {promotion.highlight}
                     </span>{" "}
-                    <br />
+                    <br className={`${locale === "ar" ? "hidden" : "block"}`} />
                     <span
                       className={
                         promotion.title2 === "Competition"
