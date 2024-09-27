@@ -1118,6 +1118,9 @@
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
 }
 
 .review-swiper-navigation-buttons .swiper-button-prev:hover {
@@ -1135,6 +1138,9 @@
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
 }
 
 .review-swiper-navigation-buttons .swiper-button-next:hover {
