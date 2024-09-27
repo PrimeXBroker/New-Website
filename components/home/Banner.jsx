@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <section className="bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/World+map+hero+bg.webp')] h-[700px] bg-center bg-no-repeat bg-cover">
-      <div className="text-center text-[#ffffff] space-y-5 pt-28">
+    <section className="bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/World+map+hero+bg.webp')] h-[760px] bg-center bg-no-repeat bg-cover pt-28">
+      <div className="text-center text-[#ffffff] space-y-5">
         <div className="rounded-[8px] border-2 border-[#222222] inline-flex items-center text-sm">
           <div className="bg-[#1d1d1d] px-4 py-2">
             <Image

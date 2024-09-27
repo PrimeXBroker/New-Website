@@ -10,7 +10,7 @@
     "promotion": "促销",
     "tradetowin": "月度交易者",
     "funded_account_competition": "资金账户竞赛",
-    "liquidity": "PrimeX 流动性",
+    "liquidity": "流动性提供",
     "deposit": "20% 奖金",
     "login": "登录",
     "register": "注册",
@@ -175,6 +175,144 @@
       "our_recognition_title": "我们的荣誉",
       "our_recognition_desc": "我们荣幸获得业界赞誉，以表彰我们的卓越和创新"
     },
+    "cookie": {
+      "text": "点击“接受所有Cookie”，即表示您同意在您的设备上存储Cookie，以增强网站导航，分析网站使用情况，并协助我们的市场营销工作。",
+      "btnTxt": "接受所有Cookie"
+    },
+    "modal": {
+      "title": "尊敬的客户，",
+      "para1": "我们很高兴通知您，我们现已更名为PrimeX Capital，我们的新网站是",
+      "para2": "请更新您的书签。",
+      "para3": "愉快的交易！",
+      "acknowledged": "已确认"
+    }
+  },
+  "newHomePage": {
+    "metaData": {
+      "title": "在线交易外汇、股票、指数、差价合约、金属阿联酋 | PrimeX Capital",
+      "description": "通过PrimeX Capital在线交易外汇、股票、指数、差价合约和金属。获取顶级交易工具和见解。了解更多并立即开始交易！"
+    },
+    "hero": {
+      "title": "全球顶级交易者的首选",
+      "desc": "以低佣金和原始点差进行交易",
+      "title2": "受监管",
+      "review": "4.8 • 优秀 • 2,000+ 评价",
+      "btnTxt": "开设账户"
+    },
+    "stats": {
+      "stat1": {
+        "title": "服务客户",
+        "value1": "250k+"
+      },
+      "stat2": {
+        "title": "实缴资本",
+        "value1": "$300+ ",
+        "value2": "百万"
+      },
+      "stat3": {
+        "title": "介绍经纪人",
+        "value1": "5,000+"
+      },
+      "stat4": {
+        "title": "每日交易量",
+        "value1": "$7+ ",
+        "value2": "十亿"
+      }
+    },
+    "tradingOpportunities": {
+      "title1": "探索 ",
+      "title2": "330+ ",
+      "title3": "交易机会",
+      "description": "深入了解外汇、指数、大宗商品、加密货币和股票等多种资产。",
+      "btnTxt": "开设账户"
+    },
+    "tradingWidget": {
+      "title1": "解锁",
+      "title2": "多样化的",
+      "title3": "全球",
+      "title4": "市场",
+      "desc": "通过CFD发现石油、黄金和天然气等大宗商品的交易机会。探索外汇、标普500、道琼斯、纳斯达克等指数的CFD，并通过CFD获得亚马逊、特斯拉等公司股票的市场敞口。"
+    },
+    "accountTypes": {
+      "title1": "选择您的 ",
+      "title2": "账户类型",
+      "desc": "探索我们的账户选项，找到最适合您的。选择适合您的完美计划。",
+      "deposit": "最低存款：",
+      "acc1": {
+        "title": "标准账户",
+        "minimumDeposit": " $10",
+        "description": "标准账户因其免掉期佣金而成为交易者的首选，消除这些费用以提高成本效益。"
+      },
+      "acc2": {
+        "title": "窄点差账户",
+        "minimumDeposit": " $1000",
+        "description": "此账户专为剥头皮交易者设计，提供最低点差以最大化短期市场波动中的利润。"
+      },
+      "acc3": {
+        "title": "原始点差账户",
+        "minimumDeposit": " $5000",
+        "description": "原始点差账户专为专业交易者设计，提供“原始点差”以带来无与伦比的交易体验。"
+      }
+    },
+    "advancedPlatforms": {
+      "advance_platform_title_1": "为现代交易者提供",
+      "advance_platform_title_2": "先进平台",
+      "li1": "高级分析工具",
+      "li2": "社区与支持",
+      "li3": "卓越的图表功能",
+      "li4": "多资产平台",
+      "li5": "自动化交易",
+      "li6": "改进的订单执行",
+      "li7": "内置经济日历"
+    },
+    "testimonial": {
+      "title1": "客户的",
+      "title2": "评价",
+      "title3": "反馈",
+      "desc": "我们以在Trustpilot上获得4.8星评分和2,000多条评论而感到自豪。来听听我们满意的客户怎么说！"
+    },
+    "promotions": {
+      "main_title1": "促销和",
+      "main_title2": "优惠",
+      "title1_1": "获得高达 ",
+      "title1_2": "$25,000",
+      "title1_3": "的奖金",
+      "desc1_1": "解锁20%的存款奖金，从您的投资中获得更多。抓住这一独家优惠，提升您的交易能力并增加潜在回报。",
+      "title2_1": "资金账户",
+      "title2_2": "竞赛",
+      "title2_3": "",
+      "desc2_1": "时刻关注最新的行业洞察和新兴趋势，为持续成功制定明智和战略性的决策。",
+      "start_btn": "立即开始"
+    },
+    "customerCare": {
+      "customer_care_title1": "始终为您",
+      "customer_care_title2": "提供支持",
+      "customer_care_li1_title": "24/7客户服务",
+      "customer_care_li1_desc": "随时准备提供帮助",
+      "customer_care_li2_title": "多语言支持",
+      "customer_care_li2_desc": "提供多语言帮助",
+      "customer_care_btn": "联系我们"
+    },
+    "academy": {
+      "academy_title1": "PrimeX学院",
+      "academy_title2": "学习与成长",
+      "academy_desc": "通过我们广泛的教育资源和专家指导，提升您的交易技能。",
+      "academy_card_1_title_1": "免费",
+      "academy_card_1_title_2": "网络研讨会",
+      "academy_card_1_desc_1": "参加与行业专家的在线课程，获得有价值的见解和专业指导。掌握最新趋势、策略和工具。",
+      "academy_card_2_title_1": "一对一",
+      "academy_card_2_title_2": "辅导",
+      "academy_card_2_desc_1": "通过领先行业专家的定制化指导，提升您的交易之旅，获取量身定制的策略和专业见解。",
+      "academy_card_3_title_1": "专家市场",
+      "academy_card_3_title_2": "分析",
+      "academy_card_3_desc_1": "时刻关注最新的行业洞察和新兴趋势，为持续成功制定明智和战略性的决策。"
+    },
+    "ourRecognition": {
+      "our_recognition_title1": "我们的",
+      "our_recognition_title2": "荣誉",
+      "our_recognition_desc": "我们很荣幸能够因卓越和创新而获得行业的认可"
+    },
+
     "cookie": {
       "text": "点击“接受所有Cookie”，即表示您同意在您的设备上存储Cookie，以增强网站导航，分析网站使用情况，并协助我们的市场营销工作。",
       "btnTxt": "接受所有Cookie"
@@ -1810,15 +1948,15 @@
       "title": "给我们留言",
       "desc": "留下您的信息，我们将尽快与您联系。",
       "first_name_label": "名字",
-      "first_name_placeholder": "约翰",
+      "first_name_placeholder": "名字",
       "last_name_label": "姓氏",
       "last_name_placeholder": "多伊",
       "email_label": "电子邮件",
-      "email_placeholder": "Johndoe@gmail.com",
+      "email_placeholder": "电子邮件",
       "occupation_label": "职业",
-      "occupation_placeholder": "助理经理",
+      "occupation_placeholder": "职业",
       "country_label": "国家",
-      "country_placeholder": "阿联酋",
+      "country_placeholder": "国家",
       "question_label": "问题",
       "question_placeholder": "写下....",
       "condition": "提交此表单即表示您同意我们的团队与您联系。",

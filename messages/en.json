@@ -10,7 +10,7 @@
     "promotion": "Promotions",
     "tradetowin": "Trader of the Month",
     "funded_account_competition": "Funded Account Competition",
-    "liquidity": "PrimeX Liquidity",
+    "liquidity": "Liquidity Providing",
     "deposit": "20% Bonus",
     "login": "Login",
     "register": "Register",
@@ -174,6 +174,144 @@
     },
     "ourRecognition": {
       "our_recognition_title": "Our Recognition",
+      "our_recognition_desc": "We’re honored to receive industry accolades for our excellence and innovation"
+    },
+    "cookie": {
+      "text": "By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+      "btnTxt": "Accept All Cookies"
+    },
+    "modal": {
+      "title": "Dear Valued Customers,",
+      "para1": "We are pleased to inform you that we are now PrimeX Capital and our new website is ",
+      "para2": "Please update your bookmarks.",
+      "para3": "Happy Trading!",
+      "acknowledged": "Acknowledged"
+    }
+  },
+  "newHomePage": {
+    "metaData": {
+      "title": "Trade Forex Stocks Indices CFD Metals Online UAE | PrimeX Capital",
+      "description": "Trade Forex, stocks, indices, CFDs, and metals online UAE with PrimeX Capital. Access top trading tools and insights. Learn more and start trading today!"
+    },
+
+    "hero": {
+      "title": "The #1 Choice of World-class Traders",
+      "desc": "Trade with low commissions and raw spreads",
+      "title2": "REGULATED",
+      "review": "4.8 • Excellent • 2,000+ reviews",
+      "btnTxt": "Open Account"
+    },
+    "stats": {
+      "stat1": {
+        "title": "Served Clients",
+        "value1": "250k+"
+      },
+      "stat2": {
+        "title": "Paid-up Capital",
+        "value1": "$300+ ",
+        "value2": "Million"
+      },
+      "stat3": {
+        "title": "Introducing Brokers",
+        "value1": "5,000+"
+      },
+      "stat4": {
+        "title": "Daily Trades",
+        "value1": "$7+ ",
+        "value2": "Billion"
+      }
+    },
+    "tradingOpportunities": {
+      "title1": "Explore ",
+      "title2": "330+ ",
+      "title3": "Trading Opportunities",
+      "description": "Dive into a diverse array of assets including forex, indices, commodities, cryptocurrencies, and stocks.",
+      "btnTxt": "Open Account"
+    },
+    "tradingWidget": {
+      "title1": "Unlock",
+      "title2": "Diverse",
+      "title3": "Global",
+      "title4": "Markets",
+      "desc": "Discover trading opportunities with CFDs on commodities like Oil, Gold, and Natural Gas. Explore CFDs in Forex, indices such as S&P 500, the Dow, Nasdaq, and seize exposure to equity markets with CFDs on shares in companies like Amazon and Tesla."
+    },
+    "accountTypes": {
+      "title1": "Choose Your ",
+      "title2": "Account Type",
+      "desc": "Explore our account options and find the one that fits your needs. Select the perfect plan for you.",
+      "deposit": "Minimum Deposit: ",
+      "acc1": {
+        "title": "Standard",
+        "minimumDeposit": " $10",
+        "description": "The Standard Account is a top choice among traders due to its no-swap commissions, offering cost-efficiency by eliminating these fees."
+      },
+      "acc2": {
+        "title": "Narrow",
+        "minimumDeposit": " $1000",
+        "description": "This account is tailored for scalpers, featuring the lowest spread to maximize profits from short-term market movements."
+      },
+      "acc3": {
+        "title": "Raw",
+        "minimumDeposit": " $5000",
+        "description": "The Raw Account is designed for professional traders, offering a 'raw spread' for an unmatched trading experience."
+      }
+    },
+    "advancedPlatforms": {
+      "advance_platform_title_1": "Advanced Platform for ",
+      "advance_platform_title_2": "Modern Traders",
+      "li1": "Advanced Analytical Tools",
+      "li2": "Community and Support",
+      "li3": "Superior Charting Capabilities",
+      "li4": "Multi-Asset Platform",
+      "li5": "Automated Trading",
+      "li6": "Improved Order Execution",
+      "li7": "Built-in Economic Calendar"
+    },
+    "testimonial": {
+      "title1": "What Our ",
+      "title2": "Clients ",
+      "title3": "Are Saying",
+      "desc": "We’re proud to have a 4.8-star rating on Trustpilot with 2,000+ reviews. Hear what our satisfied customers have to say!"
+    },
+    "promotions": {
+      "main_title1": "Promotions and ",
+      "main_title2": "Offers",
+      "title1_1": "Get upto ",
+      "title1_2": "$25,000",
+      "title1_3": "Bonus",
+      "desc1_1": "Unlock a 20% deposit bonus and get more from your investment. Take advantage of this exclusive offer to increase your trading power and enhance your potential returns.",
+      "title2_1": "Funded ",
+      "title2_2": "Account",
+      "title2_3": "Competition",
+      "desc2_1": "Keep Yourself Updated with the Latest Insights and Emerging Trends in the Industry to Make Informed and Strategic Decisions for Continued Success.",
+      "start_btn": "Start Now"
+    },
+    "customerCare": {
+      "customer_care_title1": "Always Here for ",
+      "customer_care_title2": "You",
+      "customer_care_li1_title": "24/7 Customer Care",
+      "customer_care_li1_desc": "Always ready to assist",
+      "customer_care_li2_title": "Multilingual Support",
+      "customer_care_li2_desc": "Help available in multiple languages",
+      "customer_care_btn": "Contact Us"
+    },
+    "academy": {
+      "academy_title1": "PrimeX Academy ",
+      "academy_title2": "Learn & Grow",
+      "academy_desc": "Boost your trading skills with our extensive educational resources and expert guidance.",
+      "academy_card_1_title_1": "Free",
+      "academy_card_1_title_2": "Webinars",
+      "academy_card_1_desc_1": "Join live sessions with industry experts for valuable insights and professional guidance. Stay ahead with the latest trends, strategies, and tools.",
+      "academy_card_2_title_1": "One-on-One",
+      "academy_card_2_title_2": "Coaching",
+      "academy_card_2_desc_1": "Gain Customized Guidance from Leading Industry Experts to Enhance Your Trading Journey with Tailored Strategies and Professional Insights.",
+      "academy_card_3_title_1": "Expert Market",
+      "academy_card_3_title_2": "Analysis",
+      "academy_card_3_desc_1": "Keep Yourself Updated with the Latest Insights and Emerging Trends in the Industry to Make Informed and Strategic Decisions for Continued Success."
+    },
+    "ourRecognition": {
+      "our_recognition_title1": "Our ",
+      "our_recognition_title2": "Recognition",
       "our_recognition_desc": "We’re honored to receive industry accolades for our excellence and innovation"
     },
     "cookie": {
@@ -1559,7 +1697,7 @@
     "Services": {
       "title_part3": "Services",
       "title_part3_link1": "Account Types",
-      "title_part3_link2": "Introducing Brokers"
+      "title_part3_link2": "IB Program"
     },
     "Platform": {
       "title_part4": "Platform",
@@ -1810,15 +1948,15 @@
       "title": "Drop us a Message",
       "desc": "Drop your details, we will get in touch with you soon.",
       "first_name_label": "First Name",
-      "first_name_placeholder": "John",
+      "first_name_placeholder": "First Name",
       "last_name_label": "Last Name",
       "last_name_placeholder": "Doe",
       "email_label": "Email",
-      "email_placeholder": "Johndoe@gmail.com",
+      "email_placeholder": "Email",
       "occupation_label": "Occupation",
-      "occupation_placeholder": "Assistant Manager",
+      "occupation_placeholder": "Occupation",
       "country_label": "Country",
-      "country_placeholder": "UAE",
+      "country_placeholder": "Country",
       "question_label": "Question",
       "question_placeholder": "Write....",
       "condition": "By submitting this form, you agree to be contacted by our team.",

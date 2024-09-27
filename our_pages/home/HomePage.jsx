@@ -22,6 +22,8 @@ import Link from "next/link";
 import { HiBellAlert } from "react-icons/hi2";
 import { Button } from "@nextui-org/button";
 import NewBanner from "@/components/home/NewBanner";
+import StatsCard from "../../components/home/StatsCard";
+import TradingSection from "./TradingSection";
 // import SignalsCenter from "./SignalsCenter";
 
 const HomePage = () => {
@@ -64,16 +66,39 @@ const HomePage = () => {
     },
   ];
 
+  const statsData = [
+    {
+      title: "Served Clients",
+      value1: "250k+",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Served+Clients.svg",
+    },
+    {
+      title: "Paid-up Capital",
+      value1: "$300+ ",
+      value2: "Million",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Paid-up+Capital.svg",
+    },
+    {
+      title: "Introducing Brokers",
+      value1: "5,000+",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Introducing+Brokers.svg",
+    },
+    {
+      title: "Daily Trades",
+      value1: "$7+ ",
+      value2: "Billion",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Daily+Trades.svg",
+    },
+  ];
+
   return (
     <>
       <NewBanner />
-      {/* <Banner /> */}
       <TradingOpportunities />
       <AccountTypes1 />
       <AdvancedPlatforms />
       <BecomeIB />
       <Rewards />
-      {/* <SignalsCenter /> */}
       <CustomerCare />
       <Academy />
       <OurRecognition />

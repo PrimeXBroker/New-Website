@@ -27,9 +27,11 @@ const Footer = () => {
   const locale = useLocale();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLiquidityPage, setIsLiquidityPage] = useState(false);
+  const [isHomePage, setIsHomePage] = useState(false);
 
   useEffect(() => {
     setIsLiquidityPage(pathname.includes("/liquidity"));
+    setIsHomePage(pathname === `/${locale}` || pathname === `/${locale}/`);
   }, [pathname]);
 
   const handleOpenModal = (e) => {
@@ -187,7 +189,9 @@ const Footer = () => {
       <section
         className={`${
           isLiquidityPage
-            ? "bg-[#1d1d1d] hidden"
+            ? "hidden"
+            : isHomePage
+            ? "bg-[#111111]"
             : "bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/live-account-gray.webp')] bg-cover bg-no-repeat bg-center"
         } relative z-0 overflow-hidden`}
       >
@@ -199,7 +203,7 @@ const Footer = () => {
           >
             <h1
               className={`sectionHeading text-xl ${
-                isLiquidityPage ? "text-[#ffffff]" : "text-secondary"
+                isHomePage ? "text-[#ffffff]" : "text-secondary"
               } font-semibold ${
                 locale === "ar"
                   ? "text-center md:text-right"
@@ -210,7 +214,7 @@ const Footer = () => {
             </h1>
             <p
               className={`sectionPara ${
-                isLiquidityPage ? "text-[#dfdfdf]" : "text-secondary"
+                isHomePage ? "text-[#dfdfdf]" : "text-secondary"
               } ${
                 locale === "ar"
                   ? "text-center md:text-right"
@@ -227,9 +231,7 @@ const Footer = () => {
               href="https://client.primexbroker.com/en/register"
               size="lg"
               color="primary"
-              className={`${
-                isLiquidityPage ? "rounded-[12px]" : "rounded-full"
-              }`}
+              className={`${isHomePage ? "rounded-[12px]" : "rounded-full"}`}
             >
               <p className="text-secondary font-semibold">
                 {t("getStarted.get_started_btn")}
