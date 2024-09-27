@@ -1151,3 +1151,7 @@
 .review-swiper-navigation-buttons .swiper-button-prev::after {
   display: none !important;
 }
+
+.review-swiper-navigation-buttons .swiper-button-next:hover svg {
+  width: 60% !important;
+}

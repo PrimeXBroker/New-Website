@@ -221,11 +221,11 @@ const Testimonials = () => {
           } relative bottom-[37px] z-[10]`}
         >
           <button className="swiper-button-prev group">
-            <IoMdArrowBack className="text-[#ffffff] group-hover:text-[#111111] text-xl" />
+            <IoMdArrowBack className="text-[#ffffff] group-hover:text-[#111111] " />
           </button>
 
           <button className="swiper-button-next group">
-            <IoMdArrowForward className="text-[#ffffff] group-hover:text-[#111111] text-xl" />
+            <IoMdArrowForward className="text-[#ffffff] group-hover:text-[#111111]" />
           </button>
         </div>
       </div>
