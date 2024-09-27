@@ -9,31 +9,31 @@ const TabsSection = () => {
   const [selected, setSelected] = useState("2023");
 
   const awardsData = [
-    {
-      id: 1,
-      year: t("award_year_1"),
-      awards: [
-        {
-          imgSrc:
-            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award1.webp",
-          title: t("award_1_title"),
-          location: t("award_1_location"),
-        },
-        {
-          imgSrc:
-            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award2.webp",
-          title: t("award_2_title"),
-          location: t("award_2_location"),
-          highlighted: true,
-        },
-        {
-          imgSrc:
-            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award3.webp",
-          title: t("award_3_title"),
-          location: t("award_3_location"),
-        },
-      ],
-    },
+    // {
+    //   id: 1,
+    //   year: t("award_year_1"),
+    //   awards: [
+    //     {
+    //       imgSrc:
+    //         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award1.webp",
+    //       title: t("award_1_title"),
+    //       location: t("award_1_location"),
+    //     },
+    //     {
+    //       imgSrc:
+    //         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award2.webp",
+    //       title: t("award_2_title"),
+    //       location: t("award_2_location"),
+    //       highlighted: true,
+    //     },
+    //     {
+    //       imgSrc:
+    //         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award3.webp",
+    //       title: t("award_3_title"),
+    //       location: t("award_3_location"),
+    //     },
+    //   ],
+    // },
     {
       id: 2,
       year: t("award_year_2"),
@@ -97,31 +97,31 @@ const TabsSection = () => {
         },
       ],
     },
-    {
-      id: 3,
-      year: t("award_year_3"),
-      awards: [
-        {
-          imgSrc:
-            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award4.webp",
-          title: t("award_1_title"),
-          location: t("award_1_location"),
-        },
-        {
-          imgSrc:
-            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award5.webp",
-          title: t("award_2_title"),
-          location: t("award_2_location"),
-          highlighted: true,
-        },
-        {
-          imgSrc:
-            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award6.webp",
-          title: t("award_3_title"),
-          location: t("award_3_location"),
-        },
-      ],
-    },
+    // {
+    //   id: 3,
+    //   year: t("award_year_3"),
+    //   awards: [
+    //     {
+    //       imgSrc:
+    //         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award4.webp",
+    //       title: t("award_1_title"),
+    //       location: t("award_1_location"),
+    //     },
+    //     {
+    //       imgSrc:
+    //         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award5.webp",
+    //       title: t("award_2_title"),
+    //       location: t("award_2_location"),
+    //       highlighted: true,
+    //     },
+    //     {
+    //       imgSrc:
+    //         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/award6.webp",
+    //       title: t("award_3_title"),
+    //       location: t("award_3_location"),
+    //     },
+    //   ],
+    // },
   ];
 
   return (
