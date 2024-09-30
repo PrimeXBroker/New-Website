@@ -379,6 +379,36 @@ const MobileHeader = ({ locale }) => {
             </div>
           </div>
         </div>
+        <div className="flex items-center gap-4 mt-6 mb-4 ps-[6%] pe-[5%]">
+          <button
+            onClick={() =>
+              window.open(
+                `${
+                  locale === "ar"
+                    ? "https://client.primexbroker.com/ar/login"
+                    : "https://client.primexbroker.com/en/login"
+                }`
+              )
+            }
+            className="w-[30%] mb-2 py-3 font-semibold custom-button"
+          >
+            {t("login")}
+          </button>
+          <button
+            onClick={() =>
+              window.open(
+                `${
+                  locale === "ar"
+                    ? "https://client.primexbroker.com/ar/register"
+                    : "https://client.primexbroker.com/en/register"
+                }`
+              )
+            }
+            className="w-[30%] mb-2 py-3 font-semibold custom-button"
+          >
+            {t("register")}
+          </button>
+        </div>
         <nav className="flex flex-col space-y-4 py-4 ps-[6%] pe-[5%]">
           <LocaleLink
             href="/"
@@ -623,22 +653,6 @@ const MobileHeader = ({ locale }) => {
             )}
           </div> */}
         </nav>
-        <div className="flex flex-col items-center mt-6 mb-4">
-          <button
-            onClick={() =>
-              window.open(
-                `${
-                  locale === "ar"
-                    ? "https://client.primexbroker.com/ar/login"
-                    : "https://client.primexbroker.com/en/login"
-                }`
-              )
-            }
-            className="w-[90%] mb-2 py-3 font-semibold custom-button"
-          >
-            {t("login")}
-          </button>
-        </div>
       </div>
       {isOpen && (
         <div

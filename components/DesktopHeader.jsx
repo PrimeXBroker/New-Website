@@ -364,6 +364,22 @@ const DesktopHeader = ({ locale }) => {
           >
             {t("login")}
           </button>
+          <button
+            onClick={() =>
+              window.open(
+                `${
+                  locale === "ar"
+                    ? "https://client.primexbroker.com/ar/register"
+                    : "https://client.primexbroker.com/en/register"
+                }`
+              )
+            }
+            className={`group ${
+              locale === "ar" ? "w-[140px]" : "w-[120px]"
+            }   py-[6px] custom-button`}
+          >
+            {t("register")}
+          </button>
         </div>
         <div>
           <ul className="flex gap-[16px] h-full">

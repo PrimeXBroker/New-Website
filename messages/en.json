@@ -1976,5 +1976,29 @@
       "success_desc": "Form Submitted Successfully",
       "close_btn": "Close"
     }
+  },
+  "ibProgram": {
+    "partnerBenefits": {
+      "main_title1": "Why Partner with ",
+      "main_title2": "Us?",
+      "title1": "Lucrative",
+      "title1_1": "Commissions",
+      "description1": "Earn up to $23 for every lot traded, with competitive rates designed to maximize your earnings potential as an IB partner.",
+      "title2": "Advanced",
+      "title2_1": "Trading Platform",
+      "description2": "Gain access to cutting-edge trading tools and state-of-the-art technology, ensuring a seamless and efficient trading experience for you and your clients.",
+      "title3": "Comprehensive ",
+      "title3_1": "Marketing Support",
+      "description3": "Leverage a wide range of marketing resources and promotional materials to attract, engage, and retain clients, helping you grow your business faster.",
+      "title4": "Dedicated ",
+      "title4_1": "IB Support Team",
+      "description4": "Receive ongoing, personalized assistance from our expert team, ensuring you have the guidance and support you need to succeed as an introducing broker.",
+      "title5": "Flexible",
+      "title5_1": "Payout Options",
+      "description5": "Enjoy a variety of payment options, tailored to meet your financial preferences and business needs, with fast and reliable payouts.",
+      "title6": "Transparent",
+      "title6_1": "Reporting",
+      "description6": "Monitor your clients' trading performance with detailed, transparent reports that offer clear insights into your commissions and earnings."
+    }
   }
 }
