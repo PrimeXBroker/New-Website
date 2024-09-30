@@ -354,7 +354,11 @@ const Footer = () => {
             </p>
             <div className="flex gap-4 items-center justify-around">
               <Link
-                href="https://www.facebook.com/primex.brokers?mibextid=LQQJ4d"
+                href={`${
+                  locale === "ar"
+                    ? "https://m.facebook.com/primex.capital.ar/"
+                    : "https://www.facebook.com/PrimeX.Capital.En"
+                }`}
                 target="_blank"
               >
                 <FaFacebook
