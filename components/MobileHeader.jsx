@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import LocaleLink from "./LocaleLink";
 import { useTranslations } from "next-intl";
 import Logo from "@/public/images/logos/primex-logo.webp";
@@ -14,11 +14,31 @@ const MobileHeader = ({ locale }) => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
+  const [activeDropdown, setActiveDropdown] = useState(null);
   const pathname = usePathname();
   const pathnameWithoutLocale = pathname.replace(`/${locale}`, "");
-  const [buttonText, setButtonText] = useState(
-    locale === "ar" ? "عربي" : locale === "cn" ? "中文" : "English"
-  );
+  const [language, setLanguage] = useState({
+    text: locale === "ar" ? "عربي" : locale === "cn" ? "中文" : "English",
+    flag:
+      locale === "ar"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
+        : locale === "cn"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
+        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
+  });
+
+  let dropdownTimeout;
+
+  const openDropdown = useCallback((index) => {
+    clearTimeout(dropdownTimeout);
+    setActiveDropdown(index);
+  }, []);
+
+  const closeDropdown = useCallback(() => {
+    dropdownTimeout = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 200);
+  }, []);
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
@@ -32,23 +52,54 @@ const MobileHeader = ({ locale }) => {
   const isLocaleOnly = pathname === `/${currentLocale}`;
   const restOfPath = isLocaleOnly ? "" : pathname.split("/").slice(2).join("/");
 
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem("language");
-    if (savedLanguage) {
-      setButtonText(savedLanguage);
+  const handleScroll = () => {
+    if (window.scrollY > 400) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
     }
-  }, []);
-
-  const handleClick = (language) => {
-    setButtonText(language);
-    localStorage.setItem("language", language);
   };
 
   useEffect(() => {
-    const language =
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("language");
+    if (savedLanguage) {
+      try {
+        const parsedLanguage = JSON.parse(savedLanguage);
+        if (parsedLanguage.text && parsedLanguage.flag) {
+          setLanguage(parsedLanguage);
+        }
+      } catch (e) {
+        console.error("Invalid JSON in localStorage:", e);
+        localStorage.removeItem("language");
+      }
+    }
+  }, []);
+
+  const handleClick = (text, flag) => {
+    const selectedLanguage = { text, flag };
+    setLanguage(selectedLanguage);
+    localStorage.setItem("language", JSON.stringify(selectedLanguage));
+  };
+
+  useEffect(() => {
+    const text =
       locale === "ar" ? "عربي" : locale === "cn" ? "中文" : "English";
-    localStorage.setItem("language", language);
-    setButtonText(language);
+    const flag =
+      locale === "ar"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
+        : locale === "cn"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
+        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg";
+    const initialLanguage = { text, flag };
+    setLanguage(initialLanguage);
+    localStorage.setItem("language", JSON.stringify(initialLanguage));
   }, [locale]);
 
   return (
@@ -57,6 +108,7 @@ const MobileHeader = ({ locale }) => {
         <div className="flex items-center">
           <LocaleLink href="/" className="logo" onClick={toggleDrawer}>
             <Image
+              unoptimized={true}
               width="100"
               height="100"
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Logo+.svg"
@@ -64,12 +116,128 @@ const MobileHeader = ({ locale }) => {
             />
           </LocaleLink>
         </div>
-        <div className="">
+
+        <div className="flex gap-5">
+          <div>
+            <ul className=" h-full">
+              <li
+                className="relative flex items-center h-full"
+                onMouseEnter={() => openDropdown(1)}
+                onMouseLeave={closeDropdown}
+              >
+                <button className="text-[#ffffff] text-[.8em] flex items-center">
+                  <Image
+                    unoptimized={true}
+                    width="15"
+                    height="15"
+                    src={language.flag}
+                    alt={`${language.text} flag`}
+                  />
+                  <span
+                    className={`${locale === "ar" ? "mr-[5px]" : "ml-[5px]"}`}
+                  >
+                    {language.text}
+                  </span>
+                  <svg
+                    className={`fill-current h-4 w-4 ${
+                      locale === "ar" ? "mr-1" : "ml-1"
+                    }`}
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </button>
+                {activeDropdown === 1 && (
+                  <ul className="absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
+                    <li>
+                      <Link
+                        href={
+                          currentLocale === "en"
+                            ? `/${currentLocale}/${restOfPath}`
+                            : `/en/${restOfPath}`
+                        }
+                        onClick={() =>
+                          handleClick(
+                            "English",
+                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg"
+                          )
+                        }
+                        className="px-4 py-2 text-[#ffffff] text-[.8em] hover:text-[#111111] hover:bg-primary rounded-[6px] flex items-center"
+                        dir="ltr"
+                      >
+                        <Image
+                          unoptimized={true}
+                          width="15"
+                          height="15"
+                          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg"
+                          alt="english flag"
+                        />
+                        <span className="ml-[5px]">English</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={
+                          currentLocale === "ar"
+                            ? `/${currentLocale}/${restOfPath}`
+                            : `/ar/${restOfPath}`
+                        }
+                        onClick={() =>
+                          handleClick(
+                            "عربي",
+                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
+                          )
+                        }
+                        className="px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
+                        dir="ltr"
+                      >
+                        <Image
+                          unoptimized={true}
+                          width="15"
+                          height="15"
+                          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
+                          alt="arabic flag"
+                        />
+                        <span className="ml-[5px]">عربي</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={
+                          currentLocale === "cn"
+                            ? `/${currentLocale}/${restOfPath}`
+                            : `/cn/${restOfPath}`
+                        }
+                        onClick={() =>
+                          handleClick(
+                            "中文",
+                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
+                          )
+                        }
+                        className="px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
+                        dir="ltr"
+                      >
+                        <Image
+                          unoptimized={true}
+                          width="15"
+                          height="15"
+                          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
+                          alt="chinese flag"
+                        />
+                        <span className="ml-[5px]">中文</span>
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </li>
+            </ul>
+          </div>
           <div
-            className="w-[38px] h-[38px] rounded-full flex justify-center items-center bg-primary opacity-bg-40"
+            className="w-[38px] h-[38px] rounded-[8px] flex justify-center items-center opacity-bg-40"
             onClick={toggleDrawer}
           >
-            <FaBars size={20} className="text-[#111111]" />
+            <FaBars size={20} className="text-[#ffffff]" />
           </div>
         </div>
       </div>
@@ -80,17 +248,135 @@ const MobileHeader = ({ locale }) => {
       >
         <div className="flex justify-between items-center py-7 ps-[6%] pe-[5%]">
           <Image
+            unoptimized={true}
             width="100"
             height="100"
             src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Logo+.svg"
             alt="Logo Image"
           />
-          <div className="w-[38px] h-[38px] rounded-full flex justify-center items-center bg-primary opacity-bg-40">
-            <RxCross1
-              size={16}
-              className="cursor-pointer text-[#111111]"
-              onClick={toggleDrawer}
-            />
+          <div className="flex gap-5">
+            <div>
+              <ul className=" h-full">
+                <li
+                  className="relative flex items-center h-full"
+                  onMouseEnter={() => openDropdown(1)}
+                  onMouseLeave={closeDropdown}
+                >
+                  <button className="text-[#ffffff] text-[.8em] flex items-center">
+                    <Image
+                      unoptimized={true}
+                      width="15"
+                      height="15"
+                      src={language.flag}
+                      alt={`${language.text} flag`}
+                    />
+                    <span
+                      className={`${locale === "ar" ? "mr-[5px]" : "ml-[5px]"}`}
+                    >
+                      {language.text}
+                    </span>
+                    <svg
+                      className={`fill-current h-4 w-4 ${
+                        locale === "ar" ? "mr-1" : "ml-1"
+                      }`}
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                    </svg>
+                  </button>
+                  {activeDropdown === 1 && (
+                    <ul className="absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
+                      <li>
+                        <Link
+                          href={
+                            currentLocale === "en"
+                              ? `/${currentLocale}/${restOfPath}`
+                              : `/en/${restOfPath}`
+                          }
+                          onClick={() =>
+                            handleClick(
+                              "English",
+                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg"
+                            )
+                          }
+                          className="px-4 py-2 text-[#ffffff] text-[.8em] hover:text-[#111111] hover:bg-primary rounded-[6px] flex items-center"
+                          dir="ltr"
+                        >
+                          <Image
+                            unoptimized={true}
+                            width="15"
+                            height="15"
+                            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg"
+                            alt="english flag"
+                          />
+                          <span className="ml-[5px]">English</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href={
+                            currentLocale === "ar"
+                              ? `/${currentLocale}/${restOfPath}`
+                              : `/ar/${restOfPath}`
+                          }
+                          onClick={() =>
+                            handleClick(
+                              "عربي",
+                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
+                            )
+                          }
+                          className="px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
+                          dir="ltr"
+                        >
+                          <Image
+                            unoptimized={true}
+                            width="15"
+                            height="15"
+                            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
+                            alt="arabic flag"
+                          />
+                          <span className="ml-[5px]">عربي</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href={
+                            currentLocale === "cn"
+                              ? `/${currentLocale}/${restOfPath}`
+                              : `/cn/${restOfPath}`
+                          }
+                          onClick={() =>
+                            handleClick(
+                              "中文",
+                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
+                            )
+                          }
+                          className="px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
+                          dir="ltr"
+                        >
+                          <Image
+                            unoptimized={true}
+                            width="15"
+                            height="15"
+                            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
+                            alt="chinese flag"
+                          />
+                          <span className="ml-[5px]">中文</span>
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
+                </li>
+              </ul>
+            </div>
+            <div className="w-[38px] h-[38px] rounded-[8px] flex justify-center items-center bg-[#ffffff] opacity-bg-40">
+              <FaBars
+                size={16}
+                className="cursor-pointer text-[#111111]"
+                onClick={toggleDrawer}
+              />
+            </div>
           </div>
         </div>
         <nav className="flex flex-col space-y-4 py-4 ps-[6%] pe-[5%]">
@@ -277,7 +563,7 @@ const MobileHeader = ({ locale }) => {
               </div>
             )}
           </div>
-          <div>
+          {/* <div>
             <button
               onClick={() => toggleSubMenu(6)}
               className="text-[#ffffff] text-base flex justify-between items-center w-full pt-[3px]"
@@ -335,7 +621,7 @@ const MobileHeader = ({ locale }) => {
                 </Link>
               </div>
             )}
-          </div>
+          </div> */}
         </nav>
         <div className="flex flex-col items-center mt-6 mb-4">
           <button
