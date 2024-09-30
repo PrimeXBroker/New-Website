@@ -16,7 +16,7 @@ export const tradingTabs = [
       {
         tradingSymbol: "PrimeX_REST_RA||EURUSD||EURUSD",
         image:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/EURUSD.svg",
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/BTCUSD-New.svg",
         name: "EURUSD",
       },
       {
@@ -49,7 +49,7 @@ export const tradingTabs = [
           "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Natural+Gas.svg",
         name: "Natural GAS",
       },
-      
+
       {
         tradingSymbol: "PrimeX_REST_RA||BTCUSD||BTCUSD",
         image:
@@ -82,7 +82,7 @@ export const tradingTabs = [
           "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/USDJPY.svg",
         name: "USDJPY",
       },
-      
+
       {
         tradingSymbol: "PrimeX_REST_RA||USDCHF||USDCHF",
         image:
@@ -257,7 +257,6 @@ export const tradingTabs = [
           "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/UK100.svg",
         name: "UK100.spot",
       },
-     
     ],
   },
   {
@@ -290,7 +289,7 @@ export const tradingTabs = [
           "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/CORN.svg",
         name: "CORN",
       },
-      
+
       {
         tradingSymbol: "PrimeX_REST_RA||SOYBEAN.spot||SOYBEAN.spot",
         image:
