@@ -1173,3 +1173,105 @@
   padding-left: 0px !important;
   background-color: #1d1d1d !important;
 }
+
+/*  */
+html {
+  font-family: Arial;
+}
+
+.welcome {
+  text-align: center;
+  padding: 300px 30px;
+  background-color: yellow;
+
+  h1 {
+    font-family: Arial;
+    text-transform: capitalize;
+  }
+}
+
+.ib-client-wrapper {
+  width: 100%;
+  margin: auto;
+  padding: 135px 0 105px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .ib-fixed-text {
+    flex: 2;
+    position: sticky;
+    top: 100px;
+  }
+
+  ul {
+    flex: 3;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: sticky;
+      top: 100px;
+      /* margin-bottom: 35px; */
+
+      &:nth-child(1) {
+        & > div {
+          padding-top: 0;
+          padding-bottom: 60px;
+        }
+      }
+      &:nth-child(2) {
+        & > div {
+          padding-top: 20px;
+          padding-bottom: 40px;
+        }
+      }
+      &:nth-child(3) {
+        & > div {
+          padding-top: 10px;
+          padding-bottom: 20px;
+        }
+      }
+      &:nth-child(4) {
+        & > div {
+          padding-top: 60px;
+          padding-bottom: 10px;
+        }
+      }
+      &:nth-child(5) {
+        & > div {
+          padding-top: 60px;
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+.ib-new-banner-bg {
+  background-image: url("https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/ib-bg-map.webp");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  /* background-color: rgba(0, 0, 0, 0.9); */
+}
+
+.ib-new-banner {
+  background-color: #000000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.9;
+  box-shadow: 0px 35px 77px 0px rgba(0, 0, 0, 0.1),
+    0px 141px 141px 0px rgba(0, 0, 0, 0.09),
+    0px 317px 190px 0px rgba(0, 0, 0, 0.05),
+    0px 563px 225px 0px rgba(0, 0, 0, 0.01),
+    0px 880px 246px 0px rgba(0, 0, 0, 0);
+}

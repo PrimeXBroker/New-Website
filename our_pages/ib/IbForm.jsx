@@ -6,7 +6,7 @@ const IbForm = () => {
   const locale = useLocale();
   const t = useTranslations("ibProgram.ibForm");
   return (
-    <section className="bg-[#000000]">
+    <section className="bg-[#000000] py-10">
       <div className="container grid grid-cols-12 items-center">
         <div className="col-span-12 lg:col-span-6 mb-7 lg:mb-0">
           <div className="bg-[#1D1D1D] inline-block px-[20px] py-[6px] rounded-full mb-5">

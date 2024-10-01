@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslations, useLocale } from "next-intl";
+import Image from "next/image";
 
 const EasySteps = () => {
   const locale = useLocale();
@@ -16,9 +17,12 @@ const EasySteps = () => {
       <div className="container bg-[#111111] border-2 border-[#1D1D1D] rounded-[2px]">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 px-12 py-14 justify-between">
           <div className="bg-[#1D1D1D] border-2 border-[#222222] rounded-lg p-6 flex justify-center items-center h-[250px]">
-            <img
-              src="https://via.placeholder.com/96"
-              alt="Register Icon"
+            <Image
+              unoptimized={true}
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/trustpilot-logo+.svg"
+              alt="Trustpilot"
+              width={100}
+              height={100}
               className="h-24 w-24"
             />
           </div>

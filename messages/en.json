@@ -1978,6 +1978,13 @@
     }
   },
   "ibProgram": {
+    "banner": {
+      "title1": "Become an",
+      "title2": "Introducing Broker",
+      "title3": "Earn upto $23 per lot",
+      "btnTxt": "Sign Up Now",
+      "review": "4.8 • Excellent • 2,000+ reviews"
+    },
     "partnerBenefits": {
       "main_title1": "Why Partner with ",
       "main_title2": "Us?",

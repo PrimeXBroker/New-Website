@@ -11,42 +11,42 @@ const PartnerFeatures = () => {
       title: t("title1"),
       title1: t("title1_1"),
       description: t("description1"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/liquidity/Chain.svg",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Lucrative+Commissions.svg",
     },
     {
       title: t("title2"),
       title1: t("title2_1"),
       description: t("description2"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/liquidity/Chart.svg",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Advanced+Trading+Platform.svg",
     },
     {
       title: t("title3"),
       title1: t("title3_1"),
       description: t("description3"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/liquidity/HandShake.svg",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Comprehensive+Marketing+Support.svg",
     },
     {
       title: t("title4"),
       title1: t("title4_1"),
       description: t("description4"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/liquidity/SpeedoMeter.svg",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Dedicated+IB+Support+Team.svg",
     },
     {
       title: t("title5"),
       title1: t("title5_1"),
       description: t("description5"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/liquidity/SpeedoMeter.svg",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Flexible+Payout+Options.svg",
     },
     {
       title: t("title6"),
       title1: t("title6_1"),
       description: t("description6"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/liquidity/SpeedoMeter.svg",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Transparent+Reporting.svg",
     },
   ];
 
   return (
-    <div className="bg-[#000000] py-12 sm:py-20">
+    <div className="bg-[#000000] py-10">
       <div className="container mb-7">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff] text-center">
           {t("main_title1")}
@@ -68,11 +68,13 @@ const PartnerFeatures = () => {
                   {benefit.title1}
                 </h3>
               </div>
-              <img
-                src={benefit.icon}
-                alt={benefit.title}
-                className="w-12 h-12"
-              />
+              <div className="w-12 h-12 borer-2 border-[#222222] bg-[#1D1D1D] rounded-lg flex items-center justify-center">
+                <img
+                  src={benefit.icon}
+                  alt={benefit.title}
+                  className="w-[32px]"
+                />
+              </div>
             </div>
             <p className="text-[#c6c6c6] mt-2">{benefit.description}</p>
           </div>

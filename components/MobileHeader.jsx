@@ -576,13 +576,13 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("deposit")}
                 </LocaleLink>
-                <LocaleLink
+                {/* <LocaleLink
                   href="/top-trader"
                   className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("tradetowin")}
-                </LocaleLink>
+                </LocaleLink> */}
                 <LocaleLink
                   href="/funded-account-competition"
                   className="block text-[#ffffff] text-base pt-[16px]"
