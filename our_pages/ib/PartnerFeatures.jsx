@@ -61,10 +61,10 @@ const PartnerFeatures = () => {
           >
             <div className="flex justify-between items-center">
               <div>
-                <h3 className="text-xl font-bold group-hover:text-primary">
+                <h3 className="text-xl font-bold group-hover:text-[#FED100]">
                   {benefit.title}
                 </h3>
-                <h3 className="text-xl font-bold text-[#ffffff] group-hover:text-primary">
+                <h3 className="text-xl font-bold text-[#ffffff] group-hover:text-[#FED100]">
                   {benefit.title1}
                 </h3>
               </div>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useState, useEffect, useCallback } from "react";
 import LocaleLink from "./LocaleLink";
 import { useTranslations } from "next-intl";
-import Logo from "@/public/images/logos/primex-logo.webp";
+import Logo from "@/public/images/logos/logo-white.webp";
 import Image from "next/image";
 import { FaBars, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { usePathname, useRouter } from "next/navigation";
@@ -109,9 +109,9 @@ const MobileHeader = ({ locale }) => {
           <LocaleLink href="/" className="logo" onClick={toggleDrawer}>
             <Image
               unoptimized={true}
-              width="100"
-              height="100"
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Logo+.svg"
+              width="120"
+              height="120"
+              src={Logo}
               alt="Logo Image"
             />
           </LocaleLink>
@@ -249,9 +249,9 @@ const MobileHeader = ({ locale }) => {
         <div className="flex justify-between items-center py-7 ps-[6%] pe-[5%]">
           <Image
             unoptimized={true}
-            width="100"
-            height="100"
-            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Logo+.svg"
+            width="120"
+            height="120"
+            src={Logo}
             alt="Logo Image"
           />
           <div className="flex gap-5">

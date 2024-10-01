@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
-import Logo from "@/public/images/logos/primex-logo.webp";
+import Logo from "@/public/images/logos/logo-white.webp";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import LocaleLink from "./LocaleLink";
@@ -103,7 +103,7 @@ const DesktopHeader = ({ locale }) => {
               unoptimized={true}
               width="120"
               height="120"
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Logo+.svg"
+              src={Logo}
               alt="Logo Image"
             />
           </LocaleLink>
