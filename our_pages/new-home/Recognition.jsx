@@ -32,7 +32,7 @@ const Recognition = () => {
     },
     {
       imgSrc:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Award+7.webp",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Award-7-New.webp",
     },
   ];
 
