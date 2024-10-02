@@ -17,7 +17,7 @@ const RewardsSlider = () => {
   const awards = [
     {
       imgSrc:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Iphone-mbl.webp",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Mobile-Iphone.svg",
       title: t("reward1_title"),
       lots: t("reward1_lots"),
     },

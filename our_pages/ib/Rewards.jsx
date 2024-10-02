@@ -16,7 +16,7 @@ const Rewards = () => {
             <div className="relative">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Iphone.svg"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Desktop-Iphone.svg"
                 alt="Iphone"
                 width={100}
                 height={100}
