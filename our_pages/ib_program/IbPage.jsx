@@ -1,13 +1,13 @@
 "use client";
-import Banner from "@/components/ib-program/Banner";
-import BecomeIb from "@/components/ib-program/BecomeIb";
-import IbForm from "@/components/ib-program/IbForm";
-import Partnership from "@/components/ib-program/Partnership";
-import RewardCards from "@/components/ib-program/RewardCards";
-import Rewards from "@/components/ib-program/Rewards";
-import SatisfactionTabs from "@/components/ib-program/SatisfactionTabs";
-import Steps from "@/components/ib-program/Steps";
 import React, { useEffect } from "react";
+import Banner from "../ib/Banner";
+import PartnerFeatures from "../ib/PartnerFeatures";
+import EasySteps from "../ib/EasySteps";
+import EasyStepsMobile from "../ib/EasyStepsMobile";
+import IbForm from "../ib/IbForm";
+import Rewards from "../ib/Rewards";
+import RewardsSlider from "../ib/RewardsSlider";
+import ClientSatisfaction from "../ib/ClientSatisfaction";
 
 const IbPage = () => {
   useEffect(() => {
@@ -37,13 +37,21 @@ const IbPage = () => {
   return (
     <>
       <Banner />
-      <Partnership />
-      <Steps />
+      <PartnerFeatures />
+      <div className="sm:block hidden">
+        <EasySteps />
+      </div>
+      <div className="sm:hidden block">
+        <EasyStepsMobile />
+      </div>
       <IbForm />
-      <Rewards />
-      <RewardCards />
-      <SatisfactionTabs />
-      {/* <BecomeIb /> */}
+      <div className="lg:block hidden">
+        <Rewards />
+      </div>
+      <div className="lg:hidden block">
+        <RewardsSlider />
+      </div>
+      <ClientSatisfaction />
     </>
   );
 };

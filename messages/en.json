@@ -1867,7 +1867,7 @@
     },
     "participateForm": {
       "title1": "Join for Free and Start Trading Instantly",
-      "step1_p1": "Sign Up for Free and Instantly Access Your Demo Account.",
+      "step1_p1": "Sign Up for Free and Instantly Access Your Demo Competition Account.",
       "step2_p1": "Start Trading in Real Market Conditions, Risk-Free."
     }
   },
@@ -2046,12 +2046,15 @@
       "last_name_required_error": "Please provide a last name.",
       "email_validation_error": "Please enter a valid email address.",
       "email_required_error": "Email is required.",
-      "country_required_error": "country is required!",
       "occupation_required_error": "occupation is required!",
       "question_required_error": "question is required!",
       "success_title": "Success",
       "success_desc": "Form Submitted Successfully",
-      "close_btn": "Close"
+      "close_btn": "Close",
+      "number": "Phone Number",
+      "country_label": "Country",
+      "country_placeholder": "Country",
+      "country_required_error": "country is required!"
     },
     "clientSatisfaction": {
       "main_title1": "Your Client",
@@ -2068,7 +2071,7 @@
       "title4": "Enjoy",
       "description4": "Benefit from zero deposit commissions with no hidden fees. Every penny of your deposit goes straight into your trading account, and we offer hassle-free funding options.",
       "title5": "Count on",
-      "description5": "Explore over 330 instruments across various markets, including 100 Forex options. Access the largest crypto collection in MENA, and trade CFDs with leverage for more opportunities."
+      "description5": "Count on our dedicated, multilingual customer support available 24/7 and easily accessible."
     },
     "rewards": {
       "main_title1": "IB Program",

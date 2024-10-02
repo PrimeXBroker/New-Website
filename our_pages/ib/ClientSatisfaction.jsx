@@ -23,7 +23,11 @@ const ClientSatisfaction = () => {
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-[#ffffff] mb-2">
                 {t("main_title4")}
               </h2>
-              <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-[#FED100] mb-2">
+              <h2
+                className={`text-2xl md:text-4xl lg:text-5xl font-semibold text-[#FED100] mb-2 ${
+                  locale === "ar" ? "hidden" : ""
+                }`}
+              >
                 {t("main_title5")}
               </h2>
             </div>
@@ -36,7 +40,12 @@ const ClientSatisfaction = () => {
             </h2>
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-[#ffffff] mb-2">
               {t("main_title4")}
-              <span className="text-[#FED100]"> {t("main_title5")}</span>
+              <span
+                className={`text-[#FED100] ${locale === "ar" ? "hidden" : ""}`}
+              >
+                {" "}
+                {t("main_title5")}
+              </span>
             </h2>
           </div>
           <ul>

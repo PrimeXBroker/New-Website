@@ -1746,7 +1746,7 @@
     },
     "readyToInvest": {
       "title": "准备投资",
-      "description": "开设实时账户并立即开始投资！轻松交易500多种全球资产。",
+      "description": "开设实时账户并立即开始投资！轻松交易300多种全球资产。",
       "btnText": "立即开始"
     },
     "relatedBlogs": {
@@ -1867,7 +1867,7 @@
     },
     "participateForm": {
       "title1": "免费加入并立即开始交易",
-      "step1_p1": "免费注册并立即访问您的模拟账户。",
+      "step1_p1": "免费注册并立即访问您的模拟比赛账户。",
       "step2_p1": "在真实市场条件下开始交易，无风险。"
     }
   },
@@ -2051,7 +2051,10 @@
       "question_required_error": "问题是必填项！",
       "success_title": "成功",
       "success_desc": "表单提交成功",
-      "close_btn": "关闭"
+      "close_btn": "关闭",
+      "number": "电话号码",
+      "country_label": "国家",
+      "country_placeholder": "国家"
     },
     "clientSatisfaction": {
       "main_title1": "您的客户",
@@ -2068,7 +2071,7 @@
       "title4": "享受",
       "description4": "从零存款佣金中受益，无任何隐藏费用。您存款的每一分钱都会直接进入您的交易账户，我们提供无忧的资金选项。",
       "title5": "依赖",
-      "description5": "探索超过330种不同市场的交易工具，包括100种外汇期权。访问MENA地区最大的加密货币收藏，并通过杠杆交易CFD，获得更多机会。"
+      "description5": "依赖我们敬业的多语言客户支持团队，全年无休，随时为您提供便捷的服务。"
     },
     "rewards": {
       "main_title1": "IB计划",

@@ -31,7 +31,10 @@ function Form() {
   useEffect(() => {
     const fetchLocation = async () => {
       try {
-        const response = await axios.get("https://ipapi.co/country/");
+        const response = await axios.get(
+          `https://ipapi.co/country/?key=${process.env.NEXT_PUBLIC_API_KEY}`
+        );
+        console.log(response.data, "countryip");
         if (response.data) {
           setCountryCode(response.data.toUpperCase());
         } else {
@@ -50,6 +53,7 @@ function Form() {
       last_name: "",
       email: "",
       contact: "",
+      country: "",
       question: "",
     },
     validationSchema: Yup.object({
@@ -68,6 +72,7 @@ function Form() {
       email: Yup.string()
         .email(t("email_validation_error"))
         .required(t("email_required_error")),
+      country: Yup.string().required(t("country_required_error")),
       question: Yup.string().required(t("question_required_error")),
     }),
     validate: (values) => {
@@ -84,6 +89,7 @@ function Form() {
         first_name: values.first_name,
         last_name: values.last_name,
         contact: values.contact,
+        country: values.country,
         question: values.question,
       };
       try {
@@ -186,15 +192,46 @@ function Form() {
                   onBlur={formik.handleBlur}
                   name="contact"
                   value={formik.values.contact}
-                  className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`ib-phone-input appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
                     formik.touched.contact && formik.errors.contact
                       ? "border-b border-red-600"
                       : ""
                   }`}
-                  placeholder="Phone Number"
+                  placeholder={t("number")}
                 />
               </label>
             </div>
+          </div>
+          <div className="w-full">
+            <label className="text-xs text-[#c6c6c6]">
+              {t("country_label")}
+              <select
+                className={`capitalize py-[16px] px-[12px] w-full text-base focus:outline-none border-2 border-[#222222] bg-[#1d1d1d]  text-[#c6c6c6] ${
+                  formik.touched.country && formik.errors.country
+                    ? "border border-red-600"
+                    : ""
+                }`}
+                name="country"
+                value={formik.values.country}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              >
+                <option value="" className="text-[#c6c6c6]">
+                  {t("country_placeholder")}
+                </option>
+                {nationality.map((country, index) => {
+                  return (
+                    <option
+                      key={index}
+                      value={country.en_short_name}
+                      className="text-black bg-white"
+                    >
+                      {country.en_short_name}
+                    </option>
+                  );
+                })}
+              </select>
+            </label>
           </div>
           <div className="w-full">
             <label className="text-xs text-[#c6c6c6]">
