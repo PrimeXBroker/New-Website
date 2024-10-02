@@ -186,7 +186,7 @@ const BonusForm = () => {
                           {t("condition1")}
                         </span>
                         <Link
-                          href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/20%25_deposit_bonus.pdf"
+                          href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/PrimeX_Deposit_Bonus.pdf"
                           target="_blank"
                           className="text-primary"
                         >

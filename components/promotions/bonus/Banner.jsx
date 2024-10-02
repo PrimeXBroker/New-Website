@@ -93,7 +93,7 @@ const Banner = () => {
                   <span className="text-xs sm:text-sm text-white italic font-normal">
                     <Link
                       className="text-primary"
-                      href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/20%25_deposit_bonus.pdf"
+                      href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/PrimeX_Deposit_Bonus.pdf"
                       target="_blank"
                     >
                       {t("tc")}

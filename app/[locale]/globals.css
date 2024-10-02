@@ -1178,22 +1178,6 @@
   background-color: #1d1d1d !important;
 }
 
-/*  */
-html {
-  font-family: Arial;
-}
-
-.welcome {
-  text-align: center;
-  padding: 300px 30px;
-  background-color: yellow;
-
-  h1 {
-    font-family: Arial;
-    text-transform: capitalize;
-  }
-}
-
 .ib-client-wrapper {
   width: 100%;
   margin: auto;

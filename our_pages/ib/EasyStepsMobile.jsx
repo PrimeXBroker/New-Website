@@ -36,13 +36,13 @@ const EasyStepsMobile = () => {
         {benefits.map((benefit, index) => (
           <div
             key={index}
-            className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#FED100] flex flex-col gap-2"
+            className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#FED100] flex flex-col gap-2 hover:scale-105 transition-all duration-500 ease-in-out group"
           >
             <div className="flex justify-between items-center">
               <div>
                 <h3 className="text-xl font-bold">{benefit.title}</h3>
               </div>
-              <div className="w-12 h-12 borer-2 border-[#222222] bg-[#1D1D1D] rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 borer-2 border-[#222222] bg-[#1D1D1D] group-hover:bg-[#FED100] rounded-lg flex items-center justify-center">
                 <img
                   src={benefit.icon}
                   alt={benefit.title}

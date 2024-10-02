@@ -12,19 +12,21 @@ const ClientSatisfaction = () => {
       <div className="container">
         <div className="ib-client-wrapper">
           <div className="ib-fixed-text sm:block hidden">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-[#ffffff] mb-2">
-              {t("main_title1")}
-            </h2>
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-[#FED100] mb-2">
-              {t("main_title2")}{" "}
-              <span className="text-[#ffffff]">{t("main_title3")}</span>
-            </h2>
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-[#ffffff] mb-2">
-              {t("main_title4")}
-            </h2>
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-[#FED100] mb-2">
-              {t("main_title5")}
-            </h2>
+            <div className="flex flex-col justify-end h-[60vh]">
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-[#ffffff] mb-2">
+                {t("main_title1")}
+              </h2>
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-[#FED100] mb-2">
+                {t("main_title2")}{" "}
+                <span className="text-[#ffffff]">{t("main_title3")}</span>
+              </h2>
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-[#ffffff] mb-2">
+                {t("main_title4")}
+              </h2>
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-[#FED100] mb-2">
+                {t("main_title5")}
+              </h2>
+            </div>
           </div>
           <div className="ib-fixed-text block sm:hidden text-center mb-5">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-[#ffffff] mb-2">

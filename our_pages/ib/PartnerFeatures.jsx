@@ -57,7 +57,7 @@ const PartnerFeatures = () => {
         {benefits.map((benefit, index) => (
           <div
             key={index}
-            className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#FED100] flex flex-col gap-2 transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500 group"
+            className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#FED100] flex flex-col gap-2 hover:scale-105 transition-all duration-500 ease-in-out group"
           >
             <div className="flex justify-between items-center">
               <div>
