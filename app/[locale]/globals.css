@@ -53,6 +53,10 @@
     .liquidity-bg {
       background-image: url("https://primexcapital.s3.eu-north-1.amazonaws.com/website/liquidity/liquidity-mbl-bg.png") !important;
     }
+    .ib-client-wrapper {
+      flex-direction: column !important;
+      align-items: center !important;
+    }
   }
 }
 
@@ -1193,7 +1197,7 @@ html {
 .ib-client-wrapper {
   width: 100%;
   margin: auto;
-  padding: 135px 0 105px;
+  /* padding: 135px 0 105px; */
   display: flex;
   position: relative;
   align-items: flex-start;
@@ -1252,23 +1256,24 @@ html {
 
 .ib-new-banner-bg {
   background-image: url("https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/ib-bg-map.webp");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
   position: relative;
-  z-index: 0;
-  /* background-color: rgba(0, 0, 0, 0.9); */
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 1);
 }
 
 .ib-new-banner {
-  background-color: #000000;
+  /* background-color: #000000; */
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
-  opacity: 0.9;
+  z-index: 0;
+  /* opacity: 0.1; */
   box-shadow: 0px 35px 77px 0px rgba(0, 0, 0, 0.1),
     0px 141px 141px 0px rgba(0, 0, 0, 0.09),
     0px 317px 190px 0px rgba(0, 0, 0, 0.05),

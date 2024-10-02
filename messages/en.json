@@ -2018,6 +2018,8 @@
       "step3_desc": "Get exclusive commissions and rebates."
     },
     "ibForm": {
+      "tag1": "Registration:",
+      "tag2": "IB Partnership Program",
       "main_title1": "Start Your",
       "main_title2": "Journey",
       "main_title3": "Towards ",
@@ -2050,6 +2052,48 @@
       "success_title": "Success",
       "success_desc": "Form Submitted Successfully",
       "close_btn": "Close"
+    },
+    "clientSatisfaction": {
+      "main_title1": "Your Client",
+      "main_title2": "Satisfaction ",
+      "main_title3": "is",
+      "main_title4": "Guaranteed",
+      "main_title5": "as they",
+      "title1": "Discover",
+      "description1": "Explore over 330 instruments across various markets, including 100 Forex options. Access the largest crypto collection in MENA, and trade CFDs with leverage for more opportunities.",
+      "title2": "Benefit",
+      "description2": "Take advantage of our Academy with educational blogs, market news, and featured articles. Join interactive webinars and stay informed with daily technical analysis.",
+      "title3": "Experience",
+      "description3": "Enjoy lightning-fast trade execution with minimal latency. Our system is optimized for swift order processing, ensuring a seamless trading experience every time.",
+      "title4": "Enjoy",
+      "description4": "Benefit from zero deposit commissions with no hidden fees. Every penny of your deposit goes straight into your trading account, and we offer hassle-free funding options.",
+      "title5": "Count on",
+      "description5": "Explore over 330 instruments across various markets, including 100 Forex options. Access the largest crypto collection in MENA, and trade CFDs with leverage for more opportunities."
+    },
+    "rewards": {
+      "main_title1": "IB Program",
+      "main_title2": "Rewards",
+      "main_desc": "Earn More with PrimeX",
+      "reward1_title": "Iphone",
+      "reward1_lots": "2500 No. of Lots",
+      "reward2_title": "Cash Prize 1000$",
+      "reward2_lots": "1500 No. of Lots",
+      "reward3_title": "Mac Book Pro M3 - 16",
+      "reward3_lots": "5000 No. of Lots",
+      "reward4_title": "Cash Prize 5000$",
+      "reward4_lots": "10,000 No. of Lots",
+      "reward5_title": "Cash Prize 20,000$",
+      "reward5_lots": "40,000 No. of Lots",
+      "reward6_title": "Trip to Maldives",
+      "reward6_lots": "20,000 No. of Lots",
+      "reward7_title": "Family Trip to Europe | 5 PAX",
+      "reward7_lots": "75,000 No. of Lots",
+      "reward8_title": "Mercedes C200 Coupe",
+      "reward8_lots": "150,000 No. of Lots",
+      "reward9_title": "Bentley Bentayga",
+      "reward9_lots": "300,000 No. of Lots",
+      "reward10_title": "1 BHK Apartment in Dubai",
+      "reward10_lots": "500,000 No. of Lots"
     }
   }
 }

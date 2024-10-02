@@ -61,14 +61,12 @@ const PartnerFeatures = () => {
           >
             <div className="flex justify-between items-center">
               <div>
-                <h3 className="text-xl font-bold group-hover:text-[#FED100]">
-                  {benefit.title}
-                </h3>
-                <h3 className="text-xl font-bold text-[#ffffff] group-hover:text-[#FED100]">
+                <h3 className="text-xl font-bold">{benefit.title}</h3>
+                <h3 className="text-xl font-bold text-[#ffffff]">
                   {benefit.title1}
                 </h3>
               </div>
-              <div className="w-12 h-12 borer-2 border-[#222222] bg-[#1D1D1D] rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 borer-2 border-[#222222] bg-[#1D1D1D] group-hover:bg-[#FED100] rounded-lg flex items-center justify-center">
                 <img
                   src={benefit.icon}
                   alt={benefit.title}
@@ -76,7 +74,9 @@ const PartnerFeatures = () => {
                 />
               </div>
             </div>
-            <p className="text-[#c6c6c6] mt-2">{benefit.description}</p>
+            <p className="text-[#c6c6c6] mt-2 text-sm sm:text-base">
+              {benefit.description}
+            </p>
           </div>
         ))}
       </div>
