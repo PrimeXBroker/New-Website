@@ -32,11 +32,11 @@ function Form() {
     const fetchLocation = async () => {
       try {
         const response = await axios.get(
-          `https://ipapi.co/country/?key=${process.env.NEXT_PUBLIC_API_KEY}`
+          `https://ipapi.co/json/?key=K77WYqZkYB204PVwWhbSidveUzBLTtcnvTgiE0rGtd0ww9jH6E`
         );
-        console.log(response.data, "countryip");
-        if (response.data) {
-          setCountryCode(response.data.toUpperCase());
+        console.log(response.data.country, "countryip");
+        if (response.data.country) {
+          setCountryCode(response.data.country.toUpperCase());
         } else {
           console.error("Failed to fetch country code");
         }
