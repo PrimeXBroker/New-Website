@@ -21,6 +21,7 @@ const AccountTypesPricingTableMobile = () => {
       vps: t("standard.vps"),
       metaTrader5: t("standard.metaTrader5"),
       automaticTrading: t("standard.automaticTrading"),
+      demoAccount: t("standard.demoAccount"),
       webinars: t("standard.webinars"),
       expertAdvice: t("standard.expertAdvice"),
       swap: t("swapFreeNote"),
@@ -39,6 +40,7 @@ const AccountTypesPricingTableMobile = () => {
       vps: t("narrow.vps"),
       metaTrader5: t("narrow.metaTrader5"),
       automaticTrading: t("narrow.automaticTrading"),
+      demoAccount: t("standard.demoAccount"),
       webinars: t("narrow.webinars"),
       expertAdvice: t("narrow.expertAdvice"),
       btnTxt: t("narrow.btnTxt"),
@@ -56,6 +58,7 @@ const AccountTypesPricingTableMobile = () => {
       executionType: t("raw.executionType"),
       vps: t("raw.vps"),
       metaTrader5: t("raw.metaTrader5"),
+      demoAccount: t("standard.demoAccount"),
       automaticTrading: t("raw.automaticTrading"),
       webinars: t("raw.webinars"),
       expertAdvice: t("raw.expertAdvice"),
@@ -165,11 +168,20 @@ const AccountTypesPricingTableMobile = () => {
           </div>
 
           <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#111111] px-5 py-6">
-            {t("automaticTrading")}
+            {t("metaTrader5")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
             <div className="text-[#04CC00] bg-[#222222] h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
-              {tabContent[activeTab].automaticTrading}
+              {tabContent[activeTab].metaTrader5}
+            </div>
+          </div>
+
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#111111] px-5 py-6">
+            {t("demo")}
+          </div>
+          <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
+            <div className="text-[#04CC00] bg-[#222222] h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
+              {tabContent[activeTab].demoAccount}
             </div>
           </div>
 

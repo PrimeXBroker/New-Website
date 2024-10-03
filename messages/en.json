@@ -2328,6 +2328,7 @@
       "vps": "VPS",
       "metaTrader5": "Meta Trader 5",
       "automaticTrading": "Automatic Trading",
+      "demo": "Demo Account",
       "webinars": "Webinars",
       "expertAdvice": "Expert Advice",
       "swap": "Swap",
@@ -2346,6 +2347,7 @@
         "vps": "✔",
         "metaTrader5": "✔",
         "automaticTrading": "✔",
+        "demoAccount": "✔",
         "webinars": "Weekly",
         "expertAdvice": "Above $1,000",
         "btnTxt": "Open Standard Account"
@@ -2364,6 +2366,7 @@
         "vps": "✔",
         "metaTrader5": "✔",
         "automaticTrading": "✔",
+        "demoAccount": "✔",
         "webinars": "Weekly",
         "expertAdvice": "Above $1,000",
         "btnTxt": "Open Narrow Account"
@@ -2382,6 +2385,7 @@
         "vps": "✔",
         "metaTrader5": "✔",
         "automaticTrading": "✔",
+        "demoAccount": "✔",
         "webinars": "Weekly",
         "expertAdvice": "Above $1,000",
         "btnTxt": "Open Raw Account"

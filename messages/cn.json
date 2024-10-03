@@ -2321,6 +2321,7 @@
       "vps": "VPS",
       "metaTrader5": "Meta Trader 5",
       "automaticTrading": "自动交易",
+      "demo": "模拟账户",
       "webinars": "网络研讨会",
       "expertAdvice": "专家建议",
       "swap": "掉期",
@@ -2339,6 +2340,7 @@
         "vps": "✔",
         "metaTrader5": "✔",
         "automaticTrading": "✔",
+        "demoAccount": "✔",
         "webinars": "每周",
         "expertAdvice": "超过$1,000",
         "btnTxt": "开设标准账户"
@@ -2357,6 +2359,7 @@
         "vps": "✔",
         "metaTrader5": "✔",
         "automaticTrading": "✔",
+        "demoAccount": "✔",
         "webinars": "每周",
         "expertAdvice": "超过$1,000",
         "btnTxt": "开设窄点差账户"
@@ -2375,6 +2378,7 @@
         "vps": "✔",
         "metaTrader5": "✔",
         "automaticTrading": "✔",
+        "demoAccount": "✔",
         "webinars": "每周",
         "expertAdvice": "超过$1,000",
         "btnTxt": "开设原始点差账户"

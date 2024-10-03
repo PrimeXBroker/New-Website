@@ -194,6 +194,25 @@ const AccountTypesPricingTable = () => {
             {t("raw.automaticTrading")}
           </div>
         </div>
+        {/* Twelfth Row - Dark Gray Background */}
+        <div className="text-[#C6C6C6] font-bold bg-[#111111] px-5 py-6">
+          {t("demo")}
+        </div>
+        <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
+          <div className="text-[#04CC00] bg-[#222222] h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
+            {t("standard.demoAccount")}
+          </div>
+        </div>
+        <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
+          <div className="text-[#04CC00] bg-[#222222] h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
+            {t("narrow.demoAccount")}
+          </div>
+        </div>
+        <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
+          <div className="text-[#04CC00] bg-[#222222] h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
+            {t("raw.demoAccount")}
+          </div>
+        </div>
         {/* Thirteenth Row - Black Background */}
         <div className="text-[#C6C6C6] font-bold bg-[#000000] px-5 py-6">
           {t("webinars")}
