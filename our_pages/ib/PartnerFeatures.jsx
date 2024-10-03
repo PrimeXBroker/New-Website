@@ -50,7 +50,7 @@ const PartnerFeatures = () => {
       <div className="container mb-7">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#FED100] text-center">
           {t("main_title1")}
-          <span className="text-[ffffff]">{t("main_title2")} </span>
+          <span className="text-[#ffffff]">{t("main_title2")} </span>
         </h2>
       </div>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
