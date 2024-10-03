@@ -52,7 +52,7 @@ function RegionalForm() {
       first_name: "",
       last_name: "",
       email: "",
-      contact: "",
+      phone: "",
       country: "",
       question: "",
     },
@@ -77,8 +77,8 @@ function RegionalForm() {
     }),
     validate: (values) => {
       const errors = {};
-      if (!values.contact) {
-        errors.contact = t("contact_required_error");
+      if (!values.phone) {
+        errors.phone = t("contact_required_error");
       }
       return errors;
     },
@@ -88,12 +88,15 @@ function RegionalForm() {
         email: values.email,
         first_name: values.first_name,
         last_name: values.last_name,
-        contact: values.contact,
+        phone: values.phone,
         country: values.country,
         question: values.question,
       };
       try {
-        const res = await axios.post(``, updatedValues);
+        const res = await axios.post(
+          `https://primexbroker.com/api/create/regionalpartnership`,
+          updatedValues
+        );
         if (res.data.success) {
           formik.resetForm();
           setLoading(false);
@@ -185,12 +188,12 @@ function RegionalForm() {
                 <PhoneInput
                   international
                   defaultCountry={countryCode}
-                  onChange={(value) => formik.setFieldValue("contact", value)}
+                  onChange={(value) => formik.setFieldValue("phone", value)}
                   onBlur={formik.handleBlur}
-                  name="contact"
-                  value={formik.values.contact}
+                  name="phone"
+                  value={formik.values.phone}
                   className={`ib-phone-input appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
-                    formik.touched.contact && formik.errors.contact
+                    formik.touched.phone && formik.errors.phone
                       ? "border-b border-red-600"
                       : ""
                   }`}

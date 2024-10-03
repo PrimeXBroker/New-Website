@@ -2062,13 +2062,13 @@
       "main_title4": "Guaranteed",
       "main_title5": "as they",
       "title1": "Discover",
-      "description1": "Explore over 330 instruments across various markets, including 100 Forex options. Access the largest crypto collection in MENA, and trade CFDs with leverage for more opportunities.",
+      "description1": "Discover over 330 instruments across various markets, including 100 Forex options. Access the largest crypto collection in MENA, and trade CFDs with leverage for more opportunities.",
       "title2": "Benefit",
-      "description2": "Take advantage of our Academy with educational blogs, market news, and featured articles. Join interactive webinars and stay informed with daily technical analysis.",
+      "description2": "Benefit from of our Academy with educational blogs, market news, and featured articles. Join interactive webinars and stay informed with daily technical analysis.",
       "title3": "Experience",
-      "description3": "Enjoy lightning-fast trade execution with minimal latency. Our system is optimized for swift order processing, ensuring a seamless trading experience every time.",
+      "description3": "Experience lightning-fast trade execution with minimal latency. Our system is optimized for swift order processing, ensuring a seamless trading experience every time.",
       "title4": "Enjoy",
-      "description4": "Benefit from zero deposit commissions with no hidden fees. Every penny of your deposit goes straight into your trading account, and we offer hassle-free funding options.",
+      "description4": "Enjoy from zero deposit commissions with no hidden fees. Every penny of your deposit goes straight into your trading account, and we offer hassle-free funding options.",
       "title5": "Count on",
       "description5": "Count on our dedicated, multilingual customer support available 24/7 and easily accessible."
     },
@@ -2265,6 +2265,143 @@
       "country_label": "Country",
       "country_placeholder": "Country",
       "country_required_error": "country is required!"
+    }
+  },
+  "newAccountTypes": {
+    "metaData": {
+      "title": "",
+      "description": ""
+    },
+    "banner": {
+      "title1": "Account ",
+      "title2": "Types",
+      "description": "PrimeX Offers multiple account types to perfectly match your unique trading needs.",
+      "btnTxt": "Open Live Account",
+      "registered_already": "Registered already? ",
+      "login_here": "Login Here"
+    },
+    "accountTypesBenefits": {
+      "main_title1": "Enjoy Our  ",
+      "main_title2": "Premium Advantages",
+      "title1": "24/7",
+      "title1_1": "Customer Support",
+      "description1": "Our dedicated support team is available around the clock to assist with any questions or issues, ensuring you're never left without help.",
+      "title2": "MT5",
+      "title2_1": "Platform",
+      "description2": "Enhance your trading skills with our comprehensive educational resources, including webinars, tutorials, and market analysis.",
+      "title3": "Optimal",
+      "title3_1": "Trading Conditions",
+      "description3": "Take advantage of tight spreads, high leverage, and fast execution speed for an enhanced trading experience.",
+      "title4": "PrimeX ",
+      "title4_1": "Academy",
+      "description4": "Boost your trading skills with PrimeX Academy’s resources, including webinars, tutorials, and daily market analysis, all designed to help you succeed."
+    },
+    "accountTypes": {
+      "desc": "Explore our account options and find the one that fits your needs. Select the perfect plan for you.",
+      "deposit": "Minimum Deposit: ",
+      "acc1": {
+        "title": "Standard",
+        "description": "Favored for no-swap commissions, offering cost-effective trading with no hidden fees.",
+        "btnTxt": "Open Standard Account"
+      },
+      "acc2": {
+        "title": "Narrow",
+        "description": "Built for scalpers, offering the lowest spreads to optimize short-term profits.",
+        "btnTxt": "Open Narrow Account"
+      },
+      "acc3": {
+        "title": "Raw",
+        "description": "Designed for pros, delivering raw spreads for an unmatched trading experience.",
+        "btnTxt": "Open Raw Account"
+      }
+    },
+    "accountsTable": {
+      "minimumDeposit": "Minimum Deposit",
+      "spread": "Spread",
+      "commissions": "Commissions",
+      "leverage": "Leverage",
+      "marginRequired": "Margin Required",
+      "minimumLotSize": "Minimum Lot Size",
+      "stopOutLevel": "Stop Out Level",
+      "marginCallLevel": "Margin Call Level",
+      "executionType": "Execution Type",
+      "vps": "VPS",
+      "metaTrader5": "Meta Trader 5",
+      "automaticTrading": "Automatic Trading",
+      "webinars": "Webinars",
+      "expertAdvice": "Expert Advice",
+      "swap": "Swap",
+      "swapFreeNote": "Swap-free (not all instruments)",
+      "standard": {
+        "title": "Standard",
+        "deposit": "$10",
+        "spread": "From 1.2 pips",
+        "commissions": "$0",
+        "leverage": "1:400",
+        "marginRequired": "2%",
+        "minimumLotSize": "0.01 Lots",
+        "stopOutLevel": "30%",
+        "marginCallLevel": "100%",
+        "executionType": "Non-dealing Desk",
+        "vps": "✔",
+        "metaTrader5": "✔",
+        "automaticTrading": "✔",
+        "webinars": "Weekly",
+        "expertAdvice": "Above $1,000",
+        "btnTxt": "Open Standard Account"
+      },
+      "narrow": {
+        "title": "Narrow",
+        "deposit": "$1000",
+        "spread": "From 1.0 pips",
+        "commissions": "$0",
+        "leverage": "1:500",
+        "marginRequired": "2%",
+        "minimumLotSize": "0.01 Lots",
+        "stopOutLevel": "30%",
+        "marginCallLevel": "100%",
+        "executionType": "Non-dealing Desk",
+        "vps": "✔",
+        "metaTrader5": "✔",
+        "automaticTrading": "✔",
+        "webinars": "Weekly",
+        "expertAdvice": "Above $1,000",
+        "btnTxt": "Open Narrow Account"
+      },
+      "raw": {
+        "title": "Raw",
+        "deposit": "$5000",
+        "spread": "From 0.1 pips",
+        "commissions": "$6 per 1 Lot",
+        "leverage": "1:200",
+        "marginRequired": "2%",
+        "minimumLotSize": "0.01 Lots",
+        "stopOutLevel": "30%",
+        "marginCallLevel": "100%",
+        "executionType": "Non-Dealing Desk",
+        "vps": "✔",
+        "metaTrader5": "✔",
+        "automaticTrading": "✔",
+        "webinars": "Weekly",
+        "expertAdvice": "Above $1,000",
+        "btnTxt": "Open Raw Account"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked ",
+      "title1": "Questions",
+      "question_1": "How do I choose the right account type for me?",
+      "answer_1": "Here are the details of each account type:\n. Standard Account: Perfect for beginners and novice traders, with a low minimum deposit and competitive spreads.\n. Narrow Account: Suitable for traders seeking tighter spreads and more precise trading.\n. Raw Account: Ideal for professional traders, offering raw market spreads with commission-based trading.",
+      "question_2": "Can I trade as soon as I open a live account?",
+      "answer_2": "Opening an account is simple and quick. After submitting your documents, you can start trading within 24 hours.",
+      "question_3": "Are there any hidden charges associated with these accounts?",
+      "answer_3": "No, PrimeX Capital is transparent with all its fees. All commissions and spreads for each account type are clearly defined.",
+      "question_4": "What trading platforms are available for these accounts?",
+      "answer_4": "All account types give access to MT5 for a seamless trading experience.",
+      "question_5": "Does PrimeX Capital offer a demo account?",
+      "answer_5": "Yes, PrimeX Capital offers a demo account for all traders to practice in real market conditions without using real money.",
+      "question_6": "Can I switch between account types?",
+      "answer_6": "Switching between accounts is not possible however, you can always open a new account from the list of available options."
     }
   }
 }

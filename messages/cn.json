@@ -2259,5 +2259,142 @@
       "country_label": "国家",
       "country_placeholder": "国家"
     }
+  },
+  "newAccountTypes": {
+    "metaData": {
+      "title": "",
+      "description": ""
+    },
+    "banner": {
+      "title1": "账户",
+      "title2": "类型",
+      "description": "PrimeX提供多种账户类型，完美契合您独特的交易需求。",
+      "btnTxt": "开设真实账户",
+      "registered_already": "已经注册？",
+      "login_here": "在此登录"
+    },
+    "accountTypesBenefits": {
+      "main_title1": "享受我们的",
+      "main_title2": "优质优势",
+      "title1": "全天候",
+      "title1_1": "客户支持",
+      "description1": "我们的专属支持团队全天候为您服务，解答任何问题或疑虑，确保您始终得到帮助。",
+      "title2": "MT5",
+      "title2_1": "平台",
+      "description2": "通过我们全面的教育资源提升您的交易技能，包括网络研讨会、教程和市场分析。",
+      "title3": "最佳的",
+      "title3_1": "交易条件",
+      "description3": "利用紧密点差、高杠杆和快速执行速度，提升您的交易体验。",
+      "title4": "PrimeX",
+      "title4_1": "学院",
+      "description4": "通过PrimeX学院的资源提升您的交易技能，包括网络研讨会、教程和每日市场分析，帮助您取得成功。"
+    },
+    "accountTypes": {
+      "desc": "探索我们的账户选项，找到适合您需求的账户。选择最适合您的计划。",
+      "deposit": "最低存款：",
+      "acc1": {
+        "title": "标准账户",
+        "description": "因无掉期佣金而受到青睐，提供无隐藏费用的高性价比交易。",
+        "btnTxt": "开设标准账户"
+      },
+      "acc2": {
+        "title": "窄点差账户",
+        "description": "为剥头皮交易者量身打造，提供最低点差以优化短期利润。",
+        "btnTxt": "开设窄点差账户"
+      },
+      "acc3": {
+        "title": "原始点差账户",
+        "description": "为专业人士设计，提供原始点差，带来无与伦比的交易体验。",
+        "btnTxt": "开设原始点差账户"
+      }
+    },
+    "accountsTable": {
+      "minimumDeposit": "最低存款",
+      "spread": "点差",
+      "commissions": "佣金",
+      "leverage": "杠杆",
+      "marginRequired": "所需保证金",
+      "minimumLotSize": "最小手数",
+      "stopOutLevel": "强平水平",
+      "marginCallLevel": "追加保证金水平",
+      "executionType": "执行类型",
+      "vps": "VPS",
+      "metaTrader5": "Meta Trader 5",
+      "automaticTrading": "自动交易",
+      "webinars": "网络研讨会",
+      "expertAdvice": "专家建议",
+      "swap": "掉期",
+      "swapFreeNote": "无掉期（并非所有产品）",
+      "standard": {
+        "title": "标准账户",
+        "deposit": "$10",
+        "spread": "从1.2点起",
+        "commissions": "$0",
+        "leverage": "1:400",
+        "marginRequired": "2%",
+        "minimumLotSize": "0.01手",
+        "stopOutLevel": "30%",
+        "marginCallLevel": "100%",
+        "executionType": "无交易员模式",
+        "vps": "✔",
+        "metaTrader5": "✔",
+        "automaticTrading": "✔",
+        "webinars": "每周",
+        "expertAdvice": "超过$1,000",
+        "btnTxt": "开设标准账户"
+      },
+      "narrow": {
+        "title": "窄点差账户",
+        "deposit": "$1000",
+        "spread": "从1.0点起",
+        "commissions": "$0",
+        "leverage": "1:500",
+        "marginRequired": "2%",
+        "minimumLotSize": "0.01手",
+        "stopOutLevel": "30%",
+        "marginCallLevel": "100%",
+        "executionType": "无交易员模式",
+        "vps": "✔",
+        "metaTrader5": "✔",
+        "automaticTrading": "✔",
+        "webinars": "每周",
+        "expertAdvice": "超过$1,000",
+        "btnTxt": "开设窄点差账户"
+      },
+      "raw": {
+        "title": "原始点差账户",
+        "deposit": "$5000",
+        "spread": "从0.1点起",
+        "commissions": "$6每1手",
+        "leverage": "1:200",
+        "marginRequired": "2%",
+        "minimumLotSize": "0.01手",
+        "stopOutLevel": "30%",
+        "marginCallLevel": "100%",
+        "executionType": "无交易员模式",
+        "vps": "✔",
+        "metaTrader5": "✔",
+        "automaticTrading": "✔",
+        "webinars": "每周",
+        "expertAdvice": "超过$1,000",
+        "btnTxt": "开设原始点差账户"
+      }
+    },
+    "faq": {
+      "title": "常见",
+      "title1": "问题",
+      "question_1": "我如何选择适合我的账户类型？",
+      "answer_1": "以下是每种账户类型的详细信息：\n. 标准账户：非常适合初学者和新手交易者，最低存款要求低且点差有竞争力。\n. 窄点差账户：适合寻求更紧密点差和更精确交易的交易者。\n. 原始点差账户：适合专业交易者，提供基于佣金的原始市场点差交易。",
+      "question_2": "开设真实账户后，我可以立即开始交易吗？",
+      "answer_2": "开户过程简单快捷。提交文件后，您可以在24小时内开始交易。",
+      "question_3": "这些账户是否有任何隐藏费用？",
+      "answer_3": "没有，PrimeX Capital对所有费用透明公开。每种账户类型的所有佣金和点差均明确规定。",
+      "question_4": "这些账户可以使用哪些交易平台？",
+      "answer_4": "所有账户类型均可使用MT5，以提供无缝的交易体验。",
+      "question_5": "PrimeX Capital是否提供模拟账户？",
+      "answer_5": "是的，PrimeX Capital为所有交易者提供模拟账户，您可以在真实市场条件下练习而无需使用真实资金。",
+      "question_6": "我可以在账户类型之间切换吗？",
+      "answer_6": "账户类型之间不可切换，但您可以随时从可用选项中开设新账户。"
+    }
   }
 }

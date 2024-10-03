@@ -25,7 +25,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("greyLabel.metaData.description"),
       images: [
         {
-          url: "",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/grey-regional-partnership/Grey+Label+Hero+Section.webp",
           width: 1200,
           height: 630,
           alt: t("greyLabel.metaData.title"),

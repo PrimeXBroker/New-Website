@@ -31,6 +31,7 @@ const Footer = () => {
   const [isIbPage, setIsIbPage] = useState(false);
   const [isGreyLabelPage, setIsGreyLabelPage] = useState(false);
   const [isRegionalPage, setIsRegionalPage] = useState(false);
+  const [isAccountTypesPage, setIsAccountTypePage] = useState(false);
 
   useEffect(() => {
     setIsLiquidityPage(pathname.includes("/liquidity"));
@@ -38,6 +39,7 @@ const Footer = () => {
     setIsIbPage(pathname.includes("/ib"));
     setIsGreyLabelPage(pathname.includes("/grey-label-partnership"));
     setIsRegionalPage(pathname.includes("/regional-partnership"));
+    setIsAccountTypePage(pathname.includes("/new-account-types"));
   }, [pathname]);
 
   const handleOpenModal = (e) => {
@@ -196,7 +198,11 @@ const Footer = () => {
         className={`${
           isLiquidityPage
             ? "hidden"
-            : isHomePage || isIbPage || isGreyLabelPage || isRegionalPage
+            : isHomePage ||
+              isIbPage ||
+              isGreyLabelPage ||
+              isRegionalPage ||
+              isAccountTypesPage
             ? "bg-[#000000]"
             : "bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/live-account-gray.webp')] bg-cover bg-no-repeat bg-center"
         } relative z-0 overflow-hidden`}
@@ -205,7 +211,11 @@ const Footer = () => {
           className={`container flex p-10 flex-col md:flex-row ${
             isLiquidityPage
               ? "hidden"
-              : isHomePage || isIbPage || isGreyLabelPage || isRegionalPage
+              : isHomePage ||
+                isIbPage ||
+                isGreyLabelPage ||
+                isRegionalPage ||
+                isAccountTypesPage
               ? "bg-[#111111] rounded-xl"
               : ""
           }`}
@@ -217,7 +227,11 @@ const Footer = () => {
           >
             <h1
               className={`sectionHeading text-xl ${
-                isHomePage || isIbPage || isGreyLabelPage || isRegionalPage
+                isHomePage ||
+                isIbPage ||
+                isGreyLabelPage ||
+                isRegionalPage ||
+                isAccountTypesPage
                   ? "text-[#ffffff]"
                   : "text-secondary"
               } font-semibold ${
@@ -230,7 +244,11 @@ const Footer = () => {
             </h1>
             <p
               className={`sectionPara ${
-                isHomePage || isIbPage || isGreyLabelPage || isRegionalPage
+                isHomePage ||
+                isIbPage ||
+                isGreyLabelPage ||
+                isRegionalPage ||
+                isAccountTypesPage
                   ? "text-[#dfdfdf]"
                   : "text-secondary"
               } ${
@@ -250,7 +268,11 @@ const Footer = () => {
               size="lg"
               color="primary"
               className={` custom-button ${
-                isHomePage || isIbPage || isGreyLabelPage
+                isHomePage ||
+                isIbPage ||
+                isGreyLabelPage ||
+                isRegionalPage ||
+                isAccountTypesPage
                   ? "rounded-[12px]"
                   : "rounded-full"
               }`}
