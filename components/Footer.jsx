@@ -29,11 +29,15 @@ const Footer = () => {
   const [isLiquidityPage, setIsLiquidityPage] = useState(false);
   const [isHomePage, setIsHomePage] = useState(false);
   const [isIbPage, setIsIbPage] = useState(false);
+  const [isGreyLabelPage, setIsGreyLabelPage] = useState(false);
+  const [isRegionalPage, setIsRegionalPage] = useState(false);
 
   useEffect(() => {
     setIsLiquidityPage(pathname.includes("/liquidity"));
     setIsHomePage(pathname === `/${locale}` || pathname === `/${locale}/`);
     setIsIbPage(pathname.includes("/ib"));
+    setIsGreyLabelPage(pathname.includes("/grey-label-partnership"));
+    setIsRegionalPage(pathname.includes("/regional-partnership"));
   }, [pathname]);
 
   const handleOpenModal = (e) => {
@@ -192,7 +196,7 @@ const Footer = () => {
         className={`${
           isLiquidityPage
             ? "hidden"
-            : isHomePage || isIbPage
+            : isHomePage || isIbPage || isGreyLabelPage || isRegionalPage
             ? "bg-[#000000]"
             : "bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/live-account-gray.webp')] bg-cover bg-no-repeat bg-center"
         } relative z-0 overflow-hidden`}
@@ -201,7 +205,7 @@ const Footer = () => {
           className={`container flex p-10 flex-col md:flex-row ${
             isLiquidityPage
               ? "hidden"
-              : isHomePage || isIbPage
+              : isHomePage || isIbPage || isGreyLabelPage || isRegionalPage
               ? "bg-[#111111] rounded-xl"
               : ""
           }`}
@@ -213,7 +217,9 @@ const Footer = () => {
           >
             <h1
               className={`sectionHeading text-xl ${
-                isHomePage || isIbPage ? "text-[#ffffff]" : "text-secondary"
+                isHomePage || isIbPage || isGreyLabelPage || isRegionalPage
+                  ? "text-[#ffffff]"
+                  : "text-secondary"
               } font-semibold ${
                 locale === "ar"
                   ? "text-center md:text-right"
@@ -224,7 +230,9 @@ const Footer = () => {
             </h1>
             <p
               className={`sectionPara ${
-                isHomePage || isIbPage ? "text-[#dfdfdf]" : "text-secondary"
+                isHomePage || isIbPage || isGreyLabelPage || isRegionalPage
+                  ? "text-[#dfdfdf]"
+                  : "text-secondary"
               } ${
                 locale === "ar"
                   ? "text-center md:text-right"
@@ -242,7 +250,9 @@ const Footer = () => {
               size="lg"
               color="primary"
               className={` custom-button ${
-                isHomePage || isIbPage ? "rounded-[12px]" : "rounded-full"
+                isHomePage || isIbPage || isGreyLabelPage
+                  ? "rounded-[12px]"
+                  : "rounded-full"
               }`}
             >
               <p className="text-secondary font-semibold">
