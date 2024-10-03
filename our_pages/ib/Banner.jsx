@@ -8,8 +8,7 @@ const Banner = () => {
   const t = useTranslations("ibProgram.banner");
 
   return (
-    <section className="relative md:h-[571px] lg:h-[700px] flex justify-end items-center ib-new-banner-bg pt-[102px] md:pt-0">
-      <div className="absolute  md:h-[571px] lg:h-[700px] ib-new-banner"></div>
+    <section className="bg-[#000000] pt-24 pb-20">
       <div className="relative z-10 mx-auto">
         <div className="container">
           <div className="grid grid-cols-12 items-center">
@@ -73,16 +72,14 @@ const Banner = () => {
               </div>
             </div>
             <div className="col-span-12 md:col-span-6 lg:col-span-7">
-              <div>
+              <div className="flex justify-center mt-6 md:mt-0">
                 <Image
                   unoptimized={true}
-                  src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Hero+Section+Front+Graphic.svg"
+                  src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/grey-regional-partnership/IB+page+updated+hero+section+image.webp"
                   width="100"
                   height="100"
                   alt="image"
-                  className={`w-full ml-[-6%] md:ml-[0%] ${
-                    locale === "ar" ? "mr-[8%]" : ""
-                  }`}
+                  className={`w-full sm:w-[70%] ms:w-full`}
                 />
               </div>
             </div>

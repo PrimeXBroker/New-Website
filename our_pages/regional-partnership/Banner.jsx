@@ -11,7 +11,7 @@ const Banner = () => {
     <section className="bg-[#000000] pt-32 pb-20">
       <div className="container">
         <div className="grid grid-cols-12 items-center">
-          <div className="col-span-12 md:col-span-7">
+          <div className="col-span-12 md:col-span-6">
             <div className="text-center md:text-start">
               <TrustPilot />
             </div>
@@ -56,7 +56,18 @@ const Banner = () => {
               </button>
             </div>
           </div>
-          <div className="col-span-12 md:col-span-5"></div>
+          <div className="col-span-12 md:col-span-6">
+            <div className="flex justify-center mt-6 md:mt-0">
+              <Image
+                unoptimized={true}
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/grey-regional-partnership/Regional+page+Hero+image.webp"
+                width="100"
+                height="100"
+                alt="image"
+                className={`w-full sm:w-[70%] ms:w-full`}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

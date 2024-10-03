@@ -522,6 +522,20 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("ib_program")}
                 </LocaleLink>
+                {/* <LocaleLink
+                  href="/grey-label-program"
+                  className="block text-[#ffffff] text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("grey_label")}
+                </LocaleLink>
+                <LocaleLink
+                  href="/regional-program"
+                  className="block text-[#ffffff] text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("regional")}
+                </LocaleLink> */}
                 <LocaleLink
                   href="/liquidity"
                   className="block text-[#ffffff] text-base pt-[16px]"
