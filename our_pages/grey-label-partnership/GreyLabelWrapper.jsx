@@ -23,7 +23,7 @@ const GreyLabelWrapper = () => {
       title: t("title2"),
       title1: t("title2_1"),
       description: t("description2"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/grey-regional-partnership/Cost-effective++for+Startups.svg",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/grey-regional-partnership/Offline+Marketing+Support+New.svg",
     },
     {
       title: t("title3"),

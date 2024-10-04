@@ -12,8 +12,14 @@ const AccountTypes = ({ accounts }) => {
     <section className="bg-black text-white pt-10 pb-20 px-4">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="hidden lg:block"></div>
-
+          <div className="flex items-center justify-center md:justify-start">
+            <h2
+              className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#FED100]`}
+            >
+              {t("main_title1")} <br className="hidden md:block" />
+              <span className="text-[#ffffff]"> {t("main_title2")}</span>
+            </h2>
+          </div>
           {accounts.map((account, index) => (
             <>
               <div

@@ -2121,9 +2121,9 @@
       "title1": "Favorable",
       "title1_1": "Rebate Structure",
       "description1": "Boost your revenue potential with a competitive rebate system that rewards your trading volume, ensuring you maximize profits on every transaction.",
-      "title2": "Transparent",
-      "title2_1": "Reporting",
-      "description2": "Monitor your clients' trading performance with detailed, transparent reports that offer clear insights into your commissions and earnings.",
+      "title2": "Offline Marketing",
+      "title2_1": "Support",
+      "description2": "Access to resources and materials for effective offline marketing boosting your presence and client acquisition.",
       "title3": "Comprehensive",
       "title3_1": "Support Suite",
       "description3": "Access 24/7 expert support to ensure smooth operations and quick issue resolution whenever needed.",
@@ -2299,6 +2299,8 @@
       "description4": "Boost your trading skills with PrimeX Academy’s resources, including webinars, tutorials, and daily market analysis, all designed to help you succeed."
     },
     "accountTypes": {
+      "main_title1": "Account",
+      "main_title2": "Types",
       "desc": "Explore our account options and find the one that fits your needs. Select the perfect plan for you.",
       "deposit": "Minimum Deposit: ",
       "acc1": {
@@ -2318,6 +2320,7 @@
       }
     },
     "accountsTable": {
+      "specifications": "Specifications",
       "minimumDeposit": "Minimum Deposit",
       "spread": "Spread",
       "commissions": "Commissions",

@@ -9,8 +9,14 @@ const AccountTypesPricingTable = () => {
   return (
     <div className="container mt-10">
       <div className="grid grid-cols-4 text-white">
+        <div className="text-[#C6C6C6] font-semibold bg-[#000000] px-5 py-6 text-2xl">
+          {t("specifications")}
+        </div>
+        <div className=""></div>
+        <div className=""></div>
+        <div className=""></div>
         {/* First Row - Black Background */}
-        <div className="text-[#C6C6C6] font-bold bg-[#000000] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#000000] px-5 py-6">
           {t("minimumDeposit")}
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
@@ -24,7 +30,7 @@ const AccountTypesPricingTable = () => {
         </div>
 
         {/* Second Row - Dark Gray Background */}
-        <div className="text-[#C6C6C6] font-bold bg-[#111111] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#111111] px-5 py-6">
           {t("spread")}
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
@@ -38,7 +44,7 @@ const AccountTypesPricingTable = () => {
         </div>
 
         {/* Third Row - Black Background */}
-        <div className="text-[#C6C6C6] font-bold bg-[#000000] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#000000] px-5 py-6">
           {t("commissions")}
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
@@ -52,7 +58,7 @@ const AccountTypesPricingTable = () => {
         </div>
 
         {/* Fourth Row - Dark Gray Background */}
-        <div className="text-[#C6C6C6] font-bold bg-[#111111] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#111111] px-5 py-6">
           {t("leverage")}
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
@@ -66,7 +72,7 @@ const AccountTypesPricingTable = () => {
         </div>
 
         {/* Fifth Row - Black Background */}
-        <div className="text-[#C6C6C6] font-bold bg-[#000000] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#000000] px-5 py-6">
           {t("marginRequired")}
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
@@ -80,7 +86,7 @@ const AccountTypesPricingTable = () => {
         </div>
 
         {/* Sixth Row - Dark Gray Background */}
-        <div className="text-[#C6C6C6] font-bold bg-[#111111] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#111111] px-5 py-6">
           {t("minimumLotSize")}
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
@@ -94,7 +100,7 @@ const AccountTypesPricingTable = () => {
         </div>
 
         {/* Seventh Row - Black Background */}
-        <div className="text-[#C6C6C6] font-bold bg-[#000000] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#000000] px-5 py-6">
           {t("stopOutLevel")}
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
@@ -108,7 +114,7 @@ const AccountTypesPricingTable = () => {
         </div>
 
         {/* Eighth Row - Dark Gray Background */}
-        <div className="text-[#C6C6C6] font-bold bg-[#111111] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#111111] px-5 py-6">
           {t("marginCallLevel")}
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
@@ -122,7 +128,7 @@ const AccountTypesPricingTable = () => {
         </div>
 
         {/* Ninth Row - Black Background */}
-        <div className="text-[#C6C6C6] font-bold bg-[#000000] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#000000] px-5 py-6">
           {t("executionType")}
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
@@ -136,7 +142,7 @@ const AccountTypesPricingTable = () => {
         </div>
 
         {/* Tenth Row - Dark Gray Background */}
-        <div className="text-[#C6C6C6] font-bold bg-[#111111] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#111111] px-5 py-6">
           {t("vps")}
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
@@ -156,7 +162,7 @@ const AccountTypesPricingTable = () => {
         </div>
 
         {/* Eleventh Row - Black Background */}
-        <div className=" text-[#C6C6C6] font-bold bg-[#000000] px-5 py-6">
+        <div className=" text-[#C6C6C6] font-semibold bg-[#000000] px-5 py-6">
           {t("metaTrader5")}
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
@@ -176,7 +182,7 @@ const AccountTypesPricingTable = () => {
         </div>
 
         {/* Twelfth Row - Dark Gray Background */}
-        <div className="text-[#C6C6C6] font-bold bg-[#111111] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#111111] px-5 py-6">
           {t("automaticTrading")}
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
@@ -195,7 +201,7 @@ const AccountTypesPricingTable = () => {
           </div>
         </div>
         {/* Twelfth Row - Dark Gray Background */}
-        <div className="text-[#C6C6C6] font-bold bg-[#111111] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#111111] px-5 py-6">
           {t("demo")}
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
@@ -214,7 +220,7 @@ const AccountTypesPricingTable = () => {
           </div>
         </div>
         {/* Thirteenth Row - Black Background */}
-        <div className="text-[#C6C6C6] font-bold bg-[#000000] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#000000] px-5 py-6">
           {t("webinars")}
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
@@ -228,7 +234,7 @@ const AccountTypesPricingTable = () => {
         </div>
 
         {/* Fourteenth Row - Dark Gray Background */}
-        <div className="text-[#C6C6C6] font-bold bg-[#111111] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#111111] px-5 py-6">
           {t("expertAdvice")}
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
@@ -242,7 +248,7 @@ const AccountTypesPricingTable = () => {
         </div>
 
         {/* Fifteenth Row - Black Background */}
-        <div className="text-[#C6C6C6] font-bold bg-[#000000] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#000000] px-5 py-6">
           {t("swap")}
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">

@@ -74,7 +74,7 @@ const AccountTypesPricingTableMobile = () => {
           {["standard", "narrow", "raw"].map((tab) => (
             <button
               key={tab}
-              className={`px-6 py-3 font-bold ${
+              className={`px-6 py-3 font-semibold ${
                 activeTab === tab
                   ? "text-[#ffffff] border-b-4 border-[#FED100]"
                   : "text-[#ffffff]"
@@ -86,70 +86,75 @@ const AccountTypesPricingTableMobile = () => {
           ))}
         </div>
         <div className="grid grid-cols-2 text-white">
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#000000] px-5 py-6">
+          <div className="text-[#C6C6C6] text-xl font-semibold bg-[#000000] px-5 py-6">
+            {t("specifications")}
+          </div>
+          <div className=""></div>
+
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#000000] px-5 py-6">
             {t("minimumDeposit")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#000000] px-5 py-6">
             {tabContent[activeTab].deposit}
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#111111] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
             {t("spread")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
             {tabContent[activeTab].spread}
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#000000] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#000000] px-5 py-6">
             {t("commissions")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#000000] px-5 py-6">
             {tabContent[activeTab].commissions}
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#111111] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
             {t("leverage")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
             {tabContent[activeTab].leverage}
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#111111] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
             {t("marginRequired")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
             {tabContent[activeTab].marginRequired}
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#111111] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
             {t("minimumLotSize")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
             {tabContent[activeTab].minimumLotSize}
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#111111] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
             {t("stopOutLevel")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
             {tabContent[activeTab].stopOutLevel}
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#111111] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
             {t("marginCallLevel")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
             {tabContent[activeTab].marginCallLevel}
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#111111] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
             {t("executionType")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
             {tabContent[activeTab].executionType}
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#111111] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
             {t("vps")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
@@ -158,7 +163,7 @@ const AccountTypesPricingTableMobile = () => {
             </div>
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#111111] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
             {t("metaTrader5")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
@@ -167,7 +172,7 @@ const AccountTypesPricingTableMobile = () => {
             </div>
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#111111] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
             {t("metaTrader5")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
@@ -176,7 +181,7 @@ const AccountTypesPricingTableMobile = () => {
             </div>
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#111111] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
             {t("demo")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
@@ -185,21 +190,21 @@ const AccountTypesPricingTableMobile = () => {
             </div>
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#111111] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
             {t("webinars")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
             {tabContent[activeTab].webinars}
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#111111] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
             {t("expertAdvice")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
             {tabContent[activeTab].expertAdvice}
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-bold bg-[#111111] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
             {t("swap")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
