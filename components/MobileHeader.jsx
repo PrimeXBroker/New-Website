@@ -522,7 +522,7 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("ib_program")}
                 </LocaleLink>
-                {/* <LocaleLink
+                <LocaleLink
                   href="/grey-label-program"
                   className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
@@ -530,12 +530,12 @@ const MobileHeader = ({ locale }) => {
                   {t("grey_label")}
                 </LocaleLink>
                 <LocaleLink
-                  href="/regional-program"
+                  href="/regional-partner-program"
                   className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("regional")}
-                </LocaleLink> */}
+                </LocaleLink>
                 <LocaleLink
                   href="/liquidity"
                   className="block text-[#ffffff] text-base pt-[16px]"
@@ -546,30 +546,13 @@ const MobileHeader = ({ locale }) => {
               </div>
             )}
           </div>
-          <div>
-            <button
-              onClick={() => toggleSubMenu(4)}
-              className="text-[#ffffff] text-base flex justify-between items-center w-full pt-[3px]"
-            >
-              {t("education")}
-              {openSubMenu === 4 ? (
-                <FaChevronUp size={16} />
-              ) : (
-                <FaChevronDown size={16} />
-              )}
-            </button>
-            {openSubMenu === 4 && (
-              <div className="mt-2">
-                <LocaleLink
-                  href="/academy"
-                  className="block text-[#ffffff] text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("academy")}
-                </LocaleLink>
-              </div>
-            )}
-          </div>
+          <LocaleLink
+            href="/academy"
+            className="text-[#ffffff] text-base"
+            onClick={toggleDrawer}
+          >
+            {t("academy")}
+          </LocaleLink>
           <div>
             <button
               onClick={() => toggleSubMenu(5)}

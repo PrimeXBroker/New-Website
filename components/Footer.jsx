@@ -36,10 +36,10 @@ const Footer = () => {
   useEffect(() => {
     setIsLiquidityPage(pathname.includes("/liquidity"));
     setIsHomePage(pathname === `/${locale}` || pathname === `/${locale}/`);
-    setIsIbPage(pathname.includes("/ib"));
-    setIsGreyLabelPage(pathname.includes("/grey-label-partnership"));
-    setIsRegionalPage(pathname.includes("/regional-partnership"));
-    setIsAccountTypePage(pathname.includes("/new-account-types"));
+    setIsIbPage(pathname.includes("/ib-program"));
+    setIsGreyLabelPage(pathname.includes("/grey-label-program"));
+    setIsRegionalPage(pathname.includes("/regional-partner-program"));
+    setIsAccountTypePage(pathname.includes("/account-types"));
   }, [pathname]);
 
   const handleOpenModal = (e) => {

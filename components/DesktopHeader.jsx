@@ -241,7 +241,7 @@ const DesktopHeader = ({ locale }) => {
               {activeDropdown === 2 && (
                 <ul
                   className={`absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] ${
-                    locale === "ar" ? "min-w-[200px]" : "min-w-[200px]"
+                    locale === "ar" ? "min-w-[250px]" : "min-w-[250px]"
                   } rounded-[6px]`}
                 >
                   <li>
@@ -253,7 +253,7 @@ const DesktopHeader = ({ locale }) => {
                       {t("ib_program")}
                     </LocaleLink>
                   </li>
-                  {/* <li>
+                  <li>
                     <LocaleLink
                       href="/grey-label-program"
                       onClick={closeDropdown}
@@ -264,13 +264,13 @@ const DesktopHeader = ({ locale }) => {
                   </li>
                   <li>
                     <LocaleLink
-                      href="/regional-program"
+                      href="/regional-partner-program"
                       onClick={closeDropdown}
                       className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >
                       {t("regional")}
                     </LocaleLink>
-                  </li> */}
+                  </li>
                   <li>
                     <LocaleLink
                       href="/liquidity"
@@ -283,36 +283,13 @@ const DesktopHeader = ({ locale }) => {
                 </ul>
               )}
             </li>
-            <li
-              className="relative flex items-center h-full"
-              onMouseEnter={() => openDropdown(3)}
-              onMouseLeave={closeDropdown}
-            >
-              <button className="text-[#ffffff] text-[.8em] flex items-center">
-                {t("education")}
-                <svg
-                  className={`fill-current h-4 w-4 ${
-                    locale === "ar" ? "mr-1" : "ml-1"
-                  }`}
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                </svg>
-              </button>
-              {activeDropdown === 3 && (
-                <ul className="absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
-                  <li>
-                    <LocaleLink
-                      href="/academy"
-                      onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
-                    >
-                      {t("academy")}
-                    </LocaleLink>
-                  </li>
-                </ul>
-              )}
+            <li className="flex items-center h-full">
+              <LocaleLink
+                href="/academy"
+                className="text-[#ffffff] text-[.8em]"
+              >
+                {t("academy")}
+              </LocaleLink>
             </li>
             <li
               className="relative flex items-center h-full"

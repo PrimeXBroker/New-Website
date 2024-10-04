@@ -2105,6 +2105,10 @@
     "review": "4.8 • 优秀 • 2,200+ 评价"
   },
   "greyLabel": {
+    "metaData": {
+      "title": "灰标计划 | 合作伙伴计划 | PrimeX Capital",
+      "description": "探索PrimeX Capital的灰标合作伙伴计划。享受竞争力的返利、必要的支持等更多福利。今天就加入我们的团队！"
+    },
     "banner": {
       "title1": "加入我们的",
       "title2": "灰标",
@@ -2179,6 +2183,10 @@
     }
   },
   "regionalPartnership": {
+    "metaData": {
+      "title": "区域合作伙伴计划 | PrimeX Capital",
+      "description": "通过PrimeX Capital的区域合作伙伴计划最大化您的增长。获取丰厚的返利、多层次佣金、全天候支持等更多福利。立即加入！"
+    },
     "banner": {
       "title1": "加入我们的",
       "title2": "区域",
@@ -2199,8 +2207,8 @@
       "title2": "多层次的",
       "title2_1": "佣金",
       "description2": "通过多层次的佣金系统，逐步赚取更高的佣金，奖励成功并促进长期合作伙伴关系。",
-      "title3": "全天候",
-      "title3_1": "专家支持",
+      "title3": "专家支持",
+      "title3_1": "全天候",
       "description3": "依赖行业专业人士的全天候专属支持，确保运营顺利高效，无论在哪个时区。",
       "title4": "租金/行政",
       "title4_1": "支持",
@@ -2264,8 +2272,8 @@
   },
   "newAccountTypes": {
     "metaData": {
-      "title": "",
-      "description": ""
+      "title": "账户类型 | PrimeX Capital",
+      "description": "了解PrimeX Capital的账户类型：标准账户适合高性价比交易，窄点差账户为剥头皮交易者打造，原始点差账户专为专业交易者设计。今天就开设您的账户。"
     },
     "banner": {
       "title1": "账户",

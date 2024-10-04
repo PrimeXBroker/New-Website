@@ -25,7 +25,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("ib.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib/ib-new-reward.webp",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/grey-regional-partnership/IB+page+updated+hero+section+image.webp",
           width: 1200,
           height: 630,
           alt: t("ib.metaData.title"),
