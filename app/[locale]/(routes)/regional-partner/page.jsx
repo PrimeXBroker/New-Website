@@ -8,8 +8,8 @@ export async function generateMetadata({ params: { locale } }) {
   const t = createTranslator({ locale, messages });
   const url =
     locale != "en"
-      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/regional-partner-program`
-      : `${process.env.NEXT_PUBLIC_BASE_URL}/regional-partner-program`;
+      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/regional-partner`
+      : `${process.env.NEXT_PUBLIC_BASE_URL}/regional-partner`;
 
   return {
     title: t("regionalPartnership.metaData.title"),

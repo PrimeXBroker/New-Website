@@ -8,8 +8,8 @@ export async function generateMetadata({ params: { locale } }) {
   const t = createTranslator({ locale, messages });
   const url =
     locale != "en"
-      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/grey-label-program`
-      : `${process.env.NEXT_PUBLIC_BASE_URL}/grey-label-program`;
+      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/grey-label-partner`
+      : `${process.env.NEXT_PUBLIC_BASE_URL}/grey-label-partner`;
 
   return {
     title: t("greyLabel.metaData.title"),

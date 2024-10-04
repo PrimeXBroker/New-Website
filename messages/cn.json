@@ -22,9 +22,10 @@
     "indices": "指数",
     "mt5": "MetaTrader 5",
     "ib_program": "IB计划",
-    "grey_label": "灰标计划",
-    "regional": "区域合作伙伴计划",
-    "badge_text": "新"
+    "grey_label": "灰标合作伙伴",
+    "regional": "区域合作伙伴",
+    "badge_text": "新",
+    "about": "关于"
   },
   "home": {
     "metaData": {

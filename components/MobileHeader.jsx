@@ -523,18 +523,18 @@ const MobileHeader = ({ locale }) => {
                   {t("ib_program")}
                 </LocaleLink>
                 <LocaleLink
-                  href="/grey-label-program"
-                  className="block text-[#ffffff] text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("grey_label")}
-                </LocaleLink>
-                <LocaleLink
-                  href="/regional-partner-program"
+                  href="/regional-partner"
                   className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("regional")}
+                </LocaleLink>
+                <LocaleLink
+                  href="/grey-label-partner"
+                  className="block text-[#ffffff] text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("grey_label")}
                 </LocaleLink>
                 <LocaleLink
                   href="/liquidity"
@@ -591,6 +591,13 @@ const MobileHeader = ({ locale }) => {
               </div>
             )}
           </div>
+          <LocaleLink
+            href="/about"
+            className="text-[#ffffff] text-base"
+            onClick={toggleDrawer}
+          >
+            {t("about")}
+          </LocaleLink>
           {/* <div>
             <button
               onClick={() => toggleSubMenu(6)}

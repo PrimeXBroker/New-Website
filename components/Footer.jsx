@@ -37,8 +37,8 @@ const Footer = () => {
     setIsLiquidityPage(pathname.includes("/liquidity"));
     setIsHomePage(pathname === `/${locale}` || pathname === `/${locale}/`);
     setIsIbPage(pathname.includes("/ib-program"));
-    setIsGreyLabelPage(pathname.includes("/grey-label-program"));
-    setIsRegionalPage(pathname.includes("/regional-partner-program"));
+    setIsGreyLabelPage(pathname.includes("/grey-label-partner"));
+    setIsRegionalPage(pathname.includes("/regional-partner"));
     setIsAccountTypePage(pathname.includes("/account-types"));
   }, [pathname]);
 

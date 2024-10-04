@@ -255,20 +255,20 @@ const DesktopHeader = ({ locale }) => {
                   </li>
                   <li>
                     <LocaleLink
-                      href="/grey-label-program"
-                      onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
-                    >
-                      {t("grey_label")}
-                    </LocaleLink>
-                  </li>
-                  <li>
-                    <LocaleLink
-                      href="/regional-partner-program"
+                      href="/regional-partner"
                       onClick={closeDropdown}
                       className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >
                       {t("regional")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
+                      href="/grey-label-partner"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                    >
+                      {t("grey_label")}
                     </LocaleLink>
                   </li>
                   <li>
@@ -339,6 +339,11 @@ const DesktopHeader = ({ locale }) => {
                   </li>
                 </ul>
               )}
+            </li>
+            <li className="flex items-center h-full">
+              <LocaleLink href="/about" className="text-[#ffffff] text-[.8em]">
+                {t("about")}
+              </LocaleLink>
             </li>
           </ul>
         </nav>
