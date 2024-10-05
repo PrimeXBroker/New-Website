@@ -129,12 +129,12 @@ const HomePage = () => {
       <TradePlatform />
       <Testimonials />
       <Academy academy={academyData} />
-      <div className="hidden md:block">
+      {/* <div className="hidden md:block">
         <Partnerships />
       </div>
       <div className="block md:hidden">
         <PartnershipMobile />
-      </div>
+      </div> */}
       <Support />
       <Promotions promotions={promotionsData} />
       <div className="lg:block hidden">
