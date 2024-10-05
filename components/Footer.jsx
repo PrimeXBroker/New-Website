@@ -35,6 +35,7 @@ const Footer = () => {
   const [isBonusPage, setIsBonusPage] = useState(false);
   const [isDemoPage, setIsDemoPage] = useState(false);
   const [isMT5Page, setIsMT5Page] = useState(false);
+  const [isAboutPage, setIsAboutPage] = useState(false);
 
   useEffect(() => {
     setIsLiquidityPage(pathname.includes("/liquidity"));
@@ -45,7 +46,8 @@ const Footer = () => {
     setIsAccountTypePage(pathname.includes("/account-types"));
     setIsBonusPage(pathname.includes("/bonus"));
     setIsDemoPage(pathname.includes("/funded-account-competition"));
-    setIsMT5Page(pathname.includes("/new-platform"));
+    setIsMT5Page(pathname.includes("/platform/mt5-platform"));
+    setIsAboutPage(pathname.includes("/about"));
   }, [pathname]);
 
   const handleOpenModal = (e) => {
@@ -211,7 +213,8 @@ const Footer = () => {
               isAccountTypesPage ||
               isBonusPage ||
               isDemoPage ||
-              isMT5Page
+              isMT5Page ||
+              isAboutPage
             ? "bg-[#000000]"
             : "bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/live-account-gray.webp')] bg-cover bg-no-repeat bg-center"
         } relative z-0 overflow-hidden`}
@@ -227,7 +230,8 @@ const Footer = () => {
                 isAccountTypesPage ||
                 isBonusPage ||
                 isDemoPage ||
-                isMT5Page
+                isMT5Page ||
+                isAboutPage
               ? "bg-[#111111] rounded-xl"
               : ""
           }`}
@@ -246,7 +250,8 @@ const Footer = () => {
                 isAccountTypesPage ||
                 isBonusPage ||
                 isDemoPage ||
-                isMT5Page
+                isMT5Page ||
+                isAboutPage
                   ? "text-[#ffffff]"
                   : "text-secondary"
               } font-semibold ${
@@ -266,7 +271,8 @@ const Footer = () => {
                 isAccountTypesPage ||
                 isBonusPage ||
                 isDemoPage ||
-                isMT5Page
+                isMT5Page ||
+                isAboutPage
                   ? "text-[#dfdfdf]"
                   : "text-secondary"
               } ${
@@ -293,7 +299,8 @@ const Footer = () => {
                 isAccountTypesPage ||
                 isBonusPage ||
                 isDemoPage ||
-                isMT5Page
+                isMT5Page ||
+                isAboutPage
                   ? "rounded-[12px]"
                   : "rounded-full"
               }`}

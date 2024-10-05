@@ -7,11 +7,11 @@ const AboutBanner = () => {
   const t = useTranslations("about.hero");
 
   return (
-    <section className={`bg-secondary pt-[60px] lg:pt-12`}>
+    <section className={`bg-[#000000] pt-[60px] lg:pt-12`}>
       <div className="container flex flex-col md:flex-row justify-evenly gap-10 items-center py-12">
         <div className="md:w-[45%]">
           <h1
-            className={`text-primary text-xl md:text-3xl font-semibold mb-5 ${
+            className={`text-[#FED100] text-xl md:text-3xl font-semibold mb-5 ${
               locale === "ar"
                 ? "md:text-right text-center"
                 : "md:text-left text-center"
@@ -21,7 +21,7 @@ const AboutBanner = () => {
             {t("title")}
           </h1>
           <p
-            className={`text-white text-[15px] font-[500] ${
+            className={`text-[#c6c6c6] text-[15px] font-[500] ${
               locale === "ar"
                 ? "md:text-right text-center"
                 : "md:text-left text-center"

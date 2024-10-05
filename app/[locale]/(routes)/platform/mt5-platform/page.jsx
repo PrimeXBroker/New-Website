@@ -1,4 +1,4 @@
-import Mt5PlatformPage from "@/our_pages/platform/mt5-platform/Mt5PlatformPage";
+import MT5PlatformWrapper from "@/our_pages/new-platform/MT5PlatformWrapper";
 import { createTranslator } from "next-intl";
 import Script from "next/script";
 
@@ -25,7 +25,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("metaTrader5.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/Banner.webp",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/Hero+Image.webp",
           width: 1200,
           height: 630,
           alt: t("metaTrader5.metaData.title"),
@@ -46,30 +46,30 @@ const Mt5Platform = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
-            "itemListElement": [
+            itemListElement: [
               {
                 "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.primexcapital.com/en"
+                position: 1,
+                name: "Home",
+                item: "https://www.primexcapital.com/en",
               },
               {
                 "@type": "ListItem",
-                "position": 2,
-                "name": "Platform",
-                "item": "https://www.primexcapital.com/en/platform"
+                position: 2,
+                name: "Platform",
+                item: "https://www.primexcapital.com/en/platform",
               },
               {
                 "@type": "ListItem",
-                "position": 3,
-                "name": "MetaTrader 5",
-                "item": "https://www.primexcapital.com/en/platform/mt5-platform"
-              }
-            ]
+                position: 3,
+                name: "MetaTrader 5",
+                item: "https://www.primexcapital.com/en/platform/mt5-platform",
+              },
+            ],
           }),
         }}
       />
-      <Mt5PlatformPage />
+      <MT5PlatformWrapper />
     </>
   );
 };
