@@ -999,7 +999,7 @@
       "help_li4_title": "电话：",
       "help_li4_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
       "help_li5_title": "南非：",
-      "help_li5_desc": "第一楼，Katherine和West大楼，114 West Street，Sandown，Sandton，南非，套房8号。",
+      "help_li5_desc": "套房8号，第一层，Katherine and West大楼，西街114号，桑顿，豪登省，2196，南非。",
       "help_li7_title": "阿拉伯联合酋长国：",
       "help_li7_desc": "迪拜商业湾，Westburry Tower 1，2401办公室，阿拉伯联合酋长国。"
     },
@@ -1712,7 +1712,7 @@
     },
     "Location": {
       "title_part5": "位置",
-      "title_part5_link1": "南非总部：South Africa HQ: Suite #8, 1st Floor, Katherine & West Building, 114 West Street, Sandown, Sandton, South Africa.",
+      "title_part5_link1": "南非总部：套房8号，第一层，Katherine and West大楼，西街114号，桑顿，豪登省，2196，南非。",
       "title_part5_link2": "阿联酋代表处：Office 2401, Westburry Tower 1, Business Bay, Dubai, UAE."
     },
     "getStarted": {
@@ -1849,8 +1849,9 @@
       "step3_p2": "奖励"
     },
     "signup": {
-      "title": "加入竞赛，赢取$10,000的资金账户",
-      "li1": "免费参加",
+      "title": "加入比赛并",
+      "title1": "赢取$10,000的资助账户",
+      "li1": "免费参与",
       "li2": "无限制学习",
       "li3": "无风险交易",
       "start_btn": "立即开始"
@@ -1869,9 +1870,13 @@
       "answer_5": "您可以提取利润，但这会影响您的回撤百分比。"
     },
     "participateForm": {
-      "title1": "免费加入并立即开始交易",
+      "title1": "免费",
+      "title2": "加入",
+      "title3": "并",
+      "title4": "立即开始",
+      "title5": "交易",
       "step1_p1": "免费注册并立即访问您的模拟比赛账户。",
-      "step2_p1": "在真实市场条件下开始交易，无风险。"
+      "step2_p1": "在真实市场条件下开始无风险交易。"
     }
   },
   "liquidity": {
@@ -2413,6 +2418,180 @@
       "answer_5": "是的，PrimeX Capital为所有交易者提供模拟账户，您可以在真实市场条件下练习而无需使用真实资金。",
       "question_6": "我可以在账户类型之间切换吗？",
       "answer_6": "账户类型之间不可切换，但您可以随时从可用选项中开设新账户。"
+    }
+  },
+  "newBonus": {
+    "metaData": {
+      "title": "20%存款奖金 | PrimeX Capital",
+      "description": "在PrimeX Capital获得20%存款奖金！用额外资金提升您的交易。立即注册并领取您的奖金！"
+    },
+    "header": {
+      "title_l1": "20%",
+      "title_l2": "存款奖金",
+      "subtitle": "通过存款获取20%的奖金，提升您的交易。",
+      "tc": "条款和条件适用"
+    },
+    "claim": {
+      "title1": "如何领取您的",
+      "title2": "存款奖金",
+      "claim_li1": "开设真实账户",
+      "claim_li1_p": "在PrimeX Capital开设标准账户。",
+      "claim_li2": "存款",
+      "claim_li2_p": "最低存款$500起。",
+      "claim_li3": "领取您的奖金",
+      "claim_li3_p": "仅在账户存款金额上获得20%的奖金。"
+    },
+    "promotion": {
+      "title1": "促销",
+      "title2": "适用于"
+    },
+    "maximize": {
+      "maximize_title_1": "最大化",
+      "maximize_title_2": "您的利润！",
+      "register_btn": "开设真实账户",
+      "already-reg": "已经注册？",
+      "login_here": "在此登录"
+    },
+    "terms": {
+      "title": "下载条款与条件",
+      "desc_part_1": "此优惠适用于所有新的和现有的",
+      "desc_part_2": "PrimeX Capital客户。"
+    },
+    "form": {
+      "form_title": "填写您的详细信息",
+      "title1": "领取您的",
+      "title2": "存款奖金",
+      "name": "姓名",
+      "profit_number": "存款金额",
+      "email": "电子邮箱",
+      "account_number": "账户号码",
+      "condition1": "我已阅读并同意",
+      "condition2": "条款与条件",
+      "form_btn": "提交",
+      "success_title": "成功",
+      "success_desc": "我们的团队将审核您的申请，并在接下来的24小时内与您联系，继续处理您的20%存款奖金。",
+      "success_desc1": "感谢您选择PrimeX Capital",
+      "close_btn": "关闭"
+    },
+    "calculator": {
+      "title1_1": "计算您的",
+      "title1_2": "存款奖金",
+      "para1_1": "使用右侧的表单查看您可以获得的奖金金额",
+      "para2_1": "输入您的",
+      "para2_2": "存款金额，",
+      "para2_3": "并观察",
+      "para2_4": "数字的累加。",
+      "deposit_calculator": "奖金",
+      "deposit_calculator1": "计算器",
+      "deposit_amount": "存款金额",
+      "enter_deposit_amount": "$ 0",
+      "no_of_lots": "所需手数",
+      "lots": "0",
+      "bonus_amount": "奖金金额",
+      "bonus": "0.00"
+    },
+    "faq": {
+      "question_1": "我如何获得20%存款奖金的资格？",
+      "answer_1": "要获得20%存款奖金，您必须拥有PrimeX标准账户并存入至少$500的资金。该奖金可以多次领取，但请注意，您最多可以获得$25,000的奖金。",
+      "question_2": "我可以多次领取奖金吗？",
+      "answer_2": "是的，您可以在促销期间多次领取20%存款奖金。然而，请注意，如果从本金中提取任何金额，则整个奖金金额将被收回。",
+      "question_3": "作为新客户，我如何领取奖金？",
+      "answer_3": "作为新客户，您需要开设标准账户并存入至少$500的合格存款。然后，在我们网页上填写表单。一旦您的存款得到验证，奖金将记入您的账户。",
+      "question_4": "作为现有客户，我如何领取奖金？",
+      "answer_4": "如果您是标准账户的现有客户，只需在您的账户中存入新的金额并在我们网页上填写表单。存款验证后，奖金将记入您的账户。",
+      "question_5": "奖金什么时候会被记入我的账户？",
+      "answer_5": "在您提交的表单和存款金额验证后，奖金将自动记入您的标准账户。您将收到确认奖金记入的通知。",
+      "question_6": "提取奖金的条件是什么？",
+      "answer_6": "要提取奖金，您必须满足所需的交易手数，计算公式为：奖金金额 ÷ 4。例如，如果您获得$100奖金，您需要交易25手。请注意，股票和加密货币对不包含在此活动中。"
+    }
+  },
+  "newMT5Platform": {
+    "banner": {
+      "title1": "(MT5)",
+      "title2": "MetaTrader 5",
+      "description": "精准与创新相结合的终极交易平台",
+      "btnTxt": "立即注册"
+    },
+    "mt5Features": {
+      "title1": "MT5的",
+      "title2": "关键特性",
+      "feature1_main_title1": "多资产",
+      "feature1_main_title2": "平台",
+      "feature1_title1": "多功能性",
+      "feature1_desc1": "MT5支持多种资产类别的交易，包括外汇、股票、商品、期货和加密货币。",
+      "feature1_title2": "集成工具",
+      "feature1_desc2": "将所有必要的交易工具集成在一个平台上，使交易者更容易管理不同的资产类别。",
+      "feature2_main_title1": "自动化",
+      "feature2_main_title2": "交易",
+      "feature2_title1": "智能交易系统 (EAs)",
+      "feature2_desc1": "支持通过智能交易系统 (EAs) 开发和使用自动交易策略，启用算法交易。",
+      "feature2_title2": "策略测试器",
+      "feature2_desc2": "允许交易者在历史数据上回测其交易策略，以优化性能。",
+      "feature3_main_title1": "社区",
+      "feature3_main_title2": "和",
+      "feature3_main_title3": "支持",
+      "feature3_title1": "MQL5社区",
+      "feature3_desc1": "访问MQL5社区，交易者可以分享策略、指标和智能交易系统，促进协作和知识共享。",
+      "feature3_title2": "详尽的文档",
+      "feature3_desc2": "提供全面的文档和用户指南，使交易者更容易学习和有效使用平台。",
+      "feature4_main_title1": "改进的",
+      "feature4_main_title2": "订单执行",
+      "feature4_title1": "多种订单类型",
+      "feature4_desc1": "MT5提供多种订单类型，包括市价单、限价单、止损单和追踪止损单，提供更大的交易灵活性。",
+      "feature4_title2": "一键交易",
+      "feature4_desc2": "通过从图表上直接单击一键执行交易，提升交易的速度和便利性。",
+      "feature5_main_title1": "卓越的",
+      "feature5_main_title2": "图表功能",
+      "feature5_title1": "时间周期",
+      "feature5_desc1": "相比其前身（MT4），提供更多的时间周期，允许进行更详细的市场分析。",
+      "feature5_title2": "80+技术指标",
+      "feature5_desc2": "提供大量内置的技术指标，以进行全面的技术分析。",
+      "feature6_main_title1": "增强的",
+      "feature6_main_title2": "用户体验",
+      "feature6_title1": "可定制的布局",
+      "feature6_desc1": "用户可以根据其交易风格定制平台布局，支持可分离的图表和可自定义的工具栏。",
+      "feature6_title2": "经济日历",
+      "feature6_desc2": "集成的经济日历实时更新经济事件，帮助交易者根据市场新闻做出明智的决定。",
+      "feature7_main_title1": "内置的",
+      "feature7_main_title2": "经济日历",
+      "feature7_title1": "实时更新",
+      "feature7_desc1": "提供重要经济事件和指标的实时更新，帮助交易者了解影响市场的新闻。",
+      "feature7_title2": "事件提醒",
+      "feature7_desc2": "用户可以设置即将发生的经济事件的提醒，确保他们不会错过重要的市场信息。",
+      "feature8_main_title1": "高级",
+      "feature8_main_title2": "分析工具",
+      "feature8_title1": "全面的图表分析",
+      "feature8_desc1": "MT5提供广泛的图表分析功能，支持多种时间周期和技术指标。",
+      "feature8_title2": "市场深度",
+      "feature8_desc2": "提供市场深度 (DOM) 数据，允许交易者查看不同价格水平的买卖订单。"
+    },
+    "getStarted": {
+      "main_title1": "如何开始使用",
+      "main_title2": "PrimeX上的MT5",
+      "step1_count": "1",
+      "step1_title1": "注册",
+      "step1_title2": "一个账户",
+      "step2_count": "2",
+      "step2_title1": "下载",
+      "step2_title2": "MT5",
+      "step3_count": "3",
+      "step3_title1": "为您的账户",
+      "step3_title2": "注资",
+      "step4_count": "4",
+      "step4_title1": "开始",
+      "step4_title2": "交易"
+    },
+    "joinPrimex": {
+      "title1": "加入PrimeX并",
+      "title2": "今天就使用MT5进行交易！",
+      "title3": "",
+      "description": "在PrimeX体验交易的未来，无论您是初学者还是资深交易者，MT5都提供您在金融市场取得成功所需的工具和功能。今天就加入我们，提升您的交易体验。",
+      "download_window_btn_part1": "从",
+      "download_window_btn_part2": "Microsoft获取",
+      "google_play-btn_part1": "在",
+      "google_play-btn_part2": "Google Play上获取",
+      "app_store_btn_part1": "下载自",
+      "app_store_btn_part2": "App Store"
     }
   }
 }

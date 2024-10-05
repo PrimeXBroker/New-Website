@@ -326,6 +326,16 @@
       "para2": "Please update your bookmarks.",
       "para3": "Happy Trading!",
       "acknowledged": "Acknowledged"
+    },
+    "partnerships": {
+      "title1": "Earn Big With ",
+      "title2": "PrimeX",
+      "title3": "Partnership ",
+      "title4": "Programs!",
+      "description": "Maximize your earnings with flexible commission structures, high rebates, dedicated 24/7 support, exciting reward programs and exclusive benefits through PrimeX Partnership Programs!",
+      "ib_btn": "Introducing Broker Program",
+      "grey_label_btn": "Grey Label Program",
+      "regional_btn": "Regional Partner Program"
     }
   },
   "academy": {
@@ -999,7 +1009,7 @@
       "help_li4_title": "Phone:",
       "help_li4_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
       "help_li5_title": "South Africa:",
-      "help_li5_desc": "Suite #8, 1st Floor, Katherine & West Building, 114 West Street, Sandown, Sandton, South Africa.",
+      "help_li5_desc": "Suite no 8, First Floor, Katherine and West Building, 114 West Street, Sandton, Gauteng, 2196 South Africa.",
       "help_li7_title": "United Arab Emirates:",
       "help_li7_desc": "Office 2401, Westburry Tower 1, Business Bay, Dubai, United Arab Emirates."
     },
@@ -1711,7 +1721,7 @@
     },
     "Location": {
       "title_part5": "Location",
-      "title_part5_link1": "South Africa HQ: Suite #8, 1st Floor, Katherine & West Building, 114 West Street, Sandown, Sandton, South Africa.",
+      "title_part5_link1": "South Africa HQ: Suite no 8, First Floor, Katherine and West Building, 114 West Street, Sandton, Gauteng, 2196 South Africa.",
       "title_part5_link2": "UAE Rep. Office: Office 2401, Westburry Tower 1, Business Bay, Dubai, UAE."
     },
     "getStarted": {
@@ -1848,7 +1858,8 @@
       "step3_p2": "Rewards"
     },
     "signup": {
-      "title": "Join the Competition and Win a $10,000 Funded Account",
+      "title": "Join the Competition and ",
+      "title1": "Win a $10,000 Funded Account",
       "li1": "Enter for Free",
       "li2": "Learn Without Limits",
       "li3": "Trade Risk-Free",
@@ -1868,7 +1879,11 @@
       "answer_5": "You can withdraw your profits, but this will affect your drawdown percentage."
     },
     "participateForm": {
-      "title1": "Join for Free and Start Trading Instantly",
+      "title1": "Join for ",
+      "title2": "Free ",
+      "title3": "and",
+      "title4": "Start ",
+      "title5": "Trading Instantly",
       "step1_p1": "Sign Up for Free and Instantly Access Your Demo Competition Account.",
       "step2_p1": "Start Trading in Real Market Conditions, Risk-Free."
     }
@@ -2412,6 +2427,180 @@
       "answer_5": "Yes, PrimeX Capital offers a demo account for all traders to practice in real market conditions without using real money.",
       "question_6": "Can I switch between account types?",
       "answer_6": "Switching between accounts is not possible however, you can always open a new account from the list of available options."
+    }
+  },
+  "newBonus": {
+    "metaData": {
+      "title": "20% Deposit Bonus | Primex Capital",
+      "description": "Get a 20% deposit bonus at PrimeX Capital! Supercharge your trading with extra funds. Sign up now and claim your bonus!"
+    },
+    "header": {
+      "title_l1": "20%",
+      "title_l2": "Deposit Bonus",
+      "subtitle": "Supercharge Your Trading with a 20% Bonus on your Deposits.",
+      "tc": "terms & conditions apply"
+    },
+    "claim": {
+      "title1": "How to Claim Your",
+      "title2": " Deposit Bonus",
+      "claim_li1": " Open a Live Account",
+      "claim_li1_p": " Open a Standard Account with PrimeX Capital.",
+      "claim_li2": " Deposit",
+      "claim_li2_p": "Start with a deposit of Minimum $500.",
+      "claim_li3": " Receive Your Bonus",
+      "claim_li3_p": "Get a 20% bonus only on the Deposit Amount in your Account."
+    },
+    "promotion": {
+      "title1": "Promotion",
+      "title2": "Applicable On"
+    },
+    "maximize": {
+      "maximize_title_1": "Maximize",
+      "maximize_title_2": "Your Profits Now!",
+      "register_btn": "Open Live Account",
+      "already-reg": "Registered already? ",
+      "login_here": "Login Here"
+    },
+    "terms": {
+      "title": "Download T&C's",
+      "desc_part_1": "This offer is available for all new and existing ",
+      "desc_part_2": "clients of PrimeX Capital."
+    },
+    "form": {
+      "form_title": "Enter in your Details",
+      "title1": "Claim Your",
+      "title2": "Deposit Bonus",
+      "name": "Name",
+      "profit_number": "Deposit Amount",
+      "email": "Email",
+      "account_number": "Account Number",
+      "condition1": "I have read and agree to the ",
+      "condition2": "terms and conditions",
+      "form_btn": "Submit",
+      "success_title": "Success",
+      "success_desc": "Our team will review your application and contact you within the next 24 hours to proceed with your 20% Deposit Bonus.",
+      "success_desc1": "Thank you for choosing PrimeX Capital",
+      "close_btn": "Close"
+    },
+    "calculator": {
+      "title1_1": "Calculate your",
+      "title1_2": "Deposit Bonus",
+      "para1_1": "use the form on the right to see how much bonus you could earn",
+      "para2_1": "Enter your",
+      "para2_2": "Deposit amount,",
+      "para2_3": "and watch the",
+      "para2_4": "numbers add up.",
+      "deposit_calculator": "Bonus ",
+      "deposit_calculator1": "Calculator",
+      "deposit_amount": "Deposit amount",
+      "enter_deposit_amount": "$ 0",
+      "no_of_lots": " No. of Lots required",
+      "lots": "0",
+      "bonus_amount": "Bonus amount",
+      "bonus": "0.00"
+    },
+    "faq": {
+      "question_1": "How do I qualify for the 20% Deposit Bonus?",
+      "answer_1": "To qualify for the 20% Deposit Bonus, you must have a PrimeX Standard Account and make a minimum deposit of $500. The bonus can be claimed multiple times, but remember, the total maximum bonus you can receive is capped at $25,000.",
+      "question_2": "Can I claim the bonus more than once?",
+      "answer_2": "Yes, you can claim the 20% Deposit Bonus multiple times during the promotion period. However, please note that if any amount is withdrawn from the capital, the entire bonus amount will be retracted.",
+      "question_3": " How do I claim the bonus as a new client?",
+      "answer_3": "As a new client, you need to open a Standard Account and make the qualifying deposit of at least $500. Then, complete the form on our webpage. Once your deposit is verified, the bonus will be credited to your account.",
+      "question_4": "How do I claim the bonus as an existing client?",
+      "answer_4": " If you are an existing client with a Standard Account, simply deposit a new amount into your account and fill out the form on our webpage. After verification of your deposit, the bonus will be credited to your account.",
+      "question_5": "When will the bonus be credited to my account?",
+      "answer_5": "The bonus will be automatically credited to your Standard Account upon verification of the form you submitted on the landing page and confirmation of the deposit amount. You will receive a notification confirming the bonus credit.",
+      "question_6": "What are the conditions for withdrawing the bonus?",
+      "answer_6": "To withdraw the bonus, you must fulfill the required trading lot size, which is calculated using the formula: Bonus Amount ÷ 4. For example, if you receive a $100 bonus, you need to trade 25 lots. Please note that stocks and crypto pairs are excluded from this campaign."
+    }
+  },
+  "newMT5Platform": {
+    "banner": {
+      "title1": "(MT5)",
+      "title2": "MetaTrader 5",
+      "description": "The Ultimate Trading Platform Where Precision Meets Innovation",
+      "btnTxt": "Sign Up Now"
+    },
+    "mt5Features": {
+      "title1": "Key Features ",
+      "title2": "of MT5",
+      "feature1_main_title1": "Multi Asset ",
+      "feature1_main_title2": "Platform",
+      "feature1_title1": "Versatility",
+      "feature1_desc1": "MT5 supports trading across various asset classes, including forex, stocks, commodities, futures, and cryptocurrencies.",
+      "feature1_title2": "Integrated Tools",
+      "feature1_desc2": "Combines all the necessary trading tools in one platform, making it easier for traders to manage different asset classes.",
+      "feature2_main_title1": "Automated ",
+      "feature2_main_title2": "Trading",
+      "feature2_title1": "Expert Advisors (EAs)",
+      "feature2_desc1": "Supports the development and use of automated trading strategies through EAs, enabling algorithmic trading.",
+      "feature2_title2": "Strategy Tester",
+      "feature2_desc2": "Allows traders to backtest their trading strategies on historical data to optimize performance.",
+      "feature3_main_title1": "Community",
+      "feature3_main_title2": "and ",
+      "feature3_main_title3": "Support",
+      "feature3_title1": "MQL5 Community",
+      "feature3_desc1": "Access to the MQL5 community where traders can share strategies, indicators, and EAs, fostering collaboration and knowledge sharing.",
+      "feature3_title2": "Extensive Documentation",
+      "feature3_desc2": "Comprehensive documentation and user guides are available, making it easier for traders to learn and use the platform effectively.",
+      "feature4_main_title1": "Improved ",
+      "feature4_main_title2": "Order Execution",
+      "feature4_title1": "Multiple Order Types",
+      "feature4_desc1": "MT5 offers a variety of order types, including market, limit, stop, and trailing stop orders, providing greater flexibility in trade execution.",
+      "feature4_title2": "One-Click Trading",
+      "feature4_desc2": "Enhances the speed and convenience of executing trades with a single click directly from the chart.",
+      "feature5_main_title1": "Superior ",
+      "feature5_main_title2": "Charting Capabilities",
+      "feature5_title1": "Timeframes",
+      "feature5_desc1": "Offers a greater number of timeframes compared to its predecessor (MT4), allowing for more detailed market analysis.",
+      "feature5_title2": "80+ Technical Indicators",
+      "feature5_desc2": "Provides a vast array of built-in technical indicators for comprehensive technical analysis.",
+      "feature6_main_title1": "Enhanced ",
+      "feature6_main_title2": "User Experience",
+      "feature6_title1": "Customizable Layouts",
+      "feature6_desc1": "Users can tailor the platform’s layout to suit their trading style, with detachable charts and customizable toolbars.",
+      "feature6_title2": "Economic Calendar",
+      "feature6_desc2": "Integrated economic calendar provides real-time updates on economic events, helping traders make informed decisions based on market news.",
+      "feature7_main_title1": "Built-in ",
+      "feature7_main_title2": "Economic Calendar",
+      "feature7_title1": "Real-Time Updates",
+      "feature7_desc1": "Provides real-time updates on important economic events and indicators, helping traders stay informed about market-moving news.",
+      "feature7_title2": "Event Alerts",
+      "feature7_desc2": "Users can set alerts for upcoming economic events, ensuring they never miss critical market information.",
+      "feature8_main_title1": "Advanced ",
+      "feature8_main_title2": "Analytical Tools",
+      "feature8_title1": "Comprehensive Charting",
+      "feature8_desc1": "MT5 offers extensive charting capabilities with multiple timeframes and a wide range of technical indicators.",
+      "feature8_title2": "Market Depth",
+      "feature8_desc2": "Provides access to the depth of market (DOM) data, allowing traders to see the buy and sell orders at different price levels."
+    },
+    "getStarted": {
+      "main_title1": "How to Get Started With",
+      "main_title2": "MT5 on PrimeX",
+      "step1_count": "1",
+      "step1_title1": "Register",
+      "step1_title2": "An Account",
+      "step2_count": "2",
+      "step2_title1": "Download",
+      "step2_title2": "MT5",
+      "step3_count": "3",
+      "step3_title1": "Fund Your",
+      "step3_title2": "Account",
+      "step4_count": "4",
+      "step4_title1": "Start",
+      "step4_title2": "Trading"
+    },
+    "joinPrimex": {
+      "title1": "Join PrimeX and ",
+      "title2": "trade with MT5 ",
+      "title3": "Today!",
+      "description": "Experience the future of trading with MetaTrader 5 at PrimeX. Whether you're a beginner or a seasoned trader, MT5 offers the tools and features you need to succeed in the financial markets. Join us today and elevate your trading experience.",
+      "download_window_btn_part1": "Get it from",
+      "download_window_btn_part2": "Microsoft",
+      "google_play-btn_part1": "Get it on",
+      "google_play-btn_part2": "Google Play",
+      "app_store_btn_part1": "Download on the",
+      "app_store_btn_part2": "App Store"
     }
   }
 }

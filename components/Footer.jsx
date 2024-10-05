@@ -32,6 +32,9 @@ const Footer = () => {
   const [isGreyLabelPage, setIsGreyLabelPage] = useState(false);
   const [isRegionalPage, setIsRegionalPage] = useState(false);
   const [isAccountTypesPage, setIsAccountTypePage] = useState(false);
+  const [isBonusPage, setIsBonusPage] = useState(false);
+  const [isDemoPage, setIsDemoPage] = useState(false);
+  const [isMT5Page, setIsMT5Page] = useState(false);
 
   useEffect(() => {
     setIsLiquidityPage(pathname.includes("/liquidity"));
@@ -40,6 +43,9 @@ const Footer = () => {
     setIsGreyLabelPage(pathname.includes("/grey-label-partner"));
     setIsRegionalPage(pathname.includes("/regional-partner"));
     setIsAccountTypePage(pathname.includes("/account-types"));
+    setIsBonusPage(pathname.includes("/bonus"));
+    setIsDemoPage(pathname.includes("/funded-account-competition"));
+    setIsMT5Page(pathname.includes("/new-platform"));
   }, [pathname]);
 
   const handleOpenModal = (e) => {
@@ -202,7 +208,10 @@ const Footer = () => {
               isIbPage ||
               isGreyLabelPage ||
               isRegionalPage ||
-              isAccountTypesPage
+              isAccountTypesPage ||
+              isBonusPage ||
+              isDemoPage ||
+              isMT5Page
             ? "bg-[#000000]"
             : "bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/live-account-gray.webp')] bg-cover bg-no-repeat bg-center"
         } relative z-0 overflow-hidden`}
@@ -215,7 +224,10 @@ const Footer = () => {
                 isIbPage ||
                 isGreyLabelPage ||
                 isRegionalPage ||
-                isAccountTypesPage
+                isAccountTypesPage ||
+                isBonusPage ||
+                isDemoPage ||
+                isMT5Page
               ? "bg-[#111111] rounded-xl"
               : ""
           }`}
@@ -231,7 +243,10 @@ const Footer = () => {
                 isIbPage ||
                 isGreyLabelPage ||
                 isRegionalPage ||
-                isAccountTypesPage
+                isAccountTypesPage ||
+                isBonusPage ||
+                isDemoPage ||
+                isMT5Page
                   ? "text-[#ffffff]"
                   : "text-secondary"
               } font-semibold ${
@@ -248,7 +263,10 @@ const Footer = () => {
                 isIbPage ||
                 isGreyLabelPage ||
                 isRegionalPage ||
-                isAccountTypesPage
+                isAccountTypesPage ||
+                isBonusPage ||
+                isDemoPage ||
+                isMT5Page
                   ? "text-[#dfdfdf]"
                   : "text-secondary"
               } ${
@@ -272,7 +290,10 @@ const Footer = () => {
                 isIbPage ||
                 isGreyLabelPage ||
                 isRegionalPage ||
-                isAccountTypesPage
+                isAccountTypesPage ||
+                isBonusPage ||
+                isDemoPage ||
+                isMT5Page
                   ? "rounded-[12px]"
                   : "rounded-full"
               }`}

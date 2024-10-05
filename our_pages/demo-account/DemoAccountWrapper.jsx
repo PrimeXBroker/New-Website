@@ -3,16 +3,16 @@ import Banner from "@/our_pages/demo-account/Banner";
 import FundedAccount from "@/our_pages/demo-account/FundedAccount";
 import SignUp from "@/our_pages/demo-account/SignUp";
 import React from "react";
-import Faq from "@/components/instrments/common/Faq";
 import { useTranslations } from "next-intl";
 import ParticipateForm from "@/our_pages/demo-account/ParticipateForm";
 import CompetitionWidget from "./CompetitionWidget";
 import DemoAccountTC from "./DemoAccountTC";
+import FAQ from "@/components/NewFaq";
 
 const DemoAccountWrapper = () => {
   const t = useTranslations("demoAccount");
 
-  const forexFaqs = [
+  const faqs = [
     {
       key: 1,
       question: t("faq.question_1"),
@@ -44,7 +44,7 @@ const DemoAccountWrapper = () => {
       <CompetitionWidget />
       <ParticipateForm />
       <SignUp />
-      <Faq forexFaqs={forexFaqs} />
+      <FAQ faqs={faqs} />
       <DemoAccountTC />
     </div>
   );

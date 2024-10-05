@@ -14,22 +14,24 @@ const CompetitionWidget = () => {
   }, []);
 
   return (
-    <section className="container mt-20">
-      <iframe
-        id="widgetFrame"
-        style={{ minWidth: "100%" }}
-        src="https://ratings.primexcapital.com/widgets/ratings?widgetKey=fund-oct&theme=light&lang=en"
-        scrolling="no"
-        frameBorder="0"
-        onLoad={() => {
-          if (window.iFrameResize) {
-            window.iFrameResize(
-              { heightCalculationMethod: "max", checkOrigin: false },
-              "#widgetFrame"
-            );
-          }
-        }}
-      ></iframe>
+    <section className=" pt-20 bg-[#000000]">
+      <div className="container">
+        <iframe
+          id="widgetFrame"
+          style={{ minWidth: "100%" }}
+          src="https://ratings.primexcapital.com/widgets/ratings?widgetKey=fund-oct&theme=light&lang=en"
+          scrolling="no"
+          frameBorder="0"
+          onLoad={() => {
+            if (window.iFrameResize) {
+              window.iFrameResize(
+                { heightCalculationMethod: "max", checkOrigin: false },
+                "#widgetFrame"
+              );
+            }
+          }}
+        ></iframe>
+      </div>
     </section>
   );
 };

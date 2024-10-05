@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { createTranslator } from "next-intl";
-import BonusPage from "@/our_pages/bonus/BonusPage";
 import Script from "next/script";
+import BonusPage from "@/our_pages/new-bonus/BonusPage";
 
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../messages/${locale}.json`))
@@ -47,26 +47,26 @@ const page = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
-            "itemListElement": [
+            itemListElement: [
               {
                 "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.primexcapital.com/en"
+                position: 1,
+                name: "Home",
+                item: "https://www.primexcapital.com/en",
               },
               {
                 "@type": "ListItem",
-                "position": 2,
-                "name": "Promotions",
-                "item": "https://www.primexcapital.com/en/promotions"
+                position: 2,
+                name: "Promotions",
+                item: "https://www.primexcapital.com/en/promotions",
               },
               {
                 "@type": "ListItem",
-                "position": 3,
-                "name": "20% Bonus",
-                "item": "https://www.primexcapital.com/en/bonus"
-              }
-            ]
+                position: 3,
+                name: "20% Bonus",
+                item: "https://www.primexcapital.com/en/bonus",
+              },
+            ],
           }),
         }}
       />

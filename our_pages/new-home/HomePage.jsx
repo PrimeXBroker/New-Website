@@ -12,6 +12,8 @@ import Recognition from "./Recognition";
 import MobileRecognition from "./MoileRecognition";
 import Promotions from "./Promotions";
 import TradingOpportunities from "./TradingOpportunities";
+import Partnerships from "./Partnerships";
+import PartnershipMobile from "./PartnershipMobile";
 
 const HomePage = () => {
   const locale = useLocale();
@@ -127,6 +129,12 @@ const HomePage = () => {
       <TradePlatform />
       <Testimonials />
       <Academy academy={academyData} />
+      <div className="hidden md:block">
+        <Partnerships />
+      </div>
+      <div className="block md:hidden">
+        <PartnershipMobile />
+      </div>
       <Support />
       <Promotions promotions={promotionsData} />
       <div className="lg:block hidden">

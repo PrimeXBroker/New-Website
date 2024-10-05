@@ -60,6 +60,17 @@
   }
 }
 
+/* @layer utilities {
+  @screen sm {
+    .partnerships-background {
+      background-image: url("https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/CTA+BG+M.webp") !important;
+      background-size: 50% !important;
+      background-repeat: no-repeat !important;
+      background-position: bottom !important;
+    }
+  }
+} */
+
 .tabs_custom div {
   flex-wrap: wrap !important;
   justify-content: center !important;
@@ -1268,3 +1279,20 @@
 .ib-phone-input {
   direction: ltr;
 }
+
+.partnerships-background-ar {
+  background-image: url("https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/CTA+BG+D-Ar.webp");
+  background-size: cover;
+}
+
+.partnerships-background-en {
+  background-image: url("https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/CTA+BG+D.webp");
+  background-size: cover;
+}
+
+/* .partnerships-background {
+  background-image: url("https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/CTA+BG+M.webp");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+} */

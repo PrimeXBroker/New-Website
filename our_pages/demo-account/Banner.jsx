@@ -2,27 +2,31 @@
 import React from "react";
 import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
+import TrustPilot from "@/components/TrustPilot";
 
 const Banner = () => {
   const locale = useLocale();
   const t = useTranslations("demoAccount.banner");
 
   return (
-    <section className="w-full flex flex-col md:flex-row md:h-[650px]">
-      <div className="w-[100%] md:w-[60%] bg-black text-white flex items-center pt-28 pb-36 sm:pb-32 md:pt-0 md:pb-0">
+    <section className="w-full flex flex-col md:flex-row md:h-[650px] bg-[#000000]">
+      <div className="w-[100%] md:w-[60%] text-[#ffffff] flex items-center pt-28 pb-36 sm:pb-32 md:pt-0 md:pb-0">
         <div
           className={`${
             locale === "ar" ? "mr-[10%] xl:mr-[18%]" : "ml-[10%] xl:ml-[18%]"
           }`}
         >
-          <h1 className="text-3xl sm:text-5xl xl:text-6xl font-semibold text-white sm:mb-2">
+          <div className="mb-3">
+            <TrustPilot />
+          </div>
+          <h1 className="text-3xl sm:text-5xl xl:text-6xl font-semibold text-[#ffffff] sm:mb-2">
             {t("title1")}
           </h1>
-          <h2 className="text-3xl sm:text-5xl xl:text-6xl font-semibold text-primary">
+          <h2 className="text-3xl sm:text-5xl xl:text-6xl font-semibold text-[#FED100]">
             {" "}
             {t("title2")}
           </h2>
-          <p className="text-lg sm:text-xl my-4">
+          <p className="text-lg sm:text-xl my-4 text-[#c6c6c6]">
             <span className="text-[#c6c6c6]">{t("subtitle_p1")}</span>
             {t("subtitle_p2")}
             <br />
@@ -38,7 +42,7 @@ const Banner = () => {
                 }`
               )
             }
-            className="py-3 bg-white text-black rounded-lg hover:bg-primary w-[100%] md:w-[157px]"
+            className="py-3 custom-button w-[100%] md:w-[157px]"
           >
             {t("start_btn")}
           </button>
@@ -76,7 +80,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className="w-[100%] md:w-[40%] bg-[#fed100] flex justify-center items-center pb-32">
+      <div className="w-[100%] md:w-[40%] flex justify-center items-center pb-32">
         <Image
           unoptimized={true}
           src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/demo-account/fac-top-banner.webp"
