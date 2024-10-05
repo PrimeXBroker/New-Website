@@ -46,38 +46,6 @@ const Banner = () => {
           >
             {t("start_btn")}
           </button>
-          <div className="w-full h-[100px] bg-black flex flex-col justify-between mt-6">
-            <div className="flex flex-row items-center gap-2 mb-1">
-              <div>
-                <Image
-                  src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/demo-account/trustpilot-logo.svg"
-                  alt="Trustpilot Logo"
-                  width={80}
-                  height={80}
-                />
-              </div>
-              <div>
-                <span className="text-xs">{t("rated_title")}</span>
-              </div>
-            </div>
-            <div className="flex items-center mb-2">
-              <Image
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/demo-account/reviews.svg"
-                alt="Reviews"
-                width={180}
-                height={180}
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xs mb-1">{t("reviewed_title")}</span>
-              <Image
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/demo-account/fac-testi.webp"
-                alt="User Testimonials"
-                width={120}
-                height={120}
-              />
-            </div>
-          </div>
         </div>
       </div>
       <div className="w-[100%] md:w-[40%] flex justify-center items-center pb-32">
