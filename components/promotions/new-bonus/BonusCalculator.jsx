@@ -127,7 +127,11 @@ function BonusCalculator() {
           <div className="flex flex-col flex-1 gap-12 justify-between bg-[#111111] border-3 border-[#1D1D1D] py-8 px-8 rounded-lg">
             <h2 className="text-[24px] font-semibold text-[#ffffff]">
               {t("deposit_calculator")}{" "}
-              <span className="text-[#FED100]">{t("deposit_calculator1")}</span>
+              <span
+                className={`text-[#FED100] ${locale === "ar" ? "hidden" : ""}`}
+              >
+                {t("deposit_calculator1")}
+              </span>
             </h2>
             <div>
               <label className="text-xs text-[#c6c6c6]">

@@ -326,6 +326,16 @@
       "para2": "请更新您的书签。",
       "para3": "愉快的交易！",
       "acknowledged": "已确认"
+    },
+    "partnerships": {
+      "title1": "通过",
+      "title2": "PrimeX",
+      "title3": "合作伙伴",
+      "title4": "计划赚取丰厚收益！",
+      "description": "通过灵活的佣金结构、高额返利、全天候专属支持、令人兴奋的奖励计划和独家福利，最大化您的收入，尽在PrimeX合作伙伴计划！",
+      "ib_btn": "介绍经纪人计划",
+      "grey_label_btn": "灰标计划",
+      "regional_btn": "区域合作伙伴计划"
     }
   },
   "academy": {
