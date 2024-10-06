@@ -8,6 +8,7 @@ const CompetitionWidget = () => {
       "https://ratings.primexcapital.com/widgets/assets/js/iframeResizer.js";
     script.async = true;
     document.body.appendChild(script);
+
     return () => {
       document.body.removeChild(script);
     };
@@ -19,7 +20,7 @@ const CompetitionWidget = () => {
         <iframe
           id="widgetFrame"
           style={{ minWidth: "100%" }}
-          src="https://ratings.primexcapital.com/widgets/ratings?widgetKey=fund-oct&theme=light&lang=en"
+          src="https://ratings.primexcapital.com/widgets/ratings?widgetKey=fund-oct&theme=dark&lang=en"
           scrolling="no"
           frameBorder="0"
           onLoad={() => {

@@ -136,7 +136,7 @@ const JoinPrimex = () => {
           </div>
           <div className="col-span-12 lg:col-span-5 sm:flex justify-center mt-8 lg:mt-0 hidden">
             <Image
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/join_banner.webp"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/mt5-banner-mbl.webp"
               width="470"
               height="300"
               alt="banner Image"
