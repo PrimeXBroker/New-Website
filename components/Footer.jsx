@@ -365,7 +365,9 @@ const Footer = () => {
                         <li
                           key={linkIndex}
                           className={`text-white py-1 ${
-                            language === "ar" || locale === "fa"
+                            language === "ar" ||
+                            locale === "fa" ||
+                            locale === "kur"
                               ? "text-right"
                               : "text-left"
                           }`}
@@ -389,7 +391,9 @@ const Footer = () => {
                       <li
                         key={linkIndex}
                         className={`text-white py-1 ${
-                          language === "ar" || locale === "fa"
+                          language === "ar" ||
+                          locale === "fa" ||
+                          locale === "kur"
                             ? "text-right"
                             : "text-left"
                         }`}
