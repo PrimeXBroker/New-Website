@@ -88,7 +88,9 @@ const HaveQuestion = () => {
           >
             <div
               className={`flex ${
-                locale === "ar" ? "justify-right" : "justify-end"
+                locale === "ar" || locale === "fa" || locale === "kur"
+                  ? "justify-right"
+                  : "justify-end"
               }`}
             >
               <Image
@@ -102,14 +104,18 @@ const HaveQuestion = () => {
             <div className="">
               <h3
                 className={`sectionHeading text-xl  ${
-                  locale === "ar" ? "text-right pr-4" : "text-left pl-4 "
+                  locale === "ar" || locale === "fa" || locale === "kur"
+                    ? "text-right pr-4"
+                    : "text-left pl-4 "
                 }`}
               >
                 {card.title}
               </h3>
               <p
                 className={`sectionPara text-sm ${
-                  locale === "ar" ? "text-right pr-4" : "text-left pl-4 "
+                  locale === "ar" || locale === "fa" || locale === "kur"
+                    ? "text-right pr-4"
+                    : "text-left pl-4 "
                 }`}
               >
                 {card.description}

@@ -11,7 +11,7 @@ const ReadyToDive = ({ title, description }) => {
       <div className="max-w-2xl">
         <h2
           className={`sectionHeading text-2xl ${
-            locale === "ar"
+            locale === "ar" || locale === "fa" || locale === "kur"
               ? "text-center md:text-right"
               : "text-center md:text-left"
           }`}
@@ -20,7 +20,7 @@ const ReadyToDive = ({ title, description }) => {
         </h2>
         <p
           className={`sectionpara ${
-            locale === "ar"
+            locale === "ar" || locale === "fa" || locale === "kur"
               ? "text-center md:text-right"
               : "text-center md:text-left"
           }`}

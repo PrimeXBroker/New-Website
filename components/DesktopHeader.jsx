@@ -14,12 +14,25 @@ const DesktopHeader = ({ locale }) => {
   const pathnameWithoutLocale = pathname.replace(`/${locale}`, "");
   const [isSticky, setIsSticky] = useState(false);
   const [language, setLanguage] = useState({
-    text: locale === "ar" ? "عربي" : locale === "cn" ? "中文" : "English",
+    text:
+      locale === "ar"
+        ? "عربي"
+        : locale === "cn"
+        ? "中文"
+        : locale === "fa"
+        ? "فارسی"
+        : locale === "kur"
+        ? "Kurdish"
+        : "English",
     flag:
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
         : locale === "cn"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
+        : locale === "fa"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
+        : locale === "kur"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
         : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
   });
   const router = useRouter();
@@ -78,12 +91,24 @@ const DesktopHeader = ({ locale }) => {
 
   useEffect(() => {
     const text =
-      locale === "ar" ? "عربي" : locale === "cn" ? "中文" : "English";
+      locale === "ar"
+        ? "عربي"
+        : locale === "cn"
+        ? "中文"
+        : locale === "fa"
+        ? "فارسی"
+        : locale === "kur"
+        ? "Kurdish"
+        : "English";
     const flag =
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
         : locale === "cn"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
+        : locale === "fa"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
+        : locale === "kur"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
         : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg";
     const initialLanguage = { text, flag };
     setLanguage(initialLanguage);
@@ -124,7 +149,9 @@ const DesktopHeader = ({ locale }) => {
                 {t("trading")}
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" ? "mr-1" : "ml-1"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-1"
+                      : "ml-1"
                   }`}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -191,7 +218,9 @@ const DesktopHeader = ({ locale }) => {
                 {t("platform")}
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" ? "mr-1" : "ml-1"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-1"
+                      : "ml-1"
                   }`}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -230,7 +259,9 @@ const DesktopHeader = ({ locale }) => {
                 {t("partners")}
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" ? "mr-1" : "ml-1"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-1"
+                      : "ml-1"
                   }`}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -241,7 +272,9 @@ const DesktopHeader = ({ locale }) => {
               {activeDropdown === 2 && (
                 <ul
                   className={`absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] ${
-                    locale === "ar" ? "min-w-[250px]" : "min-w-[250px]"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "min-w-[250px]"
+                      : "min-w-[250px]"
                   } rounded-[6px]`}
                 >
                   <li>
@@ -300,7 +333,9 @@ const DesktopHeader = ({ locale }) => {
                 {t("promotion")}
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" ? "mr-1" : "ml-1"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-1"
+                      : "ml-1"
                   }`}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -359,7 +394,9 @@ const DesktopHeader = ({ locale }) => {
               )
             }
             className={`group ${
-              locale === "ar" ? "w-[140px]" : "w-[120px]"
+              locale === "ar" || locale === "fa" || locale === "kur"
+                ? "w-[140px]"
+                : "w-[120px]"
             }   py-[6px] custom-button`}
           >
             {t("login")}
@@ -375,7 +412,9 @@ const DesktopHeader = ({ locale }) => {
               )
             }
             className={`group ${
-              locale === "ar" ? "w-[140px]" : "w-[120px]"
+              locale === "ar" || locale === "fa" || locale === "kur"
+                ? "w-[140px]"
+                : "w-[120px]"
             }   py-[6px] custom-button`}
           >
             {t("register")}
@@ -397,13 +436,19 @@ const DesktopHeader = ({ locale }) => {
                   alt={`${language.text} flag`}
                 />
                 <span
-                  className={`${locale === "ar" ? "mr-[5px]" : "ml-[5px]"}`}
+                  className={`${
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-[5px]"
+                      : "ml-[5px]"
+                  }`}
                 >
                   {language.text}
                 </span>
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" ? "mr-1" : "ml-1"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-1"
+                      : "ml-1"
                   }`}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -412,7 +457,7 @@ const DesktopHeader = ({ locale }) => {
                 </svg>
               </button>
               {activeDropdown === 5 && (
-                <ul className="absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
+                <ul className="absolute top-full mt-[20px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
                   <li>
                     <Link
                       href={
@@ -489,6 +534,58 @@ const DesktopHeader = ({ locale }) => {
                         alt="chinese flag"
                       />
                       <span className="ml-[5px]">中文</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={
+                        currentLocale === "fa"
+                          ? `/${currentLocale}/${restOfPath}`
+                          : `/fa/${restOfPath}`
+                      }
+                      onClick={() =>
+                        handleClick(
+                          "فارسی",
+                          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
+                        )
+                      }
+                      className="px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
+                      dir="ltr"
+                    >
+                      <Image
+                        unoptimized={true}
+                        width="16"
+                        height="16"
+                        src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
+                        alt="farsi flag"
+                      />
+                      <span className="ml-[5px]">فارسی</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={
+                        currentLocale === "kur"
+                          ? `/${currentLocale}/${restOfPath}`
+                          : `/kur/${restOfPath}`
+                      }
+                      onClick={() =>
+                        handleClick(
+                          "Kurdish",
+                          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
+                        )
+                      }
+                      className="px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
+                      dir="ltr"
+                    >
+                      <Image
+                        unoptimized={true}
+                        width="16"
+                        height="16"
+                        src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
+                        alt="kurdish flag"
+                      />
+                      <span className="ml-[5px]">Kurdish</span>
                     </Link>
                   </li>
                 </ul>

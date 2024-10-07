@@ -185,9 +185,13 @@ const RewardsSlider = () => {
         </Swiper>
         <div
           className={`review-swiper-navigation-buttons flex gap-4 w-fit ${
-            locale === "ar" ? "float-left" : "float-right"
+            locale === "ar" || locale === "fa" || locale === "kur"
+              ? "float-left"
+              : "float-right"
           } relative bottom-[37px] z-[10]`}
-          dir={locale === "ar" ? "ltr" : ""}
+          dir={
+            locale === "ar" || locale === "fa" || locale === "kur" ? "ltr" : ""
+          }
         >
           <button className="swiper-button-prev group">
             <IoMdArrowBack className="text-[#FED100] group-hover:text-[#111111]" />

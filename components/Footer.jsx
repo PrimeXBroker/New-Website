@@ -69,12 +69,15 @@ const Footer = () => {
           { name: t("company.title_part1_link1"), href: "/about" },
           { name: t("company.title_part1_link2"), href: "/contact" },
           { name: t("company.title_part1_link3"), href: "/awards" },
-          {
+          (locale === "en" || locale === "ar") && {
             name: t("company.title_part1_link4"),
             href: `/${locale}/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e/`,
           },
-          { name: t("company.title_part1_link5"), href: "/careers" },
-        ],
+          (locale === "en" || locale === "ar") && {
+            name: t("company.title_part1_link5"),
+            href: "/careers",
+          },
+        ].filter(Boolean),
       },
     },
     {
@@ -255,7 +258,7 @@ const Footer = () => {
                   ? "text-[#ffffff]"
                   : "text-secondary"
               } font-semibold ${
-                locale === "ar"
+                locale === "ar" || locale === "fa" || locale === "kur"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -276,7 +279,7 @@ const Footer = () => {
                   ? "text-[#dfdfdf]"
                   : "text-secondary"
               } ${
-                locale === "ar"
+                locale === "ar" || locale === "fa" || locale === "kur"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -341,7 +344,9 @@ const Footer = () => {
               >
                 <p
                   className={`text-primary font-semibold md:pt-0 pt-5 ${
-                    locale === "ar" ? "text-right" : "text-left"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "text-right"
+                      : "text-left"
                   }`}
                 >
                   {el.column.heading}
@@ -350,7 +355,9 @@ const Footer = () => {
                 {el.column.heading === "Platform" ? (
                   <ul
                     className={`pt-0 md:pt-2 ${
-                      locale === "ar" ? "text-right" : "text-left"
+                      locale === "ar" || locale === "fa" || locale === "kur"
+                        ? "text-right"
+                        : "text-left"
                     }`}
                   >
                     {el.column.links.map((link, linkIndex) => {
@@ -358,7 +365,9 @@ const Footer = () => {
                         <li
                           key={linkIndex}
                           className={`text-white py-1 ${
-                            language === "ar" ? "text-right" : "text-left"
+                            language === "ar" || locale === "fa"
+                              ? "text-right"
+                              : "text-left"
                           }`}
                         >
                           <a target="_blank" href={link.href}>
@@ -371,14 +380,18 @@ const Footer = () => {
                 ) : (
                   <ul
                     className={`pt-0 md:pt-2 footer ${
-                      locale === "ar" ? "text-right" : "text-left"
+                      locale === "ar" || locale === "fa" || locale === "kur"
+                        ? "text-right"
+                        : "text-left"
                     }`}
                   >
                     {el.column.links.map((link, linkIndex) => (
                       <li
                         key={linkIndex}
                         className={`text-white py-1 ${
-                          language === "ar" ? "text-right" : "text-left"
+                          language === "ar" || locale === "fa"
+                            ? "text-right"
+                            : "text-left"
                         }`}
                       >
                         <LocaleLink href={link.href}>{link.name}</LocaleLink>

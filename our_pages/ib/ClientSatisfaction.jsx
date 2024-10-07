@@ -25,7 +25,9 @@ const ClientSatisfaction = () => {
               </h2>
               <h2
                 className={`text-2xl sm:text-3xl lg:text-5xl font-semibold text-[#FED100] mb-2 ${
-                  locale === "ar" ? "hidden" : ""
+                  locale === "ar" || locale === "fa" || locale === "kur"
+                    ? "hidden"
+                    : ""
                 }`}
               >
                 {t("main_title5")}
@@ -41,7 +43,11 @@ const ClientSatisfaction = () => {
             <h2 className="text-2xl sm:text-3xl lg:text-5xl font-semibold text-[#ffffff] mb-2">
               {t("main_title4")}
               <span
-                className={`text-[#FED100] ${locale === "ar" ? "hidden" : ""}`}
+                className={`text-[#FED100] ${
+                  locale === "ar" || locale === "fa" || locale === "kur"
+                    ? "hidden"
+                    : ""
+                }`}
               >
                 {" "}
                 {t("main_title5")}
@@ -53,7 +59,9 @@ const ClientSatisfaction = () => {
               <div>
                 <div
                   className={`bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#ffffff] flex flex-col gap-2 sm:w-[400px] h-[px] group ${
-                    locale === "ar" ? "mr-auto ml-0" : "ml-auto mr-0"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-auto ml-0"
+                      : "ml-auto mr-0"
                   }`}
                 >
                   <div className="flex justify-between items-center">
@@ -81,7 +89,9 @@ const ClientSatisfaction = () => {
               <div>
                 <div
                   className={`bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#ffffff] flex flex-col gap-2 sm:w-[400px] h-[px] group ${
-                    locale === "ar" ? "mr-auto ml-0" : "ml-auto mr-0"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-auto ml-0"
+                      : "ml-auto mr-0"
                   }`}
                 >
                   <div className="flex justify-between items-center">
@@ -109,7 +119,9 @@ const ClientSatisfaction = () => {
               <div>
                 <div
                   className={`bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#ffffff] flex flex-col gap-2 sm:w-[400px] h-[px] group ${
-                    locale === "ar" ? "mr-auto ml-0" : "ml-auto mr-0"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-auto ml-0"
+                      : "ml-auto mr-0"
                   }`}
                 >
                   <div className="flex justify-between items-center">
@@ -137,7 +149,9 @@ const ClientSatisfaction = () => {
               <div>
                 <div
                   className={`bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#ffffff] flex flex-col gap-2 sm:w-[400px] h-[px] group ${
-                    locale === "ar" ? "mr-auto ml-0" : "ml-auto mr-0"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-auto ml-0"
+                      : "ml-auto mr-0"
                   }`}
                 >
                   <div className="flex justify-between items-center">
@@ -165,7 +179,9 @@ const ClientSatisfaction = () => {
               <div>
                 <div
                   className={`bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#ffffff] flex flex-col gap-2 sm:w-[400px] h-[px] group ${
-                    locale === "ar" ? "mr-auto ml-0" : "ml-auto mr-0"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-auto ml-0"
+                      : "ml-auto mr-0"
                   } `}
                 >
                   <div className="flex justify-between items-center">

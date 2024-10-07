@@ -15,7 +15,7 @@ const Banner = () => {
             <div className="col-span-12 md:col-span-6 lg:col-span-5">
               <div
                 className={`${
-                  locale === "ar"
+                  locale === "ar" || locale === "fa" || locale === "kur"
                     ? "text-center md:text-right"
                     : "text-center md:text-left"
                 }`}

@@ -155,7 +155,7 @@ const Rewards = () => {
               <Image
                 unoptimized={true}
                 src={`${
-                  locale === "ar"
+                  locale === "ar" || locale === "fa" || locale === "kur"
                     ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Inverse-Maldives-Ar.svg"
                     : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Maldives.svg"
                 }`}
@@ -179,7 +179,7 @@ const Rewards = () => {
               <Image
                 unoptimized={true}
                 src={`${
-                  locale === "ar"
+                  locale === "ar" || locale === "fa" || locale === "kur"
                     ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Inverse-europe-Ar.svg"
                     : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Europe.svg"
                 }`}

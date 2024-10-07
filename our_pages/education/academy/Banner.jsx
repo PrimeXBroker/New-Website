@@ -16,7 +16,7 @@ const Banner = ({ setActive }) => {
           <div className="max-w-2xl flex flex-col justify-center items-start gap-6 md:w-[70%]">
             <h1
               className={`text-primary text-xl md:text-3xl font-semibold ${
-                locale === "ar"
+                locale === "ar" || locale === "fa" || locale === "kur"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -35,7 +35,7 @@ const Banner = ({ setActive }) => {
             </h1>
             <p
               className={`text-white md:text-lg text-medium md:max-w-xl ${
-                locale === "ar"
+                locale === "ar" || locale === "fa" || locale === "kur"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}

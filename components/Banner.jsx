@@ -21,7 +21,7 @@ const Banner = ({
         <div className="md:w-[40%]">
           <h1
             className={`${titleColor} text-xl md:text-3xl font-semibold mb-5 ${
-              locale === "ar"
+              locale === "ar" || locale === "fa" || locale === "kur"
                 ? "md:text-right text-center"
                 : "md:text-left text-center"
             }`}
@@ -31,7 +31,7 @@ const Banner = ({
           </h1>
           <p
             className={`${descriptionColor} text-lg font-[500]  ${
-              locale === "ar"
+              locale === "ar" || locale === "fa" || locale === "kur"
                 ? "md:text-right text-center"
                 : "md:text-left text-center"
             }`}

@@ -13,7 +13,9 @@ const Banner = () => {
       <div className="w-[100%] md:w-[60%] text-[#ffffff] flex items-center pt-28 pb-36 sm:pb-32 md:pt-0 md:pb-0">
         <div
           className={`${
-            locale === "ar" ? "mr-[10%] xl:mr-[18%]" : "ml-[10%] xl:ml-[18%]"
+            locale === "ar" || locale === "fa" || locale === "kur"
+              ? "mr-[10%] xl:mr-[18%]"
+              : "ml-[10%] xl:ml-[18%]"
           }`}
         >
           <div className="mb-3">
@@ -56,7 +58,9 @@ const Banner = () => {
           height="300"
           alt="banner Image"
           className={`w-[80%] sm:w-[70%] md:w-[100%] object-contain relative top-[-95px] sm:top-[-140px] md:top-[8%] ${
-            locale === "ar" ? "md:left-[50%]" : "md:right-[50%] "
+            locale === "ar" || locale === "fa" || locale === "kur"
+              ? "md:left-[50%]"
+              : "md:right-[50%] "
           }`}
         />
       </div>

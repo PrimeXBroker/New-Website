@@ -12,7 +12,7 @@ const AboutBanner = () => {
         <div className="md:w-[45%]">
           <h1
             className={`text-[#FED100] text-xl md:text-3xl font-semibold mb-5 ${
-              locale === "ar"
+              locale === "ar" || locale === "fa" || locale === "kur"
                 ? "md:text-right text-center"
                 : "md:text-left text-center"
             }`}
@@ -22,7 +22,7 @@ const AboutBanner = () => {
           </h1>
           <p
             className={`text-[#c6c6c6] text-[15px] font-[500] ${
-              locale === "ar"
+              locale === "ar" || locale === "fa" || locale === "kur"
                 ? "md:text-right text-center"
                 : "md:text-left text-center"
             }`}

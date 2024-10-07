@@ -32,7 +32,9 @@ const BonusFormWrapper = () => {
         </div>
         <div
           className={`col-span-12 lg:col-span-6 mb-7 lg:mb-0 text-center lg:text-start ${
-            locale === "ar" ? "mr-20" : "ml-20"
+            locale === "ar" || locale === "fa" || locale === "kur"
+              ? "mr-20"
+              : "ml-20"
           }`}
         >
           {/* <div className="bg-[#1D1D1D] inline-block px-[20px] py-[6px] rounded-full mb-5">

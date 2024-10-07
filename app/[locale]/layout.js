@@ -128,7 +128,14 @@ export async function generateMetadata({ params: { locale } }) {
 
 export default async function layout({ children, params: { locale } }) {
   const messages = await getMessages();
-  const direction = locale === "ar" ? "rtl" : "ltr";
+  const detectLanguage = () => {
+    if (locale === "ar" || locale === "fa" || locale === "kur") {
+      return "rtl";
+    } else {
+      return "ltr";
+    }
+  };
+  const direction = detectLanguage();
 
   return (
     <html

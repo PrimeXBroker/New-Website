@@ -46,7 +46,7 @@ const Banner = () => {
                 }`}
                 target="_blank"
                 className={`text-xs text-[#ffffff] font-normal block mt-2 ${
-                  locale === "ar"
+                  locale === "ar" || locale === "fa" || locale === "kur"
                     ? "text-center md:text-start mr-6"
                     : "text-center md:text-start md:ml-6"
                 }`}

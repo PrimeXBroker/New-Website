@@ -29,7 +29,7 @@ const Featured = ({ title, cardsData }) => {
             >
               <div
                 className={`flex mb-4 ${
-                  locale === "ar"
+                  locale === "ar" || locale === "fa" || locale === "kur"
                     ? "justify-center sm:justify-right"
                     : "justify-center sm:justify-left"
                 }`}
@@ -44,7 +44,7 @@ const Featured = ({ title, cardsData }) => {
               </div>
               <h3
                 className={`sectionHeading text-xl group-hover:text-white ${
-                  locale === "ar"
+                  locale === "ar" || locale === "fa" || locale === "kur"
                     ? "text-center sm:text-right"
                     : "text-center sm:text-left"
                 }`}
@@ -53,7 +53,7 @@ const Featured = ({ title, cardsData }) => {
               </h3>
               <p
                 className={`sectionPara text-sm group-hover:text-white ${
-                  locale === "ar"
+                  locale === "ar" || locale === "fa" || locale === "kur"
                     ? "text-center md:text-right"
                     : "text-center md:text-left"
                 }`}

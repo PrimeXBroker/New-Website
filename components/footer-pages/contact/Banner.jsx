@@ -14,7 +14,7 @@ const ContactBanner = () => {
         <div className="md:w-[45%]">
           <h1
             className={`text-primary text-xl md:text-3xl font-semibold mb-5 ${
-              locale === "ar"
+              locale === "ar" || locale === "fa" || locale === "kur"
                 ? "md:text-right text-center"
                 : "md:text-left text-center"
             }`}
@@ -24,7 +24,7 @@ const ContactBanner = () => {
           </h1>
           <p
             className={`text-white text-lg font-[500] ${
-              locale === "ar"
+              locale === "ar" || locale === "fa" || locale === "kur"
                 ? "md:text-right text-center"
                 : "md:text-left text-center"
             }`}
@@ -34,7 +34,7 @@ const ContactBanner = () => {
           </p>
           <div
             className={`mt-10 ${
-              locale === "ar"
+              locale === "ar" || locale === "fa" || locale === "kur"
                 ? "text-center md:text-right"
                 : "text-center md:text-left"
             }`}

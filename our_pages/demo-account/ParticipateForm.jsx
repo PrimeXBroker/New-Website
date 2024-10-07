@@ -24,7 +24,7 @@ const ParticipateForm = () => {
           </div>
           <div
             className={`col-span-12 sm:col-start-2 lg:col-start-0 sm:col-span-10 lg:col-span-6 flex flex-col mx-auto ${
-              locale === "ar"
+              locale === "ar" || locale === "fa" || locale === "kur"
                 ? "pr-[20px] md:pl-[173px]"
                 : "pr-[20px] md:pr-[173px]"
             }`}

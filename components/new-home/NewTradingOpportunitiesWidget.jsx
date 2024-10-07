@@ -77,7 +77,9 @@ const TradingOpportunitiesWidget = () => {
       <div className="container bg-[#000000] grid grid-cols-1 lg:grid-cols-2 items-center">
         <div
           className={`mb-5 text-center md:text-center block lg:hidden ${
-            locale === "ar" ? "lg:mr-[120px]" : "lg:ml-[120px]"
+            locale === "ar" || locale === "fa" || locale === "kur"
+              ? "lg:mr-[120px]"
+              : "lg:ml-[120px]"
           }`}
         >
           <h2 className="text-2xl md:text-3xl lg:text-7xl xl:text-8xl mb-2 text-[#ffffff] font-semibold">
@@ -119,7 +121,9 @@ const TradingOpportunitiesWidget = () => {
                 </span>
                 <span
                   className={`whitespace-nowrap ${
-                    locale === "ar" ? "mr-2" : "ml-2"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-2"
+                      : "ml-2"
                   }`}
                   style={{ fontWeight: "500" }}
                 >
@@ -160,7 +164,11 @@ const TradingOpportunitiesWidget = () => {
                           >
                             <div
                               className={`w-[40px] h-[40px] bg-[#3C3C3C] ${
-                                locale === "ar" ? "ml-3" : "mr-3"
+                                locale === "ar" ||
+                                locale === "fa" ||
+                                locale === "kur"
+                                  ? "ml-3"
+                                  : "mr-3"
                               }`}
                             >
                               <Image
@@ -242,7 +250,9 @@ const TradingOpportunitiesWidget = () => {
         </div>
         <div
           className={`mb-5 hidden lg:block ${
-            locale === "ar" ? "lg:mr-[120px]" : "lg:ml-[120px]"
+            locale === "ar" || locale === "fa" || locale === "kur"
+              ? "lg:mr-[120px]"
+              : "lg:ml-[120px]"
           }`}
         >
           <h2 className=" text-3xl md:text-4xl lg:text-7xl xl:text-8xl mb-2 text-[#ffffff] font-semibold">

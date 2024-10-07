@@ -171,7 +171,13 @@ const Testimonials = () => {
                   <div className="w-10 h-10 p-4 rounded-full bg-[#FED100] flex items-center justify-center text-xl font-bold">
                     {review.profile}
                   </div>
-                  <div className={`${locale === "ar" ? "mr-4" : "ml-4"}`}>
+                  <div
+                    className={`${
+                      locale === "ar" || locale === "fa" || locale === "kur"
+                        ? "mr-4"
+                        : "ml-4"
+                    }`}
+                  >
                     <div className="font-semibold text-[#ffffff]">
                       {review.name}
                     </div>
@@ -197,7 +203,9 @@ const Testimonials = () => {
                   />
                   <div
                     className={`text-sm text-[#c6c6c6] ${
-                      locale === "ar" ? "mr-auto" : "ml-auto"
+                      locale === "ar" || locale === "fa" || locale === "kur"
+                        ? "mr-auto"
+                        : "ml-auto"
                     }`}
                   >
                     {review.date}
@@ -217,9 +225,13 @@ const Testimonials = () => {
         </Swiper>
         <div
           className={`review-swiper-navigation-buttons flex gap-4 w-fit ${
-            locale === "ar" ? "float-left" : "float-right"
+            locale === "ar" || locale === "fa" || locale === "kur"
+              ? "float-left"
+              : "float-right"
           } relative bottom-[37px] z-[10] `}
-          dir={locale === "ar" ? "ltr" : ""}
+          dir={
+            locale === "ar" || locale === "fa" || locale === "kur" ? "ltr" : ""
+          }
         >
           <button className="swiper-button-prev group">
             <IoMdArrowBack className="text-[#FED100] group-hover:text-[#111111] " />

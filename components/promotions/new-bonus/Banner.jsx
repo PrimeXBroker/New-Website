@@ -20,7 +20,7 @@ const Banner = () => {
               </div>
               <div
                 className={`${
-                  locale === "ar"
+                  locale === "ar" || locale === "fa" || locale === "kur"
                     ? "text-center md:text-right"
                     : "text-center md:text-left"
                 }`}
@@ -34,7 +34,7 @@ const Banner = () => {
               </div>
               <div
                 className={`${
-                  locale === "ar"
+                  locale === "ar" || locale === "fa" || locale === "kur"
                     ? "text-center md:text-right"
                     : "text-center md:text-left"
                 }`}
@@ -54,7 +54,7 @@ const Banner = () => {
               />
               <div
                 className={`relative top-[-40px] sm:top-[-46px] lg:top-[-59px] ${
-                  locale === "ar"
+                  locale === "ar" || locale === "fa" || locale === "kur"
                     ? "left-[-0%] sm:left-[-3%] lg:left-[16%]"
                     : "right-[-0%] sm:right-[-3%] lg:right-[16%]"
                 }`}

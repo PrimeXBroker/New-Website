@@ -13,7 +13,7 @@ const Banner = ({ title, description, imgUrl }) => {
         <div className="w-full lg:max-w-xl flex flex-col justify-center">
           <h1
             className={`sectionHeading text-primary ${
-              locale === "ar"
+              locale === "ar" || locale === "fa" || locale === "kur"
                 ? "text-center lg:text-right"
                 : "text-center lg:text-left"
             }`}
@@ -22,7 +22,7 @@ const Banner = ({ title, description, imgUrl }) => {
           </h1>
           <p
             className={`sectionPara text-accent pb-4 ${
-              locale === "ar"
+              locale === "ar" || locale === "fa" || locale === "kur"
                 ? "text-center lg:text-right"
                 : "text-center lg:text-left"
             }`}

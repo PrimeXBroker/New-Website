@@ -11,7 +11,7 @@ const WhyTrade = ({ title, description, imgUrl }) => {
         <div className="max-w-xl">
           <h2
             className={`sectionHeading ${
-              locale === "ar"
+              locale === "ar" || locale === "fa" || locale === "kur"
                 ? "text-center md:text-right"
                 : "text-center md:text-left"
             }`}
@@ -20,7 +20,7 @@ const WhyTrade = ({ title, description, imgUrl }) => {
           </h2>
           <p
             className={`sectionPara md:text-lg text-sm  ${
-              locale === "ar"
+              locale === "ar" || locale === "fa" || locale === "kur"
                 ? "text-center md:text-right"
                 : "text-center md:text-left"
             }`}

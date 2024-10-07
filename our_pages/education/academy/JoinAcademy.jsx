@@ -29,7 +29,7 @@ const JoinAcademy = ({ setActive }) => {
       <div className="flex-1 md:max-w-sm">
         <h2
           className={`sectionHeading md:text-2xl text-secondary font-semibold pb-4 ${
-            locale === "ar"
+            locale === "ar" || locale === "fa" || locale === "kur"
               ? "text-center md:text-right"
               : "text-center md:text-left"
           }`}
@@ -38,7 +38,7 @@ const JoinAcademy = ({ setActive }) => {
         </h2>
         <p
           className={`md:text-lg text-secondary font-[600] ${
-            locale === "ar"
+            locale === "ar" || locale === "fa" || locale === "kur"
               ? "text-center md:text-right"
               : "text-center md:text-left"
           }`}
@@ -47,7 +47,7 @@ const JoinAcademy = ({ setActive }) => {
         </p>
         <p
           className={`md:text-lg text-secondary font-[400] ${
-            locale === "ar"
+            locale === "ar" || locale === "fa" || locale === "kur"
               ? "text-center md:text-right"
               : "text-center md:text-left"
           }`}
@@ -68,7 +68,7 @@ const JoinAcademy = ({ setActive }) => {
       <div className="flex-1 md:max-w-sm">
         <h2
           className={`sectionHeading md:text-2xl text-secondary font-semibold pb-4 ${
-            locale === "ar"
+            locale === "ar" || locale === "fa" || locale === "kur"
               ? "text-center md:text-right"
               : "text-center md:text-left"
           }`}
@@ -77,7 +77,7 @@ const JoinAcademy = ({ setActive }) => {
         </h2>
         <p
           className={`md:text-lg text-secondary font-[600] ${
-            locale === "ar"
+            locale === "ar" || locale === "fa" || locale === "kur"
               ? "text-center md:text-right"
               : "text-center md:text-left"
           }`}
@@ -86,7 +86,7 @@ const JoinAcademy = ({ setActive }) => {
         </p>
         <p
           className={`md:text-lg text-secondary font-[400] ${
-            locale === "ar"
+            locale === "ar" || locale === "fa" || locale === "kur"
               ? "text-center md:text-right"
               : "text-center md:text-left"
           }`}
@@ -95,7 +95,9 @@ const JoinAcademy = ({ setActive }) => {
         </p>
         <div
           className={`flex mt-6 ${
-            locale === "ar" ? "justify-right" : "justify-left"
+            locale === "ar" || locale === "fa" || locale === "kur"
+              ? "justify-right"
+              : "justify-left"
           }`}
         >
           {/* Flex container to align items to the end (right) */}

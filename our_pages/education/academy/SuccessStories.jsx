@@ -135,7 +135,13 @@ const SuccessStories = () => {
                 <div className="w-10 h-10 p-4 rounded-full bg-white flex items-center justify-center text-xl font-bold">
                   RA
                 </div>
-                <div className={`${locale === "ar" ? "mr-4" : "ml-4"}`}>
+                <div
+                  className={`${
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-4"
+                      : "ml-4"
+                  }`}
+                >
                   <div className="font-semibold">{review.name}</div>
                   <div className="text-sm text-gray-500">
                     {" "}
@@ -160,7 +166,9 @@ const SuccessStories = () => {
                 </div>
                 <div
                   className={`text-sm text-gray-500 ${
-                    locale === "ar" ? "mr-auto" : "ml-auto"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-auto"
+                      : "ml-auto"
                   }`}
                 >
                   {review.date}

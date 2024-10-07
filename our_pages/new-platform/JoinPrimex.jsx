@@ -14,7 +14,7 @@ const JoinPrimex = () => {
       <div className="container">
         <div
           className={`grid grid-cols-12 py-10 border-[#1D1D1D] border-2 bg-[#111111] rounded-[20px] ${
-            locale === "ar"
+            locale === "ar" || locale === "fa" || locale === "kur"
               ? "pr-5 lg:pr-10 pl-5 lg:pl-0"
               : "pl-5 lg:pl-10 pr-5 lg:pr-0"
           }`}
@@ -30,7 +30,7 @@ const JoinPrimex = () => {
           <div className="col-span-12 lg:col-span-7">
             <h2
               className={`text-[#ffffff] sm:max-w-sm sm:mx-auto lg:mx-0 text-2xl md:text-3xl font-semibold mb-5 ${
-                locale === "ar"
+                locale === "ar" || locale === "fa" || locale === "kur"
                   ? "text-center lg:text-right"
                   : "text-center lg:text-left"
               }`}
@@ -42,7 +42,7 @@ const JoinPrimex = () => {
             </h2>
             <p
               className={`text-[#c6c6c6] sm:max-w-xl sm:mx-auto lg:mx-0 text-sm sm:text-[15px] font-[500] ${
-                locale === "ar"
+                locale === "ar" || locale === "fa" || locale === "kur"
                   ? "text-center lg:text-right"
                   : "text-center lg:text-left"
               }`}
@@ -65,7 +65,9 @@ const JoinPrimex = () => {
                 />
                 <div
                   className={`text-[#ffffff] ${
-                    locale === "ar" ? "mr-3 text-right" : "ml-3 text-left"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-3 text-right"
+                      : "ml-3 text-left"
                   }`}
                 >
                   <p className="text-xs text-[#c6c6c6]">
@@ -93,7 +95,9 @@ const JoinPrimex = () => {
                 />
                 <div
                   className={`text-[#ffffff] ${
-                    locale === "ar" ? "mr-3 text-right" : "ml-3 text-left"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-3 text-right"
+                      : "ml-3 text-left"
                   }`}
                 >
                   <p className="text-xs text-[#c6c6c6]">
@@ -121,7 +125,9 @@ const JoinPrimex = () => {
                 />
                 <div
                   className={`text-[#ffffff] ${
-                    locale === "ar" ? "mr-3 text-right" : "ml-3 text-left"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-3 text-right"
+                      : "ml-3 text-left"
                   }`}
                 >
                   <p className="text-xs text-[#c6c6c6]">
