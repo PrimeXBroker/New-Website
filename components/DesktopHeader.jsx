@@ -554,8 +554,8 @@ const DesktopHeader = ({ locale }) => {
                     >
                       <Image
                         unoptimized={true}
-                        width="16"
-                        height="16"
+                        width="15"
+                        height="15"
                         src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
                         alt="farsi flag"
                       />
@@ -580,8 +580,8 @@ const DesktopHeader = ({ locale }) => {
                     >
                       <Image
                         unoptimized={true}
-                        width="16"
-                        height="16"
+                        width="18"
+                        height="18"
                         src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
                         alt="kurdish flag"
                       />

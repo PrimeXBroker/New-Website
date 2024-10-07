@@ -314,8 +314,8 @@ const MobileHeader = ({ locale }) => {
                       >
                         <Image
                           unoptimized={true}
-                          width="16"
-                          height="16"
+                          width="18"
+                          height="18"
                           src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
                           alt="kurdish flag"
                         />
@@ -530,8 +530,8 @@ const MobileHeader = ({ locale }) => {
                         >
                           <Image
                             unoptimized={true}
-                            width="16"
-                            height="16"
+                            width="18"
+                            height="18"
                             src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
                             alt="kurdish flag"
                           />
