@@ -22,7 +22,7 @@ const DesktopHeader = ({ locale }) => {
         : locale === "fa"
         ? "فارسی"
         : locale === "kur"
-        ? "Kurdish"
+        ? "کوردی"
         : "English",
     flag:
       locale === "ar"
@@ -98,7 +98,7 @@ const DesktopHeader = ({ locale }) => {
         : locale === "fa"
         ? "فارسی"
         : locale === "kur"
-        ? "Kurdish"
+        ? "کوردی"
         : "English";
     const flag =
       locale === "ar"
@@ -585,7 +585,7 @@ const DesktopHeader = ({ locale }) => {
                         src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
                         alt="kurdish flag"
                       />
-                      <span className="ml-[5px]">Kurdish</span>
+                      <span className="ml-[5px]">کوردی</span>
                     </Link>
                   </li>
                 </ul>
