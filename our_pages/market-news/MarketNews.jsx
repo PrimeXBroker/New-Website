@@ -5,6 +5,7 @@ import axios from "axios";
 import Moment from "react-moment";
 import { useLocale } from "next-intl";
 import { Pagination } from "@nextui-org/react";
+import Image from "next/image";
 
 const MarketNews = ({ slugEn, slugAr }) => {
   const [news, setNews] = useState([]);
@@ -75,9 +76,12 @@ const MarketNews = ({ slugEn, slugAr }) => {
             >
               <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out rounded-xl flex flex-col h-full">
                 <div>
-                  <img
+                  <Image
+                    unoptimized={true}
                     src={blog.image}
                     alt="PrimeX Capital"
+                    width="100"
+                    height="100"
                     className="w-full overflow-hidden transition duration-700 ease-in-out transform group-hover:scale-110"
                   />
                 </div>

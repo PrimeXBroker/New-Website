@@ -5,6 +5,7 @@ import axios from "axios";
 import Moment from "react-moment";
 import { useLocale } from "next-intl";
 import { Pagination } from "@nextui-org/react";
+import Image from "next/image";
 
 const ExpertAnalysis = ({ id }) => {
   const [loading, setLoading] = useState(true);
@@ -84,8 +85,11 @@ const ExpertAnalysis = ({ id }) => {
             >
               <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out rounded-xl flex flex-col h-full">
                 <div>
-                  <img
+                  <Image
+                    unoptimized={true}
                     src={blog.image}
+                    width="100"
+                    height="100"
                     alt="PrimeX Capital"
                     className="w-full overflow-hidden transition duration-700 ease-in-out transform group-hover:scale-110"
                   />
