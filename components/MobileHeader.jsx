@@ -14,6 +14,7 @@ const MobileHeader = ({ locale }) => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const [isSticky, setIsSticky] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const pathname = usePathname();
@@ -72,6 +73,11 @@ const MobileHeader = ({ locale }) => {
     } else {
       setIsSticky(false);
     }
+    const scrollTop = window.scrollY;
+    const docHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / docHeight) * 100;
+    setScrollProgress(progress);
   };
 
   useEffect(() => {
@@ -130,6 +136,10 @@ const MobileHeader = ({ locale }) => {
 
   return (
     <header className="container w-full z-50 transition-all duration-300 block lg:hidden fixed top-0 left-0">
+      <div
+        className="fixed top-0 left-0 h-[4px] bg-[#FED100] z-50"
+        style={{ width: `${scrollProgress}%` }}
+      ></div>
       <div className="container bg-[#1d1d1d] mt-[14px] h-[51px] rounded-[8px] flex items-center justify-between px-4">
         <div className="flex items-center">
           <LocaleLink href="/" className="logo" onClick={toggleDrawer}>

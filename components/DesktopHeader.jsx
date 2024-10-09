@@ -11,6 +11,7 @@ const DesktopHeader = ({ locale }) => {
   const t = useTranslations("menu");
   const [activeDropdown, setActiveDropdown] = useState(null);
   const pathname = usePathname();
+  const [scrollProgress, setScrollProgress] = useState(0);
   const pathnameWithoutLocale = pathname.replace(`/${locale}`, "");
   const [isSticky, setIsSticky] = useState(false);
   const [language, setLanguage] = useState({
@@ -59,6 +60,11 @@ const DesktopHeader = ({ locale }) => {
     } else {
       setIsSticky(false);
     }
+    const scrollTop = window.scrollY;
+    const docHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / docHeight) * 100;
+    setScrollProgress(progress);
   };
 
   useEffect(() => {
@@ -121,6 +127,10 @@ const DesktopHeader = ({ locale }) => {
         isSticky ? "fixed top-0 left-0" : "absolute top-0 left-0"
       }`}
     >
+      <div
+        className="fixed top-0 left-0 h-[4px] bg-[#FED100] z-50"
+        style={{ width: `${scrollProgress}%` }}
+      ></div>
       <div className="container bg-[#1d1d1d] mt-[14px] h-[51px] rounded-[8px] flex items-center justify-between">
         <div className="flex items-center">
           <LocaleLink href="/" className="logo">
