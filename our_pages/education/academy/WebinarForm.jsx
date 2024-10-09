@@ -157,7 +157,7 @@ function WebinarForm() {
               value={formik.values.first_name}
               placeholder={t("first_name")}
               className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none text-sm ${
-                formik.touched.full_name && formik.errors.full_name
+                formik.touched.first_name && formik.errors.first_name
                   ? "border-b border-red-600"
                   : ""
               }`}
@@ -172,7 +172,7 @@ function WebinarForm() {
               value={formik.values.last_name}
               placeholder={t("last_name")}
               className={`appearance-none border-b rounded w-full py-2 px-3 text-secondary focus:outline-none text-sm ${
-                formik.touched.full_name && formik.errors.full_name
+                formik.touched.last_name && formik.errors.last_name
                   ? "border-b border-red-600"
                   : ""
               }`}

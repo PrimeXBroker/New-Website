@@ -1296,3 +1296,42 @@
   background-repeat: no-repeat;
   background-position: bottom;
 } */
+
+/* .all-blogs-pagination li {
+  background-color: #1d1d1d !important;
+  border-radius: 4px !important;
+  border: 1px solid #222222 !important;
+  color: #ffffff !important;
+}
+
+.all-blogs-pagination li[data-active="true"] {
+  background-color: #ffffff !important;
+  border-radius: 4px !important;
+  border: 1px solid #c6c6c6 !important;
+  color: #111111 !important;
+} */
+
+.all-blogs-pagination li[data-active="true"] {
+  background-color: #ffffff !important;
+  border-radius: 4px !important;
+  border: 1px solid #c6c6c6 !important;
+  color: #111111 !important;
+}
+
+.all-blogs-pagination li {
+  background-color: #1d1d1d !important;
+  border-radius: 4px !important;
+  border: 1px solid #222222 !important;
+  color: #ffffff !important;
+}
+
+.all-blogs-pagination .nextui-pagination-item.nextui-pagination-item--active {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+}
+
+.relaed-blogs-bg {
+  background-image: url("https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/Desktop+BG+CTA.webp");
+  background-size: cover;
+  background-position: center;
+}

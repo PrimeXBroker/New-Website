@@ -4,6 +4,10 @@ import { EditorState, convertFromRaw, CompositeDecorator } from "draft-js";
 import { Editor as MyEditor } from "draft-js";
 import axios from "axios";
 import { useLocale } from "next-intl";
+import Moment from "react-moment";
+import Link from "next/link";
+import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 
 function AnalysisNewsBody({ slug }) {
   const locale = useLocale();
@@ -118,41 +122,99 @@ function AnalysisNewsBody({ slug }) {
 
   if (content) {
     return (
-      <div>
-        <img src={detail.image} className="mb-4" />
-        <h1 className="text-[25px] mb-0 font-semibold">
-          {locale === "ar" ? detail.titleAr : detail.titleEn}
-        </h1>
-        <MyEditor
-          editorState={content}
-          readOnly={true}
-          blockRendererFn={mediaBlockRenderer}
-        />
-
-        {slug === "65375aae3611bcf247769e8f" && (
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
+      <>
+        <div className="text-white py-8 px-4 pt-20 pb-10">
+          <Link
+            className="text-[#ffffff] hover:text-[#FED100] font-medium flex justify-center sm:justify-start items-center mb-4"
+            href={`/${locale}/academy`}
           >
-            <div className="about-button text-center" onClick={handleDownload}>
-              <Link legacyBehavior href="#">
-                <a
-                  style={{
-                    textAlign: "center",
-                    paddingRight: 30,
-                  }}
-                >
-                  {" "}
-                  {detail?.language === "ar" ? "تحميل الملف" : "Download file"}
-                </a>
-              </Link>
-            </div>
+            <span className={`${locale === "ar" ? "ml-2 " : "mr-2 "}`}>
+              {locale === "ar" ? <FaArrowRight /> : <FaArrowLeft />}
+            </span>
+            {locale === "ar" ? "العودة للأكاديمية" : "Back to Academy"}
+          </Link>
+
+          <div className="text-[#c6c6c6] text-sm mb-2 text-center">
+            <Moment
+              date={detail?.createdOn}
+              format={locale === "ar" ? "YYYY/MM/DD" : "DD/MM/YYYY"}
+            />{" "}
+            • 5 Min Read
           </div>
-        )}
-      </div>
+
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-semibold mb-6 text-center text-[#ffffff] w[96%] sm:w-[80%] mx-auto">
+            {locale === "ar" ? detail.titleAr : detail.titleEn}
+          </h2>
+          {/* <div className="flex items-center space-x-4">
+            <span className="text-gray-300">Share Article</span>
+            <a
+              href="#"
+              className="p-2 bg-gray-700 rounded-full hover:bg-gray-600"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="#"
+              className="p-2 bg-gray-700 rounded-full hover:bg-gray-600"
+            >
+              <FaLinkedinIn />
+            </a>
+            <a
+              href="#"
+              className="p-2 bg-gray-700 rounded-full hover:bg-gray-600"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="#"
+              className="p-2 bg-gray-700 rounded-full hover:bg-gray-600"
+            >
+              <FaLink />
+            </a>
+          </div> */}
+        </div>
+
+        <div className="text-[#ffffff]">
+          <img src={detail.image} className="mb-4" />
+          <h1 className="text-[25px] mb-0 font-semibold">
+            {locale === "ar" ? detail.titleAr : detail.titleEn}
+          </h1>
+          <MyEditor
+            editorState={content}
+            readOnly={true}
+            blockRendererFn={mediaBlockRenderer}
+          />
+
+          {slug === "65375aae3611bcf247769e8f" && (
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <div
+                className="about-button text-center"
+                onClick={handleDownload}
+              >
+                <Link legacyBehavior href="#">
+                  <a
+                    style={{
+                      textAlign: "center",
+                      paddingRight: 30,
+                    }}
+                  >
+                    {" "}
+                    {detail?.language === "ar"
+                      ? "تحميل الملف"
+                      : "Download file"}
+                  </a>
+                </Link>
+              </div>
+            </div>
+          )}
+        </div>
+      </>
     );
   }
 }

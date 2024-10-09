@@ -107,7 +107,7 @@ const Testimonials = () => {
     <section className="py-10 bg-[#000000]">
       <div className="container">
         <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
             <span className="text-[#ffffff]">{r("title1")}</span>
             <span className="text-[#FED100]">{r("title2")}</span>
             <span className="text-[#ffffff]">{r("title3")}</span>

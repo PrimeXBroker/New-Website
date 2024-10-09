@@ -1,7 +1,7 @@
-import AcademyWrapper from "@/our_pages/education/academy/AcademyWrapper";
 import React from "react";
 import { createTranslator } from "next-intl";
 import Script from "next/script";
+import AcademyWrapper from "@/our_pages/new-academy/AcademyWrapper";
 
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../../messages/${locale}.json`))
@@ -49,26 +49,26 @@ const Academy = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
-            "itemListElement": [
+            itemListElement: [
               {
                 "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.primexcapital.com/en"
+                position: 1,
+                name: "Home",
+                item: "https://www.primexcapital.com/en",
               },
               {
                 "@type": "ListItem",
-                "position": 2,
-                "name": "Education",
-                "item": "https://www.primexcapital.com/en/education"
+                position: 2,
+                name: "Education",
+                item: "https://www.primexcapital.com/en/education",
               },
               {
                 "@type": "ListItem",
-                "position": 3,
-                "name": "Academy",
-                "item": "https://www.primexcapital.com/en/academy"
-              }
-            ]
+                position: 3,
+                name: "Academy",
+                item: "https://www.primexcapital.com/en/academy",
+              },
+            ],
           }),
         }}
       />

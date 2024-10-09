@@ -14,6 +14,8 @@ const ExpertAnalysis = ({ id }) => {
   const [currentCategory, setCurrentCategory] = useState(null);
   const locale = useLocale();
 
+  console.log("idssssssss", id);
+
   const fetchCat = async () => {
     try {
       const res = await axios.get(
@@ -62,26 +64,25 @@ const ExpertAnalysis = ({ id }) => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center my-48">
-        <div className="inline-block h-12 w-12 animate-spin rounded-full border-4 border-solid border-primary border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white">
-          <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-            Loading...
-          </span>
+      <div className="flex justify-center items-center min-h-[50vh]">
+        <div className="ellipsis">
+          <span className="dot text-[#FED100]">.</span>
+          <span className="dot text-[#FED100]">.</span>
+          <span className="dot text-[#FED100]">.</span>
         </div>
       </div>
     );
   }
-
   return (
-    <section className="container py-20">
+    <section className="container mt-8">
       <div className="grid grid-cols-12 ">
         {blogs.map((blog, index) => (
-          <div className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4">
+          <div className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4 flex flex-col">
             <Link
               href={`/${locale}/expert-analysis-detail/${blog.slug}`}
-              className="group"
+              className="group h-full rounded-xl bg-[#111111]"
             >
-              <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out">
+              <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out rounded-xl flex flex-col h-full">
                 <div>
                   <img
                     src={blog.image}
@@ -89,19 +90,19 @@ const ExpertAnalysis = ({ id }) => {
                     className="w-full overflow-hidden transition duration-700 ease-in-out transform group-hover:scale-110"
                   />
                 </div>
-                <div className="px-3 py-5 group-hover:bg-secondary transition duration-700 ease-in-out">
-                  <div className="mb-3">
-                    <p className="text-black text-base group-hover:text-white transition duration-700 ease-in-out">
+                <div className="px-3 py-5 flex-grow transition duration-700 ease-in-out">
+                  <div>
+                    <h4 className="text-xl font-semibold text-[#F9F9F9] group-hover:text-[#FED100] transition duration-700 ease-in-out">
+                      {locale === "ar" ? blog?.titleAr : blog?.titleEn}
+                    </h4>
+                  </div>
+                  <div className="mt-3">
+                    <p className="text-[#C6C6C6] text-sm group-hover:text-white transition duration-700 ease-in-out">
                       <Moment
                         date={blog?.createdOn}
                         format={locale === "ar" ? "YYYY/MM/DD" : "DD/MM/YYYY"}
                       />
                     </p>
-                  </div>
-                  <div>
-                    <h4 className="text-2xl font-semibold text-black group-hover:text-primary transition duration-700 ease-in-out">
-                      {locale === "ar" ? blog?.titleAr : blog?.titleEn}
-                    </h4>
                   </div>
                 </div>
               </div>
@@ -109,13 +110,15 @@ const ExpertAnalysis = ({ id }) => {
           </div>
         ))}
       </div>
-
       <div className="flex justify-center mt-10">
         <Pagination
           showControls
           total={totalPages}
           initialPage={page}
           onChange={(p) => setPage(p)}
+          className="all-blogs-pagination"
+          radius="sm"
+          color="default"
         />
       </div>
     </section>

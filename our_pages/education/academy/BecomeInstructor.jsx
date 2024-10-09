@@ -214,7 +214,6 @@ function BecomeInstructor() {
               }`}
             />
           </div>
-
           <div className="w-[80%] appearance-none border-b rounded py-2 px-3 text-[#9CA3AF]">
             <label
               className={`block mb-2 text-sm ${

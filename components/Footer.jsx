@@ -219,7 +219,7 @@ const Footer = () => {
               isMT5Page ||
               isAboutPage
             ? "bg-[#000000]"
-            : "bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/live-account-gray.webp')] bg-cover bg-no-repeat bg-center"
+            : "bg-[#000000]"
         } relative z-0 overflow-hidden`}
       >
         <div
@@ -236,7 +236,7 @@ const Footer = () => {
                 isMT5Page ||
                 isAboutPage
               ? "bg-[#111111] rounded-xl"
-              : ""
+              : "bg-[#111111] rounded-xl"
           }`}
         >
           <div
@@ -256,7 +256,7 @@ const Footer = () => {
                 isMT5Page ||
                 isAboutPage
                   ? "text-[#ffffff]"
-                  : "text-secondary"
+                  : "text-[#ffffff]"
               } font-semibold ${
                 locale === "ar" || locale === "fa" || locale === "kur"
                   ? "text-center md:text-right"
@@ -277,7 +277,7 @@ const Footer = () => {
                 isMT5Page ||
                 isAboutPage
                   ? "text-[#dfdfdf]"
-                  : "text-secondary"
+                  : "text-[#dfdfdf]"
               } ${
                 locale === "ar" || locale === "fa" || locale === "kur"
                   ? "text-center md:text-right"
@@ -305,7 +305,7 @@ const Footer = () => {
                 isMT5Page ||
                 isAboutPage
                   ? "rounded-[12px]"
-                  : "rounded-full"
+                  : "rounded-[12px]"
               }`}
             >
               <p className="text-secondary font-semibold">

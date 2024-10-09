@@ -51,88 +51,94 @@ const MarketNewsDetail = ({ slug }) => {
 
   return (
     <section
-      className="container py-20"
+      className="bg-[#000000] py-20"
       dir={detail?.language === "ar" ? "rtl" : "ltr"}
     >
-      <div className="grid grid-cols-12">
-        <div className=" lg:col-span-8 md:col-span-12 col-span-12">
-          <NewsBody slug={slug} />
+      <div className="container">
+        <div className="grid grid-cols-12">
+          <div className="lg:col-span-12 md:col-span-12 col-span-12">
+            <NewsBody slug={slug} />
+          </div>
         </div>
-        <div className="lg:col-span-4 col-span-12 px-6">
-          <div className="border-1 border-accent p-[30px]">
-            <div className="flex justify-center">
-              <img
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/market-news/profile-img.png"
-                alt=""
-                className="w-[65%]"
-              />
-            </div>
-            <div className="mt-5">
-              <h6 className="text-center text-base font-semibold text-black">
-                {detail?.language === "ar"
-                  ? "هل أنت مستعد للاستثمار؟"
-                  : "Ready to Invest"}
-              </h6>
-            </div>
-            <div className="blog-invest-box-text mt-4">
-              <p className="text-center text-sm">
-                {detail?.language === "ar"
-                  ? "افتح حسابًا حقيقيًا وابدأ الاستثمار الآن! تداول أكثر من 500 من الأدوات المالية العالمية دون أي متاعب."
-                  : "Open live account & Start investing NOW! Trade 330+ global assets hassle-free."}
-              </p>
-            </div>
-            <button className="bg-primary w-full h-10 rounded-xl mt-6 text-secondary font-semibold">
-              <Link
-                href={`https://client.primexbroker.com/${locale}/register`}
+        <div className="bg-[#111111] border-2 border-[#1D1D1D] rounded-[20px] flex p-10 flex-col md:flex-row mb-10 mt-20 relaed-blogs-bg">
+          <div className="lg:w-[70%] w-full mb-5 md:mb-0">
+            <h2
+              className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff] mb-3 ${
+                detail?.language === "ar" || locale === "fa" || locale === "kur"
+                  ? "text-center md:text-right"
+                  : "text-center md:text-left"
+              }`}
+            >
+              {detail?.language === "ar"
+                ? "هل أنت مستعد للاستثمار؟"
+                : "Ready to Invest"}
+            </h2>
+            <p
+              className={` text-[#c6c6c6] text-sm sm:text-base ${
+                detail?.language === "ar" || locale === "fa" || locale === "kur"
+                  ? "text-center md:text-right"
+                  : "text-center md:text-left"
+              }`}
+            >
+              {detail?.language === "ar"
+                ? "افتح حسابًا حقيقيًا وابدأ الاستثمار الآن! تداول أكثر من 500 من الأدوات المالية العالمية دون أي متاعب."
+                : "Open live account & Start investing NOW! Trade 330+ global assets hassle-free."}
+            </p>
+          </div>
+          <div className="w-full lg:w-[30%] flex justify-center md:justify-end items-center">
+            <button className="custom-button py-[16px] px-[46px]">
+              <a
+                href={`${
+                  locale === "ar"
+                    ? "https://client.primexbroker.com/ar/register"
+                    : "https://client.primexbroker.com/en/register"
+                }`}
                 target="_blank"
+                className="text-[#111111] font-semibold"
               >
-                {detail?.language === "ar" ? "ابدأ" : "GET STARTED"}
-              </Link>
+                {detail?.language === "ar" ? "ابدأ" : "Get Started"}
+              </a>
             </button>
           </div>
-          <div
-            className="bg-white px-6 py-8 mt-8"
-            style={{ boxShadow: "0 0 5px rgba(0, 0, 0, .2)" }}
-          >
-            <div className="widget-title relative mb-10">
-              <h2 className="text-2xl text-black font-semibold">
-                {detail?.language === "ar" ? "مقالات ذات صلة" : "Related Blogs"}
-              </h2>
-            </div>
-
-            <div>
-              {related.map((blog, i) => (
-                <Link
-                  href={`/${locale}/market-news-detail/${blog.slug}`}
-                  key={i}
-                >
-                  <div className="single-blog-thumb group overflow-hidden transition duration-700  mb-2 ease-in-out">
-                    <div key={i} mb-2>
-                      <img
-                        src={blog.image}
-                        alt="PrimeX Capital"
-                        className="w-full overflow-hidden transition duration-700 ease-in-out transform group-hover:scale-110"
-                      />
+        </div>
+        <div className="pt-10">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#FED100] text-center">
+            {t("relatedBlogs.title1")}
+            <span className="text-[#ffffff]"> {t("relatedBlogs.title2")}</span>
+          </h2>
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 px-4 mt-10">
+            {related.map((blog, i) => (
+              <Link
+                href={`/${locale}/market-news-detail/${blog.slug}`}
+                key={i}
+                className="group h-full bg-[#111111] rounded-xl"
+              >
+                <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out rounded-xl flex flex-col h-full">
+                  <div>
+                    <img
+                      src={blog.image}
+                      alt="PrimeX Capital"
+                      className="w-full overflow-hidden transition duration-700 ease-in-out transform group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="px-3 py-5 transition duration-700 ease-in-out">
+                    <div>
+                      <h4 className="text-xl font-semibold text-[#F9F9F9] group-hover:text-[#FED100] transition duration-700 ease-in-out">
+                        {blog?.title}
+                      </h4>
                     </div>
-                    <div className="px-3 py-5 group-hover:bg-secondary transition duration-700 ease-in-out">
-                      <div className="mb-3">
-                        <p className="text-black text-sm group-hover:text-white transition duration-700 ease-in-out">
-                          <Moment
-                            date={blog?.createdOn}
-                            format="Do MMMM YYYY"
-                          />
-                        </p>
-                      </div>
-                      <div>
-                        <h4 className="text-xl font-semibold text-black group-hover:text-primary transition duration-700 ease-in-out">
-                          {blog.title}
-                        </h4>
-                      </div>
+                    <div className="mt-3">
+                      <p className="text-[#C6C6C6] text-sm group-hover:text-white transition duration-700 ease-in-out">
+                        <Moment
+                          date={blog?.createdOn}
+                          format={locale === "ar" ? "YYYY/MM/DD" : "DD/MM/YYYY"}
+                        />
+                      </p>
                     </div>
                   </div>
-                </Link>
-              ))}
-            </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
