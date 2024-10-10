@@ -80,7 +80,7 @@ const Webinars = ({ active, setActive }) => {
                           hour: "2-digit",
                           minute: "2-digit",
                         })}{" "}
-                        GMT +5
+                        GMT +3
                       </p>
                     </div>
                   </div>
@@ -103,7 +103,7 @@ const Webinars = ({ active, setActive }) => {
                         hour: "2-digit",
                         minute: "2-digit",
                       })}{" "}
-                      GMT +5
+                      GMT +3
                     </span>
                   </div>
                 </div>
