@@ -13,9 +13,9 @@ function BlogsWrapper({ active, setActive }) {
 
   const tabs = [
     {
-      key: "Learning Hub",
-      title: t("tab1_title"),
-      content: <ExpertAnalysis id={`6641f0097c9be5623e10929e`} />,
+      key: "Market News",
+      title: t("tab3_title"),
+      content: <MarketNews slugEn={`all`} slugAr={`news`} />,
     },
     {
       key: "Technical Analysis",
@@ -23,9 +23,9 @@ function BlogsWrapper({ active, setActive }) {
       content: <ExpertAnalysis id={`6641f01d7c9be5623e1092a4`} />,
     },
     {
-      key: "Market News",
-      title: t("tab3_title"),
-      content: <MarketNews slugEn={`all`} slugAr={`news`} />,
+      key: "Learning Hub",
+      title: t("tab1_title"),
+      content: <ExpertAnalysis id={`6641f0097c9be5623e10929e`} />,
     },
     {
       key: "Starting Gateway",
@@ -49,11 +49,10 @@ function BlogsWrapper({ active, setActive }) {
             <button
               key={tab.key}
               onClick={() => setActive(tab.key)}
-              className={`tab-title font-medium px-4 py-3 text-sm w-full ${
-                active === tab.key
+              className={`tab-title font-medium px-4 py-3 text-sm w-full ${active === tab.key
                   ? "active bg-[#ffffff] text-[#111111] rounded-[5px]"
                   : "text-[#ffffff]"
-              }`}
+                }`}
             >
               {tab.title}
             </button>
