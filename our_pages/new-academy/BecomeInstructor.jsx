@@ -379,7 +379,7 @@ function BecomeInstructor() {
                 {t("success_title")}
               </ModalHeader>
               <ModalBody>
-                <p>{t("success_desc")}</p>
+                <p>{t("instructor_success_desc")}</p>
                 {/* <p>Thank you for choosing PrimeX Capital</p> */}
               </ModalBody>
               <ModalFooter>

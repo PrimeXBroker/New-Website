@@ -264,7 +264,8 @@ function BookSession() {
                 {t("success_title")}
               </ModalHeader>
               <ModalBody>
-                <p>{t("success_desc")}</p>
+                <p>{t("session_success_desc1")}</p>
+                <p>{t("session_success_desc2")}</p>
                 {/* <p>Thank you for choosing PrimeX Capital</p> */}
               </ModalBody>
               <ModalFooter>
