@@ -14,7 +14,7 @@ import MobileBlogWrapper from "./MobileBlogWrapper";
 const AcademyWrapper = () => {
   const t = useTranslations("newAcademy.joinAcademy");
   const [active, setActive] = useState("Webinars");
-  const [activeBlog, setActiveBlog] = useState("Learning Hub");
+  const [activeBlog, setActiveBlog] = useState("Market News");
   const locale = useLocale();
 
   const joinAcademy = [

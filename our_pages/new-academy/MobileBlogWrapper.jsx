@@ -17,9 +17,9 @@ function MobileBlogWrapper({ active, setActive }) {
 
   const tabs = [
     {
-      key: "Learning Hub",
-      title: t("tab1_title"),
-      content: <MobileExpertAnalysis id={`6641f0097c9be5623e10929e`} />,
+      key: "Market News",
+      title: t("tab3_title"),
+      content: <MobileMarketNews slugEn={`all`} slugAr={`news`} />,
     },
     {
       key: "Technical Analysis",
@@ -27,10 +27,11 @@ function MobileBlogWrapper({ active, setActive }) {
       content: <MobileExpertAnalysis id={`6641f01d7c9be5623e1092a4`} />,
     },
     {
-      key: "Market News",
-      title: t("tab3_title"),
-      content: <MobileMarketNews slugEn={`all`} slugAr={`news`} />,
+      key: "Learning Hub",
+      title: t("tab1_title"),
+      content: <MobileExpertAnalysis id={`6641f0097c9be5623e10929e`} />,
     },
+   
     {
       key: "Starting Gateway",
       title: t("tab4_title"),
