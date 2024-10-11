@@ -137,7 +137,7 @@ const HomePage = () => {
       </div>
       <Support />
       <Promotions promotions={promotionsData} />
-      <div className="lg:block hidden">
+      <div className="lg:block hidden py-10 bg-[#000000]">
         <Recognition />
       </div>
       <div className="lg:hidden block">

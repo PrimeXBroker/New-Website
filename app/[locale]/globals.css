@@ -57,6 +57,10 @@
       flex-direction: column !important;
       align-items: center !important;
     }
+    /* .about-bg-main {
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+    } */
   }
 }
 
@@ -1335,3 +1339,20 @@
   background-size: cover;
   background-position: center;
 }
+
+.about-bg-main {
+  background-image: url("https://primexcapital.s3.eu-north-1.amazonaws.com/website/about/new-about/BG+Map.webp");
+  background-size: cover;
+  background-position: top center;
+}
+
+/* .about-inner {
+  background-color: #000000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.9;
+} */

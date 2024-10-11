@@ -122,14 +122,24 @@ function NewsBody({ slug }) {
         <div className="text-[#ffffff] py-8 px-4 pt-10 sm:pt-20 pb-10">
           <Link
             className="text-[#ffffff] hover:text-[#FED100] font-medium flex justify-center sm:justify-start items-center mb-4"
-            href={`/${locale}/academy`}
+            href={
+              detail?.category?.title === "Press Release" ||
+              detail?.category?.title === "بيان صحفي"
+                ? `/${detail?.language}/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e`
+                : `/${detail?.language}/academy`
+            }
           >
             <span
               className={`${detail?.language === "ar" ? "ml-2 " : "mr-2 "}`}
             >
               {detail?.language === "ar" ? <FaArrowRight /> : <FaArrowLeft />}
             </span>
-            {detail?.language === "ar"
+            {detail?.category?.title === "Press Release" ||
+            detail?.category?.title === "بيان صحفي"
+              ? detail?.language === "ar"
+                ? "العودة للبيانات الصحفية"
+                : "Back to Press Release"
+              : detail?.language === "ar"
               ? "العودة للأكاديمية"
               : "Back to Academy"}
           </Link>

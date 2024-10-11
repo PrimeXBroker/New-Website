@@ -37,7 +37,7 @@ const Recognition = () => {
   ];
 
   return (
-    <section className="bg-[#000000] text-white py-10">
+    <section className="bg-[#000000] text-white">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 flex flex-col justify-center">

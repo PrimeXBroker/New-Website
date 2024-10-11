@@ -103,6 +103,12 @@ const Footer = () => {
         links: [
           { name: t("Services.title_part3_link1"), href: "/account-types" },
           { name: t("Services.title_part3_link2"), href: "/ib-program" },
+          { name: t("Services.title_part3_link3"), href: "/regional-partner" },
+          {
+            name: t("Services.title_part3_link4"),
+            href: "/grey-label-partner",
+          },
+          { name: t("Services.title_part3_link5"), href: "/liquidity" },
         ],
       },
     },
@@ -354,7 +360,7 @@ const Footer = () => {
 
                 {el.column.heading === "Platform" ? (
                   <ul
-                    className={`pt-0 md:pt-2 ${
+                    className={`pt-0 md:pt-2 text-sm ${
                       locale === "ar" || locale === "fa" || locale === "kur"
                         ? "text-right"
                         : "text-left"
@@ -381,7 +387,7 @@ const Footer = () => {
                   </ul>
                 ) : (
                   <ul
-                    className={`pt-0 md:pt-2 footer ${
+                    className={`pt-0 md:pt-2 footer text-sm ${
                       locale === "ar" || locale === "fa" || locale === "kur"
                         ? "text-right"
                         : "text-left"
@@ -428,7 +434,7 @@ const Footer = () => {
                 height="200"
               />
             </div>
-            <p className="text-white text-center text-[12px]">
+            <p className="text-white text-center text-sm text-[12px]">
               &copy; {t("copy-right")}
             </p>
             <div className="flex gap-4 items-center justify-around">

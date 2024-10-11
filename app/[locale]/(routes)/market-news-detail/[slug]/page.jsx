@@ -7,7 +7,6 @@ export async function generateMetadata({ params: { locale, slug } }) {
     const res = await axios.get(
       `https://primexbroker.com/api/fetch/one/blog/${slug}`
     );
-
     const blo = res?.data?.data;
     const url =
       locale !== "en"

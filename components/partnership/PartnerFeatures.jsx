@@ -18,12 +18,12 @@ const PartnerFeatures = ({ features, featureTitle }) => {
           >
             <div className="flex justify-between items-center">
               <div>
-                <h3 className="text-xl font-bold">{feature.title}</h3>
-                <h3 className="text-xl font-bold text-[#ffffff]">
+                <h3 className="text-xl font-semibold">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-[#ffffff]">
                   {feature.title1} <span>{feature.title2}</span>
                 </h3>
               </div>
-              <div className="w-14 h-14 borer-2 border-[#222222] bg-[#1D1D1D] rounded-lg flex items-center justify-center">
+              <div className="w-14 h-14 border-2 border-[#222222] bg-[#1D1D1D] rounded-lg flex items-center justify-center">
                 <img
                   src={feature.icon}
                   alt={feature.title}
