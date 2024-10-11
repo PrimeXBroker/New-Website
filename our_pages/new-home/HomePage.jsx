@@ -1,5 +1,4 @@
 "use client";
-
 import Banner from "@/components/new-home/Banner";
 import StatsCard from "@/components/new-home/StatsCard";
 import { useLocale, useTranslations } from "next-intl";

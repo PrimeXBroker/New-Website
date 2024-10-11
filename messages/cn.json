@@ -966,9 +966,7 @@
       "description": "了解PrimeX Capital，您的可信赖交易伙伴。发现我们的使命、价值观和致力于卓越。点击了解更多！"
     },
     "hero": {
-      "title1": "革新",
-      "title2": "您的交易",
-      "title3": "体验",
+      "title": "革新您的交易体验",
       "description": "在PrimeX Capital，我们致力于转变交易体验。我们成立的愿景是提供创新且可靠的交易解决方案。我们提供一个平台，让所有层次的交易者都能蓬勃发展。我们的使命是提供先进的技术、多样的交易工具和卓越的支持，以赋能您的交易旅程。"
     },
     "mission": {
@@ -978,8 +976,7 @@
       "vision_desc": "通过不断创新和扩展我们的产品来满足全球交易社区不断变化的需求，成为全球交易者的首选"
     },
     "coreValues": {
-      "title1": "核心",
-      "title2": "价值观",
+      "title": "核心价值观",
       "value_1_title": "诚信",
       "value_1_desc": "坚持最高的透明度和公平性标准",
       "value_2_title": "创新",
@@ -988,13 +985,6 @@
       "value_3_desc": "提供卓越的支持和个性化解决方案",
       "value_4_title": "卓越",
       "value_4_desc": "致力于提供一流的交易体验"
-    },
-    "globalMap": {
-      "title1": "找到我们",
-      "title2": "遍布全球",
-      "title3": "的足迹",
-      "country1": "阿联酋",
-      "country2": "南非"
     }
   },
   "contact": {
@@ -1079,7 +1069,8 @@
       "description": "了解PrimeX Capital的最新奖项和认可，庆祝金融服务方面的卓越成就。了解更多关于我们的成就并加入我们！"
     },
     "hero": {
-      "title": "我们所在之处，卓越得到认可！",
+      "title1": "我们在，",
+      "title2": "卓越之处被认可的地方！",
       "description": "探索我们获奖的成就，使我们作为领先的外汇经纪公司脱颖而出"
     },
     "tabs": {
@@ -1101,7 +1092,11 @@
       "award_6_title": "最佳外汇ECN经纪商",
       "award_6_location": "2023年迪拜博览会",
       "award_8_title": "最佳零售外汇经纪商",
-      "award_8_location": "2024年迪拜PROFX大奖"
+      "award_8_location": "2024年迪拜PROFX大奖",
+      "award_9_title": "最佳全球经纪商",
+      "award_9_location": "2024年迪拜外汇博览会",
+      "award_10_title": "前100名值得信赖的金融机构",
+      "award_10_location": "2024年MEFM奖项迪拜"
     }
   },
   "accountTypes": {

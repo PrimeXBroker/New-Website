@@ -19,6 +19,7 @@ const Banner = ({
     <section className={`${background}`}>
       <div className="container flex flex-col md:flex-row justify-evenly gap-10 items-center py-12">
         <div className="md:w-[40%]">
+          ={" "}
           <h1
             className={`${titleColor} text-xl md:text-3xl font-semibold mb-5 ${
               locale === "ar" || locale === "fa" || locale === "kur"

@@ -1,14 +1,13 @@
-import AwardsBanner from "@/our_pages/footer-pages/awards/Banner"
-import TabsSection from "@/our_pages/footer-pages/awards/TabsSection"
-
+import AwardsBanner from "@/our_pages/footer-pages/awards/Banner";
+import TabsSection from "@/our_pages/footer-pages/awards/TabsSection";
 
 const AwardsPage = () => {
   return (
     <>
-    <AwardsBanner/>
-    <TabsSection/>
+      <AwardsBanner />
+      <TabsSection />
     </>
-  )
-}
+  );
+};
 
-export default AwardsPage
+export default AwardsPage;

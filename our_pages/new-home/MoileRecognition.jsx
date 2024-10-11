@@ -17,6 +17,18 @@ const MobileRecognition = () => {
   const awards = [
     {
       imgSrc:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/home-award-8.webp",
+    },
+    {
+      imgSrc:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/home-award-9.webp",
+    },
+    {
+      imgSrc:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/home-award-10.webp",
+    },
+    {
+      imgSrc:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Award+1.webp",
     },
     {
@@ -41,7 +53,7 @@ const MobileRecognition = () => {
     },
     {
       imgSrc:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Award+7.webp",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Award-7-New.webp",
     },
   ];
 
