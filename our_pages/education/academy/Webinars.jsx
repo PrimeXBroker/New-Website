@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import Image from "next/image";
-import FromWarapper from "./FromWarapper";
 import axios from "axios";
+import FormWrapper from "./FormWrapper";
 
 const Webinars = ({ active, setActive }) => {
   const locale = useLocale();
   const t = useTranslations("academy.upcomingWebinars");
-  const [activeTab, setActiveTab] = useState(0);
-  // const [formActive, setFormActive] = useState( active );
   const [upcoming, setUpcoming] = useState([]);
 
   const fetchUpcomingWebinars = async () => {
-    const res = await axios.get(
-      "https://primexbroker.com/api/upcoming-webinars"
-    );
-    if (res.data.success) {
-      setUpcoming(res.data.data);
+    try {
+      const res = await axios.get(
+        "https://primexbroker.com/api/upcoming-webinars"
+      );
+      if (res.data.success) {
+        setUpcoming(res.data.data);
+      }
+    } catch (error) {
+      console.error("Error fetching webinars:", error);
     }
   };
 
@@ -25,115 +26,91 @@ const Webinars = ({ active, setActive }) => {
   }, []);
 
   return (
-    <section id="academy-form" className="bg-secondary py-20">
+    <section id="academy-form" className="bg-[#000000] py-10">
       <div className="container">
-        <div className="grid grid-cols-12">
+        <div className="grid grid-cols-12 items-center">
           <div className="col-span-12 lg:col-span-7 flex flex-col items-center lg:items-start">
             <div className="lg:mt-10">
               <h2
-                className={`sectionHeading text-2xl sm:text-3xl lg:text-5xl text-primary font-semibold pb-4 ${
+                className={`text-2xl sm:text-3xl lg:text-5xl font-semibold text-[#FED100] lg:mb-4 ${
                   locale === "ar"
                     ? "text-center lg:text-right"
                     : "text-center lg:text-left"
                 }`}
               >
-                {t("title")}
+                {t("title1")}
+              </h2>
+              <h2
+                className={`text-2xl sm:text-3xl lg:text-5xl font-semibold text-[#ffffff] ${
+                  locale === "ar"
+                    ? "text-center lg:text-right"
+                    : "text-center lg:text-left"
+                }`}
+              >
+                {t("title2")}
               </h2>
             </div>
-            {upcoming.length > 0 ? (
-              <>
-                <div className="flex w-full my-12 justify-center lg:justify-start">
-                  {upcoming.map((webinar, index) => (
-                    <button
-                      key={index}
-                      className={`md:px-6 px-3 py-2 font-semibold min-w-[100px] sm:min-w-[196px] md:min-w-[220px] lg:min-w-[196px] xl:min-w-[220px] h-[50px] rounded-t-[39px] transition-all duration-300 ease-in-out ${
-                        activeTab === index
-                          ? "bg-primary text-secondary border-primary min-w-[130px] sm:min-w-[230px] md:min-w-[242px] lg:min-w-[230px] xl:min-w-[242px] -mx-3 z-10"
-                          : "border-[#666666] border-1 text-[#666666]"
-                      }`}
-                      onClick={() => setActiveTab(index)}
-                    >
-                      {new Date(webinar.start).toLocaleDateString(locale, {
-                        weekday: "short",
-                        day: "numeric",
-                        month: "short",
-                      })}
-                    </button>
-                  ))}
-                </div>
-              </>
-            ) : (
-              <div className="text-xl text-white py-10">{t("no_webinars")}</div>
-            )}
-            <div className="pt-4">
-              {upcoming[activeTab] && (
-                <div>
-                  <div className="lg:grid lg:grid-cols-12 flex flex-col sm:flex-row justify-center items-center gap-7">
-                    <div className="col-span-3 flex items-center lg:items-start">
-                      <div>
-                        <Image
-                          className="mx-auto md:m-0 block lg:w-[140px] xl:w-[150px]"
-                          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/academy/webinar-instructor.webp"
-                          alt="Banner Image"
-                          width="150"
-                          height="150"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-span-9 flex items-center">
-                      <div
-                        className={`${
-                          locale === "ar"
-                            ? "pr-6 sm:border-r sm:border-[#666666]"
-                            : "pl-6 sm:border-l sm:border-[#666666]"
-                        }`}
-                      >
-                        <h2
-                          className={`text-white text-3xl sm:text-4xl xl:text-5xl font-semibold ${
-                            locale === "ar"
-                              ? "text-center sm:text-right"
-                              : "text-center sm:text-left"
-                          }`}
-                        >
-                          {new Date(
-                            upcoming[activeTab].start
-                          ).toLocaleTimeString(locale, {
-                            hour: "2-digit",
-                            minute: "2-digit",
-                            timeZoneName: "short",
-                          })}
-                        </h2>
-                        <h3
-                          className={`text-primary text-xl sm:text-2xl xl:text-3xl my-2 ${
-                            locale === "ar"
-                              ? "text-center sm:text-right"
-                              : "text-center sm:text-left"
-                          }`}
-                        >
-                          {locale === "ar"
-                            ? upcoming[activeTab].agendaAr
-                            : upcoming[activeTab].agenda}
-                        </h3>
-                        <p
-                          className={`text-white text-base sm:text-lg xl:text-xl font-light ${
-                            locale === "ar"
-                              ? "text-center sm:text-right"
-                              : "text-center sm:text-left"
-                          }`}
-                        >
-                          {locale === "ar"
-                            ? upcoming[activeTab].detailsAr
-                            : upcoming[activeTab].details}
-                        </p>
-                      </div>
+            {upcoming.map((webinar) => (
+              <div
+                key={webinar._id}
+                className="bg-[#1D1D1D] text-[#ffffff] rounded-lg p-6 border-2 border-[#222222] gap-3 flex flex-col lg:flex-row mt-8 upcoming-webinar w-full md:w-[68%] lg:w-[85%] group"
+              >
+                <div className="flex flex-row lg:flex-col gap-3 lg:gap-0 lg:w-[30%] xl:w-[25%]">
+                  <img
+                    className="rounded w-[80px] sm:w-[100px] lg:w-full"
+                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/ahmed.webp"
+                    alt=""
+                  />
+                  <div className="w-[70%] lg:w-[100%]">
+                    <p className="text-[#f9f9f9] text-sm mb-1 sm:mb-0">
+                      {t("webinar_title")}
+                    </p>
+                    <p className="text-[#f9f9f9] text-xs"> {t("Webinar_by")}</p>
+                    <div className="text-[#c6c6c6] w-full lg:hidden mt-2">
+                      <p className="text-xs mb-1">
+                        {new Date(webinar.start).toLocaleDateString(locale, {
+                          weekday: "long",
+                          month: "short",
+                          day: "numeric",
+                        })}
+                      </p>
+                      <p className="text-xs">
+                        {new Date(webinar.start).toLocaleTimeString(locale, {
+                          hour: "2-digit",
+                          minute: "2-digit",
+                        })}{" "}
+                        GMT +3
+                      </p>
                     </div>
                   </div>
                 </div>
-              )}
-            </div>
+                <div className="lg:w-[70%] xl:w-[85%]">
+                  <h2 className="text-base md:text-xl xl:text-2xl sm:mb-4 group-hover:text-[#FED100]">
+                    {locale === "ar" ? webinar.agendaAr : webinar.agenda}
+                  </h2>
+                  <div className="bg-[#222222] border-1 border-[#333333] p-3 rounded-lg lg:flex items-center justify-between text-[#c6c6c6] w-[90%] hidden text-sm xl:text-base">
+                    <span>
+                      {new Date(webinar.start).toLocaleDateString(locale, {
+                        weekday: "long",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </span>
+                    <span className="border-l border-[#333333] h-6"></span>
+                    <span>
+                      {new Date(webinar.start).toLocaleTimeString(locale, {
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })}{" "}
+                      GMT +3
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="col-span-12 lg:col-span-5 flex items-center lg:items-end mt-20 lg:mt-0">
-            <FromWarapper active={active} setActive={setActive} />
+          <div className="col-span-12 lg:col-span-5 flex justify-center items-center lg:items-end mt-20 lg:mt-0">
+            <FormWrapper active={active} setActive={setActive} />
           </div>
         </div>
       </div>

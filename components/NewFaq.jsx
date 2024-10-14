@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 
 const FAQ = ({ faqs }) => {
   const [activeIndex, setActiveIndex] = useState(null);
-  const f = useTranslations("newAccountTypes");
+  const f = useTranslations("accountTypes");
 
   const toggleFAQ = (index) => {
     setActiveIndex(index === activeIndex ? null : index);

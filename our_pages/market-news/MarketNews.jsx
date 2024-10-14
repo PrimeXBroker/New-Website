@@ -21,9 +21,7 @@ const MarketNews = ({ slugEn, slugAr }) => {
         locale === "ar" ? slugAr : slugEn
       }`
     );
-    console.log(res, "res.data outside");
     if (res.status === 200) {
-      console.log(res.data.data, "res.data ====");
       setCatDetail(res.data.data);
     }
   };

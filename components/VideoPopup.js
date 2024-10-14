@@ -14,7 +14,6 @@ const VideoPopup_ = ({ close, videoID }) => {
 
   const video = extractYouTubeID(videoID);
 
-  console.log(video, "videoID");
   return (
     <Fragment>
       <div className="mfp-bg mfp-ready" onClick={() => close(false)}></div>
@@ -60,7 +59,6 @@ const VideoPopup = () => {
       const a = document.querySelectorAll("a");
       a.forEach((a) => {
         if (a.href.includes("https://youtu.be")) {
-          console.log("hi");
           a.addEventListener("click", (e) => {
             e.preventDefault();
             setVideoValue(a.href);

@@ -1,117 +1,48 @@
+"use client";
 import React from "react";
-import { useTranslations } from "next-intl";
-import { useLocale } from "next-intl";
 import Link from "next/link";
 
-const sectionData = [
-  {
-    title: "Share Your Expertise With Academy of PrimeX Capital",
-    description:
-      "Ready to make an impact? Join our team of instructors and share your expertise with Academy of PrimeX Capital today!",
-    btnText: "Become An Instructor",
-    btnHref: "#",
-  },
-  {
-    title: "Join Academy of PrimeX Capital To Trade",
-    description:
-      "Ready to take your trading skills to the next level? Sign up now and embark on your journey with the Academy of PrimeX Capital!",
-    btnText: "Sign Up",
-    btnHref: "#",
-  },
-];
-
-const JoinAcademy = ({ setActive }) => {
-  const t = useTranslations("academy.joinAcademy");
-  const locale = useLocale();
-
+const JoinAcademy = ({ joinAcademy, setActive }) => {
   return (
-    <section className="bg-accent container flex flex-col justify-center md:gap-24 gap-4  md:flex-row py-12 shadow-lg my-12">
-      <div className="flex-1 md:max-w-sm">
-        <h2
-          className={`sectionHeading md:text-2xl text-secondary font-semibold pb-4 ${
-            locale === "ar" || locale === "fa" || locale === "kur"
-              ? "text-center md:text-right"
-              : "text-center md:text-left"
-          }`}
-        >
-          {t("share_expertise_title")}
-        </h2>
-        <p
-          className={`md:text-lg text-secondary font-[600] ${
-            locale === "ar" || locale === "fa" || locale === "kur"
-              ? "text-center md:text-right"
-              : "text-center md:text-left"
-          }`}
-        >
-          {t("share_expertise_subtitle")}
-        </p>
-        <p
-          className={`md:text-lg text-secondary font-[400] ${
-            locale === "ar" || locale === "fa" || locale === "kur"
-              ? "text-center md:text-right"
-              : "text-center md:text-left"
-          }`}
-        >
-          {t("share_expertise_desc")}
-        </p>
-        <div className="mt-6">
-          <Link
-            className="bg-primary text-center font-semibold px-4 py-4 w-[250px] rounded-full shadow-xl mx-auto block md:m-0"
-            href="#academy-form"
-            onClick={() => setActive("Instructor")}
+    <div className="bg-[#000000] py-10">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        {joinAcademy.map((academy, index) => (
+          <div
+            key={index}
+            className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#FED100] flex flex-col gap-3 transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500"
           >
-            {t("become_instructor_btn")}
-          </Link>
-        </div>
+            <div className="flex justify-between items-center">
+              <div className="w-[70%] sm::w-[60%]">
+                <h3 className="text-lg sm:text-xl font-semibold text-[#FED100]">
+                  {academy.title1}
+                  <span className="text-[#ffffff]">{academy.title2}</span>
+                </h3>
+              </div>
+              <div className="w-14 h-14 borer-2 border-[#222222] bg-[#1D1D1D] rounded-lg flex items-center justify-center">
+                <img src={academy.icon} alt="" className="w-[40px]" />
+              </div>
+            </div>
+            <div>
+              <h4 className="text-base font-semibold text-[#ffffff]">
+                {academy.question}
+              </h4>
+              <p className="text-[#c6c6c6] text-sm sm:text-base">
+                {academy.description}
+              </p>
+            </div>
+            <div className="mt-2">
+              <Link
+                className="text-center font-semibold px-4 py-4 w-full shadow-xl mx-auto block md:m-0 custom-button"
+                href="#academy-form"
+                onClick={() => setActive(academy.formId)}
+              >
+                {academy.btn}
+              </Link>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="border-r border-r-primary"></div>
-      <div className="flex-1 md:max-w-sm">
-        <h2
-          className={`sectionHeading md:text-2xl text-secondary font-semibold pb-4 ${
-            locale === "ar" || locale === "fa" || locale === "kur"
-              ? "text-center md:text-right"
-              : "text-center md:text-left"
-          }`}
-        >
-          {t("join_academy_title")}
-        </h2>
-        <p
-          className={`md:text-lg text-secondary font-[600] ${
-            locale === "ar" || locale === "fa" || locale === "kur"
-              ? "text-center md:text-right"
-              : "text-center md:text-left"
-          }`}
-        >
-          {t("join_academy_subtitle")}
-        </p>
-        <p
-          className={`md:text-lg text-secondary font-[400] ${
-            locale === "ar" || locale === "fa" || locale === "kur"
-              ? "text-center md:text-right"
-              : "text-center md:text-left"
-          }`}
-        >
-          {t("join_academy_desc")}
-        </p>
-        <div
-          className={`flex mt-6 ${
-            locale === "ar" || locale === "fa" || locale === "kur"
-              ? "justify-right"
-              : "justify-left"
-          }`}
-        >
-          {/* Flex container to align items to the end (right) */}
-          <Link
-            href="#academy-form"
-            onClick={() => setActive("Webinars")}
-            className="bg-primary font-semibold px-4 py-4 w-[250px] rounded-full shadow-xl text-center mt-6 mx-auto block md:m-0"
-          >
-            {t("sign_up_btn")}
-          </Link>{" "}
-          {/* Adjusted padding for better button appearance */}
-        </div>
-      </div>
-    </section>
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { createTranslator } from "next-intl";
 import Script from "next/script";
-import AcademyWrapper from "@/our_pages/new-academy/AcademyWrapper";
+import AcademyWrapper from "@/our_pages/education/academy/AcademyWrapper";
 
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../../messages/${locale}.json`))

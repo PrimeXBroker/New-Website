@@ -15,8 +15,6 @@ const ExpertAnalysis = ({ id }) => {
   const [currentCategory, setCurrentCategory] = useState(null);
   const locale = useLocale();
 
-  console.log("idssssssss", id);
-
   const fetchCat = async () => {
     try {
       const res = await axios.get(

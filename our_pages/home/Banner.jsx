@@ -1,140 +1,88 @@
 "use client";
-import React, { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/pagination";
-import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import Image from "next/image";
+import StatsCard from "./StatsCard";
 import { useLocale, useTranslations } from "next-intl";
-import { usePathname } from "next/navigation";
-import CompanyStats from "./CompanyStats";
+import Link from "next/link";
 
 const Banner = () => {
   const locale = useLocale();
-  const homeVideoPlayer = useRef(null);
   const t = useTranslations("home.hero");
-  const slideContents = [
+  const s = useTranslations("home.stats");
+
+  const statsData = [
     {
-      title: t("title1"),
-      description: t("desc1"),
+      title: s("stat1.title"),
+      value1: s("stat1.value1"),
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Served+Clients.svg",
     },
     {
-      title: t("title2"),
-      description: t("desc2"),
+      title: s("stat2.title"),
+      value1: s("stat2.value1"),
+      value2: s("stat2.value2"),
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Paid-up+Capital.svg",
     },
     {
-      title: t("title3"),
-      description: t("desc3"),
+      title: s("stat3.title"),
+      value1: s("stat3.value1"),
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Introducing+Brokers.svg",
+    },
+    {
+      title: s("stat4.title"),
+      value1: s("stat4.value1"),
+      value2: s("stat4.value2"),
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Daily+Trades.svg",
     },
   ];
 
-  const homeVideoClick = () => {
-    if (
-      homeVideoPlayer &&
-      homeVideoPlayer.current &&
-      homeVideoPlayer.current.video
-    ) {
-      homeVideoPlayer.current.video.play();
-    }
-  };
-
-  const statsOne = [
-    {
-      value: 250000,
-      description: t("fact_desc1"),
-      symbol: "+",
-      prepend: false,
-    },
-    {
-      value: 5000,
-      description: t("fact_desc2"),
-      symbol: "+",
-      prepend: false,
-    },
-    {
-      value: 300,
-      description: t("fact_desc3"),
-      symbol: locale === "en" ? "$" : "",
-      prepend: "false",
-      suffix: t("fact_million"), // Adding suffix
-    },
-    {
-      value: 7,
-      description: t("fact_desc4"),
-      symbol: locale === "en" ? "$" : "",
-      prepend: "true",
-      suffix: t("fact_no4"),
-    },
-  ];
-
-  const path = usePathname();
-  const isAr = path.includes("/ar");
   return (
-    <section
-      className="relative h-[60vh] md:h-[60vh] lg:h-[90vh] xl:h-[90vh] 2xl:h-[90vh] 3xl:h-[90vh] py-10 lg:py-16 xl:py-16 2xl:py-20 3xl:pt-40 4xl:pt-48 5xl:py-56"
-      onClick={homeVideoClick}
-    >
-      <video
-        ref={homeVideoPlayer}
-        autoPlay
-        loop
-        muted
-        controls={false}
-        className="block absolute inset-0 w-full h-full object-cover opacity-80"
-        playsInline
-      >
-        <source
-          src={
-            locale === "ar"
-              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/videos/arabic/banner_video_ar_v1.webm"
-              : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/videos/banner_video_v2.1.webm"
-          }
-          type="video/webm"
-        />
-      </video>
-      {/* <div
-        className="md:hidden absolute inset-0 w-full h-full bg-cover bg-center bg-opacity-20 py-16"
-        style={{
-          backgroundImage: "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/banner_bg.webp')",
-        }}
-      ></div> */}
-      <div className="container relative z-10 md:hidden">
-        <div className="text-center pb-16 lg:pb-6 xl:pb-12 2xl:pb-28 3xl:pb-36">
-          <Swiper
-            className="banner_swiper"
-            spaceBetween={30}
-            loop
-            effect={"fade"}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Autoplay, Pagination, EffectFade]}
-            autoplay={{
-              delay: 8000,
-            }}
-            fadeEffect={{
-              crossFade: true,
-              duration: 6000,
-            }}
+    <section className="bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/World+map+hero+bg.webp')] h-[760px] bg-center bg-no-repeat bg-cover pt-28">
+      <div className="text-center text-[#ffffff] space-y-5">
+        <Link
+          href={"https://www.trustpilot.com/review/primexbroker.com"}
+          target="_blank"
+        >
+          <div className="rounded-[8px] border-2 border-[#222222] inline-flex items-center text-sm">
+            <div className="bg-[#1d1d1d] px-4 py-2">
+              <Image
+                unoptimized={true}
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/trustpilot-logo+.svg"
+                alt="Trustpilot"
+                width={100}
+                height={100}
+                className="w-[70px] md:w-[100px]"
+              />
+            </div>
+            <div className="px-4">
+              <span className="text-xs md:text-base"> {t("review")}</span>
+            </div>
+          </div>
+        </Link>
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-[#ffffff]">
+          {t("title")}
+        </h1>
+        <p className="text-base md:text-lg lg:text-xl text-[#c6c6c6]">
+          {t("desc")}
+        </p>
+        <div className="px-5">
+          <button
+            onClick={() =>
+              window.open(
+                `${
+                  locale === "ar"
+                    ? "https://client.primexbroker.com/ar/register"
+                    : "https://client.primexbroker.com/en/register"
+                }`
+              )
+            }
+            className="py-[18px] px-[48px] font-semibold mt-5 w-full md:w-auto custom-button"
           >
-            {slideContents.map((slide, index) => (
-              <SwiperSlide key={index}>
-                <h1 className="text-white text-2xl xl:text-3xl 2xl:text-6xl 3xl:text-[68px] font-medium md:leading-none tracking-tight">
-                  {slide.title}
-                </h1>
-                <p
-                  className={`text-white text-[16px] xl:text-lg 2xl:text-xl 3xl:text-2xl tracking-wider pt-5 mx-auto ${
-                    isAr ? "md:w-[900px]" : "md:w-[800px]"
-                  }`}
-                >
-                  {slide.description}
-                </p>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+            {t("btnTxt")}
+          </button>
         </div>
       </div>
-      <CompanyStats stats={statsOne} />
+      <div className="hidden md:block">
+        <StatsCard stats={statsData} />
+      </div>
     </section>
   );
 };

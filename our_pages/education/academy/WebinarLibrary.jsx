@@ -2,11 +2,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import Image from "next/image";
-import { Autoplay, Pagination } from "swiper/modules";
-import { useState } from "react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { IoPlayOutline } from "react-icons/io5";
+import { IoMdArrowBack } from "react-icons/io";
+import { IoMdArrowForward } from "react-icons/io";
 
 const WebinarLibrary = () => {
   const t = useTranslations("academy.webinarLibrary");
@@ -73,103 +74,144 @@ const WebinarLibrary = () => {
     },
   ];
 
+  useEffect(() => {
+    const swiperPrevButton = document.querySelector(".swiper-button-prev");
+    const swiperNextButton = document.querySelector(".swiper-button-next");
+
+    if (swiperPrevButton && swiperNextButton) {
+      swiperPrevButton.addEventListener("click", () => {
+        console.log("Prev clicked");
+      });
+      swiperNextButton.addEventListener("click", () => {
+        console.log("Next clicked");
+      });
+    }
+  }, []);
+
   return (
-    <section className="py-8 container webinar_slider">
-      <h2 className="text-xl md:text-3xl text-secondary text-center font-semibold pb-4">
-        {t("title")}
-      </h2>
-      <p className="md:text-lg text-secondary text-center max-w-xl mx-auto">
-        {t("description")}
-      </p>
-      <div className="mt-12">
-        <Swiper
-          breakpoints={{
-            200: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            300: {
-              slidesPerView: 1,
-              spaceBetween: 0,
-            },
-            400: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-            },
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 10,
-            },
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 10,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            1440: {
-              slidesPerView: 4,
-              spaceBetween: 20,
-            },
-          }}
-          centeredSlides={false}
-          autoplay={{
-            delay: 1500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
-          spaceBetween={20}
-          loop
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Autoplay, Pagination]}
-        >
-          {webinarCards.map((card, index) => (
-            <SwiperSlide
-              className="flex flex-col justify-center items-center w-[255px] m-auto"
-              key={index}
-              style={{ display: "flex !important" }}
-            >
-              <div className="flex flex-col justify-center items-center w-[255px] h-[292px] m-aut0">
-                <div className="academy-video-single-box">
-                  <div className="academy-video-thumb">
-                    <img src={card.imgUrl} alt="" />
-                    <div className="academy-video-content">
-                      <div className="academy-video-icon flex justify-center items-center relative">
-                        <a
-                          className="video-vemo-icon flex justify-center items-center venobox vbox-item"
-                          data-vbtype="youtube"
-                          data-autoplay="true"
-                          href={card.iconUrl}
-                        >
-                          <IoPlayOutline className="text-[24px] z-10" />
-                        </a>
-                      </div>
-                      <div className="academy-video-title">
-                        <h4
-                          className={`text-[#fff] ${
-                            card.iconUrl === "https://youtu.be/Le1NednWK3Y"
-                              ? "text-[15px] font-semibold"
-                              : "text-[22px] font-semibold"
-                          }`}
-                          style={{ lineHeight: "normal" }}
-                        >
-                          {card.title1 && <div>{card.title1}</div>}
-                          {card.title2 && <div>{card.title2}</div>}
-                          {card.title3 && <div>{card.title3}</div>}
-                          {card.title4 && <div>{card.title4}</div>}
-                        </h4>
-                        <span>{card.name}</span>
+    <section className="py-10 bg-[#000000]">
+      <div className="container webinar_slider">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#FED100] text-center font-semibold pb-4">
+          {t("title1")} <span className="text-[#ffffff]">{t("title2")}</span>
+        </h2>
+        <p className="text-sm sm:text-base lg:text-lg text-[#ffffff] text-center max-w-xl mx-auto">
+          {t("description")}
+        </p>
+        <div className="mt-12">
+          <Swiper
+            breakpoints={{
+              200: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              300: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+              },
+              400: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+              1440: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
+            }}
+            centeredSlides={false}
+            autoplay={{
+              delay: 1500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
+            spaceBetween={20}
+            loop
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="home-testimonial-pagination"
+          >
+            {webinarCards.map((card, index) => (
+              <SwiperSlide
+                className="flex flex-col justify-center items-center w-[255px] m-auto mb-10"
+                key={index}
+                style={{ display: "flex !important" }}
+              >
+                <div className="flex flex-col justify-center items-center w-[255px] h-[292px] m-aut0">
+                  <div className="academy-video-single-box">
+                    <div className="academy-video-thumb">
+                      <img src={card.imgUrl} alt="" />
+                      <div className="academy-video-content">
+                        <div className="academy-video-icon flex justify-center items-center relative">
+                          <a
+                            className="video-vemo-icon flex justify-center items-center venobox vbox-item"
+                            data-vbtype="youtube"
+                            data-autoplay="true"
+                            href={card.iconUrl}
+                          >
+                            <IoPlayOutline className="text-[24px] z-10" />
+                          </a>
+                        </div>
+                        <div className="academy-video-title">
+                          <h4
+                            className={`text-[#fff] ${
+                              card.iconUrl === "https://youtu.be/Le1NednWK3Y"
+                                ? "text-[15px] font-semibold"
+                                : "text-[22px] font-semibold"
+                            }`}
+                            style={{ lineHeight: "normal" }}
+                          >
+                            {card.title1 && <div>{card.title1}</div>}
+                            {card.title2 && <div>{card.title2}</div>}
+                            {card.title3 && <div>{card.title3}</div>}
+                            {card.title4 && <div>{card.title4}</div>}
+                          </h4>
+                          <span>{card.name}</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div
+            className={`review-swiper-navigation-buttons flex gap-4 w-fit ${
+              locale === "ar" || locale === "fa" || locale === "kur"
+                ? "float-left"
+                : "float-right"
+            } relative bottom-[37px] z-[10] `}
+            dir={
+              locale === "ar" || locale === "fa" || locale === "kur"
+                ? "ltr"
+                : ""
+            }
+          >
+            <button className="swiper-button-prev group">
+              <IoMdArrowBack className="text-[#FED100] group-hover:text-[#111111] " />
+            </button>
+
+            <button className="swiper-button-next group">
+              <IoMdArrowForward className="text-[#FED100] group-hover:text-[#111111]" />
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );

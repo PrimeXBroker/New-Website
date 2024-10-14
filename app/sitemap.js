@@ -13,6 +13,14 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/fa`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/about`,
       lastModified: new Date(),
     },
@@ -22,6 +30,14 @@ export default async function sitemap() {
     },
     {
       url: `https://primexcapital.com/cn/about`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/fa/about`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/about`,
       lastModified: new Date(),
     },
     {
@@ -37,6 +53,14 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/fa/awards`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/awards`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/careers`,
       lastModified: new Date(),
     },
@@ -46,6 +70,14 @@ export default async function sitemap() {
     },
     {
       url: `https://primexcapital.com/cn/careers`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/fa/careers`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/careers`,
       lastModified: new Date(),
     },
     {
@@ -61,6 +93,14 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/fa/contact`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/contact`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/account-types`,
       lastModified: new Date(),
     },
@@ -70,6 +110,14 @@ export default async function sitemap() {
     },
     {
       url: `https://primexcapital.com/cn/account-types`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/fa/account-types`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/account-types`,
       lastModified: new Date(),
     },
     {
@@ -85,6 +133,14 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/fa/forex`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/forex`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/metals`,
       lastModified: new Date(),
     },
@@ -94,6 +150,14 @@ export default async function sitemap() {
     },
     {
       url: `https://primexcapital.com/cn/metals`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/fa/metals`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/metals`,
       lastModified: new Date(),
     },
     {
@@ -109,6 +173,14 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/fa/commodities`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/commodities`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/stocks`,
       lastModified: new Date(),
     },
@@ -118,6 +190,14 @@ export default async function sitemap() {
     },
     {
       url: `https://primexcapital.com/cn/stocks`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/fa/stocks`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/stocks`,
       lastModified: new Date(),
     },
     {
@@ -133,6 +213,14 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/fa/indices`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/indices`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/platform/mt5-platform`,
       lastModified: new Date(),
     },
@@ -142,6 +230,14 @@ export default async function sitemap() {
     },
     {
       url: `https://primexcapital.com/cn/platform/mt5-platform`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/fa/platform/mt5-platform`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/platform/mt5-platform`,
       lastModified: new Date(),
     },
     {
@@ -157,6 +253,14 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/fa/ib-program`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/ib-program`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/bonus`,
       lastModified: new Date(),
     },
@@ -166,6 +270,14 @@ export default async function sitemap() {
     },
     {
       url: `https://primexcapital.com/cn/bonus`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/fa/bonus`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/bonus`,
       lastModified: new Date(),
     },
     {
@@ -181,6 +293,14 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/fa/client-agreement`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/client-agreement`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/terms`,
       lastModified: new Date(),
     },
@@ -190,6 +310,14 @@ export default async function sitemap() {
     },
     {
       url: `https://primexcapital.com/cn/terms`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/fa/terms`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/terms`,
       lastModified: new Date(),
     },
     {
@@ -205,6 +333,14 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/fa/policy-statement`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/policy-statement`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/risk-disclosure`,
       lastModified: new Date(),
     },
@@ -214,6 +350,14 @@ export default async function sitemap() {
     },
     {
       url: `https://primexcapital.com/cn/risk-disclosure`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/fa/risk-disclosure`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/risk-disclosure`,
       lastModified: new Date(),
     },
     {
@@ -229,6 +373,14 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/fa/complaints-management`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/complaints-management`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/cookie-policy`,
       lastModified: new Date(),
     },
@@ -238,6 +390,14 @@ export default async function sitemap() {
     },
     {
       url: `https://primexcapital.com/cn/cookie-policy`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/fa/cookie-policy`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/cookie-policy`,
       lastModified: new Date(),
     },
     {
@@ -253,6 +413,14 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/fa/policy-of-aml`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/policy-of-aml`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/privacy-policy`,
       lastModified: new Date(),
     },
@@ -265,39 +433,71 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
-      url: `https://primexcapital.com/en/liquidity`,
+      url: `https://primexcapital.com/fa/privacy-policy`,
       lastModified: new Date(),
     },
     {
-      url: `https://primexcapital.com/ar/liquidity`,
+      url: `https://primexcapital.com/kur/privacy-policy`,
       lastModified: new Date(),
     },
     {
-      url: `https://primexcapital.com/cn/liquidity`,
+      url: `https://primexcapital.com/en/liquidity-providing`,
       lastModified: new Date(),
     },
     {
-      url: `https://primexcapital.com/en/grey-label-program`,
+      url: `https://primexcapital.com/ar/liquidity-providing`,
       lastModified: new Date(),
     },
     {
-      url: `https://primexcapital.com/ar/grey-label-program`,
+      url: `https://primexcapital.com/cn/liquidity-providing`,
       lastModified: new Date(),
     },
     {
-      url: `https://primexcapital.com/cn/grey-label-program`,
+      url: `https://primexcapital.com/fa/liquidity-providing`,
       lastModified: new Date(),
     },
     {
-      url: `https://primexcapital.com/en/regional-partner-program`,
+      url: `https://primexcapital.com/kur/liquidity-providing`,
       lastModified: new Date(),
     },
     {
-      url: `https://primexcapital.com/ar/regional-partner-program`,
+      url: `https://primexcapital.com/en/grey-label-partner`,
       lastModified: new Date(),
     },
     {
-      url: `https://primexcapital.com/cn/regional-partner-program`,
+      url: `https://primexcapital.com/ar/grey-label-partner`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/cn/grey-label-partner`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/fa/grey-label-partner`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/grey-label-partner`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/en/regional-partner`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/ar/regional-partner`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/cn/regional-partner`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/fa/regional-partner`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/regional-partner`,
       lastModified: new Date(),
     },
     {
@@ -313,6 +513,14 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/fa/academy`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/academy`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/funded-account-competition`,
       lastModified: new Date(),
     },
@@ -324,6 +532,15 @@ export default async function sitemap() {
       url: `https://primexcapital.com/cn/funded-account-competition`,
       lastModified: new Date(),
     },
+    {
+      url: `https://primexcapital.com/fa/funded-account-competition`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/funded-account-competition`,
+      lastModified: new Date(),
+    },
+
     {
       url: `https://primexcapital.com/en/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e`,
       lastModified: new Date(),

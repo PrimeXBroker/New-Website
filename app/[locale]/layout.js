@@ -79,7 +79,6 @@ export async function generateMetadata({ params: { locale } }) {
   const t = createTranslator({ locale, messages });
 
   const userCountry = await GetLocation();
-  console.log(userCountry, "userCountry");
   const isInUAE = userCountry === "AE";
 
   const descriptions = {
@@ -95,7 +94,6 @@ export async function generateMetadata({ params: { locale } }) {
   };
 
   const description = descriptions[locale] || descriptions["en"];
-  console.log(description, "description");
 
   const url =
     locale != "en"

@@ -104,7 +104,6 @@ const ContactForm = () => {
           `https://primexbroker.com/api/contact`,
           updatedValues
         );
-        console.log("ContactResponse", response);
       } catch (error) {
         console.log(error);
       } finally {

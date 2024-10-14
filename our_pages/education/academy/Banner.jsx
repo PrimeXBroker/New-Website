@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { useTranslations, useLocale } from "next-intl";
-import local from "@next/font/local";
+import TrustPilot from "@/components/TrustPilot";
 
 const Banner = ({ setActive }) => {
   const locale = useLocale();
@@ -11,30 +11,42 @@ const Banner = ({ setActive }) => {
 
   return (
     <section className="">
-      <div className="bg-secondary pt-[40px] lg:pt-0">
+      <div className="bg-[#000000] pt-[40px] lg:pt-10">
         <div className="container flex flex-col md:flex-row justify-around py-16">
-          <div className="max-w-2xl flex flex-col justify-center items-start gap-6 md:w-[70%]">
+          <div className="max-w-2xl flex flex-col justify-center items-enter md:items-start md:w-[70%]">
+            <div className="text-center md:text-start mb-3">
+              <TrustPilot />
+            </div>{" "}
             <h1
-              className={`text-primary text-xl md:text-3xl font-semibold ${
+              className={`text-3xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff] pb-1 ${
                 locale === "ar" || locale === "fa" || locale === "kur"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
-              style={{ lineHeight: "45px", letterSpacing: "1px" }}
             >
-              <span className="text-white font-light block text-lg text-2xl">
-                {h("title_1")}
-              </span>
-              {h("title_2")}
-              <span className="text-white text-xl md:text-3xl font-semibold block mt-3">
-                {h("title_3")}
-              </span>
-              <span className="text-white text-xl md:text-3xl font-semibold block mt-1">
-                {h("title_4")}
-              </span>
+              {h("title_1")}
             </h1>
+            <h2
+              className={`text-3xl sm:text-3xl lg:text-4xl font-semibold text-[#FED100] ${
+                locale === "ar" || locale === "fa" || locale === "kur"
+                  ? "text-center md:text-right"
+                  : "text-center md:text-left"
+              }`}
+            >
+              {h("title_2")}
+            </h2>
+            <h3
+              className={`text-lg sm:text-xl md:text-lg font-semibold text-[#ffffff] my-3 ${
+                locale === "ar" || locale === "fa" || locale === "kur"
+                  ? "text-center md:text-right"
+                  : "text-center md:text-left"
+              }`}
+            >
+              {h("title_3")} <br />
+              {h("title_4")}
+            </h3>
             <p
-              className={`text-white md:text-lg text-medium md:max-w-xl ${
+              className={`text-[#c6c6c6] w-[95%] sm:w-[90%] mx-auto md:mx-0 md:w-[75%] mb-5 text-sm sm:text-base ${
                 locale === "ar" || locale === "fa" || locale === "kur"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
@@ -46,7 +58,7 @@ const Banner = ({ setActive }) => {
             <Link
               href="#academy-form"
               onClick={() => setActive("Webinars")}
-              className="bg-primary text-center px-4 py-4 rounded-full w-[200px] shadow-xl block md:m-0 mx-auto"
+              className="bg-primary text-center px-4 py-4 w-[200px] shadow-xl block md:m-0 mx-auto custom-button font-semibold"
             >
               {h("join_btn")}
             </Link>
@@ -66,38 +78,6 @@ const Banner = ({ setActive }) => {
           </div>
         </div>
       </div>
-      {/* <div className="container py-16 max-w-xl flex flex-col gap-5 sm:gap-5">
-        <h2
-          className="md:text-3xl text-xl text-secondary font-semibold text-center"
-          style={{ lineHeight: "50px", letterSpacing: "1px" }}
-        >
-          {f("title")}
-        </h2>
-        <p
-          className="text-center text-secondary md:text-medium"
-          style={{ lineHeight: "30px", letterSpacing: "0.8px" }}
-        >
-          {f("description")}
-        </p>
-        <Link
-          href="https://download.mql5.com/cdn/web/primex.broker.pty/mt5/primexbroker5setup.exe"
-          className="bg-primary text-center px-4 py-4 rounded-full w-[200px] mx-auto block shadow-xl mb-3 sm:mb-2"
-        >
-          {f("download_btn")}
-        </Link>
-        <p className="text-secondary text-lg text-center" dir="ltr">
-          {f("link_title_part_1")}
-          <span className="font-[700]">{f("link_title_part_2")}</span>
-          {f("link_title_part_3")}
-          <Link
-            className="text-primary appearance-none pl-2"
-            href="https://download.mql5.com/cdn/web/primex.broker.pty/mt5/primexbroker5setup.exe"
-          >
-            {f("download_link_text")}
-          </Link>
-        </p>
-        <p className="text-secondary text-lg text-center">{f("powered_by")}</p>
-      </div> */}
     </section>
   );
 };

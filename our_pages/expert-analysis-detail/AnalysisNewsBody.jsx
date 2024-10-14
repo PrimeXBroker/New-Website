@@ -13,7 +13,6 @@ function AnalysisNewsBody({ slug }) {
   const locale = useLocale();
   const [detail, setDetail] = useState(null);
   const [content, setContent] = useState(null);
-  console.log(content, "content");
 
   const ImageComponent = ({ src }) => (
     <img src={src} alt="" style={{ maxWidth: "100%" }} />

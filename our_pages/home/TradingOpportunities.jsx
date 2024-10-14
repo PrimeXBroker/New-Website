@@ -1,65 +1,45 @@
 "use client";
-import { Tabs, Tab } from "@nextui-org/tabs";
-import Script from "next/script";
-import { useTranslations } from "next-intl";
-import Indices from "./widgets/Indices";
-import Forex from "./widgets/forex";
-import Commodities from "./widgets/Commodities";
-import Stocks from "./widgets/Stocks";
-import Crypto from "./widgets/Crypto";
+import React from "react";
+import { useLocale, useTranslations } from "next-intl";
+import TradingOpportunitiesWidget from "@/our_pages/home/NewTradingOpportunitiesWidget";
 
 const TradingOpportunities = () => {
+  const locale = useLocale();
   const t = useTranslations("home.tradingOpportunities");
 
   return (
-    <section className="pt-12 bg-accent relative">
-      <h1
-        className="sectionHeading"
-        data-aos-easing="ease-out"
-        data-aos-duration={1000}
-        data-aos="slide-up"
-      >
-        {t("trading_opportunities_title")}
-      </h1>
-      <p
-        className="sectionPara text-center py-4"
-        data-aos-easing="ease-out"
-        data-aos-duration={1000}
-        data-aos="slide-up"
-      >
-        {t("trading_opportunities_desc")}
-      </p>
-      <div className="text-center mt-8">
-        <Tabs classNames={{
-          panel:'p-0',
-        }} radius="full" color="primary" className="tabs_custom">
-          <Tab title={t("trading_opportunities_tab1")}>
-            <div className="pt-8 text-xl">
-              <Forex />
-            </div>
-          </Tab>
-          <Tab title={t("trading_opportunities_tab2")}>
-            <div className="pt-8 text-xl">
-              <Indices />
-            </div>
-          </Tab>
-          <Tab title={t("trading_opportunities_tab3")}>
-            <div className="pt-8 text-xl">
-              <Commodities />
-            </div>
-          </Tab>
-          <Tab title={t("trading_opportunities_tab4")}>
-            <div className="pt-8 text-xl">
-              <Stocks />
-            </div>
-          </Tab>
-          <Tab title={t("trading_opportunities_tab5")}>
-            <div className="pt-8 text-xl">
-              <Crypto />
-            </div>
-          </Tab>
-        </Tabs>
+    <section className="bg-[#000000] pt-12">
+      <div className="container">
+        <div className="bg-[#111111] text-[#ffffff] border-2 border-[#1d1d1d] py-8 px-4 md:px-14 rounded-xl mx-auto flex flex-col md:flex-row justify-between items-center">
+          <div className="md:w-1/2">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center md:text-start">
+              {t("title1")}{" "}
+              <span className="text-[#FED100]">{t("title2")}</span>{" "}
+              {t("title3")}
+            </h2>
+          </div>
+          <div className="md:w-1/2 flex flex-col md:items-start space-y-4">
+            <p className="text-[#c6c6c6] py-4 text-center md:text-start">
+              {t("description")}
+            </p>
+            <button
+              onClick={() =>
+                window.open(
+                  `${
+                    locale === "ar"
+                      ? "https://client.primexbroker.com/ar/register"
+                      : "https://client.primexbroker.com/en/register"
+                  }`
+                )
+              }
+              className="py-[18px] px-[48px] font-semibold custom-button"
+            >
+              {t("btnTxt")}
+            </button>
+          </div>
+        </div>
       </div>
+      <TradingOpportunitiesWidget />
     </section>
   );
 };

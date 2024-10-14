@@ -16,7 +16,6 @@ const MarketNewsDetail = ({ slug }) => {
       `https://primexbroker.com/api/fetch/publish/related/blogs/1/3/${detail.category._id}/${detail._id}`
     );
     if (res?.data?.success) {
-      console.log(res?.data?.data, "blogfryyy");
       setRelated(res?.data?.data);
       // setLoading2(false);
     }
@@ -30,7 +29,6 @@ const MarketNewsDetail = ({ slug }) => {
         { cache: "no-store" }
       );
       if (res?.data?.success) {
-        console.log(res?.data, "parsing");
         setDetail(res?.data?.data);
       }
     } catch (error) {

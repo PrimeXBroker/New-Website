@@ -14,7 +14,6 @@ const ExpertAnalysisDetail = ({ slug }) => {
   const [loading, setLoading] = useState(true);
 
   const fetchRelatedBlogs = async () => {
-    console.log(detail._id, "detail_id");
     const res = await axios.get(
       `https://primexbroker.com/api/fetch/publish/related/market-news/1/3/${detail._id}`
     );
@@ -39,8 +38,6 @@ const ExpertAnalysisDetail = ({ slug }) => {
       console.log(error);
     }
   };
-
-  console.log("slug content", slug);
 
   useEffect(() => {
     if (slug) {

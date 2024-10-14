@@ -124,7 +124,6 @@ const ComplaintForm = () => {
           `https://primexbroker.com/api/complaints`,
           updatedValues
         );
-        console.log("Response", response);
       } catch (error) {
         console.log(error);
       } finally {

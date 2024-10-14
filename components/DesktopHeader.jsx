@@ -316,7 +316,7 @@ const DesktopHeader = ({ locale }) => {
                   </li>
                   <li>
                     <LocaleLink
-                      href="/liquidity"
+                      href="/liquidity-providing"
                       onClick={closeDropdown}
                       className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >

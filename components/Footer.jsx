@@ -38,7 +38,7 @@ const Footer = () => {
   const [isAboutPage, setIsAboutPage] = useState(false);
 
   useEffect(() => {
-    setIsLiquidityPage(pathname.includes("/liquidity"));
+    setIsLiquidityPage(pathname.includes("/liquidity-providing"));
     setIsHomePage(pathname === `/${locale}` || pathname === `/${locale}/`);
     setIsIbPage(pathname.includes("/ib-program"));
     setIsGreyLabelPage(pathname.includes("/grey-label-partner"));
@@ -102,13 +102,22 @@ const Footer = () => {
         heading: t("Services.title_part3"),
         links: [
           { name: t("Services.title_part3_link1"), href: "/account-types" },
-          { name: t("Services.title_part3_link2"), href: "/ib-program" },
-          { name: t("Services.title_part3_link3"), href: "/regional-partner" },
+          {
+            name: t("Services.title_part3_link2"),
+            href: "/ib-program",
+          },
+          {
+            name: t("Services.title_part3_link3"),
+            href: "/regional-partner",
+          },
           {
             name: t("Services.title_part3_link4"),
             href: "/grey-label-partner",
           },
-          { name: t("Services.title_part3_link5"), href: "/liquidity" },
+          {
+            name: t("Services.title_part3_link5"),
+            href: "/liquidity-providing",
+          },
         ],
       },
     },

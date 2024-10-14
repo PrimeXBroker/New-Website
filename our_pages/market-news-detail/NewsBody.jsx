@@ -21,7 +21,6 @@ function NewsBody({ slug }) {
   const locale = useLocale();
   const [detail, setDetail] = useState(null);
   const [content, setContent] = useState(null);
-  console.log(content, "content");
 
   const ImageComponent = ({ src }) => (
     <img src={src} alt="" style={{ maxWidth: "100%" }} />
@@ -88,7 +87,6 @@ function NewsBody({ slug }) {
         { cache: "no-store" }
       );
       if (res?.data?.success) {
-        console.log(res?.data, "parsing");
         setDetail(res?.data?.data);
         // const currentUrl = router.asPath;
         // if (currentUrl) {
@@ -99,7 +97,6 @@ function NewsBody({ slug }) {
           contentState,
           decorator
         );
-        console.log(editorState, "editorState");
         setContent(editorState);
         // }
         // setLoading(false);
@@ -109,8 +106,6 @@ function NewsBody({ slug }) {
       console.log(error);
     }
   };
-
-  console.log("slug content", slug);
 
   useEffect(() => {
     fetchdetails();

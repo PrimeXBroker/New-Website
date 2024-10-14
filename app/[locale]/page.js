@@ -1,4 +1,4 @@
-import HomePage from "@/our_pages/new-home/HomePage";
+import HomePage from "@/our_pages/home/HomePage";
 import Script from "next/script";
 
 export default function Home() {
@@ -67,7 +67,6 @@ export default function Home() {
                 },
                 reviewBody: "Amazing vibes and office 👌...",
               },
-              // Add other reviews
             ],
             makesOffer: [
               {
@@ -78,7 +77,6 @@ export default function Home() {
                   description: "Forex trading offers diverse opportunities...",
                 },
               },
-              // Add other services
             ],
           }),
         }}
@@ -139,7 +137,6 @@ export default function Home() {
           }),
         }}
       />
-
       <HomePage />
     </>
   );

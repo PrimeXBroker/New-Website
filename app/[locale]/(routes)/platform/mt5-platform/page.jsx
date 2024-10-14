@@ -1,4 +1,4 @@
-import MT5PlatformWrapper from "@/our_pages/new-platform/MT5PlatformWrapper";
+import MT5PlatformWrapper from "@/our_pages/platforms/mt5-platform/MT5PlatformWrapper";
 import { createTranslator } from "next-intl";
 import Script from "next/script";
 
