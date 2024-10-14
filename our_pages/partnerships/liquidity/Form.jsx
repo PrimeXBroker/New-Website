@@ -252,7 +252,7 @@ function Form() {
                 {t("success_title")}
               </ModalHeader>
               <ModalBody>
-                <p>{t("webinar_success_desc")}</p>
+                <p>{t("success_desc")}</p>
                 {/* <p>Thank you for choosing PrimeX Capital</p> */}
               </ModalBody>
               <ModalFooter>

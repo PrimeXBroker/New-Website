@@ -1,4 +1,5 @@
 import AboutBanner from "@/components/footer-pages/about/AboutBanner";
+import GlobalMap from "@/components/footer-pages/about/GlobalMap";
 import Mission from "@/components/footer-pages/about/Mission";
 import Values from "@/components/footer-pages/about/Values";
 // import MobileRecognition from "@/our_pages/home/MobileRecognition";
@@ -10,6 +11,7 @@ const AboutPage = () => {
     <>
       <AboutBanner />
       <Mission />
+      <GlobalMap />
       <Values />
       {/* <div className="lg:block hidden pb-5 sm:pb-20 bg-[#000000]">
         <Recognition />
