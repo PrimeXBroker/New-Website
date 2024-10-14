@@ -68,6 +68,16 @@ function Form() {
         question: values.question,
       };
       try {
+<<<<<<< HEAD:our_pages/partnerships/liquidity/Form.jsx
+=======
+        // setLoading(true);
+        Object.assign(values, {
+          language: locale,
+          country: countryCode,
+          source: "website academy",
+        });
+
+>>>>>>> 3b724637bff13db7fe14f795eaeb2c302ab0ed3b:our_pages/new-academy/WebinarForm.jsx
         const res = await axios.post(
           `https://primexbroker.com/api/liquidity`,
           updatedValues
@@ -252,7 +262,7 @@ function Form() {
                 {t("success_title")}
               </ModalHeader>
               <ModalBody>
-                <p>{t("success_desc")}</p>
+                <p>{t("webinar_success_desc")}</p>
                 {/* <p>Thank you for choosing PrimeX Capital</p> */}
               </ModalBody>
               <ModalFooter>

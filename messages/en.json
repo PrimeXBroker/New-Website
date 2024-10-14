@@ -627,10 +627,8 @@
       "description": "Learn about PrimeX Capital, your trusted partner in trading. Discover our mission, values, and commitmart to excellarce. Click to learn more!"
     },
     "hero": {
-      "title1": "Revolutionizing",
-      "title2": "Your Trading",
-      "title3": "Experience",
-      "description": "At PrimeX Capital, we transform the trading experience with innovative and reliable solutions. Our platform empowers traders of all levels to thrive through advanced technology, diverse trading instruments, and exceptional support."
+      "title": "Revolutionizing Your Trading Experience",
+      "description": "At PrimeX Capital we are dedicated to transforming the trading experience. Established with a vision to provide innovative and reliable trading solutions. We offer a platform where traders of all levels can thrive. Our mission is to deliver advanced technology, diverse trading instruments, and exceptional support to empower your trading journey."
     },
     "mission": {
       "mission_title": "Mission",
@@ -639,8 +637,7 @@
       "vision_desc": "To be the leading choice for traders worldwide by continually innovating and expanding our offerings to meet the evolving needs of the global trading community"
     },
     "coreValues": {
-      "title1": "Core ",
-      "title2": "Values",
+      "title": "Core Values",
       "value_1_title": "Integrity",
       "value_1_desc": "Upholding the highest standards of transparency and fairness",
       "value_2_title": "Innovation",
@@ -649,13 +646,6 @@
       "value_3_desc": "Providing exceptional support and personalized solutions",
       "value_4_title": "Excellence",
       "value_4_desc": "committed to delivering top-quality trading experience"
-    },
-    "globalMap": {
-      "title1": "FIND US",
-      "title2": "ACROSS THE ",
-      "title3": "GLOBE",
-      "country1": "UAE",
-      "country2": "South Africa"
     }
   },
   "contact": {
