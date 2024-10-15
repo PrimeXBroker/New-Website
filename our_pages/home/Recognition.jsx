@@ -12,7 +12,7 @@ const Recognition = () => {
     },
     {
       imgSrc:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/home-award-9.webp",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/award-9-latest.webp",
     },
     {
       imgSrc:
@@ -44,7 +44,7 @@ const Recognition = () => {
     },
     {
       imgSrc:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Award-7-New.webp",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/awards/award-7-latest.webp",
     },
   ];
 
