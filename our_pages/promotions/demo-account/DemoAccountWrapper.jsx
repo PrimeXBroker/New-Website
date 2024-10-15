@@ -38,9 +38,7 @@ const DemoAccountWrapper = () => {
   return (
     <div className="relative">
       <Banner />
-      {/* <div className="relative z-10 -mt-52 sm:-mt-20"> */}
       <FundedAccount />
-      {/* </div> */}
       <CompetitionWidget />
       <ParticipateForm />
       <SignUp />
