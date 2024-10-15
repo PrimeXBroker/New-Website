@@ -79,8 +79,12 @@ const RewardsSlider = () => {
   ];
 
   useEffect(() => {
-    const swiperPrevButton = document.querySelector(".swiper-button-prev");
-    const swiperNextButton = document.querySelector(".swiper-button-next");
+    const swiperPrevButton = document.querySelector(
+      ".rewards-swiper-button-prev"
+    );
+    const swiperNextButton = document.querySelector(
+      ".rewards-swiper-button-next"
+    );
 
     if (swiperPrevButton && swiperNextButton) {
       swiperPrevButton.addEventListener("click", () => {
@@ -156,8 +160,8 @@ const RewardsSlider = () => {
             clickable: true,
           }}
           navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".rewards-swiper-button-next",
+            prevEl: ".rewards-swiper-button-prev",
           }}
           modules={[Autoplay, Pagination, Navigation]}
           className="mt-5 home-testimonial-pagination"
@@ -184,7 +188,7 @@ const RewardsSlider = () => {
           ))}
         </Swiper>
         <div
-          className={`review-swiper-navigation-buttons flex gap-4 w-fit ${
+          className={`rewards-swiper-navigation-buttons flex gap-4 w-fit ${
             locale === "ar" || locale === "fa" || locale === "kur"
               ? "float-left"
               : "float-right"
@@ -193,11 +197,11 @@ const RewardsSlider = () => {
             locale === "ar" || locale === "fa" || locale === "kur" ? "ltr" : ""
           }
         >
-          <button className="swiper-button-prev group">
+          <button className="rewards-swiper-button-prev group">
             <IoMdArrowBack className="text-[#FED100] group-hover:text-[#111111]" />
           </button>
 
-          <button className="swiper-button-next group">
+          <button className="rewards-swiper-button-next group">
             <IoMdArrowForward className="text-[#FED100] group-hover:text-[#111111]" />
           </button>
         </div>

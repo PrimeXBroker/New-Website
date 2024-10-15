@@ -90,8 +90,12 @@ const Testimonials = () => {
   ];
 
   useEffect(() => {
-    const swiperPrevButton = document.querySelector(".swiper-button-prev");
-    const swiperNextButton = document.querySelector(".swiper-button-next");
+    const swiperPrevButton = document.querySelector(
+      ".reviews-swiper-button-prev"
+    );
+    const swiperNextButton = document.querySelector(
+      ".reviews-swiper-button-next"
+    );
 
     if (swiperPrevButton && swiperNextButton) {
       swiperPrevButton.addEventListener("click", () => {
@@ -158,8 +162,8 @@ const Testimonials = () => {
             clickable: true,
           }}
           navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".reviews-swiper-button-next",
+            prevEl: ".reviews-swiper-button-prev",
           }}
           modules={[Autoplay, Pagination, Navigation]}
           className="mt-5 home-testimonial-pagination"
@@ -233,11 +237,11 @@ const Testimonials = () => {
             locale === "ar" || locale === "fa" || locale === "kur" ? "ltr" : ""
           }
         >
-          <button className="swiper-button-prev group">
+          <button className="reviews-swiper-button-prev group">
             <IoMdArrowBack className="text-[#FED100] group-hover:text-[#111111] " />
           </button>
 
-          <button className="swiper-button-next group">
+          <button className="reviews-swiper-button-next group">
             <IoMdArrowForward className="text-[#FED100] group-hover:text-[#111111]" />
           </button>
         </div>

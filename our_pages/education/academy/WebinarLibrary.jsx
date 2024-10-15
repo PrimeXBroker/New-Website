@@ -75,8 +75,12 @@ const WebinarLibrary = () => {
   ];
 
   useEffect(() => {
-    const swiperPrevButton = document.querySelector(".swiper-button-prev");
-    const swiperNextButton = document.querySelector(".swiper-button-next");
+    const swiperPrevButton = document.querySelector(
+      ".webinar-swiper-button-prev"
+    );
+    const swiperNextButton = document.querySelector(
+      ".webinar-swiper-button-next"
+    );
 
     if (swiperPrevButton && swiperNextButton) {
       swiperPrevButton.addEventListener("click", () => {
@@ -136,8 +140,8 @@ const WebinarLibrary = () => {
               pauseOnMouseEnter: true,
             }}
             navigation={{
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
+              nextEl: ".webinar-swiper-button-next",
+              prevEl: ".webinar-swiper-button-prev",
             }}
             spaceBetween={20}
             loop
@@ -192,7 +196,7 @@ const WebinarLibrary = () => {
             ))}
           </Swiper>
           <div
-            className={`review-swiper-navigation-buttons flex gap-4 w-fit ${
+            className={`webinars-swiper-navigation-buttons flex gap-4 w-fit ${
               locale === "ar" || locale === "fa" || locale === "kur"
                 ? "float-left"
                 : "float-right"
@@ -203,11 +207,11 @@ const WebinarLibrary = () => {
                 : ""
             }
           >
-            <button className="swiper-button-prev group">
+            <button className="webinar-swiper-button-prev group">
               <IoMdArrowBack className="text-[#FED100] group-hover:text-[#111111] " />
             </button>
 
-            <button className="swiper-button-next group">
+            <button className="webinar-swiper-button-next group">
               <IoMdArrowForward className="text-[#FED100] group-hover:text-[#111111]" />
             </button>
           </div>

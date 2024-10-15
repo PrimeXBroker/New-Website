@@ -58,8 +58,12 @@ const MobileRecognition = () => {
   ];
 
   useEffect(() => {
-    const swiperPrevButton = document.querySelector(".swiper-button-prev");
-    const swiperNextButton = document.querySelector(".swiper-button-next");
+    const swiperPrevButton = document.querySelector(
+      ".recognition-swiper-button-prev"
+    );
+    const swiperNextButton = document.querySelector(
+      ".recognition-swiper-button-next"
+    );
 
     if (swiperPrevButton && swiperNextButton) {
       swiperPrevButton.addEventListener("click", () => {
@@ -127,8 +131,8 @@ const MobileRecognition = () => {
             clickable: true,
           }}
           navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".recognition-swiper-button-next",
+            prevEl: ".recognition-swiper-button-prev",
           }}
           modules={[Autoplay, Pagination, Navigation]}
           className="mt-5 home-testimonial-pagination"
@@ -149,7 +153,7 @@ const MobileRecognition = () => {
           ))}
         </Swiper>
         <div
-          className={`review-swiper-navigation-buttons flex gap-4 w-fit ${
+          className={`recognition-swiper-navigation-buttons flex gap-4 w-fit ${
             locale === "ar" || locale === "fa" || locale === "kur"
               ? "float-left"
               : "float-right"
@@ -158,11 +162,11 @@ const MobileRecognition = () => {
             locale === "ar" || locale === "fa" || locale === "kur" ? "ltr" : ""
           }
         >
-          <button className="swiper-button-prev group">
+          <button className="recognition-swiper-button-prev group">
             <IoMdArrowBack className="text-[#FED100] group-hover:text-[#111111]" />
           </button>
 
-          <button className="swiper-button-next group">
+          <button className="recognition-swiper-button-next group">
             <IoMdArrowForward className="text-[#FED100] group-hover:text-[#111111]" />
           </button>
         </div>
