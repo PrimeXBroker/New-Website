@@ -11,6 +11,12 @@ export default async function sitemap() {
   const learningHubEnLinks = await fetchEnglishLearningHub();
   const learningHubArLinks = await fetchArabicLearningHub();
 
+
+  function escapeXmlChars(url) {
+    return url.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+  
+
   // Define static URLs
   const staticUrls = [
     {
@@ -598,17 +604,17 @@ export default async function sitemap() {
 
   // Combine static and dynamic URLs
   const sitemapUrls = [
-    ...staticUrls,
-    ...marketNewsEnLinks,
-    ...marketNewsArLinks,
-    ...startingGatewayEnLinks,
-    ...startingGatewayArLinks,
-    ...pressReleaseEnLinks,
-    ...pressReleaseArLinks,
-    ...technicalAnalysisEnLinks,
-    ...technicalAnalysisArLinks,
-    ...learningHubEnLinks,
-    ...learningHubArLinks,
+    ...staticUrls.map(urlObj => ({ ...urlObj, url: escapeXmlChars(urlObj.url) })),
+  ...marketNewsEnLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
+  ...marketNewsArLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
+  ...startingGatewayEnLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
+  ...startingGatewayArLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
+  ...pressReleaseEnLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
+  ...pressReleaseArLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
+  ...technicalAnalysisEnLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
+  ...technicalAnalysisArLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
+  ...learningHubEnLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
+  ...learningHubArLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) }))
   ];
 
   return sitemapUrls;
@@ -623,7 +629,7 @@ async function fetchEnglishMarketNews() {
     );
     const data = await response.json();
     const links = data.map((item) => ({
-      url: `https://primexbroker.com/en/market-news-detail/${item.slug}`,
+      url: `https://primexcapital.com/en/market-news-detail/${item.slug}`,
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links;
@@ -642,7 +648,7 @@ async function fetchArabicMarketNews() {
     );
     const data = await response.json();
     const links = data.map((item) => ({
-      url: `https://primexbroker.com/ar/market-news-detail/${item.slug}`,
+      url: `https://primexcapital.com/ar/market-news-detail/${item.slug}`,
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links;
@@ -661,7 +667,7 @@ async function fetchEnglishStartingGateway() {
     );
     const data = await response.json();
     const links = data.map((item) => ({
-      url: `https://primexbroker.com/en/market-news-detail/${item.slug}`,
+      url: `https://primexcapital.com/en/market-news-detail/${item.slug}`,
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links;
@@ -680,7 +686,7 @@ async function fetchArabicStartingGateway() {
     );
     const data = await response.json();
     const links = data.map((item) => ({
-      url: `https://primexbroker.com/ar/market-news-detail/${item.slug}`,
+      url: `https://primexcapital.com/ar/market-news-detail/${item.slug}`,
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links;
@@ -699,7 +705,7 @@ async function fetchEnglishPressRelease() {
     );
     const data = await response.json();
     const links = data.map((item) => ({
-      url: `https://primexbroker.com/en/market-news-detail/${item.slug}`,
+      url: `https://primexcapital.com/en/market-news-detail/${item.slug}`,
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links;
@@ -718,7 +724,7 @@ async function fetchArabicPressRelease() {
     );
     const data = await response.json();
     const links = data.map((item) => ({
-      url: `https://primexbroker.com/ar/market-news-detail/${item.slug}`,
+      url: `https://primexcapital.com/ar/market-news-detail/${item.slug}`,
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links;
@@ -737,7 +743,7 @@ async function fetchEnglishTechnicalAnalysis() {
     );
     const data = await response.json();
     const links = data.map((item) => ({
-      url: `https://primexbroker.com/en/expert-analysis-detail/${item.slug}`,
+      url: `https://primexcapital.com/en/expert-analysis-detail/${item.slug}`,
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links;
@@ -756,7 +762,7 @@ async function fetchArabicTechnicalAnalysis() {
     );
     const data = await response.json();
     const links = data.map((item) => ({
-      url: `https://primexbroker.com/ar/expert-analysis-detail/${item.slug}`,
+      url: `https://primexcapital.com/ar/expert-analysis-detail/${item.slug}`,
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links;
@@ -775,7 +781,7 @@ async function fetchEnglishLearningHub() {
     );
     const data = await response.json();
     const links = data.map((item) => ({
-      url: `https://primexbroker.com/en/expert-analysis-detail/${item.slug}`,
+      url: `https://primexcapital.com/en/expert-analysis-detail/${item.slug}`,
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links;
@@ -794,7 +800,7 @@ async function fetchArabicLearningHub() {
     );
     const data = await response.json();
     const links = data.map((item) => ({
-      url: `https://primexbroker.com/ar/expert-analysis-detail/${item.slug}`,
+      url: `https://primexcapital.com/ar/expert-analysis-detail/${item.slug}`,
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links;
