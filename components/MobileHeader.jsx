@@ -759,13 +759,13 @@ const MobileHeader = ({ locale }) => {
             </button>
             {openSubMenu === 5 && (
               <div className="mt-2">
-                <LocaleLink
+                {/* <LocaleLink
                   href="/bonus"
                   className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("deposit")}
-                </LocaleLink>
+                </LocaleLink> */}
                 {/* <LocaleLink
                   href="/top-trader"
                   className="block text-[#ffffff] text-base pt-[16px]"

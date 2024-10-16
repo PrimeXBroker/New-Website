@@ -355,7 +355,7 @@ const DesktopHeader = ({ locale }) => {
               </button>
               {activeDropdown === 4 && (
                 <ul className="absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[250px] rounded-[6px]">
-                  <li>
+                  {/* <li>
                     <LocaleLink
                       href="/bonus"
                       onClick={closeDropdown}
@@ -363,7 +363,7 @@ const DesktopHeader = ({ locale }) => {
                     >
                       {t("deposit")}
                     </LocaleLink>
-                  </li>
+                  </li> */}
                   {/* <li>
                     <LocaleLink
                       href="/top-trader"

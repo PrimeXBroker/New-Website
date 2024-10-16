@@ -70,16 +70,16 @@ const HomePage = () => {
   ];
 
   const promotionsData = [
-    {
-      title: p("title1_1"),
-      highlight: p("title1_2"),
-      title2: p("title1_3"),
-      description: p("desc1_1"),
-      buttonText: p("start_btn"),
-      iconSrc:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Bonus+Image.svg",
-      link: `/${locale}/bonus`,
-    },
+    // {
+    //   title: p("title1_1"),
+    //   highlight: p("title1_2"),
+    //   title2: p("title1_3"),
+    //   description: p("desc1_1"),
+    //   buttonText: p("start_btn"),
+    //   iconSrc:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Bonus+Image.svg",
+    //   link: `/${locale}/bonus`,
+    // },
     {
       title: p("title2_1"),
       highlight: p("title2_2"),
