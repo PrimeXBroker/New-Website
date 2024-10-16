@@ -1,5 +1,18 @@
 export default async function sitemap() {
-  return [
+  // Fetch dynamic data from the backend
+  const marketNewsEnLinks = await fetchEnglishMarketNews();
+  const marketNewsArLinks = await fetchArabicMarketNews();
+  const startingGatewayEnLinks = await fetchEnglishStartingGateway();
+  const startingGatewayArLinks = await fetchArabicStartingGateway();
+  const pressReleaseEnLinks = await fetchEnglishPressRelease();
+  const pressReleaseArLinks = await fetchArabicPressRelease();
+  const technicalAnalysisEnLinks = await fetchEnglishTechnicalAnalysis();
+  const technicalAnalysisArLinks = await fetchArabicTechnicalAnalysis();
+  const learningHubEnLinks = await fetchEnglishLearningHub();
+  const learningHubArLinks = await fetchArabicLearningHub();
+
+  // Define static URLs
+  const staticUrls = [
     {
       url: "https://primexcapital.com/en",
       lastModified: new Date(),
@@ -582,4 +595,211 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
   ];
+
+  // Combine static and dynamic URLs
+  const sitemapUrls = [
+    ...staticUrls,
+    ...marketNewsEnLinks,
+    ...marketNewsArLinks,
+    ...startingGatewayEnLinks,
+    ...startingGatewayArLinks,
+    ...pressReleaseEnLinks,
+    ...pressReleaseArLinks,
+    ...technicalAnalysisEnLinks,
+    ...technicalAnalysisArLinks,
+    ...learningHubEnLinks,
+    ...learningHubArLinks,
+  ];
+
+  return sitemapUrls;
+}
+
+// Helper function to fetch market news english blogs slug from the backend
+async function fetchEnglishMarketNews() {
+  const categoryId = "664dd9c93f02939fcd48959e";
+  try {
+    const response = await fetch(
+      `https://primexbroker.com/api/fetch/market-news-en-slugs/${categoryId}`
+    );
+    const data = await response.json();
+    const links = data.map((item) => ({
+      url: `https://primexbroker.com/en/market-news-detail/${item.slug}`,
+      lastModified: new Date(item.lastModified || Date.now()),
+    }));
+    return links;
+  } catch (error) {
+    console.error("Failed to fetch dynamic links:", error);
+    return [];
+  }
+}
+
+// Helper function to fetch market news arabic blogs slug from the backend
+async function fetchArabicMarketNews() {
+  const categoryId = "664de39c3f02939fcd48a1d0";
+  try {
+    const response = await fetch(
+      `https://primexbroker.com/api/fetch/market-news-ar-slugs/${categoryId}`
+    );
+    const data = await response.json();
+    const links = data.map((item) => ({
+      url: `https://primexbroker.com/ar/market-news-detail/${item.slug}`,
+      lastModified: new Date(item.lastModified || Date.now()),
+    }));
+    return links;
+  } catch (error) {
+    console.error("Failed to fetch dynamic links:", error);
+    return [];
+  }
+}
+
+// Helper function to fetch starting gateway english blogs slug from the backend
+async function fetchEnglishStartingGateway() {
+  const categoryId = "66532f1079afa70a9ae6302e";
+  try {
+    const response = await fetch(
+      `https://primexbroker.com/api/fetch/starting-gateway-en-slugs/${categoryId}`
+    );
+    const data = await response.json();
+    const links = data.map((item) => ({
+      url: `https://primexbroker.com/en/market-news-detail/${item.slug}`,
+      lastModified: new Date(item.lastModified || Date.now()),
+    }));
+    return links;
+  } catch (error) {
+    console.error("Failed to fetch dynamic links:", error);
+    return [];
+  }
+}
+
+// Helper function to fetch starting gateway arabic blogs slug from the backend
+async function fetchArabicStartingGateway() {
+  const categoryId = "66532f4e79afa70a9ae6303e";
+  try {
+    const response = await fetch(
+      `https://primexbroker.com/api/fetch/starting-gateway-ar-slugs/${categoryId}`
+    );
+    const data = await response.json();
+    const links = data.map((item) => ({
+      url: `https://primexbroker.com/ar/market-news-detail/${item.slug}`,
+      lastModified: new Date(item.lastModified || Date.now()),
+    }));
+    return links;
+  } catch (error) {
+    console.error("Failed to fetch dynamic links:", error);
+    return [];
+  }
+}
+
+// Helper function to fetch press release english blogs slug from the backend
+async function fetchEnglishPressRelease() {
+  const categoryId = "66544954f5b226a0bd9b5813";
+  try {
+    const response = await fetch(
+      `https://primexbroker.com/api/fetch/press-release-en-slugs/${categoryId}`
+    );
+    const data = await response.json();
+    const links = data.map((item) => ({
+      url: `https://primexbroker.com/en/market-news-detail/${item.slug}`,
+      lastModified: new Date(item.lastModified || Date.now()),
+    }));
+    return links;
+  } catch (error) {
+    console.error("Failed to fetch dynamic links:", error);
+    return [];
+  }
+}
+
+// Helper function to fetch press release arabic blogs slug from the backend
+async function fetchArabicPressRelease() {
+  const categoryId = "665448dcf5b226a0bd9b574e";
+  try {
+    const response = await fetch(
+      `https://primexbroker.com/api/fetch/press-release-ar-slugs/${categoryId}`
+    );
+    const data = await response.json();
+    const links = data.map((item) => ({
+      url: `https://primexbroker.com/ar/market-news-detail/${item.slug}`,
+      lastModified: new Date(item.lastModified || Date.now()),
+    }));
+    return links;
+  } catch (error) {
+    console.error("Failed to fetch dynamic links:", error);
+    return [];
+  }
+}
+
+// Helper function to fetch technical analysis english blogs slug from the backend
+async function fetchEnglishTechnicalAnalysis() {
+  const categoryId = "6641f01d7c9be5623e1092a4";
+  try {
+    const response = await fetch(
+      `https://primexbroker.com/api/fetch/technical-analysis-en-slugs/${categoryId}`
+    );
+    const data = await response.json();
+    const links = data.map((item) => ({
+      url: `https://primexbroker.com/en/expert-analysis-detail/${item.slug}`,
+      lastModified: new Date(item.lastModified || Date.now()),
+    }));
+    return links;
+  } catch (error) {
+    console.error("Failed to fetch dynamic links:", error);
+    return [];
+  }
+}
+
+// Helper function to fetch technical analysis arabic blogs slug from the backend
+async function fetchArabicTechnicalAnalysis() {
+  const categoryId = "6641f01d7c9be5623e1092a4";
+  try {
+    const response = await fetch(
+      `https://primexbroker.com/api/fetch/technical-analysis-ar-slugs/${categoryId}`
+    );
+    const data = await response.json();
+    const links = data.map((item) => ({
+      url: `https://primexbroker.com/ar/expert-analysis-detail/${item.slug}`,
+      lastModified: new Date(item.lastModified || Date.now()),
+    }));
+    return links;
+  } catch (error) {
+    console.error("Failed to fetch dynamic links:", error);
+    return [];
+  }
+}
+
+// Helper function to fetch learning hub english blogs slug from the backend
+async function fetchEnglishLearningHub() {
+  const categoryId = "6641f0097c9be5623e10929e";
+  try {
+    const response = await fetch(
+      `https://primexbroker.com/api/fetch/learning-hub-en-slugs/${categoryId}`
+    );
+    const data = await response.json();
+    const links = data.map((item) => ({
+      url: `https://primexbroker.com/en/expert-analysis-detail/${item.slug}`,
+      lastModified: new Date(item.lastModified || Date.now()),
+    }));
+    return links;
+  } catch (error) {
+    console.error("Failed to fetch dynamic links:", error);
+    return [];
+  }
+}
+
+// Helper function to fetch learning hub arabic blogs slug from the backend
+async function fetchArabicLearningHub() {
+  const categoryId = "6641f0097c9be5623e10929e";
+  try {
+    const response = await fetch(
+      `https://primexbroker.com/api/fetch/learning-hub-ar-slugs/${categoryId}`
+    );
+    const data = await response.json();
+    const links = data.map((item) => ({
+      url: `https://primexbroker.com/ar/expert-analysis-detail/${item.slug}`,
+      lastModified: new Date(item.lastModified || Date.now()),
+    }));
+    return links;
+  } catch (error) {
+    console.error("Failed to fetch dynamic links:", error);
+    return [];
+  }
 }

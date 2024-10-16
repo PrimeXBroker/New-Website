@@ -15,7 +15,7 @@ const Promotions = ({ promotions }) => {
             {t("main_title1")}{" "}
             <span className="text-[#FED100]">{t("main_title2")}</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-2xl mx-auto">
             {promotions.map((promotion, index) => (
               <div
                 key={index}
