@@ -30,7 +30,7 @@ const Banner = () => {
             </div>
           </div>
           <div className="col-span-12 md:col-span-7 relative">
-            <div className="flex flex-col justify-end mt-6 md:mt-0 relative">
+            <div className="flex flex-col items-end mt-6 md:mt-0 relative">
               <Image
                 unoptimized={true}
                 src={
@@ -43,7 +43,7 @@ const Banner = () => {
                 alt="image"
                 className={`w-full sm:w-[70%] ms:w-full relative`}
               />
-              <div className={`rounded-md bg-[#111111] w-[65%]`}>
+              <div className={`bg-[#ffffff] w-[65%] absolute bottom-0`}>
                 <h2 className="text-[#ffffff] text-4xl font-semibold glow-text mb-1">
                   {t("img_title1")}
                 </h2>

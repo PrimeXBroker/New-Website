@@ -1,6 +1,8 @@
 import React from "react";
+import { useLocale } from "next-intl";
 
 const FeatureCard = ({ title, description }) => {
+  const locale = useLocale();
   return (
     <div className="bg-[#1D1D1D] rounded-xl border-2 border-[#222222] hover:border-[#FED100] p-6 group">
       <h3 className="text-xl font-semibold mb-2 text-[#ffffff] group-hover:text-[#FED100]">
@@ -21,6 +23,8 @@ const KeyFeatures = ({
   highlightColor,
   titleColor1,
 }) => {
+  const locale = useLocale();
+
   return (
     <section className="bg-[#000000] py-5">
       <div className="container">
@@ -30,7 +34,12 @@ const KeyFeatures = ({
               {sectionTitle}{" "}
               <span style={{ color: highlightColor }}>{sectionHighlight}</span>
               {sectionTitle1 ? (
-                <span style={{ color: titleColor1 }}>{sectionTitle1}</span>
+                <span
+                  style={{ color: titleColor1 }}
+                  className={`${locale === "ar" ? "hidden" : ""}`}
+                >
+                  {sectionTitle1}
+                </span>
               ) : (
                 ""
               )}
