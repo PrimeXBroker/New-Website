@@ -1502,3 +1502,7 @@
 .rewards-swiper-navigation-buttons .rewards-swiper-button-prev svg {
   width: 50% !important;
 }
+
+.glow-text {
+  text-shadow: 0 0 5px #fed100, 0 0 10px #fed100;
+}

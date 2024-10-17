@@ -1912,7 +1912,7 @@
       "email": "电子邮箱",
       "email_validation_error": "请输入有效的电子邮箱地址。",
       "email_required_error": "电子邮箱是必填项。",
-      "category": "选择网络研讨会类别",
+      "category": "选择网络研讨会主题",
       "webinar_required_error": "请选择一个网络研讨会类别。",
       "contact_required_error": "联系电话是必填项。",
       "full_name": "全名",
@@ -1941,7 +1941,7 @@
       "session_success_desc1": "您的免费网络研讨会安排请求已成功发送。",
       "session_success_desc2": "感谢您选择PrimeX Capital",
       "phoneNumber": "电话号码",
-      "webinar_cate": "网络研讨会类别",
+      "webinar_cate": "网络研讨会主题",
       "condition": "提交此表单即表示您同意我们的团队联系您。",
       "write_adv": "填写..."
     },
@@ -2052,6 +2052,21 @@
       "tab2_title": "技术分析",
       "tab3_title": "市场新闻",
       "tab4_title": "起步网关"
+    }
+  },
+  "newAwards": {
+    "metaData": {
+      "title": "奖项和认可 | PrimeX Capital",
+      "description": "了解PrimeX Capital的最新奖项和认可，庆祝金融服务方面的卓越成就。了解更多关于我们的成就并加入我们！"
+    },
+    "hero": {
+      "title1": "我们在，",
+      "title2": "卓越",
+      "title3": "之处",
+      "title4": "被认可！",
+      "img_title1": "卓越",
+      "img_title2": "全球认可",
+      "description": "探索我们屡获殊荣的成就，这使我们成为领先的外汇经纪公司。"
     }
   }
 }

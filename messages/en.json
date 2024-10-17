@@ -1914,7 +1914,7 @@
       "email": "Email",
       "email_validation_error": "Please enter a valid email address.",
       "email_required_error": "Email is required.",
-      "category": "Select webinar Category",
+      "category": "Select webinars topic",
       "webinar_required_error": "Please select a webinar category.",
       "contact_required_error": "Contact number is required.",
       "full_name": "Full Name",
@@ -1943,7 +1943,7 @@
       "session_success_desc1": "Your request to schedule a free webinar has been sent successfully.",
       "session_success_desc2": "Thank you for choosing PrimeX Capital",
       "phoneNumber": "Phone Number",
-      "webinar_cate": "Webinars Cateory",
+      "webinar_cate": "Webinars Topic",
       "condition": "By submitting this form, you agree to be contacted by our team.",
       "write_adv": "Write..."
     },
@@ -2054,6 +2054,21 @@
       "tab2_title": "Technical Analysis",
       "tab3_title": "Market News",
       "tab4_title": "Starting Gateway"
+    }
+  },
+  "newAwards": {
+    "metaData": {
+      "title": "Awards and Recognitions | PrimeX Capital",
+      "description": "Discover the latest awards and recognitions of PrimeX Capital, celebrating excellarce in financial services. Learn more about our achievemarts and join us today!"
+    },
+    "hero": {
+      "title1": "We Are, Where ",
+      "title2": "Excellence ",
+      "title3": "Is",
+      "title4": "Recognized!",
+      "img_title1": "Excellence",
+      "img_title2": "Recognized Globally",
+      "description": "Explore our award-winning achievements that set us apart as a leading forex brokerage house."
     }
   }
 }
