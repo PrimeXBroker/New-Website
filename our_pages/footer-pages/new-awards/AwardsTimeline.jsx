@@ -131,11 +131,17 @@ const AwardsTimeline = () => {
             >
               <div
                 className={`border-2 border-[#1D1D1D] rounded-[20px] p-5 transition-all duration-700 
-                    bg-[#111111] text-[#ffffff]
+                    ${
+                      activeIndex === i + 1
+                        ? "bg-[#ffffff] text-[#111111]"
+                        : "bg-[#111111] text-[#ffffff]"
+                    }
                 `}
               >
                 <div
-                  className="relative bg-[#1D1D1D] p-10 rounded-[12px]"
+                  className={`relative p-10 rounded-[12px] ${
+                    activeIndex === i + 1 ? "bg-[#000000]" : "bg-[#1d1d1d]"
+                  }`}
                   dir="ltr"
                 >
                   <div className="flex justify-center items-center">
@@ -166,18 +172,40 @@ const AwardsTimeline = () => {
                       className="w-full"
                     />
                   </div>
-                  <div className="absolute top-2 right-2 bg-[#333333] px-2 py-1 rounded-[4px] text-sm md:text-xs lg:text-sm">
+                  <div
+                    className={`absolute top-2 right-2 px-2 py-1 rounded-[4px] text-sm md:text-xs lg:text-sm ${
+                      activeIndex === i + 1 ? "bg-[#ffffff]" : "bg-[#333333]"
+                    }`}
+                  >
                     {t(`awardYear${i + 1}`)}
                   </div>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-sm md:text-xs lg:text-sm font-normal text-[#F1F1F1]">
+                  <h3
+                    className={`text-sm md:text-xs lg:text-sm font-normal ${
+                      activeIndex === i + 1
+                        ? "text-[##222222]"
+                        : "text-[#F1F1F1]"
+                    }`}
+                  >
                     {t(`subtitle${i + 1}`)}
                   </h3>
-                  <h2 className="text-[22px] md:text-lg lg:text-[22px] font-semibold mt-2 text-[#ffffff]">
+                  <h2
+                    className={`text-[22px] md:text-lg lg:text-[22px] font-semibold mt-1 ${
+                      activeIndex === i + 1
+                        ? "text-[#000000]"
+                        : "text-[#ffffff]"
+                    }`}
+                  >
                     {t(`title${i + 1}`)}
                   </h2>
-                  <p className="text-sm mt-2 text-[#c6c6c6]">
+                  <p
+                    className={`text-sm mt-2 ${
+                      activeIndex === i + 1
+                        ? "text-[#555555]"
+                        : "text-[#c6c6c6]"
+                    }`}
+                  >
                     {t(`description${i + 1}`)}
                   </p>
                 </div>
