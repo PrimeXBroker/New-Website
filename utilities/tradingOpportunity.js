@@ -16,7 +16,7 @@ export const tradingTabs = [
       {
         tradingSymbol: "PrimeX_REST_RA||EURUSD||EURUSD",
         image:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/BTCUSD-New.svg",
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/new-icons/EURUSD.svg",
         name: "EURUSD",
       },
       {
@@ -67,7 +67,7 @@ export const tradingTabs = [
       {
         tradingSymbol: "PrimeX_REST_RA||GBPUSD||GBPUSD",
         image:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/GBPUSD.svg",
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/new-icons/GBPUSD.svg",
         name: "GBPUSD",
       },
       {
@@ -98,13 +98,13 @@ export const tradingTabs = [
       {
         tradingSymbol: "PrimeX_REST_RA||GBPJPY||GBPJPY",
         image:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/GBPJPY.svg",
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/new-icons/GBPJPY.svg",
         name: "GBPJPY",
       },
       {
         tradingSymbol: "PrimeX_REST_RA||EURGBP||EURGBP",
         image:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/EURGBP.svg",
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/new-icons/EURGBP.svg",
         name: "EURGBP",
       },
     ],
@@ -118,7 +118,7 @@ export const tradingTabs = [
       {
         tradingSymbol: "PrimeX_REST_RA||BTCUSD||BTCUSD",
         image:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/BTCEUR.svg",
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/new-icons/BTCUSD+1.svg",
         name: "BTCUSD",
       },
       {
