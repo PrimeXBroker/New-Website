@@ -1506,3 +1506,158 @@
 .glow-text {
   text-shadow: 0 0 5px #fed100, 0 0 10px #fed100;
 }
+
+/* Base timeline line (always visible in #222222) */
+.timeline-base {
+  width: 7px;
+  background-color: #222222;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Animated timeline line (grows/shrinks in #ffffff as you scroll) */
+.timeline-animated {
+  width: 7px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 0;
+  transition: height 0.5s ease-in-out;
+  z-index: 2;
+}
+
+/* Circle markers with scaling effect */
+.timeline-marker {
+  width: 14px;
+  height: 14px;
+  background-color: #222222;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Fade-in effect for the award cards */
+.timeline-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.timeline-card.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Timeline Mobile Container */
+.timeline-mobile {
+  /* background: var(--primary-color);
+  margin: 20px auto;
+  padding: 20px; */
+}
+
+/* Card container */
+.card-mobile {
+  position: relative;
+  max-width: 400px;
+}
+
+/* setting padding based on even or odd */
+.card-mobile:nth-child(odd) {
+  padding: 30px 0 30px 30px;
+}
+.card-mobile:nth-child(even) {
+  padding: 30px 30px 30px 0;
+}
+/* Global ::before */
+.card-mobile::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  border: solid #222222;
+}
+
+/* Setting the border of top, bottom, left */
+.card-mobile:nth-child(odd)::before {
+  left: 0px;
+  top: -4.5px;
+  bottom: -4.5px;
+  border-width: 5px 0 5px 5px;
+  border-radius: 50px 0 0 50px;
+}
+
+/* Setting the border of top, bottom, right */
+.card-mobile:nth-child(even)::before {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-width: 5px 5px 5px 0;
+  border-radius: 0 50px 50px 0;
+}
+
+/* Removing the border if it is the first card-mobile */
+.card-mobile:first-child::before {
+  border-top: 0;
+  border-top-left-radius: 0;
+}
+
+/* Removing the border if it is the last card-mobile  and it's odd */
+.card-mobile:last-child:nth-child(odd)::before {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Removing the border if it is the last card-mobile  and it's even */
+.card-mobile:last-child:nth-child(even)::before {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Information about the timeline */
+.info {
+  display: flex;
+  flex-direction: column;
+  background: #333;
+  color: gray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Title of the card */
+.title-bml {
+  color: orangered;
+  position: relative;
+}
+
+/* Timeline dot  */
+.title-bml::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  border: 3px solid orangered;
+}
+
+/* text right if the card is even  */
+.card-mobile:nth-child(even) > .info > .title-bml {
+  text-align: right;
+}
+
+/* setting dot to the left if the card-mobile is odd */
+.card-mobile:nth-child(odd) > .info > .title-bml::before {
+  left: -45px;
+}
+
+/* setting dot to the right if the card-mobile is odd */
+.card-mobile:nth-child(even) > .info > .title-bml::before {
+  right: -45px;
+}
