@@ -171,13 +171,15 @@ const AwardsTimeline = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-sm md:text-xs lg:text-sm font-normal">
+                  <h3 className="text-sm md:text-xs lg:text-sm font-normal text-[#F1F1F1]">
                     {t(`subtitle${i + 1}`)}
                   </h3>
-                  <h2 className="text-[22px] md:text-lg lg:text-[22px] font-semibold mt-2 ">
+                  <h2 className="text-[22px] md:text-lg lg:text-[22px] font-semibold mt-2 text-[#ffffff]">
                     {t(`title${i + 1}`)}
                   </h2>
-                  <p className="text-sm mt-2">{t(`description${i + 1}`)}</p>
+                  <p className="text-sm mt-2 text-[#c6c6c6]">
+                    {t(`description${i + 1}`)}
+                  </p>
                 </div>
               </div>
             </div>

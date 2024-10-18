@@ -56,7 +56,7 @@ const AwardsTimelineMobile = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal ">
+                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal text-[#F1F1F1]">
                     {t(`subtitle1`)}
                   </h3>
                   <h2 className="text-lg sm:text-[22px] md:text-lg lg:text-[22px] font-semibold mt-1">
@@ -114,7 +114,7 @@ const AwardsTimelineMobile = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal">
+                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal text-[#F1F1F1]">
                     {t(`subtitle2`)}
                   </h3>
                   <h2 className="text-lg sm:text-[22px] md:text-lg lg:text-[22px] font-semibold mt-1 ">
@@ -172,7 +172,7 @@ const AwardsTimelineMobile = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal">
+                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal text-[#F1F1F1]">
                     {t(`subtitle3`)}
                   </h3>
                   <h2 className="text-lg sm:text-[22px] md:text-lg lg:text-[22px] font-semibold mt-1 ">
@@ -230,7 +230,7 @@ const AwardsTimelineMobile = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal">
+                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal text-[#F1F1F1]">
                     {t(`subtitle4`)}
                   </h3>
                   <h2 className="text-lg sm:text-[22px] md:text-lg lg:text-[22px] font-semibold mt-1 ">
@@ -288,7 +288,7 @@ const AwardsTimelineMobile = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal">
+                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal text-[#F1F1F1]">
                     {t(`subtitle5`)}
                   </h3>
                   <h2 className="text-lg sm:text-[22px] md:text-lg lg:text-[22px] font-semibold mt-1 ">
@@ -346,7 +346,7 @@ const AwardsTimelineMobile = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal">
+                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal text-[#F1F1F1]">
                     {t(`subtitle6`)}
                   </h3>
                   <h2 className="text-lg sm:text-[22px] md:text-lg lg:text-[22px] font-semibold mt-1 ">
@@ -404,7 +404,7 @@ const AwardsTimelineMobile = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal">
+                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal text-[#F1F1F1]">
                     {t(`subtitle7`)}
                   </h3>
                   <h2 className="text-lg sm:text-[22px] md:text-lg lg:text-[22px] font-semibold mt-1 ">
@@ -462,7 +462,7 @@ const AwardsTimelineMobile = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal">
+                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal text-[#F1F1F1]">
                     {t(`subtitle8`)}
                   </h3>
                   <h2 className="text-lg sm:text-[22px] md:text-lg lg:text-[22px] font-semibold mt-1 ">
@@ -520,7 +520,7 @@ const AwardsTimelineMobile = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal">
+                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal text-[#F1F1F1]">
                     {t(`subtitle9`)}
                   </h3>
                   <h2 className="text-lg sm:text-[22px] md:text-lg lg:text-[22px] font-semibold mt-1 ">
@@ -578,7 +578,7 @@ const AwardsTimelineMobile = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal">
+                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal text-[#F1F1F1]">
                     {t(`subtitle10`)}
                   </h3>
                   <h2 className="text-lg sm:text-[22px] md:text-lg lg:text-[22px] font-semibold mt-1 ">
