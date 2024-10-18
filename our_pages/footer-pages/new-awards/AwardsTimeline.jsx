@@ -44,7 +44,7 @@ const AwardsTimeline = () => {
 
         {/* Animated Timeline Line (in #ffffff, grows and shrinks on scroll) */}
         <div
-          className="absolute left-1/2 transform -translate-x-1/2 w-2 bg-[#ffffff]"
+          className="absolute left-1/2 transform -translate-x-1/2 w-2 bg-[#FED100]"
           style={{
             height: `${(activeIndex / timelineRefs.current.length) * 100}%`,
             transition: "height 0.5s ease-in-out",
@@ -64,7 +64,7 @@ const AwardsTimeline = () => {
             {/* Timeline Marker with Conditional Arrows */}
             <div
               className={`absolute transform  w-14 h-14 ${
-                activeIndex >= i + 1 ? "bg-[#ffffff]" : "bg-[#222222]"
+                activeIndex >= i + 1 ? "bg-[#FED100]" : "bg-[#222222]"
               } rounded-full flex items-center justify-center ${
                 locale === "ar" || locale === "fa" || locale === "kur"
                   ? "right-1/2 translate-x-1/2"
@@ -85,7 +85,7 @@ const AwardsTimeline = () => {
                 <div
                   className={`absolute top-1/2 transform w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ${
                     activeIndex >= i + 1
-                      ? "border-l-[12px] border-l-[#ffffff]"
+                      ? "border-l-[12px] border-l-[#FED100]"
                       : "border-l-[12px] border-l-[#222222]"
                   } ${
                     locale === "ar" || locale === "fa" || locale === "kur"
@@ -98,7 +98,7 @@ const AwardsTimeline = () => {
                 <div
                   className={`absolute top-1/2 transform w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ${
                     activeIndex >= i + 1
-                      ? "border-r-[12px] border-r-[#ffffff]"
+                      ? "border-r-[12px] border-r-[#FED100]"
                       : "border-r-[12px] border-r-[#222222]"
                   } ${
                     locale === "ar" || locale === "fa" || locale === "kur"
