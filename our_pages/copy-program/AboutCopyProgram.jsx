@@ -24,8 +24,10 @@ const AboutCopyProgram = () => {
           <div className="col-span-5">
             <div className="mt-4 text-center md:text-start">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff]">
-                {t("title_part1")}
-                <span className="text-[#FED100]">{t("title_part2")} </span>
+                {t("title_part1")} <br />
+                <span className="text-[#FED100] inline-block mt-1">
+                  {t("title_part2")}{" "}
+                </span>
               </h2>
               <p className="text-[#c6c6c6] mt-4 w-[80%]">{t("description")}</p>
             </div>

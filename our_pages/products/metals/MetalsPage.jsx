@@ -93,7 +93,7 @@ const MetalsPage = () => {
       tradingSymbol: "PrimeX_REST_RA||COPPER||COPPER",
       image:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-instruments/metals/Metal+Icon+-+Copper.svg",
-      name: "HG/USD",
+      name: "XCU/USD",
       description: "Copper",
     },
   ];

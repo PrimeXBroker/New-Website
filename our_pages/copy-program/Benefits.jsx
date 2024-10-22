@@ -41,7 +41,7 @@ const Benefits = () => {
   ];
 
   return (
-    <div className="bg-[#000000] pb-28">
+    <div className="bg-[#000000]">
       <div className="container flex flex-col mb-10">
         <div className="w-full">
           <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff] text-center">
@@ -60,7 +60,7 @@ const Benefits = () => {
               className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] hover:border-[#FED100] text-[#ffffff] flex justify-between items-center gap-3 w-[32%]" // Ensure width
             >
               <div className="w-[85%]">
-                <h3 className="text-xl font-bold text-[#ffffff]">
+                <h3 className="text-xl font-semibold text-[#ffffff]">
                   {benefit.title1}{" "}
                   <span className="text-[#FED100]">{benefit.title2}</span>
                 </h3>

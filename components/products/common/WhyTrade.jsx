@@ -18,9 +18,6 @@ const WhyTrade = ({
   const dispatch = useAppDispatch();
   const [symbolList, setSymbolList] = useState([]);
   const [loading, setLoading] = useOptimistic(true);
-  const [previousPrices, setPreviousPrices] = useState({});
-  const [priceColors, setPriceColors] = useState({});
-  const [differenceColors, setDifferenceColors] = useState({});
 
   const handleChange = async () => {
     setLoading(true);
@@ -63,58 +60,9 @@ const WhyTrade = ({
   };
 
   useEffect(() => {
-    const interval = setInterval(handleChange, 3000);
+    const interval = setInterval(handleChange, 1000);
     return () => clearInterval(interval);
   }, [productTickers]);
-
-  const comparePrices = (currentPrice, previousPrice) => {
-    if (previousPrice === undefined) return "#111111"; // No previous price, default color
-    if (currentPrice > previousPrice) return "#00FF00"; // Green for increase
-    if (currentPrice < previousPrice) return "#FF0000"; // Red for decrease
-    return "#111111"; // No change, default color
-  };
-
-  useEffect(() => {
-    if (symbolList.length) {
-      const newPreviousPrices = symbolList.reduce((acc, symbol) => {
-        const currentBidPrice = parseFloat(symbol.bid_price);
-        const currentAskPrice = parseFloat(symbol.ask_price);
-
-        const previousBidPrice = previousPrices[symbol.name]?.bid_price;
-        const previousDifference = previousPrices[symbol.name]?.difference;
-
-        // Update bid price color
-        const bidPriceColor = comparePrices(currentBidPrice, previousBidPrice);
-        // Update ask-bid difference color
-        const differenceColor = comparePrices(
-          currentAskPrice - currentBidPrice,
-          previousDifference
-        );
-
-        // Update previous prices and colors
-        acc[symbol.name] = {
-          bid_price: currentBidPrice,
-          difference: currentAskPrice - currentBidPrice,
-        };
-
-        // Update state for colors
-        setPriceColors((prevColors) => ({
-          ...prevColors,
-          [symbol.name]: bidPriceColor, // Persist color for bid_price
-        }));
-
-        setDifferenceColors((prevColors) => ({
-          ...prevColors,
-          [symbol.name]: differenceColor, // Persist color for ask-bid difference
-        }));
-
-        return acc;
-      }, {});
-
-      // Update previous prices for the next comparison
-      setPreviousPrices(newPreviousPrices);
-    }
-  }, [symbolList]);
 
   return (
     <section className="bg-[#000000] pt-12 sm:pt-28">
@@ -130,7 +78,7 @@ const WhyTrade = ({
               </h2>
               <p
                 className={`text-[#c6c6c6] mt-4 sm:w-[84%] lg:w-auto mx-auto lg:mx-0 ${
-                  locale === "ar" || locale === "fa" || locale === "kur"
+                  locale === "ar"
                     ? "text-center lg:text-right"
                     : "text-center lg:text-left"
                 }`}
@@ -142,7 +90,7 @@ const WhyTrade = ({
           <div className="col-span-12 lg:col-span-7 mt-5 sm:mt-8">
             <div
               className={`flex justify-center items-center mt-6 md:mt-0 w-full sm:w-[86%] h-[644px] sm:h-[400px] rounded-3xl relative z-0 bg-[#222222] bg-no-repeat sm:bg-cover bg-center ${
-                locale === "ar" || locale === "fa" || locale === "kur"
+                locale === "ar"
                   ? "mx-auto lg:mx-0 lg:mr-auto"
                   : "mx-auto lg:mx-0 lg:ml-auto"
               }`}
@@ -200,18 +148,20 @@ const WhyTrade = ({
                             </div>
                             <div className="flex justify-between items-center w-full">
                               <div
-                                className="text-xl font-semibold"
-                                style={{
-                                  color: priceColors[item.name], // Bid price color
-                                }}
+                                className={`text-xl font-medium ${
+                                  item.bid_price_change === "up"
+                                    ? "text-[#43A047]"
+                                    : "text-[#DD2216]"
+                                }`}
                               >
                                 {parseFloat(item?.bid_price)?.toFixed(3)}
                               </div>
                               <div
-                                className="bg-[#F1F1F1] px-4 py-1 rounded-md text-[#111111] font-medium text-base"
-                                style={{
-                                  color: differenceColors[item.name], // Difference color
-                                }}
+                                className={`px-4 py-1 rounded-md text-[#111111] font-medium text-base ${
+                                  item.bid_price_change === "up"
+                                    ? "bg-[#43A047] bg-opacity-10 text-[#43A047]"
+                                    : "bg-[#DD2216] bg-opacity-10 text-[#DD2216]"
+                                }`}
                               >
                                 {(item?.ask_price - item.bid_price)?.toFixed(3)}
                               </div>

@@ -2127,7 +2127,7 @@
     "sign_up_btn": "Sign Up Now",
     "open_account_btn": "Open Live Account",
     "features": {
-      "feature_1_title": "Diverse Stock Options",
+      "feature_1_title": "Diverse Assets Options",
       "feature_1_desc": "Trade a wide range of global stocks.",
       "feature_2_title": "Tight Spreads",
       "feature_2_desc": "Experience low spreads and high volumes.",
@@ -2457,7 +2457,7 @@
     "about": {
       "title_part1": "PrimeX Capital ",
       "title_part2": "Copy Program",
-      "description": "At PrimeX Capital, we believe trading should be easy and accessible for everyone. Whether you’re a novice trader or looking to expand your investment portfolio, our Copy Program lets you follow and replicate the trades of top investors in real-time. Copy expert moves and earn profits without the need to be an expert yourself. At PrimeX Capital, we believe trading should be easy and accessible for everyone. Whether you’re a novice trader or looking to expand your investment portfolio, our Copy Program lets you follow and replicate the trades of top investors in real-time. Copy expert moves and earn profits without the need to be an expert yourself. "
+      "description": "At PrimeX Capital, trading is made simple and accessible for all. Our Copy Program lets you mirror top investors' trades in real-time, earning profits without needing expertise. Whether you're new to trading or expanding your portfolio, it's easy to follow expert moves and grow your investments."
     },
     "benefits": {
       "main_title1": "Enjoy Exclusive Advantages of ",
@@ -2477,6 +2477,71 @@
       "title5_part1": "Multiple Asset ",
       "title5_part2": "Portfolio",
       "description5": "Trade uninterrupted with 330+ financial instruments."
+    },
+    "steps": {
+      "title_part1": "3 Easy Steps ",
+      "title_part2": "To Start",
+      "step1": "Sign Up for the Copy Program",
+      "step2": "Choose Your Master",
+      "step3": "Copy and Trade Now"
+    },
+    "faq": {
+      "title": "Frequently Asked ",
+      "title1": "Questions",
+      "question_1": "What is Copy Trading?",
+      "answer_1": "Copy trading lets you follow seasoned traders and replicate their strategies, making it easy for beginners. It saves time and helps diversify your portfolio while giving you a chance to explore global markets. Just remember, while it can be rewarding, there's always risk involved, so use effective risk management to protect your investment.",
+      "question_2": "How can I join the copy program?",
+      "answer_2": "To join our copy program, you first need to sign up and fill out the form. Once your details are reviewed and approved, you can join our copy program. ",
+      "question_3": "How can I follow my master?",
+      "answer_3": "You first need to open your account and then choose from the list of provided masters. Once you choose your master, you can copy his/her trades. ",
+      "question_4": "What is the best way to choose a master?",
+      "answer_4": "To choose the master, we highly recommend you see the ratings of the masters based on their performance.",
+      "question_5": "What are the fees of the copy program?",
+      "answer_5": "The fees of the copy program vary from master to master. Once you sign up, the list of masters will be shown along with their fee structures. ",
+      "question_6": "Can I follow multiple masters?",
+      "answer_6": "Yes, you can follow multiple masters. It's good to diversify your portfolio.",
+      "question_7": "Can I unsubscribe to a master?",
+      "answer_7": "Yes, you can unfollow a master if you think your trades are not making profits as desired.",
+      "question_8": "What will happen to my open position if I unfollow a master?",
+      "answer_8": "Your open position will be atomically closed at the current market price.",
+      "question_9": "Can I close positions that are copied from master?",
+      "answer_9": "Yes, you can close the positions copied from your master; you can also automatically close them."
+    },
+    "copyProgramForm": {
+      "tag1": "Registration:",
+      "tag2": "IB Partnership Program",
+      "main_title1": "Step into a",
+      "main_title2": "Future of",
+      "main_title3": "Success and",
+      "main_title4": "Achievement! ",
+      "title": "Registration Form",
+      "desc": "Drop your details, we will get in touch with you soon.",
+      "full_name": "Full Name",
+      "full_name_validation_error": "Full name can only contain letters.",
+      "full_name_required_error": "Full name is required!",
+      "email_label": "Email",
+      "email_placeholder": "Email",
+      "contact_label": "Phone Number",
+      "contact_required_error": "Contact number is required.",
+      "question_label": "Question",
+      "question_placeholder": "Write....",
+      "condition": "By submitting this form, you agree to be contacted by our team.",
+      "submit_btn": "Submit",
+      "first_name_validation_error": "The first name should only include alphabetical characters.",
+      "first_name_required_error": "Please provide a first name.",
+      "last_name_validation_error": "The last name should only include alphabetical characters.",
+      "last_name_required_error": "Please provide a last name.",
+      "email_validation_error": "Please enter a valid email address.",
+      "email_required_error": "Email is required.",
+      "occupation_required_error": "occupation is required!",
+      "question_required_error": "question is required!",
+      "success_title": "Success",
+      "success_desc": "Form Submitted Successfully",
+      "close_btn": "Close",
+      "number": "Phone Number",
+      "country_label": "Country",
+      "country_placeholder": "Country",
+      "country_required_error": "country is required!"
     }
   }
 }
