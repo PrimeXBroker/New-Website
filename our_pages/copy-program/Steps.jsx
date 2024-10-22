@@ -26,7 +26,7 @@ const Steps = () => {
   ];
 
   return (
-    <section className="bg-[#000000] py-28">
+    <section className="bg-[#000000] py-16 sm:py-28">
       <div className="container">
         <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff] text-center mb-10">
           <span className="text-[#FED100]">{t("title_part1")}</span>{" "}

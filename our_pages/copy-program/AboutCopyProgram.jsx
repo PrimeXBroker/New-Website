@@ -6,7 +6,7 @@ const AboutCopyProgram = () => {
   const locale = useLocale();
   const t = useTranslations("copyProgram.about");
   return (
-    <section className="bg-[#000000] py-28">
+    <section className="bg-[#000000] py-16 sm:py-28">
       <div className="container">
         <div className="grid grid-cols-12 items-center">
           <div className="col-span-12 md:col-span-7 hidden md:block">

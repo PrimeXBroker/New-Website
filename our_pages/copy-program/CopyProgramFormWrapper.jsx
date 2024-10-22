@@ -6,7 +6,7 @@ const CopyProgramFormWrapper = () => {
   const locale = useLocale();
   const t = useTranslations("copyProgram.copyProgramForm");
   return (
-    <section className="bg-[#000000] pb-20">
+    <section className="bg-[#000000] pb-8 sm:pb-20">
       <div className="container grid grid-cols-12 items-center">
         <div className="col-span-12 lg:col-span-6 mb-7 lg:mb-0 text-center lg:text-start">
           <div className="">
