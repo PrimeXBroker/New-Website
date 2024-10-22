@@ -235,7 +235,7 @@ const Footer = () => {
               isAboutPage
             ? "bg-[#000000]"
             : "bg-[#000000]"
-        } relative z-0 overflow-hidden`}
+        } relative z-0 overflow-hidden pb-20`}
       >
         <div
           className={`container flex p-10 flex-col md:flex-row ${

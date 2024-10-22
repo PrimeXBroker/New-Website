@@ -2122,5 +2122,361 @@
       "award_count9": "09",
       "award_count10": "10"
     }
+  },
+  "productsPageCommon": {
+    "sign_up_btn": "Sign Up Now",
+    "open_account_btn": "Open Live Account",
+    "features": {
+      "feature_1_title": "Diverse Stock Options",
+      "feature_1_desc": "Trade a wide range of global stocks.",
+      "feature_2_title": "Tight Spreads",
+      "feature_2_desc": "Experience low spreads and high volumes.",
+      "feature_3_title": "Global Market",
+      "feature_3_desc": "Trade stocks in markets worldwide.",
+      "feature_4_title": "Flexible Terms",
+      "feature_4_desc": "Enjoy competitive spreads and trading options."
+    },
+    "strategies": {
+      "main_title1": "Tips and ",
+      "main_title2": "Strategies",
+      "title1": "Research Companies",
+      "description1": "Perform thorough research on companies before investing.",
+      "title2": "Diversify Investments",
+      "description2": "Spread your investments across different sectors and companies.",
+      "title3": "Stay Updated",
+      "description3": "Keep up with financial news and market trends."
+    }
+  },
+  "forexProduct": {
+    "hero": {
+      "title1": "Confidently",
+      "title2": "Trade World’s",
+      "title3": "Largest ",
+      "title4": "Forex",
+      "title5": "Market"
+    },
+    "getStarted": {
+      "main_title1": "How to ",
+      "main_title2": "Get Started",
+      "step1_count": "1",
+      "step1_title1": "Open a",
+      "step1_title2": "PrimeX Account",
+      "step2_count": "2",
+      "step2_title1": "Deposit",
+      "step2_title2": "Funds",
+      "step3_count": "3",
+      "step3_title1": "Choose your",
+      "step3_title2": "Currency Pairs",
+      "step4_count": "4",
+      "step4_title1": "Start",
+      "step4_title2": "Trading"
+    },
+    "openLiveAccount": {
+      "title_part1": "Get started with ",
+      "title_part2": "Forex Trading ",
+      "title_part3": "today at ",
+      "title_part4": "PrimeX!",
+      "description": "Open Live Account and explore our range of Forex options"
+    },
+    "faq": {
+      "title": "Frequently Asked ",
+      "title1": "Questions",
+      "question_1": "What Does \"Pip\" Mean in Forex Trading?",
+      "answer_1": "A pip, short for \"price interest point\" or \"percentage in point,\" is the smallest price movement possible in the exchange rate of a currency pair according to forex market standards.",
+      "question_2": "Can Only Professional Traders Participate in Forex Trading?",
+      "answer_2": "No, forex trading is not limited to professional traders. Anyone can participate, including beginners, who can start with a demo account to practice and gain experience before trading with real money.",
+      "question_3": "What is a 'Stop Loss' in Forex Trading?",
+      "answer_3": "A stop loss in forex trading is a tool recommended by brokers to help traders limit potential losses by automatically closing a position at a predetermined price.",
+      "question_4": "What is Hedging in Forex Trading?",
+      "answer_4": "Hedging in forex trading involves companies locking in a specific exchange rate for future transactions to mitigate the risk of currency fluctuations when dealing with foreign countries."
+    },
+    "whyTrade": {
+      "title_part1": "Why Trade",
+      "title_part2": "Forex?",
+      "description": "Forex trading offers diverse opportunities. Whether a day trader, swing trader, or long-term investor, you’ll find ample opportunities to trade currency pairs. Analyze market trends, economic indicators, and geopolitical events to make informed trading decisions."
+    }
+  },
+  "metalsProduct": {
+    "hero": {
+      "title1": "Secure Your",
+      "title2": "Future in the",
+      "title3": "Global ",
+      "title4": "Metals",
+      "title5": "Market"
+    },
+    "getStarted": {
+      "main_title1": "How to ",
+      "main_title2": "Get Started",
+      "step1_count": "1",
+      "step1_title1": "Open a",
+      "step1_title2": "PrimeX Account",
+      "step2_count": "2",
+      "step2_title1": "Deposit",
+      "step2_title2": "Funds",
+      "step3_count": "3",
+      "step3_title1": "Choose your",
+      "step3_title2": "Metals",
+      "step4_count": "4",
+      "step4_title1": "Start",
+      "step4_title2": "Trading"
+    },
+    "openLiveAccount": {
+      "title_part1": "Get started with ",
+      "title_part2": "Metals Trading ",
+      "title_part3": "today at ",
+      "title_part4": "PrimeX!",
+      "description": "Open Live Account and explore our range of Metal options"
+    },
+    "faq": {
+      "title": "Frequently Asked ",
+      "title1": "Questions",
+      "question_1": "Why Invest in Precious Metals?",
+      "answer_1": "Investing in precious metals provides diversification, serves as a hedge against inflation and currency devaluation, and offers the potential for significant returns during market volatility.",
+      "question_2": "How Can I Start Trading Precious Metals?",
+      "answer_2": "To begin trading precious metals, open a trading account with a broker, research the market, choose your preferred metals, and place your trades based on market analysis.",
+      "question_3": "What Factors Influence Precious Metal Prices?",
+      "answer_3": "Prices of precious metals are influenced by factors such as supply and demand, geopolitical events, inflation rates, and changes in currency values.",
+      "question_4": "What is the Difference Between Physical and Paper Precious Metals?",
+      "answer_4": "Physical precious metals refer to tangible assets like gold bars and silver coins, whereas paper precious metals involve financial instruments like ETFs and futures contracts that track the value of these metals.",
+      "question_5": "What is the Role of Precious Metals in Portfolio Diversification?",
+      "answer_5": "Precious metals can enhance portfolio diversification by providing a non-correlated asset class, reducing overall risk, and potentially improving returns during economic downturns."
+    },
+    "whyTrade": {
+      "title_part1": "Why Trade",
+      "title_part2": "Metals?",
+      "description": "Metals trading provides a hedge against inflation and opportunities for speculation. Investors can benefit from both short-term price shifts and long-term stability, leveraging metals like gold, silver, and copper to diversify portfolios."
+    }
+  },
+  "stocksProduct": {
+    "hero": {
+      "title1": "Build Your",
+      "title2": "Portfolio with",
+      "title3": "Top ",
+      "title4": "Global",
+      "title5": "Stocks"
+    },
+    "getStarted": {
+      "main_title1": "How to ",
+      "main_title2": "Get Started",
+      "step1_count": "1",
+      "step1_title1": "Open a",
+      "step1_title2": "PrimeX Account",
+      "step2_count": "2",
+      "step2_title1": "Deposit",
+      "step2_title2": "Funds",
+      "step3_count": "3",
+      "step3_title1": "Choose your",
+      "step3_title2": "Stocks",
+      "step4_count": "4",
+      "step4_title1": "Start",
+      "step4_title2": "Trading"
+    },
+    "openLiveAccount": {
+      "title_part1": "Get started with ",
+      "title_part2": "Stocks Trading ",
+      "title_part3": "today at ",
+      "title_part4": "PrimeX!",
+      "description": "Open Live Account and explore our range of Stock options"
+    },
+    "faq": {
+      "title": "Frequently Asked ",
+      "title1": "Questions",
+      "question_1": "What are Stock CFDs?",
+      "answer_1": "Stocks CFDs allow traders to speculate on the price movements of shares without owning the actual shares. They enable trading in both rising and falling markets and are leveraged products, which can amplify both potential profits and losses.",
+      "question_2": "What Are Some Effective Stock Trading Strategies for Beginners?",
+      "answer_2": "Common stock trading strategies for beginners include active trading, day trading, position trading, swing trading, and scalping. It's crucial to identify and time market opportunities and use stop loss orders to minimize losses.",
+      "question_3": "Where Can I Open a Trading Account to Trade Stock CFDs?",
+      "answer_3": "To trade CFD stocks online, you can open a trading account with us, research companies and industries, and then open a position based on your analysis.",
+      "question_4": "Is Trading Share CFDs Different from Buying Shares in a Company?",
+      "answer_4": "Yes, trading share CFDs differs from buying shares as CFDs are leveraged and don't involve ownership of the stock. When you buy shares, you own a part of the company, while trading CFDs involves speculating on price movements with a smaller initial investment."
+    },
+    "whyTrade": {
+      "title_part1": "Why Trade",
+      "title_part2": "Stocks?",
+      "description": "Stocks trading unlocks opportunities to invest in individual companies. Traders can capitalize on daily market movements or hold shares for long-term growth, benefiting from company performance and broader economic trends."
+    }
+  },
+  "indicesProduct": {
+    "hero": {
+      "title1": "Confidently",
+      "title2": "Trade the",
+      "title3": "World’s ",
+      "title4": "Leading",
+      "title5": "Indices"
+    },
+    "getStarted": {
+      "main_title1": "How to ",
+      "main_title2": "Get Started",
+      "step1_count": "1",
+      "step1_title1": "Open a",
+      "step1_title2": "PrimeX Account",
+      "step2_count": "2",
+      "step2_title1": "Deposit",
+      "step2_title2": "Funds",
+      "step3_count": "3",
+      "step3_title1": "Choose your",
+      "step3_title2": "Indices",
+      "step4_count": "4",
+      "step4_title1": "Start",
+      "step4_title2": "Trading"
+    },
+    "openLiveAccount": {
+      "title_part1": "Get started with ",
+      "title_part2": "Indices Trading ",
+      "title_part3": "today at ",
+      "title_part4": "PrimeX!",
+      "description": "Open Live Account and explore our range of Indice options"
+    },
+    "faq": {
+      "title": "Frequently Asked ",
+      "title1": "Questions",
+      "question_1": "What Does it Mean to Trade an Index?",
+      "answer_1": "Trading an index involves buying or selling a specific stock market index, which measures the performance of a group of stocks within a particular market.",
+      "question_2": "Can I Profit from Index Trading?",
+      "answer_2": "Yes, you can profit from index trading, but there is also the potential for losses, similar to trading other instruments.",
+      "question_3": "Which Are the Most Popular Stock Indices?",
+      "answer_3": "Popular stock indices include the S&P 330, Nasdaq, Dow Jones, FTSE 100, Nifty 50, and Nikkei 225",
+      "question_4": "What Moves the Index Price?",
+      "answer_4": "Index prices are influenced by the price changes of the index's constituent stocks.",
+      "question_5": "What is the Best Time to Trade Indices?",
+      "answer_5": "The best time to trade indices is during the respective market's trading hours. For example, trade the Nasdaq when the US markets are open. Whether to trade stocks or indices depends on an individual's risk appetite and financial goals. There is no universal answer."
+    },
+    "whyTrade": {
+      "title_part1": "Why Trade",
+      "title_part2": "Indices?",
+      "description": "Trading indices offers exposure to market trends across multiple sectors. Whether targeting short-term gains or long-term growth, indices allow traders to profit from economic cycles and market shifts with reduced individual stock risks."
+    }
+  },
+  "cryptoProduct": {
+    "hero": {
+      "title1": "Confidently",
+      "title2": "Trade in Fast",
+      "title3": "Growing ",
+      "title4": "Crypto",
+      "title5": "Market"
+    },
+    "getStarted": {
+      "main_title1": "How to ",
+      "main_title2": "Get Started",
+      "step1_count": "1",
+      "step1_title1": "Open a",
+      "step1_title2": "PrimeX Account",
+      "step2_count": "2",
+      "step2_title1": "Deposit",
+      "step2_title2": "Funds",
+      "step3_count": "3",
+      "step3_title1": "Choose your",
+      "step3_title2": "Crypto",
+      "step4_count": "4",
+      "step4_title1": "Start",
+      "step4_title2": "Trading"
+    },
+    "openLiveAccount": {
+      "title_part1": "Get started with ",
+      "title_part2": "Crypto Trading ",
+      "title_part3": "today at ",
+      "title_part4": "PrimeX!",
+      "description": "Open Live Account and explore our range of Crypto options"
+    },
+    "faq": {
+      "title": "Frequently Asked ",
+      "title1": "Questions",
+      "question_1": "What Does it Mean to Trade Cryptocurrency?",
+      "answer_1": "Trading cryptocurrency involves buying or selling digital currencies like Bitcoin, Ethereum, or Litecoin on a cryptocurrency exchange. Traders speculate on the price movements of these currencies, either to profit or hedge their positions.",
+      "question_2": "Can I Profit from Cryptocurrency Trading?",
+      "answer_2": "Yes, you can profit from cryptocurrency trading, but there is also a potential for significant losses due to the high volatility of the market. It’s essential to have a well-informed trading strategy and risk management plan.",
+      "question_3": "Which Are the Most Popular Cryptocurrencies to Trade?",
+      "answer_3": "Popular cryptocurrencies for trading include Bitcoin (BTC), Ethereum (ETH), Ripple (XRP), Litecoin (LTC), and Binance Coin (BNB), among others.",
+      "question_4": "What Factors Influence Cryptocurrency Prices?",
+      "answer_4": "Cryptocurrency prices are influenced by a variety of factors, including market sentiment, supply and demand, regulatory news, technological advancements, and broader economic conditions."
+    },
+    "whyTrade": {
+      "title_part1": "Why Trade",
+      "title_part2": "Crypto?",
+      "description": "Crypto trading offers access to a fast-growing market with 24/7 availability. Traders can capitalize on the volatility of digital assets like Bitcoin and Ethereum, seizing both short-term gains and long-term opportunities"
+    }
+  },
+  "commoditiesProduct": {
+    "hero": {
+      "title1": "Confidently",
+      "title2": "Invest in",
+      "title4": "Commodities",
+      "title5": "Worldwide"
+    },
+    "getStarted": {
+      "main_title1": "How to ",
+      "main_title2": "Get Started",
+      "step1_count": "1",
+      "step1_title1": "Open a",
+      "step1_title2": "PrimeX Account",
+      "step2_count": "2",
+      "step2_title1": "Deposit",
+      "step2_title2": "Funds",
+      "step3_count": "3",
+      "step3_title1": "Choose your",
+      "step3_title2": "Commodities",
+      "step4_count": "4",
+      "step4_title1": "Start",
+      "step4_title2": "Trading"
+    },
+    "openLiveAccount": {
+      "title_part1": "Get started with ",
+      "title_part2": "Commodities Trading ",
+      "title_part3": "today at ",
+      "title_part4": "PrimeX!",
+      "description": "Open Live Account and explore our range of Commodity options"
+    },
+    "faq": {
+      "title": "Frequently Asked ",
+      "title1": "Questions",
+      "question_1": "What Does it Mean to Trade Commodities?",
+      "answer_1": "Trading commodities involves buying and selling raw materials or primary agricultural products like oil, gold, natural gas, coffee, and wheat. Traders can profit from price movements in these commodities, either by taking physical delivery or speculating on price changes through financial instruments.",
+      "question_2": "Can I Profit from Commodities Trading?",
+      "answer_2": "Yes, commodities trading can be profitable, but it also carries risks. Like any other financial market, prices in commodities can fluctuate due to factors like supply and demand, geopolitical events, and market sentiment, leading to potential gains or losses.",
+      "question_3": "What Are the Most Popular Commodities to Trade?",
+      "answer_3": "Popular commodities to trade include gold, silver, crude oil, natural gas, wheat, corn, and coffee. Metals, energy, and agricultural products are the three main categories of commodities.",
+      "question_4": "What Factors Influence Commodity Prices?",
+      "answer_4": "Commodity prices are influenced by a variety of factors, including supply and demand, geopolitical tensions, natural disasters, weather conditions, technological advancements, and macroeconomic factors like inflation and currency movements."
+    },
+    "whyTrade": {
+      "title_part1": "Why Trade",
+      "title_part2": "Commodities?",
+      "description": "Commodities trading offers access to markets like oil, gas, and agriculture, responding to global supply and demand. Traders can hedge against inflation and profit from market fluctuations through both short-term trades and strategic investments."
+    }
+  },
+  "copyProgram": {
+    "hero": {
+      "title_part1": "Revitalize Your",
+      "title_part2": "Trading Journey",
+      "title_part3": "with our ",
+      "title_part4": "Copy ",
+      "title_part5": "Program",
+      "description": "Connect with Top Traders, Copy, and Trade Effortlessly!",
+      "btnTxt": "Sign Up Now"
+    },
+    "about": {
+      "title_part1": "PrimeX Capital ",
+      "title_part2": "Copy Program",
+      "description": "At PrimeX Capital, we believe trading should be easy and accessible for everyone. Whether you’re a novice trader or looking to expand your investment portfolio, our Copy Program lets you follow and replicate the trades of top investors in real-time. Copy expert moves and earn profits without the need to be an expert yourself. At PrimeX Capital, we believe trading should be easy and accessible for everyone. Whether you’re a novice trader or looking to expand your investment portfolio, our Copy Program lets you follow and replicate the trades of top investors in real-time. Copy expert moves and earn profits without the need to be an expert yourself. "
+    },
+    "benefits": {
+      "main_title1": "Enjoy Exclusive Advantages of ",
+      "main_title2": "Copying Our Seasoned Traders ",
+      "title1_part1": "Real-Time ",
+      "title1_part2": "Trading",
+      "description1": "Copy the trades of top investors in real-time.",
+      "title2_part1": "Diversify ",
+      "title2_part2": "Portfolio",
+      "description2": "Copy trades of multiple masters and diversify your portfolio.",
+      "title3_part1": "Automate ",
+      "title3_part2": "and Save Time",
+      "description3": "Automate with our platform and spend less time on screen.",
+      "title4_part1": "Agile ",
+      "title4_part2": "Customer Service",
+      "description4": "Experience our top-rated customer service 24/7.",
+      "title5_part1": "Multiple Asset ",
+      "title5_part2": "Portfolio",
+      "description5": "Trade uninterrupted with 330+ financial instruments."
+    }
   }
 }

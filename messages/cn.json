@@ -2120,5 +2120,326 @@
       "award_count9": "09",
       "award_count10": "10"
     }
+  },
+  "productsPageCommon": {
+    "sign_up_btn": "立即注册",
+    "open_account_btn": "开设真实账户",
+    "features": {
+      "feature_1_title": "多样化的股票选择",
+      "feature_1_desc": "交易各种全球股票。",
+      "feature_2_title": "低点差",
+      "feature_2_desc": "体验低点差和高交易量。",
+      "feature_3_title": "全球市场",
+      "feature_3_desc": "在全球市场交易股票。",
+      "feature_4_title": "灵活条款",
+      "feature_4_desc": "享受具有竞争力的点差和交易选项。"
+    },
+    "strategies": {
+      "main_title1": "提示和",
+      "main_title2": "策略",
+      "title1": "研究公司",
+      "description1": "在投资前对公司进行深入研究。",
+      "title2": "分散投资",
+      "description2": "将投资分散到不同的行业和公司。",
+      "title3": "保持更新",
+      "description3": "紧跟金融新闻和市场趋势。"
+    }
+  },
+  "forexProduct": {
+    "hero": {
+      "title1": "自信地",
+      "title2": "交易全球",
+      "title3": "最大",
+      "title4": "外汇",
+      "title5": "市场"
+    },
+    "getStarted": {
+      "main_title1": "如何",
+      "main_title2": "开始交易",
+      "step1_count": "1",
+      "step1_title1": "开设一个",
+      "step1_title2": "PrimeX账户",
+      "step2_count": "2",
+      "step2_title1": "存入",
+      "step2_title2": "资金",
+      "step3_count": "3",
+      "step3_title1": "选择您的",
+      "step3_title2": "货币对",
+      "step4_count": "4",
+      "step4_title1": "开始",
+      "step4_title2": "交易"
+    },
+    "openLiveAccount": {
+      "title_part1": "立即开始",
+      "title_part2": "外汇交易",
+      "title_part3": "今天在",
+      "title_part4": "PrimeX！",
+      "description": "开设真实账户并探索我们的外汇交易选项"
+    },
+    "faq": {
+      "title": "常见",
+      "title1": "问题",
+      "question_1": "外汇交易中的“点差”是什么意思？",
+      "answer_1": "点差，英文缩写为“pip”，是指外汇市场标准中货币对汇率中可能的最小价格变动。",
+      "question_2": "只有专业交易员才能参与外汇交易吗？",
+      "answer_2": "不，外汇交易不限于专业交易员。任何人都可以参与，包括初学者，他们可以从模拟账户开始练习并积累经验，然后再用真钱交易。",
+      "question_3": "外汇交易中的“止损”是什么？",
+      "answer_3": "外汇交易中的止损是经纪商推荐的一种工具，帮助交易员通过在预定价格自动平仓来限制潜在的损失。",
+      "question_4": "外汇交易中的对冲是什么？",
+      "answer_4": "外汇交易中的对冲涉及公司为未来的交易锁定特定的汇率，以降低与外币交易时因汇率波动带来的风险。"
+    },
+    "whyTrade": {
+      "title_part1": "为什么交易",
+      "title_part2": "外汇？",
+      "description": "外汇交易提供多样化的机会。无论是日间交易员、波段交易员还是长期投资者，您都能找到足够的机会交易货币对。通过分析市场趋势、经济指标和地缘政治事件做出明智的交易决策。"
+    }
+  },
+  "metalsProduct": {
+    "hero": {
+      "title1": "保障您的",
+      "title2": "未来于",
+      "title3": "全球",
+      "title4": "金属",
+      "title5": "市场"
+    },
+    "getStarted": {
+      "main_title1": "如何",
+      "main_title2": "开始交易",
+      "step1_count": "1",
+      "step1_title1": "开设一个",
+      "step1_title2": "PrimeX账户",
+      "step2_count": "2",
+      "step2_title1": "存入",
+      "step2_title2": "资金",
+      "step3_count": "3",
+      "step3_title1": "选择您的",
+      "step3_title2": "金属",
+      "step4_count": "4",
+      "step4_title1": "开始",
+      "step4_title2": "交易"
+    },
+    "openLiveAccount": {
+      "title_part1": "立即开始",
+      "title_part2": "金属交易",
+      "title_part3": "今天在",
+      "title_part4": "PrimeX！",
+      "description": "开设真实账户并探索我们的金属交易选项"
+    },
+    "faq": {
+      "title": "常见",
+      "title1": "问题",
+      "question_1": "为什么投资贵金属？",
+      "answer_1": "投资贵金属可以实现投资组合的多样化，对抗通货膨胀和货币贬值，并在市场波动期间提供显著的回报潜力。",
+      "question_2": "我该如何开始交易贵金属？",
+      "answer_2": "要开始交易贵金属，首先需要在经纪商处开设交易账户，研究市场，选择您喜欢的金属，并根据市场分析进行交易。",
+      "question_3": "哪些因素会影响贵金属价格？",
+      "answer_3": "贵金属的价格受到供需关系、地缘政治事件、通货膨胀率和货币价值变化等因素的影响。",
+      "question_4": "实物贵金属与纸质贵金属的区别是什么？",
+      "answer_4": "实物贵金属指的是像金条和银币这样的有形资产，而纸质贵金属包括追踪这些金属价值的金融工具，如ETF和期货合约。",
+      "question_5": "贵金属在投资组合多样化中的作用是什么？",
+      "answer_5": "贵金属通过提供非相关资产类别，可以提高投资组合的多样化，减少整体风险，并在经济衰退期间可能改善回报。"
+    },
+    "whyTrade": {
+      "title_part1": "为什么交易",
+      "title_part2": "金属？",
+      "description": "金属交易为对抗通货膨胀和投机提供了机会。投资者可以从短期价格波动和长期稳定中受益，通过交易黄金、白银和铜等金属来分散投资组合。"
+    }
+  },
+  "stocksProduct": {
+    "hero": {
+      "title1": "构建您的",
+      "title2": "投资组合，",
+      "title3": "通过顶级",
+      "title4": "全球",
+      "title5": "股票"
+    },
+    "getStarted": {
+      "main_title1": "如何",
+      "main_title2": "开始交易",
+      "step1_count": "1",
+      "step1_title1": "开设一个",
+      "step1_title2": "PrimeX账户",
+      "step2_count": "2",
+      "step2_title1": "存入",
+      "step2_title2": "资金",
+      "step3_count": "3",
+      "step3_title1": "选择您的",
+      "step3_title2": "股票",
+      "step4_count": "4",
+      "step4_title1": "开始",
+      "step4_title2": "交易"
+    },
+    "openLiveAccount": {
+      "title_part1": "立即开始",
+      "title_part2": "股票交易",
+      "title_part3": "今天在",
+      "title_part4": "PrimeX！",
+      "description": "开设真实账户并探索我们的股票交易选项"
+    },
+    "faq": {
+      "title": "常见",
+      "title1": "问题",
+      "question_1": "什么是股票差价合约 (CFDs)？",
+      "answer_1": "股票差价合约允许交易者在不拥有实际股票的情况下，投机股票价格的波动。它们可以在上涨和下跌的市场中进行交易，且是杠杆产品，这可能放大潜在的利润或损失。",
+      "question_2": "对于初学者来说，哪些股票交易策略有效？",
+      "answer_2": "初学者常用的股票交易策略包括主动交易、日内交易、持仓交易、波段交易和剥头皮交易。关键是要识别和把握市场机会，并使用止损订单来减少损失。",
+      "question_3": "我可以在哪里开设一个交易账户来交易股票差价合约？",
+      "answer_3": "要在线交易股票差价合约，您可以在我们这里开设一个交易账户，研究公司和行业，然后根据您的分析开仓交易。",
+      "question_4": "交易股票差价合约与购买公司股票有何不同？",
+      "answer_4": "是的，交易股票差价合约与购买股票不同，因为差价合约是杠杆化的，不涉及股票所有权。当您购买股票时，您拥有公司的部分股份，而交易差价合约则是通过较小的初始投资，投机价格的波动。"
+    },
+    "whyTrade": {
+      "title_part1": "为什么交易",
+      "title_part2": "股票？",
+      "description": "股票交易为投资个人公司提供了机会。交易者可以利用每日的市场波动，或长期持有股票以获得公司业绩和更广泛经济趋势带来的增长收益。"
+    }
+  },
+  "indicesProduct": {
+    "hero": {
+      "title1": "自信地",
+      "title2": "交易",
+      "title3": "全球",
+      "title4": "领先的",
+      "title5": "指数"
+    },
+    "getStarted": {
+      "main_title1": "如何",
+      "main_title2": "开始交易",
+      "step1_count": "1",
+      "step1_title1": "开设一个",
+      "step1_title2": "PrimeX账户",
+      "step2_count": "2",
+      "step2_title1": "存入",
+      "step2_title2": "资金",
+      "step3_count": "3",
+      "step3_title1": "选择您的",
+      "step3_title2": "指数",
+      "step4_count": "4",
+      "step4_title1": "开始",
+      "step4_title2": "交易"
+    },
+    "openLiveAccount": {
+      "title_part1": "立即开始",
+      "title_part2": "指数交易",
+      "title_part3": "今天在",
+      "title_part4": "PrimeX！",
+      "description": "开设真实账户并探索我们的指数交易选项"
+    },
+    "faq": {
+      "title": "常见",
+      "title1": "问题",
+      "question_1": "交易指数意味着什么？",
+      "answer_1": "交易指数是指买卖特定的股票市场指数，该指数衡量特定市场中一组股票的表现。",
+      "question_2": "我可以通过交易指数获利吗？",
+      "answer_2": "是的，您可以通过交易指数获利，但也有可能遭受损失，这与交易其他金融工具类似。",
+      "question_3": "哪些是最受欢迎的股票指数？",
+      "answer_3": "受欢迎的股票指数包括标普330、纳斯达克、道琼斯、富时100、Nifty 50和日经225。",
+      "question_4": "什么影响指数价格？",
+      "answer_4": "指数价格受其成分股价格变化的影响。",
+      "question_5": "交易指数的最佳时间是什么时候？",
+      "answer_5": "交易指数的最佳时间是其相关市场的交易时段。例如，美国市场开放时交易纳斯达克。是否交易股票或指数取决于个人的风险偏好和财务目标，没有普遍的答案。"
+    },
+    "whyTrade": {
+      "title_part1": "为什么交易",
+      "title_part2": "指数？",
+      "description": "交易指数为多个行业的市场趋势提供了敞口。无论是追求短期收益还是长期增长，指数允许交易者通过减少个股风险，从经济周期和市场波动中获利。"
+    }
+  },
+  "cryptoProduct": {
+    "hero": {
+      "title1": "自信地",
+      "title2": "交易快速",
+      "title3": "增长的",
+      "title4": "加密货币",
+      "title5": "市场"
+    },
+    "getStarted": {
+      "main_title1": "如何",
+      "main_title2": "开始交易",
+      "step1_count": "1",
+      "step1_title1": "开设一个",
+      "step1_title2": "PrimeX账户",
+      "step2_count": "2",
+      "step2_title1": "存入",
+      "step2_title2": "资金",
+      "step3_count": "3",
+      "step3_title1": "选择您的",
+      "step3_title2": "加密货币",
+      "step4_count": "4",
+      "step4_title1": "开始",
+      "step4_title2": "交易"
+    },
+    "openLiveAccount": {
+      "title_part1": "立即开始",
+      "title_part2": "加密货币交易",
+      "title_part3": "今天在",
+      "title_part4": "PrimeX！",
+      "description": "开设真实账户并探索我们的加密货币交易选项"
+    },
+    "faq": {
+      "title": "常见",
+      "title1": "问题",
+      "question_1": "交易加密货币是什么意思？",
+      "answer_1": "交易加密货币是指在加密货币交易所买卖像比特币、以太坊或莱特币等数字货币。交易者通过这些货币的价格波动进行投机，以获利或对冲其头寸。",
+      "question_2": "我可以通过加密货币交易获利吗？",
+      "answer_2": "是的，您可以通过加密货币交易获利，但由于市场的高度波动，也有可能遭受重大损失。制定良好的交易策略和风险管理计划至关重要。",
+      "question_3": "哪些是最受欢迎的加密货币？",
+      "answer_3": "受欢迎的加密货币包括比特币（BTC）、以太坊（ETH）、瑞波币（XRP）、莱特币（LTC）和币安币（BNB）等。",
+      "question_4": "哪些因素影响加密货币价格？",
+      "answer_4": "加密货币价格受到多种因素的影响，包括市场情绪、供需关系、监管新闻、技术进步和更广泛的经济状况。"
+    },
+    "whyTrade": {
+      "title_part1": "为什么交易",
+      "title_part2": "加密货币？",
+      "description": "加密货币交易为进入快速增长的市场提供了机会，并且可以24/7进行交易。交易者可以利用比特币和以太坊等数字资产的波动性，抓住短期收益和长期机会。"
+    }
+  },
+  "commoditiesProduct": {
+    "hero": {
+      "title1": "自信地",
+      "title2": "投资于",
+      "title4": "全球",
+      "title5": "大宗商品"
+    },
+    "getStarted": {
+      "main_title1": "如何",
+      "main_title2": "开始交易",
+      "step1_count": "1",
+      "step1_title1": "开设一个",
+      "step1_title2": "PrimeX账户",
+      "step2_count": "2",
+      "step2_title1": "存入",
+      "step2_title2": "资金",
+      "step3_count": "3",
+      "step3_title1": "选择您的",
+      "step3_title2": "大宗商品",
+      "step4_count": "4",
+      "step4_title1": "开始",
+      "step4_title2": "交易"
+    },
+    "openLiveAccount": {
+      "title_part1": "立即开始",
+      "title_part2": "大宗商品交易",
+      "title_part3": "今天在",
+      "title_part4": "PrimeX！",
+      "description": "开设真实账户并探索我们的大宗商品交易选项"
+    },
+    "faq": {
+      "title": "常见",
+      "title1": "问题",
+      "question_1": "交易大宗商品是什么意思？",
+      "answer_1": "交易大宗商品是指买卖原材料或主要农产品，如石油、黄金、天然气、咖啡和小麦。交易者可以通过这些大宗商品的价格波动获利，既可以通过实物交割，也可以通过金融工具投机价格变化。",
+      "question_2": "我可以通过大宗商品交易获利吗？",
+      "answer_2": "是的，大宗商品交易可以带来利润，但也存在风险。与其他金融市场一样，大宗商品的价格可能因供需、地缘政治事件和市场情绪等因素波动，从而带来潜在的收益或损失。",
+      "question_3": "哪些是最受欢迎的交易大宗商品？",
+      "answer_3": "受欢迎的交易大宗商品包括黄金、白银、原油、天然气、小麦、玉米和咖啡。大宗商品主要分为金属、能源和农产品三大类。",
+      "question_4": "哪些因素影响大宗商品价格？",
+      "answer_4": "大宗商品价格受多种因素影响，包括供需关系、地缘政治紧张局势、自然灾害、天气条件、技术进步和宏观经济因素，如通货膨胀和货币波动。"
+    },
+    "whyTrade": {
+      "title_part1": "为什么交易",
+      "title_part2": "大宗商品？",
+      "description": "大宗商品交易为交易者提供进入石油、天然气和农业等市场的机会，响应全球供需变化。交易者可以通过短期交易和战略投资对冲通货膨胀并从市场波动中获利。"
+    }
   }
 }

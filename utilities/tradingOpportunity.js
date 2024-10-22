@@ -82,7 +82,6 @@ export const tradingTabs = [
           "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/USDJPY.svg",
         name: "USDJPY",
       },
-
       {
         tradingSymbol: "PrimeX_REST_RA||USDCHF||USDCHF",
         image:
