@@ -8,7 +8,7 @@ const Banner = () => {
   const t = useTranslations("copyProgram.hero");
 
   return (
-    <section className="bg-[#000000] pt-32 pb-8">
+    <section className="bg-[#000000] pt-24 sm:pt-32 pb-8">
       <div className="container">
         <div className="grid grid-cols-12 items-center">
           <div className="col-span-12 md:col-span-5">
@@ -24,15 +24,21 @@ const Banner = () => {
                 <br className="sm:hidden lg:block" />
                 <span className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold text-[#ffffff] mb-2 inline-block md:mb-1 lg:mb-2">
                   {t("title_part3")}
-                  <span className="text-[#FED100]">{t("title_part4")}</span>
+                  <span className="text-[#FED100]">{t("title_part4")} </span>
                 </span>
-                <span className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold text-[#FED100] mb-2 inline-block md:mb-1 lg:mb-2">
+                <span
+                  className={`text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold text-[#FED100] mb-2 inline-block md:mb-1 lg:mb-2 ${
+                    locale === "ar" ? "mr-2 md:mr-0" : "ml-2 md:ml-0"
+                  }`}
+                >
                   {t("title_part5")}
                 </span>
               </h1>
-              <p className="text-[#c6c6c6] mt-4 w-[80%]">{t("description")}</p>
+              <p className="text-[#c6c6c6] mt-4 w-full lg:w-[80%]">
+                {t("description")}
+              </p>
             </div>
-            <div className="mt-3">
+            <div className="mt-3 flex justify-center md:justify-start">
               <button
                 onClick={() =>
                   window.open(
@@ -43,14 +49,14 @@ const Banner = () => {
                     }`
                   )
                 }
-                className="py-[16px] px-[46px] font-semibold mt-5 w-full md:w-auto custom-button"
+                className="py-[16px] px-[46px] font-semibold mt-5 w-full sm:w-[70%] mx-auto md:mx-0 md:w-auto custom-button"
               >
                 {t("btnTxt")}
               </button>
             </div>
           </div>
           <div className="col-span-12 md:col-span-7">
-            <div className="flex justify-end mt-6 md:mt-0">
+            <div className="flex justify-center md:justify-end mt-6 md:mt-0">
               <Image
                 unoptimized={true}
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/copy-program-hero.webp"

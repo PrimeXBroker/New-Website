@@ -32,9 +32,9 @@ const Steps = () => {
           <span className="text-[#FED100]">{t("title_part1")}</span>{" "}
           {t("title_part2")}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-[#111111] border-2 border-[#1D1D1D] rounded-2xl text-[#ffffff] px-14 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-[#111111] border-2 border-[#1D1D1D] rounded-2xl text-[#ffffff] px-10 lg:px-14 py-10">
           {steps.map((step, index) => (
-            <div key={index} className="text-center group">
+            <div key={index} className="text-center group mb-1 sm:mb-2 md:mb-0">
               <Image
                 unoptimized={true}
                 src={step.src}
@@ -43,7 +43,7 @@ const Steps = () => {
                 height={128}
                 className="mx-auto w-full group-hover:scale-105 transition-all duration-500 ease-in-out"
               />
-              <p className="text-2xl font-semibold mt-6 group-hover:text-[#fed100]">
+              <p className="text-xl sm:text-2xl md:text-xl lg:text-2xl font-semibold mt-6 group-hover:text-[#fed100]">
                 {step.label}
               </p>
             </div>

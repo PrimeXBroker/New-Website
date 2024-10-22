@@ -57,7 +57,7 @@ const Benefits = () => {
           {benefits.slice(0, 3).map((benefit, index) => (
             <div
               key={index}
-              className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] hover:border-[#FED100] text-[#ffffff] flex justify-between items-center gap-3 w-[32%]" // Ensure width
+              className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] hover:border-[#FED100] text-[#ffffff] flex justify-between items-center gap-3 w-[32%]"
             >
               <div className="w-[85%]">
                 <h3 className="text-xl font-semibold text-[#ffffff]">
@@ -78,7 +78,7 @@ const Benefits = () => {
           {benefits.slice(3, 5).map((benefit, index) => (
             <div
               key={index}
-              className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] hover:border-[#FED100] text-[#ffffff] flex justify-between items-center gap-3 w-[32%]" // Ensure width
+              className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] hover:border-[#FED100] text-[#ffffff] flex justify-between items-center gap-3 w-[32%]"
             >
               <div className="w-[85%]">
                 <h3 className="text-xl font-bold text-[#ffffff]">
