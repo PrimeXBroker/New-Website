@@ -659,6 +659,13 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("stocks")}
                 </LocaleLink>
+                <LocaleLink
+                  href="/crypto"
+                  className="block text-[#ffffff] text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("crypto")}
+                </LocaleLink>
               </div>
             )}
           </div>

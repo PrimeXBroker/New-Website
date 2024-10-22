@@ -17,6 +17,7 @@
     "forex": "外汇",
     "stocks": "股票",
     "commodities": "商品",
+    "crypto": "加密货币",
     "shares": "股份",
     "metals": "金属",
     "indices": "指数",
@@ -2146,6 +2147,10 @@
     }
   },
   "forexProduct": {
+    "metaData": {
+      "title": "在线外汇交易 | PrimeX Capital",
+      "description": "通过PrimeX Capital进行在线外汇交易，享受无缝高效的交易体验。访问高级工具和策略。今天就开始交易吧！"
+    },
     "hero": {
       "title1": "自信地",
       "title2": "交易全球",
@@ -2195,6 +2200,10 @@
     }
   },
   "metalsProduct": {
+    "metaData": {
+      "title": "在线金属交易平台 | PrimeX Capital",
+      "description": "通过PrimeX Capital的强大平台进行在线金属交易。访问高级工具和洞察，实现高效交易。点击了解更多，今天就开始交易吧！"
+    },
     "hero": {
       "title1": "保障您的",
       "title2": "未来于",
@@ -2246,6 +2255,10 @@
     }
   },
   "stocksProduct": {
+    "metaData": {
+      "title": "投资股票 | 在线股票交易 | PrimeX Capital",
+      "description": "通过PrimeX Capital进行股票投资和在线交易。访问强大的工具和洞察，实现更智能的股票交易。了解更多，今天就开始投资吧！"
+    },
     "hero": {
       "title1": "构建您的",
       "title2": "投资组合，",
@@ -2295,6 +2308,10 @@
     }
   },
   "indicesProduct": {
+    "metaData": {
+      "title": "在线指数交易 | 指数差价合约 | PrimeX Capital",
+      "description": "通过PrimeX Capital进行在线指数和差价合约交易。访问广泛的指数和高级交易工具。今天就开始交易吧！"
+    },
     "hero": {
       "title1": "自信地",
       "title2": "交易",
@@ -2395,6 +2412,10 @@
     }
   },
   "commoditiesProduct": {
+    "metaData": {
+      "title": "在线商品交易 | 商品交易平台 | PrimeX Capital",
+      "description": "通过PrimeX Capital进行在线商品交易，涵盖黄金、石油、天然气等市场。享受具有竞争力的点差和杠杆选项。点击立即交易！"
+    },
     "hero": {
       "title1": "自信地",
       "title2": "投资于",

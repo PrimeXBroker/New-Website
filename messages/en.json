@@ -17,6 +17,7 @@
     "forex": "Forex",
     "stocks": "Stocks",
     "commodities": "Commodities",
+    "crypto": "Crypto",
     "shares": "Shares",
     "metals": "Metals",
     "indices": "Indices",
@@ -2148,6 +2149,10 @@
     }
   },
   "forexProduct": {
+    "metaData": {
+      "title": "Trade Forex Online | PrimeX Capital",
+      "description": "Trade Forex online with PrimeX Capital for a seamless and efficiart trading experiarce. Access advanced tools and strategies. Start trading today!"
+    },
     "hero": {
       "title1": "Confidently",
       "title2": "Trade World’s",
@@ -2197,6 +2202,10 @@
     }
   },
   "metalsProduct": {
+    "metaData": {
+      "title": "Metals Trading Online Platform | PrimeX Capital",
+      "description": "Trade metals online with PrimeX Capital's robust platform. Access advanced tools and insights for effective trading. Click to learn more and start trading today!"
+    },
     "hero": {
       "title1": "Secure Your",
       "title2": "Future in the",
@@ -2248,6 +2257,10 @@
     }
   },
   "stocksProduct": {
+    "metaData": {
+      "title": "Invest Stocks | Trade Stocks Online | PrimeX Capital",
+      "description": "Invest in and trade stocks online with PrimeX Capital. Access powerful tools and insights for smarter stock trading. Learn more and start investing today!"
+    },
     "hero": {
       "title1": "Build Your",
       "title2": "Portfolio with",
@@ -2297,6 +2310,10 @@
     }
   },
   "indicesProduct": {
+    "metaData": {
+      "title": "Trade Indices Online | Indices CFDs | PrimeX Capital",
+      "description": "Trade indices and CFDs online with PrimeX Capital. Access a wide range of indices and advanced trading tools. Start trading today!"
+    },
     "hero": {
       "title1": "Confidently",
       "title2": "Trade the",
@@ -2348,6 +2365,10 @@
     }
   },
   "cryptoProduct": {
+    "metaData": {
+      "title": "",
+      "description": ""
+    },
     "hero": {
       "title1": "Confidently",
       "title2": "Trade in Fast",
@@ -2397,6 +2418,10 @@
     }
   },
   "commoditiesProduct": {
+    "metaData": {
+      "title": "Commodity Trading Online | Trade Commodities Online | PrimeX Capital",
+      "description": "Trade commodities online with PrimeX Capital, featuring markets like gold, oil, and natural gas. arjoy competitive spreads and leverage options. Click to trade now!"
+    },
     "hero": {
       "title1": "Confidently",
       "title2": "Invest in",
@@ -2445,6 +2470,10 @@
     }
   },
   "copyProgram": {
+    "metaData": {
+      "title": "",
+      "description": ""
+    },
     "hero": {
       "title_part1": "Revitalize Your",
       "title_part2": "Trading Journey",

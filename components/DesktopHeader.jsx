@@ -216,6 +216,15 @@ const DesktopHeader = ({ locale }) => {
                       {t("stocks")}
                     </LocaleLink>
                   </li>
+                  <li>
+                    <LocaleLink
+                      href="/crypto"
+                      onClick={closeDropdown}
+                      className="block p-[10px] text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                    >
+                      {t("crypto")}
+                    </LocaleLink>
+                  </li>
                 </ul>
               )}
             </li>
