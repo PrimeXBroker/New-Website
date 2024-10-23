@@ -28,7 +28,7 @@ const Banner = () => {
                 </span>
                 <span
                   className={`text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold text-[#FED100] mb-2 inline-block md:mb-1 lg:mb-2 ${
-                    locale === "ar" ? "mr-2 md:mr-0" : "ml-2 md:ml-0"
+                    locale === "ar" ? "mr-2 md:mr-2" : "ml-2 md:ml-0"
                   }`}
                 >
                   {t("title_part5")}

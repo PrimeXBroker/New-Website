@@ -13,21 +13,21 @@ const CopyProgramWrapper = () => {
   const t = useTranslations("copyProgram");
 
   const faqs = [
-    {
-      key: 1,
-      question: t("faq.question_1"),
-      answer: t("faq.answer_1"),
-    },
-    {
-      key: 2,
-      question: t("faq.question_2"),
-      answer: t("faq.answer_2"),
-    },
-    {
-      key: 3,
-      question: t("faq.question_3"),
-      answer: t("faq.answer_3"),
-    },
+    // {
+    //   key: 1,
+    //   question: t("faq.question_1"),
+    //   answer: t("faq.answer_1"),
+    // },
+    // {
+    //   key: 2,
+    //   question: t("faq.question_2"),
+    //   answer: t("faq.answer_2"),
+    // },
+    // {
+    //   key: 3,
+    //   question: t("faq.question_3"),
+    //   answer: t("faq.answer_3"),
+    // },
     {
       key: 4,
       question: t("faq.question_4"),
