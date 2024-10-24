@@ -94,7 +94,7 @@ const CareersDetail = ({ id }) => {
             <main>
               <Link
                 className="text-[#ffffff] hover:text-[#FED100] font-medium flex justify-center sm:justify-start items-center mb-8"
-                href={`/${locale}/new-careers`}
+                href={`/${locale}/careers`}
               >
                 <span className="mr-2">
                   <FaArrowLeft />
@@ -151,7 +151,7 @@ const CareersDetail = ({ id }) => {
             </main>
           )}
           <div ref={formRef}>
-            <CareersForm />
+            <CareersForm jobTitle={detail?.title} />
           </div>
         </div>
       </div>

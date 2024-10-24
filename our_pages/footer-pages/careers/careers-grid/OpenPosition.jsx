@@ -180,7 +180,7 @@ const OpenPosition = () => {
                     </p>
                     <div className="text-[#ffffff] hover:text-[#FED100]">
                       <Link
-                        href={`/${locale}/new-careers/${job._id}`}
+                        href={`/${locale}/careers/${job._id}`}
                         className="flex items-center gap-x-1 text-xs sm:text-sm"
                       >
                         View Job

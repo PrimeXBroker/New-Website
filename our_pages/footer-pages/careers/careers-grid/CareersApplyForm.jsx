@@ -6,7 +6,8 @@ import { useLocale, useTranslations } from "next-intl";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import axios from "axios";
-import nationality from "../../../public/assets/data/nationality.json";
+import nationality from "../../../../public/assets/data/nationality.json";
+import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 
 import {
   Modal,
@@ -18,14 +19,23 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 
-function CareersForm() {
+function CareersApplyForm() {
   const t = useTranslations("careersPage.careersForm");
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [loading, setLoading] = useState(false);
   const [countryCode, setCountryCode] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [resumeName, setResumeName] = useState("");
+  const [jobs, setJobs] = useState([]);
   const locale = useLocale();
+  const [isOpenDropdown, setIsOpenDropdown] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleOptionClick = (option) => {
+    setSelectedOption(option.name);
+    formik.setFieldValue("job_title", option.name);
+    setIsOpenDropdown(false);
+  };
 
   useEffect(() => {
     const fetchLocation = async () => {
@@ -45,6 +55,29 @@ function CareersForm() {
     fetchLocation();
   }, []);
 
+  useEffect(() => {
+    const fetchJobs = async () => {
+      setLoading(true);
+      try {
+        const response = await axios.get(
+          "https://primexbroker.com/api/get/jobs/category"
+        );
+        const fetchedJobs = response.data.data;
+        const jobOptions = fetchedJobs.map((job) => ({
+          id: job._id,
+          name: job.title,
+        }));
+        setJobs(jobOptions);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching jobs", error);
+        setLoading(false);
+      }
+    };
+
+    fetchJobs();
+  }, []);
+
   const formik = useFormik({
     initialValues: {
       first_name: "",
@@ -55,6 +88,7 @@ function CareersForm() {
       current_salary: "",
       expected_salary: "",
       years_of_experience: "",
+      job_title: "",
       resume: null,
       portfolio: "",
     },
@@ -84,6 +118,7 @@ function CareersForm() {
       years_of_experience: Yup.number().required(
         t("experience_required_error")
       ),
+      job_title: Yup.string().required(t("job_title_required_error")),
     }),
     validate: (values) => {
       const errors = {};
@@ -102,6 +137,7 @@ function CareersForm() {
         current_salary: values.current_salary,
         expected_salary: values.expected_salary,
         years_of_experience: values.years_of_experience,
+        job_title: values.job_title,
         resume: values.resume,
         portfolio: values.portfolio,
       };
@@ -156,19 +192,12 @@ function CareersForm() {
   };
 
   return (
-    <section className="container px-0 py-20">
-      <div
-        className={`bg-[#111111] border-[#1d1d1d] border-3 lg:w-[100%] rounded-[12px] p-[24px] ms:p-[40px] mx-auto`}
-      >
+    <section className="container px-0">
+      <div className="">
         <form
           onSubmit={formik.handleSubmit}
           className="flex flex-col justify-center items-center relative gap-4"
         >
-          <div className="w-full">
-            <h2 className="text-[24px] font-semibold text-[#ffffff]">
-              {t("title")}
-            </h2>
-          </div>
           <div className="md:flex w-full justify-between">
             <div className="w-full md:w-[48%] mb-3 md:mb-0">
               <label className="text-xs text-[#c6c6c6]">
@@ -338,6 +367,35 @@ function CareersForm() {
               </label>
             </div>
           </div>
+          <div className="relative w-full">
+            <label className="text-xs text-[#c6c6c6]">
+              {t("select_job_label")}
+              <div
+                className="bg-[#1d1d1d] text-[#c6c6c6] border-2 border-[#222222] rounded-[4px] py-[16px] px-[12px] w-full flex justify-between items-center cursor-pointer text-base"
+                onClick={() => setIsOpenDropdown(!isOpenDropdown)}
+              >
+                <span>{selectedOption || "Select a job"}</span>
+                {isOpenDropdown ? (
+                  <BiChevronUp size={18} color="#ffffff" />
+                ) : (
+                  <BiChevronDown size={18} color="#ffffff" />
+                )}
+              </div>
+              {isOpenDropdown && (
+                <ul className="absolute left-0 right-0 mt-2 bg-[#1d1d1d] border-2 border-[#222222] rounded-[4px] z-10 max-h-[200px] overflow-y-auto text-base">
+                  {jobs.map((job) => (
+                    <li
+                      key={job.id}
+                      className="py-[16px] px-[12px] cursor-pointer hover:bg-[#ffffff] hover:text-[#111111] text-[#c6c6c6] text-base"
+                      onClick={() => handleOptionClick(job)}
+                    >
+                      {job.name}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </label>
+          </div>
           <div className="w-full">
             <label className="text-xs text-[#c6c6c6]">
               {t("portfolio_label")}
@@ -435,4 +493,4 @@ function CareersForm() {
   );
 }
 
-export default CareersForm;
+export default CareersApplyForm;

@@ -66,7 +66,7 @@ const Banner = () => {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1 text-[#ffffff] text-3xl">
+              <ModalHeader className="flex flex-col gap-1 text-[#ffffff] text-2xl">
                 Application
               </ModalHeader>
               <ModalBody>

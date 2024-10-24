@@ -1,4 +1,4 @@
-import CareersWrapper from "@/our_pages/footer-pages/new-careers/CareersWrapper";
+import CareersWrapper from "@/our_pages/footer-pages/careers/careers-grid/CareersWrapper";
 import React from "react";
 
 const page = () => {

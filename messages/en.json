@@ -2378,8 +2378,9 @@
       "expected_salary_required_error": "Expected Salary is required!",
       "experience_required_error": "Experience is required!",
       "designation_required_error": "Designation is required!",
-      "phone_required_error": "phone is required!",
-      "select_job_label": "Job Title",
+      "phone_required_error": "Phone is required!",
+      "select_job_label": "Job Title*",
+      "select_job_placeholder": "Select Job Title",
       "job_title_required_error": "Job title is required!"
     }
   }
