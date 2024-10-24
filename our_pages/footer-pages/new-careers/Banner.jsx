@@ -59,7 +59,7 @@ const Banner = () => {
       <Modal
         isOpen={isOpen}
         onOpenChange={onOpenChange}
-        placement="center"
+        placement="top"
         size="3xl"
         className="w-auto bg-[#000000]"
       >
