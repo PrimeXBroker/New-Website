@@ -2198,8 +2198,8 @@
   },
   "copyProgram": {
     "metaData": {
-      "title": "",
-      "description": ""
+      "title": "Best Copy Trading Platform | Copy Top Traders | PrimeX Capital",
+      "description": "Copy expert traders and grow your investments with PrimeX Capital. Our top-tier platform makes profitable trading simple. Start copying winning traders today!"
     },
     "hero": {
       "title_part1": "Revitalize Your",
@@ -2298,6 +2298,89 @@
       "country_label": "Country",
       "country_placeholder": "Country",
       "country_required_error": "country is required!"
+    }
+  },
+  "careersPage": {
+    "banner": {
+      "title": "Careers",
+      "description": "A Chance to Build Your Success ",
+      "btnTxt": "Apply Now"
+    },
+    "drivingSuccess": {
+      "title_part1": "Fostering Talent, ",
+      "title_part2": "Driving Success",
+      "desc_part1": "At PrimeX Capital, we are committed to providing equal opportunities for all employees to showcase their talents and share their ideas. By bringing together young and seasoned professionals, we foster a vibrant community where collaboration thrives, creating a dynamic workplace for everyone.",
+      "desc_part2": "We offer competitive market remuneration and incentives for both new talent and seasoned experts. By joining our award-winning team, you will have the opportunity to grow professionally in this fast-paced and challenging sector. ",
+      "title1": "Multicultural",
+      "title1_1": "Organization",
+      "description1": "Grow your career in a diverse environment, collaborating with global professionals and expanding your cultural perspective.",
+      "title2": "Market Competitive",
+      "title2_1": "Remuneration",
+      "description2": "Receive competitive salary packages and bonuses that reflect your hard work, ensuring you feel valued and rewarded.",
+      "title3": "Employees",
+      "title3_1": "of the Month",
+      "description3": "Stand out by showcasing your achievements and leadership, earning recognition through special rewards and acknowledgment.",
+      "title4": "Training ",
+      "title4_2": "and",
+      "title4_1": "Development",
+      "description4": "Engage in training programs designed to accelerate your growth and equip you with the skills needed for future success.",
+      "title5": "Ethics ",
+      "title5_2": "and",
+      "title5_1": "Transparency",
+      "description5": "Join a workplace that upholds the highest standards of integrity, promoting transparency and ethical behavior at every level.",
+      "title6": "Incentives ",
+      "title6_2": "and",
+      "title6_1": "Rewards",
+      "description6": "Enjoy lucrative rewards and growth opportunities, recognizing and celebrating the outstanding performance of top achievers."
+    },
+    "openPositions": {
+      "title_part1": "Open ",
+      "title_part2": "Positions"
+    },
+    "careersForm": {
+      "title": "Application",
+      "first_name_label": "First Name*",
+      "first_name_placeholder": "Enter First Name",
+      "last_name_label": "Last Name*",
+      "last_name_placeholder": "Enter Last Name",
+      "email_label": "Email*",
+      "email_placeholder": "Enter your Email",
+      "contact_label": "Phone Number*",
+      "contact_required_error": "Contact number is required.",
+      "current_salary_label": "Current Salary (USD)*",
+      "current_salary_placeholder": "Enter Current Salary in USD",
+      "expected_salary_label": "Expected Salary (USD)*",
+      "expected_salary_placeholder": "Enter Expected Salary in USD",
+      "years_of_experience_label": "Years of Experience*",
+      "years_of_experience_placeholder": "Enter Years of Experience",
+      "portfolio_label": "Portfolio Link*",
+      "portfolio_placeholder": "Enter Link to Portfolio",
+      "resume_label": "Upload your Resume*",
+      "resume_placeholder": "Upload Resume",
+      "condition": "By submitting this form, you agree to be contacted by our team.",
+      "submit_btn": "Submit",
+      "first_name_validation_error": "The first name should only include alphabetical characters.",
+      "first_name_required_error": "Please provide a first name.",
+      "last_name_validation_error": "The last name should only include alphabetical characters.",
+      "last_name_required_error": "Please provide a last name.",
+      "email_validation_error": "Please enter a valid email address.",
+      "email_required_error": "Email is required.",
+      "success_title": "Success",
+      "success_desc": "Thank you for your application. We have successfully received your submission. Our team will review your application and get back to you shortly.",
+      "close_btn": "Close",
+      "number": "Phone Number",
+      "country_label": "Select Nationality*",
+      "country_placeholder": "Select Nationality",
+      "country_required_error": "country is required!",
+      "resume_required_error": "Resume is required!",
+      "portfolio_required_error": "Portfolio is required!",
+      "current_salary_required_error": "Current Salary is required!",
+      "expected_salary_required_error": "Expected Salary is required!",
+      "experience_required_error": "Experience is required!",
+      "designation_required_error": "Designation is required!",
+      "phone_required_error": "phone is required!",
+      "select_job_label": "Job Title",
+      "job_title_required_error": "Job title is required!"
     }
   }
 }
