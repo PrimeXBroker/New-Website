@@ -192,19 +192,12 @@ function CareersApplyForm() {
   };
 
   return (
-    <section className="container px-0 py-20">
-      <div
-        className={`bg-[#111111] border-[#1d1d1d] border-3 lg:w-[100%] rounded-[12px] p-[24px] ms:p-[40px] mx-auto`}
-      >
+    <section className="container px-0">
+      <div className="">
         <form
           onSubmit={formik.handleSubmit}
           className="flex flex-col justify-center items-center relative gap-4"
         >
-          <div className="w-full">
-            <h2 className="text-[24px] font-semibold text-[#ffffff]">
-              {t("title")}
-            </h2>
-          </div>
           <div className="md:flex w-full justify-between">
             <div className="w-full md:w-[48%] mb-3 md:mb-0">
               <label className="text-xs text-[#c6c6c6]">

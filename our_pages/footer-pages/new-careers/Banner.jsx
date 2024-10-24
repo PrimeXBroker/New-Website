@@ -61,11 +61,14 @@ const Banner = () => {
         onOpenChange={onOpenChange}
         placement="top"
         size="3xl"
-        className="w-auto bg-[#000000]"
+        className="w-auto bg-[#111111] border-[#1d1d1d] border-3 lg:w-[100%] rounded-[12px] p-[24px] ms:p-[40px] mx-auto"
       >
         <ModalContent>
           {(onClose) => (
             <>
+              <ModalHeader className="flex flex-col gap-1 text-[#ffffff] text-3xl">
+                Application
+              </ModalHeader>
               <ModalBody>
                 <CareersApplyForm />
               </ModalBody>
