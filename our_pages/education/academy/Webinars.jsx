@@ -11,7 +11,7 @@ const Webinars = ({ active, setActive }) => {
   const fetchUpcomingWebinars = async () => {
     try {
       const res = await axios.get(
-        "http://primexbroker.com/api/upcoming-webinars"
+        "https://primexbroker.com/api/upcoming-webinars"
       );
       if (res.data.success) {
         setUpcoming(res.data.data);
