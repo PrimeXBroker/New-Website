@@ -316,39 +316,6 @@
       "app_store_btn_part2": "App Store"
     }
   },
-  "careers": {
-    "metaData": {
-      "title": "Careers | PrimeX Capital",
-      "description": "Explore career opportunities at PrimeX Capital. Join a dynamic team and advance your career in the finance industry. Click to learn more and apply today!"
-    },
-    "hero": {
-      "title": "Careers",
-      "description": "If you're passionate about trading, innovation, and making an impact, you've come to the right place.",
-      "apply_btn": "Apply Now"
-    },
-    "careersForm": {
-      "title": "Be A Part of PrimeX Capital",
-      "description": "Join us and be a part of a forward-thinking company where your skills and ambitions can thrive.",
-      "first_name": "first name*",
-      "last_name": "last name*",
-      "email": "email*",
-      "country": "Nationality*",
-      "upload_resume": "Upload Resume*",
-      "upload_portfolio": "Link to your portfolio*",
-      "submit_btn": "submit",
-      "first_name_validation_error": "first name can only contain letters.",
-      "first_name_required_error": "first name is required!",
-      "last_name_validation_error": "last name can only contain letters.",
-      "last_name_required_error": "last name is required!",
-      "email_validation_error": "Invalid email address",
-      "email_required_error": "email is required!",
-      "phone_required_error": "phone is required!",
-      "country_required_error": "country is required!",
-      "resume_required_error": "resume is required!",
-      "portfolio_required_error": "portfolio is required!",
-      "success_message": "Thank you for your application. We have successfully received your submission. Our team will review your application and get back to you shortly."
-    }
-  },
   "about": {
     "metaData": {
       "title": "About Us | PrimeX Capital",
@@ -2301,6 +2268,10 @@
     }
   },
   "careersPage": {
+    "metaData": {
+      "title": "Careers | PrimeX Capital",
+      "description": "Explore career opportunities at PrimeX Capital. Join a dynamic team and advance your career in the finance industry. Click to learn more and apply today!"
+    },
     "banner": {
       "title": "Careers",
       "description": "A Chance to Build Your Success ",

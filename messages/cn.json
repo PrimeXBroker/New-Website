@@ -317,39 +317,6 @@
       "app_store_btn_part2": "App Store"
     }
   },
-  "careers": {
-    "metaData": {
-      "title": "职业生涯 | PrimeX Capital",
-      "description": "探索PrimeX Capital的职业机会。加入一个充满活力的团队，并在金融行业中推进您的职业生涯。点击了解更多并立即申请！"
-    },
-    "hero": {
-      "title": "职业生涯",
-      "description": "如果您对交易、创新和产生影响充满热情，那么您来对地方了。",
-      "apply_btn": "立即申请"
-    },
-    "careersForm": {
-      "title": "成为PrimeX Capital的一员",
-      "description": "加入我们，成为一个前瞻性公司的一部分，在这里您的技能和抱负可以得到充分发挥。",
-      "first_name": "名字*",
-      "last_name": "姓氏*",
-      "email": "电子邮件*",
-      "country": "国籍*",
-      "upload_resume": "上传简历*",
-      "upload_portfolio": "您的作品集链接*",
-      "submit_btn": "提交",
-      "first_name_validation_error": "名字只能包含字母。",
-      "first_name_required_error": "名字是必填项！",
-      "last_name_validation_error": "姓氏只能包含字母。",
-      "last_name_required_error": "姓氏是必填项！",
-      "email_validation_error": "无效的电子邮件地址",
-      "email_required_error": "电子邮件是必填项！",
-      "phone_required_error": "电话是必填项！",
-      "country_required_error": "国籍是必填项！",
-      "resume_required_error": "简历是必填项！",
-      "portfolio_required_error": "作品集是必填项！",
-      "success_message": "感谢您的申请。我们已成功收到您的提交。我们的团队将审核您的申请，并会尽快与您联系。"
-    }
-  },
   "about": {
     "metaData": {
       "title": "关于我们 | PrimeX Capital",

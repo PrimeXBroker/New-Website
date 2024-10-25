@@ -29,6 +29,8 @@ const MobileHeader = ({ locale }) => {
         ? "فارسی"
         : locale === "kur"
         ? "کوردی"
+        : locale === "tr"
+        ? "Türkçe"
         : "English",
     flag:
       locale === "ar"
@@ -39,6 +41,8 @@ const MobileHeader = ({ locale }) => {
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
         : locale === "kur"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
+        : locale === "tr"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
         : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
   });
 
@@ -118,6 +122,8 @@ const MobileHeader = ({ locale }) => {
         ? "فارسی"
         : locale === "kur"
         ? "کوردی"
+        : locale === "tr"
+        ? "Türkçe"
         : "English";
     const flag =
       locale === "ar"
@@ -128,6 +134,8 @@ const MobileHeader = ({ locale }) => {
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
         : locale === "kur"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
+        : locale === "tr"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
         : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg";
     const initialLanguage = { text, flag };
     setLanguage(initialLanguage);
@@ -342,6 +350,32 @@ const MobileHeader = ({ locale }) => {
                         </span>
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        href={
+                          currentLocale === "tr"
+                            ? `/${currentLocale}/${restOfPath}`
+                            : `/tr/${restOfPath}`
+                        }
+                        onClick={() =>
+                          handleClick(
+                            "Türkçe",
+                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
+                          )
+                        }
+                        className="px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
+                        dir="ltr"
+                      >
+                        <Image
+                          unoptimized={true}
+                          width="15"
+                          height="15"
+                          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
+                          alt="turkish flag"
+                        />
+                        <span className="ml-[5px]">Türkçe</span>
+                      </Link>
+                    </li>
                   </ul>
                 )}
               </li>
@@ -521,7 +555,6 @@ const MobileHeader = ({ locale }) => {
                           </span>
                         </Link>
                       </li>
-
                       <li>
                         <Link
                           href={
@@ -556,6 +589,32 @@ const MobileHeader = ({ locale }) => {
                           >
                             کوردی
                           </span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href={
+                            currentLocale === "tr"
+                              ? `/${currentLocale}/${restOfPath}`
+                              : `/tr/${restOfPath}`
+                          }
+                          onClick={() =>
+                            handleClick(
+                              "Türkçe",
+                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
+                            )
+                          }
+                          className="px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
+                          dir="ltr"
+                        >
+                          <Image
+                            unoptimized={true}
+                            width="15"
+                            height="15"
+                            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
+                            alt="turkish flag"
+                          />
+                          <span className="ml-[5px]">Türkçe</span>
                         </Link>
                       </li>
                     </ul>

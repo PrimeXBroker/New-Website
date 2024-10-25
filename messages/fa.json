@@ -316,39 +316,6 @@
       "app_store_btn_part2": "اپ استور"
     }
   },
-  "careers": {
-    "metaData": {
-      "title": "مشاغل | PrimeX Capital",
-      "description": "فرصت‌های شغلی در PrimeX Capital را کاوش کنید. به تیمی پویا بپیوندید و در صنعت مالی پیشرفت کنید. کلیک کنید تا بیشتر بیاموزید و امروز درخواست دهید!"
-    },
-    "hero": {
-      "title": "مشاغل",
-      "description": "اگر به معامله‌گری، نوآوری و تأثیرگذاری علاقه‌مند هستید، به جای درستی آمده‌اید.",
-      "apply_btn": "همین حالا درخواست دهید"
-    },
-    "careersForm": {
-      "title": "بخشی از PrimeX Capital باشید",
-      "description": "به ما بپیوندید و بخشی از یک شرکت پیشرو باشید که در آن مهارت‌ها و جاه‌طلبی‌های شما می‌توانند شکوفا شوند.",
-      "first_name": "نام*",
-      "last_name": "نام خانوادگی*",
-      "email": "ایمیل*",
-      "country": "ملیت*",
-      "upload_resume": "آپلود رزومه*",
-      "upload_portfolio": "لینک به نمونه‌کار شما*",
-      "submit_btn": "ارسال",
-      "first_name_validation_error": "نام فقط می‌تواند شامل حروف باشد.",
-      "first_name_required_error": "نام الزامی است!",
-      "last_name_validation_error": "نام خانوادگی فقط می‌تواند شامل حروف باشد.",
-      "last_name_required_error": "نام خانوادگی الزامی است!",
-      "email_validation_error": "آدرس ایمیل نامعتبر است",
-      "email_required_error": "ایمیل الزامی است!",
-      "phone_required_error": "شماره تلفن الزامی است!",
-      "country_required_error": "ملیت الزامی است!",
-      "resume_required_error": "رزومه الزامی است!",
-      "portfolio_required_error": "نمونه‌کار الزامی است!",
-      "success_message": "از درخواست شما متشکریم. ما با موفقیت درخواست شما را دریافت کردیم. تیم ما درخواست شما را بررسی کرده و به زودی با شما تماس خواهد گرفت."
-    }
-  },
   "about": {
     "metaData": {
       "title": "درباره ما | PrimeX Capital",

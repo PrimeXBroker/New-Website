@@ -316,39 +316,6 @@
       "app_store_btn_part2": "App Store"
     }
   },
-  "careers": {
-    "metaData": {
-      "title": "کەرەبوونەکان | PrimeX Capital",
-      "description": "پێشکەوتنەکان بپشکنە لە PrimeX Capital. بەشداربە لە تیمێکی بەرز و پێشەنگ و کاریگەری لە بواری دارایی بکە. کرتە بکە بۆ زانیاری زیاتر و تۆماربوون!"
-    },
-    "hero": {
-      "title": "کەرەبوونەکان",
-      "description": "ئەگەر ھەزت لە بازرگانی، پێشکەوتن، و تەسەیرکردن بەرزە، لە شوێنە راستیدا هەیت.",
-      "apply_btn": "ئێستا تۆمار بکە"
-    },
-    "careersForm": {
-      "title": "بەشداربە لە PrimeX Capital",
-      "description": "بەشداربە لە یەکێک لە کۆمپانیایە پێشەنگەکان و لە بەرپەسکردنی تەواوی کارەکانت بەرز بکە.",
-      "first_name": "ناوی یەکەم*",
-      "last_name": "ناوی کۆتایی*",
-      "email": "ئیمەیل*",
-      "country": "نەوە*",
-      "upload_resume": "بارکردنی CV*",
-      "upload_portfolio": "بەستەری پۆرتفۆلیۆکەت*",
-      "submit_btn": "ناردن",
-      "first_name_validation_error": "ناوی یەکەم تەنها دەبێت پیتەکان تێدا بەکارببرێت.",
-      "first_name_required_error": "ناوی یەکەم پێویستە!",
-      "last_name_validation_error": "ناوی کۆتایی تەنها دەبێت پیتەکان تێدا بەکارببرێت.",
-      "last_name_required_error": "ناوی کۆتایی پێویستە!",
-      "email_validation_error": "ناونیشانی ئیمەیل هەڵەیە.",
-      "email_required_error": "ئیمەیل پێویستە!",
-      "phone_required_error": "ژمارەی تەلەفۆن پێویستە!",
-      "country_required_error": "وڵات پێویستە!",
-      "resume_required_error": "بارکردنی CV پێویستە!",
-      "portfolio_required_error": "بەستەری پۆرتفۆلیۆ پێویستە!",
-      "success_message": "سوپاس بۆ پێشنیاری تۆمارکردنت. ئێمە بە سەرکەوتووی ناردنی تۆ وەرگرتین. تیمەکەمان پێشنیارت بەپشکنێت و بەم زووترین کاتیدا پەیوەندی پێوە دەکەین."
-    }
-  },
   "about": {
     "metaData": {
       "title": "دەربارەی ئێمە | PrimeX Capital",
