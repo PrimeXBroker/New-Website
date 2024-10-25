@@ -1578,8 +1578,10 @@
       "title1": "Upcoming",
       "title2": "Free Webinars",
       "no_webinars": "No upcoming webinars available at this time. Please check back later.",
-      "webinar_title": "Ahmed Alsajadi",
-      "Webinar_by": "Technical Analyst"
+      "webinar_title1": "Ahmed Alsajadi",
+      "Webinar1_by": "Technical Analyst",
+      "webinar_title2": "Aniket Bhoir",
+      "Webinar2_by": "Market Analyst"
     },
     "academyForm": {
       "webinars_title1": "Webinar ",
@@ -2353,6 +2355,72 @@
       "select_job_label": "Job Title*",
       "select_job_placeholder": "Select Job Title",
       "job_title_required_error": "Job title is required!"
+    }
+  },
+  "contactUs": {
+    "banner": {
+      "main_title": "Contact us",
+      "support_title": "24/7 Multilingual Support",
+      "connect_title": "Connect with PrimeX Capital’s Global Experts",
+      "help_center": "Help Center",
+      "copy_email": "Copy Email",
+      "live_chat": "Live Chat",
+      "suggestion_form_title": "Suggestion",
+      "complaint_form_title": "Complaint",
+      "email_copied_message": "Email Copied!"
+    },
+    "suggestionForm": {
+      "title": "Write to Us",
+      "desc": "Leave your message here, and our customer representative will contact you within 24 hours. ",
+      "first_name_label": "First Name",
+      "first_name_placeholder": "Enter First Name",
+      "last_name_label": "Last Name",
+      "last_name_placeholder": "Enter Last Name",
+      "email_label": "Email",
+      "email_placeholder": "Enter Your Email",
+      "contact_label": "Phone Number",
+      "contact_placeholder": "Enter Your Number",
+      "contact_required_error": "Contact number is required.",
+      "question_label": "Message",
+      "question_placeholder": "Write....",
+      "condition": "By submitting this form, you agree to be contacted by our team.",
+      "submit_btn": "Submit",
+      "first_name_validation_error": "The first name should only include alphabetical characters.",
+      "first_name_required_error": "Please provide a first name.",
+      "last_name_validation_error": "The last name should only include alphabetical characters.",
+      "last_name_required_error": "Please provide a last name.",
+      "email_validation_error": "Please enter a valid email address.",
+      "email_required_error": "Email is required.",
+      "occupation_required_error": "occupation is required!",
+      "question_required_error": "question is required!",
+      "success_title": "Success",
+      "success_desc": "Form Submitted Successfully",
+      "close_btn": "Close",
+      "number": "Phone Number",
+      "country_label": "Select Country",
+      "country_placeholder": "Select Nationality",
+      "country_required_error": "country is required!",
+      "query_category_label": "Category",
+      "query_category_placeholder": "Select one",
+      "general_inquiry": "General Inquiry",
+      "account_funding": "Account Funding",
+      "withdrawal_query": "Withdrawal Query",
+      "deposit_query": "Deposit Query",
+      "partnerships_query": "Partnerships",
+      "platform_query": "Platform/Products",
+      "trading_query": "Trading Conditions",
+      "liquidity_query": "Liquidity",
+      "competition_query": "Competitions"
+    },
+    "globalLocation": {
+      "title1": "Our Global ",
+      "title2": "Locations",
+      "uae_title1": "Dubai",
+      "uae_title2": "UAE",
+      "uae_address": "Office 2401, Westburry Tower 1, Business Bay, Dubai, UAE.",
+      "africa_title1": "Sandton",
+      "africa_title2": "South Africa",
+      "africa_address": "Suite no 8, First Floor, Katherine and West Building, 114 West Street, Sandton, Gauteng, 2196 South Africa."
     }
   }
 }

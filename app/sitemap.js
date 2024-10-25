@@ -11,11 +11,12 @@ export default async function sitemap() {
   const learningHubEnLinks = await fetchEnglishLearningHub();
   const learningHubArLinks = await fetchArabicLearningHub();
 
-
   function escapeXmlChars(url) {
-    return url.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return url
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
   }
-  
 
   // Define static URLs
   const staticUrls = [
@@ -40,6 +41,10 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/tr`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/about`,
       lastModified: new Date(),
     },
@@ -57,6 +62,10 @@ export default async function sitemap() {
     },
     {
       url: `https://primexcapital.com/kur/about`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/tr/about`,
       lastModified: new Date(),
     },
     {
@@ -80,6 +89,10 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/tr/awards`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/careers`,
       lastModified: new Date(),
     },
@@ -97,6 +110,10 @@ export default async function sitemap() {
     },
     {
       url: `https://primexcapital.com/kur/careers`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/tr/careers`,
       lastModified: new Date(),
     },
     {
@@ -120,6 +137,10 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/tr/contact`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/account-types`,
       lastModified: new Date(),
     },
@@ -137,6 +158,10 @@ export default async function sitemap() {
     },
     {
       url: `https://primexcapital.com/kur/account-types`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/tr/account-types`,
       lastModified: new Date(),
     },
     {
@@ -160,6 +185,10 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/tr/forex`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/metals`,
       lastModified: new Date(),
     },
@@ -177,6 +206,10 @@ export default async function sitemap() {
     },
     {
       url: `https://primexcapital.com/kur/metals`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/tr/metals`,
       lastModified: new Date(),
     },
     {
@@ -200,6 +233,10 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/tr/commodities`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/stocks`,
       lastModified: new Date(),
     },
@@ -217,6 +254,10 @@ export default async function sitemap() {
     },
     {
       url: `https://primexcapital.com/kur/stocks`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/tr/stocks`,
       lastModified: new Date(),
     },
     {
@@ -604,17 +645,50 @@ export default async function sitemap() {
 
   // Combine static and dynamic URLs
   const sitemapUrls = [
-    ...staticUrls.map(urlObj => ({ ...urlObj, url: escapeXmlChars(urlObj.url) })),
-  ...marketNewsEnLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
-  ...marketNewsArLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
-  ...startingGatewayEnLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
-  ...startingGatewayArLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
-  ...pressReleaseEnLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
-  ...pressReleaseArLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
-  ...technicalAnalysisEnLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
-  ...technicalAnalysisArLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
-  ...learningHubEnLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) })),
-  ...learningHubArLinks.map(link => ({ ...link, url: escapeXmlChars(link.url) }))
+    ...staticUrls.map((urlObj) => ({
+      ...urlObj,
+      url: escapeXmlChars(urlObj.url),
+    })),
+    ...marketNewsEnLinks.map((link) => ({
+      ...link,
+      url: escapeXmlChars(link.url),
+    })),
+    ...marketNewsArLinks.map((link) => ({
+      ...link,
+      url: escapeXmlChars(link.url),
+    })),
+    ...startingGatewayEnLinks.map((link) => ({
+      ...link,
+      url: escapeXmlChars(link.url),
+    })),
+    ...startingGatewayArLinks.map((link) => ({
+      ...link,
+      url: escapeXmlChars(link.url),
+    })),
+    ...pressReleaseEnLinks.map((link) => ({
+      ...link,
+      url: escapeXmlChars(link.url),
+    })),
+    ...pressReleaseArLinks.map((link) => ({
+      ...link,
+      url: escapeXmlChars(link.url),
+    })),
+    ...technicalAnalysisEnLinks.map((link) => ({
+      ...link,
+      url: escapeXmlChars(link.url),
+    })),
+    ...technicalAnalysisArLinks.map((link) => ({
+      ...link,
+      url: escapeXmlChars(link.url),
+    })),
+    ...learningHubEnLinks.map((link) => ({
+      ...link,
+      url: escapeXmlChars(link.url),
+    })),
+    ...learningHubArLinks.map((link) => ({
+      ...link,
+      url: escapeXmlChars(link.url),
+    })),
   ];
 
   return sitemapUrls;

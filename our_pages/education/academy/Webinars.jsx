@@ -11,7 +11,7 @@ const Webinars = ({ active, setActive }) => {
   const fetchUpcomingWebinars = async () => {
     try {
       const res = await axios.get(
-        "https://primexbroker.com/api/upcoming-webinars"
+        "http://primexbroker.com/api/upcoming-webinars"
       );
       if (res.data.success) {
         setUpcoming(res.data.data);
@@ -56,16 +56,31 @@ const Webinars = ({ active, setActive }) => {
                 className="bg-[#1D1D1D] text-[#ffffff] rounded-lg p-6 border-2 border-[#222222] gap-3 flex flex-col lg:flex-row mt-8 upcoming-webinar w-full md:w-[68%] lg:w-[85%] group"
               >
                 <div className="flex flex-row lg:flex-col gap-3 lg:gap-0 lg:w-[30%] xl:w-[25%]">
-                  <img
-                    className="rounded w-[80px] sm:w-[100px] lg:w-full"
-                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/ahmed.webp"
-                    alt=""
-                  />
+                  {webinar.user._id === "671b8e7499ab90fe1d3c3b2f" ? (
+                    <img
+                      className="rounded w-[80px] sm:w-[100px] lg:w-full "
+                      src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/Aniket.webp"
+                      alt=""
+                    />
+                  ) : (
+                    <img
+                      className="rounded w-[80px] sm:w-[100px] lg:w-full"
+                      src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/ahmed.webp"
+                      alt=""
+                    />
+                  )}
+
                   <div className="w-[70%] lg:w-[100%]">
                     <p className="text-[#f9f9f9] text-sm mb-1 sm:mb-0">
-                      {t("webinar_title")}
+                      {webinar.user._id === "671b8e7499ab90fe1d3c3b2f"
+                        ? t("webinar_title2")
+                        : t("webinar_title1")}
                     </p>
-                    <p className="text-[#f9f9f9] text-xs"> {t("Webinar_by")}</p>
+                    <p className="text-[#f9f9f9] text-xs">
+                      {webinar.user._id === "671b8e7499ab90fe1d3c3b2f"
+                        ? t("Webinar2_by")
+                        : t("Webinar1_by")}
+                    </p>
                     <div className="text-[#c6c6c6] w-full lg:hidden mt-2">
                       <p className="text-xs mb-1">
                         {new Date(webinar.start).toLocaleDateString(locale, {
