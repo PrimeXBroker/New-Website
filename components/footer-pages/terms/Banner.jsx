@@ -66,7 +66,7 @@ const Banner = () => {
         <Button
           title="Click to View"
           as="a"
-          href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/footer-legal/PrimeX_Capital_Terms_of_Business.pdf"
+          href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/about/PrimeX_Capital_Terms_of_Business.pdf"
           color="white"
           className="relative text-white text-center flex h-[70px] rounded-full w-[250px] bg-secondary border border-accent shadow-2xl"
           endContent={
