@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import axios from "axios";
 import FormWrapper from "./FormWrapper";
+import moment from "moment-timezone";
 
 const Webinars = ({ active, setActive }) => {
   const locale = useLocale();
   const t = useTranslations("academy.upcomingWebinars");
   const [upcoming, setUpcoming] = useState([]);
+  const userTimeZone = moment.tz.guess();
 
   const fetchUpcomingWebinars = async () => {
     try {
@@ -83,18 +85,15 @@ const Webinars = ({ active, setActive }) => {
                     </p>
                     <div className="text-[#c6c6c6] w-full lg:hidden mt-2">
                       <p className="text-xs mb-1">
-                        {new Date(webinar.start).toLocaleDateString(locale, {
-                          weekday: "long",
-                          month: "short",
-                          day: "numeric",
-                        })}
+                        {moment(webinar.start)
+                          .tz(userTimeZone)
+                          .format("dddd, MMM D")}
                       </p>
                       <p className="text-xs">
-                        {new Date(webinar.start).toLocaleTimeString(locale, {
-                          hour: "2-digit",
-                          minute: "2-digit",
-                        })}{" "}
-                        GMT +3
+                        {moment(webinar.start)
+                          .tz(userTimeZone)
+                          .format("h:mm A")}{" "}
+                        {userTimeZone}
                       </p>
                     </div>
                   </div>
@@ -103,21 +102,16 @@ const Webinars = ({ active, setActive }) => {
                   <h2 className="text-base md:text-xl xl:text-2xl sm:mb-4 group-hover:text-[#FED100]">
                     {locale === "ar" ? webinar.agendaAr : webinar.agenda}
                   </h2>
-                  <div className="bg-[#222222] border-1 border-[#333333] p-3 rounded-lg lg:flex items-center justify-between text-[#c6c6c6] w-[90%] hidden text-sm xl:text-base">
+                  <div className="bg-[#222222] border-1 border-[#333333] p-3 rounded-lg lg:flex items-center justify-between text-[#c6c6c6] w-[100%] hidden text-sm xl:text-base">
                     <span>
-                      {new Date(webinar.start).toLocaleDateString(locale, {
-                        weekday: "long",
-                        month: "short",
-                        day: "numeric",
-                      })}
+                      {moment(webinar.start)
+                        .tz(userTimeZone)
+                        .format("dddd, MMM D")}{" "}
                     </span>
                     <span className="border-l border-[#333333] h-6"></span>
                     <span>
-                      {new Date(webinar.start).toLocaleTimeString(locale, {
-                        hour: "2-digit",
-                        minute: "2-digit",
-                      })}{" "}
-                      GMT +3
+                      {moment(webinar.start).tz(userTimeZone).format("h:mm A")}{" "}
+                      {userTimeZone}
                     </span>
                   </div>
                 </div>

@@ -64,7 +64,7 @@ const MarketNews = ({ slugEn, slugAr }) => {
 
   return (
     <section className="container mt-8">
-      <div className="grid grid-cols-12 ">
+      <div className="grid grid-cols-12">
         {news.map((blog, index) => (
           <div className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4 flex flex-col">
             <Link

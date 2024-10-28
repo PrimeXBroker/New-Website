@@ -11,12 +11,12 @@ const Strategies = () => {
     {
       title: t("title1"),
       description: t("description1"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-instruments/Research+Companies.svg",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-instruments/Diversify+Instruments.svg",
     },
     {
       title: t("title2"),
       description: t("description2"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-instruments/Diversify+Instruments.svg",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-instruments/Research+Companies.svg",
     },
     {
       title: t("title3"),
