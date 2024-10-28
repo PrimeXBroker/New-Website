@@ -24,7 +24,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("about.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/about/new-about/about-us-hero.webp",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/about/about-us-hero.webp",
           width: 1200,
           height: 630,
           alt: t("about.metaData.title"),

@@ -9,7 +9,7 @@ const GlobalLocation = () => {
   const t = useTranslations("contactUs.globalLocation");
 
   return (
-    <section className="relative h-[250px] sm:h-[340px] md:h-[400px] lg:h-[570px] bg-[#000000] about-bg-main">
+    <section className="relative h-[460px] sm:h-[400px] md:h-[470px] lg:h-[570px] bg-[#000000] about-bg-main">
       <div className="container mx-auto h-full relative flex justify-center items-center">
         <div
           className={`absolute top-0 block lg:hidden ${
@@ -18,19 +18,19 @@ const GlobalLocation = () => {
               : "left-5 md:left-10"
           }`}
         >
-          <h2 className="text-[#ffffff] text-xl sm:text-3xl lg:text-5xl font-semibold sm:mb-2 block lg:hidden">
+          <h2 className="text-[#ffffff] text-2xl sm:text-4xl lg:text-5xl font-semibold sm:mb-2 block lg:hidden">
             {t("title1")}
             <span className="text-[#FED100]">{t("title2")}</span>
           </h2>
         </div>
         <div
-          className={`absolute top-[22%] flex items-center gap-2 ${
+          className={`absolute top-[16%] sm:top-[22%] flex items-center gap-2 ${
             locale === "ar" || locale === "fa" || locale === "kur"
-              ? "right-[65%] sm:right-[29%]"
-              : "left-[65%] sm:left-[31%]"
+              ? "right-[5%] sm:right-[21%] md:right-[29%] lg:right-[29%]"
+              : "left-[6%] sm:left-[12%] lg:left-[31%]"
           }`}
         >
-          <div className="bg-[#111111] p-5 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl group w-[80%]">
+          <div className="bg-[#111111] p-5 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl group hover:border-[#FED100] w-[230px] sm:w-[380px]">
             <Link
               href="https://maps.app.goo.gl/bZFoez9hfhEZzRFW6"
               target="_blank"
@@ -68,7 +68,7 @@ const GlobalLocation = () => {
                   </div>
                 </Link>
               </div>
-              <p className="text-[#c6c6c6] mt-4 text-sm sm:text-[15px] w-[80%]">
+              <p className="text-[#c6c6c6] mt-4 text-sm sm:text-[15px]">
                 {t("uae_address")}
               </p>
             </Link>
@@ -78,17 +78,24 @@ const GlobalLocation = () => {
             alt="Location Map Icon"
             width={19}
             height={19}
-            className="w-[50px]"
+            className="w-[40px] sm:w-[50px]"
           />
         </div>
         <div
-          className={`absolute top-[46%] sm:top-[54%] flex items-center gap-2 ${
+          className={`absolute top-[57%] sm:top-[64%] md:top-[57%] lg:top-[54%] flex items-center gap-2 ${
             locale === "ar" || locale === "fa" || locale === "kur"
-              ? "right-[50%]"
-              : "left-[50%]"
+              ? "right-[18%] sm:right-[27%] md:right-[38%] lg:right-[50%]"
+              : "left-[17%] sm:left-[28%] lg:left-[50%]"
           }`}
         >
-          <div className="bg-[#111111] p-5 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl group w-[80%]">
+          <Image
+            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/Pin.svg"
+            alt="Location Map Icon"
+            width={19}
+            height={19}
+            className="w-[40px] sm:w-[50px]"
+          />
+          <div className="bg-[#111111] p-5 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl group hover:border-[#FED100] w-[230px] sm:w-[380px]">
             <Link
               href="https://maps.app.goo.gl/NPtCrDm6Tqz7CNgf6"
               target="_blank"
@@ -100,7 +107,7 @@ const GlobalLocation = () => {
                     <Image
                       unoptimized={true}
                       src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/Country%3DZA+-+South+Africa%2C+Style%3DSquare%2C+Corners%3DRounded.svg"
-                      alt="ZA"
+                      alt="UAE"
                       width={100}
                       height={100}
                       className="w-full"
@@ -129,18 +136,11 @@ const GlobalLocation = () => {
                   </div>
                 </Link>
               </div>
-              <p className="text-[#c6c6c6] mt-4 text-sm sm:text-[15px] w-[80%]">
+              <p className="text-[#c6c6c6] mt-4 text-sm sm:text-[15px]">
                 {t("africa_address")}
               </p>
             </Link>
           </div>
-          <Image
-            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/Pin.svg"
-            alt="Location Map Icon"
-            width={19}
-            height={19}
-            className="w-[50px]"
-          />
         </div>
         <div
           className={`absolute bottom-10 hidden lg:block ${

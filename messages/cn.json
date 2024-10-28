@@ -350,8 +350,16 @@
       "title1": "找到我们",
       "title2": "遍布全球",
       "title3": "的足迹",
-      "country1": "阿联酋",
-      "country2": "南非"
+      "uae_title1": "迪拜",
+      "uae_title2": "阿联酋",
+      "uae_address": "Office 2401, Westburry Tower 1, Business Bay, 迪拜，阿联酋。",
+      "africa_title1": "桑顿",
+      "africa_title2": "南非",
+      "africa_address": "南非 HQ: Suite no 8, First Floor, Katherine and West Building, 114 West Street, Sandton, Gauteng, 2196 南非。"
+    },
+    "ceoMessage": {
+      "message": "“我很荣幸地分享，我们正在打造一个充满活力并不断创新的交易者社区。我们致力于追求卓越和创新，以赋能全球的交易者。通过尖端技术、实时数据、专家分析、一流功能和教育资源，我们培育了一个无与伦比的财务增长文化。您的成功就是我们的成功，我们会在每一步支持您。”",
+      "title": "首席执行官致辞"
     }
   },
   "contact": {
@@ -2259,6 +2267,76 @@
       "country_label": "国家",
       "country_placeholder": "国家",
       "country_required_error": "国家为必填项！"
+    }
+  },
+  "contactUs": {
+    "metaData": {
+      "title": "联系我们 | PrimeX Capital",
+      "description": "如有任何查询或需要支持，请与PrimeX Capital联系。我们在这里协助您解决交易需求。点击联系我们，今天就获取帮助！"
+    },
+    "banner": {
+      "main_title": "联系我们",
+      "support_title": "24/7 多语言支持",
+      "connect_title": "与PrimeX Capital的全球专家联系",
+      "help_center": "帮助中心",
+      "copy_email": "复制电子邮件",
+      "live_chat": "在线聊天",
+      "suggestion_form_title": "建议",
+      "complaint_form_title": "投诉",
+      "email_copied_message": "电子邮件已复制！"
+    },
+    "suggestionForm": {
+      "title": "给我们写信",
+      "desc": "在这里留下您的信息，我们的客户代表将在24小时内与您联系。",
+      "first_name_label": "名字",
+      "first_name_placeholder": "输入名字",
+      "last_name_label": "姓氏",
+      "last_name_placeholder": "输入姓氏",
+      "email_label": "电子邮件",
+      "email_placeholder": "输入您的电子邮件",
+      "contact_label": "电话号码",
+      "contact_placeholder": "输入您的号码",
+      "contact_required_error": "电话号码是必填项。",
+      "question_label": "信息",
+      "question_placeholder": "写入…",
+      "condition": "提交此表格，即表示您同意我们的团队与您联系。",
+      "submit_btn": "提交",
+      "first_name_validation_error": "名字只能包含字母字符。",
+      "first_name_required_error": "请提供一个名字。",
+      "last_name_validation_error": "姓氏只能包含字母字符。",
+      "last_name_required_error": "请提供一个姓氏。",
+      "email_validation_error": "请输入有效的电子邮件地址。",
+      "email_required_error": "电子邮件是必填项。",
+      "occupation_required_error": "职业是必填项！",
+      "question_required_error": "信息是必填项！",
+      "success_title": "成功",
+      "success_desc": "表格提交成功",
+      "close_btn": "关闭",
+      "number": "电话号码",
+      "country_label": "选择国家",
+      "country_placeholder": "选择国籍",
+      "country_required_error": "国家是必填项！",
+      "query_category_label": "类别",
+      "query_category_placeholder": "选择一个",
+      "general_inquiry": "一般咨询",
+      "account_funding": "账户资金",
+      "withdrawal_query": "取款问题",
+      "deposit_query": "存款问题",
+      "partnerships_query": "合作伙伴",
+      "platform_query": "平台/产品",
+      "trading_query": "交易条件",
+      "liquidity_query": "流动性",
+      "competition_query": "竞赛"
+    },
+    "globalLocation": {
+      "title1": "我们的全球",
+      "title2": "位置",
+      "uae_title1": "迪拜",
+      "uae_title2": "阿联酋",
+      "uae_address": "Office 2401, Westburry Tower 1, Business Bay, 迪拜，阿联酋。",
+      "africa_title1": "桑顿",
+      "africa_title2": "南非",
+      "africa_address": "南非 HQ: Suite no 8, First Floor, Katherine and West Building, 114 West Street, Sandton, Gauteng, 2196 南非。"
     }
   }
 }

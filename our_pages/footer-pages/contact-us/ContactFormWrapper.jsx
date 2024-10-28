@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import SuggestionForm from "./SuggestionForm";
 import Link from "next/link";
@@ -8,9 +8,11 @@ import { FaArrowLeft } from "react-icons/fa";
 import Image from "next/image";
 import { MdContentCopy } from "react-icons/md";
 import ComplaintForm from "./ComplaintForm";
+import { useRouter } from "next/navigation";
 
 const ContactFormWrapper = ({ active, setActive }) => {
   const locale = useLocale();
+  const router = useRouter();
   const t = useTranslations("contactUs.banner");
   const [copied, setCopied] = useState(false);
 
@@ -33,6 +35,10 @@ const ContactFormWrapper = ({ active, setActive }) => {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const handleChatLink = () => {
+    window.location.href = `/${locale}/contact-us/?openChat=true`;
+  };
+
   return (
     <section className="bg-[#000000] pt-24 sm:pt-28 md:pt-32 pb-20">
       <div className="container grid grid-cols-12 items-center">
@@ -52,7 +58,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
                 href="/help-center"
                 className="bg-[#111111] text-[#F1F1F1] py-2 px-4 flex items-center rounded-lg border-2 border-[#1D1D1D] hover:text-[#FED100]"
               >
-                <span className={`${locale === "ar" ? "ml-2" : "mr-2"}`}>
+                <span className={`${locale === "ar" || locale === "fa" || locale === "kur" ? "ml-2" : "mr-2"}`}>
                   <Image
                     src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/help+center.svg"
                     alt="help center"
@@ -62,16 +68,16 @@ const ContactFormWrapper = ({ active, setActive }) => {
                   />
                 </span>
                 {t("help_center")}
-                {locale === "ar" ? (
+                {locale === "ar" || locale === "fa" || locale === "kur" ? (
                   <FaArrowLeft
                     className={`text-xl text-[#C6C6C6] ${
-                      locale === "ar" ? "mr-2" : "ml-2"
+                      locale === "ar" || locale === "fa" || locale === "kur" ? "mr-2" : "ml-2"
                     }`}
                   />
                 ) : (
                   <FaArrowRight
                     className={`text-xl text-[#C6C6C6] ${
-                      locale === "ar" ? "mr-2" : "ml-2"
+                      locale === "ar" || locale === "fa" || locale === "kur" ? "mr-2" : "ml-2"
                     }`}
                   />
                 )}
@@ -80,7 +86,13 @@ const ContactFormWrapper = ({ active, setActive }) => {
                 onClick={handleCopyEmail}
                 className="bg-[#111111] text-[#F1F1F1] py-2 px-4 flex items-center rounded-lg border-2 border-[#1D1D1D] hover:text-[#FED100]"
               >
-                <span className={`${locale === "ar" ? "ml-2" : "mr-2"}`}>
+                <span
+                  className={`${
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "ml-2"
+                      : "mr-2"
+                  }`}
+                >
                   <Image
                     src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/Copy+Email.svg"
                     alt="copy email"
@@ -92,15 +104,23 @@ const ContactFormWrapper = ({ active, setActive }) => {
                 {t("copy_email")}
                 <MdContentCopy
                   className={`text-xl text-[#C6C6C6] ${
-                    locale === "ar" ? "mr-2" : "ml-2"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-2"
+                      : "ml-2"
                   }`}
                 />
               </button>
-              <Link
-                href=""
+              <button
+                onClick={handleChatLink}
                 className="bg-[#111111] text-[#F1F1F1] py-2 px-4 flex items-center rounded-lg border-2 border-[#1D1D1D] hover:text-[#FED100]"
               >
-                <span className={`${locale === "ar" ? "ml-2" : "mr-2"}`}>
+                <span
+                  className={`${
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "ml-2"
+                      : "mr-2"
+                  }`}
+                >
                   <Image
                     src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/Live+Chat.svg"
                     alt="live chat"
@@ -110,20 +130,24 @@ const ContactFormWrapper = ({ active, setActive }) => {
                   />
                 </span>
                 {t("live_chat")}
-                {locale === "ar" ? (
+                {locale === "ar" || locale === "fa" || locale === "kur" ? (
                   <FaArrowLeft
                     className={`text-xl text-[#C6C6C6] ${
-                      locale === "ar" ? "mr-2" : "ml-2"
+                      locale === "ar" || locale === "fa" || locale === "kur"
+                        ? "mr-2"
+                        : "ml-2"
                     }`}
                   />
                 ) : (
                   <FaArrowRight
                     className={`text-xl text-[#C6C6C6] ${
-                      locale === "ar" ? "mr-2" : "ml-2"
+                      locale === "ar" || locale === "fa" || locale === "kur"
+                        ? "mr-2"
+                        : "ml-2"
                     }`}
                   />
                 )}
-              </Link>
+              </button>
             </div>
             {copied && (
               <span className="text-[#FED100] text-xs">

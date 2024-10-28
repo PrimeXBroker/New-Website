@@ -2,12 +2,11 @@
 import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import axios from "axios";
 import nationality from "../../../public/assets/data/nationality.json";
-import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 
 import {
   Modal,
@@ -20,7 +19,6 @@ import {
 } from "@nextui-org/react";
 
 function SuggestionForm() {
-  const locale = useLocale();
   const t = useTranslations("contactUs.suggestionForm");
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [loading, setLoading] = useState(false);

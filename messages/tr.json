@@ -349,8 +349,16 @@
       "title1": "BİZİ",
       "title2": "DÜNYA ÇAPINDA",
       "title3": "BULUN",
-      "country1": "BAE",
-      "country2": "Güney Afrika"
+      "uae_title1": "Dubai",
+      "uae_title2": "BAE",
+      "uae_address": "Ofis 2401, Westburry Tower 1, Business Bay, Dubai, BAE.",
+      "africa_title1": "Sandton",
+      "africa_title2": "Güney Afrika",
+      "africa_address": "Suite no 8, Birinci Kat, Katherine ve West Binası, 114 West Street, Sandton, Gauteng, 2196 Güney Afrika."
+    },
+    "ceoMessage": {
+      "message": "“Dinamik ve devrim niteliğinde bir tüccar topluluğu inşa ettiğimizi paylaşmaktan onur duyuyorum. Tüm dünyadaki tüccarları güçlendirmek için mükemmellik ve yenilik sağlamaya kararlıyız. En son teknoloji, gerçek zamanlı veri, uzman analizi, üstün özellikler ve eğitim kaynakları ile eşsiz bir finansal büyüme kültürünü teşvik ediyoruz. Sizin başarınız bizim başarımızdır ve her adımda size destek olmaya hazırız.”",
+      "title": "CEO'nun Mesajı"
     }
   },
   "contact": {
@@ -2265,6 +2273,76 @@
       "country_label": "Ülke",
       "country_placeholder": "Ülke",
       "country_required_error": "Ülke gereklidir!"
+    }
+  },
+  "contactUs": {
+    "metaData": {
+      "title": "İletişime Geçin | PrimeX Capital",
+      "description": "Herhangi bir soru veya destek için PrimeX Capital ile iletişime geçin. Ticaret ihtiyaçlarınızda size yardımcı olmak için buradayız. Bugün bize ulaşın ve yardım alın!"
+    },
+    "banner": {
+      "main_title": "Bize Ulaşın",
+      "support_title": "7/24 Çok Dilli Destek",
+      "connect_title": "PrimeX Capital’in Küresel Uzmanlarıyla Bağlantı Kurun",
+      "help_center": "Yardım Merkezi",
+      "copy_email": "E-postayı Kopyala",
+      "live_chat": "Canlı Sohbet",
+      "suggestion_form_title": "Öneri",
+      "complaint_form_title": "Şikayet",
+      "email_copied_message": "E-posta Kopyalandı!"
+    },
+    "suggestionForm": {
+      "title": "Bize Yazın",
+      "desc": "Mesajınızı buraya bırakın, müşteri temsilcimiz 24 saat içinde sizinle iletişime geçecektir.",
+      "first_name_label": "Ad",
+      "first_name_placeholder": "Adınızı Girin",
+      "last_name_label": "Soyad",
+      "last_name_placeholder": "Soyadınızı Girin",
+      "email_label": "E-posta",
+      "email_placeholder": "E-postanızı Girin",
+      "contact_label": "Telefon Numarası",
+      "contact_placeholder": "Numaranızı Girin",
+      "contact_required_error": "İletişim numarası gereklidir.",
+      "question_label": "Mesaj",
+      "question_placeholder": "Yazın....",
+      "condition": "Bu formu göndererek ekibimiz tarafından sizinle iletişime geçilmesine izin vermiş olursunuz.",
+      "submit_btn": "Gönder",
+      "first_name_validation_error": "Ad yalnızca alfabetik karakterler içermelidir.",
+      "first_name_required_error": "Lütfen bir ad girin.",
+      "last_name_validation_error": "Soyad yalnızca alfabetik karakterler içermelidir.",
+      "last_name_required_error": "Lütfen bir soyad girin.",
+      "email_validation_error": "Lütfen geçerli bir e-posta adresi girin.",
+      "email_required_error": "E-posta gereklidir.",
+      "occupation_required_error": "Meslek gereklidir!",
+      "question_required_error": "Mesaj gereklidir!",
+      "success_title": "Başarılı",
+      "success_desc": "Form Başarıyla Gönderildi",
+      "close_btn": "Kapat",
+      "number": "Telefon Numarası",
+      "country_label": "Ülke Seçin",
+      "country_placeholder": "Uyruk Seçin",
+      "country_required_error": "Ülke gereklidir!",
+      "query_category_label": "Kategori",
+      "query_category_placeholder": "Birini seçin",
+      "general_inquiry": "Genel Soru",
+      "account_funding": "Hesap Fonlama",
+      "withdrawal_query": "Çekim Sorgusu",
+      "deposit_query": "Para Yatırma Sorgusu",
+      "partnerships_query": "Ortaklıklar",
+      "platform_query": "Platform/Ürünler",
+      "trading_query": "Ticaret Koşulları",
+      "liquidity_query": "Likidite",
+      "competition_query": "Yarışmalar"
+    },
+    "globalLocation": {
+      "title1": "Küresel ",
+      "title2": "Lokasyonlarımız",
+      "uae_title1": "Dubai",
+      "uae_title2": "BAE",
+      "uae_address": "Ofis 2401, Westburry Tower 1, Business Bay, Dubai, BAE.",
+      "africa_title1": "Sandton",
+      "africa_title2": "Güney Afrika",
+      "africa_address": "Suite no 8, Birinci Kat, Katherine ve West Binası, 114 West Street, Sandton, Gauteng, 2196 Güney Afrika."
     }
   }
 }

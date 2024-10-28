@@ -11,8 +11,8 @@ export async function generateMetadata({ params: { locale } }) {
       : `${process.env.NEXT_PUBLIC_BASE_URL}/contact`;
 
   return {
-    title: t("contact.metaData.title"),
-    description: t("contact.metaData.description"),
+    title: t("contactUs.metaData.title"),
+    description: t("contactUs.metaData.description"),
     alternates: {
       canonical: url,
     },
@@ -20,14 +20,14 @@ export async function generateMetadata({ params: { locale } }) {
       type: "website",
       locale: locale,
       url: url,
-      title: t("contact.metaData.title"),
-      description: t("contact.metaData.description"),
+      title: t("contactUs.metaData.title"),
+      description: t("contactUs.metaData.description"),
       images: [
         {
           url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact-us/main-contact-banner.webp",
           width: 1200,
           height: 630,
-          alt: t("contact.metaData.title"),
+          alt: t("contactUs.metaData.title"),
         },
       ],
     },

@@ -9,7 +9,7 @@ const AboutBanner = () => {
 
   return (
     <section className={`bg-[#000000] pt-[60px] lg:pt-20`}>
-      <div className="container flex flex-col md:flex-row justify-evenly gap-10 items-center py-12">
+      <div className="container flex flex-col md:flex-row justify-between gap-10 items-center py-12">
         <div className="md:w-[60%] lg:w-[45%]">
           <div className="text-center md:text-start mb-4">
             <TrustPilot />
@@ -40,9 +40,9 @@ const AboutBanner = () => {
             {t("description")}
           </p>
         </div>
-        <div>
+        <div className="text-right">
           <Image
-            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/about/new-about/about-us-hero.webp"
+            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/about/about-us-hero.webp"
             width="500"
             height="300"
             alt="banner Image"

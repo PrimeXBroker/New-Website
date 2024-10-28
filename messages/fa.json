@@ -349,8 +349,16 @@
       "title1": "ما را پیدا کنید",
       "title2": "در سرتاسر",
       "title3": "جهان",
-      "country1": "امارات متحده عربی",
-      "country2": "آفریقای جنوبی"
+      "uae_title1": "دبی",
+      "uae_title2": "امارات",
+      "uae_address": "دفتر 2401، برج وستبری 1، بیزنس بی، دبی، امارات.",
+      "africa_title1": "سندتون",
+      "africa_title2": "آفریقای جنوبی",
+      "africa_address": "واحد شماره 8، طبقه اول، ساختمان کاترین و وست، خیابان 114 وست، سندتون، گائوتنگ، 2196 آفریقای جنوبی."
+    },
+    "ceoMessage": {
+      "message": "“باعث افتخار است که به اشتراک بگذارم که ما در حال ساختن جامعه‌ای از معامله‌گران پویا و انقلابی هستیم. ما متعهد به دستیابی به برتری و نوآوری برای توانمندسازی معامله‌گران در سراسر جهان هستیم. با استفاده از تکنولوژی پیشرفته، داده‌های لحظه‌ای، تحلیل‌های کارشناسانه، ویژگی‌های برجسته و منابع آموزشی، ما فرهنگی از رشد مالی بی‌نظیر را پرورش می‌دهیم. موفقیت شما، موفقیت ماست و در هر مرحله از راه در کنار شما هستیم.”",
+      "title": "پیام مدیر عامل"
     }
   },
   "contact": {
@@ -2256,6 +2264,76 @@
       "country_label": "کشور",
       "country_placeholder": "کشور",
       "country_required_error": "کشور الزامی است!"
+    }
+  },
+  "contactUs": {
+    "metaData": {
+      "title": "تماس با ما | PrimeX Capital",
+      "description": "برای هرگونه سوال یا پشتیبانی با PrimeX Capital تماس بگیرید. ما اینجا هستیم تا به نیازهای معاملاتی شما کمک کنیم. کلیک کنید تا با ما تماس بگیرید و امروز کمک دریافت کنید!"
+    },
+    "banner": {
+      "main_title": "تماس با ما",
+      "support_title": "پشتیبانی چند زبانه 24/7",
+      "connect_title": "با کارشناسان جهانی پرایم ایکس کپیتال ارتباط برقرار کنید",
+      "help_center": "مرکز کمک",
+      "copy_email": "کپی ایمیل",
+      "live_chat": "چت زنده",
+      "suggestion_form_title": "پیشنهاد",
+      "complaint_form_title": "شکایت",
+      "email_copied_message": "ایمیل کپی شد!"
+    },
+    "suggestionForm": {
+      "title": "به ما بنویسید",
+      "desc": "پیام خود را اینجا بگذارید و نماینده مشتری ما ظرف 24 ساعت با شما تماس خواهد گرفت.",
+      "first_name_label": "نام",
+      "first_name_placeholder": "نام را وارد کنید",
+      "last_name_label": "نام خانوادگی",
+      "last_name_placeholder": "نام خانوادگی را وارد کنید",
+      "email_label": "ایمیل",
+      "email_placeholder": "ایمیل خود را وارد کنید",
+      "contact_label": "شماره تماس",
+      "contact_placeholder": "شماره خود را وارد کنید",
+      "contact_required_error": "شماره تماس مورد نیاز است.",
+      "question_label": "پیام",
+      "question_placeholder": "بنویسید....",
+      "condition": "با ارسال این فرم، شما موافقت می‌کنید که توسط تیم ما با شما تماس گرفته شود.",
+      "submit_btn": "ارسال",
+      "first_name_validation_error": "نام باید فقط شامل حروف الفبا باشد.",
+      "first_name_required_error": "لطفاً یک نام وارد کنید.",
+      "last_name_validation_error": "نام خانوادگی باید فقط شامل حروف الفبا باشد.",
+      "last_name_required_error": "لطفاً یک نام خانوادگی وارد کنید.",
+      "email_validation_error": "لطفاً یک آدرس ایمیل معتبر وارد کنید.",
+      "email_required_error": "ایمیل مورد نیاز است.",
+      "occupation_required_error": "شغل مورد نیاز است!",
+      "question_required_error": "پیام مورد نیاز است!",
+      "success_title": "موفقیت",
+      "success_desc": "فرم با موفقیت ارسال شد",
+      "close_btn": "بستن",
+      "number": "شماره تماس",
+      "country_label": "انتخاب کشور",
+      "country_placeholder": "ملیت را انتخاب کنید",
+      "country_required_error": "کشور مورد نیاز است!",
+      "query_category_label": "دسته‌بندی",
+      "query_category_placeholder": "یکی را انتخاب کنید",
+      "general_inquiry": "پرسش عمومی",
+      "account_funding": "تامین مالی حساب",
+      "withdrawal_query": "پرسش برداشت",
+      "deposit_query": "پرسش واریز",
+      "partnerships_query": "شراکت‌ها",
+      "platform_query": "پلتفرم/محصولات",
+      "trading_query": "شرایط معامله",
+      "liquidity_query": "نقدینگی",
+      "competition_query": "مسابقات"
+    },
+    "globalLocation": {
+      "title1": "مکان‌های ",
+      "title2": "جهانی ما",
+      "uae_title1": "دبی",
+      "uae_title2": "امارات",
+      "uae_address": "دفتر 2401، برج وستبری 1، بیزنس بی، دبی، امارات.",
+      "africa_title1": "سندتون",
+      "africa_title2": "آفریقای جنوبی",
+      "africa_address": "واحد شماره 8، طبقه اول، ساختمان کاترین و وست، خیابان 114 وست، سندتون، گائوتنگ، 2196 آفریقای جنوبی."
     }
   }
 }

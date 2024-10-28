@@ -346,11 +346,19 @@
       "value_4_desc": "committed to delivering top-quality trading experience"
     },
     "globalMap": {
-      "title1": "FIND US",
+      "title1": "FIND US ",
       "title2": "ACROSS THE ",
       "title3": "GLOBE",
-      "country1": "UAE",
-      "country2": "South Africa"
+      "uae_title1": "Dubai",
+      "uae_title2": "UAE",
+      "uae_address": "Office 2401, Westburry Tower 1, Business Bay, Dubai, UAE.",
+      "africa_title1": "Sandton",
+      "africa_title2": "South Africa",
+      "africa_address": "Suite no 8, First Floor, Katherine and West Building, 114 West Street, Sandton, Gauteng, 2196 South Africa."
+    },
+    "ceoMessage": {
+      "message": "“I am honored to share that we are building a community of traders that is dynamic and revolutionizing. We are committed to achieving excellence and innovation to empower traders all over the world. With cutting-edge technology, real-time data, expert analysis, premier features, and educational resources, we foster a culture of unparalleled financial growth. Your success is our success, and we’re here to support you every step of the way.”",
+      "title": "CEO’s Message"
     }
   },
   "contact": {
@@ -2358,6 +2366,10 @@
     }
   },
   "contactUs": {
+    "metaData": {
+      "title": "Contact Us | PrimeX Capital",
+      "description": "Get in touch with PrimeX Capital for any inquiries or support. We're here to assist you with your trading needs. Click to contact us and get help today!"
+    },
     "banner": {
       "main_title": "Contact us",
       "support_title": "24/7 Multilingual Support",

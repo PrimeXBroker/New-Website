@@ -349,8 +349,16 @@
       "title1": "بزانە لە کوێن",
       "title2": "لە سەرجەهانی",
       "title3": "جیهان",
-      "country1": "ئیمارات",
-      "country2": "ئافریقای باشوور"
+      "uae_title1": "دوبای",
+      "uae_title2": "ئێمەرتی",
+      "uae_address": "نووسینە 2401، وەستبەری تۆری 1، بزنەسی بای، دوبای، ئێمەرتی.",
+      "africa_title1": "سەندتون",
+      "africa_title2": "ئافریقا",
+      "africa_address": "شوێن 8، تەقەی یەکەم، بنای کەثەرین و بەستە، ڕیگای ڕۆژهەڵاتی 114، سەندتون، گاوتەنگ، 2196 ئافریقا."
+    },
+    "ceoMessage": {
+      "message": "“خولی خۆشحاڵی یم بە بەشداری لەوە دا ئەوەمانە دروستدەکەین ئەوە دایناسە و پەیوەندیدا کەندێ وەرتەبوونەوە. ئێمە وەک بەرزتریکردن پێویستە تەکنەلۆجیاکانی پێشەنگ بەرایی دیارانە پێویستە بە رەنگاکانی پێشوویی و بەکاردەەبارین. ئەم کارە پێداگرەسەر بەرزترین گەورە بوونەوە ئەزموونی پێویست بەرەزپەردەدا بە یەکسەرخۆشی یەکی یەکە گەیشتو. ",
+      "title": "پەیامی CEO"
     }
   },
   "contact": {
@@ -2247,6 +2255,76 @@
       "country_label": "وڵات",
       "country_placeholder": "وڵات",
       "country_required_error": "وڵات پێویستە!"
+    }
+  },
+  "contactUs": {
+    "metaData": {
+      "title": "پەیوەندیمان پێوە بکە | PrimeX Capital",
+      "description": "پەیوەندیمان پێوە بکە بۆ هەموو پرسیارەکانت یان یارمەتیەکان. ئێمە لەبەر پێویستەکانت وەستاوین. کرتە بکە بۆ پەیوەندیکردن و یارمەتی بەدەستبێنە!"
+    },
+    "banner": {
+      "main_title": "پەیوەندیکردن بە ماوە",
+      "support_title": "پشتیوانی 24/7 بە زمانە جیهانیەکان",
+      "connect_title": "بەستە بە کارەسەری جیهانیی پرایم ایکس کاپیتال",
+      "help_center": "مرکز یارمەتی",
+      "copy_email": "ئیمەیل کۆپی بکە",
+      "live_chat": "گفتوگۆی ڕاستەوخۆ",
+      "suggestion_form_title": "پێشنیار",
+      "complaint_form_title": "شیکایەت",
+      "email_copied_message": "ئیمەیل کۆپی کرا!"
+    },
+    "suggestionForm": {
+      "title": "نوسینی پەیام بۆ ماوە",
+      "desc": "پەیامەکەت لێرە بەجێبهێڵە، و کارمەندە کەناڵەکانمان لە ماوەی 24 کاتژمێر پەیوەندیت پێ دەکات.",
+      "first_name_label": "ناوی یەکەم",
+      "first_name_placeholder": "ناوی یەکەم بنووسە",
+      "last_name_label": "ناوی کۆتایی",
+      "last_name_placeholder": "ناوی کۆتایی بنووسە",
+      "email_label": "ئیمەیل",
+      "email_placeholder": "ئیمەیڵەکەت لێرە بنووسە",
+      "contact_label": "ژمارەی تەلەفۆن",
+      "contact_placeholder": "ژمارەی تەلەفۆنەکەت لێرە بنووسە",
+      "contact_required_error": "ژمارەی پەیوەندی پێویستە.",
+      "question_label": "پەیام",
+      "question_placeholder": "بنووسە....",
+      "condition": "بە ڕێگرتنی ئەم فۆڕمە، رەزامەندی پەیوەندیکردنمان پێ دەدات.",
+      "submit_btn": "ناردن",
+      "first_name_validation_error": "ناوی یەکەم تەنها پیتەکان دابنێت.",
+      "first_name_required_error": "تکایە ناوی یەکەم پێشکەش بکە.",
+      "last_name_validation_error": "ناوی کۆتایی تەنها پیتەکان دابنێت.",
+      "last_name_required_error": "تکایە ناوی کۆتایی پێشکەش بکە.",
+      "email_validation_error": "تکایە ناونیشانی ئیمەیلەکی دروست دابنێ.",
+      "email_required_error": "ئیمەیل پێویستە.",
+      "occupation_required_error": "پیشە پێویستە!",
+      "question_required_error": "پرسیار پێویستە!",
+      "success_title": "سەرکەوتوویە",
+      "success_desc": "فۆڕمەکە سەرکەوتووانە نێردرا",
+      "close_btn": "داخستن",
+      "number": "ژمارەی تەلەفۆن",
+      "country_label": "وڵات هەڵبژێرە",
+      "country_placeholder": "نەژاد هەڵبژێرە",
+      "country_required_error": "وڵات پێویستە!",
+      "query_category_label": "هاوپۆل",
+      "query_category_placeholder": "یەکێک هەڵبژێرە",
+      "general_inquiry": "پرسیارە گشتییەکان",
+      "account_funding": "پێواڕەبوون بە حسابەکان",
+      "withdrawal_query": "پرسیارەکانی دابەشکردن",
+      "deposit_query": "پرسیارەکانی پێواڕەبوون",
+      "partnerships_query": "هاوپەیمانەکان",
+      "platform_query": "پلاتفۆرم/بەرهەمەکان",
+      "trading_query": "مەرجەکانی بازرگانی",
+      "liquidity_query": "خوێننەوە",
+      "competition_query": "پێشبەرییەکان"
+    },
+    "globalLocation": {
+      "title1": "ناونیشانی جیهانییەکانمان",
+      "title2": "لە زەویەکان",
+      "uae_title1": "دوبای",
+      "uae_title2": "ئێمەرتی",
+      "uae_address": "نووسینە 2401، وەستبەری تۆری 1، بزنەسی بای، دوبای، ئێمەرتی.",
+      "africa_title1": "سەندتون",
+      "africa_title2": "ئافریقا",
+      "africa_address": "شوێن 8، تەقەی یەکەم، بنای کەثەرین و بەستە، ڕیگای ڕۆژهەڵاتی 114، سەندتون، گاوتەنگ، 2196 ئافریقا."
     }
   }
 }

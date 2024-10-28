@@ -118,6 +118,7 @@ function ComplaintForm() {
         );
         if (res.data.success) {
           formik.resetForm();
+          setSelectedOption("");
           setLoading(false);
           onOpen();
         } else {
