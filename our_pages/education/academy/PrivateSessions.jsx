@@ -41,7 +41,7 @@ const PrivateSessions = ({ setActive }) => {
               <div className="cursor-pointer p-5 bg-[#1D1D1D] border-2 border-[#222222] hover:border-[#FED100] rounded-lg md:w-[214px] group w-full flex flex-row md:flex-col gap-3 md:gap-0">
                 <Image
                   unoptimized={true}
-                  src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/ahmed.webp"
+                  src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/Aniket+academy.webp"
                   width="250"
                   height="200"
                   alt="expert image"

@@ -196,7 +196,7 @@ const Footer = () => {
       id: 3,
       name: "tether",
       imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/tether.webp",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/tether+logo+new.svg",
     },
     {
       id: 4,
