@@ -2344,5 +2344,74 @@
       "africa_title2": "Güney Afrika",
       "africa_address": "Suite no 8, Birinci Kat, Katherine ve West Binası, 114 West Street, Sandton, Gauteng, 2196 Güney Afrika."
     }
+  },
+  "whyChooseUs": {
+    "hero": {
+      "title1": "Elit Ticaret Deneyimi ",
+      "title2": "Dünyanın En İyi ",
+      "title3": "Finansal Hizmet ",
+      "title4": "Sağlayıcısı ile ",
+      "title5": "",
+      "btnTxt": "Şimdi Kaydol",
+      "img_title1": "Mükemmel",
+      "img_title2": "Finansal Hizmetler"
+    },
+    "values": {
+      "value_1_desc1": "Üzerinde ",
+      "value_1_desc2": "$330M ",
+      "value_1_desc3": "Ödenmiş Sermaye",
+      "value_2_desc1": "Otomatik Ticaret ",
+      "value_2_desc2": "Spreadler ",
+      "value_2_desc3": "0.1 Pipsten Başlar",
+      "value_3_desc1": "Erişim ",
+      "value_3_desc2": "330+ ",
+      "value_3_desc3": "Ticaret Enstrümanı",
+      "value_4_desc1": "Kaldıraç ",
+      "value_4_desc2": "1:500’e Kadar ",
+      "value_4_desc3": "Maksimum Esneklik"
+    },
+    "features": {
+      "main_title1": "Neden ",
+      "main_title2": "PrimeX Capital'i Seçmelisiniz?",
+      "description": "PrimeX Capital, sürekli yenilik ve küresel bir vizyonla önde gelen bir markadır ve dünyanın dört bir yanındaki seçkin tüccarların güvenini kazanmıştır. Mükemmellik taahhüdümüz, her müşteri için üst düzey bir ticaret deneyimi sağlar.",
+      "title1": "Güvenilir",
+      "title1_1": "Küresel Marka",
+      "description1": "Dünyanın dört bir yanındaki müşterilere güvenilir ve olağanüstü finansal hizmetler sunan küresel bir marka.",
+      "title2": "Şimşek Hızında",
+      "title2_1": "İşlem Gerçekleştirme",
+      "description2": "Minimum gecikme ile işlemleri gerçekleştirin, kesintisiz ve süper hızlı bir ticaret deneyimi yaşayın.",
+      "title3": "Öncü",
+      "title3_1": "Teknoloji",
+      "description3": "Gerçek zamanlı ticaret için geliştirilen en son teknoloji ticaret platformlarımızla istikrar ve hassasiyet deneyimini yaşayın.",
+      "title4": "7/24 Adanmış",
+      "title4_1": "Çok Dilli Destek",
+      "description4": "7/24, birden fazla dilde hizmet veren destek ekibimize istediğiniz zaman ulaşabilirsiniz.",
+      "title5": "Kârlı",
+      "title5_1": "Ortaklık Programları",
+      "description5": "IB, Bölgesel Ortak ve Grey Label gibi çeşitli ortaklık seçeneklerinden yararlanın.",
+      "title6": "Fonların",
+      "title6_1": "Güvenliği",
+      "description6": "En yüksek düzeyde müşteri fon koruması sağlayan sağlam düzenlemelerle güvenle ticaret yapın.",
+      "title7": "Çok Varlıklı",
+      "title7_1": "Portföy",
+      "description7": "Forex, metaller, endeksler ve hisse senetleri gibi geniş bir varlık yelpazesine erişin.",
+      "title8": "Anında",
+      "title8_1": "Para Çekme",
+      "description8": "Yatırımcıların yararına tasarlanmış hızlı ve kolay bir para çekme sürecinin keyfini çıkarın."
+    },
+    "openLiveAccount": {
+      "title": "Bir Sonraki Adımı Atın ve Finansal Kaderinizin Efendisi Olun",
+      "btnTxt": "Canlı Hesap Aç"
+    },
+    "customerServices": {
+      "title_part1": "Adanmış ",
+      "title_part2": "Müşteri Hizmetleri",
+      "step1": "Pazar stratejileri hakkında güncel kalmak için haftalık web seminerlerimize katılın.",
+      "step2": "Hizmet ekibimiz, 7/24 hizmet veren yetenekli profesyonellerden oluşmaktadır.",
+      "step3": "Ücretsiz eğitim materyalleri, bloglar ve video eğitimlerine erişin.",
+      "step4": "Uzmanlarımızla özel oturumlar planlayarak size özel rehberlik alın.",
+      "step5": "Bilgilendirilmiş kararlar için sizi güncel tutacak gerçek zamanlı piyasa haberlerine erişin.",
+      "step6": "Birden fazla ödeme seçeneği ile hızlı hesap açma."
+    }
   }
 }

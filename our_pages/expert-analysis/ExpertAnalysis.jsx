@@ -73,7 +73,7 @@ const ExpertAnalysis = ({ id }) => {
     );
   }
   return (
-    <section className="container mt-8">
+    <section className="container  pt-8 pb-12">
       <div className="grid grid-cols-12 ">
         {blogs.map((blog, index) => (
           <div className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4 flex flex-col">

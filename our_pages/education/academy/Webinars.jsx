@@ -28,7 +28,7 @@ const Webinars = ({ active, setActive }) => {
   }, []);
 
   return (
-    <section id="academy-form" className="bg-[#000000] py-10">
+    <section id="academy-form" className="bg-[#000000] pb-10">
       <div className="container">
         <div className="grid grid-cols-12 items-center">
           <div className="col-span-12 lg:col-span-7 flex flex-col items-center lg:items-start">

@@ -2434,5 +2434,74 @@
       "africa_title2": "South Africa",
       "africa_address": "Suite no 8, First Floor, Katherine and West Building, 114 West Street, Sandton, Gauteng, 2196 South Africa."
     }
+  },
+  "whyChooseUs": {
+    "hero": {
+      "title1": "Experience Elite ",
+      "title2": "Trading with the ",
+      "title3": "World’s Best ",
+      "title4": "Financial Service ",
+      "title5": "Provider ",
+      "btnTxt": "Sign Up Now",
+      "img_title1": "Excellent",
+      "img_title2": "Financial Services"
+    },
+    "values": {
+      "value_1_desc1": "Over ",
+      "value_1_desc2": "$330M ",
+      "value_1_desc3": "Paid-Up Capital",
+      "value_2_desc1": "Automated Trading ",
+      "value_2_desc2": "Spreads from ",
+      "value_2_desc3": "0.1 Pips",
+      "value_3_desc1": "Access to ",
+      "value_3_desc2": "330+ ",
+      "value_3_desc3": "Trading Instruments",
+      "value_4_desc1": "Leverage Up to ",
+      "value_4_desc2": "1:500 ",
+      "value_4_desc3": "Maximum Flexibility"
+    },
+    "features": {
+      "main_title1": "Why Choose ",
+      "main_title2": "PrimeX Capital?",
+      "description": "PrimeX Capital leads with continuous innovation and a global vision, earning the trust of elite traders worldwide. Our commitment to excellence ensures a top-tier trading experience for every client.",
+      "title1": "Trusted",
+      "title1_1": "Global Brand",
+      "description1": "A globally trusted brand providing reliable and exceptional financial services to clients worldwide.",
+      "title2": "Lightning-Fast",
+      "title2_1": "Trade Execution",
+      "description2": "Execute trades with minimal latency, ensuring a seamless and superfast trading experience.",
+      "title3": "Trailblazing",
+      "title3_1": "Technology",
+      "description3": "Experience stability and precision with our cutting-edge trading platforms, built for real-time trading.",
+      "title4": "24/7 Dedicated",
+      "title4_1": "Multilingual Support",
+      "description4": "Connect anytime to our dedicated support team, available 24/7 in multiple languages.",
+      "title5": "Lucrative",
+      "title5_1": "Partnership Programs",
+      "description5": "Benefit from diverse partnership options like IB, Regional Partner, and Grey Label.",
+      "title6": "Security",
+      "title6_1": "of Funds",
+      "description6": "Trade confidently with robust regulations that ensure the highest level of client fund protection.",
+      "title7": "Multi-Asset",
+      "title7_1": "Portfolio",
+      "description7": "Access a wide range of assets, including forex, metals, indices, and stocks.",
+      "title8": "Instant",
+      "title8_1": "Withdrawals",
+      "description8": "Enjoy a quick and easy withdrawal process designed to benefit investors."
+    },
+    "openLiveAccount": {
+      "title": "Take the Next Step and Be the Master of Your Financial Destiny",
+      "btnTxt": "Open Live Account"
+    },
+    "customerServices": {
+      "title_part1": "Dedicated ",
+      "title_part2": "Customer Services",
+      "step1": "Attend our weekly webinars to stay updated on market strategies.",
+      "step2": "Our service team consists of skilled professionals available 24/7.",
+      "step3": "Access free educational materials, blogs, and video tutorials.",
+      "step4": "Schedule private sessions with our experts for tailored guidance.",
+      "step5": "Real-time market news to keep you updated for informed decisions.",
+      "step6": "Quick account opening with multiple payment options."
+    }
   }
 }

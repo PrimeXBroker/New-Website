@@ -2338,5 +2338,74 @@
       "africa_title2": "南非",
       "africa_address": "南非 HQ: Suite no 8, First Floor, Katherine and West Building, 114 West Street, Sandton, Gauteng, 2196 南非。"
     }
+  },
+  "whyChooseUs": {
+    "hero": {
+      "title1": "体验精英",
+      "title2": "交易服务，与",
+      "title3": "世界最佳",
+      "title4": "金融服务",
+      "title5": "提供商",
+      "btnTxt": "立即注册",
+      "img_title1": "卓越的",
+      "img_title2": "金融服务"
+    },
+    "values": {
+      "value_1_desc1": "超过",
+      "value_1_desc2": "$330M",
+      "value_1_desc3": "实缴资本",
+      "value_2_desc1": "自动化交易",
+      "value_2_desc2": "点差从",
+      "value_2_desc3": "0.1 点起",
+      "value_3_desc1": "访问",
+      "value_3_desc2": "330+",
+      "value_3_desc3": "交易工具",
+      "value_4_desc1": "杠杆高达",
+      "value_4_desc2": "1:500",
+      "value_4_desc3": "最大灵活性"
+    },
+    "features": {
+      "main_title1": "为什么选择",
+      "main_title2": "PrimeX Capital？",
+      "description": "PrimeX Capital 以持续创新和全球视野领先，赢得全球精英交易者的信赖。我们对卓越的承诺为每位客户提供顶级的交易体验。",
+      "title1": "值得信赖的",
+      "title1_1": "全球品牌",
+      "description1": "一个全球信赖的品牌，为全球客户提供可靠和卓越的金融服务。",
+      "title2": "极速",
+      "title2_1": "交易执行",
+      "description2": "以最小延迟执行交易，确保无缝且超高速的交易体验。",
+      "title3": "领先的",
+      "title3_1": "技术",
+      "description3": "通过我们尖端的交易平台，体验稳定和精确的实时交易。",
+      "title4": "全天候专属",
+      "title4_1": "多语言支持",
+      "description4": "随时与我们专门的支持团队联系，提供多语言24/7全天候服务。",
+      "title5": "高收益的",
+      "title5_1": "合作计划",
+      "description5": "从多样化的合作选项中获益，如IB、区域合作伙伴和灰标合作。",
+      "title6": "资金",
+      "title6_1": "安全",
+      "description6": "在稳健的法规保障下自信交易，确保客户资金的最高保护水平。",
+      "title7": "多资产",
+      "title7_1": "组合",
+      "description7": "访问广泛的资产，包括外汇、金属、指数和股票。",
+      "title8": "即时",
+      "title8_1": "提款",
+      "description8": "享受设计优良的快捷、简单的提款流程，为投资者带来便利。"
+    },
+    "openLiveAccount": {
+      "title": "迈出下一步，掌控您的财务命运",
+      "btnTxt": "开设真实账户"
+    },
+    "customerServices": {
+      "title_part1": "专属",
+      "title_part2": "客户服务",
+      "step1": "参加我们的每周网络研讨会，及时了解市场策略。",
+      "step2": "我们的服务团队由专业人士组成，提供24/7全天候服务。",
+      "step3": "访问免费教育资料、博客和视频教程。",
+      "step4": "与我们的专家安排私人课程，获得量身定制的指导。",
+      "step5": "实时市场新闻，让您随时掌握信息以做出明智的决策。",
+      "step6": "快速开户，多种支付方式可供选择。"
+    }
   }
 }
