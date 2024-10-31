@@ -39,7 +39,7 @@ const Features = () => {
   ];
 
   return (
-    <div className="bg-[#000000] text-[#c6c6c6] pt-20">
+    <div className="bg-[#000000] text-[#c6c6c6] pt-8 sm:pt-20">
       <div className="container mx-auto">
         <div className="bg-[#111111] border border-[#1D1D1D] rounded-[20px] py-12">
           <div className="flex items-center justify-center mb-6">
