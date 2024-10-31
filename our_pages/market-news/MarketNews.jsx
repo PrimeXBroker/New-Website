@@ -63,56 +63,58 @@ const MarketNews = ({ slugEn, slugAr }) => {
   }
 
   return (
-    <section className="container pt-8 pb-12">
-      <div className="grid grid-cols-12">
-        {news.map((blog, index) => (
-          <div className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4 flex flex-col">
-            <Link
-              href={`/${locale}/market-news-detail/${blog.slug}`}
-              className="group h-full rounded-xl bg-[#111111]"
-              key={index}
-            >
-              <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out rounded-xl flex flex-col h-full">
-                <div>
-                  <Image
-                    unoptimized={true}
-                    src={blog.image}
-                    alt="PrimeX Capital"
-                    width="100"
-                    height="100"
-                    className="w-full overflow-hidden transition duration-700 ease-in-out transform group-hover:scale-110"
-                  />
-                </div>
-                <div className="px-3 py-5 bg-[#111111] transition duration-700 ease-in-out">
+    <section className="bg-[#000000] pt-8 pb-12">
+      <div className="container">
+        <div className="grid grid-cols-12">
+          {news.map((blog, index) => (
+            <div className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4 flex flex-col">
+              <Link
+                href={`/${locale}/market-news-detail/${blog.slug}`}
+                className="group h-full rounded-xl bg-[#111111]"
+                key={index}
+              >
+                <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out rounded-xl flex flex-col h-full">
                   <div>
-                    <h4 className="text-xl font-semibold text-[#F9F9F9] group-hover:text-[#FED100] transition duration-700 ease-in-out">
-                      {blog?.title}
-                    </h4>
+                    <Image
+                      unoptimized={true}
+                      src={blog.image}
+                      alt="PrimeX Capital"
+                      width="100"
+                      height="100"
+                      className="w-full overflow-hidden transition duration-700 ease-in-out transform group-hover:scale-110"
+                    />
                   </div>
-                  <div className="mt-3">
-                    <p className="text-[#C6C6C6] text-sm group-hover:text-white transition duration-700 ease-in-out">
-                      <Moment
-                        date={blog?.createdOn}
-                        format={locale === "ar" ? "YYYY/MM/DD" : "DD/MM/YYYY"}
-                      />
-                    </p>
+                  <div className="px-3 py-5 bg-[#111111] transition duration-700 ease-in-out">
+                    <div>
+                      <h4 className="text-xl font-semibold text-[#F9F9F9] group-hover:text-[#FED100] transition duration-700 ease-in-out">
+                        {blog?.title}
+                      </h4>
+                    </div>
+                    <div className="mt-3">
+                      <p className="text-[#C6C6C6] text-sm group-hover:text-white transition duration-700 ease-in-out">
+                        <Moment
+                          date={blog?.createdOn}
+                          format={locale === "ar" ? "YYYY/MM/DD" : "DD/MM/YYYY"}
+                        />
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </div>
-      <div className="flex justify-center mt-10">
-        <Pagination
-          showControls
-          total={totalPages}
-          initialPage={page}
-          onChange={(p) => setPage(p)}
-          className="all-blogs-pagination"
-          radius="sm"
-          color="default"
-        />
+              </Link>
+            </div>
+          ))}
+        </div>
+        <div className="flex justify-center mt-10">
+          <Pagination
+            showControls
+            total={totalPages}
+            initialPage={page}
+            onChange={(p) => setPage(p)}
+            className="all-blogs-pagination"
+            radius="sm"
+            color="default"
+          />
+        </div>
       </div>
     </section>
   );
