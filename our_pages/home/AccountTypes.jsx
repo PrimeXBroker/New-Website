@@ -27,7 +27,7 @@ const AccountTypes = ({ accounts }) => {
         {accounts.map((account) => (
           <div
             key={account.id}
-            className="bg-[#111111] p-6 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500 group"
+            className="bg-[#111111] p-6 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl group"
             onMouseEnter={() => setHovered(account.id)}
             onMouseLeave={() => setHovered(null)}
           >
@@ -45,7 +45,7 @@ const AccountTypes = ({ accounts }) => {
                     />
                   </div>
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-[#ffffff] group-hover:text-[#FED100]">
+                    <h3 className="text-xl sm:text-2xl font-semibold text-[#ffffff]">
                       {account.title}
                     </h3>
                     <p className="text-sm text-[#c6c6c6] mt-1">
@@ -57,30 +57,14 @@ const AccountTypes = ({ accounts }) => {
                   </div>
                 </div>
                 <Link href={`/${locale}/account-types`}>
-                  <div
-                    className="w-[33px] h-[33px] rounded-[5.73px] bg-[#1D1D1D] flex justify-center items-center group-hover:bg-[#F9F9F9]"
-                    style={{
-                      transition:
-                        "background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)",
-                    }}
-                  >
-                    {hovered === account.id ? (
-                      <RiArrowRightLine
-                        className="text-[#1D1D1D]"
-                        style={{
-                          transition:
-                            "color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)",
-                        }}
-                      />
-                    ) : (
-                      <RiArrowRightUpLine
-                        className="text-[#C6C6C6] text-xl"
-                        style={{
-                          transition:
-                            "color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)",
-                        }}
-                      />
-                    )}
+                  <div className="w-[33px] h-[33px] rounded-[5.73px] bg-[#1D1D1D] flex justify-center items-center group-hover:bg-[#F9F9F9] transition-all duration-500 ease-in-out">
+                    <RiArrowRightUpLine
+                      className={`text-xl transition-transform duration-500 ease-in-out ${
+                        hovered === account.id
+                          ? "rotate-45 text-[#1D1D1D]"
+                          : "text-[#C6C6C6]"
+                      }`}
+                    />
                   </div>
                 </Link>
               </div>
