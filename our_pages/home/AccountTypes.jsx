@@ -1,12 +1,15 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
+import { RiArrowRightUpLine } from "react-icons/ri";
+import { RiArrowRightLine } from "react-icons/ri";
 
 const AccountTypes = ({ accounts }) => {
   const locale = useLocale();
   const t = useTranslations("home.accountTypes");
+  const [hovered, setHovered] = useState(null);
 
   return (
     <div className="bg-black text-white pt-10 pb-20 px-4">
@@ -25,6 +28,8 @@ const AccountTypes = ({ accounts }) => {
           <div
             key={account.id}
             className="bg-[#111111] p-6 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500 group"
+            onMouseEnter={() => setHovered(account.id)}
+            onMouseLeave={() => setHovered(null)}
           >
             <Link href={`/${locale}/account-types`}>
               <div className="flex justify-between items-start">
@@ -52,15 +57,30 @@ const AccountTypes = ({ accounts }) => {
                   </div>
                 </div>
                 <Link href={`/${locale}/account-types`}>
-                  <div className="w-[33px] h-[33px]">
-                    <Image
-                      unoptimized={true}
-                      src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Arrow.svg"
-                      alt="Trustpilot"
-                      width={100}
-                      height={100}
-                      className={account.title}
-                    />
+                  <div
+                    className="w-[33px] h-[33px] rounded-[5.73px] bg-[#1D1D1D] flex justify-center items-center group-hover:bg-[#F9F9F9]"
+                    style={{
+                      transition:
+                        "background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)",
+                    }}
+                  >
+                    {hovered === account.id ? (
+                      <RiArrowRightLine
+                        className="text-[#1D1D1D]"
+                        style={{
+                          transition:
+                            "color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)",
+                        }}
+                      />
+                    ) : (
+                      <RiArrowRightUpLine
+                        className="text-[#C6C6C6] text-xl"
+                        style={{
+                          transition:
+                            "color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)",
+                        }}
+                      />
+                    )}
                   </div>
                 </Link>
               </div>

@@ -304,12 +304,17 @@ const Footer = () => {
             </p>
           </div>
           <div className="w-full md:w-[30%] flex justify-center items-center">
-            <Button
-              as={Link}
-              href="https://client.primexbroker.com/en/register"
-              size="lg"
-              color="primary"
-              className={` custom-button ${
+            <button
+              onClick={() =>
+                window.open(
+                  `${
+                    locale === "ar"
+                      ? "https://client.primexbroker.com/ar/register"
+                      : "https://client.primexbroker.com/en/register"
+                  }`
+                )
+              }
+              className={` custom-button px-6 py-4 ${
                 isHomePage ||
                 isIbPage ||
                 isGreyLabelPage ||
@@ -326,7 +331,7 @@ const Footer = () => {
               <p className="text-secondary font-semibold">
                 {t("getStarted.get_started_btn")}
               </p>
-            </Button>
+            </button>
           </div>
         </div>
       </section>

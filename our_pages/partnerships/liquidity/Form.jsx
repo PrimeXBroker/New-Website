@@ -230,7 +230,7 @@ function Form() {
 
             <button
               disabled={loading}
-              className="bg-[#ffffff] hover:bg-primary rounded-[5px] font-semibold py-[16px] px-[10px] text-[#111111] w-full"
+              className="font-semibold py-[16px] px-[10px] w-full custom-button"
             >
               <div className="flex gap-1 items-center justify-center">
                 {loading ? (

@@ -37,7 +37,7 @@ const Banner = ({ scrollToForm }) => {
             <div className="my-6">
               <button
                 onClick={scrollToForm}
-                className="py-3 bg-primary text-[#000000] rounded-lg hover:bg-[#ffffff] border-2 border-primary hover:border-[#ffffff] w-[100%] md:w-[157px]"
+                className="py-3 w-[100%] md:w-[157px] custom-button"
               >
                 {t("contact_btn")}
               </button>
