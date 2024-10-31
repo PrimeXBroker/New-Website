@@ -44,11 +44,15 @@ const Benefits = () => {
     <div className="bg-[#000000]">
       <div className="container flex flex-col mb-10">
         <div className="w-full">
-          <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff] text-center">
+          <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff] text-center hidden sm:block">
             {t("main_title1")} <br className="hidden sm:block" />
             <span className="text-[#FED100] inline-block mt-2">
               {t("main_title2")}
             </span>
+          </h2>
+          <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff] text-center block sm:hidden">
+            {t("main_title1")}
+            <span className="text-[#FED100]">{t("main_title2")}</span>
           </h2>
         </div>
       </div>
@@ -57,20 +61,27 @@ const Benefits = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="w-full sm:w-[48%] lg:w-[32%] bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] hover:border-[#FED100] text-[#ffffff] flex justify-between items-center gap-3"
+              className="w-full sm:w-[48%] lg:w-[32%] bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] hover:border-[#FED100] text-[#FED100] flex flex-col gap-3"
             >
-              <div className="w-[85%]">
-                <h3 className="text-xl font-semibold text-[#ffffff]">
-                  {benefit.title1}{" "}
-                  <span className="text-[#FED100]">{benefit.title2}</span>
-                </h3>
-                <p className="text-[#c6c6c6] mt-2 text-sm sm:text-[15px]">
-                  {benefit.description}
-                </p>
+              <div className="flex justify-between items-center">
+                <div>
+                  <h3 className="text-xl font-semibold">{benefit.title1}</h3>
+                  <h3 className="text-xl font-semibold text-[#ffffff]">
+                    {benefit.title2}
+                  </h3>
+                </div>
+                <div className="w-16 h-16 border-2 border-[#222222] bg-[#1D1D1D] rounded-lg flex items-center justify-center">
+                  <Image
+                    src={benefit.icon}
+                    alt="image"
+                    width="40"
+                    height="200"
+                  />
+                </div>
               </div>
-              <div className="bg-[#1D1D1D] border-2 border-[#222222] w-14 h-14 flex justify-center items-center rounded-lg">
-                <Image src={benefit.icon} alt="image" width="34" height="200" />
-              </div>
+              <p className="text-[#c6c6c6] text-sm sm:text-base">
+                {benefit.description}
+              </p>
             </div>
           ))}
         </div>

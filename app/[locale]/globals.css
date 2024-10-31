@@ -1661,3 +1661,11 @@
 .card-mobile:nth-child(even) > .info > .title-bml::before {
   right: -45px;
 }
+
+.copy-program-modal button[aria-label="Close"] {
+  background-color: #111111 !important;
+}
+
+.copy-program-modal svg {
+  color: #ffffff !important;
+}

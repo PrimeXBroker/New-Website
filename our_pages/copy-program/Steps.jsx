@@ -9,17 +9,17 @@ const Steps = () => {
 
   const steps = [
     {
-      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/Steps+1.webp",
+      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/Sign+Up+for+the+Copy+Program.webp",
       alt: "Step 1",
       label: t("step1"),
     },
     {
-      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/Steps+2.webp",
+      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/Choose+Your+Master.webp",
       alt: "Step 2",
       label: t("step2"),
     },
     {
-      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/Steps+3.webp",
+      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/Copy+and+Trade+Now.webp",
       alt: "Step 3",
       label: t("step3"),
     },

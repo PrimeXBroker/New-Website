@@ -28,7 +28,9 @@ const Banner = () => {
                 </span>
                 <span
                   className={`text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold text-[#FED100] mb-2 inline-block md:mb-1 lg:mb-2 ${
-                    locale === "ar" ? "mr-2 md:mr-2" : "ml-2 md:ml-0"
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-2 md:mr-2"
+                      : "ml-2 md:ml-0"
                   }`}
                 >
                   {t("title_part5")}
@@ -38,7 +40,7 @@ const Banner = () => {
                 {t("description")}
               </p>
             </div>
-            <div className="mt-3 flex justify-center md:justify-start">
+            <div className="lg:mt-3 flex justify-center md:justify-start">
               <button
                 onClick={() =>
                   window.open(

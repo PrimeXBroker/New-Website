@@ -2173,8 +2173,8 @@
   },
   "copyProgram": {
     "metaData": {
-      "title": "",
-      "description": ""
+      "title": "En İyi Copy Trading Platformu | En İyi Tüccarları Kopyalayın | PrimeX Capital",
+      "description": "Uzman tüccarları kopyalayın ve yatırımlarınızı PrimeX Capital ile büyütün. Üst düzey platformumuz kârlı ticareti basit hale getiriyor. Bugün kazanan tüccarları kopyalamaya başlayın!"
     },
     "hero": {
       "title_part1": "Ticaret Yolculuğunuzu",
@@ -2239,40 +2239,52 @@
       "answer_9": "Evet, ustanızdan kopyalanan pozisyonları kapatabilirsiniz; ayrıca bunları otomatik olarak da kapatabilirsiniz."
     },
     "copyProgramForm": {
-      "tag1": "Kayıt:",
-      "tag2": "IB Ortaklık Programı",
-      "main_title1": "Başarı ve",
-      "main_title2": "Geleceğine",
-      "main_title3": "Adım Atın",
-      "main_title4": "Başarı!",
+      "main_title1": "Bir ",
+      "main_title2": "Prime Trader Olun",
+      "description": "Uzmanlığınızı ek gelire dönüştürün. İşlemlerinizi paylaşın, başkalarının sizi takip etmesine izin verin ve ödüllerinizi artırın!",
       "title": "Kayıt Formu",
       "desc": "Bilgilerinizi bırakın, en kısa sürede sizinle iletişime geçeceğiz.",
-      "full_name": "Tam Adı",
-      "full_name_validation_error": "Tam ad yalnızca harflerden oluşabilir.",
-      "full_name_required_error": "Tam ad gereklidir!",
+      "first_name_label": "Ad",
+      "first_name_placeholder": "Adınızı Girin",
+      "last_name_label": "Soyad",
+      "last_name_placeholder": "Soyadınızı Girin",
       "email_label": "E-posta",
-      "email_placeholder": "E-posta",
+      "email_placeholder": "E-postanızı Girin",
       "contact_label": "Telefon Numarası",
+      "contact_placeholder": "Numaranızı Girin",
       "contact_required_error": "İletişim numarası gereklidir.",
-      "question_label": "Soru",
+      "question_label": "Mesaj",
       "question_placeholder": "Yazın....",
       "condition": "Bu formu göndererek ekibimiz tarafından sizinle iletişime geçilmesine izin vermiş olursunuz.",
       "submit_btn": "Gönder",
-      "first_name_validation_error": "Ad sadece alfabetik karakterler içermelidir.",
+      "first_name_validation_error": "Ad yalnızca alfabetik karakterler içermelidir.",
       "first_name_required_error": "Lütfen bir ad girin.",
-      "last_name_validation_error": "Soyad sadece alfabetik karakterler içermelidir.",
+      "last_name_validation_error": "Soyad yalnızca alfabetik karakterler içermelidir.",
       "last_name_required_error": "Lütfen bir soyad girin.",
       "email_validation_error": "Lütfen geçerli bir e-posta adresi girin.",
       "email_required_error": "E-posta gereklidir.",
       "occupation_required_error": "Meslek gereklidir!",
-      "question_required_error": "Soru gereklidir!",
-      "success_title": "Başarı",
+      "question_required_error": "Mesaj gereklidir!",
+      "success_title": "Başarılı",
       "success_desc": "Form Başarıyla Gönderildi",
       "close_btn": "Kapat",
       "number": "Telefon Numarası",
-      "country_label": "Ülke",
-      "country_placeholder": "Ülke",
+      "country_label": "Ülke Seçin",
+      "country_placeholder": "Uyruk Seçin",
       "country_required_error": "Ülke gereklidir!"
+    },
+    "becomeTrader": {
+      "title1": "Bir ",
+      "title2": "Prime Trader Olun",
+      "description": "Ticaret konusunda profesyonel misiniz? Başkalarının sizi kopyalamasına izin verin ve kazancınızı artırın!",
+      "btnTxt": "Şimdi Başvurun"
+    },
+    "features": {
+      "feature1": "Risk Yönetimi Üzerinde Tam Kontrol",
+      "feature2": "Aynı Anda Birden Fazla Uzmanı Kopyalayın",
+      "feature3": "Yüzdeye veya Sabit Lot Üzerinden Kopyalayın",
+      "feature4": "Yalnızca 100$'dan Kolayca Yatırıma Başlayın",
+      "feature5": "Prime Trader Hesap İstatistiklerine Ayrıntılı Erişim"
     }
   },
   "contactUs": {

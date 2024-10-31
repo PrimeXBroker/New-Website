@@ -2241,22 +2241,21 @@
       "answer_9": "Yes, you can close the positions copied from your master; you can also automatically close them."
     },
     "copyProgramForm": {
-      "tag1": "Registration:",
-      "tag2": "IB Partnership Program",
-      "main_title1": "Step into a",
-      "main_title2": "Future of",
-      "main_title3": "Success and",
-      "main_title4": "Achievement! ",
+      "main_title1": "Become a ",
+      "main_title2": "Prime Trader",
+      "description": "Turn your expertise into extra income. Share your trades, let others follow, and boost your rewards!",
       "title": "Registration Form",
       "desc": "Drop your details, we will get in touch with you soon.",
-      "full_name": "Full Name",
-      "full_name_validation_error": "Full name can only contain letters.",
-      "full_name_required_error": "Full name is required!",
+      "first_name_label": "First Name",
+      "first_name_placeholder": "Enter First Name",
+      "last_name_label": "Last Name",
+      "last_name_placeholder": "Enter Last Name",
       "email_label": "Email",
-      "email_placeholder": "Email",
+      "email_placeholder": "Enter Your Email",
       "contact_label": "Phone Number",
+      "contact_placeholder": "Enter Your Number",
       "contact_required_error": "Contact number is required.",
-      "question_label": "Question",
+      "question_label": "Message",
       "question_placeholder": "Write....",
       "condition": "By submitting this form, you agree to be contacted by our team.",
       "submit_btn": "Submit",
@@ -2272,9 +2271,22 @@
       "success_desc": "Form Submitted Successfully",
       "close_btn": "Close",
       "number": "Phone Number",
-      "country_label": "Country",
-      "country_placeholder": "Country",
+      "country_label": "Select Country",
+      "country_placeholder": "Select Nationality",
       "country_required_error": "country is required!"
+    },
+    "becomeTrader": {
+      "title1": "Become a ",
+      "title2": "Prime Trader",
+      "description": "Are you a trading pro? Let others copy and boost your earnings!",
+      "btnTxt": "Apply Now"
+    },
+    "features": {
+      "feature1": "Full Control Over Risk Management",
+      "feature2": "Copy Multiple Experts Simultaneously",
+      "feature3": "Copy by Percentage or Fixed Lot",
+      "feature4": "Start Investing Easily From $100",
+      "feature5": "Access Detailed Prime Trader Account Stats"
     }
   },
   "careersPage": {

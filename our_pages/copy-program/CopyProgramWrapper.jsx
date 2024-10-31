@@ -7,6 +7,9 @@ import Steps from "./Steps";
 import FAQ from "@/components/NewFaq";
 import { useTranslations, useLocale } from "next-intl";
 import CopyProgramFormWrapper from "./CopyProgramFormWrapper";
+import PrimeTrade from "./PrimeTrade";
+import Features from "./Features";
+import FeaturesMobile from "./FeaturesMobile";
 
 const CopyProgramWrapper = () => {
   const locale = useLocale();
@@ -63,10 +66,16 @@ const CopyProgramWrapper = () => {
   return (
     <>
       <Banner />
+      <div className="hidden lg:block">
+        <Features />
+      </div>
+      <div className="block lg:hidden">
+        <FeaturesMobile />
+      </div>
       <AboutCopyProgram />
       <Benefits />
       <Steps />
-      <CopyProgramFormWrapper />
+      <PrimeTrade />
       <FAQ faqs={faqs} />
     </>
   );
