@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { RiArrowRightUpLine } from "react-icons/ri";
-import { RiArrowRightLine } from "react-icons/ri";
 
 const AccountTypes = ({ accounts }) => {
   const locale = useLocale();
@@ -27,7 +26,7 @@ const AccountTypes = ({ accounts }) => {
         {accounts.map((account) => (
           <div
             key={account.id}
-            className="bg-[#111111] p-6 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl group"
+            className="bg-[#111111] p-6 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl hover:border-[#333333] group transition-all duration-500 ease-in-out"
             onMouseEnter={() => setHovered(account.id)}
             onMouseLeave={() => setHovered(null)}
           >

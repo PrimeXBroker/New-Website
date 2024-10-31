@@ -1,12 +1,14 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
+import { RiArrowRightUpLine } from "react-icons/ri";
 
 const Academy = ({ academy }) => {
   const locale = useLocale();
   const c = useTranslations("home.academy");
+  const [hovered, setHovered] = useState(null);
 
   return (
     <div className="bg-black text-white pt-10 pb-10 px-4">
@@ -23,7 +25,9 @@ const Academy = ({ academy }) => {
         {academy.map((acc) => (
           <div
             key={acc.id}
-            className="bg-[#111111] p-6 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500 group"
+            className="bg-[#111111] p-6 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl hover:border-[#333333] group transition-all duration-500 ease-in-out"
+            onMouseEnter={() => setHovered(acc.id)}
+            onMouseLeave={() => setHovered(null)}
           >
             <Link href={`/${locale}/academy`}>
               <div className="flex justify-between items-start">
@@ -39,21 +43,20 @@ const Academy = ({ academy }) => {
                     />
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-xl font-semibold text-[#ffffff] group-hover:text-[#FED100]">
+                    <h3 className="text-lg sm:text-xl font-semibold text-[#ffffff]">
                       {acc.title1} <br />
                       {acc.title2}
                     </h3>
                   </div>
                 </div>
                 <Link href={`/${locale}/academy`}>
-                  <div className="w-[33px] h-[33px]">
-                    <Image
-                      unoptimized={true}
-                      src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Arrow.svg"
-                      alt="Trustpilot"
-                      width={100}
-                      height={100}
-                      className={acc.title}
+                  <div className="w-[33px] h-[33px] rounded-[5.73px] bg-[#1D1D1D] flex justify-center items-center group-hover:bg-[#F9F9F9] transition-all duration-500 ease-in-out">
+                    <RiArrowRightUpLine
+                      className={`text-xl transition-transform duration-500 ease-in-out ${
+                        hovered === acc.id
+                          ? "rotate-45 text-[#1D1D1D]"
+                          : "text-[#C6C6C6]"
+                      }`}
                     />
                   </div>
                 </Link>
