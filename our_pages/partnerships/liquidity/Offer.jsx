@@ -42,12 +42,10 @@ const Offer = () => {
         {solutions.map((solution, index) => (
           <div
             key={index}
-            className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#ffffff] flex flex-col gap-2 transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500 group"
+            className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#ffffff] flex flex-col gap-2"
           >
             <div className="flex justify-between items-center">
-              <h3 className="text-xl font-bold group-hover:text-primary">
-                {solution.title}
-              </h3>
+              <h3 className="text-xl font-semibold">{solution.title}</h3>
               <img
                 src={solution.icon}
                 alt={solution.title}

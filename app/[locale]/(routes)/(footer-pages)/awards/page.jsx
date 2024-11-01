@@ -1,4 +1,4 @@
-import AwardsPage from "@/components/footer-pages/awards/AwardsPage";
+import AwardsPage from "@/components/footer-pages/new-awards/AwardsPage";
 import { createTranslator } from "next-intl";
 import React from "react";
 
@@ -25,7 +25,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("awards.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/awards/Banner.webp",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-awards/award-bg-leaf.webp",
           width: 1200,
           height: 630,
           alt: t("awards.metaData.title"),
@@ -36,11 +36,7 @@ export async function generateMetadata({ params: { locale } }) {
 }
 
 const Awards = () => {
-  return (
-    <>
-      <AwardsPage />
-    </>
-  );
+  return <AwardsPage />;
 };
 
 export default Awards;

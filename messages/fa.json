@@ -26,7 +26,13 @@
     "grey_label": "همکار برچسب خاکستری",
     "regional": "همکار منطقه‌ای",
     "badge_text": "جدید",
-    "about": "درباره ما"
+    "company": "شرکت",
+    "about": "درباره ما",
+    "contact": "تماس با ما",
+    "awards": "جوایز",
+    "press_release": "اطلاعیه‌های مطبوعاتی",
+    "careers": "فرصت‌های شغلی",
+    "choose_us": "چرا ما را انتخاب کنید"
   },
   "home": {
     "metaData": {
@@ -717,7 +723,8 @@
       "title_part1_link2": "تماس با ما",
       "title_part1_link3": "جوایز",
       "title_part1_link4": "بیانیه مطبوعاتی",
-      "title_part1_link5": "فرصت‌های شغلی"
+      "title_part1_link5": "فرصت‌های شغلی",
+      "title_part1_link6": "چرا ما را انتخاب کنید"
     },
     "Rules": {
       "title_part2": "قوانین",

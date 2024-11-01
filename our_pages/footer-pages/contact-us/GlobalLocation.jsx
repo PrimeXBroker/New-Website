@@ -1,12 +1,15 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
+import { RiArrowRightUpLine } from "react-icons/ri";
+import { RiArrowLeftUpLine } from "react-icons/ri";
 
 const GlobalLocation = () => {
   const locale = useLocale();
   const t = useTranslations("contactUs.globalLocation");
+  const [hovered, setHovered] = useState(null);
 
   return (
     <section className="relative h-[460px] sm:h-[400px] md:h-[470px] lg:h-[570px] bg-[#000000] about-bg-main">
@@ -30,7 +33,11 @@ const GlobalLocation = () => {
               : "left-[6%] sm:left-[12%] lg:left-[31%]"
           }`}
         >
-          <div className="bg-[#111111] p-5 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl group hover:border-[#FED100] w-[230px] sm:w-[380px]">
+          <div
+            className="bg-[#111111] p-5 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl w-[230px] sm:w-[380px] hover:border-[#333333] group transition-all duration-500 ease-in-out"
+            onMouseEnter={() => setHovered(0)}
+            onMouseLeave={() => setHovered(null)}
+          >
             <Link
               href="https://maps.app.goo.gl/bZFoez9hfhEZzRFW6"
               target="_blank"
@@ -49,22 +56,31 @@ const GlobalLocation = () => {
                     />
                   </div>
                   <div>
-                    <h3 className="text-base font-semibold text-[#ffffff] group-hover:text-[#FED100]">
+                    <h3 className="text-base font-semibold text-[#ffffff]">
                       {t("uae_title1")}
                     </h3>
                     <p className="text-xs text-[#c6c6c6]"> {t("uae_title2")}</p>
                   </div>
                 </div>
                 <Link href={`/${locale}/account-types`}>
-                  <div className="w-[33px] h-[33px]">
-                    <Image
-                      unoptimized={true}
-                      src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Arrow.svg"
-                      alt="Trustpilot"
-                      width={100}
-                      height={100}
-                      className="arrow"
-                    />
+                  <div className="w-[33px] h-[33px] rounded-[5.73px] bg-[#1D1D1D] flex justify-center items-center group-hover:bg-[#F9F9F9] transition-all duration-500 ease-in-out">
+                    {locale === "ar" || locale === "fa" || locale === "kur" ? (
+                      <RiArrowLeftUpLine
+                        className={`text-xl transition-transform duration-500 ease-in-out ${
+                          hovered === 0
+                            ? "rotate-[-45deg] text-[#1D1D1D]"
+                            : "text-[#C6C6C6]"
+                        }`}
+                      />
+                    ) : (
+                      <RiArrowRightUpLine
+                        className={`text-xl transition-transform duration-500 ease-in-out ${
+                          hovered === 0
+                            ? "rotate-45 text-[#1D1D1D]"
+                            : "text-[#C6C6C6]"
+                        }`}
+                      />
+                    )}
                   </div>
                 </Link>
               </div>
@@ -95,7 +111,11 @@ const GlobalLocation = () => {
             height={19}
             className="w-[40px] sm:w-[50px]"
           />
-          <div className="bg-[#111111] p-5 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl group hover:border-[#FED100] w-[230px] sm:w-[380px]">
+          <div
+            className="bg-[#111111] p-5 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl w-[230px] sm:w-[380px] hover:border-[#333333] group transition-all duration-500 ease-in-out"
+            onMouseEnter={() => setHovered(1)}
+            onMouseLeave={() => setHovered(null)}
+          >
             <Link
               href="https://maps.app.goo.gl/NPtCrDm6Tqz7CNgf6"
               target="_blank"
@@ -114,7 +134,7 @@ const GlobalLocation = () => {
                     />
                   </div>
                   <div>
-                    <h3 className="text-base font-semibold text-[#ffffff] group-hover:text-[#FED100]">
+                    <h3 className="text-base font-semibold text-[#ffffff]">
                       {t("africa_title1")}
                     </h3>
                     <p className="text-xs text-[#c6c6c6]">
@@ -124,15 +144,24 @@ const GlobalLocation = () => {
                   </div>
                 </div>
                 <Link href={`/${locale}/account-types`}>
-                  <div className="w-[33px] h-[33px]">
-                    <Image
-                      unoptimized={true}
-                      src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Arrow.svg"
-                      alt="Trustpilot"
-                      width={100}
-                      height={100}
-                      className="arrow"
-                    />
+                  <div className="w-[33px] h-[33px] rounded-[5.73px] bg-[#1D1D1D] flex justify-center items-center group-hover:bg-[#F9F9F9] transition-all duration-500 ease-in-out">
+                    {locale === "ar" || locale === "fa" || locale === "kur" ? (
+                      <RiArrowLeftUpLine
+                        className={`text-xl transition-transform duration-500 ease-in-out ${
+                          hovered === 1
+                            ? "rotate-[-45deg] text-[#1D1D1D]"
+                            : "text-[#C6C6C6]"
+                        }`}
+                      />
+                    ) : (
+                      <RiArrowRightUpLine
+                        className={`text-xl transition-transform duration-500 ease-in-out ${
+                          hovered === 1
+                            ? "rotate-45 text-[#1D1D1D]"
+                            : "text-[#C6C6C6]"
+                        }`}
+                      />
+                    )}
                   </div>
                 </Link>
               </div>

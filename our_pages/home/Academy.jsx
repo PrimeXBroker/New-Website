@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { RiArrowRightUpLine } from "react-icons/ri";
+import { RiArrowLeftUpLine } from "react-icons/ri";
 
 const Academy = ({ academy }) => {
   const locale = useLocale();
@@ -51,13 +52,23 @@ const Academy = ({ academy }) => {
                 </div>
                 <Link href={`/${locale}/academy`}>
                   <div className="w-[33px] h-[33px] rounded-[5.73px] bg-[#1D1D1D] flex justify-center items-center group-hover:bg-[#F9F9F9] transition-all duration-500 ease-in-out">
-                    <RiArrowRightUpLine
-                      className={`text-xl transition-transform duration-500 ease-in-out ${
-                        hovered === acc.id
-                          ? "rotate-45 text-[#1D1D1D]"
-                          : "text-[#C6C6C6]"
-                      }`}
-                    />
+                    {locale === "ar" || locale === "fa" || locale === "kur" ? (
+                      <RiArrowLeftUpLine
+                        className={`text-xl transition-transform duration-500 ease-in-out ${
+                          hovered === acc.id
+                            ? "rotate-[-45deg] text-[#1D1D1D]"
+                            : "text-[#C6C6C6]"
+                        }`}
+                      />
+                    ) : (
+                      <RiArrowRightUpLine
+                        className={`text-xl transition-transform duration-500 ease-in-out ${
+                          hovered === acc.id
+                            ? "rotate-45 text-[#1D1D1D]"
+                            : "text-[#C6C6C6]"
+                        }`}
+                      />
+                    )}
                   </div>
                 </Link>
               </div>

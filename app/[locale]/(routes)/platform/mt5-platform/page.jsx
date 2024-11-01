@@ -25,7 +25,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("metaTrader5.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/join-primex-mbl.webp",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/MT5+Page+Hero+New.webp",
           width: 1200,
           height: 630,
           alt: t("metaTrader5.metaData.title"),

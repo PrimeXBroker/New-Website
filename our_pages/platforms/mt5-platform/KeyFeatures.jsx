@@ -4,10 +4,8 @@ import { useLocale } from "next-intl";
 const FeatureCard = ({ title, description }) => {
   const locale = useLocale();
   return (
-    <div className="bg-[#1D1D1D] rounded-xl border-2 border-[#222222] hover:border-[#FED100] p-6 group">
-      <h3 className="text-xl font-semibold mb-2 text-[#ffffff] group-hover:text-[#FED100]">
-        {title}
-      </h3>
+    <div className="bg-[#1D1D1D] rounded-xl border-2 border-[#222222] p-6">
+      <h3 className="text-xl font-semibold mb-2 text-[#ffffff]">{title}</h3>
       <p className="text-[#c6c6c6] text-sm sm:text-base">{description}</p>
     </div>
   );

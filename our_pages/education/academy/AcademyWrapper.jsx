@@ -43,14 +43,15 @@ const AcademyWrapper = () => {
       <Banner setActive={setActive} />
       {(locale === "en" || locale === "ar") && (
         <>
+          <Webinars active={active} setActive={setActive} />
+          <PrivateSessions setActive={setActive} />
           <div className="hidden md:block">
             <BlogsWrapper active={activeBlog} setActive={setActiveBlog} />
           </div>
           <div className="block md:hidden">
             <MobileBlogWrapper active={activeBlog} setActive={setActiveBlog} />
           </div>
-          <Webinars active={active} setActive={setActive} />
-          <PrivateSessions setActive={setActive} />
+
           <JoinAcademy joinAcademy={joinAcademy} setActive={setActive} />
         </>
       )}

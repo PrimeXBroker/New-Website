@@ -52,7 +52,7 @@ const JoinPrimex = () => {
                 href="https://download.mql5.com/cdn/web/primex.broker.pty/mt5/primexbroker5setup.exe"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#1D1D1D] flex items-center justify-center w-full sm:w-[200px] h-[60px] rounded-lg transition-all group"
+                className="bg-[#1D1D1D] border-1 border-[#1d1d1d] hover:border-[#333333] transition-all duration-500 ease-in-out flex items-center justify-center w-full sm:w-[200px] h-[60px] rounded-lg group"
               >
                 <Image
                   src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/microsoft_732221+1.svg"
@@ -70,7 +70,7 @@ const JoinPrimex = () => {
                   <p className="text-xs text-[#c6c6c6]">
                     {t("download_window_btn_part1")}
                   </p>
-                  <p className="text-lg font-semibold group-hover:text-[#FED100] ">
+                  <p className="text-lg font-semibold">
                     {t("download_window_btn_part2")}
                   </p>
                 </div>
@@ -82,7 +82,7 @@ const JoinPrimex = () => {
                 href="https://download.mql5.com/cdn/mobile/mt5/android?server=PrimeXBroker-Demo,PrimeXBroker-Live"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#1D1D1D] flex items-center justify-center w-full sm:w-[200px] h-[60px] rounded-lg transition-all group"
+                className="bg-[#1D1D1D] border-1 border-[#1d1d1d] hover:border-[#333333] transition-all duration-500 ease-in-out flex items-center justify-center w-full sm:w-[200px] h-[60px] rounded-lg group"
               >
                 <Image
                   src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/google-play_3128279+1.svg"
@@ -100,7 +100,7 @@ const JoinPrimex = () => {
                   <p className="text-xs text-[#c6c6c6]">
                     {t("google_play-btn_part1")}
                   </p>
-                  <p className="text-lg font-semibold group-hover:text-[#FED100] ">
+                  <p className="text-lg font-semibold">
                     {t("google_play-btn_part2")}
                   </p>
                 </div>
@@ -112,7 +112,7 @@ const JoinPrimex = () => {
                 href="https://download.mql5.com/cdn/mobile/mt5/ios?server=PrimeXBroker-Live"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#1D1D1D] flex items-center justify-center w-full sm:w-[200px] h-[60px] rounded-lg transition-all group"
+                className="bg-[#1D1D1D] border-1 border-[#1d1d1d] hover:border-[#333333] transition-all duration-500 ease-in-out flex items-center justify-center w-full sm:w-[200px] h-[60px] rounded-lg group"
               >
                 <Image
                   src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/apple_731985+1.svg"
@@ -130,7 +130,7 @@ const JoinPrimex = () => {
                   <p className="text-xs text-[#c6c6c6]">
                     {t("app_store_btn_part1")}
                   </p>
-                  <p className="text-lg font-semibold group-hover:text-[#FED100] ">
+                  <p className="text-lg font-semibold">
                     {t("app_store_btn_part2")}
                   </p>
                 </div>

@@ -402,10 +402,89 @@ const DesktopHeader = ({ locale }) => {
                 </ul>
               )}
             </li>
-            <li className="flex items-center h-full">
-              <LocaleLink href="/about" className="text-[#ffffff] text-[.8em]">
-                {t("about")}
-              </LocaleLink>
+            <li
+              className="relative flex items-center h-full"
+              onMouseEnter={() => openDropdown(6)}
+              onMouseLeave={closeDropdown}
+            >
+              <button className="text-[#ffffff] text-[.8em] flex items-center">
+                {t("company")}
+                <svg
+                  className={`fill-current h-4 w-4 ${
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "mr-1"
+                      : "ml-1"
+                  }`}
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                </svg>
+              </button>
+              {activeDropdown === 6 && (
+                <ul
+                  className={`absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] ${
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "min-w-[180px]"
+                      : "min-w-[180px]"
+                  } rounded-[6px]`}
+                >
+                  <li>
+                    <LocaleLink
+                      href="/why-choose-us"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                    >
+                      {t("choose_us")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
+                      href="/about"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                    >
+                      {t("about")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
+                      href="/contact"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                    >
+                      {t("contact")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
+                      href="/awards"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                    >
+                      {t("awards")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
+                      href="/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                    >
+                      {t("press_release")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
+                      href="/careers"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                    >
+                      {t("careers")}
+                    </LocaleLink>
+                  </li>
+                </ul>
+              )}
             </li>
           </ul>
         </nav>

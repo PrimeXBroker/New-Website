@@ -14,7 +14,7 @@ const EasyStepsMobile = ({ easySteps, easyStepsMobile }) => {
         {easyStepsMobile.map((step, index) => (
           <div
             key={index}
-            className="bg-transparent border-dashed border-4 border-[#1D1D1D] rounded-lg p-6 shadow-lg text-[#FED100] flex flex-col gap-2 hover:scale-105 transition-all duration-500 ease-in-out group"
+            className="bg-transparent border-dashed border-4 border-[#1D1D1D] rounded-lg p-6 shadow-lg text-[#FED100] flex flex-col gap-2"
           >
             <div className="flex justify-between items-center">
               <div>

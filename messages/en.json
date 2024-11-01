@@ -26,7 +26,13 @@
     "grey_label": "Grey Label Partner",
     "regional": "Regional Partner",
     "badge_text": "new",
-    "about": "About Us"
+    "company": "Company",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "awards": "Awards",
+    "press_release": "Press Release",
+    "careers": "Careers",
+    "choose_us": "Wy Choose Us"
   },
   "home": {
     "metaData": {
@@ -718,7 +724,8 @@
       "title_part1_link2": "Contact Us",
       "title_part1_link3": "Awards",
       "title_part1_link4": "Press Release",
-      "title_part1_link5": "Careers"
+      "title_part1_link5": "Careers",
+      "title_part1_link6": "Wy Choose Us"
     },
     "Rules": {
       "title_part2": "Legal",
@@ -1586,8 +1593,8 @@
       "title1": "Upcoming",
       "title2": "Free Webinars",
       "no_webinars": "No upcoming webinars available at this time. Please check back later.",
-      "webinar_title1": "Ahmed Alsajadi",
-      "Webinar1_by": "Technical Analyst",
+      "webinar_title1": "Rose Shawish",
+      "Webinar1_by": "Fundamental Analysis",
       "webinar_title2": "Aniket Bhoir",
       "Webinar2_by": "Market Analyst"
     },

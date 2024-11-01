@@ -63,17 +63,13 @@ const Banner = ({ setActive }) => {
               {h("join_btn")}
             </Link>
           </div>
-          <div className="flex">
+          <div className="flex md:justify-end justify-center">
             <Image
-              className="mx-auto md:m-0 block"
-              src={
-                locale === "en"
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/banner_img.webp"
-                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/academy/20240805-171521.png"
-              }
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/Academy+Hero+New.webp"
               alt="Banner Image"
               width="550"
               height="500"
+              className={`w-full sm:w-[90%] ms:w-full`}
             />
           </div>
         </div>

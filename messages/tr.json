@@ -26,7 +26,13 @@
     "grey_label": "Gri Etiket Ortağı",
     "regional": "Bölgesel Ortak",
     "badge_text": "yeni",
-    "about": "Hakkımızda"
+    "company": "Şirket",
+    "about": "Hakkımızda",
+    "contact": "Bize Ulaşın",
+    "awards": "Ödüller",
+    "press_release": "Basın Bülteni",
+    "careers": "Kariyer",
+    "choose_us": "Neden Bizi Seçmelisiniz"
   },
   "home": {
     "metaData": {
@@ -718,7 +724,8 @@
       "title_part1_link2": "İletişim",
       "title_part1_link3": "Ödüller",
       "title_part1_link4": "Basın Bülteni",
-      "title_part1_link5": "Kariyer"
+      "title_part1_link5": "Kariyer",
+      "title_part1_link6": "Neden Bizi Seçmelisiniz"
     },
     "Rules": {
       "title_part2": "Yasal",

@@ -46,7 +46,7 @@ const Banner = () => {
             <div className="flex justify-center md:justify-end mt-8 md:mt-0">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/Careers-banner-right.webp"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/Career+Hero+New.webp"
                 width="100"
                 height="100"
                 alt="image"

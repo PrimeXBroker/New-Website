@@ -39,12 +39,10 @@ const Strategies = () => {
         {strategies.map((strategy, index) => (
           <div
             key={index}
-            className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#ffffff] flex justify-between items-center group hover:border-[#FED100]"
+            className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#ffffff] flex justify-between items-center"
           >
             <div className="w-[80%]">
-              <h3 className="text-xl font-bold group-hover:text-[#FED100]">
-                {strategy.title}
-              </h3>
+              <h3 className="text-xl font-semibold">{strategy.title}</h3>
               <p className="text-[#c6c6c6] mt-2 text-[15px]">
                 {strategy.description}
               </p>

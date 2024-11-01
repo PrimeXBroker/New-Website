@@ -72,7 +72,7 @@ const Recognition = () => {
                   alt={`Award ${index + 1}`}
                   width={100}
                   height={100}
-                  className="w-full mb-4 transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500"
+                  className="w-full mb-4"
                 />
               </div>
             ))}
@@ -87,7 +87,7 @@ const Recognition = () => {
                 alt={`Award ${index + 1}`}
                 width={100}
                 height={100}
-                className="w-full mb-4 transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500"
+                className="w-full mb-4"
               />
             </div>
           ))}

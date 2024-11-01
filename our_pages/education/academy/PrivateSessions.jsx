@@ -20,7 +20,7 @@ const PrivateSessions = ({ setActive }) => {
                   {t("description")}
                 </p>
               </div>
-              <div className="md:bg-[#1D1D1D] md:border-2 md:border-[#222222] md:px-6 md:py-4 rounded-lg shadow-lg md:hover:border-[#FED100]">
+              <div className="md:bg-[#1D1D1D] md:border-2 md:border-[#222222] md:px-6 md:py-4 rounded-lg shadow-lg">
                 <h3 className="text-[#FED100] text-base sm:text-lg font-semibold">
                   {t("eligibility_criteria1_li1")}
                 </h3>
@@ -28,7 +28,7 @@ const PrivateSessions = ({ setActive }) => {
                   {t("eligibility_criteria1_li2")}
                 </p>
               </div>
-              <div className="md:bg-[#1D1D1D] md:border-2 md:border-[#222222] py-2 md:px-6 md:py-4 rounded-lg shadow-lg md:hover:border-[#FED100]">
+              <div className="md:bg-[#1D1D1D] md:border-2 md:border-[#222222] py-2 md:px-6 md:py-4 rounded-lg shadow-lg">
                 <h3 className="text-[#FED100] text-base sm:text-lg font-semibold">
                   {t("eligibility_criteria2_li1")}
                 </h3>
@@ -38,7 +38,7 @@ const PrivateSessions = ({ setActive }) => {
               </div>
             </div>
             <div className="flex flex-col md:flex-row w-full lg:w-1/2 gap-4 justify-center lg:justify-end">
-              <div className="cursor-pointer p-5 bg-[#1D1D1D] border-2 border-[#222222] hover:border-[#FED100] rounded-lg md:w-[214px] group w-full flex flex-row md:flex-col gap-3 md:gap-0">
+              <div className="cursor-pointer p-5 bg-[#1D1D1D] border-2 border-[#222222] rounded-lg md:w-[214px] group w-full flex flex-row md:flex-col gap-3 md:gap-0">
                 <Image
                   unoptimized={true}
                   src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/Aniket+academy.webp"
@@ -48,7 +48,7 @@ const PrivateSessions = ({ setActive }) => {
                   className="w-[83px] sm:w-[100px] md:w-[250px]"
                 />
                 <div>
-                  <h3 className="text-[#ffffff] md:text-center text-base sm:text-lg group-hover:text-[#FED100]">
+                  <h3 className="text-[#ffffff] md:text-center text-base sm:text-lg">
                     {t("expert_2_name")}
                   </h3>
                   <h4 className="text-[#c6c6c6] md:text-center text-xs sm:text-sm">
@@ -63,7 +63,7 @@ const PrivateSessions = ({ setActive }) => {
                   </Link>
                 </div>
               </div>
-              <div className="cursor-pointer p-5 bg-[#1D1D1D] border-2 border-[#222222] hover:border-[#FED100] rounded-lg md:w-[214px] group w-full flex flex-row md:flex-col gap-3 md:gap-0">
+              <div className="cursor-pointer p-5 bg-[#1D1D1D] border-2 border-[#222222] rounded-lg md:w-[214px] group w-full flex flex-row md:flex-col gap-3 md:gap-0">
                 <Image
                   unoptimized={true}
                   src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/rose.webp"
@@ -73,7 +73,7 @@ const PrivateSessions = ({ setActive }) => {
                   className="w-[83px] sm:-[100px] md:w-[250px]"
                 />
                 <div>
-                  <h3 className="text-[#ffffff] md:text-center text-base sm:text-lg group-hover:text-[#FED100]">
+                  <h3 className="text-[#ffffff] md:text-center text-base sm:text-lg">
                     {t("expert_1_name")}
                   </h3>
                   <h4 className="text-[#c6c6c6] md:text-center text-xs sm:text-sm">

@@ -62,9 +62,7 @@ const Features = () => {
                     height="200"
                   />
                 </div>
-                <p className="text-base font-medium w-52 group-hover:text-[#FED100]">
-                  {feature.text}
-                </p>
+                <p className="text-base font-medium w-52">{feature.text}</p>
               </div>
             ))}
           </div>
@@ -88,9 +86,7 @@ const Features = () => {
                     height="200"
                   />
                 </div>
-                <p className="text-base font-medium w-52 group-hover:text-[#FED100]">
-                  {feature.text}
-                </p>
+                <p className="text-base font-medium w-52">{feature.text}</p>
               </div>
             ))}
           </div>

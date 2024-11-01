@@ -26,7 +26,13 @@
     "grey_label": "灰标合作伙伴",
     "regional": "区域合作伙伴",
     "badge_text": "新",
-    "about": "关于我们"
+    "company": "公司",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "awards": "奖项",
+    "press_release": "新闻稿",
+    "careers": "职业",
+    "choose_us": "为何选择我们"
   },
   "home": {
     "metaData": {
@@ -720,7 +726,8 @@
       "title_part1_link2": "联系我们",
       "title_part1_link3": "奖项",
       "title_part1_link4": "新闻发布",
-      "title_part1_link5": "职业机会"
+      "title_part1_link5": "职业机会",
+      "title_part1_link6": "为何选择我们"
     },
     "Rules": {
       "title_part2": "法律",

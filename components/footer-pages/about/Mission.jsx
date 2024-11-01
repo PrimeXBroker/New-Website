@@ -46,7 +46,7 @@ const Mission = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <h2
-                    className="text-[#ffffff] text-2xl sm:text-3xl font-semibold group-hover:text-[#FED100]"
+                    className="text-[#ffffff] text-2xl sm:text-3xl font-semibold"
                     style={{ letterSpacing: "1.2px" }}
                   >
                     {card.title}

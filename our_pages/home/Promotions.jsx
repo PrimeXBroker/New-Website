@@ -19,7 +19,7 @@ const Promotions = ({ promotions }) => {
             {promotions.map((promotion, index) => (
               <div
                 key={index}
-                className="bg-[#111111] border-2 border-[#1D1D1D] rounded-xl px-6 py-8 flex flex-col justify-between transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500 group"
+                className="bg-[#111111] border-2 border-[#1D1D1D] rounded-xl px-6 py-8 flex flex-col justify-between"
               >
                 <div className="flex justify-between items-center mb-6">
                   <h3 className="text-xl sm:text-2xl md:text-xl lg:text-2xl font-bold text-[#ffffff]">

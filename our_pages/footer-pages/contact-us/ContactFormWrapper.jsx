@@ -84,7 +84,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
               </Link> */}
               <button
                 onClick={handleCopyEmail}
-                className="bg-[#111111] text-[#F1F1F1] py-2 px-4 flex items-center rounded-lg border-2 border-[#1D1D1D] hover:text-[#FED100]"
+                className="bg-[#111111] text-[#F1F1F1] py-2 px-4 flex items-center rounded-lg border-2 border-[#1D1D1D] hover:border-[#333333] group transition-all duration-500 ease-in-out"
               >
                 <span
                   className={`${
@@ -112,7 +112,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
               </button>
               <button
                 onClick={handleChatLink}
-                className="bg-[#111111] text-[#F1F1F1] py-2 px-4 flex items-center rounded-lg border-2 border-[#1D1D1D] hover:text-[#FED100]"
+                className="bg-[#111111] text-[#F1F1F1] py-2 px-4 flex items-center rounded-lg border-2 border-[#1D1D1D] hover:border-[#333333] group transition-all duration-500 ease-in-out"
               >
                 <span
                   className={`${

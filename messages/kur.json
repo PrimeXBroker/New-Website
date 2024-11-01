@@ -26,7 +26,13 @@
     "grey_label": "هاوبەشەکەی دۆخۆڵ",
     "regional": "هاوبەشی ناوچەی",
     "badge_text": "نوێ",
-    "about": "دەربارەی ئێمە"
+    "company": "کۆمپانیا",
+    "about": "دەربارەی ئێمە",
+    "contact": "پەیوەندی بکە",
+    "awards": "خەڵاتەکان",
+    "press_release": "رۆژنامەگە",
+    "careers": "کار",
+    "choose_us": "بۆچی ئێمە هەڵبژێریت"
   },
   "home": {
     "metaData": {
@@ -716,7 +722,8 @@
       "title_part1_link2": "پەیوەندیکردن",
       "title_part1_link3": "خەڵاتەکان",
       "title_part1_link4": "ڕاگەیاندنەوە",
-      "title_part1_link5": "پیشە"
+      "title_part1_link5": "پیشە",
+      "title_part1_link6": "بۆچی ئێمە هەڵبژێریت"
     },
     "Rules": {
       "title_part2": "یاسایی",

@@ -6,7 +6,7 @@ const AwardsTimelineMobile = () => {
   const locale = useLocale();
   const t = useTranslations("newAwards.awardCards");
   return (
-    <div className="bg-[#000000] py-20">
+    <div className="bg-[#000000] py-8">
       <div className="container">
         <div class="timeline-mobile flex justify-center">
           <div class="outer inline-block">

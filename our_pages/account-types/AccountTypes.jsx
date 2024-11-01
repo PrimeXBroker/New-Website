@@ -24,13 +24,13 @@ const AccountTypes = ({ accounts }) => {
             <>
               <div
                 key={account.id}
-                className="bg-[#111111] p-6 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500 group flex flex-col justify-between"
+                className="bg-[#111111] p-6 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl flex flex-col justify-between"
               >
                 <div>
                   <div className="flex justify-between items-center">
                     <div className="flex items-start gap-3">
                       <div>
-                        <h3 className="text-xl sm:text-2xl font-semibold text-[#ffffff] group-hover:text-[#FED100]">
+                        <h3 className="text-xl sm:text-2xl font-semibold text-[#ffffff]">
                           {account.title}
                         </h3>
                       </div>

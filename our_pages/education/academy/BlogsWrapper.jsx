@@ -35,7 +35,7 @@ function BlogsWrapper({ active, setActive }) {
   ];
 
   return (
-    <section className="relative bg-[#000000] py-10">
+    <section className="relative bg-[#000000] pt-10">
       <div className="container">
         <div
           className={`tabs-navigation bg-[#1D1D1D] rounded-lg flex justify-between items-center w-full`}

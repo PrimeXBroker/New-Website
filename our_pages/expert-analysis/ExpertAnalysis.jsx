@@ -42,7 +42,7 @@ const ExpertAnalysis = ({ id }) => {
   const fetchEnglishBlogs = async () => {
     setLoading(true);
     const res = await axios.get(
-      `https://primexbroker.com/api/fetch/publish/related/market-news/${page}/9/${currentCategory.id}`
+      `https://primexbroker.com/api/fetch/publish/related/market-news/${page}/6/${currentCategory.id}`
     );
 
     if (res.data.success) {

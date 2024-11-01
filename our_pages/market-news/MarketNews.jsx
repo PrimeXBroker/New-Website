@@ -33,7 +33,7 @@ const MarketNews = ({ slugEn, slugAr }) => {
   const fetchNews = async () => {
     setLoading(true);
     const res = await axios.get(
-      `https://primexbroker.com/api/fetch/published/blogs/${page}/9/${
+      `https://primexbroker.com/api/fetch/published/blogs/${page}/6/${
         locale === "ar" ? slugAr : slugEn
       }/${locale}`
     );

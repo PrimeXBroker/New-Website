@@ -25,7 +25,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("careersPage.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/Careers-banner-right.webp",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/Career+Hero+New.webp",
           width: 1200,
           height: 630,
           alt: t("careersPage.metaData.title"),

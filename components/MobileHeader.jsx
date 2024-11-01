@@ -915,6 +915,65 @@ const MobileHeader = ({ locale }) => {
               </div>
             )}
           </div> */}
+          <div>
+            <button
+              onClick={() => toggleSubMenu(6)}
+              className="text-[#ffffff] text-base flex justify-between items-center w-full pt-[3px]"
+            >
+              {t("company")}
+              {openSubMenu === 6 ? (
+                <FaChevronUp size={16} />
+              ) : (
+                <FaChevronDown size={16} />
+              )}
+            </button>
+            {openSubMenu === 6 && (
+              <div className="">
+                <LocaleLink
+                  href="/why-choose-us"
+                  className="block text-[#ffffff] text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("choose_us")}
+                </LocaleLink>
+                <LocaleLink
+                  href="/about"
+                  className="block text-[#ffffff] text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("about")}
+                </LocaleLink>
+                <LocaleLink
+                  href="/contact"
+                  className="block text-[#ffffff] text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("contact")}
+                </LocaleLink>
+                <LocaleLink
+                  href="/awards"
+                  className="block text-[#ffffff] text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("awards")}
+                </LocaleLink>
+                <LocaleLink
+                  href="/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e"
+                  className="block text-[#ffffff] text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("press_release")}
+                </LocaleLink>
+                <LocaleLink
+                  href="/careers"
+                  className="block text-[#ffffff] text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("careers")}
+                </LocaleLink>
+              </div>
+            )}
+          </div>
         </nav>
       </div>
       {isOpen && (

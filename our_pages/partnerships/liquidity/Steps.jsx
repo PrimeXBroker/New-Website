@@ -18,7 +18,7 @@ const Steps = () => {
               width={64}
               height={64}
             />
-            <p className="text-sm lg:text-base text-[#c6c6c6] group-hover:text-primary">
+            <p className="text-sm lg:text-base text-[#c6c6c6]">
               {t("step1_p1")} <br /> {t("step1_p2")}
             </p>
           </div>
@@ -30,7 +30,7 @@ const Steps = () => {
               width={64}
               height={64}
             />
-            <p className="text-sm lg:text-base text-[#c6c6c6] group-hover:text-primary">
+            <p className="text-sm lg:text-base text-[#c6c6c6]">
               {t("step2_p1")} <br />
               {t("step2_p2")}
             </p>
@@ -43,7 +43,7 @@ const Steps = () => {
               width={64}
               height={64}
             />
-            <p className="text-sm lg:text-base text-[#c6c6c6] group-hover:text-primary">
+            <p className="text-sm lg:text-base text-[#c6c6c6]">
               {t("step3_p1")} <br />
               {t("step3_p2")}
             </p>

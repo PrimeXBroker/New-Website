@@ -9,7 +9,7 @@ const JoinAcademy = ({ joinAcademy, setActive }) => {
         {joinAcademy.map((academy, index) => (
           <div
             key={index}
-            className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#FED100] flex flex-col gap-3 transform translate-y-[1rem] hover:translate-y-0 transition-transform duration-500"
+            className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#FED100] flex flex-col gap-3"
           >
             <div className="flex justify-between items-center">
               <div className="w-[70%] sm::w-[60%]">

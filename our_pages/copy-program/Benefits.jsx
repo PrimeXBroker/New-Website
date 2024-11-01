@@ -61,7 +61,7 @@ const Benefits = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="w-full sm:w-[48%] lg:w-[32%] bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] hover:border-[#FED100] text-[#FED100] flex flex-col gap-3"
+              className="w-full sm:w-[48%] lg:w-[32%] bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#FED100] flex flex-col gap-3"
             >
               <div className="flex justify-between items-center">
                 <div>

@@ -13,7 +13,7 @@ const AboutCopyProgram = () => {
             <div className="">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/About+Image.webp"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/About+Image+New.webp"
                 width="100"
                 height="100"
                 alt="image"
@@ -44,7 +44,7 @@ const AboutCopyProgram = () => {
             <div className="flex justify-center md:justify-start">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/About+Image.webp"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/About+Image+New.webp"
                 width="100"
                 height="100"
                 alt="image"

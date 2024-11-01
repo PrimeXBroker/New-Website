@@ -65,9 +65,7 @@ const ClientSatisfaction = () => {
                   }`}
                 >
                   <div className="flex justify-between items-center">
-                    <h3 className="text-2xl font-bold group-hover:text-[#FED100]">
-                      {t("title1")}
-                    </h3>
+                    <h3 className="text-2xl font-semibold">{t("title1")}</h3>
                     <div className="w-14 h-14 border-3 border-[#222222] bg-[#1D1D1D] rounded-lg flex justify-center items-center">
                       <Image
                         unoptimized={true}
@@ -95,9 +93,7 @@ const ClientSatisfaction = () => {
                   }`}
                 >
                   <div className="flex justify-between items-center">
-                    <h3 className="text-2xl font-bold group-hover:text-[#FED100]">
-                      {t("title2")}
-                    </h3>
+                    <h3 className="text-2xl font-semibold">{t("title2")}</h3>
                     <div className="w-14 h-14 border-3 border-[#222222] bg-[#1D1D1D] rounded-lg flex justify-center items-center">
                       <Image
                         unoptimized={true}
@@ -125,9 +121,7 @@ const ClientSatisfaction = () => {
                   }`}
                 >
                   <div className="flex justify-between items-center">
-                    <h3 className="text-2xl font-bold group-hover:text-[#FED100]">
-                      {t("title3")}
-                    </h3>
+                    <h3 className="text-2xl font-semibold">{t("title3")}</h3>
                     <div className="w-14 h-14 border-3 border-[#222222] bg-[#1D1D1D] rounded-lg flex justify-center items-center">
                       <Image
                         unoptimized={true}
@@ -155,9 +149,7 @@ const ClientSatisfaction = () => {
                   }`}
                 >
                   <div className="flex justify-between items-center">
-                    <h3 className="text-2xl font-bold group-hover:text-[#FED100]">
-                      {t("title4")}
-                    </h3>
+                    <h3 className="text-2xl font-semibold">{t("title4")}</h3>
                     <div className="w-14 h-14 border-3 border-[#222222] bg-[#1D1D1D] rounded-lg flex justify-center items-center">
                       <Image
                         unoptimized={true}
@@ -185,9 +177,7 @@ const ClientSatisfaction = () => {
                   } `}
                 >
                   <div className="flex justify-between items-center">
-                    <h3 className="text-2xl font-bold group-hover:text-[#FED100]">
-                      {t("title5")}
-                    </h3>
+                    <h3 className="text-2xl font-semibold">{t("title5")}</h3>
                     <div className="w-14 h-14 border-3 border-[#222222] bg-[#1D1D1D] rounded-lg flex justify-center items-center">
                       <Image
                         unoptimized={true}

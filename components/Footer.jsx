@@ -66,6 +66,7 @@ const Footer = () => {
       column: {
         heading: t("company.title_part1"),
         links: [
+          { name: t("company.title_part1_link6"), href: "/why-choose-us" },
           { name: t("company.title_part1_link1"), href: "/about" },
           { name: t("company.title_part1_link2"), href: "/contact" },
           { name: t("company.title_part1_link3"), href: "/awards" },

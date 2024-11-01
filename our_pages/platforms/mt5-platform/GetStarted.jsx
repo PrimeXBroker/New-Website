@@ -16,8 +16,8 @@ const GetStarted = () => {
         </h2>
       </div>
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-[#ffffff]">
-        <div className="flex items-center bg-[#111111] border-2 border-[#1D1D1D]  rounded-lg p-4 group transform translate-y-[0] hover:translate-y-[-1rem] transition-transform duration-500">
-          <div className="flex-shrink-0 bg-[#1D1D1D] border-2 border-[#222222] text-center rounded-lg text-[#c6c6c6] h-12 w-12 flex items-center justify-center text-2xl font-bold group-hover:text-[#FED100]">
+        <div className="flex items-center bg-[#111111] border-2 border-[#1D1D1D]  rounded-lg p-4">
+          <div className="flex-shrink-0 bg-[#1D1D1D] border-2 border-[#222222] text-center rounded-lg text-[#c6c6c6] h-12 w-12 flex items-center justify-center text-2xl font-semibold">
             {t("step1_count")}
           </div>
           <div
@@ -31,8 +31,8 @@ const GetStarted = () => {
             <p className="">{t("step1_title2")}</p>
           </div>
         </div>
-        <div className="flex items-center bg-[#111111] border-2 border-[#1D1D1D] rounded-lg p-4 group transform translate-y-[0] hover:translate-y-[-1rem] transition-transform duration-500">
-          <div className="flex-shrink-0 bg-[#1D1D1D] border-2 border-[#222222] text-center rounded-lg text-[#c6c6c6] h-12 w-12 flex items-center justify-center text-2xl font-bold group-hover:text-[#FED100]">
+        <div className="flex items-center bg-[#111111] border-2 border-[#1D1D1D] rounded-lg p-4">
+          <div className="flex-shrink-0 bg-[#1D1D1D] border-2 border-[#222222] text-center rounded-lg text-[#c6c6c6] h-12 w-12 flex items-center justify-center text-2xl font-semibold">
             {t("step2_count")}
           </div>
           <div
@@ -46,8 +46,8 @@ const GetStarted = () => {
             <p className="text-[#FED100]">{t("step2_title2")}</p>
           </div>
         </div>
-        <div className="flex items-center bg-[#111111] border-2 border-[#1D1D1D] rounded-lg p-4 group transform translate-y-[0] hover:translate-y-[-1rem] transition-transform duration-500">
-          <div className="flex-shrink-0 bg-[#1D1D1D] border-2 border-[#222222] text-center rounded-lg text-[#c6c6c6] h-12 w-12 flex items-center justify-center text-2xl font-bold group-hover:text-[#FED100]">
+        <div className="flex items-center bg-[#111111] border-2 border-[#1D1D1D] rounded-lg p-4">
+          <div className="flex-shrink-0 bg-[#1D1D1D] border-2 border-[#222222] text-center rounded-lg text-[#c6c6c6] h-12 w-12 flex items-center justify-center text-2xl font-semibold">
             {t("step3_count")}
           </div>
           <div
@@ -61,8 +61,8 @@ const GetStarted = () => {
             <p className="text-[#FED100]">{t("step3_title2")}</p>
           </div>
         </div>
-        <div className="flex items-center bg-[#111111] border-2 border-[#1D1D1D] rounded-lg p-4 group transform translate-y-[0] hover:translate-y-[-1rem] transition-transform duration-500">
-          <div className="flex-shrink-0 bg-[#1D1D1D] border-2 border-[#222222] text-center rounded-lg text-[#c6c6c6] h-12 w-12 flex items-center justify-center text-2xl font-bold group-hover:text-[#FED100]">
+        <div className="flex items-center bg-[#111111] border-2 border-[#1D1D1D] rounded-lg p-4">
+          <div className="flex-shrink-0 bg-[#1D1D1D] border-2 border-[#222222] text-center rounded-lg text-[#c6c6c6] h-12 w-12 flex items-center justify-center text-2xl font-semibold">
             {t("step4_count")}
           </div>
           <div

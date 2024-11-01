@@ -25,10 +25,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("academy.metaData.description"),
       images: [
         {
-          url:
-            locale === "ar"
-              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/academy/20240805-171521.png"
-              : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/banner_img.webp",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/Academy+Hero+New.webp",
           width: 1200,
           height: 630,
           alt: t("academy.metaData.title"),

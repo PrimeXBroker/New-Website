@@ -30,7 +30,7 @@ const Support = () => {
                   />
                 </div>
                 <div>
-                  <p className="font-semibold group-hover:text-[#FED100]">
+                  <p className="font-semibold">
                     {t("customer_care_li1_title")}
                   </p>
                   <p className="text-xs sm:text-sm text-[#c6c6c6]">
@@ -50,7 +50,7 @@ const Support = () => {
                   />
                 </div>
                 <div>
-                  <p className="font-semibold group-hover:text-[#FED100]">
+                  <p className="font-semibold">
                     {t("customer_care_li2_title")}
                   </p>
                   <p className="text-xs sm:text-sm text-[#c6c6c6">

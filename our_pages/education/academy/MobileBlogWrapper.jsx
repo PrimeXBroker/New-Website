@@ -36,7 +36,7 @@ function MobileBlogWrapper({ active, setActive }) {
   ];
 
   return (
-    <section className="relative bg-[#000000] py-10">
+    <section className="relative bg-[#000000] pt-10">
       <div className="container">
         <div
           className={`tabs-navigation rounded-lg grid grid-cols-1 xs:grid-cols-2 gap-4`}

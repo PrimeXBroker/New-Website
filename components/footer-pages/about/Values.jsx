@@ -1,11 +1,9 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
 import { useTranslations } from "next-intl";
 
 const Values = () => {
   const t = useTranslations("about.coreValues");
-  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const valuesCards = [
     {
@@ -46,12 +44,6 @@ const Values = () => {
     },
   ];
 
-  const handleIconEnter = (index) => {
-    setHoveredIndex(index);
-  };
-  const handleIconLeave = () => {
-    setHoveredIndex(null);
-  };
   return (
     <section className="bg-[#000000] py-5 sm:py-20">
       <div className="container pt-6 sm:pb-20">
@@ -63,30 +55,22 @@ const Values = () => {
             {valuesCards.map((card, index) => (
               <div
                 key={card.id}
-                onMouseEnter={() => handleIconEnter(index)}
-                onMouseLeave={handleIconLeave}
-                className={`flex flex-col justify-center items-center cursor-pointer md:border-l md:border-l-[#1D1D1D] md:border-r md:border-r-[#1D1D1D] px-2 md:px-2 py-10 md:py-0 group
+                className={`flex flex-col justify-center items-center md:border-l md:border-l-[#1D1D1D] md:border-r md:border-r-[#1D1D1D] px-2 md:px-2 py-10 md:py-0 group
   ${index === 0 ? "first:border-l-0" : ""} 
   ${index === valuesCards.length - 1 ? "last:border-r-0" : ""}
   sm:border-b sm:border-b-[#1D1D1D] xs:border-b xs:border-b-[#1D1D1D] lg:border-b-0 md:border-b-0 last:border-b-0`}
               >
                 <div
-                  className={`transition-all bg-[#1D1D1D] border-2 border-[#222222] rounded-xl ${
-                    hoveredIndex === index
-                      ? "translate-y-[-10px] duration-500"
-                      : "translate-y-0"
-                  } `}
+                  className={`transition-all bg-[#1D1D1D] border-2 border-[#222222] rounded-xl`}
                 >
                   <Image
-                    src={
-                      hoveredIndex === index ? card.imgHoverUrl : card.imgUrl
-                    }
+                    src={card.imgUrl}
                     alt={card.title}
                     width="80"
                     height="200"
                   />
                 </div>
-                <h3 className="font-semibold text-[#ffffff] text-xl mt-3 mb-2 group-hover:text-[#FED100]">
+                <h3 className="font-semibold text-[#ffffff] text-xl mt-3 mb-2">
                   {card.title}
                 </h3>
                 <p className="text-[#c6c6c6] text-center text-sm w-[239px] md:w-full">

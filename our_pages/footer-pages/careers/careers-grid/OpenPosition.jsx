@@ -9,6 +9,7 @@ import { GrBriefcase } from "react-icons/gr";
 import { useLocale, useTranslations } from "next-intl";
 import axios from "axios";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
+import { FiArrowUpLeft } from "react-icons/fi";
 
 const OpenPosition = () => {
   const locale = useLocale();
@@ -20,6 +21,7 @@ const OpenPosition = () => {
   const [selectedDepartment, setSelectedDepartment] = useState("all");
   const [selectedLocation, setSelectedLocation] = useState("all");
   const [hasFiltered, setHasFiltered] = useState(false);
+  const [hovered, setHovered] = useState(null);
 
   const departmentOptions = [
     { id: 1, name: "All", value: "all" },
@@ -169,26 +171,46 @@ const OpenPosition = () => {
         ) : filteredJobs.length > 0 ? (
           filteredJobs.map((job, index) => (
             <div
-              className="bg-[#111111] border-2 border-[#1D1D1D] rounded-[20px] p-6 sm:p-8 group mb-6"
+              className="bg-[#111111] border-2 border-[#1D1D1D] rounded-[20px] p-6 sm:p-8 mb-6 hover:border-[#333333] group transition-all duration-500 ease-in-out"
               key={index}
+              onMouseEnter={() => setHovered(job.id)}
+              onMouseLeave={() => setHovered(null)}
             >
-              <div>
+              <Link href={`/${locale}/careers/${job._id}`}>
                 <div>
                   <div className="flex justify-between w-full">
                     <p className="text-[#C6C6C6] text-xs sm:text-sm">
                       {job.department}
                     </p>
-                    <div className="text-[#ffffff] hover:text-[#FED100]">
+                    <div className="text-[#ffffff]">
                       <Link
                         href={`/${locale}/careers/${job._id}`}
-                        className="flex items-center gap-x-1 text-xs sm:text-sm"
+                        className="flex items-center gap-x-1 text-xs sm:text-sm group-hover:text-[#FED100]"
                       >
                         View Job
-                        <FiArrowUpRight className="text-[16px] font-semibold" />
+                        {locale === "ar" ||
+                        locale === "fa" ||
+                        locale === "kur" ? (
+                          <FiArrowUpLeft
+                            className={`text-base font-semibold transition-transform duration-500 ease-in-out group-hover:text-[#FED100] ${
+                              hovered === job.id
+                                ? "rotate-[-45deg] text-[#C6C6C6]"
+                                : "text-[#C6C6C6]"
+                            }`}
+                          />
+                        ) : (
+                          <FiArrowUpRight
+                            className={`text-base font-semibold transition-transform duration-500 ease-in-out group-hover:text-[#FED100] ${
+                              hovered === job.id
+                                ? "rotate-45 text-[#C6C6C6]"
+                                : "text-[#C6C6C6]"
+                            }`}
+                          />
+                        )}
                       </Link>
                     </div>
                   </div>
-                  <h2 className="text-lg sm:text-2xl font-semibold mt-2 text-[#FFFFFF] group-hover:text-[#FED100]">
+                  <h2 className="text-lg sm:text-2xl font-semibold mt-2 text-[#FFFFFF]">
                     {job.title}
                   </h2>
                 </div>
@@ -218,7 +240,7 @@ const OpenPosition = () => {
                     </span>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           ))
         ) : (

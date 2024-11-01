@@ -28,7 +28,7 @@ const Webinars = ({ active, setActive }) => {
   }, []);
 
   return (
-    <section id="academy-form" className="bg-[#000000] pb-10">
+    <section id="academy-form" className="bg-[#000000] py-10">
       <div className="container">
         <div className="grid grid-cols-12 items-center">
           <div className="col-span-12 lg:col-span-7 flex flex-col items-center lg:items-start">
@@ -67,7 +67,7 @@ const Webinars = ({ active, setActive }) => {
                   ) : (
                     <img
                       className="rounded w-[80px] sm:w-[100px] lg:w-full"
-                      src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/Aniket+academy.webp"
+                      src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/rose.webp"
                       alt=""
                     />
                   )}
@@ -76,12 +76,12 @@ const Webinars = ({ active, setActive }) => {
                     <p className="text-[#f9f9f9] text-sm mb-1 sm:mb-0">
                       {webinar.user._id === "671b8e7499ab90fe1d3c3b2f"
                         ? t("webinar_title2")
-                        : t("webinar_title2")}
+                        : t("webinar_title1")}
                     </p>
                     <p className="text-[#f9f9f9] text-xs">
                       {webinar.user._id === "671b8e7499ab90fe1d3c3b2f"
                         ? t("Webinar2_by")
-                        : t("Webinar2_by")}
+                        : t("Webinar1_by")}
                     </p>
                     <div className="text-[#c6c6c6] w-full lg:hidden mt-2">
                       <p className="text-xs mb-1">

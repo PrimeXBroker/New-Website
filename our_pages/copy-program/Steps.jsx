@@ -41,9 +41,9 @@ const Steps = () => {
                 alt={step.alt}
                 width={128}
                 height={128}
-                className="mx-auto w-full group-hover:scale-105 transition-all duration-500 ease-in-out"
+                className="mx-auto w-full"
               />
-              <p className="text-xl sm:text-2xl md:text-xl lg:text-2xl font-semibold mt-6 group-hover:text-[#fed100]">
+              <p className="text-xl sm:text-2xl md:text-xl lg:text-2xl font-semibold mt-6">
                 {step.label}
               </p>
             </div>

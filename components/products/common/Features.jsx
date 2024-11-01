@@ -1,11 +1,9 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
 import { useTranslations } from "next-intl";
 
 const Features = () => {
   const t = useTranslations("productsPageCommon.features");
-  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const features = [
     {
@@ -38,12 +36,6 @@ const Features = () => {
     },
   ];
 
-  const handleIconEnter = (index) => {
-    setHoveredIndex(index);
-  };
-  const handleIconLeave = () => {
-    setHoveredIndex(null);
-  };
   return (
     <section className="bg-[#000000] pt-12 sm:pt-20">
       <div className="container">
@@ -52,19 +44,13 @@ const Features = () => {
             {features.map((feature, index) => (
               <div
                 key={feature.id}
-                onMouseEnter={() => handleIconEnter(index)}
-                onMouseLeave={handleIconLeave}
-                className={`flex md:flex-col gap-4 sm:gap-7 md:gap-0 justify-center items-center cursor-pointer md:border-l md:border-l-[#1D1D1D] md:border-r md:border-r-[#1D1D1D] px-2 md:px-2 py-10 md:py-0 group
+                className={`flex md:flex-col gap-4 sm:gap-7 md:gap-0 justify-center items-center md:border-l md:border-l-[#1D1D1D] md:border-r md:border-r-[#1D1D1D] px-2 md:px-2 py-10 md:py-0 group
   ${index === 0 ? "first:border-l-0" : ""} 
   ${index === features.length - 1 ? "last:border-r-0" : ""}
   sm:border-b sm:border-b-[#1D1D1D] xs:border-b xs:border-b-[#1D1D1D] lg:border-b-0 md:border-b-0 last:border-b-0`}
               >
                 <div
-                  className={`transition-all bg-[#1D1D1D] border-2 border-[#222222] w-16 h-16 sm:w-20 sm:h-20 md:w-16 md:h-16 flex justify-center items-center rounded-[6.32px] ${
-                    hoveredIndex === index
-                      ? "translate-y-[-10px] duration-500"
-                      : "translate-y-0"
-                  } `}
+                  className={`bg-[#1D1D1D] border-2 border-[#222222] w-16 h-16 sm:w-20 sm:h-20 md:w-16 md:h-16 flex justify-center items-center rounded-[6.32px]`}
                 >
                   <Image
                     src={feature.imgUrl}
@@ -75,7 +61,7 @@ const Features = () => {
                   />
                 </div>
                 <div className="md:text-center">
-                  <h3 className="font-semibold text-[#ffffff] text-lg sm:text-xl md:mt-3 mb-1 md:mb-2 group-hover:text-[#FED100]">
+                  <h3 className="font-semibold text-[#ffffff] text-lg sm:text-xl md:mt-3 mb-1 md:mb-2">
                     {feature.title}
                   </h3>
                   <p className="text-[#c6c6c6] w-[239px] text-sm sm:text-base">
