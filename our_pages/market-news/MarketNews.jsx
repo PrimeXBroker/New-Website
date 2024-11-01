@@ -37,7 +37,7 @@ const MarketNews = ({ news, totalPages, lang }) => {
     <section className="bg-[#000000] pt-8 pb-12">
       <div className="container">
         <div className="grid grid-cols-12">
-          {newsList.map((blog, index) => (
+          {newsList?.map((blog, index) => (
             <div className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4 flex flex-col">
               <Link
                 href={`/${locale}/market-news-detail/${blog.slug}`}

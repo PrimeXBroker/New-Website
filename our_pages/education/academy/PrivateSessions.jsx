@@ -39,6 +39,64 @@ const PrivateSessions = ({ setActive }) => {
             </div>
             <div className="flex flex-col md:flex-row w-full lg:w-1/2 gap-4 justify-center lg:justify-end">
               <div className="cursor-pointer p-5 bg-[#1D1D1D] border-2 border-[#222222] hover:border-[#FED100] rounded-lg md:w-[214px] group w-full flex flex-row md:flex-col gap-3 md:gap-0">
+                <div className="w-full h-40 overflow-hidden rounded-lg">
+                  <Image
+                    unoptimized={true}
+                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/Aniket+academy.webp"
+                    width={250}
+                    height={200}
+                    alt="expert image"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-[#ffffff] md:text-center text-base sm:text-lg group-hover:text-[#FED100]">
+                    {t("expert_2_name")}
+                  </h3>
+                  <h4 className="text-[#c6c6c6] md:text-center text-xs sm:text-sm">
+                    {t("expert_2_position")}
+                  </h4>
+                  <Link
+                    href="#academy-form"
+                    onClick={() => setActive("Session")}
+                    className="py-2 px-4 sm:px-6 w-full shadow-xl text-xs sm:text-sm mx-auto block mt-3 md:mt-4 custom-button font-semibold"
+                  >
+                    {t("book_session_btn")}
+                  </Link>
+                </div>
+              </div>
+
+              <div className="cursor-pointer p-5 bg-[#1D1D1D] border-2 border-[#222222] hover:border-[#FED100] rounded-lg md:w-[214px] group w-full flex flex-row md:flex-col gap-3 md:gap-0">
+                <div className="flex items-center justify-center w-full h-40 overflow-hidden rounded-lg">
+                  <Image
+                    unoptimized={true}
+                    src="/images/academy_image.jpg"
+                    width="150"
+                    height="200"
+                    alt="expert image"
+                    className="h-full object-cover rounded-lg"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-[#ffffff] md:text-center text-base sm:text-lg group-hover:text-[#FED100]">
+                    {t("expert_1_name")}
+                  </h3>
+                  <h4 className="text-[#c6c6c6] md:text-center text-xs sm:text-sm">
+                    {t("expert_1_position")}
+                  </h4>
+                  <Link
+                    href="#academy-form"
+                    onClick={() => setActive("Session")}
+                    className="py-2 px-4 sm:px-6 w-full shadow-xl text-xs sm:text-sm mx-auto block mt-4 custom-button font-semibold"
+                  >
+                    {t("book_session_btn")}
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* <div className="flex flex-col md:flex-row w-full lg:w-1/2 gap-4 justify-center lg:justify-end">
+              <div className="cursor-pointer p-5 bg-[#1D1D1D] border-2 border-[#222222] hover:border-[#FED100] rounded-lg md:w-[214px] group w-full flex flex-row md:flex-col gap-3 md:gap-0">
                 <Image
                   unoptimized={true}
                   src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/Aniket+academy.webp"
@@ -66,7 +124,7 @@ const PrivateSessions = ({ setActive }) => {
               <div className="cursor-pointer p-5 bg-[#1D1D1D] border-2 border-[#222222] hover:border-[#FED100] rounded-lg md:w-[214px] group w-full flex flex-row md:flex-col gap-3 md:gap-0">
                 <Image
                   unoptimized={true}
-                  src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/rose.webp"
+                  src="/images/academy_image.jpg"
                   width="250"
                   height="200"
                   alt="expert image"
@@ -88,7 +146,7 @@ const PrivateSessions = ({ setActive }) => {
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

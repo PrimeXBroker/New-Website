@@ -51,9 +51,7 @@ function WebinarForm() {
   };
 
   const fetchUpcomingWebinars = async () => {
-    const res = await axios.get(
-      "https://primexbroker.com/api/upcoming-webinars"
-    );
+    const res = await axios.get("http://localhost:4002/api/upcoming-webinars");
     if (res.data.success) {
       setUpcoming(
         res.data.data.map((web, i) => {
@@ -114,7 +112,7 @@ function WebinarForm() {
         });
 
         const res = await axios.post(
-          "https://primexbroker.com/api/zoom/register/participant",
+          "http://localhost:4002/api/zoom/register/participant",
           values
         );
         if (res.data.success) {
