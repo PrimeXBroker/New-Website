@@ -26,8 +26,10 @@ const page = async ({ params }) => {
 
   return (
     <>
-      <Banner news={news?.slice(0, 6)} />
-      <MarketNews news={news} totalPages={totalPages} lang={lang} />
+      {/* <Banner news={news?.slice(0, 6)} /> */}
+      <div className="pt-28 bg-[#000000]">
+        <MarketNews news={news} totalPages={totalPages} lang={lang} />
+      </div>
     </>
   );
 };

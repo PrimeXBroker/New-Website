@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useOptimistic } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -9,50 +9,23 @@ import axios from "axios";
 import Link from "next/link";
 import Moment from "react-moment";
 import { Pagination } from "@nextui-org/react";
+import { getNews } from "@/actions/news";
 
-const MobileMarketNews = ({ slugEn, slugAr }) => {
-  const [news, setNews] = useState([]);
-  const [loading, setLoading] = useState(true);
+const MobileMarketNews = ({ news, totalPages, lang }) => {
+  const [loading, setLoading] = useOptimistic(false);
   const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
-  const [catDetail, setCatDetail] = useState({});
+  const [newsList, setNews] = useState(news);
   const locale = useLocale();
 
-  const fetchcat = async () => {
-    const res = await axios.get(
-      `https://primexbroker.com/api/fetch/single/category/${
-        locale === "ar" ? slugAr : slugEn
-      }`
-    );
-    if (res.status === 200) {
-      setCatDetail(res.data.data);
-    }
-  };
-
-  useEffect(() => {
-    fetchcat();
-  }, [locale, slugEn, slugAr]);
-
-  const fetchNews = async () => {
+  const handleChange = async (p) => {
     setLoading(true);
-    const res = await axios.get(
-      `https://primexbroker.com/api/fetch/published/blogs/${page}/9/${
-        locale === "ar" ? slugAr : slugEn
-      }/${locale}`
-    );
-    if (res.data.success) {
-      setNews(res.data.data);
-      setTotalPages(res.data.pagination.totalPages);
-      setLoading(false);
-    } else {
-      setLoading(false);
+    const response = await getNews(page, lang, locale);
+    if (response?.success) {
+      setNews(response?.result.data);
+      setPage(p);
     }
+    setLoading(false);
   };
-
-  useEffect(() => {
-    fetchNews();
-  }, [page, slugEn, slugAr]);
-
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-[50vh]">
@@ -64,7 +37,6 @@ const MobileMarketNews = ({ slugEn, slugAr }) => {
       </div>
     );
   }
-
   return (
     <section className="py-10 bg-[#000000]">
       <div className="container">
@@ -108,7 +80,7 @@ const MobileMarketNews = ({ slugEn, slugAr }) => {
           modules={[Autoplay]}
           className="mt-5 home-testimonial-pagination"
         >
-          {news.map((blog, index) => (
+          {newsList?.map((blog, index) => (
             <SwiperSlide key={index}>
               <div className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4 flex flex-col">
                 <Link

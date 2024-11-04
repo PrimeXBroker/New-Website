@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useOptimistic, useState } from "react";
 import Link from "next/link";
 import axios from "axios";
 import Moment from "react-moment";
@@ -9,21 +9,23 @@ import Image from "next/image";
 import { getNews } from "@/actions/news";
 
 const MarketNews = ({ news, totalPages, lang }) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useOptimistic(false);
   const [page, setPage] = useState(1);
   const [newsList, setNews] = useState(news);
   const locale = useLocale();
 
   const handleChange = async (p) => {
+    setLoading(true);
     const response = await getNews(page, lang, locale);
     if (response?.success) {
       setNews(response?.result.data);
       setPage(p);
     }
+    setLoading(false);
   };
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-[50vh]">
+      <div className="flex justify-center items-center min-h-[50vh] bg-[#000000]">
         <div className="ellipsis">
           <span className="dot text-[#FED100]">.</span>
           <span className="dot text-[#FED100]">.</span>
