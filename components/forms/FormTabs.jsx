@@ -1,13 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import ComplaintForm from "./ComplaintForm";
 import ContactForm from "./ContactForm";
 
 const FormTabs = () => {
   const [activeTab, setActiveTab] = useState("suggestion");
-  const locale = useLocale();
   const t = useTranslations("contact.contactForm");
 
   const renderForm = () => {

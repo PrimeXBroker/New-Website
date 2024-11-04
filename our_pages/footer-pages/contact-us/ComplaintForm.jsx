@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import axios from "axios";
@@ -18,13 +18,15 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
+import { useDispatch, useSelector } from "react-redux";
+import { setLocation } from "@/redux/slices/locationSlice";
 
 function ComplaintForm() {
-  const locale = useLocale();
+  const dispatch = useDispatch();
   const t = useTranslations("contactUs.suggestionForm");
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [loading, setLoading] = useState(false);
-  const [countryCode, setCountryCode] = useState("");
+  const countryCode = useSelector((state) => state.location.location);
   const [isOpenDropdown, setIsOpenDropdown] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -48,12 +50,13 @@ function ComplaintForm() {
 
   useEffect(() => {
     const fetchLocation = async () => {
+      if (countryCode) return;
       try {
-        const response = await axios.get(
-          `https://ipapi.co/json/?key=K77WYqZkYB204PVwWhbSidveUzBLTtcnvTgiE0rGtd0ww9jH6E`
-        );
-        if (response.data.country) {
-          setCountryCode(response.data.country.toUpperCase());
+        const response = await axios.get(`https://ipapi.co/country/`);
+        console.log(response, "response");
+
+        if (response.data) {
+          dispatch(setLocation(response.data.toUpperCase()));
         } else {
           console.error("Failed to fetch country code");
         }

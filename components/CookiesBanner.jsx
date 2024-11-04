@@ -2,20 +2,25 @@
 import { useState, useEffect, useContext } from "react";
 import { getCookie, setCookie } from "cookies-next";
 import { useTranslations } from "next-intl";
-import { LocationContext } from "@/context/location-context";
+// import { LocationContext } from "@/context/location-context";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 const CookieBanner = () => {
   const t = useTranslations("home.cookie");
   const [show, setShow] = useState(false);
-  const location = useContext(LocationContext);
+  // const location = useContext(LocationContext);
+  const locationState = useSelector((state) => state.location);
 
   useEffect(() => {
     const fetchLocation = async () => {
       try {
-        const location = await axios.get("https://ipapi.co/country/");
-        const country = location.data;
-        if (country === "ZA") {
+        let country;
+        if (!locationState?.location) {
+          const location = await axios.get("https://ipapi.co/country/");
+          country = location.data;
+        }
+        if (country === "ZA" || locationState?.location === "ZA") {
           window.location.href = "https://www.primexcapital.co.za";
         }
       } catch (error) {
@@ -29,8 +34,9 @@ const CookieBanner = () => {
     const cookieValue = getCookie("primex_cookie");
     setShow(cookieValue !== "true");
   }, []);
+
   const handleApiCall = () => {
-    const payload = { newUser: true, ...location };
+    // const payload = { newUser: true, ...location };
     // axios
     //   .post(
     //     "url",
@@ -42,7 +48,6 @@ const CookieBanner = () => {
     //   .catch((err) => {
     //     console.log("Error:", err);
     //   });
-    console.log(payload);
   };
   return (
     <>

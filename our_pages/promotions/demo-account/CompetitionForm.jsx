@@ -2,14 +2,12 @@
 import React, { useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useLocale, useTranslations } from "next-intl";
-import { PiSignInFill, PiUserSquareThin } from "react-icons/pi";
+import { useTranslations } from "next-intl";
+import { PiUserSquareThin } from "react-icons/pi";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-import { useContext, useState } from "react";
-import { LocationContext } from "@/context/location-context";
+import { useState } from "react";
 import axios from "axios";
-import toast from "react-hot-toast";
 import nationality from "../../public/assets/data/nationality.json";
 
 import {
@@ -21,20 +19,24 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
+import { useDispatch, useSelector } from "react-redux";
+import { setLocation } from "@/redux/slices/locationSlice";
 
 function CompetitionForm() {
   const t = useTranslations("demoAccount.participateForm");
+  const dispatch = useDispatch();
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [loading, setLoading] = useState(false);
-  const [countryCode, setCountryCode] = useState("");
-  const locale = useLocale();
+  const countryCode = useSelector((state) => state.location.location);
 
   useEffect(() => {
     const fetchLocation = async () => {
+      if (countryCode) return;
+
       try {
         const response = await axios.get("https://ipapi.co/country/");
         if (response.data) {
-          setCountryCode(response.data.toUpperCase());
+          dispatch(setLocation(response.data.toUpperCase()));
         } else {
           console.error("Failed to fetch country code");
         }

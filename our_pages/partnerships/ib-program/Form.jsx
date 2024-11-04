@@ -17,21 +17,24 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
+import { useDispatch, useSelector } from "react-redux";
+import { setLocation } from "@/redux/slices/locationSlice";
 
 function Form() {
   const t = useTranslations("ibProgram.ibForm");
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [loading, setLoading] = useState(false);
-  const [countryCode, setCountryCode] = useState("");
+  const dispatch = useDispatch();
+  const countryCode = useSelector((state) => state.location.location);
 
   useEffect(() => {
     const fetchLocation = async () => {
+      if (countryCode) return;
+
       try {
-        const response = await axios.get(
-          `https://ipapi.co/json/?key=K77WYqZkYB204PVwWhbSidveUzBLTtcnvTgiE0rGtd0ww9jH6E`
-        );
-        if (response.data.country) {
-          setCountryCode(response.data.country.toUpperCase());
+        const response = await axios.get(`https://ipapi.co/country/`);
+        if (response.data) {
+          dispatch(setLocation(response.data.toUpperCase()));
         } else {
           console.error("Failed to fetch country code");
         }

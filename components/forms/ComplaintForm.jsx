@@ -24,22 +24,30 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
+import { useDispatch, useSelector } from "react-redux";
+import { setLocation } from "@/redux/slices/locationSlice";
 
 const ComplaintForm = () => {
   const locale = useLocale();
   const t = useTranslations("contact.contactForm");
+  const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
-  const [countryCode, setCountryCode] = useState("");
+  const countryCode = useSelector((state) => state.location.location);
   const [files, setFiles] = useState([]);
   const [fileNames, setFileNames] = useState(t("no_file_select"));
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   useEffect(() => {
     const fetchLocation = async () => {
+      if (countryCode) return;
+      console.log(countryCode, "countryCode");
+
       try {
         const response = await axios.get("https://ipapi.co/country/");
+        console.log(response, "response");
+
         if (response.data) {
-          setCountryCode(response.data.toUpperCase());
+          dispatch(setLocation(response.data.toUpperCase()));
         } else {
           console.error("Failed to fetch country code");
         }
