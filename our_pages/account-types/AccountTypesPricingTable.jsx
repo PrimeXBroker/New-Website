@@ -201,63 +201,63 @@ const AccountTypesPricingTable = () => {
           </div>
         </div>
         {/* Twelfth Row - Dark Gray Background */}
-        <div className="text-[#C6C6C6] font-semibold bg-[#111111] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#000000] px-5 py-6">
           {t("demo")}
         </div>
-        <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
+        <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
           <div className="text-[#04CC00] bg-[#222222] h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
             {t("standard.demoAccount")}
           </div>
         </div>
-        <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
+        <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
           <div className="text-[#04CC00] bg-[#222222] h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
             {t("narrow.demoAccount")}
           </div>
         </div>
-        <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
+        <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
           <div className="text-[#04CC00] bg-[#222222] h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
             {t("raw.demoAccount")}
           </div>
         </div>
         {/* Thirteenth Row - Black Background */}
-        <div className="text-[#C6C6C6] font-semibold bg-[#000000] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#111111] px-5 py-6">
           {t("webinars")}
         </div>
-        <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
+        <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
           {t("standard.webinars")}
         </div>
-        <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
+        <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
           {t("narrow.webinars")}
         </div>
-        <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
+        <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
           {t("raw.webinars")}
         </div>
 
         {/* Fourteenth Row - Dark Gray Background */}
-        <div className="text-[#C6C6C6] font-semibold bg-[#111111] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#000000] px-5 py-6">
           {t("expertAdvice")}
         </div>
-        <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
+        <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
           {t("standard.expertAdvice")}
         </div>
-        <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
+        <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
           {t("narrow.expertAdvice")}
         </div>
-        <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
+        <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
           {t("raw.expertAdvice")}
         </div>
 
         {/* Fifteenth Row - Black Background */}
-        <div className="text-[#C6C6C6] font-semibold bg-[#000000] px-5 py-6">
+        <div className="text-[#C6C6C6] font-semibold bg-[#111111] px-5 py-6">
           {t("swap")}
         </div>
-        <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
+        <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
           {t("swapFreeNote")}
         </div>
-        <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
+        <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
           {t("swapFreeNote")}
         </div>
-        <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
+        <div className="text-center text-[#C6C6C6] bg-[#111111] px-5 py-6">
           {t("swapFreeNote")}
         </div>
         <div></div>
