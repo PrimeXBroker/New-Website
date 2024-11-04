@@ -3,14 +3,29 @@ import { useTranslations } from "next-intl";
 import MobileExpertAnalysis from "../../expert-analysis/MobileExpertAnalysis";
 import MobileMarketNews from "../../market-news/MobileMarketNews";
 
-function MobileBlogWrapper({ active, setActive }) {
+function MobileBlogWrapper({
+  active,
+  setActive,
+  marketNewsBlogs,
+  marketNewsPages,
+  startingGatewayBlogs,
+  startingGatewayPages,
+  marketNews,
+  startingGateway,
+}) {
   const t = useTranslations("academy.blogsTabs");
 
   const tabs = [
     {
       key: "Market News",
       title: t("tab3_title"),
-      content: <MobileMarketNews slugEn={`all`} slugAr={`news`} />,
+      content: (
+        <MobileMarketNews
+          news={marketNewsBlogs}
+          totalPages={marketNewsPages}
+          lang={marketNews}
+        />
+      ),
     },
     {
       key: "Technical Analysis",
@@ -28,8 +43,9 @@ function MobileBlogWrapper({ active, setActive }) {
       title: t("tab4_title"),
       content: (
         <MobileMarketNews
-          slugEn={`starting-gateway-en`}
-          slugAr={`starting-gateway-ar`}
+          news={startingGatewayBlogs}
+          totalPages={startingGatewayPages}
+          lang={startingGateway}
         />
       ),
     },

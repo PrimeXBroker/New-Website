@@ -26,7 +26,7 @@ const page = async ({ params }) => {
 
   return (
     <>
-      <Banner news={news?.slice(0, 6)} />
+      <Banner news={news?.slice(0, 5)} />
       <MarketNews news={news} totalPages={totalPages} lang={lang} />
     </>
   );

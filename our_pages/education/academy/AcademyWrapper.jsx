@@ -11,7 +11,14 @@ import BlogsWrapper from "./BlogsWrapper";
 import { useLocale } from "next-intl";
 import MobileBlogWrapper from "./MobileBlogWrapper";
 
-const AcademyWrapper = () => {
+const AcademyWrapper = ({
+  marketNewsBlogs,
+  marketNewsPages,
+  startingGatewayBlogs,
+  startingGatewayPages,
+  marketNews,
+  startingGateway,
+}) => {
   const t = useTranslations("academy.joinAcademy");
   const [active, setActive] = useState("Webinars");
   const [activeBlog, setActiveBlog] = useState("Market News");
@@ -46,10 +53,28 @@ const AcademyWrapper = () => {
           <Webinars active={active} setActive={setActive} />
           <PrivateSessions setActive={setActive} />
           <div className="hidden md:block">
-            <BlogsWrapper active={activeBlog} setActive={setActiveBlog} />
+            <BlogsWrapper
+              active={activeBlog}
+              setActive={setActiveBlog}
+              marketNewsBlogs={marketNewsBlogs}
+              marketNewsPages={marketNewsPages}
+              startingGatewayBlogs={startingGatewayBlogs}
+              startingGatewayPages={startingGatewayPages}
+              marketNews={marketNews}
+              startingGateway={startingGateway}
+            />
           </div>
           <div className="block md:hidden">
-            <MobileBlogWrapper active={activeBlog} setActive={setActiveBlog} />
+            <MobileBlogWrapper
+              active={activeBlog}
+              setActive={setActiveBlog}
+              marketNewsBlogs={marketNewsBlogs}
+              marketNewsPages={marketNewsPages}
+              startingGatewayBlogs={startingGatewayBlogs}
+              startingGatewayPages={startingGatewayPages}
+              marketNews={marketNews}
+              startingGateway={startingGateway}
+            />
           </div>
 
           <JoinAcademy joinAcademy={joinAcademy} setActive={setActive} />

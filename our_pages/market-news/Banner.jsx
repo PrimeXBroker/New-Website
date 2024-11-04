@@ -3,8 +3,13 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button, Card, Progress } from "@nextui-org/react";
+import Moment from "react-moment";
+import { IoMdArrowBack } from "react-icons/io";
+import { IoMdArrowForward } from "react-icons/io";
+import { useLocale } from "next-intl";
 
 const Banner = ({ news }) => {
+  const locale = useLocale();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayNews, setDisplayNews] = useState(news);
   const [newsDetails, setNewsDetails] = useState(news[0]);
@@ -65,27 +70,28 @@ const Banner = ({ news }) => {
   const progressValue = (progressCounter / news.length) * 100;
 
   return (
-    <div className="pt-20 bg-black text-white">
+    <div className="pt-16 sm:pt-28 pb-20 bg-[#000000] text-[#ffffff]">
       <div className="container mx-auto px-4 py-8">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
-          <div className="w-full h-[400px]">
+          <div className="w-full sm:h-[400px]">
             <img
               src={newsDetails?.image}
               alt="PrimeX Broker Crypto Trading"
               className="rounded-lg w-full h-full"
             />
           </div>
-
           {/* Right side - Content */}
           <div className="space-y-6">
-            <h1 className="text-3xl font-bold leading-tight">
+            <h1 className="text-2xl sm:text-3xl font-bold leading-tight pt-3 lg:pt-0">
               {newsDetails?.title}
             </h1>
-            <div className="flex items-center justify-between text-gray-400">
-              <span>12.09.2024</span>
+            <div className="flex items-center justify-between text-[#c6c6c6] py-2 lg:py-0">
+              <span>
+                <Moment date={newsDetails?.createdOn} format="DD.MM.YYYY" />
+              </span>
               <span>5 Min Read</span>
             </div>
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center gap-x-4">
               <span className="text-3xl">
                 {progressCounter}/{news.length}
               </span>
@@ -94,28 +100,40 @@ const Banner = ({ news }) => {
                 aria-label="Loading..."
                 value={progressValue}
               />
-              <div className="flex space-x-2">
-                <Button
-                  onClick={prevItem}
-                  variant="outline"
-                  size="icon"
-                  className="rounded-full"
-                >
-                  <ChevronLeft className="h-4 w-4" />
-                </Button>
-                <Button
-                  onClick={nextItem}
-                  variant="outline"
-                  size="icon"
-                  className="rounded-full"
-                >
-                  <ChevronRight className="h-4 w-4" />
-                </Button>
+              <div className="flex gap-x-2">
+                <div className="flex justify-center items-center h-10 w-10 rounded-full border-[#ffffff] border-1">
+                  <Button
+                    onClick={prevItem}
+                    variant="outline"
+                    size="icon"
+                    className="rounded-full"
+                  >
+                    {locale === "ar" ? (
+                      <IoMdArrowForward className="h-4 w-4" />
+                    ) : (
+                      <IoMdArrowBack className="h-4 w-4" />
+                    )}
+                  </Button>
+                </div>
+                <div className="flex justify-center items-center h-10 w-10 rounded-full border-[#ffffff] border-1">
+                  <Button
+                    onClick={nextItem}
+                    variant="outline"
+                    size="icon"
+                    className="rounded-full"
+                  >
+                    {locale === "ar" ? (
+                      <IoMdArrowBack className="h-4 w-4" />
+                    ) : (
+                      <IoMdArrowForward className="h-4 w-4" />
+                    )}
+                  </Button>
+                </div>
               </div>
             </div>
-            <div className="mt-8 grid grid-cols-4 gap-4">
+            <div className="mt-8 grid grid-cols-4 gap-4 pt-3 lg:pt-0">
               {displayNews
-                .filter((_, index) => index !== currentIndex) // Exclude the current news
+                .filter((_, index) => index !== currentIndex)
                 .map((blog, index) => (
                   <Card
                     key={index}

@@ -2,6 +2,8 @@ import React from "react";
 import { createTranslator } from "next-intl";
 import Script from "next/script";
 import AcademyWrapper from "@/our_pages/education/academy/AcademyWrapper";
+import { getNews } from "@/actions/news";
+import { getLocale } from "next-intl/server";
 
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../../messages/${locale}.json`))
@@ -35,7 +37,27 @@ export async function generateMetadata({ params: { locale } }) {
   };
 }
 
-const Academy = () => {
+const Academy = async () => {
+  const locale = await getLocale();
+  const marketNews = locale === "ar" ? "news" : "all";
+  const response = await getNews(1, marketNews, locale);
+  console.log(response, "response");
+  let marketNewsBlogs = [],
+    marketNewsPages = 1;
+  if (response?.success) {
+    marketNewsBlogs = response?.result.data;
+    marketNewsPages = response?.result.pagination.totalPages;
+  }
+  const startingGateway =
+    locale === "ar" ? "starting-gateway-ar" : "starting-gateway-en";
+  const res = await getNews(1, startingGateway, locale);
+  let startingGatewayBlogs = [],
+    startingGatewayPages = 1;
+  if (res?.success) {
+    startingGatewayBlogs = res?.result.data;
+    startingGatewayPages = res?.result.pagination.totalPages;
+  }
+
   return (
     <>
       <Script
@@ -69,7 +91,14 @@ const Academy = () => {
           }),
         }}
       />
-      <AcademyWrapper />
+      <AcademyWrapper
+        marketNewsBlogs={marketNewsBlogs}
+        marketNewsPages={marketNewsPages}
+        startingGatewayBlogs={startingGatewayBlogs}
+        startingGatewayPages={startingGatewayPages}
+        marketNews={marketNews}
+        startingGateway={startingGateway}
+      />
     </>
   );
 };

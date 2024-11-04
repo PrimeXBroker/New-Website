@@ -3,14 +3,29 @@ import { useTranslations } from "next-intl";
 import ExpertAnalysis from "../../expert-analysis/ExpertAnalysis";
 import MarketNews from "../../market-news/MarketNews";
 
-function BlogsWrapper({ active, setActive }) {
+function BlogsWrapper({
+  active,
+  setActive,
+  marketNewsBlogs,
+  marketNewsPages,
+  startingGatewayBlogs,
+  startingGatewayPages,
+  marketNews,
+  startingGateway,
+}) {
   const t = useTranslations("academy.blogsTabs");
 
   const tabs = [
     {
       key: "Market News",
       title: t("tab3_title"),
-      content: <MarketNews slugEn={`all`} slugAr={`news`} />,
+      content: (
+        <MarketNews
+          news={marketNewsBlogs}
+          totalPages={marketNewsPages}
+          lang={marketNews}
+        />
+      ),
     },
     {
       key: "Technical Analysis",
@@ -27,8 +42,9 @@ function BlogsWrapper({ active, setActive }) {
       title: t("tab4_title"),
       content: (
         <MarketNews
-          slugEn={`starting-gateway-en`}
-          slugAr={`starting-gateway-ar`}
+          news={startingGatewayBlogs}
+          totalPages={startingGatewayPages}
+          lang={startingGateway}
         />
       ),
     },
