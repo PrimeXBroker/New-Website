@@ -6,50 +6,21 @@ import Moment from "react-moment";
 import { useLocale } from "next-intl";
 import { Pagination } from "@nextui-org/react";
 import Image from "next/image";
+import { getNews } from "@/actions/news";
 
-const MarketNews = ({ slugEn, slugAr }) => {
-  const [news, setNews] = useState([]);
-  const [loading, setLoading] = useState(true);
+const MarketNews = ({ news, totalPages, lang }) => {
+  const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
-  const [catDetail, setCatDetail] = useState({});
+  const [newsList, setNews] = useState(news);
   const locale = useLocale();
 
-  const fetchcat = async () => {
-    const res = await axios.get(
-      `https://primexbroker.com/api/fetch/single/category/${
-        locale === "ar" ? slugAr : slugEn
-      }`
-    );
-    if (res.status === 200) {
-      setCatDetail(res.data.data);
+  const handleChange = async (p) => {
+    const response = await getNews(page, lang, locale);
+    if (response?.success) {
+      setNews(response?.result.data);
+      setPage(p);
     }
   };
-
-  useEffect(() => {
-    fetchcat();
-  }, [locale, slugEn, slugAr]);
-
-  const fetchNews = async () => {
-    setLoading(true);
-    const res = await axios.get(
-      `https://primexbroker.com/api/fetch/published/blogs/${page}/6/${
-        locale === "ar" ? slugAr : slugEn
-      }/${locale}`
-    );
-    if (res.data.success) {
-      setNews(res.data.data);
-      setTotalPages(res.data.pagination.totalPages);
-      setLoading(false);
-    } else {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchNews();
-  }, [page, slugEn, slugAr]);
-
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-[50vh]">
@@ -66,7 +37,7 @@ const MarketNews = ({ slugEn, slugAr }) => {
     <section className="bg-[#000000] pt-8 pb-12">
       <div className="container">
         <div className="grid grid-cols-12">
-          {news.map((blog, index) => (
+          {newsList?.map((blog, index) => (
             <div className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4 flex flex-col">
               <Link
                 href={`/${locale}/market-news-detail/${blog.slug}`}
@@ -109,7 +80,7 @@ const MarketNews = ({ slugEn, slugAr }) => {
             showControls
             total={totalPages}
             initialPage={page}
-            onChange={(p) => setPage(p)}
+            onChange={(p) => handleChange(p)}
             className="all-blogs-pagination"
             radius="sm"
             color="default"

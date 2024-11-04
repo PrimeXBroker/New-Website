@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "primexcapital.s3.eu-north-1.amazonaws.com",
       },
+      {
+        protocol: "https",
+        hostname: "primexbroker.s3.eu-north-1.amazonaws.com",
+      },
     ],
   },
 };
