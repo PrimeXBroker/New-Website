@@ -16,21 +16,26 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import CustomSelect from "./CustomSelect";
+import { useDispatch, useSelector } from "react-redux";
+import { setLocation } from "@/redux/slices/locationSlice";
 
 function WebinarForm() {
   const t = useTranslations("academy.academyForm");
+  const dispatch = useDispatch();
   const [upcoming, setUpcoming] = useState([]);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [loading, setLoading] = useState(false);
-  const [countryCode, setCountryCode] = useState("");
+  const countryCode = useSelector((state) => state.location.location);
   const locale = useLocale();
 
   useEffect(() => {
     const fetchLocation = async () => {
+      if (countryCode) return;
+
       try {
         const response = await axios.get("https://ipapi.co/country/");
         if (response.data) {
-          setCountryCode(response.data.toUpperCase());
+          dispatch(setLocation(response.data.toUpperCase()));
         } else {
           console.error("Failed to fetch country code");
         }

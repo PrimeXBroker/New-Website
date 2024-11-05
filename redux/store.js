@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { persistReducer } from "redux-persist";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 import { tokenReducer } from "./slices/workspaceSlice";
+import { locationReducer } from "./slices/locationSlice";
 
 const createNoopStorage = () => {
   return {
@@ -33,6 +34,7 @@ const persistedReducer = persistReducer(authPersistConfig, tokenReducer);
 
 const rootReducer = combineReducers({
   auth: persistedReducer,
+  location: locationReducer,
 });
 
 export const store = configureStore({

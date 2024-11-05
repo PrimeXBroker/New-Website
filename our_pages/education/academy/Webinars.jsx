@@ -67,7 +67,7 @@ const Webinars = ({ active, setActive }) => {
                   ) : (
                     <img
                       className="rounded w-[80px] sm:w-[100px] lg:w-full"
-                      src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/rose.webp"
+                      src="/images/academy_image.jpg"
                       alt=""
                     />
                   )}

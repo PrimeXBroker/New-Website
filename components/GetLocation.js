@@ -2,13 +2,11 @@ import axios from "axios";
 
 export const GetLocation = async () => {
   try {
-    const location = await axios.get(
-      "https://ipapi.co/json/?key=K77WYqZkYB204PVwWhbSidveUzBLTtcnvTgiE0rGtd0ww9jH6E"
-    );
-    const country = location.data.country;
+    const location = await axios.get("https://ipapi.co/country/");
+    const country = location.data;
     return country;
   } catch (error) {
-    console.error("Error fetching location", error);
+    console.error("Error fetching location", error?.response?.data);
     return null;
   }
 };
