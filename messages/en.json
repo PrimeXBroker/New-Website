@@ -636,11 +636,11 @@
   },
   "footer": {
     "clientAgreement": {
-      "title_part1": "Client",
+      "title_part1": "Client ",
       "title_part2": "Agreement",
       "description": "Here, we define the contractual relationship between our clients and us, specifying the mutual duties, terms, and conditions under which services are provided.",
-      "view_btn": "Click to View",
-      "download_btn": "Download PDF",
+      "view_btn": "View Document",
+      "download_btn": "Download Document",
       "metaData": {
         "title": "",
         "description": ""
@@ -649,15 +649,15 @@
     "privacyPolicy": {
       "title_part1": "Privacy",
       "title_part2": "Policy",
-      "view_btn": "Click to View",
-      "download_btn": "Download PDF"
+      "view_btn": "View Document",
+      "download_btn": "Download Document"
     },
     "termsCondition": {
       "title_part1": "Terms &",
       "title_part2": "Conditions",
       "description": "This section outlines the legal Terms and conditions that Apply to Your Use of Our Services, including Trading, Account Management, and More.",
-      "view_btn": "Click to View",
-      "download_btn": "Download PDF",
+      "view_btn": "View Document",
+      "download_btn": "Download Document",
       "metaData": {
         "title": "",
         "description": ""
@@ -667,8 +667,8 @@
       "title_part1": "Policy",
       "title_part2": "Statement",
       "description": "This section provides an overview of our essential policies, outlining the standards and practices that govern how we operate and deliver services to clients.",
-      "view_btn": "Click to View",
-      "download_btn": "Download PDF",
+      "view_btn": "View Document",
+      "download_btn": "Download Document",
       "metaData": {
         "title": "Policy Statement | PrimeX Capital",
         "description": ""
@@ -677,8 +677,8 @@
     "riskDisclosure": {
       "title_part1": "Risk",
       "title_part2": "Disclosure",
-      "view_btn": "Click to View",
-      "download_btn": "Download PDF",
+      "view_btn": "View Document",
+      "download_btn": "Download Document",
       "description": "In this section, we explain the inherent risks associated with trading and other financial activities, ensuring clients understand and accept these risks before engaging with our platform.",
       "metaData": {
         "title": "Risk Disclosure | PrimeX Capital",
@@ -689,8 +689,8 @@
       "title_part1": "Complaints",
       "title_part2": "Management",
       "description": "This section explains how we manage and resolve client complaints, detailing our commitment to addressing concerns efficiently and transparently.",
-      "view_btn": "Click to View",
-      "download_btn": "Download PDF",
+      "view_btn": "View Document",
+      "download_btn": "Download Document",
       "metaData": {
         "title": "Complaints Management | PrimeX Capital",
         "description": "PrimeX Capital's Complaints Management policy ensures that all client concerns are addressed promptly and fairly, prioritizing your satisfaction and trust."
@@ -700,8 +700,8 @@
       "title_part1": "Cookie",
       "title_part2": "Policy",
       "description": "We describe in this section how cookies are used on our website to collect data and optimize the user experience, along with details about managing cookie preferences.",
-      "view_btn": "Click to View",
-      "download_btn": "Download PDF",
+      "view_btn": "View Document",
+      "download_btn": "Download Document",
       "metaData": {
         "title": "Cookie Policy | PrimeX Capital",
         "description": "PrimeX Capital's cookie policy explains how we use cookies to enhance your browsing experience and improve site functionality. Your privacy is our priority."
@@ -711,8 +711,8 @@
       "title_part1": "Policy",
       "title_part2": "of AML",
       "description": "This section outlines the steps and controls we have in place to prevent money laundering and terrorist financing, ensuring compliance with all applicable legal and regulatory standards.",
-      "view_btn": "Click to View",
-      "download_btn": "Download PDF",
+      "view_btn": "View Document",
+      "download_btn": "Download Document",
       "metaData": {
         "title": "Policy of AML | PrimeX Capital",
         "description": "PrimeX Capital's AML Policy outlines our commitment to preventing money laundering and ensuring compliance with global regulations. Your security is our priority."

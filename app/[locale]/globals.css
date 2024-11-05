@@ -1119,6 +1119,21 @@
   background: #ffffff;
 }
 
+.custom-button-white {
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 300ms ease-in-out;
+}
+
+.custom-button-white:hover {
+  background: #fed100;
+}
+
 .review-swiper-navigation-buttons .reviews-swiper-button-prev {
   background: transparent !important;
   text: #111111 !important;

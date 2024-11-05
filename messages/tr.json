@@ -639,8 +639,8 @@
       "title_part1": "Müşteri",
       "title_part2": "Sözleşmesi",
       "description": "Burada, müşterilerimizle aramızdaki sözleşmesel ilişkiyi tanımlıyor, hizmetlerin sağlandığı karşılıklı görevleri, şartları ve koşulları belirtiyoruz.",
-      "view_btn": "Görüntülemek İçin Tıklayın",
-      "download_btn": "PDF İndir",
+      "view_btn": "Belgeyi Görüntüle",
+      "download_btn": "Belgeyi İndir",
       "metaData": {
         "title": "",
         "description": ""
@@ -656,8 +656,8 @@
       "title_part1": "Şartlar &",
       "title_part2": "Koşullar",
       "description": "Bu bölüm, ticaret, hesap yönetimi ve daha fazlasını içeren hizmetlerimizi kullanımınıza uygulanacak yasal şartları ve koşulları özetler.",
-      "view_btn": "Görüntülemek İçin Tıklayın",
-      "download_btn": "PDF İndir",
+      "view_btn": "Belgeyi Görüntüle",
+      "download_btn": "Belgeyi İndir",
       "metaData": {
         "title": "",
         "description": ""
@@ -667,8 +667,8 @@
       "title_part1": "Politika",
       "title_part2": "Bildirimi",
       "description": "Bu bölüm, müşterilere sunduğumuz hizmetlerin nasıl yürütüldüğünü yöneten temel standartları ve uygulamaları özetler.",
-      "view_btn": "Görüntülemek İçin Tıklayın",
-      "download_btn": "PDF İndir",
+      "view_btn": "Belgeyi Görüntüle",
+      "download_btn": "Belgeyi İndir",
       "metaData": {
         "title": "Politika Bildirimi | PrimeX Capital",
         "description": ""
@@ -677,8 +677,8 @@
     "riskDisclosure": {
       "title_part1": "Risk",
       "title_part2": "Açıklaması",
-      "view_btn": "Görüntülemek İçin Tıklayın",
-      "download_btn": "PDF İndir",
+      "view_btn": "Belgeyi Görüntüle",
+      "download_btn": "Belgeyi İndir",
       "description": "Bu bölümde, ticaret ve diğer finansal faaliyetlerle ilgili riskleri açıklıyoruz, böylece müşteriler platformumuzu kullanmadan önce bu riskleri anlar ve kabul eder.",
       "metaData": {
         "title": "Risk Açıklaması | PrimeX Capital",
@@ -689,8 +689,8 @@
       "title_part1": "Şikayet",
       "title_part2": "Yönetimi",
       "description": "Bu bölüm, müşteri şikayetlerini nasıl yönettiğimizi ve çözdüğümüzü açıklıyor, endişeleri etkin ve şeffaf bir şekilde ele alma taahhüdümüzü detaylandırıyor.",
-      "view_btn": "Görüntülemek İçin Tıklayın",
-      "download_btn": "PDF İndir",
+      "view_btn": "Belgeyi Görüntüle",
+      "download_btn": "Belgeyi İndir",
       "metaData": {
         "title": "Şikayet Yönetimi | PrimeX Capital",
         "description": "PrimeX Capital'in Şikayet Yönetimi politikası, tüm müşteri endişelerinin hızlı ve adil bir şekilde ele alındığını ve memnuniyetinizin ve güveninizin öncelikli olduğunu garanti eder."
@@ -700,8 +700,8 @@
       "title_part1": "Çerez",
       "title_part2": "Politikası",
       "description": "Bu bölümde, çerezlerin web sitemizde nasıl kullanıldığını, veri toplama ve kullanıcı deneyimini optimize etme süreçlerini, ayrıca çerez tercihlerinizi nasıl yönetebileceğinizi açıklıyoruz.",
-      "view_btn": "Görüntülemek İçin Tıklayın",
-      "download_btn": "PDF İndir",
+      "view_btn": "Belgeyi Görüntüle",
+      "download_btn": "Belgeyi İndir",
       "metaData": {
         "title": "Çerez Politikası | PrimeX Capital",
         "description": "PrimeX Capital'in çerez politikası, tarama deneyiminizi geliştirmek ve site işlevselliğini artırmak için çerezleri nasıl kullandığımızı açıklar. Gizliliğiniz bizim için önceliklidir."
@@ -711,8 +711,8 @@
       "title_part1": "AML",
       "title_part2": "Politikası",
       "description": "Bu bölümde, kara para aklama ve terörizmin finansmanını önlemek için uyguladığımız adımları ve kontrolleri, yürürlükteki tüm yasal ve düzenleyici standartlara uyumu nasıl sağladığımızı açıklıyoruz.",
-      "view_btn": "Görüntülemek İçin Tıklayın",
-      "download_btn": "PDF İndir",
+      "view_btn": "Belgeyi Görüntüle",
+      "download_btn": "Belgeyi İndir",
       "metaData": {
         "title": "AML Politikası | PrimeX Capital",
         "description": "PrimeX Capital'in AML Politikası, kara para aklamayı önleme ve küresel düzenlemelere uyumu sağlama taahhüdümüzü özetler. Güvenliğiniz bizim önceliğimizdir."

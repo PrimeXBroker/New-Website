@@ -641,8 +641,8 @@
       "title_part1": "客户",
       "title_part2": "协议",
       "description": "在这里，我们定义了我们与客户之间的合同关系，规定了提供服务时的相互职责、条款和条件。",
-      "view_btn": "点击查看",
-      "download_btn": "下载PDF",
+      "view_btn": "查看文档",
+      "download_btn": "下载文档",
       "metaData": {
         "title": "",
         "description": ""
@@ -658,8 +658,8 @@
       "title_part1": "条款和",
       "title_part2": "条件",
       "description": "本节概述了适用于您使用我们服务的法律条款和条件，包括交易、账户管理等。",
-      "view_btn": "点击查看",
-      "download_btn": "下载PDF",
+      "view_btn": "查看文档",
+      "download_btn": "下载文档",
       "metaData": {
         "title": "",
         "description": ""
@@ -669,8 +669,8 @@
       "title_part1": "政策",
       "title_part2": "声明",
       "description": "本节提供了我们重要政策的概述，概述了管理我们如何运营和向客户提供服务的标准和实践。",
-      "view_btn": "点击查看",
-      "download_btn": "下载PDF",
+      "view_btn": "查看文档",
+      "download_btn": "下载文档",
       "metaData": {
         "title": "政策声明 | PrimeX Capital",
         "description": ""
@@ -679,8 +679,8 @@
     "riskDisclosure": {
       "title_part1": "风险",
       "title_part2": "披露",
-      "view_btn": "点击查看",
-      "download_btn": "下载PDF",
+      "view_btn": "查看文档",
+      "download_btn": "下载文档",
       "description": "在本节中，我们解释了与交易和其他金融活动相关的固有风险，确保客户在使用我们的平台之前了解并接受这些风险。",
       "metaData": {
         "title": "风险披露 | PrimeX Capital",
@@ -691,8 +691,8 @@
       "title_part1": "投诉",
       "title_part2": "管理",
       "description": "本节解释了我们如何管理和解决客户投诉，详细说明了我们对高效和透明地处理问题的承诺。",
-      "view_btn": "点击查看",
-      "download_btn": "下载PDF",
+      "view_btn": "查看文档",
+      "download_btn": "下载文档",
       "metaData": {
         "title": "投诉管理 | PrimeX Capital",
         "description": "PrimeX Capital 的投诉管理政策确保所有客户问题得到及时和公正的处理，我们优先考虑您的满意度和信任。"
@@ -702,8 +702,8 @@
       "title_part1": "Cookie",
       "title_part2": "政策",
       "description": "我们在本节中描述了我们的网站如何使用Cookie来收集数据并优化用户体验，并提供了关于管理Cookie偏好的详细信息。",
-      "view_btn": "点击查看",
-      "download_btn": "下载PDF",
+      "view_btn": "查看文档",
+      "download_btn": "下载文档",
       "metaData": {
         "title": "Cookie 政策 | PrimeX Capital",
         "description": "PrimeX Capital 的 Cookie 政策解释了我们如何使用 Cookie 来增强您的浏览体验和改善网站功能。您的隐私是我们的首要任务。"
@@ -713,8 +713,8 @@
       "title_part1": "反洗钱",
       "title_part2": "政策",
       "description": "本节概述了我们为防止洗钱和恐怖主义融资而采取的步骤和控制措施，确保遵守所有适用的法律和监管标准。",
-      "view_btn": "点击查看",
-      "download_btn": "下载PDF",
+      "view_btn": "查看文档",
+      "download_btn": "下载文档",
       "metaData": {
         "title": "反洗钱政策 | PrimeX Capital",
         "description": "PrimeX Capital 的反洗钱政策概述了我们在防止洗钱和确保遵守全球法规方面的承诺。您的安全是我们的首要任务。"
