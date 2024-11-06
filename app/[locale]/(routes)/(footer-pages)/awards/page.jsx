@@ -1,4 +1,4 @@
-import AwardsPage from "@/components/footer-pages/new-awards/AwardsPage";
+import AwardsPage from "@/components/footer-pages/awards/AwardsPage";
 import { createTranslator } from "next-intl";
 import React from "react";
 

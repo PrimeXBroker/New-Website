@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
+import TrustPilot from "@/components/TrustPilot";
 
 const Banner = ({ scrollToForm }) => {
   const locale = useLocale();
@@ -22,16 +23,17 @@ const Banner = ({ scrollToForm }) => {
   return (
     <section className="bg-[#000000] md:h-[550px] pt-28 md:pt-32 pb-[32px] md:pb-[0px]">
       <div className="container">
-        <div className="grid grid-cols-12">
+        <div className="grid grid-cols-12 items-center">
           <div className="col-span-12 md:col-span-6">
-            <h1 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl xl:text-[42px] font-semibold text-[#ffffff] sm:mb-2 md:mb-0 lg:mb-1 xl:mb-3">
+            <div className="mb-5 text-center md:text-start">
+              <TrustPilot />
+            </div>
+            <h1 className="text-3xl sm:text-4xl md:text-2xl lg:text-4xl xl:text-5xl font-semibold text-[#ffffff] sm:mb-2 md:mb-0 lg:mb-1 xl:mb-3 text-center md:text-start">
               {t("title1")}
+              <span className="text-[#FED100]">{t("title2")}</span>
+              {t("title3")}
             </h1>
-            <h2 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl xl:text-[42px] font-semibold text-[#ffffff]">
-              {t("title2")} <span className="text-primary"> {t("title3")}</span>{" "}
-              {t("title4")}
-            </h2>
-            <p className="text-base sm:text-xl my-4 text-[#C6C6C6]">
+            <p className="text-base sm:text-xl my-4 text-[#C6C6C6] text-center md:text-start">
               {t("desc")}
             </p>
             <div className="my-6">
@@ -41,37 +43,6 @@ const Banner = ({ scrollToForm }) => {
               >
                 {t("contact_btn")}
               </button>
-            </div>
-            <div className="w-full h-[100px] flex flex-col justify-between">
-              <div className="flex flex-row items-center gap-2 mb-1">
-                <div>
-                  <Image
-                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/demo-account/trustpilot-logo.svg"
-                    alt="Trustpilot Logo"
-                    width={80}
-                    height={80}
-                  />
-                </div>
-              </div>
-              <div className="flex items-center mb-2">
-                <Image
-                  src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/demo-account/reviews.svg"
-                  alt="Reviews"
-                  width={180}
-                  height={180}
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xs mb-1 text-[#ffffff]">
-                  {t("review_title")}
-                </span>
-                <Image
-                  src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/demo-account/fac-testi.webp"
-                  alt="User Testimonials"
-                  width={120}
-                  height={120}
-                />
-              </div>
             </div>
           </div>
           <div className="col-span-12 md:col-span-6 flex justify-center items-center mt-8 md:mt-0">

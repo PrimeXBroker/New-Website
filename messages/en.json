@@ -932,13 +932,11 @@
       "description": "Experience Seamless Financial Growth!"
     },
     "banner": {
-      "title1": "Unlock Premium Liquidity",
-      "title2": "with ",
-      "title3": "330+ ",
-      "title4": "Assets!",
+      "title1": "Unlock ",
+      "title2": "World-Class Trading ",
+      "title3": "with PrimeX",
       "desc": "Experience Seamless Financial Growth!",
-      "contact_btn": "Contact Us",
-      "review_title": "Reviewed by 2,200 Users"
+      "contact_btn": "Contact Us"
     },
     "steps": {
       "step1_p1": "Lightning-Fast",
