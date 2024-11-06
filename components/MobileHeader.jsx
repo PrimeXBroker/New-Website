@@ -849,13 +849,6 @@ const MobileHeader = ({ locale }) => {
               </div>
             )}
           </div>
-          <LocaleLink
-            href="/about"
-            className="text-[#ffffff] text-base"
-            onClick={toggleDrawer}
-          >
-            {t("about")}
-          </LocaleLink>
           {/* <div>
             <button
               onClick={() => toggleSubMenu(6)}
