@@ -38,7 +38,7 @@ const PrivateSessions = ({ setActive }) => {
               </div>
             </div>
             <div className="flex flex-col md:flex-row w-full lg:w-1/2 gap-4 justify-center lg:justify-end">
-              <div className="cursor-pointer p-5 bg-[#1D1D1D] border-2 border-[#222222] hover:border-[#FED100] rounded-lg md:w-[214px] group w-full flex flex-row md:flex-col gap-3 md:gap-0">
+              <div className="cursor-pointer p-5 bg-[#1D1D1D] border-2 border-[#222222] rounded-lg md:w-[214px] group w-full flex flex-row md:flex-col gap-3 md:gap-0">
                 <div className="w-full h-40 overflow-hidden rounded-lg">
                   <Image
                     unoptimized={true}
@@ -50,7 +50,7 @@ const PrivateSessions = ({ setActive }) => {
                   />
                 </div>
                 <div>
-                  <h3 className="text-[#ffffff] md:text-center text-base sm:text-lg group-hover:text-[#FED100]">
+                  <h3 className="text-[#ffffff] md:text-center text-base sm:text-lg">
                     {t("expert_2_name")}
                   </h3>
                   <h4 className="text-[#c6c6c6] md:text-center text-xs sm:text-sm">
@@ -66,7 +66,7 @@ const PrivateSessions = ({ setActive }) => {
                 </div>
               </div>
 
-              <div className="cursor-pointer p-5 bg-[#1D1D1D] border-2 border-[#222222] hover:border-[#FED100] rounded-lg md:w-[214px] group w-full flex flex-row md:flex-col gap-3 md:gap-0">
+              <div className="cursor-pointer p-5 bg-[#1D1D1D] border-2 border-[#222222] rounded-lg md:w-[214px] group w-full flex flex-row md:flex-col gap-3 md:gap-0">
                 <div className="flex items-center justify-center w-full h-40 overflow-hidden rounded-lg">
                   <Image
                     unoptimized={true}
@@ -78,7 +78,7 @@ const PrivateSessions = ({ setActive }) => {
                   />
                 </div>
                 <div>
-                  <h3 className="text-[#ffffff] md:text-center text-base sm:text-lg group-hover:text-[#FED100]">
+                  <h3 className="text-[#ffffff] md:text-center text-base sm:text-lg">
                     {t("expert_1_name")}
                   </h3>
                   <h4 className="text-[#c6c6c6] md:text-center text-xs sm:text-sm">

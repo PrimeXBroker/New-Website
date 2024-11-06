@@ -5,7 +5,7 @@ import axios from "axios";
 export const getNews = async (page, lang, locale) => {
   try {
     const newsRes = await axios.get(
-      `https://primexbroker.com/api/fetch/published/blogs/${page}/9/${lang}/${locale}`
+      `https://primexbroker.com/api/fetch/published/blogs/${page}/6/${lang}/${locale}`
     );
 
     if (newsRes.data.success) {
