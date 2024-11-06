@@ -669,6 +669,30 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `https://primexcapital.com/en/why-choose-us`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/ar/why-choose-us`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/cn/why-choose-us`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/fa/why-choose-us`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/kur/why-choose-us`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://primexcapital.com/tr/why-choose-us`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://primexcapital.com/en/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e`,
       lastModified: new Date(),
     },
