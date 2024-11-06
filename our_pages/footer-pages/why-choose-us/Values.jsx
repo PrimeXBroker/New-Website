@@ -62,12 +62,6 @@ const Values = () => {
     },
   ];
 
-  const handleIconEnter = (index) => {
-    setHoveredIndex(index);
-  };
-  const handleIconLeave = () => {
-    setHoveredIndex(null);
-  };
   return (
     <section className="bg-[#000000] sm:pt-10">
       <div className="container">
@@ -76,8 +70,6 @@ const Values = () => {
             {features.map((feature, index) => (
               <div
                 key={feature.id}
-                onMouseEnter={() => handleIconEnter(index)}
-                onMouseLeave={handleIconLeave}
                 className={`flex md:flex-col gap-4 sm:gap-7 md:gap-0 justify-center items-center cursor-pointer md:border-l md:border-l-[#1D1D1D] md:border-r md:border-r-[#1D1D1D] px-2 md:px-2 py-10 md:py-0 group
 ${index === 0 ? "first:border-l-0" : ""} 
 ${index === features.length - 1 ? "last:border-r-0" : ""}
