@@ -211,12 +211,12 @@ const Footer = () => {
       imgUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/adv_cash.webp",
     },
-    {
-      id: 6,
-      name: "perfect_money",
-      imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/perfect_money.webp",
-    },
+    // {
+    //   id: 6,
+    //   name: "perfect_money",
+    //   imgUrl:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/perfect_money.webp",
+    // },
   ];
 
   return (
