@@ -76,8 +76,10 @@ const Choose = () => {
       <div className="container">
         <div className="flex flex-col mb-10">
           <h2 className="text-4xl font-semibold text-[#ffffff] text-center">
-            Why Choose{" "}
-            <span className="text-[#FED100] inline-block mt-2">Us</span>
+            {t("main_title1")}
+            <span className="text-[#FED100] inline-block mt-2">
+              {t("main_title2")}
+            </span>
           </h2>
         </div>
 
