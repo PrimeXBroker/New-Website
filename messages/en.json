@@ -2520,5 +2520,106 @@
       "step5": "Real-time market news to keep you updated for informed decisions.",
       "step6": "Quick account opening with multiple payment options."
     }
+  },
+  "fundedAccount": {
+    "metaData": {
+      "title": "Funded Account | PrimeX Capital"
+    },
+    "banner1": {
+      "title1": "Boost Your ",
+      "title2": "Trading Potential ",
+      "title3": "with Our ",
+      "title4": "Supercharged ",
+      "title5": "Funds ",
+      "description": "Showcase your trading prowess, get funded, and steer your trades your way.",
+      "btnTxt": "Get a Funded Account"
+    },
+    "greede": {
+      "main_title1": "PrimeX Capital to Launch ",
+      "main_title2": "Greede",
+      "description": "A Prop firm Specializes in Funded Accounts",
+      "title1": "Funded",
+      "title1_1": "Accounts",
+      "description1": "Greede, powered by PrimeX Capital, offers world-class funded accounts for active traders pursuing growth and opportunity.",
+      "title2": "Funded",
+      "title2_1": "Account Program",
+      "description2": "Our funded program grants accounts up to $10,000 after successful evaluation, helping you scale your trading potential.",
+      "title3": "Default",
+      "title3_1": "Payout Ratio",
+      "description3": "Enjoy a rewarding 80:20 payout ratio, with 80% of profits going directly to you and 20% to the company.",
+      "title4": "Loyal ",
+      "title4_1": "and Transparent",
+      "description4": "We're committed to your success with no hidden costs or commissions on subscriptions or challenges—just honest growth.",
+      "title5": "Maximum ",
+      "title5_1": "Earning Potential",
+      "description5": "Trade with confidence and strategic insight to boost your profits, gaining access to fast, real-time returns and accelerated growth.",
+      "title6": "Favorable ",
+      "title6_1": "Trading Conditions",
+      "description6": "Take control with flexible trading options that let you trade anywhere, anytime, using your own strategies to seize every opportunity."
+    },
+    "banner2": {
+      "title1": "PrimeX Capital ",
+      "title2": "Funded Account",
+      "description": "We Provide a Funded Account Ecosystem Where You Trade Without Risking Your Capital. We empower you to take control of your financial future. Our supercharged, funded accounts are designed for active traders looking to maximize their market potential. We strive to help you build skills that boost your trades with our funds.  "
+    },
+    "discount": {
+      "main_title1": "Unlock ",
+      "main_title2": "Limited-Time Discount ",
+      "main_title3": "Offer on Challenges!",
+      "title1": " Step 1",
+      "title1_1": "Trade1",
+      "description1": "Trade for as Low as $100 this December",
+      "title2": " Step 2",
+      "title2_1": "Perform",
+      "description2": "Deliver Your Best Performance Yet",
+      "title3": " Step 3",
+      "title3_1": "Earn",
+      "description3": "Earn a 50% Challenge Discount in January!"
+    },
+    "choose": {
+      "main_title1": "Why Choose ",
+      "main_title2": "Us",
+      "title1": "Trusted Brand",
+      "title1_1": "Worldwide",
+      "description1": "With a global presence, we are the trusted choice for traders, committed to fair and transparent practices.",
+      "title2": "Trade with",
+      "title2_1": "Match Trader",
+      "description2": "Trade confidently on our powerful Match Trader platform, offering top-notch security and efficiency.",
+      "title3": "Spreads",
+      "title3_1": "from 0.1 Pips",
+      "description3": "Enjoy minimal spreads starting from 0.1 pips, providing you with a solid competitive edge in each trade.",
+      "title4": "High",
+      "title4_1": "Leverage",
+      "description4": "Access leverage up to 1:500 on all instruments, maximizing your lot sizes with minimal stop losses.",
+      "title5": "No",
+      "title5_1": "Trading Limits",
+      "description5": "Explore diverse trading styles, from swing trading to scalping, with total freedom and flexibility.",
+      "title6": "24/7",
+      "title6_1": "Customer Support",
+      "description6": "Count on our expert support, available 24/7 to ensure a smooth and professional trading experience."
+    },
+    "offer": {
+      "title1": "Offer Ends December 31, 2024",
+      "title2": " Start Trading with just $100 and Unlock 50% Off January Challenges",
+      "btnTxt": "Get a Funded Account"
+    },
+    "faq": {
+      "title": "Frequently Asked",
+      "title1": "Questions",
+      "question_1": "What is a funded account?",
+      "answer_1": "A funded account is an account provided by a prop firm after you pass their evaluation process, which typically involves various trading challenges. Once you succeed, the firm funds your account for trading.",
+      "question_2": "What are the rules or how to get started?",
+      "answer_2": "To get a funded account, open an account and start trading. Perform well, complete challenges, and after evaluation, you'll get a funded account worth $10,000.",
+      "question_3": "What is the bonus offer?",
+      "answer_3": "It is a limited time offer. Those traders who are actively trading as low as $100 in December 2024 and perform well will be given a 50% discount on all challenges in January.",
+      "question_4": "What payment methods are available?",
+      "answer_4": "You can pay via Master, Visa, Tether, American Express, and Advcash.",
+      "question_5": "What capital can I get as a funded trader?",
+      "answer_5": "You will get $10,000 funds once you are successfully evaluated at the challenge phase.",
+      "question_6": "Is there any free trial?",
+      "answer_6": "No, there is no free account, demo account, or trial before beginning with this process.",
+      "question_7": "Are there any hidden costs or charges?",
+      "answer_7": "There are no hidden costs or charges with any subscription fee, commission, or challenge."
+    }
   }
 }

@@ -2430,5 +2430,106 @@
       "step5": "Bilgilendirilmiş kararlar için sizi güncel tutacak gerçek zamanlı piyasa haberlerine erişin.",
       "step6": "Birden fazla ödeme seçeneği ile hızlı hesap açma."
     }
+  },
+  "fundedAccount": {
+    "metaData": {
+      "title": "Fonlu Hesap | PrimeX Capital"
+    },
+    "banner1": {
+      "title1": "Ticaret Potansiyelinizi ",
+      "title2": "Artırın ",
+      "title3": "Bizimle ",
+      "title4": "Güçlendirilmiş ",
+      "title5": "Fonlarla ",
+      "description": "Ticaret yeteneklerinizi gösterin, fon kazanın ve işlemlerinizi istediğiniz gibi yönlendirin.",
+      "btnTxt": "Fonlu Hesap Alın"
+    },
+    "greede": {
+      "main_title1": "PrimeX Capital ",
+      "main_title2": "Greede'yi Başlatıyor",
+      "description": "Fonlu Hesaplarda Uzmanlaşmış Bir Prop Şirketi",
+      "title1": "Fonlu",
+      "title1_1": "Hesaplar",
+      "description1": "PrimeX Capital tarafından desteklenen Greede, büyüme ve fırsat peşindeki aktif yatırımcılar için dünya çapında fonlu hesaplar sunar.",
+      "title2": "Fonlu",
+      "title2_1": "Hesap Programı",
+      "description2": "Fonlu programımız, başarılı bir değerlendirmeden sonra 10.000 $'a kadar hesaplar sunar ve ticaret potansiyelinizi ölçeklendirmenize yardımcı olur.",
+      "title3": "Varsayılan",
+      "title3_1": "Kâr Paylaşım Oranı",
+      "description3": "Kârınızın %80'ini doğrudan size, %20'sini şirkete yönlendiren kazançlı bir 80:20 kâr paylaşım oranının keyfini çıkarın.",
+      "title4": "Sadık ",
+      "title4_1": "ve Şeffaf",
+      "description4": "Başarınıza bağlıyız, abonelikler veya zorluklar için hiçbir gizli maliyet veya komisyon olmadan sadece dürüst büyüme sunuyoruz.",
+      "title5": "Maksimum ",
+      "title5_1": "Kazanma Potansiyeli",
+      "description5": "Kârınızı artırmak ve hızlı, gerçek zamanlı kazançlara erişim sağlamak için güvenle ve stratejik içgörüyle ticaret yapın.",
+      "title6": "Elverişli ",
+      "title6_1": "Ticaret Koşulları",
+      "description6": "Kendi stratejilerinizi kullanarak her fırsatı değerlendirebilmeniz için esnek ticaret seçenekleriyle istediğiniz zaman, istediğiniz yerde ticaret yapma özgürlüğünü elde edin."
+    },
+    "banner2": {
+      "title1": "PrimeX Capital ",
+      "title2": "Fonlu Hesap",
+      "description": "Kendi sermayenizi riske atmadan ticaret yapabileceğiniz bir fonlu hesap ekosistemi sunuyoruz. Finansal geleceğiniz üzerinde kontrol sahibi olmanıza olanak tanıyoruz. Güçlendirilmiş fonlu hesaplarımız, piyasa potansiyelini en üst düzeye çıkarmak isteyen aktif yatırımcılar için tasarlanmıştır. Fonlarımızla ticaretlerinizi artıracak beceriler geliştirmenize yardımcı olmaya çalışıyoruz."
+    },
+    "discount": {
+      "main_title1": "Sınırlı Süreli ",
+      "main_title2": "İndirim ",
+      "main_title3": "Fırsatını Açın!",
+      "title1": " 1. Adım",
+      "title1_1": "Ticaret",
+      "description1": "Bu Aralık ayında sadece 100 $ ile ticaret yapın",
+      "title2": " 2. Adım",
+      "title2_1": "Performans",
+      "description2": "Şimdiye Kadarki En İyi Performansınızı Gösterin",
+      "title3": " 3. Adım",
+      "title3_1": "Kazanç",
+      "description3": "Ocak ayında %50 Zorluk İndirimi Kazanın!"
+    },
+    "choose": {
+      "main_title1": "Neden Bizi ",
+      "main_title2": "Seçmelisiniz",
+      "title1": "Dünyaca Güvenilen",
+      "title1_1": "Marka",
+      "description1": "Küresel bir varlıkla, adil ve şeffaf uygulamalara bağlı yatırımcıların güvendiği bir seçim halindeyiz.",
+      "title2": "Match Trader ile",
+      "title2_1": "Ticaret",
+      "description2": "Güçlü Match Trader platformumuzda güvenle ticaret yapın, üst düzey güvenlik ve verimlilik sunuyoruz.",
+      "title3": "0.1 Pip'ten ",
+      "title3_1": "Başlayan Spreadler",
+      "description3": "Her işlemde size sağlam bir rekabet avantajı sağlayan minimal spreadlerin keyfini çıkarın.",
+      "title4": "Yüksek",
+      "title4_1": "Kaldıraç",
+      "description4": "Tüm enstrümanlarda 1:500'e kadar kaldıraç erişimiyle lot boyutlarınızı en üst düzeye çıkarın.",
+      "title5": "Ticaret Sınırlaması ",
+      "title5_1": "Yok",
+      "description5": "Salınım ticaretinden hızlı alım satıma kadar çeşitli ticaret stillerini özgürce ve esnek bir şekilde keşfedin.",
+      "title6": "7/24",
+      "title6_1": "Müşteri Desteği",
+      "description6": "Sorunsuz ve profesyonel bir ticaret deneyimi sağlamak için uzman desteğimizden 7/24 yararlanın."
+    },
+    "offer": {
+      "title1": "Teklif 31 Aralık 2024'te Sona Eriyor",
+      "title2": " Sadece 100 $ ile Ticaret Yapmaya Başlayın ve Ocak Ayı Zorluklarında %50 İndirim Kazanın",
+      "btnTxt": "Fonlu Hesap Alın"
+    },
+    "faq": {
+      "title": "Sıkça Sorulan",
+      "title1": "Sorular",
+      "question_1": "Fonlu hesap nedir?",
+      "answer_1": "Fonlu hesap, genellikle çeşitli ticaret zorluklarını içeren bir değerlendirme sürecini geçtikten sonra bir prop şirketi tarafından sağlanan bir hesaptır. Başarılı olduğunuzda, şirket ticaret için hesabınızı fonlar.",
+      "question_2": "Kurallar nelerdir veya nasıl başlanır?",
+      "answer_2": "Fonlu bir hesap almak için bir hesap açın ve ticarete başlayın. İyi bir performans sergileyin, zorlukları tamamlayın ve değerlendirme sonrası 10.000 $ değerinde fonlu bir hesap alın.",
+      "question_3": "Bonus teklifi nedir?",
+      "answer_3": "Bu, sınırlı süreli bir tekliftir. 2024 Aralık ayında aktif olarak 100 $'a kadar ticaret yapan ve iyi performans sergileyen yatırımcılara Ocak ayında tüm zorluklarda %50 indirim verilecektir.",
+      "question_4": "Hangi ödeme yöntemleri mevcuttur?",
+      "answer_4": "Master, Visa, Tether, American Express ve Advcash ile ödeme yapabilirsiniz.",
+      "question_5": "Fonlu bir yatırımcı olarak ne kadar sermaye alabilirim?",
+      "answer_5": "Zorluk aşamasında başarıyla değerlendirildikten sonra 10.000 $ fon alacaksınız.",
+      "question_6": "Ücretsiz deneme var mı?",
+      "answer_6": "Hayır, bu sürece başlamadan önce ücretsiz hesap, demo hesap veya deneme yoktur.",
+      "question_7": "Gizli maliyetler veya ücretler var mı?",
+      "answer_7": "Hiçbir abonelik ücreti, komisyon veya zorlukla ilgili gizli maliyet veya ücret yoktur."
+    }
   }
 }
