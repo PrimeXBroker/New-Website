@@ -30,7 +30,7 @@ const Discount = () => {
             <div className="absolute inset-0 bg-[#11111180]/50 backdrop-blur-md rounded-xl z-0 mx-11"></div>
 
             <div className="relative z-10 flex flex-col md:flex-row gap-6 justify-center items-center py-11 px-8 md:px-12">
-              <div className="rounded-lg p-6 text-center md:text-left relative flex-1">
+              <div className="rounded-lg p-6 text-center md:text-start relative flex-1">
                 <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
                   <span className="h-2 w-2 bg-yellow-400 rounded-full flex-shrink-0"></span>
                   <h3 className="text-white font-medium text-base leading-none">
@@ -54,7 +54,7 @@ const Discount = () => {
 
               <div className="block md:hidden w-60 h-px bg-[#1D1D1D]"></div>
 
-              <div className="rounded-lg p-6 text-center md:text-left relative flex-1">
+              <div className="rounded-lg p-6 text-center md:text-start relative flex-1">
                 <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
                   <span className="h-2 w-2 bg-yellow-400 rounded-full flex-shrink-0"></span>
                   <h3 className="text-white font-medium text-base leading-none">
@@ -73,7 +73,7 @@ const Discount = () => {
 
               <div className="block md:hidden w-60 h-px bg-[#1D1D1D]"></div>
 
-              <div className="rounded-lg p-6 text-center md:text-left relative flex-1">
+              <div className="rounded-lg p-6 text-center md:text-start relative flex-1">
                 <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
                   <span className="h-2 w-2 bg-yellow-400 rounded-full flex-shrink-0"></span>
                   <h3 className="text-white font-medium text-base leading-none">
@@ -84,7 +84,7 @@ const Discount = () => {
                   {t("title3_1")}
                 </h1>
                 <p className="text-[#C6C6C6] text-base md:text-sm lg:text-base px-5 md:px-0">
-                  {t("description3")}{" "}
+                  {t("description3")}
                 </p>
                 <div
                   className={`absolute right-0 top-0 h-full w-px bg-[#C6C6C6] ${
