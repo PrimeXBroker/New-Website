@@ -41,7 +41,7 @@ const Banner = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-x-4">
             <a
-              href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/primex-legal/PrimeX_Capital_Complaints_Management_Policy.pdf"
+              href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/primex-footer-legal/PrimeX_Capital_Complaints_Management_Policy.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold py-4 sm:py-3 sm:w-1/2 rounded-lg flex justify-center items-center custom-button mb-5 sm:mb-0"
