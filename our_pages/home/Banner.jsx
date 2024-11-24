@@ -3,6 +3,7 @@ import Image from "next/image";
 import StatsCard from "./StatsCard";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const Banner = () => {
   const locale = useLocale();
@@ -65,15 +66,7 @@ const Banner = () => {
         </p>
         <div className="px-5">
           <button
-            onClick={() =>
-              window.open(
-                `${
-                  locale === "ar"
-                    ? "https://client.primexbroker.com/ar/register"
-                    : "https://client.primexbroker.com/en/register"
-                }`
-              )
-            }
+            onClick={() => window.open(getRegisterUrl(locale))}
             className="py-[18px] px-[48px] font-semibold mt-5 w-full md:w-auto custom-button"
           >
             {t("btnTxt")}

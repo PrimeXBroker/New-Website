@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import TrustPilot from "@/components/TrustPilot";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const Banner = () => {
   const locale = useLocale();
@@ -35,15 +36,7 @@ const Banner = () => {
               }`}
             >
               <button
-                onClick={() =>
-                  window.open(
-                    `${
-                      locale === "ar"
-                        ? "https://client.primexbroker.com/ar/register"
-                        : "https://client.primexbroker.com/en/register"
-                    }`
-                  )
-                }
+                onClick={() => window.open(getRegisterUrl(locale))}
                 className="py-[16px] px-[46px] font-semibold mt-5 w-full sm:w-[70%] md:w-auto custom-button"
               >
                 {t("btnTxt")}

@@ -7,7 +7,8 @@ import Logo from "@/public/images/logos/logo-white.webp";
 import Image from "next/image";
 import { FaBars, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { usePathname, useRouter } from "next/navigation";
-import { RxCross1 } from "react-icons/rx";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
+import { getLoginUrl } from "@/utilities/getLoginUrl";
 
 const MobileHeader = ({ locale }) => {
   const t = useTranslations("menu");
@@ -633,29 +634,13 @@ const MobileHeader = ({ locale }) => {
         </div>
         <div className="flex items-center gap-4 mt-6 mb-4 ps-[6%] pe-[5%]">
           <button
-            onClick={() =>
-              window.open(
-                `${
-                  locale === "ar"
-                    ? "https://client.primexbroker.com/ar/login"
-                    : "https://client.primexbroker.com/en/login"
-                }`
-              )
-            }
+            onClick={() => window.open(getLoginUrl(locale))}
             className="w-[30%] mb-2 py-3 font-semibold custom-button"
           >
             {t("login")}
           </button>
           <button
-            onClick={() =>
-              window.open(
-                `${
-                  locale === "ar"
-                    ? "https://client.primexbroker.com/ar/register"
-                    : "https://client.primexbroker.com/en/register"
-                }`
-              )
-            }
+            onClick={() => window.open(getRegisterUrl(locale))}
             className="w-[30%] mb-2 py-3 font-semibold custom-button"
           >
             {t("register")}

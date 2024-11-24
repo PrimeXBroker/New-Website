@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const AccountTypesPricingTable = () => {
   const locale = useLocale();
@@ -263,15 +264,7 @@ const AccountTypesPricingTable = () => {
         <div></div>
         <div className="mx-5">
           <button
-            onClick={() =>
-              window.open(
-                `${
-                  locale === "ar"
-                    ? "https://client.primexbroker.com/ar/register"
-                    : "https://client.primexbroker.com/en/register"
-                }`
-              )
-            }
+            onClick={() => window.open(getRegisterUrl(locale))}
             className="py-3 w-full block font-semibold text-center custom-button text-sm mt-3"
           >
             {t("standard.btnTxt")}
@@ -279,15 +272,7 @@ const AccountTypesPricingTable = () => {
         </div>
         <div className="mx-5">
           <button
-            onClick={() =>
-              window.open(
-                `${
-                  locale === "ar"
-                    ? "https://client.primexbroker.com/ar/register"
-                    : "https://client.primexbroker.com/en/register"
-                }`
-              )
-            }
+            onClick={() => window.open(getRegisterUrl(locale))}
             className="py-3 w-full block font-semibold text-center custom-button text-sm mt-3"
           >
             {t("narrow.btnTxt")}
@@ -295,15 +280,7 @@ const AccountTypesPricingTable = () => {
         </div>
         <div className="mx-5">
           <button
-            onClick={() =>
-              window.open(
-                `${
-                  locale === "ar"
-                    ? "https://client.primexbroker.com/ar/register"
-                    : "https://client.primexbroker.com/en/register"
-                }`
-              )
-            }
+            onClick={() => window.open(getRegisterUrl(locale))}
             className="py-3 w-full block font-semibold text-center custom-button text-sm mt-3"
           >
             {t("raw.btnTxt")}

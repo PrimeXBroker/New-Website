@@ -5,6 +5,8 @@ import NewsBody from "./NewsBody";
 import { useLocale, useTranslations } from "next-intl";
 import axios from "axios";
 import Moment from "react-moment";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
+
 const MarketNewsDetail = ({ slug }) => {
   const locale = useLocale();
   const t = useTranslations("marketNewsDetail");
@@ -86,11 +88,7 @@ const MarketNewsDetail = ({ slug }) => {
           <div className="w-full lg:w-[30%] flex justify-center md:justify-end items-center">
             <button className="custom-button py-[16px] px-[46px]">
               <a
-                href={`${
-                  locale === "ar"
-                    ? "https://client.primexbroker.com/ar/register"
-                    : "https://client.primexbroker.com/en/register"
-                }`}
+                href={getRegisterUrl(locale)}
                 target="_blank"
                 className="text-[#111111] font-semibold"
               >

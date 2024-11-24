@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const OpenLiveAccount = ({
   title_part1,
@@ -45,11 +46,8 @@ const OpenLiveAccount = ({
             }`}
           >
             <Link
-              href={`${
-                locale === "ar"
-                  ? "https://client.primexbroker.com/ar/register"
-                  : "https://client.primexbroker.com/en/register"
-              }`}
+              href={getRegisterUrl(locale)}
+              target="_blank"
               className="py-4 text-sm px-20 sm:px-4 lg:text-base lg:px-6 font-semibold custom-button"
             >
               {t("open_account_btn")}

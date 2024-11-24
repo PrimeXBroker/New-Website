@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import AccountTypesPricingTable from "./AccountTypesPricingTable";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const AccountTypes = ({ accounts }) => {
   const locale = useLocale();
@@ -51,15 +52,7 @@ const AccountTypes = ({ accounts }) => {
                   </p>
                 </div>
                 <button
-                  onClick={() =>
-                    window.open(
-                      `${
-                        locale === "ar"
-                          ? "https://client.primexbroker.com/ar/register"
-                          : "https://client.primexbroker.com/en/register"
-                      }`
-                    )
-                  }
+                  onClick={() => window.open(getRegisterUrl(locale))}
                   className="py-3 w-full block font-semibold text-center custom-button text-sm mt-3"
                 >
                   {account.btnTxt}

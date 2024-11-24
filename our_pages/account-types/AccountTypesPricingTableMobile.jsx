@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const AccountTypesPricingTableMobile = () => {
   const locale = useLocale();
@@ -212,15 +213,7 @@ const AccountTypesPricingTableMobile = () => {
           </div>
           <div className="col-span-2 mx-5">
             <button
-              onClick={() =>
-                window.open(
-                  `${
-                    locale === "ar"
-                      ? "https://client.primexbroker.com/ar/register"
-                      : "https://client.primexbroker.com/en/register"
-                  }`
-                )
-              }
+              onClick={() => window.open(getRegisterUrl(locale))}
               className="py-3 w-full block font-semibold text-center custom-button text-sm mt-3"
             >
               {tabContent[activeTab].btnTxt}

@@ -6,6 +6,8 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import LocaleLink from "./LocaleLink";
 import { usePathname, useRouter } from "next/navigation";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
+import { getLoginUrl } from "@/utilities/getLoginUrl";
 
 const DesktopHeader = ({ locale }) => {
   const t = useTranslations("menu");
@@ -490,15 +492,7 @@ const DesktopHeader = ({ locale }) => {
         </nav>
         <div className="flex gap-2">
           <button
-            onClick={() =>
-              window.open(
-                `${
-                  locale === "ar"
-                    ? "https://client.primexbroker.com/ar/login"
-                    : "https://client.primexbroker.com/en/login"
-                }`
-              )
-            }
+            onClick={() => window.open(getLoginUrl(locale))}
             className={`group ${
               locale === "ar" || locale === "fa" || locale === "kur"
                 ? "w-[140px]"
@@ -508,15 +502,7 @@ const DesktopHeader = ({ locale }) => {
             {t("login")}
           </button>
           <button
-            onClick={() =>
-              window.open(
-                `${
-                  locale === "ar"
-                    ? "https://client.primexbroker.com/ar/register"
-                    : "https://client.primexbroker.com/en/register"
-                }`
-              )
-            }
+            onClick={() => window.open(getRegisterUrl(locale))}
             className={`group ${
               locale === "ar" || locale === "fa" || locale === "kur"
                 ? "w-[140px]"

@@ -2,6 +2,7 @@
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
 import TradingOpportunitiesWidget from "@/our_pages/home/NewTradingOpportunitiesWidget";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const TradingOpportunities = () => {
   const locale = useLocale();
@@ -23,15 +24,7 @@ const TradingOpportunities = () => {
               {t("description")}
             </p>
             <button
-              onClick={() =>
-                window.open(
-                  `${
-                    locale === "ar"
-                      ? "https://client.primexbroker.com/ar/register"
-                      : "https://client.primexbroker.com/en/register"
-                  }`
-                )
-              }
+              onClick={() => window.open(getRegisterUrl(locale))}
               className="py-[18px] px-[48px] font-semibold custom-button"
             >
               {t("btnTxt")}

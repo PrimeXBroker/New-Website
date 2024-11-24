@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const SignUp = () => {
   const locale = useLocale();
@@ -20,15 +21,7 @@ const SignUp = () => {
               <li>{t("li3")}</li>
             </ul>
             <button
-              onClick={() =>
-                window.open(
-                  `${
-                    locale === "ar"
-                      ? "https://client.primexbroker.com/ar/register"
-                      : "https://client.primexbroker.com/en/register"
-                  }`
-                )
-              }
+              onClick={() => window.open(getRegisterUrl(locale))}
               className="py-3 text-[#111111] custom-button md:w-[157px]"
             >
               {t("start_btn")}

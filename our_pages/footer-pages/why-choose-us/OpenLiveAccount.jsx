@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const OpenLiveAccount = () => {
   const locale = useLocale();
@@ -20,15 +21,7 @@ const OpenLiveAccount = () => {
             {t("title")}
           </div>
           <button
-            onClick={() =>
-              window.open(
-                `${
-                  locale === "ar"
-                    ? "https://client.primexbroker.com/ar/register"
-                    : "https://client.primexbroker.com/en/register"
-                }`
-              )
-            }
+            onClick={() => window.open(getRegisterUrl(locale))}
             className="py-3 px-6 lg:py-4 lg:px-8 text-base md:text-[15px] lg:text-base font-semibold rounded-md w-full md:w-auto custom-button"
           >
             {t("btnTxt")}

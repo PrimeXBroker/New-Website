@@ -18,6 +18,7 @@ import LocaleLink from "./LocaleLink";
 import { useTranslations, useLocale } from "next-intl";
 import Logo from "@/public/images/logos/logo-white.webp";
 import { usePathname, useRouter } from "next/navigation";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const Footer = () => {
   const router = useRouter();
@@ -306,15 +307,7 @@ const Footer = () => {
           </div>
           <div className="w-full md:w-[30%] flex justify-center items-center">
             <button
-              onClick={() =>
-                window.open(
-                  `${
-                    locale === "ar"
-                      ? "https://client.primexbroker.com/ar/register"
-                      : "https://client.primexbroker.com/en/register"
-                  }`
-                )
-              }
+              onClick={() => window.open(getRegisterUrl(locale))}
               className={` custom-button px-6 py-4 ${
                 isHomePage ||
                 isIbPage ||

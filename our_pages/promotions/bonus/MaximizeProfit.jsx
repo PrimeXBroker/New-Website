@@ -2,6 +2,8 @@ import Image from "next/image";
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
+import { getLoginUrl } from "@/utilities/getLoginUrl";
 
 const MaximizeProfit = () => {
   const locale = useLocale();
@@ -44,25 +46,13 @@ const MaximizeProfit = () => {
               }`}
             >
               <button
-                onClick={() =>
-                  window.open(
-                    `${
-                      locale === "ar"
-                        ? "https://client.primexbroker.com/ar/register"
-                        : "https://client.primexbroker.com/en/register"
-                    }`
-                  )
-                }
+                onClick={() => window.open(getRegisterUrl(locale))}
                 className="py-[16px] px-[32px] sm:px-[46px] font-semibold mt-5 custom-button"
               >
                 {t("register_btn")}
               </button>
               <Link
-                href={`${
-                  locale === "ar"
-                    ? "https://client.primexbroker.com/ar/login"
-                    : "https://client.primexbroker.com/en/login"
-                }`}
+                onClick={() => window.open(getLoginUrl(locale))}
                 target="_blank"
                 className={`text-xs text-[#ffffff] font-normal block mt-2 ${
                   locale === "ar" || locale === "fa" || locale === "kur"
