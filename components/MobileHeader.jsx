@@ -156,7 +156,7 @@ const MobileHeader = ({ locale }) => {
               unoptimized={true}
               width="120"
               height="120"
-              src={Logo}
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
               alt="Logo Image"
             />
           </LocaleLink>
@@ -400,7 +400,7 @@ const MobileHeader = ({ locale }) => {
             unoptimized={true}
             width="120"
             height="120"
-            src={Logo}
+            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
             alt="Logo Image"
           />
           <div className="flex gap-5">

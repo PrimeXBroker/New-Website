@@ -104,7 +104,7 @@ const RewardsSlider = () => {
             unoptimized={true}
             width="120"
             height="120"
-            src={Logo}
+            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
             alt="Logo Image"
             className="mb-2 mx-auto"
           />

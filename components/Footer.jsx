@@ -436,7 +436,7 @@ const Footer = () => {
             <div>
               <Image
                 className="block sm:mx-0 mx-auto pb-6 sm:pb-0"
-                src={Logo}
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
                 alt="footer logo"
                 width="150"
                 height="200"
