@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
-import Link from "next/link";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const OpenLiveAccount = ({
@@ -45,13 +44,13 @@ const OpenLiveAccount = ({
                 : "text-center md:text-left"
             }`}
           >
-            <Link
+            <a
               href={getRegisterUrl(locale)}
               target="_blank"
               className="py-4 text-sm px-20 sm:px-4 lg:text-base lg:px-6 font-semibold custom-button"
             >
               {t("open_account_btn")}
-            </Link>
+            </a>
           </div>
         </div>
       </div>

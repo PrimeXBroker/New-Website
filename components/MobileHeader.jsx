@@ -24,9 +24,9 @@ const MobileHeader = ({ locale }) => {
     text:
       locale === "ar"
         ? "عربي"
-        : locale === "cn"
-        ? "中文"
-        : locale === "fa"
+        : // : locale === "cn"
+        // ? "中文"
+        locale === "fa"
         ? "فارسی"
         : locale === "kur"
         ? "کوردی"
@@ -36,9 +36,9 @@ const MobileHeader = ({ locale }) => {
     flag:
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
-        : locale === "cn"
-        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
-        : locale === "fa"
+        : // : locale === "cn"
+        // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
+        locale === "fa"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
         : locale === "kur"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
@@ -117,9 +117,9 @@ const MobileHeader = ({ locale }) => {
     const text =
       locale === "ar"
         ? "عربي"
-        : locale === "cn"
-        ? "中文"
-        : locale === "fa"
+        : // : locale === "cn"
+        // ? "中文"
+        locale === "fa"
         ? "فارسی"
         : locale === "kur"
         ? "کوردی"
@@ -129,9 +129,9 @@ const MobileHeader = ({ locale }) => {
     const flag =
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
-        : locale === "cn"
-        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
-        : locale === "fa"
+        : // : locale === "cn"
+        // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
+        locale === "fa"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
         : locale === "kur"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
@@ -253,7 +253,7 @@ const MobileHeader = ({ locale }) => {
                         <span className="ml-[5px]">عربي</span>
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         href={
                           currentLocale === "cn"
@@ -278,7 +278,7 @@ const MobileHeader = ({ locale }) => {
                         />
                         <span className="ml-[5px]">中文</span>
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link
                         href={
@@ -494,7 +494,7 @@ const MobileHeader = ({ locale }) => {
                           <span className="ml-[5px]">عربي</span>
                         </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link
                           href={
                             currentLocale === "cn"
@@ -519,7 +519,7 @@ const MobileHeader = ({ locale }) => {
                           />
                           <span className="ml-[5px]">中文</span>
                         </Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link
                           href={

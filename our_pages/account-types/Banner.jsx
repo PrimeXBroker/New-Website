@@ -32,8 +32,8 @@ const Banner = () => {
               >
                 {t("btnTxt")}
               </button>
-              <Link
-                onClick={() => window.open(getLoginUrl(locale))}
+              <a
+                href={getLoginUrl(locale)}
                 target="_blank"
                 className={`text-xs text-[#ffffff] font-normal block mt-2 ${
                   locale === "ar" || locale === "fa" || locale === "kur"
@@ -43,7 +43,7 @@ const Banner = () => {
               >
                 {t("registered_already")}{" "}
                 <span className="italic font-semibold">{t("login_here")}</span>
-              </Link>
+              </a>
             </div>
           </div>
           <div className="col-span-12 md:col-span-7">
