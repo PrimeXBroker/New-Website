@@ -435,11 +435,12 @@ const Footer = () => {
           <div className="flex flex-col gap-5 lg:flex-row lg:gap-0 justify-between items-center py-12 flex-wrap">
             <div>
               <Image
-                className="block sm:mx-0 mx-auto pb-6 sm:pb-0"
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
-                alt="footer logo"
+                unoptimized={true}
                 width="150"
                 height="200"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
+                alt="footer logo"
+                className="block sm:mx-0 mx-auto pb-6 sm:pb-0"
               />
             </div>
             <p className="text-white text-center text-sm text-[12px]">
