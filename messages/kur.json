@@ -2420,5 +2420,106 @@
       "step5": "هەواڵی ڕاستەوخۆ بەرزبوونی بازار بۆ کەسی جیهان، پارە بەرزبوونی بەرپرسیارییە.",
       "step6": "کردنی حسابی خێرا بە جیاوازی ڕووداوەکان."
     }
+  },
+  "fundedAccount": {
+    "metaData": {
+      "title": "Hesabê Fandî | PrimeX Capital"
+    },
+    "banner1": {
+      "title1": "Zêdekirina ",
+      "title2": "Şansekirina We ",
+      "title3": "bi ",
+      "title4": "Serastkirinên ",
+      "title5": "Me ",
+      "description": "Kabiliyeta firotanê xwe nîşan bide, hêvî bidin u firotina xwe bi rêya xwe birêvebibin.",
+      "btnTxt": "Hesabê Fandî Bistîne"
+    },
+    "greede": {
+      "main_title1": "PrimeX Capital Dîtina ",
+      "main_title2": "Greede Dike",
+      "description": "Kompa Taybetbûna Hesaban Fandî",
+      "title1": "Hesaban",
+      "title1_1": "Fandî",
+      "description1": "Greede, bi hêza PrimeX Capital ve, hesaban fandî ya cîhanî bidest nîşanên firotanê pêşketiyê.",
+      "title2": "Bernameya Hesaban",
+      "title2_1": "Fandî",
+      "description2": "Bernameya me hewceyên fandî te dide hêjmarên xwe li 10,000 dolaran mezin dike.",
+      "title3": "Rêjeya",
+      "title3_1": "Bihayê Default",
+      "description3": "Rêzdayîna xweş 80:20 bixweş dike, bi 80% feyda li te re û 20% li kampaniya te.",
+      "title4": "Hevî û",
+      "title4_1": "Berbeşêrafî",
+      "description4": "Serketina te bi vêce xedmet dikin û hîç dirav u xercên veşartî yên te nînin.",
+      "title5": "Bihayê Mezin  ",
+      "title5_1": "ya Zarokan",
+      "description5": "Bi bedewatên niha bihayê bidomîne û qadirîzê vekirina şansên kuştî bikin.",
+      "title6": "Mercên Bihayê",
+      "title6_1": "ya Firotanê",
+      "description6": "Dastxustîyê bikar bîne bi mercên bihayê yên daîminî yên cihê niha, her dem u her derî."
+    },
+    "banner2": {
+      "title1": "PrimeX Capital ",
+      "title2": "Hesaban Fandî",
+      "description": "Em Avakirin Avakirin Hesaban ku berpişberî diravên xwe ne hatî niha bo nivîsandin u lêker."
+    },
+    "discount": {
+      "main_title1": "Vekirina",
+      "main_title2": "Kifşek Berbixwedana Serbest e",
+      "main_title3": "Tayî",
+      "title1": " Guhertina",
+      "title1_1": "Bixwest",
+      "description1": "Heyama Mezin û Serkêftin xwe tune.",
+      "title2": " Ziyan dike",
+      "title2_1": "Teşwîq",
+      "description2": "Performansa Te li sê tiştî tayîn dike",
+      "title3": " Ziyan Û Bibîne ",
+      "title3_1": "Wêjeyên Tija jî Bo",
+      "description3": "Mezin bibîne jî taybetî"
+    },
+    "choose": {
+      "main_title1": "Çima Em",
+      "main_title2": "Hilbijêre",
+      "title1": "Branda",
+      "title1_1": "Ewlehiyê",
+      "description1": "Em bi dergehên cîhanî hêza ewlehiyê û aşkar a firotanê dide.",
+      "title2": "Firotina bi",
+      "title2_1": "Match Trader",
+      "description2": "Bi serî bi platforma hêza Match Traderê xweş bixerîne.",
+      "title3": "Spredên",
+      "title3_1": "Ji 0.1 Pips",
+      "description3": "Ji pênasên nizm bihayê derbas dike bi dikûjiyek herî baş.",
+      "title4": "Bazdahiya",
+      "title4_1": "Mezin",
+      "description4": "Bazdahiya heftayî 1:500 ser hemû alatên firotanê bide zêdekirina lotan.",
+      "title5": "Hêman Firotanî",
+      "title5_1": "Têwe Çerxkirin",
+      "description5": "Stilên firotanî yên cûda lê bîne bi çerxkêşiya bê pîvaz.",
+      "title6": "Piştgiriyên",
+      "title6_1": "24/7",
+      "description6": "Ji sercavanek pisîkera mînakî piştgiriyên me hewce tune."
+    },
+    "offer": {
+      "title1": "Pêşkêş Dîsa Dawiya Rojekê 31, 2024",
+      "title2": " Bi Tenê $100 Dest pê Bike û Dîsa Dawî 50% Bibîne.",
+      "btnTxt": "Hesabê Fandî Bistîne"
+    },
+    "faq": {
+      "title": "Pir Pirsên",
+      "title1": "Pirsên Serlêdanê",
+      "question_1": "Hesabê fandî çi ye?",
+      "answer_1": "Hesabê fandî hesabek ye ku alîkarî bi şirketa prop a te dike piştî ku têxildana xweş bike. Dema ku bi serkeftin jiyan bike, şîrket hesabê te fand bike.",
+      "question_2": "Rêzên hesaban fandî çi ne an çawa dest pê bike?",
+      "answer_2": "Ji bo bidestxistina hesabek fandî, hesabek vekirî bike, firotî bike, û piştî ew çalakanî xweş bike û bêhan bike bê ser hesaban fond bike $10,000.",
+      "question_3": "Pêşkêşa taybet çi ye?",
+      "answer_3": "Ev yek pêşkêşa demkî ye. Ew firotanên ku bi $100 di Tîrmehê 2024 de dest pê bikin û xebitînê xweş nîşan bidin, 50% dîsak bikar tê xelef bikar bike.",
+      "question_4": "Çi rêbirên diravînê hene?",
+      "answer_4": "Hûn dikarin bi Visa, MasterCard, Tether, American Express û Advcash dirav bidin.",
+      "question_5": "Ev fandkirin çiqas firotî û kapital heye?",
+      "answer_5": "Dema ku hûn sax bike, hûn bi $10,000 kapital fand dikin piştî şertên bixwest bike.",
+      "question_6": "Ma ev hêmanek ji bo xweş bûyînê tune ye?",
+      "answer_6": "Na, ev tune. Ne hesabek belaş an demo tune berî dest pê bike.",
+      "question_7": "Ma xercên veşartî hene?",
+      "answer_7": "Na, hîç xerc an xelkanek veşartî tune bi peymana kuştî, lîsans an hewce tune."
+    }
   }
 }
