@@ -4,7 +4,7 @@ import { useTranslations, useLocale } from "next-intl";
 
 const HighProvidersWidget = () => {
   const locale = useLocale();
-  const t = useTranslations("copyProgram");
+  const t = useTranslations("copyProgram.hightProvidersWidget");
   const iframeRef = useRef(null);
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
 
@@ -44,8 +44,8 @@ const HighProvidersWidget = () => {
     <section className="py-28 bg-[#000000]">
       <div className="container">
         <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff] text-center mb-10">
-          <span className="text-[#FED100]">High Provider's</span> Investors
-          Number
+          {t("title1")}
+          <span className="text-[#FED100]">{t("title2")}</span>
         </h2>
         <div
           className="rounded-2xl p-3"

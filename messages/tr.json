@@ -2290,6 +2290,22 @@
       "feature3": "Yüzdeye veya Sabit Lot Üzerinden Kopyalayın",
       "feature4": "Yalnızca 100$'dan Kolayca Yatırıma Başlayın",
       "feature5": "Prime Trader Hesap İstatistiklerine Ayrıntılı Erişim"
+    },
+    "bestPerformanceWidget": {
+      "title1": "Tüm Zamanların ",
+      "title2": "En İyi Performansı"
+    },
+    "bestMonthWidget": {
+      "title1": "Bu Ayın ",
+      "title2": "En İyi Performansı"
+    },
+    "lowestDDWidget": {
+      "title1": "En Düşük ",
+      "title2": "Düşüş ve Risk"
+    },
+    "hightProvidersWidget": {
+      "title1": "En Yüksek Sıralamada ",
+      "title2": "Yatırımcı Sayısına Göre"
     }
   },
   "contactUs": {

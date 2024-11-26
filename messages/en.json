@@ -2294,19 +2294,19 @@
       "feature5": "Access Detailed Prime Trader Account Stats"
     },
     "bestPerformanceWidget": {
-      "title1": "Best ",
-      "title2": "Performance"
+      "title1": "Best By ",
+      "title2": "Performance All Time"
     },
     "bestMonthWidget": {
-      "title1": "Best ",
-      "title2": "this Month"
+      "title1": "Best By ",
+      "title2": "Performance This Month"
     },
     "lowestDDWidget": {
-      "title1": "Lowest ",
-      "title2": "DD"
+      "title1": "Lowest By ",
+      "title2": "Drawdown and Risk"
     },
     "hightProvidersWidget": {
-      "title1": "High Provider's ",
+      "title1": "Top-Ranked by ",
       "title2": "Investors Number"
     }
   },

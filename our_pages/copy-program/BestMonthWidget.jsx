@@ -4,7 +4,7 @@ import { useTranslations, useLocale } from "next-intl";
 
 const BestMonthWidget = () => {
   const locale = useLocale();
-  const t = useTranslations("copyProgram");
+  const t = useTranslations("copyProgram.bestMonthWidget");
   const iframeRef = useRef(null);
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
 
@@ -44,7 +44,8 @@ const BestMonthWidget = () => {
     <section className="py-28 bg-[#000000]">
       <div className="container">
         <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff] text-center mb-10">
-          Best <span className="text-[#FED100]">this Month</span>
+          {t("title1")}
+          <span className="text-[#FED100]">{t("title2")}</span>
         </h2>
         <div
           className="rounded-2xl p-3"
