@@ -47,7 +47,7 @@ const BestPerformanceWidget = () => {
           Best <span className="text-[#FED100]">Performance</span>
         </h2>
         <div
-          className="rounded-2xl px-12 py-12"
+          className="rounded-2xl p-9"
           style={{
             backgroundImage:
               "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/widget-gradient.webp')",
