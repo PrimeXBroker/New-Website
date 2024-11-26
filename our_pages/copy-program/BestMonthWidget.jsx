@@ -50,7 +50,7 @@ const BestMonthWidget = () => {
           className="rounded-2xl px-12 py-12"
           style={{
             backgroundImage:
-              "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/widget-gradient.webp'",
+              "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/widget-gradient.webp')",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "cover",
