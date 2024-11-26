@@ -1,7 +1,10 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import { useTranslations, useLocale } from "next-intl";
 
 const HighProvidersWidget = () => {
+  const locale = useLocale();
+  const t = useTranslations("copyProgram");
   const iframeRef = useRef(null);
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
 
@@ -44,7 +47,16 @@ const HighProvidersWidget = () => {
           <span className="text-[#FED100]">High Provider's</span> Investors
           Number
         </h2>
-        <div className="bg-[#111111] border-2 border-[#1D1D1D] rounded-2xl px-12 py-12">
+        <div
+          className="rounded-2xl px-12 py-12"
+          style={{
+            backgroundImage:
+              "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/widget-gradient.webp'",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        >
           <iframe
             ref={iframeRef}
             id="widgetFrameHighProvider"
@@ -53,7 +65,7 @@ const HighProvidersWidget = () => {
               visibility: "visible",
               borderRadius: "16px",
             }}
-            src="https://socialratings.primexcapital.com/widgets/ratings?widgetKey=high_investors_number&theme=dark&lang=en"
+            src={`https://socialratings.primexcapital.com/widgets/ratings?widgetKey=high_investors_number&theme=dark&lang=${locale}`}
             scrolling="no"
             frameBorder="0"
             onLoad={handleIframeLoad}

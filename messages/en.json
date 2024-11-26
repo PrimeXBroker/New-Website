@@ -2292,6 +2292,22 @@
       "feature3": "Copy by Percentage or Fixed Lot",
       "feature4": "Start Investing Easily From $100",
       "feature5": "Access Detailed Prime Trader Account Stats"
+    },
+    "bestPerformanceWidget": {
+      "title1": "Best ",
+      "title2": "Performance"
+    },
+    "bestMonthWidget": {
+      "title1": "Best ",
+      "title2": "this Month"
+    },
+    "lowestDDWidget": {
+      "title1": "Lowest ",
+      "title2": "DD"
+    },
+    "hightProvidersWidget": {
+      "title1": "High Provider's ",
+      "title2": "Investors Number"
     }
   },
   "careersPage": {

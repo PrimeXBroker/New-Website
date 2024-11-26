@@ -1,7 +1,10 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import { useTranslations, useLocale } from "next-intl";
 
 const LowestDDWidget = () => {
+  const locale = useLocale();
+  const t = useTranslations("copyProgram");
   const iframeRef = useRef(null);
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
 
@@ -43,7 +46,16 @@ const LowestDDWidget = () => {
         <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff] text-center mb-10">
           Lowest <span className="text-[#FED100]">DD</span>
         </h2>
-        <div className="bg-[#111111] border-2 border-[#1D1D1D] rounded-2xl px-12 py-12">
+        <div
+          className="rounded-2xl px-12 py-12"
+          style={{
+            backgroundImage:
+              "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/widget-gradient.webp'",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        >
           <iframe
             ref={iframeRef}
             id="widgetFrameLowestDD"
@@ -52,7 +64,7 @@ const LowestDDWidget = () => {
               visibility: "visible",
               borderRadius: "16px",
             }}
-            src="https://socialratings.primexcapital.com/widgets/ratings?widgetKey=lowest_DD&theme=dark&lang=en"
+            src={`https://socialratings.primexcapital.com/widgets/ratings?widgetKey=lowest_DD&theme=dark&lang=${locale}`}
             scrolling="no"
             frameBorder="0"
             onLoad={handleIframeLoad}

@@ -2283,6 +2283,22 @@
       "feature3": "按百分比或固定手数复制",
       "feature4": "轻松从 $100 开始投资",
       "feature5": "访问详细的 Prime 交易员账户统计数据"
+    },
+    "bestPerformanceWidget": {
+      "title1": "最佳",
+      "title2": "表现"
+    },
+    "bestMonthWidget": {
+      "title1": "本月",
+      "title2": "最佳"
+    },
+    "lowestDDWidget": {
+      "title1": "最低",
+      "title2": "回撤"
+    },
+    "hightProvidersWidget": {
+      "title1": "高提供者",
+      "title2": "投资者数量"
     }
   },
   "contactUs": {
