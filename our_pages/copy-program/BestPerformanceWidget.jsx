@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 
-const CopyProgramWidget = () => {
+const BestPerformanceWidget = () => {
   const iframeRef = useRef(null);
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
 
@@ -38,20 +38,29 @@ const CopyProgramWidget = () => {
   };
 
   return (
-    <section className="pb-28 bg-[#000000]">
+    <section className="bg-[#000000]">
       <div className="container">
-        <iframe
-          ref={iframeRef}
-          id="widgetFrame"
-          style={{ minWidth: "100%", visibility: "visible" }}
-          src="https://socialratings.primexcapital.com/widgets/ratings?widgetKey=social_platform_ratings&theme=dark&lang=en"
-          scrolling="no"
-          frameBorder="0"
-          onLoad={handleIframeLoad}
-        ></iframe>
+        <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff] text-center mb-10">
+          Best <span className="text-[#FED100]">Performance</span>
+        </h2>
+        <div className="bg-[#111111] border-2 border-[#1D1D1D] rounded-2xl px-12 py-12">
+          <iframe
+            ref={iframeRef}
+            id="widgetFrameBestPerformance"
+            style={{
+              minWidth: "100%",
+              visibility: "visible",
+              borderRadius: "16px",
+            }}
+            src="https://socialratings.primexcapital.com/widgets/ratings?widgetKey=Best_performance&theme=dark&lang=en"
+            scrolling="no"
+            frameBorder="0"
+            onLoad={handleIframeLoad}
+          ></iframe>
+        </div>
       </div>
     </section>
   );
 };
 
-export default CopyProgramWidget;
+export default BestPerformanceWidget;
