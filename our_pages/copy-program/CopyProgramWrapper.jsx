@@ -10,6 +10,7 @@ import CopyProgramFormWrapper from "./CopyProgramFormWrapper";
 import PrimeTrade from "./PrimeTrade";
 import Features from "./Features";
 import FeaturesMobile from "./FeaturesMobile";
+import CopyProgramWidget from "./CopyProgramWidget";
 
 const CopyProgramWrapper = () => {
   const locale = useLocale();
@@ -73,6 +74,7 @@ const CopyProgramWrapper = () => {
         <FeaturesMobile />
       </div>
       <AboutCopyProgram />
+      <CopyProgramWidget />
       <Benefits />
       <Steps />
       <PrimeTrade />
