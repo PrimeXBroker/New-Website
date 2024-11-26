@@ -47,7 +47,7 @@ const BestMonthWidget = () => {
           Best <span className="text-[#FED100]">this Month</span>
         </h2>
         <div
-          className="rounded-2xl p-9"
+          className="rounded-2xl p-3"
           style={{
             backgroundImage:
               "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/widget-gradient.webp')",
