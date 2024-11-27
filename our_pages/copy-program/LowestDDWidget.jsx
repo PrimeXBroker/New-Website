@@ -2,24 +2,22 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 
-const LowestDDWidget = () => {
+const LowestDDWidget = ({ iframeLowestDDRef }) => {
   const locale = useLocale();
   const t = useTranslations("copyProgram.lowestDDWidget");
-  const iframeRef = useRef(null);
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src =
-      "https://socialratings.primexcapital.com/widgets/assets/js/iframeResizer.js";
+    script.src = "";
     script.async = true;
 
     script.onload = () => {
       setIsScriptLoaded(true);
-      if (iframeRef.current) {
+      if (iframeLowestDDRef.current) {
         window.iFrameResize(
           { heightCalculationMethod: "max", checkOrigin: false },
-          iframeRef.current
+          iframeLowestDDRef.current
         );
       }
     };
@@ -32,10 +30,10 @@ const LowestDDWidget = () => {
   }, []);
 
   const handleIframeLoad = () => {
-    if (isScriptLoaded && iframeRef.current) {
+    if (isScriptLoaded && iframeLowestDDRef.current) {
       window.iFrameResize(
         { heightCalculationMethod: "max", checkOrigin: false },
-        iframeRef.current
+        iframeLowestDDRef.current
       );
     }
   };
@@ -57,7 +55,7 @@ const LowestDDWidget = () => {
           }}
         >
           <iframe
-            ref={iframeRef}
+            ref={iframeLowestDDRef}
             id="widgetFrameLowestDD"
             style={{
               minWidth: "100%",

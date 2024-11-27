@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Banner from "./Banner";
 import AboutCopyProgram from "./AboutCopyProgram";
 import Benefits from "./Benefits";
@@ -18,6 +18,10 @@ import HighProvidersWidget from "./HighProvidersWidget";
 const CopyProgramWrapper = () => {
   const locale = useLocale();
   const t = useTranslations("copyProgram");
+  const iframeBestPerformanceRef = useRef(null);
+  const iframeBestMonthRef = useRef(null);
+  const iframeLowestDDRef = useRef(null);
+  const iframeHigherProviderRef = useRef(null);
 
   const faqs = [
     // {
@@ -77,10 +81,12 @@ const CopyProgramWrapper = () => {
         <FeaturesMobile />
       </div>
       <AboutCopyProgram />
-      <BestPerformanceWidget />
-      <BestMonthWidget />
-      <LowestDDWidget />
-      <HighProvidersWidget />
+      <BestPerformanceWidget
+        iframeBestPerformanceRef={iframeBestPerformanceRef}
+      />
+      <BestMonthWidget iframeBestMonthRef={iframeBestMonthRef} />
+      <LowestDDWidget iframeLowestDDRef={iframeLowestDDRef} />
+      <HighProvidersWidget iframeHigherProviderRef={iframeHigherProviderRef} />
       <Benefits />
       <Steps />
       <PrimeTrade />

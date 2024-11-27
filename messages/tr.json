@@ -2178,22 +2178,22 @@
   },
   "copyProgram": {
     "metaData": {
-      "title": "En İyi Copy Trading Platformu | En İyi Tüccarları Kopyalayın | PrimeX Capital",
-      "description": "Uzman tüccarları kopyalayın ve yatırımlarınızı PrimeX Capital ile büyütün. Üst düzey platformumuz kârlı ticareti basit hale getiriyor. Bugün kazanan tüccarları kopyalamaya başlayın!"
+      "title": "En İyi Sosyal Ticaret Platformu | En İyi Sosyal Tüccarlar | PrimeX Capital",
+      "description": "Uzman sosyal tüccarları takip edin ve yatırımlarınızı PrimeX Capital ile büyütün. Üst düzey platformumuz kârlı ticareti basit hale getiriyor. Bugün kazanan tüccarları kopyalamaya başlayın!"
     },
     "hero": {
       "title_part1": "Ticaret Yolculuğunuzu",
       "title_part2": "Canlandırın",
-      "title_part3": "Copy ",
-      "title_part4": "Programımızla",
-      "title_part5": "",
+      "title_part3": "Sosyal ",
+      "title_part4": "Ticaret ",
+      "title_part5": "Platformumuzla",
       "description": "En İyi Tüccarlarla Bağlantı Kurun, Kopyalayın ve Kolayca Ticaret Yapın!",
-      "btnTxt": "Hemen Kayıt Ol"
+      "btnTxt": "Hemen Kaydol"
     },
     "about": {
       "title_part1": "PrimeX Capital ",
-      "title_part2": "Copy Programı",
-      "description": "PrimeX Capital'de ticaret herkes için basit ve erişilebilir hale getirilmiştir. Copy Programımız, üst düzey yatırımcıların işlemlerini gerçek zamanlı olarak yansıtmanızı sağlar, uzmanlığa gerek duymadan kâr elde edebilirsiniz. İster ticarete yeni başlıyor olun, ister portföyünüzü genişletiyor olun, uzman hamlelerini takip etmek ve yatırımlarınızı büyütmek kolaydır."
+      "title_part2": "Sosyal Ticaret",
+      "description": "PrimeX Capital'de ticaret herkes için basit ve erişilebilir hale getirilmiştir. Sosyal Ticaret platformumuz, üst düzey yatırımcıların işlemlerini gerçek zamanlı olarak yansıtmanızı sağlar, uzmanlığa gerek duymadan kâr elde edebilirsiniz. İster ticarete yeni başlıyor olun, ister portföyünüzü genişletiyor olun, uzman hamlelerini takip etmek ve yatırımlarınızı büyütmek kolaydır."
     },
     "benefits": {
       "main_title1": "Deneyimli Tüccarlarımızı Kopyalamanın ",
@@ -2203,7 +2203,7 @@
       "description1": "Üst düzey yatırımcıların işlemlerini gerçek zamanlı olarak kopyalayın.",
       "title2_part1": "Portföyünüzü ",
       "title2_part2": "Çeşitlendirin",
-      "description2": "Birden fazla uzmanın işlemlerini kopyalayın ve portföyünüzü çeşitlendirin.",
+      "description2": "Birden fazla ustanın işlemlerini kopyalayın ve portföyünüzü çeşitlendirin.",
       "title3_part1": "Otomatikleştirin ",
       "title3_part2": "ve Zaman Kazanın",
       "description3": "Platformumuzla otomatikleştirin ve ekran başında daha az zaman geçirin.",
@@ -2217,30 +2217,30 @@
     "steps": {
       "title_part1": "Başlamak İçin ",
       "title_part2": "3 Kolay Adım",
-      "step1": "Copy Programına Kaydolun",
+      "step1": "Sosyal Ticaret için Kaydolun",
       "step2": "Ustanızı Seçin",
-      "step3": "Kopyalayın ve Şimdi Ticaret Yapın"
+      "step3": "Kopyalayın ve Hemen Ticaret Yapın"
     },
     "faq": {
       "title": "Sıkça Sorulan ",
       "title1": "Sorular",
       "question_1": "Copy Trading Nedir?",
-      "answer_1": "Copy trading, deneyimli tüccarları takip etmenizi ve stratejilerini kopyalamanızı sağlar, bu da yeni başlayanlar için kolaylık sunar. Zaman kazandırır ve portföyünüzü çeşitlendirmeye yardımcı olurken, küresel piyasaları keşfetme fırsatı sunar. Ancak, ödüllendirici olabilse de her zaman risk vardır, bu nedenle yatırımınızı korumak için etkili risk yönetimi kullanın.",
-      "question_2": "Copy Programına Nasıl Katılabilirim?",
-      "answer_2": "Copy programımıza katılmak için önce kayıt olmanız ve formu doldurmanız gerekir. Bilgileriniz incelendikten ve onaylandıktan sonra copy programımıza katılabilirsiniz.",
-      "question_3": "Ustamı Nasıl Takip Edebilirim?",
-      "answer_3": "Öncelikle hesabınızı açmanız ve sunulan ustalar listesinden seçim yapmanız gerekmektedir. Ustanızı seçtikten sonra işlemlerini kopyalayabilirsiniz.",
-      "question_4": "Bir Usta Seçmenin En İyi Yolu Nedir?",
-      "answer_4": "Usta seçerken, performanslarına göre ustaların derecelendirmelerini incelemenizi şiddetle tavsiye ederiz.",
-      "question_5": "Copy Programının Ücretleri Nelerdir?",
-      "answer_5": "Copy programının ücretleri ustadan ustaya değişir. Kayıt olduktan sonra ustaların listesi ve ücret yapıları gösterilecektir.",
-      "question_6": "Birden Fazla Ustayı Takip Edebilir miyim?",
+      "answer_1": "Copy trading, deneyimli tüccarları takip etmenizi ve stratejilerini kopyalamanızı sağlar, bu da yeni başlayanlar için kolaylık sunar. Zaman kazandırır ve portföyünüzü çeşitlendirmeye yardımcı olurken küresel piyasaları keşfetme fırsatı sunar. Ancak, ödüllendirici olabilse de her zaman risk vardır; bu nedenle yatırımınızı korumak için etkili risk yönetimi kullanın.",
+      "question_2": "Sosyal ticarete nasıl katılabilirim?",
+      "answer_2": "Sosyal ticaretimize katılmak için önce kayıt olmanız ve formu doldurmanız gerekir. Bilgileriniz incelendikten ve onaylandıktan sonra sosyal ticaretimize katılabilirsiniz.",
+      "question_3": "Ustamı nasıl takip edebilirim?",
+      "answer_3": "Öncelikle hesabınızı açmanız ve sunulan ustalar listesinden seçim yapmanız gerekir. Ustanızı seçtikten sonra işlemlerini kopyalayabilirsiniz.",
+      "question_4": "Bir ustayı seçmenin en iyi yolu nedir?",
+      "answer_4": "Usta seçerken performanslarına göre ustaların derecelendirmelerini incelemenizi şiddetle tavsiye ederiz.",
+      "question_5": "Sosyal ticaretin ücretleri nelerdir?",
+      "answer_5": "Sosyal ticaretin ücretleri ustadan ustaya değişir. Kayıt olduktan sonra ustaların listesi ve ücret yapıları gösterilecektir.",
+      "question_6": "Birden fazla ustayı takip edebilir miyim?",
       "answer_6": "Evet, birden fazla ustayı takip edebilirsiniz. Portföyünüzü çeşitlendirmek iyidir.",
-      "question_7": "Bir Ustadan Aboneliğimi İptal Edebilir miyim?",
+      "question_7": "Bir ustadan aboneliğimi iptal edebilir miyim?",
       "answer_7": "Evet, işlemlerinizin istediğiniz kârı getirmediğini düşünüyorsanız bir ustayı takip etmeyi bırakabilirsiniz.",
-      "question_8": "Bir Ustayı Takip Etmeyi Bıraktığımda Açık Pozisyonum Ne Olur?",
+      "question_8": "Bir ustayı takip etmeyi bırakırsam açık pozisyonum ne olur?",
       "answer_8": "Açık pozisyonunuz mevcut piyasa fiyatından otomatik olarak kapatılacaktır.",
-      "question_9": "Ustamdan Kopyalanan Pozisyonları Kapatabilir miyim?",
+      "question_9": "Ustamdan kopyalanan pozisyonları kapatabilir miyim?",
       "answer_9": "Evet, ustanızdan kopyalanan pozisyonları kapatabilirsiniz; ayrıca bunları otomatik olarak da kapatabilirsiniz."
     },
     "copyProgramForm": {

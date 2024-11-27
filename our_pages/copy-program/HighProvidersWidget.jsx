@@ -2,24 +2,22 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 
-const HighProvidersWidget = () => {
+const HighProvidersWidget = ({ iframeHigherProviderRef }) => {
   const locale = useLocale();
   const t = useTranslations("copyProgram.hightProvidersWidget");
-  const iframeRef = useRef(null);
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src =
-      "https://socialratings.primexcapital.com/widgets/assets/js/iframeResizer.js";
+    script.src = "";
     script.async = true;
 
     script.onload = () => {
       setIsScriptLoaded(true);
-      if (iframeRef.current) {
+      if (iframeHigherProviderRef.current) {
         window.iFrameResize(
           { heightCalculationMethod: "max", checkOrigin: false },
-          iframeRef.current
+          iframeHigherProviderRef.current
         );
       }
     };
@@ -32,10 +30,10 @@ const HighProvidersWidget = () => {
   }, []);
 
   const handleIframeLoad = () => {
-    if (isScriptLoaded && iframeRef.current) {
+    if (isScriptLoaded && iframeHigherProviderRef.current) {
       window.iFrameResize(
         { heightCalculationMethod: "max", checkOrigin: false },
-        iframeRef.current
+        iframeHigherProviderRef.current
       );
     }
   };
@@ -58,7 +56,7 @@ const HighProvidersWidget = () => {
           }}
         >
           <iframe
-            ref={iframeRef}
+            ref={iframeHigherProviderRef}
             id="widgetFrameHighProvider"
             style={{
               minWidth: "100%",

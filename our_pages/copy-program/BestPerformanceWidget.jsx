@@ -2,10 +2,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 
-const BestPerformanceWidget = () => {
+const BestPerformanceWidget = ({ iframeBestPerformanceRef }) => {
   const locale = useLocale();
   const t = useTranslations("copyProgram.bestPerformanceWidget");
-  const iframeRef = useRef(null);
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
 
   useEffect(() => {
@@ -16,10 +15,10 @@ const BestPerformanceWidget = () => {
 
     script.onload = () => {
       setIsScriptLoaded(true);
-      if (iframeRef.current) {
+      if (iframeBestPerformanceRef.current) {
         window.iFrameResize(
           { heightCalculationMethod: "max", checkOrigin: false },
-          iframeRef.current
+          iframeBestPerformanceRef.current
         );
       }
     };
@@ -32,10 +31,10 @@ const BestPerformanceWidget = () => {
   }, []);
 
   const handleIframeLoad = () => {
-    if (isScriptLoaded && iframeRef.current) {
+    if (isScriptLoaded && iframeBestPerformanceRef.current) {
       window.iFrameResize(
         { heightCalculationMethod: "max", checkOrigin: false },
-        iframeRef.current
+        iframeBestPerformanceRef.current
       );
     }
   };
@@ -58,7 +57,7 @@ const BestPerformanceWidget = () => {
           }}
         >
           <iframe
-            ref={iframeRef}
+            ref={iframeBestPerformanceRef}
             id="widgetFrameBestPerformance"
             style={{
               minWidth: "100%",

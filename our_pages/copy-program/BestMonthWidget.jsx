@@ -2,24 +2,22 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 
-const BestMonthWidget = () => {
+const BestMonthWidget = ({ iframeBestMonthRef }) => {
   const locale = useLocale();
   const t = useTranslations("copyProgram.bestMonthWidget");
-  const iframeRef = useRef(null);
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src =
-      "https://socialratings.primexcapital.com/widgets/assets/js/iframeResizer.js";
+    script.src = "";
     script.async = true;
 
     script.onload = () => {
       setIsScriptLoaded(true);
-      if (iframeRef.current) {
+      if (iframeBestMonthRef.current) {
         window.iFrameResize(
           { heightCalculationMethod: "max", checkOrigin: false },
-          iframeRef.current
+          iframeBestMonthRef.current
         );
       }
     };
@@ -32,10 +30,10 @@ const BestMonthWidget = () => {
   }, []);
 
   const handleIframeLoad = () => {
-    if (isScriptLoaded && iframeRef.current) {
+    if (isScriptLoaded && iframeBestMonthRef.current) {
       window.iFrameResize(
         { heightCalculationMethod: "max", checkOrigin: false },
-        iframeRef.current
+        iframeBestMonthRef.current
       );
     }
   };
@@ -58,7 +56,7 @@ const BestMonthWidget = () => {
           }}
         >
           <iframe
-            ref={iframeRef}
+            ref={iframeBestMonthRef}
             id="widgetFrameBestMonth"
             style={{
               minWidth: "100%",
