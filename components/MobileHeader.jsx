@@ -796,7 +796,7 @@ const MobileHeader = ({ locale }) => {
           >
             {t("academy")}
           </LocaleLink>
-          <div>
+          {/* <div>
             <button
               onClick={() => toggleSubMenu(5)}
               className="text-[#ffffff] text-base flex justify-between items-center w-full pt-[3px]"
@@ -810,20 +810,20 @@ const MobileHeader = ({ locale }) => {
             </button>
             {openSubMenu === 5 && (
               <div className="mt-2">
-                {/* <LocaleLink
+                <LocaleLink
                   href="/bonus"
                   className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("deposit")}
-                </LocaleLink> */}
-                {/* <LocaleLink
+                </LocaleLink>
+                <LocaleLink
                   href="/top-trader"
                   className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("tradetowin")}
-                </LocaleLink> */}
+                </LocaleLink>
                 <LocaleLink
                   href="/funded-account-competition"
                   className="block text-[#ffffff] text-base pt-[16px]"
@@ -833,7 +833,7 @@ const MobileHeader = ({ locale }) => {
                 </LocaleLink>
               </div>
             )}
-          </div>
+          </div> */}
           {/* <div>
             <button
               onClick={() => toggleSubMenu(6)}
