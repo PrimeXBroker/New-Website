@@ -9,7 +9,7 @@ const HighProvidersWidget = ({ iframeHigherProviderRef }) => {
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "";
+    script.src = "https://socialratings.primexcapital.com/widgets/assets/js/iframeResizer.js";
     script.async = true;
 
     script.onload = () => {

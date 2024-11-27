@@ -84,10 +84,10 @@ const CopyProgramWrapper = () => {
       <BestPerformanceWidget
         iframeBestPerformanceRef={iframeBestPerformanceRef}
       />
-      <BestMonthWidget iframeBestMonthRef={iframeBestMonthRef} />
+      {/* <BestMonthWidget iframeBestMonthRef={iframeBestMonthRef} />
       <LowestDDWidget iframeLowestDDRef={iframeLowestDDRef} />
-      <HighProvidersWidget iframeHigherProviderRef={iframeHigherProviderRef} />
-      <Benefits />
+      <HighProvidersWidget iframeHigherProviderRef={iframeHigherProviderRef} /> */}
+      <Benefits  />
       <Steps />
       <PrimeTrade />
       <FAQ faqs={faqs} />

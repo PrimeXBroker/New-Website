@@ -41,9 +41,9 @@ const Benefits = () => {
   ];
 
   return (
-    <div className="bg-[#000000]">
+    <div className="bg-[#000000] ">
       <div className="container flex flex-col mb-10">
-        <div className="w-full">
+        <div className="w-full mt-10">
           <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff] text-center hidden sm:block">
             {t("main_title1")} <br className="hidden sm:block" />
             <span className="text-[#FED100] inline-block mt-2">

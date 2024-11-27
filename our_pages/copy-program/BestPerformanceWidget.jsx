@@ -40,8 +40,8 @@ const BestPerformanceWidget = ({ iframeBestPerformanceRef }) => {
   };
 
   return (
-    <section className="bg-[#000000]">
-      <div className="container">
+    <section className="bg-[#000000] pb-10">
+      <div className="container  ">
         <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff] text-center mb-10">
           {t("title1")}
           <span className="text-[#FED100]">{t("title2")}</span>
@@ -64,7 +64,7 @@ const BestPerformanceWidget = ({ iframeBestPerformanceRef }) => {
               visibility: "visible",
               borderRadius: "16px",
             }}
-            src={`https://socialratings.primexcapital.com/widgets/ratings?widgetKey=Best_performance&theme=dark&lang=${locale}`}
+            src={`https://socialratings.primexcapital.com/widgets/ratings?widgetKey=social_platform_ratings&theme=dark&lang=${locale}`}
             scrolling="no"
             frameBorder="0"
             onLoad={handleIframeLoad}
