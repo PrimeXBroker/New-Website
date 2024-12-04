@@ -61,7 +61,7 @@ const BestPerformanceWidget = () => {
               visibility: "visible",
               borderRadius: "16px",
             }}
-            src={`https://socialratings.primexcapital.com/widgets/ratings?widgetKey=social_platform_ratings&theme=dark&lang=${locale}`}
+            src={`https://socialratings.primexcapital.com/widgets/ratings?widgetKey=Best_performance&theme=dark&lang=${locale}`}
             scrolling="no"
             frameBorder="0"
             onLoad={handleIframeLoad}
