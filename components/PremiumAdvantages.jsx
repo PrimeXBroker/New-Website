@@ -38,7 +38,7 @@ const PremiumAdvantages = ({ items, data }) => {
                 src={locale === "ar" ? data.imgAr : data.imgEn}
                 width="500"
                 height="300"
-                alt="img"
+                alt={data.mainTitle1}
               />
             </div>
           </div>
@@ -62,7 +62,7 @@ const PremiumAdvantages = ({ items, data }) => {
                         }
                         width={isSpecialImage ? "34" : "44"}
                         height={isSpecialImage ? "34" : "44"}
-                        alt="become ib"
+                        alt={item.title}
                       />
                     </div>
                   </div>

@@ -48,7 +48,7 @@ const Banner = () => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/bonus-top.webp"
                 width="500"
                 height="500"
-                alt="img"
+                alt="Bonus Hero"
                 className="w-[65%] md:w-[75%] lg:w-96"
               />
               <div

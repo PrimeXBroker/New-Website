@@ -14,7 +14,7 @@ const Steps = () => {
           <div className="w-full md:w-0 md:flex-1 flex items-center justify-start md:justify-center gap-6 md:gap-3 lg:gap-6 px-2 md:px-0 group">
             <Image
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/liquidity/fast.svg"
-              alt="Experience Real Trading"
+              alt="Fast"
               width={64}
               height={64}
             />
@@ -26,7 +26,7 @@ const Steps = () => {
           <div className="w-full md:w-0 md:flex-1 flex items-center justify-start md:justify-center gap-6 md:gap-3 lg:gap-6 px-2 md:px-0 group">
             <Image
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/liquidity/Drop+Header.svg"
-              alt="Test your Strategies"
+              alt="Drop"
               width={64}
               height={64}
             />
@@ -39,7 +39,7 @@ const Steps = () => {
           <div className="w-full md:w-0 md:flex-1 flex items-center justify-start md:justify-center gap-6 md:gap-3 lg:gap-6 px-2 md:px-0 group">
             <Image
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/liquidity/Sheild+Header.svg"
-              alt="Unlock Rewards"
+              alt="Sheild"
               width={64}
               height={64}
             />

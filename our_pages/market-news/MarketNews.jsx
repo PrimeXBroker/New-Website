@@ -51,7 +51,7 @@ const MarketNews = ({ news, totalPages, lang }) => {
                     <Image
                       unoptimized={true}
                       src={blog.image}
-                      alt="PrimeX Capital"
+                      alt={blog?.title}
                       width="100"
                       height="100"
                       className="w-full overflow-hidden transition duration-700 ease-in-out transform group-hover:scale-110"

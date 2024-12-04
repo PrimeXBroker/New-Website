@@ -50,7 +50,7 @@ const Banner = () => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/why-choose-us/Hero+Image+WHy+Choose+PrimeX.webp"
                 width="100"
                 height="100"
-                alt="image"
+                alt="Why Choose PrimeX"
                 className={`w-full sm:w-[70%] md:w-[70%] relative`}
               />
               <div

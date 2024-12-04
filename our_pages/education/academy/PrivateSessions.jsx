@@ -45,7 +45,7 @@ const PrivateSessions = ({ setActive }) => {
                     src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/Aniket+academy.webp"
                     width={250}
                     height={200}
-                    alt="expert image"
+                    alt="Aniket"
                     className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
@@ -73,7 +73,7 @@ const PrivateSessions = ({ setActive }) => {
                     src="/images/academy_image.jpg"
                     width="150"
                     height="200"
-                    alt="expert image"
+                    alt="Rose"
                     className="h-full object-cover rounded-lg"
                   />
                 </div>

@@ -2217,6 +2217,11 @@
     "hightProvidersWidget": {
       "title1": "الأعلى تصنيفًا ",
       "title2": "بعدد المستثمرين"
+    },
+    "widgetCards": {
+      "title1": "أفضل خبرائنا ",
+      "title2": "نتائج الخبراء",
+      "btnTxt": "عرض"
     }
   },
   "contactUs": {

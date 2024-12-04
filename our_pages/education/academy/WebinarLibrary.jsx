@@ -160,7 +160,7 @@ const WebinarLibrary = () => {
                 <div className="flex flex-col justify-center items-center w-[255px] h-[292px] m-aut0">
                   <div className="academy-video-single-box">
                     <div className="academy-video-thumb">
-                      <img src={card.imgUrl} alt="" />
+                      <img src={card.imgUrl} alt={card.name} />
                       <div className="academy-video-content">
                         <div className="academy-video-icon flex justify-center items-center relative">
                           <a

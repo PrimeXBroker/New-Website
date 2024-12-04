@@ -61,7 +61,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
                 <span className={`${locale === "ar" || locale === "fa" || locale === "kur" ? "ml-2" : "mr-2"}`}>
                   <Image
                     src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/help+center.svg"
-                    alt="help center"
+                    alt="Help Center"
                     width="40"
                     height="200"
                     className="w-[32px]"
@@ -95,7 +95,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
                 >
                   <Image
                     src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/Copy+Email.svg"
-                    alt="copy email"
+                    alt="Copy Email"
                     width="40"
                     height="200"
                     className="w-[32px]"
@@ -123,7 +123,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
                 >
                   <Image
                     src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/Live+Chat.svg"
-                    alt="live chat"
+                    alt="Live Chat"
                     width="40"
                     height="200"
                     className="w-[32px]"

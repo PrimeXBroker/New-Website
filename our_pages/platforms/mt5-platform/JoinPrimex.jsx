@@ -21,7 +21,7 @@ const JoinPrimex = () => {
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/platform/mt5/join_banner.webp"
               width="470"
               height="300"
-              alt="banner Image"
+              alt="MT5 Join"
             />
           </div>
           <div className="col-span-12 lg:col-span-7">
@@ -142,7 +142,7 @@ const JoinPrimex = () => {
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/mt5-banner-mbl.webp"
               width="470"
               height="300"
-              alt="banner Image"
+              alt="MT5 Banner Image"
             />
           </div>
         </div>

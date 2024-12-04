@@ -2,22 +2,24 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 
-const LowestDDWidget = ({ iframeLowestDDRef }) => {
+const HighProvidersWidget = () => {
   const locale = useLocale();
-  const t = useTranslations("copyProgram.lowestDDWidget");
+  const t = useTranslations("copyProgram.hightProvidersWidget");
+  const iframeRef = useRef(null);
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://socialratings.primexcapital.com/widgets/assets/js/iframeResizer.js";
+    script.src =
+      "https://socialratings.primexcapital.com/widgets/assets/js/iframeResizer.js";
     script.async = true;
 
     script.onload = () => {
       setIsScriptLoaded(true);
-      if (iframeLowestDDRef.current) {
+      if (iframeRef.current) {
         window.iFrameResize(
           { heightCalculationMethod: "max", checkOrigin: false },
-          iframeLowestDDRef.current
+          iframeRef.current
         );
       }
     };
@@ -30,22 +32,19 @@ const LowestDDWidget = ({ iframeLowestDDRef }) => {
   }, []);
 
   const handleIframeLoad = () => {
-    if (isScriptLoaded && iframeLowestDDRef.current) {
+    if (isScriptLoaded && iframeRef.current) {
       window.iFrameResize(
         { heightCalculationMethod: "max", checkOrigin: false },
-        iframeLowestDDRef.current
+        iframeRef.current
       );
     }
   };
 
   return (
-    <section className="bg-[#000000]">
+    <section className="py-28 bg-[#000000]">
       <div className="container">
-        <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff] text-center mb-10">
-          {t("title1")} <span className="text-[#FED100]">{t("title2")}</span>
-        </h2>
         <div
-          className="rounded-2xl p-3"
+          className="rounded-2xl p-1"
           style={{
             backgroundImage:
               "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/widget-gradient.webp')",
@@ -55,14 +54,14 @@ const LowestDDWidget = ({ iframeLowestDDRef }) => {
           }}
         >
           <iframe
-            ref={iframeLowestDDRef}
-            id="widgetFrameLowestDD"
+            ref={iframeRef}
+            id="widgetFrame"
             style={{
               minWidth: "100%",
               visibility: "visible",
               borderRadius: "16px",
             }}
-            src={`https://socialratings.primexcapital.com/widgets/ratings?widgetKey=lowest_DD&theme=dark&lang=${locale}`}
+            src={`https://socialratings.primexcapital.com/widgets/ratings?widgetKey=high_investors_number&theme=dark&lang=${locale}`}
             scrolling="no"
             frameBorder="0"
             onLoad={handleIframeLoad}
@@ -73,4 +72,4 @@ const LowestDDWidget = ({ iframeLowestDDRef }) => {
   );
 };
 
-export default LowestDDWidget;
+export default HighProvidersWidget;

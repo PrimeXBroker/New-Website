@@ -30,7 +30,7 @@ const Banner = () => {
             >
               <Image
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/policy/Policy+Statement.svg"
-                alt="image"
+                alt="Policy Statement"
                 width="34"
                 height="200"
               />

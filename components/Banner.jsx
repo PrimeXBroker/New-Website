@@ -43,12 +43,7 @@ const Banner = ({
           {children}
         </div>
         <div>
-          <Image
-            src={imgUrl}
-            width={imgWidth}
-            height={imgHeight}
-            alt="banner Image"
-          />
+          <Image src={imgUrl} width={imgWidth} height={imgHeight} alt={title} />
         </div>
       </div>
     </section>

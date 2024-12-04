@@ -62,13 +62,13 @@ const Webinars = ({ active, setActive }) => {
                     <img
                       className="rounded w-[80px] sm:w-[100px] lg:w-full "
                       src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/Aniket+academy.webp"
-                      alt=""
+                      alt="Aniket"
                     />
                   ) : (
                     <img
                       className="rounded w-[80px] sm:w-[100px] lg:w-full"
                       src="/images/academy_image.jpg"
-                      alt=""
+                      alt="Webinar Expert"
                     />
                   )}
 

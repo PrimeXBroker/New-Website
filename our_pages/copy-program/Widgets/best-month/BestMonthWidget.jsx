@@ -2,22 +2,24 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 
-const BestMonthWidget = ({ iframeBestMonthRef }) => {
+const BestMonthWidget = () => {
   const locale = useLocale();
   const t = useTranslations("copyProgram.bestMonthWidget");
+  const iframeRef = useRef(null);
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://socialratings.primexcapital.com/widgets/assets/js/iframeResizer.js";
+    script.src =
+      "https://socialratings.primexcapital.com/widgets/assets/js/iframeResizer.js";
     script.async = true;
 
     script.onload = () => {
       setIsScriptLoaded(true);
-      if (iframeBestMonthRef.current) {
+      if (iframeRef.current) {
         window.iFrameResize(
           { heightCalculationMethod: "max", checkOrigin: false },
-          iframeBestMonthRef.current
+          iframeRef.current
         );
       }
     };
@@ -30,10 +32,10 @@ const BestMonthWidget = ({ iframeBestMonthRef }) => {
   }, []);
 
   const handleIframeLoad = () => {
-    if (isScriptLoaded && iframeBestMonthRef.current) {
+    if (isScriptLoaded && iframeRef.current) {
       window.iFrameResize(
         { heightCalculationMethod: "max", checkOrigin: false },
-        iframeBestMonthRef.current
+        iframeRef.current
       );
     }
   };
@@ -41,12 +43,8 @@ const BestMonthWidget = ({ iframeBestMonthRef }) => {
   return (
     <section className="py-28 bg-[#000000]">
       <div className="container">
-        <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff] text-center mb-10">
-          {t("title1")}
-          <span className="text-[#FED100]">{t("title2")}</span>
-        </h2>
         <div
-          className="rounded-2xl p-3"
+          className="rounded-2xl p-1"
           style={{
             backgroundImage:
               "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/widget-gradient.webp')",
@@ -56,8 +54,8 @@ const BestMonthWidget = ({ iframeBestMonthRef }) => {
           }}
         >
           <iframe
-            ref={iframeBestMonthRef}
-            id="widgetFrameBestMonth"
+            ref={iframeRef}
+            id="widgetFrame"
             style={{
               minWidth: "100%",
               visibility: "visible",

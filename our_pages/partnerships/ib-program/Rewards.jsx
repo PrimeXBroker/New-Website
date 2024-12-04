@@ -37,7 +37,7 @@ const Rewards = () => {
               <Image
                 unoptimized={true}
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/card.svg"
-                alt="card"
+                alt="Card"
                 width={100}
                 height={100}
                 className="w-full h-[389px]"
@@ -64,7 +64,7 @@ const Rewards = () => {
               <Image
                 unoptimized={true}
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Cash+Reward+1000.svg"
-                alt="Cash 1000"
+                alt="Cash Reward 1000"
                 width={100}
                 height={100}
                 className="w-full h-[159px]"
@@ -103,7 +103,7 @@ const Rewards = () => {
             <Image
               unoptimized={true}
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Handshake.svg"
-              alt="Iphone"
+              alt="Handshake"
               width={100}
               height={100}
               className="w-full h-[270px]"
@@ -117,7 +117,7 @@ const Rewards = () => {
               <Image
                 unoptimized={true}
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Cash+Reward+5000.svg"
-                alt="Iphone"
+                alt="Cash Reward 5000"
                 width={100}
                 height={100}
                 className="w-full h-[219px]"
@@ -135,7 +135,7 @@ const Rewards = () => {
               <Image
                 unoptimized={true}
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Cash+Reward+20000.svg"
-                alt="Iphone"
+                alt="Cash Reward 20000"
                 width={100}
                 height={100}
                 className="w-full h-[165px]"
@@ -159,7 +159,7 @@ const Rewards = () => {
                     ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Inverse-Maldives-Ar.svg"
                     : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Maldives.svg"
                 }`}
-                alt="card"
+                alt="Maldives"
                 width={100}
                 height={100}
                 className="w-full h-[404px]"
@@ -183,7 +183,7 @@ const Rewards = () => {
                     ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Inverse-europe-Ar.svg"
                     : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Europe.svg"
                 }`}
-                alt="Cash 1000"
+                alt="Europe"
                 width={100}
                 height={100}
                 className="w-full h-[404px]"
@@ -206,7 +206,7 @@ const Rewards = () => {
               <Image
                 unoptimized={true}
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Mercedes.svg"
-                alt="Iphone"
+                alt="Mercedes"
                 width={100}
                 height={100}
                 className="w-full h-[300px]"
@@ -225,7 +225,7 @@ const Rewards = () => {
             <Image
               unoptimized={true}
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Bentley+Bentayga.svg"
-              alt="card"
+              alt="Bentley Bentayga"
               width={100}
               height={100}
               className="w-full h-[300px]"
@@ -243,7 +243,7 @@ const Rewards = () => {
             <Image
               unoptimized={true}
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/1+BHK+Apartment++in+Dubai.svg"
-              alt="Cash 1000"
+              alt="1 BHK Apartment in Dubai"
               width={100}
               height={100}
               className="w-full h-[300px]"

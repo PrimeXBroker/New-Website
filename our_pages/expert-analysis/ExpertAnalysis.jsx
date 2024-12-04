@@ -88,7 +88,7 @@ const ExpertAnalysis = ({ id }) => {
                     src={blog.image}
                     width="100"
                     height="100"
-                    alt="PrimeX Capital"
+                    alt={blog?.titleEn}
                     className="w-full overflow-hidden transition duration-700 ease-in-out transform group-hover:scale-110"
                   />
                 </div>

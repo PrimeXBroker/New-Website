@@ -66,7 +66,7 @@ const Banner = ({ setActive }) => {
           <div className="flex md:justify-end justify-center">
             <Image
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/Academy+Hero+New.webp"
-              alt="Banner Image"
+              alt="Academy Hero Image"
               width="550"
               height="500"
               className={`w-full sm:w-[90%] ms:w-full`}

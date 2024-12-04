@@ -21,7 +21,7 @@ const StepsMobile = () => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-bonus/claim1.svg"
                 width={100}
                 height={100}
-                alt="img"
+                alt="Claim1"
                 className="w-[70px] sm:w-[90px] m-auto"
               />
             </div>
@@ -42,7 +42,7 @@ const StepsMobile = () => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-bonus/claim2+1.svg"
                 width={100}
                 height={100}
-                alt="img"
+                alt="Claim2"
                 className="w-[70px] sm:w-[90px] m-auto"
               />
             </div>
@@ -63,7 +63,7 @@ const StepsMobile = () => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-bonus/gift-box.svg"
                 width={100}
                 height={100}
-                alt="img"
+                alt="Claim3"
                 className="w-[70px] sm:w-[90px] m-auto"
               />
             </div>

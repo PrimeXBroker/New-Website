@@ -439,7 +439,7 @@ const Footer = () => {
                 width="150"
                 height="200"
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
-                alt="footer logo"
+                alt="Footer Logo"
                 className="block sm:mx-0 mx-auto pb-6 sm:pb-0"
               />
             </div>

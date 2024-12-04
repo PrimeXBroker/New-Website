@@ -49,7 +49,7 @@ const GlobalMap = () => {
                     <Image
                       unoptimized={true}
                       src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/Country%3DAE+-+United+Arab+Emirates%2C+Style%3DSquare%2C+Corners%3DRounded.svg"
-                      alt="UAE"
+                      alt="UAE Icon"
                       width={100}
                       height={100}
                       className="w-full"
@@ -125,7 +125,7 @@ const GlobalMap = () => {
                     <Image
                       unoptimized={true}
                       src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/Country%3DZA+-+South+Africa%2C+Style%3DSquare%2C+Corners%3DRounded.svg"
-                      alt="UAE"
+                      alt="South Africa Icon"
                       width={100}
                       height={100}
                       className="w-full"

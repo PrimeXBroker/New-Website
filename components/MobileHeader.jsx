@@ -176,7 +176,7 @@ const MobileHeader = ({ locale }) => {
                     width="15"
                     height="15"
                     src={language.flag}
-                    alt={`${language.text} flag`}
+                    alt={`${language.text} Flag`}
                   />
                   <span
                     className={`${
@@ -222,7 +222,7 @@ const MobileHeader = ({ locale }) => {
                           width="15"
                           height="15"
                           src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg"
-                          alt="english flag"
+                          alt="English Flag"
                         />
                         <span className="ml-[5px]">English</span>
                       </Link>
@@ -248,7 +248,7 @@ const MobileHeader = ({ locale }) => {
                           width="15"
                           height="15"
                           src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
-                          alt="arabic flag"
+                          alt="Arabic Flag"
                         />
                         <span className="ml-[5px]">عربي</span>
                       </Link>
@@ -274,7 +274,7 @@ const MobileHeader = ({ locale }) => {
                           width="15"
                           height="15"
                           src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
-                          alt="chinese flag"
+                          alt="Chinese Flag"
                         />
                         <span className="ml-[5px]">中文</span>
                       </Link>
@@ -300,7 +300,7 @@ const MobileHeader = ({ locale }) => {
                           width="15"
                           height="15"
                           src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
-                          alt="farsi flag"
+                          alt="Farsi Flag"
                         />
                         <span
                           className={`${
@@ -336,7 +336,7 @@ const MobileHeader = ({ locale }) => {
                           width="18"
                           height="18"
                           src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
-                          alt="kurdish flag"
+                          alt="Kurdish Flag"
                         />
                         <span
                           className={`${
@@ -372,7 +372,7 @@ const MobileHeader = ({ locale }) => {
                           width="15"
                           height="15"
                           src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
-                          alt="turkish flag"
+                          alt="Turkish Flag"
                         />
                         <span className="ml-[5px]">Türkçe</span>
                       </Link>
@@ -463,7 +463,7 @@ const MobileHeader = ({ locale }) => {
                             width="15"
                             height="15"
                             src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg"
-                            alt="english flag"
+                            alt="English Flag"
                           />
                           <span className="ml-[5px]">English</span>
                         </Link>
@@ -489,7 +489,7 @@ const MobileHeader = ({ locale }) => {
                             width="15"
                             height="15"
                             src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
-                            alt="arabic flag"
+                            alt="Arabic Flag"
                           />
                           <span className="ml-[5px]">عربي</span>
                         </Link>
@@ -515,7 +515,7 @@ const MobileHeader = ({ locale }) => {
                             width="15"
                             height="15"
                             src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
-                            alt="chinese flag"
+                            alt="Chinese Flag"
                           />
                           <span className="ml-[5px]">中文</span>
                         </Link>
@@ -541,7 +541,7 @@ const MobileHeader = ({ locale }) => {
                             width="15"
                             height="15"
                             src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
-                            alt="farsi flag"
+                            alt="Farsi Flag"
                           />
                           <span
                             className={`${
@@ -577,7 +577,7 @@ const MobileHeader = ({ locale }) => {
                             width="18"
                             height="18"
                             src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
-                            alt="kurdish flag"
+                            alt="Kurdish Flag"
                           />
                           <span
                             className={`${
@@ -613,7 +613,7 @@ const MobileHeader = ({ locale }) => {
                             width="15"
                             height="15"
                             src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
-                            alt="turkish flag"
+                            alt="Turkish Flag"
                           />
                           <span className="ml-[5px]">Türkçe</span>
                         </Link>

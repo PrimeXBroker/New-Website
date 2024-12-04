@@ -189,7 +189,7 @@ const Testimonials = () => {
                       <Image
                         unoptimized={true}
                         src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Location+Icon.svg"
-                        alt=""
+                        alt="Location Icon"
                         width={17}
                         height={17}
                       />
@@ -201,7 +201,7 @@ const Testimonials = () => {
                   <Image
                     unoptimized={true}
                     src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Rating+Stars.svg"
-                    alt=""
+                    alt="Rating Stars"
                     width={100}
                     height={100}
                   />

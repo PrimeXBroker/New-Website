@@ -176,7 +176,7 @@ const TradingOpportunitiesWidget = () => {
                                 src={instrument.image}
                                 width="100"
                                 height="100"
-                                alt="image"
+                                alt={instrument.name}
                                 className="w-[100%]"
                               />
                             </div>
@@ -214,7 +214,7 @@ const TradingOpportunitiesWidget = () => {
                               src={instrument.image}
                               width="100"
                               height="100"
-                              alt="image"
+                              alt={instrument.name}
                               className="w-[100%]"
                             />
                           </div>

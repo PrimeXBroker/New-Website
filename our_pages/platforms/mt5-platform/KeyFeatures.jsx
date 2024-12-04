@@ -43,7 +43,7 @@ const KeyFeatures = ({
               )}
             </h2>
             <div className="w-16 h-16 borer-2 border-[#222222] bg-[#1D1D1D] rounded-lg flex items-center justify-center">
-              <img src={icon} alt="" className="w-[40px]" />
+              <img src={icon} alt={sectionTitle} className="w-[40px]" />
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-6 mt-6">

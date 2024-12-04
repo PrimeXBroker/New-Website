@@ -30,7 +30,7 @@ const Banner = () => {
             >
               <Image
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/policy/Terms+%26+Conditions.svg"
-                alt="image"
+                alt="Terms Conditions"
                 width="34"
                 height="200"
               />

@@ -41,7 +41,7 @@ const Banner = () => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/MT5+Page+Hero+New.webp"
                 width="100"
                 height="100"
-                alt="image"
+                alt="MT5 Hero"
                 className={`w-full sm:w-[70%]`}
               />
             </div>

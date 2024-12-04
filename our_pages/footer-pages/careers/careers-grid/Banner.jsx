@@ -49,7 +49,7 @@ const Banner = () => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/Career+Hero+New.webp"
                 width="100"
                 height="100"
-                alt="image"
+                alt="Career Hero"
                 className={`w-full sm:w-[70%] ms:w-full`}
               />
             </div>

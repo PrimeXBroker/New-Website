@@ -43,7 +43,7 @@ const Support = () => {
                   <Image
                     unoptimized={true}
                     src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/multilingual-new.svg"
-                    alt="Support Team"
+                    alt="Multilingual"
                     width={300}
                     height={150}
                     className="w-full"

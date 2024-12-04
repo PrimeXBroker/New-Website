@@ -73,7 +73,7 @@ const Benefits = () => {
                 <div className="w-16 h-16 border-2 border-[#222222] bg-[#1D1D1D] rounded-lg flex items-center justify-center">
                   <Image
                     src={benefit.icon}
-                    alt="image"
+                    alt={benefit.title1}
                     width="40"
                     height="200"
                   />

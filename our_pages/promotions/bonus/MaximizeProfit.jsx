@@ -70,7 +70,7 @@ const MaximizeProfit = () => {
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/20%25-deposit-bonus/bonus-maximize.webp"
               width="400"
               height="400"
-              alt="img"
+              alt="Bonus Maximize"
               className="w-full sm:w-[50%] lg:w-[60%] h-auto"
             />
           </div>

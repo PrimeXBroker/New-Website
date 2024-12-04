@@ -36,7 +36,7 @@ const Steps = () => {
                     src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-bonus/claim1.svg"
                     width={100}
                     height={100}
-                    alt="img"
+                    alt="Claim1"
                     className="md:w-[80px] lg:w-[100px] md:h-[80px] lg:h-[100px] m-auto"
                   />
                 </div>
@@ -59,7 +59,7 @@ const Steps = () => {
                     src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-bonus/claim2+1.svg"
                     width={100}
                     height={100}
-                    alt="img"
+                    alt="Claim2"
                     className="md:w-[80px] lg:w-[100px] md:h-[80px] lg:h-[100px] m-auto"
                   />
                 </div>
@@ -82,7 +82,7 @@ const Steps = () => {
                     src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-bonus/gift-box.svg"
                     width={100}
                     height={100}
-                    alt="img"
+                    alt="Gift Box"
                     className="md:w-[80px] lg:w-[100px] md:h-[80px] lg:h-[100px] m-auto"
                   />
                 </div>

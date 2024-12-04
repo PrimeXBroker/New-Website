@@ -128,7 +128,7 @@ const WhyTrade = ({
                                     src={item.image}
                                     width="100"
                                     height="100"
-                                    alt="image"
+                                    alt={item.name}
                                     className="w-full"
                                   />
                                 </div>

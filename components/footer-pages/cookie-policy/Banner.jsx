@@ -30,7 +30,7 @@ const Banner = () => {
             >
               <Image
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/policy/Cookie+Policy.svg"
-                alt="image"
+                alt="Cookie Policy"
                 width="34"
                 height="200"
               />

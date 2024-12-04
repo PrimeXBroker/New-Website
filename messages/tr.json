@@ -2306,6 +2306,11 @@
     "hightProvidersWidget": {
       "title1": "En Yüksek Sıralamada ",
       "title2": "Yatırımcı Sayısına Göre"
+    },
+    "widgetCards": {
+      "title1": "En İyi ",
+      "title2": "Uzmanlarımızın Sonuçları",
+      "btnTxt": "Ziyaret Et"
     }
   },
   "contactUs": {

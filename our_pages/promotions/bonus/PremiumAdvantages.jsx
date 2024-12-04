@@ -108,7 +108,7 @@ const PremiumAdvantages = () => {
                           }
                           width={isSpecialImage ? "34" : "44"}
                           height={isSpecialImage ? "34" : "44"}
-                          alt="img"
+                          alt={item.title}
                         />
                       </div>
                     </div>

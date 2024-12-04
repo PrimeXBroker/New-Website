@@ -21,7 +21,13 @@ const PrimeTrade = () => {
       <div className="container mx-auto px-4">
         <div className="pt-12 px-8 rounded-[20px] bg-[#111111] text-[#ffffff]">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="text-center sm:text-left">
+            <div
+              className={`${
+                locale === "ar" || locale === "fa" || locale === "fa"
+                  ? "text-center sm:text-right"
+                  : "text-center sm:text-left"
+              }`}
+            >
               <h2 className="text-[#ffffff] text-2xl sm:text-3xl lg:text-4xl font-semibold">
                 {t("title1")}{" "}
                 <span className="text-[#FED100]">{t("title2")}</span>
@@ -43,7 +49,7 @@ const PrimeTrade = () => {
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/CTA+Mockup+Desktop.webp"
               width="100"
               height="100"
-              alt="image"
+              alt="CTA Mockup Desktop"
               className={`w-full hidden sm:block`}
             />
             <Image
@@ -51,7 +57,7 @@ const PrimeTrade = () => {
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/CTA+Mockup+Mobile.webp"
               width="100"
               height="100"
-              alt="image"
+              alt="CTA Mockup Mobile"
               className={`w-full block sm:hidden`}
             />
           </div>

@@ -17,7 +17,7 @@ const ParticipateForm = () => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/demo-account/fac-mobile.webp"
                 width="350"
                 height="300"
-                alt="banner Image"
+                alt="Funded Account Hero"
                 className="w-[500px] mx-auto"
               />
             </div>
@@ -81,7 +81,7 @@ const ParticipateForm = () => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/demo-account/fac-mobile.webp"
                 width="350"
                 height="300"
-                alt="banner Image"
+                alt="Funded Account Banner"
                 className="mx-auto"
               />
             </div>

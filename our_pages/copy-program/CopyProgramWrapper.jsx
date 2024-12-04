@@ -10,18 +10,11 @@ import CopyProgramFormWrapper from "./CopyProgramFormWrapper";
 import PrimeTrade from "./PrimeTrade";
 import Features from "./Features";
 import FeaturesMobile from "./FeaturesMobile";
-import BestPerformanceWidget from "./BestPerformanceWidget";
-import BestMonthWidget from "./BestMonthWidget";
-import LowestDDWidget from "./LowestDDWidget";
-import HighProvidersWidget from "./HighProvidersWidget";
+import WidgetCards from "./WidgetCards";
 
 const CopyProgramWrapper = () => {
   const locale = useLocale();
   const t = useTranslations("copyProgram");
-  const iframeBestPerformanceRef = useRef(null);
-  const iframeBestMonthRef = useRef(null);
-  const iframeLowestDDRef = useRef(null);
-  const iframeHigherProviderRef = useRef(null);
 
   const faqs = [
     // {
@@ -81,13 +74,8 @@ const CopyProgramWrapper = () => {
         <FeaturesMobile />
       </div>
       <AboutCopyProgram />
-      <BestPerformanceWidget
-        iframeBestPerformanceRef={iframeBestPerformanceRef}
-      />
-      {/* <BestMonthWidget iframeBestMonthRef={iframeBestMonthRef} />
-      <LowestDDWidget iframeLowestDDRef={iframeLowestDDRef} />
-      <HighProvidersWidget iframeHigherProviderRef={iframeHigherProviderRef} /> */}
-      <Benefits  />
+      <WidgetCards />
+      <Benefits />
       <Steps />
       <PrimeTrade />
       <FAQ faqs={faqs} />

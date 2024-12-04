@@ -44,7 +44,7 @@ const Banner = () => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/grey-regional-partnership/Grey+Label+Hero+Section.webp"
                 width="100"
                 height="100"
-                alt="image"
+                alt="Grey Label Hero"
                 className={`w-full sm:w-[70%] ms:w-full`}
               />
             </div>

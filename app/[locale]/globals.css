@@ -903,7 +903,7 @@
 }
 
 .dot {
-  font-size: 5rem; /* Adjust the size for larger dots */
+  font-size: 5rem;
   line-height: 1;
   animation: dot-blink 1.5s infinite step-start both;
 }

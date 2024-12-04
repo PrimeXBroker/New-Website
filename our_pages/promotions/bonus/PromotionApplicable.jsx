@@ -60,7 +60,7 @@ const PromotionApplicable = () => {
                     src={inst.img}
                     width="58"
                     height="58"
-                    alt="img"
+                    alt={inst.title}
                     className="w-[44px] sm:w-[58px] md:w-[42px] lg:w-[48px] xl:w-[58px] [h-58px] sm:h-[58px] md:h-[42px] lg:h-[48px] xl:h-[58px]"
                   />
                 </div>

@@ -33,7 +33,7 @@ const SignUp = () => {
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/demo-account/signup.webp"
               width="100"
               height="200"
-              alt="banner Image"
+              alt="Signup"
               className="w-[230px] md:w-[200px] object-fit"
             />
           </div>

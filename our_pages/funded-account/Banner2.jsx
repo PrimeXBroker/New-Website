@@ -19,7 +19,7 @@ const Banner1 = () => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/funded-account/About+Image.png"
                 width={100}
                 height={100}
-                alt="Hero Image"
+                alt="About Image"
                 className={`w-full sm:w-[70%] md:w-[90%]`}
               />
             </div>
@@ -29,12 +29,12 @@ const Banner1 = () => {
               {" "}
               {/* Removed margin-top */}
               <h1 className="text-3xl sm:text-4xl lg:text-6xl pt-4 md:pt-0 font-medium text-[#ffffff]">
-              {t("title1")}
+                {t("title1")}
                 <br />
                 <span className="text-[#FED100]">{t("title2")}</span>
               </h1>
               <p className="text-[#c6c6c6] text-base md:text-xl mt-4 md:mt-1 xl:mt-3 px-2 sm:px-16 md:px-0">
-              {t("description")}
+                {t("description")}
               </p>
             </div>
           </div>

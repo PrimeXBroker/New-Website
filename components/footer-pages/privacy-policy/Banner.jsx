@@ -26,7 +26,7 @@ const Banner = () => {
             src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/privacy-policy/Banner.webp"
             width="300"
             height="300"
-            alt="banner Image"
+            alt="Privacy Policy"
           />
         </div>
       </div>

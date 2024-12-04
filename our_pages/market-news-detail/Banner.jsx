@@ -26,7 +26,7 @@ const Banner = ({ slug }) => {
             src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/market-news/market-news-banner.webp"
             width="350"
             height="500"
-            alt="banner Image"
+            alt="Market News Banner"
             className="md:w-[300px] lg:w-[500px]"
           />
         </div>

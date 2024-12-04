@@ -15,7 +15,7 @@ function AnalysisNewsBody({ slug }) {
   const [content, setContent] = useState(null);
 
   const ImageComponent = ({ src }) => (
-    <img src={src} alt="" style={{ maxWidth: "100%" }} />
+    <img src={src} alt="PrimeX Capital" style={{ maxWidth: "100%" }} />
   );
 
   const mediaBlockRenderer = (block) => {
@@ -174,7 +174,7 @@ function AnalysisNewsBody({ slug }) {
         </div>
 
         <div className="text-[#ffffff]">
-          <img src={detail.image} className="mb-4" />
+          <img src={detail.image} alt="PrimeX Capital" className="mb-4" />
           <h1 className="text-[25px] mb-0 font-semibold">
             {locale === "ar" ? detail.titleAr : detail.titleEn}
           </h1>

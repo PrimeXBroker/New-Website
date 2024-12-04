@@ -3,7 +3,7 @@ import React from "react";
 import { createTranslator } from "next-intl";
 
 export async function generateMetadata({ params: { locale } }) {
-  const messages = (await import(`../../../../messages/${locale}.json`))
+  const messages = (await import(`../../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });
   const url =

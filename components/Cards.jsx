@@ -16,7 +16,7 @@ const Cards = ({ items }) => {
                   src={item.img}
                   width="56"
                   height="56"
-                  alt="img"
+                  alt={item.title}
                   className="block mx-0"
                 />
               </div>

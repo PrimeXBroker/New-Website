@@ -2,9 +2,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 
-const BestPerformanceWidget = ({ iframeBestPerformanceRef }) => {
+const LowestDDWidget = () => {
   const locale = useLocale();
-  const t = useTranslations("copyProgram.bestPerformanceWidget");
+  const t = useTranslations("copyProgram.lowestDDWidget");
+  const iframeRef = useRef(null);
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
 
   useEffect(() => {
@@ -15,10 +16,10 @@ const BestPerformanceWidget = ({ iframeBestPerformanceRef }) => {
 
     script.onload = () => {
       setIsScriptLoaded(true);
-      if (iframeBestPerformanceRef.current) {
+      if (iframeRef.current) {
         window.iFrameResize(
           { heightCalculationMethod: "max", checkOrigin: false },
-          iframeBestPerformanceRef.current
+          iframeRef.current
         );
       }
     };
@@ -31,23 +32,19 @@ const BestPerformanceWidget = ({ iframeBestPerformanceRef }) => {
   }, []);
 
   const handleIframeLoad = () => {
-    if (isScriptLoaded && iframeBestPerformanceRef.current) {
+    if (isScriptLoaded && iframeRef.current) {
       window.iFrameResize(
         { heightCalculationMethod: "max", checkOrigin: false },
-        iframeBestPerformanceRef.current
+        iframeRef.current
       );
     }
   };
 
   return (
-    <section className="bg-[#000000] pb-10">
-      <div className="container  ">
-        <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff] text-center mb-10">
-          {t("title1")}
-          <span className="text-[#FED100]">{t("title2")}</span>
-        </h2>
+    <section className="bg-[#000000] py-28">
+      <div className="container">
         <div
-          className="rounded-2xl p-3"
+          className="rounded-2xl p-1"
           style={{
             backgroundImage:
               "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/widget-gradient.webp')",
@@ -57,14 +54,14 @@ const BestPerformanceWidget = ({ iframeBestPerformanceRef }) => {
           }}
         >
           <iframe
-            ref={iframeBestPerformanceRef}
-            id="widgetFrameBestPerformance"
+            ref={iframeRef}
+            id="widgetFrame"
             style={{
               minWidth: "100%",
               visibility: "visible",
               borderRadius: "16px",
             }}
-            src={`https://socialratings.primexcapital.com/widgets/ratings?widgetKey=social_platform_ratings&theme=dark&lang=${locale}`}
+            src={`https://socialratings.primexcapital.com/widgets/ratings?widgetKey=lowest_DD&theme=dark&lang=${locale}`}
             scrolling="no"
             frameBorder="0"
             onLoad={handleIframeLoad}
@@ -75,4 +72,4 @@ const BestPerformanceWidget = ({ iframeBestPerformanceRef }) => {
   );
 };
 
-export default BestPerformanceWidget;
+export default LowestDDWidget;

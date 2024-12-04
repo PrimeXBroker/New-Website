@@ -30,7 +30,7 @@ const Banner = () => {
             >
               <Image
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/policy/Risk+Disclosure.svg"
-                alt="image"
+                alt="Risk Disclosure"
                 width="34"
                 height="200"
               />

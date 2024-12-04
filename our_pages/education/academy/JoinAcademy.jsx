@@ -19,7 +19,11 @@ const JoinAcademy = ({ joinAcademy, setActive }) => {
                 </h3>
               </div>
               <div className="w-14 h-14 borer-2 border-[#222222] bg-[#1D1D1D] rounded-lg flex items-center justify-center">
-                <img src={academy.icon} alt="" className="w-[40px]" />
+                <img
+                  src={academy.icon}
+                  alt={academy.title1}
+                  className="w-[40px]"
+                />
               </div>
             </div>
             <div>

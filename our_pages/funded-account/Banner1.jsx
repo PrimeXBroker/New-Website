@@ -17,16 +17,16 @@ const Banner1 = () => {
             </div>
             <div className="mt-4 md:mt-0 xl:mt-4 text-center md:text-start md:px-0 sm:px-2 px-0">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#ffffff]">
-              {t("title1")}  <br className="sm:hidden md:block" />
-              {t("title2")} <br className="sm:hidden lg:block" />
-              {t("title3")} <br className="sm:hidden lg:block" />
+                {t("title1")} <br className="sm:hidden md:block" />
+                {t("title2")} <br className="sm:hidden lg:block" />
+                {t("title3")} <br className="sm:hidden lg:block" />
                 <span className="text-[#FED100]">
-                {t("title4")} <br className="sm:hidden lg:block" />
-                {t("title5")}
+                  {t("title4")} <br className="sm:hidden lg:block" />
+                  {t("title5")}
                 </span>
               </h1>
               <p className="text-[#c6c6c6] text-base md:text-lg mt-4 md:mt-1 xl:mt-3 w-full lg:w-[80%] md:px-0 sm:px-8 px-0">
-              {t("description")}
+                {t("description")}
               </p>
             </div>
             <div className="lg:mt-3 flex justify-center md:justify-start">
@@ -43,7 +43,7 @@ const Banner1 = () => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/funded-account/Hero+Image.png"
                 width={100}
                 height={100}
-                alt="Hero Image"
+                alt="Funded Account Hero"
                 className={`w-full sm:w-[70%] md:w-[90%]`}
               />
             </div>

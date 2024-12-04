@@ -129,7 +129,7 @@ const ExpertAnalysisDetail = ({ slug }) => {
                   <div>
                     <img
                       src={blog.image}
-                      alt="PrimeX Capital"
+                      alt= {blog?.title}
                       className="w-full overflow-hidden transition duration-700 ease-in-out transform group-hover:scale-110"
                     />
                   </div>

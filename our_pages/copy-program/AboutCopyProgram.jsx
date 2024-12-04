@@ -16,7 +16,7 @@ const AboutCopyProgram = () => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/About+Image+New.webp"
                 width="100"
                 height="100"
-                alt="image"
+                alt="About Image"
                 className={`w-full sm:w-[70%]`}
               />
             </div>
@@ -47,7 +47,7 @@ const AboutCopyProgram = () => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/About+Image+New.webp"
                 width="100"
                 height="100"
-                alt="image"
+                alt="About Image"
                 className={`w-full sm:w-[90%] md:w-[70%]`}
               />
             </div>

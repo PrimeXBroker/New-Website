@@ -2297,6 +2297,11 @@
     "hightProvidersWidget": {
       "title1": "رتبه‌بندی برتر بر اساس ",
       "title2": "تعداد سرمایه‌گذاران"
+    },
+    "widgetCards": {
+      "title1": "بهترین نتایج ",
+      "title2": "متخصصین ما",
+      "btnTxt": "بازدید کنید"
     }
   },
   "contactUs": {

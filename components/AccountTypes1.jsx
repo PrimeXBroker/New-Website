@@ -39,7 +39,7 @@ const AccountTypes1 = () => {
                   src={account.imageUrl}
                   width="100"
                   height="100"
-                  alt="image"
+                  alt={account.title}
                 />
                 <p className="text-white text-lg pt-5">{account.title}</p>
               </span>

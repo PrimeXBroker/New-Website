@@ -45,7 +45,7 @@ const AboutBanner = () => {
             src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/about/about-us-hero.webp"
             width="500"
             height="300"
-            alt="banner Image"
+            alt="About Banner Image"
           />
         </div>
       </div>

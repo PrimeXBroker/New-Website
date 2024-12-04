@@ -23,7 +23,7 @@ function NewsBody({ slug }) {
   const [content, setContent] = useState(null);
 
   const ImageComponent = ({ src }) => (
-    <img src={src} alt="" style={{ maxWidth: "100%" }} />
+    <img src={src} alt="PrimeX Capital" style={{ maxWidth: "100%" }} />
   );
 
   const mediaBlockRenderer = (block) => {
@@ -179,7 +179,7 @@ function NewsBody({ slug }) {
           </div> */}
         </div>
         <div className="text-[#ffffff]">
-          <img src={detail.image} className="mb-7" />
+          <img src={detail.image} alt="PrimeX Capital" className="mb-7" />
           <h1 className="text-[25px] mb-0 font-semibold">{detail?.title}</h1>
           <MyEditor
             editorState={content}
