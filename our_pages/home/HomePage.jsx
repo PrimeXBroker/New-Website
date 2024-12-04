@@ -9,7 +9,7 @@ import Academy from "./Academy";
 import Support from "./Support";
 import Recognition from "./Recognition";
 import MobileRecognition from "./MobileRecognition";
-import Promotions from "./Promotions";
+// import Promotions from "./Promotions";
 import TradingOpportunities from "./TradingOpportunities";
 import Partnerships from "./Partnerships";
 import PartnershipMobile from "./PartnershipMobile";
@@ -135,7 +135,7 @@ const HomePage = () => {
         <PartnershipMobile />
       </div>
       <Support />
-      <Promotions promotions={promotionsData} />
+      {/* <Promotions promotions={promotionsData} /> */}
       <div className="lg:block hidden py-10 bg-[#000000]">
         <Recognition />
       </div>
