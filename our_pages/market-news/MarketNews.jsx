@@ -18,6 +18,7 @@ const MarketNews = ({ news, totalPages, lang }) => {
     setLoading(true);
     const response = await getNews(page, lang, locale);
     if (response?.success) {
+      console.log(response?.result.data, "response?.result.data");
       setNews(response?.result.data);
       setPage(p);
     }

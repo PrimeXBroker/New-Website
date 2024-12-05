@@ -41,7 +41,6 @@ const Academy = async () => {
   const locale = await getLocale();
   const marketNews = locale === "ar" ? "news" : "all";
   const response = await getNews(1, marketNews, locale);
-  console.log(response, "response");
   let marketNewsBlogs = [],
     marketNewsPages = 1;
   if (response?.success) {

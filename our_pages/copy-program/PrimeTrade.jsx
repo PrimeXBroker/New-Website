@@ -10,6 +10,7 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import CopyProgramFormWrapper from "./CopyProgramFormWrapper";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const PrimeTrade = () => {
   const locale = useLocale();
@@ -37,7 +38,7 @@ const PrimeTrade = () => {
               </p>
             </div>
             <button
-              onClick={onOpen}
+              onClick={() => window.open(getRegisterUrl(locale))}
               className="py-3 px-6 lg:py-4 lg:px-12 text-base md:text-[15px] lg:text-base font-semibold rounded-md w-full md:w-auto custom-button"
             >
               {t("btnTxt")}
