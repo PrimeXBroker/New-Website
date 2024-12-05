@@ -85,7 +85,11 @@ const ExpertAnalysis = ({ id }) => {
                 <div>
                   <Image
                     unoptimized={true}
-                    src={blog.image}
+                    src={
+                      locale === "ar"
+                        ? blog?.imageAr || blog?.image
+                        : blog?.image
+                    }
                     width="100"
                     height="100"
                     alt={blog?.titleEn}

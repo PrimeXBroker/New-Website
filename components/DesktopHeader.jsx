@@ -488,6 +488,14 @@ const DesktopHeader = ({ locale }) => {
                 </ul>
               )}
             </li>
+            <li className="flex items-center h-full">
+              <LocaleLink
+                href="/social-trading"
+                className="text-[#ffffff] text-[.8em]"
+              >
+                {t("social_trading")}
+              </LocaleLink>
+            </li>
           </ul>
         </nav>
         <div className="flex gap-2">

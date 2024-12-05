@@ -174,7 +174,13 @@ function AnalysisNewsBody({ slug }) {
         </div>
 
         <div className="text-[#ffffff]">
-          <img src={detail.image} alt="PrimeX Capital" className="mb-4" />
+          <img
+            src={
+              locale === "ar" ? detail?.imageAr || detail?.image : detail?.image
+            }
+            alt="PrimeX Capital"
+            className="mb-4"
+          />
           <h1 className="text-[25px] mb-0 font-semibold">
             {locale === "ar" ? detail.titleAr : detail.titleEn}
           </h1>

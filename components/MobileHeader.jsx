@@ -952,6 +952,13 @@ const MobileHeader = ({ locale }) => {
               </div>
             )}
           </div>
+          <LocaleLink
+            href="/social-trading"
+            className="text-[#ffffff] text-base"
+            onClick={toggleDrawer}
+          >
+            {t("social_trading")}
+          </LocaleLink>
         </nav>
       </div>
       {isOpen && (
