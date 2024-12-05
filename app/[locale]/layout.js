@@ -485,6 +485,19 @@ export default async function layout({ children, params: { locale } }) {
           href="https://www.primexcapital.com/en/policy-of-aml"
           hreflang="x-default"
         />
+        {hreflangLocales.map((lng) => (
+          <link
+            key={lng}
+            rel="alternate"
+            href={`https://www.primexcapital.com/${lng}/social-trading`}
+            hreflang={lng}
+          />
+        ))}
+        <link
+          rel="alternate"
+          href="https://www.primexcapital.com/en/social-trading"
+          hreflang="x-default"
+        />
         <link
           rel="alternate"
           href="https://primexcapital.com/en/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e"
