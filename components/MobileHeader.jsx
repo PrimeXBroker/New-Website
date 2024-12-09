@@ -744,6 +744,23 @@ const MobileHeader = ({ locale }) => {
           >
             {t("accounts")}
           </LocaleLink>
+          <LocaleLink
+            href="/social-trading"
+            className="text-[#ffffff] text-base relative"
+            onClick={toggleDrawer}
+          >
+            <span
+              className={`absolute top-[-15px] bg-[#E01515] text-[#ffffff] text-[11px] px-3 rounded-full border border-[#ffffff] ${
+                locale === "ar" || locale === "fa" || locale === "kur"
+                  ? "right-[77px]"
+                  : "left-[77px]"
+              }`}
+              style={{ lineHeight: "14px" }}
+            >
+              {t("hot_badge")}
+            </span>
+            {t("social_trading")}
+          </LocaleLink>
           <div>
             <button
               onClick={() => toggleSubMenu(3)}
@@ -952,13 +969,6 @@ const MobileHeader = ({ locale }) => {
               </div>
             )}
           </div>
-          <LocaleLink
-            href="/social-trading"
-            className="text-[#ffffff] text-base"
-            onClick={toggleDrawer}
-          >
-            {t("social_trading")}
-          </LocaleLink>
         </nav>
       </div>
       {isOpen && (

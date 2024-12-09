@@ -141,7 +141,7 @@ const DesktopHeader = ({ locale }) => {
         className="fixed top-0 left-0 h-[4px] bg-[#FED100] z-50"
         style={{ width: `${scrollProgress}%` }}
       ></div>
-      <div className="container bg-[#1d1d1d] mt-[14px] h-[51px] rounded-[8px] flex items-center justify-between">
+      <div className="container bg-[#1d1d1d] mt-[14px] h-[55px] rounded-[8px] flex items-center justify-between">
         <div className="flex items-center">
           <LocaleLink href="/" className="logo">
             <Image
@@ -278,6 +278,23 @@ const DesktopHeader = ({ locale }) => {
               >
                 {t("accounts")}
               </LocaleLink>
+            </li>
+            <li className="flex items-center h-full relative">
+              <LocaleLink
+                href="/social-trading"
+                className="text-[#ffffff] text-[.8em]"
+              >
+                {t("social_trading")}
+              </LocaleLink>
+              <span
+                className={`absolute top-1.5 bg-[#E01515] text-[#ffffff] text-[9px] px-3 rounded-full border border-[#ffffff] ${
+                  locale === "ar" || locale === "fa" || locale === "kur"
+                    ? "-left-2"
+                    : "-right-2"
+                }`}
+              >
+                {t("hot_badge")}
+              </span>
             </li>
             <li
               className="relative flex items-center h-full"
@@ -487,14 +504,6 @@ const DesktopHeader = ({ locale }) => {
                   </li>
                 </ul>
               )}
-            </li>
-            <li className="flex items-center h-full">
-              <LocaleLink
-                href="/social-trading"
-                className="text-[#ffffff] text-[.8em]"
-              >
-                {t("social_trading")}
-              </LocaleLink>
             </li>
           </ul>
         </nav>
