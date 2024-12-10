@@ -50,11 +50,11 @@ const Banner = () => {
                 alt="Trustpilot"
                 width={100}
                 height={100}
-                className="w-[70px] md:w-[100px]"
+                className="w-[65px] md:w-[100px]"
               />
             </div>
-            <div className="px-4">
-              <span className="text-xs md:text-base"> {t("review")}</span>
+            <div className="px-3 md:px-4">
+              <span className="text-[11px] md:text-sm"> {t("review")}</span>
             </div>
           </div>
         </Link>
