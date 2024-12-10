@@ -749,16 +749,18 @@ const MobileHeader = ({ locale }) => {
             className="text-[#ffffff] text-base relative"
             onClick={toggleDrawer}
           >
-            <span
-              className={`absolute top-[-15px] bg-[#E01515] text-[#ffffff] text-[11px] px-3 rounded-full border border-[#ffffff] ${
+            <Image
+              unoptimized={true}
+              width="20"
+              height="20"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
+              alt="Hot Image"
+              className={`absolute top-[-15px] ${
                 locale === "ar" || locale === "fa" || locale === "kur"
-                  ? "right-[77px]"
-                  : "left-[77px]"
+                  ? "right-[60px]"
+                  : "left-[93px]"
               }`}
-              style={{ lineHeight: "14px" }}
-            >
-              {t("hot_badge")}
-            </span>
+            />
             {t("social_trading")}
           </LocaleLink>
           <div>

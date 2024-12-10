@@ -286,15 +286,18 @@ const DesktopHeader = ({ locale }) => {
               >
                 {t("social_trading")}
               </LocaleLink>
-              <span
-                className={`absolute top-1.5 bg-[#E01515] text-[#ffffff] text-[9px] px-3 rounded-full border border-[#ffffff] ${
+              <Image
+                unoptimized={true}
+                width="18"
+                height="18"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
+                alt="Hot Image"
+                className={`absolute top-1 ${
                   locale === "ar" || locale === "fa" || locale === "kur"
-                    ? "-left-2"
-                    : "-right-2"
+                    ? "-left-0"
+                    : "-right-0"
                 }`}
-              >
-                {t("hot_badge")}
-              </span>
+              />
             </li>
             <li
               className="relative flex items-center h-full"
