@@ -238,38 +238,13 @@ const DesktopHeader = ({ locale }) => {
                 </ul>
               )}
             </li>
-            <li
-              className="relative flex items-center h-full"
-              onMouseEnter={() => openDropdown(1)}
-              onMouseLeave={closeDropdown}
-            >
-              <button className="text-[#ffffff] text-[.8em] flex items-center">
+            <li className="flex items-center h-full">
+              <LocaleLink
+                href="/platform/mt5-platform"
+                className="text-[#ffffff] text-[.8em]"
+              >
                 {t("platform")}
-                <svg
-                  className={`fill-current h-4 w-4 ${
-                    locale === "ar" || locale === "fa" || locale === "kur"
-                      ? "mr-1"
-                      : "ml-1"
-                  }`}
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                </svg>
-              </button>
-              {activeDropdown === 1 && (
-                <ul className="absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
-                  <li>
-                    <LocaleLink
-                      href="/platform/mt5-platform"
-                      onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
-                    >
-                      {t("mt5")}
-                    </LocaleLink>
-                  </li>
-                </ul>
-              )}
+              </LocaleLink>
             </li>
             <li className="flex items-center h-full">
               <LocaleLink

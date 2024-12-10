@@ -713,30 +713,13 @@ const MobileHeader = ({ locale }) => {
               </div>
             )}
           </div>
-          <div>
-            <button
-              onClick={() => toggleSubMenu(1)}
-              className="text-[#ffffff] text-base flex justify-between items-center w-full pt-[3px]"
-            >
-              {t("platform")}
-              {openSubMenu === 1 ? (
-                <FaChevronUp size={16} />
-              ) : (
-                <FaChevronDown size={16} />
-              )}
-            </button>
-            {openSubMenu === 1 && (
-              <div className="mt-2">
-                <LocaleLink
-                  href="/platform/mt5-platform"
-                  className="block text-[#ffffff] text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("mt5")}
-                </LocaleLink>
-              </div>
-            )}
-          </div>
+          <LocaleLink
+            href="/platform/mt5-platform"
+            className="text-[#ffffff] text-base"
+            onClick={toggleDrawer}
+          >
+            {t("platform")}
+          </LocaleLink>
           <LocaleLink
             href="/account-types"
             className="text-[#ffffff] text-base pt-[3px]"
