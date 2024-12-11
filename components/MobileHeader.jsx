@@ -944,13 +944,15 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("press_release")}
                 </LocaleLink>
-                <LocaleLink
-                  href="/careers"
-                  className="block text-[#ffffff] text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("careers")}
-                </LocaleLink>
+                {locale === "en" && (
+                  <LocaleLink
+                    href="/careers"
+                    className="block text-[#ffffff] text-base pt-[16px]"
+                    onClick={toggleDrawer}
+                  >
+                    {t("careers")}
+                  </LocaleLink>
+                )}
               </div>
             )}
           </div>

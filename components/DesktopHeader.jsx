@@ -471,15 +471,17 @@ const DesktopHeader = ({ locale }) => {
                       {t("press_release")}
                     </LocaleLink>
                   </li>
-                  <li>
-                    <LocaleLink
-                      href="/careers"
-                      onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
-                    >
-                      {t("careers")}
-                    </LocaleLink>
-                  </li>
+                  {locale === "en" && (
+                    <li>
+                      <LocaleLink
+                        href="/careers"
+                        onClick={closeDropdown}
+                        className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      >
+                        {t("careers")}
+                      </LocaleLink>
+                    </li>
+                  )}
                 </ul>
               )}
             </li>

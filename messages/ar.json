@@ -10,14 +10,14 @@
     "promotion": "العروض",
     "tradetowin": "متداول الشهر",
     "funded_account_competition": "مسابقة الحساب الممول",
-    "liquidity": "تزويد السيولة",
+    "liquidity": "برنامج تزويد السيولة",
     "deposit": "20% بونص",
     "login": "تسجيل الدخول",
     "register": "التسجيل",
     "forex": "الفوركس",
     "stocks": "الأسهم",
     "commodities": "السلع",
-    "crypto": "كريبتو",
+    "crypto": "العملات الرقمية",
     "shares": "الحصص",
     "metals": "المعادن",
     "indices": "المؤشرات",
@@ -30,7 +30,7 @@
     "about": "من نحن",
     "contact": "اتصل بنا",
     "awards": "الجوائز",
-    "press_release": "البيان الصحفي",
+    "press_release": "أخبار الشركة",
     "careers": "الوظائف",
     "choose_us": "لماذا تختارنا",
     "social_trading": "برنامج النسخ",
@@ -626,7 +626,7 @@
       "title_part1_link6": "لماذا تختارنا"
     },
     "Rules": {
-      "title_part2": "قانوني",
+      "title_part2": "السياسات",
       "title_part2_link1": "اتفاقية العميل",
       "title_part2_link2": "الشروط والاحكام",
       "title_part2_link3": "بيان السياسة",
@@ -643,7 +643,7 @@
       "title_part3_link2": "برنامج الوسيط المعرف",
       "title_part3_link3": "برنامج الشريك الإقليمي",
       "title_part3_link4": "برنامج جري ليبيل",
-      "title_part3_link5": "تزويد السيولة"
+      "title_part3_link5": "برنامج تزويد السيولة"
     },
     "Platform": {
       "title_part4": "منصات التداول",
