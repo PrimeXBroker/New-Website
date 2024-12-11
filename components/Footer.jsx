@@ -412,7 +412,11 @@ const Footer = () => {
                             : "text-left"
                         }`}
                       >
-                        {el.column.heading === "Our Addresses" ? (
+                        {el.column.heading === "Our Addresses" ||
+                        el.column.heading === "عناويننا" ||
+                        el.column.heading === "آدرس‌های ما" ||
+                        el.column.heading === "ناونیشانیەکانەمان" ||
+                        el.column.heading === "Adreslerimiz" ? (
                           <span>{link.name}</span>
                         ) : (
                           <LocaleLink href={link.href}>{link.name}</LocaleLink>
