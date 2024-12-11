@@ -51,7 +51,7 @@ const MaximizeProfit = () => {
               >
                 {t("register_btn")}
               </button>
-              <Link
+              <a
                 onClick={() => window.open(getLoginUrl(locale))}
                 target="_blank"
                 className={`text-xs text-[#ffffff] font-normal block mt-2 ${
@@ -62,7 +62,7 @@ const MaximizeProfit = () => {
               >
                 {t("already-reg")}
                 <span className="italic font-semibold">{t("login_here")}</span>
-              </Link>
+              </a>
             </div>
           </div>
           <div className="col-span-12 lg:col-span-6 flex flex-col items-center lg:items-end mt-10 lg:mt-0">
