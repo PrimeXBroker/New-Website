@@ -412,7 +412,11 @@ const Footer = () => {
                             : "text-left"
                         }`}
                       >
-                        <LocaleLink href={link.href}>{link.name}</LocaleLink>
+                        {el.column.heading === "Our Addresses" ? (
+                          <span>{link.name}</span>
+                        ) : (
+                          <LocaleLink href={link.href}>{link.name}</LocaleLink>
+                        )}
                       </li>
                     ))}
                   </ul>
