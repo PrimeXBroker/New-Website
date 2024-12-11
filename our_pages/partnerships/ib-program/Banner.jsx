@@ -19,13 +19,13 @@ const Banner = () => {
                 <TrustPilot />
               </div>
               <div className="mt-3 text-center md:text-start">
-                <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-[42px] font-semibold text-[#ffffff]">
+                <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#ffffff]">
                   {t("title1")}
                 </h1>
-                <h2 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-[42px] font-semibold text-[#FED100] md:mt-0 lg:my-2">
+                <h2 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#FED100] md:mt-0 lg:my-2">
                   {t("title2")}
                 </h2>
-                <h2 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-[42px] font-semibold text-[#ffffff]">
+                <h2 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#ffffff]">
                   {t("title3")}
                 </h2>
               </div>

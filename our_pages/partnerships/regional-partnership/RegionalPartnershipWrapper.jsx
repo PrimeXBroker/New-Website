@@ -71,6 +71,9 @@ const RegionalPartnershipWrapper = () => {
     step3_desc: s("step3_desc"),
     step3_img:
       "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Promote.svg",
+    count1: s("step1_count"),
+    count2: s("step2_count"),
+    count3: s("step3_count"),
   };
 
   const easyStepsMobile = [
@@ -79,18 +82,21 @@ const RegionalPartnershipWrapper = () => {
       step_desc: s("step1_desc"),
       step_img:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Register.svg",
+      count: s("step1_count"),
     },
     {
       step_title: s("step2_title"),
       step_desc: s("step2_desc"),
       step_img:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Earn.svg",
+      count: s("step2_count"),
     },
     {
       step_title: s("step3_title"),
       step_desc: s("step3_desc"),
       step_img:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Promote.svg",
+      count: s("step3_count"),
     },
   ];
 

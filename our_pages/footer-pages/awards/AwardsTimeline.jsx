@@ -75,9 +75,9 @@ const AwardsTimeline = () => {
               <span
                 className={`${
                   activeIndex >= i + 1 ? "text-[#222222]" : "text-[#c6c6c6]"
-                } font-semibold text-2xl`}
+                } font-semibold text-lg`}
               >
-                {t(`award_count${i + 1}`)}
+                {t(`awardYear${i + 1}`)}
               </span>
 
               {i % 2 === 0 ? (
@@ -172,13 +172,13 @@ const AwardsTimeline = () => {
                       className="w-full"
                     />
                   </div>
-                  <div
+                  {/* <div
                     className={`absolute top-2 right-2 px-2 py-1 rounded-[4px] text-sm md:text-xs lg:text-sm ${
                       activeIndex === i + 1 ? "bg-[#ffffff]" : "bg-[#333333]"
                     }`}
                   >
                     {t(`awardYear${i + 1}`)}
-                  </div>
+                  </div> */}
                 </div>
                 <div className="mt-4">
                   <h3

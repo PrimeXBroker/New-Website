@@ -7,19 +7,22 @@ const EasyStepsMobile = () => {
 
   const benefits = [
     {
-      title: t("step1_title"),
-      description: t("step1_desc"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Register.svg",
-    },
-    {
       title: t("step2_title"),
       description: t("step2_desc"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Earn.svg",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Register.svg",
+      count: t("step1_count"),
+    },
+    {
+      title: t("step1_title"),
+      description: t("step1_desc"),
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Promote.svg",
+      count: t("step2_count"),
     },
     {
       title: t("step3_title"),
       description: t("step3_desc"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Promote.svg",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Earn.svg",
+      count: t("step3_count"),
     },
   ];
 
@@ -39,7 +42,12 @@ const EasyStepsMobile = () => {
           >
             <div className="flex justify-between items-center">
               <div>
-                <h3 className="text-xl font-semibold">{benefit.title}</h3>
+                <h3 className="text-xl font-semibold flex items-center gap-2">
+                  <span className="bg-[#1D1D1D] border-2 border-[#222222] text-center rounded-md text-[#FED100] h-8 w-8 flex items-center justify-center text-xl font-semibold">
+                    {benefit.count}
+                  </span>
+                  {benefit.title}
+                </h3>
               </div>
               <div className="w-12 h-12 borer-2 border-[#222222] bg-[#1D1D1D] rounded-lg flex items-center justify-center">
                 <img

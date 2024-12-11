@@ -18,7 +18,12 @@ const EasyStepsMobile = ({ easySteps, easyStepsMobile }) => {
           >
             <div className="flex justify-between items-center">
               <div>
-                <h3 className="text-xl font-bold">{step.step_title}</h3>
+                <h3 className="text-xl font-bold flex items-center gap-2">
+                  <span className="bg-[#1D1D1D] border-2 border-[#222222] text-center rounded-md text-[#FED100] h-8 w-8 flex items-center justify-center text-xl font-semibold">
+                    {step.count}
+                  </span>
+                  {step.step_title}
+                </h3>
               </div>
               <div className="w-12 h-12 borer-2 border-[#222222] bg-[#1D1D1D] group-hover:bg-[#FED100] rounded-lg flex items-center justify-center">
                 <img
