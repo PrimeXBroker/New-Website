@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import ExpertAnalysis from "../../expert-analysis/ExpertAnalysis";
 import MarketNews from "../../market-news/MarketNews";
 
