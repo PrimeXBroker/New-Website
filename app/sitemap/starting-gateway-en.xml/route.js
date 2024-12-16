@@ -1,12 +1,12 @@
-async function fetchArabicPressRelease() {
-  const categoryId = "665448dcf5b226a0bd9b574e";
+async function fetchEnglishStartingGateway() {
+  const categoryId = "66532f1079afa70a9ae6302e";
   try {
     const response = await fetch(
-      `https://primexbroker.com/api/fetch/press-release-ar-slugs/${categoryId}`
+      `https://primexbroker.com/api/fetch/starting-gateway-en-slugs/${categoryId}`
     );
     const data = await response.json();
     const links = data.map((item) => ({
-      url: `https://primexcapital.com/ar/market-news-detail/${item.slug}`,
+      url: `https://primexcapital.com/en/market-news-detail/${item.slug}`,
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links.map((link) => ({
@@ -23,19 +23,19 @@ async function fetchArabicPressRelease() {
 }
 
 export default async function GET() {
-  const pressReleaseArUrls = await fetchArabicPressRelease();
+  const startingGatewayEnUrls = await fetchEnglishStartingGateway();
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${pressReleaseArUrls
-    .map(
-      ({ url, lastModified }) => `
-    <url>
-      <loc>${url}</loc>
-      <lastmod>${lastModified.toISOString()}</lastmod>
-    </url>`
-    )
-    .join("")}
-</urlset>`;
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    ${startingGatewayEnUrls
+      .map(
+        ({ url, lastModified }) => `
+      <url>
+        <loc>${url}</loc>
+        <lastmod>${lastModified.toISOString()}</lastmod>
+      </url>`
+      )
+      .join("")}
+  </urlset>`;
   return new Response(xml, {
     headers: {
       "Content-Type": "application/xml; charset=utf-8",

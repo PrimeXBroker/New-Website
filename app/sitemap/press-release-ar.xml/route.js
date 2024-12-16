@@ -1,8 +1,8 @@
-async function fetchArabicMarketNews() {
-  const categoryId = "664de39c3f02939fcd48a1d0";
+async function fetchArabicPressRelease() {
+  const categoryId = "665448dcf5b226a0bd9b574e";
   try {
     const response = await fetch(
-      `https://primexbroker.com/api/fetch/market-news-ar-slugs/${categoryId}`
+      `https://primexbroker.com/api/fetch/press-release-ar-slugs/${categoryId}`
     );
     const data = await response.json();
     const links = data.map((item) => ({
@@ -23,10 +23,10 @@ async function fetchArabicMarketNews() {
 }
 
 export default async function GET() {
-  const marketNewsArUrls = await fetchArabicMarketNews();
+  const pressReleaseArUrls = await fetchArabicPressRelease();
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${marketNewsArUrls
+    ${pressReleaseArUrls
       .map(
         ({ url, lastModified }) => `
       <url>
