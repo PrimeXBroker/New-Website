@@ -2,49 +2,64 @@ import SitemapTable from "@/components/SitemapTable";
 
 export default function SitemapPage() {
   const sitemaps = [
-    { url: "https://primexcapital.com/sitemap/en", lastModified: new Date() },
-    { url: "https://primexcapital.com/sitemap/ar", lastModified: new Date() },
-    { url: "https://primexcapital.com/sitemap/fa", lastModified: new Date() },
-    { url: "https://primexcapital.com/sitemap/kur", lastModified: new Date() },
-    { url: "https://primexcapital.com/sitemap/tr", lastModified: new Date() },
     {
-      url: "https://primexcapital.com/sitemap/market-news-en",
+      url: "https://primexcapital.com/sitemap/en/sitemap.xml",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/sitemap/market-news-ar",
+      url: "https://primexcapital.com/sitemap/ar/sitemap.xml",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/sitemap/starting-gateway-en",
+      url: "https://primexcapital.com/sitemap/fa/sitemap.xml",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/sitemap/starting-gateway-ar",
+      url: "https://primexcapital.com/sitemap/kur/sitemap.xml",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/sitemap/press-release-en",
+      url: "https://primexcapital.com/sitemap/tr/sitemap.xml",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/sitemap/press-release-ar",
+      url: "https://primexcapital.com/sitemap/market-news-en/sitemap.xml",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/sitemap/technical-analysis-en",
+      url: "https://primexcapital.com/sitemap/market-news-ar/sitemap.xml",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/sitemap/technical-analysis-ar",
+      url: "https://primexcapital.com/sitemap/starting-gateway-en/sitemap.xml",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/sitemap/learning-hub-en",
+      url: "https://primexcapital.com/sitemap/starting-gateway-ar/sitemap.xml",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/sitemap/learning-hub-ar",
+      url: "https://primexcapital.com/sitemap/press-release-en/sitemap.xml",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/sitemap/press-release-ar/sitemap.xml",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/sitemap/technical-analysis-en/sitemap.xml",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/sitemap/technical-analysis-ar/sitemap.xml",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/sitemap/learning-hub-en/sitemap.xml",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/sitemap/learning-hub-ar/sitemap.xml",
       lastModified: new Date(),
     },
   ];
