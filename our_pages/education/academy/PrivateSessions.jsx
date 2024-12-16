@@ -70,7 +70,7 @@ const PrivateSessions = ({ setActive }) => {
                 <div className="flex items-center justify-center w-full h-40 overflow-hidden rounded-lg">
                   <Image
                     unoptimized={true}
-                    src="/images/academy_image.jpg"
+                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/rose_academy_image.jpg"
                     width="150"
                     height="200"
                     alt="Rose"
