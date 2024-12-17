@@ -22,7 +22,7 @@ async function fetchArabicTechnicalAnalysis() {
   }
 }
 
-export default async function GET() {
+export async function GET() {
   const technicalAnalysisArUrls = await fetchArabicTechnicalAnalysis();
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
