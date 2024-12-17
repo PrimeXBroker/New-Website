@@ -11,7 +11,7 @@ async function fetchEnglishMarketNews() {
   const categoryId = "664dd9c93f02939fcd48959e";
   try {
     const response = await fetch(
-      `https://primexcapital.com/api/fetch/market-news-en-slugs/${categoryId}`
+      `https://primexbroker.com/api/fetch/market-news-en-slugs/${categoryId}`
     );
     const data = await response.json();
     const links = data.map((item) => ({
