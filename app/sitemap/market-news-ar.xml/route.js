@@ -9,7 +9,7 @@ async function fetchArabicMarketNews() {
       url: `https://primexcapital.com/ar/market-news-detail/${item.slug}`,
       title: item.title,
       language: item.language,
-      createdOn: new Date(item.createdOn).toISOString(),
+      createdOn: item.createdOn,
     }));
     return links.map((link) => ({
       ...link,
@@ -52,9 +52,9 @@ export async function GET() {
             <news:name>PrimeX Capital Market News</news:name>
             <news:language>${article.language}</news:language>
           </news:publication>
-          <news:publication_date>${new Date(
-            article.createdOn
-          ).toISOString()}</news:publication_date>
+          <news:publication_date>${
+            article.createdOn.split("T")[0]
+          }</news:publication_date>
           <news:title>${article.title}</news:title>
         </news:news>
       </url>`
