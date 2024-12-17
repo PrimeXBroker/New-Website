@@ -1,9 +1,16 @@
 import HomePage from "@/our_pages/home/HomePage";
 import Script from "next/script";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <meta
+          name="facebook-domain-verification"
+          content="dkhacq1ppi9o8sjisuboei4diydc3g"
+        />
+      </Head>
       <Script
         type="application/ld+json"
         id="organization-schema"
