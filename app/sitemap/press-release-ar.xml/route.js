@@ -1,7 +1,9 @@
+import axios from "axios";
+
 async function fetchArabicPressRelease() {
   const categoryId = "665448dcf5b226a0bd9b574e";
   try {
-    const response = await fetch(
+    const response = await axios.get(
       `https://primexbroker.com/api/fetch/press-release-ar-slugs/${categoryId}`
     );
     const data = await response.json();
