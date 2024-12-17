@@ -1,12 +1,3 @@
-function escapeXML(str) {
-  return str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/'/g, "&apos;")
-    .replace(/"/g, "&quot;");
-}
-
 async function fetchEnglishMarketNews() {
   const categoryId = "664dd9c93f02939fcd48959e";
   try {
@@ -15,14 +6,30 @@ async function fetchEnglishMarketNews() {
     );
     const data = await response.json();
     const links = data.map((item) => ({
-      url: `https://primexcapital.com/en/market-news-detail/${escapeXML(
-        item.slug
-      )}`,
-      title: escapeXML(item.title),
-      language: escapeXML(item.language),
+      url: `https://primexcapital.com/en/market-news-detail/${item.slug}`,
+      title: item.title,
+      language: item.language,
       createdOn: new Date(item.createdOn).toISOString(),
     }));
-    return links;
+    return links.map((link) => ({
+      ...link,
+      url: link.url
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;"),
+      title: link.title
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;"),
+      language: link.language
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;"),
+      createdOn: link.createdOn
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;"),
+    }));
   } catch (error) {
     console.error("Failed to fetch dynamic links:", error);
     return [];
@@ -39,16 +46,16 @@ export async function GET() {
       .map(
         (article) => `
       <url>
-        <loc>${escapeXML(article.url)}</loc>
+        <loc>${article.url}</loc>
         <news:news>
           <news:publication>
             <news:name>PrimeX Capital Market News</news:name>
-            <news:language>${escapeXML(article.language)}</news:language>
+            <news:language>${article.language}</news:language>
           </news:publication>
-          <news:publication_date>${escapeXML(
-            new Date(article.createdOn).toISOString()
-          )}</news:publication_date>
-          <news:title>${escapeXML(article.title)}</news:title>
+          <news:publication_date>${new Date(
+            article.createdOn
+          ).toISOString()}</news:publication_date>
+          <news:title>${article.title}</news:title>
         </news:news>
       </url>`
       )
