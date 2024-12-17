@@ -50,7 +50,7 @@ export async function GET() {
         <loc>${article.url}</loc>
         <news:news>
           <news:publication>
-            <news:name>PrimeX Capital Market News</news:name>
+            <news:name>PrimeX Market News</news:name>
             <news:language>${article.language}</news:language>
           </news:publication>
           <news:publication_date>${
