@@ -5,6 +5,9 @@ export default function robots() {
       allow: "/",
       crawlDelay: 10,
     },
-    sitemap: "https://www.primexcapital.com/sitemap.xml",
+    sitemap: [
+      "https://www.primexcapital.com/sitemap.xml",
+      "https://www.primexcapital.com/sitemap/market-news-en.xml",
+    ],
   };
 }
