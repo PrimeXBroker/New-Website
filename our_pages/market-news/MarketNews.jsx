@@ -27,7 +27,7 @@ const MarketNews = ({ news, totalPages, lang }) => {
 
   useEffect(() => {
     handleChange(page);
-  }, [news]);
+  }, [page, news]);
 
   if (loading) {
     return (
