@@ -14,18 +14,19 @@ const MarketNews = ({ news, totalPages, lang }) => {
   const [newsList, setNews] = useState(news);
   const locale = useLocale();
 
+  const handleChange = async (p) => {
+    setLoading(true);
+    const response = await getNews(page, lang, locale);
+    if (response?.success) {
+      console.log(response?.result.data, "response?.result.data");
+      setNews(response?.result.data);
+      setPage(p);
+    }
+    setLoading(false);
+  };
+
   useEffect(() => {
-    const handleChange = async (p) => {
-      setLoading(true);
-      const response = await getNews(page, lang, locale);
-      if (response?.success) {
-        console.log(response?.result.data, "response?.result.data");
-        setNews(response?.result.data);
-        setPage(p);
-      }
-      setLoading(false);
-    };
-    handleChange();
+    handleChange(page);
   }, [news]);
 
   if (loading) {
