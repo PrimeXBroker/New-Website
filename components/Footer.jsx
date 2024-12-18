@@ -455,7 +455,7 @@ const Footer = () => {
               &copy; {t("copy-right")}
             </p>
             <div className="flex gap-4 items-center justify-around">
-              <Link
+              {/* <Link
                 href={`${
                   locale === "ar"
                     ? "https://m.facebook.com/primex.capital.ar/"
@@ -468,7 +468,7 @@ const Footer = () => {
                   size={30}
                   className="hover:fill-blue-600 transition-all hover:translate-y-[-5px] duration-500"
                 />
-              </Link>
+              </Link> */}
               <Link
                 href={`${
                   locale === "ar"
