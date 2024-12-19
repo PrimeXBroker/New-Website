@@ -7,7 +7,7 @@ export default function Home() {
       <head>
         <meta
           name="facebook-domain-verification"
-          content="dkhacq1ppi9o8sjisuboei4diydc3g"
+          content="l2xgvg1t4kr3jogcr2qqnzvulmksuz"
         />
       </head>
       <Script
