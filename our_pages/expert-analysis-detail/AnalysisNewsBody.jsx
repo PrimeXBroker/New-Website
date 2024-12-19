@@ -181,9 +181,10 @@ function AnalysisNewsBody({ slug }) {
             alt="PrimeX Capital"
             className="mb-4"
           />
-          <h1 className="text-[25px] mb-0 font-semibold">
-            {locale === "ar" ? detail.titleAr : detail.titleEn}
-          </h1>
+          <div className="mb-7">
+            {/* {" "}
+            {locale === "ar" ? detail.titleAr : detail.titleEn} */}
+          </div>
           <MyEditor
             editorState={content}
             readOnly={true}

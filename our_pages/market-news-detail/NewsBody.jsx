@@ -180,7 +180,7 @@ function NewsBody({ slug }) {
         </div>
         <div className="text-[#ffffff]">
           <img src={detail.image} alt="PrimeX Capital" className="mb-7" />
-          <h1 className="text-[25px] mb-0 font-semibold">{detail?.title}</h1>
+          <div className="mb-7">{/* {detail?.title} */}</div>
           <MyEditor
             editorState={content}
             readOnly={true}
