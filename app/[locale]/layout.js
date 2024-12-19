@@ -146,10 +146,6 @@ export default async function layout({ children, params: { locale } }) {
       lang={locale}
     >
       <head>
-        <meta
-          name="facebook-domain-verification"
-          content="l2xgvg1t4kr3jogcr2qqnzvulmksuz"
-        />
         {hreflangLocales.map((lng) => (
           <link
             key={lng}

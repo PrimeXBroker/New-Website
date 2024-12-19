@@ -4,12 +4,6 @@ import Script from "next/script";
 export default function Home() {
   return (
     <>
-      <head>
-        <meta
-          name="facebook-domain-verification"
-          content="l2xgvg1t4kr3jogcr2qqnzvulmksuz"
-        />
-      </head>
       <Script
         type="application/ld+json"
         id="organization-schema"
