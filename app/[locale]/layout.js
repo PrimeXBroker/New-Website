@@ -683,7 +683,7 @@ export default async function layout({ children, params: { locale } }) {
             src="https://www.facebook.com/tr?id=1089594275856519&ev=PageView&noscript=1"
           />
         </noscript>
-        <Script
+        {/* <Script
           id="livechat"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -708,7 +708,7 @@ export default async function layout({ children, params: { locale } }) {
           >
             LiveChat
           </a>
-        </noscript>
+        </noscript> */}
       </body>
     </html>
   );
