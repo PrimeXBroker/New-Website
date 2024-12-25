@@ -733,8 +733,8 @@ const MobileHeader = ({ locale }) => {
               alt="Hot Image"
               className={`absolute top-[-15px] ${
                 locale === "ar" || locale === "fa" || locale === "kur"
-                  ? "right-[60px]"
-                  : "left-[93px]"
+                  ? "right-[41px]"
+                  : "left-[59px]"
               }`}
             />
             {t("accounts")}
