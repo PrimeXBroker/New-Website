@@ -2,12 +2,14 @@
 import React, { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
+import Image from "next/image";
 
 const AccountTypesPricingTableMobile = () => {
   const locale = useLocale();
   const t = useTranslations("accountTypes.accountsTable");
   const [activeTab, setActiveTab] = useState("standard");
   const o = useTranslations("accountTypes.accountsTable");
+  const l = useTranslations("accountTypes.accountTypes");
 
   const tabContent = {
     standard: {
@@ -81,13 +83,32 @@ const AccountTypesPricingTableMobile = () => {
           {["standard", "narrow", "raw"].map((tab) => (
             <button
               key={tab}
-              className={`px-6 py-3 font-semibold ${
+              className={`px-6 py-3 font-semibold relative ${
                 activeTab === tab
                   ? "text-[#ffffff] border-b-4 border-[#FED100]"
                   : "text-[#ffffff]"
               }`}
               onClick={() => setActiveTab(tab)}
             >
+              {tab !== "standard" && (
+                <div
+                  className={`absolute ${
+                    locale === "ar" || locale === "fa" || locale === "kur"
+                      ? "top-[-42px] right-0"
+                      : "top-[-42px] left-0"
+                  } flex justify-center items-center w-[58px] h-[58px]`}
+                >
+                  <Image
+                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/Offer.svg"
+                    alt="Offer"
+                    width={58}
+                    height={58}
+                  />
+                  <span className="absolute inset-0 flex justify-center items-center text-[#ffffff] font-bold text-xs">
+                    {l("offer")}
+                  </span>
+                </div>
+              )}
               {t(`${tab}.title`)}
             </button>
           ))}
