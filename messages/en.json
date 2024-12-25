@@ -1366,6 +1366,7 @@
       "description4": "Boost your trading skills with PrimeX Academy’s resources, including webinars, tutorials, and daily market analysis, all designed to help you succeed."
     },
     "accountTypes": {
+      "offer": "Offer",
       "main_title1": "Account",
       "main_title2": "Types",
       "desc": "Explore our account options and find the one that fits your needs. Select the perfect plan for you.",
@@ -1427,6 +1428,7 @@
       "narrow": {
         "title": "Narrow",
         "deposit": "$1000",
+        "deposit-offer": "$500",
         "spread": "From 1.0 pips",
         "commissions": "$0",
         "leverage": "1:500",
@@ -1446,6 +1448,7 @@
       "raw": {
         "title": "Raw",
         "deposit": "$5000",
+        "deposit-offer": "$1500",
         "spread": "From 0.1 pips",
         "commissions": "$6 per 1 Lot",
         "leverage": "1:200",

@@ -25,8 +25,27 @@ const AccountTypes = ({ accounts }) => {
             <>
               <div
                 key={account.id}
-                className="bg-[#111111] p-6 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl flex flex-col justify-between"
+                className="bg-[#111111] p-6 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl flex flex-col justify-between relative"
               >
+                {(account.id === 2 || account.id === 3) && (
+                  <div
+                    className={`absolute ${
+                      locale === "ar" || locale === "fa" || locale === "kur"
+                        ? "top-[-36px] right-0"
+                        : "top-[-36px] left-0"
+                    } flex justify-center items-center w-[58px] h-[58px]`}
+                  >
+                    <Image
+                      src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/Offer.svg"
+                      alt="Offer"
+                      width={58}
+                      height={58}
+                    />
+                    <span className="absolute inset-0 flex justify-center items-center text-[#ffffff] font-bold text-xs">
+                      {t("offer")}
+                    </span>
+                  </div>
+                )}
                 <div>
                   <div className="flex justify-between items-center">
                     <div className="flex items-start gap-3">

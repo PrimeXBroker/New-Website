@@ -246,13 +246,25 @@ const DesktopHeader = ({ locale }) => {
                 {t("platform")}
               </LocaleLink>
             </li>
-            <li className="flex items-center h-full">
+            <li className="flex items-center h-full relative">
               <LocaleLink
                 href="/account-types"
                 className="text-[#ffffff] text-[.8em]"
               >
                 {t("accounts")}
               </LocaleLink>
+              <Image
+                unoptimized={true}
+                width="18"
+                height="18"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
+                alt="Hot Image"
+                className={`absolute top-1 ${
+                  locale === "ar" || locale === "fa" || locale === "kur"
+                    ? "-left-0"
+                    : "-right-0"
+                }`}
+              />
             </li>
             <li className="flex items-center h-full relative">
               <LocaleLink

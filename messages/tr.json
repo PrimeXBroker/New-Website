@@ -1366,6 +1366,7 @@
       "description4": "PrimeX Akademisi'nin kaynakları, web seminerleri, eğitimler ve günlük piyasa analizleri ile ticaret becerilerinizi artırın; tümü başarıya ulaşmanız için tasarlandı."
     },
     "accountTypes": {
+      "offer": "teklif",
       "main_title1": "Hesap",
       "main_title2": "Türleri",
       "desc": "Hesap seçeneklerimizi keşfedin ve ihtiyaçlarınıza en uygun olanı bulun. Sizin için mükemmel planı seçin.",
@@ -1427,6 +1428,7 @@
       "narrow": {
         "title": "Dar",
         "deposit": "$1000",
+        "deposit-offer": "$500",
         "spread": "1.0 pipsten itibaren",
         "commissions": "$0",
         "leverage": "1:500",
@@ -1446,6 +1448,7 @@
       "raw": {
         "title": "Ham",
         "deposit": "$5000",
+        "deposit-offer": "$1500",
         "spread": "0.1 pipsten itibaren",
         "commissions": "$6 her 1 Lot için",
         "leverage": "1:200",

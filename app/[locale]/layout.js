@@ -10,7 +10,6 @@ import Cookies from "@/components/Cookies";
 import "aos/dist/aos.css";
 import { Suspense } from "react";
 import { Toaster } from "react-hot-toast";
-import ChatWidget from "@/components/ChatWidget";
 import { FacebookPixelEvents } from "@/utilities/pixelEvent";
 import FallbackLoader from "@/components/LoadingSpinner";
 import Script from "next/script";

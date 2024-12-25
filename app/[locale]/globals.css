@@ -1677,3 +1677,14 @@
 .copy-program-modal svg {
   color: #ffffff !important;
 }
+
+.strikethrough-rotate::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  right: -6px;
+  height: 2px;
+  background: #e01515;
+  top: 50%;
+  transform: rotate(6deg);
+}

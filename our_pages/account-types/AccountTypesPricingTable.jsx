@@ -24,10 +24,18 @@ const AccountTypesPricingTable = () => {
           {t("standard.deposit")}
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
-          {t("narrow.deposit")}
+          <span className="block font-semibold">
+            {t("narrow.deposit-offer")}
+          </span>
+          <span className="relative strikethrough-rotate">
+            {t("narrow.deposit")}
+          </span>
         </div>
         <div className="text-center text-[#C6C6C6] bg-[#000000] px-5 py-6">
-          {t("raw.deposit")}
+          <span className="block font-semibold">{t("raw.deposit-offer")}</span>
+          <span className="relative strikethrough-rotate">
+            {t("raw.deposit")}
+          </span>
         </div>
 
         {/* Second Row - Dark Gray Background */}

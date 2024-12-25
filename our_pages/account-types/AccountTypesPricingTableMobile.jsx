@@ -7,9 +7,11 @@ const AccountTypesPricingTableMobile = () => {
   const locale = useLocale();
   const t = useTranslations("accountTypes.accountsTable");
   const [activeTab, setActiveTab] = useState("standard");
+  const o = useTranslations("accountTypes.accountsTable");
 
   const tabContent = {
     standard: {
+      id: 1,
       deposit: t("standard.deposit"),
       spread: t("standard.spread"),
       commissions: t("standard.commissions"),
@@ -29,7 +31,9 @@ const AccountTypesPricingTableMobile = () => {
       btnTxt: t("standard.btnTxt"),
     },
     narrow: {
+      id: 2,
       deposit: t("narrow.deposit"),
+      depositOffer: o("narrow.deposit-offer"),
       spread: t("narrow.spread"),
       commissions: t("narrow.commissions"),
       leverage: t("narrow.leverage"),
@@ -48,7 +52,9 @@ const AccountTypesPricingTableMobile = () => {
       swap: t("swapFreeNote"),
     },
     raw: {
+      id: 3,
       deposit: t("raw.deposit"),
+      depositOffer: o("raw.deposit-offer"),
       spread: t("raw.spread"),
       commissions: t("raw.commissions"),
       leverage: t("raw.leverage"),
@@ -96,7 +102,16 @@ const AccountTypesPricingTableMobile = () => {
             {t("minimumDeposit")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#000000] px-5 py-6">
-            {tabContent[activeTab].deposit}
+            <span className="block font-semibold">
+              {tabContent[activeTab].depositOffer}
+            </span>
+            <span
+              className={`relative ${
+                tabContent[activeTab].id !== 1 ? "strikethrough-rotate" : ""
+              }`}
+            >
+              {tabContent[activeTab].deposit}
+            </span>
           </div>
 
           <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">

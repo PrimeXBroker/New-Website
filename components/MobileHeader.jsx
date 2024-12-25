@@ -722,9 +722,21 @@ const MobileHeader = ({ locale }) => {
           </LocaleLink>
           <LocaleLink
             href="/account-types"
-            className="text-[#ffffff] text-base pt-[3px]"
+            className="text-[#ffffff] text-base relative pt-[3px]"
             onClick={toggleDrawer}
           >
+            <Image
+              unoptimized={true}
+              width="20"
+              height="20"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
+              alt="Hot Image"
+              className={`absolute top-[-15px] ${
+                locale === "ar" || locale === "fa" || locale === "kur"
+                  ? "right-[60px]"
+                  : "left-[93px]"
+              }`}
+            />
             {t("accounts")}
           </LocaleLink>
           <LocaleLink
