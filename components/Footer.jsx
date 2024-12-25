@@ -252,8 +252,8 @@ const Footer = () => {
                 isDemoPage ||
                 isMT5Page ||
                 isAboutPage
-              ? "bg-[#111111] rounded-xl"
-              : "bg-[#111111] rounded-xl"
+              ? "bg-[#111111] border-[#1D1D1D] border-2 rounded-xl"
+              : "bg-[#111111] border-[#1D1D1D] border-2 rounded-xl"
           }`}
         >
           <div
