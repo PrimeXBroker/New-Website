@@ -25,11 +25,13 @@ const AccountTypes = ({ accounts }) => {
             <>
               <div
                 key={account.id}
-                className="bg-[#111111] p-6 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl flex flex-col justify-between relative"
+                className={`bg-[#111111] p-6 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl flex flex-col justify-between relative ${
+                  account.id !== 3 ? "mb-8 md:mb-0" : ""
+                }`}
               >
                 {(account.id === 2 || account.id === 3) && (
                   <div
-                    className={`absolute hidden md:block ${
+                    className={`absolute ${
                       locale === "ar" || locale === "fa" || locale === "kur"
                         ? "top-[-36px] right-0"
                         : "top-[-36px] left-0"

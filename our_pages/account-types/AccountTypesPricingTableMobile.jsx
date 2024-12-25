@@ -210,41 +210,32 @@ const AccountTypesPricingTableMobile = () => {
           </div>
 
           <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
-            {t("metaTrader5")}
-          </div>
-          <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
-            <div className="text-[#04CC00] bg-[#222222] h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
-              {tabContent[activeTab].metaTrader5}
-            </div>
-          </div>
-
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#000000] px-5 py-6">
             {t("demo")}
           </div>
-          <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#000000] px-5 py-6">
+          <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
             <div className="text-[#04CC00] bg-[#222222] h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
               {tabContent[activeTab].demoAccount}
             </div>
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#000000] px-5 py-6">
             {t("webinars")}
           </div>
-          <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
+          <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#000000] px-5 py-6">
             {tabContent[activeTab].webinars}
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#000000] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
             {t("expertAdvice")}
           </div>
-          <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#000000] px-5 py-6">
+          <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
             {tabContent[activeTab].expertAdvice}
           </div>
 
-          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
+          <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#000000] px-5 py-6">
             {t("swap")}
           </div>
-          <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#111111] px-5 py-6">
+          <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#000000] px-5 py-6">
             {tabContent[activeTab].swap}
           </div>
           <div className="col-span-2 mx-5">
