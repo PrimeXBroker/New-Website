@@ -29,7 +29,7 @@ const AccountTypes = ({ accounts }) => {
               >
                 {(account.id === 2 || account.id === 3) && (
                   <div
-                    className={`absolute ${
+                    className={`absolute hidden md:block ${
                       locale === "ar" || locale === "fa" || locale === "kur"
                         ? "top-[-36px] right-0"
                         : "top-[-36px] left-0"
