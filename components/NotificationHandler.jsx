@@ -1,15 +1,12 @@
 "use client";
 import { SubscribeNotificationUser } from "@/utilities/SubscribeNotificationUser";
 import { useEffect } from "react";
-import { useLocale } from "next-intl";
 
 const NotificationHandler = () => {
-  const locale = useLocale();
-
   useEffect(() => {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker
-        .register(`/${locale}/sw.js`)
+        .register("/sw.js")
         .then((registration) => {
           console.log("Service Worker registered:", registration.scope);
         })
