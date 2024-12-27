@@ -52,7 +52,7 @@ const AwardsTimeline = () => {
         ></div>
 
         {/* Timeline Points */}
-        {Array.from({ length: 10 }, (_, i) => (
+        {Array.from({ length: 11 }, (_, i) => (
           <div
             key={i}
             className={`relative flex items-center py-10 timeline-card transition-all duration-700 ${
