@@ -157,7 +157,7 @@ const AwardsTimeline = () => {
                       unoptimized={true}
                       width="120"
                       height="120"
-                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-awards/Award+${
+                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-awards/Award+${
                         i + 1
                       }.svg`}
                       alt="Award"
