@@ -37,8 +37,8 @@ const AwardsTimeline = () => {
   }, []);
 
   return (
-    <section className="bg-[#000000] py-20 relative overflow-x-hidden">
-      <div className="container relative mx-auto">
+    <section className="bg-[#000000] py-20 relative overflow-hidden">
+      <div className="container relative mx-auto overflow-hidden">
         {/* Base Timeline Line (always visible in #222222) */}
         <div className="absolute left-1/2 transform -translate-x-1/2 w-2 bg-[#222222] h-full"></div>
 
@@ -115,18 +115,18 @@ const AwardsTimeline = () => {
                 activeIndex >= i + 1
                   ? i % 2 === 0
                     ? locale === "ar" || locale === "fa" || locale === "kur"
-                      ? "mr-auto -translate-x-0 opacity-100"
-                      : "ml-auto translate-x-0 opacity-100"
+                      ? "mr-auto -translate-y-0 opacity-100"
+                      : "ml-auto translate-y-0 opacity-100"
                     : locale === "ar" || locale === "fa" || locale === "kur"
-                    ? "ml-auto -translate-x-0 opacity-100"
-                    : "mr-auto translate-x-0 opacity-100"
+                    ? "ml-auto -translate-y-0 opacity-100"
+                    : "mr-auto translate-y-0 opacity-100"
                   : i % 2 === 0
                   ? locale === "ar" || locale === "fa" || locale === "kur"
-                    ? "mr-auto -translate-x-[100%] opacity-0"
-                    : "ml-auto translate-x-[100%] opacity-0"
+                    ? "mr-auto -translate-y-[100%] opacity-0"
+                    : "ml-auto translate-y-[100%] opacity-0"
                   : locale === "ar" || locale === "fa" || locale === "kur"
-                  ? "ml-auto translate-x-[100%] opacity-0"
-                  : "mr-auto -translate-x-[100%] opacity-0"
+                  ? "ml-auto translate-y-[100%] opacity-0"
+                  : "mr-auto -translate-y-[100%] opacity-0"
               } w-96 md:w-80 lg:w-96 transition-all duration-700`}
             >
               <div

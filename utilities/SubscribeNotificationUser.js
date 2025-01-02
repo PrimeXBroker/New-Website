@@ -23,7 +23,6 @@ export async function SubscribeNotificationUser() {
           `Failed to subscribe on server: ${response.statusText}`
         );
       }
-
       console.log("User subscribed successfully:", subscription);
       return subscription;
     } catch (error) {
