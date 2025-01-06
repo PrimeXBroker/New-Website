@@ -483,7 +483,7 @@ const DesktopHeader = ({ locale }) => {
                       {t("press_release")}
                     </LocaleLink>
                   </li>
-                  {locale === "en" && (
+                  {/* {locale === "en" && (
                     <li>
                       <LocaleLink
                         href="/careers"
@@ -493,7 +493,7 @@ const DesktopHeader = ({ locale }) => {
                         {t("careers")}
                       </LocaleLink>
                     </li>
-                  )}
+                  )} */}
                 </ul>
               )}
             </li>
