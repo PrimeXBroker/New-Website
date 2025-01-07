@@ -208,10 +208,53 @@ const Footer = () => {
     },
     {
       id: 5,
-      name: "adv_cash",
+      name: "tymebank",
       imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/adv_cash.webp",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/tymebank.webp",
     },
+    {
+      id: 6,
+      name: "fnb",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/fnb.webp",
+    },
+    {
+      id: 7,
+      name: "nedbank",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/nedbank.webp",
+    },
+    {
+      id: 8,
+      name: "standard",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/standard-bank.webp",
+    },
+    {
+      id: 9,
+      name: "absa",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/absa.webp",
+    },
+    {
+      id: 10,
+      name: "discovery",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/discovery.webp",
+    },
+    {
+      id: 11,
+      name: "capitec",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/capitec.webp",
+    },
+
+    // {
+    //   id: 5,
+    //   name: "adv_cash",
+    //   imgUrl:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/adv_cash.webp",
+    // },
     // {
     //   id: 6,
     //   name: "perfect_money",
@@ -334,16 +377,58 @@ const Footer = () => {
           <h6 className="text-center pb-4 text-[#fff] text-xl">
             {t("logos.payment_options")}
           </h6>
-          <div className="flex flex-row justify-center lg:gap-0 gap-5 lg:justify-around items-center border-b border-b-gray-500 pb-12 flex-wrap">
-            {/* <p className="text-white text-sm font-[200]">{t("logos.title")}</p> */}
+          <div className="lg:flex flex-wrap justify-center gap-4 border-b border-b-gray-500 pb-12 hidden">
+            {/* First Row */}
+            <div className="flex w-full justify-center gap-4">
+              {paymentOptions.slice(0, 6).map((el) => (
+                <div
+                  key={el.id}
+                  className="w-1/6 flex justify-center items-center"
+                >
+                  <Image
+                    src={el.imgUrl}
+                    alt={el.name}
+                    width={120}
+                    height={100}
+                    className="object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+            {/* Second Row (Centered with 5 items) */}
+            <div className="flex w-full justify-center gap-4">
+              {paymentOptions.slice(6).map((el) => (
+                <div
+                  key={el.id}
+                  className="w-1/6 flex justify-center items-center"
+                >
+                  <Image
+                    src={el.imgUrl}
+                    alt={el.name}
+                    width={120}
+                    height={100}
+                    className="object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 border-b border-b-gray-500 pb-12 lg:hidden">
             {paymentOptions.map((el) => (
-              <Image
+              <div
                 key={el.id}
-                src={el.imgUrl}
-                alt={el.name}
-                width={120}
-                height={100}
-              />
+                className={`w-1/3 sm:w-1/4 md:w-1/5 lg:w-1/6 flex justify-center items-center ${
+                  el.id === 11 ? "mb-0" : "mb-3"
+                }`}
+              >
+                <Image
+                  src={el.imgUrl}
+                  alt={el.name}
+                  width={120}
+                  height={100}
+                  className="object-contain"
+                />
+              </div>
             ))}
           </div>
           <div className="py-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-4 md:gap-y-8 lg:gap-y-0 border-b border-b-gray-500 sm:text-left text-center">
