@@ -28,7 +28,7 @@ const Banner = () => {
             <div className="flex justify-center md:justify-end mt-6 md:mt-0">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/Top-Ranked+by+Investors+Number.webp"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/social-trading/Top-Ranked-by-Investors-Number.webp"
                 width="100"
                 height="100"
                 alt="Copy Program Hero"
