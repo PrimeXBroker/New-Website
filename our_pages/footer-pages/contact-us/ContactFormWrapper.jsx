@@ -35,9 +35,9 @@ const ContactFormWrapper = ({ active, setActive }) => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleChatLink = () => {
-    window.location.href = `/${locale}/contact-us/?openChat=true`;
-  };
+  // const handleChatLink = () => {
+  //   window.location.href = `/${locale}/contact-us/?openChat=true`;
+  // };
 
   return (
     <section className="bg-[#000000] pt-24 sm:pt-28 md:pt-32 pb-20">
@@ -110,8 +110,10 @@ const ContactFormWrapper = ({ active, setActive }) => {
                   }`}
                 />
               </button>
-              <button
-                onClick={handleChatLink}
+              <a
+                // onClick={handleChatLink}
+                 href="https://direct.lc.chat/18955417/"
+                target="_blank"
                 className="bg-[#111111] text-[#F1F1F1] py-2 px-4 flex items-center rounded-lg border-2 border-[#1D1D1D] hover:border-[#333333] group transition-all duration-500 ease-in-out"
               >
                 <span
@@ -147,7 +149,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
                     }`}
                   />
                 )}
-              </button>
+              </a>
             </div>
             {copied && (
               <span className="text-[#FED100] text-xs">
