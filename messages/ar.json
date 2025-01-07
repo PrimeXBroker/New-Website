@@ -1323,7 +1323,7 @@
       "standard": {
         "title": "ستاندرد",
         "deposit": "10$",
-        "spread": "من 1.2 نقطة",
+        "spread": "من 0.8 نقطة",
         "commissions": "0$",
         "leverage": "1:400",
         "marginRequired": "2%",
@@ -1343,7 +1343,7 @@
         "title": "نارو",
         "deposit": "1000$",
         "deposit-offer": "500$",
-        "spread": "من 1.0 نقطة",
+        "spread": "من 0.6 نقطة",
         "commissions": "0$",
         "leverage": "1:500",
         "marginRequired": "2%",

@@ -1404,7 +1404,7 @@
       "standard": {
         "title": "استاندارد",
         "deposit": "$10",
-        "spread": "از 1.2 پیپ",
+        "spread": "از 0.8 پیپ",
         "commissions": "$0",
         "leverage": "1:400",
         "marginRequired": "2%",
@@ -1424,7 +1424,7 @@
         "title": "باریک",
         "deposit": "$1000",
         "deposit-offer": "$500",
-        "spread": "از 1.0 پیپ",
+        "spread": "از 0.6 پیپ",
         "commissions": "$0",
         "leverage": "1:500",
         "marginRequired": "2%",

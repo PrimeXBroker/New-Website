@@ -1409,7 +1409,7 @@
       "standard": {
         "title": "Standard",
         "deposit": "$10",
-        "spread": "From 1.2 pips",
+        "spread": "From 0.8 pips",
         "commissions": "$0",
         "leverage": "1:400",
         "marginRequired": "2%",
@@ -1429,7 +1429,7 @@
         "title": "Narrow",
         "deposit": "$1000",
         "deposit-offer": "$500",
-        "spread": "From 1.0 pips",
+        "spread": "From 0.6 pips",
         "commissions": "$0",
         "leverage": "1:500",
         "marginRequired": "2%",

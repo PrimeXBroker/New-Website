@@ -1409,7 +1409,7 @@
       "standard": {
         "title": "Standart",
         "deposit": "$10",
-        "spread": "1.2 pipsten itibaren",
+        "spread": "0.8 pipsten itibaren",
         "commissions": "$0",
         "leverage": "1:400",
         "marginRequired": "%2",
@@ -1429,7 +1429,7 @@
         "title": "Dar",
         "deposit": "$1000",
         "deposit-offer": "$500",
-        "spread": "1.0 pipsten itibaren",
+        "spread": "0.6 pipsten itibaren",
         "commissions": "$0",
         "leverage": "1:500",
         "marginRequired": "%2",

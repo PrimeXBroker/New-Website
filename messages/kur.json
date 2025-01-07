@@ -1403,7 +1403,7 @@
       "standard": {
         "title": "Standard",
         "deposit": "$10",
-        "spread": "لە 1.2 پپسەوە",
+        "spread": "لە 0.8 پپسەوە",
         "commissions": "$0",
         "leverage": "1:400",
         "marginRequired": "2%",
@@ -1423,7 +1423,7 @@
         "title": "Narrow",
         "deposit": "$1000",
         "deposit-offer": "$500",
-        "spread": "لە 1.0 پپسەوە",
+        "spread": "لە 0.6 پپسەوە",
         "commissions": "$0",
         "leverage": "1:500",
         "marginRequired": "2%",
