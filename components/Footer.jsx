@@ -202,48 +202,54 @@ const Footer = () => {
     },
     {
       id: 4,
+      name: "depositor",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/local-depositor.webp",
+    },
+    {
+      id: 5,
       name: "amex",
       imgUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/amex.webp",
     },
     {
-      id: 5,
+      id: 6,
       name: "tymebank",
       imgUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/tymebank.webp",
     },
     {
-      id: 6,
+      id: 7,
       name: "fnb",
       imgUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/fnb.webp",
     },
     {
-      id: 7,
+      id: 8,
       name: "nedbank",
       imgUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/nedbank.webp",
     },
     {
-      id: 8,
+      id: 9,
       name: "standard",
       imgUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/standard-bank.webp",
     },
     {
-      id: 9,
+      id: 10,
       name: "absa",
       imgUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/absa.webp",
     },
     {
-      id: 10,
+      id: 11,
       name: "discovery",
       imgUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/discovery.webp",
     },
     {
-      id: 11,
+      id: 12,
       name: "capitec",
       imgUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/capitec.webp",
