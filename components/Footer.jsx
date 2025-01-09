@@ -204,7 +204,7 @@ const Footer = () => {
       id: 4,
       name: "depositor",
       imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/depositor.webp",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/depositor-payment.webp",
     },
     {
       id: 5,
