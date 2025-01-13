@@ -42,7 +42,7 @@ const PrivateSessions = ({ setActive }) => {
                 <div className="w-full h-40 overflow-hidden rounded-lg">
                   <Image
                     unoptimized={true}
-                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/Aniket+academy.webp"
+                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/zyad.webp"
                     width={250}
                     height={200}
                     alt="Aniket"
