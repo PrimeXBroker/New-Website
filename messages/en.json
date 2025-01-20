@@ -2203,18 +2203,18 @@
       "description": "Social expert traders and grow your investments with PrimeX Capital. Our top-tier platform makes profitable trading simple. Start copying winning traders today!"
     },
     "hero": {
-      "title_part1": "Revitalize Your",
-      "title_part2": "Trading Journey",
-      "title_part3": "with our ",
-      "title_part4": "Social ",
-      "title_part5": "Trading",
-      "description": "Connect with Top Traders, Copy, and Trade Effortlessly!",
-      "btnTxt": "Sign Up Now"
+      "title_part1": "Start trading ",
+      "title_part2": "easily by ",
+      "title_part3": "copying ",
+      "title_part4": "expert ",
+      "title_part5": "strategies",
+      "description": "Connect with top traders, copy their strategies, and trade with confidence.",
+      "btnTxt": "Get Started Now"
     },
     "about": {
       "title_part1": "PrimeX Capital ",
       "title_part2": "Social Trading",
-      "description": "At PrimeX Capital, trading is made simple and accessible for all. Our Social Trading lets you mirror top investors' trades in real-time, earning profits without needing expertise. Whether you're new to trading or expanding your portfolio, it's easy to follow expert moves and grow your investments."
+      "description": "At PrimeX Capital, we make trading simple and accessible to everyone. Our copy trading service allows you to follow and replicate the trades of top investors directly, enabling you to generate profits without prior experience. Whether you're a beginner or looking to expand your portfolio, you can easily follow experts' moves and maximize your returns."
     },
     "benefits": {
       "main_title1": "Enjoy Exclusive Advantages of ",
@@ -2228,8 +2228,8 @@
       "title3_part1": "Automate ",
       "title3_part2": "and Save Time",
       "description3": "Automate with our platform and spend less time on screen.",
-      "title4_part1": "Agile ",
-      "title4_part2": "Customer Service",
+      "title4_part1": "24/7 ",
+      "title4_part2": "Customer Support",
       "description4": "Experience our top-rated customer service 24/7.",
       "title5_part1": "Multiple Asset ",
       "title5_part2": "Portfolio",
@@ -2238,9 +2238,9 @@
     "steps": {
       "title_part1": "3 Easy Steps ",
       "title_part2": "To Start",
-      "step1": "Sign Up for the Social Trading",
+      "step1": "Open a Copy Trading Account",
       "step2": "Choose Your Master",
-      "step3": "Copy and Trade Now"
+      "step3": "Start Copying and Trading Instantly"
     },
     "faq": {
       "title": "Frequently Asked ",
@@ -2251,7 +2251,7 @@
       "answer_2": "To join our social trading, you first need to sign up and fill out the form. Once your details are reviewed and approved, you can join our social trading.",
       "question_3": "How can I follow my master?",
       "answer_3": "You first need to open your account and then choose from the list of provided masters. Once you choose your master, you can copy his/her trades. ",
-      "question_4": "What is the best way to choose a master?",
+      "question_4": "How do I choose the right expert for my trades?",
       "answer_4": "To choose the master, we highly recommend you see the ratings of the masters based on their performance.",
       "question_5": "What are the fees of the social trading?",
       "answer_5": "The fees of the social trading vary from master to master. Once you sign up, the list of masters will be shown along with their fee structures. ",
@@ -2300,33 +2300,29 @@
       "country_required_error": "country is required!"
     },
     "becomeTrader": {
-      "title1": "Become a ",
-      "title2": "Prime Trader",
+      "title1": "Join the ",
+      "title2": "Elite Traders",
       "description": "Are you a trading pro? Let others copy and boost your earnings!",
       "btnTxt": "Open an Account"
     },
     "features": {
       "feature1": "Full Control Over Risk Management",
-      "feature2": "Copy Multiple Experts Simultaneously",
-      "feature3": "Copy by Percentage or Fixed Lot",
+      "feature2": "Copy Multiple Strategies Simultaneously",
+      "feature3": "Flexible Copying Options, Percentage-Based Or Fixed Size",
       "feature4": "Start Investing Easily From $100",
-      "feature5": "Access Detailed Prime Trader Account Stats"
+      "feature5": "Access Detailed Statistics Of Top Traders"
     },
     "bestPerformanceWidget": {
-      "title1": "Best By ",
-      "title2": "Performance All Time"
+      "title1": "All-time Top Performers"
     },
     "bestMonthWidget": {
-      "title1": "Best By ",
-      "title2": "Performance This Month"
+      "title1": "Best Performers This Month"
     },
     "lowestDDWidget": {
-      "title1": "Lowest By ",
-      "title2": "Drawdown and Risk"
+      "title1": "Lowest Risk And Drawdown"
     },
     "hightProvidersWidget": {
-      "title1": "Top-Ranked by ",
-      "title2": "Investors Number"
+      "title1": "Most Followed By Users"
     },
     "widgetCards": {
       "title1": "Our Best ",

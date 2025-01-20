@@ -2201,18 +2201,18 @@
       "description": "Uzman sosyal tüccarları takip edin ve yatırımlarınızı PrimeX Capital ile büyütün. Üst düzey platformumuz kârlı ticareti basit hale getiriyor. Bugün kazanan tüccarları kopyalamaya başlayın!"
     },
     "hero": {
-      "title_part1": "Ticaret Yolculuğunuzu",
-      "title_part2": "Canlandırın",
-      "title_part3": "Sosyal ",
-      "title_part4": "Ticaret ",
-      "title_part5": "Platformumuzla",
-      "description": "En İyi Tüccarlarla Bağlantı Kurun, Kopyalayın ve Kolayca Ticaret Yapın!",
-      "btnTxt": "Hemen Kaydol"
+      "title_part1": "Kolayca ticarete ",
+      "title_part2": "başlayın, ",
+      "title_part3": "uzmanların ",
+      "title_part4": "stratejilerini ",
+      "title_part5": "kopyalayarak",
+      "description": "En iyi tüccarlarla bağlantı kurun, stratejilerini kopyalayın ve güvenle ticaret yapın.",
+      "btnTxt": "Hemen Başlayın"
     },
     "about": {
       "title_part1": "PrimeX Capital ",
       "title_part2": "Sosyal Ticaret",
-      "description": "PrimeX Capital'de ticaret herkes için basit ve erişilebilir hale getirilmiştir. Sosyal Ticaret platformumuz, üst düzey yatırımcıların işlemlerini gerçek zamanlı olarak yansıtmanızı sağlar, uzmanlığa gerek duymadan kâr elde edebilirsiniz. İster ticarete yeni başlıyor olun, ister portföyünüzü genişletiyor olun, uzman hamlelerini takip etmek ve yatırımlarınızı büyütmek kolaydır."
+      "description": "PrimeX Capital'de ticareti herkes için basit ve erişilebilir hale getiriyoruz. Copy trading hizmetimiz, en iyi yatırımcıların işlemlerini doğrudan takip etmenizi ve kopyalamanızı sağlar, böylece önceden deneyime sahip olmadan kâr elde edebilirsiniz. İster yeni başlayan olun, ister portföyünüzü genişletmek isteyin, uzmanların hamlelerini kolayca takip edebilir ve getirilerinizi maksimize edebilirsiniz."
     },
     "benefits": {
       "main_title1": "Deneyimli Tüccarlarımızı Kopyalamanın ",
@@ -2226,8 +2226,8 @@
       "title3_part1": "Otomatikleştirin ",
       "title3_part2": "ve Zaman Kazanın",
       "description3": "Platformumuzla otomatikleştirin ve ekran başında daha az zaman geçirin.",
-      "title4_part1": "Esnek ",
-      "title4_part2": "Müşteri Hizmetleri",
+      "title4_part1": "7/24 ",
+      "title4_part2": "Müşteri Desteği",
       "description4": "24/7 en yüksek puanlı müşteri hizmetlerimizi deneyimleyin.",
       "title5_part1": "Çoklu Varlık ",
       "title5_part2": "Portföyü",
@@ -2236,9 +2236,9 @@
     "steps": {
       "title_part1": "Başlamak İçin ",
       "title_part2": "3 Kolay Adım",
-      "step1": "Sosyal Ticaret için Kaydolun",
+      "step1": "Bir Copy Trading Hesabı Açın",
       "step2": "Ustanızı Seçin",
-      "step3": "Kopyalayın ve Hemen Ticaret Yapın"
+      "step3": "Hemen Kopyalamaya ve Ticaret Yapmaya Başlayın"
     },
     "faq": {
       "title": "Sıkça Sorulan ",
@@ -2249,7 +2249,7 @@
       "answer_2": "Sosyal ticaretimize katılmak için önce kayıt olmanız ve formu doldurmanız gerekir. Bilgileriniz incelendikten ve onaylandıktan sonra sosyal ticaretimize katılabilirsiniz.",
       "question_3": "Ustamı nasıl takip edebilirim?",
       "answer_3": "Öncelikle hesabınızı açmanız ve sunulan ustalar listesinden seçim yapmanız gerekir. Ustanızı seçtikten sonra işlemlerini kopyalayabilirsiniz.",
-      "question_4": "Bir ustayı seçmenin en iyi yolu nedir?",
+      "question_4": "İşlemlerim için doğru uzmanı nasıl seçebilirim?",
       "answer_4": "Usta seçerken performanslarına göre ustaların derecelendirmelerini incelemenizi şiddetle tavsiye ederiz.",
       "question_5": "Sosyal ticaretin ücretleri nelerdir?",
       "answer_5": "Sosyal ticaretin ücretleri ustadan ustaya değişir. Kayıt olduktan sonra ustaların listesi ve ücret yapıları gösterilecektir.",
@@ -2298,33 +2298,29 @@
       "country_required_error": "Ülke gereklidir!"
     },
     "becomeTrader": {
-      "title1": "Bir ",
-      "title2": "Prime Trader Olun",
+      "title1": "Elit Tüccarlara ",
+      "title2": "Katılın",
       "description": "Ticaret konusunda profesyonel misiniz? Başkalarının sizi kopyalamasına izin verin ve kazancınızı artırın!",
       "btnTxt": "Hesap Aç"
     },
     "features": {
       "feature1": "Risk Yönetimi Üzerinde Tam Kontrol",
-      "feature2": "Aynı Anda Birden Fazla Uzmanı Kopyalayın",
-      "feature3": "Yüzdeye veya Sabit Lot Üzerinden Kopyalayın",
+      "feature2": "Aynı Anda Birden Fazla Stratejiyi Kopyalayın",
+      "feature3": "Esnek Kopyalama Seçenekleri, Yüzdeye Dayalı veya Sabit Boyut",
       "feature4": "Yalnızca 100$'dan Kolayca Yatırıma Başlayın",
-      "feature5": "Prime Trader Hesap İstatistiklerine Ayrıntılı Erişim"
+      "feature5": "En İyi Tüccarların Ayrıntılı İstatistiklerine Erişin"
     },
     "bestPerformanceWidget": {
-      "title1": "Tüm Zamanların ",
-      "title2": "En İyi Performansı"
+      "title1": "Tüm Zamanların En İyi Performans Gösterenleri"
     },
     "bestMonthWidget": {
-      "title1": "Bu Ayın ",
-      "title2": "En İyi Performansı"
+      "title1": "Bu Ayın En İyi Performans Gösterenleri"
     },
     "lowestDDWidget": {
-      "title1": "En Düşük ",
-      "title2": "Düşüş ve Risk"
+      "title1": "En Düşük Risk ve Geri Çekilme"
     },
     "hightProvidersWidget": {
-      "title1": "En Yüksek Sıralamada ",
-      "title2": "Yatırımcı Sayısına Göre"
+      "title1": "Kullanıcılar Tarafından En Çok Takip Edilenler"
     },
     "widgetCards": {
       "title1": "En İyi ",
