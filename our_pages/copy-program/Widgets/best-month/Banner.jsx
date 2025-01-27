@@ -16,11 +16,11 @@ const Banner = () => {
               <TrustPilot />
             </div>
             <div className="mt-4 text-center md:text-start">
-              <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#ffffff]">
+              <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#FED100]">
                 {t("title1")}
-                <span className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#FED100]">
+                {/* <span className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#FED100]">
                   {t("title2")}
-                </span>
+                </span> */}
               </h1>
             </div>
           </div>
