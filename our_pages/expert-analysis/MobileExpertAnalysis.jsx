@@ -144,7 +144,7 @@ const MobileExpertAnalysis = ({ id }) => {
                           <Moment
                             date={blog.createdOn}
                             format={
-                              locale === "ar" ? "YYYY/MM/DD" : "DD/MM/YYYY"
+                              locale === "ar" ? "YYYY/MM/DD" : "Do MMM YYYY"
                             }
                           />
                         </p>
