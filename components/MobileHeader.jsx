@@ -725,7 +725,7 @@ const MobileHeader = ({ locale }) => {
             className="text-[#ffffff] text-base relative pt-[3px]"
             onClick={toggleDrawer}
           >
-            <Image
+            {/* <Image
               unoptimized={true}
               width="20"
               height="20"
@@ -736,7 +736,7 @@ const MobileHeader = ({ locale }) => {
                   ? "right-[41px]"
                   : "left-[59px]"
               }`}
-            />
+            /> */}
             {t("accounts")}
           </LocaleLink>
           <LocaleLink

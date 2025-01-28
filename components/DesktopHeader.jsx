@@ -253,7 +253,7 @@ const DesktopHeader = ({ locale }) => {
               >
                 {t("accounts")}
               </LocaleLink>
-              <Image
+              {/* <Image
                 unoptimized={true}
                 width="18"
                 height="18"
@@ -264,7 +264,7 @@ const DesktopHeader = ({ locale }) => {
                     ? "-left-0"
                     : "-right-0"
                 }`}
-              />
+              /> */}
             </li>
             <li className="flex items-center h-full relative">
               <LocaleLink
