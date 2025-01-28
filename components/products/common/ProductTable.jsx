@@ -73,10 +73,10 @@ const ProductTable = ({ headers, data }) => {
                       style={{
                         minWidth:
                           cellIndex === 1
-                            ? "460px"
+                            ? "320px"
                             : cellIndex === 0
-                            ? "185px"
-                            : "220px",
+                            ? "155px"
+                            : "175px",
                         textAlign: cellIndex === 0 ? "left" : "left",
                         borderTop: "none",
                         borderBottom: "none",
