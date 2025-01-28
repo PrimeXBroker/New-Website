@@ -19,7 +19,7 @@ const Banner = ({ setActive }) => {
             </div>{" "}
             <h1
               className={`text-3xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff] pb-1 ${
-                locale === "ar" || locale === "fa" || locale === "kur"
+                locale === "ar" || locale === "fa" || locale === "kd"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -28,7 +28,7 @@ const Banner = ({ setActive }) => {
             </h1>
             <h2
               className={`text-3xl sm:text-3xl lg:text-4xl font-semibold text-[#FED100] ${
-                locale === "ar" || locale === "fa" || locale === "kur"
+                locale === "ar" || locale === "fa" || locale === "kd"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -37,7 +37,7 @@ const Banner = ({ setActive }) => {
             </h2>
             <h3
               className={`text-lg sm:text-xl md:text-lg font-semibold text-[#ffffff] my-3 ${
-                locale === "ar" || locale === "fa" || locale === "kur"
+                locale === "ar" || locale === "fa" || locale === "kd"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -47,7 +47,7 @@ const Banner = ({ setActive }) => {
             </h3>
             <p
               className={`text-[#c6c6c6] w-[95%] sm:w-[90%] mx-auto md:mx-0 md:w-[75%] mb-5 text-sm sm:text-base ${
-                locale === "ar" || locale === "fa" || locale === "kur"
+                locale === "ar" || locale === "fa" || locale === "kd"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}

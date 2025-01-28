@@ -32,7 +32,7 @@ const AccountTypes = ({ accounts }) => {
                 {/* {(account.id === 2 || account.id === 3) && (
                   <div
                     className={`absolute ${
-                      locale === "ar" || locale === "fa" || locale === "kur"
+                      locale === "ar" || locale === "fa" || locale === "kd"
                         ? "top-[-36px] right-0"
                         : "top-[-36px] left-0"
                     } flex justify-center items-center w-[58px] h-[58px]`}

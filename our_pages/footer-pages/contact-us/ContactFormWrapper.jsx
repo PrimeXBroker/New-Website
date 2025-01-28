@@ -58,7 +58,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
                 href="/help-center"
                 className="bg-[#111111] text-[#F1F1F1] py-2 px-4 flex items-center rounded-lg border-2 border-[#1D1D1D] hover:text-[#FED100]"
               >
-                <span className={`${locale === "ar" || locale === "fa" || locale === "kur" ? "ml-2" : "mr-2"}`}>
+                <span className={`${locale === "ar" || locale === "fa" || locale === "kd" ? "ml-2" : "mr-2"}`}>
                   <Image
                     src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/help+center.svg"
                     alt="Help Center"
@@ -68,16 +68,16 @@ const ContactFormWrapper = ({ active, setActive }) => {
                   />
                 </span>
                 {t("help_center")}
-                {locale === "ar" || locale === "fa" || locale === "kur" ? (
+                {locale === "ar" || locale === "fa" || locale === "kd" ? (
                   <FaArrowLeft
                     className={`text-xl text-[#C6C6C6] ${
-                      locale === "ar" || locale === "fa" || locale === "kur" ? "mr-2" : "ml-2"
+                      locale === "ar" || locale === "fa" || locale === "kd" ? "mr-2" : "ml-2"
                     }`}
                   />
                 ) : (
                   <FaArrowRight
                     className={`text-xl text-[#C6C6C6] ${
-                      locale === "ar" || locale === "fa" || locale === "kur" ? "mr-2" : "ml-2"
+                      locale === "ar" || locale === "fa" || locale === "kd" ? "mr-2" : "ml-2"
                     }`}
                   />
                 )}
@@ -88,7 +88,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
               >
                 <span
                   className={`${
-                    locale === "ar" || locale === "fa" || locale === "kur"
+                    locale === "ar" || locale === "fa" || locale === "kd"
                       ? "ml-2"
                       : "mr-2"
                   }`}
@@ -104,7 +104,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
                 {t("copy_email")}
                 <MdContentCopy
                   className={`text-xl text-[#C6C6C6] ${
-                    locale === "ar" || locale === "fa" || locale === "kur"
+                    locale === "ar" || locale === "fa" || locale === "kd"
                       ? "mr-2"
                       : "ml-2"
                   }`}
@@ -112,13 +112,13 @@ const ContactFormWrapper = ({ active, setActive }) => {
               </button>
               <a
                 // onClick={handleChatLink}
-                 href="https://direct.lc.chat/18955417/"
+                href="https://direct.lc.chat/18955417/"
                 target="_blank"
                 className="bg-[#111111] text-[#F1F1F1] py-2 px-4 flex items-center rounded-lg border-2 border-[#1D1D1D] hover:border-[#333333] group transition-all duration-500 ease-in-out"
               >
                 <span
                   className={`${
-                    locale === "ar" || locale === "fa" || locale === "kur"
+                    locale === "ar" || locale === "fa" || locale === "kd"
                       ? "ml-2"
                       : "mr-2"
                   }`}
@@ -132,10 +132,10 @@ const ContactFormWrapper = ({ active, setActive }) => {
                   />
                 </span>
                 {t("live_chat")}
-                {locale === "ar" || locale === "fa" || locale === "kur" ? (
+                {locale === "ar" || locale === "fa" || locale === "kd" ? (
                   <FaArrowLeft
                     className={`text-xl text-[#C6C6C6] ${
-                      locale === "ar" || locale === "fa" || locale === "kur"
+                      locale === "ar" || locale === "fa" || locale === "kd"
                         ? "mr-2"
                         : "ml-2"
                     }`}
@@ -143,7 +143,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
                 ) : (
                   <FaArrowRight
                     className={`text-xl text-[#C6C6C6] ${
-                      locale === "ar" || locale === "fa" || locale === "kur"
+                      locale === "ar" || locale === "fa" || locale === "kd"
                         ? "mr-2"
                         : "ml-2"
                     }`}

@@ -15,14 +15,14 @@ const MaximizeProfit = () => {
         <div className="grid grid-cols-12 justify-center items-center bg-[#111111] border-2 border-[#1D1D1D] rounded-[20px] px-14 pt-8">
           <div
             className={`col-span-12 lg:col-span-6 ${
-              locale === "ar" || locale === "fa" || locale === "kur"
+              locale === "ar" || locale === "fa" || locale === "kd"
                 ? "text-center lg:text-right"
                 : "text-center lg:text-left"
             }`}
           >
             <h2
               className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#FED100] mb-2 ${
-                locale === "ar" || locale === "fa" || locale === "kur"
+                locale === "ar" || locale === "fa" || locale === "kd"
                   ? "text-center lg:text-right"
                   : "text-center lg:text-left"
               }`}
@@ -31,7 +31,7 @@ const MaximizeProfit = () => {
             </h2>
             <h2
               className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff] ${
-                locale === "ar" || locale === "fa" || locale === "kur"
+                locale === "ar" || locale === "fa" || locale === "kd"
                   ? "text-center lg:text-right"
                   : "text-center lg:text-left"
               }`}
@@ -40,7 +40,7 @@ const MaximizeProfit = () => {
             </h2>
             <div
               className={`${
-                locale === "ar" || locale === "fa" || locale === "kur"
+                locale === "ar" || locale === "fa" || locale === "kd"
                   ? "text-center lg:text-right"
                   : "text-center lg:text-left"
               }`}
@@ -55,7 +55,7 @@ const MaximizeProfit = () => {
                 onClick={() => window.open(getLoginUrl(locale))}
                 target="_blank"
                 className={`text-xs text-[#ffffff] font-normal block mt-2 ${
-                  locale === "ar" || locale === "fa" || locale === "kur"
+                  locale === "ar" || locale === "fa" || locale === "kd"
                     ? "text-center lg:text-start mr-2"
                     : "text-center lg:text-start md:ml-6"
                 }`}

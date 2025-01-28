@@ -72,12 +72,12 @@ const portada = localFont({
   variable: "--font-portada",
 });
 
-const hreflangLocales = ["en", "ar", "fa", "kur", "tr"];
+const hreflangLocales = ["en", "ar", "fa", "kd", "tr"];
 
 export default async function layout({ children, params: { locale } }) {
   const messages = await getMessages();
   const detectLanguage = () => {
-    if (locale === "ar" || locale === "fa" || locale === "kur") {
+    if (locale === "ar" || locale === "fa" || locale === "kd") {
       return "rtl";
     } else {
       return "ltr";

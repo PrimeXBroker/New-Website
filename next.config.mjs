@@ -51,12 +51,12 @@ const nextConfig = {
         destination: "/sitemap/fa",
       },
       {
-        source: "/sitemap/kur.xml",
-        destination: "/sitemap/kur.xml",
+        source: "/sitemap/kd.xml",
+        destination: "/sitemap/kd.xml",
       },
       {
-        source: "/sitemap/kur",
-        destination: "/sitemap/kur",
+        source: "/sitemap/kd",
+        destination: "/sitemap/kd",
       },
       {
         source: "/sitemap/tr.xml",

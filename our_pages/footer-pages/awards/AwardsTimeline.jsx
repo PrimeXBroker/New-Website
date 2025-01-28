@@ -66,7 +66,7 @@ const AwardsTimeline = () => {
               className={`absolute transform  w-14 h-14 ${
                 activeIndex >= i + 1 ? "bg-[#FED100]" : "bg-[#222222]"
               } rounded-full flex items-center justify-center ${
-                locale === "ar" || locale === "fa" || locale === "kur"
+                locale === "ar" || locale === "fa" || locale === "kd"
                   ? "right-1/2 translate-x-1/2"
                   : "left-1/2 -translate-x-1/2"
               }`}
@@ -88,7 +88,7 @@ const AwardsTimeline = () => {
                       ? "border-l-[12px] border-l-[#FED100]"
                       : "border-l-[12px] border-l-[#222222]"
                   } ${
-                    locale === "ar" || locale === "fa" || locale === "kur"
+                    locale === "ar" || locale === "fa" || locale === "kd"
                       ? "-translate-y-1/2 -left-2 rotate-180"
                       : "-right-2 -translate-y-1/2"
                   }`}
@@ -101,7 +101,7 @@ const AwardsTimeline = () => {
                       ? "border-r-[12px] border-r-[#FED100]"
                       : "border-r-[12px] border-r-[#222222]"
                   } ${
-                    locale === "ar" || locale === "fa" || locale === "kur"
+                    locale === "ar" || locale === "fa" || locale === "kd"
                       ? "-right-2 -translate-y-1/2 rotate-180"
                       : "-left-2 -translate-y-1/2"
                   }`}
@@ -114,17 +114,17 @@ const AwardsTimeline = () => {
               className={`${
                 activeIndex >= i + 1
                   ? i % 2 === 0
-                    ? locale === "ar" || locale === "fa" || locale === "kur"
+                    ? locale === "ar" || locale === "fa" || locale === "kd"
                       ? "mr-auto -translate-y-0 opacity-100"
                       : "ml-auto translate-y-0 opacity-100"
-                    : locale === "ar" || locale === "fa" || locale === "kur"
+                    : locale === "ar" || locale === "fa" || locale === "kd"
                     ? "ml-auto -translate-y-0 opacity-100"
                     : "mr-auto translate-y-0 opacity-100"
                   : i % 2 === 0
-                  ? locale === "ar" || locale === "fa" || locale === "kur"
+                  ? locale === "ar" || locale === "fa" || locale === "kd"
                     ? "mr-auto -translate-y-[100%] opacity-0"
                     : "ml-auto translate-y-[100%] opacity-0"
-                  : locale === "ar" || locale === "fa" || locale === "kur"
+                  : locale === "ar" || locale === "fa" || locale === "kd"
                   ? "ml-auto translate-y-[100%] opacity-0"
                   : "mr-auto -translate-y-[100%] opacity-0"
               } w-96 md:w-80 lg:w-96 transition-all duration-700`}

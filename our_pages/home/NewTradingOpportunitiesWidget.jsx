@@ -77,7 +77,7 @@ const TradingOpportunitiesWidget = () => {
       <div className="container bg-[#000000] grid grid-cols-1 lg:grid-cols-2 items-center">
         <div
           className={`mb-5 text-center md:text-center block lg:hidden ${
-            locale === "ar" || locale === "fa" || locale === "kur"
+            locale === "ar" || locale === "fa" || locale === "kd"
               ? "lg:mr-[120px]"
               : "lg:ml-[120px]"
           }`}
@@ -121,7 +121,7 @@ const TradingOpportunitiesWidget = () => {
                 </span>
                 <span
                   className={`whitespace-nowrap ${
-                    locale === "ar" || locale === "fa" || locale === "kur"
+                    locale === "ar" || locale === "fa" || locale === "kd"
                       ? "mr-2"
                       : "ml-2"
                   }`}
@@ -166,7 +166,7 @@ const TradingOpportunitiesWidget = () => {
                               className={`w-[40px] h-[40px] bg-[#3C3C3C] ${
                                 locale === "ar" ||
                                 locale === "fa" ||
-                                locale === "kur"
+                                locale === "kd"
                                   ? "ml-3"
                                   : "mr-3"
                               }`}
@@ -250,7 +250,7 @@ const TradingOpportunitiesWidget = () => {
         </div>
         <div
           className={`mb-5 hidden lg:block ${
-            locale === "ar" || locale === "fa" || locale === "kur"
+            locale === "ar" || locale === "fa" || locale === "kd"
               ? "lg:mr-[120px]"
               : "lg:ml-[120px]"
           }`}

@@ -10,7 +10,7 @@ const CopyProgramFormWrapper = () => {
       <div
         className="container grid grid-cols-12 items-center"
         dir={
-          locale === "ar" || locale === "fa" || locale === "kur" ? "rtl" : "ltr"
+          locale === "ar" || locale === "fa" || locale === "kd" ? "rtl" : "ltr"
         }
       >
         <div className="col-span-12 lg:col-span-6 mb-7 lg:mb-0 text-center lg:text-start">

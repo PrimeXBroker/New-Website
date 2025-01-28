@@ -2,78 +2,78 @@ import SitemapTable from "@/components/SitemapTable";
 
 export default function KurSitemapPage() {
   const urls = [
-    { url: "https://primexcapital.com/kur", lastModified: new Date() },
-    { url: "https://primexcapital.com/kur/about", lastModified: new Date() },
-    { url: "https://primexcapital.com/kur/careers", lastModified: new Date() },
-    { url: "https://primexcapital.com/kur/contact", lastModified: new Date() },
+    { url: "https://primexcapital.com/kd", lastModified: new Date() },
+    { url: "https://primexcapital.com/kd/about", lastModified: new Date() },
+    { url: "https://primexcapital.com/kd/careers", lastModified: new Date() },
+    { url: "https://primexcapital.com/kd/contact", lastModified: new Date() },
     {
-      url: "https://primexcapital.com/kur/account-types",
+      url: "https://primexcapital.com/kd/account-types",
       lastModified: new Date(),
     },
-    { url: "https://primexcapital.com/kur/forex", lastModified: new Date() },
-    { url: "https://primexcapital.com/kur/metals", lastModified: new Date() },
+    { url: "https://primexcapital.com/kd/forex", lastModified: new Date() },
+    { url: "https://primexcapital.com/kd/metals", lastModified: new Date() },
     {
-      url: "https://primexcapital.com/kur/commodities",
+      url: "https://primexcapital.com/kd/commodities",
       lastModified: new Date(),
     },
-    { url: "https://primexcapital.com/kur/stocks", lastModified: new Date() },
-    { url: "https://primexcapital.com/kur/indices", lastModified: new Date() },
+    { url: "https://primexcapital.com/kd/stocks", lastModified: new Date() },
+    { url: "https://primexcapital.com/kd/indices", lastModified: new Date() },
     {
-      url: "https://primexcapital.com/kur/platform/mt5-platform",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://primexcapital.com/kur/ib-program",
+      url: "https://primexcapital.com/kd/platform/mt5-platform",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/kur/client-agreement",
-      lastModified: new Date(),
-    },
-    { url: "https://primexcapital.com/kur/terms", lastModified: new Date() },
-    {
-      url: "https://primexcapital.com/kur/policy-statement",
+      url: "https://primexcapital.com/kd/ib-program",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/kur/risk-disclosure",
+      url: "https://primexcapital.com/kd/client-agreement",
+      lastModified: new Date(),
+    },
+    { url: "https://primexcapital.com/kd/terms", lastModified: new Date() },
+    {
+      url: "https://primexcapital.com/kd/policy-statement",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/kur/complaints-management",
+      url: "https://primexcapital.com/kd/risk-disclosure",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/kur/cookie-policy",
+      url: "https://primexcapital.com/kd/complaints-management",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/kur/policy-of-aml",
+      url: "https://primexcapital.com/kd/cookie-policy",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/kur/privacy-policy",
+      url: "https://primexcapital.com/kd/policy-of-aml",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/kur/liquidity-providing",
+      url: "https://primexcapital.com/kd/privacy-policy",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/kur/grey-label-partner",
+      url: "https://primexcapital.com/kd/liquidity-providing",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/kur/regional-partner",
-      lastModified: new Date(),
-    },
-    { url: "https://primexcapital.com/kur/academy", lastModified: new Date() },
-    {
-      url: "https://primexcapital.com/kur/why-choose-us",
+      url: "https://primexcapital.com/kd/grey-label-partner",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/kur/social-trading",
+      url: "https://primexcapital.com/kd/regional-partner",
+      lastModified: new Date(),
+    },
+    { url: "https://primexcapital.com/kd/academy", lastModified: new Date() },
+    {
+      url: "https://primexcapital.com/kd/why-choose-us",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/kd/social-trading",
       lastModified: new Date(),
     },
   ];
