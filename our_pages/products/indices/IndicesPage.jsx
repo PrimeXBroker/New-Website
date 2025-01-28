@@ -1,6 +1,6 @@
 "use client";
 import Banner from "@/components/products/common/Banner";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import Features from "@/components/products/common/Features";
 import GetStarted from "@/components/products/common/GetStarted";
@@ -8,9 +8,28 @@ import OpenLiveAccount from "@/components/products/common/OpenLiveAccount";
 import Strategies from "@/components/products/common/Strategies";
 import FAQ from "@/components/NewFaq";
 import WhyTrade from "@/components/products/common/WhyTrade";
+import ProductTable from "@/components/products/common/ProductTable";
+import * as XLSX from "xlsx";
 
 const IndicesPage = () => {
   const t = useTranslations("indicesProduct");
+  const [data, setData] = useState([]);
+  const [headers, setHeaders] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("/assets/excel/indices.xlsx");
+      const arrayBuffer = await response.arrayBuffer();
+      const workbook = XLSX.read(arrayBuffer, { type: "array" });
+      const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+      const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+      setHeaders(jsonData[0]);
+      setData(jsonData.slice(1));
+    };
+
+    fetchData();
+  }, []);
 
   const getStarted = [
     {
@@ -108,6 +127,7 @@ const IndicesPage = () => {
         title_part5={t("hero.title5")}
         imgUrl="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-instruments/indices/Indices.webp"
       />
+      <ProductTable headers={headers} data={data} />
       <Features />
       <WhyTrade
         title_part1={t("whyTrade.title_part1")}
