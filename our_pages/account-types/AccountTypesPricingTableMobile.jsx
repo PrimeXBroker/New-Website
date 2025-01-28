@@ -90,7 +90,7 @@ const AccountTypesPricingTableMobile = () => {
               }`}
               onClick={() => setActiveTab(tab)}
             >
-              {tab !== "standard" && (
+              {/* {tab !== "standard" && (
                 <div
                   className={`absolute ${
                     locale === "ar" || locale === "fa" || locale === "kur"
@@ -108,7 +108,7 @@ const AccountTypesPricingTableMobile = () => {
                     {l("offer")}
                   </span>
                 </div>
-              )}
+              )} */}
               {t(`${tab}.title`)}
             </button>
           ))}
@@ -123,16 +123,10 @@ const AccountTypesPricingTableMobile = () => {
             {t("minimumDeposit")}
           </div>
           <div className="text-center text-[#C6C6C6] text-sm sm:text-base bg-[#000000] px-5 py-6">
-            <span className="block font-semibold">
+            {/* <span className="block font-semibold">
               {tabContent[activeTab].depositOffer}
-            </span>
-            <span
-              className={`relative ${
-                tabContent[activeTab].id !== 1 ? "strikethrough-rotate" : ""
-              }`}
-            >
-              {tabContent[activeTab].deposit}
-            </span>
+            </span> */}
+            <span className={`relative`}>{tabContent[activeTab].deposit}</span>
           </div>
 
           <div className="text-[#C6C6C6] text-sm sm:text-base font-semibold bg-[#111111] px-5 py-6">
