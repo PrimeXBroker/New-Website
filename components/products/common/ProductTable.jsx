@@ -32,6 +32,7 @@ const ProductTable = ({ headers, data }) => {
               borderCollapse: "separate",
               borderSpacing: "0",
             }}
+            dir="ltr"
           >
             <thead>
               <tr style={{ backgroundColor: "#111111" }}>
