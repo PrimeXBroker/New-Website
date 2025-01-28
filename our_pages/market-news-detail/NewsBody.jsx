@@ -142,7 +142,7 @@ function NewsBody({ slug }) {
           <div className="text-[#c6c6c6] text-sm mb-2 text-center">
             <Moment
               date={detail?.postedOn ? detail?.postedOn : detail?.createdOn}
-              format={locale === "ar" ? "YYYY/MM/DD" : "DD/MM/YYYY"}
+              format={locale === "ar" ? "YYYY/MM/DD" : "Do MMM YYYY"}
             />{" "}
             • 5 Min Read
           </div>

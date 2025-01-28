@@ -129,7 +129,9 @@ const MarketNewsDetail = ({ slug }) => {
                           date={
                             blog?.postedOn ? blog?.postedOn : blog?.createdOn
                           }
-                          format={locale === "ar" ? "YYYY/MM/DD" : "DD/MM/YYYY"}
+                          format={
+                            locale === "ar" ? "YYYY/MM/DD" : "Do MMM YYYY"
+                          }
                         />
                       </p>
                     </div>
