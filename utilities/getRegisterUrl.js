@@ -2,7 +2,7 @@ export const getRegisterUrl = (locale) => {
   switch (locale) {
     case "ar":
       return "https://my.primexcapital.com/ar/register/?sl=1";
-    case "kur":
+    case "kd":
       return "https://my.primexcapital.com/ku/register/?sl=1";
     case "fa":
       return "https://my.primexcapital.com/fa/register/?sl=1";

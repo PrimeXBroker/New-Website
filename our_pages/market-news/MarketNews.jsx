@@ -72,8 +72,12 @@ const MarketNews = ({ news, totalPages, lang }) => {
                     <div className="mt-3">
                       <p className="text-[#C6C6C6] text-sm group-hover:text-white transition duration-700 ease-in-out">
                         <Moment
-                          date={blog?.createdOn}
-                          format={locale === "ar" ? "YYYY/MM/DD" : "DD/MM/YYYY"}
+                          date={
+                            blog?.postedOn ? blog?.postedOn : blog?.createdOn
+                          }
+                          format={
+                            locale === "ar" ? "YYYY/MM/DD" : "Do MMM YYYY"
+                          }
                         />
                       </p>
                     </div>

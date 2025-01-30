@@ -46,7 +46,7 @@ const FeaturesMobile = () => {
                   key={index}
                   className={`md:flex flex-row items-center gap-4 md:px-6 xl:px-12 group mb-12 hidden ${
                     index === 1 || index === 3
-                      ? locale === "ar" || locale === "fa" || locale === "kur"
+                      ? locale === "ar" || locale === "fa" || locale === "kd"
                         ? "border-r border-[#1D1D1D]"
                         : "border-l border-[#1D1D1D]"
                       : ""

@@ -13,25 +13,21 @@ const WidgetCards = () => {
     {
       id: 1,
       title1: t("bestPerformanceWidget.title1"),
-      title2: t("bestPerformanceWidget.title2"),
       link: `/${locale}/best-by-performance-all-time`,
     },
     {
       id: 2,
       title1: t("bestMonthWidget.title1"),
-      title2: t("bestMonthWidget.title2"),
       link: `/${locale}/best-by-performance-this-month`,
     },
     {
       id: 3,
       title1: t("lowestDDWidget.title1"),
-      title2: t("lowestDDWidget.title2"),
       link: `/${locale}/lowest-by-drawdown-and-risk`,
     },
     {
       id: 4,
       title1: t("hightProvidersWidget.title1"),
-      title2: t("hightProvidersWidget.title2"),
       link: `/${locale}/top-ranked-by-investors-number`,
     },
   ];
@@ -54,11 +50,8 @@ const WidgetCards = () => {
           >
             <a href={widget.link} target="_blank">
               <div>
-                <p className="text-lg lg:text-base xl:text-lg">
+                <p className="text-lg lg:text-base xl:text-lg text-[#FED100] pr-[30px]">
                   {widget.title1}
-                </p>
-                <p className="text-[#FED100] text-lg lg:text-base xl:text-lg">
-                  {widget.title2}
                 </p>
               </div>
               <a
@@ -68,7 +61,7 @@ const WidgetCards = () => {
                 style={{ borderRadius: "8px" }}
               >
                 {t("widgetCards.btnTxt")}
-                {locale === "ar" || locale === "fa" || locale === "kur" ? (
+                {locale === "ar" || locale === "fa" || locale === "kd" ? (
                   <RiArrowLeftUpLine
                     className={`text-lg inline-block mr-1 text-[#111111] transition-transform duration-500 ease-in-out ${
                       hovered === widget.id ? "rotate-[-45deg]" : ""

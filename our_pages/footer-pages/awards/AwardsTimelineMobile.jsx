@@ -38,7 +38,7 @@ const AwardsTimelineMobile = () => {
                       unoptimized={true}
                       width="120"
                       height="120"
-                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-awards/Award+1.svg`}
+                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-awards/Award+1.svg`}
                       alt="Award"
                       className="w-full"
                     />
@@ -96,7 +96,7 @@ const AwardsTimelineMobile = () => {
                       unoptimized={true}
                       width="120"
                       height="120"
-                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-awards/Award+2.svg`}
+                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-awards/Award+2.svg`}
                       alt="Award"
                       className="w-full"
                     />
@@ -154,7 +154,7 @@ const AwardsTimelineMobile = () => {
                       unoptimized={true}
                       width="120"
                       height="120"
-                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-awards/Award+3.svg`}
+                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-awards/Award+3.svg`}
                       alt="Award"
                       className="w-full"
                     />
@@ -212,7 +212,7 @@ const AwardsTimelineMobile = () => {
                       unoptimized={true}
                       width="120"
                       height="120"
-                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-awards/Award+4.svg`}
+                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-awards/Award+4.svg`}
                       alt="Award"
                       className="w-full"
                     />
@@ -270,7 +270,7 @@ const AwardsTimelineMobile = () => {
                       unoptimized={true}
                       width="120"
                       height="120"
-                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-awards/Award+5.svg`}
+                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-awards/Award+5.svg`}
                       alt="Award"
                       className="w-full"
                     />
@@ -328,7 +328,7 @@ const AwardsTimelineMobile = () => {
                       unoptimized={true}
                       width="120"
                       height="120"
-                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-awards/Award+6.svg`}
+                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-awards/Award+6.svg`}
                       alt="Award"
                       className="w-full"
                     />
@@ -386,7 +386,7 @@ const AwardsTimelineMobile = () => {
                       unoptimized={true}
                       width="120"
                       height="120"
-                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-awards/Award+7.svg`}
+                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-awards/Award+7.svg`}
                       alt="Award"
                       className="w-full"
                     />
@@ -444,7 +444,7 @@ const AwardsTimelineMobile = () => {
                       unoptimized={true}
                       width="120"
                       height="120"
-                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-awards/Award+8.svg`}
+                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-awards/Award+8.svg`}
                       alt="Award"
                       className="w-full"
                     />
@@ -502,7 +502,7 @@ const AwardsTimelineMobile = () => {
                       unoptimized={true}
                       width="120"
                       height="120"
-                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-awards/Award+9.svg`}
+                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-awards/Award+9.svg`}
                       alt="Award"
                       className="w-full"
                     />
@@ -560,7 +560,7 @@ const AwardsTimelineMobile = () => {
                       unoptimized={true}
                       width="120"
                       height="120"
-                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-awards/Award+10.svg`}
+                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-awards/Award+10.svg`}
                       alt="Award"
                       className="w-full"
                     />
@@ -618,7 +618,7 @@ const AwardsTimelineMobile = () => {
                       unoptimized={true}
                       width="120"
                       height="120"
-                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-awards/Award+11.svg`}
+                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-awards/Award+11.svg`}
                       alt="Award"
                       className="w-full"
                     />

@@ -17,6 +17,10 @@ const MobileRecognition = () => {
   const awards = [
     {
       imgSrc:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/home-award-11.webp",
+    },
+    {
+      imgSrc:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/home-award-8.webp",
     },
     {
@@ -154,12 +158,12 @@ const MobileRecognition = () => {
         </Swiper>
         <div
           className={`recognition-swiper-navigation-buttons flex gap-4 w-fit ${
-            locale === "ar" || locale === "fa" || locale === "kur"
+            locale === "ar" || locale === "fa" || locale === "kd"
               ? "float-left"
               : "float-right"
           } relative bottom-[37px] z-[10]`}
           dir={
-            locale === "ar" || locale === "fa" || locale === "kur" ? "ltr" : ""
+            locale === "ar" || locale === "fa" || locale === "kd" ? "ltr" : ""
           }
         >
           <button className="recognition-swiper-button-prev group">

@@ -768,7 +768,7 @@
     },
     "footerNotice": {
       "heading_1": "PrimeX Capital Ltd",
-      "para_1": "(formerly known as Aksha Markets Ltd) with registration number C203687 GBL and registration address at United Docks Business Park, Caudan, Port Louis,11101, Republic of Mauritius is regulated by the Financial Services Commission of the Republic of Mauritius with an Investment Dealer License with license number GB23202141.",
+      "para_1": "(formerly known as Aksha Markets Ltd) with registration number C203687 GBL and registration address at 4th Floor, Docks 4, Caudan, Port Louis,11101, Republic of Mauritius is regulated by the Financial Services Commission of the Republic of Mauritius with an Investment Dealer License with license number GB23202141.",
       "heading_2": "PRIMEX BROKER (PTY) LTD",
       "para_2": "regulated and authorized to provide financial services by South Africa Financial Sector Conduct Authority (FSCA) under license number (FSP No. 51864).",
       "heading_3": "Restricted Regions :",
@@ -781,7 +781,7 @@
       "title": "We Accept:",
       "payment_options": "Multiple Payment Options"
     },
-    "copy-right": "2021 - 2024 PrimeX Broker (PTY) LTD all rights reserved."
+    "copy-right": "2021 - 2025 PrimeX Broker (PTY) LTD all rights reserved."
   },
   "marketNews": {
     "hero": {
@@ -1409,7 +1409,7 @@
       "standard": {
         "title": "Standard",
         "deposit": "$10",
-        "spread": "From 1.2 pips",
+        "spread": "From 0.8 pips",
         "commissions": "$0",
         "leverage": "1:400",
         "marginRequired": "2%",
@@ -1429,7 +1429,7 @@
         "title": "Narrow",
         "deposit": "$1000",
         "deposit-offer": "$500",
-        "spread": "From 1.0 pips",
+        "spread": "From 0.6 pips",
         "commissions": "$0",
         "leverage": "1:500",
         "marginRequired": "2%",
@@ -1605,8 +1605,8 @@
       "title1": "Upcoming",
       "title2": "Free Webinars",
       "no_webinars": "No upcoming webinars available at this time. Please check back later.",
-      "webinar_title1": "Rose Shawish",
-      "Webinar1_by": "Fundamental Analysis",
+      "webinar_title1": "Zyad Atta",
+      "Webinar1_by": "Forex Analyst",
       "webinar_title2": "Aniket Bhoir",
       "Webinar2_by": "Market Analyst"
     },
@@ -1680,8 +1680,8 @@
       "eligibility_criteria2_li2": "For Clients with active balance of over $10,000",
       "expert_1_name": "Rose Shawish",
       "expert_1_position": "Fundamental Analyst",
-      "expert_2_name": "Aniket Bhoir",
-      "expert_2_position": "Market Analyst",
+      "expert_2_name": "Zyad Atta",
+      "expert_2_position": "Forex Analyst",
       "book_session_btn": "Book a Session"
     },
     "joinAcademy": {
@@ -1795,50 +1795,50 @@
       "description": "Explore our award-winning achievements that set us apart as a leading forex brokerage house."
     },
     "awardCards": {
-      "title1": "Top 100 Trusted Brokerages",
-      "subtitle1": "MEFM Awards Dubai",
-      "description1": "Recognized as the Top 100 Trusted Brokerages in the Middle East Financial Markets Awards 2023 for delivering excellence in financial services.",
-      "title2": "Best Copy Trading Forex Broker",
-      "subtitle2": "EGYPT EXPO",
-      "description2": "Earned a premier award of Best Copy Trading Forex Broker in Africa for 2023 for outstanding copy trading and client services.",
-      "title3": "Most Trusted ECN Broker",
-      "subtitle3": "International Business  Magazine",
-      "description3": "Garnered immense success with The Most Trusted ECN Broker in the UAE for 2023 due to commitment to transparency and fair trading practices.",
-      "title4": "Most Reliable Forex Broker",
-      "subtitle4": "Global Business & Finance Magazine",
-      "description4": "Celebrated as the Most Reliable Forex Broker Middle East for 2023 with unwavering hard work to win client trust through top-quality trading services.",
-      "title5": "BEST Forex ECN Broker",
-      "subtitle5": "FOREX EXPO DUBAI",
-      "description5": "Proudly rose as Best Forex ECN Broker at Expo Dubai 2023 for the excellence in providing efficient, advanced, and customizable trading solutions.",
-      "title6": "Best Copy Program",
-      "subtitle6": "World Business Outlook",
-      "description6": "Won Best Copy Trading Program in the UAE for 2023, highlighting advancement and top-tier copy trading strategies.",
-      "title7": "Best ECN Broker",
-      "subtitle7": "Money Expo Mumbai",
-      "description7": "Shined out as Best ECN Broker at the India Financial Expo 2023 for exceptional trading infrastructure and commitment to client success.",
-      "title8": "Best Retail FX Broker",
-      "subtitle8": "MEFM Awards Dubai",
-      "description8": "Celebrated as the Best Retail FX Broker for outstanding financial service and performance at the PROFX Awards Dubai 2024.",
-      "title9": "Top 100 Trusted Financial Institutions",
-      "subtitle9": "MEFM Awards Dubai",
-      "description9": "Recognized as the Top 100 Trusted Financial Institutions in the Middle East Financial Markets Awards 2024 for delivering excellence in financial services.",
-      "title10": "Best Global Broker 2024",
-      "subtitle10": "ForeX Expo Dubai",
-      "description10": "Honored with the Best Global Brokerage award worldwide for unwavering commitment towards innovation in forex trading at the Dubai Forex Expo 2024.",
-      "title11": "Best Forex Broker in South Africa",
-      "subtitle11": "Traders Fair & Award 2024",
-      "description11": "We are proud to announce that PrimeX Capital has been awarded Best Forex Broker in South Africa at the Traders Fair and Awards 2024, based on the votes of traders \"Traders Choice\".",
-      "awardYear1": "2023",
-      "awardYear2": "2023",
-      "awardYear3": "2023",
-      "awardYear4": "2023",
+      "title1": "Best Forex Broker in South Africa",
+      "subtitle1": "Traders Fair & Award 2024",
+      "description1": "We are proud to announce that PrimeX Capital has been awarded Best Forex Broker in South Africa at the Traders Fair and Awards 2024, based on the votes of traders \"Traders Choice\".",
+      "title2": "Best Retail FX Broker",
+      "subtitle2": "MEFM Awards Dubai",
+      "description2": "Celebrated as the Best Retail FX Broker for outstanding financial service and performance at the PROFX Awards Dubai 2024.",
+      "title3": "Top 100 Trusted Financial Institutions",
+      "subtitle3": "MEFM Awards Dubai",
+      "description3": "Recognized as the Top 100 Trusted Financial Institutions in the Middle East Financial Markets Awards 2024 for delivering excellence in financial services.",
+      "title4": "Best Global Broker 2024",
+      "subtitle4": "ForeX Expo Dubai",
+      "description4": "Honored with the Best Global Brokerage award worldwide for unwavering commitment towards innovation in forex trading at the Dubai Forex Expo 2024.",
+      "title5": "Top 100 Trusted Brokerages",
+      "subtitle5": "MEFM Awards Dubai",
+      "description5": "Recognized as the Top 100 Trusted Brokerages in the Middle East Financial Markets Awards 2023 for delivering excellence in financial services.",
+      "title6": "Best Copy Trading Forex Broker",
+      "subtitle6": "EGYPT EXPO",
+      "description6": "Earned a premier award of Best Copy Trading Forex Broker in Africa for 2023 for outstanding copy trading and client services.",
+      "title7": "Most Trusted ECN Broker",
+      "subtitle7": "International Business  Magazine",
+      "description7": "Garnered immense success with The Most Trusted ECN Broker in the UAE for 2023 due to commitment to transparency and fair trading practices.",
+      "title8": "Most Reliable Forex Broker",
+      "subtitle8": "Global Business & Finance Magazine",
+      "description8": "Celebrated as the Most Reliable Forex Broker Middle East for 2023 with unwavering hard work to win client trust through top-quality trading services.",
+      "title9": "BEST Forex ECN Broker",
+      "subtitle9": "FOREX EXPO DUBAI",
+      "description9": "Proudly rose as Best Forex ECN Broker at Expo Dubai 2023 for the excellence in providing efficient, advanced, and customizable trading solutions.",
+      "title10": "Best Copy Program",
+      "subtitle10": "World Business Outlook",
+      "description10": "Won Best Copy Trading Program in the UAE for 2023, highlighting advancement and top-tier copy trading strategies.",
+      "title11": "Best ECN Broker",
+      "subtitle11": "Money Expo Mumbai",
+      "description11": "Shined out as Best ECN Broker at the India Financial Expo 2023 for exceptional trading infrastructure and commitment to client success.",
+      "awardYear1": "2024",
+      "awardYear2": "2024",
+      "awardYear3": "2024",
+      "awardYear4": "2024",
       "awardYear5": "2023",
       "awardYear6": "2023",
       "awardYear7": "2023",
-      "awardYear8": "2024",
-      "awardYear9": "2024",
-      "awardYear10": "2024",
-      "awardYear11": "2024",
+      "awardYear8": "2023",
+      "awardYear9": "2023",
+      "awardYear10": "2023",
+      "awardYear11": "2023",
       "award_count1": "01",
       "award_count2": "02",
       "award_count3": "03",
@@ -2203,18 +2203,18 @@
       "description": "Social expert traders and grow your investments with PrimeX Capital. Our top-tier platform makes profitable trading simple. Start copying winning traders today!"
     },
     "hero": {
-      "title_part1": "Revitalize Your",
-      "title_part2": "Trading Journey",
-      "title_part3": "with our ",
-      "title_part4": "Social ",
-      "title_part5": "Trading",
-      "description": "Connect with Top Traders, Copy, and Trade Effortlessly!",
-      "btnTxt": "Sign Up Now"
+      "title_part1": "Start trading ",
+      "title_part2": "easily by ",
+      "title_part3": "copying ",
+      "title_part4": "expert ",
+      "title_part5": "strategies",
+      "description": "Connect with top traders, copy their strategies, and trade with confidence.",
+      "btnTxt": "Get Started Now"
     },
     "about": {
       "title_part1": "PrimeX Capital ",
       "title_part2": "Social Trading",
-      "description": "At PrimeX Capital, trading is made simple and accessible for all. Our Social Trading lets you mirror top investors' trades in real-time, earning profits without needing expertise. Whether you're new to trading or expanding your portfolio, it's easy to follow expert moves and grow your investments."
+      "description": "At PrimeX Capital, we make trading simple and accessible to everyone. Our copy trading service allows you to follow and replicate the trades of top investors directly, enabling you to generate profits without prior experience. Whether you're a beginner or looking to expand your portfolio, you can easily follow experts' moves and maximize your returns."
     },
     "benefits": {
       "main_title1": "Enjoy Exclusive Advantages of ",
@@ -2228,8 +2228,8 @@
       "title3_part1": "Automate ",
       "title3_part2": "and Save Time",
       "description3": "Automate with our platform and spend less time on screen.",
-      "title4_part1": "Agile ",
-      "title4_part2": "Customer Service",
+      "title4_part1": "24/7 ",
+      "title4_part2": "Customer Support",
       "description4": "Experience our top-rated customer service 24/7.",
       "title5_part1": "Multiple Asset ",
       "title5_part2": "Portfolio",
@@ -2238,9 +2238,9 @@
     "steps": {
       "title_part1": "3 Easy Steps ",
       "title_part2": "To Start",
-      "step1": "Sign Up for the Social Trading",
+      "step1": "Open a Copy Trading Account",
       "step2": "Choose Your Master",
-      "step3": "Copy and Trade Now"
+      "step3": "Start Copying and Trading Instantly"
     },
     "faq": {
       "title": "Frequently Asked ",
@@ -2251,7 +2251,7 @@
       "answer_2": "To join our social trading, you first need to sign up and fill out the form. Once your details are reviewed and approved, you can join our social trading.",
       "question_3": "How can I follow my master?",
       "answer_3": "You first need to open your account and then choose from the list of provided masters. Once you choose your master, you can copy his/her trades. ",
-      "question_4": "What is the best way to choose a master?",
+      "question_4": "How do I choose the right expert for my trades?",
       "answer_4": "To choose the master, we highly recommend you see the ratings of the masters based on their performance.",
       "question_5": "What are the fees of the social trading?",
       "answer_5": "The fees of the social trading vary from master to master. Once you sign up, the list of masters will be shown along with their fee structures. ",
@@ -2300,33 +2300,29 @@
       "country_required_error": "country is required!"
     },
     "becomeTrader": {
-      "title1": "Become a ",
-      "title2": "Prime Trader",
+      "title1": "Join the ",
+      "title2": "Elite Traders",
       "description": "Are you a trading pro? Let others copy and boost your earnings!",
       "btnTxt": "Open an Account"
     },
     "features": {
       "feature1": "Full Control Over Risk Management",
-      "feature2": "Copy Multiple Experts Simultaneously",
-      "feature3": "Copy by Percentage or Fixed Lot",
+      "feature2": "Copy Multiple Strategies Simultaneously",
+      "feature3": "Flexible Copying Options, Percentage-Based Or Fixed Size",
       "feature4": "Start Investing Easily From $100",
-      "feature5": "Access Detailed Prime Trader Account Stats"
+      "feature5": "Access Detailed Statistics Of Top Traders"
     },
     "bestPerformanceWidget": {
-      "title1": "Best By ",
-      "title2": "Performance All Time"
+      "title1": "All-time Top Performers"
     },
     "bestMonthWidget": {
-      "title1": "Best By ",
-      "title2": "Performance This Month"
+      "title1": "Best Performers This Month"
     },
     "lowestDDWidget": {
-      "title1": "Lowest By ",
-      "title2": "Drawdown and Risk"
+      "title1": "Lowest Risk And Drawdown"
     },
     "hightProvidersWidget": {
-      "title1": "Top-Ranked by ",
-      "title2": "Investors Number"
+      "title1": "Most Followed By Users"
     },
     "widgetCards": {
       "title1": "Our Best ",

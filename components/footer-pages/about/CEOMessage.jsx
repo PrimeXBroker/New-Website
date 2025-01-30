@@ -18,7 +18,7 @@ const CEOMessage = () => {
           <p className="text-lg text-[#ffffff]">{t("message")}</p>
           <p
             className={`text-[#ffffff] font-semibold mt-4 text-2xl ${
-              locale === "ar" || locale === "fa" || locale === "kur"
+              locale === "ar" || locale === "fa" || locale === "kd"
                 ? "text-left"
                 : "text-right"
             }`}

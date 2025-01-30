@@ -25,7 +25,7 @@ const ClientSatisfaction = () => {
               </h2>
               <h2
                 className={`text-2xl sm:text-3xl lg:text-5xl font-semibold text-[#FED100] mb-2 ${
-                  locale === "ar" || locale === "fa" || locale === "kur"
+                  locale === "ar" || locale === "fa" || locale === "kd"
                     ? "hidden"
                     : ""
                 }`}
@@ -44,7 +44,7 @@ const ClientSatisfaction = () => {
               {t("main_title4")}
               <span
                 className={`text-[#FED100] ${
-                  locale === "ar" || locale === "fa" || locale === "kur"
+                  locale === "ar" || locale === "fa" || locale === "kd"
                     ? "hidden"
                     : ""
                 }`}
@@ -59,7 +59,7 @@ const ClientSatisfaction = () => {
               <div>
                 <div
                   className={`bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#ffffff] flex flex-col gap-2 sm:w-[400px] h-[px] group ${
-                    locale === "ar" || locale === "fa" || locale === "kur"
+                    locale === "ar" || locale === "fa" || locale === "kd"
                       ? "mr-auto ml-0"
                       : "ml-auto mr-0"
                   }`}
@@ -87,7 +87,7 @@ const ClientSatisfaction = () => {
               <div>
                 <div
                   className={`bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#ffffff] flex flex-col gap-2 sm:w-[400px] h-[px] group ${
-                    locale === "ar" || locale === "fa" || locale === "kur"
+                    locale === "ar" || locale === "fa" || locale === "kd"
                       ? "mr-auto ml-0"
                       : "ml-auto mr-0"
                   }`}
@@ -115,7 +115,7 @@ const ClientSatisfaction = () => {
               <div>
                 <div
                   className={`bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#ffffff] flex flex-col gap-2 sm:w-[400px] h-[px] group ${
-                    locale === "ar" || locale === "fa" || locale === "kur"
+                    locale === "ar" || locale === "fa" || locale === "kd"
                       ? "mr-auto ml-0"
                       : "ml-auto mr-0"
                   }`}
@@ -143,7 +143,7 @@ const ClientSatisfaction = () => {
               <div>
                 <div
                   className={`bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#ffffff] flex flex-col gap-2 sm:w-[400px] h-[px] group ${
-                    locale === "ar" || locale === "fa" || locale === "kur"
+                    locale === "ar" || locale === "fa" || locale === "kd"
                       ? "mr-auto ml-0"
                       : "ml-auto mr-0"
                   }`}
@@ -171,7 +171,7 @@ const ClientSatisfaction = () => {
               <div>
                 <div
                   className={`bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#ffffff] flex flex-col gap-2 sm:w-[400px] h-[px] group ${
-                    locale === "ar" || locale === "fa" || locale === "kur"
+                    locale === "ar" || locale === "fa" || locale === "kd"
                       ? "mr-auto ml-0"
                       : "ml-auto mr-0"
                   } `}

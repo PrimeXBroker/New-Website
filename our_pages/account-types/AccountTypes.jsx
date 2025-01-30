@@ -29,10 +29,10 @@ const AccountTypes = ({ accounts }) => {
                   account.id !== 3 ? "mb-8 md:mb-0" : ""
                 }`}
               >
-                {(account.id === 2 || account.id === 3) && (
+                {/* {(account.id === 2 || account.id === 3) && (
                   <div
                     className={`absolute ${
-                      locale === "ar" || locale === "fa" || locale === "kur"
+                      locale === "ar" || locale === "fa" || locale === "kd"
                         ? "top-[-36px] right-0"
                         : "top-[-36px] left-0"
                     } flex justify-center items-center w-[58px] h-[58px]`}
@@ -47,7 +47,7 @@ const AccountTypes = ({ accounts }) => {
                       {t("offer")}
                     </span>
                   </div>
-                )}
+                )} */}
                 <div>
                   <div className="flex justify-between items-center">
                     <div className="flex items-start gap-3">

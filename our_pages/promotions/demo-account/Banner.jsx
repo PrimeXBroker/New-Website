@@ -33,7 +33,7 @@ const Banner = () => {
             </div>
             <div
               className={`mt-5 ${
-                locale === "ar" || locale === "fa" || locale === "kur"
+                locale === "ar" || locale === "fa" || locale === "kd"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}

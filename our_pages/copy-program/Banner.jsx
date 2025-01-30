@@ -25,20 +25,14 @@ const Banner = () => {
                 <br className="sm:hidden lg:block" />
                 <span className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold text-[#ffffff] mb-2 inline-block md:mb-1 lg:mb-2">
                   {t("title_part3")}
-                  <span
-                    className={`text-[#FED100] ${
-                      locale === "ar" ? "hidden" : ""
-                    }`}
-                  >
-                    {t("title_part4")}{" "}
-                  </span>
+                  <span className={`text-[#FED100]`}>{t("title_part4")} </span>
                 </span>
                 <span
                   className={`text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold text-[#FED100] mb-2 inline-block md:mb-1 lg:mb-2 ${
-                    locale === "ar" || locale === "fa" || locale === "kur"
+                    locale === "ar" || locale === "fa" || locale === "kd"
                       ? "mr-2 md:mr-2"
                       : "ml-2 md:ml-0"
-                  } ${locale === "ar" ? "hidden" : ""}`}
+                  }`}
                 >
                   {t("title_part5")}
                 </span>
@@ -60,7 +54,7 @@ const Banner = () => {
             <div className="flex justify-center md:justify-end mt-6 md:mt-0">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/copy-program-hero.webp"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/social-trading/Hero-Image-Copy-Program.webp"
                 width="100"
                 height="100"
                 alt="Copy Program Hero"

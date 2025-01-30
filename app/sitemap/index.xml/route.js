@@ -5,7 +5,7 @@ export async function GET() {
     `${baseUrl}/sitemap/en.xml`,
     `${baseUrl}/sitemap/ar.xml`,
     `${baseUrl}/sitemap/fa.xml`,
-    `${baseUrl}/sitemap/kur.xml`,
+    `${baseUrl}/sitemap/kd.xml`,
     `${baseUrl}/sitemap/tr.xml`,
     `${baseUrl}/sitemap/market-news-en.xml`,
     `${baseUrl}/sitemap/market-news-ar.xml`,

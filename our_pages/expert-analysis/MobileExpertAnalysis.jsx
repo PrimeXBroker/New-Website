@@ -8,6 +8,7 @@ import { Autoplay } from "swiper/modules";
 import axios from "axios";
 import Link from "next/link";
 import Moment from "react-moment";
+
 import { Pagination } from "@nextui-org/react";
 
 const MobileExpertAnalysis = ({ id }) => {
@@ -143,7 +144,7 @@ const MobileExpertAnalysis = ({ id }) => {
                           <Moment
                             date={blog.createdOn}
                             format={
-                              locale === "ar" ? "YYYY/MM/DD" : "DD/MM/YYYY"
+                              locale === "ar" ? "YYYY/MM/DD" : "Do MMM YYYY"
                             }
                           />
                         </p>

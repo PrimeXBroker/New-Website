@@ -16,7 +16,7 @@ const AboutBanner = () => {
           </div>
           <h1
             className={`text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#FED100] mb-5 ${
-              locale === "ar" || locale === "fa" || locale === "kur"
+              locale === "ar" || locale === "fa" || locale === "kd"
                 ? "md:text-right text-center"
                 : "md:text-left text-center"
             }`}
@@ -31,7 +31,7 @@ const AboutBanner = () => {
           </h1>
           <p
             className={`text-[#c6c6c6] text-[15px] font-[500] px-2 md:px-0 ${
-              locale === "ar" || locale === "fa" || locale === "kur"
+              locale === "ar" || locale === "fa" || locale === "kd"
                 ? "md:text-right text-center"
                 : "md:text-left text-center"
             }`}

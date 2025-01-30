@@ -16,11 +16,11 @@ const Banner = () => {
               <TrustPilot />
             </div>
             <div className="mt-4 text-center md:text-start">
-              <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#ffffff]">
+              <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#FED100]">
                 {t("title1")}
-                <span className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#FED100]">
+                {/* <span className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#FED100]">
                   {t("title2")}
-                </span>
+                </span> */}
               </h1>
             </div>
           </div>
@@ -28,7 +28,7 @@ const Banner = () => {
             <div className="flex justify-center md:justify-end mt-6 md:mt-0">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/Best+By+Performance+This+Month.webp"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/social-trading/Best-By-Performance-This-Month.webp"
                 width="100"
                 height="100"
                 alt="Copy Program Hero"

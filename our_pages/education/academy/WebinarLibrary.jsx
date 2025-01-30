@@ -197,14 +197,12 @@ const WebinarLibrary = () => {
           </Swiper>
           <div
             className={`webinars-swiper-navigation-buttons flex gap-4 w-fit ${
-              locale === "ar" || locale === "fa" || locale === "kur"
+              locale === "ar" || locale === "fa" || locale === "kd"
                 ? "float-left"
                 : "float-right"
             } relative bottom-[37px] z-[10] `}
             dir={
-              locale === "ar" || locale === "fa" || locale === "kur"
-                ? "ltr"
-                : ""
+              locale === "ar" || locale === "fa" || locale === "kd" ? "ltr" : ""
             }
           >
             <button className="webinar-swiper-button-prev group">

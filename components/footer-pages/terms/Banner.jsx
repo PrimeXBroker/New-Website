@@ -47,10 +47,10 @@ const Banner = () => {
               className="font-semibold py-4 sm:py-3 sm:w-1/2 rounded-lg flex justify-center items-center custom-button mb-5 sm:mb-0"
             >
               {t("view_btn")}{" "}
-              {locale === "ar" || locale === "fa" || locale === "kur" ? (
+              {locale === "ar" || locale === "fa" || locale === "kd" ? (
                 <FiArrowUpLeft
                   className={`text-lg font-bold text-[#111111] ${
-                    locale === "ar" || locale === "fa" || locale === "kur"
+                    locale === "ar" || locale === "fa" || locale === "kd"
                       ? "mr-2"
                       : "ml-2"
                   }`}
@@ -58,7 +58,7 @@ const Banner = () => {
               ) : (
                 <FiArrowUpRight
                   className={`text-lg font-bold text-[#111111] ${
-                    locale === "ar" || locale === "fa" || locale === "kur"
+                    locale === "ar" || locale === "fa" || locale === "kd"
                       ? "mr-2"
                       : "ml-2"
                   }`}
@@ -75,10 +75,10 @@ const Banner = () => {
               className="font-semibold py-4 sm:py-3 sm:w-1/2 rounded-lg flex justify-center items-center custom-button-white mb-5 sm:mb-0"
             >
               {t("download_btn")}{" "}
-              {locale === "ar" || locale === "fa" || locale === "kur" ? (
+              {locale === "ar" || locale === "fa" || locale === "kd" ? (
                 <FiDownload
                   className={`text-lg font-bold text-[#111111] ${
-                    locale === "ar" || locale === "fa" || locale === "kur"
+                    locale === "ar" || locale === "fa" || locale === "kd"
                       ? "mr-2"
                       : "ml-2"
                   }`}
@@ -86,7 +86,7 @@ const Banner = () => {
               ) : (
                 <FiDownload
                   className={`text-lg font-bold text-[#111111] ${
-                    locale === "ar" || locale === "fa" || locale === "kur"
+                    locale === "ar" || locale === "fa" || locale === "kd"
                       ? "mr-2"
                       : "ml-2"
                   }`}

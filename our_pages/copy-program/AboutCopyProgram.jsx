@@ -13,7 +13,7 @@ const AboutCopyProgram = () => {
             <div className="">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/About+Image+New.webp"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/social-trading/About-Image-Copy-Program-Page.webp"
                 width="100"
                 height="100"
                 alt="About Image"
@@ -31,7 +31,7 @@ const AboutCopyProgram = () => {
               </h2>
               <p
                 className={`text-[#c6c6c6] mt-4 w-full sm:w-[90%] md:w-[80%] mx-auto md:mx-0 ${
-                  locale === "ar" || locale === "fa" || locale === "kur"
+                  locale === "ar" || locale === "fa" || locale === "kd"
                     ? "text-center md:text-right"
                     : "text-center md:text-left"
                 }`}
@@ -44,7 +44,7 @@ const AboutCopyProgram = () => {
             <div className="flex justify-center md:justify-start">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/About+Image+New.webp"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/social-trading/About-Image-Copy-Program-Page.webp"
                 width="100"
                 height="100"
                 alt="About Image"

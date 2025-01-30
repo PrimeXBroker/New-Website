@@ -47,7 +47,7 @@ const PrimeTrade = () => {
           <div className="flex justify-center md:justify-end mt-6">
             <Image
               unoptimized={true}
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/CTA+Mockup+Desktop.webp"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/social-trading/CTA-Mockup-Desktop.webp"
               width="100"
               height="100"
               alt="CTA Mockup Desktop"
@@ -55,7 +55,7 @@ const PrimeTrade = () => {
             />
             <Image
               unoptimized={true}
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/CTA+Mockup+Mobile.webp"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/social-trading/CTA-Mockup-Mobile.webp"
               width="100"
               height="100"
               alt="CTA Mockup Mobile"

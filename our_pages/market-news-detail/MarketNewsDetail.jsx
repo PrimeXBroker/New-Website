@@ -64,7 +64,7 @@ const MarketNewsDetail = ({ slug }) => {
           <div className="lg:w-[70%] w-full mb-5 md:mb-0">
             <h2
               className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff] mb-3 ${
-                detail?.language === "ar" || locale === "fa" || locale === "kur"
+                detail?.language === "ar" || locale === "fa" || locale === "kd"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -75,7 +75,7 @@ const MarketNewsDetail = ({ slug }) => {
             </h2>
             <p
               className={` text-[#c6c6c6] text-sm sm:text-base ${
-                detail?.language === "ar" || locale === "fa" || locale === "kur"
+                detail?.language === "ar" || locale === "fa" || locale === "kd"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -126,8 +126,12 @@ const MarketNewsDetail = ({ slug }) => {
                     <div className="mt-3">
                       <p className="text-[#C6C6C6] text-sm group-hover:text-white transition duration-700 ease-in-out">
                         <Moment
-                          date={blog?.createdOn}
-                          format={locale === "ar" ? "YYYY/MM/DD" : "DD/MM/YYYY"}
+                          date={
+                            blog?.postedOn ? blog?.postedOn : blog?.createdOn
+                          }
+                          format={
+                            locale === "ar" ? "YYYY/MM/DD" : "Do MMM YYYY"
+                          }
                         />
                       </p>
                     </div>
