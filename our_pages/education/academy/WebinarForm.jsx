@@ -114,7 +114,7 @@ function WebinarForm() {
       try {
         Object.assign(values, {
           language: locale,
-          country: countryCode,
+          country: (!countryCode || countryCode != "") ? "AE" : countryCode,
           source: "website academy",
         });
 
