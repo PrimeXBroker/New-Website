@@ -2657,5 +2657,16 @@
       "question_7": "Are there any hidden costs or charges?",
       "answer_7": "There are no hidden costs or charges with any subscription fee, commission, or challenge."
     }
+  },
+  "economicCalender": {
+    "metaData": {
+      "title": "Economic Calender | PrimeX Capital",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "PrimeX Capital ",
+      "title_2": "Economic Calendar",
+      "description": "Track high-impact economic events and key market data. Stay informed and make smarter investment decisions with real-time updates."
+    }
   }
 }

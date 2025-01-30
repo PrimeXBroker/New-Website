@@ -14,9 +14,9 @@ const Banner = () => {
         <div className="container mx-auto lg:px-10 xl:px-4">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center h-full">
             <div className="col-span-12 md:col-span-6 flex flex-col justify-center">
-              <div className="text-center md:text-start mb-4">
+              {/* <div className="text-center md:text-start mb-4">
                 <TrustPilot />
-              </div>
+              </div> */}
               <div
                 className={`${
                   locale === "ar" || locale === "fa" || locale === "kd"

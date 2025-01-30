@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
-import { IoMdArrowBack } from "react-icons/io";
+import { IoMdArrowBack, IoMdStar } from "react-icons/io";
 import { IoMdArrowForward } from "react-icons/io";
 
 const Testimonials = () => {
@@ -116,9 +116,9 @@ const Testimonials = () => {
             <span className="text-[#FED100]">{r("title2")}</span>
             <span className="text-[#ffffff]">{r("title3")}</span>
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg mt-4 md:w-[575px] mx-auto text-[#ffffff]">
+          {/* <p className="text-sm sm:text-base lg:text-lg mt-4 md:w-[575px] mx-auto text-[#ffffff]">
             {r("desc")}
-          </p>
+          </p> */}
         </div>
         <Swiper
           breakpoints={{
@@ -198,13 +198,11 @@ const Testimonials = () => {
                   </div>
                 </div>
                 <div className="flex items-center mb-4">
-                  <Image
-                    unoptimized={true}
-                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Rating+Stars.svg"
-                    alt="Rating Stars"
-                    width={100}
-                    height={100}
-                  />
+                  <div className="flex text-[#FED100]">
+                    {[...Array(5)].map((_, index) => (
+                      <IoMdStar key={index} className="w-5 h-5" />
+                    ))}
+                  </div>
                   <div
                     className={`text-sm text-[#c6c6c6] ${
                       locale === "ar" || locale === "fa" || locale === "kd"

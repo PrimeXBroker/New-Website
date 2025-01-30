@@ -19,6 +19,7 @@ import MobileHeader from "@/components/MobileHeader";
 import VideoPopup from "@/components/VideoPopup";
 import ImageView from "@/components/ImageView";
 import NotificationHandler from "@/components/NotificationHandler";
+import RedirectHandler from "@/components/RedirectHandler";
 
 const montserrat = localFont({
   src: [
@@ -475,6 +476,7 @@ export default async function layout({ children, params: { locale } }) {
           <div dir={direction}>
             <NextUIProvider>
               <NextIntlClientProvider messages={messages}>
+                <RedirectHandler />
                 <NotificationHandler />
                 <ImageView />
                 <VideoPopup />

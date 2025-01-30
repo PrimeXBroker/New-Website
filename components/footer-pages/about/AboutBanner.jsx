@@ -11,9 +11,9 @@ const AboutBanner = () => {
     <section className={`bg-[#000000] pt-[60px] lg:pt-20`}>
       <div className="container flex flex-col md:flex-row justify-between gap-10 items-center py-12">
         <div className="md:w-[60%] lg:w-[45%]">
-          <div className="text-center md:text-start mb-4">
+          {/* <div className="text-center md:text-start mb-4">
             <TrustPilot />
-          </div>
+          </div> */}
           <h1
             className={`text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#FED100] mb-5 ${
               locale === "ar" || locale === "fa" || locale === "kd"

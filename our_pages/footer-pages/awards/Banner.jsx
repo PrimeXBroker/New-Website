@@ -12,9 +12,9 @@ const Banner = () => {
       <div className="container">
         <div className="grid grid-cols-12 items-center">
           <div className="col-span-12 md:col-span-5">
-            <div className="text-center md:text-start">
+            {/* <div className="text-center md:text-start">
               <TrustPilot />
-            </div>
+            </div> */}
             <div className="mt-4 text-center md:text-start">
               <h2 className="text-xl sm:text-2xl md:text-xl lg:text-2xl xl:text-3xl font-semibold text-[#ffffff] md:mb-1 lg:mb-0">
                 {t("title1")}

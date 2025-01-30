@@ -25,9 +25,9 @@ const Banner = ({ scrollToForm }) => {
       <div className="container">
         <div className="grid grid-cols-12 items-center">
           <div className="col-span-12 md:col-span-6">
-            <div className="mb-5 text-center md:text-start">
+            {/* <div className="mb-5 text-center md:text-start">
               <TrustPilot />
-            </div>
+            </div> */}
             <h1 className="text-3xl sm:text-4xl md:text-2xl lg:text-4xl xl:text-5xl font-semibold text-[#ffffff] sm:mb-2 md:mb-0 lg:mb-1 xl:mb-3 text-center md:text-start">
               {t("title1")}
               <span className="text-[#FED100]">{t("title2")}</span>
