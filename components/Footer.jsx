@@ -71,10 +71,10 @@ const Footer = () => {
           { name: t("company.title_part1_link1"), href: "/about" },
           { name: t("company.title_part1_link2"), href: "/contact" },
           { name: t("company.title_part1_link3"), href: "/awards" },
-          (locale === "en" || locale === "ar") && {
-            name: t("company.title_part1_link4"),
-            href: `/${locale}/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e/`,
-          },
+          // (locale === "en" || locale === "ar") && {
+          //   name: t("company.title_part1_link4"),
+          //   href: `/${locale}/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e/`,
+          // },
           // locale === "en" && {
           //   name: t("company.title_part1_link5"),
           //   href: "/careers",
