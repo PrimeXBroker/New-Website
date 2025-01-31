@@ -846,7 +846,7 @@ const MobileHeader = ({ locale }) => {
                   {t("market-news")}
                 </LocaleLink>
                 <LocaleLink
-                  href="/expert-analysis/technical-analysis/6641f0097c9be5623e10929e"
+                  href="/expert-analysis/technical-analysis/6641f01d7c9be5623e1092a4"
                   className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >

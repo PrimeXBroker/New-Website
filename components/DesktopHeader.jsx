@@ -412,7 +412,7 @@ const DesktopHeader = ({ locale }) => {
                       </li>
                       <li>
                         <LocaleLink
-                          href="/expert-analysis/technical-analysis/6641f0097c9be5623e10929e"
+                          href="/expert-analysis/technical-analysis/6641f01d7c9be5623e1092a4"
                           onClick={closeDropdown}
                           className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                         >

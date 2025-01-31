@@ -57,7 +57,7 @@ const page = async () => {
     startingGatewayPages = res?.result.pagination.totalPages;
   }
   const pressRelease =
-    locale === "ar" ? "66544954f5b226a0bd9b5813" : "665448dcf5b226a0bd9b574e";
+    locale === "ar" ? "665448dcf5b226a0bd9b574e" : "66544954f5b226a0bd9b5813";
   const pressResponse = await getNews(1, pressRelease, locale);
   let pressReleaseBlogs = [],
     pressReleasePages = 1;
