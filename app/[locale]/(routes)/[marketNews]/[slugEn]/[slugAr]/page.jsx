@@ -29,8 +29,12 @@ const page = async ({ params }) => {
   return (
     <>
       <Hero />
-      <Banner news={news?.slice(0, 5)} />
-      <MarketNews news={news} totalPages={totalPages} lang={lang} />
+      {(locale === "en" || locale === "ar") && (
+        <>
+          <Banner news={news?.slice(0, 5)} />
+          <MarketNews news={news} totalPages={totalPages} lang={lang} />
+        </>
+      )}
       <div className="pb-10 bg-[#000000]">
         <Testimonials />
       </div>
