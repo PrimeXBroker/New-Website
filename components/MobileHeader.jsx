@@ -812,7 +812,7 @@ const MobileHeader = ({ locale }) => {
           >
             {t("academy")}
           </LocaleLink> */}
-          <div>
+          <div className="relative">
             <button
               onClick={() => toggleSubMenu(5)}
               className="text-[#ffffff] text-base flex justify-between items-center w-full pt-[3px]"
@@ -824,6 +824,18 @@ const MobileHeader = ({ locale }) => {
                 <FaChevronDown size={16} />
               )}
             </button>
+            <Image
+              unoptimized={true}
+              width="20"
+              height="20"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
+              alt="Hot Image"
+              className={`absolute top-[-15px] ${
+                locale === "ar" || locale === "fa" || locale === "kd"
+                  ? "right-[60px]"
+                  : "left-[59px]"
+              }`}
+            />
             {openSubMenu === 5 && (
               <div className="mt-2">
                 <LocaleLink
