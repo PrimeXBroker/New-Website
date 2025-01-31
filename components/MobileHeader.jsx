@@ -803,19 +803,19 @@ const MobileHeader = ({ locale }) => {
               </div>
             )}
           </div>
-          <LocaleLink
+          {/* <LocaleLink
             href="/academy"
             className="text-[#ffffff] text-base"
             onClick={toggleDrawer}
           >
             {t("academy")}
-          </LocaleLink>
-          {/* <div>
+          </LocaleLink> */}
+          <div>
             <button
               onClick={() => toggleSubMenu(5)}
               className="text-[#ffffff] text-base flex justify-between items-center w-full pt-[3px]"
             >
-              {t("promotion")}
+              {t("knowledge-hub")}
               {openSubMenu === 5 ? (
                 <FaChevronUp size={16} />
               ) : (
@@ -825,29 +825,43 @@ const MobileHeader = ({ locale }) => {
             {openSubMenu === 5 && (
               <div className="mt-2">
                 <LocaleLink
-                  href="/bonus"
+                  href="/economic-calender"
                   className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
-                  {t("deposit")}
+                  {t("economic-calendar")}
                 </LocaleLink>
                 <LocaleLink
-                  href="/top-trader"
+                  href="/webinars"
                   className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
-                  {t("tradetowin")}
+                  {t("webinars")}
                 </LocaleLink>
                 <LocaleLink
-                  href="/funded-account-competition"
+                  href="/market-news/all/news"
                   className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
-                  {t("funded_account_competition")}
+                  {t("market-news")}
+                </LocaleLink>
+                {/* <LocaleLink
+                  href="/technical-analysis"
+                  className="block text-[#ffffff] text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("technical-analysis")}
+                </LocaleLink> */}
+                <LocaleLink
+                  href="/blogs"
+                  className="block text-[#ffffff] text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("blog")}
                 </LocaleLink>
               </div>
             )}
-          </div> */}
+          </div>
           {/* <div>
             <button
               onClick={() => toggleSubMenu(6)}
@@ -949,13 +963,13 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("awards")}
                 </LocaleLink>
-                <LocaleLink
+                {/* <LocaleLink
                   href="/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e"
                   className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("press_release")}
-                </LocaleLink>
+                </LocaleLink> */}
                 {locale === "en" && (
                   <LocaleLink
                     href="/careers"

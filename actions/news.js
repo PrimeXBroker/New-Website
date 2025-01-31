@@ -8,6 +8,8 @@ export const getNews = async (page, lang, locale) => {
       `https://primexbroker.com/api/fetch/published/blogs/${page}/6/${lang}/${locale}`
     );
 
+    console.log(newsRes, "newsRes");
+
     if (newsRes.data.success) {
       return { result: newsRes.data, success: true };
     } else {

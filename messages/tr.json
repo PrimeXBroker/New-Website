@@ -34,7 +34,13 @@
     "careers": "Kariyer",
     "choose_us": "Neden Bizi Seçmelisiniz",
     "social_trading": "Sosyal Ticaret",
-    "hot_badge": "Sıcak"
+    "hot_badge": "Sıcak",
+    "knowledge-hub": "Araştırma",
+    "economic-calendar": "Ekonomik Takvim",
+    "technical-analysis": "Teknik Analiz",
+    "webinars": "Web Seminerleri",
+    "blog": "Blog",
+    "market-news": "Piyasa Haberleri"
   },
   "home": {
     "metaData": {
@@ -768,7 +774,7 @@
     },
     "footerNotice": {
       "heading_1": "PrimeX Capital Ltd",
-      "para_1": "(eski adıyla Aksha Markets Ltd), C203687 GBL kayıt numarasıyla 4. Kat, Docks 4, Caudan, Port Louis, 11101, Mauritius Cumhuriyeti adresinde kayıtlıdır ve Mauritius Cumhuriyeti Finansal Hizmetler Komisyonu tarafından GB23202141 lisans numarası ile Yatırım Komisyoncusu Lisansı kapsamında düzenlenmektedir.",
+      "para_1": "(eski adıyla Aksha Markets Ltd), 203687 GBC kayıt numarasıyla 4. Kat, Docks 4, Caudan, Port Louis, 11101, Mauritius Cumhuriyeti adresinde kayıtlıdır ve Mauritius Cumhuriyeti Finansal Hizmetler Komisyonu tarafından GB23202141 lisans numarası ile Yatırım Komisyoncusu Lisansı kapsamında düzenlenmektedir.",
       "heading_2": "PRIMEX BROKER (PTY) LTD",
       "para_2": "Güney Afrika Finansal Sektör Yürütme Otoritesi (FSCA) tarafından FSP No. 51864 lisans numarası altında finansal hizmetler sunma yetkisine sahiptir.",
       "heading_3": "Kısıtlı Bölgeler :",
@@ -1658,8 +1664,8 @@
       "account_number_error": "Hesap numarası gereklidir.",
       "availability": "Uygunluk",
       "availability_error": "Lütfen uygunluğunuzu belirtin.",
-      "success_title": "Başarılı",
-      "webinar_success_desc": "PrimeX Capital Akademisine abone olduğunuz için teşekkür ederiz",
+      "success_title": "Web Semineri Kaydı",
+      "webinar_success_desc": "Ücretsiz web seminerine başarıyla kaydoldunuz. Teşekkür ederiz.",
       "close_btn": "Kapat",
       "instructor_success_desc": "PrimeX Capital'e katılmak için gösterdiğiniz ilgi için teşekkür ederiz. Ekibimiz başvurunuzu dikkatle inceleyecek ve sizinle iletişime geçecektir.",
       "session_success_desc1": "Ücretsiz web semineri planlama talebiniz başarıyla gönderildi.",
@@ -2566,6 +2572,51 @@
       "answer_6": "Hayır, bu sürece başlamadan önce ücretsiz hesap, demo hesap veya deneme yoktur.",
       "question_7": "Gizli maliyetler veya ücretler var mı?",
       "answer_7": "Hiçbir abonelik ücreti, komisyon veya zorlukla ilgili gizli maliyet veya ücret yoktur."
+    }
+  },
+  "economicCalender": {
+    "metaData": {
+      "title": "Ekonomik Takvim | PrimeX Capital",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "PrimeX Capital ",
+      "title_2": "Ekonomik Takvim",
+      "description": "Yüksek etkili ekonomik olayları ve önemli piyasa verilerini takip edin. Gerçek zamanlı güncellemelerle bilgili kalın ve daha akıllı yatırım kararları alın."
+    }
+  },
+  "knowledgeHubWebinars": {
+    "metaData": {
+      "title": "Web Seminerleri | PrimeX Capital",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "PrimeX Capital",
+      "title_2": "Özel Web Seminerleri",
+      "description": "Uzman liderliğindeki web seminerleriyle ticaret seviyenizi yükseltin. Ücretsiz katılın veya özel oturumlar için rezervasyon yaparak kişiselleştirilmiş eğitim ve hızlandırılmış başarıya ulaşın.",
+      "join_btn": "Ücretsiz Web Seminerine Katılın"
+    }
+  },
+  "knowledgeHubBlogs": {
+    "metaData": {
+      "title": "Bloglar | PrimeX Capital",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "Öğrenin ve ",
+      "title_2": "Güncel Kalın",
+      "description": "Uzmanlar tarafından hazırlanan eğitim materyalleriyle sağlam bir ticaret temeli oluşturun. PrimeX Capital'in en son basın bültenleri ve önemli şirket güncellemeleriyle güncel kalın."
+    }
+  },
+  "knowledgeHubMarketNews": {
+    "metaData": {
+      "title": "Piyasa Haberleri | PrimeX Capital",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "Gerçek Zamanlı",
+      "title_2": "Piyasa Haberleri",
+      "description": "Büyük finansal olayları, son dakika haberlerini ve piyasa değişimlerini takip edin. Bilgilendirilmiş ticaret kararları almak için uzman analizleri ve veri odaklı içgörülerle önde olun."
     }
   }
 }

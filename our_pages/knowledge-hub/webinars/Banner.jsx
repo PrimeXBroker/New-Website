@@ -6,7 +6,7 @@ import TrustPilot from "@/components/TrustPilot";
 
 const Banner = ({ setActive }) => {
   const locale = useLocale();
-  const h = useTranslations("knowledgeHubBlogs.hero");
+  const h = useTranslations("knowledgeHubWebinars.hero");
 
   return (
     <section className="">
@@ -44,10 +44,17 @@ const Banner = ({ setActive }) => {
             >
               {h("description")}
             </p>
+            <Link
+              href="#academy-form"
+              onClick={() => setActive("Webinars")}
+              className="bg-primary text-center px-4 py-4 w-[200px] shadow-xl block md:m-0 mx-auto custom-button font-semibold"
+            >
+              {h("join_btn")}
+            </Link>
           </div>
-          <div className="flex md:justify-end justify-center">
+          <div className="flex md:justify-end justify-center pt-5 md:mt-0">
             <Image
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/knowledge-hub/economic-calender/blogs-image.webp"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/Academy+Hero+New.webp"
               alt="Academy Hero Image"
               width="550"
               height="500"

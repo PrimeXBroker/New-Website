@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
@@ -10,7 +11,7 @@ const MaximizeProfit = () => {
   const t = useTranslations("bonus.maximize");
 
   return (
-    <section className="bg-[#000000] py-10">
+    <section className="bg-[#000000] pt-10 pb-20">
       <div className="container">
         <div className="grid grid-cols-12 justify-center items-center bg-[#111111] border-2 border-[#1D1D1D] rounded-[20px] px-14 pt-8">
           <div
@@ -47,7 +48,7 @@ const MaximizeProfit = () => {
             >
               <button
                 onClick={() => window.open(getRegisterUrl(locale))}
-                className="py-[16px] px-[32px] sm:px-[46px] font-semibold mt-5 custom-button"
+                className="py-[16px] px-[32px] sm:px-[46px] font-semibold mt-5 custom-button rounded-xl"
               >
                 {t("register_btn")}
               </button>
@@ -56,8 +57,8 @@ const MaximizeProfit = () => {
                 target="_blank"
                 className={`text-xs text-[#ffffff] font-normal block mt-2 ${
                   locale === "ar" || locale === "fa" || locale === "kd"
-                    ? "text-center lg:text-start mr-2"
-                    : "text-center lg:text-start md:ml-6"
+                    ? "text-center lg:text-start"
+                    : "text-center lg:text-start"
                 }`}
               >
                 {t("already-reg")}

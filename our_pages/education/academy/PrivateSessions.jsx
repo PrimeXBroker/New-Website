@@ -7,7 +7,7 @@ const PrivateSessions = ({ setActive }) => {
   const t = useTranslations("academy.privateSessions");
 
   return (
-    <div className="bg-[#000000] text-[#ffffff] py-10">
+    <div className="bg-[#000000] text-[#ffffff] pt-10 py-20">
       <div className="container">
         <div className="px-5 sm:px-8 py-8 rounded-xl bg-[#111111] border-2 border-[#222222]">
           <div className="flex flex-col lg:flex-row gap-6 justify-between items-start">

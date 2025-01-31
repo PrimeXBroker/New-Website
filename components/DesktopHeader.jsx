@@ -352,21 +352,21 @@ const DesktopHeader = ({ locale }) => {
                 </ul>
               )}
             </li>
-            <li className="flex items-center h-full">
+            {/* <li className="flex items-center h-full">
               <LocaleLink
                 href="/academy"
                 className="text-[#ffffff] text-[.8em]"
               >
                 {t("academy")}
               </LocaleLink>
-            </li>
-            {/* <li
+            </li> */}
+            <li
               className="relative flex items-center h-full"
               onMouseEnter={() => openDropdown(4)}
               onMouseLeave={closeDropdown}
             >
               <button className="text-[#ffffff] text-[.8em] flex items-center">
-                {t("promotion")}
+                {t("knowledge-hub")}
                 <svg
                   className={`fill-current h-4 w-4 ${
                     locale === "ar" || locale === "fa" || locale === "kd"
@@ -383,34 +383,56 @@ const DesktopHeader = ({ locale }) => {
                 <ul className="absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[250px] rounded-[6px]">
                   <li>
                     <LocaleLink
-                      href="/bonus"
+                      href="/economic-calender"
                       onClick={closeDropdown}
                       className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >
-                      {t("deposit")}
+                      {t("economic-calendar")}
                     </LocaleLink>
                   </li>
                   <li>
                     <LocaleLink
-                      href="/top-trader"
+                      href="/webinars"
                       onClick={closeDropdown}
                       className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >
-                      {t("tradetowin")}
+                      {t("webinars")}
                     </LocaleLink>
                   </li>
-                  <li>
-                    <LocaleLink
-                      href="/funded-account-competition"
-                      onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
-                    >
-                      {t("funded_account_competition")}
-                    </LocaleLink>
-                  </li>
+                  {(locale === "en" || locale === "ar") && (
+                    <>
+                      <li>
+                        <LocaleLink
+                          href="/market-news/all/news"
+                          onClick={closeDropdown}
+                          className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                        >
+                          {t("market-news")}
+                        </LocaleLink>
+                      </li>
+                      {/* <li>
+                        <LocaleLink
+                          href="/technical-analysis"
+                          onClick={closeDropdown}
+                          className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                        >
+                          {t("technical-analysis")}
+                        </LocaleLink>
+                      </li> */}
+                      <li>
+                        <LocaleLink
+                          href="/blogs"
+                          onClick={closeDropdown}
+                          className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                        >
+                          {t("blog")}
+                        </LocaleLink>
+                      </li>
+                    </>
+                  )}
                 </ul>
               )}
-            </li> */}
+            </li>
             <li
               className="relative flex items-center h-full"
               onMouseEnter={() => openDropdown(6)}
@@ -474,7 +496,7 @@ const DesktopHeader = ({ locale }) => {
                       {t("awards")}
                     </LocaleLink>
                   </li>
-                  <li>
+                  {/* <li>
                     <LocaleLink
                       href="/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e"
                       onClick={closeDropdown}
@@ -482,7 +504,7 @@ const DesktopHeader = ({ locale }) => {
                     >
                       {t("press_release")}
                     </LocaleLink>
-                  </li>
+                  </li> */}
                   {/* {locale === "en" && (
                     <li>
                       <LocaleLink

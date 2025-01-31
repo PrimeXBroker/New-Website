@@ -7,32 +7,16 @@ import MarketNews from "../../market-news/MarketNews";
 function BlogsWrapper({
   active,
   setActive,
-  marketNewsBlogs,
-  marketNewsPages,
   startingGatewayBlogs,
   startingGatewayPages,
-  marketNews,
+  pressReleaseBlogs,
+  pressReleasePages,
   startingGateway,
+  pressRelease,
 }) {
   const t = useTranslations("academy.blogsTabs");
 
   const tabs = [
-    {
-      key: "Market News",
-      title: t("tab3_title"),
-      content: (
-        <MarketNews
-          news={marketNewsBlogs}
-          totalPages={marketNewsPages}
-          lang={marketNews}
-        />
-      ),
-    },
-    {
-      key: "Technical Analysis",
-      title: t("tab2_title"),
-      content: <ExpertAnalysis id={`6641f01d7c9be5623e1092a4`} />,
-    },
     {
       key: "Learning Hub",
       title: t("tab1_title"),
@@ -46,6 +30,17 @@ function BlogsWrapper({
           news={startingGatewayBlogs}
           totalPages={startingGatewayPages}
           lang={startingGateway}
+        />
+      ),
+    },
+    {
+      key: "Press Release",
+      title: t("tab5_title"),
+      content: (
+        <MarketNews
+          news={pressReleaseBlogs}
+          totalPages={pressReleasePages}
+          lang={pressRelease}
         />
       ),
     },

@@ -70,8 +70,8 @@ const Banner = ({ news }) => {
   const progressValue = (progressCounter / news.length) * 100;
 
   return (
-    <div className="pt-16 sm:pt-28 pb-20 bg-[#000000] text-[#ffffff]">
-      <div className="container mx-auto px-4 py-8">
+    <div className="py-20 bg-[#000000] text-[#ffffff]">
+      <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div className="w-full sm:h-[400px]">
             <img

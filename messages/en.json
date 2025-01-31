@@ -34,7 +34,13 @@
     "careers": "Careers",
     "choose_us": "Why Choose Us",
     "social_trading": "Social Trading",
-    "hot_badge": "Hot"
+    "hot_badge": "Hot",
+    "knowledge-hub": "Research",
+    "economic-calendar": "Economic Calendar",
+    "technical-analysis": "Technical Analysis",
+    "webinars": "Webinars",
+    "blog": "Blog",
+    "market-news": "Market News"
   },
   "home": {
     "metaData": {
@@ -768,7 +774,7 @@
     },
     "footerNotice": {
       "heading_1": "PrimeX Capital Ltd",
-      "para_1": "(formerly known as Aksha Markets Ltd) with registration number C203687 GBL and registration address at 4th Floor, Docks 4, Caudan, Port Louis,11101, Republic of Mauritius is regulated by the Financial Services Commission of the Republic of Mauritius with an Investment Dealer License with license number GB23202141.",
+      "para_1": "(formerly known as Aksha Markets Ltd) with registration number 203687 GBC and registration address at 4th Floor, Docks 4, Caudan, Port Louis,11101, Republic of Mauritius is regulated by the Financial Services Commission of the Republic of Mauritius with an Investment Dealer License with license number GB23202141.",
       "heading_2": "PRIMEX BROKER (PTY) LTD",
       "para_2": "regulated and authorized to provide financial services by South Africa Financial Sector Conduct Authority (FSCA) under license number (FSP No. 51864).",
       "heading_3": "Restricted Regions :",
@@ -1660,8 +1666,8 @@
       "account_number_error": "Account number is required.",
       "availability": "Availability",
       "availability_error": "Please provide your availability.",
-      "success_title": "Success",
-      "webinar_success_desc": "Thanks For Subscribing to PrimeX Capital Academy",
+      "success_title": "Webinar Registration",
+      "webinar_success_desc": "You have successfully registered for the free webinar. Thank you.",
       "close_btn": "Close",
       "instructor_success_desc": "Thanks for your interest in joining PrimeX Capital. Our team will carefully review your application and reach out to you.",
       "session_success_desc1": "Your request to schedule a free webinar has been sent successfully.",
@@ -1777,7 +1783,8 @@
       "tab1_title": "PrimeX Learning Hub",
       "tab2_title": "Technical Analysis",
       "tab3_title": "Market News",
-      "tab4_title": "Starting Gateway"
+      "tab4_title": "Starting Gateway",
+      "tab5_title": "Press Release"
     }
   },
   "newAwards": {
@@ -2667,6 +2674,40 @@
       "title_1": "PrimeX Capital ",
       "title_2": "Economic Calendar",
       "description": "Track high-impact economic events and key market data. Stay informed and make smarter investment decisions with real-time updates."
+    }
+  },
+  "knowledgeHubWebinars": {
+    "metaData": {
+      "title": "Webinars | PrimeX Capital",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "PrimeX Capital",
+      "title_2": "Exclusive Webinars",
+      "description": "Level up your trading with expert-led webinars. Join free or book private sessions for tailored coaching and accelerated success.",
+      "join_btn": "Join Free Webinar"
+    }
+  },
+  "knowledgeHubBlogs": {
+    "metaData": {
+      "title": "Blogs | PrimeX Capital",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "Learn & ",
+      "title_2": "Stay Updated",
+      "description": "Build a strong trading foundation with expert-curated learning materials. Stay updated with PrimeX Capital’s latest press releases and key company updates."
+    }
+  },
+  "knowledgeHubMarketNews": {
+    "metaData": {
+      "title": "Market News | PrimeX Capital",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "Real-Time",
+      "title_2": "Market News",
+      "description": "Track major financial events, breaking news, and market shifts. Stay ahead with expert insights and data-driven analysis to make informed trading decisions."
     }
   }
 }

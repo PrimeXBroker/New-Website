@@ -7,8 +7,7 @@ import TrustPilot from "@/components/TrustPilot";
 
 const Banner = ({ setActive }) => {
   const locale = useLocale();
-  const h = useTranslations("academy.hero");
-  const f = useTranslations("academy.unlimitedFeatures");
+  const h = useTranslations("economicCalender.hero");
 
   return (
     <section className="">
@@ -19,7 +18,7 @@ const Banner = ({ setActive }) => {
               <TrustPilot />
             </div>{" "} */}
             <h1
-              className={`text-3xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff] pb-1 ${
+              className={`text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#ffffff] pb-1 ${
                 locale === "ar" || locale === "fa" || locale === "kd"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
@@ -28,7 +27,7 @@ const Banner = ({ setActive }) => {
               {h("title_1")}
             </h1>
             <h2
-              className={`text-3xl sm:text-3xl lg:text-4xl font-semibold text-[#FED100] ${
+              className={`text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#FED100] ${
                 locale === "ar" || locale === "fa" || locale === "kd"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
@@ -36,18 +35,8 @@ const Banner = ({ setActive }) => {
             >
               {h("title_2")}
             </h2>
-            <h3
-              className={`text-lg sm:text-xl md:text-lg font-semibold text-[#ffffff] my-3 ${
-                locale === "ar" || locale === "fa" || locale === "kd"
-                  ? "text-center md:text-right"
-                  : "text-center md:text-left"
-              }`}
-            >
-              {h("title_3")} <br />
-              {h("title_4")}
-            </h3>
             <p
-              className={`text-[#c6c6c6] w-[95%] sm:w-[90%] mx-auto md:mx-0 md:w-[75%] mb-5 text-sm sm:text-base ${
+              className={`text-[#c6c6c6] w-[95%] sm:w-[90%] mx-auto md:mx-0 md:w-[75%] mt-2 text-sm sm:text-base ${
                 locale === "ar" || locale === "fa" || locale === "kd"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
@@ -56,18 +45,11 @@ const Banner = ({ setActive }) => {
             >
               {h("description")}
             </p>
-            <Link
-              href="#academy-form"
-              onClick={() => setActive("Webinars")}
-              className="bg-primary text-center px-4 py-4 w-[200px] shadow-xl block md:m-0 mx-auto custom-button font-semibold"
-            >
-              {h("join_btn")}
-            </Link>
           </div>
-          <div className="flex md:justify-end justify-center">
+          <div className="flex md:justify-end justify-center pt-5 md:mt-0">
             <Image
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/Academy+Hero+New.webp"
-              alt="Academy Hero Image"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/knowledge-hub/economic-calender/economic-calendar-hero.webp"
+              alt="Economic Calender Hero Image"
               width="550"
               height="500"
               className={`w-full sm:w-[90%] ms:w-full`}

@@ -6,38 +6,21 @@ import MobileMarketNews from "../../market-news/MobileMarketNews";
 function MobileBlogWrapper({
   active,
   setActive,
-  marketNewsBlogs,
-  marketNewsPages,
   startingGatewayBlogs,
   startingGatewayPages,
-  marketNews,
+  pressReleaseBlogs,
+  pressReleasePages,
   startingGateway,
+  pressRelease,
 }) {
   const t = useTranslations("academy.blogsTabs");
 
   const tabs = [
     {
-      key: "Market News",
-      title: t("tab3_title"),
-      content: (
-        <MobileMarketNews
-          news={marketNewsBlogs}
-          totalPages={marketNewsPages}
-          lang={marketNews}
-        />
-      ),
-    },
-    {
-      key: "Technical Analysis",
-      title: t("tab2_title"),
-      content: <MobileExpertAnalysis id={`6641f01d7c9be5623e1092a4`} />,
-    },
-    {
       key: "Learning Hub",
       title: t("tab1_title"),
       content: <MobileExpertAnalysis id={`6641f0097c9be5623e10929e`} />,
     },
-
     {
       key: "Starting Gateway",
       title: t("tab4_title"),
@@ -46,6 +29,17 @@ function MobileBlogWrapper({
           news={startingGatewayBlogs}
           totalPages={startingGatewayPages}
           lang={startingGateway}
+        />
+      ),
+    },
+    {
+      key: "Press Release",
+      title: t("tab5_title"),
+      content: (
+        <MobileMarketNews
+          news={pressReleaseBlogs}
+          totalPages={pressReleasePages}
+          lang={pressRelease}
         />
       ),
     },

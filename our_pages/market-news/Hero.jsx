@@ -4,9 +4,9 @@ import React from "react";
 import { useTranslations, useLocale } from "next-intl";
 import TrustPilot from "@/components/TrustPilot";
 
-const Banner = ({ setActive }) => {
+const Hero = () => {
   const locale = useLocale();
-  const h = useTranslations("knowledgeHubBlogs.hero");
+  const h = useTranslations("knowledgeHubMarketNews.hero");
 
   return (
     <section className="">
@@ -47,8 +47,8 @@ const Banner = ({ setActive }) => {
           </div>
           <div className="flex md:justify-end justify-center">
             <Image
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/knowledge-hub/economic-calender/blogs-image.webp"
-              alt="Academy Hero Image"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/knowledge-hub/economic-calender/market-news.webp"
+              alt="Market News Hero Image"
               width="550"
               height="500"
               className={`w-full sm:w-[90%] ms:w-full`}
@@ -60,4 +60,4 @@ const Banner = ({ setActive }) => {
   );
 };
 
-export default Banner;
+export default Hero;

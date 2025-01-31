@@ -3,6 +3,8 @@ import React from "react";
 import MarketNews from "@/our_pages/market-news/MarketNews";
 import { getLocale } from "next-intl/server";
 import { getNews } from "@/actions/news";
+import Hero from "@/our_pages/market-news/Hero";
+import Testimonials from "@/our_pages/home/Testimonials";
 
 const page = async ({ params }) => {
   const { marketNews, slugEn, slugAr } = params;
@@ -26,8 +28,12 @@ const page = async ({ params }) => {
 
   return (
     <>
+      <Hero />
       <Banner news={news?.slice(0, 5)} />
       <MarketNews news={news} totalPages={totalPages} lang={lang} />
+      <div className="pb-10 bg-[#000000]">
+        <Testimonials />
+      </div>
     </>
   );
 };
