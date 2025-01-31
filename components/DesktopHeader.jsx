@@ -390,26 +390,8 @@ const DesktopHeader = ({ locale }) => {
                       {t("economic-calendar")}
                     </LocaleLink>
                   </li>
-                  <li>
-                    <LocaleLink
-                      href="/webinars"
-                      onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
-                    >
-                      {t("webinars")}
-                    </LocaleLink>
-                  </li>
                   {(locale === "en" || locale === "ar") && (
                     <>
-                      <li>
-                        <LocaleLink
-                          href="/market-news/all/news"
-                          onClick={closeDropdown}
-                          className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
-                        >
-                          {t("market-news")}
-                        </LocaleLink>
-                      </li>
                       <li>
                         <LocaleLink
                           href="/expert-analysis/technical-analysis/6641f01d7c9be5623e1092a4"
@@ -421,14 +403,34 @@ const DesktopHeader = ({ locale }) => {
                       </li>
                       <li>
                         <LocaleLink
-                          href="/blogs"
+                          href="/market-news/all/news"
                           onClick={closeDropdown}
                           className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                         >
-                          {t("blog")}
+                          {t("market-news")}
                         </LocaleLink>
                       </li>
                     </>
+                  )}
+                  <li>
+                    <LocaleLink
+                      href="/webinars"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                    >
+                      {t("webinars")}
+                    </LocaleLink>
+                  </li>
+                  {(locale === "en" || locale === "ar") && (
+                    <li>
+                      <LocaleLink
+                        href="/blogs"
+                        onClick={closeDropdown}
+                        className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      >
+                        {t("blog")}
+                      </LocaleLink>
+                    </li>
                   )}
                 </ul>
               )}

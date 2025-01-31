@@ -831,6 +831,24 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("economic-calendar")}
                 </LocaleLink>
+                {(locale === "en" || locale === "ar") && (
+                  <>
+                    <LocaleLink
+                      href="/expert-analysis/technical-analysis/6641f01d7c9be5623e1092a4"
+                      className="block text-[#ffffff] text-base pt-[16px]"
+                      onClick={toggleDrawer}
+                    >
+                      {t("technical-analysis")}
+                    </LocaleLink>
+                    <LocaleLink
+                      href="/market-news/all/news"
+                      className="block text-[#ffffff] text-base pt-[16px]"
+                      onClick={toggleDrawer}
+                    >
+                      {t("market-news")}
+                    </LocaleLink>
+                  </>
+                )}
                 <LocaleLink
                   href="/webinars"
                   className="block text-[#ffffff] text-base pt-[16px]"
@@ -838,27 +856,15 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("webinars")}
                 </LocaleLink>
-                <LocaleLink
-                  href="/market-news/all/news"
-                  className="block text-[#ffffff] text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("market-news")}
-                </LocaleLink>
-                <LocaleLink
-                  href="/expert-analysis/technical-analysis/6641f01d7c9be5623e1092a4"
-                  className="block text-[#ffffff] text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("technical-analysis")}
-                </LocaleLink>
-                <LocaleLink
-                  href="/blogs"
-                  className="block text-[#ffffff] text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("blog")}
-                </LocaleLink>
+                {(locale === "en" || locale === "ar") && (
+                  <LocaleLink
+                    href="/blogs"
+                    className="block text-[#ffffff] text-base pt-[16px]"
+                    onClick={toggleDrawer}
+                  >
+                    {t("blog")}
+                  </LocaleLink>
+                )}
               </div>
             )}
           </div>
