@@ -110,7 +110,7 @@ const ExpertAnalysis = ({ id }) => {
                             blog?.postedOn ? blog?.postedOn : blog?.createdOn
                           }
                           format={
-                            locale === "ar" ? "YYYY/MM/DD" : "Do MMM YYYY"
+                            locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"
                           }
                         />
                       </p>
