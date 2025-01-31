@@ -151,7 +151,7 @@ const MobileHeader = ({ locale }) => {
       ></div>
       <div className="container bg-[#1d1d1d] mt-[14px] h-[51px] rounded-[8px] flex items-center justify-between px-4">
         <div className="flex items-center">
-          <LocaleLink href="/" className="logo" onClick={toggleDrawer}>
+          <LocaleLink href="/" className="logo">
             <Image
               unoptimized={true}
               width="120"
@@ -396,13 +396,15 @@ const MobileHeader = ({ locale }) => {
         }`}
       >
         <div className="flex justify-between items-center py-7 ps-[6%] pe-[5%]">
-          <Image
-            unoptimized={true}
-            width="120"
-            height="120"
-            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
-            alt="Logo Image"
-          />
+          <LocaleLink href="/" className="logo" onClick={toggleDrawer}>
+            <Image
+              unoptimized={true}
+              width="120"
+              height="120"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
+              alt="Logo Image"
+            />
+          </LocaleLink>
           <div className="flex gap-5">
             <div>
               <ul className=" h-full">
