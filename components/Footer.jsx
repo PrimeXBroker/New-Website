@@ -149,10 +149,10 @@ const Footer = () => {
       column: {
         heading: t("Location.title_part5"),
         links: [
-          {
-            name: t("Location.title_part5_link1"),
-            href: "#",
-          },
+          // {
+          //   name: t("Location.title_part5_link1"),
+          //   href: "#",
+          // },
           {
             name: t("Location.title_part5_link2"),
             href: "#",
