@@ -1781,7 +1781,8 @@
       "tab1_title": "PrimeX Öğrenim Merkezi",
       "tab2_title": "Teknik Analiz",
       "tab3_title": "Piyasa Haberleri",
-      "tab4_title": "Başlangıç Kapısı"
+      "tab4_title": "Başlangıç Kapısı",
+      "tab5_title": "Basın Bülteni"
     }
   },
   "newAwards": {
@@ -2617,6 +2618,17 @@
       "title_1": "Gerçek Zamanlı",
       "title_2": "Piyasa Haberleri",
       "description": "Büyük finansal olayları, son dakika haberlerini ve piyasa değişimlerini takip edin. Bilgilendirilmiş ticaret kararları almak için uzman analizleri ve veri odaklı içgörülerle önde olun."
+    }
+  },
+  "knowledgeHubTechnical": {
+    "metaData": {
+      "title": "Teknik Analiz | PrimeX Capital",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "Uzman",
+      "title_2": "Teknik Analiz",
+      "description": "Temel göstergeleri, grafik formasyonlarını ve piyasa trendlerini keşfedin. Ticaret stratejinizi geliştirmek için profesyonel analizler ve derinlemesine incelemeler alın."
     }
   }
 }

@@ -63,7 +63,7 @@ const ExpertAnalysis = ({ id }) => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-[50vh]">
+      <div className="flex justify-center items-center min-h-[50vh] bg-[#000000]">
         <div className="ellipsis">
           <span className="dot text-[#FED100]">.</span>
           <span className="dot text-[#FED100]">.</span>
@@ -73,59 +73,65 @@ const ExpertAnalysis = ({ id }) => {
     );
   }
   return (
-    <section className="container  pt-8 pb-12">
-      <div className="grid grid-cols-12 ">
-        {blogs.map((blog, index) => (
-          <div className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4 flex flex-col">
-            <Link
-              href={`/${locale}/expert-analysis-detail/${blog.slug}`}
-              className="group h-full rounded-xl bg-[#111111]"
-            >
-              <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out rounded-xl flex flex-col h-full">
-                <div>
-                  <Image
-                    unoptimized={true}
-                    src={
-                      locale === "ar"
-                        ? blog?.imageAr || blog?.image
-                        : blog?.image
-                    }
-                    width="100"
-                    height="100"
-                    alt={blog?.titleEn}
-                    className="w-full overflow-hidden transition duration-700 ease-in-out transform group-hover:scale-110"
-                  />
-                </div>
-                <div className="px-3 py-5 flex-grow transition duration-700 ease-in-out">
+    <section className="bg-[#000000] pt-8 pb-12">
+      <div className="container">
+        <div className="grid grid-cols-12 ">
+          {blogs.map((blog, index) => (
+            <div className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4 flex flex-col">
+              <Link
+                href={`/${locale}/expert-analysis-detail/${blog.slug}`}
+                className="group h-full rounded-xl bg-[#111111]"
+              >
+                <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out rounded-xl flex flex-col h-full">
                   <div>
-                    <h4 className="text-xl font-semibold text-[#F9F9F9] group-hover:text-[#FED100] transition duration-700 ease-in-out">
-                      {locale === "ar" ? blog?.titleAr : blog?.titleEn}
-                    </h4>
+                    <Image
+                      unoptimized={true}
+                      src={
+                        locale === "ar"
+                          ? blog?.imageAr || blog?.image
+                          : blog?.image
+                      }
+                      width="100"
+                      height="100"
+                      alt={blog?.titleEn}
+                      className="w-full overflow-hidden transition duration-700 ease-in-out transform group-hover:scale-110"
+                    />
                   </div>
-                  <div className="mt-3">
-                    <p className="text-[#C6C6C6] text-sm group-hover:text-white transition duration-700 ease-in-out">
-                      <Moment
-                        date={blog?.postedOn ? blog?.postedOn : blog?.createdOn}
-                        format={locale === "ar" ? "YYYY/MM/DD" : "Do MMM YYYY"}
-                      />
-                    </p>
+                  <div className="px-3 py-5 flex-grow transition duration-700 ease-in-out">
+                    <div>
+                      <h4 className="text-xl font-semibold text-[#F9F9F9] group-hover:text-[#FED100] transition duration-700 ease-in-out">
+                        {locale === "ar" ? blog?.titleAr : blog?.titleEn}
+                      </h4>
+                    </div>
+                    <div className="mt-3">
+                      <p className="text-[#C6C6C6] text-sm group-hover:text-white transition duration-700 ease-in-out">
+                        <Moment
+                          date={
+                            blog?.postedOn ? blog?.postedOn : blog?.createdOn
+                          }
+                          format={
+                            locale === "ar" ? "YYYY/MM/DD" : "Do MMM YYYY"
+                          }
+                        />
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </div>
-      <div className="flex justify-center mt-10">
-        <Pagination
-          showControls
-          total={totalPages}
-          initialPage={page}
-          onChange={(p) => setPage(p)}
-          className="all-blogs-pagination"
-          radius="sm"
-          color="default"
-        />
+              </Link>
+            </div>
+          ))}
+        </div>
+        <div className="flex justify-center mt-10">
+          <Pagination
+            showControls
+            total={totalPages}
+            initialPage={page}
+            onChange={(p) => setPage(p)}
+            className="all-blogs-pagination"
+            radius="sm"
+            color="default"
+          />
+        </div>
       </div>
     </section>
   );

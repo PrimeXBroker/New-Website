@@ -155,11 +155,11 @@ const DesktopHeader = ({ locale }) => {
         </div>
         <nav className="flex items-center h-full">
           <ul className="flex gap-[16px] h-full">
-            <li className="flex items-center h-full">
+            {/* <li className="flex items-center h-full">
               <LocaleLink href="/" className="text-[#ffffff] text-[.8em]">
                 {t("home")}
               </LocaleLink>
-            </li>
+            </li> */}
             <li
               className="relative flex items-center h-full"
               onMouseEnter={() => openDropdown(0)}
@@ -410,15 +410,15 @@ const DesktopHeader = ({ locale }) => {
                           {t("market-news")}
                         </LocaleLink>
                       </li>
-                      {/* <li>
+                      <li>
                         <LocaleLink
-                          href="/technical-analysis"
+                          href="/expert-analysis/technical-analysis/6641f0097c9be5623e10929e"
                           onClick={closeDropdown}
                           className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                         >
                           {t("technical-analysis")}
                         </LocaleLink>
-                      </li> */}
+                      </li>
                       <li>
                         <LocaleLink
                           href="/blogs"

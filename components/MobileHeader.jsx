@@ -647,13 +647,13 @@ const MobileHeader = ({ locale }) => {
           </button>
         </div>
         <nav className="flex flex-col space-y-4 py-4 ps-[6%] pe-[5%]">
-          <LocaleLink
+          {/* <LocaleLink
             href="/"
             className="text-[#ffffff] text-base"
             onClick={toggleDrawer}
           >
             {t("home")}
-          </LocaleLink>
+          </LocaleLink> */}
           <div>
             <button
               onClick={() => toggleSubMenu(0)}
@@ -845,13 +845,13 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("market-news")}
                 </LocaleLink>
-                {/* <LocaleLink
-                  href="/technical-analysis"
+                <LocaleLink
+                  href="/expert-analysis/technical-analysis/6641f0097c9be5623e10929e"
                   className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("technical-analysis")}
-                </LocaleLink> */}
+                </LocaleLink>
                 <LocaleLink
                   href="/blogs"
                   className="block text-[#ffffff] text-base pt-[16px]"

@@ -2709,5 +2709,16 @@
       "title_2": "Market News",
       "description": "Track major financial events, breaking news, and market shifts. Stay ahead with expert insights and data-driven analysis to make informed trading decisions."
     }
+  },
+  "knowledgeHubTechnical": {
+    "metaData": {
+      "title": "Technical Analysis | PrimeX Capital",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "Expert",
+      "title_2": "Technical Analysis",
+      "description": "Explore key indicators, chart patterns, and market trends. Get professional breakdowns and in-depth analysis to sharpen your trading strategy."
+    }
   }
 }
