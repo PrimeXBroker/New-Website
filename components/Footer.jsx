@@ -167,10 +167,10 @@ const Footer = () => {
       heading: t("footerNotice.heading_1"),
       paragraph: t("footerNotice.para_1"),
     },
-    {
-      heading: t("footerNotice.heading_2"),
-      paragraph: t("footerNotice.para_2"),
-    },
+    // {
+    //   heading: t("footerNotice.heading_2"),
+    //   paragraph: t("footerNotice.para_2"),
+    // },
     {
       heading: t("footerNotice.heading_3"),
       paragraph: t("footerNotice.para_3"),

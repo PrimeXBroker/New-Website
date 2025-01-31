@@ -59,7 +59,7 @@ const Webinars = ({ active, setActive }) => {
               >
                 <div className="flex flex-row lg:flex-col gap-3 lg:gap-0 lg:w-[30%] xl:w-[25%]">
                   <img
-                    className="rounded w-[80px] sm:w-[100px] lg:w-full "
+                    className="rounded w-[80px] sm:w-[100px] lg:w-full mb-3"
                     src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/zyad.webp"
                     alt="Aniket"
                   />
@@ -84,9 +84,12 @@ const Webinars = ({ active, setActive }) => {
                   </div>
                 </div>
                 <div className="lg:w-[70%] xl:w-[85%]">
-                  <h2 className="text-base md:text-xl xl:text-2xl sm:mb-4 group-hover:text-[#FED100]">
+                  <h2 className="text-base md:text-xl xl:text-2xl mb-2 group-hover:text-[#FED100]">
                     {locale === "ar" ? webinar.agendaAr : webinar.agenda}
                   </h2>
+                  <p className="text-sm xl:text-base mb-2 text-[#ffffff] line-clamp-2">
+                    {locale === "ar" ? webinar.detailsAr : webinar.details}
+                  </p>
                   <div className="bg-[#222222] border-1 border-[#333333] p-3 rounded-lg lg:flex items-center justify-between text-[#c6c6c6] w-[100%] hidden text-sm xl:text-base">
                     <span>
                       {moment(webinar.start)

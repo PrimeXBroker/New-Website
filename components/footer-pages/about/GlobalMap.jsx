@@ -95,7 +95,7 @@ const GlobalMap = () => {
             className="w-[40px] sm:w-[50px]"
           />
         </div>
-        <div
+        {/* <div
           className={`absolute top-[57%] sm:top-[64%] md:top-[57%] lg:top-[54%] flex items-center gap-2 ${
             locale === "ar" || locale === "fa" || locale === "kd"
               ? "right-[18%] sm:right-[27%] md:right-[38%] lg:right-[50%]"
@@ -166,7 +166,7 @@ const GlobalMap = () => {
               </p>
             </Link>
           </div>
-        </div>
+        </div> */}
         <div
           className={`absolute bottom-10 hidden lg:block ${
             locale === "ar" || locale === "fa" || locale === "kd"

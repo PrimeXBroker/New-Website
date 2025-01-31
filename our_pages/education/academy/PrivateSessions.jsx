@@ -11,7 +11,7 @@ const PrivateSessions = ({ setActive }) => {
       <div className="container">
         <div className="px-5 sm:px-8 py-8 rounded-xl bg-[#111111] border-2 border-[#222222]">
           <div className="flex flex-col lg:flex-row gap-6 justify-between items-start">
-            <div className="space-y-4 w-full lg:w-1/2">
+            <div className="space-y-4 w-full md:w-[70%]">
               <div className="mb-8">
                 <h2 className="text-2xl sm:text-3xl font-semibold mb-1">
                   {t("title")}
@@ -37,7 +37,7 @@ const PrivateSessions = ({ setActive }) => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row w-full lg:w-1/2 gap-4 justify-center lg:justify-end">
+            <div className="flex flex-col md:flex-row gap-4 w-full md:w-[30%] justify-center lg:justify-end">
               <div className="cursor-pointer p-5 bg-[#1D1D1D] border-2 border-[#222222] rounded-lg md:w-[214px] group w-full flex flex-row md:flex-col gap-3 md:gap-0">
                 <div className="w-full h-40 overflow-hidden rounded-lg">
                   <Image
@@ -66,7 +66,7 @@ const PrivateSessions = ({ setActive }) => {
                 </div>
               </div>
 
-              <div className="cursor-pointer p-5 bg-[#1D1D1D] border-2 border-[#222222] rounded-lg md:w-[214px] group w-full flex flex-row md:flex-col gap-3 md:gap-0">
+              {/* <div className="cursor-pointer p-5 bg-[#1D1D1D] border-2 border-[#222222] rounded-lg md:w-[214px] group w-full flex flex-row md:flex-col gap-3 md:gap-0">
                 <div className="flex items-center justify-center w-full h-40 overflow-hidden rounded-lg">
                   <Image
                     unoptimized={true}
@@ -92,7 +92,7 @@ const PrivateSessions = ({ setActive }) => {
                     {t("book_session_btn")}
                   </Link>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
