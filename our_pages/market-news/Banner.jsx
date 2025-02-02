@@ -70,9 +70,9 @@ const Banner = ({ news }) => {
   const progressValue = (progressCounter / news.length) * 100;
 
   return (
-    <div className="py-20 bg-[#000000] text-[#ffffff]">
+    <div className="pt-20 sm:pt-24 bg-[#000000] text-[#ffffff]">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center bg-[#111111] border-2 border-[#1d1d1d] rounded-3xl p-5 sm:p-14">
           <div className="w-full sm:h-[400px]">
             <img
               src={newsDetails?.image}
@@ -81,13 +81,16 @@ const Banner = ({ news }) => {
             />
           </div>
           {/* Right side - Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 sm:h-[400px] flex flex-col justify-between">
             <h1 className="text-2xl sm:text-3xl font-bold leading-tight pt-3 lg:pt-0">
               {newsDetails?.title}
             </h1>
-            <div className="flex items-center justify-between text-[#c6c6c6] py-2 lg:py-0">
+            <div className="flex items-center justify-between text-[#c6c6c6]">
               <span>
-                <Moment date={newsDetails?.createdOn} format="DD.MM.YYYY" />
+                <Moment
+                  date={newsDetails?.createdOn}
+                  format={locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"}
+                />
               </span>
               <span>5 Min Read</span>
             </div>
@@ -137,14 +140,14 @@ const Banner = ({ news }) => {
                 .map((blog, index) => (
                   <Card
                     key={index}
-                    className="bg-gray-900 rounded-lg overflow-hidden"
+                    className="rounded-[4px] border-[0.42px] border-[#ffffff] overflow-hidden bg-[#292929] p-2"
                   >
                     <Image
                       src={blog?.image}
                       alt={`Thumbnail ${index}`}
                       width={300}
                       height={150}
-                      className="w-full h-auto cursor-pointer"
+                      className="w-full h-auto cursor-pointer rounded-[2px]"
                       onClick={() => handleThumbnailClick(index + 1)}
                     />
                   </Card>

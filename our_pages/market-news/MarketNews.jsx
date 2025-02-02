@@ -42,7 +42,7 @@ const MarketNews = ({ news, totalPages, lang }) => {
   }
 
   return (
-    <section className="bg-[#000000] pt-8 pb-12">
+    <section className="bg-[#000000] pt-20 sm:pt-24 pb-10 sm:pb-14">
       <div className="container">
         <div className="grid grid-cols-12">
           {newsList?.map((blog, index) => (

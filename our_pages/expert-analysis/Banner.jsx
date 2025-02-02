@@ -11,56 +11,12 @@ import axios from "axios";
 
 const Banner = ({ news }) => {
   const locale = useLocale();
-  const [blogs, setBlogs] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayNews, setDisplayNews] = useState(news);
   const [newsDetails, setNewsDetails] = useState(news[0]);
   const [progressCounter, setProgressCounter] = useState(1); // Track the overall position
 
-  const fetchCat = async () => {
-    try {
-      const res = await axios.get(
-        `https://primexbroker.com/api/fetch/single/market-news/category/${id}`,
-        { cache: "no-store" }
-      );
-      if (res.data?.success) {
-        const data = {
-          titleAr: res.data.data.titleAr,
-          titleEn: res.data.data.titleEn,
-          id: res.data.data._id,
-          leadBy: res.data.data.leadBy,
-        };
-        setCurrentCategory((prev) => data);
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  useEffect(() => {
-    fetchCat();
-  }, [id]);
-
-  const fetchEnglishBlogs = async () => {
-    setLoading(true);
-    const res = await axios.get(
-      `https://primexbroker.com/api/fetch/publish/related/market-news/${page}/6/${currentCategory.id}`
-    );
-
-    if (res.data.success) {
-      setBlogs(res.data.data);
-      setLoading(false);
-    } else {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    if (currentCategory) {
-      setLoading(true);
-      fetchEnglishBlogs();
-    }
-  }, [currentCategory, page, id]);
+  console.log(newsDetails, "-------------> newsDetails carousel");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -116,10 +72,17 @@ const Banner = ({ news }) => {
   // Calculate the progress percentage based on progressCounter
   const progressValue = (progressCounter / news.length) * 100;
 
+  useEffect(() => {
+    if (news.length > 0) {
+      setDisplayNews(news);
+      setNewsDetails(news[0]); // تحديث أول عنصر بعد تحميل البيانات
+    }
+  }, [news]);
+
   return (
-    <div className="py-20 bg-[#000000] text-[#ffffff]">
+    <div className="pt-20 sm:pt-24 bg-[#000000] text-[#ffffff]">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center bg-[#111111] border-2 border-[#1d1d1d] rounded-3xl p-5 sm:p-14">
           <div className="w-full sm:h-[400px]">
             <img
               src={newsDetails?.image}
@@ -128,13 +91,16 @@ const Banner = ({ news }) => {
             />
           </div>
           {/* Right side - Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 sm:h-[400px] flex flex-col justify-between">
             <h1 className="text-2xl sm:text-3xl font-bold leading-tight pt-3 lg:pt-0">
-              {newsDetails?.title}
+              {newsDetails?.titleEn}
             </h1>
             <div className="flex items-center justify-between text-[#c6c6c6] py-2 lg:py-0">
               <span>
-                <Moment date={newsDetails?.createdOn} format="DD.MM.YYYY" />
+                <Moment
+                  date={newsDetails?.createdOn}
+                  format={locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"}
+                />
               </span>
               <span>5 Min Read</span>
             </div>
@@ -184,14 +150,14 @@ const Banner = ({ news }) => {
                 .map((blog, index) => (
                   <Card
                     key={index}
-                    className="bg-gray-900 rounded-lg overflow-hidden"
+                    className="rounded-[4px] border-[0.42px] border-[#ffffff] overflow-hidden bg-[#292929] p-2"
                   >
                     <Image
                       src={blog?.image}
                       alt={`Thumbnail ${index}`}
                       width={300}
                       height={150}
-                      className="w-full h-auto cursor-pointer"
+                      className="w-full h-[75px] cursor-pointer rounded-[2px]"
                       onClick={() => handleThumbnailClick(index + 1)}
                     />
                   </Card>

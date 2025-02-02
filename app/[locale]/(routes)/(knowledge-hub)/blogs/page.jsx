@@ -66,6 +66,20 @@ const page = async () => {
     pressReleasePages = pressResponse?.result.pagination.totalPages;
   }
 
+  const page = 1;
+
+  let totalPages,
+    news = [];
+  const lang =
+    locale === "ar" ? "665448dcf5b226a0bd9b574e" : "66544954f5b226a0bd9b5813";
+
+  // news
+  const carouselResponse = await getNews(page, lang, locale);
+  if (carouselResponse?.success) {
+    news = carouselResponse?.result.data;
+    totalPages = carouselResponse?.result.pagination.totalPages;
+  }
+
   return (
     <>
       <Script
@@ -109,6 +123,7 @@ const page = async () => {
         marketNews={marketNews}
         startingGateway={startingGateway}
         pressRelease={pressRelease}
+        news={news?.slice(0, 5)}
       />
     </>
   );

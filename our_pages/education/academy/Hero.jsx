@@ -4,14 +4,14 @@ import React from "react";
 import { useTranslations, useLocale } from "next-intl";
 import TrustPilot from "@/components/TrustPilot";
 
-const Banner = ({ setActive }) => {
+const Hero = ({ setActive }) => {
   const locale = useLocale();
   const h = useTranslations("knowledgeHubBlogs.hero");
 
   return (
     <section className="">
       <div className="bg-[#000000] pt-[40px] lg:pt-10">
-        <div className="container flex flex-col md:flex-row justify-around py-16">
+        <div className="container flex flex-col md:flex-row justify-around pt-16">
           <div className="max-w-2xl flex flex-col justify-center items-enter md:items-start md:w-[70%]">
             {/* <div className="text-center md:text-start mb-3">
               <TrustPilot />
@@ -60,4 +60,4 @@ const Banner = ({ setActive }) => {
   );
 };
 
-export default Banner;
+export default Hero;

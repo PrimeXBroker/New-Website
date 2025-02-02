@@ -1,15 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import Banner from "./Banner";
-import Testimonials from "../../home/Testimonials";
-import WebinarLibrary from "./WebinarLibrary";
 import { useTranslations } from "next-intl";
-import JoinAcademy from "./JoinAcademy";
-import PrivateSessions from "./PrivateSessions";
-import Webinars from "./Webinars";
 import BlogsWrapper from "./BlogsWrapper";
 import { useLocale } from "next-intl";
 import MobileBlogWrapper from "./MobileBlogWrapper";
+import Hero from "./Hero";
+import Banner from "@/our_pages/market-news/Banner";
 
 const AcademyWrapper = ({
   marketNewsBlogs,
@@ -21,6 +17,7 @@ const AcademyWrapper = ({
   marketNews,
   startingGateway,
   pressRelease,
+  news,
 }) => {
   const t = useTranslations("academy.joinAcademy");
   const [activeBlog, setActiveBlog] = useState("Learning Hub");
@@ -28,9 +25,10 @@ const AcademyWrapper = ({
 
   return (
     <>
-      <Banner />
+      <Hero />
       {(locale === "en" || locale === "ar") && (
         <>
+          <Banner news={news} />
           <div className="hidden md:block">
             <BlogsWrapper
               active={activeBlog}
