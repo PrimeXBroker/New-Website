@@ -54,7 +54,9 @@ const MarketNews = ({ news, totalPages, lang }) => {
               <Link
                 href={`/${locale}/${convertToKebabCase(
                   blog?.category?.title
-                )}/${blog.slug}`}
+                )}/${blog.slug}?date=${
+                  blog?.postedOn ? blog?.postedOn : blog?.createdOn
+                }`}
                 className="group h-full rounded-xl bg-[#111111]"
                 key={index}
               >
