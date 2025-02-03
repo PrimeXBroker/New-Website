@@ -86,6 +86,7 @@ function NewsBody({ slug }) {
         `https://primexbroker.com/api/fetch/one/blog/${slug}`,
         { cache: "no-store" }
       );
+      console.log(res?.data?.data, "market-blogs");
       if (res?.data?.success) {
         setDetail(res?.data?.data);
         // const currentUrl = router.asPath;
@@ -118,10 +119,9 @@ function NewsBody({ slug }) {
           <Link
             className="text-[#ffffff] hover:text-[#FED100] font-medium flex justify-center sm:justify-start items-center mb-4"
             href={
-              detail?.category?.title === "Press Release" ||
-              detail?.category?.title === "بيان صحفي"
-                ? `/${detail?.language}/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e`
-                : `/${detail?.language}/academy`
+              detail?.category?.title === "Market News"
+                ? `/${locale}/market-news`
+                : `/${locale}/blogs`
             }
           >
             <span
@@ -129,14 +129,13 @@ function NewsBody({ slug }) {
             >
               {detail?.language === "ar" ? <FaArrowRight /> : <FaArrowLeft />}
             </span>
-            {detail?.category?.title === "Press Release" ||
-            detail?.category?.title === "بيان صحفي"
-              ? detail?.language === "ar"
-                ? "العودة للبيانات الصحفية"
-                : "Back to Press Release"
-              : detail?.language === "ar"
-              ? "العودة للأكاديمية"
-              : "Back to Academy"}
+            {detail?.category?.title === "Market News"
+              ? locale === "ar"
+                ? "العودة إلى أخبار السوق"
+                : "Back to Market News"
+              : locale === "ar"
+              ? "العودة إلى المدونات"
+              : "Back to Blogs"}
           </Link>
 
           <div className="text-[#c6c6c6] text-sm mb-2 text-center">

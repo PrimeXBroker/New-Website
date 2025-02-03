@@ -137,10 +137,10 @@ function AnalysisNewsBody({ slug }) {
             </span>
             {detail?.category === "6641f01d7c9be5623e1092a4"
               ? locale === "ar"
-                ? ""
+                ? "العودة إلى التحليل الفني"
                 : "Back to Technical Analysis"
               : locale === "ar"
-              ? ""
+              ? "العودة إلى المدونات"
               : "Back to Blogs"}
           </Link>
 
