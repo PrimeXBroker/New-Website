@@ -7,7 +7,7 @@
     <script src="https://static.sumsub.com/idensic/static/sns-websdk-builder.js"></script>
 </head>
 <body>
-    <p id="status"></p>
+    <!-- <p id="status"></p> -->
     <div id="sumsub-websdk-container"></div>
 
     <script>
@@ -17,7 +17,7 @@
         }
 
         function launchWebSdk(accessToken) {
-            document.getElementById("status").innerText = "Initializing SumSub...";
+            // document.getElementById("status").innerText = "Initializing SumSub...";
             console.log("🚀 Launching WebSDK with token:", accessToken);
 
             let snsWebSdkInstance = snsWebSdk
@@ -25,12 +25,12 @@
                 .withConf({ lang: "en", theme: "dark" })
                 .withOptions({ addViewportTag: false, adaptIframeHeight: true })
                 .on("idCheck.onStepCompleted", (payload) => {
-                    document.getElementById("status").innerText = "✅ Verification Completed";
+                    // document.getElementById("status").innerText = "✅ Verification Completed";
                     console.log("✅ Verification Completed", payload);
                     window.ReactNativeWebView.postMessage(JSON.stringify({ status: "completed", data: payload }));
                 })
                 .on("idCheck.onError", (error) => {
-                    document.getElementById("status").innerText = "❌ Verification Failed";
+                    // document.getElementById("status").innerText = "❌ Verification Failed";
                     console.error("❌ Verification Error:", error);
                     window.ReactNativeWebView.postMessage(JSON.stringify({ status: "error", error: error }));
                 })
