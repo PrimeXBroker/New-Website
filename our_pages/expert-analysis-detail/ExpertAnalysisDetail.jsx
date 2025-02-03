@@ -7,7 +7,7 @@ import Moment from "react-moment";
 import AnalysisNewsBody from "./AnalysisNewsBody";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
-const ExpertAnalysisDetail = ({ slug }) => {
+const ExpertAnalysisDetail = ({ slug, date }) => {
   const locale = useLocale();
   const t = useTranslations("marketNewsDetail");
   const [detail, setDetail] = useState(null);
@@ -30,6 +30,7 @@ const ExpertAnalysisDetail = ({ slug }) => {
         `https://primexbroker.com/api/fetch/one/market-news/${slug}`,
         { cache: "no-store" }
       );
+      console.log(res?.data?.data, "res?.data?.data");
       if (res?.data?.success) {
         setDetail(res?.data?.data);
         setLoading(false);
@@ -75,7 +76,7 @@ const ExpertAnalysisDetail = ({ slug }) => {
       <div className="container">
         <div className="grid grid-cols-12">
           <div className="lg:col-span-12 md:col-span-12 col-span-12">
-            <AnalysisNewsBody slug={slug} />
+            <AnalysisNewsBody slug={slug} date={date} />
           </div>
         </div>
         <div className="bg-[#111111] border-2 border-[#1D1D1D] rounded-[20px] flex p-10 flex-col md:flex-row mb-10 mt-20 relaed-blogs-bg">

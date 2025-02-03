@@ -85,7 +85,9 @@ const ExpertAnalysis = ({ id }) => {
               <Link
                 href={`/${locale}/details/${convertToKebabCase(
                   currentCategory.titleEn
-                )}/${blog.slug}`}
+                )}/${blog.slug}?date=${
+                  blog?.postedOn ? blog?.postedOn : blog?.createdOn
+                }`}
                 className="group h-full rounded-xl bg-[#111111]"
               >
                 <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out rounded-xl flex flex-col h-full">

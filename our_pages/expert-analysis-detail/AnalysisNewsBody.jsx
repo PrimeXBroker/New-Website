@@ -9,7 +9,7 @@ import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 
-function AnalysisNewsBody({ slug }) {
+function AnalysisNewsBody({ slug, date }) {
   const locale = useLocale();
   const [detail, setDetail] = useState(null);
   const [content, setContent] = useState(null);
@@ -146,7 +146,7 @@ function AnalysisNewsBody({ slug }) {
 
           <div className="text-[#c6c6c6] text-sm mb-2 text-center">
             <Moment
-              date={detail?.postedOn ? detail?.postedOn : detail?.createdOn}
+              date={date}
               format={locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"}
             />{" "}
             • 5 Min Read
