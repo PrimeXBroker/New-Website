@@ -25,7 +25,13 @@ const Banner = ({ scrollToForm }) => {
       <div className="container">
         <div className="grid grid-cols-12 items-center">
           <div className="col-span-12 md:col-span-6">
-            {/* <div className="mb-5 text-center md:text-start">
+            {/* <div
+              className={`text-center md:text-start relative ${
+                locale === "ar" || locale === "fa" || locale === "kd"
+                  ? "left-[137px]"
+                  : "right-[137px]"
+              }`}
+            >
               <TrustPilot />
             </div> */}
             <h1 className="text-3xl sm:text-4xl md:text-2xl lg:text-4xl xl:text-5xl font-semibold text-[#ffffff] sm:mb-2 md:mb-0 lg:mb-1 xl:mb-3 text-center md:text-start">

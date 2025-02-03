@@ -39,7 +39,9 @@ const Banner = () => {
   return (
     <section className="bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/World+map+hero+bg.webp')] h-[760px] bg-center bg-no-repeat bg-cover pt-28">
       <div className="text-center text-[#ffffff] space-y-5">
-        {/* <TrustPilot /> */}
+        {/* <div className={`text-center md:text-start relative`}>
+          <TrustPilot />
+        </div> */}
         <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-[#ffffff]">
           {t("title")}
         </h1>

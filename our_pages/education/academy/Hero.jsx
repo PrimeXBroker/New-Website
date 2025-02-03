@@ -13,9 +13,15 @@ const Hero = ({ setActive }) => {
       <div className="bg-[#000000] pt-[40px] lg:pt-10">
         <div className="container flex flex-col md:flex-row justify-around pt-16">
           <div className="max-w-2xl flex flex-col justify-center items-enter md:items-start md:w-[70%]">
-            {/* <div className="text-center md:text-start mb-3">
+            {/* <div
+              className={`text-center md:text-start relative ${
+                locale === "ar" || locale === "fa" || locale === "kd"
+                  ? "left-[137px]"
+                  : "right-[137px]"
+              }`}
+            >
               <TrustPilot />
-            </div>{" "} */}
+            </div> */}
             <h1
               className={`text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#ffffff] pb-1 ${
                 locale === "ar" || locale === "fa" || locale === "kd"

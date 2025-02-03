@@ -31,22 +31,6 @@ const TrustPilot = () => {
     };
   }, [pathname]);
 
-  useEffect(() => {
-    const observer = new MutationObserver(() => {
-      const wrapper = document.querySelector(".tp-widget-wrapper");
-      if (wrapper) {
-        wrapper.style.textAlign = locale === "ar" ? "right" : "left";
-      }
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-    });
-
-    return () => observer.disconnect();
-  }, [locale]);
-
   return (
     <div
       className="trustpilot-widget h-[52px]"

@@ -18,9 +18,15 @@ const Banner = ({
   return (
     <section className="bg-[#000000] pt-32 pb-8">
       <div className="container">
-        <div className="grid grid-cols-12 items-center">
+        <div className="grid grid-cols-12 items-center overflow-hidden">
           <div className="col-span-12 md:col-span-5">
-            {/* <div className="text-center md:text-start">
+            {/* <div
+              className={`text-center md:text-start relative ${
+                locale === "ar" || locale === "fa" || locale === "kd"
+                  ? ""
+                  : "md:right-[20%] lg:right-[24%] xl:right-[28%]"
+              }`}
+            >
               <TrustPilot />
             </div> */}
             <div className="mt-5 md:mt-4 lg:mt-5 text-center md:text-start">

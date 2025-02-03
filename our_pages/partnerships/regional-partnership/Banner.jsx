@@ -13,7 +13,13 @@ const Banner = () => {
       <div className="container">
         <div className="grid grid-cols-12 items-center">
           <div className="col-span-12 md:col-span-6">
-            {/* <div className="text-center md:text-start">
+            {/* <div
+              className={`text-center md:text-start relative ${
+                locale === "ar" || locale === "fa" || locale === "kd"
+                  ? "left-[137px]"
+                  : "right-[137px]"
+              }`}
+            >
               <TrustPilot />
             </div> */}
             <div className="mt-4 text-center md:text-start">
