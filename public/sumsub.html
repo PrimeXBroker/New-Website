@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SumSub WebSDK</title>
     <script src="https://static.sumsub.com/idensic/static/sns-websdk-builder.js"></script>
 </head>
+
 <body>
     <h2>SumSub WebSDK Debugging</h2>
     <p id="status">Waiting for SumSub Token...</p>
@@ -35,19 +37,26 @@
             snsWebSdkInstance.launch("#sumsub-websdk-container");
         }
 
-        window.addEventListener("message", function(event) {
-            console.log("📥 Received message from React Native WebView:", event.data);
+        window.addEventListener("message", function (event) {
+            console.log("📥 Received message from WebView:", event.data);
 
             let receivedData;
             try {
-                receivedData = JSON.parse(event.data);
+                // Ensure the message is valid JSON before parsing
+                if (typeof event.data === "string") {
+                    receivedData = JSON.parse(event.data);
+                    console.log("✅ Parsed Data:", receivedData);
+                } else {
+                    throw new Error("Received non-string data.");
+                }
             } catch (e) {
-                console.error("❌ Received invalid JSON format:", event.data);
+                console.error("❌ Failed to parse JSON:", event.data);
                 return;
             }
 
+            // Ensure sumsubToken exists before launching the SDK
             if (receivedData.sumsubToken) {
-                console.log("✅ SumSub Access Token Received:", receivedData.sumsubToken);
+                console.log("✅ SumSub Token Received:", receivedData.sumsubToken);
                 launchWebSdk(receivedData.sumsubToken);
             } else {
                 console.error("❌ No SumSub token received.");
@@ -57,4 +66,5 @@
         console.log("⏳ Waiting for SumSub Token...");
     </script>
 </body>
+
 </html>
