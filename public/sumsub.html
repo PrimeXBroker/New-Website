@@ -2,27 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SumSub WebSDK</title>
     <script src="https://static.sumsub.com/idensic/static/sns-websdk-builder.js"></script>
 </head>
 <body>
+    <h2>SumSub WebSDK Debugging</h2>
+    <p id="status">Waiting for User Token...</p>
     <div id="sumsub-websdk-container"></div>
 
     <script>
+        let userToken = null; // Will store the user's login token
+        let sumsubAccessToken = null; // Will store the SumSub access token
+
+        function fetchNewAccessToken() {
+            console.log("Requesting SumSub access token from backend...");
+            
+            return fetch("https://your-backend.com/get-sumsub-token", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${userToken}`
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.token) {
+                    console.log("Received SumSub Access Token:", data.token);
+                    return data.token;
+                } else {
+                    throw new Error("Failed to get SumSub access token");
+                }
+            })
+            .catch(error => {
+                console.error("Error fetching SumSub access token:", error);
+            });
+        }
+
         function launchWebSdk(accessToken) {
+            document.getElementById("status").innerText = "Initializing SumSub...";
+
             let snsWebSdkInstance = snsWebSdk
-                .init(accessToken, () => fetchNewAccessToken()) // Refresh token handler
-                .withConf({
-                    lang: "en",
-                    theme: "dark"
-                })
+                .init(accessToken, () => fetchNewAccessToken())
+                .withConf({ lang: "en", theme: "dark" })
                 .withOptions({ addViewportTag: false, adaptIframeHeight: true })
                 .on("idCheck.onStepCompleted", (payload) => {
+                    document.getElementById("status").innerText = "Verification Completed";
                     console.log("Verification Completed", payload);
                     window.ReactNativeWebView.postMessage(JSON.stringify({ status: "completed", data: payload }));
                 })
                 .on("idCheck.onError", (error) => {
+                    document.getElementById("status").innerText = "Verification Failed";
                     console.log("Verification Error", error);
                     window.ReactNativeWebView.postMessage(JSON.stringify({ status: "error", error: error }));
                 })
@@ -31,17 +61,27 @@
             snsWebSdkInstance.launch("#sumsub-websdk-container");
         }
 
-        function fetchNewAccessToken() {
-            return fetch("https://your-backend.com/get-sumsub-token")
-                .then(response => response.json())
-                .then(data => data.token);
-        }
-
         window.addEventListener("message", function(event) {
-            if (event.data && event.data.accessToken) {
-                launchWebSdk(event.data.accessToken);
+            if (event.data) {
+                let receivedData = JSON.parse(event.data);
+                if (receivedData.userToken) {
+                    console.log("Received User Login Token:", receivedData.userToken);
+                    userToken = receivedData.userToken;
+
+                    // Fetch SumSub access token using the user token
+                    fetchNewAccessToken().then(accessToken => {
+                        if (accessToken) {
+                            sumsubAccessToken = accessToken;
+                            launchWebSdk(sumsubAccessToken);
+                        }
+                    });
+                } else {
+                    console.error("No user token received.");
+                }
             }
         });
+
+        console.log("Waiting for User Token...");
     </script>
 </body>
 </html>
