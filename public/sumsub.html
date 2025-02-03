@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SumSub WebSDK</title>
     <script src="https://static.sumsub.com/idensic/static/sns-websdk-builder.js"></script>
 </head>
-
 <body>
     <h2>SumSub WebSDK Debugging</h2>
-    <p id="status">Waiting for SumSub Token...</p>
+    <p id="status">Initializing SumSub...</p>
     <div id="sumsub-websdk-container"></div>
 
     <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
         function launchWebSdk(accessToken) {
             document.getElementById("status").innerText = "Initializing SumSub...";
             console.log("🚀 Launching WebSDK with token:", accessToken);
 
             let snsWebSdkInstance = snsWebSdk
-                .init(accessToken, () => Promise.resolve(accessToken)) // No token refresh needed
+                .init(accessToken, () => Promise.resolve(accessToken))
                 .withConf({ lang: "en", theme: "dark" })
                 .withOptions({ addViewportTag: false, adaptIframeHeight: true })
                 .on("idCheck.onStepCompleted", (payload) => {
@@ -37,34 +40,14 @@
             snsWebSdkInstance.launch("#sumsub-websdk-container");
         }
 
-        window.addEventListener("message", function (event) {
-            console.log("📥 Received message from WebView:", event.data);
-
-            let receivedData;
-            try {
-                // Ensure the message is valid JSON before parsing
-                if (typeof event.data === "string") {
-                    receivedData = JSON.parse(event.data);
-                    console.log("✅ Parsed Data:", receivedData);
-                } else {
-                    throw new Error("Received non-string data.");
-                }
-            } catch (e) {
-                console.error("❌ Failed to parse JSON:", event.data);
-                return;
-            }
-
-            // Ensure sumsubToken exists before launching the SDK
-            if (receivedData.sumsubToken) {
-                console.log("✅ SumSub Token Received:", receivedData.sumsubToken);
-                launchWebSdk(receivedData.sumsubToken);
-            } else {
-                console.error("❌ No SumSub token received.");
-            }
-        });
-
-        console.log("⏳ Waiting for SumSub Token...");
+        // ✅ Get SumSub token from URL and start the SDK
+        const sumsubToken = getQueryParam("sumsubToken");
+        if (sumsubToken) {
+            console.log("✅ SumSub Token Received:", sumsubToken);
+            launchWebSdk(sumsubToken);
+        } else {
+            console.error("❌ No SumSub token found in URL.");
+        }
     </script>
 </body>
-
 </html>
