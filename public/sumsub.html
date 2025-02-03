@@ -13,31 +13,27 @@
 
     <script>
         let userToken = "80e3097b4296ed6e646a05d9125ce397a0d052c3d0fb1dbf33b9930c2f3841470e98e7b3b0e54ac5a2ce3d9a1bb78acf56302c7ba9f5da7a09b297f0"; // Will store the user's login token
-        let sumsubAccessToken = null; // Will store the SumSub access token
+        let sumsubAccessToken = "_act-jwt-eyJhbGciOiJub25lIn0.eyJqdGkiOiJfYWN0LWMyNmRjNzY1LWI5N2MtNDc5Ny04MzcxLTIyMjEwNmVmYWI5My12MiIsInVybCI6Imh0dHBzOi8vYXBpLnN1bXN1Yi5jb20ifQ.-v2"; // Will store the SumSub access token
 
-        function fetchNewAccessToken() {
-            console.log("Requesting SumSub access token from backend...");
+        // async function fetchNewAccessToken() {
+        //     console.log("Requesting SumSub access token from backend...", userToken);
             
-            return fetch("https://my.primexcapital.com/client-api/kyc/sumsub/access-token", {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer ${userToken}`
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.token) {
-                    console.log("Received SumSub Access Token:", data.token);
-                    return data.token;
-                } else {
-                    throw new Error("Failed to get SumSub access token");
-                }
-            })
-            .catch(error => {
-                console.error("Error fetching SumSub access token:", error);
-            });
-        }
+        // const response = await fetch("https://my.primexcapital.com/client-api/kyc/sumsub/access-token", {
+        //         method: "GET",
+        //         headers: {
+        //             "Content-Type": "application/json",
+        //             "Authorization": `Bearer ${userToken}`
+        //         }
+        //     })
+        //     if(response.token) {
+        //         console.log("Received SumSub Access Token:", data.token);
+        //         return data.token;
+        //     } 
+        //     else {
+        //         throw new Error("Failed to get SumSub access token", response);
+        //     }
+           
+        // }
 
         function launchWebSdk(accessToken) {
             document.getElementById("status").innerText = "Initializing SumSub...";
@@ -61,27 +57,27 @@
             snsWebSdkInstance.launch("#sumsub-websdk-container");
         }
 
-        window.addEventListener("message", function(event) {
-            if (event.data) {
-                console.log(event.data);
+        // window.addEventListener("message", function(event) {
+        //     if (event.data) {
+        //         console.log(event.data);
                 
-                let receivedData = event.data;
-                if (receivedData.userToken) {
-                    console.log("Received User Login Token:", receivedData.userToken);
-                    userToken = receivedData.userToken;
+        //         let receivedData = event.data;
+        //         if (receivedData.userToken) {
+                    // console.log("Received User Login Token:", receivedData.userToken);
+                    // userToken = receivedData.userToken;
 
                     // Fetch SumSub access token using the user token
-                    fetchNewAccessToken().then(accessToken => {
-                        if (accessToken) {
-                            sumsubAccessToken = accessToken;
+                    // fetchNewAccessToken().then(accessToken => {
+                    //     if (accessToken) {
+                            // sumsubAccessToken = accessToken;
                             launchWebSdk(sumsubAccessToken);
-                        }
-                    });
-                } else {
-                    console.error("No user token received.");
-                }
-            }
-        });
+                    //     }
+                    // });
+                // } else {
+                //     console.error("No user token received.",sumsubAccessToken );
+                // }
+            // }
+        // });
 
         console.log("Waiting for User Token...");
     </script>
