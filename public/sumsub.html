@@ -12,7 +12,7 @@
     <div id="sumsub-websdk-container"></div>
 
     <script>
-        let userToken = null; // Will store the user's login token
+        let userToken = "80e3097b4296ed6e646a05d9125ce397a0d052c3d0fb1dbf33b9930c2f3841470e98e7b3b0e54ac5a2ce3d9a1bb78acf56302c7ba9f5da7a09b297f0"; // Will store the user's login token
         let sumsubAccessToken = null; // Will store the SumSub access token
 
         function fetchNewAccessToken() {
@@ -63,7 +63,9 @@
 
         window.addEventListener("message", function(event) {
             if (event.data) {
-                let receivedData = JSON.parse(event.data);
+                console.log(event.data);
+                
+                let receivedData = event.data;
                 if (receivedData.userToken) {
                     console.log("Received User Login Token:", receivedData.userToken);
                     userToken = receivedData.userToken;
