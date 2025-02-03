@@ -15,6 +15,10 @@ const ExpertAnalysis = ({ id }) => {
   const [currentCategory, setCurrentCategory] = useState(null);
   const locale = useLocale();
 
+  const convertToKebabCase = (str) => {
+    return str.toLowerCase().replace(/\s+/g, "-");
+  };
+
   const fetchCat = async () => {
     try {
       const res = await axios.get(
@@ -79,7 +83,9 @@ const ExpertAnalysis = ({ id }) => {
           {blogs.map((blog, index) => (
             <div className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4 flex flex-col">
               <Link
-                href={`/${locale}/expert-analysis-detail/${blog.slug}`}
+                href={`/${locale}/details/${convertToKebabCase(
+                  currentCategory.titleEn
+                )}/${blog.slug}`}
                 className="group h-full rounded-xl bg-[#111111]"
               >
                 <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out rounded-xl flex flex-col h-full">

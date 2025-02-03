@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>SumSub WebSDK</title>
+    <script src="https://static.sumsub.com/idensic/static/sns-websdk-builder.js"></script>
+</head>
+<body>
+    <div id="sumsub-websdk-container"></div>
+
+    <script>
+        function launchWebSdk(accessToken) {
+            let snsWebSdkInstance = snsWebSdk
+                .init(accessToken, () => fetchNewAccessToken()) // Refresh token handler
+                .withConf({
+                    lang: "en",
+                    theme: "dark"
+                })
+                .withOptions({ addViewportTag: false, adaptIframeHeight: true })
+                .on("idCheck.onStepCompleted", (payload) => {
+                    console.log("Verification Completed", payload);
+                    window.ReactNativeWebView.postMessage(JSON.stringify({ status: "completed", data: payload }));
+                })
+                .on("idCheck.onError", (error) => {
+                    console.log("Verification Error", error);
+                    window.ReactNativeWebView.postMessage(JSON.stringify({ status: "error", error: error }));
+                })
+                .build();
+
+            snsWebSdkInstance.launch("#sumsub-websdk-container");
+        }
+
+        function fetchNewAccessToken() {
+            return fetch("https://your-backend.com/get-sumsub-token")
+                .then(response => response.json())
+                .then(data => data.token);
+        }
+
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.accessToken) {
+                launchWebSdk(event.data.accessToken);
+            }
+        });
+    </script>
+</body>
+</html>

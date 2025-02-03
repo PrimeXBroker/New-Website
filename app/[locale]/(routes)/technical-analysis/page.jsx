@@ -9,7 +9,7 @@ import Hero from "@/our_pages/expert-analysis/Hero";
 import axios from "axios";
 
 const pages = () => {
-  const { id } = useParams();
+  const id = "6641f01d7c9be5623e1092a4";
   const locale = useLocale();
   const [blogs, setBlogs] = useState([]);
   const [totalPages, setTotalPages] = useState(1);

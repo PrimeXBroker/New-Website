@@ -78,6 +78,7 @@ function AnalysisNewsBody({ slug }) {
         `https://primexbroker.com/api/fetch/one/market-news/${slug}`,
         { cache: "no-store" }
       );
+      console.log(res?.data?.data, "analysisblog");
       if (res?.data?.success) {
         setDetail(res?.data?.data);
         if (locale === "en") {
@@ -125,18 +126,28 @@ function AnalysisNewsBody({ slug }) {
         <div className="text-white py-8 px-4 pt-20 pb-10">
           <Link
             className="text-[#ffffff] hover:text-[#FED100] font-medium flex justify-center sm:justify-start items-center mb-4"
-            href={`/${locale}/academy`}
+            href={
+              detail?.category === "6641f01d7c9be5623e1092a4"
+                ? `/${locale}/technical-analysis`
+                : `/${locale}/blogs`
+            }
           >
             <span className={`${locale === "ar" ? "ml-2 " : "mr-2 "}`}>
               {locale === "ar" ? <FaArrowRight /> : <FaArrowLeft />}
             </span>
-            {locale === "ar" ? "العودة للأكاديمية" : "Back to Academy"}
+            {detail?.category === "6641f01d7c9be5623e1092a4"
+              ? locale === "ar"
+                ? ""
+                : "Back to Technical Analysis"
+              : locale === "ar"
+              ? ""
+              : "Back to Blogs"}
           </Link>
 
           <div className="text-[#c6c6c6] text-sm mb-2 text-center">
             <Moment
               date={detail?.postedOn ? detail?.postedOn : detail?.createdOn}
-              format={locale === "ar" ? "YYYY/MM/DD" : "Do MMM YYYY"}
+              format={locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"}
             />{" "}
             • 5 Min Read
           </div>

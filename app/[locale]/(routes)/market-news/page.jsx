@@ -8,13 +8,13 @@ import Testimonials from "@/our_pages/home/Testimonials";
 import { createTranslator } from "next-intl";
 
 export async function generateMetadata({ params: { locale } }) {
-  const messages = (await import(`../../../../../../messages/${locale}.json`))
+  const messages = (await import(`../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });
   const url =
     locale != "en"
-      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/market-news/all/news`
-      : `${process.env.NEXT_PUBLIC_BASE_URL}/market-news/all/news`;
+      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/market-news`
+      : `${process.env.NEXT_PUBLIC_BASE_URL}/market-news`;
   return {
     title: t("knowledgeHubMarketNews.metaData.title"),
     description: t("knowledgeHubMarketNews.metaData.description"),
@@ -46,7 +46,7 @@ const page = async ({ params }) => {
 
   let totalPages,
     news = [];
-  const lang = locale === "ar" ? slugAr : slugEn;
+  const lang = locale === "ar" ? "news" : "all";
 
   // news
   const response = await getNews(page, lang, locale);

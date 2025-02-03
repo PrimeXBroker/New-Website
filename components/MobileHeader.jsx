@@ -848,14 +848,14 @@ const MobileHeader = ({ locale }) => {
                 {(locale === "en" || locale === "ar") && (
                   <>
                     <LocaleLink
-                      href="/expert-analysis/technical-analysis/6641f01d7c9be5623e1092a4"
+                      href="/technical-analysis"
                       className="block text-[#ffffff] text-base pt-[16px]"
                       onClick={toggleDrawer}
                     >
                       {t("technical-analysis")}
                     </LocaleLink>
                     <LocaleLink
-                      href="/market-news/all/news"
+                      href="/market-news"
                       className="block text-[#ffffff] text-base pt-[16px]"
                       onClick={toggleDrawer}
                     >

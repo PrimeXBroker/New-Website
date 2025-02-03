@@ -14,6 +14,10 @@ const MarketNews = ({ news, totalPages, lang }) => {
   const [newsList, setNews] = useState(news);
   const locale = useLocale();
 
+  const convertToKebabCase = (str) => {
+    return str.toLowerCase().replace(/\s+/g, "-");
+  };
+
   const handleChange = async (p) => {
     setLoading(true);
     const response = await getNews(page, lang, locale);
@@ -48,7 +52,9 @@ const MarketNews = ({ news, totalPages, lang }) => {
           {newsList?.map((blog, index) => (
             <div className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4 flex flex-col">
               <Link
-                href={`/${locale}/market-news-detail/${blog.slug}`}
+                href={`/${locale}/${convertToKebabCase(
+                  blog?.category?.title
+                )}/${blog.slug}`}
                 className="group h-full rounded-xl bg-[#111111]"
                 key={index}
               >

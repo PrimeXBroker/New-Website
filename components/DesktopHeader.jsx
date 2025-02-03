@@ -406,7 +406,7 @@ const DesktopHeader = ({ locale }) => {
                     <>
                       <li>
                         <LocaleLink
-                          href="/expert-analysis/technical-analysis/6641f01d7c9be5623e1092a4"
+                          href="/technical-analysis"
                           onClick={closeDropdown}
                           className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                         >
@@ -415,7 +415,7 @@ const DesktopHeader = ({ locale }) => {
                       </li>
                       <li>
                         <LocaleLink
-                          href="/market-news/all/news"
+                          href="/market-news"
                           onClick={closeDropdown}
                           className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                         >

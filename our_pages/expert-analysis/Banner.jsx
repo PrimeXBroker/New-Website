@@ -16,8 +16,6 @@ const Banner = ({ news }) => {
   const [newsDetails, setNewsDetails] = useState(news[0]);
   const [progressCounter, setProgressCounter] = useState(1); // Track the overall position
 
-  console.log(newsDetails, "-------------> newsDetails carousel");
-
   useEffect(() => {
     const interval = setInterval(() => {
       nextItem();
@@ -93,7 +91,7 @@ const Banner = ({ news }) => {
           {/* Right side - Content */}
           <div className="space-y-6 sm:h-[400px] flex flex-col justify-between">
             <h1 className="text-2xl sm:text-3xl font-bold leading-tight pt-3 lg:pt-0">
-              {newsDetails?.titleEn}
+              {locale === "ar" ? newsDetails?.titleAr : newsDetails?.titleEn}
             </h1>
             <div className="flex items-center justify-between text-[#c6c6c6] py-2 lg:py-0">
               <span>

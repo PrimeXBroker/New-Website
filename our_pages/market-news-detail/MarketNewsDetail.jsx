@@ -13,6 +13,10 @@ const MarketNewsDetail = ({ slug }) => {
   const [detail, setDetail] = useState(null);
   const [related, setRelated] = useState([]);
 
+  const convertToKebabCase = (str) => {
+    return str.toLowerCase().replace(/\s+/g, "-");
+  };
+
   const fetchRelatedBlogs = async () => {
     const res = await axios.get(
       `https://primexbroker.com/api/fetch/publish/related/blogs/1/3/${detail.category._id}/${detail._id}`
@@ -105,7 +109,9 @@ const MarketNewsDetail = ({ slug }) => {
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 px-4 mt-10">
             {related.map((blog, i) => (
               <Link
-                href={`/${locale}/market-news-detail/${blog.slug}`}
+                href={`/${locale}/${convertToKebabCase(
+                  blog?.category?.title
+                )}/${blog.slug}`}
                 key={i}
                 className="group h-full bg-[#111111] rounded-xl"
               >
@@ -130,7 +136,7 @@ const MarketNewsDetail = ({ slug }) => {
                             blog?.postedOn ? blog?.postedOn : blog?.createdOn
                           }
                           format={
-                            locale === "ar" ? "YYYY/MM/DD" : "Do MMM YYYY"
+                            locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"
                           }
                         />
                       </p>
