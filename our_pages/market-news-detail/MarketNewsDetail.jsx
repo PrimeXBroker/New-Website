@@ -7,7 +7,7 @@ import axios from "axios";
 import Moment from "react-moment";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
-const MarketNewsDetail = ({ slug, date }) => {
+const MarketNewsDetail = ({ slug }) => {
   const locale = useLocale();
   const t = useTranslations("marketNewsDetail");
   const [detail, setDetail] = useState(null);
@@ -61,7 +61,7 @@ const MarketNewsDetail = ({ slug, date }) => {
       <div className="container">
         <div className="grid grid-cols-12">
           <div className="lg:col-span-12 md:col-span-12 col-span-12">
-            <NewsBody slug={slug} date={date} />
+            <NewsBody slug={slug} />
           </div>
         </div>
         <div className="bg-[#111111] border-2 border-[#1D1D1D] rounded-[20px] flex p-10 flex-col md:flex-row mb-10 mt-20 relaed-blogs-bg">

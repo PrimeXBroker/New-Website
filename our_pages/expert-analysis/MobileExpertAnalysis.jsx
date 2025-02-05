@@ -148,7 +148,9 @@ const MobileExpertAnalysis = ({ id }) => {
                         </h4>
                         <p className="text-[#C6C6C6] text-xs md:text-sm group-hover:text-white transition duration-700 ease-in-out mt-3">
                           <Moment
-                            date={blog.createdOn}
+                            date={
+                              blog?.postedOn ? blog?.postedOn : blog?.createdOn
+                            }
                             format={
                               locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"
                             }

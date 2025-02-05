@@ -140,7 +140,7 @@ function NewsBody({ slug, date }) {
 
           <div className="text-[#c6c6c6] text-sm mb-2 text-center">
             <Moment
-              date={date}
+              date={detail?.postedOn ? detail?.postedOn : detail?.createdOn}
               format={locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"}
             />{" "}
             • 5 Min Read
