@@ -149,18 +149,24 @@
       "customer_care_btn": "Bize Ulaşın"
     },
     "academy": {
-      "academy_title1": "PrimeX Akademi ",
-      "academy_title2": "Öğrenin ve Büyüyün",
-      "academy_desc": "Geniş eğitim kaynaklarımız ve uzman rehberliğimiz ile ticaret becerilerinizi geliştirin.",
+      "academy_title1": "PrimeX ",
+      "academy_title2": "Araştırma Merkezi",
+      "academy_desc": "Mevcut ticaret araçlarımızla ticaret deneyiminizi geliştirin.",
       "academy_card_1_title_1": "Ücretsiz",
-      "academy_card_1_title_2": "Webinarlar",
-      "academy_card_1_desc_1": "Canlı oturumlara katılın ve sektördeki uzmanlardan değerli bilgiler ve profesyonel rehberlik alın. En son trendler, stratejiler ve araçlarla bir adım önde olun.",
+      "academy_card_1_title_2": "Haftalık Web Seminerleri",
+      "academy_card_1_desc_1": "Sektör uzmanlarıyla gerçekleştirdiğimiz haftalık canlı oturumlara katılın ve değerli içgörüler ile profesyonel rehberlik alın. En son trendler, stratejiler ve araçlarla önde olun.",
       "academy_card_2_title_1": "Günlük Piyasa",
       "academy_card_2_title_2": "Güncellemeleri",
-      "academy_card_2_desc_1": "Forex, Emtialar, Ekonomiler ve Hisse Senetleri üzerinde günlük piyasa haberleri ve uzman analizleriyle bir adım önde olun. Bilinçli ticaret kararları için gereken bilgilere ulaşın.",
+      "academy_card_2_desc_1": "Forex, emtialar, ekonomiler ve hisse senetleri hakkında günlük piyasa haberlerini alın. Bilgi sahibi olun ve daha iyi ticaret kararları verin.",
       "academy_card_3_title_1": "Uzman Piyasa",
-      "academy_card_3_title_2": "Analizleri",
-      "academy_card_3_desc_1": "Sürekli başarı için stratejik ve bilinçli kararlar vermek adına sektördeki en son bilgiler ve ortaya çıkan trendlerle kendinizi güncel tutun."
+      "academy_card_3_title_2": "Analizi",
+      "academy_card_3_desc_1": "Son içgörüler ve ortaya çıkan trendlerle güncel kalın ve uzun vadeli başarı için bilinçli ve stratejik kararlar verin.",
+      "academy_card_4_title_1": "Ekonomik",
+      "academy_card_4_title_2": "Takvim",
+      "academy_card_4_desc_1": "Yüksek etkili ekonomik olayları ve önemli piyasa verilerini takip edin. Gerçek zamanlı güncellemelerle bilgili kalın ve daha akıllı yatırım kararları alın.",
+      "academy_card_5_title_1": "Öğrenin ve",
+      "academy_card_5_title_2": "Güncel Kalın",
+      "academy_card_5_desc_1": "Uzman kaynaklarla sağlam bir ticaret temeli oluşturun. Basın bültenleri, eğitim materyalleri ve şirket haberleriyle güncel kalın."
     },
     "ourRecognition": {
       "our_recognition_title1": "Bizim ",

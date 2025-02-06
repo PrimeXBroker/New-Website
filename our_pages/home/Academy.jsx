@@ -22,11 +22,11 @@ const Academy = ({ academy }) => {
           {c("academy_desc")}
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
         {academy.map((acc) => (
           <div
             key={acc.id}
-            className="bg-[#111111] p-6 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl hover:border-[#333333] group transition-all duration-500 ease-in-out"
+            className="flex-1 min-w-[300px] max-w-full sm:max-w-[350px] p-6 rounded-xl border-2 border-[#1d1d1d] bg-[#111111] hover:shadow-xl hover:border-[#333333] group transition-all duration-500 ease-in-out"
             onMouseEnter={() => setHovered(acc.id)}
             onMouseLeave={() => setHovered(null)}
           >

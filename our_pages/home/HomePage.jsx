@@ -70,6 +70,22 @@ const HomePage = () => {
       description: c("academy_card_3_desc_1"),
       link: "technical-analysis",
     },
+    {
+      id: 4,
+      title1: c("academy_card_4_title_1"),
+      title2: c("academy_card_4_title_2"),
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/calendar-hub.svg",
+      description: c("academy_card_4_desc_1"),
+      link: "economic-calender",
+    },
+    {
+      id: 5,
+      title1: c("academy_card_5_title_1"),
+      title2: c("academy_card_5_title_2"),
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/blogs-hub.svg",
+      description: c("academy_card_5_desc_1"),
+      link: "blogs",
+    },
   ];
 
   const promotionsData = [

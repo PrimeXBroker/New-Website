@@ -149,18 +149,24 @@
       "customer_care_btn": "Contact Us"
     },
     "academy": {
-      "academy_title1": "PrimeX Academy ",
-      "academy_title2": "Learn & Grow",
-      "academy_desc": "Boost your trading skills with our extensive educational resources and expert guidance.",
+      "academy_title1": "PrimeX ",
+      "academy_title2": "Research Center",
+      "academy_desc": "Boost your trading experience with our trading tools available.",
       "academy_card_1_title_1": "Free",
-      "academy_card_1_title_2": "Webinars",
-      "academy_card_1_desc_1": "Join live sessions with industry experts for valuable insights and professional guidance. Stay ahead with the latest trends, strategies, and tools.",
+      "academy_card_1_title_2": "Weekly Webinars",
+      "academy_card_1_desc_1": "Join our weekly live sessions with industry experts for valuable insights and professional guidance. Stay ahead with the latest trends, strategies, and tools.",
       "academy_card_2_title_1": "Daily Market",
       "academy_card_2_title_2": "Updates",
-      "academy_card_2_desc_1": "Stay ahead with daily market news and expert analysis on Forex, Commodities, Economies, and Stocks. Get the insights you need for informed trading decisions.",
+      "academy_card_2_desc_1": "Get daily market news on Forex, commodities, economies, and stocks. Stay informed and make better trading decisions.",
       "academy_card_3_title_1": "Expert Market",
       "academy_card_3_title_2": "Analysis",
-      "academy_card_3_desc_1": "Keep Yourself Updated with the Latest Insights and Emerging Trends in the Industry to Make Informed and Strategic Decisions for Continued Success."
+      "academy_card_3_desc_1": "Stay updated with the latest insights and emerging trends to make informed and strategic decisions for long-term success.",
+      "academy_card_4_title_1": "Economic",
+      "academy_card_4_title_2": "Calendar",
+      "academy_card_4_desc_1": "Track high-impact economic events and key market data. Stay informed with real-time updates and make smarter investment decisions.",
+      "academy_card_5_title_1": "Learn & Stay",
+      "academy_card_5_title_2": "Updated",
+      "academy_card_5_desc_1": "Build a strong trading foundation with expert resources. Stay updated on press releases, education, and company news."
     },
     "ourRecognition": {
       "our_recognition_title1": "Our ",
