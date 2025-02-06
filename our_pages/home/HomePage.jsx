@@ -52,6 +52,7 @@ const HomePage = () => {
       title2: c("academy_card_1_title_2"),
       icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Free+webinars.svg",
       description: c("academy_card_1_desc_1"),
+      link: "webinars",
     },
     {
       id: 2,
@@ -59,6 +60,7 @@ const HomePage = () => {
       title2: c("academy_card_2_title_2"),
       icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Daily+Market+Updates.svg",
       description: c("academy_card_2_desc_1"),
+      link: "market-news",
     },
     {
       id: 3,
@@ -66,6 +68,7 @@ const HomePage = () => {
       title2: c("academy_card_3_title_2"),
       icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/Expert+Market+Analysis.svg",
       description: c("academy_card_3_desc_1"),
+      link: "technical-analysis",
     },
   ];
 

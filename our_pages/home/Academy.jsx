@@ -30,7 +30,7 @@ const Academy = ({ academy }) => {
             onMouseEnter={() => setHovered(acc.id)}
             onMouseLeave={() => setHovered(null)}
           >
-            <Link href={`/${locale}/academy`}>
+            <Link href={`/${locale}/${acc.link}`}>
               <div className="flex justify-between items-start">
                 <div className="flex items-start gap-3">
                   <div className="w-[58px] h-[58px]">
@@ -50,7 +50,7 @@ const Academy = ({ academy }) => {
                     </h3>
                   </div>
                 </div>
-                <Link href={`/${locale}/academy`}>
+                <Link href={`/${locale}/${acc.link}`}>
                   <div className="w-[33px] h-[33px] rounded-[5.73px] bg-[#1D1D1D] flex justify-center items-center group-hover:bg-[#F9F9F9] transition-all duration-500 ease-in-out">
                     {locale === "ar" || locale === "fa" || locale === "kd" ? (
                       <RiArrowLeftUpLine
