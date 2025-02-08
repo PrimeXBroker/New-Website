@@ -130,17 +130,17 @@ const Footer = () => {
           {
             name: t("Platform.title_part4_link1"),
             target: "_blank",
-            href: "https://download.mql5.com/cdn/web/primex.broker.pty/mt5/primexbroker5setup.exe",
+            href: "https://download.mql5.com/cdn/web/primex.capital.ltd/mt5/primexcapital5setup.exe",
           },
           {
             name: t("Platform.title_part4_link2"),
             target: "_blank",
-            href: "https://download.mql5.com/cdn/mobile/mt5/android?server=PrimeXBroker-Demo,PrimeXBroker-Live",
+            href: "https://download.mql5.com/cdn/mobile/mt5/android?server=PrimeXCapital-Demo,PrimeXCapital-Live",
           },
           {
             name: t("Platform.title_part4_link3"),
             target: "_blank",
-            href: "https://download.mql5.com/cdn/mobile/mt5/ios?server=PrimeXBroker-Live",
+            href: "https://download.mql5.com/cdn/mobile/mt5/ios?server=PrimeXCapital-Demo,PrimeXCapital-Live",
           },
         ],
       },
