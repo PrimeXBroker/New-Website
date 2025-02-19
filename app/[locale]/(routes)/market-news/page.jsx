@@ -58,7 +58,7 @@ const page = async ({ params }) => {
   return (
     <>
       <Hero />
-      {(locale === "en" || locale === "ar") && (
+      {(locale === "en" || locale === "ar" || locale === "kd") && (
         <>
           <Banner news={news?.slice(0, 5)} />
           <MarketNews news={news} totalPages={totalPages} lang={lang} />

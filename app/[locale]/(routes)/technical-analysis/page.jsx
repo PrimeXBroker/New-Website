@@ -66,7 +66,7 @@ const pages = () => {
   return (
     <>
       <Hero />
-      {(locale === "en" || locale === "ar") && (
+      {(locale === "en" || locale === "ar" || locale === "kd") && (
         <>
           <Banner news={blogs?.slice(0, 5)} />
           <ExpertAnalysis id={id} />
