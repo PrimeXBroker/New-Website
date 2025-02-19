@@ -845,7 +845,7 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("economic-calendar")}
                 </LocaleLink>
-                {(locale === "en" || locale === "ar") && (
+                {(locale === "en" || locale === "ar" || locale === "kd") && (
                   <>
                     <LocaleLink
                       href="/technical-analysis"
@@ -870,7 +870,7 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("webinars")}
                 </LocaleLink>
-                {(locale === "en" || locale === "ar") && (
+                {(locale === "en" || locale === "ar" || locale === "kd") && (
                   <LocaleLink
                     href="/blogs"
                     className="block text-[#ffffff] text-base pt-[16px]"

@@ -402,7 +402,7 @@ const DesktopHeader = ({ locale }) => {
                       {t("economic-calendar")}
                     </LocaleLink>
                   </li>
-                  {(locale === "en" || locale === "ar") && (
+                  {(locale === "en" || locale === "ar" || locale === "kd") && (
                     <>
                       <li>
                         <LocaleLink
@@ -433,7 +433,7 @@ const DesktopHeader = ({ locale }) => {
                       {t("webinars")}
                     </LocaleLink>
                   </li>
-                  {(locale === "en" || locale === "ar") && (
+                  {(locale === "en" || locale === "ar" || locale === "kd") && (
                     <li>
                       <LocaleLink
                         href="/blogs"
