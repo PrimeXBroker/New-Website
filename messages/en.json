@@ -2726,5 +2726,64 @@
       "title_2": "Technical Analysis",
       "description": "Explore key indicators, chart patterns, and market trends. Get professional breakdowns and in-depth analysis to sharpen your trading strategy."
     }
+  },
+  "ramadanOffer": {
+    "metaData": {
+      "title": "Ramadan Offer | PrimeX Capital",
+      "description": ""
+    },
+    "hero": {
+      "sub_title": "Deposit - Trade - Win!",
+      "title": "Ramadan Grand Competition",
+      "description": "Multiply Your Chances to Win",
+      "prize1": "3 Lucky Winners",
+      "prize2": "3 Valuable Prizes",
+      "btnTxt": "Open Live Account",
+      "registered_already": "Registered already?",
+      "login_here": " Login Here"
+    },
+    "countdown": {
+      "title1": "Time Left Until",
+      "title2": "Challenge Ends",
+      "days": "DAYS",
+      "hours": "HOURS",
+      "minutes": "MINUTES",
+      "seconds": "SECONDS"
+    },
+    "exclusivePrize": {
+      "main_title1": "Exclusive Prizes ",
+      "main_title2": "Await",
+      "title1": "Third Prize",
+      "name1": "HP Laptop",
+      "title2": "First Prize",
+      "name2": "iPhone 16 Pro",
+      "title3": "Second Prize",
+      "name3": "Samsung Galaxy S25"
+    },
+    "participateDrawer": {
+      "main_title1": "How to ",
+      "main_title2": "Participate in the Draw",
+      "step1": "Step 1",
+      "title1": "Deposit",
+      "description1": "Deposit $100 or more in your wallet.",
+      "step2": "Step 2",
+      "title2": "Stay active",
+      "description2": "Stay active trading during Ramadan.",
+      "step3": "Step 3",
+      "title3": "Maintain balance",
+      "description3": "Maintain balance until Ramadan ends.",
+      "step4": "Step 4",
+      "title4": "Live draw",
+      "description4": "Wait for the live draw after Eid al-Fitr."
+    },
+    "winnersAnnounced": {
+      "badge_title": "Winners will be announced in a live draw after Eid al-Fitr",
+      "title": "The More You Deposit, The Higher Your Chances of Winning!",
+      "btnTxt": "Open Live Account"
+    },
+    "terms": {
+      "title": "Download T&C's",
+      "desc_part_1": "This offer is available for all new and existing clients of PrimeX Capital."
+    }
   }
 }

@@ -2636,5 +2636,64 @@
       "title_2": "Teknik Analiz",
       "description": "Temel göstergeleri, grafik formasyonlarını ve piyasa trendlerini keşfedin. Ticaret stratejinizi geliştirmek için profesyonel analizler ve derinlemesine incelemeler alın."
     }
+  },
+  "ramadanOffer": {
+    "metaData": {
+      "title": "Ramazan Kampanyası | PrimeX Capital",
+      "description": ""
+    },
+    "hero": {
+      "sub_title": "Para Yatır - Ticaret Yap - Kazan!",
+      "title": "Ramazan Büyük Yarışması",
+      "description": "Kazanç Şansınızı Katlayın",
+      "prize1": "3 Şanslı Kazanan",
+      "prize2": "3 Değerli Ödül",
+      "btnTxt": "Canlı Hesap Aç",
+      "registered_already": "Zaten kayıtlı mısınız?",
+      "login_here": " Buradan Giriş Yapın"
+    },
+    "countdown": {
+      "title1": "Bitişe Kalan",
+      "title2": "Süre",
+      "days": "GÜN",
+      "hours": "SAAT",
+      "minutes": "DAKİKA",
+      "seconds": "SANİYE"
+    },
+    "exclusivePrize": {
+      "main_title1": "Özel Ödüller ",
+      "main_title2": "Sizi Bekliyor",
+      "title1": "Üçüncülük Ödülü",
+      "name1": "HP Dizüstü Bilgisayar",
+      "title2": "Birincilik Ödülü",
+      "name2": "iPhone 16 Pro",
+      "title3": "İkincilik Ödülü",
+      "name3": "Samsung Galaxy S25"
+    },
+    "participateDrawer": {
+      "main_title1": "Çekilişe ",
+      "main_title2": "Nasıl Katılabilirsiniz?",
+      "step1": "Adım 1",
+      "title1": "Para Yatırın",
+      "description1": "Cüzdanınıza 100$ veya daha fazla yatırın.",
+      "step2": "Adım 2",
+      "title2": "Aktif Kalın",
+      "description2": "Ramazan boyunca aktif olarak ticaret yapın.",
+      "step3": "Adım 3",
+      "title3": "Bakiyenizi Koruyun",
+      "description3": "Ramazan bitene kadar bakiyenizi koruyun.",
+      "step4": "Adım 4",
+      "title4": "Canlı Çekiliş",
+      "description4": "Ramazan Bayramı sonrası canlı çekilişi bekleyin."
+    },
+    "winnersAnnounced": {
+      "badge_title": "Kazananlar Ramazan Bayramı sonrası canlı çekilişte duyurulacaktır.",
+      "title": "Ne Kadar Çok Para Yatırırsanız, Kazanma Şansınız O Kadar Yüksek!",
+      "btnTxt": "Canlı Hesap Aç"
+    },
+    "terms": {
+      "title": "Şartlar ve Koşulları İndir",
+      "desc_part_1": "Bu teklif, PrimeX Capital'in tüm yeni ve mevcut müşterileri için geçerlidir."
+    }
   }
 }
