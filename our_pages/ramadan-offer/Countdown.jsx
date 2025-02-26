@@ -37,14 +37,14 @@ const Countdown = () => {
       <div className="container">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div>
-            <h2 className="text-5xl text-[#ffffff] font-semibold">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#ffffff] font-semibold">
               {t("title1")}
             </h2>
-            <h2 className="text-5xl text-[#FED100] font-semibold mt-2">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#FED100] font-semibold mt-2">
               {t("title2")}
             </h2>
           </div>
-          <div className="flex gap-4 text-5xl font-bold text-[#ffffff]">
+          <div className="flex gap-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#ffffff]">
             <div className="text-center">
               <span className="text-6xl font-semibold">
                 {String(days).padStart(2, "0")}

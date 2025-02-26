@@ -50,7 +50,11 @@ const ParticipateDraw = () => {
             alt="Left Candle"
             width={200}
             height={200}
-            className="absolute left-[18px] top-0 w-[10%] hidden sm:block"
+            className={`absolute top-0 w-[10%] hidden sm:block ${
+              locale === "ar" || locale === "fa" || locale === "kd"
+                ? "right-[18px]"
+                : "left-[18px]"
+            }`}
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 bg-[#111111] rounded-[16px] px-8 py-6">
@@ -82,7 +86,11 @@ const ParticipateDraw = () => {
             alt="Right Candle"
             width={200}
             height={200}
-            className="absolute right-[8px] top-0 w-[10%] hidden sm:block"
+            className={`absolute top-0 w-[10%] hidden sm:block ${
+              locale === "ar" || locale === "fa" || locale === "kd"
+                ? "left-[8px]"
+                : "right-[8px]"
+            }`}
           />
         </div>
       </div>
