@@ -7,7 +7,7 @@ const TermsCondition = () => {
   const t = useTranslations("ramadanOffer.terms");
 
   return (
-    <section className="bg-[#000000] py-24">
+    <section className="bg-[#000000] py-14 sm:py-24">
       <div className="container">
         <div className="bg-[#111111] border-2 border-[#1D1D1D] rounded-[20px] flex p-10 flex-col md:flex-row">
           <div className="lg:w-[70%] w-full mb-5 md:mb-0">
