@@ -12,23 +12,23 @@ const CookieBanner = () => {
   // const location = useContext(LocationContext);
   const locationState = useSelector((state) => state.location);
 
-  useEffect(() => {
-    const fetchLocation = async () => {
-      try {
-        let country;
-        if (!locationState?.location) {
-          const location = await axios.get("https://ipapi.co/country/");
-          country = location.data;
-        }
-        if (country === "ZA" || locationState?.location === "ZA") {
-          window.location.href = "https://www.primexcapital.co.za";
-        }
-      } catch (error) {
-        console.error("Error fetching location", error);
-      }
-    };
-    fetchLocation();
-  }, []);
+  // useEffect(() => {
+  //   const fetchLocation = async () => {
+  //     try {
+  //       let country;
+  //       if (!locationState?.location) {
+  //         const location = await axios.get("https://ipapi.co/country/");
+  //         country = location.data;
+  //       }
+  //       if (country === "ZA" || locationState?.location === "ZA") {
+  //         window.location.href = "https://www.primexcapital.co.za";
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching location", error);
+  //     }
+  //   };
+  //   fetchLocation();
+  // }, []);
 
   useEffect(() => {
     const cookieValue = getCookie("primex_cookie");
