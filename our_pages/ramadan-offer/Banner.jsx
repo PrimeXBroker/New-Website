@@ -52,8 +52,8 @@ const Banner = () => {
             >
               {h("description")}
             </p>
-            <div className="flex flex-row md:flex-col lg:flex-row mt-4 gap-3">
-              <div className="flex items-center gap-1">
+            <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row mt-4 gap-3">
+              <div className="flex items-center gap-2 md:gap-1">
                 <Image
                   unoptimized={true}
                   width="25"
@@ -62,7 +62,7 @@ const Banner = () => {
                   alt="Logo Image"
                 />
                 <p
-                  className={`text-[#ffffff] text-base lg:text-xl ${
+                  className={`text-[#ffffff] text-xl md:text-base lg:text-xl ${
                     locale === "ar" || locale === "fa" || locale === "kd"
                       ? "text-center md:text-right"
                       : "text-center md:text-left"
@@ -72,7 +72,7 @@ const Banner = () => {
                   {h("prize1")}
                 </p>
               </div>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-2 md:gap-1">
                 <Image
                   unoptimized={true}
                   width="25"
@@ -81,7 +81,7 @@ const Banner = () => {
                   alt="Logo Image"
                 />
                 <p
-                  className={`text-[#ffffff] text-base lg:text-xl ${
+                  className={`text-[#ffffff] text-xl md:text-base lg:text-xl ${
                     locale === "ar" || locale === "fa" || locale === "kd"
                       ? "text-center md:text-right"
                       : "text-center md:text-left"

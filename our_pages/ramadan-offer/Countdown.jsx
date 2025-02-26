@@ -35,7 +35,7 @@ const Countdown = () => {
   return (
     <div className="bg-[#000000] pt-14">
       <div className="container">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col lg:flex-row items-center justify-between">
           <div>
             <h2 className="text-5xl text-[#ffffff] font-semibold">
               {t("title1")}
