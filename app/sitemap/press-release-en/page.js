@@ -8,7 +8,7 @@ async function fetchEnglishPressRelease() {
     );
     const data = await response.json();
     const links = data.map((item) => ({
-      url: `https://primexcapital.com/en/market-news-detail/${item.slug}`,
+      url: `https://primexcapital.com/en/press-release/${item.slug}`,
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links.map((link) => ({

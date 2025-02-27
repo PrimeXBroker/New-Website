@@ -6,7 +6,7 @@ async function fetchEnglishLearningHub() {
     );
     const data = await response.json();
     const links = data.map((item) => ({
-      url: `https://primexcapital.com/en/expert-analysis-detail/${item.slug}`,
+      url: `https://primexcapital.com/en/details/primex-learning-hub-/${item.slug}`,
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links.map((link) => ({

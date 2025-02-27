@@ -6,7 +6,7 @@ async function fetchEnglishStartingGateway() {
     );
     const data = await response.json();
     const links = data.map((item) => ({
-      url: `https://primexcapital.com/en/market-news-detail/${item.slug}`,
+      url: `https://primexcapital.com/en/starting-gateway/${item.slug}`,
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links.map((link) => ({

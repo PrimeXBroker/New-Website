@@ -93,10 +93,6 @@ export async function GET() {
       url: "https://primexcapital.com/ar/blogs",
       lastModified: new Date(),
     },
-    {
-      url: "https://primexcapital.com/ar/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e",
-      lastModified: new Date(),
-    },
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

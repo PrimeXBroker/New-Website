@@ -8,7 +8,7 @@ async function fetchArabicMarketNews() {
     );
     const data = await response.json();
     const links = data.map((item) => ({
-      url: `https://primexcapital.com/ar/market-news-detail/${item.slug}`,
+      url: `https://primexcapital.com/ar/market-news/${item.slug}`,
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links.map((link) => ({

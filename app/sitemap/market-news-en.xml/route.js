@@ -7,7 +7,7 @@ async function fetchEnglishMarketNews() {
       `https://primexbroker.com/api/fetch/market-news-en-slugs/${categoryId}`
     );
     const links = response.data.map((item) => ({
-      url: `https://primexcapital.com/en/market-news-detail/${item.slug}`,
+      url: `https://primexcapital.com/en/market-news/${item.slug}`,
       title: item.title,
       language: item.language,
       createdOn: item.createdOn,
