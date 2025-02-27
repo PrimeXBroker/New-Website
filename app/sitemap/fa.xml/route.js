@@ -65,13 +65,32 @@ export async function GET() {
       url: "https://primexcapital.com/fa/regional-partner",
       lastModified: new Date(),
     },
-    { url: "https://primexcapital.com/fa/academy", lastModified: new Date() },
     {
       url: "https://primexcapital.com/fa/why-choose-us",
       lastModified: new Date(),
     },
     {
       url: "https://primexcapital.com/fa/social-trading",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/fa/economic-calender",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/fa/technical-analysis",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/fa/market-news",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/fa/webinars",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/fa/blogs",
       lastModified: new Date(),
     },
   ];

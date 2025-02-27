@@ -67,13 +67,32 @@ export default function ArSitemapPage() {
       url: "https://primexcapital.com/ar/regional-partner",
       lastModified: new Date(),
     },
-    { url: "https://primexcapital.com/ar/academy", lastModified: new Date() },
     {
       url: "https://primexcapital.com/ar/why-choose-us",
       lastModified: new Date(),
     },
     {
       url: "https://primexcapital.com/ar/social-trading",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/ar/economic-calender",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/ar/technical-analysis",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/ar/market-news",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/ar/webinars",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/ar/blogs",
       lastModified: new Date(),
     },
     {

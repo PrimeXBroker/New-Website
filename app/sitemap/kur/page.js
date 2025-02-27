@@ -67,13 +67,32 @@ export default function KurSitemapPage() {
       url: "https://primexcapital.com/kd/regional-partner",
       lastModified: new Date(),
     },
-    { url: "https://primexcapital.com/kd/academy", lastModified: new Date() },
     {
       url: "https://primexcapital.com/kd/why-choose-us",
       lastModified: new Date(),
     },
     {
       url: "https://primexcapital.com/kd/social-trading",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/kd/economic-calender",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/kd/technical-analysis",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/kd/market-news",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/kd/webinars",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/kd/blogs",
       lastModified: new Date(),
     },
   ];
