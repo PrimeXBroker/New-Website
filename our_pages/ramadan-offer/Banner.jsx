@@ -4,6 +4,7 @@ import React from "react";
 import { useTranslations, useLocale } from "next-intl";
 import TrustPilot from "@/components/TrustPilot";
 import { getLoginUrl } from "@/utilities/getLoginUrl";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const Banner = () => {
   const locale = useLocale();
