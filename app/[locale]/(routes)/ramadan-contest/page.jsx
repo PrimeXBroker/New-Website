@@ -8,8 +8,8 @@ export async function generateMetadata({ params: { locale } }) {
   const t = createTranslator({ locale, messages });
   const url =
     locale != "en"
-      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/ramadan-offer`
-      : `${process.env.NEXT_PUBLIC_BASE_URL}/ramadan-offer`;
+      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/ramadan-contest`
+      : `${process.env.NEXT_PUBLIC_BASE_URL}/ramadan-contest`;
   return {
     title: t("ramadanOffer.metaData.title"),
     description: t("ramadanOffer.metaData.description"),
