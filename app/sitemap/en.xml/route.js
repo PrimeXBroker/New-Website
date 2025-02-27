@@ -93,26 +93,6 @@ export async function GET() {
       url: "https://primexcapital.com/en/blogs",
       lastModified: new Date(),
     },
-    {
-      url: "https://primexcapital.com/en/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://primexcapital.com/en/expert-analysis/primex-learning-hub-/6641f0097c9be5623e10929e",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://primexcapital.com/en/expert-analysis/technical-analysis/6641f01d7c9be5623e1092a4",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://primexcapital.com/en/market-news/all/news",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://primexcapital.com/en/starting-gateway/starting-gateway-en/starting-gateway-ar",
-      lastModified: new Date(),
-    },
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
