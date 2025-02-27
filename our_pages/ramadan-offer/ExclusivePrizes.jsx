@@ -52,7 +52,7 @@ const ExclusivePrizes = () => {
                     {prize.title}
                   </div>
                 </div>
-                <h3 className="absolute top-16 px-5 mt-2 text-2xl md:text-lg lg:text-2xl font-medium text-[#ffffff]">
+                <h3 className="absolute top-16 px-5 mt-2 text-2xl md:text-lg lg:text-2xl font-medium text-[#ffffff] text-start">
                   {prize.name}
                 </h3>
               </div>
