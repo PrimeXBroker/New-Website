@@ -40,7 +40,8 @@
     "technical-analysis": "Technical Analysis",
     "webinars": "Webinars",
     "blog": "Blogs",
-    "market-news": "Market News"
+    "market-news": "Market News",
+    "ramadan-contest": "Ramadan Contest"
   },
   "home": {
     "metaData": {
@@ -2730,11 +2731,11 @@
   "ramadanOffer": {
     "metaData": {
       "title": "Ramadan Contest | PrimeX Capital",
-      "description": "PrimeX Ramadan Grand Competition 2025. Deposit $100 or more, trade actively during Ramadan without withdrawing any amount, and win valuable prizes including iPhone 16 Pro Max 512GB, Samsung Galaxy S25 Ultra 256GB, and Dell Inspiron 7440 2-in-1 Laptop. Join PrimeX Capital's exclusive competition."
+      "description": "PrimeX Ramadan Grand Contest 2025. Your total deposits should be 100$ or more throughout the month, trade actively during Ramadan without withdrawing any amount, and win valuable prizes including iPhone 16 Pro Max 512GB, Samsung Galaxy S25 Ultra 256GB, and Dell Inspiron 7440 2-in-1 Laptop. Join PrimeX Capital's exclusive competition."
     },
     "hero": {
       "sub_title": "Don't miss the opportunity, trade and win valuable prizes!",
-      "title": "Ramadan Grand Competition",
+      "title": "Ramadan Grand Contest",
       "description": "Multiply Your Chances to Win",
       "prize1": "3 Lucky Winners",
       "prize2": "3 Valuable Prizes",
@@ -2765,7 +2766,7 @@
       "main_title2": "Participate in the Draw?",
       "step1": "Step 1",
       "title1": "Deposit",
-      "description1": "Deposit $100 or more in your wallet.",
+      "description1": "Your total deposits should be 100$ or more throughout the month.",
       "step2": "Step 2",
       "title2": "Start Trading",
       "description2": "Once you deposit and start trading, your account will be added to the list of prize candidates.",
@@ -2783,7 +2784,7 @@
     },
     "terms": {
       "title": "Download Terms & Conditions",
-      "desc_part_1": "This competition is available to all PrimeX Capital new and existing clients.",
+      "desc_part_1": "This contest is available to all PrimeX Capital new and existing clients.",
       "btnTxt": "Download T&C's"
     }
   }

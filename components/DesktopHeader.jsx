@@ -183,6 +183,15 @@ const DesktopHeader = ({ locale }) => {
                 <ul className="absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
                   <li>
                     <LocaleLink
+                      href="/platform/mt5-platform"
+                      onClick={closeDropdown}
+                      className="block p-[10px] text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                    >
+                      {t("platform")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
                       href="/forex"
                       onClick={closeDropdown}
                       className="block p-[10px] text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
@@ -238,14 +247,6 @@ const DesktopHeader = ({ locale }) => {
                 </ul>
               )}
             </li>
-            <li className="flex items-center h-full">
-              <LocaleLink
-                href="/platform/mt5-platform"
-                className="text-[#ffffff] text-[.8em]"
-              >
-                {t("platform")}
-              </LocaleLink>
-            </li>
             <li className="flex items-center h-full relative">
               <LocaleLink
                 href="/account-types"
@@ -266,6 +267,26 @@ const DesktopHeader = ({ locale }) => {
                 }`}
               /> */}
             </li>
+            {/* <li className="flex items-center h-full relative">
+              <LocaleLink
+                href="/ramadan-contest"
+                className="text-[#ffffff] text-[.8em]"
+              >
+                {t("ramadan-contest")}
+              </LocaleLink>
+              <Image
+                unoptimized={true}
+                width="18"
+                height="18"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
+                alt="Hot Image"
+                className={`absolute top-1 ${
+                  locale === "ar" || locale === "fa" || locale === "kd"
+                    ? "-left-0"
+                    : "-right-0"
+                }`}
+              />
+            </li> */}
             <li className="flex items-center h-full relative">
               <LocaleLink
                 href="/social-trading"
