@@ -50,7 +50,7 @@ const Footer = () => {
     setIsDemoPage(pathname.includes("/funded-account-competition"));
     setIsMT5Page(pathname.includes("/platform/mt5-platform"));
     setIsAboutPage(pathname.includes("/about"));
-    setIsRamadanOfferPage(pathname.includes("/ramadan-offer"));
+    setIsRamadanOfferPage(pathname.includes("/ramadan-contest"));
   }, [pathname]);
 
   const handleOpenModal = (e) => {
