@@ -81,7 +81,7 @@ const ParticipateDraw = () => {
                 <h3 className="text-xl font-semibold text-[#ffffff] mt-2">
                   {item.title}
                 </h3>
-                <p className="text-[#C6C6C6] text-base mt-2">
+                <p className="text-[#C6C6C6] text-[15px] mt-2">
                   {item.description}
                 </p>
               </div>
@@ -103,7 +103,7 @@ const ParticipateDraw = () => {
                 <h3 className="text-xl font-semibold text-[#ffffff] mt-2">
                   {item.title}
                 </h3>
-                <p className="text-[#C6C6C6] text-base mt-2">
+                <p className="text-[#C6C6C6] text-[15px] mt-2">
                   {item.description}
                 </p>
               </div>

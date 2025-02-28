@@ -25,7 +25,7 @@ const Banner = () => {
               <TrustPilot />
             </div> */}
             <h2
-              className={`text-xl sm:text-3xl md:text-xl lg:text-3xl xl:text-3xl text-[#ffffff] ${
+              className={`text-base sm:text-lg md:text-base lg:text-lg xl:text-lg text-[#ffffff] ${
                 locale === "ar" || locale === "fa" || locale === "kd"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"

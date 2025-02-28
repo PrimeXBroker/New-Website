@@ -2729,11 +2729,11 @@
   },
   "ramadanOffer": {
     "metaData": {
-      "title": "PrimeX Ramadan Contest | PrimeX Capital",
+      "title": "Ramadan Contest | PrimeX Capital",
       "description": "PrimeX Ramadan Grand Competition 2025. Deposit $100 or more, trade actively during Ramadan without withdrawing any amount, and win valuable prizes including iPhone 16 Pro Max 512GB, Samsung Galaxy S25 Ultra 256GB, and Dell Inspiron 7440 2-in-1 Laptop. Join PrimeX Capital's exclusive competition."
     },
     "hero": {
-      "sub_title": "Deposit - Trade - Win!",
+      "sub_title": "Don't miss the opportunity, trade and win valuable prizes!",
       "title": "Ramadan Grand Competition",
       "description": "Multiply Your Chances to Win",
       "prize1": "3 Lucky Winners",
@@ -2754,36 +2754,37 @@
       "main_title1": "Exclusive Prizes ",
       "main_title2": "Await",
       "title1": "Third Prize",
-      "name1": "HP Laptop",
+      "name1": "Dell Inspiron 7440 2-in-1 Laptop",
       "title2": "First Prize",
-      "name2": "iPhone 16 Pro",
+      "name2": "iPhone 16 Pro Max 512GB",
       "title3": "Second Prize",
-      "name3": "Samsung Galaxy S25"
+      "name3": "Samsung Galaxy S25 Ultra 256GB"
     },
     "participateDrawer": {
       "main_title1": "How to ",
-      "main_title2": "Participate in the Draw",
+      "main_title2": "Participate in the Draw?",
       "step1": "Step 1",
       "title1": "Deposit",
       "description1": "Deposit $100 or more in your wallet.",
       "step2": "Step 2",
-      "title2": "Stay active",
-      "description2": "Stay active trading during Ramadan.",
+      "title2": "Start Trading",
+      "description2": "Once you deposit and start trading, your account will be added to the list of prize candidates.",
       "step3": "Step 3",
-      "title3": "Maintain balance",
-      "description3": "Maintain balance until Ramadan ends.",
+      "title3": "Stay Active",
+      "description3": "Stay active trading during Ramadan.",
       "step4": "Step 4",
-      "title4": "Live draw",
-      "description4": "Wait for the live draw after Eid al-Fitr."
+      "title4": "Join the draw",
+      "description4": "Maintain your balance until the end of the holy month and wait for the livestream draw."
     },
     "winnersAnnounced": {
-      "badge_title": "Winners will be announced in a live draw after Eid al-Fitr",
+      "badge_title": "Winners to be revealed in our post-Eid livestream draw",
       "title": "The More You Deposit, The Higher Your Chances of Winning!",
       "btnTxt": "Open Live Account"
     },
     "terms": {
-      "title": "Download T&C's",
-      "desc_part_1": "This offer is available for all new and existing clients of PrimeX Capital."
+      "title": "Download Terms & Conditions",
+      "desc_part_1": "This competition is available to all PrimeX Capital new and existing clients.",
+      "btnTxt": "Download T&C's"
     }
   }
 }

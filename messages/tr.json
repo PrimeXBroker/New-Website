@@ -2639,11 +2639,11 @@
   },
   "ramadanOffer": {
     "metaData": {
-      "title": "PrimeX Ramazan Yarışması | PrimeX Capital",
+      "title": "Ramazan Yarışması | PrimeX Capital",
       "description": "PrimeX Ramazan Büyük Yarışması 2025. 100$ veya daha fazla yatırın, Ramazan boyunca aktif olarak ticaret yapın ve hiçbir miktar çekmeden iPhone 16 Pro Max 512GB, Samsung Galaxy S25 Ultra 256GB ve Dell Inspiron 7440 2'si 1 Arada Dizüstü Bilgisayar gibi değerli ödülleri kazanın. PrimeX Capital'in özel yarışmasına katılın."
     },
     "hero": {
-      "sub_title": "Para Yatır - Ticaret Yap - Kazan!",
+      "sub_title": "Fırsatı kaçırmayın, ticaret yapın ve değerli ödüller kazanın!",
       "title": "Ramazan Büyük Yarışması",
       "description": "Kazanç Şansınızı Katlayın",
       "prize1": "3 Şanslı Kazanan",
@@ -2664,11 +2664,11 @@
       "main_title1": "Özel Ödüller ",
       "main_title2": "Sizi Bekliyor",
       "title1": "Üçüncülük Ödülü",
-      "name1": "HP Dizüstü Bilgisayar",
+      "name1": "Dell Inspiron 7440 2'si 1 Arada Dizüstü Bilgisayar",
       "title2": "Birincilik Ödülü",
-      "name2": "iPhone 16 Pro",
+      "name2": "iPhone 16 Pro Max 512GB",
       "title3": "İkincilik Ödülü",
-      "name3": "Samsung Galaxy S25"
+      "name3": "Samsung Galaxy S25 Ultra 256GB"
     },
     "participateDrawer": {
       "main_title1": "Çekilişe ",
@@ -2677,23 +2677,24 @@
       "title1": "Para Yatırın",
       "description1": "Cüzdanınıza 100$ veya daha fazla yatırın.",
       "step2": "Adım 2",
-      "title2": "Aktif Kalın",
-      "description2": "Ramazan boyunca aktif olarak ticaret yapın.",
+      "title2": "Ticarete Başlayın",
+      "description2": "Para yatırdıktan ve ticarete başladıktan sonra hesabınız ödül adayları listesine eklenecektir.",
       "step3": "Adım 3",
-      "title3": "Bakiyenizi Koruyun",
-      "description3": "Ramazan bitene kadar bakiyenizi koruyun.",
+      "title3": "Aktif Kalın",
+      "description3": "Ramazan boyunca aktif olarak ticaret yapın.",
       "step4": "Adım 4",
-      "title4": "Canlı Çekiliş",
-      "description4": "Ramazan Bayramı sonrası canlı çekilişi bekleyin."
+      "title4": "Çekilişe Katılın",
+      "description4": "Kutsal ayın sonuna kadar bakiyenizi koruyun ve canlı çekilişi bekleyin."
     },
     "winnersAnnounced": {
-      "badge_title": "Kazananlar Ramazan Bayramı sonrası canlı çekilişte duyurulacaktır.",
+      "badge_title": "Kazananlar Ramazan Bayramı sonrası canlı çekilişimizde açıklanacaktır.",
       "title": "Ne Kadar Çok Para Yatırırsanız, Kazanma Şansınız O Kadar Yüksek!",
       "btnTxt": "Canlı Hesap Aç"
     },
     "terms": {
       "title": "Şartlar ve Koşulları İndir",
-      "desc_part_1": "Bu teklif, PrimeX Capital'in tüm yeni ve mevcut müşterileri için geçerlidir."
+      "desc_part_1": "Bu yarışma, PrimeX Capital'in tüm yeni ve mevcut müşterileri için geçerlidir.",
+      "btnTxt": "Şartları ve Koşulları İndir"
     }
   }
 }

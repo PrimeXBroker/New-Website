@@ -37,7 +37,7 @@ const TermsCondition = () => {
                 target="_blank"
                 className="text-[#111111] font-semibold"
               >
-                {t("title")}
+                {t("btnTxt")}
               </a>
             </button>
           </div>
