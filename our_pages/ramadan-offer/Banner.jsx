@@ -115,11 +115,9 @@ const Banner = () => {
             </div>
           </div>
           <div className="flex md:justify-end justify-center mt-5 md:mt-0">
-            <Image
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ramadan-offer/ramadan-hero.webp"
+            <img
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ramadan-offer/ramadan-contest-hero.webp"
               alt="Ramadan Offer Hero Image"
-              width="550"
-              height="500"
               className={`w-full sm:w-[90%] md:w-full`}
             />
           </div>

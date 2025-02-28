@@ -24,7 +24,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("ramadanOffer.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ramadan-offer/ramadan-hero.webp",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ramadan-offer/ramadan-contest-hero.webp",
           width: 1200,
           height: 630,
           alt: t("ramadanOffer.metaData.title"),

@@ -3,26 +3,25 @@ import React, { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import { useTranslations, useLocale } from "next-intl";
 
-const targetDate = dayjs()
-  .add(32, "days")
-  .add(22, "hours")
-  .add(33, "minutes")
-  .add(1, "second");
+const startDate = dayjs("2025-03-01T00:00:00");
+const endDate = dayjs("2025-03-30T23:59:59");
 
 const Countdown = () => {
   const locale = useLocale();
   const t = useTranslations("ramadanOffer.countdown");
-  const [timeLeft, setTimeLeft] = useState(targetDate.diff(dayjs(), "second"));
+  const [timeLeft, setTimeLeft] = useState(endDate.diff(dayjs(), "second"));
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTimeLeft(targetDate.diff(dayjs(), "second"));
+      setTimeLeft(endDate.diff(dayjs(), "second"));
     }, 1000);
 
     return () => clearInterval(interval);
   }, []);
 
   const formatTime = (seconds) => {
+    if (seconds <= 0) return { days: 0, hours: 0, minutes: 0, secs: 0 };
+
     const days = Math.floor(seconds / (24 * 3600));
     const hours = Math.floor((seconds % (24 * 3600)) / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
