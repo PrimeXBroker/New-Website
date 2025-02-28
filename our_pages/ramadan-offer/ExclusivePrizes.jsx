@@ -8,12 +8,6 @@ const ExclusivePrizes = () => {
 
   const prizes = [
     {
-      title: t("title1"),
-      name: t("name1"),
-      image:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ramadan-offer/hp-laptop.webp",
-    },
-    {
       title: t("title2"),
       name: t("name2"),
       image:
@@ -24,6 +18,12 @@ const ExclusivePrizes = () => {
       name: t("name3"),
       image:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ramadan-offer/samsung-galaxy-s25.webp",
+    },
+    {
+      title: t("title1"),
+      name: t("name1"),
+      image:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ramadan-offer/hp-laptop.webp",
     },
   ];
 
