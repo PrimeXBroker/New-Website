@@ -33,10 +33,19 @@ const ParticipateDraw = () => {
   return (
     <div className="bg-[#000000] pb-14 md:pb-24 relative">
       <div className="container">
-        <h2 className="text-3xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff] text-center mb-8 sm:mb-10">
-          {t("main_title1")}
-          <span className="text-[#FED100]">{t("main_title2")}</span>
-        </h2>
+        {locale !== "ar" && (
+          <h2 className="text-3xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff] text-center mb-8 sm:mb-10">
+            {t("main_title1")}
+            <span className="text-[#FED100]">{t("main_title2")}</span>
+          </h2>
+        )}
+        {locale === "ar" && (
+          <h2 className="text-3xl sm:text-3xl lg:text-4xl font-semibold text-[#FED100] text-center mb-8 sm:mb-10">
+            {t("main_title1")}
+            <span className="text-[#ffffff]">{t("main_title3")}</span>
+            {t("main_title2")}
+          </h2>
+        )}
         <div
           className="relative bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/ramadan-offer/background-steps-mobile.webp)] sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/ramadan-offer/steps-background.webp)] bg-cover bg-center px-8 md:px-16 h-[970px] sm:h-[500px] lg:h-[330px] rounded-[20px] flex items-center"
           // style={{
