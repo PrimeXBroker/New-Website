@@ -267,7 +267,7 @@ const DesktopHeader = ({ locale }) => {
                 }`}
               /> */}
             </li>
-            {/* <li className="flex items-center h-full relative">
+            <li className="flex items-center h-full relative">
               <LocaleLink
                 href="/ramadan-contest"
                 className="text-[#ffffff] text-[.8em]"
@@ -286,7 +286,7 @@ const DesktopHeader = ({ locale }) => {
                     : "-right-0"
                 }`}
               />
-            </li> */}
+            </li>
             <li className="flex items-center h-full relative">
               <LocaleLink
                 href="/social-trading"

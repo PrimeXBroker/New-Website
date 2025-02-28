@@ -33,7 +33,7 @@ const TermsCondition = () => {
           <div className="w-full lg:w-[30%] flex justify-center md:justify-end items-center">
             <button className="custom-button py-[16px] px-[46px]">
               <a
-                href=""
+                href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/PrimeX_Ramadan_Contest.pdf"
                 target="_blank"
                 className="text-[#111111] font-semibold"
               >

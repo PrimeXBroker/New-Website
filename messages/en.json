@@ -2,7 +2,7 @@
   "menu": {
     "home": "Home",
     "trading": "Trading",
-    "platform": "Platform",
+    "platform": "MT5 Platform",
     "accounts": "Accounts",
     "partners": "Partnership",
     "education": "Education",
@@ -2766,16 +2766,16 @@
       "main_title2": "Participate in the Draw?",
       "step1": "Step 1",
       "title1": "Deposit",
-      "description1": "Your total deposits should be 100$ or more throughout the month.",
+      "description1": "Your total deposits must reach $100 during the month.",
       "step2": "Step 2",
       "title2": "Start Trading",
-      "description2": "Once you deposit and start trading, your account will be added to the list of prize candidates.",
+      "description2": "After depositing and trading, you'll join the candidates list.",
       "step3": "Step 3",
       "title3": "Stay Active",
-      "description3": "Stay active trading during Ramadan.",
+      "description3": "Keep trading throughout Ramadan, with no withdrawals.",
       "step4": "Step 4",
-      "title4": "Join the draw",
-      "description4": "Maintain your balance until the end of the holy month and wait for the livestream draw."
+      "title4": "The draw",
+      "description4": "Winners will be announced through a live draw."
     },
     "winnersAnnounced": {
       "badge_title": "Winners to be revealed in our post-Eid livestream draw",
