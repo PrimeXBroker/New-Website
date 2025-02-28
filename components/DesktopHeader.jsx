@@ -22,25 +22,25 @@ const DesktopHeader = ({ locale }) => {
         ? "عربي"
         : // : locale === "cn"
         // ? "中文"
-        locale === "fa"
-        ? "فارسی"
-        : locale === "kd"
+        // locale === "fa"
+        // ? "فارسی"
+        locale === "kd"
         ? "کوردی"
-        : locale === "tr"
-        ? "Türkçe"
-        : "English",
+        : // : locale === "tr"
+          // ? "Türkçe"
+          "English",
     flag:
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
         : // : locale === "cn"
         // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
-        locale === "fa"
-        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
-        : locale === "kd"
+        // locale === "fa"
+        // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
+        locale === "kd"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
-        : locale === "tr"
-        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
-        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
+        : // : locale === "tr"
+          // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
   });
   const router = useRouter();
   let dropdownTimeout;
@@ -107,25 +107,25 @@ const DesktopHeader = ({ locale }) => {
         ? "عربي"
         : // : locale === "cn"
         // ? "中文"
-        locale === "fa"
-        ? "فارسی"
-        : locale === "kd"
+        // locale === "fa"
+        // ? "فارسی"
+        locale === "kd"
         ? "کوردی"
-        : locale === "tr"
-        ? "Türkçe"
-        : "English";
+        : // : locale === "tr"
+          // ? "Türkçe"
+          "English";
     const flag =
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
         : // : locale === "cn"
         // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
-        locale === "fa"
-        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
-        : locale === "kd"
+        // locale === "fa"
+        // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
+        locale === "kd"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
-        : locale === "tr"
-        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
-        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg";
+        : // : locale === "tr"
+          // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
+          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg";
     const initialLanguage = { text, flag };
     setLanguage(initialLanguage);
     localStorage.setItem("language", JSON.stringify(initialLanguage));
@@ -673,7 +673,7 @@ const DesktopHeader = ({ locale }) => {
                       <span className="ml-[5px]">中文</span>
                     </Link>
                   </li> */}
-                  <li>
+                  {/* <li>
                     <Link
                       href={
                         currentLocale === "fa"
@@ -698,7 +698,7 @@ const DesktopHeader = ({ locale }) => {
                       />
                       <span className="ml-[5px]">فارسی</span>
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link
                       href={
@@ -725,7 +725,7 @@ const DesktopHeader = ({ locale }) => {
                       <span className="ml-[5px]">کوردی</span>
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href={
                         currentLocale === "tr"
@@ -750,7 +750,7 @@ const DesktopHeader = ({ locale }) => {
                       />
                       <span className="ml-[5px]">Türkçe</span>
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               )}
             </li>
