@@ -95,6 +95,10 @@ export default function ArSitemapPage() {
       url: "https://primexcapital.com/ar/blogs",
       lastModified: new Date(),
     },
+    {
+      url: "https://primexcapital.com/ar/ramadan-contest",
+      lastModified: new Date(),
+    },
   ];
 
   return (

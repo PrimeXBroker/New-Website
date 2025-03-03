@@ -95,6 +95,10 @@ export default function KurSitemapPage() {
       url: "https://primexcapital.com/kd/blogs",
       lastModified: new Date(),
     },
+    {
+      url: "https://primexcapital.com/kd/ramadan-contest",
+      lastModified: new Date(),
+    },
   ];
 
   return (

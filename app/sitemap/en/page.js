@@ -95,6 +95,10 @@ export default function EnSitemapPage() {
       url: "https://primexcapital.com/en/blogs",
       lastModified: new Date(),
     },
+    {
+      url: "https://primexcapital.com/en/ramadan-contest",
+      lastModified: new Date(),
+    },
   ];
 
   return (

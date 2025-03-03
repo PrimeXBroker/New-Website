@@ -93,6 +93,10 @@ export async function GET() {
       url: "https://primexcapital.com/kd/blogs",
       lastModified: new Date(),
     },
+    {
+      url: "https://primexcapital.com/kd/ramadan-contest",
+      lastModified: new Date(),
+    },
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
