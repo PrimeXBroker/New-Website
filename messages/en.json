@@ -733,6 +733,28 @@
         "description": "PrimeX Capital's AML Policy outlines our commitment to preventing money laundering and ensuring compliance with global regulations. Your security is our priority."
       }
     },
+    "followerAgreement": {
+      "title_part1": "Policy",
+      "title_part2": "of AML",
+      "description": "This section outlines the steps and controls we have in place to prevent money laundering and terrorist financing, ensuring compliance with all applicable legal and regulatory standards.",
+      "view_btn": "View Document",
+      "download_btn": "Download Document",
+      "metaData": {
+        "title": "Policy of AML | PrimeX Capital",
+        "description": "PrimeX Capital's AML Policy outlines our commitment to preventing money laundering and ensuring compliance with global regulations. Your security is our priority."
+      }
+    },
+    "providerAgreement": {
+      "title_part1": "Policy",
+      "title_part2": "of AML",
+      "description": "This section outlines the steps and controls we have in place to prevent money laundering and terrorist financing, ensuring compliance with all applicable legal and regulatory standards.",
+      "view_btn": "View Document",
+      "download_btn": "Download Document",
+      "metaData": {
+        "title": "Policy of AML | PrimeX Capital",
+        "description": "PrimeX Capital's AML Policy outlines our commitment to preventing money laundering and ensuring compliance with global regulations. Your security is our priority."
+      }
+    },
     "company": {
       "title_part1": "Company",
       "title_part1_link1": "About Us",

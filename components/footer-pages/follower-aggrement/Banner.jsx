@@ -7,7 +7,7 @@ import { FiDownload } from "react-icons/fi";
 
 const Banner = () => {
   const locale = useLocale();
-  const t = useTranslations("footer.policyStatement");
+  const t = useTranslations("footer.followerAgreement");
 
   const handleDownload = (loc, name) => {
     const anchor = document.createElement("a");
@@ -29,8 +29,8 @@ const Banner = () => {
               className={`bg-[#1D1D1D] border-2 border-[#222222] w-14 h-14 flex justify-center items-center rounded-lg`}
             >
               <Image
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/policy/Policy+Statement.svg"
-                alt="Policy Statement"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/policy/Client+Agreement.svg"
+                alt="Follower Agreement Social Trading Program"
                 width="34"
                 height="200"
               />
@@ -41,7 +41,7 @@ const Banner = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-x-4">
             <a
-              href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/footer-agreements/PrimeX_Capital_Policy_Statement.pdf"
+              href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/footer-agreements/Follower_Agreement_Social_Trading_Program.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold py-4 sm:py-3 sm:w-1/2 rounded-lg flex justify-center items-center custom-button mb-5 sm:mb-0"
@@ -68,8 +68,8 @@ const Banner = () => {
             <a
               onClick={() =>
                 handleDownload(
-                  "/assets/pdf/PrimeX_Capital_Policy_Statement.pdf",
-                  "PrimeX Capital Policy Statement"
+                  "/assets/pdf/Follower_Agreement_Social_Trading_Program.pdf",
+                  "PrimeX Capital Follower Agreement Social Trading Program"
                 )
               }
               className="font-semibold py-4 sm:py-3 sm:w-1/2 rounded-lg flex justify-center items-center custom-button-white mb-5 sm:mb-0"
