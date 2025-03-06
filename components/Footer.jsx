@@ -602,6 +602,8 @@ const Footer = () => {
                 href={`${
                   locale === "ar"
                     ? "https://www.instagram.com/primexcapital.ar/"
+                    : locale === "kd"
+                    ? "https://www.instagram.com/primexcapital.kd/"
                     : "https://www.instagram.com/primexcapital.en/"
                 }`}
                 target="_blank"
@@ -616,6 +618,8 @@ const Footer = () => {
                 href={`${
                   locale === "ar"
                     ? "https://t.me/PrimeX_Capital_ar"
+                    : locale === "kd"
+                    ? "https://t.me/primex_capital_kd"
                     : "https://t.me/PrimeX_Capital"
                 }`}
                 target="_blank"
