@@ -79,7 +79,7 @@ const JoinPrimex = () => {
               <div className="hidden md:block h-[60px] border-l-2 border-[#1D1D1D]" />
 
               <a
-                href="https://download.mql5.com/cdn/mobile/mt5/android?server=PrimeXCapital-Demo,PrimeXCapital-Live"
+                href="https://download.mql5.com/cdn/mobile/mt5/android?server=PrimeXCapital-Live"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#1D1D1D] border-1 border-[#1d1d1d] hover:border-[#333333] transition-all duration-500 ease-in-out flex items-center justify-center w-full sm:w-[200px] h-[60px] rounded-lg group"
@@ -109,7 +109,7 @@ const JoinPrimex = () => {
               <div className="hidden md:block h-[60px] border-l-2 border-[#1D1D1D]" />
 
               <a
-                href="https://download.mql5.com/cdn/mobile/mt5/ios?server=PrimeXCapital-Demo,PrimeXCapital-Live"
+                href="https://download.mql5.com/cdn/mobile/mt5/ios?server=PrimeXCapital-Live"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#1D1D1D] border-1 border-[#1d1d1d] hover:border-[#333333] transition-all duration-500 ease-in-out flex items-center justify-center w-full sm:w-[200px] h-[60px] rounded-lg group"

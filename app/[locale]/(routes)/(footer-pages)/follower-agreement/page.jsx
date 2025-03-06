@@ -8,8 +8,8 @@ export async function generateMetadata({ params: { locale } }) {
   const t = createTranslator({ locale, messages });
   const url =
     locale != "en"
-      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/client-agreement`
-      : `${process.env.NEXT_PUBLIC_BASE_URL}/client-agreement`;
+      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/follower-agreement`
+      : `${process.env.NEXT_PUBLIC_BASE_URL}/follower-agreement`;
 
   return {
     title: t("followerAgreement.metaData.title"),
@@ -25,7 +25,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("followerAgreement.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/client-agreement/Banner.webp",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/follower-meta.webp",
           width: 1200,
           height: 630,
           alt: t("followerAgreement.metaData.title"),

@@ -98,6 +98,8 @@ const Footer = () => {
           },
           { name: t("Rules.title_part2_link6"), href: "/cookie-policy" },
           { name: t("Rules.title_part2_link7"), href: "/policy-of-aml" },
+          { name: t("Rules.title_part2_link8"), href: "/follower-agreement" },
+          { name: t("Rules.title_part2_link9"), href: "/provider-agreement" },
         ],
       },
     },
@@ -137,12 +139,12 @@ const Footer = () => {
           {
             name: t("Platform.title_part4_link2"),
             target: "_blank",
-            href: "https://download.mql5.com/cdn/mobile/mt5/android?server=PrimeXCapital-Demo,PrimeXCapital-Live",
+            href: "https://download.mql5.com/cdn/mobile/mt5/android?server=PrimeXCapital-Live",
           },
           {
             name: t("Platform.title_part4_link3"),
             target: "_blank",
-            href: "https://download.mql5.com/cdn/mobile/mt5/ios?server=PrimeXCapital-Demo,PrimeXCapital-Live",
+            href: "https://download.mql5.com/cdn/mobile/mt5/ios?server=PrimeXCapital-Live",
           },
         ],
       },

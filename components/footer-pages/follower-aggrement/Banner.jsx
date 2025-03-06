@@ -29,7 +29,7 @@ const Banner = () => {
               className={`bg-[#1D1D1D] border-2 border-[#222222] w-14 h-14 flex justify-center items-center rounded-lg`}
             >
               <Image
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/policy/Client+Agreement.svg"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/follower-icon.svg"
                 alt="Follower Agreement Social Trading Program"
                 width="34"
                 height="200"

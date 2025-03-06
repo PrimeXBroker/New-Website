@@ -734,25 +734,25 @@
       }
     },
     "followerAgreement": {
-      "title_part1": "Policy",
-      "title_part2": "of AML",
-      "description": "This section outlines the steps and controls we have in place to prevent money laundering and terrorist financing, ensuring compliance with all applicable legal and regulatory standards.",
+      "title_part1": "Follower",
+      "title_part2": "Agreement",
+      "description": "The terms and conditions for participating as a Follower in our Social Trading Program.",
       "view_btn": "View Document",
       "download_btn": "Download Document",
       "metaData": {
-        "title": "Policy of AML | PrimeX Capital",
-        "description": "PrimeX Capital's AML Policy outlines our commitment to preventing money laundering and ensuring compliance with global regulations. Your security is our priority."
+        "title": "Follower Agreement | PrimeX Capital",
+        "description": "The terms and conditions for participating as a Follower in our Social Trading Program."
       }
     },
     "providerAgreement": {
-      "title_part1": "Policy",
-      "title_part2": "of AML",
-      "description": "This section outlines the steps and controls we have in place to prevent money laundering and terrorist financing, ensuring compliance with all applicable legal and regulatory standards.",
+      "title_part1": "Provider",
+      "title_part2": "Agreement",
+      "description": "This Provider Agreement outlines the terms and conditions for participating in the PrimeX Capital Social Trading Program as a Master Provider, allowing other clients to follow your trading strategies.",
       "view_btn": "View Document",
       "download_btn": "Download Document",
       "metaData": {
-        "title": "Policy of AML | PrimeX Capital",
-        "description": "PrimeX Capital's AML Policy outlines our commitment to preventing money laundering and ensuring compliance with global regulations. Your security is our priority."
+        "title": "Provider Agreement | PrimeX Capital",
+        "description": "This Provider Agreement outlines the terms and conditions for participating in the PrimeX Capital Social Trading Program as a Master Provider, allowing other clients to follow your trading strategies."
       }
     },
     "company": {
@@ -773,6 +773,8 @@
       "title_part2_link5": "Complaints Management",
       "title_part2_link6": "Cookie Policy",
       "title_part2_link7": "Policy of AML",
+      "title_part2_link8": "Follower Agreement",
+      "title_part2_link9": "Provider Agreement",
       "view_btn": "Click to View",
       "download_btn": "Download PDF"
     },
