@@ -99,6 +99,14 @@ export default function FaSitemapPage() {
       url: "https://primexcapital.com/fa/ramadan-contest",
       lastModified: new Date(),
     },
+    {
+      url: "https://primexcapital.com/fa/follower-agreement",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/fa/provider-agreement",
+      lastModified: new Date(),
+    },
   ];
 
   return (

@@ -12,8 +12,8 @@ export async function generateMetadata({ params: { locale } }) {
       : `${process.env.NEXT_PUBLIC_BASE_URL}/follower-agreement`;
 
   return {
-    title: t("followerAgreement.metaData.title"),
-    description: t("followerAgreement.metaData.description"),
+    title: t("footer.followerAgreement.metaData.title"),
+    description: t("footer.followerAgreement.metaData.description"),
     alternates: {
       canonical: url,
     },
@@ -21,14 +21,14 @@ export async function generateMetadata({ params: { locale } }) {
       type: "website",
       locale: locale,
       url: url,
-      title: t("followerAgreement.metaData.title"),
-      description: t("followerAgreement.metaData.description"),
+      title: t("footer.followerAgreement.metaData.title"),
+      description: t("footer.followerAgreement.metaData.description"),
       images: [
         {
           url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/follower-meta.webp",
           width: 1200,
           height: 630,
-          alt: t("followerAgreement.metaData.title"),
+          alt: t("footer.followerAgreement.metaData.title"),
         },
       ],
     },

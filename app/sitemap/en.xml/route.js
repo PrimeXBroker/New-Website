@@ -97,6 +97,14 @@ export async function GET() {
       url: "https://primexcapital.com/en/ramadan-contest",
       lastModified: new Date(),
     },
+    {
+      url: "https://primexcapital.com/en/follower-agreement",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/en/provider-agreement",
+      lastModified: new Date(),
+    },
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

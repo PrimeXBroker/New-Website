@@ -99,6 +99,14 @@ export default function TrSitemapPage() {
       url: "https://primexcapital.com/tr/ramadan-contest",
       lastModified: new Date(),
     },
+    {
+      url: "https://primexcapital.com/tr/follower-agreement",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/tr/provider-agreement",
+      lastModified: new Date(),
+    },
   ];
   return (
     <div style={{ margin: "20px auto" }}>

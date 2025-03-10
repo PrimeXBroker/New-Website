@@ -99,6 +99,14 @@ export default function EnSitemapPage() {
       url: "https://primexcapital.com/en/ramadan-contest",
       lastModified: new Date(),
     },
+    {
+      url: "https://primexcapital.com/en/follower-agreement",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/en/provider-agreement",
+      lastModified: new Date(),
+    },
   ];
 
   return (
