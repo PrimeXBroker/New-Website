@@ -9,9 +9,9 @@ const ContactUsWrapper = () => {
   return (
     <>
       <ContactFormWrapper active={active} setActive={setActive} />
-      <div className="pb-20 bg-[#000000]">
+      {/* <div className="pb-20 bg-[#000000]">
         <GlobalLocation />
-      </div>
+      </div> */}
     </>
   );
 };

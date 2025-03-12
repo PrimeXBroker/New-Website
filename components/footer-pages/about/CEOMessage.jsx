@@ -6,7 +6,7 @@ const CEOMessage = () => {
   const t = useTranslations("about.ceoMessage");
 
   return (
-    <section className="bg-[#000000] pt-20">
+    <section className="bg-[#000000]">
       <div className="container">
         <div
           className="p-8 rounded-[20px] bg-cover bg-center"

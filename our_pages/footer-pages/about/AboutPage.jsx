@@ -12,7 +12,7 @@ const AboutPage = () => {
     <>
       <AboutBanner />
       <Mission />
-      <GlobalMap />
+      {/* <GlobalMap /> */}
       <CEOMessage />
       <Values />
       <div className="lg:block hidden pb-5 sm:pb-20 bg-[#000000]">
