@@ -648,6 +648,64 @@ const AwardsTimelineMobile = () => {
                 </div>
               </div>
             </div>
+            <div class="card-mobile relative">
+              <div className="bg-[#222222] w-8 h-8 rounded-full absolute -bottom-1 -left-3 flex justify-center items-center">
+                <span className="text-[#c6c6c6] text-sm">
+                  {t("award_count12")}
+                </span>
+              </div>
+              <div
+                className={`border-2 border-[#1D1D1D] rounded-[20px] p-5 transition-all duration-700 
+                    bg-[#111111] text-[#ffffff]
+                `}
+              >
+                <div
+                  className="relative bg-[#1D1D1D] p-10 rounded-[12px]"
+                  dir="ltr"
+                >
+                  <div className="flex justify-center items-center">
+                    <Image
+                      unoptimized={true}
+                      width="120"
+                      height="120"
+                      src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-awards/Leaf+Left.svg"
+                      alt="Left Leaf"
+                      className="w-full"
+                    />
+                    <Image
+                      unoptimized={true}
+                      width="120"
+                      height="120"
+                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-awards/Award+12.svg`}
+                      alt="Award"
+                      className="w-full"
+                    />
+                    <Image
+                      unoptimized={true}
+                      width="120"
+                      height="120"
+                      src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-awards/Leaf+Right.svg"
+                      alt="Right Leaf"
+                      className="w-full"
+                    />
+                  </div>
+                  <div className="absolute top-2 right-2 bg-[#333333] px-2 py-1 rounded-[4px] text-xs sm:text-sm md:text-xs lg:text-sm">
+                    {t(`awardYear12`)}
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal text-[#F1F1F1]">
+                    {t(`subtitle12`)}
+                  </h3>
+                  <h2 className="text-lg sm:text-[22px] md:text-lg lg:text-[22px] font-semibold mt-1 ">
+                    {t(`title12`)}
+                  </h2>
+                  <p className="text-sm mt-2 text-[#c6c6c6]">
+                    {t(`description12`)}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

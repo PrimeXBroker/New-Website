@@ -8,6 +8,10 @@ const Recognition = () => {
   const awards = [
     {
       imgSrc:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/home-award-12.webp",
+    },
+    {
+      imgSrc:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/home-award-11.webp",
     },
     {
