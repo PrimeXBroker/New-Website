@@ -591,7 +591,7 @@ const AwardsTimelineMobile = () => {
               </div>
             </div>
             <div class="card-mobile relative">
-              <div className="bg-[#222222] w-8 h-8 rounded-full absolute -bottom-1 -left-3 flex justify-center items-center">
+              <div className="bg-[#222222] w-8 h-8 rounded-full absolute top-1/2 -left-3 flex justify-center items-center">
                 <span className="text-[#c6c6c6] text-sm">
                   {t("award_count11")}
                 </span>
@@ -649,7 +649,7 @@ const AwardsTimelineMobile = () => {
               </div>
             </div>
             <div class="card-mobile relative">
-              <div className="bg-[#222222] w-8 h-8 rounded-full absolute -bottom-1 -left-3 flex justify-center items-center">
+              <div className="bg-[#222222] w-8 h-8 rounded-full absolute -bottom-1 -right-3 flex justify-center items-center">
                 <span className="text-[#c6c6c6] text-sm">
                   {t("award_count12")}
                 </span>
