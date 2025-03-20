@@ -119,7 +119,7 @@ function NewsBody({ slug, date }) {
           <Link
             className="text-[#ffffff] hover:text-[#FED100] font-medium flex justify-center sm:justify-start items-center mb-4"
             href={
-              detail?.category?.title === "Market News"
+              ["Market News", "أخبار السوق"].includes(detail?.category?.title)
                 ? `/${locale}/market-news`
                 : `/${locale}/blogs`
             }
@@ -129,7 +129,7 @@ function NewsBody({ slug, date }) {
             >
               {detail?.language === "ar" ? <FaArrowRight /> : <FaArrowLeft />}
             </span>
-            {detail?.category?.title === "Market News"
+            {["Market News", "أخبار السوق"].includes(detail?.category?.title)
               ? locale === "ar"
                 ? "العودة إلى أخبار السوق"
                 : "Back to Market News"

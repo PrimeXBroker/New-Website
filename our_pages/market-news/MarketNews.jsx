@@ -44,6 +44,7 @@ const MarketNews = ({ news, totalPages, lang }) => {
       </div>
     );
   }
+  console.log(newsList?.[0], "newsList");
 
   return (
     <section className="bg-[#000000] pt-20 sm:pt-24 pb-10 sm:pb-14">
