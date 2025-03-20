@@ -216,48 +216,48 @@ const Footer = () => {
       imgUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/amex.webp",
     },
-    {
-      id: 6,
-      name: "tymebank",
-      imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/tymebank.webp",
-    },
-    {
-      id: 7,
-      name: "fnb",
-      imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/fnb.webp",
-    },
-    {
-      id: 8,
-      name: "nedbank",
-      imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/nedbank.webp",
-    },
-    {
-      id: 9,
-      name: "standard",
-      imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/standard-bank.webp",
-    },
-    {
-      id: 10,
-      name: "absa",
-      imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/absa.webp",
-    },
-    {
-      id: 11,
-      name: "discovery",
-      imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/discovery.webp",
-    },
-    {
-      id: 12,
-      name: "capitec",
-      imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/capitec.webp",
-    },
+    // {
+    //   id: 6,
+    //   name: "tymebank",
+    //   imgUrl:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/tymebank.webp",
+    // },
+    // {
+    //   id: 7,
+    //   name: "fnb",
+    //   imgUrl:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/fnb.webp",
+    // },
+    // {
+    //   id: 8,
+    //   name: "nedbank",
+    //   imgUrl:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/nedbank.webp",
+    // },
+    // {
+    //   id: 9,
+    //   name: "standard",
+    //   imgUrl:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/standard-bank.webp",
+    // },
+    // {
+    //   id: 10,
+    //   name: "absa",
+    //   imgUrl:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/absa.webp",
+    // },
+    // {
+    //   id: 11,
+    //   name: "discovery",
+    //   imgUrl:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/discovery.webp",
+    // },
+    // {
+    //   id: 12,
+    //   name: "capitec",
+    //   imgUrl:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/capitec.webp",
+    // },
 
     // {
     //   id: 5,
@@ -406,7 +406,7 @@ const Footer = () => {
               ))}
             </div>
             {/* Second Row (Centered with 5 items) */}
-            <div className="flex w-full justify-center gap-4">
+            {/* <div className="flex w-full justify-center gap-4">
               {paymentOptions.slice(6).map((el) => (
                 <div
                   key={el.id}
@@ -421,7 +421,7 @@ const Footer = () => {
                   />
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
           <div className="flex flex-wrap justify-center gap-4 border-b border-b-gray-500 pb-12 lg:hidden">
             {paymentOptions.map((el) => (
