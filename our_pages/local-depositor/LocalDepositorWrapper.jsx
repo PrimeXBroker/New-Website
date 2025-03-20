@@ -25,9 +25,9 @@ const LocalDepositorWrapper = () => {
         >
           {h("description2")}
         </p>
-        <Explore />
         <PaymentMethods />
         <Benefits />
+        <Explore />
       </div>
     </div>
   );
