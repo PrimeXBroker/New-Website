@@ -16,7 +16,7 @@ const LocalDepositorWrapper = () => {
         <Banner />
         <DepositorSection1 />
         <p
-          className={`text-[#c6c6c6] w-[95%] mx-auto md:mx-0 pt-8 pb-10 text-sm sm:text-base ${
+          className={`text-[#ffffff] text-xl sm:text-2xl md:text-xl lg:text-2xl xl:text-3xl font-semibold my-5 ${
             locale === "ar" || locale === "fa" || locale === "kd"
               ? "text-center md:text-right"
               : "text-center md:text-left"
