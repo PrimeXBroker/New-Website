@@ -10,6 +10,8 @@ const Explore = () => {
     switch (locale) {
       case "ar":
         return "https://shorturl.at/2hdlM";
+      case "kd":
+        return "https://my.primexcapital.com/ku/register/?sl=1";
       default:
         return "";
     }
