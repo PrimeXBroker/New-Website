@@ -1,8 +1,10 @@
+"use client";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
 const PaymentMethods = () => {
+  const locale = useLocale();
   const t = useTranslations("localDepositor.paymentmethods");
 
   const paymentOptions = [
@@ -43,6 +45,16 @@ const PaymentMethods = () => {
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/local-depositor/images/icon-for-logo.svg",
     },
   ];
+
+  const getHomeRegisterUrl = (locale) => {
+    switch (locale) {
+      case "ar":
+        return "https://shorturl.at/2hdlM";
+      default:
+        return "";
+    }
+  };
+
   return (
     <div className="container flex flex-col items-center py-8">
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff] mb-10">
@@ -67,7 +79,10 @@ const PaymentMethods = () => {
           </div>
         ))}
       </div>
-      <button className="custom-button px-7 py-2 rounded-md mt-4 text-secondary font-semibold w-40">
+      <button
+        onClick={() => window.open(getHomeRegisterUrl(locale))}
+        className="custom-button px-7 py-2 rounded-md mt-4 text-secondary font-semibold w-40"
+      >
         {t("buttonText")}
       </button>
     </div>

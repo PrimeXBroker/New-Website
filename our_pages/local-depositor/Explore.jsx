@@ -1,8 +1,20 @@
-import { useTranslations } from "next-intl";
+"use client";
+import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 
 const Explore = () => {
+  const locale = useLocale();
   const h = useTranslations("localDepositor.explore");
+
+  const getHomeRegisterUrl = (locale) => {
+    switch (locale) {
+      case "ar":
+        return "https://shorturl.at/2hdlM";
+      default:
+        return "";
+    }
+  };
+
   return (
     <section className="bg-[#000000] py-3">
       <div className="container">
@@ -15,7 +27,10 @@ const Explore = () => {
             </h2>
             <div className="">
               <p>{h("description")}</p>
-              <button className="custom-button px-7 py-2 rounded-md mt-4 text-secondary font-semibold">
+              <button
+                onClick={() => window.open(getHomeRegisterUrl(locale))}
+                className="custom-button px-7 py-2 rounded-md mt-4 text-secondary font-semibold"
+              >
                 {h("buttonText")}
               </button>
             </div>
