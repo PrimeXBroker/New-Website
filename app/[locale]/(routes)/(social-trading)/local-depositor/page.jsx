@@ -37,7 +37,7 @@ export async function generateMetadata({ params: { locale } }) {
 }
 
 const LocalDepositor = async ({ params: { locale } }) => {
-  if (locale !== "ar") {
+  if (locale === "en") {
     redirect("/");
   }
 
