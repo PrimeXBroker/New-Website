@@ -51,7 +51,7 @@ const PaymentMethods = () => {
       case "ar":
         return "https://shorturl.at/2hdlM";
       case "kd":
-        return "https://my.primexcapital.com/ku/register/?sl=1";
+        return "https://shorturl.at/flGCR";
       default:
         return "";
     }
