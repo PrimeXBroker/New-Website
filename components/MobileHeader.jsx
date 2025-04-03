@@ -765,7 +765,7 @@ const MobileHeader = ({ locale }) => {
             className="text-[#ffffff] text-base relative"
             onClick={toggleDrawer}
           >
-            <Image
+            {/* <Image
               unoptimized={true}
               width="20"
               height="20"
@@ -776,7 +776,7 @@ const MobileHeader = ({ locale }) => {
                   ? "right-[60px]"
                   : "left-[93px]"
               }`}
-            />
+            /> */}
             {t("social_trading")}
           </LocaleLink>
           <div>
@@ -843,7 +843,7 @@ const MobileHeader = ({ locale }) => {
                 <FaChevronDown size={16} />
               )}
             </button>
-            <Image
+            {/* <Image
               unoptimized={true}
               width="20"
               height="20"
@@ -854,7 +854,7 @@ const MobileHeader = ({ locale }) => {
                   ? "right-[60px]"
                   : "left-[59px]"
               }`}
-            />
+            /> */}
             {openSubMenu === 5 && (
               <div className="mt-2">
                 <LocaleLink

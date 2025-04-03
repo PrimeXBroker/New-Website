@@ -294,18 +294,6 @@ const DesktopHeader = ({ locale }) => {
               >
                 {t("social_trading")}
               </LocaleLink>
-              <Image
-                unoptimized={true}
-                width="18"
-                height="18"
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
-                alt="Hot Image"
-                className={`absolute top-1 ${
-                  locale === "ar" || locale === "fa" || locale === "kd"
-                    ? "-left-0"
-                    : "-right-0"
-                }`}
-              />
             </li>
             <li
               className="relative flex items-center h-full"
@@ -400,7 +388,7 @@ const DesktopHeader = ({ locale }) => {
                   <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                 </svg>
               </button>
-              <Image
+              {/* <Image
                 unoptimized={true}
                 width="18"
                 height="18"
@@ -411,7 +399,7 @@ const DesktopHeader = ({ locale }) => {
                     ? "left-[16px]"
                     : "right-[16px]"
                 }`}
-              />
+              /> */}
               {activeDropdown === 4 && (
                 <ul className="absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[250px] rounded-[6px]">
                   <li>
