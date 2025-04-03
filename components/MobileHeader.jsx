@@ -741,7 +741,7 @@ const MobileHeader = ({ locale }) => {
             /> */}
             {t("accounts")}
           </LocaleLink>
-          <LocaleLink
+          {/* <LocaleLink
             href="/ramadan-contest"
             className="text-[#ffffff] text-base relative"
             onClick={toggleDrawer}
@@ -759,7 +759,7 @@ const MobileHeader = ({ locale }) => {
               }`}
             />
             {t("ramadan-contest")}
-          </LocaleLink>
+          </LocaleLink> */}
           <LocaleLink
             href="/social-trading"
             className="text-[#ffffff] text-base relative"
