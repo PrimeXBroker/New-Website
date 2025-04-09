@@ -349,7 +349,7 @@ const DesktopHeader = ({ locale }) => {
                       {t("grey_label")}
                     </LocaleLink>
                   </li>
-                  <li>
+                  {/* <li>
                     <LocaleLink
                       href="/liquidity-providing"
                       onClick={closeDropdown}
@@ -357,7 +357,7 @@ const DesktopHeader = ({ locale }) => {
                     >
                       {t("liquidity")}
                     </LocaleLink>
-                  </li>
+                  </li> */}
                 </ul>
               )}
             </li>

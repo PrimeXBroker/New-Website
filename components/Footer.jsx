@@ -120,10 +120,10 @@ const Footer = () => {
             name: t("Services.title_part3_link4"),
             href: "/grey-label-partner",
           },
-          {
-            name: t("Services.title_part3_link5"),
-            href: "/liquidity-providing",
-          },
+          // {
+          //   name: t("Services.title_part3_link5"),
+          //   href: "/liquidity-providing",
+          // },
         ],
       },
     },
