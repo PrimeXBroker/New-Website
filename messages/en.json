@@ -41,7 +41,8 @@
     "webinars": "Webinars",
     "blog": "Blogs",
     "market-news": "Market News",
-    "ramadan-contest": "Ramadan Contest"
+    "ramadan-contest": "Ramadan Contest",
+    "primex-spread": "PrimeX Spreads"
   },
   "home": {
     "metaData": {
@@ -762,7 +763,8 @@
       "title_part1_link3": "Awards",
       "title_part1_link4": "Press Release",
       "title_part1_link5": "Careers",
-      "title_part1_link6": "Why Choose Us"
+      "title_part1_link6": "Why Choose Us",
+      "title_part1_link7": "PrimeX Spreads"
     },
     "Rules": {
       "title_part2": "Policies",
@@ -2821,8 +2823,8 @@
   },
   "spreadPage": {
     "metaData": {
-      "title": "",
-      "description": ""
+      "title": "Best Forex and Metals Spreads | PrimeX Capital",
+      "description": "Trade Forex and metals with ultra-competitive spreads starting from 0.8 pips on the Standard account. Open an account today with PrimeX Capital and reduce your trading costs with no hidden commissions."
     },
     "hero": {
       "title": "Trade Forex and Metals with the Best Spreads Ever!",

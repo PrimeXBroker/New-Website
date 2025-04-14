@@ -41,7 +41,8 @@
     "webinars": "الندوات المجانية",
     "blog": "المدونة",
     "market-news": "أخبار السوق",
-    "ramadan-contest": "مسابقة رمضان"
+    "ramadan-contest": "مسابقة رمضان",
+    "primex-spread": "سبريد برايم اكس"
   },
   "home": {
     "metaData": {
@@ -658,7 +659,8 @@
       "title_part1_link3": "الجوائز",
       "title_part1_link4": "بيان صحفي",
       "title_part1_link5": "الوظائف",
-      "title_part1_link6": "لماذا تختارنا"
+      "title_part1_link6": "لماذا تختارنا",
+      "title_part1_link7": "سبريد برايم اكس"
     },
     "Rules": {
       "title_part2": "السياسات",

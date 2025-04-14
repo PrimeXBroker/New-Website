@@ -1002,6 +1002,13 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("awards")}
                 </LocaleLink>
+                <LocaleLink
+                  href="/primex-spreads"
+                  className="block text-[#ffffff] text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("primex-spread")}
+                </LocaleLink>
                 {/* <LocaleLink
                   href="/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e"
                   className="block text-[#ffffff] text-base pt-[16px]"

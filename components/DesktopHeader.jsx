@@ -519,6 +519,15 @@ const DesktopHeader = ({ locale }) => {
                       {t("awards")}
                     </LocaleLink>
                   </li>
+                  <li>
+                    <LocaleLink
+                      href="/primex-spreads"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                    >
+                      {t("primex-spread")}
+                    </LocaleLink>
+                  </li>
                   {/* <li>
                     <LocaleLink
                       href="/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e"
