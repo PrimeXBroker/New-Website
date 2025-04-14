@@ -2818,5 +2818,46 @@
       "desc_part_1": "This contest is available to all PrimeX Capital new and existing clients.",
       "btnTxt": "Download T&C's"
     }
+  },
+  "spreadPage": {
+    "metaData": {
+      "title": "",
+      "description": ""
+    },
+    "hero": {
+      "title": "Trade Forex and Metals with the Best Spreads Ever!",
+      "description1": "With PrimeX Capital, you get the best spreads on Forex and metals, along with a variety of financial instruments, starting from just 0.8 pips on the Standard account. With no hidden commissions.",
+      "description2": "Our ultra-competitive spreads dramatically reduce your trading costs, preserving more of your capital.",
+      "btnTxt": "Open Account"
+    },
+    "accountTypes": {
+      "title1": "Competitive Spreads",
+      "title2": "Across All Account Types"
+    },
+    "accountTypesTable": {
+      "specification1": "Account ",
+      "specification2": "Types",
+      "type1": "Standard",
+      "type2": "Narrow",
+      "type3": "Raw"
+    },
+    "spreadMatters": {
+      "title1": "Why Our ",
+      "title2": "Spreads Matter",
+      "subtitle": "Low spread, Bigger Opportunities",
+      "description": "Lower spreads mean lower trading costs, allowing you to retain more of your profits. Every pip matters in trading, and our competitive spreads give you the edge you need.",
+      "btnTxt": "Open Account"
+    },
+    "industryLeading": {
+      "title1": "Industry-Leading ",
+      "title2": "Spreads Today",
+      "subtitle": "Start Trading with",
+      "description": "Join the 250,000+ traders who have chosen PrimeX Capital for their trading needs. Open an account in minutes and experience the difference our competitive spreads can make to your trading.",
+      "btnTxt": "Open Account"
+    },
+    "getStarted": {
+      "btn1Txt": "Open Account",
+      "btn2Txt": "Try Free Demo"
+    }
   }
 }

@@ -38,6 +38,7 @@ const Footer = () => {
   const [isMT5Page, setIsMT5Page] = useState(false);
   const [isAboutPage, setIsAboutPage] = useState(false);
   const [isRamadanOfferPage, setIsRamadanOfferPage] = useState(false);
+  const [isSpreadPage, setIsSpreadPage] = useState(false);
 
   useEffect(() => {
     setIsLiquidityPage(pathname.includes("/liquidity-providing"));
@@ -51,6 +52,7 @@ const Footer = () => {
     setIsMT5Page(pathname.includes("/platform/mt5-platform"));
     setIsAboutPage(pathname.includes("/about"));
     setIsRamadanOfferPage(pathname.includes("/ramadan-contest"));
+    setIsSpreadPage(pathname.includes("/spread"));
   }, [pathname]);
 
   const handleOpenModal = (e) => {
@@ -277,7 +279,7 @@ const Footer = () => {
     <>
       <section
         className={`${
-          isLiquidityPage || isRamadanOfferPage
+          isLiquidityPage || isRamadanOfferPage || isSpreadPage
             ? "hidden"
             : isHomePage ||
               isIbPage ||

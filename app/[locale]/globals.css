@@ -1134,6 +1134,70 @@
   background: #fed100;
 }
 
+.custom-button-white-brown {
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  color: #111111;
+  background: #f9f9f9;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 300ms ease-in-out;
+}
+
+.custom-button-white-brown:hover {
+  background: #111111;
+  color: #f9f9f9 !important;
+}
+
+.custom-button-brown {
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  color: #f9f9f9;
+  background: #111111;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 300ms ease-in-out;
+}
+
+.custom-button-brown:hover {
+  background: #f9f9f9;
+  color: #111111 !important;
+}
+
+.custom-button-white-yellow {
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  color: #111111;
+  background: #f9f9f9;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 300ms ease-in-out;
+}
+
+.custom-button-white-yellow:hover {
+  background: #fed100;
+  color: #111111 !important;
+}
+
+.custom-button-yellow-white {
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  color: #111111;
+  background: #fed100;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 300ms ease-in-out;
+}
+
+.custom-button-yellow-white:hover {
+  background: #f9f9f9;
+  color: #111111 !important;
+}
+
 .review-swiper-navigation-buttons .reviews-swiper-button-prev {
   background: transparent !important;
   text: #111111 !important;
