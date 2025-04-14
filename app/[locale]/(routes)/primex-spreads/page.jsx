@@ -7,8 +7,8 @@ export async function generateMetadata({ params: { locale } }) {
   const t = createTranslator({ locale, messages });
   const url =
     locale != "en"
-      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/spread`
-      : `${process.env.NEXT_PUBLIC_BASE_URL}/spread`;
+      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/primex-spreads`
+      : `${process.env.NEXT_PUBLIC_BASE_URL}/primex-spreads`;
 
   return {
     title: t("spreadPage.metaData.title"),
