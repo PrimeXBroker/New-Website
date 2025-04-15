@@ -485,6 +485,15 @@ const DesktopHeader = ({ locale }) => {
                 >
                   <li>
                     <LocaleLink
+                      href="/primex-spreads"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                    >
+                      {t("primex-spread")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
                       href="/why-choose-us"
                       onClick={closeDropdown}
                       className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
@@ -517,15 +526,6 @@ const DesktopHeader = ({ locale }) => {
                       className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
                     >
                       {t("awards")}
-                    </LocaleLink>
-                  </li>
-                  <li>
-                    <LocaleLink
-                      href="/primex-spreads"
-                      onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
-                    >
-                      {t("primex-spread")}
                     </LocaleLink>
                   </li>
                   {/* <li>

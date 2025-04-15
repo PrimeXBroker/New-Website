@@ -975,6 +975,13 @@ const MobileHeader = ({ locale }) => {
             {openSubMenu === 6 && (
               <div className="">
                 <LocaleLink
+                  href="/primex-spreads"
+                  className="block text-[#ffffff] text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("primex-spread")}
+                </LocaleLink>
+                <LocaleLink
                   href="/why-choose-us"
                   className="block text-[#ffffff] text-base pt-[16px]"
                   onClick={toggleDrawer}
@@ -1001,13 +1008,6 @@ const MobileHeader = ({ locale }) => {
                   onClick={toggleDrawer}
                 >
                   {t("awards")}
-                </LocaleLink>
-                <LocaleLink
-                  href="/primex-spreads"
-                  className="block text-[#ffffff] text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("primex-spread")}
                 </LocaleLink>
                 {/* <LocaleLink
                   href="/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e"
