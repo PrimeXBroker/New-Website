@@ -52,7 +52,7 @@ const Footer = () => {
     setIsMT5Page(pathname.includes("/platform/mt5-platform"));
     setIsAboutPage(pathname.includes("/about"));
     setIsRamadanOfferPage(pathname.includes("/ramadan-contest"));
-    setIsSpreadPage(pathname.includes("/spread"));
+    setIsSpreadPage(pathname.includes("/primex-spreads"));
   }, [pathname]);
 
   const handleOpenModal = (e) => {
