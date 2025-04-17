@@ -27,6 +27,12 @@ const WhyBonusIconic = () => {
       icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/images/money_2302801.svg",
     },
     {
+      title1: t("home_feature_4_title1"),
+      title2: t("home_feature_4_title2"),
+      description: t("home_feature_4_description"),
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/images/laurel-wreath_15663394.svg",
+    },
+    {
       title1: t("home_feature_5_title1"),
       title2: t("home_feature_5_title2"),
       description: t("home_feature_5_description"),
@@ -36,6 +42,18 @@ const WhyBonusIconic = () => {
       title1: t("home_feature_6_title1"),
       title2: t("home_feature_6_title2"),
       description: t("home_feature_6_description"),
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/images/laurel-wreath_15663394.svg",
+    },
+    {
+      title1: t("home_feature_7_title1"),
+      title2: t("home_feature_7_title2"),
+      description: t("home_feature_7_description"),
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/images/laurel-wreath_15663394.svg",
+    },
+    {
+      title1: t("home_feature_8_title1"),
+      title2: t("home_feature_8_title2"),
+      description: t("home_feature_8_description"),
       icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/images/laurel-wreath_15663394.svg",
     },
   ];
