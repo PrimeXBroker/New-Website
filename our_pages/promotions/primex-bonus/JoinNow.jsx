@@ -5,7 +5,7 @@ const JoinNow = () => {
   const t = useTranslations("bonusPage.bonusJoinNow");
 
   return (
-    <section className="bg-[#030303] py-28">
+    <section className="bg-[#030303] py-16 sm:py-28">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-extrabold text-[#F9F9F9] leading-tight">
           {t("title1")}

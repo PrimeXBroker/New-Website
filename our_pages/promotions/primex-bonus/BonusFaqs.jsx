@@ -75,7 +75,7 @@ const BonusFaqs = () => {
   };
 
   return (
-    <section className="bg-[#030303] text-[#F9F9F9] py-28">
+    <section className="bg-[#030303] text-[#F9F9F9] py-16 sm:py-28">
       <div className="container mx-auto">
         <div className="text-center md:text-center mb-10">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F9F9F9] uppercase">

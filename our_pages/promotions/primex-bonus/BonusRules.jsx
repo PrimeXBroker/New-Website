@@ -62,7 +62,7 @@ const BonusRules = () => {
   ];
 
   return (
-    <div className="bg-[#030303] text-[#F9F9F9] px-8">
+    <div className="bg-[#030303] text-[#F9F9F9]">
       <div className="container mx-auto">
         <div className="text-center md:text-center mb-10">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F9F9F9] uppercase">
