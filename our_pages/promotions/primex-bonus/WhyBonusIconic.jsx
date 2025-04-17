@@ -44,7 +44,7 @@ const WhyBonusIconic = () => {
     <div className="bg-[#030303]">
       <div className="container mx-auto">
         <div className="text-center md:text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F9F9F9]">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F9F9F9] uppercase">
             {t("home_heading")}
           </h2>
           <p className="text-sm sm:text-base lg:text-lg mt-2 w-[70%] mx-auto text-[#F9F9F9]">
