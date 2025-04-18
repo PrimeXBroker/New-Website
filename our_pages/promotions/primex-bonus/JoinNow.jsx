@@ -1,11 +1,21 @@
 "use client";
-import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 
 const JoinNow = () => {
   const locale = useLocale();
   const t = useTranslations("bonusPage.bonusJoinNow");
+
+  const getHomeRegisterUrl = (locale) => {
+    switch (locale) {
+      case "ar":
+        return "https://shorturl.at/ieMcJ";
+      case "kd":
+        return "https://shorturl.at/JHkdW";
+      default:
+        return "https://shorturl.at/JzIEo";
+    }
+  };
 
   return (
     <section className="bg-[#030303] py-16 sm:py-28">
@@ -18,7 +28,7 @@ const JoinNow = () => {
         </p>
         <div className="text-center">
           <button
-            onClick={() => window.open(getRegisterUrl(locale))}
+            onClick={() => window.open(getHomeRegisterUrl(locale))}
             className="sm:px-12 py-4 font-semibold w-full sm:w-auto mx-auto text-lg !rounded-lg flex items-center justify-center gap-3 custom-button-yellow-white"
           >
             {t("btnTxt")}

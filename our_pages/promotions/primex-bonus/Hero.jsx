@@ -3,11 +3,21 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 // import CountdownTimer from "./CountdownTimer";
-import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const Hero = () => {
   const locale = useLocale();
   const t = useTranslations("bonusPage.bonusHero");
+
+  const getHomeRegisterUrl = (locale) => {
+    switch (locale) {
+      case "ar":
+        return "https://shorturl.at/ieMcJ";
+      case "kd":
+        return "https://shorturl.at/JHkdW";
+      default:
+        return "https://shorturl.at/JzIEo";
+    }
+  };
 
   return (
     <section className="bg-[#030303] pt-24 sm:pt-28">
@@ -26,7 +36,7 @@ const Hero = () => {
               </p>
               <div className="lg:mt-3 flex justify-center md:justify-start">
                 <button
-                  onClick={() => window.open(getRegisterUrl(locale))}
+                  onClick={() => window.open(getHomeRegisterUrl(locale))}
                   className="px-12 py-4 font-semibold w-full md:w-auto text-lg !rounded-lg flex items-center justify-center gap-3 custom-button-yellow-white"
                 >
                   {t("btnTxt")}
