@@ -2,7 +2,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
-import CountdownTimer from "./CountdownTimer";
+// import CountdownTimer from "./CountdownTimer";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const Hero = () => {
@@ -44,9 +44,9 @@ const Hero = () => {
                   className="w-[80%]"
                 />
               </div>
-              <div className="pe-3 ps-3 sm:pe-12 sm:ps-12 md:ps-0 mt-6 md:mt-4">
+              {/* <div className="pe-3 ps-3 sm:pe-12 sm:ps-12 md:ps-0 mt-6 md:mt-4">
                 <CountdownTimer />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

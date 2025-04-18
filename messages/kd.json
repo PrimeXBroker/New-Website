@@ -2811,6 +2811,10 @@
     }
   },
   "bonusPage": {
+    "metaData": {
+      "title": "Bouns | PrimeX Capital",
+      "description": "add text here"
+    },
     "bonusHero": {
       "hero_title": "PRIMEX 50% DEPOSIT BONUS",
       "hero_subtitle": "Unlock Your Trading Potential With ",
@@ -2822,32 +2826,15 @@
       "label_4": "Seconds"
     },
     "bonusPrizeBreakdown": {
-      "title": "Prizes Breakdown",
-      "first_prize_title": "First Place",
-      "first_prize_cash1": "$2,500",
-      "first_prize_cash1_title": "cash prize",
-      "first_prize_cash2": "$100,000",
-      "first_prize_cash2_title1": "swing",
-      "first_prize_cash2_title2": "funded account",
-      "first_prize_cash_title": "cash prize",
-      "second_prize_title": "Second Place",
-      "second_prize_cash1": "$1,500",
-      "second_prize_cash1_title": "cash prize",
-      "second_prize_cash2": "$50,000",
-      "second_prize_cash2_title1": "swing",
-      "second_prize_cash2_title2": "funded account",
-      "second_prize_cash_title": "cash prize",
-      "third_prize_title": "Third Place",
-      "third_prize_cash1": "$1,000",
-      "third_prize_cash1_title": "cash prize",
-      "third_prize_cash2": "$25,000",
-      "third_prize_cash2_title1": "swing",
-      "third_prize_cash2_title2": "funded account",
-      "third_prize_cash_title": "cash prize",
-      "fourth_prize_title": "4th to 10th Place",
-      "fourth_prize_cash1": "$10,000",
-      "fourth_prize_cash2_title1": "swing",
-      "fourth_prize_cash2_title2": "funded account"
+      "title": "How it works",
+      "step1": "Register",
+      "step1_desc": "Sign up and verify your PrimeX account",
+      "step2": "Open Account",
+      "step2_desc": "Open your 50% Bonus Account",
+      "step3": "Deposit",
+      "step3_desc": "Deposit a minimum of $100 into this account",
+      "step4": "Receive Bonus",
+      "step4_desc": "Get a 50% bonus added to your account immediately"
     },
     "bonusRules": {
       "title": "Terms and Conditions",
