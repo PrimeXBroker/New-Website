@@ -24,7 +24,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("bonusPage.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/images/bonus-hero.png",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/primex-50-bonus-hero.png",
           width: 1200,
           height: 630,
           alt: t("bonusPage.metaData.title"),
