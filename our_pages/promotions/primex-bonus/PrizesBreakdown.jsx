@@ -10,25 +10,25 @@ const PrizesBreakdown = () => {
     {
       title: t("step1"),
       imageSrc:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/page-images/Register.webp",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Register.webp",
       description: t("step1_desc"),
     },
     {
       title: t("step2"),
       imageSrc:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/page-images/Open-Account.webp",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Open-Account.webp",
       description: t("step2_desc"),
     },
     {
       title: t("step3"),
       imageSrc:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/page-images/Deposit.webp",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Deposit.webp",
       description: t("step3_desc"),
     },
     {
       title: t("step4"),
       imageSrc:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/page-images/Receive-Bonus.webp",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Receive-Bonus.webp",
       description: t("step4_desc"),
     },
   ];
