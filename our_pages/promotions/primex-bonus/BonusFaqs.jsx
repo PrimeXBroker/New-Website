@@ -64,6 +64,30 @@ const BonusFaqs = () => {
         </>
       ),
     },
+    {
+      question: t("question8"),
+      answer: (
+        <>
+          <p className="mb-0">{t("answer8")}</p>
+        </>
+      ),
+    },
+    {
+      question: t("question9"),
+      answer: (
+        <>
+          <p className="mb-0">{t("answer9")}</p>
+        </>
+      ),
+    },
+    {
+      question: t("question10"),
+      answer: (
+        <>
+          <p className="mb-0">{t("answer10")}</p>
+        </>
+      ),
+    },
   ];
 
   const toggleAccordion = (index) => {
@@ -78,7 +102,7 @@ const BonusFaqs = () => {
     <section className="bg-[#030303] text-[#F9F9F9] py-16 sm:py-28">
       <div className="container mx-auto">
         <div className="text-center md:text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F9F9F9] uppercase">
+          <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-[#F9F9F9] uppercase">
             {t("title")}
           </h2>
         </div>
@@ -86,20 +110,24 @@ const BonusFaqs = () => {
           {faqs.map((faq, index) => (
             <div key={index} className="bg-[#1A1A1A] rounded-xl p-6">
               <div
-                className="flex justify-between items-center cursor-pointer"
+                className="flex justify-between items-center cursor-pointer gap-3"
                 onClick={() => toggleAccordion(index)}
               >
-                <p className="text-lg font-semibold">{faq.question}</p>
-                <div className="flex justify-center items-center rounded-full bg-[#F9F9F9] w-[26px] h-[26px]">
+                <p className="text-sm sm:text-base md:text-lg font-semibold">
+                  {faq.question}
+                </p>
+                <div className="flex justify-center items-center flex-shrink-0 rounded-full bg-[#F9F9F9] w-[20px] h-[20px] sm:w-[26px] sm:h-[26px]">
                   {active === index ? (
-                    <IoIosArrowUp size={16} className="text-[#1A1A1A]" />
+                    <IoIosArrowUp className="text-[#1A1A1A] text-sm sm:text-base" />
                   ) : (
-                    <IoIosArrowDown size={16} className="text-[#1A1A1A]" />
+                    <IoIosArrowDown className="text-[#1A1A1A] text-sm sm:text-base" />
                   )}
                 </div>
               </div>
               {active === index && (
-                <div className="text-[#F9F9F9] pt-6">{faq.answer}</div>
+                <div className="text-[#F9F9F9] text-sm sm:text-base pt-6">
+                  {faq.answer}
+                </div>
               )}
             </div>
           ))}
