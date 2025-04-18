@@ -2864,7 +2864,7 @@
   },
   "bonusPage": {
     "metaData": {
-      "title": "50% Deposit Bonus! | PrimeX Capital",
+      "title": "50% Deposit Bonus | PrimeX Capital",
       "description": "Unlock your trading potential with PrimeX Capital's 50% Deposit Bonus! Get up to $500 instantly on deposits of $100+. Trade forex, metals, indices & stocks with a trusted global broker. Fast execution & 24/7 multilanguage support."
     },
     "bonusHero": {
@@ -2898,7 +2898,7 @@
       "general_rules_li1_desc": "The bonus amount is tradable and subject to loss",
       "general_rules_li2_desc": "The bonus amount is not withdrawable",
       "general_rules_li3_desc": "This offer is exclusively for residents of specific countries",
-      "general_rules_li4_desc": "Any withdrawal will credit out a percentage of the bonus equal to the withdrawal amount",
+      "general_rules_li4_desc": "Any withdrawal will cancel all accumulated bonus amounts",
       "timeline_title": "General rules",
       "timeline_li1_desc": "Open a new '50% Bonus Account' live account to qualify",
       "timeline_li2_desc": "The bonus account holds the same characteristics of Standard account",
@@ -2950,7 +2950,7 @@
       "question5": "Can I withdraw the bonus amount?",
       "answer5": "No, you can’t withdraw the bonus amount. The bonus amount is tradable and subject to loss.",
       "question6": "Can I withdraw my trading profits?",
-      "answer6": " Yes, you can withdraw all your trading profits and capital, however any withdrawal will credit out a percentage of the bonus equal to the withdrawal amount.",
+      "answer6": "You can withdraw all your trading profits and capital. However, any withdrawal will cancel all accumulated bonus amounts in your account.",
       "question7": "Who is eligible for this bonus?",
       "answer7": "This bonus is exclusively available for traders who are residents of selected countries and have deposited $100 or more in their bonus account.",
       "question8": "Do I need to open a specific type of account to qualify for the bonus?",

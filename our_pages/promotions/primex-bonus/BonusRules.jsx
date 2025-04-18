@@ -9,7 +9,7 @@ const BonusRules = () => {
     {
       category: t("trading_rules_title"),
       imageUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/page-images/Bonus-Eligibility.svg",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Bonus-Eligibility.svg",
       items: [
         t("trading_rules_li1_desc"),
         t("trading_rules_li2_desc"),
@@ -19,7 +19,7 @@ const BonusRules = () => {
     {
       category: t("general_rules_title"),
       imageUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/page-images/Bonus-Rules.svg",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Bonus-Rules.svg",
       items: [
         t("general_rules_li1_desc"),
         t("general_rules_li2_desc"),
@@ -30,7 +30,7 @@ const BonusRules = () => {
     {
       category: t("timeline_title"),
       imageUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/page-images/General-Rules.svg",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/General-rules.svg",
       items: [
         t("timeline_li1_desc"),
         t("timeline_li2_desc"),
@@ -41,7 +41,7 @@ const BonusRules = () => {
     {
       category: t("works_title"),
       imageUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/page-images/Prohibited.svg",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Prohibited-Trading-Strategies.svg",
       items: [t("works_li1_desc"), t("works_li2_desc"), t("works_li3_desc")],
     },
   ];
