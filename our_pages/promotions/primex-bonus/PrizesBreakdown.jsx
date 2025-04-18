@@ -57,7 +57,7 @@ const PrizesBreakdown = () => {
                   className="w-[60%] md:w-[75%] h-full"
                 />
               </div>
-              <div className="w-full sm:w-2/4 pl-0 sm:ps-4 md:ps-2 lg:ps-4 text-center sm:text-left">
+              <div className="w-full sm:w-2/4 pl-0 sm:ps-4 md:ps-2 lg:ps-4 text-center sm:text-start">
                 <h3 className="text-[#F9F9F9] text-xl sm:text-2xl md:text-xl lg:text-2xl font-semibold">
                   {card.title}
                 </h3>

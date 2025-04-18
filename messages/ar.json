@@ -2749,7 +2749,7 @@
       "step2_desc": "Open your 50% Bonus Account",
       "step3": "Deposit",
       "step3_desc": "Deposit a minimum of $100 into this account",
-      "step4": "Receive Bonus",
+      "step4": "Receive Your Bonus",
       "step4_desc": "Get a 50% bonus added to your account immediately"
     },
     "bonusRules": {
@@ -2774,7 +2774,7 @@
     },
     "iconicFeatures": {
       "home_heading": "Why PrimeX Capital?",
-      "home_description": "Take control of your future by joining the Greede's community. Be a part of something valuable. We support your success and growth.",
+      "home_description": "PrimeX Capital leads with continuous innovation and a global vision, earning the trust of elite traders worldwide. Our commitment to excellence ensures a top-tier trading experience for every client.",
       "home_feature_1_title1": "Trusted",
       "home_feature_1_title2": "Global Broker",
       "home_feature_1_description": "PrimeX Capital is known for providing reliable and exceptional financial services worldwide.",
@@ -2814,10 +2814,10 @@
       "answer5": "No, you can’t withdraw the bonus amount. The bonus amount is tradable and subject to loss. However, if you make any withdrawal from your account, the full bonus amount will be deducted.",
       "question6": "Can I withdraw my trading profits?",
       "answer6": "Yes, you can withdraw all your trading profits without losing the bonus amount, the main goal of the bonus is increasing your margin and capital by 50% to leverage your trading potential.",
-      "question7": "Who is eligible for this bonus offer?",
-      "answer7": "This offer is exclusively available for traders who are residents of some countries and have deposited $100 or more in the new 50% Bonus Account. ",
+      "question7": "Who is eligible for this bonus?",
+      "answer7": "This bonus is exclusively available for traders who are residents of selected countries and have deposited $100 or more in their bonus account.",
       "question8": "Do I need to open a specific type of account to qualify for the bonus?",
-      "answer8": "Yes, you need to open a new account categorized as the '50% Bonus Account' to qualify.",
+      "answer8": " Yes, you need to open a new live account named '50% Bonus Account'.",
       "question9": "How many bonuses can I claim?",
       "answer9": "You can claim unlimited 50% bonuses if your deposit is 100$ or above.",
       "question10": "Are there any prohibited trading strategies?",
@@ -2826,7 +2826,7 @@
     "bonusJoinNow": {
       "title1": "Ready to boost your trading?",
       "subtitle": "Open your 50% Bonus Account today!",
-      "btnTxt": " Claim Your 50% Bonus Now!"
+      "btnTxt": "Claim Your 50% Bonus Now!"
     }
   }
 }
