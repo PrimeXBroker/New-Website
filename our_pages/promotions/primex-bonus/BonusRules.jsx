@@ -24,6 +24,7 @@ const BonusRules = () => {
         t("general_rules_li1_desc"),
         t("general_rules_li2_desc"),
         t("general_rules_li3_desc"),
+        t("general_rules_li4_desc"),
       ],
     },
     {
