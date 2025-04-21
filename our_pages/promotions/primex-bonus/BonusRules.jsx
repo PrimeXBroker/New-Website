@@ -42,7 +42,7 @@ const BonusRules = () => {
       category: t("works_title"),
       imageUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Prohibited-Trading-Strategies.svg",
-      items: [t("works_li1_desc"), t("works_li2_desc"), t("works_li3_desc")],
+      items: [t("works_li1_desc"), t("works_li2_desc")],
     },
   ];
 

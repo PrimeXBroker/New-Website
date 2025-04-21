@@ -2905,9 +2905,8 @@
       "timeline_li3_desc": "Only one bonus account is allowed per client",
       "timeline_li4_desc": "PrimeX Capital reserves the right to modify the terms and conditions",
       "works_title": "Prohibited Trading Strategies",
-      "works_li1_desc": "External Hedging",
-      "works_li2_desc": "Internal Hedging",
-      "works_li3_desc": "(HFT) High-Frequency Trading"
+      "works_li1_desc": "Cross-hedging between different accounts",
+      "works_li2_desc": "(HFT) High-Frequency Trading"
     },
     "iconicFeatures": {
       "home_heading": "Why PrimeX Capital?",
@@ -2958,7 +2957,7 @@
       "question9": "How many bonuses can I claim?",
       "answer9": "You can claim unlimited 50% bonuses if your deposit is 100$ or above.",
       "question10": "Are there any prohibited trading strategies?",
-      "answer10": "Yes, the following trading strategies are prohibited: External Hedging, Internal Hedging, High-Frequency Trading (HFT)."
+      "answer10": "Yes, the following trading strategies are prohibited: Cross-hedging between different accounts and High-Frequency Trading (HFT)."
     },
     "bonusJoinNow": {
       "title1": "Ready to boost your trading?",
