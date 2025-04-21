@@ -17,7 +17,7 @@ const Banner = () => {
           <div className="col-span-12 md:col-span-5">
             {/* <div
               className={`text-center md:text-start relative ${
-                locale === "ar" || locale === "fa" || locale === "kd"
+                locale === "ar" || locale === "fa" || locale === "ku"
                   ? "left-[137px]"
                   : "right-[137px]"
               }`}
@@ -42,7 +42,7 @@ const Banner = () => {
                 href={getLoginUrl(locale)}
                 target="_blank"
                 className={`text-xs text-[#ffffff] font-normal block mt-2 ${
-                  locale === "ar" || locale === "fa" || locale === "kd"
+                  locale === "ar" || locale === "fa" || locale === "ku"
                     ? "text-center md:text-start mr-6"
                     : "text-center md:text-start md:ml-6"
                 }`}

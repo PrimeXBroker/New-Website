@@ -15,7 +15,7 @@ export default function SitemapIndexPage() {
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/sitemap/kd",
+      url: "https://primexcapital.com/sitemap/ku",
       lastModified: new Date(),
     },
     {

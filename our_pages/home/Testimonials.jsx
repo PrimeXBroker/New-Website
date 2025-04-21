@@ -177,7 +177,7 @@ const Testimonials = () => {
                   </div>
                   <div
                     className={`${
-                      locale === "ar" || locale === "fa" || locale === "kd"
+                      locale === "ar" || locale === "fa" || locale === "ku"
                         ? "mr-4"
                         : "ml-4"
                     }`}
@@ -205,7 +205,7 @@ const Testimonials = () => {
                   </div>
                   <div
                     className={`text-sm text-[#c6c6c6] ${
-                      locale === "ar" || locale === "fa" || locale === "kd"
+                      locale === "ar" || locale === "fa" || locale === "ku"
                         ? "mr-auto"
                         : "ml-auto"
                     }`}
@@ -227,12 +227,12 @@ const Testimonials = () => {
         </Swiper>
         <div
           className={`review-swiper-navigation-buttons flex gap-4 w-fit ${
-            locale === "ar" || locale === "fa" || locale === "kd"
+            locale === "ar" || locale === "fa" || locale === "ku"
               ? "float-left"
               : "float-right"
           } relative bottom-[37px] z-[10] `}
           dir={
-            locale === "ar" || locale === "fa" || locale === "kd" ? "ltr" : ""
+            locale === "ar" || locale === "fa" || locale === "ku" ? "ltr" : ""
           }
         >
           <button className="reviews-swiper-button-prev group">

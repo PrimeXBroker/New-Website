@@ -190,7 +190,7 @@ const OpenPosition = () => {
                         View Job
                         {locale === "ar" ||
                         locale === "fa" ||
-                        locale === "kd" ? (
+                        locale === "ku" ? (
                           <FiArrowUpLeft
                             className={`text-base font-semibold transition-transform duration-500 ease-in-out group-hover:text-[#FED100] ${
                               hovered === job.id

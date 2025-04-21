@@ -14,7 +14,7 @@ const Banner = () => {
           <div className="col-span-12 md:col-span-5">
             {/* <div
               className={`text-center md:text-start relative ${
-                locale === "ar" || locale === "fa" || locale === "kd"
+                locale === "ar" || locale === "fa" || locale === "ku"
                   ? "left-[137px]"
                   : "right-[137px]"
               }`}
@@ -49,7 +49,7 @@ const Banner = () => {
               />
               <div
                 className={`bg-[#111111] bg-opacity-[80%] backdrop-blur-[7px] py-4 px-6 md:px-4 lg:px-6 w-[90%] sm:w-[65%] absolute bottom-0 ${
-                  locale === "ar" || locale === "fa" || locale === "kd"
+                  locale === "ar" || locale === "fa" || locale === "ku"
                     ? "rounded-tl-[0px] rounded-tr-[28px] rounded-bl-[8px] rounded-br-[0px] sm:left-[14.7%] md:left-0"
                     : "rounded-tl-[28px] rounded-tr-[0px] rounded-bl-[0px] rounded-br-[8px] sm:right-[14.7%] md:right-0"
                 }`}

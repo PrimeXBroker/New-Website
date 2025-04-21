@@ -10,7 +10,7 @@ const Explore = () => {
     switch (locale) {
       case "ar":
         return "https://shorturl.at/2hdlM";
-      case "kd":
+      case "ku":
         return "https://shorturl.at/flGCR";
       default:
         return "";

@@ -28,7 +28,7 @@ const MobileHeader = ({ locale }) => {
         // ? "中文"
         // locale === "fa"
         // ? "فارسی"
-        locale === "kd"
+        locale === "ku"
         ? "کوردی"
         : // : locale === "tr"
           // ? "Türkçe"
@@ -40,7 +40,7 @@ const MobileHeader = ({ locale }) => {
         // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
         // locale === "fa"
         // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
-        locale === "kd"
+        locale === "ku"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
         : // : locale === "tr"
           // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
@@ -121,7 +121,7 @@ const MobileHeader = ({ locale }) => {
         // ? "中文"
         // locale === "fa"
         // ? "فارسی"
-        locale === "kd"
+        locale === "ku"
         ? "کوردی"
         : // : locale === "tr"
           // ? "Türkçe"
@@ -133,7 +133,7 @@ const MobileHeader = ({ locale }) => {
         // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
         // locale === "fa"
         // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
-        locale === "kd"
+        locale === "ku"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
         : // : locale === "tr"
           // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
@@ -180,7 +180,7 @@ const MobileHeader = ({ locale }) => {
                   />
                   <span
                     className={`${
-                      locale === "ar" || locale === "fa" || locale === "kd"
+                      locale === "ar" || locale === "fa" || locale === "ku"
                         ? "mr-[5px]"
                         : "ml-[5px]"
                     }`}
@@ -189,7 +189,7 @@ const MobileHeader = ({ locale }) => {
                   </span>
                   <svg
                     className={`fill-current h-4 w-4 ${
-                      locale === "ar" || locale === "fa" || locale === "kd"
+                      locale === "ar" || locale === "fa" || locale === "ku"
                         ? "mr-1"
                         : "ml-1"
                     }`}
@@ -306,7 +306,7 @@ const MobileHeader = ({ locale }) => {
                           className={`${
                             locale === "ar" ||
                             locale === "fa" ||
-                            locale === "kd"
+                            locale === "ku"
                               ? "mr-[5px]"
                               : "ml-[5px]"
                           }`}
@@ -318,9 +318,9 @@ const MobileHeader = ({ locale }) => {
                     <li>
                       <Link
                         href={
-                          currentLocale === "kd"
+                          currentLocale === "ku"
                             ? `/${currentLocale}/${restOfPath}`
-                            : `/kd/${restOfPath}`
+                            : `/ku/${restOfPath}`
                         }
                         onClick={() =>
                           handleClick(
@@ -342,7 +342,7 @@ const MobileHeader = ({ locale }) => {
                           className={`${
                             locale === "ar" ||
                             locale === "fa" ||
-                            locale === "kd"
+                            locale === "ku"
                               ? "mr-[5px]"
                               : "ml-[5px]"
                           }`}
@@ -423,7 +423,7 @@ const MobileHeader = ({ locale }) => {
                     />
                     <span
                       className={`${
-                        locale === "ar" || locale === "fa" || locale === "kd"
+                        locale === "ar" || locale === "fa" || locale === "ku"
                           ? "mr-[5px]"
                           : "ml-[5px]"
                       }`}
@@ -432,7 +432,7 @@ const MobileHeader = ({ locale }) => {
                     </span>
                     <svg
                       className={`fill-current h-4 w-4 ${
-                        locale === "ar" || locale === "fa" || locale === "kd"
+                        locale === "ar" || locale === "fa" || locale === "ku"
                           ? "mr-1"
                           : "ml-1"
                       }`}
@@ -549,7 +549,7 @@ const MobileHeader = ({ locale }) => {
                             className={`${
                               locale === "ar" ||
                               locale === "fa" ||
-                              locale === "kd"
+                              locale === "ku"
                                 ? "mr-[5px]"
                                 : "ml-[5px]"
                             }`}
@@ -561,9 +561,9 @@ const MobileHeader = ({ locale }) => {
                       <li>
                         <Link
                           href={
-                            currentLocale === "kd"
+                            currentLocale === "ku"
                               ? `/${currentLocale}/${restOfPath}`
-                              : `/kd/${restOfPath}`
+                              : `/ku/${restOfPath}`
                           }
                           onClick={() =>
                             handleClick(
@@ -585,7 +585,7 @@ const MobileHeader = ({ locale }) => {
                             className={`${
                               locale === "ar" ||
                               locale === "fa" ||
-                              locale === "kd"
+                              locale === "ku"
                                 ? "mr-[5px]"
                                 : "ml-[5px]"
                             }`}
@@ -734,7 +734,7 @@ const MobileHeader = ({ locale }) => {
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
               alt="Hot Image"
               className={`absolute top-[-15px] ${
-                locale === "ar" || locale === "fa" || locale === "kd"
+                locale === "ar" || locale === "fa" || locale === "ku"
                   ? "right-[41px]"
                   : "left-[59px]"
               }`}
@@ -753,7 +753,7 @@ const MobileHeader = ({ locale }) => {
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
               alt="Hot Image"
               className={`absolute ${
-                locale === "ar" || locale === "fa" || locale === "kd"
+                locale === "ar" || locale === "fa" || locale === "ku"
                   ? "right-[41px]"
                   : "left-[59px]"
               }`}
@@ -772,7 +772,7 @@ const MobileHeader = ({ locale }) => {
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
               alt="Hot Image"
               className={`absolute top-[-15px] ${
-                locale === "ar" || locale === "fa" || locale === "kd"
+                locale === "ar" || locale === "fa" || locale === "ku"
                   ? "right-[60px]"
                   : "left-[124px]"
               }`}
@@ -791,7 +791,7 @@ const MobileHeader = ({ locale }) => {
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
               alt="Hot Image"
               className={`absolute top-[-15px] ${
-                locale === "ar" || locale === "fa" || locale === "kd"
+                locale === "ar" || locale === "fa" || locale === "ku"
                   ? "right-[60px]"
                   : "left-[93px]"
               }`}
@@ -869,7 +869,7 @@ const MobileHeader = ({ locale }) => {
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
               alt="Hot Image"
               className={`absolute top-[-15px] ${
-                locale === "ar" || locale === "fa" || locale === "kd"
+                locale === "ar" || locale === "fa" || locale === "ku"
                   ? "right-[60px]"
                   : "left-[59px]"
               }`}
@@ -883,7 +883,7 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("economic-calendar")}
                 </LocaleLink>
-                {(locale === "en" || locale === "ar" || locale === "kd") && (
+                {(locale === "en" || locale === "ar" || locale === "ku") && (
                   <>
                     <LocaleLink
                       href="/technical-analysis"
@@ -908,7 +908,7 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("webinars")}
                 </LocaleLink>
-                {(locale === "en" || locale === "ar" || locale === "kd") && (
+                {(locale === "en" || locale === "ar" || locale === "ku") && (
                   <LocaleLink
                     href="/blogs"
                     className="block text-[#ffffff] text-base pt-[16px]"

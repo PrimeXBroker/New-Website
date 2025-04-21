@@ -58,7 +58,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
                 href="/help-center"
                 className="bg-[#111111] text-[#F1F1F1] py-2 px-4 flex items-center rounded-lg border-2 border-[#1D1D1D] hover:text-[#FED100]"
               >
-                <span className={`${locale === "ar" || locale === "fa" || locale === "kd" ? "ml-2" : "mr-2"}`}>
+                <span className={`${locale === "ar" || locale === "fa" || locale === "ku" ? "ml-2" : "mr-2"}`}>
                   <Image
                     src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/help+center.svg"
                     alt="Help Center"
@@ -68,16 +68,16 @@ const ContactFormWrapper = ({ active, setActive }) => {
                   />
                 </span>
                 {t("help_center")}
-                {locale === "ar" || locale === "fa" || locale === "kd" ? (
+                {locale === "ar" || locale === "fa" || locale === "ku" ? (
                   <FaArrowLeft
                     className={`text-xl text-[#C6C6C6] ${
-                      locale === "ar" || locale === "fa" || locale === "kd" ? "mr-2" : "ml-2"
+                      locale === "ar" || locale === "fa" || locale === "ku" ? "mr-2" : "ml-2"
                     }`}
                   />
                 ) : (
                   <FaArrowRight
                     className={`text-xl text-[#C6C6C6] ${
-                      locale === "ar" || locale === "fa" || locale === "kd" ? "mr-2" : "ml-2"
+                      locale === "ar" || locale === "fa" || locale === "ku" ? "mr-2" : "ml-2"
                     }`}
                   />
                 )}
@@ -88,7 +88,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
               >
                 <span
                   className={`${
-                    locale === "ar" || locale === "fa" || locale === "kd"
+                    locale === "ar" || locale === "fa" || locale === "ku"
                       ? "ml-2"
                       : "mr-2"
                   }`}
@@ -104,7 +104,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
                 {t("copy_email")}
                 <MdContentCopy
                   className={`text-xl text-[#C6C6C6] ${
-                    locale === "ar" || locale === "fa" || locale === "kd"
+                    locale === "ar" || locale === "fa" || locale === "ku"
                       ? "mr-2"
                       : "ml-2"
                   }`}
@@ -118,7 +118,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
               >
                 <span
                   className={`${
-                    locale === "ar" || locale === "fa" || locale === "kd"
+                    locale === "ar" || locale === "fa" || locale === "ku"
                       ? "ml-2"
                       : "mr-2"
                   }`}
@@ -132,10 +132,10 @@ const ContactFormWrapper = ({ active, setActive }) => {
                   />
                 </span>
                 {t("live_chat")}
-                {locale === "ar" || locale === "fa" || locale === "kd" ? (
+                {locale === "ar" || locale === "fa" || locale === "ku" ? (
                   <FaArrowLeft
                     className={`text-xl text-[#C6C6C6] ${
-                      locale === "ar" || locale === "fa" || locale === "kd"
+                      locale === "ar" || locale === "fa" || locale === "ku"
                         ? "mr-2"
                         : "ml-2"
                     }`}
@@ -143,7 +143,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
                 ) : (
                   <FaArrowRight
                     className={`text-xl text-[#C6C6C6] ${
-                      locale === "ar" || locale === "fa" || locale === "kd"
+                      locale === "ar" || locale === "fa" || locale === "ku"
                         ? "mr-2"
                         : "ml-2"
                     }`}

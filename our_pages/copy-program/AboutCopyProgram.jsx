@@ -31,7 +31,7 @@ const AboutCopyProgram = () => {
               </h2>
               <p
                 className={`text-[#c6c6c6] mt-4 w-full sm:w-[90%] md:w-[80%] mx-auto md:mx-0 ${
-                  locale === "ar" || locale === "fa" || locale === "kd"
+                  locale === "ar" || locale === "fa" || locale === "ku"
                     ? "text-center md:text-right"
                     : "text-center md:text-left"
                 }`}

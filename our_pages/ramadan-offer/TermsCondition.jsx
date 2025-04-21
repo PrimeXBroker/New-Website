@@ -13,7 +13,7 @@ const TermsCondition = () => {
           <div className="lg:w-[70%] w-full mb-5 md:mb-0">
             <h2
               className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff] mb-3 ${
-                locale === "ar" || locale === "fa" || locale === "kd"
+                locale === "ar" || locale === "fa" || locale === "ku"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -22,7 +22,7 @@ const TermsCondition = () => {
             </h2>
             <p
               className={` text-[#c6c6c6] text-sm sm:text-base ${
-                locale === "ar" || locale === "fa" || locale === "kd"
+                locale === "ar" || locale === "fa" || locale === "ku"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}

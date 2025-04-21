@@ -26,7 +26,7 @@ const AcademyWrapper = ({
   return (
     <>
       <Hero />
-      {(locale === "en" || locale === "ar" || locale === "kd") && (
+      {(locale === "en" || locale === "ar" || locale === "ku") && (
         <>
           <Banner news={news} />
           <div className="hidden md:block">

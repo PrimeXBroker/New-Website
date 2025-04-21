@@ -68,7 +68,7 @@ const MarketNewsDetail = ({ slug }) => {
           <div className="lg:w-[70%] w-full mb-5 md:mb-0">
             <h2
               className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff] mb-3 ${
-                detail?.language === "ar" || locale === "fa" || locale === "kd"
+                detail?.language === "ar" || locale === "fa" || locale === "ku"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -79,7 +79,7 @@ const MarketNewsDetail = ({ slug }) => {
             </h2>
             <p
               className={` text-[#c6c6c6] text-sm sm:text-base ${
-                detail?.language === "ar" || locale === "fa" || locale === "kd"
+                detail?.language === "ar" || locale === "fa" || locale === "ku"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}

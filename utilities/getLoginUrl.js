@@ -2,7 +2,7 @@ export const getLoginUrl = (locale) => {
   switch (locale) {
     case "ar":
       return "https://my.primexcapital.com/ar/login?sl=1";
-    case "kd":
+    case "ku":
       return "https://my.primexcapital.com/ku/login?sl=1";
     case "fa":
       return "https://my.primexcapital.com/fa/login?sl=1";

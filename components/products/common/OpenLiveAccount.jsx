@@ -24,7 +24,7 @@ const OpenLiveAccount = ({
         >
           <div
             className={`${
-              locale === "ar" || locale === "fa" || locale === "kd"
+              locale === "ar" || locale === "fa" || locale === "ku"
                 ? "text-center md:text-right"
                 : "text-center md:text-left"
             }`}
@@ -39,7 +39,7 @@ const OpenLiveAccount = ({
           </div>
           <div
             className={`mt-8 ${
-              locale === "ar" || locale === "fa" || locale === "kd"
+              locale === "ar" || locale === "fa" || locale === "ku"
                 ? "text-center md:text-right"
                 : "text-center md:text-left"
             }`}

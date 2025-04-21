@@ -22,7 +22,7 @@ const GetStarted = () => {
           </div>
           <div
             className={`${
-              locale === "ar" || locale === "fa" || locale === "kd"
+              locale === "ar" || locale === "fa" || locale === "ku"
                 ? "mr-4"
                 : "ml-4"
             }`}
@@ -37,7 +37,7 @@ const GetStarted = () => {
           </div>
           <div
             className={`${
-              locale === "ar" || locale === "fa" || locale === "kd"
+              locale === "ar" || locale === "fa" || locale === "ku"
                 ? "mr-4"
                 : "ml-4"
             }`}
@@ -52,7 +52,7 @@ const GetStarted = () => {
           </div>
           <div
             className={`${
-              locale === "ar" || locale === "fa" || locale === "kd"
+              locale === "ar" || locale === "fa" || locale === "ku"
                 ? "mr-4"
                 : "ml-4"
             }`}
@@ -67,7 +67,7 @@ const GetStarted = () => {
           </div>
           <div
             className={`${
-              locale === "ar" || locale === "fa" || locale === "kd"
+              locale === "ar" || locale === "fa" || locale === "ku"
                 ? "mr-4"
                 : "ml-4"
             }`}

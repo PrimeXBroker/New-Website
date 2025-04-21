@@ -43,7 +43,7 @@ const SpreadMatter = () => {
                 className="custom-button-white-yellow px-6 py-4 mt-5 rounded-[12px] w-full sm:w-auto flex items-center justify-center gap-3 font-semibold "
               >
                 {t("btnTxt")}
-                {locale === "ar" || locale === "kd" ? (
+                {locale === "ar" || locale === "ku" ? (
                   <BsArrowUpLeftCircleFill />
                 ) : (
                   <BsArrowUpRightCircleFill />

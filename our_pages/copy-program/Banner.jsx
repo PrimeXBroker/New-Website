@@ -15,7 +15,7 @@ const Banner = () => {
           <div className="col-span-12 md:col-span-5">
             {/* <div
               className={`text-center md:text-start relative ${
-                locale === "ar" || locale === "fa" || locale === "kd"
+                locale === "ar" || locale === "fa" || locale === "ku"
                   ? "left-[137px]"
                   : "right-[137px]"
               }`}
@@ -35,7 +35,7 @@ const Banner = () => {
                 </span>
                 <span
                   className={`text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold text-[#FED100] mb-2 inline-block md:mb-1 lg:mb-2 ${
-                    locale === "ar" || locale === "fa" || locale === "kd"
+                    locale === "ar" || locale === "fa" || locale === "ku"
                       ? "mr-2 md:mr-2"
                       : "ml-2 md:ml-0"
                   }`}

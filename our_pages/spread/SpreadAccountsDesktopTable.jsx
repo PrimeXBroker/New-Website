@@ -102,7 +102,7 @@ const SpreadAccountsDesktopTable = () => {
             className="py-3 w-full font-semibold text-center custom-button-white-yellow text-sm mt-3 flex items-center gap-3 justify-center"
           >
             {t("standard.btnTxt")}
-            {locale === "ar" || locale === "kd" ? (
+            {locale === "ar" || locale === "ku" ? (
               <BsArrowUpLeftCircleFill />
             ) : (
               <BsArrowUpRightCircleFill />
@@ -115,7 +115,7 @@ const SpreadAccountsDesktopTable = () => {
             className="py-3 w-full font-semibold text-center custom-button-white-yellow text-sm mt-3 flex items-center gap-3 justify-center"
           >
             {t("narrow.btnTxt")}
-            {locale === "ar" || locale === "kd" ? (
+            {locale === "ar" || locale === "ku" ? (
               <BsArrowUpLeftCircleFill />
             ) : (
               <BsArrowUpRightCircleFill />
@@ -128,7 +128,7 @@ const SpreadAccountsDesktopTable = () => {
             className="py-3 w-full font-semibold text-center custom-button-white-yellow text-sm mt-3 flex items-center gap-3 justify-center"
           >
             {t("raw.btnTxt")}
-            {locale === "ar" || locale === "kd" ? (
+            {locale === "ar" || locale === "ku" ? (
               <BsArrowUpLeftCircleFill />
             ) : (
               <BsArrowUpRightCircleFill />

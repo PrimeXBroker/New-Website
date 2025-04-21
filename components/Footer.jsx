@@ -331,7 +331,7 @@ const Footer = () => {
                   ? "text-[#ffffff]"
                   : "text-[#ffffff]"
               } font-semibold ${
-                locale === "ar" || locale === "fa" || locale === "kd"
+                locale === "ar" || locale === "fa" || locale === "ku"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -352,7 +352,7 @@ const Footer = () => {
                   ? "text-[#dfdfdf]"
                   : "text-[#dfdfdf]"
               } ${
-                locale === "ar" || locale === "fa" || locale === "kd"
+                locale === "ar" || locale === "fa" || locale === "ku"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -456,7 +456,7 @@ const Footer = () => {
               >
                 <p
                   className={`text-primary font-semibold md:pt-0 pt-5 ${
-                    locale === "ar" || locale === "fa" || locale === "kd"
+                    locale === "ar" || locale === "fa" || locale === "ku"
                       ? "text-right"
                       : "text-left"
                   }`}
@@ -467,7 +467,7 @@ const Footer = () => {
                 {el.column.heading === "Platform" ? (
                   <ul
                     className={`pt-0 md:pt-2 text-sm ${
-                      locale === "ar" || locale === "fa" || locale === "kd"
+                      locale === "ar" || locale === "fa" || locale === "ku"
                         ? "text-right"
                         : "text-left"
                     }`}
@@ -479,7 +479,7 @@ const Footer = () => {
                           className={`text-white py-1 ${
                             language === "ar" ||
                             locale === "fa" ||
-                            locale === "kd"
+                            locale === "ku"
                               ? "text-right"
                               : "text-left"
                           }`}
@@ -494,7 +494,7 @@ const Footer = () => {
                 ) : (
                   <ul
                     className={`pt-0 md:pt-2 footer text-sm ${
-                      locale === "ar" || locale === "fa" || locale === "kd"
+                      locale === "ar" || locale === "fa" || locale === "ku"
                         ? "text-right"
                         : "text-left"
                     }`}
@@ -505,7 +505,7 @@ const Footer = () => {
                         className={`text-white py-1 ${
                           language === "ar" ||
                           locale === "fa" ||
-                          locale === "kd"
+                          locale === "ku"
                             ? "text-right"
                             : "text-left"
                         }`}
@@ -605,8 +605,8 @@ const Footer = () => {
                 href={`${
                   locale === "ar"
                     ? "https://www.instagram.com/primexcapital.ar/"
-                    : locale === "kd"
-                    ? "https://www.instagram.com/primexcapital.kd/"
+                    : locale === "ku"
+                    ? "https://www.instagram.com/primexcapital.ku/"
                     : "https://www.instagram.com/primexcapital.en/"
                 }`}
                 target="_blank"
@@ -621,7 +621,7 @@ const Footer = () => {
                 href={`${
                   locale === "ar"
                     ? "https://t.me/PrimeX_Capital_ar"
-                    : locale === "kd"
+                    : locale === "ku"
                     ? "https://t.me/primex_capital_kd"
                     : "https://t.me/PrimeX_Capital"
                 }`}

@@ -16,7 +16,7 @@ const Banner = () => {
             <div className="col-span-12 md:col-span-6 flex flex-col justify-center">
               {/* <div
                 className={`text-center md:text-start relative ${
-                  locale === "ar" || locale === "fa" || locale === "kd"
+                  locale === "ar" || locale === "fa" || locale === "ku"
                     ? "left-[137px]"
                     : "right-[137px]"
                 }`}
@@ -25,7 +25,7 @@ const Banner = () => {
               </div> */}
               <div
                 className={`${
-                  locale === "ar" || locale === "fa" || locale === "kd"
+                  locale === "ar" || locale === "fa" || locale === "ku"
                     ? "text-center md:text-right"
                     : "text-center md:text-left"
                 }`}
@@ -39,7 +39,7 @@ const Banner = () => {
               </div>
               <div
                 className={`${
-                  locale === "ar" || locale === "fa" || locale === "kd"
+                  locale === "ar" || locale === "fa" || locale === "ku"
                     ? "text-center md:text-right"
                     : "text-center md:text-left"
                 }`}
@@ -59,7 +59,7 @@ const Banner = () => {
               />
               <div
                 className={`relative top-[-40px] sm:top-[-46px] lg:top-[-59px] ${
-                  locale === "ar" || locale === "fa" || locale === "kd"
+                  locale === "ar" || locale === "fa" || locale === "ku"
                     ? "left-[-0%] sm:left-[-3%] lg:left-[16%]"
                     : "right-[-0%] sm:right-[-3%] lg:right-[16%]"
                 }`}

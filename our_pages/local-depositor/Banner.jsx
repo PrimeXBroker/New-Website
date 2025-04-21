@@ -13,7 +13,7 @@ const Banner = ({ setActive }) => {
         <div className="flex-1 flex flex-col justify-center items-enter md:items-start md:w-[70%]">
           <h1
             className={`text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#ffffff] pb-1 ${
-              locale === "ar" || locale === "fa" || locale === "kd"
+              locale === "ar" || locale === "fa" || locale === "ku"
                 ? "text-center md:text-right"
                 : "text-center md:text-left"
             }`}
@@ -23,7 +23,7 @@ const Banner = ({ setActive }) => {
 
           <p
             className={`text-[#c6c6c6] w-[95%] sm:w-[90%] mx-auto md:mx-0 md:w-[75%] mt-2 text-sm sm:text-base ${
-              locale === "ar" || locale === "fa" || locale === "kd"
+              locale === "ar" || locale === "fa" || locale === "ku"
                 ? "text-center md:text-right"
                 : "text-center md:text-left"
             }`}

@@ -60,7 +60,7 @@ const SpreadAccountMobileTable = () => {
                 {/* {tab !== "standard" && (
                 <div
                   className={`absolute ${
-                    locale === "ar" || locale === "fa" || locale === "kd"
+                    locale === "ar" || locale === "fa" || locale === "ku"
                       ? "top-[-42px] right-0"
                       : "top-[-42px] left-0"
                   } flex justify-center items-center w-[58px] h-[58px]`}
@@ -121,7 +121,7 @@ const SpreadAccountMobileTable = () => {
                 className="py-3 w-full font-semibold text-center custom-button-white-yellow text-sm mt-3 flex items-center gap-3 justify-center"
               >
                 {tabContent[activeTab].btnTxt}
-                {locale === "ar" || locale === "kd" ? (
+                {locale === "ar" || locale === "ku" ? (
                   <BsArrowUpLeftCircleFill />
                 ) : (
                   <BsArrowUpRightCircleFill />

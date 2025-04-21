@@ -40,7 +40,7 @@ const Hero = () => {
                 className="px-8 py-5 font-semibold mt-5 w-full sm:w-[70%] mx-auto md:mx-0 md:w-auto flex items-center justify-center gap-3 custom-button-yellow-white"
               >
                 {t("btnTxt")}
-                {locale === "ar" || locale === "kd" ? (
+                {locale === "ar" || locale === "ku" ? (
                   <BsArrowUpLeftCircleFill />
                 ) : (
                   <BsArrowUpRightCircleFill />

@@ -61,7 +61,7 @@ const WidgetCards = () => {
                 style={{ borderRadius: "8px" }}
               >
                 {t("widgetCards.btnTxt")}
-                {locale === "ar" || locale === "fa" || locale === "kd" ? (
+                {locale === "ar" || locale === "fa" || locale === "ku" ? (
                   <RiArrowLeftUpLine
                     className={`text-lg inline-block mr-1 text-[#111111] transition-transform duration-500 ease-in-out ${
                       hovered === widget.id ? "rotate-[-45deg]" : ""

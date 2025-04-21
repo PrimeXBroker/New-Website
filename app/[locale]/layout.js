@@ -74,15 +74,15 @@ const portada = localFont({
 });
 
 const hreflangLocales = [
-  { lng: "en-IQ", url: "en" },
-  { lng: "ar-IQ", url: "ar" },
-  { lng: "ckb-IQ", url: "kd" },
+  { lng: "en", url: "en" },
+  { lng: "ar", url: "ar" },
+  { lng: "ku", url: "ku" },
 ];
 
 export default async function layout({ children, params: { locale } }) {
   const messages = await getMessages();
   const detectLanguage = () => {
-    if (locale === "ar" || locale === "fa" || locale === "kd") {
+    if (locale === "ar" || locale === "fa" || locale === "ku") {
       return "rtl";
     } else {
       return "ltr";

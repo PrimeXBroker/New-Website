@@ -10,7 +10,7 @@ const JoinNow = () => {
     switch (locale) {
       case "ar":
         return "https://shorturl.at/ieMcJ";
-      case "kd":
+      case "ku":
         return "https://shorturl.at/JHkdW";
       default:
         return "https://shorturl.at/JzIEo";
