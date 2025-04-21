@@ -16,7 +16,7 @@ const Rewards = () => {
             <div className="relative">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Desktop-Iphone.svg"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Desktop-Iphone.png"
                 alt="Iphone"
                 width={100}
                 height={100}
@@ -63,7 +63,7 @@ const Rewards = () => {
             <div className="relative">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Cash+Reward+1000.svg"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Cash%2BReward%2B1000.png"
                 alt="Cash Reward 1000"
                 width={100}
                 height={100}
@@ -81,7 +81,7 @@ const Rewards = () => {
             <div className="relative">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Macbook.svg"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Macbook.png"
                 alt="Macbook"
                 width={100}
                 height={100}
@@ -102,7 +102,7 @@ const Rewards = () => {
           <div>
             <Image
               unoptimized={true}
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Handshake.svg"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Handshake.png"
               alt="Handshake"
               width={100}
               height={100}
@@ -116,7 +116,7 @@ const Rewards = () => {
             <div className="relative">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Cash+Reward+5000.svg"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Cash%2BReward%2B5000.png"
                 alt="Cash Reward 5000"
                 width={100}
                 height={100}
@@ -134,7 +134,7 @@ const Rewards = () => {
             <div className="relative">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Cash+Reward+20000.svg"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Cash%2BReward%2B20000.png"
                 alt="Cash Reward 20000"
                 width={100}
                 height={100}
@@ -180,8 +180,8 @@ const Rewards = () => {
                 unoptimized={true}
                 src={`${
                   locale === "ar" || locale === "fa" || locale === "kd"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Inverse-europe-Ar.svg"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Europe.svg"
+                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Inverse-europe-Ar.png"
+                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Europe.png"
                 }`}
                 alt="Europe"
                 width={100}
@@ -205,7 +205,7 @@ const Rewards = () => {
             <div className="relative">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Mercedes.svg"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Mercedes.png"
                 alt="Mercedes"
                 width={100}
                 height={100}
@@ -224,7 +224,7 @@ const Rewards = () => {
           <div className="relative">
             <Image
               unoptimized={true}
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Bentley+Bentayga.svg"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Bentley%2BBentayga.png"
               alt="Bentley Bentayga"
               width={100}
               height={100}
@@ -242,7 +242,7 @@ const Rewards = () => {
           <div className="relative">
             <Image
               unoptimized={true}
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/1+BHK+Apartment++in+Dubai.svg"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/1%2BBHK%2BApartment%2B%2Bin%2BDubai.png"
               alt="1 BHK Apartment in Dubai"
               width={100}
               height={100}
