@@ -9,8 +9,6 @@ export default function robots() {
       "https://www.primexcapital.com/sitemap.xml",
       "https://primexcapital.com/sitemap/en.xml",
       "https://primexcapital.com/sitemap/ar.xml",
-      "https://primexcapital.com/sitemap/fa.xml",
-      "https://primexcapital.com/sitemap/kd.xml",
       "https://primexcapital.com/sitemap/tr.xml",
       "https://primexcapital.com/sitemap/market-news-en.xml",
       "https://primexcapital.com/sitemap/market-news-ar.xml",

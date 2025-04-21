@@ -205,7 +205,7 @@ const Rewards = () => {
             <div className="relative">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Mercedes.png"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Mercedes.svg"
                 alt="Mercedes"
                 width={100}
                 height={100}
@@ -224,7 +224,7 @@ const Rewards = () => {
           <div className="relative">
             <Image
               unoptimized={true}
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Bentley%2BBentayga.png"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Bentley+Bentayga.svg"
               alt="Bentley Bentayga"
               width={100}
               height={100}

@@ -73,7 +73,7 @@ const portada = localFont({
   variable: "--font-portada",
 });
 
-const hreflangLocales = ["en", "ar", "fa", "kd", "tr"];
+const hreflangLocales = ["en-001", "ar-001", "ckb-001"];
 
 export default async function layout({ children, params: { locale } }) {
   const messages = await getMessages();
@@ -450,12 +450,12 @@ export default async function layout({ children, params: { locale } }) {
         <link
           rel="alternate"
           href="https://primexcapital.com/en/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e"
-          hreflang="en"
+          hreflang="en-001"
         />
         <link
           rel="alternate"
           href="https://primexcapital.com/ar/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e"
-          hreflang="ar"
+          hreflang="ar-001"
         />
         <link
           rel="alternate"
