@@ -74,9 +74,9 @@ const portada = localFont({
 });
 
 const hreflangLocales = [
-  { lng: "en-001", url: "en" },
-  { lng: "ar-001", url: "ar" },
-  { lng: "ckb-001", url: "kd" },
+  { lng: "en-IQ", url: "en" },
+  { lng: "ar-IQ", url: "ar" },
+  { lng: "ckb-IQ", url: "kd" },
 ];
 
 export default async function layout({ children, params: { locale } }) {
