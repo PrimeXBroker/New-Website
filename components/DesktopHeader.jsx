@@ -739,7 +739,7 @@ const DesktopHeader = ({ locale }) => {
                       href={
                         currentLocale === "ku"
                           ? `/${currentLocale}/${restOfPath}`
-                          : `/ku${restOfPath}`
+                          : `/ku/${restOfPath}`
                       }
                       onClick={() =>
                         handleClick(

@@ -280,7 +280,7 @@ const Footer = () => {
     <>
       <section
         className={`${
-          isLiquidityPage || isRamadanOfferPage || isSpreadPage
+          isLiquidityPage || isRamadanOfferPage || isSpreadPage || isHomePage
             ? "hidden"
             : isHomePage ||
               isIbPage ||
