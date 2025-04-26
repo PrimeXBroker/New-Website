@@ -6,6 +6,7 @@ import { getNews } from "@/actions/news";
 import Hero from "@/our_pages/market-news/Hero";
 import Testimonials from "@/our_pages/home/Testimonials";
 import { createTranslator } from "next-intl";
+import ClientReviews from "@/components/common/ClientReviews";
 
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../messages/${locale}.json`))
@@ -58,14 +59,17 @@ const page = async ({ params }) => {
   return (
     <>
       <Hero />
-      {(locale === "en" || locale === "ar" || locale === "ku") && (
+      {(locale === "en" ||
+        locale === "ar" ||
+        locale === "ku" ||
+        locale === "ps") && (
         <>
           <Banner news={news?.slice(0, 5)} />
           <MarketNews news={news} totalPages={totalPages} lang={lang} />
         </>
       )}
-      <div className="pb-10 sm:pb-14 bg-[#000000]">
-        <Testimonials />
+      <div className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
+        <ClientReviews />
       </div>
     </>
   );

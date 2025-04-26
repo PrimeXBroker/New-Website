@@ -1,7 +1,7 @@
-import HomePage from "@/our_pages/home/HomePage";
 import Script from "next/script";
 import { createTranslator } from "next-intl";
 import { GetLocation } from "@/components/GetLocation";
+import HomeWrapper from "@/our_pages/homepage/HomeWrapper";
 
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../messages/${locale}.json`)).default;
@@ -64,41 +64,41 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "PrimeX Capital",
-            "url": "https://www.primexcapital.com/en",
-            "logo": "https://www.primexcapital.com/_next/static/media/logo_black_v2.2.9e793512.svg",
-            "description": "At PrimeX Capital, we are dedicated to transforming the trading experience...",
-            "foundingDate": "2022",
-            "founder": {
+            name: "PrimeX Capital",
+            url: "https://www.primexcapital.com/en",
+            logo: "https://www.primexcapital.com/_next/static/media/logo_black_v2.2.9e793512.svg",
+            description:
+              "At PrimeX Capital, we are dedicated to transforming the trading experience...",
+            foundingDate: "2022",
+            founder: {
               "@type": "Person",
-              "name": "Ahmed Alarji"
+              name: "Ahmed Alarji",
             },
-            "contactPoint": {
+            contactPoint: {
               "@type": "ContactPoint",
-              "email": "support@primexcapital.com",
-              "telephone": "+971 800 774639",
-              "contactType": "Customer Support",
-              "areaServed": "UAE",
-              "availableLanguage": ["English", "Arabic"]
+              email: "support@primexcapital.com",
+              telephone: "+971 800 774639",
+              contactType: "Customer Support",
+              areaServed: "UAE",
+              availableLanguage: ["English", "Arabic"],
             },
-            "address": {
+            address: {
               "@type": "PostalAddress",
-              "streetAddress": "Westburry Office Tower...",
-              "addressLocality": "Dubai",
-              "addressRegion": "Dubai",
-              "addressCountry": "United Arab Emirates"
+              streetAddress: "Westburry Office Tower...",
+              addressLocality: "Dubai",
+              addressRegion: "Dubai",
+              addressCountry: "United Arab Emirates",
             },
-            "sameAs": [
+            sameAs: [
               "https://www.facebook.com/PrimeX.Capital.En",
               "https://x.com/PrimeXCapital",
               "https://www.instagram.com/primexcapital.en/",
-              "https://www.youtube.com/@primex.capital"
-            ]
-          })
+              "https://www.youtube.com/@primex.capital",
+            ],
+          }),
         }}
-        
       />
-      <HomePage />
+      <HomeWrapper />
     </>
   );
 }

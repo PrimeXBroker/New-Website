@@ -4,60 +4,45 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import AccountTypesPricingTable from "./AccountTypesPricingTable";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
+import CustomYellowButton from "@/components/common/CustomYellowButton";
 
 const AccountTypes = ({ accounts }) => {
   const locale = useLocale();
   const t = useTranslations("accountTypes.accountTypes");
 
   return (
-    <section className="bg-black text-white pt-10 pb-20 px-4">
+    <section className="bg-p dark:bg-p-dark text-tm dark:text-tm-dark py-16 sm:py-28 px-4">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="flex items-center justify-center md:justify-start">
             <h2
-              className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#FED100]`}
+              className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-pcp dark:text-pcp-dark`}
             >
               {t("main_title1")} <br className="hidden md:block" />
-              <span className="text-[#ffffff]"> {t("main_title2")}</span>
+              <span className="text-tm dark:text-tm-dark">
+                {" "}
+                {t("main_title2")}
+              </span>
             </h2>
           </div>
           {accounts.map((account) => (
             <>
               <div
                 key={account.id}
-                className={`bg-[#111111] p-6 rounded-xl border-2 border-[#1d1d1d] hover:shadow-xl flex flex-col justify-between relative ${
+                className={`bg-cc dark:bg-cc-dark p-6 rounded-xl flex flex-col justify-between relative ${
                   account.id !== 3 ? "mb-8 md:mb-0" : ""
                 }`}
               >
-                {/* {(account.id === 2 || account.id === 3) && (
-                  <div
-                    className={`absolute ${
-                      locale === "ar" || locale === "fa" || locale === "ku"
-                        ? "top-[-36px] right-0"
-                        : "top-[-36px] left-0"
-                    } flex justify-center items-center w-[58px] h-[58px]`}
-                  >
-                    <Image
-                      src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/account-types/Offer.svg"
-                      alt="Offer"
-                      width={58}
-                      height={58}
-                    />
-                    <span className="absolute inset-0 flex justify-center items-center text-[#ffffff] font-bold text-xs">
-                      {t("offer")}
-                    </span>
-                  </div>
-                )} */}
                 <div>
                   <div className="flex justify-between items-center">
                     <div className="flex items-start gap-3">
                       <div>
-                        <h3 className="text-xl sm:text-2xl font-semibold text-[#ffffff]">
+                        <h3 className="text-xl sm:text-2xl font-semibold text-tm dark:text-tm-dark">
                           {account.title}
                         </h3>
                       </div>
                     </div>
-                    <div className="w-[58px] h-[58px]">
+                    <div className="w-[54px] h-[54px]">
                       <Image
                         unoptimized={true}
                         src={account.icon}
@@ -68,16 +53,15 @@ const AccountTypes = ({ accounts }) => {
                       />
                     </div>
                   </div>
-                  <p className="text-[#c6c6c6] mt-4 text-sm sm:text-base">
+                  <p className="text-ts dark:text-ts-dark mt-4 text-sm sm:text-base">
                     {account.description}
                   </p>
                 </div>
-                <button
+                <CustomYellowButton
+                  title={account.btnTxt}
                   onClick={() => window.open(getRegisterUrl(locale))}
-                  className="py-3 w-full block font-semibold text-center custom-button text-sm mt-3"
-                >
-                  {account.btnTxt}
-                </button>
+                  className="py-5 md:py-4 lg:py-4 text-base w-full justify-between sm:justify-center mt-3"
+                />
               </div>
             </>
           ))}

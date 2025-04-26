@@ -51,11 +51,14 @@
       "description": "Trade Forex, stocks, indices, CFDs, and metals online UAE with PrimeX Capital. Access top trading tools and insights. Learn more and start trading today!"
     },
     "hero": {
-      "title": "The #1 Choice of World-class Traders",
+      "title1": "The ",
+      "title2": "#1 Choice ",
+      "title3": "of World-class Traders",
       "desc": "Trade with low commissions and raw spreads",
-      "title2": "REGULATED",
-      "review": "4.8/5 Excellent based on 2,400+ reviews",
-      "btnTxt": "Open Account"
+      "btnTxt1": "Open Account",
+      "btnTxt2": "Try Free Demo",
+      "imgTxt1": "Explore 330+",
+      "imgTxt2": "Trading Opportunities"
     },
     "stats": {
       "stat1": {
@@ -64,8 +67,7 @@
       },
       "stat2": {
         "title": "Paid-up Capital",
-        "value1": "$300+ ",
-        "value2": "Million"
+        "value1": "$300+ Million"
       },
       "stat3": {
         "title": "Introducing Brokers",
@@ -73,16 +75,30 @@
       },
       "stat4": {
         "title": "Daily Trades",
-        "value1": "$7+ ",
-        "value2": "Million"
+        "value1": "$7+ Million"
       }
     },
-    "tradingOpportunities": {
+    "promotions": {
       "title1": "Explore ",
-      "title2": "330+ ",
-      "title3": "Trading Opportunities",
-      "description": "Dive into a diverse array of assets including forex, indices, commodities, cryptocurrencies, and stocks.",
-      "btnTxt": "Open Account"
+      "title2": "Our Services",
+      "desc": "Discover tools and programs built for real trading results.",
+      "promotion1": {
+        "title": "50% Bonus",
+        "desc": "Boost your trading with our 50% Bonus Account"
+      },
+      "promotion2": {
+        "title": "IB Program",
+        "desc": "Earn up to $23 with PrimeX Capital's IB Program"
+      },
+      "promotion3": {
+        "title": "Social Trading",
+        "desc": "Start trading easily by copying expert strategies"
+      },
+      "promotion4": {
+        "title": "PrimeX Spreads",
+        "desc": "Trade Forex and Metals with the Best Spreads Ever"
+      },
+      "btnTxt": "Learn More"
     },
     "tradingWidget": {
       "title1": "Unlock",
@@ -115,32 +131,28 @@
     "advancedPlatforms": {
       "advance_platform_title_1": "Advanced Platform for ",
       "advance_platform_title_2": "Modern Traders",
+      "advance_platform_description": "Experience a cutting-edge platform built for modern traders—seamless performance, powerful analytics, and innovative tools to elevate your success.",
       "li1": "Advanced Analytical Tools",
-      "li2": "Community and Support",
-      "li3": "Superior Charting Capabilities",
-      "li4": "Multi-Asset Platform",
-      "li5": "Automated Trading",
-      "li6": "Improved Order Execution",
-      "li7": "Built-in Economic Calendar"
+      "li1_desc": "Make smart decisions with precision.",
+      "li2": "Dedicated Community & Support",
+      "li2_desc": "Connect with experts and peers anytime.",
+      "li3": "Powerful Charting Capabilities",
+      "li3_desc": "Visualize trends and seize opportunities.",
+      "li4": "All-in-One Multi-Asset Platform",
+      "li4_desc": "Trade seamlessly across various markets.",
+      "li5": "Seamless Automated Trading",
+      "li5_desc": "Boost output with smart automation.",
+      "li6": "Lightning-Fast Order Execution",
+      "li6_desc": "Enjoy reliable, lightning-speed trades.",
+      "li7": "Integrated Economic Calendar",
+      "li7_desc": "Stay updated with real-time insights.",
+      "btnTxt": "Open Account"
     },
     "testimonial": {
       "title1": "What Our ",
       "title2": "Clients ",
       "title3": "Are Saying",
-      "desc": "We’re proud to have a 4.8-star rating on Trustpilot with 2,200+ reviews. Hear what our satisfied customers have to say!"
-    },
-    "promotions": {
-      "main_title1": "Promotions and ",
-      "main_title2": "Offers",
-      "title1_1": "Get upto ",
-      "title1_2": "$25,000",
-      "title1_3": "Bonus",
-      "desc1_1": "Unlock a 20% deposit bonus and get more from your investment. Take advantage of this exclusive offer to increase your trading power and enhance your potential returns.",
-      "title2_1": "Funded ",
-      "title2_2": "Account",
-      "title2_3": "Competition",
-      "desc2_1": "Keep Yourself Updated with the Latest Insights and Emerging Trends in the Industry to Make Informed and Strategic Decisions for Continued Success.",
-      "start_btn": "Start Now"
+      "desc": "We’re proud to have a 4.8-star rating on Trustpilot with 2,000+ reviews. Hear what our satisfied customers have to say!"
     },
     "customerCare": {
       "customer_care_title1": "Always Here for ",
@@ -149,32 +161,62 @@
       "customer_care_li1_desc": "Always ready to assist",
       "customer_care_li2_title": "Multilingual Support",
       "customer_care_li2_desc": "Help available in multiple languages",
+      "description": "Experience seamless support with 24/7 Customer Care and Multilingual Assistance. We're ready to help you anytime, anywhere.",
       "customer_care_btn": "Contact Us"
     },
     "academy": {
-      "academy_title1": "PrimeX ",
-      "academy_title2": "Research Center",
-      "academy_desc": "Boost your trading experience with our trading tools available.",
-      "academy_card_1_title_1": "Free",
-      "academy_card_1_title_2": "Weekly Webinars",
-      "academy_card_1_desc_1": "Join our weekly live sessions with industry experts for valuable insights and professional guidance. Stay ahead with the latest trends, strategies, and tools.",
-      "academy_card_2_title_1": "Daily Market",
-      "academy_card_2_title_2": "Updates",
-      "academy_card_2_desc_1": "Get daily market news on Forex, commodities, economies, and stocks. Stay informed and make better trading decisions.",
-      "academy_card_3_title_1": "Expert Market",
-      "academy_card_3_title_2": "Analysis",
-      "academy_card_3_desc_1": "Stay updated with the latest insights and emerging trends to make informed and strategic decisions for long-term success.",
-      "academy_card_4_title_1": "Economic",
-      "academy_card_4_title_2": "Calendar",
-      "academy_card_4_desc_1": "Track high-impact economic events and key market data. Stay informed with real-time updates and make smarter investment decisions.",
-      "academy_card_5_title_1": "Learn & Stay",
-      "academy_card_5_title_2": "Updated",
-      "academy_card_5_desc_1": "Build a strong trading foundation with expert resources. Stay updated on press releases, education, and company news."
+      "academy_title1": "PrimeX Academy ",
+      "academy_title2": "Learn & Grow",
+      "academy_desc": "Boost your trading skills with our extensive educational resources and expert guidance.",
+      "academy_card_1_title_1": "Free Webinars",
+      "academy_card_1_desc_1": "Join live sessions with industry experts for valuable insights and professional guidance. Stay ahead with the latest trends, strategies, and tools.",
+      "academy_card_2_title_1": "Daily Market Updates",
+      "academy_card_2_desc_1": "Stay ahead with daily market news and expert analysis on Forex, Commodities, Economies, and Stocks. Get the insights you need for informed trading decisions.",
+      "academy_card_3_title_1": "Expert Market Analysis",
+      "academy_card_3_desc_1": "Keep Yourself Updated with the Latest Insights and Emerging Trends in the Industry to Make Informed and Strategic Decisions for Continued Success."
     },
     "ourRecognition": {
       "our_recognition_title1": "Our ",
       "our_recognition_title2": "Recognition",
-      "our_recognition_desc": "We’re honored to receive industry accolades for our excellence and innovation"
+      "our_recognition_desc": "We’re honored to receive industry accolades for our excellence and innovation",
+      "award1_badge": "Best Innovative",
+      "award1_title1": "Broker",
+      "award1_desc": "Oman Smart Vision Summit",
+      "award2_badge": "Best",
+      "award2_title1": "Forex Broker",
+      "award2_title2": "in South Africa",
+      "award2_desc": "Traders Fair & Award 2024",
+      "award3_badge": "Best Global",
+      "award3_title1": "Broker 2024",
+      "award3_desc": "Forex Expo Dubai",
+      "award4_badge": "Top 100 Trusted",
+      "award4_title1": "Financial",
+      "award4_title2": "Institutions 2024",
+      "award4_desc": "MEFM Awards Dubai 2024",
+      "award5_badge": "Best Retail FX",
+      "award5_title1": "Broker 2024",
+      "award5_desc": "MEFM Awards Dubai 2024",
+      "award6_badge": "Best",
+      "award6_title1": "ECN Broker",
+      "award6_desc": "Money Expo Mumbai",
+      "award7_badge": "Best",
+      "award7_title1": "Copy Program",
+      "award7_desc": "World Business Outlook",
+      "award8_badge": "Best Forex",
+      "award8_title1": "ECN Broker",
+      "award8_desc": "Forex Expo Dubai",
+      "award9_badge": "Most Reliable",
+      "award9_title1": "Forex Broker",
+      "award9_desc": "Global Business & Finance Magazine",
+      "award10_badge": "Most Trusted",
+      "award10_title1": "ECN Broker",
+      "award10_desc": "International Business Magazine",
+      "award11_badge": "Best Copy Trading",
+      "award11_title1": "Forex Broker",
+      "award11_desc": "Egypt Expo",
+      "award12_badge": "Top 100 Trusted",
+      "award12_title1": "Brokerages",
+      "award12_desc": "MEFM Awards Dubai"
     },
     "cookie": {
       "text": "By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
@@ -189,13 +231,13 @@
     },
     "partnerships": {
       "title1": "Earn Big With ",
-      "title2": "PrimeX",
+      "title2": "PrimeX ",
       "title3": "Partnership ",
       "title4": "Programs!",
       "description": "Maximize your earnings with flexible commission structures, high rebates, dedicated 24/7 support, exciting reward programs and exclusive benefits through PrimeX Partnership Programs!",
-      "ib_btn": "Introducing Broker Program",
-      "grey_label_btn": "Grey Label Program",
-      "regional_btn": "Regional Partner Program"
+      "ib_btn": "Introducing Broker",
+      "grey_label_btn": "Grey Label",
+      "regional_btn": "Regional Partner"
     }
   },
   "webinar": {
@@ -804,7 +846,8 @@
       "get_started_title": "Get Started with PrimeX Capital",
       "get_started_desc_1": "Ready to elevate your trading experience? Join PrimeX Capital and ",
       "get_started_desc_2": "explore our advanced trading features and special offers.",
-      "get_started_btn": "Open Live Account"
+      "get_started_btn": "Open Live Account",
+      "get_started_btn1": "Open Account"
     },
     "footerNotice": {
       "heading_1": "PrimeX Capital Ltd",
@@ -1416,17 +1459,17 @@
       "acc1": {
         "title": "Standard",
         "description": "Favored for no-swap commissions, offering cost-effective trading with no hidden fees.",
-        "btnTxt": "Open Standard Account"
+        "btnTxt": "Standard Account"
       },
       "acc2": {
         "title": "Narrow",
         "description": "Built for scalpers, offering the lowest spreads to optimize short-term profits.",
-        "btnTxt": "Open Narrow Account"
+        "btnTxt": "Narrow Account"
       },
       "acc3": {
         "title": "Raw",
         "description": "Designed for pros, delivering raw spreads for an unmatched trading experience.",
-        "btnTxt": "Open Raw Account"
+        "btnTxt": "Raw Account"
       }
     },
     "accountsTable": {
@@ -1465,7 +1508,7 @@
         "demoAccount": "✔",
         "webinars": "Weekly",
         "expertAdvice": "Above $1,000",
-        "btnTxt": "Open Standard Account"
+        "btnTxt": "Standard Account"
       },
       "narrow": {
         "title": "Narrow",
@@ -1485,7 +1528,7 @@
         "demoAccount": "✔",
         "webinars": "Weekly",
         "expertAdvice": "Above $1,000",
-        "btnTxt": "Open Narrow Account"
+        "btnTxt": "Narrow Account"
       },
       "raw": {
         "title": "Raw",
@@ -1505,7 +1548,7 @@
         "demoAccount": "✔",
         "webinars": "Weekly",
         "expertAdvice": "Above $1,000",
-        "btnTxt": "Open Raw Account"
+        "btnTxt": "Raw Account"
       }
     },
     "faq": {
@@ -1796,7 +1839,7 @@
       "review_date_5": "August 01, 2024",
       "review_name_6": "Yousef",
       "review_title_6": "The Best Decision for My Trading Journey",
-      "review_description_6": "For my trading journey, enrolling in PrimeX Academy was the best choice I could have made. The expert insights and hands-on guidance have been invaluable. I’ve seen significant improvements in my strategies and results.",
+      "review_description_6": "For my trading journey, enrolling in PrimeX Academy was the best choice I could have made. The expert insights and hands-on guidance have been invaluable. I’ve seen significant improvements in my strategies.",
       "review_country_6": "UAE",
       "review_date_6": "July 29, 2024",
       "review_name_7": "Hussain",
@@ -1813,7 +1856,16 @@
       "review_title_9": "Gain Confidence and Skills to Excel in Trading",
       "review_description_9": "The level of detail and expertise at PrimeX Academy is phenomenal. It’s more than just learning; it’s about gaining the skills and confidence to excel in the trading world. I couldn’t be happier with my experience.",
       "review_country_9": "KSA",
-      "review_date_9": "August 10, 2024"
+      "review_date_9": "August 10, 2024",
+      "rating1": "5.0",
+      "rating2": "5.0",
+      "rating3": "5.0",
+      "rating4": "5.0",
+      "rating5": "5.0",
+      "rating6": "5.0",
+      "rating7": "5.0",
+      "rating8": "5.0",
+      "rating9": "5.0"
     },
     "blogsTabs": {
       "tab1_title": "PrimeX Learning Hub",
@@ -1844,36 +1896,36 @@
       "title2": "Best Forex Broker in South Africa",
       "subtitle2": "Traders Fair & Award 2024",
       "description2": "We are proud to announce that PrimeX Capital has been awarded Best Forex Broker in South Africa at the Traders Fair and Awards 2024, based on the votes of traders \"Traders Choice\".",
-      "title3": "Best Retail FX Broker",
-      "subtitle3": "MEFM Awards Dubai",
-      "description3": "Celebrated as the Best Retail FX Broker for outstanding financial service and performance at the PROFX Awards Dubai 2024.",
+      "title5": "Best Retail FX Broker",
+      "subtitle5": "MEFM Awards Dubai",
+      "description5": "Celebrated as the Best Retail FX Broker for outstanding financial service and performance at the PROFX Awards Dubai 2024.",
       "title4": "Top 100 Trusted Financial Institutions",
       "subtitle4": "MEFM Awards Dubai",
       "description4": "Recognized as the Top 100 Trusted Financial Institutions in the Middle East Financial Markets Awards 2024 for delivering excellence in financial services.",
-      "title5": "Best Global Broker 2024",
-      "subtitle5": "ForeX Expo Dubai",
-      "description5": "Honored with the Best Global Brokerage award worldwide for unwavering commitment towards innovation in forex trading at the Dubai Forex Expo 2024.",
-      "title6": "Top 100 Trusted Brokerages",
-      "subtitle6": "MEFM Awards Dubai",
-      "description6": "Recognized as the Top 100 Trusted Brokerages in the Middle East Financial Markets Awards 2023 for delivering excellence in financial services.",
-      "title7": "Best Copy Trading Forex Broker",
-      "subtitle7": "EGYPT EXPO",
-      "description7": "Earned a premier award of Best Copy Trading Forex Broker in Africa for 2023 for outstanding copy trading and client services.",
-      "title8": "Most Trusted ECN Broker",
-      "subtitle8": "International Business  Magazine",
-      "description8": "Garnered immense success with The Most Trusted ECN Broker in the UAE for 2023 due to commitment to transparency and fair trading practices.",
+      "title3": "Best Global Broker 2024",
+      "subtitle3": "ForeX Expo Dubai",
+      "description3": "Honored with the Best Global Brokerage award worldwide for unwavering commitment towards innovation in forex trading at the Dubai Forex Expo 2024.",
+      "title12": "Top 100 Trusted Brokerages",
+      "subtitle12": "MEFM Awards Dubai",
+      "description12": "Recognized as the Top 100 Trusted Brokerages in the Middle East Financial Markets Awards 2023 for delivering excellence in financial services.",
+      "title11": "Best Copy Trading Forex Broker",
+      "subtitle11": "EGYPT EXPO",
+      "description11": "Earned a premier award of Best Copy Trading Forex Broker in Africa for 2023 for outstanding copy trading and client services.",
+      "title10": "Most Trusted ECN Broker",
+      "subtitle10": "International Business  Magazine",
+      "description10": "Garnered immense success with The Most Trusted ECN Broker in the UAE for 2023 due to commitment to transparency and fair trading practices.",
       "title9": "Most Reliable Forex Broker",
       "subtitle9": "Global Business & Finance Magazine",
       "description9": "Celebrated as the Most Reliable Forex Broker Middle East for 2023 with unwavering hard work to win client trust through top-quality trading services.",
-      "title10": "BEST Forex ECN Broker",
-      "subtitle10": "FOREX EXPO DUBAI",
-      "description10": "Proudly rose as Best Forex ECN Broker at Expo Dubai 2023 for the excellence in providing efficient, advanced, and customizable trading solutions.",
-      "title11": "Best Copy Program",
-      "subtitle11": "World Business Outlook",
-      "description11": "Won Best Copy Trading Program in the UAE for 2023, highlighting advancement and top-tier copy trading strategies.",
-      "title12": "Best ECN Broker",
-      "subtitle12": "Money Expo Mumbai",
-      "description12": "Shined out as Best ECN Broker at the India Financial Expo 2023 for exceptional trading infrastructure and commitment to client success.",
+      "title8": "BEST Forex ECN Broker",
+      "subtitle8": "FOREX EXPO DUBAI",
+      "description8": "Proudly rose as Best Forex ECN Broker at Expo Dubai 2023 for the excellence in providing efficient, advanced, and customizable trading solutions.",
+      "title7": "Best Copy Program",
+      "subtitle7": "World Business Outlook",
+      "description7": "Won Best Copy Trading Program in the UAE for 2023, highlighting advancement and top-tier copy trading strategies.",
+      "title6": "Best ECN Broker",
+      "subtitle6": "Money Expo Mumbai",
+      "description6": "Shined out as Best ECN Broker at the India Financial Expo 2023 for exceptional trading infrastructure and commitment to client success.",
       "awardYear1": "2025",
       "awardYear2": "2024",
       "awardYear3": "2024",

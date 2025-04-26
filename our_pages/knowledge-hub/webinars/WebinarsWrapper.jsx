@@ -14,7 +14,10 @@ const WebinarsWrapper = () => {
   return (
     <>
       <Banner setActive={setActive} />
-      {(locale === "en" || locale === "ar" || locale === "ku") && (
+      {(locale === "en" ||
+        locale === "ar" ||
+        locale === "ku" ||
+        locale === "ps") && (
         <>
           <Webinars active={active} setActive={setActive} />
           <PrivateSessions setActive={setActive} />

@@ -141,14 +141,14 @@ function ComplaintForm() {
           className="flex flex-col justify-center items-center relative gap-4"
         >
           <div className="w-full my-4">
-            <h2 className="text-[24px] font-semibold text-[#ffffff] mb-1">
+            <h2 className="text-[24px] font-semibold text-tm dark:text-tm-dark mb-1">
               {t("title")}
             </h2>
-            <p className="text-xs text-[#c6c6c6]">{t("desc")}</p>
+            <p className="text-xs text-ts dark:text-ts-dark">{t("desc")}</p>
           </div>
           <div className="md:flex w-full justify-between">
             <div className="w-full md:w-[48%] mb-3 md:mb-0">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("first_name_label")}
                 <input
                   type="text"
@@ -157,16 +157,16 @@ function ComplaintForm() {
                   onBlur={formik.handleBlur}
                   value={formik.values.first_name}
                   placeholder={t("first_name_placeholder")}
-                  className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.first_name && formik.errors.first_name
-                      ? "border border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                 />
               </label>
             </div>
             <div className="w-full md:w-[48%] ">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("last_name_label")}
                 <input
                   type="text"
@@ -175,9 +175,9 @@ function ComplaintForm() {
                   onBlur={formik.handleBlur}
                   value={formik.values.last_name}
                   placeholder={t("last_name_placeholder")}
-                  className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.last_name && formik.errors.last_name
-                      ? "border border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                 />
@@ -186,7 +186,7 @@ function ComplaintForm() {
           </div>
           <div className="md:flex w-full justify-between">
             <div className="w-full md:w-[48%] mb-3 md:mb-0">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("email_label")}
                 <input
                   type="email"
@@ -195,16 +195,16 @@ function ComplaintForm() {
                   onBlur={formik.handleBlur}
                   value={formik.values.email}
                   placeholder={t("email_placeholder")}
-                  className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.email && formik.errors.email
-                      ? "border-b border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                 />
               </label>
             </div>
             <div className="w-full md:w-[48%] ib-contact">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("contact_label")}
                 <PhoneInput
                   international
@@ -213,9 +213,9 @@ function ComplaintForm() {
                   onBlur={formik.handleBlur}
                   name="contact"
                   value={formik.values.contact}
-                  className={`ib-phone-input appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`ib-phone-input appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.contact && formik.errors.contact
-                      ? "border-b border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                   placeholder={t("number")}
@@ -225,12 +225,12 @@ function ComplaintForm() {
           </div>
           <div className="md:flex w-full justify-between">
             <div className="w-full md:w-[48%] mb-3 md:mb-0">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("country_label")}
                 <select
-                  className={`capitalize py-[16px] px-[12px] w-full text-base focus:outline-none border-2 border-[#222222] bg-[#1d1d1d]  text-[#c6c6c6] ${
+                  className={`capitalize py-[16px] px-[12px] w-full text-base focus:outline-none border border-e1 dark:border-e1-dark text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark ${
                     formik.touched.country && formik.errors.country
-                      ? "border border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                   name="country"
@@ -238,7 +238,7 @@ function ComplaintForm() {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                 >
-                  <option value="" className="text-[#c6c6c6]">
+                  <option value="" className="text-ts dark:text-ts-dark">
                     {t("country_placeholder")}
                   </option>
                   {nationality.map((country, index) => {
@@ -246,7 +246,7 @@ function ComplaintForm() {
                       <option
                         key={index}
                         value={country.en_short_name}
-                        className="text-black bg-white"
+                        className="text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark"
                       >
                         {country.en_short_name}
                       </option>
@@ -256,12 +256,12 @@ function ComplaintForm() {
               </label>
             </div>
             <div className="w-full md:w-[48%] mb-3 md:mb-0">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("query_category_label")}
                 <div
-                  className={`bg-[#1d1d1d] text-[#c6c6c6] border-2 border-[#222222] rounded-[4px] py-[16px] px-[12px] w-full flex justify-between items-center cursor-pointer text-base ${
+                  className={`text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark rounded-[4px] py-[16px] px-[12px] w-full flex justify-between items-center cursor-pointer text-base ${
                     formik.touched.qtype && formik.errors.qtype
-                      ? "border-b border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                   onClick={() => setIsOpenDropdown(!isOpenDropdown)}
@@ -276,11 +276,11 @@ function ComplaintForm() {
                   )}
                 </div>
                 {isOpenDropdown && (
-                  <ul className="absolute left-0 right-0 mt-2 bg-[#1d1d1d] border-2 border-[#222222] rounded-[4px] z-10 text-base">
+                  <ul className="absolute left-0 right-0 mt-2 bg-e1 dark:bg-e1-dark rounded-[4px] z-10 text-base">
                     {questionTypes.map((option) => (
                       <li
                         key={option.id}
-                        className="py-[16px] px-[12px] cursor-pointer hover:bg-[#ffffff] hover:text-[#111111] text-[#c6c6c6] text-base"
+                        className="py-[16px] px-[12px] cursor-pointer hover:bg-tm dark:hover:bg-tm-dark hover:text-p dark:hover:text-p-dark text-ts dark:text-ts-dark text-base"
                         onClick={() => handleOptionClick(option)}
                       >
                         {option.name}
@@ -292,7 +292,7 @@ function ComplaintForm() {
             </div>
           </div>
           <div className="w-full">
-            <label className="text-xs text-[#c6c6c6]">
+            <label className="text-xs text-ts dark:text-ts-dark">
               {t("question_label")}
               <textarea
                 name="message"
@@ -301,21 +301,22 @@ function ComplaintForm() {
                 value={formik.values.message}
                 rows="4"
                 placeholder={t("question_placeholder")}
-                className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                className={`appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                   formik.touched.message && formik.errors.message
-                    ? "border-b border-red-600"
+                    ? "border border-rc dark:border-rc-dark"
                     : ""
                 }`}
               />
             </label>
           </div>
           <div className="w-full">
-            <p className="text-xs text-[#c6c6c6] mb-1">{t("condition")}</p>
+            <p className="text-xs text-ts dark:text-ts-dark mb-1">
+              {t("condition")}
+            </p>
 
             <button
               disabled={loading}
-              className="font-semibold py-[16px] px-[10px] text-[#111111] w-full custom-button"
-              style={{ borderRadius: "5px" }}
+              className="transition-colors duration-300 ease-in-out rounded-lg font-bold w-full flex items-center justify-center gap-3 group bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark group py-4 px-3"
             >
               <div className="flex gap-1 items-center justify-center">
                 {loading ? (
@@ -338,15 +339,11 @@ function ComplaintForm() {
               </ModalHeader>
               <ModalBody>
                 <p>{t("success_desc")}</p>
-                {/* <p>Thank you for choosing PrimeX Capital</p> */}
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
                   {t("close_btn")}
                 </Button>
-                {/* <Button color="primary" onPress={onClose}>
-                  Action
-                </Button> */}
               </ModalFooter>
             </>
           )}

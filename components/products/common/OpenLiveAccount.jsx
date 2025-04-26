@@ -1,6 +1,9 @@
+"use client";
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
+import CustomYellowButton from "@/components/common/CustomYellowButton";
+import { useTheme } from "next-themes";
 
 const OpenLiveAccount = ({
   title_part1,
@@ -10,47 +13,53 @@ const OpenLiveAccount = ({
   description,
 }) => {
   const locale = useLocale();
+  const { theme } = useTheme();
   const t = useTranslations("productsPageCommon");
 
   return (
-    <section className="bg-[#000000]">
+    <section className="bg-p dark:bg-p-dark">
       <div className="container">
         <div
-          className="bg-cover md:px-10 xl:px-16 h-[240px] lg:h-[310px] border-2 border-[#1D1D1D] rounded-[20px] flex flex-col justify-center"
-          style={{
-            backgroundImage:
-              "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-instruments/open-acc-bg.webp')",
-          }}
+          className="md:px-10 xl:px-16 h-[240px] bg-cover bg-center bg-cc dark:bg-cc-dark lg:h-[310px] rounded-[20px] flex flex-col justify-center"
+          style={
+            theme === "dark"
+              ? {
+                  backgroundImage:
+                    "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/why-choose-us/CTA+BG+Desktop.webp')",
+                }
+              : {
+                  backgroundImage:
+                    "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/CTA+Desktop+Light.webp')",
+                }
+          }
         >
           <div
             className={`${
-              locale === "ar" || locale === "fa" || locale === "ku"
+              locale === "ar" || locale === "ps" || locale === "ku"
                 ? "text-center md:text-right"
                 : "text-center md:text-left"
             }`}
           >
-            <h2 className="text-[#ffffff] text-2xl lg:text-4xl font-semibold">
+            <h2 className="text-tm dark:text-tm-dark text-2xl lg:text-4xl font-semibold">
               {title_part1}
-              <span className="text-[#FED100]">{title_part2}</span>
+              <span className="text-pcp dark:text-pcp-dark">{title_part2}</span>
               {title_part3}
-              <span className="text-[#FED100]">{title_part4}</span>
+              <span className="text-pcp dark:text-pcp-dark">{title_part4}</span>
             </h2>
-            <p className="text-[#c6c6c6] pt-4">{description}</p>
+            <p className="text-ts dark:text-ts-dark pt-4">{description}</p>
           </div>
           <div
             className={`mt-8 ${
-              locale === "ar" || locale === "fa" || locale === "ku"
+              locale === "ar" || locale === "ps" || locale === "ku"
                 ? "text-center md:text-right"
                 : "text-center md:text-left"
             }`}
           >
-            <a
-              href={getRegisterUrl(locale)}
-              target="_blank"
-              className="py-4 text-sm px-20 sm:px-4 lg:text-base lg:px-6 font-semibold custom-button"
-            >
-              {t("open_account_btn")}
-            </a>
+            <CustomYellowButton
+              title={t("open_account_btn")}
+              onClick={() => window.open(getRegisterUrl(locale))}
+              className="py-[16px] px-[46px] font-semibold w-full sm:w-72 md:w-auto custom-button"
+            />
           </div>
         </div>
       </div>

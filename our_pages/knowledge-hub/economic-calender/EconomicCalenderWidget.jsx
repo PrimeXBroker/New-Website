@@ -1,7 +1,10 @@
 "use client";
+import { useTheme } from "next-themes";
 import { useEffect } from "react";
 
 const EconomicCalendarWidget = () => {
+  const { theme } = useTheme();
+
   useEffect(() => {
     const widgetContainer = document.getElementById("economicCalendarWidget");
     if (!widgetContainer) return;
@@ -17,7 +20,7 @@ const EconomicCalendarWidget = () => {
         width: "100%",
         height: "100%",
         mode: "2",
-        theme: 1,
+        ...(theme === "dark" && { theme: 1 }),
       })
     );
 
@@ -32,9 +35,9 @@ const EconomicCalendarWidget = () => {
   }, []);
 
   return (
-    <section className="bg-[#000000] py-10">
+    <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
       <div className="container">
-        <div className="bg-[#111111] border-2 border-[#1d1d1d] rounded-xl p-4 h-[800px]">
+        <div className="bg-cc dark:bg-cc-dark rounded-xl p-4 h-[800px]">
           <div id="economicCalendarWidget" className="w-full h-full"></div>
         </div>
       </div>

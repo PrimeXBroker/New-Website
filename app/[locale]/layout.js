@@ -20,6 +20,8 @@ import VideoPopup from "@/components/VideoPopup";
 import ImageView from "@/components/ImageView";
 import NotificationHandler from "@/components/NotificationHandler";
 import RedirectHandler from "@/components/RedirectHandler";
+import ThemeToggle from "@/components/common/ThemeToggle";
+import ThemeProviderWrapper from "@/context/theme-provider";
 
 const montserrat = localFont({
   src: [
@@ -82,7 +84,7 @@ const hreflangLocales = [
 export default async function layout({ children, params: { locale } }) {
   const messages = await getMessages();
   const detectLanguage = () => {
-    if (locale === "ar" || locale === "fa" || locale === "ku") {
+    if (locale === "ar" || locale === "ps" || locale === "ku") {
       return "rtl";
     } else {
       return "ltr";
@@ -341,21 +343,24 @@ export default async function layout({ children, params: { locale } }) {
           <div dir={direction}>
             <NextUIProvider>
               <NextIntlClientProvider messages={messages}>
-                <RedirectHandler />
-                <NotificationHandler />
-                <ImageView />
-                <VideoPopup />
-                <DesktopHeader locale={locale} />
-                <MobileHeader locale={locale} />
-                {children}
-                <Toaster
-                  toastOptions={{
-                    duration: 5000,
-                  }}
-                />
-                <FacebookPixelEvents />
-                <Footer />
-                <Cookies />
+                <ThemeProviderWrapper>
+                  <RedirectHandler />
+                  <NotificationHandler />
+                  <ImageView />
+                  <VideoPopup />
+                  <DesktopHeader locale={locale} />
+                  <MobileHeader locale={locale} />
+                  {children}
+                  <ThemeToggle />
+                  <Toaster
+                    toastOptions={{
+                      duration: 5000,
+                    }}
+                  />
+                  <FacebookPixelEvents />
+                  <Footer />
+                  <Cookies />
+                </ThemeProviderWrapper>
               </NextIntlClientProvider>
             </NextUIProvider>
           </div>

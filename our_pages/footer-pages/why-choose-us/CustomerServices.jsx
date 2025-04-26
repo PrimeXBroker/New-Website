@@ -9,45 +9,45 @@ const CustomerServices = () => {
 
   const steps = [
     {
-      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/why-choose-us/Dedicated+Customer+Services++1.webp",
+      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/why-choose-us/dedicated-service-1.webp",
       alt: "Step 1",
       label: t("step1"),
     },
     {
-      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/why-choose-us/Dedicated+Customer+Services++2.webp",
+      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/why-choose-us/dedicated-service-2.webp",
       alt: "Step 2",
       label: t("step2"),
     },
     {
-      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/why-choose-us/Dedicated+Customer+Services++3.webp",
+      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/why-choose-us/dedicated-service-3.webp",
       alt: "Step 3",
       label: t("step3"),
     },
     {
-      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/why-choose-us/Dedicated+Customer+Services++4.webp",
+      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/why-choose-us/dedicated-service-4.webp",
       alt: "Step 4",
       label: t("step4"),
     },
     {
-      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/why-choose-us/Dedicated+Customer+Services++5.webp",
+      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/why-choose-us/dedicated-service-5.webp",
       alt: "Step 5",
       label: t("step5"),
     },
     {
-      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/why-choose-us/Dedicated+Customer+Services++6.webp",
+      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/why-choose-us/dedicated-service-6.webp",
       alt: "Step 6",
       label: t("step6"),
     },
   ];
 
   return (
-    <section className="bg-[#000000] py-16 sm:py-28">
+    <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
       <div className="container">
-        <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff] text-center mb-10">
+        <h2 className="text-2xl md:text-4xl font-semibold text-tm dark:text-tm-dark text-center mb-10">
           <span className="text-[#FED100]">{t("title_part1")}</span>{" "}
           {t("title_part2")}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 bg-[#111111] border-2 border-[#1D1D1D] rounded-2xl text-[#ffffff] px-10 lg:px-14 pt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 bg-cc dark:bg-cc-dark rounded-2xl text-tm dark:text-tm-dark px-10 lg:px-14 pt-10">
           {steps.map((step, index) => (
             <div key={index} className="group mb-6 md:mb-10">
               <Image

@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 
 const Mission = () => {
   const locale = useLocale();
+  const { theme } = useTheme();
   const t = useTranslations("about.mission");
 
   const missionCards = [
@@ -10,50 +13,56 @@ const Mission = () => {
       id: 1,
       title: t("mission_title"),
       description: t("mission_desc"),
-      imgUrl:
+      imgUrlDark:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/about/new-about/Mission.svg",
+      imgUrlLight:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/about-us/low-price_8922469.svg",
     },
     {
       id: 2,
       title: t("vision_title"),
       description: t("vision_desc"),
-      imgUrl:
+      imgUrlDark:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/about/new-about/Vision.svg",
+      imgUrlLight:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/about-us/growth_10106238.svg",
     },
   ];
 
   return (
-    <section className="bg-[#000000] py-5 sm:py-20">
+    <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
       <div className="container">
-        <div className="py-4 flex flex-col justify-center items-center md:flex-row border-[#1D1D1D] border-2 bg-[#111111] rounded-2xl">
+        <div className="py-4 flex flex-col justify-center items-center md:flex-row bg-cc dark:bg-cc-dark rounded-2xl">
           {missionCards.map((card, index) => (
             <div
               key={card.id}
               className={`flex items-center group p-8 ${
                 index === 0
                   ? `${
-                      locale === "ar" || locale === "fa" || locale === "ku"
-                        ? "md:border-l-2 md:border-[#1D1D1D] md:pl-12"
-                        : "md:border-r-2 md:border-[#1D1D1D] md:pr-12"
+                      locale === "ar" || locale === "ps" || locale === "ku"
+                        ? "md:border-l-2 md:border-e1 md:dark:border-e1-dark md:pl-12"
+                        : "md:border-r-2 md:border-e1 md:dark:border-e1-dark md:pr-12"
                     }`
                   : "md:pl-12"
               } ${
                 index !== missionCards.length - 1
-                  ? "border-b-2 md:border-b-0 border-[#1D1D1D]"
+                  ? "border-b-2 md:border-b-0 border-e1 dark:border-e1-dark"
                   : ""
               }`}
             >
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <h2
-                    className="text-[#ffffff] text-2xl sm:text-3xl font-semibold"
+                    className="text-tm dark:text-tm-dark text-2xl sm:text-3xl font-semibold"
                     style={{ letterSpacing: "1.2px" }}
                   >
                     {card.title}
                   </h2>
-                  <div className="w-14 h-14 border-2 border-[#222222] bg-[#1D1D1D] rounded-lg flex items-center justify-center">
+                  <div className="w-14 h-14 bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center">
                     <Image
-                      src={card.imgUrl}
+                      src={
+                        theme === "dark" ? card.imgUrlDark : card.imgUrlLight
+                      }
                       alt={card.title}
                       width="500"
                       height="100"
@@ -61,7 +70,7 @@ const Mission = () => {
                     />
                   </div>
                 </div>
-                <p className="text-[#c6c6c6] text-sm sm:text-[15px]">
+                <p className="text-ts dark:text-ts-dark text-sm sm:text-[15px]">
                   {card.description}
                 </p>
               </div>

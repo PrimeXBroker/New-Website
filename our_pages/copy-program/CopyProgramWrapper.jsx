@@ -78,7 +78,9 @@ const CopyProgramWrapper = () => {
       <Benefits />
       <Steps />
       <PrimeTrade />
-      <FAQ faqs={faqs} />
+      <div className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
+        <FAQ faqs={faqs} />
+      </div>
     </>
   );
 };

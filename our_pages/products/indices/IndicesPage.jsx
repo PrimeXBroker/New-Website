@@ -148,7 +148,7 @@ const IndicesPage = () => {
         description={t("openLiveAccount.description")}
       />
       <Strategies />
-      <div className="pb-8 bg-[#000000]">
+      <div className="pb-8 bg-p dark:bg-p-dark">
         <FAQ faqs={faqs} />
       </div>
     </>

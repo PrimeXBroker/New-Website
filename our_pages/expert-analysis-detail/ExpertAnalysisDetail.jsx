@@ -6,6 +6,7 @@ import axios from "axios";
 import Moment from "react-moment";
 import AnalysisNewsBody from "./AnalysisNewsBody";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
+import CustomYellowButton from "@/components/common/CustomYellowButton";
 
 const ExpertAnalysisDetail = ({ slug }) => {
   const locale = useLocale();
@@ -62,7 +63,7 @@ const ExpertAnalysisDetail = ({ slug }) => {
   if (loading) {
     return (
       <div className="flex items-center justify-center my-48">
-        <div className="inline-block h-12 w-12 animate-spin rounded-full border-4 border-solid border-primary border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white">
+        <div className="inline-block h-12 w-12 animate-spin rounded-full border-4 border-solid border-pcp dark:border-pcp-dark border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] text-tm dark:text-tm-dark">
           <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
             Loading...
           </span>
@@ -72,18 +73,18 @@ const ExpertAnalysisDetail = ({ slug }) => {
   }
 
   return (
-    <section className="bg-[#000000] py-20">
+    <section className="bg-p dark:bg-p-dark py-20">
       <div className="container">
         <div className="grid grid-cols-12">
           <div className="lg:col-span-12 md:col-span-12 col-span-12">
             <AnalysisNewsBody slug={slug} />
           </div>
         </div>
-        <div className="bg-[#111111] border-2 border-[#1D1D1D] rounded-[20px] flex p-10 flex-col md:flex-row mb-10 mt-20 relaed-blogs-bg">
+        <div className="bg-cc dark:bg-cc-dark rounded-[20px] flex p-10 flex-col md:flex-row mb-10 mt-20 relaed-blogs-bg">
           <div className="lg:w-[70%] w-full mb-5 md:mb-0">
             <h2
-              className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff] mb-3 ${
-                locale === "ar" || locale === "fa" || locale === "ku"
+              className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark mb-3 ${
+                locale === "ar" || locale === "ps" || locale === "ku"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -91,8 +92,8 @@ const ExpertAnalysisDetail = ({ slug }) => {
               {locale === "ar" ? "هل أنت مستعد للاستثمار؟" : "Ready to Invest"}
             </h2>
             <p
-              className={` text-[#c6c6c6] text-sm sm:text-base ${
-                locale === "ar" || locale === "fa" || locale === "ku"
+              className={` text-ts dark:text-ts-dark text-sm sm:text-base ${
+                locale === "ar" || locale === "ps" || locale === "ku"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -103,15 +104,11 @@ const ExpertAnalysisDetail = ({ slug }) => {
             </p>
           </div>
           <div className="w-full lg:w-[30%] flex justify-center md:justify-end items-center">
-            <button className="custom-button py-[16px] px-[46px]">
-              <a
-                href={getRegisterUrl(locale)}
-                target="_blank"
-                className="text-[#111111] font-semibold"
-              >
-                {detail?.language === "ar" ? "ابدأ" : "Get Started"}
-              </a>
-            </button>
+            <CustomYellowButton
+              title={detail?.language === "ar" ? "ابدأ" : "Get Started"}
+              onClick={() => window.open(getRegisterUrl(locale))}
+              className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full sm:w-auto justify-between sm:justify-center"
+            />
           </div>
         </div>
         {/* <div className="pt-10">

@@ -37,21 +37,16 @@ const AwardsTimeline = () => {
   }, []);
 
   return (
-    <section className="bg-[#000000] py-20 relative overflow-hidden">
+    <section className="bg-p dark:bg-p-dark py-16 sm:py-28 relative overflow-hidden">
       <div className="container relative mx-auto overflow-hidden">
-        {/* Base Timeline Line (always visible in #222222) */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-2 bg-[#222222] h-full"></div>
-
-        {/* Animated Timeline Line (in #ffffff, grows and shrinks on scroll) */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-2 bg-cc dark:bg-cc-dark h-full"></div>
         <div
-          className="absolute left-1/2 transform -translate-x-1/2 w-2 bg-[#FED100]"
+          className="absolute left-1/2 transform -translate-x-1/2 w-2 bg-pcp dark:bg-pcp-dark"
           style={{
             height: `${(activeIndex / timelineRefs.current.length) * 100}%`,
             transition: "height 0.5s ease-in-out",
           }}
         ></div>
-
-        {/* Timeline Points */}
         {Array.from({ length: 11 }, (_, i) => (
           <div
             key={i}
@@ -61,86 +56,86 @@ const AwardsTimeline = () => {
             data-index={i + 1}
             ref={(el) => (timelineRefs.current[i] = el)}
           >
-            {/* Timeline Marker with Conditional Arrows */}
             <div
               className={`absolute transform  w-14 h-14 ${
-                activeIndex >= i + 1 ? "bg-[#FED100]" : "bg-[#222222]"
+                activeIndex >= i + 1
+                  ? "bg-pcp dark:bg-pcp-dark"
+                  : "bg-cc dark:bg-cc-dark"
               } rounded-full flex items-center justify-center ${
-                locale === "ar" || locale === "fa" || locale === "ku"
+                locale === "ar" || locale === "ps" || locale === "ku"
                   ? "right-1/2 translate-x-1/2"
                   : "left-1/2 -translate-x-1/2"
               }`}
-              style={{ zIndex: 10 }} // Increased z-index to bring the marker above the timeline
+              style={{ zIndex: 10 }}
             >
               <span
                 className={`${
-                  activeIndex >= i + 1 ? "text-[#222222]" : "text-[#c6c6c6]"
+                  activeIndex >= i + 1
+                    ? "text-nb dark:text-nb-dark"
+                    : "text-ts dark:text-ts-dark"
                 } font-semibold text-lg`}
               >
                 {t(`awardYear${i + 1}`)}
               </span>
-
               {i % 2 === 0 ? (
-                // Right Arrow for even index
                 <div
                   className={`absolute top-1/2 transform w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ${
                     activeIndex >= i + 1
-                      ? "border-l-[12px] border-l-[#FED100]"
-                      : "border-l-[12px] border-l-[#222222]"
+                      ? "border-l-[12px] border-l-pcp dark:border-l-pcp-dark"
+                      : "border-l-[12px] border-l-cc dark:border-l-cc-dark"
                   } ${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "-translate-y-1/2 -left-2 rotate-180"
                       : "-right-2 -translate-y-1/2"
                   }`}
                 ></div>
               ) : (
-                // Left Arrow for odd index
                 <div
                   className={`absolute top-1/2 transform w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ${
                     activeIndex >= i + 1
-                      ? "border-r-[12px] border-r-[#FED100]"
-                      : "border-r-[12px] border-r-[#222222]"
+                      ? "border-r-[12px] border-r-pcp dark:border-r-pcp-dark"
+                      : "border-r-[12px] border-r-cc dark:border-r-cc-dark"
                   } ${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "-right-2 -translate-y-1/2 rotate-180"
                       : "-left-2 -translate-y-1/2"
                   }`}
                 ></div>
               )}
             </div>
-
-            {/* Award Card */}
             <div
               className={`${
                 activeIndex >= i + 1
                   ? i % 2 === 0
-                    ? locale === "ar" || locale === "fa" || locale === "ku"
+                    ? locale === "ar" || locale === "ps" || locale === "ku"
                       ? "mr-auto -translate-y-0 opacity-100"
                       : "ml-auto translate-y-0 opacity-100"
-                    : locale === "ar" || locale === "fa" || locale === "ku"
+                    : locale === "ar" || locale === "ps" || locale === "ku"
                     ? "ml-auto -translate-y-0 opacity-100"
                     : "mr-auto translate-y-0 opacity-100"
                   : i % 2 === 0
-                  ? locale === "ar" || locale === "fa" || locale === "ku"
+                  ? locale === "ar" || locale === "ps" || locale === "ku"
                     ? "mr-auto -translate-y-[100%] opacity-0"
                     : "ml-auto translate-y-[100%] opacity-0"
-                  : locale === "ar" || locale === "fa" || locale === "ku"
+                  : locale === "ar" || locale === "ps" || locale === "ku"
                   ? "ml-auto translate-y-[100%] opacity-0"
                   : "mr-auto -translate-y-[100%] opacity-0"
               } w-96 md:w-80 lg:w-96 transition-all duration-700`}
             >
               <div
-                className={`border-2 border-[#1D1D1D] rounded-[20px] p-5 transition-all duration-700 
+                className={`rounded-[20px] p-5 transition-all duration-700 
                     ${
                       activeIndex === i + 1
-                        ? "bg-[#ffffff] text-[#111111]"
-                        : "bg-[#111111] text-[#ffffff]"
+                        ? "bg-tm dark:bg-tm-dark text-p dark:text-p-dark"
+                        : "bg-cc dark:bg-cc-dark text-tm dark:text-tm-dark"
                     }
                 `}
               >
                 <div
                   className={`relative p-10 rounded-[12px] ${
-                    activeIndex === i + 1 ? "bg-[#000000]" : "bg-[#1d1d1d]"
+                    activeIndex === i + 1
+                      ? "bg-e2 dark:bg-e2-dark"
+                      : "bg-e2 dark:bg-e2-dark"
                   }`}
                   dir="ltr"
                 >
@@ -157,11 +152,11 @@ const AwardsTimeline = () => {
                       unoptimized={true}
                       width="120"
                       height="120"
-                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-awards/Award+${
+                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/awards/award+${
                         i + 1
-                      }.svg`}
+                      }.png`}
                       alt="Award"
-                      className="w-full"
+                      className="w-[106px] h-[106px]"
                     />
                     <Image
                       unoptimized={true}
@@ -172,20 +167,13 @@ const AwardsTimeline = () => {
                       className="w-full"
                     />
                   </div>
-                  {/* <div
-                    className={`absolute top-2 right-2 px-2 py-1 rounded-[4px] text-sm md:text-xs lg:text-sm ${
-                      activeIndex === i + 1 ? "bg-[#ffffff]" : "bg-[#333333]"
-                    }`}
-                  >
-                    {t(`awardYear${i + 1}`)}
-                  </div> */}
                 </div>
                 <div className="mt-4">
                   <h3
                     className={`text-sm md:text-xs lg:text-sm font-normal ${
                       activeIndex === i + 1
-                        ? "text-[##222222]"
-                        : "text-[#F1F1F1]"
+                        ? "text-tl dark:text-tl-dark"
+                        : "text-ts dark:text-ts-dark"
                     }`}
                   >
                     {t(`subtitle${i + 1}`)}
@@ -193,8 +181,8 @@ const AwardsTimeline = () => {
                   <h2
                     className={`text-[22px] md:text-lg lg:text-[22px] font-semibold mt-1 ${
                       activeIndex === i + 1
-                        ? "text-[#000000]"
-                        : "text-[#ffffff]"
+                        ? "text-p dark:text-p-dark"
+                        : "text-tm dark:text-tm-dark"
                     }`}
                   >
                     {t(`title${i + 1}`)}
@@ -202,8 +190,8 @@ const AwardsTimeline = () => {
                   <p
                     className={`text-sm mt-2 ${
                       activeIndex === i + 1
-                        ? "text-[#555555]"
-                        : "text-[#c6c6c6]"
+                        ? "text-tl dark:text-tl-dark"
+                        : "text-ts dark:text-ts-dark"
                     }`}
                   >
                     {t(`description${i + 1}`)}

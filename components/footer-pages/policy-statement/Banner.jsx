@@ -4,9 +4,11 @@ import { FiArrowUpRight, FiArrowUpLeft } from "react-icons/fi";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { FiDownload } from "react-icons/fi";
+import { useTheme } from "next-themes";
 
 const Banner = () => {
   const locale = useLocale();
+  const { theme } = useTheme();
   const t = useTranslations("footer.policyStatement");
 
   const handleDownload = (loc, name) => {
@@ -17,26 +19,30 @@ const Banner = () => {
   };
 
   return (
-    <section className="bg-[#000000] flex items-center pb-16 sm:pb-32 pt-32 sm:pt-44">
+    <section className="bg-p dark:bg-p-dark flex items-center pb-16 sm:pb-32 pt-32 sm:pt-44">
       <div className="container mx-auto">
-        <div className="bg-[#111111] text-[#ffffff] border-[#1d1d1d] border-2 p-8 rounded-[20px] w-full flex flex-col gap-y-6 relative shadow-lg">
+        <div className="bg-cc dark:bg-cc-dark text-tm dark:text-tm-dark p-8 rounded-[20px] w-full flex flex-col gap-y-6 relative shadow-lg">
           <div className="flex items-center justify-between">
             <h1 className="text-2xl sm:text-4xl font-semibold">
               {t("title_part1")} <br className="block sm:hidden" />{" "}
               <span>{t("title_part2")}</span>
             </h1>
             <div
-              className={`bg-[#1D1D1D] border-2 border-[#222222] w-14 h-14 flex justify-center items-center rounded-lg`}
+              className={`bg-e1 dark:bg-e1-dark w-14 h-14 flex justify-center items-center rounded-lg`}
             >
               <Image
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/policy/Policy+Statement.svg"
+                src={
+                  theme === "dark"
+                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/policy/Policy+Statement.svg"
+                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/policy/Policy+Statement.svg"
+                }
                 alt="Policy Statement"
                 width="34"
                 height="200"
               />
             </div>
           </div>
-          <p className="text-[#c6c6c6] leading-relaxed text-sm sm:text-base">
+          <p className="text-ts dark:text-ts-dark leading-relaxed text-sm sm:text-base">
             {t("description")}
           </p>
           <div className="flex flex-col sm:flex-row gap-x-4">
@@ -44,21 +50,21 @@ const Banner = () => {
               href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/footer-agreements/PrimeX_Capital_Policy_Statement.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold py-4 sm:py-3 sm:w-1/2 rounded-lg flex justify-center items-center custom-button mb-5 sm:mb-0"
+              className="font-bold py-4 sm:py-3 sm:w-1/2 rounded-lg flex justify-center items-center bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark mb-5 sm:mb-0 cursor-pointer"
             >
               {t("view_btn")}{" "}
-              {locale === "ar" || locale === "fa" || locale === "ku" ? (
+              {locale === "ar" || locale === "ps" || locale === "ku" ? (
                 <FiArrowUpLeft
-                  className={`text-lg font-bold text-[#111111] ${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                  className={`text-lg font-bold text-nb dark:text-nb-dark ${
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "mr-2"
                       : "ml-2"
                   }`}
                 />
               ) : (
                 <FiArrowUpRight
-                  className={`text-lg font-bold text-[#111111] ${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                  className={`text-lg font-bold text-nb dark:text-nb-dark ${
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "mr-2"
                       : "ml-2"
                   }`}
@@ -72,21 +78,21 @@ const Banner = () => {
                   "PrimeX Capital Policy Statement"
                 )
               }
-              className="font-semibold py-4 sm:py-3 sm:w-1/2 rounded-lg flex justify-center items-center custom-button-white mb-5 sm:mb-0"
+              className="font-bold py-4 sm:py-3 sm:w-1/2 rounded-lg flex justify-center items-center bg-tm dark:bg-tm-dark text-p dark:text-p-dark mb-5 sm:mb-0 cursor-pointer"
             >
               {t("download_btn")}{" "}
-              {locale === "ar" || locale === "fa" || locale === "ku" ? (
+              {locale === "ar" || locale === "ps" || locale === "ku" ? (
                 <FiDownload
-                  className={`text-lg font-bold text-[#111111] ${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                  className={`text-lg font-bold text-p dark:text-p-dark ${
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "mr-2"
                       : "ml-2"
                   }`}
                 />
               ) : (
                 <FiDownload
-                  className={`text-lg font-bold text-[#111111] ${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                  className={`text-lg font-bold text-p dark:text-p-dark ${
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "mr-2"
                       : "ml-2"
                   }`}

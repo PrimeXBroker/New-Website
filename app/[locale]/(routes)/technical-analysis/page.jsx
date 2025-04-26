@@ -7,6 +7,7 @@ import Testimonials from "@/our_pages/home/Testimonials";
 import { useLocale } from "next-intl";
 import Hero from "@/our_pages/expert-analysis/Hero";
 import axios from "axios";
+import ClientReviews from "@/components/common/ClientReviews";
 
 const pages = () => {
   const id = "6641f01d7c9be5623e1092a4";
@@ -66,14 +67,17 @@ const pages = () => {
   return (
     <>
       <Hero />
-      {(locale === "en" || locale === "ar" || locale === "ku") && (
+      {(locale === "en" ||
+        locale === "ar" ||
+        locale === "ku" ||
+        locale === "ps") && (
         <>
           <Banner news={blogs?.slice(0, 5)} />
           <ExpertAnalysis id={id} />
         </>
       )}
-      <div className="pb-10 bg-[#000000]">
-        <Testimonials />
+      <div className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
+        <ClientReviews />
       </div>
     </>
   );

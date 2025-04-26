@@ -123,9 +123,9 @@ function AnalysisNewsBody({ slug }) {
   if (content) {
     return (
       <>
-        <div className="text-white py-8 px-4 pt-20 pb-10">
+        <div className="text-tm dark:text-tm-dark py-8 px-4 pt-20 pb-10">
           <Link
-            className="text-[#ffffff] hover:text-[#FED100] font-medium flex justify-center sm:justify-start items-center mb-4"
+            className="text-tm dark:text-tm-dark hover:text-pcp dark:hover:text-pcp-dark font-medium flex justify-center sm:justify-start items-center mb-4"
             href={
               detail?.category === "6641f01d7c9be5623e1092a4"
                 ? `/${locale}/technical-analysis`
@@ -144,7 +144,7 @@ function AnalysisNewsBody({ slug }) {
               : "Back to Blogs"}
           </Link>
 
-          <div className="text-[#c6c6c6] text-sm mb-2 text-center">
+          <div className="text-ts dark:text-ts-dark text-sm mb-2 text-center">
             <Moment
               date={detail?.postedOn ? detail?.postedOn : detail?.createdOn}
               format={locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"}
@@ -152,7 +152,7 @@ function AnalysisNewsBody({ slug }) {
             • 5 Min Read
           </div>
 
-          <h2 className="text-xl sm:text-3xl md:text-4xl font-semibold mb-6 text-center text-[#ffffff] w[96%] sm:w-[80%] mx-auto">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-semibold mb-6 text-center text-tm dark:text-tm-dark w[96%] sm:w-[80%] mx-auto">
             {locale === "ar" ? detail.titleAr : detail.titleEn}
           </h2>
           {/* <div className="flex items-center space-x-4">
@@ -184,7 +184,7 @@ function AnalysisNewsBody({ slug }) {
           </div> */}
         </div>
 
-        <div className="text-[#ffffff]">
+        <div className="text-tm dark:text-tm-dark">
           <img
             src={
               locale === "ar" ? detail?.imageAr || detail?.image : detail?.image

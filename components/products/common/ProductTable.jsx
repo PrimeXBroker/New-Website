@@ -23,11 +23,11 @@ const ProductTable = ({ headers, data }) => {
   }, [filteredData.length, totalPages]);
 
   return (
-    <section className="bg-[#000000] pt-12 sm:pt-20">
+    <section className="bg-p dark:bg-p-dark pt-16 sm:pt-28">
       <div className="container highlights-col">
         <div className="table-responsive overflow-x-auto">
           <table
-            className="table text-[#ffffff] mb-0 w-full"
+            className="table text-tm dark:text-tm-dark mb-0 w-full"
             style={{
               borderCollapse: "separate",
               borderSpacing: "0",
@@ -35,20 +35,19 @@ const ProductTable = ({ headers, data }) => {
             dir="ltr"
           >
             <thead>
-              <tr style={{ backgroundColor: "#111111" }}>
+              <tr className="bg-cc dark:bg-cc-dark">
                 {headers.map((header, index) => (
                   <th
                     key={index}
-                    style={{
-                      borderRight:
-                        index === headers.length - 1
-                          ? "none"
-                          : "1px solid #1d1d1d",
-                      borderBottom: "none",
-                    }}
-                    className="px-5 py-5 text-left"
+                    className={`px-5 py-5 text-left ${
+                      index === headers.length - 1
+                        ? "none"
+                        : "border-r border-e1 dark:border-e1-dark"
+                    }`}
                   >
-                    <h5 className="text-sm text-[#fed100]">{header}</h5>
+                    <h5 className="text-sm text-pcp dark:text-pcp-dark">
+                      {header}
+                    </h5>
                   </th>
                 ))}
               </tr>
@@ -57,13 +56,19 @@ const ProductTable = ({ headers, data }) => {
               {currentRecords.map((row, rowIndex) => (
                 <tr
                   key={rowIndex}
-                  style={{
-                    backgroundColor: rowIndex % 2 === 0 ? "#000000" : "#111111",
-                  }}
+                  className={`${
+                    rowIndex % 2 === 0
+                      ? "bg-p dark:bg-p-dark"
+                      : "bg-cc dark:bg-cc-dark"
+                  }`}
                 >
                   {row.map((cell, cellIndex) => (
                     <td
                       className={`py-5 px-5 text-sm ${
+                        cellIndex === row.length - 1
+                          ? "none"
+                          : "border-r border-e1 dark:border-e1-dark"
+                      } ${
                         cellIndex === 1
                           ? "w-[460px]"
                           : cellIndex === 0
@@ -81,10 +86,6 @@ const ProductTable = ({ headers, data }) => {
                         textAlign: cellIndex === 0 ? "left" : "left",
                         borderTop: "none",
                         borderBottom: "none",
-                        borderRight:
-                          cellIndex === row.length - 1
-                            ? "none"
-                            : "1px solid #1d1d1d",
                       }}
                     >
                       {cell}

@@ -115,9 +115,9 @@ function NewsBody({ slug, date }) {
   if (content) {
     return (
       <>
-        <div className="text-[#ffffff] py-8 px-4 pt-10 sm:pt-20 pb-10">
+        <div className="text-tm dark:text-tm-dark py-8 px-4 pt-10 sm:pt-20 pb-10">
           <Link
-            className="text-[#ffffff] hover:text-[#FED100] font-medium flex justify-center sm:justify-start items-center mb-4"
+            className="text-tm dark:text-tm-dark hover:text-pcp dark:hover:text-pcp-dark font-medium flex justify-center sm:justify-start items-center mb-4"
             href={
               ["Market News", "أخبار السوق"].includes(detail?.category?.title)
                 ? `/${locale}/market-news`
@@ -138,7 +138,7 @@ function NewsBody({ slug, date }) {
               : "Back to Blogs"}
           </Link>
 
-          <div className="text-[#c6c6c6] text-sm mb-2 text-center">
+          <div className="text-ts dark:text-ts-dark text-sm mb-2 text-center">
             <Moment
               date={detail?.postedOn ? detail?.postedOn : detail?.createdOn}
               format={locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"}
@@ -146,7 +146,7 @@ function NewsBody({ slug, date }) {
             • 5 Min Read
           </div>
 
-          <h2 className="text-xl sm:text-3xl md:text-4xl font-semibold mb-6 text-center text-[#ffffff] w[96%] sm:w-[80%] mx-auto">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-semibold mb-6 text-center text-tm dark:text-tm-dark w[96%] sm:w-[80%] mx-auto">
             {detail?.title}
           </h2>
           {/* <div className="flex items-center space-x-4">
@@ -177,7 +177,7 @@ function NewsBody({ slug, date }) {
             </a>
           </div> */}
         </div>
-        <div className="text-[#ffffff]">
+        <div className="text-tm dark:text-tm-dark">
           <img src={detail.image} alt="PrimeX Capital" className="mb-7" />
           <div className="mb-7">{/* {detail?.title} */}</div>
           <MyEditor

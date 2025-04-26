@@ -70,9 +70,9 @@ const Banner = ({ news }) => {
   const progressValue = (progressCounter / news.length) * 100;
 
   return (
-    <div className="pt-20 sm:pt-24 bg-[#000000] text-[#ffffff]">
+    <div className="pt-16 sm:pt-28 bg-p dark:bg-p-dark text-tm dark:text-tm-dark">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-8 items-center bg-[#111111] border-2 border-[#1d1d1d] rounded-3xl p-5 sm:p-14">
+        <div className="grid lg:grid-cols-2 gap-8 items-center bg-cc dark:bg-cc-dark rounded-3xl p-5 sm:p-14">
           <div className="w-full sm:h-[400px]">
             <img
               src={newsDetails?.image}
@@ -85,7 +85,7 @@ const Banner = ({ news }) => {
             <h1 className="text-2xl sm:text-3xl font-bold leading-tight pt-3 lg:pt-0">
               {newsDetails?.title}
             </h1>
-            <div className="flex items-center justify-between text-[#c6c6c6]">
+            <div className="flex items-center justify-between text-ts dark:text-ts-dark">
               <span>
                 <Moment
                   date={newsDetails?.createdOn}
@@ -104,7 +104,7 @@ const Banner = ({ news }) => {
                 value={progressValue}
               />
               <div className="flex gap-x-2">
-                <div className="flex justify-center items-center h-10 w-10 rounded-full border-[#ffffff] border-1">
+                <div className="flex justify-center items-center h-10 w-10 rounded-full bg-e1 dark:bg-e1-dark">
                   <Button
                     onClick={prevItem}
                     variant="outline"
@@ -112,13 +112,13 @@ const Banner = ({ news }) => {
                     className="rounded-full"
                   >
                     {locale === "ar" ? (
-                      <IoMdArrowForward className="h-4 w-4" />
+                      <IoMdArrowForward className="h-4 w-4 text-tm dark:text-tm-dark" />
                     ) : (
-                      <IoMdArrowBack className="h-4 w-4" />
+                      <IoMdArrowBack className="h-4 w-4 text-tm dark:text-tm-dark" />
                     )}
                   </Button>
                 </div>
-                <div className="flex justify-center items-center h-10 w-10 rounded-full border-[#ffffff] border-1">
+                <div className="flex justify-center items-center h-10 w-10 rounded-full bg-e1 dark:bg-e1-dark">
                   <Button
                     onClick={nextItem}
                     variant="outline"
@@ -126,9 +126,9 @@ const Banner = ({ news }) => {
                     className="rounded-full"
                   >
                     {locale === "ar" ? (
-                      <IoMdArrowBack className="h-4 w-4" />
+                      <IoMdArrowBack className="h-4 w-4 text-tm dark:text-tm-dark" />
                     ) : (
-                      <IoMdArrowForward className="h-4 w-4" />
+                      <IoMdArrowForward className="h-4 w-4 text-tm dark:text-tm-dark" />
                     )}
                   </Button>
                 </div>
@@ -140,7 +140,7 @@ const Banner = ({ news }) => {
                 .map((blog, index) => (
                   <Card
                     key={index}
-                    className="rounded-[4px] border-[0.42px] border-[#ffffff] overflow-hidden bg-[#292929] p-2"
+                    className="rounded-[4px] overflow-hidden bg-e1 dark:bg-e1-dark p-2"
                   >
                     <Image
                       src={blog?.image}

@@ -34,10 +34,10 @@ const PrizesBreakdown = () => {
   ];
 
   return (
-    <div className="bg-[#030303] py-16 sm:py-28">
+    <div className="bg-p dark:bg-p-dark py-16 sm:py-28">
       <div className="container">
         <div className="text-center md:text-center mb-10">
-          <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-[#F9F9F9] uppercase">
+          <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-tm dark:text-tm-dark uppercase">
             {t("title")}
           </h2>
         </div>
@@ -45,7 +45,7 @@ const PrizesBreakdown = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="bg-[#1A1A1A] px-10 md:px-3 lg:px-10 py-8 rounded-2xl shadow-xl flex flex-col sm:flex-row items-center"
+              className="bg-cc dark:bg-cc-dark px-10 md:px-3 lg:px-10 py-8 rounded-2xl shadow-xl flex flex-col sm:flex-row items-center"
             >
               <div className="w-full sm:w-1/2 flex justify-center items-center mb-4 sm:mb-0">
                 <Image
@@ -58,10 +58,10 @@ const PrizesBreakdown = () => {
                 />
               </div>
               <div className="w-full sm:w-2/4 pl-0 sm:ps-4 md:ps-2 lg:ps-4 text-center sm:text-start">
-                <h3 className="text-[#F9F9F9] text-xl sm:text-2xl md:text-xl lg:text-2xl font-semibold">
+                <h3 className="text-tm dark:text-tm-dark text-xl sm:text-2xl md:text-xl lg:text-2xl font-semibold">
                   {card.title}
                 </h3>
-                <p className="text-[#F9F9F9] mt-3 sm:mt-5 md:mt-3 lg:mt-5 font-medium text-sm sm:text-base md:text-sm lg:text-base mb-0">
+                <p className="text-tm dark:text-tm-dark mt-3 sm:mt-5 md:mt-3 lg:mt-5 font-medium text-sm sm:text-base md:text-sm lg:text-base mb-0">
                   {card.description}
                 </p>
               </div>

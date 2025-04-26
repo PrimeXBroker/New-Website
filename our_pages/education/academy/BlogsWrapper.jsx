@@ -47,10 +47,10 @@ function BlogsWrapper({
   ];
 
   return (
-    <section className="relative bg-[#000000] pt-20 sm:pt-24 pb-10 sm:pb-14">
+    <section className="relative bg-p dark:bg-p-dark pt-20 sm:pt-24 pb-10 sm:pb-14">
       <div className="container">
         <div
-          className={`tabs-navigation bg-[#1D1D1D] rounded-lg flex justify-between items-center w-full`}
+          className={`tabs-navigation bg-cc dark:bg-cc-dark rounded-lg flex justify-between items-center w-full`}
         >
           {tabs.map((tab) => (
             <button
@@ -58,8 +58,8 @@ function BlogsWrapper({
               onClick={() => setActive(tab.key)}
               className={`tab-title font-medium px-4 py-3 text-sm w-full ${
                 active === tab.key
-                  ? "active bg-[#ffffff] text-[#111111] rounded-[5px]"
-                  : "text-[#ffffff]"
+                  ? "active bg-tm dark:bg-tm-dark text-p dark:text-p-dark rounded-[5px]"
+                  : "text-tm dark:text-tm-dark"
               }`}
             >
               {tab.title}

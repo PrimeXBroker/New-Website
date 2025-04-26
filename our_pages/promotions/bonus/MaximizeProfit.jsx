@@ -5,25 +5,26 @@ import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { getLoginUrl } from "@/utilities/getLoginUrl";
+import CustomYellowButton from "@/components/common/CustomYellowButton";
 
 const MaximizeProfit = () => {
   const locale = useLocale();
   const t = useTranslations("bonus.maximize");
 
   return (
-    <section className="bg-[#000000] pt-10 pb-20">
+    <section className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
       <div className="container">
-        <div className="grid grid-cols-12 justify-center items-center bg-[#111111] border-2 border-[#1D1D1D] rounded-[20px] px-14 pt-8">
+        <div className="grid grid-cols-12 justify-center items-center bg-cc dark:bg-cc-dark rounded-[20px] px-14 pt-8">
           <div
             className={`col-span-12 lg:col-span-6 ${
-              locale === "ar" || locale === "fa" || locale === "ku"
+              locale === "ar" || locale === "ps" || locale === "ku"
                 ? "text-center lg:text-right"
                 : "text-center lg:text-left"
             }`}
           >
             <h2
-              className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#FED100] mb-2 ${
-                locale === "ar" || locale === "fa" || locale === "ku"
+              className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-pcp dark:text-pcp-dark mb-2 ${
+                locale === "ar" || locale === "ps" || locale === "ku"
                   ? "text-center lg:text-right"
                   : "text-center lg:text-left"
               }`}
@@ -31,8 +32,8 @@ const MaximizeProfit = () => {
               {t("maximize_title_1")}
             </h2>
             <h2
-              className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff] ${
-                locale === "ar" || locale === "fa" || locale === "ku"
+              className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark ${
+                locale === "ar" || locale === "ps" || locale === "ku"
                   ? "text-center lg:text-right"
                   : "text-center lg:text-left"
               }`}
@@ -41,22 +42,22 @@ const MaximizeProfit = () => {
             </h2>
             <div
               className={`${
-                locale === "ar" || locale === "fa" || locale === "ku"
+                locale === "ar" || locale === "ps" || locale === "ku"
                   ? "text-center lg:text-right"
                   : "text-center lg:text-left"
               }`}
             >
-              <button
+              <CustomYellowButton
+                title={t("register_btn")}
                 onClick={() => window.open(getRegisterUrl(locale))}
-                className="py-[16px] px-[32px] sm:px-[46px] font-semibold mt-5 custom-button rounded-xl"
-              >
-                {t("register_btn")}
-              </button>
+                className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full sm:w-auto justify-between sm:justify-center mt-5"
+              />
+
               <a
                 onClick={() => window.open(getLoginUrl(locale))}
                 target="_blank"
-                className={`text-xs text-[#ffffff] font-normal block mt-2 ${
-                  locale === "ar" || locale === "fa" || locale === "ku"
+                className={`text-xs text-tm dark:text-tm-dark font-normal block mt-2 ${
+                  locale === "ar" || locale === "ps" || locale === "ku"
                     ? "text-center lg:text-start"
                     : "text-center lg:text-start"
                 }`}

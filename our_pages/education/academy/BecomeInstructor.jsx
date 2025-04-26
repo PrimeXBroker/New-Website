@@ -111,23 +111,25 @@ function BecomeInstructor() {
   return (
     <section id="academy-form" className="container px-0">
       <div
-        className={`bg-[#111111] border-[#1d1d1d] border-3 md:w-[80%] lg:w-[100%] rounded-[12px] p-[24px] ms:p-[40px] mx-auto`}
+        className={`bg-cc dark:bg-cc-dark md:w-[80%] lg:w-[100%] rounded-[12px] p-[24px] ms:p-[40px] mx-auto`}
       >
         <form
           onSubmit={formik.handleSubmit}
           className="flex flex-col justify-center items-center relative gap-4"
         >
           <div className="w-full">
-            <h2 className="text-[24px] font-semibold text-[#ffffff]">
+            <h2 className="text-[24px] font-semibold text-tm dark:text-tm-dark">
               {t("instructor_title1")}{" "}
-              <span className="text-[#c6c6c6] font-normal">
+              <span className="text-ts dark:text-ts-dark font-normal">
                 {t("instructor_title2")}
               </span>
             </h2>
-            <p className="text-xs text-[#c6c6c6]">{t("instructor_desc")}</p>
+            <p className="text-xs text-ts dark:text-ts-dark">
+              {t("instructor_desc")}
+            </p>
           </div>
           <div className="w-full mb-3 md:mb-0">
-            <label className="text-xs text-[#c6c6c6]">
+            <label className="text-xs text-ts dark:text-ts-dark">
               {t("full_name")}
               <input
                 type="text"
@@ -136,9 +138,9 @@ function BecomeInstructor() {
                 onBlur={formik.handleBlur}
                 value={formik.values.fullName}
                 placeholder={t("full_name")}
-                className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                className={`appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                   formik.touched.fullName && formik.errors.fullName
-                    ? "border border-red-600"
+                    ? "border border-rc dark:border-rc-dark"
                     : ""
                 }`}
               />
@@ -146,7 +148,7 @@ function BecomeInstructor() {
           </div>
           <div className="md:flex w-full justify-between">
             <div className="w-full md:w-[48%] ib-contact">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("phoneNumber")}
                 <PhoneInput
                   international
@@ -155,9 +157,9 @@ function BecomeInstructor() {
                   onBlur={formik.handleBlur}
                   name="number"
                   value={formik.values.number}
-                  className={`ib-phone-input appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`ib-phone-input appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.number && formik.errors.number
-                      ? "border-b border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                   placeholder={t("phoneNumber")}
@@ -165,7 +167,7 @@ function BecomeInstructor() {
               </label>
             </div>
             <div className="w-full md:w-[48%] mb-3 md:mb-0">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("email")}
                 <input
                   type="email"
@@ -174,9 +176,9 @@ function BecomeInstructor() {
                   onBlur={formik.handleBlur}
                   value={formik.values.email}
                   placeholder={t("email")}
-                  className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.email && formik.errors.email
-                      ? "border-b border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                 />
@@ -185,7 +187,7 @@ function BecomeInstructor() {
           </div>
           <div className="md:flex w-full justify-between">
             <div className="w-full md:w-[48%] ib-contact">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("experience_year")}
                 <input
                   type="number"
@@ -194,16 +196,16 @@ function BecomeInstructor() {
                   onBlur={formik.handleBlur}
                   value={formik.values.experience}
                   placeholder={t("experience_year")}
-                  className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.experience && formik.errors.experience
-                      ? "border-b border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                 />
               </label>
             </div>
             <div className="w-full md:w-[48%] mb-3 md:mb-0">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("speciality")}
                 <input
                   type="text"
@@ -212,9 +214,9 @@ function BecomeInstructor() {
                   onBlur={formik.handleBlur}
                   value={formik.values.specialty}
                   placeholder={t("speciality")}
-                  className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.specialty && formik.errors.specialty
-                      ? "border border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                 />
@@ -222,7 +224,7 @@ function BecomeInstructor() {
             </div>
           </div>
           <div className="w-full mb-3">
-            <label className="text-xs text-[#c6c6c6]">
+            <label className="text-xs text-ts dark:text-ts-dark">
               {t("advantages")}
               <textarea
                 name="advantages"
@@ -231,15 +233,15 @@ function BecomeInstructor() {
                 value={formik.values.advantages}
                 rows="4"
                 placeholder={t("write_adv")}
-                className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                className={`appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                   formik.touched.advantages && formik.errors.advantages
-                    ? "border-b border-red-600"
+                    ? "border border-rc dark:border-rc-dark"
                     : ""
                 }`}
               />
             </label>
           </div>
-          <div className="w-full appearance-none rounded text-[#C6C6C6] mb-3">
+          <div className="w-full appearance-none rounded text-ts dark:text-ts-dark mb-3">
             <label
               className={`block mb-2 text-sm ${
                 locale === "ar" ? "text-right" : "text-left"
@@ -251,10 +253,10 @@ function BecomeInstructor() {
               {workedBefore.map((option) => (
                 <label
                   key={option.value}
-                  className={`flex items-center space-x-2 border-2 rounded-md px-4 py-2 cursor-pointer transition-all ${
+                  className={`flex items-center space-x-2 rounded-md px-4 py-2 cursor-pointer transition-all ${
                     formik.values.workedWithCompanies === option.value
-                      ? "bg-[#F9F9F9] border-[#C6C6C6] border-1 text-[#1D1D1D]"
-                      : "bg-[#1D1D1D] border-[#222222] text-[#c6c6c6] border-1"
+                      ? "bg-tm dark:bg-tm-dark text-p dark:text-p-dark"
+                      : "bg-e1 dark:bg-e1-dark text-ts dark:text-ts-dark"
                   }`}
                 >
                   <input
@@ -271,16 +273,16 @@ function BecomeInstructor() {
                     <FaCheckCircle
                       className={`text-lg ${
                         formik.values.workedWithCompanies === "Yes"
-                          ? "text-[#1D1D1D]"
-                          : "text-[#c6c6c6]"
+                          ? "text-p dark:text-p-dark"
+                          : "text-ts dark:text-ts-dark"
                       }`}
                     />
                   ) : (
                     <FaTimesCircle
                       className={`text-lg ${
                         formik.values.workedWithCompanies === "No"
-                          ? "text-[#1D1D1D]"
-                          : "text-[#c6c6c6]"
+                          ? "text-p dark:text-p-dark"
+                          : "text-ts dark:text-ts-dark"
                       }`}
                     />
                   )}
@@ -290,13 +292,13 @@ function BecomeInstructor() {
             </div>
             {formik.touched.workedWithCompanies &&
             formik.errors.workedWithCompanies ? (
-              <div className="text-red-600">
+              <div className="text-rc dark:text-rc-dark">
                 {formik.errors.workedWithCompanies}
               </div>
             ) : null}
           </div>
 
-          <div className="w-full appearance-none rounded text-[#C6C6C6] mb-3">
+          <div className="w-full appearance-none rounded text-ts dark:text-ts-dark mb-3">
             <label
               className={`block mb-2 text-sm ${
                 locale === "ar" ? "text-right" : "text-left"
@@ -308,10 +310,10 @@ function BecomeInstructor() {
               {workedBefore.map((option) => (
                 <label
                   key={option.value}
-                  className={`flex items-center space-x-2 border-2 rounded-md px-4 py-2 cursor-pointer transition-all ${
+                  className={`flex items-center space-x-2 rounded-md px-4 py-2 cursor-pointer transition-all ${
                     formik.values.doneWebinar === option.value
-                      ? "bg-[#F9F9F9] border-[#C6C6C6] border-1 text-[#1D1D1D]"
-                      : "bg-[#1D1D1D] border-[#222222] text-[#c6c6c6] border-1"
+                      ? "bg-tm dark:bg-tm-dark text-p dark:text-p-dark"
+                      : "bg-e1 dark:bg-e1-dark text-ts dark:text-ts-dark"
                   }`}
                 >
                   <input
@@ -328,16 +330,16 @@ function BecomeInstructor() {
                     <FaCheckCircle
                       className={`text-lg ${
                         formik.values.doneWebinar === "Yes"
-                          ? "text-[#1D1D1D]"
-                          : "text-[#c6c6c6]"
+                          ? "text-p dark:text-p-dark"
+                          : "text-ts dark:text-ts-dark"
                       }`}
                     />
                   ) : (
                     <FaTimesCircle
                       className={`text-lg ${
                         formik.values.doneWebinar === "No"
-                          ? "text-[#1D1D1D]"
-                          : "text-[#c6c6c6]"
+                          ? "text-p dark:text-p-dark"
+                          : "text-ts dark:text-ts-dark"
                       }`}
                     />
                   )}
@@ -346,16 +348,19 @@ function BecomeInstructor() {
               ))}
             </div>
             {formik.touched.doneWebinar && formik.errors.doneWebinar ? (
-              <div className="text-red-600">{formik.errors.doneWebinar}</div>
+              <div className="text-rc dark:text-rc-dark">
+                {formik.errors.doneWebinar}
+              </div>
             ) : null}
           </div>
 
           <div className="w-full">
-            <p className="text-xs text-[#c6c6c6] mb-1">{t("condition")}</p>
+            <p className="text-xs text-ts dark:text-ts-dark mb-1">
+              {t("condition")}
+            </p>
             <button
               disabled={loading}
-              className="font-semibold py-[16px] px-[10px] text-[#111111] w-full custom-button"
-              style={{ borderRadius: "5px" }}
+              className="transition-colors duration-300 ease-in-out rounded-lg font-bold w-full flex items-center justify-center gap-3 group bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark group py-4 px-3"
             >
               <div className="flex gap-1 items-center justify-center">
                 {loading ? (

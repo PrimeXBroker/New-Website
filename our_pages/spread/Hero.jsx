@@ -6,6 +6,7 @@ import {
   BsArrowUpLeftCircleFill,
   BsArrowUpRightCircleFill,
 } from "react-icons/bs";
+import CustomYellowButton from "@/components/common/CustomYellowButton";
 
 const Hero = () => {
   const locale = useLocale();
@@ -23,29 +24,27 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-[#000000] pt-24 sm:pt-32 pb-8">
+    <section className="bg-p dark:bg-p-dark pt-24 sm:pt-32">
       <div className="container">
         <div className="grid grid-cols-12 items-center">
           <div className="col-span-12 md:col-span-6">
             <div className="mt-4 text-center md:text-start">
-              <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold text-[#ffffff]">
+              <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold text-tm dark:text-tm-dark">
                 {t("title")}
               </h1>
-              <p className="text-[#c6c6c6] mt-5 w-full">{t("description1")}</p>
-              <p className="text-[#c6c6c6] mt-4 w-full">{t("description2")}</p>
+              <p className="text-ts dark:text-ts-dark mt-5 w-full">
+                {t("description1")}
+              </p>
+              <p className="text-ts dark:text-ts-dark mt-4 w-full">
+                {t("description2")}
+              </p>
             </div>
             <div className="lg:mt-3 flex justify-center md:justify-start">
-              <button
+              <CustomYellowButton
+                title={t("btnTxt")}
                 onClick={() => window.open(getRegisterUrl(locale))}
-                className="px-8 py-5 font-semibold mt-5 w-full sm:w-[70%] mx-auto md:mx-0 md:w-auto flex items-center justify-center gap-3 custom-button-yellow-white"
-              >
-                {t("btnTxt")}
-                {locale === "ar" || locale === "ku" ? (
-                  <BsArrowUpLeftCircleFill />
-                ) : (
-                  <BsArrowUpRightCircleFill />
-                )}
-              </button>
+                className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full sm:w-auto justify-between sm:justify-center mt-5"
+              />
             </div>
           </div>
           <div className="col-span-12 md:col-span-6 mt-5 md:mt-0">

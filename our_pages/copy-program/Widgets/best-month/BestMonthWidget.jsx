@@ -1,9 +1,11 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { useTheme } from "next-themes";
 
 const BestMonthWidget = () => {
   const locale = useLocale();
+  const { theme } = useTheme();
   const t = useTranslations("copyProgram.bestMonthWidget");
   const iframeRef = useRef(null);
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
@@ -41,7 +43,7 @@ const BestMonthWidget = () => {
   };
 
   return (
-    <section className="py-28 bg-[#000000]">
+    <section className="py-28 bg-p dark:bg-p-dark">
       <div className="container">
         <div
           className="rounded-2xl p-1"
@@ -61,7 +63,11 @@ const BestMonthWidget = () => {
               visibility: "visible",
               borderRadius: "16px",
             }}
-            src={`https://socialratings.primexcapital.com/widgets/ratings?widgetKey=best_this_month&theme=dark&lang=${locale}`}
+            src={
+              theme === "dark"
+                ? `https://socialratings.primexcapital.com/widgets/ratings?widgetKey=best_this_month&theme=dark&lang=${locale}`
+                : `https://socialratings.primexcapital.com/widgets/ratings?widgetKey=best_this_month&theme=light&lang=${locale}`
+            }
             scrolling="no"
             frameBorder="0"
             onLoad={handleIframeLoad}

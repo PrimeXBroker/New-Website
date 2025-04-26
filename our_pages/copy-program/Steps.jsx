@@ -9,30 +9,32 @@ const Steps = () => {
 
   const steps = [
     {
-      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/social-trading/Sign-Up-for-the-Copy-Program.webp",
+      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/social-trading/Sign+Up+for+the+Copy+Program+1.webp",
       alt: "Step 1",
       label: t("step1"),
     },
     {
-      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/social-trading/Choose-Your-Master.webp",
+      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/social-trading/Choose+Your+Master+1.webp",
       alt: "Step 2",
       label: t("step2"),
     },
     {
-      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/social-trading/Copy-and-Trade-Now.webp",
+      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/social-trading/Copy+and+Trade+Now.webp",
       alt: "Step 3",
       label: t("step3"),
     },
   ];
 
   return (
-    <section className="bg-[#000000] py-16 sm:py-28">
+    <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
       <div className="container">
-        <h2 className="text-2xl md:text-4xl font-semibold text-[#ffffff] text-center mb-10">
-          <span className="text-[#FED100]">{t("title_part1")}</span>{" "}
+        <h2 className="text-2xl md:text-4xl font-semibold text-tm dark:text-tm-dark text-center mb-10">
+          <span className="text-pcp dark:text-pcp-dark">
+            {t("title_part1")}
+          </span>{" "}
           {t("title_part2")}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-[#111111] border-2 border-[#1D1D1D] rounded-2xl text-[#ffffff] px-10 lg:px-14 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-cc dark:bg-cc-dark rounded-2xl text-tm dark:text-tm-dark px-10 lg:px-14 py-10">
           {steps.map((step, index) => (
             <div key={index} className="text-center group mb-1 sm:mb-2 md:mb-0">
               <Image

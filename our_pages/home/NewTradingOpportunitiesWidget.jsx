@@ -73,45 +73,45 @@ const TradingOpportunitiesWidget = () => {
   }, [activeTab]);
 
   return (
-    <section className="pt-20 pb-10 relative">
-      <div className="container bg-[#000000] grid grid-cols-1 lg:grid-cols-2 items-center">
+    <section className="relative">
+      <div className="container bg-p dark:bg-p-dark grid grid-cols-1 lg:grid-cols-2 items-center">
         <div
           className={`mb-5 text-center md:text-center block lg:hidden ${
-            locale === "ar" || locale === "fa" || locale === "ku"
+            locale === "ar" || locale === "ps" || locale === "ku"
               ? "lg:mr-[120px]"
               : "lg:ml-[120px]"
           }`}
         >
-          <h2 className="text-2xl md:text-3xl lg:text-7xl xl:text-8xl mb-2 text-[#ffffff] font-semibold">
+          <h2 className="text-2xl md:text-3xl lg:text-7xl xl:text-8xl mb-2 text-tm dark:text-tm-dark font-semibold">
             {t("title1")} <br className="hidden lg:block" />
-            <span className="text-[#FED100]">{t("title2")}</span>{" "}
+            <span className="text-pcp dark:text-pcp-dark">
+              {t("title2")}
+            </span>{" "}
             <br className="md:hidden lg:block" />
-            <span className="text-[#FED100]">{t("title3")}</span>{" "}
+            <span className="text-pcp dark:text-pcp-dark">
+              {t("title3")}
+            </span>{" "}
             <br className="hidden lg:block" />
             <span>{t("title4")}</span>
           </h2>
-          <p className="mb-1 text-[#c6c6c6] text-sm md:text-base">
+          <p className="mb-1 text-ts dark:text-ts-dark text-sm md:text-base">
             {t("desc")}
           </p>
         </div>
-        <div className="bg-[#111111] border-[3px] border-[#1D1D1D] py-[22px] px-[10px] sm:px-[24px] sm:py-[32px] rounded-[12px] max-w-3xl w-full md:w-[640px] lg:w-[600px] 2xl:w-[640px] mx-auto text-white">
+        <div className="bg-cc dark:bg-cc-dark py-[22px] px-[10px] sm:px-[24px] sm:py-[32px] rounded-[12px] max-w-3xl w-full md:w-[640px] lg:w-[600px] 2xl:w-[640px] mx-auto text-tm dark:text-tm-dark">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-6">
             {tradingTabs?.map((tab) => (
               <button
                 key={tab.name}
                 className={`flex items-center justify-center border-[1px] text-[12px] rounded-[4px] sm:px-[28px] py-[12px] ${
                   activeTab === tab.name
-                    ? "bg-[#FED100] text-[#111111] border-[#C6C6C6]"
-                    : "bg-[#262525] border-[#333333] text-[#C6C6C6]"
+                    ? "bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark border-pcp dark:border-pcp-dark"
+                    : "bg-e1 dark:bg-e1-dark border-e1 dark:border-e2-dark text-tm dark:text-tm-dark"
                 }`}
                 onClick={() => handleChange(tab)}
               >
                 <span
-                  className={`flex items-center justify-center w-[14.77px] h-[14.77px] border-[1px] rounded-[3.6px] ${
-                    activeTab === tab.name
-                      ? "text-[#F9F9F9]"
-                      : "text-[#262525] "
-                  }`}
+                  className={`flex items-center justify-center w-[14.77px] h-[14.77px] border-[1px] rounded-[3.6px]`}
                 >
                   <img
                     src={activeTab === tab.name ? tab.iconActive : tab.icon}
@@ -121,7 +121,7 @@ const TradingOpportunitiesWidget = () => {
                 </span>
                 <span
                   className={`whitespace-nowrap ${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "mr-2"
                       : "ml-2"
                   }`}
@@ -132,9 +132,9 @@ const TradingOpportunitiesWidget = () => {
               </button>
             ))}
           </div>
-          <div className="bg-[#1D1D1D] border-[3px] border-[#222222] py-[12px] px-[12px] sm:py-[24px] sm:px-[24px] rounded-[8px]">
+          <div className="bg-e1 dark:bg-e1-dark py-[12px] px-[12px] sm:py-[24px] sm:px-[24px] rounded-[8px]">
             <div
-              className="hidden md:flex text-[#C6C6C6] text-[14px] pb-[24px]"
+              className="hidden md:flex text-tm dark:text-tm-dark text-[14px] pb-[24px]"
               style={{ fontWeight: "500" }}
             >
               <div className="w-[236px]">Name</div>
@@ -155,17 +155,17 @@ const TradingOpportunitiesWidget = () => {
                   ? symbolList?.map((instrument) => (
                       <div
                         key={instrument.symbol}
-                        className="flex gap-4 px-[14px] py-[8px] border-[1px] bg-[#262525] border-[#333333] text-[#C6C6C6] rounded-[4px] mb-3"
+                        className="flex gap-4 px-[14px] py-[8px] bg-cc dark:bg-cc-dark text-ts dark:text-ts-dark rounded-[4px] mb-3"
                       >
                         <>
                           <div
-                            className="hidden md:flex items-center text-[#ffffff] text-[14px] w-[236px]"
+                            className="hidden md:flex items-center text-tm dark:text-tm-dark text-[14px] w-[236px]"
                             style={{ fontWeight: "500" }}
                           >
                             <div
-                              className={`w-[40px] h-[40px] bg-[#3C3C3C] ${
+                              className={`w-[40px] h-[40px] bg-e1 dark:bg-e1-dark ${
                                 locale === "ar" ||
-                                locale === "fa" ||
+                                locale === "ps" ||
                                 locale === "ku"
                                   ? "ml-3"
                                   : "mr-3"
@@ -183,14 +183,14 @@ const TradingOpportunitiesWidget = () => {
                             {instrument.name}
                           </div>
                           <div
-                            className="hidden md:flex items-center text-[#ffffff] text-[14px] w-[80px] justify-center"
+                            className="hidden md:flex items-center text-tm dark:text-tm-dark text-[14px] w-[80px] justify-center"
                             style={{ fontWeight: "500" }}
                           >
                             {parseFloat(instrument?.bid_price)?.toFixed(3)}
                           </div>
                           <div className="hidden md:flex items-center justify-between">
                             <span
-                              className={`text-[#FED100] text-[14px] w-[134px] flex justify-center`}
+                              className={`text-pcp dark:text-pcp-dark text-[14px] w-[134px] flex justify-center`}
                               style={{ fontWeight: "500" }}
                             >
                               {(
@@ -198,7 +198,7 @@ const TradingOpportunitiesWidget = () => {
                               )?.toFixed(3)}
                             </span>
                             <button
-                              className="bg-[#333333] text-[#C6C6C6] text-[14px] py-[4px] px-[12px] rounded-[100px]"
+                              className="bg-e1 dark:bg-e1-dark text-ts dark:text-ts-dark text-[14px] py-[4px] px-[12px] rounded-[100px]"
                               style={{ fontWeight: "500" }}
                             >
                               {activeTab}
@@ -208,7 +208,7 @@ const TradingOpportunitiesWidget = () => {
 
                         {/* mobile view  */}
                         <>
-                          <div className="block md:hidden w-[32px] h-[32px] bg-[#3C3C3C] mr-1">
+                          <div className="block md:hidden w-[32px] h-[32px] bg-e1 dark:bg-e1-dark mr-1">
                             <Image
                               unoptimized={true}
                               src={instrument.image}
@@ -220,23 +220,25 @@ const TradingOpportunitiesWidget = () => {
                           </div>
                           <div className="flex md:hidden items-center justify-between w-10/12">
                             <div className="flex flex-col">
-                              <span className="text-[14px] text-[#fff]">
+                              <span className="text-[14px] text-tm dark:text-tm-dark">
                                 {instrument.name}
                               </span>
                               <div className="flex items-center gap-5 text-xs">
-                                <div className="text-[12px] text-[#fff]">
+                                <div className="text-[12px] text-tm dark:text-tm-dark">
                                   {parseFloat(instrument?.bid_price)?.toFixed(
                                     3
                                   )}
                                 </div>
-                                <span className={`text-[12px] text-[#FED100]`}>
+                                <span
+                                  className={`text-[12px] text-pcp dark:text-pcp-dark`}
+                                >
                                   {(
                                     instrument?.ask_price - instrument.bid_price
                                   )?.toFixed(3)}
                                 </span>
                               </div>
                             </div>
-                            <button className="bg-[#333333] text-[#C6C6C6] text-[10px] py-[4px] px-[12px] rounded-[100px]">
+                            <button className="bg-e1 dark:bg-e1-dark text-ts dark:text-ts-dark text-[10px] py-[4px] px-[12px] rounded-[100px]">
                               {activeTab}
                             </button>
                           </div>
@@ -250,20 +252,24 @@ const TradingOpportunitiesWidget = () => {
         </div>
         <div
           className={`mb-5 hidden lg:block ${
-            locale === "ar" || locale === "fa" || locale === "ku"
+            locale === "ar" || locale === "ps" || locale === "ku"
               ? "lg:mr-[120px]"
               : "lg:ml-[120px]"
           }`}
         >
-          <h2 className=" text-3xl md:text-4xl lg:text-7xl xl:text-8xl mb-2 text-[#ffffff] font-semibold">
+          <h2 className=" text-3xl md:text-4xl lg:text-7xl xl:text-8xl mb-2 text-tm dark:text-tm-dark font-semibold">
             {t("title1")} <br className="hidden lg:block" />
-            <span className="text-[#FED100]">{t("title2")}</span>{" "}
+            <span className="text-pcp dark:text-pcp-dark">
+              {t("title2")}
+            </span>{" "}
             <br className="md:hidden lg:block" />
-            <span className="text-[#FED100]">{t("title3")}</span>{" "}
+            <span className="text-pcp dark:text-pcp-dark">
+              {t("title3")}
+            </span>{" "}
             <br className="hidden lg:block" />
             <span>{t("title4")}</span>
           </h2>
-          <p className="mb-1 text-[#c6c6c6]">{t("desc")}</p>
+          <p className="mb-1 text-ts dark:text-ts-dark">{t("desc")}</p>
         </div>
       </div>
     </section>

@@ -55,7 +55,7 @@ const MarketNewsDetail = ({ slug }) => {
 
   return (
     <section
-      className="bg-[#000000] py-20"
+      className="bg-p dark:bg-p-dark py-20"
       dir={detail?.language === "ar" ? "rtl" : "ltr"}
     >
       <div className="container">
@@ -64,11 +64,11 @@ const MarketNewsDetail = ({ slug }) => {
             <NewsBody slug={slug} />
           </div>
         </div>
-        <div className="bg-[#111111] border-2 border-[#1D1D1D] rounded-[20px] flex p-10 flex-col md:flex-row mb-10 mt-20 relaed-blogs-bg">
+        <div className="bg-cc dark:bg-cc-dark rounded-[20px] flex p-10 flex-col md:flex-row mb-10 mt-20 relaed-blogs-bg">
           <div className="lg:w-[70%] w-full mb-5 md:mb-0">
             <h2
-              className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff] mb-3 ${
-                detail?.language === "ar" || locale === "fa" || locale === "ku"
+              className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark mb-3 ${
+                detail?.language === "ar" || locale === "ps" || locale === "ku"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -78,8 +78,8 @@ const MarketNewsDetail = ({ slug }) => {
                 : "Ready to Invest"}
             </h2>
             <p
-              className={` text-[#c6c6c6] text-sm sm:text-base ${
-                detail?.language === "ar" || locale === "fa" || locale === "ku"
+              className={` text-ts dark:text-ts-dark text-sm sm:text-base ${
+                detail?.language === "ar" || locale === "ps" || locale === "ku"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -102,9 +102,12 @@ const MarketNewsDetail = ({ slug }) => {
           </div>
         </div>
         <div className="pt-10">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#FED100] text-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-pcp dark:text-pcp-dark text-center">
             {t("relatedBlogs.title1")}
-            <span className="text-[#ffffff]"> {t("relatedBlogs.title2")}</span>
+            <span className="text-tm dark:text-tm-dark">
+              {" "}
+              {t("relatedBlogs.title2")}
+            </span>
           </h2>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 px-4 mt-10">
             {related.map((blog, i) => (
@@ -113,7 +116,7 @@ const MarketNewsDetail = ({ slug }) => {
                   blog?.category?.title
                 )}/${blog.slug}`}
                 key={i}
-                className="group h-full bg-[#111111] rounded-xl"
+                className="group h-full bg-cc dark:bg-cc-dark rounded-xl"
               >
                 <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out rounded-xl flex flex-col h-full">
                   <div>
@@ -125,12 +128,12 @@ const MarketNewsDetail = ({ slug }) => {
                   </div>
                   <div className="px-3 py-5 transition duration-700 ease-in-out">
                     <div>
-                      <h4 className="text-xl font-semibold text-[#F9F9F9] group-hover:text-[#FED100] transition duration-700 ease-in-out">
+                      <h4 className="text-xl font-semibold text-tm dark:text-tm-dark group-hover:text-pcp dark:group-hover:text-pcp-dark transition duration-700 ease-in-out">
                         {blog?.title}
                       </h4>
                     </div>
                     <div className="mt-3">
-                      <p className="text-[#C6C6C6] text-sm group-hover:text-white transition duration-700 ease-in-out">
+                      <p className="text-ts dark:text-ts-dark text-sm group-hover:text-tm dark:group-hover:text-tm-dark transition duration-700 ease-in-out">
                         <Moment
                           date={
                             blog?.postedOn ? blog?.postedOn : blog?.createdOn

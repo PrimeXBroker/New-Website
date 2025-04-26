@@ -52,7 +52,7 @@ const Academy = ({ academy }) => {
                 </div>
                 <Link href={`/${locale}/${acc.link}`}>
                   <div className="w-[33px] h-[33px] rounded-[5.73px] bg-[#1D1D1D] flex justify-center items-center group-hover:bg-[#F9F9F9] transition-all duration-500 ease-in-out">
-                    {locale === "ar" || locale === "fa" || locale === "ku" ? (
+                    {locale === "ar" || locale === "ps" || locale === "ku" ? (
                       <RiArrowLeftUpLine
                         className={`text-xl transition-transform duration-500 ease-in-out ${
                           hovered === acc.id

@@ -1,18 +1,17 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import SuggestionForm from "./SuggestionForm";
-import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import Image from "next/image";
 import { MdContentCopy } from "react-icons/md";
 import ComplaintForm from "./ComplaintForm";
-import { useRouter } from "next/navigation";
+import { useTheme } from "next-themes";
 
 const ContactFormWrapper = ({ active, setActive }) => {
+  const { theme } = useTheme();
   const locale = useLocale();
-  const router = useRouter();
   const t = useTranslations("contactUs.banner");
   const [copied, setCopied] = useState(false);
 
@@ -35,66 +34,38 @@ const ContactFormWrapper = ({ active, setActive }) => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  // const handleChatLink = () => {
-  //   window.location.href = `/${locale}/contact-us/?openChat=true`;
-  // };
-
   return (
-    <section className="bg-[#000000] pt-24 sm:pt-28 md:pt-32 pb-20">
+    <section className="bg-p dark:bg-p-dark pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-28">
       <div className="container grid grid-cols-12 items-center">
         <div className="col-span-12 lg:col-span-6 mb-7 lg:mb-0 text-center lg:text-start">
           <div className="">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#ffffff] md:mt-0 lg:my-1">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-tm dark:text-tm-dark md:mt-0 lg:my-1">
               {t("main_title")}
             </h1>
-            <p className="text-[#c6c6c6] mt-4 text-xl sm:text-2xl">
+            <p className="text-ts dark:text-ts-dark mt-4 text-xl sm:text-2xl">
               {t("support_title")}
             </p>
-            <p className="text-[#ffffff] mt-4 text-xl sm:text-2xl w-[96%] sm:w-[70%] mx-auto lg:mx-0">
+            <p className="text-tm dark:text-tm-dark mt-4 text-xl sm:text-2xl w-[96%] sm:w-[70%] mx-auto lg:mx-0">
               {t("connect_title")}
             </p>
             <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
-              {/* <Link
-                href="/help-center"
-                className="bg-[#111111] text-[#F1F1F1] py-2 px-4 flex items-center rounded-lg border-2 border-[#1D1D1D] hover:text-[#FED100]"
-              >
-                <span className={`${locale === "ar" || locale === "fa" || locale === "ku" ? "ml-2" : "mr-2"}`}>
-                  <Image
-                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/help+center.svg"
-                    alt="Help Center"
-                    width="40"
-                    height="200"
-                    className="w-[32px]"
-                  />
-                </span>
-                {t("help_center")}
-                {locale === "ar" || locale === "fa" || locale === "ku" ? (
-                  <FaArrowLeft
-                    className={`text-xl text-[#C6C6C6] ${
-                      locale === "ar" || locale === "fa" || locale === "ku" ? "mr-2" : "ml-2"
-                    }`}
-                  />
-                ) : (
-                  <FaArrowRight
-                    className={`text-xl text-[#C6C6C6] ${
-                      locale === "ar" || locale === "fa" || locale === "ku" ? "mr-2" : "ml-2"
-                    }`}
-                  />
-                )}
-              </Link> */}
               <button
                 onClick={handleCopyEmail}
-                className="bg-[#111111] text-[#F1F1F1] py-2 px-4 flex items-center rounded-lg border-2 border-[#1D1D1D] hover:border-[#333333] group transition-all duration-500 ease-in-out"
+                className="bg-cc dark:bg-cc-dark text-tm dark:text-tm-dark py-2 px-4 flex items-center rounded-lg border-2 border-cc dark:border-cc-dark hover:border-e1 dark:hover:border-e1-dark group transition-all duration-500 ease-in-out"
               >
                 <span
                   className={`${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "ml-2"
                       : "mr-2"
                   }`}
                 >
                   <Image
-                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/Copy+Email.svg"
+                    src={
+                      theme === "dark"
+                        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/Copy+Email.svg"
+                        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/contact-us/Copy+Email.svg"
+                    }
                     alt="Copy Email"
                     width="40"
                     height="200"
@@ -103,28 +74,31 @@ const ContactFormWrapper = ({ active, setActive }) => {
                 </span>
                 {t("copy_email")}
                 <MdContentCopy
-                  className={`text-xl text-[#C6C6C6] ${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                  className={`text-xl text-ts dark:text-ts-dark ${
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "mr-2"
                       : "ml-2"
                   }`}
                 />
               </button>
               <a
-                // onClick={handleChatLink}
                 href="https://direct.lc.chat/18955417/"
                 target="_blank"
-                className="bg-[#111111] text-[#F1F1F1] py-2 px-4 flex items-center rounded-lg border-2 border-[#1D1D1D] hover:border-[#333333] group transition-all duration-500 ease-in-out"
+                className="bg-cc dark:bg-cc-dark text-tm dark:text-tm-dark py-2 px-4 flex items-center rounded-lg border-2 border-cc dark:border-cc-dark hover:border-e1 dark:hover:border-e1-dark group transition-all duration-500 ease-in-out"
               >
                 <span
                   className={`${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "ml-2"
                       : "mr-2"
                   }`}
                 >
                   <Image
-                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/Live+Chat.svg"
+                    src={
+                      theme === "dark"
+                        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/Live+Chat.svg"
+                        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/contact-us/Live+Chat.svg"
+                    }
                     alt="Live Chat"
                     width="40"
                     height="200"
@@ -132,18 +106,18 @@ const ContactFormWrapper = ({ active, setActive }) => {
                   />
                 </span>
                 {t("live_chat")}
-                {locale === "ar" || locale === "fa" || locale === "ku" ? (
+                {locale === "ar" || locale === "ps" || locale === "ku" ? (
                   <FaArrowLeft
-                    className={`text-xl text-[#C6C6C6] ${
-                      locale === "ar" || locale === "fa" || locale === "ku"
+                    className={`text-xl text-ts dark:text-ts-dark ${
+                      locale === "ar" || locale === "ps" || locale === "ku"
                         ? "mr-2"
                         : "ml-2"
                     }`}
                   />
                 ) : (
                   <FaArrowRight
-                    className={`text-xl text-[#C6C6C6] ${
-                      locale === "ar" || locale === "fa" || locale === "ku"
+                    className={`text-xl text-ts dark:text-ts-dark ${
+                      locale === "ar" || locale === "ps" || locale === "ku"
                         ? "mr-2"
                         : "ml-2"
                     }`}
@@ -152,16 +126,16 @@ const ContactFormWrapper = ({ active, setActive }) => {
               </a>
             </div>
             {copied && (
-              <span className="text-[#FED100] text-xs">
+              <span className="text-pcp dark:text-pcp-dark text-xs">
                 {t("email_copied_message")}
               </span>
             )}
           </div>
         </div>
         <div className="col-span-12 lg:col-span-6 ">
-          <div className="bg-[#111111] border-[#1d1d1d] border-3 md:w-[74%] lg:w-[100%] rounded-[12px] p-[24px] ms:p-[40px] mx-auto">
+          <div className="bg-cc dark:bg-cc-dark md:w-[74%] lg:w-[100%] rounded-[12px] p-[24px] ms:p-[40px] mx-auto">
             <div
-              className={`tabs-navigation bg-[#1D1D1D] rounded-lg mb-2 flex justify-between items-center w-full mx-auto`}
+              className={`tabs-navigation bg-e1 dark:bg-e1-dark rounded-lg mb-2 flex justify-between items-center w-full mx-auto`}
             >
               {tabs.map((tab) => (
                 <button
@@ -169,8 +143,8 @@ const ContactFormWrapper = ({ active, setActive }) => {
                   onClick={() => setActive(tab.key)}
                   className={`tab-title font-semibold px-4 py-3 text-sm w-full ${
                     active === tab.key
-                      ? "active bg-[#ffffff] text-[#111111] rounded-[5px]"
-                      : "text-[#ffffff]"
+                      ? "active bg-tm dark:bg-tm-dark text-p dark:text-p-dark rounded-[5px]"
+                      : "text-tm dark:text-tm-dark"
                   }`}
                 >
                   {tab.title}

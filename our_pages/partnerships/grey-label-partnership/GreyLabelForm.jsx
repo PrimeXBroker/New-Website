@@ -115,21 +115,21 @@ function GreyLabelForm() {
   return (
     <section className="container px-0">
       <div
-        className={`bg-[#111111] border-[#1d1d1d] border-3 md:w-[74%] lg:w-[100%] rounded-[12px] p-[24px] ms:p-[40px] mx-auto`}
+        className={`bg-cc dark:bg-cc-dark md:w-[74%] lg:w-[100%] rounded-[12px] p-[24px] ms:p-[40px] mx-auto`}
       >
         <form
           onSubmit={formik.handleSubmit}
           className="flex flex-col justify-center items-center relative gap-4"
         >
           <div className="w-full">
-            <h2 className="text-[24px] font-semibold text-[#ffffff]">
+            <h2 className="text-[24px] font-semibold text-tm dark:text-tm-dark">
               {t("title")}
             </h2>
-            <p className="text-xs text-[#c6c6c6]">{t("desc")}</p>
+            <p className="text-xs text-ts dark:text-ts-dark">{t("desc")}</p>
           </div>
           <div className="md:flex w-full justify-between">
             <div className="w-full md:w-[48%] mb-3 md:mb-0">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("first_name_label")}
                 <input
                   type="text"
@@ -138,16 +138,16 @@ function GreyLabelForm() {
                   onBlur={formik.handleBlur}
                   value={formik.values.first_name}
                   placeholder={t("first_name_placeholder")}
-                  className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.first_name && formik.errors.first_name
-                      ? "border border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                 />
               </label>
             </div>
             <div className="w-full md:w-[48%] ">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("last_name_label")}
                 <input
                   type="text"
@@ -156,9 +156,9 @@ function GreyLabelForm() {
                   onBlur={formik.handleBlur}
                   value={formik.values.last_name}
                   placeholder={t("last_name_label")}
-                  className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.last_name && formik.errors.last_name
-                      ? "border border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                 />
@@ -167,7 +167,7 @@ function GreyLabelForm() {
           </div>
           <div className="md:flex w-full justify-between">
             <div className="w-full md:w-[48%] mb-3 md:mb-0">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("email_label")}
                 <input
                   type="email"
@@ -176,16 +176,16 @@ function GreyLabelForm() {
                   onBlur={formik.handleBlur}
                   value={formik.values.email}
                   placeholder={t("email_placeholder")}
-                  className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.email && formik.errors.email
-                      ? "border-b border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                 />
               </label>
             </div>
             <div className="w-full md:w-[48%] ib-contact">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("contact_label")}
                 <PhoneInput
                   international
@@ -194,9 +194,9 @@ function GreyLabelForm() {
                   onBlur={formik.handleBlur}
                   name="phone"
                   value={formik.values.phone}
-                  className={`ib-phone-input appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`ib-phone-input appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.phone && formik.errors.phone
-                      ? "border-b border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                   placeholder={t("number")}
@@ -205,12 +205,12 @@ function GreyLabelForm() {
             </div>
           </div>
           <div className="w-full">
-            <label className="text-xs text-[#c6c6c6]">
+            <label className="text-xs text-ts dark:text-ts-dark">
               {t("country_label")}
               <select
-                className={`capitalize py-[16px] px-[12px] w-full text-base focus:outline-none border-2 border-[#222222] bg-[#1d1d1d]  text-[#c6c6c6] ${
+                className={`capitalize py-[16px] px-[12px] w-full text-base focus:outline-none border border-e1 dark:border-e1-dark bg-e1 dark:bg-e1-dark text-ts dark:text-ts-dark ${
                   formik.touched.country && formik.errors.country
-                    ? "border border-red-600"
+                    ? "border border-rc dark:border-rc-dark"
                     : ""
                 }`}
                 name="country"
@@ -218,7 +218,7 @@ function GreyLabelForm() {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
               >
-                <option value="" className="text-[#c6c6c6]">
+                <option value="" className="text-ts dark:text-ts-dark">
                   {t("country_placeholder")}
                 </option>
                 {nationality.map((country, index) => {
@@ -226,7 +226,7 @@ function GreyLabelForm() {
                     <option
                       key={index}
                       value={country.en_short_name}
-                      className="text-black bg-white"
+                      className="text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark"
                     >
                       {country.en_short_name}
                     </option>
@@ -236,7 +236,7 @@ function GreyLabelForm() {
             </label>
           </div>
           <div className="w-full">
-            <label className="text-xs text-[#c6c6c6]">
+            <label className="text-xs text-ts dark:text-ts-dark">
               {t("question_label")}
               <textarea
                 name="question"
@@ -245,21 +245,22 @@ function GreyLabelForm() {
                 value={formik.values.question}
                 rows="4"
                 placeholder={t("question_placeholder")}
-                className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                className={`appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                   formik.touched.question && formik.errors.question
-                    ? "border-b border-red-600"
+                    ? "border border-rc dark:border-rc-dark"
                     : ""
                 }`}
               />
             </label>
           </div>
           <div className="w-full">
-            <p className="text-xs text-[#c6c6c6] mb-1">{t("condition")}</p>
+            <p className="text-xs text-ts dark:text-ts-dark mb-1">
+              {t("condition")}
+            </p>
 
             <button
               disabled={loading}
-              className="font-semibold py-[16px] px-[10px] text-[#111111] w-full custom-button"
-              style={{ borderRadius: "5px" }}
+              className="transition-colors duration-300 ease-in-out rounded-lg font-bold w-full flex items-center justify-center gap-3 group bg-pcp dark:bg-pcp-dark hover:bg-tm dark:hover:bg-tm-dark text-nb dark:text-nb-dark group py-4 px-3"
             >
               <div className="flex gap-1 items-center justify-center">
                 {loading ? (

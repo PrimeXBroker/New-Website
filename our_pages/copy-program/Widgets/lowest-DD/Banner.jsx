@@ -8,13 +8,13 @@ const Banner = () => {
   const t = useTranslations("copyProgram.lowestDDWidget");
 
   return (
-    <section className="bg-[#000000] pt-24 sm:pt-32 pb-8">
+    <section className="bg-p dark:bg-p-dark pt-24 sm:pt-32 pb-8">
       <div className="container">
         <div className="grid grid-cols-12 items-center">
           <div className="col-span-12 md:col-span-5">
             {/* <div
               className={`text-center md:text-start relative ${
-                locale === "ar" || locale === "fa" || locale === "ku"
+                locale === "ar" || locale === "ps" || locale === "ku"
                   ? "left-[137px]"
                   : "right-[137px]"
               }`}
@@ -22,7 +22,7 @@ const Banner = () => {
               <TrustPilot />
             </div> */}
             <div className="mt-4 text-center md:text-start">
-              <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#FED100]">
+              <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-pcp dark:text-pcp-dark">
                 {t("title1")}
                 {/* <span className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#FED100]">
                   {t("title2")}

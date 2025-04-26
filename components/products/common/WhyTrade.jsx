@@ -5,6 +5,7 @@ import { useLocale } from "next-intl";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { setTokenData } from "@/redux/slices/workspaceSlice";
 import axios from "axios";
+import { useTheme } from "next-themes";
 
 const WhyTrade = ({
   title_part1,
@@ -13,7 +14,7 @@ const WhyTrade = ({
   productTickers,
 }) => {
   const locale = useLocale();
-
+  const { theme } = useTheme();
   const { tokenData } = useAppSelector((state) => state.auth);
   const dispatch = useAppDispatch();
   const [symbolList, setSymbolList] = useState([]);
@@ -65,20 +66,20 @@ const WhyTrade = ({
   }, [productTickers]);
 
   return (
-    <section className="bg-[#000000] pt-12 sm:pt-28">
+    <section className="bg-p dark:bg-p-dark pt-16 sm:pt-28">
       <div className="container">
         <div className="grid grid-cols-12 items-center">
           <div className="col-span-12 lg:col-span-5">
             <div className="mt-5 text-center lg:text-start flex flex-col gap-2">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff]">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark">
                 {title_part1} <br className="hidden lg:block" />
-                <span className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-semibold text-[#FED100] inline-block mt-2">
+                <span className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-semibold text-pcp dark:text-pcp-dark inline-block mt-2">
                   {title_part2}
                 </span>
               </h2>
               <p
-                className={`text-[#c6c6c6] mt-4 sm:w-[84%] lg:w-auto mx-auto lg:mx-0 ${
-                  locale === "ar"
+                className={`text-ts dark:text-ts-dark mt-4 sm:w-[84%] lg:w-auto mx-auto lg:mx-0 ${
+                  locale === "ar" || locale === "ku" || locale === "ps"
                     ? "text-center lg:text-right"
                     : "text-center lg:text-left"
                 }`}
@@ -87,38 +88,45 @@ const WhyTrade = ({
               </p>
             </div>
           </div>
-          <div className="col-span-12 lg:col-span-7 mt-5 sm:mt-8">
+          <div className="col-span-12 lg:col-span-7 mt-5 sm:mt-0">
             <div
-              className={`flex justify-center items-center mt-6 md:mt-0 w-full sm:w-[86%] h-[644px] sm:h-[400px] rounded-3xl relative z-0 bg-[#222222] bg-no-repeat sm:bg-cover bg-center ${
-                locale === "ar"
+              className={`flex justify-center items-center mt-6 md:mt-0 w-full sm:w-[86%] h-[644px] sm:h-[400px] rounded-3xl relative z-0 bg-cc dark:bg-cc-dark bg-no-repeat sm:bg-cover bg-center ${
+                locale === "ar" || locale === "ku" || locale === "ps"
                   ? "mx-auto lg:mx-0 lg:mr-auto"
                   : "mx-auto lg:mx-0 lg:ml-auto"
               }`}
-              style={{
-                backgroundImage:
-                  "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-instruments/Product+Tickers+BG+.webp')",
-              }}
+              style={
+                theme === "dark"
+                  ? {
+                      backgroundImage:
+                        "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-instruments/Product+Tickers+BG+.webp')",
+                    }
+                  : {
+                      backgroundImage:
+                        "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/trading-instruments/Bg-Ticker-Light.webp')",
+                    }
+              }
             >
               <div className="h-[400px] z-10 flex items-center">
                 {loading && !symbolList.length ? (
                   <div className="flex justify-center items-center">
                     <div className="ellipsis">
-                      <span className="dot text-[#FED100]">.</span>
-                      <span className="dot text-[#FED100]">.</span>
-                      <span className="dot text-[#FED100]">.</span>
+                      <span className="dot text-pcp dark:text-pcp-dark">.</span>
+                      <span className="dot text-pcp dark:text-pcp-dark">.</span>
+                      <span className="dot text-pcp dark:text-pcp-dark">.</span>
                     </div>
                   </div>
                 ) : (
                   <>
                     <div
-                      className="bg-[#FFFFFF] bg-opacity-30 p-5 rounded-[20px] backdrop-blur-sm"
+                      className="bg-tm dark:bg-tm-dark bg-opacity-30 dark:bg-opacity-30 p-5 rounded-[20px] backdrop-blur-sm"
                       dir="ltr"
                     >
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {symbolList.map((item, index) => (
                           <div
                             key={index}
-                            className="w-56 bg-[#FFFFFF] rounded-2xl shadow-md p-4 flex flex-col justify-center items-center space-y-4"
+                            className="w-56 bg-nw dark:bg-nw-dark rounded-2xl shadow-md p-4 flex flex-col justify-center items-center space-y-4"
                           >
                             <div className="flex gap-3 items-center w-full">
                               <div className="flex items-center space-x-2">
@@ -134,11 +142,11 @@ const WhyTrade = ({
                                 </div>
                               </div>
                               <div className="">
-                                <p className="text-base font-semibold text-[#111111]">
+                                <p className="text-base font-semibold text-nb dark:text-nb-dark">
                                   {item.name}
                                 </p>
                                 {item.description ? (
-                                  <p className="text-xs text-[#111111]">
+                                  <p className="text-xs text-nb dark:text-nb-dark">
                                     {item.description}
                                   </p>
                                 ) : (
@@ -150,8 +158,8 @@ const WhyTrade = ({
                               <div
                                 className={`text-xl font-medium ${
                                   item.bid_price_change === "up"
-                                    ? "text-[#43A047]"
-                                    : "text-[#DD2216]"
+                                    ? "text-gc dark:text-gc-dark"
+                                    : "text-rc dark:text-rc-dark"
                                 }`}
                               >
                                 {parseFloat(item?.bid_price)?.toFixed(3)}
@@ -159,8 +167,8 @@ const WhyTrade = ({
                               <div
                                 className={`px-4 py-1 rounded-md text-[#111111] font-medium text-base ${
                                   item.bid_price_change === "up"
-                                    ? "bg-[#43A047] bg-opacity-10 text-[#43A047]"
-                                    : "bg-[#DD2216] bg-opacity-10 text-[#DD2216]"
+                                    ? "bg-gb dark:bg-gb-dark text-gc dark:text-gc-dark"
+                                    : "bg-rb dark:bg-rb-dark dark:text-rc-dark"
                                 }`}
                               >
                                 {(item?.ask_price - item.bid_price)?.toFixed(3)}

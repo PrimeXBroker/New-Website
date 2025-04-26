@@ -17,7 +17,7 @@ const StatsCard = ({ stats }) => {
           <div
             key={index}
             className={`flex flex-col md:items-center justify-center  border-[#ffffff] border-opacity-[10%] last:border-none px-20 pb-4 md:px-0 md:pb-0 ${
-              locale === "ar" || locale === "fa" || locale === "ku"
+              locale === "ar" || locale === "ps" || locale === "ku"
                 ? "border-b-2 md:border-b-0 md:border-l-2"
                 : "border-b-2 md:border-b-0 md:border-r-2"
             } `}

@@ -1,39 +1,44 @@
 "use client";
+import { useTheme } from "next-themes";
 import React from "react";
 
 const EasyStepsMobile = ({ easySteps, easyStepsMobile }) => {
+  const { theme } = useTheme();
+
   return (
-    <div className="bg-[#000000] py-10">
+    <div className="bg-p dark:bg-p-dark py-10">
       <div className="container mb-7">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#FED100] text-center">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-pcp dark:text-pcp-dark text-center">
           {easySteps.title1}
-          <span className="text-[#ffffff]">{easySteps.title2}</span>
+          <span className="text-tm dark:text-tm-dark">{easySteps.title2}</span>
         </h2>
       </div>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         {easyStepsMobile.map((step, index) => (
           <div
             key={index}
-            className="bg-transparent border-dashed border-4 border-[#1D1D1D] rounded-lg p-6 shadow-lg text-[#FED100] flex flex-col gap-2"
+            className="bg-cc dark:bg-cc-dark p-6 rounded-lg text-pcp dark:text-pcp-dark flex flex-col gap-2"
           >
             <div className="flex justify-between items-center">
               <div>
                 <h3 className="text-xl font-bold flex items-center gap-2">
-                  <span className="bg-[#1D1D1D] border-2 border-[#222222] text-center rounded-md text-[#FED100] h-8 w-8 flex items-center justify-center text-xl font-semibold">
+                  <span className="bg-e1 dark:bg-e1-dark text-center rounded-md text-tm dark:text-tm-dark h-8 w-8 flex items-center justify-center text-xl font-semibold">
                     {step.count}
                   </span>
                   {step.step_title}
                 </h3>
               </div>
-              <div className="w-12 h-12 borer-2 border-[#222222] bg-[#1D1D1D] group-hover:bg-[#FED100] rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center">
                 <img
-                  src={step.step_img}
+                  src={
+                    theme === "dark" ? step.step_img_dark : step.step_img_light
+                  }
                   alt={step.step_title}
                   className="w-[32px]"
                 />
               </div>
             </div>
-            <p className="text-[#c6c6c6] mt-2 text-sm sm:text-base">
+            <p className="text-tm dark:text-tm-dark mt-2 text-sm sm:text-base">
               {step.step_desc}
             </p>
           </div>

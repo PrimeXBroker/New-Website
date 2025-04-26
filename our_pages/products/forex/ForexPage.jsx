@@ -143,7 +143,7 @@ const ForexPage = () => {
         description={t("openLiveAccount.description")}
       />
       <Strategies />
-      <div className="pb-0 sm:pb-8 bg-[#000000]">
+      <div className="pb-16 sm:pb-28 bg-p dark:bg-p-dark">
         <FAQ faqs={faqs} />
       </div>
     </>

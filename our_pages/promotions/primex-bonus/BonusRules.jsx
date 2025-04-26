@@ -1,15 +1,20 @@
+"use client";
 import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import React from "react";
 
 const BonusRules = () => {
+  const { theme } = useTheme();
   const t = useTranslations("bonusPage.bonusRules");
 
   const rulesData = [
     {
       category: t("trading_rules_title"),
-      imageUrl:
+      imageDark:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Bonus-Eligibility.svg",
+      imageLight:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/bonus/Bonus+Eligibility.svg",
       items: [
         t("trading_rules_li1_desc"),
         t("trading_rules_li2_desc"),
@@ -18,8 +23,10 @@ const BonusRules = () => {
     },
     {
       category: t("general_rules_title"),
-      imageUrl:
+      imageDark:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Bonus-Rules.svg",
+      imageLight:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/bonus/Bonus+Rules.svg",
       items: [
         t("general_rules_li1_desc"),
         t("general_rules_li2_desc"),
@@ -29,8 +36,10 @@ const BonusRules = () => {
     },
     {
       category: t("timeline_title"),
-      imageUrl:
+      imageDark:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/General-rules.svg",
+      imageLight:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/bonus/General+rules.svg",
       items: [
         t("timeline_li1_desc"),
         t("timeline_li2_desc"),
@@ -40,17 +49,19 @@ const BonusRules = () => {
     },
     {
       category: t("works_title"),
-      imageUrl:
+      imageDark:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Prohibited-Trading-Strategies.svg",
+      imageLight:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/bonus/Prohibited+Trading+Strategies.svg",
       items: [t("works_li1_desc"), t("works_li2_desc")],
     },
   ];
 
   return (
-    <div className="bg-[#030303] text-[#F9F9F9]">
+    <div className="bg-p dark:bg-p-dark text-tm dark:text-tm-dark">
       <div className="container mx-auto">
         <div className="text-center md:text-center mb-10">
-          <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-[#F9F9F9] uppercase">
+          <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-tm dark:text-tm-dark uppercase">
             {t("title")}
           </h2>
         </div>
@@ -58,7 +69,7 @@ const BonusRules = () => {
           {rulesData.map((rule, index) => (
             <div
               key={index}
-              className="bg-[#1A1A1A] p-8 rounded-lg min-h-[244px]"
+              className="bg-cc dark:bg-cc-dark p-8 rounded-lg min-h-[244px]"
             >
               <dv className="flex justify-between items-center mb-6">
                 <h3 className="text-xl sm:text-2xl font-semibold">
@@ -67,7 +78,7 @@ const BonusRules = () => {
                 <div>
                   <Image
                     unoptimized={true}
-                    src={rule.imageUrl}
+                    src={theme === "dark" ? rule.imageDark : rule.imageLight}
                     width="100"
                     height="100"
                     alt={`${rule.category} Prize`}

@@ -8,8 +8,10 @@ import LocaleLink from "./LocaleLink";
 import { usePathname, useRouter } from "next/navigation";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { getLoginUrl } from "@/utilities/getLoginUrl";
+import { useTheme } from "next-themes";
 
 const DesktopHeader = ({ locale }) => {
+  const { theme } = useTheme();
   const t = useTranslations("menu");
   const [activeDropdown, setActiveDropdown] = useState(null);
   const pathname = usePathname();
@@ -20,11 +22,11 @@ const DesktopHeader = ({ locale }) => {
     text:
       locale === "ar"
         ? "عربي"
-        : // : locale === "cn"
-        // ? "中文"
-        // locale === "fa"
-        // ? "فارسی"
-        locale === "ku"
+        : locale === "es"
+        ? "Espanol"
+        : locale === "ps"
+        ? "پښتو"
+        : locale === "ku"
         ? "کوردی"
         : // : locale === "tr"
           // ? "Türkçe"
@@ -32,11 +34,11 @@ const DesktopHeader = ({ locale }) => {
     flag:
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
-        : // : locale === "cn"
-        // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
-        // locale === "fa"
-        // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
-        locale === "ku"
+        : locale === "es"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
+        : locale === "ps"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
+        : locale === "ku"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
         : // : locale === "tr"
           // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
@@ -105,11 +107,11 @@ const DesktopHeader = ({ locale }) => {
     const text =
       locale === "ar"
         ? "عربي"
-        : // : locale === "cn"
-        // ? "中文"
-        // locale === "fa"
-        // ? "فارسی"
-        locale === "ku"
+        : locale === "es"
+        ? "Espanol"
+        : locale === "ps"
+        ? "پښتو"
+        : locale === "ku"
         ? "کوردی"
         : // : locale === "tr"
           // ? "Türkçe"
@@ -117,11 +119,11 @@ const DesktopHeader = ({ locale }) => {
     const flag =
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
-        : // : locale === "cn"
-        // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
-        // locale === "fa"
-        // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
-        locale === "ku"
+        : locale === "es"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
+        : locale === "ps"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
+        : locale === "ku"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
         : // : locale === "tr"
           // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
@@ -138,17 +140,21 @@ const DesktopHeader = ({ locale }) => {
       }`}
     >
       <div
-        className="fixed top-0 left-0 h-[4px] bg-[#FED100] z-50"
+        className="fixed top-0 left-0 h-[4px] bg-pcp dark:bg-pcp-dark z-50"
         style={{ width: `${scrollProgress}%` }}
       ></div>
-      <div className="container bg-[#1d1d1d] mt-[14px] h-[55px] rounded-[8px] flex items-center justify-between">
+      <div className="container bg-cc dark:bg-cc-dark mt-[14px] h-[55px] rounded-[8px] flex items-center justify-between">
         <div className="flex items-center">
           <LocaleLink href="/" className="logo">
             <Image
               unoptimized={true}
               width="120"
               height="120"
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
+              src={
+                theme === "dark"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-black.webp"
+              }
               alt="Logo Image"
             />
           </LocaleLink>
@@ -156,7 +162,7 @@ const DesktopHeader = ({ locale }) => {
         <nav className="flex items-center h-full">
           <ul className="flex gap-[16px] h-full">
             {/* <li className="flex items-center h-full">
-              <LocaleLink href="/" className="text-[#ffffff] text-[.8em]">
+              <LocaleLink href="/" className="text-tm dark:text-tm-dark text-[.8em]">
                 {t("home")}
               </LocaleLink>
             </li> */}
@@ -165,11 +171,11 @@ const DesktopHeader = ({ locale }) => {
               onMouseEnter={() => openDropdown(0)}
               onMouseLeave={closeDropdown}
             >
-              <button className="text-[#ffffff] text-[.8em] flex items-center">
+              <button className="text-tm dark:text-tm-dark text-[.8em] flex items-center">
                 {t("trading")}
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "mr-1"
                       : "ml-1"
                   }`}
@@ -180,12 +186,12 @@ const DesktopHeader = ({ locale }) => {
                 </svg>
               </button>
               {activeDropdown === 0 && (
-                <ul className="absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
+                <ul className="absolute top-full mt-[4px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
                   <li>
                     <LocaleLink
                       href="/platform/mt5-platform"
                       onClick={closeDropdown}
-                      className="block p-[10px] text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block p-[10px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("platform")}
                     </LocaleLink>
@@ -194,7 +200,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/forex"
                       onClick={closeDropdown}
-                      className="block p-[10px] text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block p-[10px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("forex")}
                     </LocaleLink>
@@ -203,7 +209,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/metals"
                       onClick={closeDropdown}
-                      className="block p-[10px] text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block p-[10px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("metals")}
                     </LocaleLink>
@@ -212,7 +218,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/indices"
                       onClick={closeDropdown}
-                      className="block p-[10px] text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block p-[10px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("indices")}
                     </LocaleLink>
@@ -221,7 +227,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/commodities"
                       onClick={closeDropdown}
-                      className="block p-[10px] text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block p-[10px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("commodities")}
                     </LocaleLink>
@@ -230,7 +236,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/stocks"
                       onClick={closeDropdown}
-                      className="block p-[10px] text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block p-[10px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("stocks")}
                     </LocaleLink>
@@ -239,7 +245,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/crypto"
                       onClick={closeDropdown}
-                      className="block p-[10px] text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block p-[10px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("crypto")}
                     </LocaleLink>
@@ -250,7 +256,7 @@ const DesktopHeader = ({ locale }) => {
             <li className="flex items-center h-full relative">
               <LocaleLink
                 href="/account-types"
-                className="text-[#ffffff] text-[.8em]"
+                className="text-tm dark:text-tm-dark text-[.8em]"
               >
                 {t("accounts")}
               </LocaleLink>
@@ -261,14 +267,17 @@ const DesktopHeader = ({ locale }) => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
                 alt="Hot Image"
                 className={`absolute top-1 ${
-                  locale === "ar" || locale === "fa" || locale === "ku"
+                  locale === "ar" || locale === "ps" || locale === "ku"
                     ? "-left-0"
                     : "-right-0"
                 }`}
               /> */}
             </li>
             <li className="flex items-center h-full relative">
-              <LocaleLink href="/bonus" className="text-[#ffffff] text-[.8em]">
+              <LocaleLink
+                href="/bonus"
+                className="text-tm dark:text-tm-dark text-[.8em]"
+              >
                 {t("bonus")}
               </LocaleLink>
               <Image
@@ -278,7 +287,7 @@ const DesktopHeader = ({ locale }) => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
                 alt="Hot Image"
                 className={`absolute top-1 ${
-                  locale === "ar" || locale === "fa" || locale === "ku"
+                  locale === "ar" || locale === "ps" || locale === "ku"
                     ? "-left-0"
                     : "-right-0"
                 }`}
@@ -287,7 +296,7 @@ const DesktopHeader = ({ locale }) => {
             {/* <li className="flex items-center h-full relative">
               <LocaleLink
                 href="/ramadan-contest"
-                className="text-[#ffffff] text-[.8em]"
+                className="text-tm dark:text-tm-dark text-[.8em]"
               >
                 {t("ramadan-contest")}
               </LocaleLink>
@@ -298,7 +307,7 @@ const DesktopHeader = ({ locale }) => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
                 alt="Hot Image"
                 className={`absolute top-1 ${
-                  locale === "ar" || locale === "fa" || locale === "ku"
+                  locale === "ar" || locale === "ps" || locale === "ku"
                     ? "-left-0"
                     : "-right-0"
                 }`}
@@ -307,7 +316,7 @@ const DesktopHeader = ({ locale }) => {
             <li className="flex items-center h-full relative">
               <LocaleLink
                 href="/social-trading"
-                className="text-[#ffffff] text-[.8em]"
+                className="text-tm dark:text-tm-dark text-[.8em]"
               >
                 {t("social_trading")}
               </LocaleLink>
@@ -317,11 +326,11 @@ const DesktopHeader = ({ locale }) => {
               onMouseEnter={() => openDropdown(2)}
               onMouseLeave={closeDropdown}
             >
-              <button className="text-[#ffffff] text-[.8em] flex items-center">
+              <button className="text-tm dark:text-tm-dark text-[.8em] flex items-center">
                 {t("partners")}
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "mr-1"
                       : "ml-1"
                   }`}
@@ -333,8 +342,8 @@ const DesktopHeader = ({ locale }) => {
               </button>
               {activeDropdown === 2 && (
                 <ul
-                  className={`absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] ${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                  className={`absolute top-full mt-[4px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] ${
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "min-w-[250px]"
                       : "min-w-[250px]"
                   } rounded-[6px]`}
@@ -343,7 +352,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/ib-program"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("ib_program")}
                     </LocaleLink>
@@ -352,7 +361,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/regional-partner"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("regional")}
                     </LocaleLink>
@@ -361,7 +370,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/grey-label-partner"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("grey_label")}
                     </LocaleLink>
@@ -370,7 +379,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/liquidity-providing"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("liquidity")}
                     </LocaleLink>
@@ -381,7 +390,7 @@ const DesktopHeader = ({ locale }) => {
             {/* <li className="flex items-center h-full">
               <LocaleLink
                 href="/academy"
-                className="text-[#ffffff] text-[.8em]"
+                className="text-tm dark:text-tm-dark text-[.8em]"
               >
                 {t("academy")}
               </LocaleLink>
@@ -391,11 +400,11 @@ const DesktopHeader = ({ locale }) => {
               onMouseEnter={() => openDropdown(4)}
               onMouseLeave={closeDropdown}
             >
-              <button className="text-[#ffffff] text-[.8em] flex items-center relative">
+              <button className="text-tm dark:text-tm-dark text-[.8em] flex items-center relative">
                 {t("knowledge-hub")}
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "mr-1"
                       : "ml-1"
                   }`}
@@ -412,18 +421,18 @@ const DesktopHeader = ({ locale }) => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
                 alt="Hot Image"
                 className={`absolute top-1 ${
-                  locale === "ar" || locale === "fa" || locale === "ku"
+                  locale === "ar" || locale === "ps" || locale === "ku"
                     ? "left-[16px]"
                     : "right-[16px]"
                 }`}
               /> */}
               {activeDropdown === 4 && (
-                <ul className="absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[250px] rounded-[6px]">
+                <ul className="absolute top-full mt-[4px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] min-w-[250px] rounded-[6px]">
                   <li>
                     <LocaleLink
                       href="/economic-calender"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("economic-calendar")}
                     </LocaleLink>
@@ -434,7 +443,7 @@ const DesktopHeader = ({ locale }) => {
                         <LocaleLink
                           href="/technical-analysis"
                           onClick={closeDropdown}
-                          className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                          className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                         >
                           {t("technical-analysis")}
                         </LocaleLink>
@@ -443,7 +452,7 @@ const DesktopHeader = ({ locale }) => {
                         <LocaleLink
                           href="/market-news"
                           onClick={closeDropdown}
-                          className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                          className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                         >
                           {t("market-news")}
                         </LocaleLink>
@@ -454,7 +463,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/webinars"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("webinars")}
                     </LocaleLink>
@@ -464,7 +473,7 @@ const DesktopHeader = ({ locale }) => {
                       <LocaleLink
                         href="/blogs"
                         onClick={closeDropdown}
-                        className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                        className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                       >
                         {t("blog")}
                       </LocaleLink>
@@ -478,11 +487,11 @@ const DesktopHeader = ({ locale }) => {
               onMouseEnter={() => openDropdown(6)}
               onMouseLeave={closeDropdown}
             >
-              <button className="text-[#ffffff] text-[.8em] flex items-center">
+              <button className="text-tm dark:text-tm-dark text-[.8em] flex items-center">
                 {t("company")}
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "mr-1"
                       : "ml-1"
                   }`}
@@ -494,8 +503,8 @@ const DesktopHeader = ({ locale }) => {
               </button>
               {activeDropdown === 6 && (
                 <ul
-                  className={`absolute top-full mt-[4px] bg-[#1d1d1d] shadow-lg p-[10px] ${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                  className={`absolute top-full mt-[4px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] ${
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "min-w-[180px]"
                       : "min-w-[180px]"
                   } rounded-[6px]`}
@@ -504,7 +513,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/primex-spreads"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("primex-spread")}
                     </LocaleLink>
@@ -513,7 +522,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/why-choose-us"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("choose_us")}
                     </LocaleLink>
@@ -522,7 +531,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/about"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("about")}
                     </LocaleLink>
@@ -531,7 +540,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/contact"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("contact")}
                     </LocaleLink>
@@ -540,7 +549,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/awards"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("awards")}
                     </LocaleLink>
@@ -549,7 +558,7 @@ const DesktopHeader = ({ locale }) => {
                     <LocaleLink
                       href="/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e"
                       onClick={closeDropdown}
-                      className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("press_release")}
                     </LocaleLink>
@@ -559,7 +568,7 @@ const DesktopHeader = ({ locale }) => {
                       <LocaleLink
                         href="/careers"
                         onClick={closeDropdown}
-                        className="block px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px]"
+                        className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                       >
                         {t("careers")}
                       </LocaleLink>
@@ -574,20 +583,20 @@ const DesktopHeader = ({ locale }) => {
           <button
             onClick={() => window.open(getLoginUrl(locale))}
             className={`group ${
-              locale === "ar" || locale === "fa" || locale === "ku"
+              locale === "ar" || locale === "ps" || locale === "ku"
                 ? "w-[140px]"
                 : "w-[120px]"
-            }   py-[6px] custom-button`}
+            }   py-[6px] rounded-lg font-bold flex items-center justify-center bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark`}
           >
             {t("login")}
           </button>
           <button
             onClick={() => window.open(getRegisterUrl(locale))}
             className={`group ${
-              locale === "ar" || locale === "fa" || locale === "ku"
+              locale === "ar" || locale === "ps" || locale === "ku"
                 ? "w-[140px]"
                 : "w-[120px]"
-            }   py-[6px] custom-button`}
+            }   py-[6px] rounded-lg font-bold flex items-center justify-center bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark`}
           >
             {t("register")}
           </button>
@@ -599,7 +608,7 @@ const DesktopHeader = ({ locale }) => {
               onMouseEnter={() => openDropdown(5)}
               onMouseLeave={closeDropdown}
             >
-              <button className="text-[#ffffff] text-[.8em] flex items-center">
+              <button className="text-tm dark:text-tm-dark text-[.8em] flex items-center">
                 <Image
                   unoptimized={true}
                   width="15"
@@ -609,7 +618,7 @@ const DesktopHeader = ({ locale }) => {
                 />
                 <span
                   className={`${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "mr-[5px]"
                       : "ml-[5px]"
                   }`}
@@ -618,7 +627,7 @@ const DesktopHeader = ({ locale }) => {
                 </span>
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "mr-1"
                       : "ml-1"
                   }`}
@@ -629,7 +638,7 @@ const DesktopHeader = ({ locale }) => {
                 </svg>
               </button>
               {activeDropdown === 5 && (
-                <ul className="absolute top-full mt-[20px] bg-[#1d1d1d] shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
+                <ul className="absolute top-full mt-[20px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
                   <li>
                     <Link
                       href={
@@ -643,7 +652,7 @@ const DesktopHeader = ({ locale }) => {
                           "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg"
                         )
                       }
-                      className="px-4 py-2 text-[#ffffff] text-[.8em] hover:text-[#111111] hover:bg-primary rounded-[6px] flex items-center"
+                      className="px-4 py-2 text-tm dark:text-tm-dark text-[.8em] hover:text-nb dark:hover:text-nb-dark hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
                       dir="ltr"
                     >
                       <Image
@@ -669,7 +678,7 @@ const DesktopHeader = ({ locale }) => {
                           "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
                         )
                       }
-                      className="px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
+                      className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
                       dir="ltr"
                     >
                       <Image
@@ -682,64 +691,12 @@ const DesktopHeader = ({ locale }) => {
                       <span className="ml-[5px]">عربي</span>
                     </Link>
                   </li>
-                  {/* <li>
-                    <Link
-                      href={
-                        currentLocale === "cn"
-                          ? `/${currentLocale}/${restOfPath}`
-                          : `/cn/${restOfPath}`
-                      }
-                      onClick={() =>
-                        handleClick(
-                          "中文",
-                          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
-                        )
-                      }
-                      className="px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
-                      dir="ltr"
-                    >
-                      <Image
-                        unoptimized={true}
-                        width="15"
-                        height="15"
-                        src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/cn-flag.svg"
-                        alt="Chinese Flag"
-                      />
-                      <span className="ml-[5px]">中文</span>
-                    </Link>
-                  </li> */}
-                  {/* <li>
-                    <Link
-                      href={
-                        currentLocale === "fa"
-                          ? `/${currentLocale}/${restOfPath}`
-                          : `/fa/${restOfPath}`
-                      }
-                      onClick={() =>
-                        handleClick(
-                          "فارسی",
-                          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
-                        )
-                      }
-                      className="px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
-                      dir="ltr"
-                    >
-                      <Image
-                        unoptimized={true}
-                        width="15"
-                        height="15"
-                        src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/persian.webp"
-                        alt="Farsi Flag"
-                      />
-                      <span className="ml-[5px]">فارسی</span>
-                    </Link>
-                  </li> */}
                   <li>
                     <Link
                       href={
                         currentLocale === "ku"
                           ? `/${currentLocale}/${restOfPath}`
-                          : `/ku${restOfPath}`
+                          : `/ku/${restOfPath}`
                       }
                       onClick={() =>
                         handleClick(
@@ -747,7 +704,7 @@ const DesktopHeader = ({ locale }) => {
                           "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
                         )
                       }
-                      className="px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
+                      className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
                       dir="ltr"
                     >
                       <Image
@@ -758,6 +715,58 @@ const DesktopHeader = ({ locale }) => {
                         alt="Kurdish Flag"
                       />
                       <span className="ml-[5px]">کوردی</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={
+                        currentLocale === "es"
+                          ? `/${currentLocale}/${restOfPath}`
+                          : `/es/${restOfPath}`
+                      }
+                      onClick={() =>
+                        handleClick(
+                          "Espanol",
+                          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
+                        )
+                      }
+                      className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
+                      dir="ltr"
+                    >
+                      <Image
+                        unoptimized={true}
+                        width="15"
+                        height="15"
+                        src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
+                        alt="Chinese Flag"
+                      />
+                      <span className="ml-[5px]">Espanol</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={
+                        currentLocale === "ps"
+                          ? `/${currentLocale}/${restOfPath}`
+                          : `/ps/${restOfPath}`
+                      }
+                      onClick={() =>
+                        handleClick(
+                          "پښتو",
+                          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
+                        )
+                      }
+                      className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
+                      dir="ltr"
+                    >
+                      <Image
+                        unoptimized={true}
+                        width="15"
+                        height="15"
+                        src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
+                        alt="Farsi Flag"
+                      />
+                      <span className="ml-[5px]">پښتو</span>
                     </Link>
                   </li>
                   {/* <li>
@@ -773,7 +782,7 @@ const DesktopHeader = ({ locale }) => {
                           "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
                         )
                       }
-                      className="px-4 py-2 text-[#ffffff] hover:text-[#111111] text-[.8em] hover:bg-primary rounded-[6px] flex items-center"
+                      className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
                       dir="ltr"
                     >
                       <Image

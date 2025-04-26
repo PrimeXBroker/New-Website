@@ -35,11 +35,11 @@ const MarketNews = ({ news, totalPages, lang }) => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-[50vh] bg-[#000000]">
+      <div className="flex justify-center items-center min-h-[50vh] bg-p dark:bg-p-dark">
         <div className="ellipsis">
-          <span className="dot text-[#FED100]">.</span>
-          <span className="dot text-[#FED100]">.</span>
-          <span className="dot text-[#FED100]">.</span>
+          <span className="dot text-pcp dark:text-pcp-dark">.</span>
+          <span className="dot text-pcp dark:text-pcp-dark">.</span>
+          <span className="dot text-pcp dark:text-pcp-dark">.</span>
         </div>
       </div>
     );
@@ -47,7 +47,7 @@ const MarketNews = ({ news, totalPages, lang }) => {
   console.log(newsList?.[0], "newsList");
 
   return (
-    <section className="bg-[#000000] pt-20 sm:pt-24 pb-10 sm:pb-14">
+    <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
       <div className="container">
         <div className="grid grid-cols-12">
           {newsList?.map((blog, index) => (
@@ -56,7 +56,7 @@ const MarketNews = ({ news, totalPages, lang }) => {
                 href={`/${locale}/${convertToKebabCase(
                   blog?.category?.title
                 )}/${blog.slug}`}
-                className="group h-full rounded-xl bg-[#111111]"
+                className="group h-full rounded-xl bg-cc dark:bg-cc-dark"
                 key={index}
               >
                 <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out rounded-xl flex flex-col h-full">
@@ -70,14 +70,14 @@ const MarketNews = ({ news, totalPages, lang }) => {
                       className="w-full overflow-hidden transition duration-700 ease-in-out transform group-hover:scale-110"
                     />
                   </div>
-                  <div className="px-3 py-5 bg-[#111111] transition duration-700 ease-in-out">
+                  <div className="px-3 py-5 bg-cc dark:bg-cc-dark transition duration-700 ease-in-out">
                     <div>
-                      <h4 className="text-xl font-semibold text-[#F9F9F9] group-hover:text-[#FED100] transition duration-700 ease-in-out">
+                      <h4 className="text-xl font-semibold text-tm dark:text-tm-dark group-hover:text-pcp dark:group-hover:text-pcp-dark transition duration-700 ease-in-out">
                         {blog?.title}
                       </h4>
                     </div>
                     <div className="mt-3">
-                      <p className="text-[#C6C6C6] text-sm group-hover:text-white transition duration-700 ease-in-out">
+                      <p className="text-ts dark:text-ts-dark text-sm group-hover:text-tm dark:group-hover:text-tm-dark transition duration-700 ease-in-out">
                         <Moment
                           date={
                             blog?.postedOn ? blog?.postedOn : blog?.createdOn
@@ -100,9 +100,6 @@ const MarketNews = ({ news, totalPages, lang }) => {
             total={totalPages}
             initialPage={page}
             onChange={(p) => handleChange(p)}
-            className="all-blogs-pagination"
-            radius="sm"
-            color="default"
           />
         </div>
       </div>

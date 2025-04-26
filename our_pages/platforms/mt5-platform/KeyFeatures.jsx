@@ -1,12 +1,18 @@
+"use client";
 import React from "react";
 import { useLocale } from "next-intl";
+import { useTheme } from "next-themes";
 
 const FeatureCard = ({ title, description }) => {
   const locale = useLocale();
   return (
-    <div className="bg-[#1D1D1D] rounded-xl border-2 border-[#222222] p-6">
-      <h3 className="text-xl font-semibold mb-2 text-[#ffffff]">{title}</h3>
-      <p className="text-[#c6c6c6] text-sm sm:text-base">{description}</p>
+    <div className="bg-e1 dark:bg-e1-dark rounded-xl p-6">
+      <h3 className="text-xl font-semibold mb-2 text-tm dark:text-tm-dark">
+        {title}
+      </h3>
+      <p className="text-ts dark:text-ts-dark text-sm sm:text-base">
+        {description}
+      </p>
     </div>
   );
 };
@@ -16,25 +22,26 @@ const KeyFeatures = ({
   sectionHighlight,
   sectionTitle1,
   features,
-  icon,
+  iconDark,
+  iconLight,
   titleColor,
   highlightColor,
   titleColor1,
 }) => {
   const locale = useLocale();
+  const { theme } = useTheme();
 
   return (
-    <section className="bg-[#000000] py-5">
+    <section className="bg-p dark:bg-p-dark py-5">
       <div className="container">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 py-8 bg-[#111111] border-2 border-[#1D1D1D] rounded-xl">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 py-8 bg-cc dark:bg-cc-dark rounded-xl">
           <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-bold" style={{ color: titleColor }}>
+            <h2 className={`text-2xl font-bold ${titleColor}`}>
               {sectionTitle}{" "}
-              <span style={{ color: highlightColor }}>{sectionHighlight}</span>
+              <span className={`${highlightColor}`}>{sectionHighlight}</span>
               {sectionTitle1 ? (
                 <span
-                  style={{ color: titleColor1 }}
-                  className={`${locale === "ar" ? "hidden" : ""}`}
+                  className={`${locale === "ar" ? "hidden" : ""} ${titleColor}`}
                 >
                   {sectionTitle1}
                 </span>
@@ -42,8 +49,12 @@ const KeyFeatures = ({
                 ""
               )}
             </h2>
-            <div className="w-16 h-16 borer-2 border-[#222222] bg-[#1D1D1D] rounded-lg flex items-center justify-center">
-              <img src={icon} alt={sectionTitle} className="w-[40px]" />
+            <div className="w-16 h-16 bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center">
+              <img
+                src={theme === "dark" ? iconDark : iconLight}
+                alt={sectionTitle}
+                className="w-[40px]"
+              />
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-6 mt-6">

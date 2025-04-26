@@ -1,43 +1,33 @@
 import Image from "next/image";
 import React from "react";
 import { useTranslations, useLocale } from "next-intl";
-import TrustPilot from "@/components/TrustPilot";
 
 const AboutBanner = () => {
   const locale = useLocale();
   const t = useTranslations("about.hero");
 
   return (
-    <section className={`bg-[#000000] pt-[60px] lg:pt-20`}>
+    <section className={`bg-p dark:bg-p-dark pt-[60px] lg:pt-20`}>
       <div className="container flex flex-col md:flex-row justify-between gap-10 items-center py-12">
         <div className="md:w-[60%] lg:w-[45%]">
-          {/* <div
-            className={`text-center md:text-start relative ${
-              locale === "ar" || locale === "fa" || locale === "ku"
-                ? "left-[137px]"
-                : "right-[137px]"
-            }`}
-          >
-            <TrustPilot />
-          </div> */}
           <h1
-            className={`text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#FED100] mb-5 ${
-              locale === "ar" || locale === "fa" || locale === "ku"
+            className={`text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-pcp dark:text-pcp-dark mb-5 ${
+              locale === "ar" || locale === "ps" || locale === "ku"
                 ? "md:text-right text-center"
                 : "md:text-left text-center"
             }`}
           >
             {t("title1")} <br />
-            <span className="text-[#ffffff] inline-block my-1">
+            <span className="text-tm dark:text-tm-dark inline-block my-1">
               {" "}
               {t("title2")}
             </span>{" "}
             <br />
-            <span className="text-[#ffffff]"> {t("title3")}</span>
+            <span className="text-tm dark:text-tm-dark"> {t("title3")}</span>
           </h1>
           <p
-            className={`text-[#c6c6c6] text-[15px] font-[500] px-2 md:px-0 ${
-              locale === "ar" || locale === "fa" || locale === "ku"
+            className={`text-ts dark:text-ts-dark text-[15px] font-[500] px-2 md:px-0 ${
+              locale === "ar" || locale === "ps" || locale === "ku"
                 ? "md:text-right text-center"
                 : "md:text-left text-center"
             }`}

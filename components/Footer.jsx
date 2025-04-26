@@ -19,10 +19,13 @@ import { useTranslations, useLocale } from "next-intl";
 import Logo from "@/public/images/logos/logo-white.webp";
 import { usePathname, useRouter } from "next/navigation";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
+import GetStarted from "./common/GetStarted";
+import { useTheme } from "next-themes";
 
 const Footer = () => {
   const router = useRouter();
   const pathname = usePathname();
+  const { theme } = useTheme();
   const language = useLocale();
   const t = useTranslations("footer");
   const locale = useLocale();
@@ -278,119 +281,13 @@ const Footer = () => {
 
   return (
     <>
-      <section
-        className={`${
-          isLiquidityPage || isRamadanOfferPage || isSpreadPage
-            ? "hidden"
-            : isHomePage ||
-              isIbPage ||
-              isGreyLabelPage ||
-              isRegionalPage ||
-              isAccountTypesPage ||
-              isBonusPage ||
-              isDemoPage ||
-              isMT5Page ||
-              isAboutPage
-            ? "bg-[#000000]"
-            : "bg-[#000000]"
-        } relative z-0 overflow-hidden pb-20`}
-      >
-        <div
-          className={`container flex p-10 flex-col md:flex-row ${
-            isLiquidityPage
-              ? "hidden"
-              : isHomePage ||
-                isIbPage ||
-                isGreyLabelPage ||
-                isRegionalPage ||
-                isAccountTypesPage ||
-                isBonusPage ||
-                isDemoPage ||
-                isMT5Page ||
-                isAboutPage
-              ? "bg-[#111111] border-[#1D1D1D] border-2 rounded-xl"
-              : "bg-[#111111] border-[#1D1D1D] border-2 rounded-xl"
-          }`}
-        >
-          <div
-            className={`${
-              isLiquidityPage ? "md:w-full" : "md:w-[60%]"
-            } w-full mb-5 md:mb-0 mx-auto`}
-          >
-            <h1
-              className={`sectionHeading text-xl ${
-                isHomePage ||
-                isIbPage ||
-                isGreyLabelPage ||
-                isRegionalPage ||
-                isAccountTypesPage ||
-                isBonusPage ||
-                isDemoPage ||
-                isMT5Page ||
-                isAboutPage
-                  ? "text-[#ffffff]"
-                  : "text-[#ffffff]"
-              } font-semibold ${
-                locale === "ar" || locale === "fa" || locale === "ku"
-                  ? "text-center md:text-right"
-                  : "text-center md:text-left"
-              }`}
-            >
-              {t("getStarted.get_started_title")}
-            </h1>
-            <p
-              className={`sectionPara ${
-                isHomePage ||
-                isIbPage ||
-                isGreyLabelPage ||
-                isRegionalPage ||
-                isAccountTypesPage ||
-                isBonusPage ||
-                isDemoPage ||
-                isMT5Page ||
-                isAboutPage
-                  ? "text-[#dfdfdf]"
-                  : "text-[#dfdfdf]"
-              } ${
-                locale === "ar" || locale === "fa" || locale === "ku"
-                  ? "text-center md:text-right"
-                  : "text-center md:text-left"
-              }`}
-            >
-              {t("getStarted.get_started_desc_1")}
-              {t("getStarted.get_started_desc_2")}
-            </p>
-          </div>
-          <div className="w-full md:w-[30%] flex justify-center items-center">
-            <button
-              onClick={() => window.open(getRegisterUrl(locale))}
-              className={` custom-button px-6 py-4 ${
-                isHomePage ||
-                isIbPage ||
-                isGreyLabelPage ||
-                isRegionalPage ||
-                isAccountTypesPage ||
-                isBonusPage ||
-                isDemoPage ||
-                isMT5Page ||
-                isAboutPage
-                  ? "rounded-[12px]"
-                  : "rounded-[12px]"
-              }`}
-            >
-              <p className="text-secondary font-semibold">
-                {t("getStarted.get_started_btn")}
-              </p>
-            </button>
-          </div>
-        </div>
-      </section>
-      <footer className="bg-[#000000]">
+      <GetStarted />
+      <footer className="bg-cc dark:bg-cc-dark">
         <div className="container flex flex-col pt-8">
-          <h6 className="text-center pb-4 text-[#fff] text-xl">
+          <h6 className="text-center pb-4 text-tm dark:text-tm-dark text-xl">
             {t("logos.payment_options")}
           </h6>
-          <div className="lg:flex flex-wrap justify-center gap-4 border-b border-b-gray-500 pb-12 hidden">
+          <div className="lg:flex flex-wrap justify-center gap-4 border-b border-b-tl dark:border-b-tl-dark pb-12 hidden">
             {/* First Row */}
             <div className="flex w-full justify-center gap-4">
               {paymentOptions.slice(0, 6).map((el) => (
@@ -426,7 +323,7 @@ const Footer = () => {
               ))}
             </div> */}
           </div>
-          <div className="flex flex-wrap justify-center gap-4 border-b border-b-gray-500 pb-12 lg:hidden">
+          <div className="flex flex-wrap justify-center gap-4 border-b border-b-tl dark:border-b-tl-dark pb-12 lg:hidden">
             {paymentOptions.map((el) => (
               <div
                 key={el.id}
@@ -444,7 +341,7 @@ const Footer = () => {
               </div>
             ))}
           </div>
-          <div className="py-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-4 md:gap-y-8 lg:gap-y-0 border-b border-b-gray-500 sm:text-left text-center">
+          <div className="py-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-4 md:gap-y-8 lg:gap-y-0 border-b border-b-tl dark:border-b-tl-dark sm:text-left text-center">
             {footerLinks.map((el, index) => (
               <div
                 key={index}
@@ -455,8 +352,8 @@ const Footer = () => {
                 }`}
               >
                 <p
-                  className={`text-primary font-semibold md:pt-0 pt-5 ${
-                    locale === "ar" || locale === "fa" || locale === "ku"
+                  className={`text-pcp dark:text-pcp-dark font-semibold md:pt-0 pt-5 ${
+                    locale === "ar" || locale === "ps" || locale === "ku"
                       ? "text-right"
                       : "text-left"
                   }`}
@@ -467,7 +364,7 @@ const Footer = () => {
                 {el.column.heading === "Platform" ? (
                   <ul
                     className={`pt-0 md:pt-2 text-sm ${
-                      locale === "ar" || locale === "fa" || locale === "ku"
+                      locale === "ar" || locale === "ps" || locale === "ku"
                         ? "text-right"
                         : "text-left"
                     }`}
@@ -476,9 +373,9 @@ const Footer = () => {
                       return (
                         <li
                           key={linkIndex}
-                          className={`text-white py-1 ${
+                          className={`text-tm dark:text-tm-dark py-1 ${
                             language === "ar" ||
-                            locale === "fa" ||
+                            locale === "ps" ||
                             locale === "ku"
                               ? "text-right"
                               : "text-left"
@@ -494,7 +391,7 @@ const Footer = () => {
                 ) : (
                   <ul
                     className={`pt-0 md:pt-2 footer text-sm ${
-                      locale === "ar" || locale === "fa" || locale === "ku"
+                      locale === "ar" || locale === "ps" || locale === "ku"
                         ? "text-right"
                         : "text-left"
                     }`}
@@ -502,9 +399,9 @@ const Footer = () => {
                     {el.column.links.map((link, linkIndex) => (
                       <li
                         key={linkIndex}
-                        className={`text-white py-1 ${
+                        className={`text-tm dark:text-tm-dark py-1 ${
                           language === "ar" ||
-                          locale === "fa" ||
+                          locale === "ps" ||
                           locale === "ku"
                             ? "text-right"
                             : "text-left"
@@ -526,14 +423,16 @@ const Footer = () => {
               </div>
             ))}
           </div>
-          <div className="py-10 flex flex-col md:flex-row border-b border-b-gray-500 ">
+          <div className="py-10 flex flex-col md:flex-row border-b border-b-tl dark:border-b-tl-dark ">
             <div className="w-full md:w-[100%]">
               {footerNotice.map((el, index) => (
                 <div key={index} className="pb-4">
-                  <span className="text-white text-[14px] font-semibold pr-2">
+                  <span className="text-tm dark:text-tm-dark text-[14px] font-semibold pr-2">
                     {el.heading}
                   </span>
-                  <span className="text-white text-[14px]">{el.paragraph}</span>
+                  <span className="text-tm dark:text-tm-dark text-[14px]">
+                    {el.paragraph}
+                  </span>
                 </div>
               ))}
             </div>
@@ -544,12 +443,16 @@ const Footer = () => {
                 unoptimized={true}
                 width="150"
                 height="200"
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
+                src={
+                  theme === "dark"
+                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
+                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-black.webp"
+                }
                 alt="Footer Logo"
                 className="block sm:mx-0 mx-auto pb-6 sm:pb-0"
               />
             </div>
-            <p className="text-white text-center text-sm text-[12px]">
+            <p className="text-tm dark:text-tm-dark text-center text-sm text-[12px]">
               &copy; {t("copy-right")}
             </p>
             <div className="flex gap-4 items-center justify-around">
@@ -578,7 +481,7 @@ const Footer = () => {
                 <FaXTwitter
                   color="#FFF"
                   size={30}
-                  className="hover:fill-black transition-all hover:translate-y-[-5px] duration-500"
+                  className="fill-tm dark:fill-tm-dark hover:fill-black transition-all hover:translate-y-[-5px] duration-500"
                 />
               </Link>
               <Link
@@ -588,7 +491,7 @@ const Footer = () => {
                 <FaYoutube
                   color="#FFF"
                   size={30}
-                  className="hover:fill-red-700 transition-all hover:translate-y-[-5px] duration-500"
+                  className="fill-tm dark:fill-tm-dark hover:fill-red-700 transition-all hover:translate-y-[-5px] duration-500"
                 />
               </Link>
               <Link
@@ -598,7 +501,7 @@ const Footer = () => {
                 <FaLinkedinIn
                   color="#FFF"
                   size={30}
-                  className="hover:fill-blue-700 transition-all hover:translate-y-[-5px] duration-500"
+                  className="fill-tm dark:fill-tm-dark hover:fill-blue-700 transition-all hover:translate-y-[-5px] duration-500"
                 />
               </Link>
               <Link
@@ -614,7 +517,7 @@ const Footer = () => {
                 <FaInstagram
                   color="#FFF"
                   size={30}
-                  className="hover:fill-purple-500 transition-all hover:translate-y-[-5px] duration-500"
+                  className="fill-tm dark:fill-tm-dark hover:fill-purple-500 transition-all hover:translate-y-[-5px] duration-500"
                 />
               </Link>
               <Link
@@ -630,7 +533,7 @@ const Footer = () => {
                 <FaTelegram
                   color="#FFF"
                   size={30}
-                  className="hover:fill-blue-400 transition-all hover:translate-y-[-5px] duration-500"
+                  className="fill-tm dark:fill-tm-dark hover:fill-blue-400 transition-all hover:translate-y-[-5px] duration-500"
                 />
               </Link>
             </div>

@@ -120,24 +120,26 @@ function BookSession() {
   return (
     <section className="container px-0">
       <div
-        className={`bg-[#111111] border-[#1d1d1d] border-3 md:w-[80%] lg:w-[100%] rounded-[12px] p-[24px] ms:p-[40px] mx-auto`}
+        className={`bg-cc dark:bg-cc-dark md:w-[80%] lg:w-[100%] rounded-[12px] p-[24px] ms:p-[40px] mx-auto`}
       >
         <form
           onSubmit={formik.handleSubmit}
           className="flex flex-col justify-center items-center relative gap-4"
         >
           <div className="w-full">
-            <h2 className="text-[24px] font-semibold text-[#ffffff]">
+            <h2 className="text-[24px] font-semibold text-tm dark:text-tm-dark">
               {t("session_title1")}{" "}
-              <span className="text-[#c6c6c6] font-normal">
+              <span className="text-ts dark:text-ts-dark font-normal">
                 {t("session_title2")}
               </span>
             </h2>
-            <p className="text-xs text-[#c6c6c6]">{t("session_desc")}</p>
+            <p className="text-xs text-ts dark:text-ts-dark">
+              {t("session_desc")}
+            </p>
           </div>
           <div className="md:flex w-full justify-between">
             <div className="w-full md:w-[48%] mb-3 md:mb-0">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("full_name")}
                 <input
                   type="text"
@@ -146,16 +148,16 @@ function BookSession() {
                   onBlur={formik.handleBlur}
                   value={formik.values.fullName}
                   placeholder={t("full_name")}
-                  className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.fullName && formik.errors.fullName
-                      ? "border border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                 />
               </label>
             </div>
             <div className="w-full md:w-[48%] ">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("account_number")}
                 <input
                   type="text"
@@ -164,9 +166,9 @@ function BookSession() {
                   onBlur={formik.handleBlur}
                   value={formik.values.accountId}
                   placeholder={t("account_number")}
-                  className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.accountId && formik.errors.accountId
-                      ? "border border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                 />
@@ -175,7 +177,7 @@ function BookSession() {
           </div>
           <div className="md:flex w-full justify-between">
             <div className="w-full md:w-[48%] ib-contact">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("phoneNumber")}
                 <PhoneInput
                   international
@@ -186,9 +188,9 @@ function BookSession() {
                   onBlur={formik.handleBlur}
                   name="phoneNumber"
                   value={formik.values.phoneNumber}
-                  className={`ib-phone-input appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`ib-phone-input appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.phoneNumber && formik.errors.phoneNumber
-                      ? "border-b border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                   placeholder={t("phoneNumber")}
@@ -196,7 +198,7 @@ function BookSession() {
               </label>
             </div>
             <div className="w-full md:w-[48%] mb-3 md:mb-0">
-              <label className="text-xs text-[#c6c6c6]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("email")}
                 <input
                   type="email"
@@ -205,9 +207,9 @@ function BookSession() {
                   onBlur={formik.handleBlur}
                   value={formik.values.email}
                   placeholder={t("email")}
-                  className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.email && formik.errors.email
-                      ? "border-b border-red-600"
+                      ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                 />
@@ -215,7 +217,7 @@ function BookSession() {
             </div>
           </div>
           <div className="w-full">
-            <label className="text-xs text-[#c6c6c6]">
+            <label className="text-xs text-ts dark:text-ts-dark">
               {t("availability_label")}
               <CustomSelect
                 label={t("availability_label")}
@@ -224,17 +226,20 @@ function BookSession() {
                 onChange={handleSelectChange}
               />
               {formik.errors.time && formik.touched.time && (
-                <div className="text-red-600 text-xs">{formik.errors.time}</div>
+                <div className="text-rc dark:text-rc-dark text-xs">
+                  {formik.errors.time}
+                </div>
               )}
             </label>
           </div>
           <div className="w-full">
-            <p className="text-xs text-[#c6c6c6] mb-1">{t("condition")}</p>
+            <p className="text-xs text-ts dark:text-ts-dark mb-1">
+              {t("condition")}
+            </p>
 
             <button
               disabled={loading}
-              className="font-semibold py-[16px] px-[10px] text-[#111111] w-full custom-button"
-              style={{ borderRadius: "5px" }}
+              className="transition-colors duration-300 ease-in-out rounded-lg font-bold w-full flex items-center justify-center gap-3 group bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark group py-4 px-3"
             >
               <div className="flex gap-1 items-center justify-center">
                 {loading ? (
