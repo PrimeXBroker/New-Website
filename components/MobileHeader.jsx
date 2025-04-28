@@ -27,7 +27,7 @@ const MobileHeader = ({ locale }) => {
       locale === "ar"
         ? "عربي"
         : locale === "es"
-        ? "Espanol"
+        ? "Español"
         : locale === "ps"
         ? "پښتو"
         : locale === "ku"
@@ -120,7 +120,7 @@ const MobileHeader = ({ locale }) => {
       locale === "ar"
         ? "عربي"
         : locale === "es"
-        ? "Espanol"
+        ? "Español"
         : locale === "ps"
         ? "پښتو"
         : locale === "ku"
@@ -304,7 +304,7 @@ const MobileHeader = ({ locale }) => {
                         }
                         onClick={() =>
                           handleClick(
-                            "Espanol",
+                            "Español",
                             "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
                           )
                         }
@@ -318,7 +318,7 @@ const MobileHeader = ({ locale }) => {
                           src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
                           alt="Chinese Flag"
                         />
-                        <span className="ml-[5px]">Espanol</span>
+                        <span className="ml-[5px]">Español</span>
                       </Link>
                     </li>
                     <li>
@@ -551,7 +551,7 @@ const MobileHeader = ({ locale }) => {
                           }
                           onClick={() =>
                             handleClick(
-                              "Espanol",
+                              "Español",
                               "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
                             )
                           }
@@ -565,7 +565,7 @@ const MobileHeader = ({ locale }) => {
                             src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
                             alt="Chinese Flag"
                           />
-                          <span className="ml-[5px]">Espanol</span>
+                          <span className="ml-[5px]">Español</span>
                         </Link>
                       </li>
                       <li>
@@ -979,12 +979,12 @@ const MobileHeader = ({ locale }) => {
                       : `/es/${restOfPath}`
                   }
                   onClick={() => {
-                    handleClick("Espanol");
+                    handleClick("Español");
                     toggleDrawer();
                   }}
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                 >
-                  Espanol
+                  Español
                 </Link>
               </div>
             )}

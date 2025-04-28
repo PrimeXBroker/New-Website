@@ -23,7 +23,7 @@ const DesktopHeader = ({ locale }) => {
       locale === "ar"
         ? "عربي"
         : locale === "es"
-        ? "Espanol"
+        ? "Español"
         : locale === "ps"
         ? "پښتو"
         : locale === "ku"
@@ -108,7 +108,7 @@ const DesktopHeader = ({ locale }) => {
       locale === "ar"
         ? "عربي"
         : locale === "es"
-        ? "Espanol"
+        ? "Español"
         : locale === "ps"
         ? "پښتو"
         : locale === "ku"
@@ -726,7 +726,7 @@ const DesktopHeader = ({ locale }) => {
                       }
                       onClick={() =>
                         handleClick(
-                          "Espanol",
+                          "Español",
                           "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
                         )
                       }
@@ -740,7 +740,7 @@ const DesktopHeader = ({ locale }) => {
                         src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
                         alt="Chinese Flag"
                       />
-                      <span className="ml-[5px]">Espanol</span>
+                      <span className="ml-[5px]">Español</span>
                     </Link>
                   </li>
                   <li>
