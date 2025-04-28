@@ -14,7 +14,11 @@ const Hero = () => {
       <div className="container pt-12">
         <div className="grid grid-cols-12">
           <div className="col-span-12 relative">
-            <div className="md:absolute lg:pt-5">
+            <div
+              className={`md:absolute md:w-[60%] ${
+                locale === "es" || locale === "ps" ? "lg:pt-0" : "lg:pt-5"
+              }`}
+            >
               <h1 className="text-tm dark:text-tm-dark text-4xl sm:text-5xl md:text-4xl lg:text-[52px] font-bold xs:leading-tight sm:leading-tight md:leading-tight lg:leading-tight text-center sm:text-start">
                 {t("title1")}
                 <span className="text-pcp dark:text-pcp-dark">
@@ -26,7 +30,13 @@ const Hero = () => {
               <p className="text-ts dark:text-ts-dark font-medium text-lg sm:text-xl md:text-base lg:text-xl mb-0 mt-3 text-center sm:text-start">
                 {t("desc")}
               </p>
-              <div className="flex gap-5 mt-6 lg:mt-8">
+              <div
+                className={`flex gap-5 ${
+                  locale === "es" || locale === "ps"
+                    ? " mt-6 md:mt-3 lg:mt-3"
+                    : " mt-6 lg:mt-8"
+                }`}
+              >
                 <CustomYellowButton
                   onClick={() => window.open(getRegisterUrl(locale))}
                   title={t("btnTxt1")}
