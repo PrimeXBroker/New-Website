@@ -22,8 +22,8 @@ export default function ThemeToggle() {
           transition-all ease-in-out duration-[180ms]
           ${
             isDarkMode
-              ? "bg-cc-dark text-ts-dark border border-e1-dark shadow-md"
-              : "bg-cc text-ts border border-e1 shadow-md"
+              ? "bg-cc text-ts border border-e1 shadow-md"
+              : "bg-cc-dark text-ts-dark border border-e1-dark shadow-md"
           }`}
       >
         <span className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] flex items-center justify-center">
@@ -37,21 +37,21 @@ export default function ThemeToggle() {
               cx="12"
               cy="12"
               r="10"
-              stroke={isDarkMode ? "#A6A6A6" : "#666666"}
+              stroke={isDarkMode ? "#666666" : "#A6A6A6"}
               strokeWidth="2"
               fill="none"
             />
             <path
               d={
                 isDarkMode
-                  ? "M12 2 A10 10 0 0 0 12 22 Z"
-                  : "M12 2 A10 10 0 0 1 12 22 Z"
+                  ? "M12 2 A10 10 0 0 1 12 22 Z"
+                  : "M12 2 A10 10 0 0 0 12 22 Z"
               }
-              fill={isDarkMode ? "#A6A6A6" : "#666666"}
+              fill={isDarkMode ? "#666666" : "#A6A6A6"}
             />
           </svg>
         </span>
-        <span>{isDarkMode ? "Dark Mode" : "Light Mode"}</span>
+        <span>{isDarkMode ? "Light Mode" : "Dark Mode"}</span>
       </button>
     </section>
   );
