@@ -50,7 +50,7 @@ const Hero = () => {
               height="100"
               src={
                 locale === "ar" || locale === "ku" || locale === "ps"
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/home-hero-desktop-ar.webp"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/home-banner-ar-desktop.webp"
                   : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/home-hero-desktop-en.webp"
               }
               alt="Logo Image"
@@ -74,7 +74,7 @@ const Hero = () => {
               height="100"
               src={
                 locale === "ar" || locale === "ku" || locale === "ps"
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/home-hero-mobile-ar.webp"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/home-banner-ar-mbl.webp"
                   : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/home-hero-mobile-en.webp"
               }
               alt="Logo Image"
