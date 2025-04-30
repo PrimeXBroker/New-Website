@@ -836,13 +836,13 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("regional")}
                 </LocaleLink>
-                <LocaleLink
+                {/* <LocaleLink
                   href="/grey-label-partner"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("grey_label")}
-                </LocaleLink>
+                </LocaleLink> */}
                 {/* <LocaleLink
                   href="/liquidity-providing"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
