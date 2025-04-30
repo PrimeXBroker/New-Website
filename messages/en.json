@@ -3017,5 +3017,32 @@
       "subtitle": "Open your 50% Bonus Account today!",
       "btnTxt": "Claim Your 50% Bonus Now!"
     }
+  },
+  "primeXTradingApp": {
+    "metaData": {
+      "title": "",
+      "description": ""
+    },
+    "banner": {
+      "title1": "The PrimeX ",
+      "title2": "Capital App",
+      "title3": "Always Connected",
+      "description": "Manage your PrimeX Capital account anytime, anywhere — All through a secure, intuitive app.",
+      "google_play-btn_part1": "Get it on",
+      "google_play-btn_part2": "Google Play",
+      "app_store_btn_part1": "Download on the",
+      "app_store_btn_part2": "App Store"
+    },
+    "downloadAppToady": {
+      "heading": "Download the App Today",
+      "title1": "Your ",
+      "title2": "PrimeX Capital Account, ",
+      "title3": "Always Within Reach",
+      "description": "Stay connected to your trading journey. Manage your account and monitor activity — anytime, anywhere with the PrimeX Capital app.",
+      "google_play-btn_part1": "Get it on",
+      "google_play-btn_part2": "Google Play",
+      "app_store_btn_part1": "Download on the",
+      "app_store_btn_part2": "App Store"
+    }
   }
 }

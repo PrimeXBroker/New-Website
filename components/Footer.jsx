@@ -9,6 +9,7 @@ import {
   FaInstagram,
   FaTelegram,
   FaRegEye,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaDownload } from "react-icons/fa6";
@@ -491,7 +492,7 @@ const Footer = () => {
                 <FaYoutube
                   color="#FFF"
                   size={30}
-                  className="fill-tm dark:fill-tm-dark hover:fill-red-700 transition-all hover:translate-y-[-5px] duration-500"
+                  className="fill-tm dark:fill-tm-dark hover:fill-[#ff0033] dark:hover:fill-[#ff0033] transition-all hover:translate-y-[-5px] duration-500"
                 />
               </Link>
               <Link
@@ -501,7 +502,7 @@ const Footer = () => {
                 <FaLinkedinIn
                   color="#FFF"
                   size={30}
-                  className="fill-tm dark:fill-tm-dark hover:fill-blue-700 transition-all hover:translate-y-[-5px] duration-500"
+                  className="fill-tm dark:fill-tm-dark hover:fill-[#0a66c2] dark:hover:fill-[#0a66c2] transition-all hover:translate-y-[-5px] duration-500"
                 />
               </Link>
               <Link
@@ -517,7 +518,7 @@ const Footer = () => {
                 <FaInstagram
                   color="#FFF"
                   size={30}
-                  className="fill-tm dark:fill-tm-dark hover:fill-purple-500 transition-all hover:translate-y-[-5px] duration-500"
+                  className="fill-tm dark:fill-tm-dark hover:fill-[#8146ba] dark:hover:fill-[#8146ba] transition-all hover:translate-y-[-5px] duration-500"
                 />
               </Link>
               <Link
@@ -533,7 +534,27 @@ const Footer = () => {
                 <FaTelegram
                   color="#FFF"
                   size={30}
-                  className="fill-tm dark:fill-tm-dark hover:fill-blue-400 transition-all hover:translate-y-[-5px] duration-500"
+                  className="fill-tm dark:fill-tm-dark hover:fill-[#28a8e9] dark:hover:fill-[#28a8e9] transition-all hover:translate-y-[-5px] duration-500"
+                />
+              </Link>
+              <Link
+                href={`${
+                  locale === "ar"
+                    ? "https://whatsapp.com/channel/0029Vb7M9j5EawdyFPPOWh3L"
+                    : locale === "ku"
+                    ? "https://whatsapp.com/channel/0029VbB6OC71SWt00NiUAL1t"
+                    : locale === "es"
+                    ? "https://whatsapp.com/channel/0029Vb5kNFU9xVJcwh9aD90N"
+                    : locale === "ps"
+                    ? "https://whatsapp.com/channel/0029VbAMPjU3QxS6L63Dh01k"
+                    : "https://whatsapp.com/channel/0029VbAjXdhDjiOgrjoD6o2L"
+                }`}
+                target="_blank"
+              >
+                <FaWhatsapp
+                  color="#FFF"
+                  size={30}
+                  className="fill-tm dark:fill-tm-dark hover:fill-[#2cd46b] dark:hover:fill-[#2cd46b] transition-all hover:translate-y-[-5px] duration-500"
                 />
               </Link>
             </div>
