@@ -32,11 +32,11 @@ const PartnershipProgram = () => {
                   onClick={() => router.push(`/${locale}/ib-program`)}
                   className="py-4 px-7 w-full md:w-auto text-base justify-between md:justify-center"
                 />
-                <CustomWhiteButton
+                {/* <CustomWhiteButton
                   title={t("grey_label_btn")}
                   onClick={() => router.push(`/${locale}/grey-label-partner`)}
                   className="py-4 px-7 w-full md:w-auto text-base justify-between md:justify-center"
-                />
+                /> */}
                 <CustomWhiteButton
                   title={t("regional_btn")}
                   onClick={() => router.push(`/${locale}/regional-partner`)}
