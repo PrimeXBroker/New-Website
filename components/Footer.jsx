@@ -474,35 +474,17 @@ const Footer = () => {
               <Link
                 href={`${
                   locale === "ar"
-                    ? "https://x.com/PrimeXCapitalAr"
-                    : "https://x.com/PrimeXCapital"
+                    ? "https://t.me/PrimeX_Capital_ar"
+                    : locale === "ku"
+                    ? "https://t.me/primex_capital_kd"
+                    : "https://t.me/PrimeX_Capital"
                 }`}
                 target="_blank"
               >
-                <FaXTwitter
+                <FaTelegram
                   color="#FFF"
                   size={30}
-                  className="fill-tm dark:fill-tm-dark hover:fill-black transition-all hover:translate-y-[-5px] duration-500"
-                />
-              </Link>
-              <Link
-                href="https://www.youtube.com/@primex.capital"
-                target="_blank"
-              >
-                <FaYoutube
-                  color="#FFF"
-                  size={30}
-                  className="fill-tm dark:fill-tm-dark hover:fill-[#ff0033] dark:hover:fill-[#ff0033] transition-all hover:translate-y-[-5px] duration-500"
-                />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/company/primexcapital/"
-                target="_blank"
-              >
-                <FaLinkedinIn
-                  color="#FFF"
-                  size={30}
-                  className="fill-tm dark:fill-tm-dark hover:fill-[#0a66c2] dark:hover:fill-[#0a66c2] transition-all hover:translate-y-[-5px] duration-500"
+                  className="fill-tm dark:fill-tm-dark hover:fill-[#28a8e9] dark:hover:fill-[#28a8e9] transition-all hover:translate-y-[-5px] duration-500"
                 />
               </Link>
               <Link
@@ -524,22 +506,6 @@ const Footer = () => {
               <Link
                 href={`${
                   locale === "ar"
-                    ? "https://t.me/PrimeX_Capital_ar"
-                    : locale === "ku"
-                    ? "https://t.me/primex_capital_kd"
-                    : "https://t.me/PrimeX_Capital"
-                }`}
-                target="_blank"
-              >
-                <FaTelegram
-                  color="#FFF"
-                  size={30}
-                  className="fill-tm dark:fill-tm-dark hover:fill-[#28a8e9] dark:hover:fill-[#28a8e9] transition-all hover:translate-y-[-5px] duration-500"
-                />
-              </Link>
-              <Link
-                href={`${
-                  locale === "ar"
                     ? "https://whatsapp.com/channel/0029Vb7M9j5EawdyFPPOWh3L"
                     : locale === "ku"
                     ? "https://whatsapp.com/channel/0029VbB6OC71SWt00NiUAL1t"
@@ -555,6 +521,40 @@ const Footer = () => {
                   color="#FFF"
                   size={30}
                   className="fill-tm dark:fill-tm-dark hover:fill-[#2cd46b] dark:hover:fill-[#2cd46b] transition-all hover:translate-y-[-5px] duration-500"
+                />
+              </Link>
+              <Link
+                href="https://www.youtube.com/@primex.capital"
+                target="_blank"
+              >
+                <FaYoutube
+                  color="#FFF"
+                  size={30}
+                  className="fill-tm dark:fill-tm-dark hover:fill-[#ff0033] dark:hover:fill-[#ff0033] transition-all hover:translate-y-[-5px] duration-500"
+                />
+              </Link>
+              <Link
+                href={`${
+                  locale === "ar"
+                    ? "https://x.com/PrimeXCapitalAr"
+                    : "https://x.com/PrimeXCapital"
+                }`}
+                target="_blank"
+              >
+                <FaXTwitter
+                  color="#FFF"
+                  size={30}
+                  className="fill-tm dark:fill-tm-dark hover:fill-black transition-all hover:translate-y-[-5px] duration-500"
+                />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/primexcapital/"
+                target="_blank"
+              >
+                <FaLinkedinIn
+                  color="#FFF"
+                  size={30}
+                  className="fill-tm dark:fill-tm-dark hover:fill-[#0a66c2] dark:hover:fill-[#0a66c2] transition-all hover:translate-y-[-5px] duration-500"
                 />
               </Link>
             </div>
