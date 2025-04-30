@@ -460,7 +460,7 @@ const Footer = () => {
               {/* <Link
                 href={`${
                   locale === "ar"
-                    ? "https://m.facebook.com/primex.capital.ar/"
+                    ? "https://m.facebook.com/primex.capital.ar/ "
                     : "https://www.facebook.com/PrimeX.Capital.En"
                 }`}
                 target="_blank"
