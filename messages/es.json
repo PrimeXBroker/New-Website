@@ -43,7 +43,8 @@
     "blog": "Blogs",
     "market-news": "Noticias del Mercado",
     "ramadan-contest": "Concurso de Ramadán",
-    "primex-spread": "Spreads de PrimeX"
+    "primex-spread": "Spreads de PrimeX",
+    "primex-app": "Aplicación PrimeX"
   },
   "home": {
     "metaData": {
@@ -3016,6 +3017,50 @@
       "title1": "¿Listo para mejorar tu trading?",
       "subtitle": "Abre tu Cuenta con el Bonus del 50% hoy mismo",
       "btnTxt": "¡Reclama tu Bonus del 50% Ahora!"
+    }
+  },
+  "primeXTradingApp": {
+    "metaData": {
+      "title": "Aplicación PrimeX | Conexión sin límites | PrimeX Capital",
+      "description": "La aplicación PrimeX le permite administrar su cuenta fácilmente desde cualquier lugar, a través de la cual puede monitorear sus inversiones y realizar depósitos y retiros sin problemas."
+    },
+    "banner": {
+      "title1": "Aplicación ",
+      "title2": "PrimeX Capital",
+      "title3": "Conexión Sin Límites",
+      "description": "Administre su cuenta en PrimeX Capital en cualquier momento y desde cualquier lugar, todo a través de una aplicación segura y fácil de usar.",
+      "google_play-btn_part1": "Descarga la aplicación desde",
+      "google_play-btn_part2": "Google Play",
+      "app_store_btn_part1": "Descarga la aplicación desde",
+      "app_store_btn_part2": "App Store"
+    },
+    "appBenefits": {
+      "main_title1": "¿Por qué ",
+      "main_title2": "La Aplicación PrimeX?",
+      "title1": "Gestión de ",
+      "title1_1": "Cuenta",
+      "description1": "Vea la información detallada de su cuenta, incluidos los saldos, el historial de transacciones y la configuración.",
+      "title2": "Depósito",
+      "title2_2": "y",
+      "title2_1": "Retiro de Fondos",
+      "description2": "Financie su cuenta y solicite retiros sin problemas y con un solo clic.",
+      "title3": "Soporte",
+      "title3_1": "24/7",
+      "description3": "Póngase en contacto con nuestro equipo de soporte especializado para obtener ayuda en cualquier momento que la necesite.",
+      "title4": "Acceso ",
+      "title4_1": "Seguro",
+      "description4": "Mantenga su cuenta segura utilizando las últimas tecnologías de protección para garantizar la seguridad de su información personal y financiera."
+    },
+    "downloadAppToady": {
+      "heading": "Descarga la aplicación desde",
+      "title1": "Su Cuenta",
+      "title2": "de PrimeX Capital,",
+      "title3": "Siempre a su Alcance",
+      "description": "Manténgase conectado constantemente con sus operaciones, administre y supervise de cerca su cuenta, en cualquier momento y desde cualquier lugar.",
+      "google_play-btn_part1": "Descarga la aplicación desde",
+      "google_play-btn_part2": "Google Play",
+      "app_store_btn_part1": "Descarga la aplicación desde",
+      "app_store_btn_part2": "App Store"
     }
   }
 }

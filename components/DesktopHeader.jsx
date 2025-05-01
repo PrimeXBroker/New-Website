@@ -189,6 +189,15 @@ const DesktopHeader = ({ locale }) => {
                 <ul className="absolute top-full mt-[4px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
                   <li>
                     <LocaleLink
+                      href="/app"
+                      onClick={closeDropdown}
+                      className="block p-[10px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                    >
+                      {t("primex-app")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
                       href="/platform/mt5-platform"
                       onClick={closeDropdown}
                       className="block p-[10px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"

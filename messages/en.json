@@ -43,7 +43,8 @@
     "blog": "Blogs",
     "market-news": "Market News",
     "ramadan-contest": "Ramadan Contest",
-    "primex-spread": "PrimeX Spreads"
+    "primex-spread": "PrimeX Spreads",
+    "primex-app": "PrimeX App"
   },
   "home": {
     "metaData": {
@@ -3020,8 +3021,8 @@
   },
   "primeXTradingApp": {
     "metaData": {
-      "title": "",
-      "description": ""
+      "title": "PrimeX App | Always Connected | PrimeX Capital",
+      "description": "The PrimeX app allows you to easily manage your account from anywhere. Through it, you can monitor your investments and make deposits and withdrawals effortlessly."
     },
     "banner": {
       "title1": "The PrimeX ",
@@ -3032,6 +3033,23 @@
       "google_play-btn_part2": "Google Play",
       "app_store_btn_part1": "Download on the",
       "app_store_btn_part2": "App Store"
+    },
+    "appBenefits": {
+      "main_title1": "Why ",
+      "main_title2": "PrimeX App?",
+      "title1": "Account",
+      "title1_1": "Management",
+      "description1": " Access your detailed account information, including balances, transaction history, and settings. ",
+      "title2": "Deposits ",
+      "title2_2": "and",
+      "title2_1": "Withdrawals",
+      "description2": "Fund your account and request withdrawals effortlessly with a click of a button.",
+      "title3": "24/7",
+      "title3_1": "Expert Support",
+      "description3": "Get the help you need, when you need it. Our dedicated support team is always ready to assist you with expert care.",
+      "title4": "Advanced",
+      "title4_1": "Security Access",
+      "description4": "Protect your account with state-of-the-art security features, ensuring your personal and financial information is safe."
     },
     "downloadAppToady": {
       "heading": "Download the App Today",

@@ -33,7 +33,7 @@ const Hero = () => {
                 href="https://play.google.com/store/apps/details?id=com.primex.primexmobileapp"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-e1 dark:bg-e1-dark border-1 border-e1 dark:border-e1-dark hover:border-e2 dark:hover:border-e2-dark transition-all duration-500 ease-in-out flex items-center justify-center w-full sm:w-[200px] h-[60px] rounded-lg group"
+                className="bg-e1 dark:bg-e1-dark border-1 border-e1 dark:border-e1-dark hover:border-e2 dark:hover:border-e2-dark transition-all duration-500 ease-in-out flex items-center justify-center w-full lg:w-[200px] h-[60px] rounded-lg group"
               >
                 <Image
                   src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/google-play_3128279+1.svg"
@@ -51,7 +51,7 @@ const Hero = () => {
                   <p className="text-xs text-ts dark:text-ts-dark">
                     {t("google_play-btn_part1")}
                   </p>
-                  <p className="text-lg font-semibold">
+                  <p className="text-lg md:text-sm lg:text-lg font-semibold">
                     {t("google_play-btn_part2")}
                   </p>
                 </div>
@@ -60,7 +60,7 @@ const Hero = () => {
                 href=" https://apps.apple.com/ae/app/primex-online-trading/id6741466188"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-e1 dark:bg-e1-dark border-1 border-e1 dark:border-e1-dark hover:border-e2 dark:hover:border-e2-dark transition-all duration-500 ease-in-out flex items-center justify-center w-full sm:w-[200px] h-[60px] rounded-lg group"
+                className="bg-e1 dark:bg-e1-dark border-1 border-e1 dark:border-e1-dark hover:border-e2 dark:hover:border-e2-dark transition-all duration-500 ease-in-out flex items-center justify-center w-full lg:w-[200px] h-[60px] rounded-lg group"
               >
                 <Image
                   src={
@@ -82,7 +82,7 @@ const Hero = () => {
                   <p className="text-xs text-ts dark:text-ts-dark">
                     {t("app_store_btn_part1")}
                   </p>
-                  <p className="text-lg font-semibold">
+                  <p className="text-lg md:text-sm lg:text-lg font-semibold">
                     {t("app_store_btn_part2")}
                   </p>
                 </div>

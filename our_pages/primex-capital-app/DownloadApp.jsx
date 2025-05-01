@@ -18,7 +18,7 @@ const DownloadApp = () => {
           </h2>
         </div>
         <div
-          className={`grid grid-cols-12 bg-cc dark:bg-cc-dark rounded-[20px] items-center ${
+          className={`grid grid-cols-12 bg-cc dark:bg-cc-dark rounded-[20px] items-center pt-8 lg:pt-0 ${
             locale === "ar" || locale === "ps" || locale === "ku"
               ? "pr-5 lg:pr-10 pl-5 lg:pl-0"
               : "pl-5 lg:pl-10 pr-5 lg:pr-0"
@@ -28,8 +28,8 @@ const DownloadApp = () => {
             <h2
               className={`text-tm dark:text-tm-dark sm:mx-auto lg:mx-0 text-2xl md:text-3xl font-semibold mb-5 ${
                 locale === "ar" || locale === "ps" || locale === "ku"
-                  ? "text-center lg:text-right"
-                  : "text-center lg:text-left"
+                  ? "text-center lg:text-start"
+                  : "text-center lg:text-start"
               }`}
               style={{ letterSpacing: "1px" }}
             >
@@ -40,8 +40,8 @@ const DownloadApp = () => {
             <p
               className={`text-ts dark:text-ts-dark sm:max-w-xl sm:mx-auto lg:mx-0 text-sm sm:text-[15px] font-[500] ${
                 locale === "ar" || locale === "ps" || locale === "ku"
-                  ? "text-center lg:text-right"
-                  : "text-center lg:text-left"
+                  ? "text-center lg:text-start"
+                  : "text-center lg:text-start"
               }`}
               style={{ letterSpacing: "1.4px" }}
             >
@@ -52,7 +52,7 @@ const DownloadApp = () => {
                 href="https://play.google.com/store/apps/details?id=com.primex.primexmobileapp"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-e1 dark:bg-e1-dark border-1 border-e1 dark:border-e1-dark hover:border-e2 dark:hover:border-e2-dark transition-all duration-500 ease-in-out flex items-center justify-center w-full sm:w-[200px] h-[60px] rounded-lg group"
+                className="bg-e1 dark:bg-e1-dark border-1 border-e1 dark:border-e1-dark hover:border-e2 dark:hover:border-e2-dark transition-all duration-500 ease-in-out flex items-center justify-center gap-3 sm:gap-0 w-full sm:w-[200px] h-[60px] rounded-lg group"
               >
                 <Image
                   src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/google-play_3128279+1.svg"
@@ -79,7 +79,7 @@ const DownloadApp = () => {
                 href=" https://apps.apple.com/ae/app/primex-online-trading/id6741466188"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-e1 dark:bg-e1-dark border-1 border-e1 dark:border-e1-dark hover:border-e2 dark:hover:border-e2-dark transition-all duration-500 ease-in-out flex items-center justify-center w-full sm:w-[200px] h-[60px] rounded-lg group"
+                className="bg-e1 dark:bg-e1-dark border-1 border-e1 dark:border-e1-dark hover:border-e2 dark:hover:border-e2-dark transition-all duration-500 ease-in-out flex items-center justify-center gap-3 sm:gap-0 w-full sm:w-[200px] h-[60px] rounded-lg group"
               >
                 <Image
                   src={
@@ -114,7 +114,7 @@ const DownloadApp = () => {
               width="470"
               height="300"
               alt="MT5 Banner Image"
-              className="w-[72%] h-full"
+              className="w-full sm:w-[72%] h-full"
             />
           </div>
         </div>

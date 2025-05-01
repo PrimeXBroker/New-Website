@@ -681,6 +681,13 @@ const MobileHeader = ({ locale }) => {
             {openSubMenu === 0 && (
               <div className="">
                 <LocaleLink
+                  href="/app"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("primex-app")}
+                </LocaleLink>
+                <LocaleLink
                   href="/platform/mt5-platform"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                   onClick={toggleDrawer}
