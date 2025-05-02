@@ -60,8 +60,8 @@ const Webinars = ({ active, setActive }) => {
                 <div className="flex flex-row lg:flex-col gap-3 lg:gap-0 lg:w-[30%] xl:w-[25%]">
                   <img
                     className="rounded w-[80px] sm:w-[100px] lg:w-full mb-3"
-                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/zyad.webp"
-                    alt="Aniket"
+                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/knowledge-hub/Due.webp"
+                    alt="Due"
                   />
                   <div className="w-[70%] lg:w-[100%]">
                     <p className="text-tm dark:text-tm-dark text-sm mb-1 sm:mb-0">
