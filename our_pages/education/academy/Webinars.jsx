@@ -70,10 +70,14 @@ const Webinars = ({ active, setActive }) => {
                   />
                   <div className="w-[70%] lg:w-[100%]">
                     <p className="text-tm dark:text-tm-dark text-sm mb-1 sm:mb-0">
-                      {t("webinar_title1")}
+                      {webinar._id === "6814a4c57760443d5c59562a"
+                        ? t("webinar_title3")
+                        : t("webinar_title1")}
                     </p>
                     <p className="text-tm dark:text-tm-dark text-xs">
-                      {t("Webinar1_by")}
+                      {webinar._id === "6814a4c57760443d5c59562a"
+                        ? ""
+                        : t("Webinar1_by")}
                     </p>
                     <div className="text-tm dark:text-tm-dark w-full lg:hidden mt-2">
                       <p className="text-xs mb-1">
