@@ -2414,16 +2414,32 @@
       "feature5": "Accede a estadísticas detalladas de los mejores Operadors"
     },
     "bestPerformanceWidget": {
-      "title1": "Mejores rendimientos de todos los tiempos"
+      "title1": "Mejores rendimientos de todos los tiempos",
+      "metaData": {
+        "title": "Mejores Desempeños de Todos los Tiempos | PrimeX Capital",
+        "description": "Explora las cuentas de trading de mejor desempeño de todos los tiempos de PrimeX Capital, mostrando rendimientos excepcionales y estrategias. Únete a nosotros para elevar tu experiencia de trading con características avanzadas y ofertas especiales."
+      }
     },
     "bestMonthWidget": {
-      "title1": "Mejores rendimientos de este mes"
+      "title1": "Mejores rendimientos de este mes",
+      "metaData": {
+        "title": "Mejores Desempeños de Este Mes | PrimeX Capital",
+        "description": "Descubre las cuentas de trading de mejor desempeño de PrimeX Capital de este mes, destacando rendimientos excepcionales y estrategias. Únete a nosotros para mejorar tu experiencia de trading con características avanzadas y ofertas especiales."
+      }
     },
     "lowestDDWidget": {
-      "title1": "Menor riesgo y drawdown"
+      "title1": "Menor riesgo y drawdown",
+      "metaData": {
+        "title": "Riesgo y Drawdown Más Bajos | PrimeX Capital",
+        "description": "Explora las cuentas de trading de PrimeX Capital con el menor drawdown y riesgo, diseñadas para la estabilidad y rendimientos consistentes. Únete a nosotros para mejorar tu experiencia de trading con características avanzadas y ofertas especiales."
+      }
     },
     "hightProvidersWidget": {
-      "title1": "Más seguidos por los usuarios"
+      "title1": "Más seguidos por los usuarios",
+      "metaData": {
+        "title": "Mejor Clasificados por Número de Inversores | PrimeX Capital",
+        "description": "Descubre a los traders más seguidos en la plataforma de trading social de PrimeX Capital, mostrando a los inversores mejor clasificados para ayudarte a tomar decisiones informadas de trading."
+      }
     },
     "widgetCards": {
       "title1": "Our Best ",
@@ -2590,6 +2606,10 @@
     }
   },
   "whyChooseUs": {
+    "metaData": {
+      "title": "Por Qué Elegirnos | PrimeX Capital",
+      "description": "PrimeX Capital ofrece servicios de trading de élite con más de $330 millones en capital pagado, proporcionando acceso a más de 330 instrumentos, spreads desde 0.1 pips y apalancamiento de hasta 1:500. Experimenta una ejecución de operaciones ultrarrápida, tecnología de vanguardia, soporte multilingüe 24/7 y una sólida seguridad de fondos."
+    },
     "hero": {
       "title1": "Experimenta",
       "title2": "el Comercio de Élite ",
