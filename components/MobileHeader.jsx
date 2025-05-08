@@ -893,13 +893,6 @@ const MobileHeader = ({ locale }) => {
             /> */}
             {openSubMenu === 5 && (
               <div className="mt-2">
-                <LocaleLink
-                  href="/economic-calender"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("economic-calendar")}
-                </LocaleLink>
                 {(locale === "en" || locale === "ar" || locale === "ku") && (
                   <>
                     <LocaleLink
@@ -924,6 +917,13 @@ const MobileHeader = ({ locale }) => {
                   onClick={toggleDrawer}
                 >
                   {t("webinars")}
+                </LocaleLink>
+                <LocaleLink
+                  href="/economic-calender"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("economic-calendar")}
                 </LocaleLink>
                 {(locale === "en" || locale === "ar" || locale === "ku") && (
                   <LocaleLink
