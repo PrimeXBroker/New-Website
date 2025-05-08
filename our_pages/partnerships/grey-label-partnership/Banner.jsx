@@ -44,7 +44,7 @@ const Banner = () => {
                 src={
                   theme === "dark"
                     ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/grey-regional-partnership/Grey+Label+Hero+Section.webp"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/grey-label/Grey+Label+Hero+Section.jpg"
+                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/grey-label-light-hero.jpg"
                 }
                 width="100"
                 height="100"
