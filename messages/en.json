@@ -731,7 +731,7 @@
       "download_btn": "Download Document",
       "metaData": {
         "title": "Policy Statement | PrimeX Capital",
-        "description": ""
+        "description": "PrimeX Capital's Policy Statement outlines the essential standards and practices that govern our operations and service delivery, ensuring transparency and compliance in all client interactions."
       }
     },
     "riskDisclosure": {
@@ -2415,16 +2415,32 @@
       "feature5": "Access Detailed Statistics Of Top Traders"
     },
     "bestPerformanceWidget": {
-      "title1": "All-time Top Performers"
+      "title1": "All-time Top Performers",
+      "metaData": {
+        "title": "All-time Top Performers | PrimeX Capital",
+        "description": "Explore PrimeX Capital's top-performing trading accounts of all time, showcasing exceptional returns and strategies. Join us to elevate your trading experience with advanced features and special offers."
+      }
     },
     "bestMonthWidget": {
-      "title1": "Best Performers This Month"
+      "title1": "Best Performers This Month",
+      "metaData": {
+        "title": "Best Performers This Month | PrimeX Capital",
+        "description": "Discover PrimeX Capital's top-performing trading accounts for this month, highlighting exceptional returns and strategies. Join us to enhance your trading experience with advanced features and special offers."
+      }
     },
     "lowestDDWidget": {
-      "title1": "Lowest Risk And Drawdown"
+      "title1": "Lowest Risk And Drawdown",
+      "metaData": {
+        "title": "Lowest Risk and Drawdown | PrimeX Capital",
+        "description": "Explore PrimeX Capital's trading accounts with the lowest drawdown and risk, designed for stability and consistent returns. Join us to enhance your trading experience with advanced features and special offers."
+      }
     },
     "hightProvidersWidget": {
-      "title1": "Most Followed By Users"
+      "title1": "Most Followed By Users",
+      "metaData": {
+        "title": "Top-Ranked by Investors Number | PrimeX Capital",
+        "description": "Discover the most followed traders on PrimeX Capital's social trading platform, showcasing top-ranked investors to help you make informed trading decisions."
+      }
     },
     "widgetCards": {
       "title1": "Our Best ",
@@ -2591,6 +2607,10 @@
     }
   },
   "whyChooseUs": {
+    "metaData": {
+      "title": "Why Choose Us | PrimeX Capital",
+      "description": "PrimeX Capital offers elite trading services with over $330 million in paid-up capital, providing access to 330+ instruments, spreads from 0.1 pips, and leverage up to 1:500. Experience lightning-fast trade execution, cutting-edge technology, 24/7 multilingual support, and robust fund security."
+    },
     "hero": {
       "title1": "Experience Elite ",
       "title2": "Trading with the ",
@@ -2774,7 +2794,7 @@
   "knowledgeHubWebinars": {
     "metaData": {
       "title": "Webinars | PrimeX Capital",
-      "description": ""
+      "description": "Enhance your trading skills with PrimeX Capital's expert-led webinars, offering free sessions and personalized coaching to accelerate your success."
     },
     "hero": {
       "title_1": "PrimeX Capital",
@@ -2797,7 +2817,7 @@
   "knowledgeHubMarketNews": {
     "metaData": {
       "title": "Market News | PrimeX Capital",
-      "description": ""
+      "description": "Stay informed with PrimeX Capital's real-time market news, offering expert insights and data-driven analysis on major financial events and market shifts to support your trading decisions."
     },
     "hero": {
       "title_1": "Real-Time",
