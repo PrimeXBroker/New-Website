@@ -64,20 +64,25 @@ const Webinars = ({ active, setActive }) => {
                     <img
                       className="rounded w-[80px] sm:w-[100px] lg:w-full mb-3"
                       src={
+                        webinar.selectedName === "Ahmed Al Araji & Zyad Atta" ||
                         webinar._id === "681c618c227fc53fe3d710e7"
                           ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/knowledge-hub/Due.webp"
                           : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/zyad.webp"
                       }
-                      alt="Aniket"
+                      alt="webinar image"
                     />
                     <div className="w-[70%] lg:w-[100%]">
                       <p className="text-tm dark:text-tm-dark text-sm mb-1 sm:mb-0">
-                        {webinar._id === "681c618c227fc53fe3d710e7"
+                        {webinar.selectedName ===
+                          "Ahmed Al Araji & Zyad Atta" ||
+                        webinar._id === "681c618c227fc53fe3d710e7"
                           ? t("webinar_title3")
                           : t("webinar_title1")}
                       </p>
                       <p className="text-tm dark:text-tm-dark text-xs">
-                        {webinar._id === "681c618c227fc53fe3d710e7"
+                        {webinar.selectedName ===
+                          "Ahmed Al Araji & Zyad Atta" ||
+                        webinar._id === "681c618c227fc53fe3d710e7"
                           ? ""
                           : t("Webinar1_by")}
                       </p>
