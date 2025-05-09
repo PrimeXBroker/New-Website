@@ -8,13 +8,18 @@ import { IoMdArrowBack } from "react-icons/io";
 import { IoMdArrowForward } from "react-icons/io";
 import { useLocale } from "next-intl";
 import axios from "axios";
+import Link from "next/link";
 
-const Banner = ({ news }) => {
+const Banner = ({ news, titleEn }) => {
   const locale = useLocale();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayNews, setDisplayNews] = useState(news);
   const [newsDetails, setNewsDetails] = useState(news[0]);
   const [progressCounter, setProgressCounter] = useState(1); // Track the overall position
+
+  const convertToKebabCase = (str) => {
+    return str.toLowerCase().replace(/\s+/g, "-");
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -82,16 +87,34 @@ const Banner = ({ news }) => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 items-center bg-cc dark:bg-cc-dark rounded-3xl p-5 sm:p-14">
           <div className="w-full sm:h-[400px]">
-            <img
-              src={newsDetails?.image}
-              alt="PrimeX Broker Crypto Trading"
-              className="rounded-lg w-full h-full"
-            />
+            {titleEn && newsDetails?.slug && (
+              <Link
+                href={`/${locale}/details/${convertToKebabCase(titleEn)}/${
+                  newsDetails.slug
+                }`}
+              >
+                <img
+                  src={newsDetails?.image}
+                  alt="PrimeX Broker Crypto Trading"
+                  className="rounded-lg w-full h-full"
+                />
+              </Link>
+            )}
           </div>
           {/* Right side - Content */}
           <div className="space-y-6 sm:h-[400px] flex flex-col justify-between">
             <h1 className="text-2xl sm:text-3xl font-bold leading-tight pt-3 lg:pt-0 text-tm dark:text-tm-dark">
-              {locale === "ar" ? newsDetails?.titleAr : newsDetails?.titleEn}
+              {titleEn && newsDetails?.slug && (
+                <Link
+                  href={`/${locale}/details/${convertToKebabCase(titleEn)}/${
+                    newsDetails.slug
+                  }`}
+                >
+                  {locale === "ar"
+                    ? newsDetails?.titleAr
+                    : newsDetails?.titleEn}
+                </Link>
+              )}
             </h1>
             <div className="flex items-center justify-between text-ts dark:text-ts-dark py-2 lg:py-0">
               <span>
@@ -146,19 +169,25 @@ const Banner = ({ news }) => {
               {displayNews
                 .filter((_, index) => index !== currentIndex)
                 .map((blog, index) => (
-                  <Card
-                    key={index}
-                    className="rounded-[4px] overflow-hidden bg-e1 dark:bg-e1-dark p-2"
+                  <Link
+                    href={`/${locale}/details/${convertToKebabCase(titleEn)}/${
+                      blog.slug
+                    }`}
                   >
-                    <Image
-                      src={blog?.image}
-                      alt={`Thumbnail ${index}`}
-                      width={300}
-                      height={150}
-                      className="w-full h-[75px] cursor-pointer rounded-[2px]"
-                      onClick={() => handleThumbnailClick(index + 1)}
-                    />
-                  </Card>
+                    <Card
+                      key={index}
+                      className="rounded-[4px] overflow-hidden bg-e1 dark:bg-e1-dark p-2"
+                    >
+                      <Image
+                        src={blog?.image}
+                        alt={`Thumbnail ${index}`}
+                        width={300}
+                        height={150}
+                        className="w-full h-[75px] cursor-pointer rounded-[2px]"
+                        onClick={() => handleThumbnailClick(index + 1)}
+                      />
+                    </Card>
+                  </Link>
                 ))}
             </div>
           </div>

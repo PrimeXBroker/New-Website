@@ -7,6 +7,7 @@ import Moment from "react-moment";
 import { IoMdArrowBack } from "react-icons/io";
 import { IoMdArrowForward } from "react-icons/io";
 import { useLocale } from "next-intl";
+import Link from "next/link";
 
 const Banner = ({ news }) => {
   const locale = useLocale();
@@ -14,6 +15,12 @@ const Banner = ({ news }) => {
   const [displayNews, setDisplayNews] = useState(news);
   const [newsDetails, setNewsDetails] = useState(news[0]);
   const [progressCounter, setProgressCounter] = useState(1); // Track the overall position
+
+  console.log(news, "--------> news");
+
+  const convertToKebabCase = (str) => {
+    return str.toLowerCase().replace(/\s+/g, "-");
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -74,17 +81,29 @@ const Banner = ({ news }) => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 items-center bg-cc dark:bg-cc-dark rounded-3xl p-5 sm:p-14">
           <div className="w-full sm:h-[400px]">
-            <img
-              src={newsDetails?.image}
-              alt="PrimeX Broker Crypto Trading"
-              className="rounded-lg w-full h-full"
-            />
+            <Link
+              href={`/${locale}/${convertToKebabCase(
+                newsDetails?.category?.title
+              )}/${newsDetails.slug}`}
+            >
+              <img
+                src={newsDetails?.image}
+                alt="PrimeX Broker Crypto Trading"
+                className="rounded-lg w-full h-full"
+              />
+            </Link>
           </div>
           {/* Right side - Content */}
           <div className="space-y-6 sm:h-[400px] flex flex-col justify-between">
-            <h1 className="text-2xl sm:text-3xl font-bold leading-tight pt-3 lg:pt-0">
-              {newsDetails?.title}
-            </h1>
+            <Link
+              href={`/${locale}/${convertToKebabCase(
+                newsDetails?.category?.title
+              )}/${newsDetails.slug}`}
+            >
+              <h1 className="text-2xl sm:text-3xl font-bold leading-tight pt-3 lg:pt-0">
+                {newsDetails?.title}
+              </h1>
+            </Link>
             <div className="flex items-center justify-between text-ts dark:text-ts-dark">
               <span>
                 <Moment
@@ -138,19 +157,25 @@ const Banner = ({ news }) => {
               {displayNews
                 .filter((_, index) => index !== currentIndex)
                 .map((blog, index) => (
-                  <Card
-                    key={index}
-                    className="rounded-[4px] overflow-hidden bg-e1 dark:bg-e1-dark p-2"
+                  <Link
+                    href={`/${locale}/${convertToKebabCase(
+                      blog?.category?.title
+                    )}/${blog.slug}`}
                   >
-                    <Image
-                      src={blog?.image}
-                      alt={`Thumbnail ${index}`}
-                      width={300}
-                      height={150}
-                      className="w-full h-auto cursor-pointer rounded-[2px]"
-                      onClick={() => handleThumbnailClick(index + 1)}
-                    />
-                  </Card>
+                    <Card
+                      key={index}
+                      className="rounded-[4px] overflow-hidden bg-e1 dark:bg-e1-dark p-2"
+                    >
+                      <Image
+                        src={blog?.image}
+                        alt={`Thumbnail ${index}`}
+                        width={300}
+                        height={150}
+                        className="w-full h-auto cursor-pointer rounded-[2px]"
+                        onClick={() => handleThumbnailClick(index + 1)}
+                      />
+                    </Card>
+                  </Link>
                 ))}
             </div>
           </div>

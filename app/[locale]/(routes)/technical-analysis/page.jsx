@@ -72,7 +72,10 @@ const pages = () => {
         locale === "ku" ||
         locale === "ps") && (
         <>
-          <Banner news={blogs?.slice(0, 5)} />
+          <Banner
+            news={blogs?.slice(0, 5)}
+            titleEn={currentCategory?.titleEn}
+          />
           <ExpertAnalysis id={id} />
         </>
       )}
