@@ -12,8 +12,8 @@ export async function generateMetadata({ params: { locale } }) {
       : `${process.env.NEXT_PUBLIC_BASE_URL}/client-agreement`;
 
   return {
-    title: t("footer.client-agreement.metaData.title"),
-    description: t("footer.client-agreement.metaData.description"),
+    title: t("footer.clientAgreement.metaData.title"),
+    description: t("footer.clientAgreement.metaData.description"),
     alternates: {
       canonical: url,
     },
@@ -21,14 +21,14 @@ export async function generateMetadata({ params: { locale } }) {
       type: "website",
       locale: locale,
       url: url,
-      title: t("footer.client-agreement.metaData.title"),
-      description: t("footer.client-agreement.metaData.description"),
+      title: t("footer.clientAgreement.metaData.title"),
+      description: t("footer.clientAgreement.metaData.description"),
       images: [
         {
           url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/client-agreement/Banner.webp",
           width: 1200,
           height: 630,
-          alt: t("footer.client-agreement.metaData.title"),
+          alt: t("footer.clientAgreement.metaData.title"),
         },
       ],
     },

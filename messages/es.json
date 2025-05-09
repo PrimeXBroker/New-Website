@@ -731,7 +731,7 @@
       "download_btn": "Descargar Documento",
       "metaData": {
         "title": "Declaración de Políticas | PrimeX Capital",
-        "description": ""
+        "description": "La declaración de políticas de PrimeX Capital establece los estándares y prácticas esenciales que rigen nuestras operaciones y la entrega de servicios, asegurando transparencia y cumplimiento en todas las interacciones con los clientes."
       }
     },
     "riskDisclosure": {
@@ -2793,7 +2793,7 @@
   "knowledgeHubWebinars": {
     "metaData": {
       "title": "Webinars | PrimeX Capital",
-      "description": ""
+      "description": "Mejora tus habilidades de trading con los seminarios web dirigidos por expertos de PrimeX Capital, que ofrecen sesiones gratuitas y coaching personalizado para acelerar tu éxito."
     },
     "hero": {
       "title_1": "PrimeX Capital",
@@ -2816,7 +2816,7 @@
   "knowledgeHubMarketNews": {
     "metaData": {
       "title": "Noticias del Mercado | PrimeX Capital",
-      "description": ""
+      "description": "Mantente informado con las noticias de mercado en tiempo real de PrimeX Capital, ofreciendo conocimientos expertos y análisis basado en datos sobre los principales eventos financieros y cambios en el mercado para apoyar tus decisiones de trading."
     },
     "hero": {
       "title_1": "Noticias del Mercado en Tiempo Real",
