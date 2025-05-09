@@ -696,14 +696,14 @@
   },
   "footer": {
     "clientAgreement": {
-      "title_part1": "Client ",
-      "title_part2": "Agreement",
-      "description": "Here, we define the contractual relationship between our clients and us, specifying the mutual duties, terms, and conditions under which services are provided.",
-      "view_btn": "View Document",
-      "download_btn": "Download Document",
+      "title_part1": "د مراجعینو ",
+      "title_part2": "تړون",
+      "description": "دلته، موږ د خپلو مراجعینو او زموږ ترمنځ قراردادي اړیکه تعریف کوو، چې د دواړو اړخونو د دندو، شرایطو او هغو شرایطو ځانګړتیاوې روښانه کوي چې لاندې خدمتونه وړاندې کیږي.",
+      "view_btn": "د سند لیدل",
+      "download_btn": "د سند ډاونلوډ کول",
       "metaData": {
-        "title": "",
-        "description": ""
+        "title": "د پیرودونکي تړون | پرایم ایکس کپیتال",
+        "description": "د پرایم ایکس کپیتال د پیرودونکي تړون بیاکتنه وکړئ ترڅو زموږ د خدماتو حاکم شرایط او شرایط او ستاسو د پیرودونکي په توګه حقوق درک کړئ."
       }
     },
     "privacyPolicy": {
@@ -719,8 +719,8 @@
       "view_btn": "اسناد وګورئ",
       "download_btn": "اسناد ډاونلوډ کړئ",
       "metaData": {
-        "title": "",
-        "description": ""
+        "title": "شرایط او مقررات | پرایم ایکس کپیتال",
+        "description": "د پرایم ایکس کپیتال خدماتو، چې پکې سوداګري او حساب مدیریت شامل دي، د کارولو لپاره قانوني شرایط او شرایط بیاکتنه وکړئ."
       }
     },
     "policyStatement": {

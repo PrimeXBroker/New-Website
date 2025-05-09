@@ -702,8 +702,8 @@
       "view_btn": "Ver Documento",
       "download_btn": "Descargar Documento",
       "metaData": {
-        "title": "",
-        "description": ""
+        "title": "Acuerdo del Cliente | PrimeX Capital",
+        "description": "Revise el Acuerdo del Cliente de PrimeX Capital para comprender los términos y condiciones que rigen nuestros servicios y sus derechos como cliente."
       }
     },
     "privacyPolicy": {
@@ -719,8 +719,8 @@
       "view_btn": "Ver Documento",
       "download_btn": "Descargar Documento",
       "metaData": {
-        "title": "",
-        "description": ""
+        "title": "Términos y Condiciones | PrimeX Capital",
+        "description": "Revise los términos y condiciones legales que rigen su uso de los servicios de PrimeX Capital, incluyendo el comercio y la gestión de cuentas."
       }
     },
     "policyStatement": {
