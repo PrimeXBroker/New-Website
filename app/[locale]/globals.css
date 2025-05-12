@@ -1865,3 +1865,32 @@ html.dark #sun-moon:after {
 .promotion-swiper-navigation-buttons .promotions-swiper-button-prev::after {
   display: none !important;
 }
+
+.terms-checkbox.hidden {
+  display: none;
+}
+
+.terms-custom-checkbox {
+  /* width: 24px;
+  height: 19px; */
+  border: 2px solid #666666;
+  border-radius: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  transition: background-color 0.2s ease;
+}
+
+html.dark .terms-custom-checkbox {
+  border: 2px solid #999999 !important;
+  background-color: #030303 !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.terms-checkbox:checked + .terms-label .terms-custom-checkbox {
+  background-color: #0f9d58;
+}
+
+html.dark .terms-checkbox:checked + .terms-label .terms-custom-checkbox {
+  background-color: #10a85e !important;
+}

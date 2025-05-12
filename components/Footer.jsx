@@ -17,9 +17,7 @@ import CustomModal from "./Modal";
 import { Button } from "@nextui-org/button";
 import LocaleLink from "./LocaleLink";
 import { useTranslations, useLocale } from "next-intl";
-import Logo from "@/public/images/logos/logo-white.webp";
 import { usePathname, useRouter } from "next/navigation";
-import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import GetStarted from "./common/GetStarted";
 import { useTheme } from "next-themes";
 
@@ -31,32 +29,10 @@ const Footer = () => {
   const t = useTranslations("footer");
   const locale = useLocale();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLiquidityPage, setIsLiquidityPage] = useState(false);
-  const [isHomePage, setIsHomePage] = useState(false);
-  const [isIbPage, setIsIbPage] = useState(false);
-  const [isGreyLabelPage, setIsGreyLabelPage] = useState(false);
-  const [isRegionalPage, setIsRegionalPage] = useState(false);
-  const [isAccountTypesPage, setIsAccountTypePage] = useState(false);
-  const [isBonusPage, setIsBonusPage] = useState(false);
-  const [isDemoPage, setIsDemoPage] = useState(false);
-  const [isMT5Page, setIsMT5Page] = useState(false);
-  const [isAboutPage, setIsAboutPage] = useState(false);
-  const [isRamadanOfferPage, setIsRamadanOfferPage] = useState(false);
-  const [isSpreadPage, setIsSpreadPage] = useState(false);
+  const [isRegisterPage, setIsRegisterPage] = useState(false);
 
   useEffect(() => {
-    setIsLiquidityPage(pathname.includes("/liquidity-providing"));
-    setIsHomePage(pathname === `/${locale}` || pathname === `/${locale}/`);
-    setIsIbPage(pathname.includes("/ib-program"));
-    setIsGreyLabelPage(pathname.includes("/grey-label-partner"));
-    setIsRegionalPage(pathname.includes("/regional-partner"));
-    setIsAccountTypePage(pathname.includes("/account-types"));
-    setIsBonusPage(pathname.includes("/bonus"));
-    setIsDemoPage(pathname.includes("/funded-account-competition"));
-    setIsMT5Page(pathname.includes("/platform/mt5-platform"));
-    setIsAboutPage(pathname.includes("/about"));
-    setIsRamadanOfferPage(pathname.includes("/ramadan-contest"));
-    setIsSpreadPage(pathname.includes("/primex-spreads"));
+    setIsRegisterPage(pathname.includes("/registration"));
   }, [pathname]);
 
   const handleOpenModal = (e) => {
@@ -282,7 +258,9 @@ const Footer = () => {
 
   return (
     <>
-      <GetStarted />
+      <div className={`${isRegisterPage ? "hidden" : ""}`}>
+        <GetStarted />
+      </div>
       <footer className="bg-cc dark:bg-cc-dark">
         <div className="container flex flex-col pt-8">
           <h6 className="text-center pb-4 text-tm dark:text-tm-dark text-xl">

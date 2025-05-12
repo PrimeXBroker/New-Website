@@ -3082,5 +3082,77 @@
       "app_store_btn_part1": "Descarga la aplicación desde",
       "app_store_btn_part2": "App Store"
     }
+  },
+  "registration": {
+    "app": {
+      "app_title": "Aplicación PrimeX"
+    },
+    "register": {
+      "step_1_title": "Registrarse",
+      "step_1_description": "Registre su cuenta de trading en PrimeX",
+      "step_2_title": "Información Personal",
+      "step_2_description": "Cuéntenos un poco sobre usted",
+      "step_3_title": "Crear Contraseña",
+      "step_3_description": "Cree una contraseña o use nuestro generador de contraseñas para proteger su cuenta.",
+      "step_4_title": "Confirmar Correo Electrónico",
+      "step_4_description": "El correo de verificación ha sido enviado a ",
+      "step_5_title": "Éxito",
+      "step_5_description": "Su registro fue exitoso."
+    },
+    "signUpStep": {
+      "first_name_label": "Nombre",
+      "first_name_placeholder": "Escriba su Nombre",
+      "last_name_label": "Apellido",
+      "last_name_placeholder": "Escriba su Apellido",
+      "email_label": "Correo Electrónico",
+      "email_placeholder": "Escriba su Dirección de Correo Electrónico",
+      "phone_number_label": "Número de Teléfono",
+      "phone_number_placeholder": "Escriba su Número de Teléfono",
+      "continue_button": "Continuar",
+      "sign_in_button": "Iniciar Sesión",
+      "risk_warning": "Advertencia de Riesgo: Operar con instrumentos de FX y CFDs puede implicar un alto nivel de riesgo y puede resultar en la pérdida de todo su capital invertido.",
+      "error_message": "Este campo es obligatorio"
+    },
+    "personalInfoStep": {
+      "birthday_label": "Fecha de Nacimiento",
+      "birthday_placeholder": "DD/MM/AAAA",
+      "country_label": "País",
+      "city_label": "Ciudad",
+      "preferred_language_label": "Idioma Preferido",
+      "continue_button": "Continuar",
+      "back_button": "Atrás",
+      "risk_warning": "Advertencia de Riesgo: Operar con instrumentos de FX y CFDs puede implicar un alto nivel de riesgo y puede resultar en la pérdida de todo su capital invertido."
+    },
+    "createPassword": {
+      "password_label": "Contraseña",
+      "password_placeholder": " Nueva Contraseña ",
+      "password_criteria_1": "Al menos 1 letra minúscula y 1 mayúscula",
+      "password_criteria_2": "Al menos 1 número (0-9)",
+      "password_criteria_3": "Al menos 8 caracteres",
+      "password_criteria_4": "Solo caracteres latinos",
+      "random_password": "Generar contraseña aleatoria",
+      "agreement": " Acepto recibir boletines informativos, materiales de marketing, noticias de la empresa y actualizaciones de productos",
+      "continue_button": "Continuar",
+      "back_button": "Atrás",
+      "risk_warning": "Advertencia de Riesgo: Operar con instrumentos de FX y CFDs puede implicar un alto nivel de riesgo y puede resultar en la pérdida de todo su capital invertido."
+    },
+    "confirmEmailStep": {
+      "instructions": "Por favor, siga el enlace de este correo electrónico o ingrese el PIN recibido a continuación",
+      "code_placeholder": "Escriba el Código",
+      "code_error_message": "El código no es válido",
+      "resend_button": "Reenviar Código",
+      "timer_text": "Reenviar código en ",
+      "back_button": "Atrás",
+      "verify_code_button": "Verificar Código",
+      "risk_warning": "Advertencia de Riesgo: Operar con instrumentos de FX y CFDs puede implicar un alto nivel de riesgo y puede resultar en la pérdida de todo su capital invertido."
+    },
+    "successStep": {
+      "success_message": "Se ha registrado exitosamente",
+      "verification_button_text": "Verificación",
+      "deposit_button_text": "Depositar",
+      "go_to_dashboard_button": "Ir al Panel de Control",
+      "redirect_message": "Redirigiendo al Panel de Control en ",
+      "redirect_message_second": "segundos"
+    }
   }
 }

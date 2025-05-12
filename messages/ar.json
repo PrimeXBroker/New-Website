@@ -2962,5 +2962,77 @@
       "app_store_btn_part1": "حمل التطبيق من",
       "app_store_btn_part2": "App Store"
     }
+  },
+  "registration": {
+    "app": {
+      "app_title": "تطبيق برايم اكس"
+    },
+    "register": {
+      "step_1_title": "التسجيل",
+      "step_1_description": "سجل حساب التداول الخاص بك على برايم اكس",
+      "step_2_title": "المعلومات الشخصية",
+      "step_2_description": "أخبرنا قليلاً عن نفسك",
+      "step_3_title": "إنشاء كلمة المرور",
+      "step_3_description": "قم بإنشاء كلمة مرور أو استخدم مولد كلمات المرور لحماية حسابك.",
+      "step_4_title": "تأكيد البريد الإلكتروني",
+      "step_4_description": "تم إرسال بريد التحقق إلى ",
+      "step_5_title": "نجاح التسجيل",
+      "step_5_description": "تم تسجيلك بنجاح."
+    },
+    "signUpStep": {
+      "first_name_label": "الاسم الأول",
+      "first_name_placeholder": "اكتب اسمك الأول",
+      "last_name_label": "اسم العائلة",
+      "last_name_placeholder": "اكتب اسم عائلتك",
+      "email_label": "البريد الإلكتروني",
+      "email_placeholder": "اكتب عنوان بريدك الإلكتروني",
+      "phone_number_label": "رقم الهاتف",
+      "phone_number_placeholder": "اكتب رقم هاتفك",
+      "continue_button": "متابعة",
+      "sign_in_button": "تسجيل الدخول",
+      "risk_warning": "تحذير المخاطر: تداول أدوات الفوركس وعقود الفروقات قد ينطوي على مستوى عالٍ من المخاطر وقد يؤدي إلى خسارة كل رأس المال المستثمر.",
+      "error_message": "هذا الحقل مطلوب"
+    },
+    "personalInfoStep": {
+      "birthday_label": "تاريخ الميلاد",
+      "birthday_placeholder": "سنة/شهر/يوم",
+      "country_label": "البلد",
+      "city_label": "المدينة",
+      "preferred_language_label": "اللغة المفضلة",
+      "continue_button": "متابعة",
+      "back_button": "رجوع",
+      "risk_warning": "تحذير المخاطر: تداول أدوات الفوركس وعقود الفروقات قد ينطوي على مستوى عالٍ من المخاطر وقد يؤدي إلى خسارة كل رأس المال المستثمر."
+    },
+    "createPassword": {
+      "password_label": "كلمة المرور",
+      "password_placeholder": " كلمة مرور جديدة ",
+      "password_criteria_1": "حرف صغير وكبير على الأقل",
+      "password_criteria_2": "رقم واحد على الأقل (0-9)",
+      "password_criteria_3": "8 أحرف على الأقل",
+      "password_criteria_4": "أحرف لاتينية فقط",
+      "random_password": "إنشاء كلمة مرور عشوائية",
+      "agreement": "  أوافق على استلام النشرات الإخبارية، والمواد التسويقية، وأخبار الشركة، وتحديثات المنتجات.",
+      "continue_button": "متابعة",
+      "back_button": "رجوع",
+      "risk_warning": "تحذير المخاطر: تداول أدوات الفوركس وعقود الفروقات قد ينطوي على مستوى عالٍ من المخاطر وقد يؤدي إلى خسارة كل رأس المال المستثمر."
+    },
+    "confirmEmailStep": {
+      "instructions": "يرجى اتباع الرابط الذى تم ارساله الى البريد الإلكتروني أو إدخال رمز التحقق المستلم",
+      "code_placeholder": "اكتب الرمز",
+      "code_error_message": "الرمز غير صالح",
+      "resend_button": "إعادة إرسال الرمز",
+      "timer_text": "إعادة إرسال الرمز في ",
+      "back_button": "رجوع",
+      "verify_code_button": "تحقق من الرمز",
+      "risk_warning": "تحذير المخاطر: تداول أدوات الفوركس وعقود الفروقات قد ينطوي على مستوى عالٍ من المخاطر وقد يؤدي إلى خسارة كل رأس المال المستثمر."
+    },
+    "successStep": {
+      "success_message": "لقد تم تسجيلك بنجاح",
+      "verification_button_text": "التحقق",
+      "deposit_button_text": "إيداع",
+      "go_to_dashboard_button": "الانتقال إلى لوحة التحكم",
+      "redirect_message": "إعادة التوجيه إلى لوحة التحكم في ",
+      "redirect_message_second": "ثوانٍ"
+    }
   }
 }

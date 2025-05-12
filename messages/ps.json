@@ -3082,5 +3082,77 @@
       "app_store_btn_part1": "اپلیکیشن له دې ځایه ډاونلوډ کړئ",
       "app_store_btn_part2": "App Store"
     }
+  },
+  "registration": {
+    "app": {
+      "app_title": "د پرایم ایکس اپلیکیشن"
+    },
+    "register": {
+      "step_1_title": "ثبت نام",
+      "step_1_description": "خپل د پرایم ایکس سوداګرۍ حساب ثبت کړئ",
+      "step_2_title": "شخصي معلومات",
+      "step_2_description": "زموږ سره خپل معلومات شریک کړئ",
+      "step_3_title": "پټنوم جوړ کړئ",
+      "step_3_description": "خپل حساب خوندي ساتلو لپاره پټنوم جوړ کړئ یا زموږ د پټنوم جنریټر وکاروئ.",
+      "step_4_title": "بریښنالیک تایید کړئ",
+      "step_4_description": "د تایید بریښنالیک ته واستول شو ",
+      "step_5_title": "بریا",
+      "step_5_description": "ستاسو ثبت نام بریالی و."
+    },
+    "signUpStep": {
+      "first_name_label": "لومړی نوم",
+      "first_name_placeholder": "خپل لومړی نوم ولیکئ",
+      "last_name_label": "تخلص",
+      "last_name_placeholder": "خپل تخلص ولیکئ",
+      "email_label": "بریښنالیک",
+      "email_placeholder": "خپل بریښنالیک آدرس ولیکئ",
+      "phone_number_label": "د تلیفون شمیره",
+      "phone_number_placeholder": "خپل د تلیفون شمیره ولیکئ",
+      "continue_button": "دوام ورکړئ",
+      "sign_in_button": "ننوتل",
+      "risk_warning": "د خطر خبرداری: د فارکس وسایلو او CFDs سوداګري لوړه کچه خطر لري او ممکن ستاسو ټول پانګه له لاسه ورکړئ.",
+      "error_message": "دا برخه اړینه ده"
+    },
+    "personalInfoStep": {
+      "birthday_label": "د زیږون نیټه",
+      "birthday_placeholder": "ورځ/میاشت/کال",
+      "country_label": "هیواد",
+      "city_label": "ښار",
+      "preferred_language_label": "غوره ژبه",
+      "continue_button": "دوام ورکړئ",
+      "back_button": "شاته",
+      "risk_warning": "د خطر خبرداری: د فارکس وسایلو او CFDs سوداګري لوړه کچه خطر لري او ممکن ستاسو ټول پانګه له لاسه ورکړئ."
+    },
+    "createPassword": {
+      "password_label": "رمز",
+      "password_placeholder": " نوی رمز",
+      "password_criteria_1": "لږ تر لږه ۱ کوچنی او ۱ لوی توری",
+      "password_criteria_2": "لږ تر لږه ۱ عدد (۰-۹)",
+      "password_criteria_3": "لږ تر لږه ۸ حروف",
+      "password_criteria_4": "یوازې لاتیني حروف",
+      "random_password": "تصادفي پټنوم جوړ کړئ",
+      "agreement": " زه موافق یم چې خبرپاڼې، بازارموندنې مواد، د شرکت خبرونه، او د محصول تازه معلومات ترلاسه کړم.",
+      "continue_button": "دوام ورکړئ",
+      "back_button": "شاته",
+      "risk_warning": "د خطر خبرداری: د فارکس وسایلو او CFDs سوداګري لوړه کچه خطر لري او ممکن ستاسو ټول پانګه له لاسه ورکړئ."
+    },
+    "confirmEmailStep": {
+      "instructions": "مهرباني وکړئ د دې بریښنالیک لینک تعقیب کړئ یا لاندې ترلاسه شوی PIN داخل کړئ",
+      "code_placeholder": "کوډ ولیکئ",
+      "code_error_message": "کوډ نامعتبر دی",
+      "resend_button": "کوډ بیا واستوئ",
+      "timer_text": "کوډ بیا واستوئ په ",
+      "back_button": "شاته",
+      "verify_code_button": "کوډ تایید کړئ",
+      "risk_warning": "د خطر خبرداری: د فارکس وسایلو او CFDs سوداګري لوړه کچه خطر لري او ممکن ستاسو ټول پانګه له لاسه ورکړئ."
+    },
+    "successStep": {
+      "success_message": "تاسو بریالي ثبت شوي یاست",
+      "verification_button_text": "تایید",
+      "deposit_button_text": "جمع کړئ",
+      "go_to_dashboard_button": "ډشبورډ ته لاړ شئ",
+      "redirect_message": "ډشبورډ ته لیږدول کیږي په ",
+      "redirect_message_second": "ثانیو کې"
+    }
   }
 }

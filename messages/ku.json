@@ -3037,5 +3037,77 @@
       "app_store_btn_part1": " داونڵۆودی بکە لە",
       "app_store_btn_part2": " ئاپ ستۆر"
     }
+  },
+  "registration": {
+    "app": {
+      "app_title": "ئەپڵیکەیشنی پرایم ئێکس"
+    },
+    "register": {
+      "step_1_title": "هەژمار تۆمار بکە",
+      "step_1_description": " هەژماری مامەڵەکردنی خۆت لە پرایم ئێکس تۆمار بکە",
+      "step_2_title": "زانیاری کەسی",
+      "step_2_description": " کەمێک باسی خۆتمان بۆ بکە",
+      "step_3_title": " وشەیەکی نهێنی دابنێ",
+      "step_3_description": " وشەی نهێنی دابنێ یان تایبەتمەندی دروستکەری وشەی نهێنیمان بەکاربهێنە بۆ پاراستنی هەژمارەکەت.",
+      "step_4_title": " ئیمەیڵ پشتڕاست بکەرەوە",
+      "step_4_description": " ئیمەیڵی پشتڕاستکردنەوەکە نێردرا بۆ",
+      "step_5_title": "سەرکەوتوو بوو",
+      "step_5_description": "تۆمارکردنی هەژمارەکەت سەرکەوتوو بوو"
+    },
+    "signUpStep": {
+      "first_name_label": "ناوی یەکەم",
+      "first_name_placeholder": "ناوی یەکەمت بنووسە",
+      "last_name_label": "ناوی دووەم",
+      "last_name_placeholder": "ناوی دووەمت بنووسە",
+      "email_label": "ئیمەیڵ",
+      "email_placeholder": " ناونیشانی ئیمەیڵەکەت بنووسە",
+      "phone_number_label": "ژمارەی مۆبایل",
+      "phone_number_placeholder": " ژمارەی مۆبایلەکەت بنووسە ",
+      "continue_button": "بەردەوامبوون",
+      "sign_in_button": "تۆماری چوونەژوورەوە",
+      "risk_warning": " ئاگاداری زەرەر : مامەڵەکردن بە ئامێرەکانی ئاڵوگۆڕکردنی فۆڕێکس و  گرێبەستی جیاوازی (CFD) دەکرێت ئاستێکی بەرزی زەرەری لێبکەوێتەوە و لەوانەیە ببێتە هۆی لەدەستدانی هەموو سەرمایە وەبەرهێنراوەکەت.",
+      "error_message": "ئەم بەشە داواکراوە"
+    },
+    "personalInfoStep": {
+      "birthday_label": "بەرواری لەدایکبوون",
+      "birthday_placeholder": "ڕۆژ\\مانگ\\ساڵ",
+      "country_label": "وڵات",
+      "city_label": "شار",
+      "preferred_language_label": "زمانی خوازراو",
+      "continue_button": "بەردەوامبوون",
+      "back_button": "گەڕانەوە",
+      "risk_warning": " ئامێرەکانی ئاڵوگۆڕکردنی فۆڕێکس و  گرێبەستی جیاوازی (CFD) دەکرێت ئاستێکی بەرزی زەرەری لێبکەوێتەوە و لەوانەیە ببێتە هۆی لەدەستدانی هەموو سەرمایە وەبەرهێنراوەکەت."
+    },
+    "createPassword": {
+      "password_label": "Password",
+      "password_placeholder": "New Password",
+      "password_criteria_1": " بەلایەنی کەمەوە 1 پیتی بچووک و گەورە",
+      "password_criteria_2": " بەلایەنی کەمەوە 1 ژمارە لە نێوان (0-9)",
+      "password_criteria_3": " بەلایەنی کەمەوە 8 پیت",
+      "password_criteria_4": "تەنها پیتی لاتینی",
+      "random_password": "وشەی نهێنی بەشێوەی خۆکار دروست بکە",
+      "agreement": " I agree to receive newsletters, marketing materials, company news, and product updates.",
+      "continue_button": "بەردەوامبوون",
+      "back_button": "گەڕانەوە",
+      "risk_warning": " ئامێرەکانی ئاڵوگۆڕکردنی فۆڕێکس و  گرێبەستی جیاوازی (CFD) دەکرێت ئاستێکی بەرزی زەرەری لێبکەوێتەوە و لەوانەیە ببێتە هۆی لەدەستدانی هەموو سەرمایە وەبەرهێنراوەکەت."
+    },
+    "confirmEmailStep": {
+      "instructions": " تکایە لینکی ئەم ئیمەیڵە بکەرەوە یان کۆدی وەرگیراو لە خوارەوە زیاد بکە ",
+      "code_placeholder": "کۆدەکە بنووسە",
+      "code_error_message": "کۆدەکە دروست نییە",
+      "resend_button": "دووبارە ناردنەوەی کۆد",
+      "timer_text": " دووبارە کۆد بنێرەوە پاش",
+      "back_button": "گەڕانەوە",
+      "verify_code_button": " کۆدەکە پشتڕاست بکەرەوە",
+      "risk_warning": " ئاگاداری زەرەر : مامەڵەکردن بە ئامێرەکانی ئاڵوگۆڕکردنی فۆڕێکس و  گرێبەستی جیاوازی (CFD) دەکرێت ئاستێکی بەرزی زەرەری لێبکەوێتەوە و لەوانەیە ببێتە هۆی لەدەستدانی هەموو سەرمایە وەبەرهێنراوەکەت."
+    },
+    "successStep": {
+      "success_message": "بەسەرکەوتوویی هەژمارت تۆمار کرد",
+      "verification_button_text": "پشتڕاستکردنەوە",
+      "deposit_button_text": "پارە خستنە سەر هەژمار",
+      "go_to_dashboard_button": " بڕۆ بۆ داشبۆرد",
+      "redirect_message": " ئاڕاستەکردنەوە بۆ داشبۆرد پاش",
+      "redirect_message_second": "چرکە"
+    }
   }
 }

@@ -3083,5 +3083,77 @@
       "app_store_btn_part1": "Download on the",
       "app_store_btn_part2": "App Store"
     }
+  },
+  "registration": {
+    "app": {
+      "app_title": "PrimeX App"
+    },
+    "register": {
+      "step_1_title": "Sign up",
+      "step_1_description": "Register your trading account on PrimeX",
+      "step_2_title": "Personal Info",
+      "step_2_description": "Tell us a bit about yourself",
+      "step_3_title": "Create Password",
+      "step_3_description": "Create a password or use our password generator to protect your account.",
+      "step_4_title": "Confirm Email",
+      "step_4_description": "The verification email is sent to ",
+      "step_5_title": "Success",
+      "step_5_description": "Your registration was successful."
+    },
+    "signUpStep": {
+      "first_name_label": "First Name",
+      "first_name_placeholder": "Type your First Name",
+      "last_name_label": "Last Name",
+      "last_name_placeholder": "Type your Last Name",
+      "email_label": "Email",
+      "email_placeholder": "Type your Email Address",
+      "phone_number_label": "Phone Number",
+      "phone_number_placeholder": "Type your Phone Number",
+      "continue_button": "Continue",
+      "sign_in_button": "Sign In",
+      "risk_warning": "Risk Warning : Trading FX instruments and CFDs can incur a high level of risk and may result in a loss of all your invested Capital.",
+      "error_message": "This field is required"
+    },
+    "personalInfoStep": {
+      "birthday_label": "Birthday",
+      "birthday_placeholder": "DD/MM/YYYY",
+      "country_label": "Country",
+      "city_label": "City",
+      "preferred_language_label": "Preferred Language",
+      "continue_button": "Continue",
+      "back_button": "Back",
+      "risk_warning": "Risk Warning : Trading FX instruments and CFDs can incur a high level of risk and may result in a loss of all your invested Capital."
+    },
+    "createPassword": {
+      "password_label": "Password",
+      "password_placeholder": "New Password",
+      "password_criteria_1": "At least 1 lowercase & uppercase letter",
+      "password_criteria_2": "At least 1 number (0-9)",
+      "password_criteria_3": "At least 8 characters",
+      "password_criteria_4": "Only Latin characters",
+      "random_password": "Generate random password",
+      "agreement": " I agree to receive newsletters, marketing materials, company news, and product updates.",
+      "continue_button": "Continue",
+      "back_button": "Back",
+      "risk_warning": "Risk Warning : Trading FX instruments and CFDs can incur a high level of risk and may result in a loss of all your invested Capital."
+    },
+    "confirmEmailStep": {
+      "instructions": "Please follow the link from this email or enter the received PIN below",
+      "code_placeholder": "Type Code",
+      "code_error_message": "Code is invalid",
+      "resend_button": "Resend Code",
+      "timer_text": "Resend code in ",
+      "back_button": "Back",
+      "verify_code_button": "Verify Code",
+      "risk_warning": "Risk Warning : Trading FX instruments and CFDs can incur a high level of risk and may result in a loss of all your invested Capital."
+    },
+    "successStep": {
+      "success_message": "You have successfully registered",
+      "verification_button_text": "Verification",
+      "deposit_button_text": "Deposit",
+      "go_to_dashboard_button": "Go to Dashboard",
+      "redirect_message": "Redirecting to Dashboard in ",
+      "redirect_message_second": "seconds"
+    }
   }
 }
