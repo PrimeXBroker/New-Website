@@ -108,7 +108,7 @@ const Webinars = ({ active, setActive }) => {
                     <p className="text-sm xl:text-base mb-2 text-rm dark:text-tm-dark line-clamp-2">
                       {locale === "ar" ? webinar.detailsAr : webinar.details}
                     </p>
-                    {webinar._id === "681c618c227fc53fe3d710e7" && (
+                    {webinar.selectedName === "Ahmed Al Araji & Zyad Atta" && (
                       <p className="text-sm xl:text-base mb-2 text-rm dark:text-tm-dark line-clamp-2">
                         {locale === "ar"
                           ? "أحمد الاعرجي (محلل اقتصادي)، زياد عطا (محلل فني)"
