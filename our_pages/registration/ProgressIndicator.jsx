@@ -22,7 +22,7 @@ export default function ProgressIndicator({ step }) {
               cx="50%"
               cy="50%"
               r="22"
-              stroke={theme === "dark" ? "#242424" : "#E0E0E0"}
+              stroke={theme === "dark" ? "#333333" : "#CCCCCC"}
               strokeWidth="5"
               fill="transparent"
             />
@@ -37,7 +37,7 @@ export default function ProgressIndicator({ step }) {
               strokeDashoffset={strokeDashoffset}
             />
           </svg>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl font-semibold text-ctm dark:text-ctm-dark">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl font-semibold text-tm dark:text-tm-dark">
             {step}
           </div>
         </div>
@@ -49,7 +49,7 @@ export default function ProgressIndicator({ step }) {
               cx="50%"
               cy="50%"
               r="16"
-              stroke={theme === "dark" ? "#242424" : "#E0E0E0"}
+              stroke={theme === "dark" ? "#333333" : "#CCCCCC"}
               strokeWidth="4"
               fill="transparent"
             />
@@ -64,7 +64,7 @@ export default function ProgressIndicator({ step }) {
               strokeDashoffset={mobileStrokeDashoffset}
             />
           </svg>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-base font-semibold text-ctm dark:text-ctm-dark">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-base font-semibold text-tm dark:text-tm-dark">
             {step}
           </div>
         </div>

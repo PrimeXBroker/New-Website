@@ -19,10 +19,10 @@ export default function Register({ step, setStep }) {
   const handleBack = () => setStep((prev) => prev - 1);
 
   return (
-    <div className="px-3 sm:px-12 md:px-16 lg:px-10 xl:px-16 2xl:px-24 relative">
+    <div className="px-3 sm:px-12 md:px-16 lg:px-10 xl:px-16 2xl:px-20 pt-28 relative">
       {step !== 5 && (
-        <div className="sm:hidden bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/mobile-mockup.webp)] bg-cover bg-center rounded-xl p-4 mt-6">
-          <div className="bg-white/70 backdrop-blur rounded-xl p-3">
+        <div className="sm:hidden bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/mobile-mockup.webp)] bg-cover bg-center rounded-xl p-4">
+          <div className="bg-white/70 dark:bg-white/70 backdrop-blur dark:backdrop-blur rounded-xl p-3">
             <p className="text-nb dark:text-nb-dark text-2xl font-bold font-montserrat mb-3 text-center">
               {p("app_title")}
             </p>
@@ -90,17 +90,21 @@ export default function Register({ step, setStep }) {
         </div>
       )}
       {step !== 5 && (
-        <div className="hidden sm:block lg:hidden mt-12 relative">
+        <div className="hidden sm:block lg:hidden relative">
           <Image
             unoptimized={true}
-            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/tablet-mockup.webp"
+            src={
+              locale === "ar" || locale === "ps" || locale === "ku"
+                ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/tablet-mockup-ar.webp"
+                : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/tablet-mockup.webp"
+            }
             alt="Tablet Mockup"
             width={32}
             height={32}
             className="rounded-xl w-full h-full relative"
           />
           <div className={`hidden sm:flex justify-start items-end`}>
-            <div className="absolute top-1/2 right-6 -translate-y-1/2 bg-white/50 backdrop-blur rounded-xl p-3">
+            <div className="absolute top-1/2 end-6 -translate-y-1/2 bg-white/50 dark:bg-white/50 backdrop-blur dak:backdrop-blur rounded-xl p-3">
               <p className="text-nb dark:text-nb-dark text-xl lg:text-2xl font-bold font-montserrat mb-3 text-center">
                 {p("app_title")}
               </p>
@@ -170,22 +174,22 @@ export default function Register({ step, setStep }) {
       )}
       <div className="flex justify-between mb-2 mt-8 sm:mt-6 lg:mt-0 relative z-0">
         {step === 1 && (
-          <h2 className="text-ctm dark:text-ctm-dark font-bold text-[32px] sm:text-[40px]">
+          <h2 className="text-tm dark:text-tm-dark font-bold text-[32px] sm:text-[40px]">
             {t("step_1_title")}
           </h2>
         )}
         {step === 2 && (
-          <h2 className="text-ctm dark:text-ctm-dark font-bold text-[32px] sm:text-[40px]">
+          <h2 className="text-tm dark:text-tm-dark font-bold text-[32px] sm:text-[40px]">
             {t("step_2_title")}
           </h2>
         )}
         {step === 3 && (
-          <h2 className="text-ctm dark:text-ctm-dark font-bold text-[32px] sm:text-[40px]">
+          <h2 className="text-tm dark:text-tm-dark font-bold text-[32px] sm:text-[40px]">
             {t("step_3_title")}
           </h2>
         )}
         {step === 4 && (
-          <h2 className="text-ctm dark:text-ctm-dark font-bold text-[32px] sm:text-[40px]">
+          <h2 className="text-tm dark:text-tm-dark font-bold text-[32px] sm:text-[40px]">
             {t("step_4_title")}
           </h2>
         )}
@@ -193,22 +197,22 @@ export default function Register({ step, setStep }) {
       </div>
       <div className="pb-5 sm:pb-6">
         {step === 1 && (
-          <p className="text-cts dark:text-cts-dark font-medium text-sm sm:text-lg mb-0">
+          <p className="text-ts dark:text-ts-dark font-medium text-sm sm:text-lg mb-0">
             {t("step_1_description")}
           </p>
         )}
         {step === 2 && (
-          <p className="text-cts dark:text-cts-dark font-medium text-sm sm:text-lg mb-0">
+          <p className="text-ts dark:text-ts-dark font-medium text-sm sm:text-lg mb-0">
             {t("step_2_description")}
           </p>
         )}
         {step === 3 && (
-          <p className="text-cts dark:text-cts-dark font-medium text-sm sm:text-lg mb-0">
+          <p className="text-ts dark:text-ts-dark font-medium text-sm sm:text-lg mb-0">
             {t("step_3_description")}
           </p>
         )}
         {step === 4 && (
-          <p className="text-cts dark:text-cts-dark font-medium text-sm sm:text-lg mb-0">
+          <p className="text-ts dark:text-ts-dark font-medium text-sm sm:text-lg mb-0">
             {t("step_4_description")} johndoe@gmail.com
           </p>
         )}

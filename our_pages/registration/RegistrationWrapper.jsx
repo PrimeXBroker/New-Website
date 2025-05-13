@@ -13,29 +13,27 @@ const RegistrationWrapper = () => {
   const t = useTranslations("primeXTradingApp.downloadAppToady");
 
   return (
-    <section className="bg-cp dark:bg-cp-dark pt-16 lg:pt-28 pb-10">
+    <section className={`bg-p dark:bg-p-dark ${step !== 5 ? "pb-10" : ""}`}>
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {step !== 5 && (
-          <div
-            className={`hidden lg:flex justify-start items-end relative bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/registeration-bg.webp)] bg-cover h-screen`}
-          >
+          <div className={`hidden lg:block relative`}>
             <Image
               unoptimized={true}
               width="18"
               height="18"
               src={
                 locale === "ar" || locale === "ku" || locale === "ps"
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/registeration-phone-mockup-ar.webp"
-                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/registeration-phone-mockup.webp"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/mockup-ar.webp"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/mockup-en.webp"
               }
               alt="Registration Mockup"
-              className="w-[65%]"
+              className="w-full"
             />
-            <div className="absolute bottom-7 left-1/2 transform -translate-x-1/2 bg-white/50 backdrop-blur rounded-xl p-3">
+            <div className="absolute top-1/2 start-16 -translate-y-1/2 bg-white/50 backdrop-blur rounded-xl p-3">
               <p className="text-nb dark:text-nb-dark text-2xl font-bold font-montserrat mb-3 text-center">
                 {p("app_title")}
               </p>
-              <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-3">
+              <div className="flex flex-col justify-center lg:justify-start items-center gap-3">
                 <a
                   href="https://play.google.com/store/apps/details?id=com.primex.primexmobileapp"
                   target="_blank"

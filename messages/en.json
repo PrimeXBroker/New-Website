@@ -3120,6 +3120,7 @@
       "country_label": "Country",
       "city_label": "City",
       "preferred_language_label": "Preferred Language",
+      "select_placeholder": "Select...",
       "continue_button": "Continue",
       "back_button": "Back",
       "risk_warning": "Risk Warning : Trading FX instruments and CFDs can incur a high level of risk and may result in a loss of all your invested Capital."

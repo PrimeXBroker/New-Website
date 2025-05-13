@@ -44,13 +44,13 @@ export default function PhoneNumberField() {
   return (
     <div className="w-full relative mt-1 sm:mt-2">
       <div
-        className={`flex w-full border border-ce2 dark:border-ce2-dark bg-ce1 dark:bg-ce1-dark cursor-pointer
+        className={`flex w-full border border-e2 dark:border-e2-dark bg-cc dark:bg-cc-dark cursor-pointer
     ${isOpen ? "rounded-t-md sm:rounded-t-lg" : "rounded-md sm:rounded-lg"}
   `}
         onClick={() => setIsOpen(!isOpen)}
       >
         <div
-          className={`flex items-center gap-2 p-4 w-[140px] border-e border-ce2 dark:border-ce2-dark bg-ce2 dark:bg-ce2-dark
+          className={`flex items-center gap-2 p-4 w-[140px] border-e border-e2 dark:border-e2-dark bg-e2 dark:bg-e2-dark
     ${
       isOpen ? "rounded-tl-md sm:rounded-tl-lg" : "rounded-s-md sm:rounded-s-lg"
     }
@@ -63,10 +63,10 @@ export default function PhoneNumberField() {
             height={15}
             className="w-[20px] h-auto"
           />
-          <span className="text-sm sm:text-base font-medium text-ctm dark:text-ctm-dark">
+          <span className="text-sm sm:text-base font-medium text-tm dark:text-tm-dark">
             {selectedPhone.code}
           </span>
-          <IoChevronDownOutline className="text-cts dark:text-cts-dark ml-auto" />
+          <IoChevronDownOutline className="text-ts dark:text-ts-dark ml-auto" />
         </div>
         <input
           type="tel"
@@ -74,7 +74,7 @@ export default function PhoneNumberField() {
           value={phoneInput}
           onClick={(e) => e.stopPropagation()}
           onChange={(e) => setPhoneInput(e.target.value)}
-          className={`w-full font-medium p-4 text-sm sm:text-base bg-ce1 dark:bg-ce1-dark text-ctm dark:text-ctm-dark placeholder:text-cts dark:placeholder:text-cts-dark focus:outline-none ${
+          className={`w-full font-medium p-4 text-sm sm:text-base bg-cc dark:bg-cc-dark text-tm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts-dark focus:outline-none ${
             isOpen
               ? "rounded-tr-md sm:rounded-tr-lg"
               : "rounded-e-md sm:rounded-e-lg"
@@ -83,15 +83,15 @@ export default function PhoneNumberField() {
       </div>
 
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-ce1 dark:bg-ce1-dark rounded-b-md sm:rounded-b-lg border border-t-0 border-ce2 dark:border-ce2-dark z-30 max-h-64 overflow-y-auto">
-          <div className="flex items-center border-y border-ce3 dark:border-ce3-dark bg-ce2 dark:bg-ce2-dark px-3">
-            <FiSearch className="text-cts dark:text-cts-dark mr-2" />
+        <div className="absolute top-full left-0 w-full bg-cc dark:bg-cc-dark rounded-b-md sm:rounded-b-lg border border-t-0 border-e2 dark:border-e2-dark z-30 max-h-64 overflow-y-auto">
+          <div className="flex items-center border-y border-e2 dark:border-e2-dark bg-cc dark:bg-cc-dark px-3">
+            <FiSearch className="text-ts dark:text-ts-dark mr-2" />
             <input
               type="text"
               placeholder="Search"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full py-3 bg-ce2 dark:bg-ce2-dark text-sm font-medium text-ctm dark:text-ctm-dark placeholder:text-cts dark:placeholder:text-cts-dark focus:outline-none"
+              className="w-full py-3 bg-cc dark:bg-cc-dark text-sm font-medium text-ctm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts-dark focus:outline-none"
             />
           </div>
           {filteredOptions.map((option, i) => (
@@ -101,13 +101,13 @@ export default function PhoneNumberField() {
                 setSelectedPhone(option);
                 setIsOpen(false);
               }}
-              className={`px-5 py-3 text-sm font-medium text-ctm dark:text-ctm-dark flex items-center gap-3 ${
+              className={`mx-5 px-2 py-4 text-sm font-medium text-ctm dark:text-ctm-dark flex items-center gap-2 hover:bg-e1 dark:hover:bg-e1-dark ${
                 i !== filteredOptions.length - 1
-                  ? "border-b border-ce2 dark:border-ce2-dark"
+                  ? "border-b border-e2 dark:border-e2-dark"
                   : ""
               } cursor-pointer`}
             >
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 text-tm dark:text-tm-dark text-sm font-medium">
                 <Image
                   src={option.flag}
                   alt="Flag"
@@ -117,7 +117,9 @@ export default function PhoneNumberField() {
                 />
                 {option.label}
               </div>
-              <span>{option.code}</span>
+              <span className="text-ts dark:text-ts-dark font-medium text-xs">
+                {option.code}
+              </span>
             </div>
           ))}
         </div>

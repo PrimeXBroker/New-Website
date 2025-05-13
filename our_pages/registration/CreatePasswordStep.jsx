@@ -80,7 +80,7 @@ export default function CreatePasswordStep({ handleNext, handleBack }) {
 
   return (
     <form>
-      <label className="text-cts dark:text-cts-dark text-xs sm:text-sm font-medium">
+      <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium">
         {t("password_label")}
       </label>
       <div className="flex items-center justify-between gap-2 mb-3">
@@ -91,17 +91,17 @@ export default function CreatePasswordStep({ handleNext, handleBack }) {
             placeholder={t("password_label")}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className={`appearance-none mt-1 sm:mt-2 font-medium border border-ce2 dark:border-ce2-dark focus:border-ctm dark:focus:border-ctm-dark rounded-md sm:rounded-lg w-full p-4 text-ctm dark:text-ctm-dark placeholder:text-cts dark:placeholder:text-cts-dark bg-ce1 dark:bg-ce1-dark focus:outline-none text-sm sm:text-base`}
+            className={`appearance-none mt-1 sm:mt-2 font-medium border border-e2 dark:border-e2-dark focus:border-tm dark:focus:border-tm-dark rounded-md sm:rounded-lg w-full p-4 text-tm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-cc dark:bg-cc-dark focus:outline-none text-sm sm:text-base`}
           />
           <button
             type="button"
             onClick={togglePasswordVisibility}
-            className="absolute right-5 top-1/2 transform -translate-y-1/2 mt-1"
+            className="absolute end-5 top-1/2 transform -translate-y-1/2 mt-1"
           >
             {passwordVisible ? (
-              <MdOutlineVisibility className="text-cts dark:text-cts-dark text-xl sm:text-2xl" />
+              <MdOutlineVisibility className="text-ts dark:text-ts-dark text-xl sm:text-2xl" />
             ) : (
-              <MdOutlineVisibilityOff className="text-cts dark:text-cts-dark text-xl sm:text-2xl" />
+              <MdOutlineVisibilityOff className="text-ts dark:text-ts-dark text-xl sm:text-2xl" />
             )}
           </button>
         </div>
@@ -111,14 +111,14 @@ export default function CreatePasswordStep({ handleNext, handleBack }) {
             onClick={copyToClipboard}
             className={`flex items-center justify-center border-1 rounded-md sm:rounded-lg p-4 mt-1 ${
               copied
-                ? "border border-cgc dark:border-cgc-dark bg-cgb dark:bg-cgb-dark"
-                : "border border-ce2 dark:border-ce2-dark bg-ce1 dark:bg-ce1-dark"
+                ? "border border-gc dark:border-gc-dark bg-gb dark:bg-gb-dark"
+                : "border border-e2 dark:border-e2-dark bg-cc dark:bg-cc-dark"
             }`}
           >
             {copied ? (
-              <LuCheck className="text-cgc dark:text-cgc-dark text-xl sm:text-2xl" />
+              <LuCheck className="text-gc dark:text-gc-dark text-xl sm:text-2xl" />
             ) : (
-              <MdOutlineContentCopy className="text-cts dark:text-cts-dark text-xl sm:text-2xl" />
+              <MdOutlineContentCopy className="text-ts dark:text-ts-dark text-xl sm:text-2xl" />
             )}
           </button>
         </div>
@@ -126,7 +126,7 @@ export default function CreatePasswordStep({ handleNext, handleBack }) {
       <button
         type="button"
         onClick={generateRandomPassword}
-        className={`text-ctm dark:text-ctm-dark hover:text-cpc dark:hover:text-cpc-dark font-semibold text-sm sm:text-base ${
+        className={`text-tm dark:text-tm-dark hover:text-pcp dark:hover:text-pcp-dark font-semibold text-sm sm:text-base ${
           !showCriteria
             ? "xs:mb-[15px] xl:mb-[20px] 2xl:mb-[22px] 3xl:mb-[33px]"
             : ""
@@ -141,15 +141,15 @@ export default function CreatePasswordStep({ handleNext, handleBack }) {
               key={index}
               className={`flex items-center px-2 py-1 rounded-sm ${
                 item.valid
-                  ? "text-cgc dark:text-cgc-dark bg-cgb dark:bg-cgb-dark"
-                  : "text-crc dark:text-crc-dark bg-crb dark:bg-crb-dark"
+                  ? "text-gc dark:text-gc-dark bg-gb dark:bg-gb-dark"
+                  : "text-rc dark:text-rc-dark bg-rb dark:bg-rb-dark"
               }`}
               style={{ width: "auto" }}
             >
               {item.valid ? (
-                <LuCheck className="flex-shrink-0 mr-1 text-xs sm:text-sm" />
+                <LuCheck className="flex-shrink-0 me-1 text-xs sm:text-sm" />
               ) : (
-                <RxCross2 className="flex-shrink-0 mr-1 text-xs sm:text-sm" />
+                <RxCross2 className="flex-shrink-0 me-1 text-xs sm:text-sm" />
               )}
               <span className="text-xs sm:text-sm font-medium leading-snug">
                 {item.text}
@@ -164,27 +164,27 @@ export default function CreatePasswordStep({ handleNext, handleBack }) {
           htmlFor="terms"
           className="terms-label flex items-start cursor-pointer"
         >
-          <span className="terms-custom-checkbox w-7 h-4 sm:w-6 sm:h-5 mr-2 sm:mr-3 mt-1"></span>
-          <span className="text-cts dark:text-cts-dark font-medium text-sm sm:text-base">
+          <span className="terms-custom-checkbox w-7 h-4 sm:w-6 sm:h-5 me-2 sm:me-3 mt-1"></span>
+          <span className="text-ts dark:text-ts-dark font-medium text-sm sm:text-base">
             {t("agreement")}
           </span>
         </label>
       </div>
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-5 mt-8">
+      <div className="mt-8">
         <button
           onClick={handleBack}
-          className="bg-ce1 dark:bg-ce1-dark rounded-md sm:rounded-md px-5 py-4 text-ctm dark:text-ctm-dark text-base sm:text-xl font-semibold w-full sm:w-1/2"
+          className="bg-cc dark:bg-cc-dark border border-e2 dark:border-e2-dark rounded-md sm:rounded-md px-5 py-4 text-tm dark:text-tm-dark text-base sm:text-xl font-semibold w-full"
         >
           {t("back_button")}
         </button>
         <button
           onClick={handleNext}
-          className="bg-cpc dark:bg-cpc-dark rounded-md sm:rounded-md px-5 py-4 text-cnb dark:text-cnb-dark text-base sm:text-xl font-semibold w-full sm:w-1/2"
+          className="bg-pcp dark:bg-pcp-dark border border-pcp dark:border-pcp-dark rounded-md sm:rounded-md px-5 py-4 text-nb dark:text-nb-dark text-base sm:text-xl font-semibold w-full mt-3"
         >
           {t("continue_button")}
         </button>
       </div>
-      <p className="text-cts dark:text-cts-dark text-xs font-normal text-center mb-0 mt-5 sm:px-5">
+      <p className="text-ts dark:text-ts-dark text-xs font-normal text-center mb-0 mt-4 sm:px-5">
         {t("risk_warning")}
       </p>
     </form>

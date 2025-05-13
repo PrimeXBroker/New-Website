@@ -12,74 +12,74 @@ export default function SignUpStep({ handleNext }) {
     <form>
       <div className="sm:flex w-full justify-between sm:mb-3">
         <div className="w-full sm:w-[49%]">
-          <label className="text-cts dark:text-cts-dark text-xs sm:text-sm font-medium">
+          <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium">
             {t("first_name_label")}
             <input
               type="text"
               placeholder={t("first_name_placeholder")}
-              className={`appearance-none mb-3 sm:mb-0 mt-1 sm:mt-2 font-medium border border-ce2 dark:border-ce2-dark focus:border-ctm dark:focus:border-ctm-dark rounded-md sm:rounded-lg w-full p-4 text-ctm dark:text-ctm-dark placeholder:text-cts dark:placeholder:text-cts-dark bg-ce1 dark:bg-ce1-dark focus:outline-none text-sm sm:text-base`}
+              className={`appearance-none mb-3 sm:mb-0 mt-1 sm:mt-2 font-medium border border-e2 dark:border-e2-dark focus:border-tm dark:focus:border-tm-dark rounded-md sm:rounded-lg w-full p-4 text-tm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-cc dark:bg-cc-dark focus:outline-none text-sm sm:text-base`}
             />
           </label>
           {error && (
-            <p className="text-crc dark:text-crc-dark font-medium text-sm mt-2">
+            <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
               {t("error_message")}
             </p>
           )}
         </div>
         <div className="w-full sm:w-[49%]">
-          <label className="text-cts dark:text-cts-dark text-xs sm:text-sm font-medium">
+          <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium">
             {t("last_name_label")}
             <input
               type="text"
               placeholder={t("last_name_placeholder")}
-              className={`appearance-none mb-3 sm:mb-0 mt-1 sm:mt-2 font-medium border border-ce2 dark:border-ce2-dark focus:border-ctm dark:focus:border-ctm-dark rounded-md sm:rounded-lg w-full p-4 text-ctm dark:text-ctm-dark placeholder:text-cts dark:placeholder:text-cts-dark bg-ce1 dark:bg-ce1-dark focus:outline-none text-sm sm:text-base`}
+              className={`appearance-none mb-3 sm:mb-0 mt-1 sm:mt-2 font-medium border border-e2 dark:border-e2-dark focus:border-tm dark:focus:border-tm-dark rounded-md sm:rounded-lg w-full p-4 text-tm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-cc dark:bg-cc-dark focus:outline-none text-sm sm:text-base`}
             />
           </label>
           {error && (
-            <p className="text-crc dark:text-crc-dark font-medium text-sm mt-2">
+            <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
               {t("error_message")}
             </p>
           )}
         </div>
       </div>
       <div className="w-full sm:mb-3">
-        <label className="text-cts dark:text-cts-dark text-xs sm:text-sm font-medium">
+        <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium">
           {t("email_label")}
           <input
             type="email"
             placeholder={t("email_placeholder")}
-            className={`appearance-none mb-3 sm:mb-0 mt-1 sm:mt-2 font-medium border border-ce2 dark:border-ce2-dark focus:border-ctm dark:focus:border-ctm-dark rounded-md sm:rounded-lg w-full p-4 text-ctm dark:text-ctm-dark placeholder:text-cts dark:placeholder:text-cts-dark bg-ce1 dark:bg-ce1-dark focus:outline-none text-sm sm:text-base`}
+            className={`appearance-none mb-3 sm:mb-0 mt-1 sm:mt-2 font-medium border border-e2 dark:border-e2-dark focus:border-tm dark:focus:border-tm-dark rounded-md sm:rounded-lg w-full p-4 text-tm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-cc dark:bg-cc-dark focus:outline-none text-sm sm:text-base`}
           />
         </label>
         {error && (
-          <p className="text-crc dark:text-crc-dark font-medium text-sm mt-2">
+          <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
             {t("error_message")}
           </p>
         )}
       </div>
-      <div className="w-full mb-3">
-        <label className="text-cts dark:text-cts-dark text-xs sm:text-sm font-medium">
+      <div className="w-full mb-3" dir="ltr">
+        <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium">
           {t("phone_number_label")}
           <PhoneNumberInput />
         </label>
         {error && (
-          <p className="text-crc dark:text-crc-dark font-medium text-xs sm:text-sm mt-1 sm:mt-2">
+          <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
             {t("error_message")}
           </p>
         )}
       </div>
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-5 mt-8">
+      <div className="mt-8">
+        <button className="bg-cc dark:bg-cc-dark border border-e2 dark:border-e2-dark rounded-md sm:rounded-lg px-5 py-4 text-tm dark:text-tm-dark text-base sm:text-xl font-semibold w-full">
+          {t("sign_in_button")}
+        </button>
         <button
           onClick={handleNext}
-          className="bg-cpc dark:bg-cpc-dark rounded-md sm:rounded-lg px-5 py-4 text-cnb dark:text-cnb-dark text-base sm:text-xl font-semibold w-full sm:w-1/2"
+          className="bg-pcp dark:bg-pcp-dark border border-pcp dark:border-pcp-dark rounded-md sm:rounded-lg px-5 py-4 text-cb dark:text-nb-dark text-base sm:text-xl font-semibold w-full mt-3"
         >
           {t("continue_button")}
         </button>
-        <button className="bg-ce1 dark:bg-ce1-dark rounded-md sm:rounded-lg px-5 py-4 text-ctm dark:text-ctm-dark text-base sm:text-xl font-semibold w-full sm:w-1/2">
-          {t("sign_in_button")}
-        </button>
       </div>
-      <p className="text-cts dark:text-cts-dark text-xs font-normal text-center mb-0 mt-5 sm:px-5">
+      <p className="text-ts dark:text-ts-dark text-xs font-normal text-center mb-0 mt-4 sm:px-5">
         {t("risk_warning")}
       </p>
     </form>

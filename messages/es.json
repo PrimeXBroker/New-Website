@@ -3119,6 +3119,7 @@
       "country_label": "País",
       "city_label": "Ciudad",
       "preferred_language_label": "Idioma Preferido",
+      "select_placeholder": "Seleccionar...",
       "continue_button": "Continuar",
       "back_button": "Atrás",
       "risk_warning": "Advertencia de Riesgo: Operar con instrumentos de FX y CFDs puede implicar un alto nivel de riesgo y puede resultar en la pérdida de todo su capital invertido."

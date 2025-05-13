@@ -2999,6 +2999,7 @@
       "country_label": "البلد",
       "city_label": "المدينة",
       "preferred_language_label": "اللغة المفضلة",
+      "select_placeholder": "اختر...",
       "continue_button": "متابعة",
       "back_button": "رجوع",
       "risk_warning": "تحذير المخاطر: تداول أدوات الفوركس وعقود الفروقات قد ينطوي على مستوى عالٍ من المخاطر وقد يؤدي إلى خسارة كل رأس المال المستثمر."

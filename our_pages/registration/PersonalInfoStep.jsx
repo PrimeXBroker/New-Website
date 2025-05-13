@@ -52,7 +52,7 @@ export default function PersonalInfoStep({ handleNext, handleBack }) {
 
   return (
     <form>
-      <div className="flex flex-col gap-1 mb-3">
+      <div className="flex flex-col mb-3">
         <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium">
           {t("birthday_label")}
         </label>
@@ -66,24 +66,24 @@ export default function PersonalInfoStep({ handleNext, handleBack }) {
                 type="button"
                 onClick={onClick}
                 ref={ref}
-                className={`appearance-none text-left flex items-center justify-between mt-1 sm:mt-2 font-medium border border-ce2 dark:border-ce2-dark focus:border-ctm dark:focus:border-ctm-dark rounded-md sm:rounded-lg w-full p-4 bg-ce1 dark:bg-ce1-dark focus:outline-none text-sm sm:text-base`}
+                className={`appearance-none text-left flex items-center justify-between mt-1 sm:mt-2 font-medium border border-e2 dark:border-e2-dark focus:border-tm dark:focus:border-tm-dark rounded-md sm:rounded-lg w-full p-4 bg-cc dark:bg-cc-dark focus:outline-none text-sm sm:text-base`}
               >
                 <span
                   className={`${
                     value
-                      ? "text-ctm dark:text-ctm-dark"
-                      : "text-cts dark:text-cts-dark"
+                      ? "text-tm dark:text-tm-dark"
+                      : "text-ts dark:text-ts-dark"
                   }`}
                 >
                   {value || t("birthday_placeholder")}
                 </span>
-                <IoMdCalendar className="text-cts dark:text-cts-dark text-xl sm:text-2xl" />
+                <IoMdCalendar className="text-ts dark:text-ts-dark text-xl sm:text-2xl" />
               </button>
             ))
           )}
         />
         {error && (
-          <p className="text-crc dark:text-crc-dark font-medium text-sm mt-1">
+          <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
             {t("error_message")}
           </p>
         )}
@@ -99,7 +99,7 @@ export default function PersonalInfoStep({ handleNext, handleBack }) {
             flag={true}
           />
           {error && (
-            <p className="text-crc dark:text-crc-dark font-medium text-sm mt-2">
+            <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
               {t("error_message")}
             </p>
           )}
@@ -114,7 +114,7 @@ export default function PersonalInfoStep({ handleNext, handleBack }) {
             flag={false}
           />
           {error && (
-            <p className="text-crc dark:text-crc-dark font-medium text-sm mt-2">
+            <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
               {t("error_message")}
             </p>
           )}
@@ -130,26 +130,26 @@ export default function PersonalInfoStep({ handleNext, handleBack }) {
           flag={false}
         />
         {error && (
-          <p className="text-crc dark:text-crc-dark font-medium text-sm mt-2">
+          <p className="text-rc dark:text-rc-dark font-medium text-sm mt-2">
             {t("error_message")}
           </p>
         )}
       </div>
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-5 mt-8">
+      <div className="mt-8">
         <button
           onClick={handleBack}
-          className="bg-ce1 dark:bg-ce1-dark rounded-md sm:rounded-lg px-5 py-4 text-ctm dark:text-ctm-dark text-base sm:text-xl font-semibold w-full sm:w-1/2"
+          className="bg-cc dark:bg-cc-dark border border-e2 dark:border-e2-dark rounded-md sm:rounded-lg px-5 py-4 text-tm dark:text-tm-dark text-base sm:text-xl font-semibold w-full"
         >
           {t("back_button")}
         </button>
         <button
           onClick={handleNext}
-          className="bg-cpc dark:bg-cpc-dark rounded-md sm:rounded-lg px-5 py-4 text-cnb dark:text-cnb-dark text-base sm:text-xl font-semibold w-full sm:w-1/2"
+          className="bg-pcp dark:bg-pcp-dark border border-pcp dark:border-pcp-dark rounded-md sm:rounded-lg px-5 py-4 text-nb dark:text-nb-dark text-base sm:text-xl font-semibold w-full mt-3"
         >
           {t("continue_button")}
         </button>
       </div>
-      <p className="text-cts dark:text-cts-dark text-xs font-normal text-center mb-0 mt-5 sm:px-5">
+      <p className="text-ts dark:text-ts-dark text-xs font-normal text-center mb-0 mt-4 sm:px-5">
         {t("risk_warning")}
       </p>
     </form>

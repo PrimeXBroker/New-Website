@@ -18,7 +18,7 @@ export default function SuccessStep() {
   }, [countdown]);
 
   return (
-    <div className="bg-cp dark:bg-cp-dark sm:p-8 rounded-3xl lg:w-[584px] mx-auto text-center lg:mt-5 sm:mb-28 lg:mb-0">
+    <div className="bg-cc dark:bg-cc-dark sm:p-8 rounded-3xl lg:w-[584px] mx-auto text-center lg:mt-5 sm:mb-28 lg:mb-0">
       <div className="mb-6">
         <div className="flex justify-center items-center">
           <Image
@@ -30,12 +30,12 @@ export default function SuccessStep() {
             className="w-[80px] h-[80px]"
           />
         </div>
-        <h2 className="text-ctm dark:text-ctm-dark font-semibold text-lg sm:text-2xl mt-6 mb-10">
+        <h2 className="text-tm dark:text-tm-dark font-semibold text-lg sm:text-2xl mt-6 mb-10">
           {t("success_message")}
         </h2>
       </div>
       <div className="flex flex-col sm:flex-row justify-center gap-4 mb-5">
-        <button className="flex justify-center items-center gap-3 p-4 sm:p-5 bg-cpc dark:bg-cpc-dark text-cnb dark:text-cnb-dark rounded-md sm:rounded-lg w-full sm:w-1/2 font-semibold text-base sm:text-xl">
+        <button className="flex justify-center items-center gap-3 p-4 sm:p-5 bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark rounded-md sm:rounded-lg w-full sm:w-1/2 font-semibold text-base sm:text-xl">
           <Image
             unoptimized={true}
             width="18"
@@ -46,7 +46,7 @@ export default function SuccessStep() {
           />
           {t("verification_button_text")}
         </button>
-        <button className="flex justify-center items-center gap-3 p-4 sm:p-5 bg-cpc dark:bg-cpc-dark text-cnb dark:text-cnb-dark rounded-md sm:rounded-lg w-full sm:w-1/2 font-semibold text-base sm:text-xl">
+        <button className="flex justify-center items-center gap-3 p-4 sm:p-5 bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark rounded-md sm:rounded-lg w-full sm:w-1/2 font-semibold text-base sm:text-xl">
           <Image
             unoptimized={true}
             width="18"
@@ -59,10 +59,10 @@ export default function SuccessStep() {
         </button>
       </div>
       <div>
-        <button className="p-4 sm:p-5 bg-ctm dark:bg-ctm-dark text-cp dark:text-cp-dark rounded-md sm:rounded-lg font-semibold text-base sm:text-xl w-full">
+        <button className="p-4 sm:p-5 bg-tm dark:bg-tm-dark text-p dark:text-p-dark rounded-md sm:rounded-lg font-semibold text-base sm:text-xl w-full">
           {t("go_to_dashboard_button")}
         </button>
-        <p className="p-4 text-sm sm:text-base font-semibold text-cts dark:text-cts-dark">
+        <p className="p-4 text-sm sm:text-base font-semibold text-ts dark:text-ts-dark">
           {t("redirect_message")} {countdown} {t("redirect_message_second")}
         </p>
       </div>

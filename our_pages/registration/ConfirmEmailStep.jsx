@@ -28,7 +28,7 @@ export default function ConfirmEmailStep({ handleNext, handleBack }) {
 
   return (
     <div>
-      <p className="text-cts dark:text-cts-dark font-medium text-base sm:text-lg mb-5 sm:mb-6">
+      <p className="text-ts dark:text-ts-dark font-medium text-base sm:text-lg mb-5 sm:mb-6">
         {t("instructions")}
       </p>
       <div>
@@ -36,11 +36,11 @@ export default function ConfirmEmailStep({ handleNext, handleBack }) {
           <input
             type="text"
             placeholder={t("code_placeholder")}
-            className={`appearance-none font-medium border border-ce2 dark:border-ce2-dark focus:border-ctm dark:focus:border-ctm-dark rounded-md sm:rounded-lg w-full p-4 text-ctm dark:text-ctm-dark placeholder:text-cts dark:placeholder:text-cts-dark bg-ce1 dark:bg-ce1-dark focus:outline-none text-sm sm:text-base`}
+            className={`appearance-none font-medium border border-e2 dark:border-e2-dark focus:border-tm dark:focus:border-tm-dark rounded-md sm:rounded-lg w-full p-4 text-tm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-cc dark:bg-cc-dark focus:outline-none text-sm sm:text-base`}
           />
         </div>
         {codeError && (
-          <p className="text-crc dark:text-crc-dark font-medium text-base mt-2">
+          <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
             {t("code_error_message")}
           </p>
         )}
@@ -49,30 +49,30 @@ export default function ConfirmEmailStep({ handleNext, handleBack }) {
         <button
           type="button"
           onClick={handleResend}
-          className="text-ctm dark:text-ctm-dark font-semibold text-base text-center mt-2 p-4 w-full"
+          className="text-tm dark:text-tm-dark font-semibold text-base text-center mt-2 p-4 w-full"
         >
           {t("resend_button")}
         </button>
       ) : (
-        <div className="text-cts dark:text-cts-dark font-semibold text-sm sm:text-base text-center mt-2 p-4 w-full">
+        <div className="text-ts dark:text-ts-dark font-semibold text-sm sm:text-base text-center mt-2 p-4 w-full">
           {t("timer_text")} 00:{timer.toString().padStart(2, "0")}
         </div>
       )}
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-5 mt-8">
+      <div className="mt-8">
         <button
           onClick={handleBack}
-          className="bg-ce1 dark:bg-ce1-dark rounded-md sm:rounded-lg px-5 py-4 text-ctm dark:text-ctm-dark sm:text-xl font-semibold w-full sm:w-1/2"
+          className="bg-cc dark:bg-cc-dark border border-e2 dark:border-e2-dark rounded-md sm:rounded-lg px-5 py-4 text-tm dark:text-tm-dark sm:text-xl font-semibold w-full"
         >
           {t("back_button")}
         </button>
         <button
           onClick={handleNext}
-          className="bg-cpc dark:bg-cpc-dark rounded-md sm:rounded-lg px-5 py-4 text-cnb dark:text-cnb-dark sm:text-xl font-semibold w-full sm:w-1/2"
+          className="bg-pcp dark:bg-pcp-dark border border-pcp dark:border-pcp-dark rounded-md sm:rounded-lg px-5 py-4 text-nb dark:text-nb-dark sm:text-xl font-semibold w-full mt-3"
         >
           {t("verify_code_button")}
         </button>
       </div>
-      <p className="text-cts dark:text-cts-dark text-xs font-normal text-center mb-0 mt-5 sm:px-5">
+      <p className="text-ts dark:text-ts-dark text-xs font-normal text-center mb-0 mt-4 sm:px-5">
         {t("risk_warning")}
       </p>
     </div>
