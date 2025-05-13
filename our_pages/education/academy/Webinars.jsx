@@ -66,8 +66,8 @@ const Webinars = ({ active, setActive }) => {
                       src={
                         webinar.selectedName === "Ahmed Al Araji & Zyad Atta" ||
                         webinar._id === "681c618c227fc53fe3d710e7"
-                          ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/knowledge-hub/Due.webp"
-                          : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/education/academy/zyad.webp"
+                          ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/knowledge-hub/speakers.webp"
+                          : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/knowledge-hub/speaker-ziad.webp"
                       }
                       alt="webinar image"
                     />

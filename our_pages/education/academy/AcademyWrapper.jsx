@@ -26,43 +26,37 @@ const AcademyWrapper = ({
   return (
     <>
       <Hero />
-      {(locale === "en" ||
-        locale === "ar" ||
-        locale === "ku" ||
-        locale === "ps") && (
-        <>
-          <Banner news={news} />
-          <div className="hidden md:block">
-            <BlogsWrapper
-              active={activeBlog}
-              setActive={setActiveBlog}
-              marketNewsBlogs={marketNewsBlogs}
-              marketNewsPages={marketNewsPages}
-              startingGatewayBlogs={startingGatewayBlogs}
-              startingGatewayPages={startingGatewayPages}
-              pressReleaseBlogs={pressReleaseBlogs}
-              pressReleasePages={pressReleasePages}
-              marketNews={marketNews}
-              startingGateway={startingGateway}
-              pressRelease={pressRelease}
-            />
-          </div>
-          <div className="block md:hidden">
-            <MobileBlogWrapper
-              active={activeBlog}
-              setActive={setActiveBlog}
-              marketNewsBlogs={marketNewsBlogs}
-              marketNewsPages={marketNewsPages}
-              startingGatewayBlogs={startingGatewayBlogs}
-              startingGatewayPages={startingGatewayPages}
-              pressReleaseBlogs={pressReleaseBlogs}
-              pressReleasePages={pressReleasePages}
-              marketNews={marketNews}
-              pressRelease={pressRelease}
-            />
-          </div>
-        </>
-      )}
+
+      <Banner news={news} />
+      <div className="hidden md:block">
+        <BlogsWrapper
+          active={activeBlog}
+          setActive={setActiveBlog}
+          marketNewsBlogs={marketNewsBlogs}
+          marketNewsPages={marketNewsPages}
+          startingGatewayBlogs={startingGatewayBlogs}
+          startingGatewayPages={startingGatewayPages}
+          pressReleaseBlogs={pressReleaseBlogs}
+          pressReleasePages={pressReleasePages}
+          marketNews={marketNews}
+          startingGateway={startingGateway}
+          pressRelease={pressRelease}
+        />
+      </div>
+      <div className="block md:hidden">
+        <MobileBlogWrapper
+          active={activeBlog}
+          setActive={setActiveBlog}
+          marketNewsBlogs={marketNewsBlogs}
+          marketNewsPages={marketNewsPages}
+          startingGatewayBlogs={startingGatewayBlogs}
+          startingGatewayPages={startingGatewayPages}
+          pressReleaseBlogs={pressReleaseBlogs}
+          pressReleasePages={pressReleasePages}
+          marketNews={marketNews}
+          pressRelease={pressRelease}
+        />
+      </div>
     </>
   );
 };

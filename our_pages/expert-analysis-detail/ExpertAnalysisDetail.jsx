@@ -84,28 +84,40 @@ const ExpertAnalysisDetail = ({ slug }) => {
           <div className="lg:w-[70%] w-full mb-5 md:mb-0">
             <h2
               className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark mb-3 ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" || locale === "ku"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
             >
-              {locale === "ar" ? "هل أنت مستعد للاستثمار؟" : "Ready to Invest"}
+              {locale === "ar"
+                ? "هل أنت مستعد للاستثمار؟"
+                : locale === "ku"
+                ? "ئامادە بۆ سەرمایەکەردن"
+                : "Ready to Invest"}
             </h2>
             <p
               className={` text-ts dark:text-ts-dark text-sm sm:text-base ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" || locale === "ku"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
             >
               {locale === "ar"
                 ? "افتح حسابًا حقيقيًا وابدأ الاستثمار الآن! تداول أكثر من 500 من الأدوات المالية العالمية دون أي متاعب."
+                : locale === "ku"
+                ? "حسابە کە بەرەوە بکە و ئێستا سەرمایەکەردن پەڕە بکە! 330+ دارایی جیهانی بە بێ مەشقی فەرمی فڕۆشە."
                 : "Open live account & Start investing NOW! Trade 330+ global assets hassle-free."}
             </p>
           </div>
           <div className="w-full lg:w-[30%] flex justify-center md:justify-end items-center">
             <CustomYellowButton
-              title={detail?.language === "ar" ? "ابدأ" : "Get Started"}
+              title={
+                locale === "ar"
+                  ? "ابدأ"
+                  : locale === "ku"
+                  ? "دەست پێ بکە"
+                  : "Get Started"
+              }
               onClick={() => window.open(getRegisterUrl(locale))}
               className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full sm:w-auto justify-between sm:justify-center"
             />
