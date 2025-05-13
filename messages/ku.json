@@ -3080,14 +3080,14 @@
       "risk_warning": " ئامێرەکانی ئاڵوگۆڕکردنی فۆڕێکس و  گرێبەستی جیاوازی (CFD) دەکرێت ئاستێکی بەرزی زەرەری لێبکەوێتەوە و لەوانەیە ببێتە هۆی لەدەستدانی هەموو سەرمایە وەبەرهێنراوەکەت."
     },
     "createPassword": {
-      "password_label": "Password",
-      "password_placeholder": "New Password",
+      "password_label": "وشەی نهێنی",
+      "password_placeholder": " وشەی نهێنی نوێ",
       "password_criteria_1": " بەلایەنی کەمەوە 1 پیتی بچووک و گەورە",
       "password_criteria_2": " بەلایەنی کەمەوە 1 ژمارە لە نێوان (0-9)",
       "password_criteria_3": " بەلایەنی کەمەوە 8 پیت",
       "password_criteria_4": "تەنها پیتی لاتینی",
       "random_password": "وشەی نهێنی بەشێوەی خۆکار دروست بکە",
-      "agreement": " I agree to receive newsletters, marketing materials, company news, and product updates.",
+      "agreement": "من ڕەزامەندم بە وەرگرتنی هەواڵنامە و کەرەستەی بازرگانی و هەواڵی کۆمپانیا و گۆڕانکاری نوێ لە بارەی بەرهەمەکانەوە.",
       "continue_button": "بەردەوامبوون",
       "back_button": "گەڕانەوە",
       "risk_warning": " ئامێرەکانی ئاڵوگۆڕکردنی فۆڕێکس و  گرێبەستی جیاوازی (CFD) دەکرێت ئاستێکی بەرزی زەرەری لێبکەوێتەوە و لەوانەیە ببێتە هۆی لەدەستدانی هەموو سەرمایە وەبەرهێنراوەکەت."
