@@ -8,15 +8,30 @@ import SuccessStep from "./SuccessStep";
 import { useLocale, useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Register({ step, setStep }) {
   const locale = useLocale();
   const { theme } = useTheme();
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    birthDate: "",
+    country: "",
+    city: "",
+    language: "",
+    password: { first: "", second: "" },
+    token: "",
+  });
   const t = useTranslations("registration.register");
   const p = useTranslations("registration.app");
   const d = useTranslations("primeXTradingApp.downloadAppToady");
   const handleNext = () => setStep((prev) => prev + 1);
   const handleBack = () => setStep((prev) => prev - 1);
+
+  console.log(formData, "formData");
 
   return (
     <div className="px-3 sm:px-12 md:px-16 lg:px-10 xl:px-16 2xl:px-20 pt-28 relative">
@@ -218,12 +233,28 @@ export default function Register({ step, setStep }) {
         )}
       </div>
       <div className="flex-1">
-        {step === 1 && <SignUpStep handleNext={handleNext} />}
+        {step === 1 && (
+          <SignUpStep
+            handleNext={handleNext}
+            setFormData={setFormData}
+            formData={formData}
+          />
+        )}
         {step === 2 && (
-          <PersonalInfoStep handleNext={handleNext} handleBack={handleBack} />
+          <PersonalInfoStep
+            handleNext={handleNext}
+            handleBack={handleBack}
+            setFormData={setFormData}
+            formData={formData}
+          />
         )}
         {step === 3 && (
-          <CreatePasswordStep handleNext={handleNext} handleBack={handleBack} />
+          <CreatePasswordStep
+            handleNext={handleNext}
+            handleBack={handleBack}
+            setFormData={setFormData}
+            formData={formData}
+          />
         )}
         {step === 4 && (
           <ConfirmEmailStep handleNext={handleNext} handleBack={handleBack} />

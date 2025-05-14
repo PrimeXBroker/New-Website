@@ -1,41 +1,22 @@
 "use client";
+import { phoneOptions } from "@/utils/data";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { IoChevronDownOutline } from "react-icons/io5";
 
-export default function PhoneNumberField() {
+export default function PhoneNumberField({
+  value,
+  handleInputChange,
+  selectedPhone,
+  setSelectedPhone,
+}) {
   const locale = useLocale();
   const t = useTranslations("registration.signUpStep");
   const [error, setError] = useState(false);
-  const phoneOptions = [
-    {
-      label: "Afghanistan",
-      code: "+93",
-      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Samoa+Am%C3%A9ricaines.svg",
-    },
-    {
-      label: "Albania",
-      code: "+355",
-      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Albanie.svg",
-    },
-    {
-      label: "Algeria",
-      code: "+213",
-      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Alg%C3%A9rie.svg",
-    },
-    {
-      label: "Andorra",
-      code: "+376",
-      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Afghanistan.svg",
-    },
-  ];
-
-  const [selectedPhone, setSelectedPhone] = useState(phoneOptions[0]);
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [phoneInput, setPhoneInput] = useState("");
 
   const filteredOptions = phoneOptions.filter((option) =>
     option.label.toLowerCase().includes(searchTerm.toLowerCase())
@@ -71,9 +52,9 @@ export default function PhoneNumberField() {
         <input
           type="tel"
           placeholder={t("phone_number_placeholder")}
-          value={phoneInput}
+          value={value}
           onClick={(e) => e.stopPropagation()}
-          onChange={(e) => setPhoneInput(e.target.value)}
+          onChange={(e) => handleInputChange("phone", `${e.target.value}`)}
           className={`w-full font-medium p-4 text-sm sm:text-base bg-cc dark:bg-cc-dark text-tm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts-dark focus:outline-none ${
             isOpen
               ? "rounded-tr-md sm:rounded-tr-lg"
