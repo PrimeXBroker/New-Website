@@ -10,7 +10,7 @@ const PrivateSessions = ({ setActive }) => {
 
   return (
     <div className="bg-p dark:bg-p-dark text-tm dark:text-tm-dark pb-16 sm:pb-28">
-      <div className="container">
+      <div className="container" id="booksession">
         <div className="px-5 sm:px-8 py-8 rounded-xl bg-cc dark:bg-cc-dark">
           <div className="flex flex-col lg:flex-row gap-6 justify-between items-start">
             <div className="space-y-4 w-full md:w-[70%]">
