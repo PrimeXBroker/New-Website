@@ -169,18 +169,18 @@ const Footer = () => {
   ];
 
   const paymentOptions = [
-    {
-      id: 1,
-      name: "master",
-      imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/master.webp",
-    },
-    {
-      id: 2,
-      name: "visa",
-      imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/visa.webp",
-    },
+    // {
+    //   id: 1,
+    //   name: "master",
+    //   imgUrl:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/master.webp",
+    // },
+    // {
+    //   id: 2,
+    //   name: "visa",
+    //   imgUrl:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/visa.webp",
+    // },
     {
       id: 3,
       name: "tether",
