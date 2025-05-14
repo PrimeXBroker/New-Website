@@ -6,14 +6,24 @@ import { IoMdCalendar } from "react-icons/io";
 import CustomSelectDropdown from "./CustomSelectDropdown";
 import { useLocale, useTranslations } from "next-intl";
 
-export default function PersonalInfoStep({ handleNext, handleBack }) {
+export default function PersonalInfoStep({
+  handleNext,
+  handleBack,
+  setFormData,
+  formData,
+}) {
   const locale = useLocale();
   const t = useTranslations("registration.personalInfoStep");
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("");
-  const [error, setError] = useState(false);
+  const [errors, setErrors] = useState({
+    dob: "",
+    country: "",
+    city: "",
+    language: "",
+  });
 
   const languageOptions = [
     { label: "English", value: "en" },
@@ -30,28 +40,51 @@ export default function PersonalInfoStep({ handleNext, handleBack }) {
   const countryOptions = [
     {
       label: "Afghanistan",
-      value: "Afghanistan",
+      value: "AF",
       flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Samoa+Am%C3%A9ricaines.svg",
     },
     {
       label: "Albanie",
-      value: "Albanie",
+      value: "AL",
       flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Albanie.svg",
     },
     {
       label: "Algérie",
-      value: "Algérie",
+      value: "DZ",
       flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Alg%C3%A9rie.svg",
     },
     {
       label: "Samoa Américaines",
-      value: "Samoa Américaines",
+      value: "AS",
       flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Afghanistan.svg",
     },
   ];
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Basic validation logic
+    const errorsList = {};
+    if (!selectedDate) errorsList.dob = "Please Select DOB";
+    if (!selectedCountry) errorsList.country = "Please Select Country";
+    if (!selectedCity) errorsList.city = "Please Select City";
+    if (!selectedLanguage) errorsList.language = "Please Select Language";
+
+    setErrors(errorsList);
+
+    if (Object.keys(errorsList).length === 0) {
+      setFormData({
+        ...formData,
+        birthDate: selectedDate,
+        country: selectedCountry,
+        city: selectedCity,
+        language: selectedLanguage,
+      });
+      handleNext();
+    }
+  };
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="flex flex-col mb-3">
         <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium">
           {t("birthday_label")}
@@ -82,9 +115,9 @@ export default function PersonalInfoStep({ handleNext, handleBack }) {
             ))
           )}
         />
-        {error && (
+        {errors?.dob && (
           <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
-            {t("error_message")}
+            {errors?.dob}
           </p>
         )}
       </div>
@@ -98,9 +131,9 @@ export default function PersonalInfoStep({ handleNext, handleBack }) {
             searchInput={true}
             flag={true}
           />
-          {error && (
+          {errors?.country && (
             <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
-              {t("error_message")}
+              {errors?.country}
             </p>
           )}
         </div>
@@ -113,9 +146,9 @@ export default function PersonalInfoStep({ handleNext, handleBack }) {
             searchInput={true}
             flag={false}
           />
-          {error && (
+          {errors?.city && (
             <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
-              {t("error_message")}
+              {errors?.city}
             </p>
           )}
         </div>
@@ -129,9 +162,9 @@ export default function PersonalInfoStep({ handleNext, handleBack }) {
           searchInput={false}
           flag={false}
         />
-        {error && (
+        {errors?.language && (
           <p className="text-rc dark:text-rc-dark font-medium text-sm mt-2">
-            {t("error_message")}
+            {errors?.language}
           </p>
         )}
       </div>
@@ -143,7 +176,7 @@ export default function PersonalInfoStep({ handleNext, handleBack }) {
           {t("back_button")}
         </button>
         <button
-          onClick={handleNext}
+          type="submit"
           className="bg-pcp dark:bg-pcp-dark border border-pcp dark:border-pcp-dark rounded-md sm:rounded-lg px-5 py-4 text-nb dark:text-nb-dark text-base sm:text-xl font-semibold w-full mt-3"
         >
           {t("continue_button")}

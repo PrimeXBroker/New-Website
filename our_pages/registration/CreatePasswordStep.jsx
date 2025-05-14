@@ -8,12 +8,17 @@ import {
 import { LuCheck } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
 import { useLocale, useTranslations } from "next-intl";
+import apiRequest from "@/utils/apiRequest";
 
-export default function CreatePasswordStep({ handleNext, handleBack }) {
+export default function CreatePasswordStep({
+  handleNext,
+  handleBack,
+  setFormData,
+  formData,
+}) {
   const locale = useLocale();
   const t = useTranslations("registration.createPassword");
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [password, setPassword] = useState("");
   const [showCriteria, setShowCriteria] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -22,8 +27,8 @@ export default function CreatePasswordStep({ handleNext, handleBack }) {
   };
 
   const copyToClipboard = () => {
-    if (password) {
-      navigator.clipboard.writeText(password).then(() => {
+    if (formData?.password) {
+      navigator.clipboard.writeText(formData?.password).then(() => {
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
       });
@@ -51,35 +56,71 @@ export default function CreatePasswordStep({ handleNext, handleBack }) {
       .split("")
       .sort(() => 0.5 - Math.random())
       .join("");
-
-    setPassword(shuffledPassword);
+    handleChange(shuffledPassword);
   };
 
+  const handleChange = (pass) => {
+    setFormData({
+      ...formData,
+      password: { first: pass, second: pass },
+    });
+  };
   const criteria = [
     {
       text: t("password_criteria_1"),
-      valid: /(?=.*[a-z])(?=.*[A-Z])/.test(password),
+      valid: /(?=.*[a-z])(?=.*[A-Z])/.test(formData?.password),
     },
     {
       text: t("password_criteria_2"),
-      valid: /\d/.test(password),
+      valid: /\d/.test(formData?.password),
     },
     {
       text: t("password_criteria_3"),
-      valid: password.length >= 8,
+      valid: formData?.password.length >= 8,
     },
-    {
-      text: t("password_criteria_4"),
-      valid: /^[a-zA-Z0-9]*$/.test(password),
-    },
+    // {
+    //   text: t("password_criteria_4"),
+    //   valid: /^[a-zA-Z0-9]*$/.test(formData?.password),
+    // },
   ];
 
   useEffect(() => {
-    setShowCriteria(password.length > 0);
-  }, [password]);
+    setShowCriteria(formData?.password.length > 0);
+  }, [formData?.password]);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formData?.password, "formData?.password");
+
+    if (formData?.password?.first.length > 0) {
+      try {
+        const result = await apiRequest("PUT", "/registration", formData);
+        console.log(result, "result");
+
+        if (result?.registrationToken) {
+          const response = await apiRequest(
+            "POST",
+            "/registration/send-pin-by-token",
+            { token: result?.registrationToken }
+          );
+          console.log(JSON.stringify(response, null, 2));
+          if (response) {
+            setFormData({
+              ...formData,
+              token: result?.registrationToken,
+            });
+            handleNext();
+          }
+        }
+      } catch (error) {
+        console.log(error, "error");
+      } finally {
+        setIsLoading(false);
+      }
+    }
+  };
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium">
         {t("password_label")}
       </label>
@@ -89,8 +130,8 @@ export default function CreatePasswordStep({ handleNext, handleBack }) {
             id="passwordInput"
             type={passwordVisible ? "text" : "password"}
             placeholder={t("password_label")}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={formData?.password?.first}
+            onChange={(e) => handleChange(e.target.value)}
             className={`appearance-none mt-1 sm:mt-2 font-medium border border-e2 dark:border-e2-dark focus:border-tm dark:focus:border-tm-dark rounded-md sm:rounded-lg w-full p-4 text-tm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-cc dark:bg-cc-dark focus:outline-none text-sm sm:text-base`}
           />
           <button
@@ -178,7 +219,7 @@ export default function CreatePasswordStep({ handleNext, handleBack }) {
           {t("back_button")}
         </button>
         <button
-          onClick={handleNext}
+          type="submit"
           className="bg-pcp dark:bg-pcp-dark border border-pcp dark:border-pcp-dark rounded-md sm:rounded-md px-5 py-4 text-nb dark:text-nb-dark text-base sm:text-xl font-semibold w-full mt-3"
         >
           {t("continue_button")}
