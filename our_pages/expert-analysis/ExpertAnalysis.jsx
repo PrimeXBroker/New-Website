@@ -48,7 +48,6 @@ const ExpertAnalysis = ({ id }) => {
     const res = await axios.get(
       `https://primexbroker.com/api/fetch/publish/related/market-news/${page}/6/${currentCategory.id}`
     );
-
     if (res.data.success) {
       setBlogs(res.data.data);
       setTotalPages(res.data.pagination.totalPages);
@@ -95,6 +94,8 @@ const ExpertAnalysis = ({ id }) => {
                       src={
                         locale === "ar"
                           ? blog?.imageAr || blog?.image
+                          : locale === "ku"
+                          ? blog?.imageKd || blog?.image
                           : blog?.image
                       }
                       width="100"
@@ -106,7 +107,11 @@ const ExpertAnalysis = ({ id }) => {
                   <div className="px-3 py-5 flex-grow transition duration-700 ease-in-out">
                     <div>
                       <h4 className="text-xl font-semibold text-tm dark:text-tm-dark group-hover:text-pcp dark:hover:text-pcp-dark transition duration-700 ease-in-out">
-                        {locale === "ar" ? blog?.titleAr : blog?.titleEn}
+                        {locale === "ar"
+                          ? blog?.titleAr
+                          : locale === "ku"
+                          ? blog?.titleKd || blog?.titleEn
+                          : blog?.titleEn}
                       </h4>
                     </div>
                     <div className="mt-3">

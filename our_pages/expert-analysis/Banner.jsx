@@ -17,6 +17,8 @@ const Banner = ({ news, titleEn }) => {
   const [newsDetails, setNewsDetails] = useState(news[0]);
   const [progressCounter, setProgressCounter] = useState(1); // Track the overall position
 
+  console.log(news, "news");
+
   const convertToKebabCase = (str) => {
     return str.toLowerCase().replace(/\s+/g, "-");
   };
@@ -94,7 +96,13 @@ const Banner = ({ news, titleEn }) => {
                 }`}
               >
                 <img
-                  src={newsDetails?.image}
+                  src={
+                    locale === "ar"
+                      ? newsDetails?.imageAr || newsDetails?.image
+                      : locale === "ku"
+                      ? newsDetails?.imageKd || newsDetails?.image
+                      : newsDetails?.image
+                  }
                   alt="PrimeX Broker Crypto Trading"
                   className="rounded-lg w-full h-full"
                 />
@@ -112,6 +120,8 @@ const Banner = ({ news, titleEn }) => {
                 >
                   {locale === "ar"
                     ? newsDetails?.titleAr
+                    : locale === "ku"
+                    ? newsDetails?.titleKd || newsDetails?.titleEn
                     : newsDetails?.titleEn}
                 </Link>
               )}
@@ -142,7 +152,7 @@ const Banner = ({ news, titleEn }) => {
                     size="icon"
                     className="rounded-full"
                   >
-                    {locale === "ar" ? (
+                    {locale === "ar" || locale === "ku" ? (
                       <IoMdArrowForward className="h-4 w-4 text-tm dark:text-tm-dark" />
                     ) : (
                       <IoMdArrowBack className="h-4 w-4 text-tm dark:text-tm-dark" />
@@ -156,7 +166,7 @@ const Banner = ({ news, titleEn }) => {
                     size="icon"
                     className="rounded-full"
                   >
-                    {locale === "ar" ? (
+                    {locale === "ar" || locale === "ku" ? (
                       <IoMdArrowBack className="h-4 w-4 text-tm dark:text-tm-dark" />
                     ) : (
                       <IoMdArrowForward className="h-4 w-4 text-tm dark:text-tm-dark" />
@@ -179,7 +189,13 @@ const Banner = ({ news, titleEn }) => {
                       className="rounded-[4px] overflow-hidden bg-e1 dark:bg-e1-dark p-2"
                     >
                       <Image
-                        src={blog?.image}
+                        src={
+                          locale === "ar"
+                            ? blog?.imageAr || blog?.image
+                            : locale === "ku"
+                            ? blog?.imageKd || blog?.image
+                            : blog?.image
+                        }
                         alt={`Thumbnail ${index}`}
                         width={300}
                         height={150}

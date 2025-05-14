@@ -81,9 +81,18 @@ function AnalysisNewsBody({ slug }) {
       console.log(res?.data?.data, "analysisblog");
       if (res?.data?.success) {
         setDetail(res?.data?.data);
-        if (locale === "en") {
+        if (locale === "ar") {
           const contentState = convertFromRaw(
-            JSON.parse(res?.data?.data?.contentEn)
+            JSON.parse(res?.data?.data?.contentAr)
+          );
+          const editorState = EditorState.createWithContent(
+            contentState,
+            decorator
+          );
+          setContent(editorState);
+        } else if (locale === "ku") {
+          const contentState = convertFromRaw(
+            JSON.parse(res?.data?.data?.contentKd || res?.data?.data?.contentEn)
           );
           const editorState = EditorState.createWithContent(
             contentState,
@@ -92,7 +101,7 @@ function AnalysisNewsBody({ slug }) {
           setContent(editorState);
         } else {
           const contentState = convertFromRaw(
-            JSON.parse(res?.data?.data?.contentAr)
+            JSON.parse(res?.data?.data?.contentEn)
           );
           const editorState = EditorState.createWithContent(
             contentState,
@@ -132,12 +141,22 @@ function AnalysisNewsBody({ slug }) {
                 : `/${locale}/blogs`
             }
           >
-            <span className={`${locale === "ar" ? "ml-2 " : "mr-2 "}`}>
-              {locale === "ar" ? <FaArrowRight /> : <FaArrowLeft />}
+            <span
+              className={`${
+                locale === "ar" || locale === "ku" ? "ml-2 " : "mr-2 "
+              }`}
+            >
+              {locale === "ar" || locale === "ku" ? (
+                <FaArrowRight />
+              ) : (
+                <FaArrowLeft />
+              )}
             </span>
             {detail?.category === "6641f01d7c9be5623e1092a4"
               ? locale === "ar"
                 ? "العودة إلى التحليل الفني"
+                : locale === "ku"
+                ? "گەڕاندن بۆ تێبینی فنی"
                 : "Back to Technical Analysis"
               : locale === "ar"
               ? "العودة إلى المدونات"
@@ -153,7 +172,11 @@ function AnalysisNewsBody({ slug }) {
           </div>
 
           <h2 className="text-xl sm:text-3xl md:text-4xl font-semibold mb-6 text-center text-tm dark:text-tm-dark w[96%] sm:w-[80%] mx-auto">
-            {locale === "ar" ? detail.titleAr : detail.titleEn}
+            {locale === "ar"
+              ? detail?.titleAr
+              : locale === "ku"
+              ? detail?.titleKd || detail?.titleEn
+              : detail?.titleEn}
           </h2>
           {/* <div className="flex items-center space-x-4">
             <span className="text-gray-300">Share Article</span>
@@ -187,7 +210,11 @@ function AnalysisNewsBody({ slug }) {
         <div className="text-tm dark:text-tm-dark">
           <img
             src={
-              locale === "ar" ? detail?.imageAr || detail?.image : detail?.image
+              locale === "ar"
+                ? detail?.imageAr || detail?.image
+                : locale === "ku"
+                ? detail?.imageKd || detail?.image
+                : detail?.image
             }
             alt="PrimeX Capital"
             className="mb-4"
