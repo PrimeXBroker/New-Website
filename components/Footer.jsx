@@ -193,12 +193,12 @@ const Footer = () => {
       imgUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/depositor-payment.webp",
     },
-    {
-      id: 5,
-      name: "amex",
-      imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/amex.webp",
-    },
+    // {
+    //   id: 5,
+    //   name: "amex",
+    //   imgUrl:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/amex.webp",
+    // },
     // {
     //   id: 6,
     //   name: "tymebank",
