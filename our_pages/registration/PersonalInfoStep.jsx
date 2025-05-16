@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { IoMdCalendar } from "react-icons/io";
@@ -7,6 +7,7 @@ import CustomSelectDropdown from "./CustomSelectDropdown";
 import { useLocale, useTranslations } from "next-intl";
 import axios from "axios";
 import moment from "moment-timezone";
+import { Country, City } from "country-state-city";
 
 export default function PersonalInfoStep({
   handleNext,
@@ -19,9 +20,14 @@ export default function PersonalInfoStep({
 
   const t = useTranslations("registration.personalInfoStep");
   const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedCountry, setSelectedCountry] = useState("");
+  const [countries, setCountries] = useState([]);
+  const [cities, setCities] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState();
   const [selectedCity, setSelectedCity] = useState("");
+  // const [selectedCountry, setSelectedCountry] = useState("");
+  // const [selectedCity, setSelectedCity] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("");
+
   const [errors, setErrors] = useState({
     birthDate: "",
     country: "",
@@ -34,35 +40,61 @@ export default function PersonalInfoStep({
     { label: "Arabic", value: "ar" },
   ];
 
-  const cityOptions = [
-    { label: "Abu Dhabi", value: "Abu Dhabi" },
-    { label: "Ajmān", value: "Ajmān" },
-    { label: "Al Ain", value: "Al Ain" },
-    { label: "Al Awdah", value: "Al Awdah" },
-  ];
+  // const cityOptions = [
+  //   { label: "Abu Dhabi", value: "Abu Dhabi" },
+  //   { label: "Ajmān", value: "Ajmān" },
+  //   { label: "Al Ain", value: "Al Ain" },
+  //   { label: "Al Awdah", value: "Al Awdah" },
+  // ];
 
-  const countryOptions = [
-    {
-      label: "Afghanistan",
-      value: "AF",
-      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Samoa+Am%C3%A9ricaines.svg",
-    },
-    {
-      label: "Albanie",
-      value: "AL",
-      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Albanie.svg",
-    },
-    {
-      label: "Algérie",
-      value: "DZ",
-      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Alg%C3%A9rie.svg",
-    },
-    {
-      label: "Samoa Américaines",
-      value: "AS",
-      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Afghanistan.svg",
-    },
-  ];
+  // const countryOptions = [
+  //   {
+  //     label: "Afghanistan",
+  //     value: "AF",
+  //     flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Samoa+Am%C3%A9ricaines.svg",
+  //   },
+  //   {
+  //     label: "Albanie",
+  //     value: "AL",
+  //     flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Albanie.svg",
+  //   },
+  //   {
+  //     label: "Algérie",
+  //     value: "DZ",
+  //     flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Alg%C3%A9rie.svg",
+  //   },
+  //   {
+  //     label: "Samoa Américaines",
+  //     value: "AS",
+  //     flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Afghanistan.svg",
+  //   },
+  // ];
+
+  useEffect(() => {
+    const countryList = Country.getAllCountries().map((country) => ({
+      label: country.name,
+      value: country.isoCode,
+      flag: country.flag,
+      // flag: `https://flagcdn.com/w40/${country.isoCode.toLowerCase()}.png`, // Use CDN for flags÷
+    }));
+
+    setCountries(countryList);
+  }, []);
+
+  useEffect(() => {
+    if (!selectedCountry) return;
+
+    const cityList = City.getCitiesOfCountry(selectedCountry?.value).map(
+      (city) => ({
+        label: city.name,
+        value: city.name,
+      })
+    );
+    console.log(cityList, "selectedCountry");
+
+    setCities(cityList);
+    setSelectedCity("");
+  }, [selectedCountry]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -79,7 +111,7 @@ export default function PersonalInfoStep({
     if (Object.keys(errorsList).length === 0) {
       const data = {
         ...formData,
-        country: selectedCountry,
+        country: selectedCountry.value,
         city: selectedCity,
         language: selectedLanguage,
         birthDate: moment(selectedDate).tz(userTimeZone).format("YYYY-MM-DD"),
@@ -162,10 +194,10 @@ export default function PersonalInfoStep({
         )}
       </div>
       <div className="md:flex w-full justify-between sm:mb-3">
-        <div className="w-full md:w-[49%] mb-3 sm:mb-0">
+        <div className="w-full md:w-[49%]  mb-3 sm:mb-0">
           <CustomSelectDropdown
-            label={t("country_label")}
-            options={countryOptions}
+            label="Select Country"
+            options={countries}
             selected={selectedCountry}
             onChange={setSelectedCountry}
             searchInput={true}
@@ -177,10 +209,10 @@ export default function PersonalInfoStep({
             </p>
           )}
         </div>
-        <div className="w-full md:w-[49%] mb-3 sm:mb-0">
+        <div className="w-full md:w-[49%]  mb-3 sm:mb-0">
           <CustomSelectDropdown
-            label={t("city_label")}
-            options={cityOptions}
+            label="Select City"
+            options={cities}
             selected={selectedCity}
             onChange={setSelectedCity}
             searchInput={true}

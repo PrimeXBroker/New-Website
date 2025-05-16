@@ -22,7 +22,7 @@ export default function CustomSelectDropdown({
   );
 
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium">
         {label}
       </label>
@@ -41,16 +41,20 @@ export default function CustomSelectDropdown({
         >
           {selected ? (
             <div className="flex items-center gap-2">
-              {flag && (
-                <Image
-                  src={options.find((o) => o.value === selected)?.flag}
-                  alt="Flag"
-                  width={20}
-                  height={15}
-                  className="w-[20px] h-auto"
-                />
-              )}
-              <span>{options.find((o) => o.value === selected)?.label}</span>
+              {flag &&
+                // <Image
+                //   src={options.find((o) => o.value === selected)?.flag}
+                //   alt="Flag"
+                //   width={20}
+                //   height={15}
+                //   className="w-[20px] h-auto"
+                // />
+                selected?.flag}
+              <span>
+                {flag
+                  ? options.find((o) => o.value === selected?.value)?.label
+                  : options.find((o) => o.value === selected)?.label}
+              </span>
             </div>
           ) : (
             t("select_placeholder")
@@ -59,7 +63,7 @@ export default function CustomSelectDropdown({
         </button>
         {isOpen && (
           <div
-            className="absolute top-full left-0 w-full bg-cc dark:bg-cc-dark rounded-b-md sm:rounded-b-lg border border-t-0 border-e2 dark:border-e2-dark z-10 hover:cursor-pointer"
+            className="absolute h-60 overflow-scroll top-full left-0 w-full bg-cc dark:bg-cc-dark rounded-b-md sm:rounded-b-lg border border-t-0 border-e2 dark:border-e2-dark z-10 hover:cursor-pointer"
             dir="ltr"
           >
             {searchInput && (
@@ -80,7 +84,8 @@ export default function CustomSelectDropdown({
               <div
                 key={option.value}
                 onClick={() => {
-                  onChange(option.value);
+                  if (flag) onChange(option);
+                  else onChange(option.value);
                   setIsOpen(false);
                 }}
                 className={`mx-5 px-2 py-4 text-sm font-medium text-tm dark:text-tm-dark flex items-center hover:bg-e1 dark:hover:bg-e1-dark ${
@@ -89,15 +94,15 @@ export default function CustomSelectDropdown({
                     : ""
                 }`}
               >
-                {flag && (
-                  <Image
-                    src={option.flag}
-                    alt="Flag"
-                    width={32}
-                    height={32}
-                    className="w-[21px] h-full mr-2"
-                  />
-                )}
+                {flag &&
+                  // <Image
+                  //   src={option.flag}
+                  //   alt="Flag"
+                  //   width={32}
+                  //   height={32}
+                  //   className="w-[21px] h-full mr-2"
+                  // />
+                  option?.flag}
 
                 {option.label}
               </div>
