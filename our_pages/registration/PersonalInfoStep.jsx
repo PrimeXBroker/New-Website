@@ -5,6 +5,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import { IoMdCalendar } from "react-icons/io";
 import CustomSelectDropdown from "./CustomSelectDropdown";
 import { useLocale, useTranslations } from "next-intl";
+import axios from "axios";
+import moment from "moment-timezone";
 
 export default function PersonalInfoStep({
   handleNext,
@@ -13,13 +15,15 @@ export default function PersonalInfoStep({
   formData,
 }) {
   const locale = useLocale();
+  const userTimeZone = moment.tz.guess();
+
   const t = useTranslations("registration.personalInfoStep");
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("");
   const [errors, setErrors] = useState({
-    dob: "",
+    birthDate: "",
     country: "",
     city: "",
     language: "",
@@ -60,12 +64,12 @@ export default function PersonalInfoStep({
     },
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Basic validation logic
     const errorsList = {};
-    if (!selectedDate) errorsList.dob = "Please Select DOB";
+    if (!selectedDate) errorsList.birthDate = "Please Select DOB";
     if (!selectedCountry) errorsList.country = "Please Select Country";
     if (!selectedCity) errorsList.city = "Please Select City";
     if (!selectedLanguage) errorsList.language = "Please Select Language";
@@ -73,14 +77,50 @@ export default function PersonalInfoStep({
     setErrors(errorsList);
 
     if (Object.keys(errorsList).length === 0) {
-      setFormData({
+      const data = {
         ...formData,
-        birthDate: selectedDate,
         country: selectedCountry,
         city: selectedCity,
         language: selectedLanguage,
-      });
-      handleNext();
+        birthDate: moment(selectedDate).tz(userTimeZone).format("YYYY-MM-DD"),
+        password: { first: "", second: "" },
+      };
+      console.log(data, "data");
+
+      const config = {
+        method: "put",
+        url: "https://my.primexcapital.com/client-api/registration?version=1.0.0",
+        data,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      };
+
+      try {
+        const response = await axios(config);
+      } catch (error) {
+        console.log(error, "error");
+
+        const apiErrors = error?.response?.data?.errors.children;
+        const country = apiErrors.country.errors?.join(", ") || "";
+        const city = apiErrors.city.errors?.join(", ") || "";
+        const email = apiErrors.email.errors?.join(", ") || "";
+        const birthDate = apiErrors.birthDate.errors?.join(", ") || "";
+
+        if (country || city || email || birthDate) {
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            country,
+            city,
+            email,
+            birthDate,
+          }));
+        } else {
+          handleNext();
+        }
+      }
+      setFormData(data);
     }
   };
   return (
@@ -115,9 +155,9 @@ export default function PersonalInfoStep({
             ))
           )}
         />
-        {errors?.dob && (
+        {errors?.birthDate && (
           <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
-            {errors?.dob}
+            {errors?.birthDate}
           </p>
         )}
       </div>

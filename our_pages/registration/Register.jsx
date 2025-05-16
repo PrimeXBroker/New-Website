@@ -9,6 +9,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useState } from "react";
+import axios from "axios";
 
 export default function Register({ step, setStep }) {
   const locale = useLocale();
@@ -31,6 +32,56 @@ export default function Register({ step, setStep }) {
   const handleNext = () => setStep((prev) => prev + 1);
   const handleBack = () => setStep((prev) => prev - 1);
 
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    if (formData?.password?.first.length > 0) {
+      try {
+        const config = {
+          method: "put",
+          url: "https://my.primexcapital.com/client-api/registration?version=1.0.0",
+          data: formData,
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        };
+
+        try {
+          const result = await axios(config);
+          console.log(result, "result");
+          if (result?.data?.registrationToken) {
+            const config1 = {
+              method: "post",
+              url: "https://my.primexcapital.com/client-api/registration/send-pin-by-token?version=1.0.0",
+              data: { token: result?.data?.registrationToken },
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+            };
+            const response = await axios(config1);
+
+            console.log(
+              JSON.stringify(response, null, 2),
+              "response send email"
+            );
+            if (response) {
+              setFormData({
+                ...formData,
+                token: result?.data?.registrationToken,
+              });
+              if (step !== 4) handleNext();
+            }
+          }
+        } catch (error) {
+          console.log(error, "error");
+        }
+      } catch (error) {
+        console.log(error, "error 1");
+      }
+    }
+  };
   console.log(formData, "formData");
 
   return (
@@ -254,10 +305,16 @@ export default function Register({ step, setStep }) {
             handleBack={handleBack}
             setFormData={setFormData}
             formData={formData}
+            sendEmail={sendEmail}
           />
         )}
         {step === 4 && (
-          <ConfirmEmailStep handleNext={handleNext} handleBack={handleBack} />
+          <ConfirmEmailStep
+            handleNext={handleNext}
+            handleBack={handleBack}
+            sendEmail={sendEmail}
+            formData={formData}
+          />
         )}
         {step === 5 && <SuccessStep />}
       </div>

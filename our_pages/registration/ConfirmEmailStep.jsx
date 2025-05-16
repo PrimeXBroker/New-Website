@@ -1,11 +1,20 @@
 "use client";
+import axios from "axios";
 import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
 
-export default function ConfirmEmailStep({ handleNext, handleBack }) {
+export default function ConfirmEmailStep({
+  handleNext,
+  handleBack,
+  sendEmail,
+  formData,
+}) {
   const locale = useLocale();
+  const router = useRouter();
   const t = useTranslations("registration.confirmEmailStep");
   const [timer, setTimer] = useState(59);
+  const [value, setValue] = useState("");
   const [showResendButton, setShowResendButton] = useState(false);
   const [codeError, setCodeError] = useState(false);
 
@@ -20,11 +29,37 @@ export default function ConfirmEmailStep({ handleNext, handleBack }) {
     }
   }, [timer]);
 
-  const handleResend = () => {
+  const handleResend = async () => {
     setTimer(59);
     setShowResendButton(false);
     setCodeError(false);
+    await sendEmail();
   };
+  console.log(formData?.token, "formData?.token");
+
+  const handleEmail = async () => {
+    const config = {
+      method: "post",
+      url: "https://my.primexcapital.com/client-api/registration/confirmation-by-token?version=1.0.0",
+      data: { token: formData?.token, pin: value },
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    };
+
+    try {
+      const response = await axios(config);
+
+      if (response?.data?.result) {
+        console.log("successfully registered");
+        router.push("/");
+      }
+    } catch (error) {
+      console.log(error, "email error");
+    }
+  };
+  console.log(value, "value");
 
   return (
     <div>
@@ -35,6 +70,8 @@ export default function ConfirmEmailStep({ handleNext, handleBack }) {
         <div className="flex justify-between gap-x-2">
           <input
             type="text"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
             placeholder={t("code_placeholder")}
             className={`appearance-none font-medium border border-e2 dark:border-e2-dark focus:border-tm dark:focus:border-tm-dark rounded-md sm:rounded-lg w-full p-4 text-tm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-cc dark:bg-cc-dark focus:outline-none text-sm sm:text-base`}
           />
@@ -66,7 +103,7 @@ export default function ConfirmEmailStep({ handleNext, handleBack }) {
           {t("back_button")}
         </button>
         <button
-          onClick={handleNext}
+          onClick={handleEmail}
           className="bg-pcp dark:bg-pcp-dark border border-pcp dark:border-pcp-dark rounded-md sm:rounded-lg px-5 py-4 text-nb dark:text-nb-dark sm:text-xl font-semibold w-full mt-3"
         >
           {t("verify_code_button")}
