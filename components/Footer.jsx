@@ -169,18 +169,18 @@ const Footer = () => {
   ];
 
   const paymentOptions = [
-    {
-      id: 1,
-      name: "master",
-      imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/master.webp",
-    },
-    {
-      id: 2,
-      name: "visa",
-      imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/visa.webp",
-    },
+    // {
+    //   id: 1,
+    //   name: "master",
+    //   imgUrl:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/master.webp",
+    // },
+    // {
+    //   id: 2,
+    //   name: "visa",
+    //   imgUrl:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/visa.webp",
+    // },
     {
       id: 3,
       name: "tether",
@@ -193,12 +193,12 @@ const Footer = () => {
       imgUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/depositor-payment.webp",
     },
-    {
-      id: 5,
-      name: "amex",
-      imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/amex.webp",
-    },
+    // {
+    //   id: 5,
+    //   name: "amex",
+    //   imgUrl:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/amex.webp",
+    // },
     // {
     //   id: 6,
     //   name: "tymebank",
