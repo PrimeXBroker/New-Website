@@ -45,49 +45,47 @@ export default function SignUpStep({ handleNext, setFormData, formData }) {
     if (validateForm()) {
       // try {
       const data = {
-        ...formData,
+        firstName: formData?.firstName,
+        lastName: formData?.lastName,
+        email: formData?.email,
         phone: `${selectedPhone?.code}${formData?.phone}`,
       };
-      console.log(data, "data");
       const config = {
         method: "put",
         url: "https://my.primexcapital.com/client-api/registration?version=1.0.0",
-        data: {
-          firstName: "Mehtab",
-          lastName: "Kazmi",
-          email: "mehtabkazmi5@gmail.com",
-          phone: "+93453453563",
-          birthDate: "",
-          country: "",
-          city: "",
-          language: "",
-          password: {
-            first: "",
-            second: "",
-          },
-          token: "",
-        },
+        data: data,
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
       };
 
-      console.log("Request Config:", config);
+      try {
+        await axios(config);
+      } catch (error) {
+        const apiErrors = error?.response?.data?.errors.children;
+        const firstName = apiErrors.firstName.errors?.join(", ") || "";
+        const lastName = apiErrors.lastName.errors?.join(", ") || "";
+        const email = apiErrors.email.errors?.join(", ") || "";
+        const phone = apiErrors.phone.errors?.join(", ") || "";
 
-      axios(config)
-        .then((response) => {
-          console.log("Response:", response);
-        })
-        .catch((error) => {
-          if (error.response) {
-            console.log("Response Error:", error.response.data);
-          } else if (error.request) {
-            console.log("Request Error:", error.request);
-          } else {
-            console.log("General Error:", error.message);
-          }
-        });
+        if (firstName || lastName || email || phone) {
+          setError((prevErrors) => ({
+            ...prevErrors,
+            firstName,
+            lastName,
+            email,
+            phone,
+          }));
+        } else {
+          setFormData({
+            ...data,
+            fullName: `${data?.firstName} ${data.lastName}`,
+            phone: `${selectedPhone?.code}${formData?.phone}`,
+          });
+          handleNext();
+        }
+      }
     }
   };
 
@@ -107,7 +105,7 @@ export default function SignUpStep({ handleNext, setFormData, formData }) {
           </label>
           {error?.firstName && (
             <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
-              {t("error_message")}
+              {error?.firstName}
             </p>
           )}
         </div>
@@ -124,7 +122,7 @@ export default function SignUpStep({ handleNext, setFormData, formData }) {
           </label>
           {error?.lastName && (
             <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
-              {t("error_message")}
+              {error?.lastName}
             </p>
           )}
         </div>
@@ -142,7 +140,7 @@ export default function SignUpStep({ handleNext, setFormData, formData }) {
         </label>
         {error?.email && (
           <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
-            {t("error_message")}
+            {error?.email}
           </p>
         )}
       </div>
@@ -158,7 +156,7 @@ export default function SignUpStep({ handleNext, setFormData, formData }) {
         </label>
         {error?.phone && (
           <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
-            {t("error_message")}
+            {error?.phone}
           </p>
         )}
       </div>
