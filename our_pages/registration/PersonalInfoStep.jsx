@@ -36,6 +36,9 @@ export default function PersonalInfoStep({
   const languageOptions = [
     { label: "English", value: "en" },
     { label: "Arabic", value: "ar" },
+    { label: "Kurdish", value: "ku" },
+    { label: "Español", value: "es" },
+    { label: "Pashto", value: "ps" },
   ];
 
   useEffect(() => {
@@ -149,7 +152,7 @@ export default function PersonalInfoStep({
       <div className="md:flex w-full justify-between sm:mb-3">
         <div className="w-full md:w-[49%]  mb-3 sm:mb-0">
           <CustomSelectDropdown
-            label="Select Country"
+            label={t("country_label")}
             options={countries}
             selected={selectedCountry}
             onChange={(value) => {
@@ -167,7 +170,7 @@ export default function PersonalInfoStep({
         </div>
         <div className="w-full md:w-[49%]  mb-3 sm:mb-0">
           <CustomSelectDropdown
-            label="Select City"
+            label={t("city_label")}
             options={cities}
             selected={selectedCity}
             onChange={(value) => {

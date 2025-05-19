@@ -172,7 +172,12 @@ export default function CreatePasswordStep({
         </div>
       )}
       <div className="flex items-start">
-        <input type="checkbox" id="terms" className="terms-checkbox hidden" />
+        <input
+          type="checkbox"
+          id="terms"
+          className="terms-checkbox hidden"
+          defaultChecked
+        />
         <label
           htmlFor="terms"
           className="terms-label flex items-start cursor-pointer"

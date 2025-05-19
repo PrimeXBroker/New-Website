@@ -1911,6 +1911,7 @@ html.dark
 }
 
 .css-vycme6-MuiPickersInputBase-root-MuiPickersOutlinedInput-root {
+  direction: ltr !important;
   font-family: var(--font-montserrat) !important;
   color: #111111 !important;
   padding: 16px 16px !important;
@@ -1961,4 +1962,44 @@ html.dark .css-1umw9bq-MuiSvgIcon-root {
 
 .css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section {
   font-family: var(--font-montserrat) !important;
+}
+
+.css-151nkvq-MuiPaper-root-MuiPickerPopper-paper {
+  background-color: #fcfcfc !important;
+  color: #111111 !important;
+}
+
+html.dark .css-151nkvq-MuiPaper-root-MuiPickerPopper-paper {
+  background-color: #171717 !important;
+  color: #f9f9f9 !important;
+}
+
+.css-4k4mmf-MuiButtonBase-root-MuiPickersDay-root {
+  color: #111111 !important;
+}
+
+html.dark .css-4k4mmf-MuiButtonBase-root-MuiPickersDay-root {
+  color: #f9f9f9 !important;
+}
+
+.css-14yom7c-MuiSvgIcon-root-MuiPickersCalendarHeader-switchViewIcon {
+  color: #111111 !important;
+}
+
+html.dark .css-14yom7c-MuiSvgIcon-root-MuiPickersCalendarHeader-switchViewIcon {
+  color: #f9f9f9 !important;
+}
+
+.css-1mvmid-MuiYearCalendar-button.Mui-selected {
+  color: #111111 !important;
+  background-color: #fed100 !important;
+}
+
+.css-1jyby0c-MuiMonthCalendar-button.Mui-selected {
+  color: #111111 !important;
+  background-color: #fed100 !important;
+}
+
+.css-4k4mmf-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+  background-color: #fed100 !important;
 }

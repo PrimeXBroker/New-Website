@@ -42,6 +42,11 @@ export default function SignUpStep({ handleNext, setFormData, formData }) {
   }, []);
 
   const handleInputChange = (field, value) => {
+    if (field === "firstName" || field === "lastName") {
+      if (!/^[A-Za-z]*$/.test(value)) {
+        return;
+      }
+    }
     setFormData({ ...formData, [field]: value });
     if (value.trim() !== "") {
       setError((prevError) => ({ ...prevError, [field]: "" }));
@@ -51,8 +56,18 @@ export default function SignUpStep({ handleNext, setFormData, formData }) {
   const validateForm = () => {
     const newError = { firstName: "", lastName: "", email: "", phone: "" };
 
-    if (!formData.firstName) newError.firstName = "First Name is required";
-    if (!formData.lastName) newError.lastName = "Last Name is required";
+    if (!formData.firstName) {
+      newError.firstName = "First Name is required";
+    } else if (!/^[A-Za-z]+$/.test(formData.firstName)) {
+      newError.firstName = "First Name must contain only alphabets";
+    }
+
+    if (!formData.lastName) {
+      newError.lastName = "Last Name is required";
+    } else if (!/^[A-Za-z]+$/.test(formData.lastName)) {
+      newError.lastName = "Last Name must contain only alphabets";
+    }
+
     if (!formData.email) {
       newError.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
@@ -195,9 +210,6 @@ export default function SignUpStep({ handleNext, setFormData, formData }) {
         )}
       </div>
       <div className="mt-8">
-        <button className="bg-cc dark:bg-cc-dark border border-e2 dark:border-e2-dark rounded-md sm:rounded-lg px-5 py-4 text-tm dark:text-tm-dark text-base sm:text-xl font-semibold w-full">
-          {t("sign_in_button")}
-        </button>
         <button
           type="submit"
           className="bg-pcp dark:bg-pcp-dark border border-pcp dark:border-pcp-dark rounded-md sm:rounded-lg px-5 py-4 text-cb dark:text-nb-dark text-base sm:text-xl font-semibold w-full mt-3"

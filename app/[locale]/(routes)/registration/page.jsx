@@ -8,12 +8,12 @@ export async function generateMetadata({ params: { locale } }) {
   const t = createTranslator({ locale, messages });
   const url =
     locale != "en"
-      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/primex-spreads`
-      : `${process.env.NEXT_PUBLIC_BASE_URL}/primex-spreads`;
+      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/registration`
+      : `${process.env.NEXT_PUBLIC_BASE_URL}/registration`;
 
   return {
-    title: t("spreadPage.metaData.title"),
-    description: t("spreadPage.metaData.description"),
+    title: t("registration.metaData.title"),
+    description: t("registration.metaData.description"),
     alternates: {
       canonical: url,
     },
@@ -21,14 +21,14 @@ export async function generateMetadata({ params: { locale } }) {
       type: "website",
       locale: locale,
       url: url,
-      title: t("spreadPage.metaData.title"),
-      description: t("spreadPage.metaData.description"),
+      title: t("registration.metaData.title"),
+      description: t("registration.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/spread/spread-hero.png",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/mockup-en.webp",
           width: 1200,
           height: 630,
-          alt: t("spreadPage.metaData.title"),
+          alt: t("registration.metaData.title"),
         },
       ],
     },

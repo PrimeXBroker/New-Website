@@ -3040,6 +3040,14 @@
     }
   },
   "registration": {
+    "registerMetaData": {
+      "title": "",
+      "description": ""
+    },
+    "successMetaData": {
+      "title": "",
+      "description": ""
+    },
     "app": {
       "app_title": "ئەپڵیکەیشنی پرایم ئێکس"
     },

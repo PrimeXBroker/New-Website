@@ -3085,6 +3085,10 @@
     }
   },
   "registration": {
+    "metaData": {
+      "title": "Register as a Client | PrimeX Capital",
+      "description": "Join PrimeX Capital and unlock exclusive trading opportunities. Register now for a secure, user-friendly platform with expert market insights. Start your financial journey today!"
+    },
     "app": {
       "app_title": "PrimeX App"
     },
