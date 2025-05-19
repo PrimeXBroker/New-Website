@@ -279,7 +279,7 @@ export default function Register({ step, setStep }) {
         )}
         {step === 4 && (
           <p className="text-ts dark:text-ts-dark font-medium text-sm sm:text-lg mb-0">
-            {t("step_4_description")} johndoe@gmail.com
+            {t("step_4_description")} {formData?.email}
           </p>
         )}
       </div>
