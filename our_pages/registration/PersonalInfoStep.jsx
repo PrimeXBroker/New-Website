@@ -1,13 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { IoMdCalendar } from "react-icons/io";
 import CustomSelectDropdown from "./CustomSelectDropdown";
 import { useLocale, useTranslations } from "next-intl";
 import axios from "axios";
 import moment from "moment-timezone";
 import { Country, City } from "country-state-city";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import StaticViewDatePicker from "./StaticViewDatePicker";
 
 export default function PersonalInfoStep({
   handleNext,
@@ -19,7 +20,7 @@ export default function PersonalInfoStep({
   const userTimeZone = moment.tz.guess();
 
   const t = useTranslations("registration.personalInfoStep");
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [selectedDate, setSelectedDate] = useState(null);
   const [countries, setCountries] = useState([]);
   const [cities, setCities] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState();
@@ -61,7 +62,6 @@ export default function PersonalInfoStep({
         value: city.name,
       })
     );
-    console.log(cityList, "selectedCountry");
 
     setCities(cityList);
     setSelectedCity("");
@@ -129,20 +129,17 @@ export default function PersonalInfoStep({
   return (
     <form onSubmit={handleSubmit}>
       <div className="flex flex-col mb-3">
-        <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium mb-1 sm:mb-2">
+        <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium">
           {t("birthday_label")}
         </label>
-        <LocalizationProvider dateAdapter={AdapterDateFns}>
-          <DatePicker
-            value={selectedDate}
-            onChange={(newValue) => {
-              setSelectedDate(newValue);
-              setErrors((prev) => ({ ...prev, birthDate: "" }));
-            }}
-            openTo="year"
-            views={["year", "month", "day"]}
-          />
-        </LocalizationProvider>
+        <StaticViewDatePicker
+          selectedDate={selectedDate}
+          onChange={(date) => {
+            setSelectedDate(date);
+            setErrors((prev) => ({ ...prev, birthDate: "" }));
+          }}
+          placeholder={t("birthday_placeholder")}
+        />
         {errors?.birthDate && (
           <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
             {errors?.birthDate}
@@ -152,7 +149,7 @@ export default function PersonalInfoStep({
       <div className="md:flex w-full justify-between sm:mb-3">
         <div className="w-full md:w-[49%]  mb-3 sm:mb-0">
           <CustomSelectDropdown
-            label={t("country_label")}
+            label="Select Country"
             options={countries}
             selected={selectedCountry}
             onChange={(value) => {
@@ -170,7 +167,7 @@ export default function PersonalInfoStep({
         </div>
         <div className="w-full md:w-[49%]  mb-3 sm:mb-0">
           <CustomSelectDropdown
-            label={t("city_label")}
+            label="Select City"
             options={cities}
             selected={selectedCity}
             onChange={(value) => {
