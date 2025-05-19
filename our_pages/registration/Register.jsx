@@ -10,26 +10,31 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useState } from "react";
 import axios from "axios";
+import moment from "moment-timezone";
+import { phoneOptions } from "@/utils/data";
 
 export default function Register({ step, setStep }) {
   const locale = useLocale();
   const { theme } = useTheme();
+  const userTimeZone = moment.tz.guess();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
-    birthDate: "",
-    country: "",
+    birthDate: new Date(),
+    country: null,
     city: "",
     language: "",
     password: { first: "", second: "" },
     token: "",
   });
+  const [selectedPhone, setSelectedPhone] = useState(phoneOptions[0]);
+
   const t = useTranslations("registration.register");
   const p = useTranslations("registration.app");
   const d = useTranslations("primeXTradingApp.downloadAppToady");
-  const handleNext = () => setStep((prev) => prev + 1);
+  const handleNext = (val) => setStep(val);
   const handleBack = () => setStep((prev) => prev - 1);
 
   const sendEmail = async (e) => {
@@ -40,7 +45,14 @@ export default function Register({ step, setStep }) {
         const config = {
           method: "put",
           url: "https://my.primexcapital.com/client-api/registration?version=1.0.0",
-          data: formData,
+          data: {
+            ...formData,
+            birthDate: moment(formData?.birthDate)
+              .tz(userTimeZone)
+              .format("YYYY-MM-DD"),
+            country: formData?.country?.value,
+            phone: `${selectedPhone?.code}${formData?.phone}`,
+          },
           headers: {
             "Content-Type": "application/json",
             Accept: "application/json",
@@ -49,7 +61,6 @@ export default function Register({ step, setStep }) {
 
         try {
           const result = await axios(config);
-          console.log(result, "result");
           if (result?.data?.registrationToken) {
             const config1 = {
               method: "post",
@@ -71,7 +82,7 @@ export default function Register({ step, setStep }) {
                 ...formData,
                 token: result?.data?.registrationToken,
               });
-              if (step !== 4) handleNext();
+              if (step !== 4) handleNext(4);
             }
           }
         } catch (error) {
@@ -82,7 +93,6 @@ export default function Register({ step, setStep }) {
       }
     }
   };
-  console.log(formData, "formData");
 
   return (
     <div className="px-3 sm:px-12 md:px-16 lg:px-10 xl:px-16 2xl:px-20 pt-28 relative">
@@ -289,6 +299,8 @@ export default function Register({ step, setStep }) {
             handleNext={handleNext}
             setFormData={setFormData}
             formData={formData}
+            setSelectedPhone={setSelectedPhone}
+            selectedPhone={selectedPhone}
           />
         )}
         {step === 2 && (
@@ -301,7 +313,6 @@ export default function Register({ step, setStep }) {
         )}
         {step === 3 && (
           <CreatePasswordStep
-            handleNext={handleNext}
             handleBack={handleBack}
             setFormData={setFormData}
             formData={formData}
@@ -310,7 +321,6 @@ export default function Register({ step, setStep }) {
         )}
         {step === 4 && (
           <ConfirmEmailStep
-            handleNext={handleNext}
             handleBack={handleBack}
             sendEmail={sendEmail}
             formData={formData}

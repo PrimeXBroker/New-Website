@@ -4,12 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
 
-export default function ConfirmEmailStep({
-  handleNext,
-  handleBack,
-  sendEmail,
-  formData,
-}) {
+export default function ConfirmEmailStep({ handleBack, sendEmail, formData }) {
   const locale = useLocale();
   const router = useRouter();
   const t = useTranslations("registration.confirmEmailStep");

@@ -1,7 +1,6 @@
-"use client";
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { IoChevronDownOutline } from "react-icons/io5";
 
@@ -16,17 +15,33 @@ export default function CustomSelectDropdown({
   const t = useTranslations("registration.personalInfoStep");
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const dropdownRef = useRef(null); // Reference for dropdown container
 
-  const filteredOptions = options.filter((option) =>
+  const filteredOptions = options?.filter((option) =>
     option.label.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  // Close the dropdown when clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="w-full ">
       <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium">
         {label}
       </label>
-      <div className="relative">
+      <div className="relative" ref={dropdownRef}>
         <button
           type="button"
           className={`w-full mt-1 sm:mt-2 font-medium bg-cc dark:bg-cc-dark focus:outline-none border border-e2 dark:border-e2-dark text-left p-4 text-sm sm:text-base hover:cursor-pointer flex justify-between items-center 

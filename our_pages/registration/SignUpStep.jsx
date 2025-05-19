@@ -6,10 +6,15 @@ import { phoneOptions } from "@/utils/data";
 import axios from "axios";
 import { Country } from "country-state-city";
 
-export default function SignUpStep({ handleNext, setFormData, formData }) {
+export default function SignUpStep({
+  handleNext,
+  setFormData,
+  formData,
+  setSelectedPhone,
+  selectedPhone,
+}) {
   const t = useTranslations("registration.signUpStep");
   const [countries, setCountries] = useState([]);
-  const [selectedPhone, setSelectedPhone] = useState(phoneOptions[0]);
   const [error, setError] = useState({
     firstName: "",
     lastName: "",
@@ -112,9 +117,9 @@ export default function SignUpStep({ handleNext, setFormData, formData }) {
           setFormData({
             ...data,
             fullName: `${data?.firstName} ${data.lastName}`,
-            phone: `${selectedPhone?.code}${formData?.phone}`,
+            phone: formData?.phone,
           });
-          handleNext();
+          handleNext(2);
         }
       }
     }

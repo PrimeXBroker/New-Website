@@ -19,12 +19,8 @@ export default function PersonalInfoStep({
   const userTimeZone = moment.tz.guess();
 
   const t = useTranslations("registration.personalInfoStep");
-  const [selectedDate, setSelectedDate] = useState(new Date());
   const [countries, setCountries] = useState([]);
   const [cities, setCities] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState();
-  const [selectedCity, setSelectedCity] = useState("");
-  const [selectedLanguage, setSelectedLanguage] = useState("");
 
   const [errors, setErrors] = useState({
     birthDate: "",
@@ -45,14 +41,13 @@ export default function PersonalInfoStep({
       isoCode: country.isoCode.toUpperCase(),
       flag: `https://flagcdn.com/w40/${country.isoCode.toLowerCase()}.png`,
     }));
-    console.log(countryList, "countryList");
     setCountries(countryList);
   }, []);
 
   useEffect(() => {
-    if (!selectedCountry) return;
+    if (!formData?.country) return;
 
-    const cityList = City.getCitiesOfCountry(selectedCountry?.value).map(
+    const cityList = City.getCitiesOfCountry(formData?.country?.value).map(
       (city) => ({
         label: city.name,
         value: city.name,
@@ -61,28 +56,28 @@ export default function PersonalInfoStep({
     console.log(cityList, "selectedCountry");
 
     setCities(cityList);
-    setSelectedCity("");
-  }, [selectedCountry]);
+    setFormData({ ...formData, city: "" });
+  }, [formData?.country]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Basic validation logic
     const errorsList = {};
-    if (!selectedDate) errorsList.birthDate = "Please Select DOB";
-    if (!selectedCountry) errorsList.country = "Please Select Country";
-    if (!selectedCity) errorsList.city = "Please Select City";
-    if (!selectedLanguage) errorsList.language = "Please Select Language";
+    if (!formData?.birthDate) errorsList.birthDate = "Please Select DOB";
+    if (!formData?.country) errorsList.country = "Please Select Country";
+    if (!formData?.city) errorsList.city = "Please Select City";
+    if (!formData?.language) errorsList.language = "Please Select Language";
 
     setErrors(errorsList);
 
     if (Object.keys(errorsList).length === 0) {
       const data = {
         ...formData,
-        country: selectedCountry.value,
-        city: selectedCity,
-        language: selectedLanguage,
-        birthDate: moment(selectedDate).tz(userTimeZone).format("YYYY-MM-DD"),
+        country: formData?.country?.value,
+        birthDate: moment(formData?.birthDate)
+          .tz(userTimeZone)
+          .format("YYYY-MM-DD"),
         password: { first: "", second: "" },
       };
       console.log(data, "data");
@@ -117,12 +112,13 @@ export default function PersonalInfoStep({
             birthDate,
           }));
         } else {
-          handleNext();
+          handleNext(3);
         }
       }
-      setFormData(data);
     }
   };
+  console.log(JSON.stringify(formData, null, 2));
+
   return (
     <form onSubmit={handleSubmit}>
       <div className="flex flex-col mb-3">
@@ -131,9 +127,9 @@ export default function PersonalInfoStep({
         </label>
         <LocalizationProvider dateAdapter={AdapterDateFns}>
           <DatePicker
-            value={selectedDate}
+            value={formData?.birthDate}
             onChange={(newValue) => {
-              setSelectedDate(newValue);
+              setFormData({ ...formData, birthDate: newValue });
               setErrors((prev) => ({ ...prev, birthDate: "" }));
             }}
             openTo="year"
@@ -151,9 +147,9 @@ export default function PersonalInfoStep({
           <CustomSelectDropdown
             label="Select Country"
             options={countries}
-            selected={selectedCountry}
+            selected={formData?.country}
             onChange={(value) => {
-              setSelectedCountry(value);
+              setFormData({ ...formData, country: value });
               setErrors((prev) => ({ ...prev, country: "" }));
             }}
             searchInput={true}
@@ -169,9 +165,9 @@ export default function PersonalInfoStep({
           <CustomSelectDropdown
             label="Select City"
             options={cities}
-            selected={selectedCity}
+            selected={formData?.city}
             onChange={(value) => {
-              setSelectedCity(value);
+              setFormData({ ...formData, city: value });
               setErrors((prev) => ({ ...prev, city: "" }));
             }}
             searchInput={true}
@@ -188,9 +184,9 @@ export default function PersonalInfoStep({
         <CustomSelectDropdown
           label={t("preferred_language_label")}
           options={languageOptions}
-          selected={selectedLanguage}
+          selected={formData?.language}
           onChange={(value) => {
-            setSelectedLanguage(value);
+            setFormData({ ...formData, language: value });
             setErrors((prev) => ({ ...prev, language: "" }));
           }}
           searchInput={false}
