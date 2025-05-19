@@ -1,13 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { IoMdCalendar } from "react-icons/io";
 import CustomSelectDropdown from "./CustomSelectDropdown";
 import { useLocale, useTranslations } from "next-intl";
 import axios from "axios";
 import moment from "moment-timezone";
 import { Country, City } from "country-state-city";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import StaticViewDatePicker from "./StaticViewDatePicker";
 
 export default function PersonalInfoStep({
   handleNext,
@@ -32,6 +33,9 @@ export default function PersonalInfoStep({
   const languageOptions = [
     { label: "English", value: "en" },
     { label: "Arabic", value: "ar" },
+    { label: "Kurdish", value: "ku" },
+    { label: "Español", value: "es" },
+    { label: "Pashto", value: "ps" },
   ];
 
   useEffect(() => {
@@ -53,7 +57,6 @@ export default function PersonalInfoStep({
         value: city.name,
       })
     );
-    console.log(cityList, "selectedCountry");
 
     setCities(cityList);
     setFormData({ ...formData, city: "" });
@@ -122,20 +125,17 @@ export default function PersonalInfoStep({
   return (
     <form onSubmit={handleSubmit}>
       <div className="flex flex-col mb-3">
-        <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium mb-1 sm:mb-2">
+        <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium">
           {t("birthday_label")}
         </label>
-        <LocalizationProvider dateAdapter={AdapterDateFns}>
-          <DatePicker
-            value={formData?.birthDate}
-            onChange={(newValue) => {
-              setFormData({ ...formData, birthDate: newValue });
-              setErrors((prev) => ({ ...prev, birthDate: "" }));
-            }}
-            openTo="year"
-            views={["year", "month", "day"]}
-          />
-        </LocalizationProvider>
+        <StaticViewDatePicker
+          selectedDate={formData?.birthDate}
+          onChange={(date) => {
+            setFormData({ ...formData, birthDate: date });
+            setErrors((prev) => ({ ...prev, birthDate: "" }));
+          }}
+          placeholder={t("birthday_placeholder")}
+        />
         {errors?.birthDate && (
           <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
             {errors?.birthDate}

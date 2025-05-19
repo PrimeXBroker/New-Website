@@ -3084,6 +3084,10 @@
     }
   },
   "registration": {
+    "metaData": {
+      "title": "Regístrese como Cliente | PrimeX Capital",
+      "description": "Únase a PrimeX Capital y desbloquee oportunidades exclusivas de trading. Regístrese ahora para obtener una plataforma segura y fácil de usar con análisis expertos del mercado. ¡Comience su viaje financiero hoy!"
+    },
     "app": {
       "app_title": "Aplicación PrimeX"
     },
@@ -3151,8 +3155,8 @@
       "success_message": "Se ha registrado exitosamente",
       "verification_button_text": "Verificación",
       "deposit_button_text": "Depositar",
-      "go_to_dashboard_button": "Ir al Panel de Control",
-      "redirect_message": "Redirigiendo al Panel de Control en ",
+      "go_to_dashboard_button": "Ir a Iniciar Sesión",
+      "redirect_message": "Redirigiendo al inicio de sesión en ",
       "redirect_message_second": "segundos"
     }
   }

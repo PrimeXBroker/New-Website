@@ -2964,6 +2964,10 @@
     }
   },
   "registration": {
+    "metaData": {
+      "title": "سجل حسابك كعميل | برايم اكس كابيتال",
+      "description": "انضم إلى برايم إكس كابيتال واستفد من فرص التداول الحصرية. سجل الآن لتحصل على وصول إلى منصة آمنة وسهلة الاستخدام مع خدمات استثنائية أخرى!"
+    },
     "app": {
       "app_title": "تطبيق برايم اكس"
     },
@@ -3031,8 +3035,8 @@
       "success_message": "لقد تم تسجيلك بنجاح",
       "verification_button_text": "التحقق",
       "deposit_button_text": "إيداع",
-      "go_to_dashboard_button": "الانتقال إلى لوحة التحكم",
-      "redirect_message": "إعادة التوجيه إلى لوحة التحكم في ",
+      "go_to_dashboard_button": "إلى تسجيل الدخول",
+      "redirect_message": "جاري التحويل إلى تسجيل الدخول في ",
       "redirect_message_second": "ثوانٍ"
     }
   }
