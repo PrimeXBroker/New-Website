@@ -3040,13 +3040,9 @@
     }
   },
   "registration": {
-    "registerMetaData": {
-      "title": "",
-      "description": ""
-    },
-    "successMetaData": {
-      "title": "",
-      "description": ""
+    "metaData": {
+      "title": "تۆمارکردن وەک کڕیار | پرایم ئێکس کاپیتاڵ",
+      "description": "بەشداربە لەگەڵ پرایم ئێکس کاپیتاڵ و هەلی گەورەی مامەڵەکردن بەدەست بهێنە. هەر ئێستا هەژمار تۆمار بکە لە پلاتفۆرمێکی پارێزراو و ئاسان بۆ بەکارهێنان کە زانیاری گرنگی بازاڕ دەخاتەڕوو. هەر ئەمڕۆ دەست بە گەشتی ئاڵوگۆڕکردنەکانت بکە!"
     },
     "app": {
       "app_title": "ئەپڵیکەیشنی پرایم ئێکس"
@@ -3115,8 +3111,8 @@
       "success_message": "بەسەرکەوتوویی هەژمارت تۆمار کرد",
       "verification_button_text": "پشتڕاستکردنەوە",
       "deposit_button_text": "پارە خستنە سەر هەژمار",
-      "go_to_dashboard_button": " بڕۆ بۆ داشبۆرد",
-      "redirect_message": " ئاڕاستەکردنەوە بۆ داشبۆرد پاش",
+      "go_to_dashboard_button": "بڕۆ بۆ تۆماری چوونەژوورەوە",
+      "redirect_message": " نوێکردنەوە بۆ چوونەژوورەوە لە",
       "redirect_message_second": "چرکە"
     }
   }
