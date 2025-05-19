@@ -1,5 +1,4 @@
 "use client";
-import { phoneOptions } from "@/utils/data";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
@@ -11,6 +10,7 @@ export default function PhoneNumberField({
   handleInputChange,
   selectedPhone,
   setSelectedPhone,
+  countries = [],
 }) {
   const locale = useLocale();
   const t = useTranslations("registration.signUpStep");
@@ -18,7 +18,7 @@ export default function PhoneNumberField({
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredOptions = phoneOptions.filter((option) =>
+  const filteredOptions = countries.filter((option) =>
     option.label.toLowerCase().includes(searchTerm.toLowerCase())
   );
 

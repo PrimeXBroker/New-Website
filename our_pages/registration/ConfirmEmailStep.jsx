@@ -53,7 +53,7 @@ export default function ConfirmEmailStep({
 
       if (response?.data?.result) {
         console.log("successfully registered");
-        router.push("/");
+        router.push(`/${locale}/registration/success`);
       }
     } catch (error) {
       console.log(error, "email error");

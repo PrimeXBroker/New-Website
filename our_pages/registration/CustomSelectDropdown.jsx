@@ -41,24 +41,35 @@ export default function CustomSelectDropdown({
         >
           {selected ? (
             <div className="flex items-center gap-2">
-              {flag &&
-                // <Image
-                //   src={options.find((o) => o.value === selected)?.flag}
-                //   alt="Flag"
-                //   width={20}
-                //   height={15}
-                //   className="w-[20px] h-auto"
-                // />
-                selected?.flag}
+              {flag && selected && (
+                <Image
+                  src={
+                    typeof selected === "object" && selected.flag
+                      ? selected.flag
+                      : options.find((o) => o.value === selected)?.flag || ""
+                  }
+                  alt="Flag"
+                  width={20}
+                  height={15}
+                  className="w-[20px] h-auto"
+                />
+              )}
               <span>
                 {flag
-                  ? options.find((o) => o.value === selected?.value)?.label
-                  : options.find((o) => o.value === selected)?.label}
+                  ? typeof selected === "object" && selected.label
+                    ? selected.label
+                    : options.find(
+                        (o) => o.value === (selected?.value || selected)
+                      )?.label || t("select_placeholder")
+                  : options.find(
+                      (o) => o.value === (selected?.value || selected)
+                    )?.label || t("select_placeholder")}
               </span>
             </div>
           ) : (
             t("select_placeholder")
           )}
+
           <IoChevronDownOutline className="text-ts dark:text-ts-dark text-base sm:text-xl" />
         </button>
         {isOpen && (
@@ -94,16 +105,15 @@ export default function CustomSelectDropdown({
                     : ""
                 }`}
               >
-                {flag &&
-                  // <Image
-                  //   src={option.flag}
-                  //   alt="Flag"
-                  //   width={32}
-                  //   height={32}
-                  //   className="w-[21px] h-full mr-2"
-                  // />
-                  option?.flag}
-
+                {flag && (
+                  <Image
+                    src={option.flag}
+                    alt="Flag"
+                    width={32}
+                    height={32}
+                    className="w-[21px] h-full mr-2"
+                  />
+                )}
                 {option.label}
               </div>
             ))}

@@ -1,13 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import { IoMdCalendar } from "react-icons/io";
 import CustomSelectDropdown from "./CustomSelectDropdown";
 import { useLocale, useTranslations } from "next-intl";
 import axios from "axios";
 import moment from "moment-timezone";
 import { Country, City } from "country-state-city";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 export default function PersonalInfoStep({
   handleNext,
@@ -19,13 +19,11 @@ export default function PersonalInfoStep({
   const userTimeZone = moment.tz.guess();
 
   const t = useTranslations("registration.personalInfoStep");
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(new Date());
   const [countries, setCountries] = useState([]);
   const [cities, setCities] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState();
   const [selectedCity, setSelectedCity] = useState("");
-  // const [selectedCountry, setSelectedCountry] = useState("");
-  // const [selectedCity, setSelectedCity] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("");
 
   const [errors, setErrors] = useState({
@@ -40,44 +38,14 @@ export default function PersonalInfoStep({
     { label: "Arabic", value: "ar" },
   ];
 
-  // const cityOptions = [
-  //   { label: "Abu Dhabi", value: "Abu Dhabi" },
-  //   { label: "Ajmān", value: "Ajmān" },
-  //   { label: "Al Ain", value: "Al Ain" },
-  //   { label: "Al Awdah", value: "Al Awdah" },
-  // ];
-
-  // const countryOptions = [
-  //   {
-  //     label: "Afghanistan",
-  //     value: "AF",
-  //     flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Samoa+Am%C3%A9ricaines.svg",
-  //   },
-  //   {
-  //     label: "Albanie",
-  //     value: "AL",
-  //     flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Albanie.svg",
-  //   },
-  //   {
-  //     label: "Algérie",
-  //     value: "DZ",
-  //     flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Alg%C3%A9rie.svg",
-  //   },
-  //   {
-  //     label: "Samoa Américaines",
-  //     value: "AS",
-  //     flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Afghanistan.svg",
-  //   },
-  // ];
-
   useEffect(() => {
     const countryList = Country.getAllCountries().map((country) => ({
       label: country.name,
       value: country.isoCode,
-      flag: country.flag,
-      // flag: `https://flagcdn.com/w40/${country.isoCode.toLowerCase()}.png`, // Use CDN for flags÷
+      isoCode: country.isoCode.toUpperCase(),
+      flag: `https://flagcdn.com/w40/${country.isoCode.toLowerCase()}.png`,
     }));
-
+    console.log(countryList, "countryList");
     setCountries(countryList);
   }, []);
 
@@ -158,35 +126,20 @@ export default function PersonalInfoStep({
   return (
     <form onSubmit={handleSubmit}>
       <div className="flex flex-col mb-3">
-        <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium">
+        <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium mb-1 sm:mb-2">
           {t("birthday_label")}
         </label>
-        <DatePicker
-          selected={selectedDate}
-          onChange={(date) => setSelectedDate(date)}
-          dateFormat="dd/MM/yyyy"
-          customInput={React.createElement(
-            React.forwardRef(({ value, onClick }, ref) => (
-              <button
-                type="button"
-                onClick={onClick}
-                ref={ref}
-                className={`appearance-none text-left flex items-center justify-between mt-1 sm:mt-2 font-medium border border-e2 dark:border-e2-dark focus:border-tm dark:focus:border-tm-dark rounded-md sm:rounded-lg w-full p-4 bg-cc dark:bg-cc-dark focus:outline-none text-sm sm:text-base`}
-              >
-                <span
-                  className={`${
-                    value
-                      ? "text-tm dark:text-tm-dark"
-                      : "text-ts dark:text-ts-dark"
-                  }`}
-                >
-                  {value || t("birthday_placeholder")}
-                </span>
-                <IoMdCalendar className="text-ts dark:text-ts-dark text-xl sm:text-2xl" />
-              </button>
-            ))
-          )}
-        />
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+          <DatePicker
+            value={selectedDate}
+            onChange={(newValue) => {
+              setSelectedDate(newValue);
+              setErrors((prev) => ({ ...prev, birthDate: "" }));
+            }}
+            openTo="year"
+            views={["year", "month", "day"]}
+          />
+        </LocalizationProvider>
         {errors?.birthDate && (
           <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
             {errors?.birthDate}
@@ -199,7 +152,10 @@ export default function PersonalInfoStep({
             label="Select Country"
             options={countries}
             selected={selectedCountry}
-            onChange={setSelectedCountry}
+            onChange={(value) => {
+              setSelectedCountry(value);
+              setErrors((prev) => ({ ...prev, country: "" }));
+            }}
             searchInput={true}
             flag={true}
           />
@@ -214,7 +170,10 @@ export default function PersonalInfoStep({
             label="Select City"
             options={cities}
             selected={selectedCity}
-            onChange={setSelectedCity}
+            onChange={(value) => {
+              setSelectedCity(value);
+              setErrors((prev) => ({ ...prev, city: "" }));
+            }}
             searchInput={true}
             flag={false}
           />
@@ -230,7 +189,10 @@ export default function PersonalInfoStep({
           label={t("preferred_language_label")}
           options={languageOptions}
           selected={selectedLanguage}
-          onChange={setSelectedLanguage}
+          onChange={(value) => {
+            setSelectedLanguage(value);
+            setErrors((prev) => ({ ...prev, language: "" }));
+          }}
           searchInput={false}
           flag={false}
         />

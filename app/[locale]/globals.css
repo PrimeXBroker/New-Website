@@ -1892,3 +1892,73 @@ html.dark .terms-custom-checkbox {
 html.dark .terms-checkbox:checked + .terms-label .terms-custom-checkbox {
   background-color: #10a85e !important;
 }
+
+.css-vycme6-MuiPickersInputBase-root-MuiPickersOutlinedInput-root.Mui-focused:not(
+    .Mui-error
+  )
+  .MuiPickersOutlinedInput-notchedOutline {
+  border-color: #ebebeb !important;
+  border-width: 1px !important;
+}
+
+html.dark
+  .css-vycme6-MuiPickersInputBase-root-MuiPickersOutlinedInput-root.Mui-focused:not(
+    .Mui-error
+  )
+  .MuiPickersOutlinedInput-notchedOutline {
+  border-color: #2b2b2b !important;
+  border-width: 1px !important;
+}
+
+.css-vycme6-MuiPickersInputBase-root-MuiPickersOutlinedInput-root {
+  font-family: var(--font-montserrat) !important;
+  color: #111111 !important;
+  padding: 16px 16px !important;
+  border-radius: 8px !important;
+  background: #fcfcfc !important;
+}
+
+html.dark .css-vycme6-MuiPickersInputBase-root-MuiPickersOutlinedInput-root {
+  color: #f9f9f9 !important;
+  background: #171717 !important;
+}
+
+.css-1fb7els-MuiPickersSectionList-root-MuiPickersInputBase-sectionsContainer-MuiPickersOutlinedInput-sectionsContainer {
+  font-family: var(--font-montserrat) !important;
+  width: 100% !important;
+  padding: 0px 0px !important;
+}
+
+.css-1ysp02-MuiButtonBase-root-MuiIconButton-root {
+  padding: 0px 8px 0x 0px !important;
+  transition: none !important;
+}
+
+.css-1y4gq5a-MuiPickersSectionList-root-MuiPickersInputBase-sectionsContainer-MuiPickersOutlinedInput-sectionsContainer {
+  font-family: var(--font-montserrat) !important;
+  padding: 0px 0 0px !important;
+  padding: 0px 0 !important;
+}
+
+.css-1ysp02-MuiButtonBase-root-MuiIconButton-root {
+  padding: 0px !important;
+  padding-right: 8px !important;
+}
+
+.css-1umw9bq-MuiSvgIcon-root {
+  fill: #666666 !important;
+  transition: none !important;
+}
+
+html.dark .css-1umw9bq-MuiSvgIcon-root {
+  fill: #a6a6a6 !important;
+  transition: none !important;
+}
+
+.css-1ysp02-MuiButtonBase-root-MuiIconButton-root:hover {
+  background-color: transparent !important;
+}
+
+.css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section {
+  font-family: var(--font-montserrat) !important;
+}

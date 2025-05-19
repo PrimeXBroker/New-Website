@@ -3152,8 +3152,8 @@
       "success_message": "You have successfully registered",
       "verification_button_text": "Verification",
       "deposit_button_text": "Deposit",
-      "go_to_dashboard_button": "Go to Dashboard",
-      "redirect_message": "Redirecting to Dashboard in ",
+      "go_to_dashboard_button": "Go to Login",
+      "redirect_message": "Redirecting to Login in ",
       "redirect_message_second": "seconds"
     }
   }

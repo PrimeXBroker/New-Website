@@ -65,18 +65,19 @@ export default function CreatePasswordStep({
       password: { first: pass, second: pass },
     });
   };
+
   const criteria = [
     {
       text: t("password_criteria_1"),
-      valid: /(?=.*[a-z])(?=.*[A-Z])/.test(formData?.password),
+      valid: /(?=.*[a-z])(?=.*[A-Z])/.test(formData?.password?.first),
     },
     {
       text: t("password_criteria_2"),
-      valid: /\d/.test(formData?.password),
+      valid: /\d/.test(formData?.password?.first),
     },
     {
       text: t("password_criteria_3"),
-      valid: formData?.password?.length >= 8,
+      valid: formData?.password?.first?.length >= 8,
     },
     // {
     //   text: t("password_criteria_4"),

@@ -1,14 +1,14 @@
 "use client";
-import { useLocale, useTranslations } from "next-intl";
-import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { useState, useEffect } from "react";
 import PhoneNumberInput from "./PhoneNumberInput";
-import apiRequest from "@/utils/apiRequest";
 import { phoneOptions } from "@/utils/data";
 import axios from "axios";
+import { Country } from "country-state-city";
 
 export default function SignUpStep({ handleNext, setFormData, formData }) {
-  const locale = useLocale();
   const t = useTranslations("registration.signUpStep");
+  const [countries, setCountries] = useState([]);
   const [selectedPhone, setSelectedPhone] = useState(phoneOptions[0]);
   const [error, setError] = useState({
     firstName: "",
@@ -17,8 +17,35 @@ export default function SignUpStep({ handleNext, setFormData, formData }) {
     phone: "",
   });
 
+  useEffect(() => {
+    const countriesList = Country.getAllCountries().map((country) => ({
+      label: country.name,
+      code: `+${country.phonecode}`,
+      isoCode: country.isoCode.toUpperCase(),
+      flag: `https://flagcdn.com/w40/${country.isoCode.toLowerCase()}.png`,
+    }));
+
+    setCountries(countriesList);
+
+    setSelectedPhone(phoneOptions[0] ?? countriesList[0]);
+
+    axios
+      .get("https://ipapi.co/country/")
+      .then((res) => {
+        const userCountryCode = res.data?.toUpperCase() || null;
+        const userCountry = countriesList.find(
+          (c) => c.isoCode === userCountryCode
+        );
+        if (userCountry) setSelectedPhone(userCountry);
+      })
+      .catch(() => {});
+  }, []);
+
   const handleInputChange = (field, value) => {
     setFormData({ ...formData, [field]: value });
+    if (value.trim() !== "") {
+      setError((prevError) => ({ ...prevError, [field]: "" }));
+    }
   };
 
   const validateForm = () => {
@@ -31,7 +58,11 @@ export default function SignUpStep({ handleNext, setFormData, formData }) {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newError.email = "Please enter a valid email";
     }
-    if (!formData.phone) newError.phone = "Phone Number is required";
+    if (!formData.phone) {
+      newError.phone = "Phone Number is required";
+    } else if (formData.phone.replace(/\D/g, "").length < 9) {
+      newError.phone = "Phone Number must be at least 9 digits";
+    }
 
     setError(newError);
 
@@ -147,12 +178,15 @@ export default function SignUpStep({ handleNext, setFormData, formData }) {
       <div className="w-full mb-3" dir="ltr">
         <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium">
           {t("phone_number_label")}
-          <PhoneNumberInput
-            value={formData.phone}
-            handleInputChange={handleInputChange}
-            setSelectedPhone={setSelectedPhone}
-            selectedPhone={selectedPhone}
-          />
+          {selectedPhone && (
+            <PhoneNumberInput
+              value={formData.phone}
+              handleInputChange={handleInputChange}
+              setSelectedPhone={setSelectedPhone}
+              selectedPhone={selectedPhone}
+              countries={countries}
+            />
+          )}
         </label>
         {error?.phone && (
           <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">

@@ -1,4 +1,5 @@
 "use client";
+import { getLoginUrl } from "@/utilities/getLoginUrl";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -6,7 +7,7 @@ import { useEffect, useState } from "react";
 export default function SuccessStep() {
   const locale = useLocale();
   const t = useTranslations("registration.successStep");
-  const [countdown, setCountdown] = useState(5);
+  const [countdown, setCountdown] = useState(10);
 
   useEffect(() => {
     if (countdown > 0) {
@@ -14,57 +15,44 @@ export default function SuccessStep() {
         setCountdown((prev) => prev - 1);
       }, 1000);
       return () => clearInterval(timer);
+    } else {
+      window.location.href = getLoginUrl(locale);
     }
   }, [countdown]);
 
   return (
-    <div className="bg-cc dark:bg-cc-dark sm:p-8 rounded-3xl lg:w-[584px] mx-auto text-center lg:mt-5 sm:mb-28 lg:mb-0">
-      <div className="mb-6">
-        <div className="flex justify-center items-center">
-          <Image
-            unoptimized={true}
-            width="18"
-            height="18"
-            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Tick+Icon+Signup+Done+Screen.svg"
-            alt="Success"
-            className="w-[80px] h-[80px]"
-          />
+    <div
+      className={
+        "sm:col-span-2 sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/registration-success-bg.webp)] sm:bg-cover lg:h-screen flex justify-center items-center"
+      }
+    >
+      <div className="bg-cc dark:bg-cc-dark sm:p-8 rounded-3xl lg:w-[584px] mx-auto text-center lg:mt-8">
+        <div className="mb-6">
+          <div className="flex justify-center items-center">
+            <Image
+              unoptimized={true}
+              width="18"
+              height="18"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Tick+Icon+Signup+Done+Screen.svg"
+              alt="Success"
+              className="w-[80px] h-[80px]"
+            />
+          </div>
+          <h2 className="text-tm dark:text-tm-dark font-semibold text-lg sm:text-2xl mt-6">
+            {t("success_message")}
+          </h2>
         </div>
-        <h2 className="text-tm dark:text-tm-dark font-semibold text-lg sm:text-2xl mt-6 mb-10">
-          {t("success_message")}
-        </h2>
-      </div>
-      <div className="flex flex-col sm:flex-row justify-center gap-4 mb-5">
-        <button className="flex justify-center items-center gap-3 p-4 sm:p-5 bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark rounded-md sm:rounded-lg w-full sm:w-1/2 font-semibold text-base sm:text-xl">
-          <Image
-            unoptimized={true}
-            width="18"
-            height="18"
-            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Verification+Icon+Signup+Done+Screen.svg"
-            alt="Success"
-            className="w-[24px] h-[24px]"
-          />
-          {t("verification_button_text")}
-        </button>
-        <button className="flex justify-center items-center gap-3 p-4 sm:p-5 bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark rounded-md sm:rounded-lg w-full sm:w-1/2 font-semibold text-base sm:text-xl">
-          <Image
-            unoptimized={true}
-            width="18"
-            height="18"
-            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/Deposit+Icon+Signup+Done+Screen.svg"
-            alt="Success"
-            className="w-[24px] h-[24px]"
-          />
-          {t("deposit_button_text")}
-        </button>
-      </div>
-      <div>
-        <button className="p-4 sm:p-5 bg-tm dark:bg-tm-dark text-p dark:text-p-dark rounded-md sm:rounded-lg font-semibold text-base sm:text-xl w-full">
-          {t("go_to_dashboard_button")}
-        </button>
-        <p className="p-4 text-sm sm:text-base font-semibold text-ts dark:text-ts-dark">
-          {t("redirect_message")} {countdown} {t("redirect_message_second")}
-        </p>
+        <div>
+          <button
+            onClick={() => window.open(getLoginUrl(locale))}
+            className="p-4 sm:p-5 bg-tm dark:bg-tm-dark text-p dark:text-p-dark rounded-md sm:rounded-lg font-semibold text-base sm:text-xl w-full"
+          >
+            {t("go_to_dashboard_button")}
+          </button>
+          <p className="p-4 text-sm sm:text-base font-semibold text-ts dark:text-ts-dark">
+            {t("redirect_message")} {countdown} {t("redirect_message_second")}
+          </p>
+        </div>
       </div>
     </div>
   );
