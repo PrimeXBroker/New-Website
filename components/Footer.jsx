@@ -169,91 +169,41 @@ const Footer = () => {
   ];
 
   const paymentOptions = [
-    // {
-    //   id: 1,
-    //   name: "master",
-    //   imgUrl:
-    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/master.webp",
-    // },
-    // {
-    //   id: 2,
-    //   name: "visa",
-    //   imgUrl:
-    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/visa.webp",
-    // },
     {
-      id: 3,
+      id: 1,
       name: "tether",
       imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/tether+logo+new.svg",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/payment-icons/Tether.svg",
+      title: "Tether",
+    },
+    {
+      id: 1,
+      name: "bitcoin",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/payment-icons/BTC.svg",
+      title: "Bitcoin",
+    },
+    {
+      id: 3,
+      name: "depositor",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/payment-icons/Local+Depositor.svg",
+      title: "Local Depositor",
     },
     {
       id: 4,
-      name: "depositor",
+      name: "ethereum",
       imgUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/depositor-payment.webp",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/payment-icons/Ethereum.svg",
+      title: "Ethereum",
     },
-    // {
-    //   id: 5,
-    //   name: "amex",
-    //   imgUrl:
-    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/amex.webp",
-    // },
-    // {
-    //   id: 6,
-    //   name: "tymebank",
-    //   imgUrl:
-    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/tymebank.webp",
-    // },
-    // {
-    //   id: 7,
-    //   name: "fnb",
-    //   imgUrl:
-    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/fnb.webp",
-    // },
-    // {
-    //   id: 8,
-    //   name: "nedbank",
-    //   imgUrl:
-    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/nedbank.webp",
-    // },
-    // {
-    //   id: 9,
-    //   name: "standard",
-    //   imgUrl:
-    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/standard-bank.webp",
-    // },
-    // {
-    //   id: 10,
-    //   name: "absa",
-    //   imgUrl:
-    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/absa.webp",
-    // },
-    // {
-    //   id: 11,
-    //   name: "discovery",
-    //   imgUrl:
-    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/discovery.webp",
-    // },
-    // {
-    //   id: 12,
-    //   name: "capitec",
-    //   imgUrl:
-    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/capitec.webp",
-    // },
-
-    // {
-    //   id: 5,
-    //   name: "adv_cash",
-    //   imgUrl:
-    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/adv_cash.webp",
-    // },
-    // {
-    //   id: 6,
-    //   name: "perfect_money",
-    //   imgUrl:
-    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/payment/perfect_money.webp",
-    // },
+    {
+      id: 4,
+      name: "usdc",
+      imgUrl:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/payment-icons/USDC.svg",
+      title: "USDC",
+    },
   ];
 
   return (
@@ -263,62 +213,34 @@ const Footer = () => {
       </div>
       <footer className="bg-cc dark:bg-cc-dark">
         <div className="container flex flex-col pt-8">
-          <h6 className="text-center pb-4 text-tm dark:text-tm-dark text-xl">
+          <h6 className="text-center text-tm dark:text-tm-dark text-xl">
             {t("logos.payment_options")}
           </h6>
-          <div className="lg:flex flex-wrap justify-center gap-4 border-b border-b-tl dark:border-b-tl-dark pb-12 hidden">
-            {/* First Row */}
-            <div className="flex w-full justify-center gap-4">
-              {paymentOptions.slice(0, 6).map((el) => (
+          <div
+            className="flex flex-wrap justify-center gap-4 border-b border-b-tl dark:border-b-tl-dark py-12"
+            dir="ltr"
+          >
+            <div className="flex w-full flex-wrap justify-center gap-y-6 lg:gap-y-6">
+              {paymentOptions.map((el) => (
                 <div
                   key={el.id}
-                  className="w-1/6 flex justify-center items-center"
+                  className="w-1/2 sm:w-1/3 lg:w-1/5 flex justify-center items-center"
                 >
-                  <Image
-                    src={el.imgUrl}
-                    alt={el.name}
-                    width={120}
-                    height={100}
-                    className="object-contain"
-                  />
+                  <div className="flex items-center gap-2">
+                    <Image
+                      src={el.imgUrl}
+                      alt={el.name}
+                      width={40}
+                      height={40}
+                      className="object-contain w-[30px] sm:w-[40px]"
+                    />
+                    <p className="text-tm dark:text-tm-dark font-semibold text-base sm:text-lg md:text-xl mb-0 pb-0">
+                      {el.title}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
-            {/* Second Row (Centered with 5 items) */}
-            {/* <div className="flex w-full justify-center gap-4">
-              {paymentOptions.slice(6).map((el) => (
-                <div
-                  key={el.id}
-                  className="w-1/6 flex justify-center items-center"
-                >
-                  <Image
-                    src={el.imgUrl}
-                    alt={el.name}
-                    width={120}
-                    height={100}
-                    className="object-contain"
-                  />
-                </div>
-              ))}
-            </div> */}
-          </div>
-          <div className="flex flex-wrap justify-center gap-4 border-b border-b-tl dark:border-b-tl-dark pb-12 lg:hidden">
-            {paymentOptions.map((el) => (
-              <div
-                key={el.id}
-                className={`w-1/3 sm:w-1/4 md:w-1/5 lg:w-1/6 flex justify-center items-center ${
-                  el.id === 11 ? "mb-0" : "mb-3"
-                }`}
-              >
-                <Image
-                  src={el.imgUrl}
-                  alt={el.name}
-                  width={120}
-                  height={100}
-                  className="object-contain"
-                />
-              </div>
-            ))}
           </div>
           <div className="py-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-4 md:gap-y-8 lg:gap-y-0 border-b border-b-tl dark:border-b-tl-dark sm:text-left text-center">
             {footerLinks.map((el, index) => (
