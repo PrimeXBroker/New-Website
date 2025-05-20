@@ -220,7 +220,7 @@ const Footer = () => {
             className="flex flex-wrap justify-center gap-4 border-b border-b-tl dark:border-b-tl-dark py-12"
             dir="ltr"
           >
-            <div className="flex w-full flex-wrap justify-center gap-y-6 lg:gap-y-6">
+            <div className="flex w-full flex-wrap justify-center gap-y-6 lg:gap-y-0">
               {paymentOptions.map((el) => (
                 <div
                   key={el.id}
