@@ -38,7 +38,9 @@ export default function Register({ step, setStep }) {
   const handleBack = () => setStep((prev) => prev - 1);
 
   const sendEmail = async (e) => {
-    e.preventDefault();
+    if (e && e.preventDefault) {
+      e.preventDefault();
+    }
 
     if (formData?.password?.first.length > 0) {
       try {

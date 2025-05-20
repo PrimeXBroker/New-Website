@@ -1,5 +1,6 @@
 "use client";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
@@ -8,17 +9,6 @@ import React from "react";
 const Hero = () => {
   const locale = useLocale();
   const t = useTranslations("bonusPage.bonusHero");
-
-  const getHomeRegisterUrl = (locale) => {
-    switch (locale) {
-      case "ar":
-        return "https://shorturl.at/ieMcJ";
-      case "ku":
-        return "https://shorturl.at/JHkdW";
-      default:
-        return "https://shorturl.at/JzIEo";
-    }
-  };
 
   return (
     <section className="bg-p dark:bg-p-dark pt-24 sm:pt-28">
@@ -38,7 +28,7 @@ const Hero = () => {
               <div className="lg:mt-3 flex justify-center md:justify-start">
                 <CustomYellowButton
                   title={t("btnTxt")}
-                  onClick={() => window.open(getHomeRegisterUrl(locale))}
+                  onClick={() => window.open(getRegisterUrl(locale))}
                   className="px-12 py-4 text-lg w-full sm:w-auto justify-between sm:justify-center"
                 />
               </div>

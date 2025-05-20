@@ -8,6 +8,7 @@ import {
 import { LuCheck } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
 import { useLocale, useTranslations } from "next-intl";
+import { Spinner } from "@nextui-org/react";
 
 export default function CreatePasswordStep({
   handleNext,
@@ -21,14 +22,16 @@ export default function CreatePasswordStep({
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [showCriteria, setShowCriteria] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [passwordError, setPasswordError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
 
   const copyToClipboard = () => {
-    if (formData?.password) {
-      navigator.clipboard.writeText(formData?.password).then(() => {
+    if (formData?.password?.first) {
+      navigator.clipboard.writeText(formData?.password?.first).then(() => {
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
       });
@@ -64,6 +67,9 @@ export default function CreatePasswordStep({
       ...formData,
       password: { first: pass, second: pass },
     });
+    if (pass.trim() !== "") {
+      setPasswordError("");
+    }
   };
 
   const criteria = [
@@ -89,10 +95,23 @@ export default function CreatePasswordStep({
     setShowCriteria(formData?.password?.first?.length > 0);
   }, [formData?.password]);
 
-  console.log(formData, "formData");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!formData?.password?.first || formData.password.first.trim() === "") {
+      setPasswordError("Password is required");
+      return;
+    }
+    setPasswordError("");
+    setLoading(true);
+    try {
+      await sendEmail(e);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <form onSubmit={sendEmail}>
+    <form onSubmit={handleSubmit}>
       <label className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium">
         {t("password_label")}
       </label>
@@ -106,6 +125,11 @@ export default function CreatePasswordStep({
             onChange={(e) => handleChange(e.target.value)}
             className={`appearance-none mt-1 sm:mt-2 font-medium border border-e2 dark:border-e2-dark focus:border-tm dark:focus:border-tm-dark rounded-md sm:rounded-lg w-full p-4 text-tm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-cc dark:bg-cc-dark focus:outline-none text-sm sm:text-base`}
           />
+          {passwordError && (
+            <p className="text-rc dark:text-rc-dark font-medium text-sm mt-1">
+              {passwordError}
+            </p>
+          )}
           <button
             type="button"
             onClick={togglePasswordVisibility}
@@ -197,9 +221,17 @@ export default function CreatePasswordStep({
         </button>
         <button
           type="submit"
-          className="bg-pcp dark:bg-pcp-dark border border-pcp dark:border-pcp-dark rounded-md sm:rounded-md px-5 py-4 text-nb dark:text-nb-dark text-base sm:text-xl font-semibold w-full mt-3"
+          disabled={loading}
+          className="flex justify-center items-center gap-3 bg-pcp dark:bg-pcp-dark border border-pcp dark:border-pcp-dark rounded-md sm:rounded-md px-5 py-4 text-nb dark:text-nb-dark text-base sm:text-xl font-semibold w-full mt-3"
         >
-          {t("continue_button")}
+          {loading ? (
+            <>
+              {t("continue_button")}{" "}
+              <Spinner variant="spinner" color="default" size="sm" />
+            </>
+          ) : (
+            t("continue_button")
+          )}
         </button>
       </div>
       <p className="text-ts dark:text-ts-dark text-xs font-normal text-center mb-0 mt-4 sm:px-5">

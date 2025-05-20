@@ -5,6 +5,7 @@ import PhoneNumberInput from "./PhoneNumberInput";
 import { phoneOptions } from "@/utils/data";
 import axios from "axios";
 import { Country } from "country-state-city";
+import { Spinner } from "@nextui-org/react";
 
 export default function SignUpStep({
   handleNext,
@@ -21,6 +22,7 @@ export default function SignUpStep({
     email: "",
     phone: "",
   });
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const countriesList = Country.getAllCountries().map((country) => ({
@@ -95,6 +97,7 @@ export default function SignUpStep({
 
     if (validateForm()) {
       // try {
+      setLoading(true);
       const data = {
         firstName: formData?.firstName,
         lastName: formData?.lastName,
@@ -136,6 +139,8 @@ export default function SignUpStep({
           });
           handleNext(2);
         }
+      } finally {
+        setLoading(false);
       }
     }
   };
@@ -217,9 +222,17 @@ export default function SignUpStep({
       <div className="mt-8">
         <button
           type="submit"
-          className="bg-pcp dark:bg-pcp-dark border border-pcp dark:border-pcp-dark rounded-md sm:rounded-lg px-5 py-4 text-cb dark:text-nb-dark text-base sm:text-xl font-semibold w-full mt-3"
+          disabled={loading}
+          className="flex justify-center items-center gap-3 bg-pcp dark:bg-pcp-dark border border-pcp dark:border-pcp-dark rounded-md sm:rounded-lg px-5 py-4 text-cb dark:text-nb-dark text-base sm:text-xl font-semibold w-full mt-3"
         >
-          {t("continue_button")}
+          {loading ? (
+            <>
+              {t("continue_button")}{" "}
+              <Spinner variant="spinner" color="default" size="sm" />
+            </>
+          ) : (
+            t("continue_button")
+          )}
         </button>
       </div>
       <p className="text-ts dark:text-ts-dark text-xs font-normal text-center mb-0 mt-4 sm:px-5">

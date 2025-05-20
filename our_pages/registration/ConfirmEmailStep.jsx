@@ -1,4 +1,5 @@
 "use client";
+import { Spinner } from "@nextui-org/react";
 import axios from "axios";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
@@ -12,6 +13,7 @@ export default function ConfirmEmailStep({ handleBack, sendEmail, formData }) {
   const [value, setValue] = useState("");
   const [showResendButton, setShowResendButton] = useState(false);
   const [codeError, setCodeError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (timer > 0) {
@@ -33,6 +35,7 @@ export default function ConfirmEmailStep({ handleBack, sendEmail, formData }) {
   console.log(formData?.token, "formData?.token");
 
   const handleEmail = async () => {
+    setLoading(true);
     const config = {
       method: "post",
       url: "https://my.primexcapital.com/client-api/registration/confirmation-by-token?version=1.0.0",
@@ -49,9 +52,14 @@ export default function ConfirmEmailStep({ handleBack, sendEmail, formData }) {
       if (response?.data?.result) {
         console.log("successfully registered");
         router.push(`/${locale}/registration/success`);
+      } else {
+        setCodeError(true);
       }
     } catch (error) {
       console.log(error, "email error");
+      setCodeError(true);
+    } finally {
+      setLoading(false);
     }
   };
   console.log(value, "value");
@@ -66,7 +74,10 @@ export default function ConfirmEmailStep({ handleBack, sendEmail, formData }) {
           <input
             type="text"
             value={value}
-            onChange={(e) => setValue(e.target.value)}
+            onChange={(e) => {
+              setValue(e.target.value);
+              setCodeError(false);
+            }}
             placeholder={t("code_placeholder")}
             className={`appearance-none font-medium border border-e2 dark:border-e2-dark focus:border-tm dark:focus:border-tm-dark rounded-md sm:rounded-lg w-full p-4 text-tm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-cc dark:bg-cc-dark focus:outline-none text-sm sm:text-base`}
           />
@@ -99,9 +110,17 @@ export default function ConfirmEmailStep({ handleBack, sendEmail, formData }) {
         </button>
         <button
           onClick={handleEmail}
-          className="bg-pcp dark:bg-pcp-dark border border-pcp dark:border-pcp-dark rounded-md sm:rounded-lg px-5 py-4 text-nb dark:text-nb-dark sm:text-xl font-semibold w-full mt-3"
+          disabled={loading}
+          className="flex justify-center items-center gap-3 bg-pcp dark:bg-pcp-dark border border-pcp dark:border-pcp-dark rounded-md sm:rounded-lg px-5 py-4 text-nb dark:text-nb-dark sm:text-xl font-semibold w-full mt-3"
         >
-          {t("verify_code_button")}
+          {loading ? (
+            <>
+              {t("verify_code_button")}
+              <Spinner variant="spinner" color="default" size="sm" />
+            </>
+          ) : (
+            t("verify_code_button")
+          )}
         </button>
       </div>
       <p className="text-ts dark:text-ts-dark text-xs font-normal text-center mb-0 mt-4 sm:px-5">

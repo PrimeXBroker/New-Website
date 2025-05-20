@@ -53,7 +53,6 @@ export default function PhoneNumberField({
           type="tel"
           placeholder={t("phone_number_placeholder")}
           value={value}
-          onClick={(e) => e.stopPropagation()}
           onChange={(e) => handleInputChange("phone", `${e.target.value}`)}
           className={`w-full font-medium p-4 text-sm sm:text-base bg-cc dark:bg-cc-dark text-tm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts-dark focus:outline-none ${
             isOpen
