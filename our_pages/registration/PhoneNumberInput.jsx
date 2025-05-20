@@ -14,13 +14,13 @@ export default function PhoneNumberField({
 }) {
   const locale = useLocale();
   const t = useTranslations("registration.signUpStep");
-  const [error, setError] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredOptions = countries.filter((option) =>
     option.label.toLowerCase().includes(searchTerm.toLowerCase())
   );
+  console.log(filteredOptions, "countries");
 
   return (
     <div className="w-full relative mt-1 sm:mt-2">
@@ -74,34 +74,40 @@ export default function PhoneNumberField({
               className="w-full py-3 bg-cc dark:bg-cc-dark text-sm font-medium text-ctm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts-dark focus:outline-none"
             />
           </div>
-          {filteredOptions.map((option, i) => (
-            <div
-              key={option.code}
-              onClick={() => {
-                setSelectedPhone(option);
-                setIsOpen(false);
-              }}
-              className={`mx-5 px-2 py-4 text-sm font-medium text-ctm dark:text-ctm-dark flex items-center gap-2 hover:bg-e1 dark:hover:bg-e1-dark ${
-                i !== filteredOptions.length - 1
-                  ? "border-b border-e2 dark:border-e2-dark"
-                  : ""
-              } cursor-pointer`}
-            >
-              <div className="flex items-center gap-2 text-tm dark:text-tm-dark text-sm font-medium">
-                <Image
-                  src={option.flag}
-                  alt="Flag"
-                  width={21}
-                  height={16}
-                  className="w-[21px] h-full mr-2"
-                />
-                {option.label}
+          {filteredOptions.length > 0 ? (
+            filteredOptions.map((option, i) => (
+              <div
+                key={i}
+                onClick={() => {
+                  setSelectedPhone(option);
+                  setIsOpen(false);
+                }}
+                className={`mx-5 px-2 py-4 text-sm font-medium text-ctm dark:text-ctm-dark flex items-center gap-2 hover:bg-e1 dark:hover:bg-e1-dark ${
+                  i !== filteredOptions.length - 1
+                    ? "border-b border-e2 dark:border-e2-dark"
+                    : ""
+                } cursor-pointer`}
+              >
+                <div className="flex items-center gap-2 text-tm dark:text-tm-dark text-sm font-medium">
+                  <Image
+                    src={option.flag}
+                    alt="Flag"
+                    width={21}
+                    height={16}
+                    className="w-[21px] h-full mr-2"
+                  />
+                  {option.label}
+                </div>
+                <span className="text-ts dark:text-ts-dark font-medium text-xs">
+                  {option.code}
+                </span>
               </div>
-              <span className="text-ts dark:text-ts-dark font-medium text-xs">
-                {option.code}
-              </span>
+            ))
+          ) : (
+            <div className="mx-5 px-2 py-4 text-sm font-medium text-gray-500">
+              No results found
             </div>
-          ))}
+          )}
         </div>
       )}
     </div>
