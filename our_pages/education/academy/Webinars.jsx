@@ -54,7 +54,6 @@ const Webinars = ({ active, setActive }) => {
               </h2>
             </div>
             {upcoming.map((webinar) => {
-              if (webinar._id === "681c6b7c227fc53fe3d71162") return null;
               return (
                 <div
                   key={webinar._id}
@@ -63,26 +62,17 @@ const Webinars = ({ active, setActive }) => {
                   <div className="flex flex-row lg:flex-col gap-3 lg:gap-0 lg:w-[30%] xl:w-[25%]">
                     <img
                       className="rounded w-[80px] sm:w-[100px] lg:w-full mb-3"
-                      src={
-                        webinar.selectedName === "Ahmed Al Araji & Zyad Atta" ||
-                        webinar._id === "681c618c227fc53fe3d710e7"
-                          ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/knowledge-hub/speakers.webp"
-                          : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/knowledge-hub/speaker-ziad.webp"
-                      }
+                      src={webinar.image}
                       alt="webinar image"
                     />
                     <div className="w-[70%] lg:w-[100%]">
                       <p className="text-tm dark:text-tm-dark text-sm mb-1 sm:mb-0">
-                        {webinar.selectedName ===
-                          "Ahmed Al Araji & Zyad Atta" ||
-                        webinar._id === "681c618c227fc53fe3d710e7"
+                        {webinar._id === "682d9c0884d8dd7225a52071"
                           ? t("webinar_title3")
                           : t("webinar_title1")}
                       </p>
                       <p className="text-tm dark:text-tm-dark text-xs">
-                        {webinar.selectedName ===
-                          "Ahmed Al Araji & Zyad Atta" ||
-                        webinar._id === "681c618c227fc53fe3d710e7"
+                        {webinar._id === "682d9c0884d8dd7225a52071"
                           ? ""
                           : t("Webinar1_by")}
                       </p>
@@ -108,13 +98,6 @@ const Webinars = ({ active, setActive }) => {
                     <p className="text-sm xl:text-base mb-2 text-rm dark:text-tm-dark line-clamp-2">
                       {locale === "ar" ? webinar.detailsAr : webinar.details}
                     </p>
-                    {webinar.selectedName === "Ahmed Al Araji & Zyad Atta" && (
-                      <p className="text-sm xl:text-base mb-2 text-rm dark:text-tm-dark line-clamp-2">
-                        {locale === "ar"
-                          ? "أحمد الاعرجي (محلل اقتصادي)، زياد عطا (محلل فني)"
-                          : "Ahmed Al Araji (Fundamentals Analyst), Zyad Atta (Forex Analysis)"}
-                      </p>
-                    )}
                     <div className="bg-cc dark:bg-cc-dark p-3 rounded-lg lg:flex items-center justify-between text-tm dark:text-tm-dark w-[100%] hidden text-sm xl:text-base">
                       <span>
                         {moment(webinar.start)
