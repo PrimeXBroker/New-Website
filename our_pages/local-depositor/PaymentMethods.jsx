@@ -1,4 +1,6 @@
 "use client";
+import CustomYellowButton from "@/components/common/CustomYellowButton";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
@@ -59,7 +61,7 @@ const PaymentMethods = () => {
 
   return (
     <div className="container flex flex-col items-center py-8">
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff] mb-10">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark mb-10">
         {t("heading")}
       </h2>
       <div className="flex flex-wrap lg:flex-nowrap w-full justify-center gap-4 pb-12">
@@ -77,16 +79,15 @@ const PaymentMethods = () => {
                 className="object-contain"
               />
             </div>
-            <h2 className="text-[#c6c6c6]">{el.name}</h2>
+            <h2 className="text-ts dark:text-ts-dark">{el.name}</h2>
           </div>
         ))}
       </div>
-      <button
-        onClick={() => window.open(getHomeRegisterUrl(locale))}
-        className="custom-button px-7 py-2 rounded-md mt-4 text-secondary font-semibold w-40"
-      >
-        {t("buttonText")}
-      </button>
+      <CustomYellowButton
+        title={t("buttonText")}
+        onClick={() => window.open(getRegisterUrl(locale))}
+        className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full sm:w-auto justify-between sm:justify-center mt-4"
+      />
     </div>
   );
 };

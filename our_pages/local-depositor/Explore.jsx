@@ -1,4 +1,6 @@
 "use client";
+import CustomYellowButton from "@/components/common/CustomYellowButton";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 
@@ -6,35 +8,23 @@ const Explore = () => {
   const locale = useLocale();
   const h = useTranslations("localDepositor.explore");
 
-  const getHomeRegisterUrl = (locale) => {
-    switch (locale) {
-      case "ar":
-        return "https://shorturl.at/2hdlM";
-      case "ku":
-        return "https://shorturl.at/flGCR";
-      default:
-        return "";
-    }
-  };
-
   return (
-    <section className="bg-[#000000] py-3">
+    <section className="bg-p dark:bg-p-dark py-3">
       <div className="container">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 py-8 bg-[#111111] border-2 border-[#1D1D1D] rounded-xl">
-          <div className="grid grid-cols-2 items-center text-[#ffffff]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 py-8 bg-cc dark:bg-cc-dark border-2 border-cc dark:border-cc-dark rounded-xl">
+          <div className="grid grid-cols-2 items-center text-tm dark:text-tm-dark">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold">
               {h("title1")}
-              <span className="text-[#FED100]"> 330+ </span>
+              <span className="text-pcp dark:text-pcp-dark"> 330+ </span>
               {h("title2")}
             </h2>
             <div className="">
               <p>{h("description")}</p>
-              <button
-                onClick={() => window.open(getHomeRegisterUrl(locale))}
-                className="custom-button px-7 py-2 rounded-md mt-4 text-secondary font-semibold"
-              >
-                {h("buttonText")}
-              </button>
+              <CustomYellowButton
+                title={h("buttonText")}
+                onClick={() => window.open(getRegisterUrl(locale))}
+                className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full sm:w-auto justify-between sm:justify-center mt-4"
+              />
             </div>
           </div>
         </div>

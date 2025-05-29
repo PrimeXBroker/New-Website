@@ -25,9 +25,9 @@ const Benefits = () => {
   ];
 
   return (
-    <div className="bg-[#000000] py-10">
+    <div className="bg-p dark:bg-p-dark py-10">
       <div className="container mb-7">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff] text-center">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark text-center">
           {t("main_title")}
         </h2>
       </div>
@@ -35,11 +35,11 @@ const Benefits = () => {
         {benefits.map((benefit, index) => (
           <div
             key={index}
-            className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#FED100] flex flex-col gap-2"
+            className="bg-cc dark:bg-cc-dark p-6 rounded-lg border-2 border-cc dark:border-cc-dark text-pcp dark:text-pcp-dark flex flex-col gap-2"
           >
             <div className="flex justify-between items-center">
               <h3 className="text-xl font-semibold">{benefit.title}</h3>
-              <div className="w-12 h-12 borer-2 border-[#222222] bg-[#1D1D1D] rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 borer-2 border-e1 dark:border-e1-dark bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center">
                 <img
                   src={benefit.icon}
                   alt={benefit.title}
@@ -47,7 +47,7 @@ const Benefits = () => {
                 />
               </div>
             </div>
-            <p className="text-[#c6c6c6] mt-2 text-sm sm:text-base">
+            <p className="text-ts dark:text-ts-dark mt-2 text-sm sm:text-base">
               {benefit.description}
             </p>
           </div>

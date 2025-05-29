@@ -11,12 +11,12 @@ const LocalDepositorWrapper = () => {
   const h = useTranslations("localDepositor.section1");
 
   return (
-    <div className="bg-[#000000]">
+    <div className="bg-p dark:bg-p-dark">
       <div className="container">
         <Banner />
         <DepositorSection1 />
         <p
-          className={`text-[#ffffff] text-xl sm:text-2xl md:text-xl lg:text-2xl xl:text-3xl font-semibold my-5 ${
+          className={`text-tm dark:text-tm-dark text-xl sm:text-2xl md:text-xl lg:text-2xl xl:text-3xl font-semibold my-5 ${
             locale === "ar" || locale === "ps" || locale === "ku"
               ? "text-center md:text-right"
               : "text-center md:text-left"
