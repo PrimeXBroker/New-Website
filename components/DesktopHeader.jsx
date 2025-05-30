@@ -195,9 +195,30 @@ const DesktopHeader = ({ locale }) => {
                         onMouseEnter={() => setActiveSubDropdown("platforms")}
                         // onMouseLeave={() => setActiveSubDropdown(null)}
                       >
-                        <div className="cursor cursor-pointer block p-[8px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]">
+                        <div className="flex items-center justify-between cursor-pointer p-[8px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]">
                           {t("platforms")}
+                          <svg
+                            className={`fill-current h-4 w-4 ${
+                              locale === "ar" ||
+                              locale === "ps" ||
+                              locale === "ku"
+                                ? "mr-1"
+                                : "ml-1"
+                            }`}
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            style={
+                              locale === "ar" ||
+                              locale === "ps" ||
+                              locale === "ku"
+                                ? {}
+                                : { transform: "scaleX(-1)" }
+                            }
+                          >
+                            <path d="M7.05 4.293L8.464 5.707 4.222 10l4.242 4.293-1.414 1.414L1.394 10 7.05 4.293z" />
+                          </svg>
                         </div>
+
                         {activeSubDropdown === "platforms" && (
                           <ul
                             onMouseEnter={() =>
@@ -237,8 +258,28 @@ const DesktopHeader = ({ locale }) => {
                         onMouseEnter={() => setActiveSubDropdown("market")}
                         // onMouseLeave={() => setActiveSubDropdown(null)}
                       >
-                        <div className="cursor-pointer block p-[8px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]">
+                        <div className="cursor-pointer flex items-center justify-between p-[8px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]">
                           {t("market")}
+                          <svg
+                            className={`fill-current h-4 w-4 ${
+                              locale === "ar" ||
+                              locale === "ps" ||
+                              locale === "ku"
+                                ? "mr-1"
+                                : "ml-1"
+                            }`}
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            style={
+                              locale === "ar" ||
+                              locale === "ps" ||
+                              locale === "ku"
+                                ? {}
+                                : { transform: "scaleX(-1)" }
+                            }
+                          >
+                            <path d="M7.05 4.293L8.464 5.707 4.222 10l4.242 4.293-1.414 1.414L1.394 10 7.05 4.293z" />
+                          </svg>
                         </div>
                         {activeSubDropdown === "market" && (
                           <ul
