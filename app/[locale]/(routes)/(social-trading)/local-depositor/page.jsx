@@ -1,6 +1,5 @@
 import LocalDepositorWrapper from "@/our_pages/local-depositor/LocalDepositorWrapper";
 import { createTranslator } from "next-intl";
-import { redirect } from "next/navigation";
 import React from "react";
 
 export async function generateMetadata({ params: { locale } }) {
@@ -36,12 +35,8 @@ export async function generateMetadata({ params: { locale } }) {
   };
 }
 
-const LocalDepositor = async ({ params: { locale } }) => {
-  if (locale === "en") {
-    redirect("/");
-  }
-
+const page = () => {
   return <LocalDepositorWrapper />;
 };
 
-export default LocalDepositor;
+export default page;

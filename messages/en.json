@@ -2791,6 +2791,48 @@
       "description": "Track high-impact economic events and key market data. Stay informed and make smarter investment decisions with real-time updates."
     }
   },
+  "localDepositor": {
+    "metaData": {
+      "title": "Local Deposit Service Now Available in Iraq",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "Local Deposit Service Now Available in Iraq",
+      "title_2": "",
+      "description": "Trade easily and securely with PrimeX Capital! We offer you a variety of local deposit and withdrawal options within Iraq, allowing you to manage your funds flexibly and comfortably directly from your account in the client portal."
+    },
+    "section1": {
+      "title_1": "What is a Local Depositor?",
+      "title_2": "",
+      "description": "A Local Depositor is a service specifically designed to facilitate the deposit and withdrawal of funds from your trading account using payment methods available within Iraq. Instead of resorting to complicated international bank transfers, you can now use your bank account in local Iraqi banks such as Rafidain Bank or the Iraqi National Bank. The service also allows the use of transfers from approved electronic wallets in Iraq such as Zain Cash or Asia, saving you time and effort.",
+      "description2": "Now in Iraq, you can deposit funds into your trading account and withdraw through our approved local depositor.."
+    },
+    "benefits": {
+      "main_title": "Benefits of Using the Local Depositor",
+      "title1": "Transfer Speed",
+      "description1": "Deposits and withdrawals are processed much faster compared to other payment methods.",
+      "title2": "Depositor Determines the Fees",
+      "description2": "Commissions related to deposit and withdrawal operations are determined according to the policy of the approved local depositor, which may change depending on market conditions and services provided.",
+      "title3": "Ease of Use",
+      "description3": "Multiple local deposit and withdrawal methods within Iraq and from inside the client portal."
+    },
+    "paymentmethods": {
+      "heading": "Available Local Deposit and Withdrawal Methods",
+      "title1": "First Iraqi Bank",
+      "title2": "AsiaPay",
+      "title3": "Zain Cash",
+      "title4": "Rafidain",
+      "title5": "Al-Taif Bank",
+      "title6": "Internal Exchanges",
+      "buttonText": "Start Trading Now"
+    },
+    "explore": {
+      "title1": "Explore",
+      "title2": "Trading Opportunity",
+      "description": "Immerse yourself in a diverse range of assets including Forex, Indices, Commodities, Cryptocurrencies, and Stocks..",
+      "buttonText": "Open Account"
+    }
+  },
   "knowledgeHubWebinars": {
     "metaData": {
       "title": "Webinars | PrimeX Capital",

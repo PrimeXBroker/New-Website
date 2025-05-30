@@ -29,7 +29,7 @@ const DepositorSection1 = () => {
           {h("title_1")}
         </h1>
         <p
-          className={`text-ts dark:text-ts-dark w-[95%] sm:w-[90%] mx-auto md:mx-0 md:w-[55%] mt-2 text-sm sm:text-base ${
+          className={`text-ts dark:text-ts-dark  mt-2 text-sm sm:text-base ${
             locale === "ar" || locale === "ps" || locale === "ku"
               ? "text-center md:text-right"
               : "text-center md:text-left"
