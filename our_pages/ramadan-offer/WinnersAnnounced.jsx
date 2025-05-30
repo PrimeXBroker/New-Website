@@ -2,10 +2,17 @@
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import React from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
 
 const WinnersAnnounced = () => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("ramadanOffer.winnersAnnounced");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <div className="bg-[#000000]">
@@ -23,7 +30,7 @@ const WinnersAnnounced = () => {
             </div>
             <h2 className="text-2xl sm:text-3xl font-semibold">{t("title")}</h2>
             <button
-              onClick={() => window.open(getRegisterUrl(locale))}
+              onClick={handleClick}
               className="py-[16px] px-[46px] font-semibold mt-5 sm:mt-4 w-full md:w-auto custom-button"
             >
               {t("btnTxt")}

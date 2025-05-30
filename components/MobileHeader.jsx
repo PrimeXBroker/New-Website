@@ -157,6 +157,11 @@ const MobileHeader = ({ locale }) => {
     localStorage.setItem("language", JSON.stringify(initialLanguage));
   }, [locale]);
 
+  const handleRegisterClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
+
   return (
     <header className="container w-full z-50 transition-all duration-300 block lg:hidden fixed top-0 left-0">
       <div
@@ -664,7 +669,7 @@ const MobileHeader = ({ locale }) => {
             {t("login")}
           </button>
           <button
-            onClick={() => window.open(getRegisterUrl(locale))}
+            onClick={handleRegisterClick}
             className="w-[30%] mb-2 py-3 rounded-lg font-bold flex items-center justify-center bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark"
           >
             {t("register")}

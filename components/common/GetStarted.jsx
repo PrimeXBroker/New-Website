@@ -4,10 +4,18 @@ import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 import CustomWhiteButton from "./CustomWhiteButton";
 import { FiArrowUpLeft, FiArrowUpRight } from "react-icons/fi";
+import { useRouter } from "next/navigation";
 
 const GetStarted = () => {
+  const router = useRouter();
   const t = useTranslations("footer");
   const locale = useLocale();
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
+
   return (
     <section className=" bg-p dark:bg-p-dark relative z-0 overflow-hidden pb-16 sm:pb-28">
       <div className="container">
@@ -35,7 +43,7 @@ const GetStarted = () => {
           </div>
           <div className="w-full lg:w-[40%] gap-4 flex flex-col md:flex-row justify-center lg:justify-end items-center mt-5 lg:mt-0">
             <button
-              onClick={() => window.open(getRegisterUrl(locale))}
+              onClick={handleClick}
               className={`transition-colors duration-300 ease-in-out rounded-lg font-bold flex items-center justify-center gap-3 group bg-nw dark:bg-nw-dark text-nb dark:text-nb-dark group py-5 px-9 w-auto tablet-md:text-[12px] laptop-sm:text-[15px] laptop-md:text-base`}
             >
               {t("getStarted.get_started_btn1")}

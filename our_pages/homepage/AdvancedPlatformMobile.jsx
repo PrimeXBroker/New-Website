@@ -3,11 +3,18 @@ import CustomButton from "@/components/common/CustomYellowButton";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const AdvancedPlatformMobile = () => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("home.advancedPlatforms");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   const features = [
     {
@@ -100,7 +107,7 @@ const AdvancedPlatformMobile = () => {
           </div>
           <CustomButton
             title="Open Account"
-            onClick={() => window.open(getRegisterUrl(locale))}
+            onClick={handleClick}
             className="py-4 px-7 w-full justify-between text-base bg-pcp dark:bg-pcp-dark hover:bg-tm dark:hover:bg-tm-dark text-nb dark:text-nb-dark"
           />
         </div>

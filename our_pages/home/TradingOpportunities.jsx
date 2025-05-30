@@ -3,10 +3,17 @@ import React from "react";
 import { useLocale, useTranslations } from "next-intl";
 import TradingOpportunitiesWidget from "@/our_pages/home/NewTradingOpportunitiesWidget";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
+import { useRouter } from "next/navigation";
 
 const TradingOpportunities = () => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("home.tradingOpportunities");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <section className="bg-[#000000] pt-12">
@@ -24,7 +31,7 @@ const TradingOpportunities = () => {
               {t("description")}
             </p>
             <button
-              onClick={() => window.open(getRegisterUrl(locale))}
+              onClick={handleClick}
               className="py-[18px] px-[48px] font-semibold custom-button"
             >
               {t("btnTxt")}

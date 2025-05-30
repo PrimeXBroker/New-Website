@@ -5,11 +5,18 @@ import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import TrustPilot from "@/components/TrustPilot";
+import { useRouter } from "next/navigation";
 
 const Banner = () => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("home.hero");
   const s = useTranslations("home.stats");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   const statsData = [
     {
@@ -50,7 +57,7 @@ const Banner = () => {
         </p>
         <div className="px-5">
           <button
-            onClick={() => window.open(getRegisterUrl(locale))}
+            onClick={handleClick}
             className="py-[18px] px-[48px] font-semibold mt-5 w-full md:w-auto custom-button"
           >
             {t("btnTxt")}

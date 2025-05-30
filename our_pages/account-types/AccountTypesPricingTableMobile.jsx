@@ -4,13 +4,20 @@ import { useLocale, useTranslations } from "next-intl";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import Image from "next/image";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
+import { useRouter } from "next/navigation";
 
 const AccountTypesPricingTableMobile = () => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("accountTypes.accountsTable");
   const [activeTab, setActiveTab] = useState("standard");
   const o = useTranslations("accountTypes.accountsTable");
   const l = useTranslations("accountTypes.accountTypes");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   const tabContent = {
     standard: {
@@ -214,7 +221,7 @@ const AccountTypesPricingTableMobile = () => {
           <div className="col-span-2 mx-5">
             <CustomYellowButton
               title={tabContent[activeTab].btnTxt}
-              onClick={() => window.open(getRegisterUrl(locale))}
+              onClick={handleClick}
               className="py-4 md:py-3 lg:py-3 text-base w-full justify-between sm:justify-center mt-5"
             />
           </div>

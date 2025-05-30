@@ -135,6 +135,11 @@ const DesktopHeader = ({ locale }) => {
     localStorage.setItem("language", JSON.stringify(initialLanguage));
   }, [locale]);
 
+  const handleRegisterClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
+
   return (
     <header
       className={`w-full z-50 transition-all duration-300 hidden lg:block ${
@@ -735,7 +740,7 @@ const DesktopHeader = ({ locale }) => {
             {t("login")}
           </button>
           <button
-            onClick={() => window.open(getRegisterUrl(locale))}
+            onClick={handleRegisterClick}
             className={`group ${
               locale === "ar" || locale === "ps" || locale === "ku"
                 ? "w-[140px]"

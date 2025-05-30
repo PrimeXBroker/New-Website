@@ -1,6 +1,7 @@
 "use client";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 import React from "react";
 import {
   BsArrowUpLeftCircleFill,
@@ -8,9 +9,16 @@ import {
 } from "react-icons/bs";
 
 const GetStarted = () => {
+  const router = useRouter();
   const t = useTranslations("footer");
   const b = useTranslations("spreadPage.getStarted");
   const locale = useLocale();
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
+
   return (
     <section className=" bg-[#000000] relative z-0 overflow-hidden pb-16 sm:pb-28">
       <div className="container">
@@ -38,7 +46,7 @@ const GetStarted = () => {
           </div>
           <div className="w-full lg:w-[40%] gap-4 flex flex-col md:flex-row justify-center lg:justify-end items-center mt-5 lg:mt-0">
             <button
-              onClick={() => window.open(getRegisterUrl(locale))}
+              onClick={handleClick}
               className="custom-button-brown px-6 py-4 rounded-[12px] w-full lg:w-auto flex items-center justify-center gap-3 font-semibold "
             >
               {b("btn1Txt")}

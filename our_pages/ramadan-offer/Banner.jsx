@@ -5,10 +5,17 @@ import { useTranslations, useLocale } from "next-intl";
 import TrustPilot from "@/components/TrustPilot";
 import { getLoginUrl } from "@/utilities/getLoginUrl";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
+import { useRouter } from "next/navigation";
 
 const Banner = () => {
+  const router = useRouter();
   const locale = useLocale();
   const h = useTranslations("ramadanOffer.hero");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <section className="">
@@ -95,7 +102,7 @@ const Banner = () => {
             </div>
             <div className="mt-3 lg:mt-5">
               <button
-                onClick={() => window.open(getRegisterUrl(locale))}
+                onClick={handleClick}
                 className="py-[16px] px-[46px] font-semibold mt-5 w-full md:w-auto custom-button"
               >
                 {h("btnTxt")}

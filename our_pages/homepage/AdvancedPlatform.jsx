@@ -3,11 +3,18 @@ import CustomWhiteButton from "@/components/common/CustomWhiteButton";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const AdvancedPlatform = () => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("home.advancedPlatforms");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   const features = [
     {
@@ -128,7 +135,7 @@ const AdvancedPlatform = () => {
             ))}
             <CustomWhiteButton
               title={t("btnTxt")}
-              onClick={() => window.open(getRegisterUrl(locale))}
+              onClick={handleClick}
               className="lg:py-3 lg:px-6 xl:py-4 xl:px-7 w-auto tablet-md:text-[12px] laptop-sm:text-[15px] laptop-md:text-base"
             />
           </div>

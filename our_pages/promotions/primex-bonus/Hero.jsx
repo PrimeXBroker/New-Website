@@ -3,12 +3,19 @@ import CustomYellowButton from "@/components/common/CustomYellowButton";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 // import CountdownTimer from "./CountdownTimer";
 
 const Hero = () => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("bonusPage.bonusHero");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <section className="bg-p dark:bg-p-dark pt-24 sm:pt-28">
@@ -28,7 +35,7 @@ const Hero = () => {
               <div className="lg:mt-3 flex justify-center md:justify-start">
                 <CustomYellowButton
                   title={t("btnTxt")}
-                  onClick={() => window.open(getRegisterUrl(locale))}
+                  onClick={handleClick}
                   className="px-12 py-4 text-lg w-full sm:w-auto justify-between sm:justify-center"
                 />
               </div>

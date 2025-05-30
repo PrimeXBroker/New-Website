@@ -3,10 +3,17 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import TrustPilot from "@/components/TrustPilot";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
+import { useRouter } from "next/navigation";
 
 const Banner = () => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("demoAccount.banner");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <section className="bg-[#000000] pt-32 pb-10">
@@ -45,7 +52,7 @@ const Banner = () => {
               }`}
             >
               <button
-                onClick={() => window.open(getRegisterUrl(locale))}
+                onClick={handleClick}
                 className="py-3 custom-button w-[90%] sm:w-[157px]"
               >
                 {t("start_btn")}

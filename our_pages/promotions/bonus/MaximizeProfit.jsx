@@ -6,10 +6,17 @@ import Link from "next/link";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { getLoginUrl } from "@/utilities/getLoginUrl";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
+import { useRouter } from "next/navigation";
 
 const MaximizeProfit = () => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("bonus.maximize");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <section className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
@@ -49,7 +56,7 @@ const MaximizeProfit = () => {
             >
               <CustomYellowButton
                 title={t("register_btn")}
-                onClick={() => window.open(getRegisterUrl(locale))}
+                onClick={handleClick}
                 className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full sm:w-auto justify-between sm:justify-center mt-5"
               />
 

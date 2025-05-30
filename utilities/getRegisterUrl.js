@@ -1,14 +1,14 @@
 export const getRegisterUrl = (locale) => {
   switch (locale) {
     case "ar":
-      return "https://primexcapital.com/ar/registration";
+      return `/${locale}/registration`;
     case "ku":
-      return "https://primexcapital.com/ku/registration";
+      return `/${locale}/registration`;
     case "es":
-      return "https://primexcapital.com/es/registration";
+      return `/${locale}/registration`;
     case "ps":
-      return "https://primexcapital.com/ps/registration";
+      return `/${locale}/registration`;
     default:
-      return "https://primexcapital.com/en/registration";
+      return `/${locale}/registration`;
   }
 };

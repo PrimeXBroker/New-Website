@@ -3,14 +3,21 @@ import React, { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import CustomWhiteButton from "@/components/common/CustomWhiteButton";
+import { useRouter } from "next/navigation";
 
 const SpreadAccountMobileTable = () => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("accountTypes.accountsTable");
   const [activeTab, setActiveTab] = useState("standard");
   const o = useTranslations("accountTypes.accountsTable");
   const l = useTranslations("accountTypes.accountTypes");
   const s = useTranslations("spreadPage.accountTypesTable");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   const tabContent = {
     standard: {
@@ -94,7 +101,7 @@ const SpreadAccountMobileTable = () => {
             <div className="col-span-2 mx-5">
               <CustomWhiteButton
                 title={tabContent[activeTab].btnTxt}
-                onClick={() => window.open(getRegisterUrl(locale))}
+                onClick={handleClick}
                 className="py-4 md:py-3 lg:py-3 text-base w-full justify-between sm:justify-center mt-5"
               />
             </div>

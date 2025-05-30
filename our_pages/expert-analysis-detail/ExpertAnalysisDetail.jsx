@@ -7,8 +7,10 @@ import Moment from "react-moment";
 import AnalysisNewsBody from "./AnalysisNewsBody";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
+import { useRouter } from "next/navigation";
 
 const ExpertAnalysisDetail = ({ slug }) => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("marketNewsDetail");
   const [detail, setDetail] = useState(null);
@@ -72,6 +74,11 @@ const ExpertAnalysisDetail = ({ slug }) => {
     );
   }
 
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
+
   return (
     <section className="bg-p dark:bg-p-dark py-20">
       <div className="container">
@@ -118,7 +125,7 @@ const ExpertAnalysisDetail = ({ slug }) => {
                   ? "دەست پێ بکە"
                   : "Get Started"
               }
-              onClick={() => window.open(getRegisterUrl(locale))}
+              onClick={handleClick}
               className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full sm:w-auto justify-between sm:justify-center"
             />
           </div>

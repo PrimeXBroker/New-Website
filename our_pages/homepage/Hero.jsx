@@ -3,11 +3,18 @@ import CustomYellowButton from "@/components/common/CustomYellowButton";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const Hero = () => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("home.hero");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <section className="bg-p dark:bg-p-dark pt-14 sm:pt-16 md:pt-20">
@@ -38,7 +45,7 @@ const Hero = () => {
                 }`}
               >
                 <CustomYellowButton
-                  onClick={() => window.open(getRegisterUrl(locale))}
+                  onClick={handleClick}
                   title={t("btnTxt1")}
                   className="py-5 px-9 md:py-4 md:px-7 lg:py-5 lg:px-9 text-lg w-full sm:w-auto justify-between sm:justify-center"
                 />

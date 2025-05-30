@@ -3,6 +3,7 @@ import CustomWhiteButton from "@/components/common/CustomWhiteButton";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 import {
   BsArrowUpLeftCircleFill,
@@ -10,8 +11,14 @@ import {
 } from "react-icons/bs";
 
 const SpreadMatter = () => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("spreadPage.industryLeading");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <section className="bg-p dark:bg-p-dark text-tm dark:text-tm-dark py-16 sm:py-28">
@@ -43,7 +50,7 @@ const SpreadMatter = () => {
             <div className="flex justify-center lg:justify-start">
               <CustomWhiteButton
                 title={t("btnTxt")}
-                onClick={() => window.open(getRegisterUrl(locale))}
+                onClick={handleClick}
                 className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full sm:w-auto justify-between sm:justify-center mt-5"
               />
             </div>

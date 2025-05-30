@@ -1,13 +1,21 @@
+"use client";
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import Image from "next/image";
 import CustomWhiteButton from "@/components/common/CustomWhiteButton";
+import { useRouter } from "next/navigation";
 
 const SpreadAccountsDesktopTable = () => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("accountTypes.accountsTable");
   const s = useTranslations("spreadPage.accountTypesTable");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <div className="container">
@@ -96,21 +104,21 @@ const SpreadAccountsDesktopTable = () => {
         <div className="mx-5">
           <CustomWhiteButton
             title={t("standard.btnTxt")}
-            onClick={() => window.open(getRegisterUrl(locale))}
+            onClick={handleClick}
             className="py-4 md:py-3 lg:py-3 text-base w-full justify-between sm:justify-center mt-5"
           />
         </div>
         <div className="mx-5">
           <CustomWhiteButton
             title={t("narrow.btnTxt")}
-            onClick={() => window.open(getRegisterUrl(locale))}
+            onClick={handleClick}
             className="py-4 md:py-3 lg:py-3 text-base w-full justify-between sm:justify-center mt-5"
           />
         </div>
         <div className="mx-5">
           <CustomWhiteButton
             title={t("raw.btnTxt")}
-            onClick={() => window.open(getRegisterUrl(locale))}
+            onClick={handleClick}
             className="py-4 md:py-3 lg:py-3 text-base w-full justify-between sm:justify-center mt-5"
           />
         </div>

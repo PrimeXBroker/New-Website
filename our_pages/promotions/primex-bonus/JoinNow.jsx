@@ -2,11 +2,18 @@
 import CustomYellowButton from "@/components/common/CustomYellowButton";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const JoinNow = () => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("bonusPage.bonusJoinNow");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
@@ -20,7 +27,7 @@ const JoinNow = () => {
         <div className="text-center">
           <CustomYellowButton
             title={t("btnTxt")}
-            onClick={() => window.open(getRegisterUrl(locale))}
+            onClick={handleClick}
             className="sm:px-12 py-4 text-lg w-full sm:w-auto mx-auto justify-between sm:justify-center"
           />
         </div>

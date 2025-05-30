@@ -4,10 +4,17 @@ import { useLocale, useTranslations } from "next-intl";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { getLoginUrl } from "@/utilities/getLoginUrl";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
+import { useRouter } from "next/navigation";
 
 const Banner = () => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("accountTypes.banner");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <section className="bg-p dark:bg-p-dark pt-32">
@@ -26,7 +33,7 @@ const Banner = () => {
             <div className="mt-10">
               <CustomYellowButton
                 title={t("btnTxt")}
-                onClick={() => window.open(getRegisterUrl(locale))}
+                onClick={handleClick}
                 className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full sm:w-auto justify-between sm:justify-center"
               />
               <a

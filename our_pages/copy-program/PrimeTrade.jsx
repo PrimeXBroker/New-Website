@@ -13,12 +13,19 @@ import CopyProgramFormWrapper from "./CopyProgramFormWrapper";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
 import { useTheme } from "next-themes";
+import { useRouter } from "next/navigation";
 
 const PrimeTrade = () => {
+  const router = useRouter();
   const locale = useLocale();
   const { theme } = useTheme();
   const t = useTranslations("copyProgram.becomeTrader");
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <section className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
@@ -44,7 +51,7 @@ const PrimeTrade = () => {
             </div>
             <CustomYellowButton
               title={t("btnTxt")}
-              onClick={() => window.open(getRegisterUrl(locale))}
+              onClick={handleClick}
               className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full sm:w-auto justify-between sm:justify-center"
             />
           </div>

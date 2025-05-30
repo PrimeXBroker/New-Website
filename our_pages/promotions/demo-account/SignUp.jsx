@@ -1,11 +1,19 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
+import { useRouter } from "next/navigation";
 
 const SignUp = () => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("demoAccount.signup");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <section className="bg-[#000000] mx-auto">
@@ -21,7 +29,7 @@ const SignUp = () => {
               <li>{t("li3")}</li>
             </ul>
             <button
-              onClick={() => window.open(getRegisterUrl(locale))}
+              onClick={handleClick}
               className="py-3 text-[#111111] custom-button md:w-[157px]"
             >
               {t("start_btn")}

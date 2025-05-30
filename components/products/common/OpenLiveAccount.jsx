@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
 import { useTheme } from "next-themes";
+import { useRouter } from "next/navigation";
 
 const OpenLiveAccount = ({
   title_part1,
@@ -12,9 +13,15 @@ const OpenLiveAccount = ({
   title_part4,
   description,
 }) => {
+  const router = useRouter();
   const locale = useLocale();
   const { theme } = useTheme();
   const t = useTranslations("productsPageCommon");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <section className="bg-p dark:bg-p-dark">
@@ -57,7 +64,7 @@ const OpenLiveAccount = ({
           >
             <CustomYellowButton
               title={t("open_account_btn")}
-              onClick={() => window.open(getRegisterUrl(locale))}
+              onClick={handleClick}
               className="py-[16px] px-[46px] font-semibold w-full sm:w-72 md:w-auto custom-button"
             />
           </div>

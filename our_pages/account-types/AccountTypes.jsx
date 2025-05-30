@@ -5,10 +5,17 @@ import { useLocale, useTranslations } from "next-intl";
 import AccountTypesPricingTable from "./AccountTypesPricingTable";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
+import { useRouter } from "next/navigation";
 
 const AccountTypes = ({ accounts }) => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("accountTypes.accountTypes");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <section className="bg-p dark:bg-p-dark text-tm dark:text-tm-dark py-16 sm:py-28 px-4">
@@ -59,7 +66,7 @@ const AccountTypes = ({ accounts }) => {
                 </div>
                 <CustomYellowButton
                   title={account.btnTxt}
-                  onClick={() => window.open(getRegisterUrl(locale))}
+                  onClick={handleClick}
                   className="py-5 md:py-4 lg:py-4 text-base w-full justify-between sm:justify-center mt-3"
                 />
               </div>

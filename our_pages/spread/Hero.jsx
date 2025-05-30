@@ -7,8 +7,10 @@ import {
   BsArrowUpRightCircleFill,
 } from "react-icons/bs";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("spreadPage.hero");
   const spreadVideoPlayer = useRef(null);
@@ -21,6 +23,11 @@ const Hero = () => {
     ) {
       spreadVideoPlayer.current.video.play();
     }
+  };
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
   };
 
   return (
@@ -42,7 +49,7 @@ const Hero = () => {
             <div className="lg:mt-3 flex justify-center md:justify-start">
               <CustomYellowButton
                 title={t("btnTxt")}
-                onClick={() => window.open(getRegisterUrl(locale))}
+                onClick={handleClick}
                 className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full sm:w-auto justify-between sm:justify-center mt-5"
               />
             </div>

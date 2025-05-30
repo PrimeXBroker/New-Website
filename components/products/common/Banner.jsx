@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
+import { useRouter } from "next/navigation";
 
 const Banner = ({
   title_part1,
@@ -12,8 +13,14 @@ const Banner = ({
   title_part5,
   imgUrl,
 }) => {
+  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("productsPageCommon");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <section className="bg-p dark:bg-p-dark pt-32">
@@ -48,7 +55,7 @@ const Banner = ({
             >
               <CustomYellowButton
                 title={t("sign_up_btn")}
-                onClick={() => window.open(getRegisterUrl(locale))}
+                onClick={handleClick}
                 className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full sm:w-auto justify-between sm:justify-center"
               />
             </div>
