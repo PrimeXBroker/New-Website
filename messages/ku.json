@@ -44,7 +44,11 @@
     "market-news": "هەواڵی بازاڕ",
     "ramadan-contest": "پێشبڕکێی ڕەمەزان",
     "primex-spread": "پڕایمێکس سپرێدەکان",
-    "primex-app": "ئەپلیکەیشنی برايم ئێكس"
+    "primex-app": "ئەپلیکەیشنی برايم ئێكس",
+    "account_types": "جۆرەکانی هەژمار",
+    "local_depositor": "پارە دانانی ناوخۆیی (عێراق)",
+    "platforms": "پلاتفۆرمەکان",
+    "market": "بازاڕەکان"
   },
   "home": {
     "metaData": {

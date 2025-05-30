@@ -44,7 +44,11 @@
     "market-news": "Noticias del Mercado",
     "ramadan-contest": "Concurso de Ramadán",
     "primex-spread": "Spreads de PrimeX",
-    "primex-app": "Aplicación PrimeX"
+    "primex-app": "Aplicación PrimeX",
+    "account_types": "Tipos de Cuenta",
+    "local_depositor": "Depósito Local (Irak)",
+    "platforms": "Plataformas",
+    "market": "Mercados"
   },
   "home": {
     "metaData": {

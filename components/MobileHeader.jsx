@@ -17,6 +17,8 @@ const MobileHeader = ({ locale }) => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
+  const [platformsOpen, setPlatformsOpen] = useState(false);
+  const [marketOpen, setMarketOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isSticky, setIsSticky] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -61,6 +63,16 @@ const MobileHeader = ({ locale }) => {
       setActiveDropdown(null);
     }, 200);
   }, []);
+
+  const togglePlatforms = () => {
+    setPlatformsOpen(!platformsOpen);
+    if (marketOpen) setMarketOpen(false);
+  };
+
+  const toggleMarket = () => {
+    setMarketOpen(!marketOpen);
+    if (platformsOpen) setPlatformsOpen(false);
+  };
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
@@ -679,85 +691,148 @@ const MobileHeader = ({ locale }) => {
               )}
             </button>
             {openSubMenu === 0 && (
+              <ul className="pl-4 mt-2">
+                <li>
+                  <button
+                    onClick={togglePlatforms}
+                    className="text-tm dark:text-tm-dark text-base flex justify-between items-center w-full pt-[3px]"
+                  >
+                    {t("platforms")}
+                    {platformsOpen ? (
+                      <FaChevronUp size={16} />
+                    ) : (
+                      <FaChevronDown size={16} />
+                    )}
+                  </button>
+                  {platformsOpen && (
+                    <ul className="pl-4">
+                      <li>
+                        <LocaleLink
+                          href="/app"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[10px]"
+                        >
+                          {t("primex-app")}
+                        </LocaleLink>
+                      </li>
+                      <li>
+                        <LocaleLink
+                          href="/platform/mt5-platform"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                        >
+                          {t("platform")}
+                        </LocaleLink>
+                      </li>
+                    </ul>
+                  )}
+                </li>
+
+                <li className="mt-2">
+                  <button
+                    onClick={toggleMarket}
+                    className="text-tm dark:text-tm-dark text-base flex justify-between items-center w-full pt-[3px]"
+                  >
+                    {t("market")}
+                    {marketOpen ? (
+                      <FaChevronUp size={16} />
+                    ) : (
+                      <FaChevronDown size={16} />
+                    )}
+                  </button>
+                  {marketOpen && (
+                    <ul className="pl-4 mt-2">
+                      <li>
+                        <LocaleLink
+                          href="/forex"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[10px]"
+                        >
+                          {t("forex")}
+                        </LocaleLink>
+                      </li>
+                      <li>
+                        <LocaleLink
+                          href="/metals"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                        >
+                          {t("metals")}
+                        </LocaleLink>
+                      </li>
+                      <li>
+                        <LocaleLink
+                          href="/indices"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                        >
+                          {t("indices")}
+                        </LocaleLink>
+                      </li>
+                      <li>
+                        <LocaleLink
+                          href="/commodities"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                        >
+                          {t("commodities")}
+                        </LocaleLink>
+                      </li>
+                      <li>
+                        <LocaleLink
+                          href="/stocks"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                        >
+                          {t("stocks")}
+                        </LocaleLink>
+                      </li>
+                      <li>
+                        <LocaleLink
+                          href="/crypto"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                        >
+                          {t("crypto")}
+                        </LocaleLink>
+                      </li>
+                    </ul>
+                  )}
+                </li>
+              </ul>
+            )}
+          </div>
+          <div>
+            <button
+              onClick={() => toggleSubMenu(7)}
+              className="text-tm dark:text-tm-dark text-base flex justify-between items-center w-full pt-[3px]"
+            >
+              {t("accounts")}
+              {openSubMenu === 7 ? (
+                <FaChevronUp size={16} />
+              ) : (
+                <FaChevronDown size={16} />
+              )}
+            </button>
+            {openSubMenu === 7 && (
               <div className="">
                 <LocaleLink
-                  href="/app"
+                  href="/account-types"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
-                  {t("primex-app")}
+                  {t("account_types")}
                 </LocaleLink>
                 <LocaleLink
-                  href="/platform/mt5-platform"
+                  href="/local-depositor"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
-                  {t("platform")}
-                </LocaleLink>
-                <LocaleLink
-                  href="/forex"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("forex")}
-                </LocaleLink>
-                <LocaleLink
-                  href="/metals"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("metals")}
-                </LocaleLink>
-                <LocaleLink
-                  href="/indices"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("indices")}
-                </LocaleLink>
-                <LocaleLink
-                  href="/commodities"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("commodities")}
-                </LocaleLink>
-                <LocaleLink
-                  href="/stocks"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("stocks")}
-                </LocaleLink>
-                <LocaleLink
-                  href="/crypto"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("crypto")}
+                  {t("local_depositor")}
                 </LocaleLink>
               </div>
             )}
           </div>
-          <LocaleLink
-            href="/account-types"
-            className="text-tm dark:text-tm-dark text-base relative pt-[3px]"
-            onClick={toggleDrawer}
-          >
-            {/* <Image
-              unoptimized={true}
-              width="20"
-              height="20"
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
-              alt="Hot Image"
-              className={`absolute top-[-15px] ${
-                locale === "ar" || locale === "ps" || locale === "ku"
-                  ? "right-[41px]"
-                  : "left-[59px]"
-              }`}
-            /> */}
-            {t("accounts")}
-          </LocaleLink>
           <LocaleLink
             href="/bonus"
             className="text-tm dark:text-tm-dark text-base relative pt-[3px]"
@@ -796,25 +871,6 @@ const MobileHeader = ({ locale }) => {
             />
             {t("ramadan-contest")}
           </LocaleLink> */}
-          <LocaleLink
-            href="/social-trading"
-            className="text-tm dark:text-tm-dark text-base relative"
-            onClick={toggleDrawer}
-          >
-            {/* <Image
-              unoptimized={true}
-              width="20"
-              height="20"
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
-              alt="Hot Image"
-              className={`absolute top-[-15px] ${
-                locale === "ar" || locale === "ps" || locale === "ku"
-                  ? "right-[60px]"
-                  : "left-[93px]"
-              }`}
-            /> */}
-            {t("social_trading")}
-          </LocaleLink>
           <div>
             <button
               onClick={() => toggleSubMenu(3)}
@@ -829,6 +885,13 @@ const MobileHeader = ({ locale }) => {
             </button>
             {openSubMenu === 3 && (
               <div className="mt-2">
+                <LocaleLink
+                  href="/social-trading"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("social_trading")}
+                </LocaleLink>
                 <LocaleLink
                   href="/ib-program"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
@@ -1032,18 +1095,18 @@ const MobileHeader = ({ locale }) => {
                   {t("about")}
                 </LocaleLink>
                 <LocaleLink
-                  href="/contact"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("contact")}
-                </LocaleLink>
-                <LocaleLink
                   href="/awards"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("awards")}
+                </LocaleLink>
+                <LocaleLink
+                  href="/contact"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("contact")}
                 </LocaleLink>
                 {/* <LocaleLink
                   href="/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e"

@@ -44,7 +44,11 @@
     "market-news": "بازار خبرونه",
     "ramadan-contest": "د رمضان سیالي",
     "primex-spread": "پرایم ایکس اسپریډ",
-    "primex-app": "پرایم ایکس اپلیکیشن"
+    "primex-app": "پرایم ایکس اپلیکیشن",
+    "account_types": "د حساب ډولونه",
+    "local_depositor": "محلي زیرمه (عراق)",
+    "platforms": "منصې",
+    "market": "بازارونه"
   },
   "home": {
     "metaData": {

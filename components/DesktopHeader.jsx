@@ -14,6 +14,7 @@ const DesktopHeader = ({ locale }) => {
   const { theme } = useTheme();
   const t = useTranslations("menu");
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [activeSubDropdown, setActiveSubDropdown] = useState(null);
   const pathname = usePathname();
   const [scrollProgress, setScrollProgress] = useState(0);
   const pathnameWithoutLocale = pathname.replace(`/${locale}`, "");
@@ -55,6 +56,7 @@ const DesktopHeader = ({ locale }) => {
   const closeDropdown = useCallback(() => {
     dropdownTimeout = setTimeout(() => {
       setActiveDropdown(null);
+      setActiveSubDropdown(null);
     }, 200);
   }, []);
 
@@ -186,101 +188,192 @@ const DesktopHeader = ({ locale }) => {
                 </svg>
               </button>
               {activeDropdown === 0 && (
-                <ul className="absolute top-full mt-[4px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] min-w-[150px] rounded-[6px]">
+                <ul className="absolute top-full mt-[4px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] min-w-[200px] rounded-[6px]">
                   <li>
-                    <LocaleLink
-                      href="/app"
-                      onClick={closeDropdown}
-                      className="block p-[10px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
-                    >
-                      {t("primex-app")}
-                    </LocaleLink>
-                  </li>
-                  <li>
-                    <LocaleLink
-                      href="/platform/mt5-platform"
-                      onClick={closeDropdown}
-                      className="block p-[10px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
-                    >
-                      {t("platform")}
-                    </LocaleLink>
-                  </li>
-                  <li>
-                    <LocaleLink
-                      href="/forex"
-                      onClick={closeDropdown}
-                      className="block p-[10px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
-                    >
-                      {t("forex")}
-                    </LocaleLink>
-                  </li>
-                  <li>
-                    <LocaleLink
-                      href="/metals"
-                      onClick={closeDropdown}
-                      className="block p-[10px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
-                    >
-                      {t("metals")}
-                    </LocaleLink>
-                  </li>
-                  <li>
-                    <LocaleLink
-                      href="/indices"
-                      onClick={closeDropdown}
-                      className="block p-[10px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
-                    >
-                      {t("indices")}
-                    </LocaleLink>
-                  </li>
-                  <li>
-                    <LocaleLink
-                      href="/commodities"
-                      onClick={closeDropdown}
-                      className="block p-[10px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
-                    >
-                      {t("commodities")}
-                    </LocaleLink>
-                  </li>
-                  <li>
-                    <LocaleLink
-                      href="/stocks"
-                      onClick={closeDropdown}
-                      className="block p-[10px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
-                    >
-                      {t("stocks")}
-                    </LocaleLink>
-                  </li>
-                  <li>
-                    <LocaleLink
-                      href="/crypto"
-                      onClick={closeDropdown}
-                      className="block p-[10px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
-                    >
-                      {t("crypto")}
-                    </LocaleLink>
+                    <ul>
+                      <li
+                        onMouseEnter={() => setActiveSubDropdown("platforms")}
+                        // onMouseLeave={() => setActiveSubDropdown(null)}
+                      >
+                        <div className="cursor cursor-pointer block p-[8px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]">
+                          {t("platforms")}
+                        </div>
+                        {activeSubDropdown === "platforms" && (
+                          <ul
+                            onMouseEnter={() =>
+                              setActiveSubDropdown("platforms")
+                            }
+                            onMouseLeave={() => setActiveSubDropdown(null)}
+                            className="absolute top-0 start-full ms-2 bg-cc dark:bg-cc-dark shadow-lg p-[10px] min-w-[180px] rounded-[6px] z-50"
+                          >
+                            <li>
+                              <LocaleLink
+                                href="/app"
+                                onClick={() => {
+                                  closeDropdown();
+                                  setActiveSubDropdown(null);
+                                }}
+                                className="block p-[8px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                              >
+                                {t("primex-app")}
+                              </LocaleLink>
+                            </li>
+                            <li>
+                              <LocaleLink
+                                href="/platform/mt5-platform"
+                                onClick={() => {
+                                  closeDropdown();
+                                  setActiveSubDropdown(null);
+                                }}
+                                className="block p-[8px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                              >
+                                {t("platform")}
+                              </LocaleLink>
+                            </li>
+                          </ul>
+                        )}
+                      </li>
+                      <li
+                        onMouseEnter={() => setActiveSubDropdown("market")}
+                        // onMouseLeave={() => setActiveSubDropdown(null)}
+                      >
+                        <div className="cursor-pointer block p-[8px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]">
+                          {t("market")}
+                        </div>
+                        {activeSubDropdown === "market" && (
+                          <ul
+                            onMouseEnter={() => setActiveSubDropdown("market")}
+                            onMouseLeave={() => setActiveSubDropdown(null)}
+                            className="absolute top-0 start-full ms-2 bg-cc dark:bg-cc-dark shadow-lg p-[10px] min-w-[180px] rounded-[6px] z-50"
+                          >
+                            <li>
+                              <LocaleLink
+                                href="/forex"
+                                onClick={() => {
+                                  closeDropdown();
+                                  setActiveSubDropdown(null);
+                                }}
+                                className="block p-[8px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                              >
+                                {t("forex")}
+                              </LocaleLink>
+                            </li>
+                            <li>
+                              <LocaleLink
+                                href="/metals"
+                                onClick={() => {
+                                  closeDropdown();
+                                  setActiveSubDropdown(null);
+                                }}
+                                className="block p-[8px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                              >
+                                {t("metals")}
+                              </LocaleLink>
+                            </li>
+                            <li>
+                              <LocaleLink
+                                href="/indices"
+                                onClick={() => {
+                                  closeDropdown();
+                                  setActiveSubDropdown(null);
+                                }}
+                                className="block p-[8px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                              >
+                                {t("indices")}
+                              </LocaleLink>
+                            </li>
+                            <li>
+                              <LocaleLink
+                                href="/commodities"
+                                onClick={() => {
+                                  closeDropdown();
+                                  setActiveSubDropdown(null);
+                                }}
+                                className="block p-[8px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                              >
+                                {t("commodities")}
+                              </LocaleLink>
+                            </li>
+                            <li>
+                              <LocaleLink
+                                href="/stocks"
+                                onClick={() => {
+                                  closeDropdown();
+                                  setActiveSubDropdown(null);
+                                }}
+                                className="block p-[8px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                              >
+                                {t("stocks")}
+                              </LocaleLink>
+                            </li>
+                            <li>
+                              <LocaleLink
+                                href="/crypto"
+                                onClick={() => {
+                                  closeDropdown();
+                                  setActiveSubDropdown(null);
+                                }}
+                                className="block p-[8px] text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                              >
+                                {t("crypto")}
+                              </LocaleLink>
+                            </li>
+                          </ul>
+                        )}
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               )}
             </li>
-            <li className="flex items-center h-full relative">
-              <LocaleLink
-                href="/account-types"
-                className="text-tm dark:text-tm-dark text-[.8em]"
-              >
+
+            <li
+              className="relative flex items-center h-full"
+              onMouseEnter={() => openDropdown(7)}
+              onMouseLeave={closeDropdown}
+            >
+              <button className="text-tm dark:text-tm-dark text-[.8em] flex items-center">
                 {t("accounts")}
-              </LocaleLink>
-              {/* <Image
-                unoptimized={true}
-                width="18"
-                height="18"
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
-                alt="Hot Image"
-                className={`absolute top-1 ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
-                    ? "-left-0"
-                    : "-right-0"
-                }`}
-              /> */}
+                <svg
+                  className={`fill-current h-4 w-4 ${
+                    locale === "ar" || locale === "ps" || locale === "ku"
+                      ? "mr-1"
+                      : "ml-1"
+                  }`}
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                </svg>
+              </button>
+              {activeDropdown === 7 && (
+                <ul
+                  className={`absolute top-full mt-[4px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] ${
+                    locale === "ar" || locale === "ps" || locale === "ku"
+                      ? "min-w-[180px]"
+                      : "min-w-[180px]"
+                  } rounded-[6px]`}
+                >
+                  <li>
+                    <LocaleLink
+                      href="/account-types"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                    >
+                      {t("account_types")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
+                      href="/local-depositor"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                    >
+                      {t("local_depositor")}
+                    </LocaleLink>
+                  </li>
+                </ul>
+              )}
             </li>
             <li className="flex items-center h-full relative">
               <LocaleLink
@@ -322,14 +415,6 @@ const DesktopHeader = ({ locale }) => {
                 }`}
               />
             </li> */}
-            <li className="flex items-center h-full relative">
-              <LocaleLink
-                href="/social-trading"
-                className="text-tm dark:text-tm-dark text-[.8em]"
-              >
-                {t("social_trading")}
-              </LocaleLink>
-            </li>
             <li
               className="relative flex items-center h-full"
               onMouseEnter={() => openDropdown(2)}
@@ -357,6 +442,15 @@ const DesktopHeader = ({ locale }) => {
                       : "min-w-[250px]"
                   } rounded-[6px]`}
                 >
+                  <li>
+                    <LocaleLink
+                      href="/social-trading"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                    >
+                      {t("social_trading")}
+                    </LocaleLink>
+                  </li>
                   <li>
                     <LocaleLink
                       href="/ib-program"
@@ -547,20 +641,20 @@ const DesktopHeader = ({ locale }) => {
                   </li>
                   <li>
                     <LocaleLink
-                      href="/contact"
-                      onClick={closeDropdown}
-                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
-                    >
-                      {t("contact")}
-                    </LocaleLink>
-                  </li>
-                  <li>
-                    <LocaleLink
                       href="/awards"
                       onClick={closeDropdown}
                       className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("awards")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
+                      href="/contact"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                    >
+                      {t("contact")}
                     </LocaleLink>
                   </li>
                   {/* <li>

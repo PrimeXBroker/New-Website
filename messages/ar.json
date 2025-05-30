@@ -44,7 +44,11 @@
     "market-news": "أخبار السوق",
     "ramadan-contest": "مسابقة رمضان",
     "primex-spread": "سبريد برايم اكس",
-    "primex-app": "تطبيق برايم اكس"
+    "primex-app": "تطبيق برايم اكس",
+    "account_types": "أنواع الحسابات",
+    "local_depositor": "إيداع محلي (العراق)",
+    "platforms": "المنصات",
+    "market": "الأسواق"
   },
   "home": {
     "metaData": {

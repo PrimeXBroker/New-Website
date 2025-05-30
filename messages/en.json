@@ -44,7 +44,11 @@
     "market-news": "Market News",
     "ramadan-contest": "Ramadan Contest",
     "primex-spread": "PrimeX Spreads",
-    "primex-app": "PrimeX App"
+    "primex-app": "PrimeX App",
+    "account_types": "Account Types",
+    "local_depositor": "Local Deposit (Iraq)",
+    "platforms": "Platforms",
+    "market": "Markets"
   },
   "home": {
     "metaData": {
