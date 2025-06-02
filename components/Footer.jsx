@@ -357,11 +357,17 @@ const Footer = () => {
               &copy; {t("copy-right")}
             </p>
             <div className="flex gap-4 items-center justify-around">
-              {/* <Link
+              <Link
                 href={`${
                   locale === "ar"
-                    ? "https://m.facebook.com/primex.capital.ar/ "
-                    : "https://www.facebook.com/PrimeX.Capital.En"
+                    ? "https://www.facebook.com/PrimeX.Global.Ar/"
+                    : locale === "ku"
+                    ? "https://www.facebook.com/PrimeX.Global.Kd"
+                    : locale === "es"
+                    ? "https://www.facebook.com/PrimeX.Global.Es/"
+                    : locale === "ps"
+                    ? "https://www.facebook.com/profile.php?id=61575159165427"
+                    : "https://www.facebook.com/PrimeX.Global.En"
                 }`}
                 target="_blank"
               >
@@ -370,7 +376,7 @@ const Footer = () => {
                   size={30}
                   className="hover:fill-blue-600 transition-all hover:translate-y-[-5px] duration-500"
                 />
-              </Link> */}
+              </Link>
               <Link
                 href={`${
                   locale === "ar"
