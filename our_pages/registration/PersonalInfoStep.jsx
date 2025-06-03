@@ -74,12 +74,19 @@ export default function PersonalInfoStep({
 
     if (Object.keys(errorsList).length === 0) {
       setLoading(true);
+      const birthDateObj =
+        formData.birthDate instanceof Date
+          ? formData.birthDate
+          : new Date(formData.birthDate);
+
       const data = {
         ...formData,
         country: formData?.country?.value,
-        birthDate: moment(formData?.birthDate)
-          .tz(userTimeZone)
-          .format("YYYY-MM-DD"),
+        birthDate: {
+          year: birthDateObj.getFullYear(),
+          month: birthDateObj.getMonth() + 1,
+          day: birthDateObj.getDate(),
+        },
         password: { first: "", second: "" },
       };
       console.log(data, "data");
@@ -121,7 +128,6 @@ export default function PersonalInfoStep({
       }
     }
   };
-  console.log(JSON.stringify(formData, null, 2));
 
   return (
     <form onSubmit={handleSubmit}>
