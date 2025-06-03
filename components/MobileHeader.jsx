@@ -160,6 +160,7 @@ const MobileHeader = ({ locale }) => {
   const handleRegisterClick = () => {
     const url = getRegisterUrl(locale);
     router.push(url);
+    setIsOpen(false);
   };
 
   return (
