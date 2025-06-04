@@ -113,18 +113,7 @@ const page = async () => {
           }),
         }}
       />
-      <AcademyWrapper
-        marketNewsBlogs={marketNewsBlogs}
-        marketNewsPages={marketNewsPages}
-        startingGatewayBlogs={startingGatewayBlogs}
-        startingGatewayPages={startingGatewayPages}
-        pressReleaseBlogs={pressReleaseBlogs}
-        pressReleasePages={pressReleasePages}
-        marketNews={marketNews}
-        startingGateway={startingGateway}
-        pressRelease={pressRelease}
-        news={news?.slice(0, 5)}
-      />
+      <AcademyWrapper />
     </>
   );
 };

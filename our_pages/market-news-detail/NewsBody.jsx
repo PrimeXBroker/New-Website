@@ -115,9 +115,9 @@ function NewsBody({ slug, date }) {
   if (content) {
     return (
       <>
-        <div className="text-tm dark:text-tm-dark py-8 px-4 pt-10 sm:pt-20 pb-10">
+        <div className="text-tm dark:text-tm-dark pt-10 sm:pt-16">
           <Link
-            className="text-tm dark:text-tm-dark hover:text-pcp dark:hover:text-pcp-dark font-medium flex justify-center sm:justify-start items-center mb-4"
+            className="text-tm dark:text-tm-dark hover:text-pcp dark:hover:text-pcp-dark font-medium flex justify-center sm:justify-start items-center mb-8"
             href={
               ["Market News", "أخبار السوق"].includes(detail?.category?.title)
                 ? `/${locale}/market-news`
@@ -146,7 +146,7 @@ function NewsBody({ slug, date }) {
             • 5 Min Read
           </div>
 
-          <h2 className="text-xl sm:text-3xl md:text-4xl font-semibold mb-6 text-center text-tm dark:text-tm-dark w[96%] sm:w-[80%] mx-auto">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-semibold mb-12 text-center text-tm dark:text-tm-dark">
             {detail?.title}
           </h2>
           {/* <div className="flex items-center space-x-4">

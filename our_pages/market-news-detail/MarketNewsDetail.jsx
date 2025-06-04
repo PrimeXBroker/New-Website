@@ -59,8 +59,8 @@ const MarketNewsDetail = ({ slug }) => {
       dir={detail?.language === "ar" ? "rtl" : "ltr"}
     >
       <div className="container">
-        <div className="grid grid-cols-12">
-          <div className="lg:col-span-12 md:col-span-12 col-span-12">
+        <div className="flex justify-center">
+          <div className="w-full lg:w-7/12 md:w-full">
             <NewsBody slug={slug} />
           </div>
         </div>

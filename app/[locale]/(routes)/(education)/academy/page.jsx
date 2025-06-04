@@ -90,14 +90,7 @@ const Academy = async () => {
           }),
         }}
       />
-      <AcademyWrapper
-        marketNewsBlogs={marketNewsBlogs}
-        marketNewsPages={marketNewsPages}
-        startingGatewayBlogs={startingGatewayBlogs}
-        startingGatewayPages={startingGatewayPages}
-        marketNews={marketNews}
-        startingGateway={startingGateway}
-      />
+      <AcademyWrapper />
     </>
   );
 };

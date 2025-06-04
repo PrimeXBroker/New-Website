@@ -7,6 +7,7 @@ import Moment from "react-moment";
 import { IoMdArrowBack } from "react-icons/io";
 import { IoMdArrowForward } from "react-icons/io";
 import { useLocale } from "next-intl";
+import axios from "axios";
 import Link from "next/link";
 
 const Banner = ({ news }) => {
@@ -16,11 +17,7 @@ const Banner = ({ news }) => {
   const [newsDetails, setNewsDetails] = useState(news[0]);
   const [progressCounter, setProgressCounter] = useState(1); // Track the overall position
 
-  console.log(news, "--------> news");
-
-  const convertToKebabCase = (str) => {
-    return str.toLowerCase().replace(/\s+/g, "-");
-  };
+  console.log(news, "news");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -76,35 +73,48 @@ const Banner = ({ news }) => {
   // Calculate the progress percentage based on progressCounter
   const progressValue = (progressCounter / news.length) * 100;
 
+  useEffect(() => {
+    if (news.length > 0) {
+      setDisplayNews(news);
+      setNewsDetails(news[0]); // تحديث أول عنصر بعد تحميل البيانات
+    }
+  }, [news]);
+
   return (
-    <div className="pt-16 sm:pt-28 bg-p dark:bg-p-dark text-tm dark:text-tm-dark">
+    <div className="pt-16 sm:pt-28 bg-p dark:bg-p-dark text-[#ffffff]">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 items-center bg-cc dark:bg-cc-dark rounded-3xl p-5 sm:p-14">
           <div className="w-full sm:h-[400px]">
-            <Link
-              href={`/${locale}/${convertToKebabCase(
-                newsDetails?.category?.title
-              )}/${newsDetails.slug}`}
-            >
-              <img
-                src={newsDetails?.image}
-                alt="PrimeX Broker Crypto Trading"
-                className="rounded-lg w-full h-full"
-              />
-            </Link>
+            {newsDetails?.slug && (
+              <Link href={`/${locale}/blogs/${newsDetails.slug}`}>
+                <img
+                  src={
+                    locale === "ar"
+                      ? newsDetails?.imageAr || newsDetails?.image
+                      : locale === "ku"
+                      ? newsDetails?.imageKd || newsDetails?.image
+                      : newsDetails?.image
+                  }
+                  alt="PrimeX Broker Crypto Trading"
+                  className="rounded-lg w-full h-full"
+                />
+              </Link>
+            )}
           </div>
           {/* Right side - Content */}
           <div className="space-y-6 sm:h-[400px] flex flex-col justify-between">
-            <Link
-              href={`/${locale}/${convertToKebabCase(
-                newsDetails?.category?.title
-              )}/${newsDetails.slug}`}
-            >
-              <h1 className="text-2xl sm:text-3xl font-bold leading-tight pt-3 lg:pt-0">
-                {newsDetails?.title}
-              </h1>
-            </Link>
-            <div className="flex items-center justify-between text-ts dark:text-ts-dark">
+            <h1 className="text-2xl sm:text-3xl font-bold leading-tight pt-3 lg:pt-0 text-tm dark:text-tm-dark">
+              {newsDetails?.slug && (
+                <Link href={`/${locale}/blogs/${newsDetails.slug}`}>
+                  {locale === "ar"
+                    ? newsDetails?.titleAr
+                    : locale === "ku"
+                    ? newsDetails?.titleKd || newsDetails?.titleEn
+                    : newsDetails?.titleEn}
+                </Link>
+              )}
+            </h1>
+            <div className="flex items-center justify-between text-ts dark:text-ts-dark py-2 lg:py-0">
               <span>
                 <Moment
                   date={newsDetails?.createdOn}
@@ -114,7 +124,7 @@ const Banner = ({ news }) => {
               <span>5 Min Read</span>
             </div>
             <div className="flex items-center gap-x-4">
-              <span className="text-3xl">
+              <span className="text-3xl text-tm dark:text-tm-dark">
                 {progressCounter}/{news.length}
               </span>
               <Progress
@@ -130,7 +140,7 @@ const Banner = ({ news }) => {
                     size="icon"
                     className="rounded-full"
                   >
-                    {locale === "ar" ? (
+                    {locale === "ar" || locale === "ku" ? (
                       <IoMdArrowForward className="h-4 w-4 text-tm dark:text-tm-dark" />
                     ) : (
                       <IoMdArrowBack className="h-4 w-4 text-tm dark:text-tm-dark" />
@@ -144,7 +154,7 @@ const Banner = ({ news }) => {
                     size="icon"
                     className="rounded-full"
                   >
-                    {locale === "ar" ? (
+                    {locale === "ar" || locale === "ku" ? (
                       <IoMdArrowBack className="h-4 w-4 text-tm dark:text-tm-dark" />
                     ) : (
                       <IoMdArrowForward className="h-4 w-4 text-tm dark:text-tm-dark" />
@@ -157,21 +167,23 @@ const Banner = ({ news }) => {
               {displayNews
                 .filter((_, index) => index !== currentIndex)
                 .map((blog, index) => (
-                  <Link
-                    href={`/${locale}/${convertToKebabCase(
-                      blog?.category?.title
-                    )}/${blog.slug}`}
-                  >
+                  <Link href={`/${locale}/blogs/${blog.slug}`}>
                     <Card
                       key={index}
                       className="rounded-[4px] overflow-hidden bg-e1 dark:bg-e1-dark p-2"
                     >
                       <Image
-                        src={blog?.image}
+                        src={
+                          locale === "ar"
+                            ? blog?.imageAr || blog?.image
+                            : locale === "ku"
+                            ? blog?.imageKd || blog?.image
+                            : blog?.image
+                        }
                         alt={`Thumbnail ${index}`}
                         width={300}
                         height={150}
-                        className="w-full h-auto cursor-pointer rounded-[2px]"
+                        className="w-full h-[75px] cursor-pointer rounded-[2px]"
                         onClick={() => handleThumbnailClick(index + 1)}
                       />
                     </Card>

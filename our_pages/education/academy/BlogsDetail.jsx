@@ -4,33 +4,24 @@ import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import axios from "axios";
 import Moment from "react-moment";
-import AnalysisNewsBody from "./AnalysisNewsBody";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
+import BlogsNewsBody from "./BlogsNewsBody";
 
-const ExpertAnalysisDetail = ({ slug }) => {
+const BlogDetail = () => {
+  const { slug } = useParams();
   const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("marketNewsDetail");
   const [detail, setDetail] = useState(null);
-  const [related, setRelated] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  const fetchRelatedBlogs = async () => {
-    const res = await axios.get(
-      `https://primexbroker.com/api/fetch/publish/related/market-news/1/3/${detail._id}`
-    );
-    if (res?.data?.success) {
-      setRelated(res?.data?.data);
-    }
-  };
 
   const fetchdetails = async () => {
     setLoading(true);
     try {
       const res = await axios.get(
-        `https://primexbroker.com/api/fetch/one/market-news/${slug}`,
+        `https://primexbroker.com/api/fetch/one/all-blog/${slug}`,
         { cache: "no-store" }
       );
       console.log(res?.data?.data, "res?.data?.data");
@@ -56,12 +47,6 @@ const ExpertAnalysisDetail = ({ slug }) => {
     }
   }, [slug]);
 
-  useEffect(() => {
-    if (detail) {
-      fetchRelatedBlogs();
-    }
-  }, [detail]);
-
   if (loading) {
     return (
       <div className="flex items-center justify-center my-48">
@@ -84,7 +69,7 @@ const ExpertAnalysisDetail = ({ slug }) => {
       <div className="container">
         <div className="flex justify-center">
           <div className="w-full lg:w-7/12 md:w-full">
-            <AnalysisNewsBody slug={slug} />
+            <BlogsNewsBody slug={slug} />
           </div>
         </div>
         <div className="bg-cc dark:bg-cc-dark rounded-[20px] flex p-10 flex-col md:flex-row mb-10 mt-20 relaed-blogs-bg">
@@ -130,49 +115,9 @@ const ExpertAnalysisDetail = ({ slug }) => {
             />
           </div>
         </div>
-        {/* <div className="pt-10">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#FED100] text-center">
-            {t("relatedBlogs.title1")}
-            <span className="text-[#ffffff]"> {t("relatedBlogs.title2")}</span>
-          </h2>
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 px-4 mt-10">
-            {related.map((blog, i) => (
-              <Link
-                href={`/${locale}/market-news-detail/${blog.slug}`}
-                key={i}
-                className="group h-full bg-[#111111] rounded-xl"
-              >
-                <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out rounded-xl flex flex-col h-full">
-                  <div>
-                    <img
-                      src={blog.image}
-                      alt= {blog?.title}
-                      className="w-full overflow-hidden transition duration-700 ease-in-out transform group-hover:scale-110"
-                    />
-                  </div>
-                  <div className="px-3 py-5 transition duration-700 ease-in-out">
-                    <div>
-                      <h4 className="text-xl font-semibold text-[#F9F9F9] group-hover:text-[#FED100] transition duration-700 ease-in-out">
-                        {blog?.title}
-                      </h4>
-                    </div>
-                    <div className="mt-3">
-                      <p className="text-[#C6C6C6] text-sm group-hover:text-white transition duration-700 ease-in-out">
-                        <Moment
-                          date={blog?.createdOn}
-                          format={locale === "ar" ? "YYYY/MM/DD" : "DD/MM/YYYY"}
-                        />
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div> */}
       </div>
     </section>
   );
 };
 
-export default ExpertAnalysisDetail;
+export default BlogDetail;

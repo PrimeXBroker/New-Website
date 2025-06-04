@@ -44,14 +44,20 @@ export default function Register({ step, setStep }) {
 
     if (formData?.password?.first.length > 0) {
       try {
+        const birthDateObj =
+          formData.birthDate instanceof Date
+            ? formData.birthDate
+            : new Date(formData.birthDate);
         const config = {
           method: "put",
           url: "https://my.primexcapital.com/client-api/registration?version=1.0.0",
           data: {
             ...formData,
-            birthDate: moment(formData?.birthDate)
-              .tz(userTimeZone)
-              .format("YYYY-MM-DD"),
+            birthDate: {
+              year: birthDateObj.getFullYear(),
+              month: birthDateObj.getMonth() + 1,
+              day: birthDateObj.getDate(),
+            },
             country: formData?.country?.value,
             phone: `${selectedPhone?.code}${formData?.phone}`,
           },

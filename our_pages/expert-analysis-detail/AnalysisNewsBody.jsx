@@ -132,9 +132,9 @@ function AnalysisNewsBody({ slug }) {
   if (content) {
     return (
       <>
-        <div className="text-tm dark:text-tm-dark py-8 px-4 pt-20 pb-10">
+        <div className="text-tm dark:text-tm-dark pt-10 sm:pt-16">
           <Link
-            className="text-tm dark:text-tm-dark hover:text-pcp dark:hover:text-pcp-dark font-medium flex justify-center sm:justify-start items-center mb-4"
+            className="text-tm dark:text-tm-dark hover:text-pcp dark:hover:text-pcp-dark font-medium flex justify-center sm:justify-start items-center mb-8"
             href={
               detail?.category === "6641f01d7c9be5623e1092a4"
                 ? `/${locale}/technical-analysis`
@@ -171,7 +171,7 @@ function AnalysisNewsBody({ slug }) {
             • 5 Min Read
           </div>
 
-          <h2 className="text-xl sm:text-3xl md:text-4xl font-semibold mb-6 text-center text-tm dark:text-tm-dark w[96%] sm:w-[80%] mx-auto">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-semibold mb-12 text-center text-tm dark:text-tm-dark w[96%] sm:w-[80%] mx-auto">
             {locale === "ar"
               ? detail?.titleAr
               : locale === "ku"

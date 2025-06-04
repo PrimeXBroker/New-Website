@@ -67,7 +67,6 @@ const pages = () => {
   return (
     <>
       <Hero />
-
       <Banner news={blogs?.slice(0, 5)} titleEn={currentCategory?.titleEn} />
       <ExpertAnalysis id={id} />
       <div className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
