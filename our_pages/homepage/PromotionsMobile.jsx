@@ -58,10 +58,12 @@ const PromotionsMobile = () => {
             {t("desc")}
           </p>
         </div>
-        {promotionsData.map((promo) => (
+        {promotionsData.map((promo, index) => (
           <Link
             href={promo.link}
-            className="flex bg-cc dark:bg-cc-dark rounded-xl overflow-hidden items-center gap-5 p-5 mb-5 border-2 border-cc dark:border-cc-dark hover:border-tl dark:hover:border-tl-dark group transition-all duration-500 ease-in-out cursor-pointer"
+            className={`flex bg-cc dark:bg-cc-dark rounded-xl overflow-hidden items-center gap-5 p-5 ${
+              index === promotionsData.length - 1 ? "" : "mb-5"
+            } border-2 border-cc dark:border-cc-dark hover:border-tl dark:hover:border-tl-dark group transition-all duration-500 ease-in-out cursor-pointer`}
           >
             <div>
               <Image
