@@ -35,9 +35,7 @@ const AcademyWrapper = () => {
   return (
     <>
       <Banner news={blogs?.slice(0, 5)} />
-      <div className="hidden md:block">
-        <BlogsWrapper />
-      </div>
+      <BlogsWrapper />
     </>
   );
 };
