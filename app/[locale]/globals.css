@@ -1907,7 +1907,9 @@ html.dark .terms-checkbox:checked + .terms-label .terms-custom-checkbox {
 .blog-detail-styling h4,
 .blog-detail-styling h5,
 .blog-detail-styling h6,
-.blog-detail-styling p {
+.blog-detail-styling p,
+.blog-detail-styling span,
+.blog-detail-styling strong {
   font-size: revert !important;
-  font-weight: revert !important;
+  line-height: revert !important;
 }
