@@ -59,7 +59,7 @@ function BlogsNewsBody({ slug }) {
   if (content) {
     return (
       <>
-        <div className="text-tm dark:text-tm-dark pt-10 sm:pt-16">
+        <div className="text-tm dark:text-tm-dark pt-10 sm:pt-16 bullet-list-styling">
           <Link
             className="text-tm dark:text-tm-dark hover:text-pcp dark:hover:text-pcp-dark font-medium flex justify-center sm:justify-start items-center mb-8"
             href={`/${locale}/blogs`}

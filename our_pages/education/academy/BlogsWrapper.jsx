@@ -45,7 +45,7 @@ const BlogsWrapper = () => {
     );
   }
   return (
-    <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
+    <section className="bg-p dark:bg-p-dark py-16 sm:py-28 bullet-list-styling">
       <div className="container">
         <div className="grid grid-cols-12 ">
           {blogs.map((blog, index) => (

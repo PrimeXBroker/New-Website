@@ -1893,9 +1893,9 @@ html.dark .terms-checkbox:checked + .terms-label .terms-custom-checkbox {
   background-color: #10a85e !important;
 }
 
-ol,
-ul,
-menu {
+.bullet-list-styling ol,
+.bullet-list-styling ul,
+.bullet-list-styling menu {
   list-style: revert !important;
   margin: revert !important;
   padding: revert !important;

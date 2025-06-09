@@ -65,7 +65,7 @@ const BlogDetail = () => {
   };
 
   return (
-    <section className="bg-p dark:bg-p-dark py-20">
+    <section className="bg-p dark:bg-p-dark py-20 bullet-list-styling">
       <div className="container">
         <div className="flex justify-center">
           <div className="w-full lg:w-7/12 md:w-full">

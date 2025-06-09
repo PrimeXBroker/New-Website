@@ -81,7 +81,7 @@ const Banner = ({ news }) => {
   }, [news]);
 
   return (
-    <div className="pt-16 sm:pt-28 bg-p dark:bg-p-dark text-[#ffffff]">
+    <div className="pt-16 sm:pt-28 bg-p dark:bg-p-dark text-[#ffffff] bullet-list-styling">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 items-center bg-cc dark:bg-cc-dark rounded-3xl p-5 sm:p-14">
           <div className="w-full sm:h-[400px]">
