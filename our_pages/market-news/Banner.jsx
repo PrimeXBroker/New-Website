@@ -95,7 +95,7 @@ const Banner = ({ news }) => {
                       ? newsDetails?.imageKd || newsDetails?.image
                       : newsDetails?.image
                   }
-                  alt="PrimeX Broker Crypto Trading"
+                  alt={newsDetails?.altTag}
                   className="rounded-lg w-full h-full"
                 />
               </Link>
@@ -180,7 +180,7 @@ const Banner = ({ news }) => {
                             ? blog?.imageKd || blog?.image
                             : blog?.image
                         }
-                        alt={`Thumbnail ${index}`}
+                        alt={blog?.altTag}
                         width={300}
                         height={150}
                         className="w-full h-[75px] cursor-pointer rounded-[2px]"

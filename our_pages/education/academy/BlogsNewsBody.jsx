@@ -8,6 +8,7 @@ import Moment from "react-moment";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
+import ReadOnlyEditor from "@/components/common/ReadOnlyEditor";
 
 function BlogsNewsBody({ slug }) {
   const locale = useLocale();
@@ -27,7 +28,11 @@ function BlogsNewsBody({ slug }) {
         if (locale === "ar") {
           setContent(res?.data?.data?.contentAr);
         } else if (locale === "ku") {
-          setContent(res?.data?.data?.contentKd);
+          setContent(
+            res?.data?.data?.contentKd
+              ? res?.data?.data?.contentKd
+              : res?.data?.data?.contentEn
+          );
         } else {
           setContent(res?.data?.data?.contentEn);
         }
@@ -102,11 +107,11 @@ function BlogsNewsBody({ slug }) {
                 ? detail?.imageKd || detail?.image
                 : detail?.image
             }
-            alt="PrimeX Capital"
+            alt={detail?.altTag}
             className="mb-4"
           />
           <div className="mb-7"></div>
-          <div dangerouslySetInnerHTML={{ __html: content }} />
+          <ReadOnlyEditor content={content} />
         </div>
       </>
     );

@@ -67,7 +67,7 @@ const BlogsWrapper = () => {
                       }
                       width="100"
                       height="100"
-                      alt={blog?.titleEn}
+                      alt={blog?.altTag}
                       className="w-full overflow-hidden transition duration-700 ease-in-out transform group-hover:scale-110"
                     />
                   </div>

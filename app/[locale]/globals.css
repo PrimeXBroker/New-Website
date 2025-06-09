@@ -1892,3 +1892,11 @@ html.dark .terms-custom-checkbox {
 html.dark .terms-checkbox:checked + .terms-label .terms-custom-checkbox {
   background-color: #10a85e !important;
 }
+
+ol,
+ul,
+menu {
+  list-style: revert !important;
+  margin: revert !important;
+  padding: revert !important;
+}
