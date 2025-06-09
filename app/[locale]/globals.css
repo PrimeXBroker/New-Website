@@ -1900,3 +1900,14 @@ html.dark .terms-checkbox:checked + .terms-label .terms-custom-checkbox {
   margin: revert !important;
   padding: revert !important;
 }
+
+.blog-detail-styling h1,
+.blog-detail-styling h2,
+.blog-detail-styling h3,
+.blog-detail-styling h4,
+.blog-detail-styling h5,
+.blog-detail-styling h6,
+.blog-detail-styling p {
+  font-size: revert !important;
+  font-weight: revert !important;
+}
