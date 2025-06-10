@@ -17,7 +17,7 @@ const BlogsWrapper = () => {
   const fetchEnglishBlogs = async () => {
     setLoading(true);
     const res = await axios.get(
-      `https://primexbroker.com/api/fetch/publish/related/all-blog/${page}/6`
+      `https://primexbroker.com/api/fetch/publish/related/all-blog/${page}/9`
     );
     if (res.data.success) {
       setBlogs(res.data.data);
