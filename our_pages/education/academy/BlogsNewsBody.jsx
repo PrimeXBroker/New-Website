@@ -110,7 +110,7 @@ function BlogsNewsBody({ slug }) {
             alt={detail?.altTag}
             className="mb-4"
           />
-          <div className="mb-7 blog-detail-styling">
+          <div className="mb-7 ">
             <ReadOnlyEditor content={content} />
           </div>
         </div>

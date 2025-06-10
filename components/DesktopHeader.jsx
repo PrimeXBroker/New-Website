@@ -13,6 +13,7 @@ import { useTheme } from "next-themes";
 const DesktopHeader = ({ locale }) => {
   const { theme } = useTheme();
   const t = useTranslations("menu");
+  const foo = useTranslations("footer");
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
   const pathname = usePathname();
@@ -407,6 +408,15 @@ const DesktopHeader = ({ locale }) => {
                       className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("account_types")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
+                      href="/primex-spreads"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                    >
+                      {foo("company.title_part1_link7")}
                     </LocaleLink>
                   </li>
                   <li>
