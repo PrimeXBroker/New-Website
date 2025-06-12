@@ -226,18 +226,36 @@ const Footer = () => {
                   key={el.id}
                   className="w-1/2 sm:w-1/3 lg:w-1/5 flex justify-center items-center"
                 >
-                  <div className="flex items-center gap-2">
-                    <Image
-                      src={el.imgUrl}
-                      alt={el.name}
-                      width={40}
-                      height={40}
-                      className="object-contain w-[30px] sm:w-[40px]"
-                    />
-                    <p className="text-tm dark:text-tm-dark font-semibold text-base sm:text-lg md:text-xl mb-0 pb-0">
-                      {el.title}
-                    </p>
-                  </div>
+                  {el.id === 3 ? (
+                    <Link
+                      href="https://primexcapital.com/ar/local-depositor"
+                      className="flex items-center gap-2"
+                    >
+                      <Image
+                        src={el.imgUrl}
+                        alt={el.name}
+                        width={40}
+                        height={40}
+                        className="object-contain w-[30px] sm:w-[40px]"
+                      />
+                      <p className="text-tm dark:text-tm-dark font-semibold text-base sm:text-lg md:text-xl mb-0 pb-0">
+                        {el.title}
+                      </p>
+                    </Link>
+                  ) : (
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src={el.imgUrl}
+                        alt={el.name}
+                        width={40}
+                        height={40}
+                        className="object-contain w-[30px] sm:w-[40px]"
+                      />
+                      <p className="text-tm dark:text-tm-dark font-semibold text-base sm:text-lg md:text-xl mb-0 pb-0">
+                        {el.title}
+                      </p>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

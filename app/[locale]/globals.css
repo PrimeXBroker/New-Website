@@ -1913,3 +1913,22 @@ html.dark .terms-checkbox:checked + .terms-label .terms-custom-checkbox {
   font-size: revert !important;
   line-height: revert !important;
 }
+
+.editor h1 {
+  font-size: 2rem;
+}
+.editor h2 {
+  font-size: 1.6rem;
+}
+.editor [data-ccp-parastyle="heading 2"] {
+  font-size: 1.4rem;
+}
+.editor a {
+  color: blue !important; /* Ensure it's blue */
+  text-decoration: none; /* Remove underline if necessary */
+}
+
+/* Optional: Change on hover */
+.editor a:hover {
+  color: darkblue; /* Dark blue on hover */
+}

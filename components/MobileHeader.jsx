@@ -14,6 +14,7 @@ import { useTheme } from "next-themes";
 const MobileHeader = ({ locale }) => {
   const { theme } = useTheme();
   const t = useTranslations("menu");
+  const foo = useTranslations("footer");
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
@@ -828,6 +829,13 @@ const MobileHeader = ({ locale }) => {
                   onClick={toggleDrawer}
                 >
                   {t("account_types")}
+                </LocaleLink>
+                <LocaleLink
+                  href="/primex-spreads"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {foo("company.title_part1_link7")}
                 </LocaleLink>
                 <LocaleLink
                   href="/local-depositor"
