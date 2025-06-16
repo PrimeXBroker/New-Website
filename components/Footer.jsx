@@ -392,7 +392,7 @@ const Footer = () => {
                 <FaFacebook
                   color="#FFF"
                   size={30}
-                  className="hover:fill-blue-600 transition-all hover:translate-y-[-5px] duration-500"
+                  className="fill-tm dark:fill-tm-dark hover:fill-blue-600 transition-all hover:translate-y-[-5px] duration-500"
                 />
               </Link>
               <Link
