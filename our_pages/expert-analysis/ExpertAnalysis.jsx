@@ -75,6 +75,7 @@ const ExpertAnalysis = ({ id }) => {
       </div>
     );
   }
+
   return (
     <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
       <div className="container">
