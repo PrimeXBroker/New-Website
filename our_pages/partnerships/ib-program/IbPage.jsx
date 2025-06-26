@@ -36,7 +36,7 @@ const IbPage = () => {
       <div className="sm:hidden block">
         <EasyStepsMobile />
       </div>
-      <IbForm />
+      {/* <IbForm /> */}
       <div className="lg:block hidden">
         <Rewards />
       </div>

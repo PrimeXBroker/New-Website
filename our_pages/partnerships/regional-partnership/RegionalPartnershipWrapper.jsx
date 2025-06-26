@@ -143,7 +143,7 @@ const RegionalPartnershipWrapper = () => {
           easySteps={easySteps}
         />
       </div>
-      <RegionalFormWrapper />
+      {/* <RegionalFormWrapper /> */}
       <ClientSatisfaction />
     </>
   );
