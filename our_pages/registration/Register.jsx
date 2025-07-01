@@ -41,6 +41,7 @@ export default function Register({ step, setStep }) {
     if (e && e.preventDefault) {
       e.preventDefault();
     }
+    console.log(formData?.password?.first, "formData?.password?.first");
 
     if (formData?.password?.first.length > 0) {
       try {
@@ -48,19 +49,21 @@ export default function Register({ step, setStep }) {
           formData.birthDate instanceof Date
             ? formData.birthDate
             : new Date(formData.birthDate);
+
+        const data = {
+          ...formData,
+          birthDate: {
+            year: birthDateObj.getFullYear(),
+            month: birthDateObj.getMonth() + 1,
+            day: birthDateObj.getDate(),
+          },
+          country: formData?.country?.isoCode,
+          phone: `${selectedPhone?.code}${formData?.phone}`,
+        };
         const config = {
           method: "put",
           url: "https://my.primexcapital.com/client-api/registration?version=1.0.0",
-          data: {
-            ...formData,
-            birthDate: {
-              year: birthDateObj.getFullYear(),
-              month: birthDateObj.getMonth() + 1,
-              day: birthDateObj.getDate(),
-            },
-            country: formData?.country?.value,
-            phone: `${selectedPhone?.code}${formData?.phone}`,
-          },
+          data: data,
           headers: {
             "Content-Type": "application/json",
             Accept: "application/json",
@@ -69,6 +72,8 @@ export default function Register({ step, setStep }) {
 
         try {
           const result = await axios(config);
+          console.log(result, "result");
+
           if (result?.data?.registrationToken) {
             const config1 = {
               method: "post",
@@ -80,6 +85,7 @@ export default function Register({ step, setStep }) {
               },
             };
             const response = await axios(config1);
+            console.log(result, "result");
 
             console.log(
               JSON.stringify(response, null, 2),
@@ -90,7 +96,7 @@ export default function Register({ step, setStep }) {
                 ...formData,
                 token: result?.data?.registrationToken,
               });
-              if (step !== 4) handleNext(4);
+              handleNext(2);
             }
           }
         } catch (error) {
@@ -262,7 +268,7 @@ export default function Register({ step, setStep }) {
             {t("step_1_title")}
           </h2>
         )}
-        {step === 2 && (
+        {/* {step === 2 && (
           <h2 className="text-tm dark:text-tm-dark font-bold text-[32px] sm:text-[40px]">
             {t("step_2_title")}
           </h2>
@@ -271,13 +277,13 @@ export default function Register({ step, setStep }) {
           <h2 className="text-tm dark:text-tm-dark font-bold text-[32px] sm:text-[40px]">
             {t("step_3_title")}
           </h2>
-        )}
-        {step === 4 && (
+        )} */}
+        {step === 2 && (
           <h2 className="text-tm dark:text-tm-dark font-bold text-[32px] sm:text-[40px]">
             {t("step_4_title")}
           </h2>
         )}
-        {step !== 5 && <ProgressIndicator step={step} />}
+        {step !== 3 && <ProgressIndicator step={step} />}
       </div>
       <div className="pb-5 sm:pb-6">
         {step === 1 && (
@@ -285,7 +291,7 @@ export default function Register({ step, setStep }) {
             {t("step_1_description")}
           </p>
         )}
-        {step === 2 && (
+        {/* {step === 2 && (
           <p className="text-ts dark:text-ts-dark font-medium text-sm sm:text-lg mb-0">
             {t("step_2_description")}
           </p>
@@ -294,8 +300,8 @@ export default function Register({ step, setStep }) {
           <p className="text-ts dark:text-ts-dark font-medium text-sm sm:text-lg mb-0">
             {t("step_3_description")}
           </p>
-        )}
-        {step === 4 && (
+        )} */}
+        {step === 2 && (
           <p className="text-ts dark:text-ts-dark font-medium text-sm sm:text-lg mb-0">
             {t("step_4_description")} {formData?.email}
           </p>
@@ -309,32 +315,33 @@ export default function Register({ step, setStep }) {
             formData={formData}
             setSelectedPhone={setSelectedPhone}
             selectedPhone={selectedPhone}
+            sendEmail={sendEmail}
           />
         )}
-        {step === 2 && (
+        {/* {step === 2 && (
           <PersonalInfoStep
             handleNext={handleNext}
             handleBack={handleBack}
             setFormData={setFormData}
             formData={formData}
           />
-        )}
-        {step === 3 && (
+        )} */}
+        {/* {step === 2 && (
           <CreatePasswordStep
             handleBack={handleBack}
             setFormData={setFormData}
             formData={formData}
             sendEmail={sendEmail}
           />
-        )}
-        {step === 4 && (
+        )} */}
+        {step === 2 && (
           <ConfirmEmailStep
             handleBack={handleBack}
             sendEmail={sendEmail}
             formData={formData}
           />
         )}
-        {step === 5 && <SuccessStep />}
+        {step === 3 && <SuccessStep />}
       </div>
     </div>
   );

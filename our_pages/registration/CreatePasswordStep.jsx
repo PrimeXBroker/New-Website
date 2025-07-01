@@ -85,10 +85,6 @@ export default function CreatePasswordStep({
       text: t("password_criteria_3"),
       valid: formData?.password?.first?.length >= 8,
     },
-    // {
-    //   text: t("password_criteria_4"),
-    //   valid: /^[a-zA-Z0-9]*$/.test(formData?.password),
-    // },
   ];
 
   useEffect(() => {
