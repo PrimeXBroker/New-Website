@@ -115,9 +115,23 @@ export default async function layout({ children, params: { locale } }) {
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}`}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/app`}
             hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/app`}
           />
         ))}
         {hreflangLocales.map((item) => (
@@ -131,9 +145,23 @@ export default async function layout({ children, params: { locale } }) {
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/forex`}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/metals`}
             hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/metals`}
           />
         ))}
         {hreflangLocales.map((item) => (
@@ -144,13 +172,26 @@ export default async function layout({ children, params: { locale } }) {
             hreflang={item.lng}
           />
         ))}
-
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/indices`}
+          />
+        ))}
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/commodities`}
             hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/commodities`}
           />
         ))}
         {hreflangLocales.map((item) => (
@@ -164,9 +205,23 @@ export default async function layout({ children, params: { locale } }) {
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/stocks`}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/crypto`}
             hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/crypto`}
           />
         ))}
         {hreflangLocales.map((item) => (
@@ -180,9 +235,23 @@ export default async function layout({ children, params: { locale } }) {
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/platform/mt5-platform`}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/account-types`}
             hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/account-types`}
           />
         ))}
         {hreflangLocales.map((item) => (
@@ -196,9 +265,23 @@ export default async function layout({ children, params: { locale } }) {
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/ib-program`}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/regional-partner`}
             hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/regional-partner`}
           />
         ))}
         {hreflangLocales.map((item) => (
@@ -212,9 +295,23 @@ export default async function layout({ children, params: { locale } }) {
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/bonus`}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/social-trading`}
             hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/social-trading`}
           />
         ))}
         {hreflangLocales.map((item) => (
@@ -228,9 +325,23 @@ export default async function layout({ children, params: { locale } }) {
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/technical-analysis`}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/market-news`}
             hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/market-news`}
           />
         ))}
         {hreflangLocales.map((item) => (
@@ -244,9 +355,23 @@ export default async function layout({ children, params: { locale } }) {
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/webinars`}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/economic-calender`}
             hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/economic-calender`}
           />
         ))}
         {hreflangLocales.map((item) => (
@@ -260,9 +385,38 @@ export default async function layout({ children, params: { locale } }) {
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/blogs`}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/primex-spreads`}
             hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/primex-spreads`}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="alternate"
+            href={`https://www.primexcapital.com/${item.url}/local-depositor`}
+            hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/local-depositor`}
           />
         ))}
         {hreflangLocales.map((item) => (
@@ -276,9 +430,23 @@ export default async function layout({ children, params: { locale } }) {
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/why-choose-us`}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/about`}
             hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/about`}
           />
         ))}
         {hreflangLocales.map((item) => (
@@ -292,9 +460,23 @@ export default async function layout({ children, params: { locale } }) {
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/contact`}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/awards`}
             hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/awards`}
           />
         ))}
         {hreflangLocales.map((item) => (
@@ -308,9 +490,23 @@ export default async function layout({ children, params: { locale } }) {
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/client-agreement`}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/terms`}
             hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/terms`}
           />
         ))}
         {hreflangLocales.map((item) => (
@@ -324,9 +520,23 @@ export default async function layout({ children, params: { locale } }) {
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/policy-statement`}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/risk-disclosure`}
             hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/risk-disclosure`}
           />
         ))}
         {hreflangLocales.map((item) => (
@@ -340,9 +550,23 @@ export default async function layout({ children, params: { locale } }) {
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/complaints-management`}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/cookie-policy`}
             hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/cookie-policy`}
           />
         ))}
         {hreflangLocales.map((item) => (
@@ -356,6 +580,13 @@ export default async function layout({ children, params: { locale } }) {
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/policy-of-aml`}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/follower-agreement`}
             hreflang={item.lng}
@@ -364,9 +595,23 @@ export default async function layout({ children, params: { locale } }) {
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/follower-agreement`}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/provider-agreement`}
             hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="canonical"
+            href={`https://www.primexcapital.com/${item.url}/provider-agreement`}
           />
         ))}
         <Script

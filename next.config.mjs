@@ -44,14 +44,6 @@ const nextConfig = {
         destination: "/sitemap/ar",
       },
       {
-        source: "/sitemap/fa.xml",
-        destination: "/sitemap/fa.xml",
-      },
-      {
-        source: "/sitemap/fa",
-        destination: "/sitemap/fa",
-      },
-      {
         source: "/sitemap/ku.xml",
         destination: "/sitemap/ku.xml",
       },
@@ -60,12 +52,20 @@ const nextConfig = {
         destination: "/sitemap/ku",
       },
       {
-        source: "/sitemap/tr.xml",
-        destination: "/sitemap/tr.xml",
+        source: "/sitemap/ps.xml",
+        destination: "/sitemap/ps.xml",
       },
       {
-        source: "/sitemap/tr",
-        destination: "/sitemap/tr",
+        source: "/sitemap/ps",
+        destination: "/sitemap/ps",
+      },
+      {
+        source: "/sitemap/es.xml",
+        destination: "/sitemap/es.xml",
+      },
+      {
+        source: "/sitemap/es",
+        destination: "/sitemap/es",
       },
       {
         source: "/sitemap/market-news-en.xml",
@@ -82,6 +82,38 @@ const nextConfig = {
       {
         source: "/sitemap/market-news-ar",
         destination: "/sitemap/market-news-ar",
+      },
+      {
+        source: "/sitemap/technical-analysis-en.xml",
+        destination: "/sitemap/technical-analysis-en.xml",
+      },
+      {
+        source: "/sitemap/technical-analysis-en",
+        destination: "/sitemap/technical-analysis-en",
+      },
+      {
+        source: "/sitemap/technical-analysis-ar.xml",
+        destination: "/sitemap/technical-analysis-ar.xml",
+      },
+      {
+        source: "/sitemap/technical-analysis-ar",
+        destination: "/sitemap/technical-analysis-ar",
+      },
+      {
+        source: "/sitemap/blogs-en.xml",
+        destination: "/sitemap/blogs-en.xml",
+      },
+      {
+        source: "/sitemap/blogs-en",
+        destination: "/sitemap/blogs-en",
+      },
+      {
+        source: "/sitemap/blogs-ar.xml",
+        destination: "/sitemap/blogs-ar.xml",
+      },
+      {
+        source: "/sitemap/blogs-ar",
+        destination: "/sitemap/blogs-ar",
       },
       {
         source: "/sitemap/starting-gateway-en.xml",
@@ -114,22 +146,6 @@ const nextConfig = {
       {
         source: "/sitemap/press-release-ar",
         destination: "/sitemap/press-release-ar",
-      },
-      {
-        source: "/sitemap/technical-analysis-en.xml",
-        destination: "/sitemap/technical-analysis-en.xml",
-      },
-      {
-        source: "/sitemap/technical-analysis-en",
-        destination: "/sitemap/technical-analysis-en",
-      },
-      {
-        source: "/sitemap/technical-analysis-ar.xml",
-        destination: "/sitemap/technical-analysis-ar.xml",
-      },
-      {
-        source: "/sitemap/technical-analysis-ar",
-        destination: "/sitemap/technical-analysis-ar",
       },
       {
         source: "/sitemap/learning-hub-en.xml",
