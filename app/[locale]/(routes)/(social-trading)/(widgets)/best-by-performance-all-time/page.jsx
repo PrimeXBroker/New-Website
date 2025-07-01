@@ -6,10 +6,7 @@ export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });
-  const url =
-    locale != "en"
-      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/best-by-performance-all-time`
-      : `${process.env.NEXT_PUBLIC_BASE_URL}/best-by-performance-all-time`;
+  const url = `https://www.primexcapital.com/${locale}/best-by-performance-all-time`;
 
   return {
     title: t("copyProgram.bestPerformanceWidget.metaData.title"),
@@ -35,28 +32,9 @@ export async function generateMetadata({ params: { locale } }) {
   };
 }
 
-const page = ({ params: { locale } }) => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-  ];
-
+const page = () => {
   return (
     <>
-      <head>
-        {hreflangLocales
-          .filter((item) => item.lng === locale)
-          .map((item) => (
-            <link
-              key={item.lng}
-              rel="canonical"
-              href={`https://www.primexcapital.com/${item.url}/best-by-performance-all-time`}
-            />
-          ))}
-      </head>
       <BestPerformanceWrapper />
     </>
   );

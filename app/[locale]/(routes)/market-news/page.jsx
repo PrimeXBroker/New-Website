@@ -12,10 +12,8 @@ export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });
-  const url =
-    locale != "en"
-      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/market-news`
-      : `${process.env.NEXT_PUBLIC_BASE_URL}/market-news`;
+  const url = `https://www.primexcapital.com/${locale}/market-news`;
+
   return {
     title: t("knowledgeHubMarketNews.metaData.title"),
     description: t("knowledgeHubMarketNews.metaData.description"),
@@ -56,27 +54,8 @@ const page = async ({ params }) => {
     totalPages = response?.result.pagination.totalPages;
   }
 
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-  ];
-
   return (
     <>
-      <head>
-        {hreflangLocales
-          .filter((item) => item.lng === locale)
-          .map((item) => (
-            <link
-              key={item.lng}
-              rel="canonical"
-              href={`https://www.primexcapital.com/${item.url}/market-news`}
-            />
-          ))}
-      </head>
       <Hero />
       <Banner news={news?.slice(0, 5)} />
       <MarketNews news={news} totalPages={totalPages} lang={lang} />
