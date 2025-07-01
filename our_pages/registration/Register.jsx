@@ -30,12 +30,17 @@ export default function Register({ step, setStep }) {
     token: "",
   });
   const [selectedPhone, setSelectedPhone] = useState(phoneOptions[0]);
+  const [isChecked, setIsChecked] = useState(true);
+
+  const url = new URL(window.location.href);
+  const pidParam = url.searchParams.get("pid");
 
   const t = useTranslations("registration.register");
   const p = useTranslations("registration.app");
   const d = useTranslations("primeXTradingApp.downloadAppToady");
   const handleNext = (val) => setStep(val);
   const handleBack = () => setStep((prev) => prev - 1);
+  console.log(isChecked, "isChecked");
 
   const sendEmail = async (e) => {
     if (e && e.preventDefault) {
@@ -43,7 +48,7 @@ export default function Register({ step, setStep }) {
     }
     console.log(formData?.password?.first, "formData?.password?.first");
 
-    if (formData?.password?.first.length > 0) {
+    if (isChecked) {
       try {
         const birthDateObj =
           formData.birthDate instanceof Date
@@ -59,6 +64,7 @@ export default function Register({ step, setStep }) {
           },
           country: formData?.country?.isoCode,
           phone: `${selectedPhone?.code}${formData?.phone}`,
+          ...(pidParam && { partnerId: parseInt(pidParam) }),
         };
         const config = {
           method: "put",
@@ -316,6 +322,8 @@ export default function Register({ step, setStep }) {
             setSelectedPhone={setSelectedPhone}
             selectedPhone={selectedPhone}
             sendEmail={sendEmail}
+            setIsChecked={setIsChecked}
+            isChecked={isChecked}
           />
         )}
         {/* {step === 2 && (

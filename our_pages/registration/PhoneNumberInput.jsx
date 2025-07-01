@@ -28,7 +28,6 @@ export default function PhoneNumberField({
         className={`flex w-full border border-e2 dark:border-e2-dark bg-cc dark:bg-cc-dark cursor-pointer
     ${isOpen ? "rounded-t-md sm:rounded-t-lg" : "rounded-md sm:rounded-lg"}
   `}
-        onClick={() => setIsOpen(!isOpen)}
       >
         <div
           className={`flex items-center gap-2 p-4 w-[140px] border-e border-e2 dark:border-e2-dark bg-e2 dark:bg-e2-dark
@@ -36,6 +35,7 @@ export default function PhoneNumberField({
       isOpen ? "rounded-tl-md sm:rounded-tl-lg" : "rounded-s-md sm:rounded-s-lg"
     }
   `}
+          onClick={() => setIsOpen(!isOpen)}
         >
           <Image
             src={selectedPhone.flag}

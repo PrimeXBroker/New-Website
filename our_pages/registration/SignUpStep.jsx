@@ -31,6 +31,8 @@ export default function SignUpStep({
   setSelectedPhone,
   selectedPhone,
   sendEmail,
+  setIsChecked,
+  isChecked,
 }) {
   const t = useTranslations("registration.signUpStep");
   const t1 = useTranslations("registration.personalInfoStep");
@@ -494,7 +496,7 @@ export default function SignUpStep({
           <button
             type="button"
             onClick={copyToClipboard}
-            className={`flex items-center justify-center border-1 rounded-md sm:rounded-lg p-4 mt-1 ${
+            className={`flex items-center justify-center border-1 rounded-md sm:rounded-lg p-4 mt-1 md:mt-2.5 ${
               copied
                 ? "border border-gc dark:border-gc-dark bg-gb dark:bg-gb-dark"
                 : "border border-e2 dark:border-e2-dark bg-cc dark:bg-cc-dark"
@@ -548,7 +550,9 @@ export default function SignUpStep({
           type="checkbox"
           id="terms"
           className="terms-checkbox hidden"
-          defaultChecked
+          checked={isChecked}
+          onChange={(e) => setIsChecked(e.target.checked)}
+          required
         />
         <label
           htmlFor="terms"
