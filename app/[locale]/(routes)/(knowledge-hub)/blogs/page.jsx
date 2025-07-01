@@ -9,10 +9,8 @@ export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });
-  const url =
-    locale != "en"
-      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/blogs`
-      : `${process.env.NEXT_PUBLIC_BASE_URL}/blogs`;
+  const url = `https://www.primexcapital.com/${locale}/blogs`;
+
   return {
     title: t("knowledgeHubBlogs.metaData.title"),
     description: t("knowledgeHubBlogs.metaData.description"),
@@ -80,27 +78,8 @@ const page = async () => {
     totalPages = carouselResponse?.result.pagination.totalPages;
   }
 
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-  ];
-
   return (
     <>
-      <head>
-        {hreflangLocales
-          .filter((item) => item.lng === locale)
-          .map((item) => (
-            <link
-              key={item.lng}
-              rel="canonical"
-              href={`https://www.primexcapital.com/${item.url}/blogs`}
-            />
-          ))}
-      </head>
       <Script
         type="application/ld+json"
         id="breadcrumb-schema"

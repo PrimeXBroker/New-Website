@@ -6,10 +6,7 @@ export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });
-  const url =
-    locale != "en"
-      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/platform/mt5-platform`
-      : `${process.env.NEXT_PUBLIC_BASE_URL}/platform/mt5-platform`;
+  const url = `https://www.primexcapital.com/${locale}/platform/mt5-platform`;
 
   return {
     title: t("metaTrader5.metaData.title"),
@@ -35,28 +32,9 @@ export async function generateMetadata({ params: { locale } }) {
   };
 }
 
-const Mt5Platform = ({ params: { locale } }) => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-  ];
-
+const Mt5Platform = () => {
   return (
     <>
-      <head>
-        {hreflangLocales
-          .filter((item) => item.lng === locale)
-          .map((item) => (
-            <link
-              key={item.lng}
-              rel="canonical"
-              href={`https://www.primexcapital.com/${item.url}/platform/mt5-platform`}
-            />
-          ))}
-      </head>
       <Script
         type="application/ld+json"
         id="breadcrumb-schema"

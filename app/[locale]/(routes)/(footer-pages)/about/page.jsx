@@ -5,10 +5,7 @@ export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });
-  const url =
-    locale != "en"
-      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/about`
-      : `${process.env.NEXT_PUBLIC_BASE_URL}/about`;
+  const url = `https://www.primexcapital.com/${locale}/about`;
 
   return {
     title: t("about.metaData.title"),
@@ -34,28 +31,9 @@ export async function generateMetadata({ params: { locale } }) {
   };
 }
 
-const About = ({ params: { locale } }) => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-  ];
-
+const About = () => {
   return (
     <>
-      <head>
-        {hreflangLocales
-          .filter((item) => item.lng === locale)
-          .map((item) => (
-            <link
-              key={item.lng}
-              rel="canonical"
-              href={`https://www.primexcapital.com/${item.url}/about`}
-            />
-          ))}
-      </head>
       <AboutPage />
     </>
   );

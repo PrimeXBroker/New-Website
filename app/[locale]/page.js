@@ -24,10 +24,7 @@ export async function generateMetadata({ params: { locale } }) {
 
   const description = descriptions[locale] || descriptions["en"];
 
-  const url =
-    locale != "en"
-      ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}`
-      : `${process.env.NEXT_PUBLIC_BASE_URL}`;
+  const url = `https://www.primexcapital.com/${locale}`;
 
   return {
     title: t("home.metaData.title"),
@@ -53,28 +50,9 @@ export async function generateMetadata({ params: { locale } }) {
   };
 }
 
-export default function Home({ params: { locale } }) {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-  ];
-
+export default function Home() {
   return (
     <>
-      <head>
-        {hreflangLocales
-          .filter((item) => item.lng === locale)
-          .map((item) => (
-            <link
-              key={item.lng}
-              rel="canonical"
-              href={`https://www.primexcapital.com/${item.url}`}
-            />
-          ))}
-      </head>
       <Script
         type="application/ld+json"
         id="organization-schema"
