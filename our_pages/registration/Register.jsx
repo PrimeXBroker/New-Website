@@ -34,6 +34,7 @@ export default function Register({ step, setStep }) {
 
   const url = new URL(window.location.href);
   const pidParam = url.searchParams.get("pid");
+  const lid = url.searchParams.get("lid");
 
   const t = useTranslations("registration.register");
   const p = useTranslations("registration.app");
@@ -65,6 +66,7 @@ export default function Register({ step, setStep }) {
           country: formData?.country?.isoCode,
           phone: `${selectedPhone?.code}${formData?.phone}`,
           ...(pidParam && { partnerId: parseInt(pidParam) }),
+          ...(lid && { referralLinkId: parseInt(lid) }),
         };
         const config = {
           method: "put",
