@@ -35,9 +35,38 @@ export async function generateMetadata({ params: { locale } }) {
   };
 }
 
-const page = () => {
+const page = ({ params: { locale } }) => {
+  const hreflangLocales = [
+    { lng: "en", url: "en" },
+    { lng: "ar", url: "ar" },
+    { lng: "ku", url: "ku" },
+    { lng: "es", url: "es" },
+    { lng: "ps", url: "ps" },
+  ];
+
   return (
     <>
+      <head>
+        {hreflangLocales
+          .filter((item) => item.lng === locale)
+          .map((item) => (
+            <link
+              key={item.lng}
+              rel="canonical"
+              href={`https://www.primexcapital.com/${item.url}/ib-program`}
+            />
+          ))}
+        {hreflangLocales
+          .filter((item) => item.lng === locale)
+          .map((item) => (
+            <link
+              key={item.lng}
+              rel="alternate"
+              href={`https://www.primexcapital.com/${item.url}/ib-program`}
+              hreflang={item.lng}
+            />
+          ))}
+      </head>
       <Script
         id="linkedin-tracking"
         strategy="afterInteractive"
