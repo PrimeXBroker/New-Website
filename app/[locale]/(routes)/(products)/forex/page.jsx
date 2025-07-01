@@ -56,16 +56,6 @@ const page = ({ params: { locale } }) => {
               href={`https://www.primexcapital.com/${item.url}/forex`}
             />
           ))}
-        {hreflangLocales
-          .filter((item) => item.lng === locale)
-          .map((item) => (
-            <link
-              key={item.lng}
-              rel="alternate"
-              href={`https://www.primexcapital.com/${item.url}/forex`}
-              hreflang={item.lng}
-            />
-          ))}
       </head>
       <ForexPage />
     </>

@@ -56,16 +56,6 @@ const Awards = ({ params: { locale } }) => {
               href={`https://www.primexcapital.com/${item.url}/awards`}
             />
           ))}
-        {hreflangLocales
-          .filter((item) => item.lng === locale)
-          .map((item) => (
-            <link
-              key={item.lng}
-              rel="alternate"
-              href={`https://www.primexcapital.com/${item.url}/awards`}
-              hreflang={item.lng}
-            />
-          ))}
       </head>
       <AwardsPage />
     </>

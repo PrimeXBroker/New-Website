@@ -56,16 +56,6 @@ const page = ({ params: { locale } }) => {
               href={`https://www.primexcapital.com/${item.url}/ib-program`}
             />
           ))}
-        {hreflangLocales
-          .filter((item) => item.lng === locale)
-          .map((item) => (
-            <link
-              key={item.lng}
-              rel="alternate"
-              href={`https://www.primexcapital.com/${item.url}/ib-program`}
-              hreflang={item.lng}
-            />
-          ))}
       </head>
       <Script
         id="linkedin-tracking"

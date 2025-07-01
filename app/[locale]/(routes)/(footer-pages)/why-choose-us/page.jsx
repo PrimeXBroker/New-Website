@@ -56,16 +56,6 @@ const page = ({ params: { locale } }) => {
               href={`https://www.primexcapital.com/${item.url}/why-choose-us`}
             />
           ))}
-        {hreflangLocales
-          .filter((item) => item.lng === locale)
-          .map((item) => (
-            <link
-              key={item.lng}
-              rel="alternate"
-              href={`https://www.primexcapital.com/${item.url}/why-choose-us`}
-              hreflang={item.lng}
-            />
-          ))}
       </head>
       <WhyChooseUsWrapper />
     </>

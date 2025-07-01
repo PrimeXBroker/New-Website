@@ -74,16 +74,6 @@ export default function Home({ params: { locale } }) {
               href={`https://www.primexcapital.com/${item.url}`}
             />
           ))}
-        {hreflangLocales
-          .filter((item) => item.lng === locale)
-          .map((item) => (
-            <link
-              key={item.lng}
-              rel="alternate"
-              href={`https://www.primexcapital.com/${item.url}`}
-              hreflang={item.lng}
-            />
-          ))}
       </head>
       <Script
         type="application/ld+json"

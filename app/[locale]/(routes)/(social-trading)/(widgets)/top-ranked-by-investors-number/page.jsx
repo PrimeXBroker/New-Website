@@ -56,16 +56,6 @@ const page = ({ params: { locale } }) => {
               href={`https://www.primexcapital.com/${item.url}/top-ranked-by-investors-number`}
             />
           ))}
-        {hreflangLocales
-          .filter((item) => item.lng === locale)
-          .map((item) => (
-            <link
-              key={item.lng}
-              rel="alternate"
-              href={`https://www.primexcapital.com/${item.url}/top-ranked-by-investors-number`}
-              hreflang={item.lng}
-            />
-          ))}
       </head>
       <HighProvidersWrapper />
     </>

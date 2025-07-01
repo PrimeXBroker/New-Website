@@ -56,16 +56,6 @@ const Mt5Platform = ({ params: { locale } }) => {
               href={`https://www.primexcapital.com/${item.url}/platform/mt5-platform`}
             />
           ))}
-        {hreflangLocales
-          .filter((item) => item.lng === locale)
-          .map((item) => (
-            <link
-              key={item.lng}
-              rel="alternate"
-              href={`https://www.primexcapital.com/${item.url}/platform/mt5-platform`}
-              hreflang={item.lng}
-            />
-          ))}
       </head>
       <Script
         type="application/ld+json"

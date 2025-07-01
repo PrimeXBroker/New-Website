@@ -56,16 +56,6 @@ const page = ({ params: { locale } }) => {
               href={`https://www.primexcapital.com/${item.url}/social-trading`}
             />
           ))}
-        {hreflangLocales
-          .filter((item) => item.lng === locale)
-          .map((item) => (
-            <link
-              key={item.lng}
-              rel="alternate"
-              href={`https://www.primexcapital.com/${item.url}/social-trading`}
-              hreflang={item.lng}
-            />
-          ))}
       </head>
       <CopyProgramWrapper />
     </>

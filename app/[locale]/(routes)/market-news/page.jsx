@@ -76,16 +76,6 @@ const page = async ({ params }) => {
               href={`https://www.primexcapital.com/${item.url}/market-news`}
             />
           ))}
-        {hreflangLocales
-          .filter((item) => item.lng === locale)
-          .map((item) => (
-            <link
-              key={item.lng}
-              rel="alternate"
-              href={`https://www.primexcapital.com/${item.url}/market-news`}
-              hreflang={item.lng}
-            />
-          ))}
       </head>
       <Hero />
       <Banner news={news?.slice(0, 5)} />

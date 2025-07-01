@@ -55,16 +55,6 @@ const About = ({ params: { locale } }) => {
               href={`https://www.primexcapital.com/${item.url}/about`}
             />
           ))}
-        {hreflangLocales
-          .filter((item) => item.lng === locale)
-          .map((item) => (
-            <link
-              key={item.lng}
-              rel="alternate"
-              href={`https://www.primexcapital.com/${item.url}/about`}
-              hreflang={item.lng}
-            />
-          ))}
       </head>
       <AboutPage />
     </>
