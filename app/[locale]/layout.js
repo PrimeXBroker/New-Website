@@ -124,6 +124,14 @@ export default async function layout({ children, params: { locale } }) {
           <link
             key={item.lng}
             rel="alternate"
+            href={`https://www.primexcapital.com/${item.url}/platform/mt5-platform`}
+            hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/forex`}
             hreflang={item.lng}
           />
@@ -144,7 +152,6 @@ export default async function layout({ children, params: { locale } }) {
             hreflang={item.lng}
           />
         ))}
-
         {hreflangLocales.map((item) => (
           <link
             key={item.lng}
@@ -173,14 +180,6 @@ export default async function layout({ children, params: { locale } }) {
           <link
             key={item.lng}
             rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/platform/mt5-platform`}
-            hreflang={item.lng}
-          />
-        ))}
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/account-types`}
             hreflang={item.lng}
           />
@@ -189,7 +188,7 @@ export default async function layout({ children, params: { locale } }) {
           <link
             key={item.lng}
             rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/ib-program`}
+            href={`https://www.primexcapital.com/${item.url}/primex-spreads`}
             hreflang={item.lng}
           />
         ))}
@@ -197,7 +196,7 @@ export default async function layout({ children, params: { locale } }) {
           <link
             key={item.lng}
             rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/regional-partner`}
+            href={`https://www.primexcapital.com/${item.url}/local-depositor`}
             hreflang={item.lng}
           />
         ))}
@@ -214,6 +213,22 @@ export default async function layout({ children, params: { locale } }) {
             key={item.lng}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/social-trading`}
+            hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="alternate"
+            href={`https://www.primexcapital.com/${item.url}/ib-program`}
+            hreflang={item.lng}
+          />
+        ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="alternate"
+            href={`https://www.primexcapital.com/${item.url}/regional-partner`}
             hreflang={item.lng}
           />
         ))}
@@ -261,14 +276,6 @@ export default async function layout({ children, params: { locale } }) {
           <link
             key={item.lng}
             rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/primex-spreads`}
-            hreflang={item.lng}
-          />
-        ))}
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/why-choose-us`}
             hreflang={item.lng}
           />
@@ -285,7 +292,7 @@ export default async function layout({ children, params: { locale } }) {
           <link
             key={item.lng}
             rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/contact`}
+            href={`https://www.primexcapital.com/${item.url}/awards`}
             hreflang={item.lng}
           />
         ))}
@@ -293,7 +300,7 @@ export default async function layout({ children, params: { locale } }) {
           <link
             key={item.lng}
             rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/awards`}
+            href={`https://www.primexcapital.com/${item.url}/contact`}
             hreflang={item.lng}
           />
         ))}

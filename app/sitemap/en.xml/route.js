@@ -1,23 +1,38 @@
 export async function GET() {
   const urls = [
     { url: "https://primexcapital.com/en", lastModified: new Date() },
-    { url: "https://primexcapital.com/en/about", lastModified: new Date() },
-    { url: "https://primexcapital.com/en/careers", lastModified: new Date() },
-    { url: "https://primexcapital.com/en/contact", lastModified: new Date() },
+    { url: "https://primexcapital.com/en/app", lastModified: new Date() },
     {
-      url: "https://primexcapital.com/en/account-types",
+      url: "https://primexcapital.com/en/platform/mt5-platform",
       lastModified: new Date(),
     },
     { url: "https://primexcapital.com/en/forex", lastModified: new Date() },
     { url: "https://primexcapital.com/en/metals", lastModified: new Date() },
+    { url: "https://primexcapital.com/en/indices", lastModified: new Date() },
     {
       url: "https://primexcapital.com/en/commodities",
       lastModified: new Date(),
     },
     { url: "https://primexcapital.com/en/stocks", lastModified: new Date() },
-    { url: "https://primexcapital.com/en/indices", lastModified: new Date() },
+    { url: "https://primexcapital.com/en/crypto", lastModified: new Date() },
     {
-      url: "https://primexcapital.com/en/platform/mt5-platform",
+      url: "https://primexcapital.com/en/account-types",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/en/primex-spreads",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/en/local-depositor",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/en/bonus",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/en/social-trading",
       lastModified: new Date(),
     },
     {
@@ -25,10 +40,26 @@ export async function GET() {
       lastModified: new Date(),
     },
     {
+      url: "https://primexcapital.com/en/regional-partner",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/en/primex-spreads",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://primexcapital.com/en/why-choose-us",
+      lastModified: new Date(),
+    },
+    { url: "https://primexcapital.com/en/about", lastModified: new Date() },
+    { url: "https://primexcapital.com/en/contact", lastModified: new Date() },
+    { url: "https://primexcapital.com/en/awards", lastModified: new Date() },
+    {
       url: "https://primexcapital.com/en/client-agreement",
       lastModified: new Date(),
     },
     { url: "https://primexcapital.com/en/terms", lastModified: new Date() },
+
     {
       url: "https://primexcapital.com/en/policy-statement",
       lastModified: new Date(),
@@ -50,31 +81,11 @@ export async function GET() {
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/en/privacy-policy",
+      url: "https://primexcapital.com/en/follower-agreement",
       lastModified: new Date(),
     },
     {
-      url: "https://primexcapital.com/en/liquidity-providing",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://primexcapital.com/en/grey-label-partner",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://primexcapital.com/en/regional-partner",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://primexcapital.com/en/why-choose-us",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://primexcapital.com/en/social-trading",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://primexcapital.com/en/economic-calender",
+      url: "https://primexcapital.com/en/provider-agreement",
       lastModified: new Date(),
     },
     {
@@ -90,19 +101,11 @@ export async function GET() {
       lastModified: new Date(),
     },
     {
+      url: "https://primexcapital.com/en/economic-calender",
+      lastModified: new Date(),
+    },
+    {
       url: "https://primexcapital.com/en/blogs",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://primexcapital.com/en/ramadan-contest",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://primexcapital.com/en/follower-agreement",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://primexcapital.com/en/provider-agreement",
       lastModified: new Date(),
     },
   ];

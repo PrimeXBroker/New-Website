@@ -56,8 +56,27 @@ const page = async ({ params }) => {
     totalPages = response?.result.pagination.totalPages;
   }
 
+  const hreflangLocales = [
+    { lng: "en", url: "en" },
+    { lng: "ar", url: "ar" },
+    { lng: "ku", url: "ku" },
+    { lng: "es", url: "es" },
+    { lng: "ps", url: "ps" },
+  ];
+
   return (
     <>
+      <head>
+        {hreflangLocales
+          .filter((item) => item.lng === locale)
+          .map((item) => (
+            <link
+              key={item.lng}
+              rel="canonical"
+              href={`https://www.primexcapital.com/${item.url}/market-news`}
+            />
+          ))}
+      </head>
       <Hero />
       <Banner news={news?.slice(0, 5)} />
       <MarketNews news={news} totalPages={totalPages} lang={lang} />

@@ -35,8 +35,31 @@ export async function generateMetadata({ params: { locale } }) {
   };
 }
 
-const page = () => {
-  return <CopyProgramWrapper />;
+const page = ({ params: { locale } }) => {
+  const hreflangLocales = [
+    { lng: "en", url: "en" },
+    { lng: "ar", url: "ar" },
+    { lng: "ku", url: "ku" },
+    { lng: "es", url: "es" },
+    { lng: "ps", url: "ps" },
+  ];
+
+  return (
+    <>
+      <head>
+        {hreflangLocales
+          .filter((item) => item.lng === locale)
+          .map((item) => (
+            <link
+              key={item.lng}
+              rel="canonical"
+              href={`https://www.primexcapital.com/${item.url}/social-trading`}
+            />
+          ))}
+      </head>
+      <CopyProgramWrapper />
+    </>
+  );
 };
 
 export default page;
