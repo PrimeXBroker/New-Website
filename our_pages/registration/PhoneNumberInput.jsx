@@ -20,7 +20,7 @@ export default function PhoneNumberField({
   const filteredOptions = countries.filter((option) =>
     option.label.toLowerCase().includes(searchTerm.toLowerCase())
   );
-  console.log(filteredOptions, "countries");
+  // console.log(filteredOptions, "countries");
 
   return (
     <div className="w-full relative mt-1 sm:mt-2">

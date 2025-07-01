@@ -32,7 +32,7 @@ export default function ConfirmEmailStep({ handleBack, sendEmail, formData }) {
     setCodeError(false);
     await sendEmail();
   };
-  console.log(formData?.token, "formData?.token");
+  // console.log(formData?.token, "formData?.token");
 
   const handleEmail = async () => {
     setLoading(true);
@@ -62,7 +62,7 @@ export default function ConfirmEmailStep({ handleBack, sendEmail, formData }) {
       setLoading(false);
     }
   };
-  console.log(value, "value");
+  // console.log(value, "value");
 
   return (
     <div>
