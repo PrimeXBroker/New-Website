@@ -488,7 +488,7 @@ export default async function layout({ children, params: { locale } }) {
             __html: `<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7629401&fmt=gif" />`,
           }}
         />
-        <Script
+        {/* <Script
           id="gtag-send-event"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -510,7 +510,7 @@ export default async function layout({ children, params: { locale } }) {
               }
             `,
           }}
-        />
+        /> */}
         <Script
           id="tiktok-pixel"
           strategy="afterInteractive"
