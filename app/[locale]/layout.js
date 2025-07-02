@@ -13,7 +13,6 @@ import { Toaster } from "react-hot-toast";
 import { FacebookPixelEvents } from "@/utilities/pixelEvent";
 import FallbackLoader from "@/components/LoadingSpinner";
 import Script from "next/script";
-import GoogleAnalytics from "@/utilities/GoogleAnalytics";
 import DesktopHeader from "@/components/DesktopHeader";
 import MobileHeader from "@/components/MobileHeader";
 import VideoPopup from "@/components/VideoPopup";
@@ -404,7 +403,6 @@ export default async function layout({ children, params: { locale } }) {
           }}
         />
       </head>
-      <GoogleAnalytics />
       <body>
         <Suspense fallback={<FallbackLoader />}>
           <div dir={direction}>
@@ -488,7 +486,7 @@ export default async function layout({ children, params: { locale } }) {
             __html: `<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7629401&fmt=gif" />`,
           }}
         />
-        {/* <Script
+        <Script
           id="gtag-send-event"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -510,7 +508,7 @@ export default async function layout({ children, params: { locale } }) {
               }
             `,
           }}
-        /> */}
+        />
         <Script
           id="tiktok-pixel"
           strategy="afterInteractive"
