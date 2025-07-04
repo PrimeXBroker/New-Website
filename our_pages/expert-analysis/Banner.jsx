@@ -111,7 +111,7 @@ const Banner = ({ news, titleEn }) => {
           </div>
           {/* Right side - Content */}
           <div className="space-y-6 sm:h-[400px] flex flex-col justify-between">
-            <h1 className="text-2xl sm:text-3xl font-bold leading-tight pt-3 lg:pt-0 text-tm dark:text-tm-dark">
+            <h2 className="text-2xl sm:text-3xl font-bold leading-tight pt-3 lg:pt-0 text-tm dark:text-tm-dark">
               {titleEn && newsDetails?.slug && (
                 <Link
                   href={`/${locale}/details/${convertToKebabCase(titleEn)}/${
@@ -125,7 +125,7 @@ const Banner = ({ news, titleEn }) => {
                     : newsDetails?.titleEn}
                 </Link>
               )}
-            </h1>
+            </h2>
             <div className="flex items-center justify-between text-ts dark:text-ts-dark py-2 lg:py-0">
               <span>
                 <Moment

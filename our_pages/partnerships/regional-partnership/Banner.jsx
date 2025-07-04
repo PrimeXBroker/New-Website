@@ -42,9 +42,9 @@ const Banner = () => {
                   {t("title7")}
                 </span>
               </h2>
-              <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-tm dark:text-tm-dark">
+              <h2 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-tm dark:text-tm-dark">
                 {t("title8")}
-              </h1>
+              </h2>
             </div>
             <div className="mt-10">
               <CustomYellowButton
