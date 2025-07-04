@@ -3099,7 +3099,9 @@
       "google_play-btn_part1": "Get it on",
       "google_play-btn_part2": "Google Play",
       "app_store_btn_part1": "Download on the",
-      "app_store_btn_part2": "App Store"
+      "app_store_btn_part2": "App Store",
+      "app_gallery_btn_part1": "Explore it on",
+      "app_gallery_btn_part2": "AppGallery"
     },
     "appBenefits": {
       "main_title1": "Why ",
@@ -3127,7 +3129,9 @@
       "google_play-btn_part1": "Get it on",
       "google_play-btn_part2": "Google Play",
       "app_store_btn_part1": "Download on the",
-      "app_store_btn_part2": "App Store"
+      "app_store_btn_part2": "App Store",
+      "app_gallery_btn_part1": "Explore it on",
+      "app_gallery_btn_part2": "AppGallery"
     }
   },
   "registration": {

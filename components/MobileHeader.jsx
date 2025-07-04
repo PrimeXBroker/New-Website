@@ -12,7 +12,8 @@ import { getLoginUrl } from "@/utilities/getLoginUrl";
 import { useTheme } from "next-themes";
 
 const MobileHeader = ({ locale }) => {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const t = useTranslations("menu");
   const foo = useTranslations("footer");
   const router = useRouter();
@@ -53,6 +54,10 @@ const MobileHeader = ({ locale }) => {
   });
 
   let dropdownTimeout;
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const openDropdown = useCallback((index) => {
     clearTimeout(dropdownTimeout);
@@ -178,7 +183,9 @@ const MobileHeader = ({ locale }) => {
               width="120"
               height="120"
               src={
-                theme === "dark"
+                !mounted
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
+                  : resolvedTheme === "dark"
                   ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
                   : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-black.webp"
               }
@@ -427,7 +434,9 @@ const MobileHeader = ({ locale }) => {
               width="120"
               height="120"
               src={
-                theme === "dark"
+                !mounted
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
+                  : resolvedTheme === "dark"
                   ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
                   : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-black.webp"
               }

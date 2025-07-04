@@ -2936,7 +2936,9 @@
       "google_play-btn_part1": "حمل التطبيق من",
       "google_play-btn_part2": "Google Play",
       "app_store_btn_part1": "حمل التطبيق من",
-      "app_store_btn_part2": "App Store"
+      "app_store_btn_part2": "App Store",
+      "app_gallery_btn_part1": "استكشفه على",
+      "app_gallery_btn_part2": "اب كالري"
     },
     "appBenefits": {
       "main_title1": "لماذا ",
@@ -2964,7 +2966,9 @@
       "google_play-btn_part1": "حمل التطبيق من",
       "google_play-btn_part2": "Google Play",
       "app_store_btn_part1": "حمل التطبيق من",
-      "app_store_btn_part2": "App Store"
+      "app_store_btn_part2": "App Store",
+      "app_gallery_btn_part1": "استكشفه على",
+      "app_gallery_btn_part2": "اب كالري"
     }
   },
   "registration": {

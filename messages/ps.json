@@ -3098,7 +3098,9 @@
       "google_play-btn_part1": "اپلیکیشن له دې ځایه ډاونلوډ کړئ",
       "google_play-btn_part2": "Google Play",
       "app_store_btn_part1": "اپلیکیشن له دې ځایه ډاونلوډ کړئ",
-      "app_store_btn_part2": "App Store"
+      "app_store_btn_part2": "App Store",
+      "app_gallery_btn_part1": "په کې یې ولټوئ",
+      "app_gallery_btn_part2": "اپ ګالري"
     },
     "appBenefits": {
       "main_title1": "ولې د ",
@@ -3126,7 +3128,9 @@
       "google_play-btn_part1": "اپلیکیشن له دې ځایه ډاونلوډ کړئ",
       "google_play-btn_part2": "Google Play",
       "app_store_btn_part1": "اپلیکیشن له دې ځایه ډاونلوډ کړئ",
-      "app_store_btn_part2": "App Store"
+      "app_store_btn_part2": "App Store",
+      "app_gallery_btn_part1": "په کې یې ولټوئ",
+      "app_gallery_btn_part2": "اپ ګالري"
     }
   },
   "registration": {

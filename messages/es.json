@@ -3098,7 +3098,9 @@
       "google_play-btn_part1": "Descarga la aplicación desde",
       "google_play-btn_part2": "Google Play",
       "app_store_btn_part1": "Descarga la aplicación desde",
-      "app_store_btn_part2": "App Store"
+      "app_store_btn_part2": "App Store",
+      "app_gallery_btn_part1": "Explóralo en",
+      "app_gallery_btn_part2": "AppGallery"
     },
     "appBenefits": {
       "main_title1": "¿Por qué ",
@@ -3126,7 +3128,9 @@
       "google_play-btn_part1": "Descarga la aplicación desde",
       "google_play-btn_part2": "Google Play",
       "app_store_btn_part1": "Descarga la aplicación desde",
-      "app_store_btn_part2": "App Store"
+      "app_store_btn_part2": "App Store",
+      "app_gallery_btn_part1": "Explóralo en",
+      "app_gallery_btn_part2": "AppGallery"
     }
   },
   "registration": {

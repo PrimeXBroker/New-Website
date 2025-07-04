@@ -24,12 +24,17 @@ import { useTheme } from "next-themes";
 const Footer = () => {
   const router = useRouter();
   const pathname = usePathname();
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const language = useLocale();
   const t = useTranslations("footer");
   const locale = useLocale();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isRegisterPage, setIsRegisterPage] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     setIsRegisterPage(pathname.includes("/registration"));
@@ -363,7 +368,9 @@ const Footer = () => {
                 width="150"
                 height="200"
                 src={
-                  theme === "dark"
+                  !mounted
+                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
+                    : resolvedTheme === "dark"
                     ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
                     : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-black.webp"
                 }

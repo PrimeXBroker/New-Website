@@ -106,6 +106,37 @@ const DownloadApp = () => {
                   </p>
                 </div>
               </a>
+              <a
+                href="https://appgallery.cloud.huawei.com/ag/n/app/C114072661?locale=en_GB&source=appshare&subsource=C114072661&shareTo=com.android.bluetooth&shareFrom=appmarket&shareIds=e02c3da07c89442dbb99f53adb01464d_com.android.bluetooth&callType=SHARE"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-e1 dark:bg-e1-dark border-1 border-e1 dark:border-e1-dark hover:border-e2 dark:hover:border-e2-dark transition-all duration-500 ease-in-out flex items-center justify-center gap-3 sm:gap-0 w-full sm:w-[200px] h-[60px] rounded-lg group"
+              >
+                <Image
+                  src={
+                    theme === "dark"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-online-trading/huawei-app-gallery.svg"
+                      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-online-trading/huawei-app-gallery.svg"
+                  }
+                  alt="Apple Store"
+                  width={32}
+                  height={32}
+                />
+                <div
+                  className={`text-tm dark:text-tm-dark ${
+                    locale === "ar" || locale === "ps" || locale === "ku"
+                      ? "mr-3 text-right"
+                      : "ml-3 text-left"
+                  }`}
+                >
+                  <p className="text-xs text-ts dark:text-ts-dark">
+                    {t("app_gallery_btn_part1")}
+                  </p>
+                  <p className="text-lg font-semibold">
+                    {t("app_gallery_btn_part2")}
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
           <div className="col-span-12 lg:col-span-6 flex justify-center mt-8 lg:mt-0">
