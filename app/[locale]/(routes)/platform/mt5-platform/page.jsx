@@ -33,8 +33,26 @@ export async function generateMetadata({ params: { locale } }) {
 }
 
 const Mt5Platform = () => {
+  const hreflangLocales = [
+    { lng: "en", url: "en" },
+    { lng: "ar", url: "ar" },
+    { lng: "ku", url: "ku" },
+    { lng: "es", url: "es" },
+    { lng: "ps", url: "ps" },
+  ];
+
   return (
     <>
+      <head>
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="alternate"
+            href={`https://www.primexcapital.com/${item.url}/platform/mt5-platform`}
+            hreflang={item.lng}
+          />
+        ))}
+      </head>
       <Script
         type="application/ld+json"
         id="breadcrumb-schema"

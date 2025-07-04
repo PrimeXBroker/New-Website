@@ -84,6 +84,14 @@ const pages = () => {
               href={`https://www.primexcapital.com/${item.url}/technical-analysis`}
             />
           ))}
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="alternate"
+            href={`https://www.primexcapital.com/${item.url}/technical-analysis`}
+            hreflang={item.lng}
+          />
+        ))}
       </head>
       <Hero />
       <Banner news={blogs?.slice(0, 5)} titleEn={currentCategory?.titleEn} />

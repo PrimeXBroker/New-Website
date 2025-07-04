@@ -78,8 +78,26 @@ const page = async () => {
     totalPages = carouselResponse?.result.pagination.totalPages;
   }
 
+  const hreflangLocales = [
+    { lng: "en", url: "en" },
+    { lng: "ar", url: "ar" },
+    { lng: "ku", url: "ku" },
+    { lng: "es", url: "es" },
+    { lng: "ps", url: "ps" },
+  ];
+
   return (
     <>
+      <head>
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="alternate"
+            href={`https://www.primexcapital.com/${item.url}/blogs`}
+            hreflang={item.lng}
+          />
+        ))}
+      </head>
       <Script
         type="application/ld+json"
         id="breadcrumb-schema"

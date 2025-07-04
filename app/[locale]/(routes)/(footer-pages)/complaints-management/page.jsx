@@ -33,8 +33,25 @@ export async function generateMetadata({ params: { locale } }) {
 }
 
 const page = () => {
+  const hreflangLocales = [
+    { lng: "en", url: "en" },
+    { lng: "ar", url: "ar" },
+    { lng: "ku", url: "ku" },
+    { lng: "es", url: "es" },
+    { lng: "ps", url: "ps" },
+  ];
   return (
     <>
+      <head>
+        {hreflangLocales.map((item) => (
+          <link
+            key={item.lng}
+            rel="alternate"
+            href={`https://www.primexcapital.com/${item.url}/complaints-management`}
+            hreflang={item.lng}
+          />
+        ))}
+      </head>
       <ComplaintsManagementPage />
     </>
   );
