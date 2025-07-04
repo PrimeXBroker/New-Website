@@ -21,7 +21,7 @@ const GetStarted = () => {
       <div className="container">
         <div className="flex p-10 flex-col lg:flex-row rounded-xl bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/spread/get-started-cta.webp)] bg-cover bg-center">
           <div className="lg:w-[60%]">
-            <h1
+            <h3
               className={`sectionHeading text-xl text-nb dark:text-nb-dark font-semibold ${
                 locale === "ar" || locale === "ps" || locale === "ku"
                   ? "text-center md:text-right"
@@ -29,7 +29,7 @@ const GetStarted = () => {
               }`}
             >
               {t("getStarted.get_started_title")}
-            </h1>
+            </h3>
             <p
               className={`sectionPara text-nb dark:text-nb-dark ${
                 locale === "ar" || locale === "ps" || locale === "ku"
