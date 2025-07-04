@@ -11,6 +11,8 @@ async function fetchArabicMarketNews() {
       title: item.title,
       language: item.language,
       createdOn: item.createdOn,
+      priority: 0.8,
+      changeFrequency: "daily",
     }));
     return links.map((link) => ({
       ...link,
@@ -58,6 +60,8 @@ export async function GET() {
           }</news:publication_date>
           <news:title>${article.title}</news:title>
         </news:news>
+         <priority>${article.priority}</priority>
+        <changefreq>${article.changeFrequency}</changefreq>
       </url>`
       )
       .join("")}

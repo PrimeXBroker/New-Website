@@ -8,6 +8,8 @@ async function fetchArabicBlogs() {
     const data = await response.json();
     const links = data.map((item) => ({
       url: `https://primexcapital.com/ar/blogs/${item.slug}`,
+      priority: 0.8,
+      changeFrequency: "daily",
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links.map((link) => ({

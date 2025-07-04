@@ -43,6 +43,26 @@ export default function SitemapTable({ sitemaps }) {
                 backgroundColor: "#f2f2f2",
               }}
             >
+              Priority
+            </th>
+            <th
+              style={{
+                padding: "8px 10px",
+                textAlign: "left",
+                fontWeight: "bold",
+                backgroundColor: "#f2f2f2",
+              }}
+            >
+              Frequency
+            </th>
+            <th
+              style={{
+                padding: "8px 10px",
+                textAlign: "left",
+                fontWeight: "bold",
+                backgroundColor: "#f2f2f2",
+              }}
+            >
               Last Modified
             </th>
           </tr>
@@ -80,6 +100,26 @@ export default function SitemapTable({ sitemaps }) {
                 >
                   {item.url}
                 </a>
+              </td>
+              <td
+                style={{
+                  padding: "4px 10px 4px 10px",
+                  color: "#000",
+                  whiteSpace: "nowrap",
+                  textAlign: "center",
+                }}
+              >
+                {item.priority}
+              </td>
+              <td
+                style={{
+                  padding: "4px 10px 4px 10px",
+                  color: "#000",
+                  whiteSpace: "nowrap",
+                  textAlign: "center",
+                }}
+              >
+                {item.changeFrequency}
               </td>
               <td
                 style={{

@@ -7,6 +7,8 @@ async function fetchEnglishPressRelease() {
     const data = await response.json();
     const links = data.map((item) => ({
       url: `https://primexcapital.com/en/press-release/${item.slug}`,
+      priority: 0.8,
+      changeFrequency: "daily",
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links.map((link) => ({
@@ -28,9 +30,11 @@ export async function GET() {
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${pressReleaseEnUrls
       .map(
-        ({ url, lastModified }) => `
+        ({ url, priority, changeFrequency, lastModified }) => `
       <url>
         <loc>${url}</loc>
+        <priority>${priority}</priority>
+          <frequency>${changeFrequency}</frequency>
         <lastmod>${lastModified.toISOString()}</lastmod>
       </url>`
       )
