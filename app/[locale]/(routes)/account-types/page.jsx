@@ -21,7 +21,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("accountTypes.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-account-types/accounttypes-header-img.webp",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-account-types/acc-type-hero.png",
           width: 1200,
           height: 630,
           alt: t("accountTypes.metaData.title"),
