@@ -1,90 +1,236 @@
 export async function GET() {
-  const baseUrl = "https://primexcapital.com";
-
   const sitemaps = [
-    { url: `${baseUrl}/sitemap/en.xml`, changefreq: "daily", priority: "1" },
-    { url: `${baseUrl}/sitemap/ar.xml`, changefreq: "daily", priority: "1" },
-    { url: `${baseUrl}/sitemap/ku.xml`, changefreq: "weekly", priority: "1" },
-    { url: `${baseUrl}/sitemap/ps.xml`, changefreq: "weekly", priority: "1" },
-    { url: `${baseUrl}/sitemap/es.xml`, changefreq: "weekly", priority: "1" },
     {
-      url: `${baseUrl}/sitemap/market-news-en.xml`,
-      changefreq: "hourly",
-      priority: "0.8",
+      url: "https://primexcapital.com/en",
+      lastModified: new Date(),
+      priority: 1,
+      changeFrequency: "Daily",
     },
     {
-      url: `${baseUrl}/sitemap/market-news-ar.xml`,
-      changefreq: "hourly",
-      priority: "0.8",
+      url: "https://primexcapital.com/en/app",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
     },
     {
-      url: `${baseUrl}/sitemap/technical-analysis-en.xml`,
-      changefreq: "weekly",
-      priority: "0.8",
+      url: "https://primexcapital.com/en/platform/mt5-platform",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
     },
     {
-      url: `${baseUrl}/sitemap/technical-analysis-ar.xml`,
-      changefreq: "weekly",
-      priority: "0.8",
+      url: "https://primexcapital.com/en/forex",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
     },
     {
-      url: `${baseUrl}/sitemap/blogs-en.xml`,
-      changefreq: "monthly",
-      priority: "0.8",
+      url: "https://primexcapital.com/en/metals",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
     },
     {
-      url: `${baseUrl}/sitemap/blogs-ar.xml`,
-      changefreq: "monthly",
-      priority: "0.8",
+      url: "https://primexcapital.com/en/indices",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
     },
     {
-      url: `${baseUrl}/sitemap/starting-gateway-en.xml`,
-      changefreq: "monthly",
-      priority: "0.8",
+      url: "https://primexcapital.com/en/commodities",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
     },
     {
-      url: `${baseUrl}/sitemap/starting-gateway-ar.xml`,
-      changefreq: "monthly",
-      priority: "0.8",
+      url: "https://primexcapital.com/en/stocks",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
     },
     {
-      url: `${baseUrl}/sitemap/press-release-en.xml`,
-      changefreq: "monthly",
-      priority: "0.8",
+      url: "https://primexcapital.com/en/crypto",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
     },
     {
-      url: `${baseUrl}/sitemap/press-release-ar.xml`,
-      changefreq: "monthly",
-      priority: "0.8",
+      url: "https://primexcapital.com/en/account-types",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
     },
     {
-      url: `${baseUrl}/sitemap/learning-hub-en.xml`,
-      changefreq: "monthly",
-      priority: "0.8",
+      url: "https://primexcapital.com/en/primex-spreads",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
     },
     {
-      url: `${baseUrl}/sitemap/learning-hub-ar.xml`,
-      changefreq: "monthly",
-      priority: "0.8",
+      url: "https://primexcapital.com/en/local-depositor",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/bonus",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/social-trading",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/ib-program",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/regional-partner",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/primex-spreads",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/why-choose-us",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/about",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/contact",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/awards",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/client-agreement",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/terms",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+
+    {
+      url: "https://primexcapital.com/en/policy-statement",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/risk-disclosure",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/complaints-management",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/cookie-policy",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/policy-of-aml",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/follower-agreement",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/provider-agreement",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/technical-analysis",
+      lastModified: new Date(),
+      priority: 0.7,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/market-news",
+      lastModified: new Date(),
+      priority: 0.7,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/webinars",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/economic-calender",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
+    {
+      url: "https://primexcapital.com/en/blogs",
+      lastModified: new Date(),
+      priority: 0.7,
+      changeFrequency: "Daily",
     },
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-  <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${sitemaps
-      .map(
-        ({ url, changefreq, priority }) => `
-      <sitemap>
-        <loc>${url}</loc>
-        <changefreq>${changefreq}</changefreq>
-        <priority>${priority}</priority>
-        <lastmod>${new Date().toISOString()}</lastmod>
-      </sitemap>`
-      )
-      .join("")}
-  </sitemapindex>`;
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      ${sitemaps
+        .map(
+          ({ url, priority, changeFrequency, lastModified }) => `
+        <url>
+          <loc>${url}</loc>
+          <priority>${priority}</priority>
+          <frequency>${changeFrequency}</frequency>
+          <lastmod>${lastModified.toISOString()}</lastmod>
+        </url>`
+        )
+        .join("")}
+    </urlset>`;
 
   return new Response(xml, {
-    headers: { "Content-Type": "application/xml; charset=utf-8" },
+    headers: {
+      "Content-Type": "application/xml; charset=utf-8",
+    },
   });
 }
