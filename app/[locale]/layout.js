@@ -21,7 +21,7 @@ import NotificationHandler from "@/components/NotificationHandler";
 import RedirectHandler from "@/components/RedirectHandler";
 import ThemeToggle from "@/components/common/ThemeToggle";
 import ThemeProviderWrapper from "@/context/theme-provider";
-// import RedirectionHandler from "@/components/common/RedirectionHandler";
+import RedirectionHandler from "@/components/common/RedirectionHandler";
 
 const montserrat = localFont({
   src: [
@@ -125,7 +125,7 @@ export default async function layout({ children, params: { locale } }) {
         />
       </head>
       <body>
-        {/* <RedirectionHandler /> */}
+        <RedirectionHandler />
         <Suspense fallback={<FallbackLoader />}>
           <div dir={direction}>
             <NextUIProvider>
