@@ -385,13 +385,15 @@ const Footer = () => {
               <Link
                 href={`${
                   locale === "ar"
-                    ? "https://www.facebook.com/PrimeX.Global.Ar/"
+                    ? "https://www.facebook.com/PrimeX.Arabic/"
                     : locale === "ku"
-                    ? "https://www.facebook.com/PrimeX.Global.Kd"
+                    ? "https://www.facebook.com/PrimeX.Global.Ku/"
                     : locale === "es"
-                    ? "https://www.facebook.com/PrimeX.Global.Es/"
+                    ? "https://www.facebook.com/PrimeX.Global.Es"
                     : locale === "ps"
-                    ? "https://www.facebook.com/profile.php?id=61575159165427"
+                    ? "https://www.facebook.com/PrimeX.Pashto/"
+                    : locale === "pt"
+                    ? "https://www.facebook.com/PrimeX.Global.Pt/"
                     : "https://www.facebook.com/PrimeX.Global.En"
                 }`}
                 target="_blank"
@@ -408,6 +410,12 @@ const Footer = () => {
                     ? "https://t.me/PrimeX_Capital_ar"
                     : locale === "ku"
                     ? "https://t.me/primex_capital_kd"
+                    : locale === "es"
+                    ? "https://t.me/primexcapital_es"
+                    : locale === "ps"
+                    ? "https://t.me/primexcapital_ps"
+                    : locale === "pt"
+                    ? "https://t.me/primexcapital_pt"
                     : "https://t.me/PrimeX_Capital"
                 }`}
                 target="_blank"
@@ -421,10 +429,16 @@ const Footer = () => {
               <Link
                 href={`${
                   locale === "ar"
-                    ? "https://www.instagram.com/primexcapital.ar/"
+                    ? "https://www.instagram.com/primexcapital.ar"
                     : locale === "ku"
-                    ? "https://www.instagram.com/primexcapital.ku/"
-                    : "https://www.instagram.com/primexcapital.en/"
+                    ? "https://www.instagram.com/primexcapital.kd"
+                    : locale === "es"
+                    ? "https://www.instagram.com/primexcapital.es"
+                    : locale === "ps"
+                    ? "https://www.instagram.com/primexcapital.ps"
+                    : locale === "pt"
+                    ? "https://www.instagram.com/primexcapital.pt"
+                    : "https://www.instagram.com/primexcapital.en"
                 }`}
                 target="_blank"
               >
@@ -444,6 +458,8 @@ const Footer = () => {
                     ? "https://whatsapp.com/channel/0029Vb5kNFU9xVJcwh9aD90N"
                     : locale === "ps"
                     ? "https://whatsapp.com/channel/0029VbAMPjU3QxS6L63Dh01k"
+                    : locale === "pt"
+                    ? "https://whatsapp.com/channel/0029VbAjXdhDjiOgrjoD6o2L"
                     : "https://whatsapp.com/channel/0029VbAjXdhDjiOgrjoD6o2L"
                 }`}
                 target="_blank"
@@ -455,7 +471,11 @@ const Footer = () => {
                 />
               </Link>
               <Link
-                href="https://www.youtube.com/@primex.capital"
+                href={`${
+                  locale === "ar"
+                    ? "https://www.youtube.com/@primex.capital"
+                    : "https://www.youtube.com/@PrimeX.Capitalen"
+                }`}
                 target="_blank"
               >
                 <FaYoutube
@@ -464,14 +484,7 @@ const Footer = () => {
                   className="fill-tm dark:fill-tm-dark hover:fill-[#ff0033] dark:hover:fill-[#ff0033] transition-all hover:translate-y-[-5px] duration-500"
                 />
               </Link>
-              <Link
-                href={`${
-                  locale === "ar"
-                    ? "https://x.com/PrimeXCapitalAr"
-                    : "https://x.com/PrimeXCapital"
-                }`}
-                target="_blank"
-              >
+              <Link href="https://x.com/PrimeXCapital" target="_blank">
                 <FaXTwitter
                   color="#FFF"
                   size={30}
