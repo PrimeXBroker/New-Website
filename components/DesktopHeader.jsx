@@ -31,9 +31,9 @@ const DesktopHeader = ({ locale }) => {
         ? "پښتو"
         : locale === "ku"
         ? "کوردی"
-        : // : locale === "tr"
-          // ? "Türkçe"
-          "English",
+        : locale === "pt"
+        ? "Português"
+        : "English",
     flag:
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
@@ -43,9 +43,9 @@ const DesktopHeader = ({ locale }) => {
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
         : locale === "ku"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
-        : // : locale === "tr"
-          // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
+        : locale === "pt"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
+        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
   });
   const router = useRouter();
   let dropdownTimeout;
@@ -121,9 +121,9 @@ const DesktopHeader = ({ locale }) => {
         ? "پښتو"
         : locale === "ku"
         ? "کوردی"
-        : // : locale === "tr"
-          // ? "Türkçe"
-          "English";
+        : locale === "pt"
+        ? "Português"
+        : "English";
     const flag =
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
@@ -133,9 +133,9 @@ const DesktopHeader = ({ locale }) => {
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
         : locale === "ku"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
-        : // : locale === "tr"
-          // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg";
+        : locale === "pt"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
+        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg";
     const initialLanguage = { text, flag };
     setLanguage(initialLanguage);
     localStorage.setItem("language", JSON.stringify(initialLanguage));
@@ -594,28 +594,28 @@ const DesktopHeader = ({ locale }) => {
               /> */}
               {activeDropdown === 4 && (
                 <ul className="absolute top-full mt-[4px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] min-w-[250px] rounded-[6px]">
-                  {(locale === "en" || locale === "ar" || locale === "ku") && (
-                    <>
-                      <li>
-                        <LocaleLink
-                          href="/technical-analysis"
-                          onClick={closeDropdown}
-                          className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
-                        >
-                          {t("technical-analysis")}
-                        </LocaleLink>
-                      </li>
-                      <li>
-                        <LocaleLink
-                          href="/market-news"
-                          onClick={closeDropdown}
-                          className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
-                        >
-                          {t("market-news")}
-                        </LocaleLink>
-                      </li>
-                    </>
-                  )}
+                  {/* {(locale === "en" || locale === "ar" || locale === "ku") && ( */}
+                  <>
+                    <li>
+                      <LocaleLink
+                        href="/technical-analysis"
+                        onClick={closeDropdown}
+                        className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                      >
+                        {t("technical-analysis")}
+                      </LocaleLink>
+                    </li>
+                    <li>
+                      <LocaleLink
+                        href="/market-news"
+                        onClick={closeDropdown}
+                        className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                      >
+                        {t("market-news")}
+                      </LocaleLink>
+                    </li>
+                  </>
+                  {/* )} */}
                   <li>
                     <LocaleLink
                       href="/webinars"
@@ -634,17 +634,17 @@ const DesktopHeader = ({ locale }) => {
                       {t("economic-calendar")}
                     </LocaleLink>
                   </li>
-                  {(locale === "en" || locale === "ar" || locale === "ku") && (
-                    <li>
-                      <LocaleLink
-                        href="/blogs"
-                        onClick={closeDropdown}
-                        className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
-                      >
-                        {t("blog")}
-                      </LocaleLink>
-                    </li>
-                  )}
+                  {/* {(locale === "en" || locale === "ar" || locale === "ku") && ( */}
+                  <li>
+                    <LocaleLink
+                      href="/blogs"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                    >
+                      {t("blog")}
+                    </LocaleLink>
+                  </li>
+                  {/* )} */}
                 </ul>
               )}
             </li>
@@ -929,14 +929,14 @@ const DesktopHeader = ({ locale }) => {
                   {/* <li>
                     <Link
                       href={
-                        currentLocale === "tr"
+                        currentLocale === "pt"
                           ? `/${currentLocale}/${restOfPath}`
-                          : `/tr/${restOfPath}`
+                          : `/pt/${restOfPath}`
                       }
                       onClick={() =>
                         handleClick(
-                          "Türkçe",
-                          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
+                          "Português",
+                          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
                         )
                       }
                       className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
@@ -946,10 +946,10 @@ const DesktopHeader = ({ locale }) => {
                         unoptimized={true}
                         width="15"
                         height="15"
-                        src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
-                        alt="Turkish Flag"
+                        src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
+                        alt="Português Flag"
                       />
-                      <span className="ml-[5px]">Türkçe</span>
+                      <span className="ml-[5px]">Português</span>
                     </Link>
                   </li> */}
                 </ul>

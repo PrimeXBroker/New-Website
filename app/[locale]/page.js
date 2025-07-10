@@ -1,34 +1,16 @@
+import React from "react";
 import Script from "next/script";
 import { createTranslator } from "next-intl";
-import { GetLocation } from "@/components/GetLocation";
 import HomeWrapper from "@/our_pages/homepage/HomeWrapper";
 
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../messages/${locale}.json`)).default;
   const t = createTranslator({ locale, messages });
-
-  const userCountry = await GetLocation();
-  const isInUAE = userCountry === "AE";
-
-  const descriptions = {
-    en: `Trade Forex, stocks, indices, CFDs, and metals online${
-      isInUAE ? " UAE" : ""
-    } with PrimeX Capital. Access top trading tools and insights. Learn more and start trading today!`,
-    ar: `تداول الفوركس والأسهم والمؤشرات وعقود الفروقات والمعادن عبر الإنترنت${
-      isInUAE ? " في الإمارات" : ""
-    } مع برايم اكس كابيتال. احصل على أفضل الأدوات المالية والرؤى. تعلم المزيد وابدأ التداول اليوم!`,
-    cn: `通过PrimeX Capital在线交易外汇、股票、指数、差价合约和金属${
-      isInUAE ? " UAE" : ""
-    }。获取顶级交易工具和见解。了解更多并立即开始交易！`,
-  };
-
-  const description = descriptions[locale] || descriptions["en"];
-
   const url = `https://www.primexcapital.com/${locale}`;
 
   return {
     title: t("home.metaData.title"),
-    description: description,
+    description: t("home.metaData.description"),
     alternates: {
       canonical: url,
     },
@@ -37,7 +19,7 @@ export async function generateMetadata({ params: { locale } }) {
       locale: locale,
       url: url,
       title: t("home.metaData.title"),
-      description: description,
+      description: t("home.metaData.description"),
       images: [
         {
           url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/World+map+hero+bg.webp",

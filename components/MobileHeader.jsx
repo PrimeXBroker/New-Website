@@ -36,9 +36,9 @@ const MobileHeader = ({ locale }) => {
         ? "پښتو"
         : locale === "ku"
         ? "کوردی"
-        : // : locale === "tr"
-          // ? "Türkçe"
-          "English",
+        : locale === "pt"
+        ? "Português"
+        : "English",
     flag:
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
@@ -48,9 +48,9 @@ const MobileHeader = ({ locale }) => {
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
         : locale === "ku"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
-        : // : locale === "tr"
-          // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
+        : locale === "pt"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
+        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
   });
 
   let dropdownTimeout;
@@ -143,9 +143,9 @@ const MobileHeader = ({ locale }) => {
         ? "پښتو"
         : locale === "ku"
         ? "کوردی"
-        : // : locale === "tr"
-          // ? "Türkçe"
-          "English";
+        : locale === "pt"
+        ? "Português"
+        : "English";
     const flag =
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
@@ -155,9 +155,9 @@ const MobileHeader = ({ locale }) => {
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
         : locale === "ku"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
-        : // : locale === "tr"
-          // ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg";
+        : locale === "pt"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
+        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg";
     const initialLanguage = { text, flag };
     setLanguage(initialLanguage);
     localStorage.setItem("language", JSON.stringify(initialLanguage));
@@ -386,14 +386,14 @@ const MobileHeader = ({ locale }) => {
                     {/* <li>
                       <Link
                         href={
-                          currentLocale === "tr"
+                          currentLocale === "pt"
                             ? `/${currentLocale}/${restOfPath}`
-                            : `/tr/${restOfPath}`
+                            : `/pt/${restOfPath}`
                         }
                         onClick={() =>
                           handleClick(
-                            "Türkçe",
-                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
+                            "Português",
+                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
                           )
                         }
                         className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
@@ -403,10 +403,10 @@ const MobileHeader = ({ locale }) => {
                           unoptimized={true}
                           width="15"
                           height="15"
-                          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
-                          alt="Turkish Flag"
+                          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
+                          alt="Português Flag"
                         />
-                        <span className="ml-[5px]">Türkçe</span>
+                        <span className="ml-[5px]">Português</span>
                       </Link>
                     </li> */}
                   </ul>
@@ -635,14 +635,14 @@ const MobileHeader = ({ locale }) => {
                       {/* <li>
                         <Link
                           href={
-                            currentLocale === "tr"
+                            currentLocale === "pt"
                               ? `/${currentLocale}/${restOfPath}`
-                              : `/tr/${restOfPath}`
+                              : `/pt/${restOfPath}`
                           }
                           onClick={() =>
                             handleClick(
-                              "Türkçe",
-                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
+                              "Português",
+                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
                             )
                           }
                           className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
@@ -652,10 +652,10 @@ const MobileHeader = ({ locale }) => {
                             unoptimized={true}
                             width="15"
                             height="15"
-                            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/turkey.webp"
-                            alt="Turkish Flag"
+                            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
+                            alt="Português Flag"
                           />
-                          <span className="ml-[5px]">Türkçe</span>
+                          <span className="ml-[5px]">Português</span>
                         </Link>
                       </li> */}
                     </ul>
@@ -979,24 +979,24 @@ const MobileHeader = ({ locale }) => {
             /> */}
             {openSubMenu === 5 && (
               <div className="mt-2">
-                {(locale === "en" || locale === "ar" || locale === "ku") && (
-                  <>
-                    <LocaleLink
-                      href="/technical-analysis"
-                      className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                      onClick={toggleDrawer}
-                    >
-                      {t("technical-analysis")}
-                    </LocaleLink>
-                    <LocaleLink
-                      href="/market-news"
-                      className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                      onClick={toggleDrawer}
-                    >
-                      {t("market-news")}
-                    </LocaleLink>
-                  </>
-                )}
+                {/* {(locale === "en" || locale === "ar" || locale === "ku") && ( */}
+                <>
+                  <LocaleLink
+                    href="/technical-analysis"
+                    className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                    onClick={toggleDrawer}
+                  >
+                    {t("technical-analysis")}
+                  </LocaleLink>
+                  <LocaleLink
+                    href="/market-news"
+                    className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                    onClick={toggleDrawer}
+                  >
+                    {t("market-news")}
+                  </LocaleLink>
+                </>
+                {/* )} */}
                 <LocaleLink
                   href="/webinars"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
@@ -1011,15 +1011,15 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("economic-calendar")}
                 </LocaleLink>
-                {(locale === "en" || locale === "ar" || locale === "ku") && (
-                  <LocaleLink
-                    href="/blogs"
-                    className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                    onClick={toggleDrawer}
-                  >
-                    {t("blog")}
-                  </LocaleLink>
-                )}
+                {/* {(locale === "en" || locale === "ar" || locale === "ku") && ( */}
+                <LocaleLink
+                  href="/blogs"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("blog")}
+                </LocaleLink>
+                {/* )} */}
               </div>
             )}
           </div>

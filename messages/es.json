@@ -52,8 +52,8 @@
   },
   "home": {
     "metaData": {
-      "title": "Comercia Forex, Acciones, Índices, CFD y Metales en Línea UAE | PrimeX Capital",
-      "description": "Comercia Forex, acciones, índices, CFDs y metales en línea UAE con PrimeX Capital. Accede a las mejores herramientas y análisis de trading. ¡Aprende más y comienza a comerciar hoy!"
+      "title": "Broker de Forex y CFDs | Plataforma de Trading FX | PrimeX Capital",
+      "description": "Comercia forex, metales, acciones y materias primas en línea con Primex Capital: un bróker global que ofrece plataformas seguras, herramientas avanzadas y soporte experto."
     },
     "hero": {
       "title1": "La ",
@@ -295,8 +295,8 @@
   },
   "metaTrader5": {
     "metaData": {
-      "title": "Comercia sin interrupciones con MetaTrader 5 | MT5 | PrimeX Capital",
-      "description": "Experimenta trading avanzado con la plataforma MetaTrader 5 (MT5) de PrimeX Capital. Disfruta de herramientas de vanguardia y ejecución sin interrupciones. ¡Haz clic para saber más y comenzar a comerciar!"
+      "title": "Comercia de manera más inteligente con la plataforma MT5 | PrimeX Capital",
+      "description": "Descubre el poder de la plataforma MT5 con PrimeX Capital. Opera con divisas, materias primas y CFDs utilizando herramientas avanzadas, datos en tiempo real y ejecución ultrarrápida."
     },
     "banner": {
       "title1": "MetaTrader 5",
@@ -388,8 +388,8 @@
   },
   "about": {
     "metaData": {
-      "title": "Acerca de Nosotros | PrimeX Capital",
-      "description": "Conoce PrimeX Capital, tu socio de confianza en trading. Descubre nuestra misión, valores y compromiso con la excelencia. ¡Haz clic para aprender más!"
+      "title": "Sobre Nosotros | PrimeX Capital",
+      "description": "Aprende sobre PrimeX Capital, tu socio de confianza en el trading. Descubre nuestra misión, valores y compromiso con la excelencia. ¡Haz clic para saber más!"
     },
     "hero": {
       "title1": "Revolucionando",
@@ -510,7 +510,7 @@
   "awards": {
     "metaData": {
       "title": "Premios y Reconocimientos | PrimeX Capital",
-      "description": "Descubre los últimos premios y reconocimientos de PrimeX Capital, celebrando la excelencia en servicios financieros. Aprende más sobre nuestros logros y ¡únete a nosotros hoy!"
+      "description": "Descubre los últimos premios y reconocimientos de PrimeX Capital, celebrando la excelencia en los servicios financieros. Conoce más sobre nuestros logros y únete a nosotros hoy."
     },
     "hero": {
       "title1": "¡Estamos Donde",
@@ -1124,8 +1124,8 @@
   },
   "ibProgram": {
     "metaData": {
-      "title": "Programa de Corredores Introducentes (IB) | PrimeX Capital",
-      "description": "Únete al Programa de Corredores Introducentes (IB) de PrimeX Capital y gana comisiones refiriendo clientes. Disfruta de soporte y recursos de primer nivel. Haz clic para saber más."
+      "title": "Programa de Introducción de Brokers (IB) | PrimeX Capital",
+      "description": "Únete al Programa de Broker Introducción (IB) de PrimeX Capital y gana comisiones por referir clientes. Disfruta de un soporte y recursos de primer nivel. Haz clic para obtener más información."
     },
     "banner": {
       "title1": "Conviértete en un",
@@ -1338,7 +1338,7 @@
   "regionalPartnership": {
     "metaData": {
       "title": "Programa de Asociación Regional | PrimeX Capital",
-      "description": "Maximiza tu crecimiento con el Programa de Asociación Regional de PrimeX Capital. Obtén descuentos lucrativos, comisiones multinivel, soporte 24/7 y más. ¡Únete ahora!"
+      "description": "Maximiza tu crecimiento con el Programa de Asociación Regional de PrimeX Capital. Obtén reembolsos lucrativos, comisiones de múltiples niveles, soporte 24/7 y más. ¡Únete ahora!"
     },
     "banner": {
       "title1": "Únete a Nuestro",
@@ -1429,7 +1429,7 @@
   "accountTypes": {
     "metaData": {
       "title": "Tipos de Cuenta | PrimeX Capital",
-      "description": "Descubre los tipos de cuentas de PrimeX Capital: Estándar para trading económico, Estrecha para scalpers, y Raw para Operadors profesionales. Abre tu cuenta hoy."
+      "description": "Descubre los tipos de cuenta de PrimeX Capital: Estándar para un trading rentable, Estrecha para scalpers y Raw para traders profesionales. Abre tu cuenta hoy."
     },
     "banner": {
       "title1": "Tipos de ",
@@ -1983,8 +1983,8 @@
   },
   "forexProduct": {
     "metaData": {
-      "title": "Opera Forex en Línea | PrimeX Capital",
-      "description": "Opera Forex en línea con PrimeX Capital para una experiencia de trading eficiente y sin interrupciones. Accede a herramientas y estrategias avanzadas. ¡Comienza a operar hoy!"
+      "title": "Comercia Forex en línea | PrimeX Capital",
+      "description": "Comercia divisas en línea con PrimeX Capital para una experiencia de trading fluida y eficiente. ¡Accede a herramientas y estrategias avanzadas para comenzar a operar con confianza hoy mismo!"
     },
     "hero": {
       "title1": "Opera con Confianza",
@@ -2036,8 +2036,8 @@
   },
   "metalsProduct": {
     "metaData": {
-      "title": "Plataforma de Trading de Metales en Línea | PrimeX Capital",
-      "description": "Opera metales en línea con la plataforma robusta de PrimeX Capital. Accede a herramientas avanzadas y perspectivas para un trading efectivo. Haz clic para obtener más información y comenzar a operar hoy mismo."
+      "title": "Comercia metales en línea | PrimeX Capital",
+      "description": "Comercia metales en línea con la plataforma robusta de PrimeX Capital. Accede a herramientas avanzadas y análisis para un trading efectivo. ¡Haz clic para obtener más información y comenzar a operar hoy mismo!"
     },
     "hero": {
       "title1": "Asegura Tu",
@@ -2092,7 +2092,7 @@
   "stocksProduct": {
     "metaData": {
       "title": "Invertir en Acciones | Operar Acciones en Línea | PrimeX Capital",
-      "description": "Invierte y opera acciones en línea con PrimeX Capital. Accede a herramientas poderosas y perspectivas para un trading de acciones más inteligente. Aprende más y comienza a invertir hoy mismo."
+      "description": "Invierte y negocia acciones en línea con PrimeX Capital. Accede a herramientas poderosas y análisis para una negociación de acciones más inteligente. ¡Aprende más y comienza a invertir hoy!"
     },
     "hero": {
       "title1": "Construye tu",
@@ -2144,8 +2144,8 @@
   },
   "indicesProduct": {
     "metaData": {
-      "title": "Opera con Índices en Línea | CFDs de Índices | PrimeX Capital",
-      "description": "Opera con índices y CFDs en línea con PrimeX Capital. Accede a una amplia gama de índices y herramientas avanzadas de trading. ¡Comienza a operar hoy!"
+      "title": "Comercia con Índices en Línea | CFDs de Índices | PrimeX Capital",
+      "description": "Comercia índices y CFDs en línea con PrimeX Capital. Accede a una amplia gama de índices y herramientas de trading avanzadas. ¡Comienza a operar hoy!"
     },
     "hero": {
       "title1": "Opera",
@@ -2199,8 +2199,8 @@
   },
   "cryptoProduct": {
     "metaData": {
-      "title": "",
-      "description": ""
+      "title": "Comercia con Cripto Online | PrimeX Capital",
+      "description": "Comercia criptomonedas en línea con PrimeX Capital. Accede a una plataforma de trading de criptomonedas segura e intuitiva con datos en tiempo real, ejecución rápida y soporte 24/7."
     },
     "hero": {
       "title1": "Opera",
@@ -2252,8 +2252,8 @@
   },
   "commoditiesProduct": {
     "metaData": {
-      "title": "Trading de Commodities en Línea | Opera Commodities en Línea | PrimeX Capital",
-      "description": "Opera commodities en línea con PrimeX Capital, incluyendo mercados como el oro, el petróleo y el gas natural. Disfruta de spreads competitivos y opciones de apalancamiento. ¡Haz clic para operar ahora!"
+      "title": "Comercia con Commodities en Línea | PrimeX Capital",
+      "description": "Comercia con productos básicos en línea con PrimeX Capital, con mercados como oro, petróleo y gas natural. Disfruta de spreads competitivos y opciones de apalancamiento. ¡Haz clic para operar ahora!"
     },
     "hero": {
       "title1": "Opera",
@@ -2304,8 +2304,8 @@
   },
   "copyProgram": {
     "metaData": {
-      "title": "Mejor Plataforma de Trading Social | Traders Top | PrimeX Capital",
-      "description": "Socializa con traders expertos y haz crecer tus inversiones con PrimeX Capital. Nuestra plataforma de primer nivel hace que el trading rentable sea fácil. ¡Comienza a copiar Operadors ganadores hoy!"
+      "title": "Mejor Plataforma de Trading Social | Mejores Traders Sociales | PrimeX Capital",
+      "description": "Expertos en trading social y haz crecer tus inversiones con PrimeX Capital. Nuestra plataforma de primer nivel hace que el trading rentable sea sencillo. ¡Comienza a copiar a los traders ganadores hoy mismo!"
     },
     "hero": {
       "title_part1": "Comienza ",
@@ -2542,7 +2542,7 @@
   "contactUs": {
     "metaData": {
       "title": "Contáctanos | PrimeX Capital",
-      "description": "Ponte en contacto con PrimeX Capital para cualquier consulta o soporte. Estamos aquí para ayudarte con tus necesidades de trading. ¡Haz clic para contactarnos y obtener ayuda hoy!"
+      "description": "Póngase en contacto con PrimeX Capital para cualquier consulta o soporte. Estamos aquí para asistirle con sus necesidades de trading. ¡Haga clic para contactarnos y obtener ayuda hoy mismo!"
     },
     "banner": {
       "main_title": "Contáctanos",
@@ -2611,8 +2611,8 @@
   },
   "whyChooseUs": {
     "metaData": {
-      "title": "Por Qué Elegirnos | PrimeX Capital",
-      "description": "PrimeX Capital ofrece servicios de trading de élite con más de $330 millones en capital pagado, proporcionando acceso a más de 330 instrumentos, spreads desde 0.1 pips y apalancamiento de hasta 1:500. Experimenta una ejecución de operaciones ultrarrápida, tecnología de vanguardia, soporte multilingüe 24/7 y una sólida seguridad de fondos."
+      "title": "¿Por qué elegirnos? | PrimeX Capital",
+      "description": "Descubre por qué los traders confían en PrimeX Capital. Ofrecemos plataformas de trading seguras, soporte experto, spreads competitivos y un enfoque centrado en el cliente para el éxito."
     },
     "hero": {
       "title1": "Experimenta",
@@ -2785,8 +2785,8 @@
   },
   "economicCalender": {
     "metaData": {
-      "title": "Calendario económico | PrimeX Capital",
-      "description": ""
+      "title": "Calendario Económico | PrimeX Capital",
+      "description": "Mantente actualizado con el calendario económico en tiempo real de PrimeX Capital. Sigue los eventos globales clave, los datos que mueven el mercado, las decisiones sobre tasas de interés y los indicadores económicos."
     },
     "hero": {
       "title_1": "PrimeX Capital ",
@@ -2796,8 +2796,8 @@
   },
   "localDepositor": {
     "metaData": {
-      "title": "Servicio de Depósito Local Ahora Disponible en Iraq",
-      "description": ""
+      "title": "Servicio de Depósito Local Ahora Disponible en Irak",
+      "description": "Comercia de manera fácil y segura con PrimeX Capital. ¡Te ofrecemos una variedad de opciones locales para depósitos y retiros dentro de Irak!"
     },
     "hero": {
       "title_1": "Servicio de Depósito Local Ahora Disponible en Iraq",
@@ -2838,7 +2838,7 @@
   },
   "knowledgeHubWebinars": {
     "metaData": {
-      "title": "Webinars | PrimeX Capital",
+      "title": "Webinarios | PrimeX Capital",
       "description": "Mejora tus habilidades de trading con los seminarios web dirigidos por expertos de PrimeX Capital, que ofrecen sesiones gratuitas y coaching personalizado para acelerar tu éxito."
     },
     "hero": {
@@ -2851,7 +2851,7 @@
   "knowledgeHubBlogs": {
     "metaData": {
       "title": "Blogs | PrimeX Capital",
-      "description": ""
+      "description": "Explora consejos de trading de expertos, análisis de mercado y estrategias financieras en el blog de PrimeX Capital. Mantente informado para mejorar tus decisiones de trading."
     },
     "hero": {
       "title_1": "Aprende y ",
@@ -2862,7 +2862,7 @@
   "knowledgeHubMarketNews": {
     "metaData": {
       "title": "Noticias del Mercado | PrimeX Capital",
-      "description": "Mantente informado con las noticias de mercado en tiempo real de PrimeX Capital, ofreciendo conocimientos expertos y análisis basado en datos sobre los principales eventos financieros y cambios en el mercado para apoyar tus decisiones de trading."
+      "description": "Manténgase adelante con las últimas noticias y análisis del mercado de PrimeX Capital. Siga las tendencias financieras globales, los desarrollos en divisas, actualizaciones económicas y perspectivas de expertos a diario."
     },
     "hero": {
       "title_1": "Noticias del Mercado en Tiempo Real",
@@ -2872,8 +2872,8 @@
   },
   "knowledgeHubTechnical": {
     "metaData": {
-      "title": "Análisis Técnico | PrimeX Capital",
-      "description": ""
+      "title": "Análisis Técnico y Perspectivas del Mercado | PrimeX Capital",
+      "description": "Mantente a la vanguardia en el trading con el análisis técnico experto de PrimeX Capital. Accede a gráficos en tiempo real, pronósticos de tendencias y estrategias para tomar decisiones más inteligentes."
     },
     "hero": {
       "title_1": "Análisis Técnico",
@@ -2944,7 +2944,7 @@
   "spreadPage": {
     "metaData": {
       "title": "Mejores Spreads de Forex y Metales | PrimeX Capital",
-      "description": "Opera Forex y metales con spreads ultracompetitivos desde 0.8 pips en la cuenta Standard. Abre una cuenta hoy con PrimeX Capital y reduce tus costos de operación sin comisiones ocultas."
+      "description": "Comercia Forex y metales con spreads ultra competitivos desde 0.8 pips en la cuenta estándar. Abre una cuenta hoy con PrimeX Capital."
     },
     "hero": {
       "title_1": "¡Opera Forex y Metales con los Mejores Spreads de Siempre!",
@@ -2984,8 +2984,8 @@
   },
   "bonusPage": {
     "metaData": {
-      "title": "50% Deposit Bonus | PrimeX Capital",
-      "description": "Unlock your trading potential with PrimeX Capital's 50% Deposit Bonus! Get up to $500 instantly on deposits of $100+. Trade forex, metals, indices & stocks with a trusted global broker. Fast execution & 24/7 multilanguage support."
+      "title": "50% Bono de Depósito | PrimeX Capital",
+      "description": "Desbloquea tu potencial de trading con el bono de depósito del 50% de PrimeX Capital. Opera en forex, metales, índices y acciones con un bróker global de confianza."
     },
     "bonusHero": {
       "hero_title": "BONUS DE DEPÓSITO DEL 50% DE PRIMEX",
@@ -3087,8 +3087,8 @@
   },
   "primeXTradingApp": {
     "metaData": {
-      "title": "Aplicación PrimeX | Conexión sin límites | PrimeX Capital",
-      "description": "La aplicación PrimeX le permite administrar su cuenta fácilmente desde cualquier lugar, a través de la cual puede monitorear sus inversiones y realizar depósitos y retiros sin problemas."
+      "title": "Gestiona tu Portafolio de Trading | App PrimeX | PrimeX Capital",
+      "description": "Descubre el poder de la plataforma MT5 con PrimeX Capital. Opera en forex, materias primas y CFDs con herramientas avanzadas, datos en tiempo real y ejecución ultrarrápida."
     },
     "banner": {
       "title1": "Aplicación ",
