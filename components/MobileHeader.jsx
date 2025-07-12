@@ -383,7 +383,7 @@ const MobileHeader = ({ locale }) => {
                         </span>
                       </Link>
                     </li>
-                    {/* <li>
+                    <li>
                       <Link
                         href={
                           currentLocale === "pt"
@@ -408,7 +408,7 @@ const MobileHeader = ({ locale }) => {
                         />
                         <span className="ml-[5px]">Português</span>
                       </Link>
-                    </li> */}
+                    </li>
                   </ul>
                 )}
               </li>
@@ -632,7 +632,7 @@ const MobileHeader = ({ locale }) => {
                           </span>
                         </Link>
                       </li>
-                      {/* <li>
+                      <li>
                         <Link
                           href={
                             currentLocale === "pt"
@@ -657,7 +657,7 @@ const MobileHeader = ({ locale }) => {
                           />
                           <span className="ml-[5px]">Português</span>
                         </Link>
-                      </li> */}
+                      </li>
                     </ul>
                   )}
                 </li>

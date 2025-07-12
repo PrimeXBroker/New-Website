@@ -926,7 +926,7 @@ const DesktopHeader = ({ locale }) => {
                       <span className="ml-[5px]">پښتو</span>
                     </Link>
                   </li>
-                  {/* <li>
+                  <li>
                     <Link
                       href={
                         currentLocale === "pt"
@@ -951,7 +951,7 @@ const DesktopHeader = ({ locale }) => {
                       />
                       <span className="ml-[5px]">Português</span>
                     </Link>
-                  </li> */}
+                  </li>
                 </ul>
               )}
             </li>

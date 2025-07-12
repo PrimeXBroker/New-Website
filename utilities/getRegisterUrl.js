@@ -8,6 +8,8 @@ export const getRegisterUrl = (locale) => {
       return `/${locale}/registration`;
     case "ps":
       return `/${locale}/registration`;
+    case "pt":
+      return `/${locale}/registration`;
     default:
       return `/${locale}/registration`;
   }

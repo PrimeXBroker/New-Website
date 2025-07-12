@@ -8,6 +8,8 @@ export const getLoginUrl = (locale) => {
       return "https://my.primexcapital.com/es/login?sl=1";
     case "ps":
       return "https://my.primexcapital.com/ps/login?sl=1";
+    case "pt":
+      return "https://my.primexcapital.com/pt/login?sl=1";
     default:
       return "https://my.primexcapital.com/login?sl=1";
   }
