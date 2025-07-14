@@ -1,8 +1,16 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { useTheme } from "next-themes";
+import trustedGlobalBroker from "@/public/animations/bonus/trusted-global-broker.json";
+import lightningFast from "@/public/animations/bonus/lightning-fast-trade-execution.json";
+import trailblazingTechnology from "@/public/animations/bonus/trailblazing-technology.json";
+import dedicatedMultilingual from "@/public/animations/bonus/dedicated-multilingual-support.json";
+import lucrativePartnership from "@/public/animations/bonus/lucrative-partnership-programs.json";
+import securityOfFunds from "@/public/animations/bonus/security-of-funds.json";
+import multiAssetPortfolio from "@/public/animations/bonus/multi-asset-portfolio.json";
+import easyDeposit from "@/public/animations/bonus/easy-deposit-withdrawal.json";
+import Lottie from "lottie-react";
 
 const WhyBonusIconic = () => {
   const locale = useLocale();
@@ -14,73 +22,49 @@ const WhyBonusIconic = () => {
       title1: t("home_feature_1_title1"),
       title2: t("home_feature_1_title2"),
       description: t("home_feature_1_description"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Trusted-Global-Broker.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/bonus/Trusted+Global+Broker.svg",
+      icon: trustedGlobalBroker,
     },
     {
       title1: t("home_feature_2_title1"),
       title2: t("home_feature_2_title2"),
       description: t("home_feature_2_description"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Lightning-Fast-Trade-Execution.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/bonus/Lightning-Fast+Trade+Execution.svg",
+      icon: lightningFast,
     },
     {
       title1: t("home_feature_3_title1"),
       title2: t("home_feature_3_title2"),
       description: t("home_feature_3_description"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Trailblazing-Technology.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/bonus/Trailblazing+Technology.svg",
+      icon: trailblazingTechnology,
     },
     {
       title1: t("home_feature_4_title1"),
       title2: t("home_feature_4_title2"),
       description: t("home_feature_4_description"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Dedicated-Multilingual-Support.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/bonus/Dedicated+Multilingual+Support.svg",
+      icon: dedicatedMultilingual,
     },
     {
       title1: t("home_feature_5_title1"),
       title2: t("home_feature_5_title2"),
       description: t("home_feature_5_description"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Lucrative-Partnership-Programs.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/bonus/Lucrative+Partnership+Programs.svg",
+      icon: lucrativePartnership,
     },
     {
       title1: t("home_feature_6_title1"),
       title2: t("home_feature_6_title2"),
       description: t("home_feature_6_description"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Trailblazing-Technology-1.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/bonus/Security.svg",
+      icon: securityOfFunds,
     },
     {
       title1: t("home_feature_7_title1"),
       title2: t("home_feature_7_title2"),
       description: t("home_feature_7_description"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Multi-Asset-Portfolio.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/bonus/Multi-Asset+Portfolio.svg",
+      icon: multiAssetPortfolio,
     },
     {
       title1: t("home_feature_8_title1"),
       title2: t("home_feature_8_title2"),
       description: t("home_feature_8_description"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Easy-Deposit-Withdrawal.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/bonus/Easy+Deposit+Withdrawal.svg",
+      icon: easyDeposit,
     },
   ];
 
@@ -109,14 +93,10 @@ const WhyBonusIconic = () => {
                   </h3>
                 </div>
                 <div className="">
-                  <Image
-                    src={
-                      theme === "dark" ? benefit.iconDark : benefit.iconLight
-                    }
-                    alt={benefit.title1}
-                    width="40"
-                    height="40"
-                    className="w-[52px] h-[52px]"
+                  <Lottie
+                    animationData={benefit.icon}
+                    loop={true}
+                    style={{ width: "52px", height: "52px" }}
                   />
                 </div>
               </div>

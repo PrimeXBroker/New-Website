@@ -1,8 +1,12 @@
 "use client";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
-import Image from "next/image";
 import React from "react";
+import bonusEligibility from "@/public/animations/bonus/bonus-eligibility.json";
+import bonusRules from "@/public/animations/bonus/bonus-rules.json";
+import generalRules from "@/public/animations/bonus/general-rules.json";
+import tradingStrategies from "@/public/animations/bonus/prohibited-trading-strategies.json";
+import Lottie from "lottie-react";
 
 const BonusRules = () => {
   const { theme } = useTheme();
@@ -11,10 +15,7 @@ const BonusRules = () => {
   const rulesData = [
     {
       category: t("trading_rules_title"),
-      imageDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Bonus-Eligibility.svg",
-      imageLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/bonus/Bonus+Eligibility.svg",
+      icon: bonusEligibility,
       items: [
         t("trading_rules_li1_desc"),
         t("trading_rules_li2_desc"),
@@ -23,10 +24,7 @@ const BonusRules = () => {
     },
     {
       category: t("general_rules_title"),
-      imageDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Bonus-Rules.svg",
-      imageLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/bonus/Bonus+Rules.svg",
+      icon: bonusRules,
       items: [
         t("general_rules_li1_desc"),
         t("general_rules_li2_desc"),
@@ -36,10 +34,7 @@ const BonusRules = () => {
     },
     {
       category: t("timeline_title"),
-      imageDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/General-rules.svg",
-      imageLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/bonus/General+rules.svg",
+      icon: generalRules,
       items: [
         t("timeline_li1_desc"),
         t("timeline_li2_desc"),
@@ -49,10 +44,7 @@ const BonusRules = () => {
     },
     {
       category: t("works_title"),
-      imageDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/icons/Prohibited-Trading-Strategies.svg",
-      imageLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/bonus/Prohibited+Trading+Strategies.svg",
+      icon: tradingStrategies,
       items: [t("works_li1_desc"), t("works_li2_desc")],
     },
   ];
@@ -76,13 +68,10 @@ const BonusRules = () => {
                   {rule.category}
                 </h3>
                 <div>
-                  <Image
-                    unoptimized={true}
-                    src={theme === "dark" ? rule.imageDark : rule.imageLight}
-                    width="100"
-                    height="100"
-                    alt={`${rule.category} Prize`}
-                    className="w-[42px] h-[42px] sm:w-[52px] sm:h-[52px]"
+                  <Lottie
+                    animationData={rule.icon}
+                    loop={true}
+                    style={{ width: "52px", height: "52px" }}
                   />
                 </div>
               </dv>
