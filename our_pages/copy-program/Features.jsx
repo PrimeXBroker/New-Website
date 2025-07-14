@@ -1,36 +1,30 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
-import { useTheme } from "next-themes";
+import fullControlOverRisk from "@/public/animations/social-trading/full-control-over-risk.json";
+import copyMultipleExperts from "@/public/animations/social-trading/copy-multiple-experts.json";
+import copyByPercentage from "@/public/animations/social-trading/copy-by-percentage.json";
+import startInvestingEasily from "@/public/animations/social-trading/start-investing-easily.json";
+import accessDetailedPrime from "@/public/animations/social-trading/access-detailed-prime.json";
+import Lottie from "lottie-react";
 
 const Features = () => {
   const locale = useLocale();
-  const { theme } = useTheme();
   const t = useTranslations("copyProgram.features");
 
   const featuresDataTop = [
     {
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/Full+Control+Over+Risk+Management.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/social-trading/Full+Control+Over+Risk+Management.svg",
+      icon: fullControlOverRisk,
       text: t("feature1"),
       alt: "Risk Management Icon",
     },
     {
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/Copy+Multiple+Experts+Simultaneously.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/social-trading/Copy+Multiple+Experts+Simultaneously.svg",
+      icon: copyMultipleExperts,
       text: t("feature2"),
       alt: "Copy Multiple Experts Icon",
     },
     {
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/Copy+by+Percentage+or+Fixed+Lot.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/social-trading/Copy+by+Percentage+or+Fixed+Lot.svg",
+      icon: copyByPercentage,
       text: t("feature3"),
       alt: "Percentage or Fixed Lot Icon",
     },
@@ -38,18 +32,12 @@ const Features = () => {
 
   const featuresDataBottom = [
     {
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/Start+Investing+Easily+From+%24100.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/social-trading/Start+Investing+Easily+From+%24100.svg",
+      icon: startInvestingEasily,
       text: t("feature4"),
       alt: "Investing Icon",
     },
     {
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/Access+Detailed+Prime+Trader+Account+Stats.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/social-trading/Access+Detailed+Prime+Trader+Account+Stats.svg",
+      icon: accessDetailedPrime,
       text: t("feature5"),
       alt: "Account Stats Icon",
     },
@@ -72,14 +60,7 @@ const Features = () => {
                 }`}
               >
                 <div className="p-3 bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center h-16 w-16">
-                  <Image
-                    src={
-                      theme === "dark" ? feature.iconDark : feature.iconLight
-                    }
-                    alt={feature.alt}
-                    width="40"
-                    height="200"
-                  />
+                  <Lottie animationData={feature.icon} loop={true} />
                 </div>
                 <p className="text-base font-medium w-52">{feature.text}</p>
               </div>
@@ -98,14 +79,7 @@ const Features = () => {
                 }`}
               >
                 <div className="p-3 bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center h-16 w-16">
-                  <Image
-                    src={
-                      theme === "dark" ? feature.iconDark : feature.iconLight
-                    }
-                    alt={feature.alt}
-                    width="40"
-                    height="200"
-                  />
+                  <Lottie animationData={feature.icon} loop={true} />
                 </div>
                 <p className="text-base font-medium w-52">{feature.text}</p>
               </div>

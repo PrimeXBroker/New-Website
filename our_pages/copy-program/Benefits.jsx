@@ -3,6 +3,12 @@ import React from "react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { useTheme } from "next-themes";
+import realTimeTrading from "@/public/animations/social-trading/real-time-trading.json";
+import diversifyPortfolio from "@/public/animations/social-trading/diversify-portfolio.json";
+import automateAndSaveTime from "@/public/animations/social-trading/automate-and-save-time.json";
+import agileCustomerService from "@/public/animations/social-trading/agile-customer-service.json";
+import multiAssetPortfolio from "@/public/animations/social-trading/multi-asset-portfolio.json";
+import Lottie from "lottie-react";
 
 const Benefits = () => {
   const locale = useLocale();
@@ -14,46 +20,31 @@ const Benefits = () => {
       title1: t("title1_part1"),
       title2: t("title1_part2"),
       description: t("description1"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/Real-Time+Trading.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/social-trading/Real-Time+Trading.svg",
+      icon: realTimeTrading,
     },
     {
       title1: t("title2_part1"),
       title2: t("title2_part2"),
       description: t("description2"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/Diversify+Portfolio.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/social-trading/Diversify+Portfolio.svg",
+      icon: diversifyPortfolio,
     },
     {
       title1: t("title3_part1"),
       title2: t("title3_part2"),
       description: t("description3"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/Automte+and+save+time.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/social-trading/Automte+and+save+time.svg",
+      icon: automateAndSaveTime,
     },
     {
       title1: t("title4_part1"),
       title2: t("title4_part2"),
       description: t("description4"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/7+Customer+Support.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/social-trading/24+7+Customer+Support.svg",
+      icon: agileCustomerService,
     },
     {
       title1: t("title5_part1"),
       title2: t("title5_part2"),
       description: t("description5"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/copy-program/globe.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/social-trading/globe.svg",
+      icon: multiAssetPortfolio,
     },
   ];
 
@@ -90,13 +81,10 @@ const Benefits = () => {
                   </h3>
                 </div>
                 <div className="w-16 h-16 bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center">
-                  <Image
-                    src={
-                      theme === "dark" ? benefit.iconDark : benefit.iconLight
-                    }
-                    alt={benefit.title1}
-                    width="40"
-                    height="200"
+                  <Lottie
+                    animationData={benefit.icon}
+                    loop={true}
+                    style={{ width: "52px", height: "52px" }}
                   />
                 </div>
               </div>
