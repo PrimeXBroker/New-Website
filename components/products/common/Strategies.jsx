@@ -3,6 +3,10 @@ import React from "react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { useTheme } from "next-themes";
+import researchCompanies from "@/public/animations/products/research-companies.json";
+import diversifyInvestments from "@/public/animations/products/diversify-investments.json";
+import stayUpdated from "@/public/animations/products/stay-updated.json";
+import Lottie from "lottie-react";
 
 const Strategies = () => {
   const locale = useLocale();
@@ -13,26 +17,17 @@ const Strategies = () => {
     {
       title: t("title1"),
       description: t("description1"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-instruments/Diversify+Instruments.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/trading-instruments/Research-Companies.svg",
+      icon: researchCompanies,
     },
     {
       title: t("title2"),
       description: t("description2"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-instruments/Research+Companies.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/trading-instruments/Diversify-Investments.svg",
+      icon: diversifyInvestments,
     },
     {
       title: t("title3"),
       description: t("description3"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-instruments/Stay+Updated.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/trading-instruments/Stay-Updated.svg",
+      icon: stayUpdated,
     },
   ];
 
@@ -63,11 +58,10 @@ const Strategies = () => {
             <div
               className={`bg-e1 dark:bg-e1-dark w-14 h-14 flex justify-center items-center rounded-lg`}
             >
-              <Image
-                src={theme === "dark" ? strategy.iconDark : strategy.iconLight}
-                alt={strategy.title}
-                width="34"
-                height="200"
+              <Lottie
+                animationData={strategy.icon}
+                loop={true}
+                style={{ width: "52px", height: "52px" }}
               />
             </div>
           </div>

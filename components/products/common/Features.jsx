@@ -2,6 +2,11 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
+import diverseAssetsOptions from "@/public/animations/products/diverse-assets-options.json";
+import tightSpreads from "@/public/animations/products/tight-spreads.json";
+import globalMarket from "@/public/animations/products/global-market.json";
+import flexibleTerms from "@/public/animations/products/flexible-terms.json";
+import Lottie from "lottie-react";
 
 const Features = () => {
   const { theme } = useTheme();
@@ -12,37 +17,25 @@ const Features = () => {
       id: 1,
       title: t("feature_1_title"),
       description: t("feature_1_desc"),
-      imgDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-instruments/Diverse+Stock+Options.svg",
-      imgLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/trading-instruments/Diverse-Stock-Options.svg",
+      icon: diverseAssetsOptions,
     },
     {
       id: 1,
       title: t("feature_2_title"),
       description: t("feature_2_desc"),
-      imgDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-instruments/Tight+Spreads.svg",
-      imgLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/trading-instruments/Tight-Spreads.svg",
+      icon: tightSpreads,
     },
     {
       id: 3,
       title: t("feature_3_title"),
       description: t("feature_3_desc"),
-      imgDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-instruments/Global+Market.svg",
-      imgLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/trading-instruments/Global-Market.svg",
+      icon: globalMarket,
     },
     {
       id: 4,
       title: t("feature_4_title"),
       description: t("feature_4_desc"),
-      imgDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-instruments/Flexible+Terms.svg",
-      imgLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/trading-instruments/Flexible-Terms.svg",
+      icon: flexibleTerms,
     },
   ];
 
@@ -62,12 +55,10 @@ const Features = () => {
                 <div
                   className={`bg-e1 dark:bg-e1-dark w-16 h-16 sm:w-20 sm:h-20 md:w-16 md:h-16 flex justify-center items-center rounded-[6.32px]`}
                 >
-                  <Image
-                    src={theme === "dark" ? feature.imgDark : feature.imgLight}
-                    alt={feature.title}
-                    width="40"
-                    height="200"
-                    className="w-[34px] sm:w-[40px]"
+                  <Lottie
+                    animationData={feature.icon}
+                    loop={true}
+                    style={{ width: "52px", height: "52px" }}
                   />
                 </div>
                 <div className="md:text-center">
