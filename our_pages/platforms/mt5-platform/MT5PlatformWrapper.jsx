@@ -1,9 +1,18 @@
+"use client";
 import React from "react";
 import Banner from "./Banner";
 import KeyFeatures from "./KeyFeatures";
 import { useTranslations } from "next-intl";
 import GetStarted from "./GetStarted";
 import JoinPrimex from "./JoinPrimex";
+import advancedAnalyticalTools from "@/public/animations/mt5/advanced-analytical-tools.json";
+import multiAssetPlatform from "@/public/animations/mt5/multi-asset-platform.json";
+import automatedTradingIcon from "@/public/animations/mt5/automated-trading.json";
+import communityAndSupport from "@/public/animations/mt5/community-and-support.json";
+import improvedOrderExecution from "@/public/animations/mt5/improved-order-execution.json";
+import superiorChartingCapabilities from "@/public/animations/mt5/superior-charting-capabilities.json";
+import builtInEconomicCalendar from "@/public/animations/mt5/built-in-economic-calendar.json";
+import enhancedUserExperience from "@/public/animations/mt5/enhanced-user-experience.json";
 
 const MT5PlatformWrapper = () => {
   const t = useTranslations("metaTrader5.mt5Features");
@@ -112,8 +121,7 @@ const MT5PlatformWrapper = () => {
           sectionTitle={t("feature8_main_title1")}
           sectionHighlight={t("feature8_main_title2")}
           features={analyticalTools}
-          iconDark="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/pie-chart_2695446+1.svg"
-          iconLight="https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/mt5/Advanced+Analytical+Tools.svg"
+          icon={advancedAnalyticalTools}
           titleColor="text-tm dark:text-tm-dark"
           highlightColor="text-pcp dark:text-pcp-dark"
         />
@@ -121,8 +129,7 @@ const MT5PlatformWrapper = () => {
           sectionTitle={t("feature1_main_title1")}
           sectionHighlight={t("feature1_main_title2")}
           features={multiAssets}
-          iconDark="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/layers_11072985.svg"
-          iconLight="https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/mt5/Multi+Asset+Platform.svg"
+          icon={multiAssetPlatform}
           titleColor="text-pcp dark:text-pcp-dark"
           highlightColor="text-tm dark:text-tm-dark"
         />
@@ -130,8 +137,7 @@ const MT5PlatformWrapper = () => {
           sectionTitle={t("feature2_main_title1")}
           sectionHighlight={t("feature2_main_title2")}
           features={automatedTrading}
-          iconDark="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/currency-exchange_10434529+1.svg"
-          iconLight="https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/mt5/Automated+Trading.svg"
+          icon={automatedTradingIcon}
           titleColor="text-tm dark:text-tm-dark"
           highlightColor="text-pcp dark:text-pcp-dark"
         />
@@ -140,8 +146,7 @@ const MT5PlatformWrapper = () => {
           sectionHighlight={t("feature3_main_title2")}
           sectionTitle1={t("feature3_main_title3")}
           features={communitySupport}
-          iconDark="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/workgroup_12886641+1.svg"
-          iconLight="https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/mt5/Community+and+Support.svg"
+          icon={communityAndSupport}
           titleColor="text-pcp dark:text-pcp-dark"
           highlightColor="text-tm dark:text-tm-dark"
           titleColor1="text-pcp dark:text-pcp-dark"
@@ -150,8 +155,7 @@ const MT5PlatformWrapper = () => {
           sectionTitle={t("feature4_main_title1")}
           sectionHighlight={t("feature4_main_title2")}
           features={orderExecution}
-          iconDark="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/receipt_10440045+1.svg"
-          iconLight="https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/mt5/Improved+Order+Execution.svg"
+          icon={improvedOrderExecution}
           titleColor="text-tm dark:text-tm-dark"
           highlightColor="text-pcp dark:text-pcp-dark"
         />
@@ -159,8 +163,7 @@ const MT5PlatformWrapper = () => {
           sectionTitle={t("feature5_main_title1")}
           sectionHighlight={t("feature5_main_title2")}
           features={chartingCapabilities}
-          iconDark="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/bar-chart_386894+1.svg"
-          iconLight="https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/mt5/Superior+Charting+Capabilities.svg"
+          icon={superiorChartingCapabilities}
           titleColor="text-tm dark:text-tm-dark"
           highlightColor="text-pcp dark:text-pcp-dark"
         />
@@ -168,8 +171,7 @@ const MT5PlatformWrapper = () => {
           sectionTitle={t("feature6_main_title1")}
           sectionHighlight={t("feature6_main_title2")}
           features={userExperience}
-          iconDark="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/Frame+2147224183.svg"
-          iconLight="https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/mt5/Enhanced+User+Experience.svg"
+          icon={enhancedUserExperience}
           titleColor="text-tm dark:text-tm-dark"
           highlightColor="text-pcp dark:text-pcp-dark"
         />
@@ -177,8 +179,7 @@ const MT5PlatformWrapper = () => {
           sectionTitle={t("feature7_main_title1")}
           sectionHighlight={t("feature7_main_title2")}
           features={economicCalender}
-          iconDark="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/calendar_9310559+1.svg"
-          iconLight="https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/mt5/Built-in+Economic+Calendar.svg"
+          icon={builtInEconomicCalendar}
           titleColor="text-tm dark:text-tm-dark"
           highlightColor="text-pcp dark:text-pcp-dark"
         />

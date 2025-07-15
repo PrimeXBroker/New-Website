@@ -2,6 +2,7 @@
 import React from "react";
 import { useLocale } from "next-intl";
 import { useTheme } from "next-themes";
+import Lottie from "lottie-react";
 
 const FeatureCard = ({ title, description }) => {
   const locale = useLocale();
@@ -22,11 +23,9 @@ const KeyFeatures = ({
   sectionHighlight,
   sectionTitle1,
   features,
-  iconDark,
-  iconLight,
+  icon,
   titleColor,
   highlightColor,
-  titleColor1,
 }) => {
   const locale = useLocale();
   const { theme } = useTheme();
@@ -50,10 +49,10 @@ const KeyFeatures = ({
               )}
             </h2>
             <div className="w-16 h-16 bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center">
-              <img
-                src={theme === "dark" ? iconDark : iconLight}
-                alt={sectionTitle}
-                className="w-[40px]"
+              <Lottie
+                animationData={icon}
+                loop={true}
+                style={{ width: "52px", height: "52px" }}
               />
             </div>
           </div>
