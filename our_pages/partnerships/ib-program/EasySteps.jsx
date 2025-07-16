@@ -83,17 +83,10 @@ const EasySteps = () => {
               <p className="text-tm dark:text-tm-dark">{t("step2_desc")}</p>
             </div>
             <div className="bg-e1 dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
-              <Image
-                unoptimized={true}
-                src={
-                  theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Register.svg"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Register.svg"
-                }
-                alt="Promote"
-                width={100}
-                height={100}
-                className="h-32 w-32"
+              <Lottie
+                animationData={register}
+                loop={true}
+                style={{ width: "144px", height: "144px" }}
               />
             </div>
             <div className="bg-transparent border-dashed border-4 border-e2 dark:border-e2-dark rounded-lg p-6 flex flex-col justify-center h-[250px] ">
@@ -106,17 +99,10 @@ const EasySteps = () => {
               <p className="text-tm dark:text-tm-dark">{t("step1_desc")}</p>
             </div>
             <div className="bg-e1 dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
-              <Image
-                unoptimized={true}
-                src={
-                  theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Promote.svg"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Promote.svg"
-                }
-                alt="Register"
-                width={100}
-                height={100}
-                className="h-32 w-32"
+              <Lottie
+                animationData={promote}
+                loop={true}
+                style={{ width: "144px", height: "144px" }}
               />
             </div>
             <div className="bg-transparent border-dashed border-4 border-e2 dark:border-e2-dark rounded-lg p-6 flex flex-col justify-center h-[250px]">
@@ -129,17 +115,10 @@ const EasySteps = () => {
               <p className="text-tm dark:text-tm-dark">{t("step3_desc")}</p>
             </div>
             <div className="bg-e1 dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
-              <Image
-                unoptimized={true}
-                src={
-                  theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Earn.svg"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Earn.svg"
-                }
-                alt="Earn"
-                width={100}
-                height={100}
-                className="h-32 w-32"
+              <Lottie
+                animationData={earn}
+                loop={true}
+                style={{ width: "144px", height: "144px" }}
               />
             </div>
           </div>
