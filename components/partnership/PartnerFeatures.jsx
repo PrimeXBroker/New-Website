@@ -1,4 +1,5 @@
 "use client";
+import Lottie from "lottie-react";
 import { useTheme } from "next-themes";
 import React from "react";
 
@@ -29,11 +30,21 @@ const PartnerFeatures = ({ features, featureTitle }) => {
                 </h3>
               </div>
               <div className="w-14 h-14 bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center">
-                <img
-                  src={theme === "dark" ? feature.iconDark : feature.iconLight}
-                  alt={feature.title}
-                  className="w-[32px]"
-                />
+                {feature.icon && typeof feature.icon === "object" ? (
+                  <Lottie
+                    animationData={feature.icon}
+                    loop={true}
+                    style={{ width: "52px", height: "52px" }}
+                  />
+                ) : (
+                  <img
+                    src={
+                      theme === "dark" ? feature.iconDark : feature.iconLight
+                    }
+                    alt={feature.title}
+                    className="w-[32px]"
+                  />
+                )}
               </div>
             </div>
             <p className="text-ts dark:text-ts-dark mt-2 text-sm sm:text-base">

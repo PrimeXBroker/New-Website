@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import Lottie from "lottie-react";
 
 const EasySteps = ({ easySteps }) => {
   const { theme } = useTheme();
@@ -28,17 +29,10 @@ const EasySteps = ({ easySteps }) => {
               </p>
             </div>
             <div className="bg-e1 dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
-              <Image
-                unoptimized={true}
-                src={
-                  theme === "dark"
-                    ? easySteps.step3_img_dark
-                    : easySteps.step3_img_light
-                }
-                alt="Promote"
-                width={100}
-                height={100}
-                className="h-32 w-32"
+              <Lottie
+                animationData={easySteps.step3_icon}
+                loop={true}
+                style={{ width: "144px", height: "144px" }}
               />
             </div>
             <div className="bg-transparent border-dashed border-4 border-e2 dark:border-e2-dark rounded-lg p-6 flex flex-col justify-center h-[250px]">
@@ -53,17 +47,10 @@ const EasySteps = ({ easySteps }) => {
               </p>
             </div>
             <div className="bg-e1 dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
-              <Image
-                unoptimized={true}
-                src={
-                  theme === "dark"
-                    ? easySteps.step1_img_dark
-                    : easySteps.step1_img_light
-                }
-                alt="Register"
-                width={100}
-                height={100}
-                className="h-32 w-32"
+              <Lottie
+                animationData={easySteps.step1_icon}
+                loop={true}
+                style={{ width: "144px", height: "144px" }}
               />
             </div>
             <div className="bg-transparent border-dashed border-4 border-e2 dark:border-e2-dark rounded-lg p-6 flex flex-col justify-center h-[250px]">
@@ -78,17 +65,10 @@ const EasySteps = ({ easySteps }) => {
               </p>
             </div>
             <div className="bg-e1 dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
-              <Image
-                unoptimized={true}
-                src={
-                  theme === "dark"
-                    ? easySteps.step2_img_dark
-                    : easySteps.step2_img_light
-                }
-                alt="Earn"
-                width={100}
-                height={100}
-                className="h-32 w-32"
+              <Lottie
+                animationData={easySteps.step2_icon}
+                loop={true}
+                style={{ width: "144px", height: "144px" }}
               />
             </div>
           </div>

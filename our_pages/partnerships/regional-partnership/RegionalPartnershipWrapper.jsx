@@ -7,6 +7,15 @@ import EasySteps from "@/components/partnership/EasySteps";
 import EasyStepsMobile from "@/components/partnership/MobileEasySteps";
 import RegionalFormWrapper from "./RegionalFormWrapper";
 import ClientSatisfaction from "../ib-program/ClientSatisfaction";
+import lucrativeRebateStructure from "@/public/animations/regional-partnership/lucrative-rebate-structure.json";
+import multiTieredCommissions from "@/public/animations/regional-partnership/multi-tiered-commissions.json";
+import expertSupport from "@/public/animations/regional-partnership/expert-support.json";
+import rentalAdministrativeAssistance from "@/public/animations/regional-partnership/rental-administrative-assistance.json";
+import offlineMarketingResources from "@/public/animations/regional-partnership/offline-marketing-resources.json";
+import employeeCompensationSupport from "@/public/animations/regional-partnership/employee-compensation-support.json";
+import register from "@/public/animations/regional-partnership/register.json";
+import earn from "@/public/animations/regional-partnership/earn.json";
+import promote from "@/public/animations/regional-partnership/promote.json";
 
 const RegionalPartnershipWrapper = () => {
   const t = useTranslations("regionalPartnership.regionalBenefits");
@@ -17,55 +26,37 @@ const RegionalPartnershipWrapper = () => {
       title: t("title1"),
       title1: t("title1_1"),
       description: t("description1"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/grey-regional-partnership/Lucrative++Rebate+Structure.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/regional-partner/Lucrative++Rebate+Structure.svg",
+      icon: lucrativeRebateStructure,
     },
     {
       title: t("title2"),
       title1: t("title2_1"),
       description: t("description2"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/grey-regional-partnership/Multi-tiered++Commissions.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/regional-partner/Multi-tiered++Commissions.svg",
+      icon: multiTieredCommissions,
     },
     {
       title: t("title3"),
       title1: t("title3_1"),
       description: t("description3"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/grey-regional-partnership/Comprehensive++Support+Suite.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/regional-partner/24+7++Expert+Support.svg",
+      icon: expertSupport,
     },
     {
       title: t("title4"),
       title1: t("title4_1"),
       description: t("description4"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/grey-regional-partnership/Administrative++Assistance.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/regional-partner/Rental+Administrative++Assistance.svg",
+      icon: rentalAdministrativeAssistance,
     },
     {
       title: t("title5"),
       title1: t("title5_1"),
       description: t("description5"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/grey-regional-partnership/Offline++Marketing+Resources.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/regional-partner/Offline++Marketing+Resources.svg",
+      icon: offlineMarketingResources,
     },
     {
       title: t("title6"),
       title1: t("title6_1"),
       description: t("description6"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/grey-regional-partnership/Employee++Compensation+Support.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/regional-partner/Employee++Compensation+Support.svg",
+      icon: employeeCompensationSupport,
     },
   ];
 
@@ -79,22 +70,13 @@ const RegionalPartnershipWrapper = () => {
     title2: s("title2"),
     step1_title: s("step1_title"),
     step1_desc: s("step1_desc"),
-    step1_img_dark:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Register.svg",
-    step1_img_light:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Register.svg",
+    step1_icon: register,
     step2_title: s("step2_title"),
     step2_desc: s("step2_desc"),
-    step2_img_dark:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Earn.svg",
-    step2_img_light:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Earn.svg",
+    step2_icon: earn,
     step3_title: s("step3_title"),
     step3_desc: s("step3_desc"),
-    step3_img_dark:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Promote.svg",
-    step3_img_light:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Promote.svg",
+    step3_icon: promote,
     count1: s("step1_count"),
     count2: s("step2_count"),
     count3: s("step3_count"),
@@ -104,28 +86,19 @@ const RegionalPartnershipWrapper = () => {
     {
       step_title: s("step1_title"),
       step_desc: s("step1_desc"),
-      step_img_dark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Register.svg",
-      step_img_light:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Register.svg",
+      step1_icon: register,
       count: s("step1_count"),
     },
     {
       step_title: s("step2_title"),
       step_desc: s("step2_desc"),
-      step_img_dark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Earn.svg",
-      step_img_light:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Earn.svg",
+      step2_icon: earn,
       count: s("step2_count"),
     },
     {
       step_title: s("step3_title"),
       step_desc: s("step3_desc"),
-      step_img_dark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Promote.svg",
-      step_img_light:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Promote.svg",
+      step3_icon: promote,
       count: s("step3_count"),
     },
   ];

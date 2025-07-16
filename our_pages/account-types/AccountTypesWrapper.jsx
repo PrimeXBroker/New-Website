@@ -8,6 +8,9 @@ import AccountTypes from "./AccountTypes";
 import AccountTypesPricingTableMobile from "./AccountTypesPricingTableMobile";
 import FAQ from "@/components/NewFaq";
 import ClientReviews from "@/components/common/ClientReviews";
+import customerSupport from "@/public/animations/account-types/customer-support.json";
+import optimalTradingConditions from "@/public/animations/account-types/optimal-trading-conditions.json";
+import primexAcademy from "@/public/animations/account-types/primex-academy.json";
 
 const AccountTypesWrapper = () => {
   const t = useTranslations("accountTypes.accountTypesBenefits");
@@ -19,10 +22,7 @@ const AccountTypesWrapper = () => {
       title: t("title1"),
       title1: t("title1_1"),
       description: t("description1"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-account-types/7+Customer+Support.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/account-types/24+7+Customer+Support.svg",
+      icon: customerSupport,
     },
     {
       title: t("title2"),
@@ -37,19 +37,13 @@ const AccountTypesWrapper = () => {
       title: t("title3"),
       title1: t("title3_1"),
       description: t("description3"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-account-types/Optimal+Trading+Conditions.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/account-types/Optimal+Trading+Conditions.svg",
+      icon: optimalTradingConditions,
     },
     {
       title: t("title4"),
       title1: t("title4_1"),
       description: t("description4"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-account-types/Primex+academy.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/account-types/Primex+academy.svg",
+      icon: primexAcademy,
     },
   ];
 
