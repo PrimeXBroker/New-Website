@@ -2,6 +2,13 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
+import lucrativeCommissions from "@/public/animations/ib-program/lucrative-commissions.json";
+import advancedTradingPlatform from "@/public/animations/ib-program/advanced-trading-platform.json";
+import comprehensiveMarketingSupport from "@/public/animations/ib-program/comprehensive-marketing-support.json";
+import dedicatedIbSupportTeam from "@/public/animations/ib-program/dedicated-ib-support-team.json";
+import flexiblePayoutOptions from "@/public/animations/ib-program/flexible-payout-options.json";
+import transparentReporting from "@/public/animations/ib-program/transparent-reporting.json";
+import Lottie from "lottie-react";
 
 const PartnerFeatures = () => {
   const { theme } = useTheme();
@@ -12,55 +19,37 @@ const PartnerFeatures = () => {
       title: t("title1"),
       title1: t("title1_1"),
       description: t("description1"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Lucrative+Commissions.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Lucrative+Commissions.svg",
+      icon: lucrativeCommissions,
     },
     {
       title: t("title2"),
       title1: t("title2_1"),
       description: t("description2"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Advanced+Trading+Platform.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Advanced+Trading+Platform.svg",
+      icon: advancedTradingPlatform,
     },
     {
       title: t("title3"),
       title1: t("title3_1"),
       description: t("description3"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Comprehensive+Marketing+Support.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Comprehensive+Marketing+Support.svg",
+      icon: comprehensiveMarketingSupport,
     },
     {
       title: t("title4"),
       title1: t("title4_1"),
       description: t("description4"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Dedicated+IB+Support+Team.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Dedicated+IB+Support+Team.svg",
+      icon: dedicatedIbSupportTeam,
     },
     {
       title: t("title5"),
       title1: t("title5_1"),
       description: t("description5"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Flexible+Payout+Options.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Flexible+Payout+Options.svg",
+      icon: flexiblePayoutOptions,
     },
     {
       title: t("title6"),
       title1: t("title6_1"),
       description: t("description6"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Transparent+Reporting.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Transparent+Reporting.svg",
+      icon: transparentReporting,
     },
   ];
 
@@ -86,10 +75,10 @@ const PartnerFeatures = () => {
                 </h3>
               </div>
               <div className="w-14 h-14 bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center">
-                <img
-                  src={theme === "dark" ? benefit.iconDark : benefit.iconLight}
-                  alt={benefit.title}
-                  className="w-[32px]"
+                <Lottie
+                  animationData={benefit.icon}
+                  loop={true}
+                  style={{ width: "52px", height: "52px" }}
                 />
               </div>
             </div>

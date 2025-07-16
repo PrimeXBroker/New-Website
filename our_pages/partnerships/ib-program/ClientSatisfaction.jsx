@@ -3,6 +3,12 @@ import React from "react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { useTheme } from "next-themes";
+import discover from "@/public/animations/ib-program/discover.json";
+import benefit from "@/public/animations/ib-program/benefit.json";
+import experience from "@/public/animations/ib-program/experience.json";
+import enjoy from "@/public/animations/ib-program/enjoy.json";
+import countOn from "@/public/animations/ib-program/count-on.json";
+import Lottie from "lottie-react";
 
 const ClientSatisfaction = () => {
   const locale = useLocale();
@@ -74,17 +80,10 @@ const ClientSatisfaction = () => {
                   <div className="flex justify-between items-center">
                     <h3 className="text-2xl font-semibold">{t("title1")}</h3>
                     <div className="w-14 h-14 bg-e1 dark:bg-e1-dark rounded-lg flex justify-center items-center">
-                      <Image
-                        unoptimized={true}
-                        src={
-                          theme === "dark"
-                            ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Discover.svg"
-                            : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Discover.svg"
-                        }
-                        alt="Discover"
-                        width={100}
-                        height={100}
-                        className="w-[34px] h-[34px]"
+                      <Lottie
+                        animationData={discover}
+                        loop={true}
+                        style={{ width: "52px", height: "52px" }}
                       />
                     </div>
                   </div>
@@ -106,17 +105,10 @@ const ClientSatisfaction = () => {
                   <div className="flex justify-between items-center">
                     <h3 className="text-2xl font-semibold">{t("title2")}</h3>
                     <div className="w-14 h-14 bg-e1 dark:bg-e1-dark rounded-lg flex justify-center items-center">
-                      <Image
-                        unoptimized={true}
-                        src={
-                          theme === "dark"
-                            ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Benefit.svg"
-                            : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Benefit.svg"
-                        }
-                        alt="Benefit"
-                        width={100}
-                        height={100}
-                        className="w-[34px] h-[34px]"
+                      <Lottie
+                        animationData={benefit}
+                        loop={true}
+                        style={{ width: "52px", height: "52px" }}
                       />
                     </div>
                   </div>
@@ -138,17 +130,10 @@ const ClientSatisfaction = () => {
                   <div className="flex justify-between items-center">
                     <h3 className="text-2xl font-semibold">{t("title3")}</h3>
                     <div className="w-14 h-14 bg-e1 dark:bg-e1-dark rounded-lg flex justify-center items-center">
-                      <Image
-                        unoptimized={true}
-                        src={
-                          theme === "dark"
-                            ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Experience.svg"
-                            : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Experience.svg"
-                        }
-                        alt="Experience"
-                        width={100}
-                        height={100}
-                        className="w-[34px] h-[34px]"
+                      <Lottie
+                        animationData={experience}
+                        loop={true}
+                        style={{ width: "52px", height: "52px" }}
                       />
                     </div>
                   </div>
@@ -170,17 +155,10 @@ const ClientSatisfaction = () => {
                   <div className="flex justify-between items-center">
                     <h3 className="text-2xl font-semibold">{t("title4")}</h3>
                     <div className="w-14 h-14 bg-e1 dark:bg-e1-dark rounded-lg flex justify-center items-center">
-                      <Image
-                        unoptimized={true}
-                        src={
-                          theme === "dark"
-                            ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Enjoy.svg"
-                            : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Enjoy.svg"
-                        }
-                        alt="Enjoy"
-                        width={100}
-                        height={100}
-                        className="w-[34px] h-[34px]"
+                      <Lottie
+                        animationData={enjoy}
+                        loop={true}
+                        style={{ width: "52px", height: "52px" }}
                       />
                     </div>
                   </div>
@@ -202,17 +180,10 @@ const ClientSatisfaction = () => {
                   <div className="flex justify-between items-center">
                     <h3 className="text-2xl font-semibold">{t("title5")}</h3>
                     <div className="w-14 h-14 bg-e1 dark:bg-e1-dark rounded-lg flex justify-center items-center">
-                      <Image
-                        unoptimized={true}
-                        src={
-                          theme === "dark"
-                            ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Count+on.svg"
-                            : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Count+on.svg"
-                        }
-                        alt="Count On"
-                        width={100}
-                        height={100}
-                        className="w-[34px] h-[34px]"
+                      <Lottie
+                        animationData={countOn}
+                        loop={true}
+                        style={{ width: "52px", height: "52px" }}
                       />
                     </div>
                   </div>

@@ -2,6 +2,10 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
+import register from "@/public/animations/ib-program/register.json";
+import promote from "@/public/animations/ib-program/promote.json";
+import earn from "@/public/animations/ib-program/earn.json";
+import Lottie from "lottie-react";
 
 const EasyStepsMobile = () => {
   const { theme } = useTheme();
@@ -11,28 +15,19 @@ const EasyStepsMobile = () => {
     {
       title: t("step2_title"),
       description: t("step2_desc"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Register.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Register.svg",
+      icon: register,
       count: t("step1_count"),
     },
     {
       title: t("step1_title"),
       description: t("step1_desc"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Promote.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Promote.svg",
+      icon: promote,
       count: t("step2_count"),
     },
     {
       title: t("step3_title"),
       description: t("step3_desc"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Earn.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Earn.svg",
+      icon: earn,
       count: t("step3_count"),
     },
   ];
@@ -61,10 +56,10 @@ const EasyStepsMobile = () => {
                 </h3>
               </div>
               <div className="w-12 h-12 bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center">
-                <img
-                  src={theme === "dark" ? benefit.iconDark : benefit.iconLight}
-                  alt={benefit.title}
-                  className="w-[32px]"
+                <Lottie
+                  animationData={benefit.icon}
+                  loop={true}
+                  style={{ width: "42px", height: "42px" }}
                 />
               </div>
             </div>

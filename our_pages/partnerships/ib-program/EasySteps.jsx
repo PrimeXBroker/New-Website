@@ -3,6 +3,10 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import register from "@/public/animations/ib-program/register.json";
+import promote from "@/public/animations/ib-program/promote.json";
+import earn from "@/public/animations/ib-program/earn.json";
+import Lottie from "lottie-react";
 
 const EasySteps = () => {
   const { theme } = useTheme();
@@ -29,17 +33,10 @@ const EasySteps = () => {
               <p className="text-tm dark:text-tm-dark">{t("step2_desc")}</p>
             </div>
             <div className="bg-e1 dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
-              <Image
-                unoptimized={true}
-                src={
-                  theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Promote.svg"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Promote.svg"
-                }
-                alt="Promote"
-                width={100}
-                height={100}
-                className="h-32 w-32"
+              <Lottie
+                animationData={promote}
+                loop={true}
+                style={{ width: "144px", height: "144px" }}
               />
             </div>
             <div className="bg-transparent border-dashed border-4 border-e2 dark:border-e2-dark rounded-lg p-6 flex flex-col justify-center h-[250px] ">
@@ -52,17 +49,10 @@ const EasySteps = () => {
               <p className="text-tm dark:text-tm-dark">{t("step3_desc")}</p>
             </div>
             <div className="bg-e1 dark dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
-              <Image
-                unoptimized={true}
-                src={
-                  theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Register.svg"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Register.svg"
-                }
-                alt="Register"
-                width={100}
-                height={100}
-                className="h-32 w-32"
+              <Lottie
+                animationData={register}
+                loop={true}
+                style={{ width: "144px", height: "144px" }}
               />
             </div>
             <div className="bg-transparent border-dashed border-4 border-e2 dark:border-e2-dark rounded-lg p-6 flex flex-col justify-center h-[250px]">
@@ -75,17 +65,10 @@ const EasySteps = () => {
               <p className="text-tm dark:text-tm-dark">{t("step1_desc")}</p>
             </div>
             <div className="bg-e1 dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
-              <Image
-                unoptimized={true}
-                src={
-                  theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Earn.svg"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/Earn.svg"
-                }
-                alt="Earn"
-                width={100}
-                height={100}
-                className="h-32 w-32"
+              <Lottie
+                animationData={earn}
+                loop={true}
+                style={{ width: "144px", height: "144px" }}
               />
             </div>
           </div>
