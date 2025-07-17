@@ -3,7 +3,7 @@ import React from "react";
 import { useTranslations, useLocale } from "next-intl";
 import fullControlOverRisk from "@/public/animations/social-trading/full-control-over-risk.json";
 import copyMultipleExperts from "@/public/animations/social-trading/copy-multiple-experts.json";
-import copyByPercentage from "@/public/animations/social-trading/copy-by-percentage.json";
+import copyByPercentage from "@/public/animations/social-trading/copy-by-percentage-or-fixed-lot.json";
 import startInvestingEasily from "@/public/animations/social-trading/start-investing-easily.json";
 import accessDetailedPrime from "@/public/animations/social-trading/access-detailed-prime.json";
 import Lottie from "lottie-react";
