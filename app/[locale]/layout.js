@@ -22,6 +22,7 @@ import RedirectHandler from "@/components/RedirectHandler";
 import ThemeToggle from "@/components/common/ThemeToggle";
 import ThemeProviderWrapper from "@/context/theme-provider";
 import RedirectionHandler from "@/components/common/RedirectionHandler";
+import MousePartialEffect from "@/components/common/MousePartialEffect";
 
 const montserrat = localFont({
   src: [
@@ -135,6 +136,7 @@ export default async function layout({ children, params: { locale } }) {
                   <NotificationHandler />
                   <ImageView />
                   <VideoPopup />
+                  <MousePartialEffect />
                   <DesktopHeader locale={locale} />
                   <MobileHeader locale={locale} />
                   {children}
