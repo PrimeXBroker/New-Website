@@ -6,7 +6,7 @@ const MousePartialEffect = () => {
   return (
     <MouseParticles
       g={1}
-      color={["#FED100", "#ffffff"]}
+      color={["#FED100", "#F9F9F9"]}
       cull="MuiSvgIcon-root,MuiButton-root"
       level={6}
     />
