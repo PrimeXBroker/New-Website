@@ -5,6 +5,8 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { FiDownload } from "react-icons/fi";
 import { useTheme } from "next-themes";
+import followerAgreement from "@/public/animations/policies/follower-agreement.json";
+import Lottie from "lottie-react";
 
 const Banner = () => {
   const locale = useLocale();
@@ -30,15 +32,10 @@ const Banner = () => {
             <div
               className={`bg-e1 dark:bg-e1-dark w-14 h-14 flex justify-center items-center rounded-lg`}
             >
-              <Image
-                src={
-                  theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/follower-icon.svg"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/policy/follower-icon.svg"
-                }
-                alt="Follower Agreement Social Trading Program"
-                width="34"
-                height="200"
+              <Lottie
+                animationData={followerAgreement}
+                loop={true}
+                style={{ width: "52px", height: "52px" }}
               />
             </div>
           </div>
