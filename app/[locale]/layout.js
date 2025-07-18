@@ -124,6 +124,41 @@ export default async function layout({ children, params: { locale } }) {
             `,
           }}
         />
+        <Script
+          id="gtag-report-conversion"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              function gtag_report_conversion(url) {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-11492934355/UxvrCKrc_LMaENOFoegq',
+                    'value': 1.0,
+                    'currency': 'AED',
+                    'event_callback': callback
+                });
+                return false;
+              }
+            `,
+          }}
+        />
+        <Script
+          id="gtag-signup-conversion"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-11492934355/UxvrCKrc_LMaENOFoegq',
+                  'value': 1.0,
+                  'currency': 'AED'
+              });
+            `,
+          }}
+        />
       </head>
       <body>
         <RedirectionHandler />
