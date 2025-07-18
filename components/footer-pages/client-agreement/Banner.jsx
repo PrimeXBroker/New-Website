@@ -5,6 +5,8 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { FiDownload } from "react-icons/fi";
 import { useTheme } from "next-themes";
+import clientAgreement from "@/public/animations/policies/client-agreement.json";
+import Lottie from "lottie-react";
 
 const Banner = () => {
   const locale = useLocale();
@@ -30,15 +32,10 @@ const Banner = () => {
             <div
               className={`bg-e1 dark:bg-e1-dark w-14 h-14 flex justify-center items-center rounded-lg`}
             >
-              <Image
-                src={
-                  theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/policy/Client+Agreement.svg"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/policy/Client+Agreement.svg"
-                }
-                alt="Client Agreement"
-                width="34"
-                height="200"
+              <Lottie
+                animationData={clientAgreement}
+                loop={true}
+                style={{ width: "52px", height: "52px" }}
               />
             </div>
           </div>

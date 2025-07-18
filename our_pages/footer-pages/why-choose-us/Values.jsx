@@ -3,6 +3,11 @@ import Image from "next/image";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
+import overPaidUp from "@/public/animations/why-choose-us/over-paid-up-capital.json";
+import automatedTradingSpreads from "@/public/animations/why-choose-us/automated-trading-spreads-from-pips.json";
+import accessToTrading from "@/public/animations/why-choose-us/access-to-trading-instruments.json";
+import leverageUpToMaximum from "@/public/animations/why-choose-us/leverage-up-to-maximum-flexibility.json";
+import Lottie from "lottie-react";
 
 const Values = () => {
   const { theme } = useTheme();
@@ -15,10 +20,7 @@ const Values = () => {
       description1: t("value_1_desc1"),
       description2: t("value_1_desc2"),
       description3: t("value_1_desc3"),
-      imgDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/why-choose-us/Over+%24330M++Paid-Up+Capital.svg",
-      imgLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/why-choose-us/Over+%24330M++Paid-Up+Capital.svg",
+      icon: overPaidUp,
       desc1_color: "text-ts dark:text-ts-dark",
       desc2_color: "text-pcp dark:text-pcp-dark",
       desc3_color: "text-ts dark:text-ts-dark",
@@ -28,10 +30,7 @@ const Values = () => {
       description1: t("value_2_desc1"),
       description2: t("value_2_desc2"),
       description3: t("value_2_desc3"),
-      imgDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/why-choose-us/Automated+Trading+Spreads+from+0.1+Pips.svg",
-      imgLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/why-choose-us/Automated+Trading+Spreads+from+0.1+Pips.svg",
+      icon: automatedTradingSpreads,
       desc1_color: "text-ts dark:text-ts-dark",
       desc2_color: "text-ts dark:text-ts-dark",
       desc3_color: "text-pcp dark:text-pcp-dark",
@@ -41,10 +40,7 @@ const Values = () => {
       description1: t("value_3_desc1"),
       description2: t("value_3_desc2"),
       description3: t("value_3_desc3"),
-      imgDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/why-choose-us/Access+to+330%2B++Trading+Instruments.svg",
-      imgLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/why-choose-us/Access+to+330%2B++Trading+Instruments.svg",
+      icon: accessToTrading,
       desc1_color: "text-ts dark:text-ts-dark",
       desc2_color: "text-pcp dark:text-pcp-dark",
       desc3_color: "text-ts dark:text-ts-dark",
@@ -54,10 +50,7 @@ const Values = () => {
       description1: t("value_4_desc1"),
       description2: t("value_4_desc2"),
       description3: t("value_4_desc3"),
-      imgDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/why-choose-us/Leverage+Up+to+1_500+Maximum+Flexibility.svg",
-      imgLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/why-choose-us/Leverage+Up+to+1_500+Maximum+Flexibility.svg",
+      icon: leverageUpToMaximum,
       desc1_color: "text-ts dark:text-ts-dark",
       desc2_color: "text-pcp dark:text-pcp-dark",
       desc3_color: "text-ts dark:text-ts-dark",
@@ -84,11 +77,10 @@ sm:border-b sm:border-b-e1 sm:dark:border-b-e1-dark xs:border-b xs:border-b-e1 x
                       : "translate-y-0"
                   } `}
                 >
-                  <Image
-                    src={theme === "dark" ? feature.imgDark : feature.imgLight}
-                    alt={feature.title}
-                    width="40"
-                    height="200"
+                  <Lottie
+                    animationData={feature.icon}
+                    loop={true}
+                    style={{ width: "52px", height: "52px" }}
                   />
                 </div>
                 <p

@@ -2,6 +2,11 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
+import integrity from "@/public/animations/about-us/integrity.json";
+import innovation from "@/public/animations/about-us/innovation.json";
+import customerFocus from "@/public/animations/about-us/customer-focus.json";
+import excellence from "@/public/animations/about-us/excellence.json";
+import Lottie from "lottie-react";
 
 const Values = () => {
   const { theme } = useTheme();
@@ -12,37 +17,25 @@ const Values = () => {
       id: 1,
       title: t("value_1_title"),
       description: t("value_1_desc"),
-      imgUrlDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/about/new-about/Integrity.svg",
-      imgUrlLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/about-us/Integrity+Light+Theme.svg",
+      icon: integrity,
     },
     {
       id: 1,
       title: t("value_2_title"),
       description: t("value_2_desc"),
-      imgUrlDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/about/new-about/Innovation.svg",
-      imgUrlLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/about-us/Innovation+Light+Theme.svg",
+      icon: innovation,
     },
     {
       id: 3,
       title: t("value_3_title"),
       description: t("value_3_desc"),
-      imgUrlDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/about/new-about/Customer+Focus.svg",
-      imgUrlLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/about-us/Customer+Focus+Light+Theme.svg",
+      icon: customerFocus,
     },
     {
       id: 4,
       title: t("value_4_title"),
       description: t("value_4_desc"),
-      imgUrlDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/about/new-about/Excellence.svg",
-      imgUrlLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/about-us/Excellence+Light+Theme.svg",
+      icon: excellence,
     },
   ];
 
@@ -66,12 +59,10 @@ const Values = () => {
                 <div
                   className={`transition-all bg-e1 dark:bg-e1-dark rounded-xl`}
                 >
-                  <Image
-                    src={theme === "dark" ? card.imgUrlDark : card.imgUrlLight}
-                    alt={card.title}
-                    width="80"
-                    height="80"
-                    className=""
+                  <Lottie
+                    animationData={card.icon}
+                    loop={true}
+                    style={{ width: "52px", height: "52px" }}
                   />
                 </div>
                 <h3 className="font-semibold text-tm dark:text-tm-dark text-xl mt-3 mb-2">

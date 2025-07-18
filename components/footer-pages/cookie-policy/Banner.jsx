@@ -5,6 +5,8 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { FiDownload } from "react-icons/fi";
 import { useTheme } from "next-themes";
+import cookiePolicy from "@/public/animations/policies/cookie-policy.json";
+import Lottie from "lottie-react";
 
 const Banner = () => {
   const locale = useLocale();
@@ -30,15 +32,10 @@ const Banner = () => {
             <div
               className={`bg-e1 dark:bg-e1-dark w-14 h-14 flex justify-center items-center rounded-lg`}
             >
-              <Image
-                src={
-                  theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/policy/Cookie+Policy.svg"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/policy/Cookie+Policy.svg"
-                }
-                alt="Cookie Policy"
-                width="34"
-                height="200"
+              <Lottie
+                animationData={cookiePolicy}
+                loop={true}
+                style={{ width: "52px", height: "52px" }}
               />
             </div>
           </div>

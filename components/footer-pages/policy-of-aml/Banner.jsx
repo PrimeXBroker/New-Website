@@ -5,6 +5,8 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { FiDownload } from "react-icons/fi";
 import { useTheme } from "next-themes";
+import policyOfAml from "@/public/animations/policies/policy-of-aml.json";
+import Lottie from "lottie-react";
 
 const Banner = () => {
   const locale = useLocale();
@@ -30,15 +32,10 @@ const Banner = () => {
             <div
               className={`bg-e1 dark:bg-e1-dark w-14 h-14 flex justify-center items-center rounded-lg`}
             >
-              <Image
-                src={
-                  theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/policy/Policy+of+AML.svg"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/policy/Policy+of+AML.svg"
-                }
-                alt="Policy of AML"
-                width="34"
-                height="200"
+              <Lottie
+                animationData={policyOfAml}
+                loop={true}
+                style={{ width: "52px", height: "52px" }}
               />
             </div>
           </div>

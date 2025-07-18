@@ -2,6 +2,9 @@
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
+import mission from "@/public/animations/about-us/mission.json";
+import vision from "@/public/animations/about-us/vision.json";
+import Lottie from "lottie-react";
 
 const Mission = () => {
   const locale = useLocale();
@@ -13,19 +16,13 @@ const Mission = () => {
       id: 1,
       title: t("mission_title"),
       description: t("mission_desc"),
-      imgUrlDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/about/new-about/Mission.svg",
-      imgUrlLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/about-us/low-price_8922469.svg",
+      icon: mission,
     },
     {
       id: 2,
       title: t("vision_title"),
       description: t("vision_desc"),
-      imgUrlDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/about/new-about/Vision.svg",
-      imgUrlLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/about-us/growth_10106238.svg",
+      icon: vision,
     },
   ];
 
@@ -59,14 +56,10 @@ const Mission = () => {
                     {card.title}
                   </h2>
                   <div className="w-14 h-14 bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center">
-                    <Image
-                      src={
-                        theme === "dark" ? card.imgUrlDark : card.imgUrlLight
-                      }
-                      alt={card.title}
-                      width="500"
-                      height="100"
-                      className="w-[46px]"
+                    <Lottie
+                      animationData={card.icon}
+                      loop={true}
+                      style={{ width: "52px", height: "52px" }}
                     />
                   </div>
                 </div>
