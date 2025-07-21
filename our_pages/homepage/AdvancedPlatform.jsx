@@ -9,7 +9,6 @@ import advancedAnalyticalToolsDark from "@/public/animations/home/dark-mode/adva
 import advancedAnalyticalToolsLight from "@/public/animations/home/light-mode/advanced-analytical-tools.json";
 import dedicatedCommunityDark from "@/public/animations/home/dark-mode/dedicated-community-support.json";
 import dedicatedCommunityLight from "@/public/animations/home/light-mode/dedicated-community-support.json";
-
 import powerfulChartingDark from "@/public/animations/home/dark-mode/powerful-charting-capabilities.json";
 import powerfulChartingLight from "@/public/animations/home/light-mode/powerful-charting-capabilities.json";
 import allInOneMultiDark from "@/public/animations/home/dark-mode/all-in-one-multi-asset-platform.json";

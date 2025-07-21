@@ -5,8 +5,25 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
+import advancedAnalyticalToolsDark from "@/public/animations/home/dark-mode/advanced-analytical-tools.json";
+import advancedAnalyticalToolsLight from "@/public/animations/home/light-mode/advanced-analytical-tools.json";
+import dedicatedCommunityDark from "@/public/animations/home/dark-mode/dedicated-community-support.json";
+import dedicatedCommunityLight from "@/public/animations/home/light-mode/dedicated-community-support.json";
+import powerfulChartingDark from "@/public/animations/home/dark-mode/powerful-charting-capabilities.json";
+import powerfulChartingLight from "@/public/animations/home/light-mode/powerful-charting-capabilities.json";
+import allInOneMultiDark from "@/public/animations/home/dark-mode/all-in-one-multi-asset-platform.json";
+import allInOneMultiLight from "@/public/animations/home/light-mode/all-in-one-multi-asset-platform.json";
+import seamlessAutomatedDark from "@/public/animations/home/dark-mode/seamless-automated-trading.json";
+import seamlessAutomatedLight from "@/public/animations/home/light-mode/seamless-automated-trading.json";
+import integratedEconomicDark from "@/public/animations/home/dark-mode/integrated-economic-calendar.json";
+import integratedEconomicLight from "@/public/animations/home/light-mode/integrated-economic-calendar.json";
+import lightningFastDark from "@/public/animations/home/dark-mode/lightning-fast-order-execution.json";
+import lightningFastLight from "@/public/animations/home/light-mode/lightning-fast-order-execution.json";
+import { useTheme } from "next-themes";
+import Lottie from "lottie-react";
 
 const AdvancedPlatformMobile = () => {
+  const { theme } = useTheme();
   const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("home.advancedPlatforms");
@@ -18,37 +35,44 @@ const AdvancedPlatformMobile = () => {
 
   const features = [
     {
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/platform-icons/advanced-analytical-tools-dark.svg",
+      iconDark: advancedAnalyticalToolsDark,
+      iconLight: advancedAnalyticalToolsLight,
       title: t("li1"),
       description: t("li1_desc"),
     },
     {
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/platform-icons/community-and-support-dark.svg",
+      iconDark: dedicatedCommunityDark,
+      iconLight: dedicatedCommunityLight,
       title: t("li2"),
       description: t("li2_desc"),
     },
     {
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/platform-icons/powerful-charting-dark.svg",
+      iconDark: powerfulChartingDark,
+      iconLight: powerfulChartingLight,
       title: t("li3"),
       description: t("li3_desc"),
     },
     {
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/platform-icons/multi-assets-platform-dark.svg",
+      iconDark: allInOneMultiDark,
+      iconLight: allInOneMultiLight,
       title: t("li4"),
       description: t("li4_desc"),
     },
     {
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/platform-icons/automated-trading-dark.svg",
+      iconDark: seamlessAutomatedDark,
+      iconLight: seamlessAutomatedLight,
       title: t("li5"),
       description: t("li5_desc"),
     },
     {
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/platform-icons/lightening-fast-dark.svg",
+      iconDark: lightningFastDark,
+      iconLight: lightningFastLight,
       title: t("li6"),
       description: t("li6_desc"),
     },
     {
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/platform-icons/integrated-economic-calender.svg",
+      iconDark: integratedEconomicDark,
+      iconLight: integratedEconomicLight,
       title: t("li7"),
       description: t("li7_desc"),
     },
@@ -86,13 +110,12 @@ const AdvancedPlatformMobile = () => {
                   index !== features.length - 1 ? "mb-6" : ""
                 }`}
               >
-                <Image
-                  unoptimized
-                  src={item.icon}
-                  alt={item.title}
-                  width={100}
-                  height={100}
-                  className="w-[36px] h-[36px] sm:w-[54px] sm:h-[54px]"
+                <Lottie
+                  animationData={
+                    theme === "dark" ? item.iconDark : item.iconLight
+                  }
+                  loop={true}
+                  style={{ width: "42px", height: "42px" }}
                 />
                 <div>
                   <p className="text-sm sm:text-xl text-tm dark:text-tm-dark font-semibold mb-0">
