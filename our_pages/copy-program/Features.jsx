@@ -59,8 +59,12 @@ const Features = () => {
                     : ""
                 }`}
               >
-                <div className="p-3 bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center h-16 w-16">
-                  <Lottie animationData={feature.icon} loop={true} />
+                <div className="p-3 bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-lg flex items-center justify-center h-16 w-16">
+                  <Lottie
+                    animationData={feature.icon}
+                    loop={true}
+                    style={{ width: "52px", height: "52px" }}
+                  />
                 </div>
                 <p className="text-base font-medium w-52">{feature.text}</p>
               </div>
@@ -78,8 +82,12 @@ const Features = () => {
                     : ""
                 }`}
               >
-                <div className="p-3 bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center h-16 w-16">
-                  <Lottie animationData={feature.icon} loop={true} />
+                <div className="p-3 bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-lg flex items-center justify-center h-16 w-16">
+                  <Lottie
+                    animationData={feature.icon}
+                    loop={true}
+                    style={{ width: "52px", height: "52px" }}
+                  />
                 </div>
                 <p className="text-base font-medium w-52">{feature.text}</p>
               </div>

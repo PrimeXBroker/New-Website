@@ -79,7 +79,7 @@ const ClientSatisfaction = () => {
                 >
                   <div className="flex justify-between items-center">
                     <h3 className="text-2xl font-semibold">{t("title1")}</h3>
-                    <div className="w-14 h-14 bg-e1 dark:bg-e1-dark rounded-lg flex justify-center items-center">
+                    <div className="w-14 h-14 bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-lg flex justify-center items-center">
                       <Lottie
                         animationData={discover}
                         loop={true}
@@ -104,7 +104,7 @@ const ClientSatisfaction = () => {
                 >
                   <div className="flex justify-between items-center">
                     <h3 className="text-2xl font-semibold">{t("title2")}</h3>
-                    <div className="w-14 h-14 bg-e1 dark:bg-e1-dark rounded-lg flex justify-center items-center">
+                    <div className="w-14 h-14 bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-lg flex justify-center items-center">
                       <Lottie
                         animationData={benefit}
                         loop={true}
@@ -129,7 +129,7 @@ const ClientSatisfaction = () => {
                 >
                   <div className="flex justify-between items-center">
                     <h3 className="text-2xl font-semibold">{t("title3")}</h3>
-                    <div className="w-14 h-14 bg-e1 dark:bg-e1-dark rounded-lg flex justify-center items-center">
+                    <div className="w-14 h-14 bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-lg flex justify-center items-center">
                       <Lottie
                         animationData={experience}
                         loop={true}
@@ -154,7 +154,7 @@ const ClientSatisfaction = () => {
                 >
                   <div className="flex justify-between items-center">
                     <h3 className="text-2xl font-semibold">{t("title4")}</h3>
-                    <div className="w-14 h-14 bg-e1 dark:bg-e1-dark rounded-lg flex justify-center items-center">
+                    <div className="w-14 h-14 bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-lg flex justify-center items-center">
                       <Lottie
                         animationData={enjoy}
                         loop={true}
@@ -179,7 +179,7 @@ const ClientSatisfaction = () => {
                 >
                   <div className="flex justify-between items-center">
                     <h3 className="text-2xl font-semibold">{t("title5")}</h3>
-                    <div className="w-14 h-14 bg-e1 dark:bg-e1-dark rounded-lg flex justify-center items-center">
+                    <div className="w-14 h-14 bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-lg flex justify-center items-center">
                       <Lottie
                         animationData={countOn}
                         loop={true}

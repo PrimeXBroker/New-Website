@@ -82,15 +82,18 @@ const AdvancedPlatform = () => {
                 {t("advance_platform_description")}
               </p>
               <div className="flex flex-row items-center gap-2">
-                <Lottie
-                  animationData={
-                    theme === "dark"
-                      ? advancedAnalyticalToolsDark
-                      : advancedAnalyticalToolsLight
-                  }
-                  loop={true}
-                  style={{ width: "52px", height: "52px" }}
-                />
+                <div className="h-10 w-10 flex justify-center items-center bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-md">
+                  <Lottie
+                    animationData={
+                      theme === "dark"
+                        ? advancedAnalyticalToolsDark
+                        : advancedAnalyticalToolsLight
+                    }
+                    loop={true}
+                    style={{ width: "32px", height: "32px" }}
+                  />
+                </div>
+
                 <div>
                   <p className="lg:text-xs xl:text-sm text-tm dark:text-tm-dark font-bold mb-0">
                     {t("li1")}
@@ -101,15 +104,17 @@ const AdvancedPlatform = () => {
                 </div>
               </div>
               <div className="flex flex-row items-center gap-2 mt-4">
-                <Lottie
-                  animationData={
-                    theme === "dark"
-                      ? dedicatedCommunityDark
-                      : dedicatedCommunityLight
-                  }
-                  loop={true}
-                  style={{ width: "52px", height: "52px" }}
-                />
+                <div className="h-10 w-10 flex justify-center items-center bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-md">
+                  <Lottie
+                    animationData={
+                      theme === "dark"
+                        ? dedicatedCommunityDark
+                        : dedicatedCommunityLight
+                    }
+                    loop={true}
+                    style={{ width: "32px", height: "32px" }}
+                  />
+                </div>
                 <div>
                   <p className="lg:text-xs xl:text-sm text-tm dark:text-tm-dark font-bold mb-0">
                     {t("li2")}
@@ -139,13 +144,15 @@ const AdvancedPlatform = () => {
                 key={index}
                 className={`flex flex-row items-center gap-2 lg:mb-2 xl:mb-4`}
               >
-                <Lottie
-                  animationData={
-                    theme === "dark" ? item.iconDark : item.iconLight
-                  }
-                  loop={true}
-                  style={{ width: "42px", height: "42px" }}
-                />
+                <div className="h-10 w-10 flex justify-center items-center bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-md">
+                  <Lottie
+                    animationData={
+                      theme === "dark" ? item.iconDark : item.iconLight
+                    }
+                    loop={true}
+                    style={{ width: "32px", height: "32px" }}
+                  />
+                </div>
                 <div>
                   <p className="lg:text-xs xl:text-sm text-tm dark:text-tm-dark font-bold mb-0">
                     {item.title}

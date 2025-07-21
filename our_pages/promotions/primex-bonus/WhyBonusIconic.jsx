@@ -92,7 +92,7 @@ const WhyBonusIconic = () => {
                     {benefit.title2}
                   </h3>
                 </div>
-                <div className="">
+                <div className="flex justify-center items-center w-14 h-14 bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-lg">
                   <Lottie
                     animationData={benefit.icon}
                     loop={true}

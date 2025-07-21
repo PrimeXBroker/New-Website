@@ -60,7 +60,7 @@ const FeaturesMobile = () => {
                       : ""
                   }`}
                 >
-                  <div className="p-3 bg-e1 dark:border-e1-dark rounded-lg flex items-center justify-center h-16 w-16">
+                  <div className="p-3 bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-lg flex items-center justify-center h-16 w-16">
                     <Lottie animationData={feature.icon} loop={true} />
                   </div>
                   <p className="text-base font-medium w-52">{feature.text}</p>
@@ -73,7 +73,7 @@ const FeaturesMobile = () => {
                       : ""
                   }`}
                 >
-                  <div className="p-3 bg-e1 dark:border-e1-dark rounded-lg flex items-center justify-center h-16 w-16">
+                  <div className="p-3 bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-lg flex items-center justify-center h-16 w-16">
                     <Lottie animationData={feature.icon} loop={true} />
                   </div>
                   <p className="text-base font-medium w-52">{feature.text}</p>

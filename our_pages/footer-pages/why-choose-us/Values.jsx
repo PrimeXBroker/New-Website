@@ -71,7 +71,7 @@ ${index === features.length - 1 ? "last:border-r-0" : ""}
 sm:border-b sm:border-b-e1 sm:dark:border-b-e1-dark xs:border-b xs:border-b-e1 xs:dark:border-b-e1-dark lg:border-b-0 md:border-b-0 last:border-b-0`}
               >
                 <div
-                  className={`transition-all bg-e1 dark:bg-e1-dark w-16 h-16 sm:w-20 sm:h-20 md:w-16 md:h-16 flex justify-center items-center rounded-[6.32px] ${
+                  className={`transition-all bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 w-16 h-16 sm:w-20 sm:h-20 md:w-16 md:h-16 flex justify-center items-center rounded-[6.32px] ${
                     hoveredIndex === index
                       ? "translate-y-[-10px] duration-500"
                       : "translate-y-0"

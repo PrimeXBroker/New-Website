@@ -48,7 +48,7 @@ const KeyFeatures = ({
                 ""
               )}
             </h2>
-            <div className="w-16 h-16 bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center">
+            <div className="w-16 h-16 bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-lg flex items-center justify-center">
               <Lottie
                 animationData={icon}
                 loop={true}

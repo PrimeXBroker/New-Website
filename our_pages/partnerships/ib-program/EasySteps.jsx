@@ -32,7 +32,7 @@ const EasySteps = () => {
               </h3>
               <p className="text-tm dark:text-tm-dark">{t("step2_desc")}</p>
             </div>
-            <div className="bg-e1 dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
+            <div className="bg-e1 dark:bg-white/15 rounded-lg p-6 flex justify-center items-center h-[250px]">
               <Lottie
                 animationData={promote}
                 loop={true}
@@ -48,7 +48,7 @@ const EasySteps = () => {
               </h3>
               <p className="text-tm dark:text-tm-dark">{t("step3_desc")}</p>
             </div>
-            <div className="bg-e1 dark dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
+            <div className="bg-e1 dark dark:bg-white/15 rounded-lg p-6 flex justify-center items-center h-[250px]">
               <Lottie
                 animationData={register}
                 loop={true}
@@ -64,7 +64,7 @@ const EasySteps = () => {
               </h3>
               <p className="text-tm dark:text-tm-dark">{t("step1_desc")}</p>
             </div>
-            <div className="bg-e1 dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
+            <div className="bg-e1 dark:bg-white/15 rounded-lg p-6 flex justify-center items-center h-[250px]">
               <Lottie
                 animationData={earn}
                 loop={true}
@@ -82,7 +82,7 @@ const EasySteps = () => {
               </h3>
               <p className="text-tm dark:text-tm-dark">{t("step2_desc")}</p>
             </div>
-            <div className="bg-e1 dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
+            <div className="bg-e1 dark:bg-white/15 rounded-lg p-6 flex justify-center items-center h-[250px]">
               <Lottie
                 animationData={register}
                 loop={true}
@@ -98,7 +98,7 @@ const EasySteps = () => {
               </h3>
               <p className="text-tm dark:text-tm-dark">{t("step1_desc")}</p>
             </div>
-            <div className="bg-e1 dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
+            <div className="bg-e1 dark:bg-white/15 rounded-lg p-6 flex justify-center items-center h-[250px]">
               <Lottie
                 animationData={promote}
                 loop={true}
@@ -114,7 +114,7 @@ const EasySteps = () => {
               </h3>
               <p className="text-tm dark:text-tm-dark">{t("step3_desc")}</p>
             </div>
-            <div className="bg-e1 dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
+            <div className="bg-e1 dark:bg-white/15 rounded-lg p-6 flex justify-center items-center h-[250px]">
               <Lottie
                 animationData={earn}
                 loop={true}

@@ -30,7 +30,7 @@ const Banner = () => {
               <span>{t("title_part2")}</span>
             </h1>
             <div
-              className={`bg-e1 dark:bg-e1-dark w-14 h-14 flex justify-center items-center rounded-lg`}
+              className={`bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 w-14 h-14 flex justify-center items-center rounded-lg`}
             >
               <Lottie
                 animationData={followerAgreement}

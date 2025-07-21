@@ -110,13 +110,15 @@ const AdvancedPlatformMobile = () => {
                   index !== features.length - 1 ? "mb-6" : ""
                 }`}
               >
-                <Lottie
-                  animationData={
-                    theme === "dark" ? item.iconDark : item.iconLight
-                  }
-                  loop={true}
-                  style={{ width: "42px", height: "42px" }}
-                />
+                <div className="h-10 w-10 flex justify-center items-center bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-md">
+                  <Lottie
+                    animationData={
+                      theme === "dark" ? item.iconDark : item.iconLight
+                    }
+                    loop={true}
+                    style={{ width: "32px", height: "32px" }}
+                  />
+                </div>
                 <div>
                   <p className="text-sm sm:text-xl text-tm dark:text-tm-dark font-semibold mb-0">
                     {item.title}

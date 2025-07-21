@@ -55,7 +55,7 @@ const EasyStepsMobile = () => {
                   {benefit.title}
                 </h3>
               </div>
-              <div className="w-12 h-12 bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-e1 dark:bg-white/15 rounded-lg flex items-center justify-center">
                 <Lottie
                   animationData={benefit.icon}
                   loop={true}

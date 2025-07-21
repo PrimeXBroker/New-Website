@@ -28,7 +28,7 @@ const EasySteps = ({ easySteps }) => {
                 {easySteps.step2_desc}
               </p>
             </div>
-            <div className="bg-e1 dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
+            <div className="bg-e1 dark:bg-white/15 rounded-lg p-6 flex justify-center items-center h-[250px]">
               <Lottie
                 animationData={easySteps.step3_icon}
                 loop={true}
@@ -46,7 +46,7 @@ const EasySteps = ({ easySteps }) => {
                 {easySteps.step3_desc}
               </p>
             </div>
-            <div className="bg-e1 dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
+            <div className="bg-e1 dark:bg-white/15 rounded-lg p-6 flex justify-center items-center h-[250px]">
               <Lottie
                 animationData={easySteps.step1_icon}
                 loop={true}
@@ -64,7 +64,7 @@ const EasySteps = ({ easySteps }) => {
                 {easySteps.step1_desc}
               </p>
             </div>
-            <div className="bg-e1 dark:bg-e1-dark rounded-lg p-6 flex justify-center items-center h-[250px]">
+            <div className="bg-e1 dark:bg-white/15 rounded-lg p-6 flex justify-center items-center h-[250px]">
               <Lottie
                 animationData={easySteps.step2_icon}
                 loop={true}

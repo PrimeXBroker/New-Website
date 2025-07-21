@@ -43,7 +43,7 @@ const Benefits = () => {
           >
             <div className="flex justify-between items-center">
               <h3 className="text-xl font-semibold">{benefit.title}</h3>
-              <div className="w-12 h-12 borer-2 border-e1 dark:border-e1-dark bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center">
+              <div className="w-14 h-14 bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-lg flex items-center justify-center">
                 <Lottie
                   animationData={benefit.icon}
                   loop={true}
