@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 export default function ProgressIndicator({ step }) {
   const { theme } = useTheme();
 
-  const percentage = (step / 4) * 100;
+  const percentage = (step / 2) * 100;
   const circumference = 2 * Math.PI * 22;
   const strokeDashoffset = circumference - (circumference * percentage) / 100;
 
