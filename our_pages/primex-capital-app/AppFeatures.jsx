@@ -2,6 +2,11 @@
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import React from "react";
+import accountManagement from "@/public/animations/primex-app/account-management.json";
+import depositsAndWithdrawals from "@/public/animations/primex-app/deposits-and-withdrawals.json";
+import expertSupport from "@/public/animations/primex-app/expert-support.json";
+import advancedSecurityAccess from "@/public/animations/primex-app/advanced-security-access.json";
+import Lottie from "lottie-react";
 
 const AppFeatures = () => {
   const t = useTranslations("primeXTradingApp.appBenefits");
@@ -12,38 +17,26 @@ const AppFeatures = () => {
       title: t("title1"),
       title1: t("title1_1"),
       description: t("description1"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-online-trading/Account++Management+Dark+Mode.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-online-trading/Account++Management+Light+Mode.svg",
+      icon: accountManagement,
     },
     {
       title: t("title2"),
       title1: t("title2_1"),
       title2: t("title2_2"),
       description: t("description2"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-online-trading/Deposits+and++Withdrawals+Dark+Mode.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-online-trading/Deposits+and++Withdrawals+Light+Mode.svg",
+      icon: depositsAndWithdrawals,
     },
     {
       title: t("title3"),
       title1: t("title3_1"),
       description: t("description3"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-online-trading/24+7++Expert+Support+Dark+Mode.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-online-trading/24+7++Expert+Support+Light+Mode.svg",
+      icon: expertSupport,
     },
     {
       title: t("title4"),
       title1: t("title4_1"),
       description: t("description4"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-online-trading/Advanced++Security+Access+Dark+Mode.svg",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-online-trading/Advanced++Security+Access+Light+Mode.svg",
+      icon: advancedSecurityAccess,
     },
   ];
 
@@ -76,10 +69,10 @@ const AppFeatures = () => {
                 </h3>
               </div>
               <div className="w-14 h-14 bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center">
-                <img
-                  src={theme === "dark" ? feature.iconDark : feature.iconLight}
-                  alt={feature.title}
-                  className="w-[32px]"
+                <Lottie
+                  animationData={feature.icon}
+                  loop={true}
+                  style={{ width: "52px", height: "52px" }}
                 />
               </div>
             </div>

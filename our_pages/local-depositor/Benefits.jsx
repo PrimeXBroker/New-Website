@@ -1,6 +1,10 @@
 "use client";
 import React from "react";
 import { useTranslations } from "next-intl";
+import transferSpeed from "@/public/animations/local-depositor/transfer-speed.json";
+import depositorDeterminesTheFees from "@/public/animations/local-depositor/depositor-determines-the-fees.json";
+import easeOfUse from "@/public/animations/local-depositor/ease-of-use.json";
+import Lottie from "lottie-react";
 
 const Benefits = () => {
   const t = useTranslations("localDepositor.benefits");
@@ -10,17 +14,17 @@ const Benefits = () => {
     {
       title: t("title1"),
       description: t("description1"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/local-depositor/images/speed.svg",
+      icon: transferSpeed,
     },
     {
       title: t("title2"),
       description: t("description2"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/local-depositor/images/no-fees.svg",
+      icon: depositorDeterminesTheFees,
     },
     {
       title: t("title3"),
       description: t("description3"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/local-depositor/images/ease-of-use.svg",
+      icon: easeOfUse,
     },
   ];
 
@@ -40,10 +44,10 @@ const Benefits = () => {
             <div className="flex justify-between items-center">
               <h3 className="text-xl font-semibold">{benefit.title}</h3>
               <div className="w-12 h-12 borer-2 border-e1 dark:border-e1-dark bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center">
-                <img
-                  src={benefit.icon}
-                  alt={benefit.title}
-                  className="w-[32px]"
+                <Lottie
+                  animationData={benefit.icon}
+                  loop={true}
+                  style={{ width: "52px", height: "52px" }}
                 />
               </div>
             </div>

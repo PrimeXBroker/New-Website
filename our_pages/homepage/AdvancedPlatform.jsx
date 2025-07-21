@@ -5,8 +5,26 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
+import advancedAnalyticalToolsDark from "@/public/animations/home/dark-mode/advanced-analytical-tools.json";
+import advancedAnalyticalToolsLight from "@/public/animations/home/light-mode/advanced-analytical-tools.json";
+import dedicatedCommunityDark from "@/public/animations/home/dark-mode/dedicated-community-support.json";
+import dedicatedCommunityLight from "@/public/animations/home/light-mode/dedicated-community-support.json";
+
+import powerfulChartingDark from "@/public/animations/home/dark-mode/powerful-charting-capabilities.json";
+import powerfulChartingLight from "@/public/animations/home/light-mode/powerful-charting-capabilities.json";
+import allInOneMultiDark from "@/public/animations/home/dark-mode/all-in-one-multi-asset-platform.json";
+import allInOneMultiLight from "@/public/animations/home/light-mode/all-in-one-multi-asset-platform.json";
+import seamlessAutomatedDark from "@/public/animations/home/dark-mode/seamless-automated-trading.json";
+import seamlessAutomatedLight from "@/public/animations/home/light-mode/seamless-automated-trading.json";
+import integratedEconomicDark from "@/public/animations/home/dark-mode/integrated-economic-calendar.json";
+import integratedEconomicLight from "@/public/animations/home/light-mode/integrated-economic-calendar.json";
+import lightningFastDark from "@/public/animations/home/dark-mode/lightning-fast-order-execution.json";
+import lightningFastLight from "@/public/animations/home/light-mode/lightning-fast-order-execution.json";
+import { useTheme } from "next-themes";
+import Lottie from "lottie-react";
 
 const AdvancedPlatform = () => {
+  const { theme } = useTheme();
   const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("home.advancedPlatforms");
@@ -18,27 +36,32 @@ const AdvancedPlatform = () => {
 
   const features = [
     {
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/platform-icons/powerful-charting-dark.svg",
+      iconDark: powerfulChartingDark,
+      iconLight: powerfulChartingLight,
       title: t("li3"),
       description: t("li3_desc"),
     },
     {
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/platform-icons/multi-assets-platform-dark.svg",
+      iconDark: allInOneMultiDark,
+      iconLight: allInOneMultiLight,
       title: t("li4"),
       description: t("li4_desc"),
     },
     {
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/platform-icons/automated-trading-dark.svg",
+      iconDark: seamlessAutomatedDark,
+      iconLight: seamlessAutomatedLight,
       title: t("li5"),
       description: t("li5_desc"),
     },
     {
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/platform-icons/lightening-fast-dark.svg",
+      iconDark: integratedEconomicDark,
+      iconLight: integratedEconomicLight,
       title: t("li6"),
       description: t("li6_desc"),
     },
     {
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/platform-icons/integrated-economic-calender.svg",
+      iconDark: lightningFastDark,
+      iconLight: lightningFastLight,
       title: t("li7"),
       description: t("li7_desc"),
     },
@@ -60,13 +83,14 @@ const AdvancedPlatform = () => {
                 {t("advance_platform_description")}
               </p>
               <div className="flex flex-row items-center gap-2">
-                <Image
-                  unoptimized={true}
-                  src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/platform-icons/advanced-analytical-tools-dark.svg"
-                  alt="advanced analytical tools"
-                  width={100}
-                  height={100}
-                  className="w-[40px] h-40px"
+                <Lottie
+                  animationData={
+                    theme === "dark"
+                      ? advancedAnalyticalToolsDark
+                      : advancedAnalyticalToolsLight
+                  }
+                  loop={true}
+                  style={{ width: "52px", height: "52px" }}
                 />
                 <div>
                   <p className="lg:text-xs xl:text-sm text-tm dark:text-tm-dark font-bold mb-0">
@@ -78,13 +102,14 @@ const AdvancedPlatform = () => {
                 </div>
               </div>
               <div className="flex flex-row items-center gap-2 mt-4">
-                <Image
-                  unoptimized={true}
-                  src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/platform-icons/community-and-support-dark.svg"
-                  alt="advanced analytical tools"
-                  width={100}
-                  height={100}
-                  className="w-[40px] h-40px"
+                <Lottie
+                  animationData={
+                    theme === "dark"
+                      ? dedicatedCommunityDark
+                      : dedicatedCommunityLight
+                  }
+                  loop={true}
+                  style={{ width: "52px", height: "52px" }}
                 />
                 <div>
                   <p className="lg:text-xs xl:text-sm text-tm dark:text-tm-dark font-bold mb-0">
@@ -115,13 +140,12 @@ const AdvancedPlatform = () => {
                 key={index}
                 className={`flex flex-row items-center gap-2 lg:mb-2 xl:mb-4`}
               >
-                <Image
-                  unoptimized
-                  src={item.icon}
-                  alt={item.title}
-                  width={100}
-                  height={100}
-                  className="w-[40px] h-[40px]"
+                <Lottie
+                  animationData={
+                    theme === "dark" ? item.iconDark : item.iconLight
+                  }
+                  loop={true}
+                  style={{ width: "42px", height: "42px" }}
                 />
                 <div>
                   <p className="lg:text-xs xl:text-sm text-tm dark:text-tm-dark font-bold mb-0">

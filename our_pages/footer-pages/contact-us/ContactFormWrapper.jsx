@@ -8,6 +8,9 @@ import Image from "next/image";
 import { MdContentCopy } from "react-icons/md";
 import ComplaintForm from "./ComplaintForm";
 import { useTheme } from "next-themes";
+import copyEmail from "@/public/animations/contact-us/copy-email.json";
+import liveChat from "@/public/animations/contact-us/live-chat.json";
+import Lottie from "lottie-react";
 
 const ContactFormWrapper = ({ active, setActive }) => {
   const { theme } = useTheme();
@@ -60,24 +63,18 @@ const ContactFormWrapper = ({ active, setActive }) => {
                       : "mr-2"
                   }`}
                 >
-                  <Image
-                    src={
-                      theme === "dark"
-                        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/Copy+Email.svg"
-                        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/contact-us/Copy+Email.svg"
-                    }
-                    alt="Copy Email"
-                    width="40"
-                    height="200"
-                    className="w-[32px]"
+                  <Lottie
+                    animationData={copyEmail}
+                    loop={true}
+                    style={{ width: "52px", height: "52px" }}
                   />
                 </span>
                 {t("copy_email")}
                 <MdContentCopy
                   className={`text-xl text-ts dark:text-ts-dark ${
                     locale === "ar" || locale === "ps" || locale === "ku"
-                      ? "mr-2"
-                      : "ml-2"
+                      ? "mr-3"
+                      : "ml-3"
                   }`}
                 />
               </button>
@@ -89,20 +86,14 @@ const ContactFormWrapper = ({ active, setActive }) => {
                 <span
                   className={`${
                     locale === "ar" || locale === "ps" || locale === "ku"
-                      ? "ml-2"
-                      : "mr-2"
+                      ? "ml-3"
+                      : "mr-3"
                   }`}
                 >
-                  <Image
-                    src={
-                      theme === "dark"
-                        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/contact/Live+Chat.svg"
-                        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/contact-us/Live+Chat.svg"
-                    }
-                    alt="Live Chat"
-                    width="40"
-                    height="200"
-                    className="w-[32px]"
+                  <Lottie
+                    animationData={liveChat}
+                    loop={true}
+                    style={{ width: "52px", height: "52px" }}
                   />
                 </span>
                 {t("live_chat")}
@@ -110,16 +101,16 @@ const ContactFormWrapper = ({ active, setActive }) => {
                   <FaArrowLeft
                     className={`text-xl text-ts dark:text-ts-dark ${
                       locale === "ar" || locale === "ps" || locale === "ku"
-                        ? "mr-2"
-                        : "ml-2"
+                        ? "mr-3"
+                        : "ml-3"
                     }`}
                   />
                 ) : (
                   <FaArrowRight
                     className={`text-xl text-ts dark:text-ts-dark ${
                       locale === "ar" || locale === "ps" || locale === "ku"
-                        ? "mr-2"
-                        : "ml-2"
+                        ? "mr-3"
+                        : "ml-3"
                     }`}
                   />
                 )}

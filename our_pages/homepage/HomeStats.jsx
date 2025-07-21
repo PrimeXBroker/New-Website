@@ -1,29 +1,44 @@
+"use client";
 import { useLocale, useTranslations } from "next-intl";
-import Image from "next/image";
 import React from "react";
+import servedClientsDark from "@/public/animations/home/dark-mode/250k-served-clients.json";
+import millionPaidUpCapitalDark from "@/public/animations/home/dark-mode/$300-million-paid-up-capital.json";
+import millionDailyTradesDark from "@/public/animations/home/dark-mode/$7-million-daily-trades.json";
+import introducingBrokersDark from "@/public/animations/home/dark-mode/5000-introducing-brokers.json";
+import servedClientsLight from "@/public/animations/home/light-mode/250k-served-clients.json";
+import millionPaidUpCapitalLight from "@/public/animations/home/light-mode/$300-million-paid-up-capital.json";
+import millionDailyTradesLight from "@/public/animations/home/light-mode/$7-million-daily-trades.json";
+import introducingBrokersLight from "@/public/animations/home/light-mode/5,000-introducing-brokers.json";
+import Lottie from "lottie-react";
+import { useTheme } from "next-themes";
 
 const HomeStats = () => {
+  const { theme } = useTheme();
   const locale = useLocale();
   const t = useTranslations("home.stats");
 
   const stats = [
     {
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/250k-Served-Clients.svg",
+      iconDark: servedClientsDark,
+      iconLight: servedClientsLight,
       value: t("stat1.value1"),
       label: t("stat1.title"),
     },
     {
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/%24300-Million-Paid-up-Capital.svg",
+      iconDark: millionPaidUpCapitalDark,
+      iconLight: millionPaidUpCapitalLight,
       value: t("stat2.value1"),
       label: t("stat2.title"),
     },
     {
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/%247-Million-Daily-Trades.svg",
+      iconDark: millionDailyTradesDark,
+      iconLight: millionDailyTradesLight,
       value: t("stat4.value1"),
       label: t("stat4.title"),
     },
     {
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/5%2C000-Introducing-Brokers.svg",
+      iconDark: introducingBrokersDark,
+      iconLight: introducingBrokersLight,
       value: t("stat3.value1"),
       label: t("stat3.title"),
     },
@@ -47,13 +62,12 @@ const HomeStats = () => {
               } lg:mb-0`}
             >
               <div>
-                <Image
-                  unoptimized={true}
-                  width="100"
-                  height="100"
-                  src={stat.icon}
-                  alt="Logo Image"
-                  className="w-[37px] h-[36px] sm:w-full sm:h-full"
+                <Lottie
+                  animationData={
+                    theme === "dark" ? stat.iconDark : stat.iconLight
+                  }
+                  loop={true}
+                  style={{ width: "52px", height: "52px" }}
                 />
               </div>
               <div>

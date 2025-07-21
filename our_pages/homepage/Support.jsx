@@ -4,6 +4,9 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
+import customerCare from "@/public/animations/home/customer-care.json";
+import multilingualSupport from "@/public/animations/home/multilingual-support.json";
+import Lottie from "lottie-react";
 
 const Support = () => {
   const locale = useLocale();
@@ -35,14 +38,11 @@ const Support = () => {
             </h2>
             <div className="flex flex-col md:flex-row gap-6 my-6 lg:my-4">
               <div className="flex items-center gap-2 group">
-                <div className="w-[52px] h-[52px]">
-                  <Image
-                    unoptimized={true}
-                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/7-Customer-Care.webp"
-                    alt="Support Team"
-                    width={300}
-                    height={150}
-                    className="w-full"
+                <div className="flex items-center justify-center w-[60px] h-[60px] bg-pcp dark:bg-pcp rounded-lg">
+                  <Lottie
+                    animationData={customerCare}
+                    loop={true}
+                    style={{ width: "52px", height: "52px" }}
                   />
                 </div>
                 <div className="text-start">
@@ -55,14 +55,11 @@ const Support = () => {
                 </div>
               </div>
               <div className="flex items-center gap-2 group">
-                <div className="w-[52px] h-[52px]">
-                  <Image
-                    unoptimized={true}
-                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/Multilingual-Support.webp"
-                    alt="Multilingual"
-                    width={300}
-                    height={150}
-                    className="w-full"
+                <div className="flex items-center justify-center w-[60px] h-[60px] bg-pcp dark:bg-pcp rounded-lg">
+                  <Lottie
+                    animationData={multilingualSupport}
+                    loop={true}
+                    style={{ width: "52px", height: "52px" }}
                   />
                 </div>
                 <div className="text-start">
