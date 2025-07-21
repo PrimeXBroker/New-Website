@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import Register from "./Register";
@@ -30,9 +30,14 @@ const RegistrationWrapper = () => {
               className="w-full"
             />
             <div className="absolute top-1/2 start-16 -translate-y-1/2 bg-white/50 backdrop-blur rounded-xl p-3">
-              <p className="text-nb dark:text-nb-dark text-2xl font-bold font-montserrat mb-3 text-center">
-                {p("app_title")}
-              </p>
+              <Image
+                unoptimized={true}
+                width="160"
+                height="160"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-black.webp"
+                alt="Logo Image"
+                className="mb-3 mx-auto"
+              />
               <div className="flex flex-col justify-center lg:justify-start items-center gap-3">
                 <a
                   href="https://play.google.com/store/apps/details?id=com.primex.primexmobileapp"
