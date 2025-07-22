@@ -72,7 +72,6 @@ const Hero = () => {
                 }
                 type="video/mp4"
                 autoPlay
-                loop
                 muted
                 controls={false}
                 playsInline
