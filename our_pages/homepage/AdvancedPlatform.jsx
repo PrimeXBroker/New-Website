@@ -53,14 +53,14 @@ const AdvancedPlatform = () => {
       description: t("li5_desc"),
     },
     {
-      iconDark: integratedEconomicDark,
-      iconLight: integratedEconomicLight,
+      iconDark: lightningFastDark,
+      iconLight: lightningFastLight,
       title: t("li6"),
       description: t("li6_desc"),
     },
     {
-      iconDark: lightningFastDark,
-      iconLight: lightningFastLight,
+      iconDark: integratedEconomicDark,
+      iconLight: integratedEconomicLight,
       title: t("li7"),
       description: t("li7_desc"),
     },

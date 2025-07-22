@@ -4,12 +4,23 @@ import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useRef } from "react";
 
 const Hero = () => {
   const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("home.hero");
+  const homeVideoPlayer = useRef(null);
+
+  const homeVideoClick = () => {
+    if (
+      homeVideoPlayer &&
+      homeVideoPlayer.current &&
+      homeVideoPlayer.current.video
+    ) {
+      homeVideoPlayer.current.video.play();
+    }
+  };
 
   const handleClick = () => {
     const url = getRegisterUrl(locale);
@@ -51,18 +62,22 @@ const Hero = () => {
                 />
               </div>
             </div>
-            <Image
-              unoptimized={true}
-              width="100"
-              height="100"
-              src={
-                locale === "ar" || locale === "ku" || locale === "ps"
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/home-banner-ar-desktop.webp"
-                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/home-hero-desktop-en.webp"
-              }
-              alt="Logo Image"
-              className="w-full hidden md:block"
-            />
+            <div className="m-auto hidden md:block" onClick={homeVideoClick}>
+              <video
+                ref={homeVideoPlayer}
+                src={
+                  locale === "ar" || locale === "ps" || locale === "ku"
+                    ? "/assets/home-hero-desktop-ar.mp4"
+                    : "/assets/home-hero-desktop-en.mp4"
+                }
+                type="video/mp4"
+                autoPlay
+                loop
+                muted
+                controls={false}
+                playsInline
+              ></video>
+            </div>
             <div
               className={`absolute bottom-6 lg:bottom-10 hidden md:block ${
                 locale === "ar" || locale === "ku" || locale === "ps"
