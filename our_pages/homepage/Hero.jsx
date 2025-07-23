@@ -33,7 +33,7 @@ const Hero = () => {
         <div className="grid grid-cols-12">
           <div className="col-span-12 relative">
             <div
-              className={`md:absolute md:w-[60%] ${
+              className={`md:absolute z-10 md:w-[60%] ${
                 locale === "es" || locale === "ps" ? "lg:pt-0" : "lg:pt-5"
               }`}
             >
