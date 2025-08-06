@@ -9,24 +9,24 @@
     "education": "Educação",
     "academy": "Academia",
     "promotion": "Promoções",
-    "tradetowin": "Trader do Mês",
+    "tradetowin": "Operar para vencer",
     "funded_account_competition": "Competição de Conta Financiada",
-    "liquidity": "Fornecimento de Liquidez",
-    "deposit": "Bônus de 20%",
+    "liquidity": "Liquidez",
+    "deposit": "depósito",
     "login": "Entrar",
     "register": "Registrar",
     "forex": "Forex",
     "stocks": "Ações",
-    "commodities": "Comodidades",
+    "commodities": "Commodities",
     "crypto": "Cripto",
     "shares": "Ações",
     "metals": "Metais",
     "indices": "Índices",
-    "mt5": "MetaTrader 5",
+    "mt5": "mt5",
     "ib_program": "Programa IB",
     "grey_label": "Parceiro Grey Label",
-    "regional": "Parceiro Regional",
-    "badge_text": "novo",
+    "regional": "Regional",
+    "badge_text": "texto da badge",
     "company": "Empresa",
     "about": "Sobre nós",
     "contact": "Contate-nos",
@@ -35,18 +35,18 @@
     "careers": "Carreiras",
     "choose_us": "Por que escolher-nos",
     "social_trading": "Negociação Social",
-    "hot_badge": "Quente",
-    "knowledge-hub": "Pesquisa",
+    "hot_badge": "hot_badge",
+    "knowledge-hub": "núcleo de conhecimento",
     "economic-calendar": "Calendário Econômico",
     "technical-analysis": "Análise Técnica",
-    "webinars": "Webinars",
-    "blog": "Blogs",
+    "webinars": "Webinários",
+    "blog": "Blog",
     "market-news": "Notícias de Mercado",
     "ramadan-contest": "Concurso de Ramadan",
     "primex-spread": "Spreads PrimeX",
     "primex-app": "Aplicativo PrimeX",
     "account_types": "Tipos de Conta",
-    "local_depositor": "Depósito Local (Iraque)",
+    "local_depositor": "Depósito Local",
     "platforms": "Plataformas",
     "market": "Mercados"
   },
@@ -75,7 +75,7 @@
         "value1": "$300+ Milhões"
       },
       "stat3": {
-        "title": "Corretores Introduzindo",
+        "title": "Corretores Introdutórios",
         "value1": "5,000+"
       },
       "stat4": {
@@ -120,7 +120,7 @@
       "acc1": {
         "title": "Padrão",
         "minimumDeposit": " $10",
-        "description": "A Conta Padrão é uma das escolhas principais entre os traders devido às suas comissões sem swap, oferecendo eficiência de custos ao eliminar essas taxas."
+        "description": "A Conta Padrão é uma das escolhas principais entre os traders devido às suas comissões sem swap, oferecendo eficiência de custos ao eliminar estas taxas."
       },
       "acc2": {
         "title": "Narrow",
@@ -135,8 +135,8 @@
     },
     "advancedPlatforms": {
       "advance_platform_title_1": "Plataforma Avançada para ",
-      "advance_platform_title_2": "Traders Modernos",
-      "advance_platform_description": "Experimente uma plataforma de ponta construída para traders modernos—desempenho sem interrupções, análises poderosas e ferramentas inovadoras para elevar seu sucesso.",
+      "advance_platform_title_2": "Traders Inovadores",
+      "advance_platform_description": "Experimente uma plataforma de ponta construída para traders inovadores—desempenho sem interrupções, análises poderosas e ferramentas modernas para elevar seu sucesso.",
       "li1": "Ferramentas Analíticas Avançadas",
       "li1_desc": "Tome decisões inteligentes com precisão.",
       "li2": "Comunidade e Suporte Dedicados",
@@ -163,7 +163,7 @@
       "customer_care_title1": "Sempre Aqui para ",
       "customer_care_title2": "Você",
       "customer_care_li1_title": "Atendimento ao Cliente 24/7",
-      "customer_care_li1_desc": "Sempre pronto para ajudar",
+      "customer_care_li1_desc": "Sempre dispostos a ajudar",
       "customer_care_li2_title": "Suporte Multilíngue",
       "customer_care_li2_desc": "Ajuda disponível em vários idiomas",
       "description": "Experimente um suporte contínuo com Atendimento ao Cliente 24/7 e Assistência Multilíngue. Estamos prontos para ajudar você a qualquer momento, em qualquer lugar.",
@@ -171,19 +171,19 @@
     },
     "academy": {
       "academy_title1": "PrimeX Academy ",
-      "academy_title2": "Aprenda e Cresça",
+      "academy_title2": "Aprenda e Se Desenvolva",
       "academy_desc": "Aumente suas habilidades de negociação com nossos recursos educacionais extensivos e orientação especializada.",
-      "academy_card_1_title_1": "Webinars Gratuitos",
+      "academy_card_1_title_1": "Webinários Gratuitos",
       "academy_card_1_desc_1": "Participe de sessões ao vivo com especialistas da indústria para obter insights valiosos e orientação profissional. Mantenha-se à frente com as últimas tendências, estratégias e ferramentas.",
       "academy_card_2_title_1": "Atualizações Diárias do Mercado",
-      "academy_card_2_desc_1": "Mantenha-se à frente com notícias diárias de mercado e análises especializadas sobre Forex, Commodities, Economias e Ações. Obtenha os insights necessários para decisões de negociação informadas.",
+      "academy_card_2_desc_1": "Mantenha-se atualizado com as principais notícias diárias do mercado e análises especializadas sobre Forex, Commodities, Economia e Ações. Tenha acesso a insights valiosos para embasar suas decisões estratégicas de negociação e ampliar seu potencial no mercado financeiro.",
       "academy_card_3_title_1": "Análise Especializada de Mercado",
-      "academy_card_3_desc_1": "Mantenha-se atualizado com os últimos insights e tendências emergentes na indústria para tomar decisões estratégicas e informadas para o sucesso contínuo."
+      "academy_card_3_desc_1": "Esteja sempre à frente acompanhando os insights mais recentes e as tendências emergentes do setor. Assim, você terá a base necessária para tomar decisões estratégicas, informadas e impulsionar o sucesso contínuo dos seus trades."
     },
     "ourRecognition": {
       "our_recognition_title1": "Nosso ",
       "our_recognition_title2": "Reconhecimento",
-      "our_recognition_desc": "Estamos honrados em receber prêmios da indústria por nossa excelência e inovação",
+      "our_recognition_desc": "Somos honrados em ter recebido prêmios da indústria por nossa excelência e inovação",
       "award1_badge": "Melhor Inovador",
       "award1_title1": "Corretora",
       "award1_desc": "Oman Smart Vision Summit",
@@ -231,16 +231,16 @@
       "title": "Prezado Cliente,",
       "para1": "Temos o prazer de informar que agora somos a PrimeX Capital e nosso novo site é ",
       "para2": "Por favor, atualize seus favoritos.",
-      "para3": "Boas negociações!",
+      "para3": "Bons trades!",
       "acknowledged": "Confirmado"
     },
     "partnerships": {
-      "title1": "Ganhe Grande Com ",
+      "title1": "Ganhe Muito Com ",
       "title2": "PrimeX ",
       "title3": "Programa de ",
       "title4": "Parcerias!",
-      "description": "Maximize seus ganhos com estruturas de comissão flexíveis, altos rebates, suporte dedicado 24/7, programas de recompensa emocionantes e benefícios exclusivos através dos Programas de Parceria PrimeX!",
-      "ib_btn": "Introdução de Corretor",
+      "description": "Potencialize seus ganhos com estruturas de comissão flexíveis, rebates elevados, atendimento dedicado 24/7, programas de recompensas atrativos e benefícios exclusivos oferecidos pelos Programas de Parceria PrimeX!",
+      "ib_btn": "Corretor Introdutor",
       "grey_label_btn": "Grey Label",
       "regional_btn": "Parceiro Regional"
     }
@@ -252,17 +252,17 @@
     },
     "banner": {
       "title1_1": "Junte-se aos Nossos Especialistas",
-      "title1_2": "para Webinars Insightful e",
+      "title1_2": "para webinários informativos e",
       "title1_3": "Enriquecedores",
-      "desc1_1": "Cada Webinar é Minuciosamente Preparado para Melhorar seu Conhecimento",
+      "desc1_1": "Cada Webinário é Minuciosamente Preparado para Melhorar seu Conhecimento",
       "desc1_2": "E Habilidades em Negociação, Independentemente do Nível de Experiência dos Traders"
     },
     "weeklyWebinars": {
-      "title1_1": "Webinars Semanais",
-      "title1_2": "Webinars",
+      "title1_1": "Webinários Semanais",
+      "title1_2": "Webinários",
       "desc1_1": "Nossas sessões semanais com",
       "desc1_2": "Rose Shawish e Ahmed Alsajadi",
-      "desc1_3": "vão mantê-lo à frente da curva, oferecendo insights e estratégias em tempo real para aproveitar as oportunidades emergentes e mitigar riscos.",
+      "desc1_3": "Mantenha-se à frente do mercado com insights e estratégias em tempo real, garantindo que você aproveite oportunidades emergentes e minimize riscos de forma eficaz.",
       "form_title": "Inscreva-se Agora!",
       "first_name": "Nome",
       "last_name": "Sobrenome",
@@ -278,18 +278,18 @@
       "sign_up_btn": "Inscreva-se Agora!"
     },
     "meetExperts": {
-      "title": "Conheça Nossos Especialistas em Webinars",
-      "description": "Conheça as Mentes por Trás dos Nossos Webinars, Indivíduos com Ampla Experiência e Expertise no Campo de Negociação.",
+      "title": "Conheça Nossos Especialistas em Webinários",
+      "description": "Conheça as Mentes por Trás dos Nossos Webinários, Indivíduos com Ampla Experiência e Expertise no Campo de Trading.",
       "expert1_name": "Rose Shawish",
       "expert2_name": "Ahmed Alsajadi",
       "expert1_position": "Analista Fundamentalista",
       "expert2_position": "Analista Técnico",
       "expert1_desc": "Com anos de experiência nos mercados financeiros, Rose traz uma vasta gama de conhecimento e uma paixão por ajudar os traders a alcançar o sucesso. Seus insights sobre a dinâmica do mercado e psicologia de negociação são inestimáveis tanto para traders iniciantes quanto experientes.",
-      "expert2_desc": "Como um trader experiente e educador, Ahmed se dedica a capacitar traders com as habilidades e a confiança necessárias para navegar em mercados complexos. Sua abordagem pragmática e compreensão profunda da mecânica do mercado tornam seus webinars perspicazes e envolventes."
+      "expert2_desc": "Como trader experiente e educador, Ahmed dedica-se a capacitar traders com habilidades e confiança para navegar em mercados complexos. Sua abordagem pragmática e seu profundo entendimento da mecânica do mercado conferem aos seus webinars um caráter envolvente e repleto de insights, promovendo aprendizado prático e relevante para a realidade dos participantes."
     },
     "signup": {
-      "title": "Pronto para elevar seu jogo de negociação?",
-      "btnTxt": "Inscreva-se para Nossos Webinars Gratuitos Hoje!",
+      "title": "Preparado para levar sua negociação ao próximo nível?",
+      "btnTxt": "Inscreva-se para Nossos Webinários Gratuitos Hoje!",
       "desc": "Ganhe acesso a conteúdo exclusivo, insights de especialistas e uma comunidade de traders comprometidos com o crescimento e sucesso."
     }
   },
@@ -377,7 +377,7 @@
       "title1": "Junte-se ao PrimeX e ",
       "title2": "negocie com MT5 ",
       "title3": "Hoje!",
-      "description": "Experimente o futuro da negociação com MetaTrader 5 no PrimeX. Seja você iniciante ou trader experiente, o MT5 oferece as ferramentas e recursos que você precisa para ter sucesso nos mercados financeiros. Junte-se a nós hoje e eleve sua experiência de negociação.",
+      "description": "Descubra o futuro da negociação com o MetaTrader 5 na PrimeX. Seja você um iniciante ou um trader experiente, o MT5 proporciona recursos avançados e ferramentas completas para impulsionar seu sucesso nos mercados financeiros. Junte-se à PrimeX hoje e eleve sua experiência de trading a um novo patamar.",
       "download_window_btn_part1": "Obtenha no",
       "download_window_btn_part2": "Microsoft",
       "google_play-btn_part1": "Obtenha no",
@@ -395,25 +395,25 @@
       "title1": "Revolucionando",
       "title2": "Sua Experiência",
       "title3": "de Negociação",
-      "description": "Na PrimeX Capital, transformamos a experiência de negociação com soluções inovadoras e confiáveis. Nossa plataforma capacita traders de todos os níveis a prosperar por meio de tecnologia avançada, instrumentos de negociação diversificados e suporte excepcional."
+      "description": "Na PrimeX Capital, oferecemos uma experiência de negociação confiável e inovadora. Nossa plataforma reúne tecnologia avançada, variedade de instrumentos financeiros e suporte especializado para atender traders de todos os níveis, otimizar estratégias e maximizar eficiência no mercado financeiro."
     },
     "mission": {
       "mission_title": "Missão",
-      "mission_desc": "Oferecer um ambiente de negociação de ponta que apoie os traders com ferramentas avançadas, serviço excepcional e diversas oportunidades para o sucesso financeiro.",
+      "mission_desc": "Oferecer um ambiente de negociação de ponta que apoie traders de todos os níveis com ferramentas avançadas, atendimento excepcional e diversas oportunidades para alcançar sucesso financeiro.",
       "vision_title": "Visão",
-      "vision_desc": "Ser a escolha líder para traders em todo o mundo, inovando continuamente e expandindo nossas ofertas para atender às necessidades em evolução da comunidade global de negociação."
+      "vision_desc": "Ser reconhecida como a principal escolha global para traders, promovendo inovação constante e ampliando nossas soluções para antecipar e atender às necessidades dinâmicas da comunidade mundial de negociação."
     },
     "coreValues": {
       "title1": "Valores ",
       "title2": "Fundamentais",
       "value_1_title": "Integridade",
-      "value_1_desc": "Manter os mais altos padrões de transparência e justiça.",
+      "value_1_desc": "Adotar os mais elevados padrões de transparência e equidade em todas as nossas operações.",
       "value_2_title": "Inovação",
       "value_2_desc": "Pioneirismo no avanço da tecnologia e serviços de negociação.",
       "value_3_title": "Foco no Cliente",
-      "value_3_desc": "Fornecer suporte excepcional e soluções personalizadas.",
+      "value_3_desc": "Oferecer suporte excepcional e soluções personalizadas que atendam às necessidades específicas de cada cliente.",
       "value_4_title": "Excelência",
-      "value_4_desc": "Comprometidos em oferecer uma experiência de negociação de qualidade superior."
+      "value_4_desc": "Comprometidos em proporcionar uma experiência de negociação excepcional, pautada pela qualidade superior em cada etapa do atendimento."
     },
     "globalMap": {
       "title1": "ENCONTRE-NOS ",
@@ -427,7 +427,7 @@
       "africa_address": "Suíte #8, Katherine & West Building, Sandton, África do Sul."
     },
     "ceoMessage": {
-      "message": "“Tenho a honra de compartilhar que estamos construindo uma comunidade de traders dinâmica e revolucionária. Estamos comprometidos em alcançar excelência e inovação para capacitar traders de todo o mundo. Com tecnologia de ponta, dados em tempo real, análises especializadas, recursos exclusivos e materiais educacionais, promovemos uma cultura de crescimento financeiro incomparável. O seu sucesso é o nosso sucesso, e estamos aqui para apoiá-lo em cada passo do caminho.”",
+      "message": "Tenho a honra de anunciar que estamos construindo uma comunidade de traders vibrante e inovadora, dedicada a transformar a forma como se negocia globalmente. Nosso compromisso é alcançar a excelência e impulsionar a inovação para capacitar traders em todo o mundo a atingir seu pleno potencial.Com tecnologia de ponta, acesso a dados em tempo real, análises especializadas, recursos exclusivos e materiais educacionais de alta qualidade, cultivamos uma cultura focada no crescimento financeiro sustentável e exponencial. Seu sucesso é a nossa maior motivação. Estamos ao seu lado em cada etapa dessa jornada, oferecendo apoio contínuo para que você conquiste seus objetivos.",
       "title": "Mensagem do CEO"
     }
   },
@@ -469,10 +469,10 @@
       "account_number_required_error": "O número da conta de negociação é obrigatório.",
       "choose_file_desc": "Por favor, forneça-nos uma captura de tela de seus terminais de negociação, caso ache que isso possa apoiar ainda mais sua solicitação de reclamação.",
       "file_required_error": "Por favor, selecione um arquivo.",
-      "checkbox": "Eu concordo e entendo que a PrimeX Capital tem um interesse legítimo em me contatar sobre minhas reclamações.",
+      "checkbox": "Eu concordo e entendo que a PrimeX Capital tem interesse legítimo em me contatar sobre minhas reclamações.",
       "date_time_placeholder": "Data/Hora da situação contestada",
       "contested_positions": "Posições contestadas e/ou ordens pendentes",
-      "disputed_situation": "Descrição breve da situação contestada",
+      "disputed_situation": "Descrição breve da situação a ser contestada",
       "disputed_situation_required_error": "A descrição breve da situação contestada é obrigatória.",
       "disputed_settled": "Como você acha que essa disputa poderia ser resolvida",
       "disputed_settled_required_error": "A resolução da disputa é obrigatória.",
@@ -562,14 +562,14 @@
       "subtitle_l4": "sobre seus",
       "subtitle_l5": "Depósitos!",
       "tc": "termos e condições aplicáveis",
-      "btnTxt": "Abrir Conta ao Vivo",
+      "btnTxt": "Abrir Conta Real",
       "reg_now": "Já registrado?",
       "login_here": "Entrar Aqui"
     },
     "claim": {
       "title1": "Como Solicitar Seu",
       "title2": "Bônus de Depósito",
-      "claim_li1": "Abrir uma Conta ao Vivo",
+      "claim_li1": "Abrir uma Conta Real",
       "claim_li1_p": "Abra uma conta Plus padrão com a PrimeX Capital.",
       "claim_li2": "Depositar",
       "claim_li2_p": "Comece com um depósito mínimo de $500.",
@@ -586,7 +586,7 @@
     },
     "terms": {
       "title": "Baixar T&C's",
-      "desc_part_1": "Esta oferta está disponível para todos os novos e existentes ",
+      "desc_part_1": "Esta oferta está disponível para todos os clientes novos e existentes ",
       "desc_part_2": "clientes da PrimeX Capital."
     },
     "form": {
@@ -606,7 +606,7 @@
       "para2_1": "Digite seu",
       "para2_2": "Valor do depósito,",
       "para2_3": "e veja os",
-      "para2_4": "números somando.",
+      "para2_4": "valores somados.",
       "deposit_calculator:": "Calculadora de Depósito:",
       "deposit_amount": "Valor do depósito",
       "enter_deposit_amount": "Digite o valor do depósito",
@@ -620,16 +620,16 @@
       "question_2": "Posso solicitar o bônus mais de uma vez?",
       "answer_2": "Sim, você pode solicitar o Bônus de Depósito de 20% várias vezes durante o período da promoção. No entanto, observe que se qualquer quantia for retirada do capital, o valor total do bônus será retirado.",
       "question_3": "Como eu solicito o bônus como um novo cliente?",
-      "answer_3": "Como um novo cliente, você precisa abrir uma Conta Standard Plus e fazer o depósito qualificador de pelo menos $500. Em seguida, complete o formulário em nossa página. Após a verificação do seu depósito, o bônus será creditado em sua conta.",
+      "answer_3": "Como um novo cliente, você precisa abrir uma Conta Standard Plus e fazer o depósito elegível de pelo menos $500. Em seguida, complete o formulário em nossa página. Após a verificação do seu depósito, o bônus será creditado em sua conta.",
       "question_4": "Como eu solicito o bônus como um cliente existente?",
-      "answer_4": "Se você é um cliente existente com uma Conta Standard Plus, basta depositar um novo valor em sua conta e preencher o formulário em nossa página. Após a verificação do seu depósito, o bônus será creditado em sua conta.",
+      "answer_4": "Se você já é um cliente com uma Conta Standard Plus, basta depositar um novo valor em sua conta e preencher o formulário em nossa página. Após a verificação do seu depósito, o bônus será creditado em sua conta.",
       "question_5": "Quando o bônus será creditado na minha conta?",
       "answer_5": "O bônus será automaticamente creditado na sua Conta Standard Plus após a verificação do formulário que você enviou na página de destino e a confirmação do valor do depósito. Você receberá uma notificação confirmando o crédito do bônus.",
       "question_6": "Quais são as condições para retirar o bônus?",
       "answer_6": "Para retirar o bônus, você deve cumprir o tamanho de lote de negociação exigido, que é calculado usando a fórmula: Valor do Bônus ÷ 4. Por exemplo, se você receber um bônus de $100, precisará negociar 25 lotes. Observe que ações e pares de criptomoedas estão excluídos desta campanha."
     },
     "withdraw": {
-      "title_1": "Retirável",
+      "title_1": "Sacável",
       "para_1": "Desfrute de acesso total ao seu bônus.",
       "title_2": "Negociável",
       "para_2": "Use seu bônus para negociar em todos os ativos disponíveis.",
@@ -650,7 +650,7 @@
       "celeb_l2": "2º Aniversário ",
       "celeb_l3": "com um",
       "title": "Conta Presente de $30",
-      "subtitle_l1": "Aproveite sua conta ao vivo grátis de",
+      "subtitle_l1": "Aproveite sua conta real grátis de",
       "subtitle_l2": "$30 hoje",
       "subtitle_l3": "Sem depósito necessário!"
     },
@@ -856,7 +856,7 @@
     },
     "footerNotice": {
       "heading_1": "PrimeX Capital Ltd",
-      "para_1": "Com número de registro 203687 GBC e endereço de registro no 4º andar, Docks 4, Caudan, Port Louis, 11101, República de Maurícias, é regulamentado pela Comissão de Serviços Financeiros da República de Maurícias com uma Licença de Corretor de Investimentos com número de licença GB23202141.",
+      "para_1": "Com número de registro 203687 GBC e endereço de registro no 4º andar, Docks 4, Caudan, Port Louis, 11101, República de Maurício, é regulamentado pela Comissão de Serviços Financeiros da República de Maurícias com uma Licença de Corretor de Investimentos com número de licença GB23202141.",
       "heading_2": "PRIMEX BROKER (PTY) LTD",
       "para_2": "Regulamentado e autorizado a fornecer serviços financeiros pela Autoridade de Conduta do Setor Financeiro da África do Sul (FSCA) sob o número de licença (FSP No. 51864).",
       "heading_3": "Regiões Restritas:",
@@ -914,7 +914,7 @@
     },
     "participationRequirements": {
       "title1": "Sua Chance de Ganhar",
-      "title1_part": "o novíssimo iPhone hoje!",
+      "title1_part": "um novíssimo iPhone hoje!",
       "title2": "Requisitos de Participação",
       "desc_p1": "Para clientes novos e existentes, ser o trader de maior desempenho",
       "desc_p2": "dentro de 30 dias",
@@ -953,9 +953,9 @@
     "faq": {
       "title": "Perguntas Frequentes",
       "question_1": "Quem pode participar da competição Trader do Mês?",
-      "answer_1": "Tanto novos quanto clientes existentes da PrimeX Capital podem participar. Novos clientes precisam abrir uma conta, enquanto clientes existentes precisam apenas começar a negociar.",
+      "answer_1": "Tanto novos quanto clientes já existentes da PrimeX Capital podem participar. Novos clientes devem apenas abrir uma conta, enquanto os clientes atuais precisam apenas iniciar suas operações de negociação.",
       "question_2": "Como faço para entrar na competição?",
-      "answer_2": "Para entrar, abra uma conta ao vivo com a PrimeX Capital, preencha e envie o formulário da competição e comece a negociar.",
+      "answer_2": "Para entrar, abra uma conta real com a PrimeX Capital, preencha e envie o formulário da competição e comece a negociar.",
       "question_3": "Quais são os requisitos para a competição?",
       "answer_3": "Para ganhar, você deve ser o trader de maior desempenho durante o período de competição de 30 dias.",
       "question_4": "Retirar meus lucros afetará meu progresso na competição?",
@@ -967,7 +967,7 @@
   "demoAccount": {
     "metaData": {
       "title": "Competição de Conta Financiada | PrimeX Capital",
-      "description": "Mostre suas habilidades de negociação com a PrimeX Capital, aprenda com cenários em tempo real e ganhe prêmios incríveis. Pronto para elevar seu jogo de negociação? Clique para saber mais."
+      "description": "Destaque suas habilidades de negociação na PrimeX Capital, aprenda com cenários reais do mercado e concorra a prêmios exclusivos. Está pronto para avançar ao próximo nível? Clique e descubra como transformar sua experiência de trading!"
     },
     "banner": {
       "title1": "Negocie Sem Medo",
@@ -997,7 +997,7 @@
     },
     "faq": {
       "title": "Perguntas Frequentes",
-      "question_1": "Quem pode participar da participação na conta financiada?",
+      "question_1": "Quem pode participar da Conta Financiada da PrimeX Capital?",
       "answer_1": "Todos podem participar. É obrigatório ter uma conta de competição demo.",
       "question_2": "Como faço para entrar na competição?",
       "answer_2": "Para participar, abra uma conta de competição demo com a PrimeX Capital e comece a negociar.",
@@ -1021,13 +1021,13 @@
   "liquidity": {
     "metaData": {
       "title": "Desbloqueie a Negociação de Classe Mundial com a PrimeX",
-      "description": "Experimente um Crescimento Financeiro Sem Costura!"
+      "description": "Viva uma experiência de crescimento financeiro sem obstáculos!"
     },
     "banner": {
       "title1": "Desbloqueie ",
       "title2": "Negociação de Classe Mundial ",
       "title3": "com a PrimeX",
-      "desc": "Experimente um Crescimento Financeiro Sem Costura!",
+      "desc": "Viva uma experiência de crescimento financeiro sem obstáculos!",
       "contact_btn": "Entre em Contato"
     },
     "steps": {
@@ -1093,7 +1093,7 @@
       "main_title4": "Especialistas",
       "main_title5": "Especializados",
       "title": "Deixe-nos uma Mensagem",
-      "desc": "Deixe seus detalhes, entraremos em contato com você em breve.",
+      "desc": "Deixe seus contatos, lhe contataremos em breve.",
       "first_name_label": "Primeiro Nome",
       "first_name_placeholder": "Primeiro Nome",
       "last_name_label": "Sobrenome",
@@ -1125,11 +1125,11 @@
   "ibProgram": {
     "metaData": {
       "title": "Programa de Corretor Introduzido (IB) | PrimeX Capital",
-      "description": "Junte-se ao Programa de Corretor Introduzido (IB) da PrimeX Capital e ganhe comissões ao referir clientes. Desfrute de suporte e recursos de primeira linha. Clique para saber mais."
+      "description": "Junte-se ao Programa de Corretor Introdutor (IB) da PrimeX Capital e ganhe comissões ao referir clientes. Desfrute de suporte e recursos de primeira linha. Clique para saber mais."
     },
     "banner": {
       "title1": "Torne-se um",
-      "title2": "Corretor Introduzido",
+      "title2": "Corretor Introdutor",
       "title3": "E ganhe até $23 por lote",
       "btnTxt": "Cadastre-se Agora",
       "review": "4.8/5 Excelente, com base em mais de 2.400 avaliações"
@@ -1148,7 +1148,7 @@
       "description3": "Aproveite uma ampla gama de recursos de marketing e materiais promocionais para atrair, engajar e reter clientes, ajudando você a crescer mais rápido no seu negócio.",
       "title4": "Equipe de Suporte",
       "title4_1": "IB Dedicada",
-      "description4": "Receba assistência contínua e personalizada da nossa equipe de especialistas, garantindo que você tenha a orientação e o suporte necessários para ter sucesso como corretor introduzido.",
+      "description4": "Receba assistência contínua e personalizada da nossa equipe de especialistas, garantindo que você tenha a orientação e o suporte necessários para ter sucesso como corretor introdutor.",
       "title5": "Opções de Pagamento",
       "title5_1": "Flexíveis",
       "description5": "Desfrute de uma variedade de opções de pagamento, personalizadas para atender às suas preferências financeiras e necessidades de negócios, com pagamentos rápidos e confiáveis.",
@@ -1179,7 +1179,7 @@
       "main_title5": "e",
       "main_title6": "Sucesso",
       "title": "Formulário de Registro",
-      "desc": "Deixe seus detalhes, entraremos em contato com você em breve.",
+      "desc": "Deixe seus contatos, lhe em contataremos em breve.",
       "first_name_label": "Primeiro Nome",
       "first_name_placeholder": "Primeiro Nome",
       "last_name_label": "Sobrenome",
@@ -1215,13 +1215,13 @@
       "main_title4": "Garantida",
       "main_title5": "pois eles",
       "title1": "Descubra",
-      "description1": "Descubra mais de 330 instrumentos em diversos mercados, incluindo 100 opções de Forex. Acesse a maior coleção de criptoativos na MENA e negocie CFDs com alavancagem para mais oportunidades.",
+      "description1": "Descubra mais de 330 instrumentos em diversos mercados, incluindo 100 opções de Forex. Acesse a maior coleção de criptoativos da MENA e negocie CFDs com alavancagem para mais oportunidades.",
       "title2": "Beneficie-se",
       "description2": "Beneficie-se da nossa Academia com blogs educacionais, notícias de mercado e artigos em destaque. Participe de webinars interativos e fique informado com análises técnicas diárias.",
       "title3": "Experimente",
       "description3": "Experimente execução de ordens ultra-rápida com latência mínima. Nosso sistema é otimizado para processamento rápido de ordens, garantindo uma experiência de negociação perfeita sempre.",
       "title4": "Aproveite",
-      "description4": "Aproveite comissões de zero depósito sem taxas ocultas. Cada centavo do seu depósito vai diretamente para sua conta de negociação, e oferecemos opções de financiamento sem complicação.",
+      "description4": "Aproveite comissões de zero depósito sem taxas ocultas. Cada centavo do seu depósito vai diretamente para sua conta de negociação, e oferecemos opções de financiamento sem complicações.",
       "title5": "Conte com",
       "description5": "Conte com nosso suporte ao cliente dedicado e multilíngue, disponível 24/7 e facilmente acessível."
     },
@@ -1453,7 +1453,7 @@
       "description3": "Aproveite spreads apertados, alta alavancagem e velocidade de execução rápida para uma experiência de negociação aprimorada.",
       "title4": "Academia",
       "title4_1": "PrimeX",
-      "description4": "Impulsione suas habilidades de negociação com os recursos da PrimeX Academy, incluindo webinars, tutoriais e análises diárias de mercado, todos projetados para ajudá-lo a ter sucesso."
+      "description4": "Impulsione suas habilidades de negociação com os recursos da PrimeX Academy, incluindo webinários, tutoriais e análises diárias de mercado, todos projetados para ajudá-lo a ter sucesso."
     },
     "accountTypes": {
       "offer": "Oferta",
@@ -1473,7 +1473,7 @@
       },
       "acc3": {
         "title": "Raw",
-        "description": "Projetada para profissionais, oferecendo spreads crus para uma experiência de negociação incomparável.",
+        "description": "Projetada para profissionais, oferecendo spreads básicos para uma experiência de negociação incomparável.",
         "btnTxt": "Conta Raw"
       }
     },
@@ -1492,7 +1492,7 @@
       "metaTrader5": "Meta Trader 5",
       "automaticTrading": "Negociação Automática",
       "demo": "Conta Demo",
-      "webinars": "Webinars",
+      "webinars": "Webinários",
       "expertAdvice": "Conselho de Especialista",
       "swap": "Swap",
       "swapFreeNote": "Sem Swap (nem todos os instrumentos)",
@@ -1560,7 +1560,7 @@
       "title": "Perguntas Frequentes",
       "title1": "Questões",
       "question_1": "Como escolho o tipo de conta certo para mim?",
-      "answer_1": "Aqui estão os detalhes de cada tipo de conta:\n. Conta Standard: Perfeita para iniciantes e traders novatos, com um depósito mínimo baixo e spreads competitivos.\n. Conta Narrow: Adequada para traders que buscam spreads mais apertados e negociação mais precisa.\n. Conta Raw: Ideal para traders profissionais, oferecendo spreads de mercado cru com negociação baseada em comissões.",
+      "answer_1": "Aqui estão os detalhes de cada tipo de conta:\n. Conta Standard: Perfeita para iniciantes e traders novatos, com um depósito mínimo baixo e spreads competitivos.\n. Conta Narrow: Adequada para traders que buscam spreads mais apertados e negociação mais precisa.\n. Conta Raw: Ideal para traders profissionais, oferecendo spreads de mercado básicos com negociação baseada em comissões.",
       "question_2": "Posso negociar assim que abrir uma conta ao vivo?",
       "answer_2": "Abrir uma conta é simples e rápido. Após enviar seus documentos, você pode começar a negociar dentro de 24 horas.",
       "question_3": "Há taxas ocultas associadas a essas contas?",
@@ -1661,7 +1661,7 @@
   "academy": {
     "metaData": {
       "title": "Academia | PrimeX Capital",
-      "description": "Domine suas habilidades de negociação com a Academia da PrimeX Capital. Oferecemos webinars gratuitos, blogs, notícias de mercado e sessões privadas de educação 1 a 1. Clique para saber mais!"
+      "description": "Domine suas habilidades de negociação com a Academia da PrimeX Capital. Oferecemos webinários gratuitos, blogs, notícias de mercado e sessões privadas de educação 1 a 1. Clique para saber mais!"
     },
     "hero": {
       "title_1": "PrimeX Capital",
@@ -1743,22 +1743,22 @@
       "advantages_error": "Listar suas qualificações adicionais é obrigatório.",
       "workedWithCompanies": "Você já trabalhou com empresas antes?",
       "workedWithCompanies_error": "Por favor, indique se você já trabalhou com alguma empresa.",
-      "doneWebinar": "Você já fez um webinar?",
-      "doneWebinar_error": "Por favor, indique se você já conduziu um webinar.",
+      "doneWebinar": "Você já fez um webinário?",
+      "doneWebinar_error": "Por favor, indique se você já conduziu um webinário.",
       "radio_option_1": "Sim",
       "radio_option_2": "Não",
       "account_number": "Número da Conta",
       "account_number_error": "O número da conta é obrigatório.",
       "availability": "Disponibilidade",
       "availability_error": "Por favor, forneça sua disponibilidade.",
-      "success_title": "Cadastro no Webinar",
-      "webinar_success_desc": "Você se cadastrou com sucesso no webinar gratuito. Obrigado.",
+      "success_title": "Cadastro no Webinário",
+      "webinar_success_desc": "Você se cadastrou com sucesso no webinário gratuito. Obrigado.",
       "close_btn": "Fechar",
       "instructor_success_desc": "Obrigado pelo seu interesse em ingressar na PrimeX Capital. Nossa equipe revisará sua inscrição com atenção e entrará em contato com você.",
-      "session_success_desc1": "Sua solicitação para agendar um webinar gratuito foi enviada com sucesso.",
+      "session_success_desc1": "Sua solicitação para agendar um webinário gratuito foi enviada com sucesso.",
       "session_success_desc2": "Obrigado por escolher a PrimeX Capital",
       "phoneNumber": "Número de Telefone",
-      "webinar_cate": "Tópico do Webinar",
+      "webinar_cate": "Tópico do Webinário",
       "condition": "Ao enviar este formulário, você concorda em ser contatado pela nossa equipe.",
       "write_adv": "Escreva..."
     },
@@ -1790,7 +1790,7 @@
     "webinarLibrary": {
       "title1": "Biblioteca de",
       "title2": "Webinars",
-      "description": "Perdeu a Sessão Ao Vivo? Não se preocupe, coloque-se em dia com nossa Biblioteca de Webinars e fique à frente da curva.",
+      "description": "Perdeu a Sessão Ao Vivo? Não se preocupe, coloque-se em dia com nossa Biblioteca de Webinários e fique à frente da curva.",
       "webinar1_topic_p1": "Divergência SMT",
       "webinar1_topic_p2": "Tecnologia Smart Money",
       "presenter_1": "Por Ahmed Alsajadi",
@@ -2027,12 +2027,12 @@
       "question_3": "O que é um 'Stop Loss' na Negociação Forex?",
       "answer_3": "Um stop loss na negociação forex é uma ferramenta recomendada pelos corretores para ajudar os traders a limitar perdas potenciais, fechando automaticamente uma posição em um preço predefinido.",
       "question_4": "O que é Hedging na Negociação Forex?",
-      "answer_4": "O hedging na negociação forex envolve empresas que travam uma taxa de câmbio específica para transações futuras, a fim de mitigar o risco de flutuações cambiais ao lidar com países estrangeiros."
+      "answer_4": "Hedging em negociação Forex é uma estratégia de gestão de risco utilizada para proteger operações contra movimentos desfavoráveis nos preços das moedas. O objetivo do hedging é limitar ou compensar possíveis perdas decorrentes da volatilidade do mercado cambial, funcionando como uma espécie de \"seguro\" para suas operações."
     },
     "whyTrade": {
       "title_part1": "Por Que Negociar",
       "title_part2": "Forex?",
-      "description": "A negociação de Forex oferece diversas oportunidades. Seja um trader diário, swing trader ou investidor de longo prazo, você encontrará várias oportunidades para negociar pares de moedas. Analise tendências de mercado, indicadores econômicos e eventos geopolíticos para tomar decisões de negociação informadas."
+      "description": "A negociação de Forex oferece diversas oportunidades. Seja um day trader, swing trader ou investidor de longo prazo, você encontrará várias oportunidades para negociar pares de moedas. Analise tendências de mercado, indicadores econômicos e eventos geopolíticos para tomar decisões de negociação informadas."
     }
   },
   "metalsProduct": {
@@ -2273,7 +2273,7 @@
       "step2_title2": "Fundos",
       "step3_count": "3",
       "step3_title1": "Escolha suas",
-      "step3_title2": "Comodidades",
+      "step3_title2": "Commodities",
       "step4_count": "4",
       "step4_title1": "Comece",
       "step4_title2": "a Negociar"
@@ -2320,12 +2320,13 @@
     "about": {
       "title_part1": "PrimeX Capital ",
       "title_part2": "Negociação Social",
-      "description": "Na PrimeX Capital, tornamos a negociação simples e acessível a todos. Nosso serviço de copy trading permite que você siga e replique as negociações dos principais investidores diretamente, permitindo que você gere lucros sem experiência prévia. Seja você um iniciante ou esteja procurando expandir seu portfólio, pode facilmente seguir os movimentos dos especialistas e maximizar seus retornos."
+      "description": "Na PrimeX Capital, tornamos a negociação mais simples e acessível a todos. Nosso serviço de copy trading permite que você siga e replique as negociações dos principais investidores diretamente, permitindo que você gere lucros sem experiência prévia. Seja você um iniciante ou esteja procurando expandir seu portfólio, pode facilmente seguir os movimentos dos especialistas e maximizar seus retornos."
     },
     "benefits": {
       "main_title1": "Desfrute das Vantagens Exclusivas de ",
       "main_title2": "Copiar Nossos Traders Experientes",
-      "title1_part1": "Negociação em Tempo Real",
+      "title1_part1": "Negociação em",
+      "title1_part2": "Tempo Real",
       "description1": "Copie as negociações dos melhores investidores em tempo real.",
       "title2_part1": "Diversifique seu ",
       "title2_part2": "Portfólio",
@@ -2674,7 +2675,7 @@
     "customerServices": {
       "title_part1": "Serviços de ",
       "title_part2": "Atendimento ao Cliente",
-      "step1": "Participe de nossos webinars semanais para ficar atualizado sobre estratégias de mercado.",
+      "step1": "Participe de nossos webinários semanais para ficar atualizado sobre estratégias de mercado.",
       "step2": "Nossa equipe de atendimento é composta por profissionais qualificados, disponíveis 24/7.",
       "step3": "Acesse materiais educacionais gratuitos, blogs e tutoriais em vídeo.",
       "step4": "Agende sessões privadas com nossos especialistas para orientações personalizadas.",
@@ -2690,7 +2691,7 @@
       "title1": "Aumente Seu ",
       "title2": "Potencial de Negociação ",
       "title3": "com Nossos ",
-      "title4": "Fundos Supercarregados ",
+      "title4": "Fundos Alavancados ",
       "description": "Mostre sua habilidade em negociação, obtenha fundos e controle suas negociações da sua maneira.",
       "btnTxt": "Obtenha uma Conta Financiada"
     },
@@ -2720,7 +2721,7 @@
     "banner2": {
       "title1": "PrimeX Capital ",
       "title2": "Conta Financiada",
-      "description": "Oferecemos um ecossistema de Conta Financiada onde você negocia sem arriscar seu capital. Empoderamos você a tomar o controle do seu futuro financeiro. Nossas contas financiadas supercarregadas são projetadas para traders ativos que buscam maximizar seu potencial no mercado. Nosso objetivo é ajudá-lo a desenvolver habilidades que impulsionem suas negociações com nossos fundos."
+      "description": "Oferecemos um ecossistema de Conta Financiada onde você negocia sem arriscar seu capital. Empoderamos você a tomar o controle do seu futuro financeiro. Nossas contas financiadas salavancadas são projetadas para traders ativos que buscam maximizar seu potencial no mercado. Nosso objetivo é ajudá-lo a desenvolver habilidades que impulsionem suas negociações com nossos fundos."
     },
     "discount": {
       "main_title1": "Desbloqueie ",
@@ -2842,8 +2843,8 @@
     },
     "hero": {
       "title_1": "PrimeX Capital",
-      "title_2": "Webinars Exclusivos",
-      "description": "Eleve suas habilidades de negociação com webinars liderados por especialistas. Participe gratuitamente ou agende sessões privadas para coaching personalizado e sucesso acelerado.",
+      "title_2": "Webinários Exclusivos",
+      "description": "Eleve suas habilidades de negociação com webinários liderados por especialistas. Participe gratuitamente ou agende sessões privadas para coaching personalizado e sucesso acelerado.",
       "join_btn": "Participe do Webinar Gratuito"
     }
   },
@@ -3019,7 +3020,7 @@
       "general_rules_li3_desc": "Esta oferta é exclusivamente para residentes de países específicos",
       "general_rules_li4_desc": "Qualquer saque cancelará todos os bônus acumulados",
       "timeline_title": "Regras Gerais",
-      "timeline_li1_desc": "Abra uma nova conta ao vivo 'Conta de Bônus de 50%' para se qualificar",
+      "timeline_li1_desc": "Abra uma nova conta real 'Conta de Bônus de 50%' para se qualificar",
       "timeline_li2_desc": "A conta de bônus possui as mesmas características da conta Standard",
       "timeline_li3_desc": "Somente uma conta bônus é permitida por cliente",
       "timeline_li4_desc": "A PrimeX Capital reserva o direito de modificar os termos e condições",
@@ -3072,7 +3073,7 @@
       "question7": "Quem é elegível para este bônus?",
       "answer7": "Este bônus está disponível exclusivamente para traders residentes em países selecionados e que tenham depositado $100 ou mais em sua conta bônus.",
       "question8": "Preciso abrir um tipo específico de conta para qualificar para o bônus?",
-      "answer8": "Sim, você precisa abrir uma nova conta ao vivo chamada 'Conta Bônus de 50%'.",
+      "answer8": "Sim, você precisa abrir uma nova conta real chamada 'Conta Bônus de 50%'.",
       "question9": "Quantos bônus posso reivindicar?",
       "answer9": "Você pode reivindicar bônus de 50% ilimitados se seu depósito for de $100 ou mais.",
       "question10": "Existem estratégias de negociação proibidas?",
