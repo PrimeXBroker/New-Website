@@ -1760,7 +1760,11 @@
       "phoneNumber": "Número de Telefone",
       "webinar_cate": "Tópico do Webinário",
       "condition": "Ao enviar este formulário, você concorda em ser contatado pela nossa equipe.",
-      "write_adv": "Escreva..."
+      "write_adv": "Escreva...",
+      "ask_about": "O que você gostaria de perguntar?",
+      "select_date_label": "Selecione a Data",
+      "ask_about_error": "O campo Perguntar sobre é obrigatório.",
+      "date_error": "O campo 'Data' é obrigatório."
     },
     "privateSessions": {
       "title": "Consulta Gratuita",

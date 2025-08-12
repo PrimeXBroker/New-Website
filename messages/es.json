@@ -1759,7 +1759,11 @@
       "phoneNumber": "Número de Teléfono",
       "webinar_cate": "Tema de Webinars",
       "condition": "Al enviar este formulario, aceptas ser contactado por nuestro equipo.",
-      "write_adv": "Escribir..."
+      "write_adv": "Escribir...",
+      "ask_about": "¿Qué deseas preguntar?",
+      "select_date_label": "Seleccionar fecha",
+      "ask_about_error": "El campo Pregunta sobre es obligatorio.",
+      "date_error": "El campo de la fecha es obligatorio."
     },
     "privateSessions": {
       "title": "Consultas Gratuitas",

@@ -1688,7 +1688,11 @@
       "session_title2": "الجلسة",
       "session_desc": "أدخل تفاصيلك وسنتواصل معك قريبًا.",
       "availability_label": "التوفر",
-      "write_adv": "اكتب..."
+      "write_adv": "اكتب...",
+      "ask_about": "ما الذي ترغب في الاستفسار عنه؟",
+      "select_date_label": "اختر التاريخ",
+      "ask_about_error": "حقل الاستفسار عن السؤال مطلوب.",
+      "date_error": "حقل التاريخ مطلوب."
     },
     "privateSessions": {
       "title": "استشارة مجانية",

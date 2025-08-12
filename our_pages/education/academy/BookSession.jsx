@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import axios from "axios";
+import moment from "moment-timezone";
 
 import {
   Modal,
@@ -19,13 +20,16 @@ import {
 import CustomSelect from "./CustomSelect";
 import { useDispatch, useSelector } from "react-redux";
 import { setLocation } from "@/redux/slices/locationSlice";
+import DateTimePicker from "./DateTimePicker";
 
 function BookSession() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const dispatch = useDispatch();
   const t = useTranslations("academy.academyForm");
   const [loading, setLoading] = useState(false);
+  const [availableSlots, setAvailableSlots] = useState([]);
   const countryCode = useSelector((state) => state.location.location);
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   useEffect(() => {
     const fetchLocation = async () => {
@@ -47,25 +51,32 @@ function BookSession() {
 
   const webinarTypes = [
     {
-      id: "12:00 PM - 03:00 PM ( GST + 3 Time )",
-      name: "09:00 AM - 12:00 AM ( GST + 3 Time )",
-      value: "12:00 PM - 03:00 PM ( GST + 3 Time )",
+      id: "1:00 PM - 2:00 PM ( GST + 3 Time )",
+      name: "1:00 PM - 2:00 PM ( GST + 3 Time )",
+      value: "1:00 PM - 2:00 PM ( GST + 3 Time )",
     },
     {
-      id: "12:00 PM - 03:00 PM ( GST + 3 Time )",
-      name: "12:00 PM - 03:00 PM ( GST + 3 Time )",
-      value: "12:00 PM - 03:00 PM ( GST + 3 Time )",
+      id: "3:00 PM - 4:00 PM ( GST + 3 Time )",
+      name: "3:00 PM - 4:00 PM ( GST + 3 Time )",
+      value: "3:00 PM - 4:00 PM ( GST + 3 Time )",
     },
     {
-      id: "03:00 PM - 05:00 PM ( GST + 3 Time )",
-      name: "03:00 PM - 05:00 PM ( GST + 3 Time )",
-      value: "03:00 PM - 05:00 PM ( GST + 3 Time )",
+      id: "5:00 PM - 6:00 PM ( GST + 3 Time )",
+      name: "5:00 PM - 6:00 PM ( GST + 3 Time )",
+      value: "5:00 PM - 6:00 PM ( GST + 3 Time )",
     },
   ];
 
-  const handleSelectChange = (selectedValue) => {
-    formik.setFieldValue("time", selectedValue);
-  };
+  useEffect(() => {
+    const selectedDay = moment(selectedDate).day();
+    let slots = webinarTypes;
+    if (selectedDay === 5) {
+      slots = webinarTypes.filter(
+        (slot) => slot.value !== "3:00 PM - 4:00 PM ( GST + 3 Time )"
+      );
+    }
+    setAvailableSlots(slots);
+  }, [selectedDate]);
 
   const formik = useFormik({
     initialValues: {
@@ -75,6 +86,8 @@ function BookSession() {
       accountId: "",
       time: "",
       appointmentFor: "6638c57d544c48054fa68135",
+      askAbout: "",
+      selectedDate: moment(selectedDate).format("YYYY-MM-DD"),
     },
     validationSchema: Yup.object({
       fullName: Yup.string()
@@ -88,6 +101,8 @@ function BookSession() {
         .required(t("email_required_error")),
       time: Yup.string().required(t("availability_error")),
       accountId: Yup.number().required(t("account_number_error")),
+      askAbout: Yup.string().required(t("ask_about_error")),
+      selectedDate: Yup.string().required(t("date_error")),
     }),
     validate: (values) => {
       const errors = {};
@@ -105,6 +120,7 @@ function BookSession() {
         );
         if (res.data.success) {
           formik.resetForm();
+          formik.setFieldValue("time", "");
           setLoading(false);
           onOpen();
         } else {
@@ -218,25 +234,64 @@ function BookSession() {
           </div>
           <div className="w-full">
             <label className="text-xs text-ts dark:text-ts-dark">
+              {t("select_date_label")}
+            </label>
+            <DateTimePicker
+              selectedDate={selectedDate}
+              onChange={(newDate) => {
+                setSelectedDate(newDate);
+                formik.setFieldValue(
+                  "selectedDate",
+                  moment(newDate).format("YYYY-MM-DD")
+                );
+              }}
+            />
+            {formik.errors.selectedDate && formik.touched.selectedDate && (
+              <div className="text-rc dark:text-rc-dark text-xs">
+                {formik.errors.selectedDate}
+              </div>
+            )}
+          </div>
+          <div className="w-full">
+            <label className="text-xs text-ts dark:text-ts-dark">
               {t("availability_label")}
               <CustomSelect
                 label={t("availability_label")}
-                options={webinarTypes}
+                options={availableSlots}
                 value={formik.values.time}
-                onChange={handleSelectChange}
+                onChange={(selectedValue) =>
+                  formik.setFieldValue("time", selectedValue)
+                }
               />
               {formik.errors.time && formik.touched.time && (
-                <div className="text-rc dark:text-rc-dark text-xs">
+                <div className="text-rc dark:text-rc-dark text-xs mt-2">
                   {formik.errors.time}
                 </div>
               )}
             </label>
           </div>
           <div className="w-full">
+            <label className="text-xs text-ts dark:text-ts-dark">
+              {t("ask_about")}
+              <textarea
+                name="askAbout"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.askAbout}
+                rows="4"
+                placeholder={t("write_adv")}
+                className={`appearance-none border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
+                  formik.touched.askAbout && formik.errors.askAbout
+                    ? "border border-rc dark:border-rc-dark"
+                    : ""
+                }`}
+              />
+            </label>
+          </div>
+          <div className="w-full">
             <p className="text-xs text-ts dark:text-ts-dark mb-1">
               {t("condition")}
             </p>
-
             <button
               disabled={loading}
               className="transition-colors duration-300 ease-in-out rounded-lg font-bold w-full flex items-center justify-center gap-3 group bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark group py-4 px-3"
@@ -252,7 +307,6 @@ function BookSession() {
           </div>
         </form>
       </div>
-
       <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="center">
         <ModalContent>
           {(onClose) => (
