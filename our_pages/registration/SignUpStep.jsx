@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import PhoneNumberInput from "./PhoneNumberInput";
 import { phoneOptions } from "@/utils/data";
 import axios from "axios";
-import { City, Country } from "country-state-city";
+import * as csc from "countrycitystatejson";
 import { Spinner } from "@nextui-org/react";
 import StaticViewDatePicker from "./StaticViewDatePicker";
 import CustomSelectDropdown from "./CustomSelectDropdown";
@@ -56,43 +56,124 @@ export default function SignUpStep({
   });
   const [loading, setLoading] = useState(false);
 
+  // useEffect(() => {
+  //   const countriesList = Country.getAllCountries().map((country) => ({
+  //     label: country.name,
+  //     code: `+${country.phonecode}`,
+  //     isoCode: country.isoCode.toUpperCase(),
+  //     flag: `https://flagcdn.com/w40/${country.isoCode.toLowerCase()}.png`,
+  //   }));
+
+  //   setCountries(countriesList);
+
+  //   setSelectedPhone(phoneOptions[0] ?? countriesList[0]);
+
+  //   axios
+  //     .get("https://ipapi.co/country/")
+  //     .then((res) => {
+  //       const userCountryCode = res.data?.toUpperCase() || null;
+  //       const userCountry = countriesList.find(
+  //         (c) => c.isoCode === userCountryCode
+  //       );
+  //       if (userCountry) setSelectedPhone(userCountry);
+  //     })
+  //     .catch(() => {});
+  // }, []);
+
   useEffect(() => {
-    const countriesList = Country.getAllCountries().map((country) => ({
-      label: country.name,
-      code: `+${country.phonecode}`,
-      isoCode: country.isoCode.toUpperCase(),
-      flag: `https://flagcdn.com/w40/${country.isoCode.toLowerCase()}.png`,
-    }));
+    // Get all country short names (e.g., 'US', 'IN')
+    const countriesData = csc.getCountries();
+
+    const countriesList = countriesData.map((countryData) => {
+      return {
+        label: countryData?.name,
+        isoCode: countryData?.shortName,
+        code: `+${countryData?.phone || "1"}`, // fallback to +1
+        flag: `https://flagcdn.com/w40/${countryData?.shortName?.toLowerCase()}.png`,
+      };
+    });
 
     setCountries(countriesList);
 
+    // Set default phone option
     setSelectedPhone(phoneOptions[0] ?? countriesList[0]);
 
+    // Auto-detect user country via IP
     axios
       .get("https://ipapi.co/country/")
       .then((res) => {
-        const userCountryCode = res.data?.toUpperCase() || null;
-        const userCountry = countriesList.find(
+        const userCountryCode = res.data?.trim().toUpperCase();
+        const detectedCountry = countriesList.find(
           (c) => c.isoCode === userCountryCode
         );
-        if (userCountry) setSelectedPhone(userCountry);
+        if (detectedCountry) setSelectedPhone(detectedCountry);
       })
-      .catch(() => {});
+      .catch((err) => {
+        console.warn("Could not detect country:", err);
+      });
   }, []);
 
   useEffect(() => {
-    if (!formData?.country) return;
+    if (!formData?.country?.isoCode) {
+      setCities([]);
+      return;
+    }
 
-    const cityList = City.getCitiesOfCountry(formData?.country?.isoCode).map(
-      (city) => ({
-        label: city.name,
-        value: city.name,
-      })
-    );
+    try {
+      // Get all states for the selected country
+      const states = csc.getStatesByShort(formData.country.isoCode);
 
-    setCities(cityList);
-    setFormData({ ...formData, city: "" });
+      let cityList = [];
+
+      if (Array.isArray(states)) {
+        for (const stateName of states) {
+          const stateCities = csc.getCities(
+            formData.country.isoCode,
+            stateName
+          );
+          if (Array.isArray(stateCities)) {
+            cityList = cityList.concat(
+              stateCities.map((city) => ({
+                label: typeof city === "object" ? city.name : city,
+                value: typeof city === "object" ? city.name : city,
+              }))
+            );
+          }
+        }
+      } else {
+        console.warn("No states found for", formData.country.isoCode);
+      }
+
+      const uniqueCities = Array.from(
+        new Map(cityList.map((city) => [city.label, city])).values()
+      );
+
+      // // Sort alphabetically
+      const sortedCities = uniqueCities.sort((a, b) =>
+        a.label.localeCompare(b.label)
+      );
+
+      setCities(sortedCities);
+      setFormData((prev) => ({ ...prev, city: "" }));
+    } catch (err) {
+      console.error("Error fetching cities:", err);
+      setCities([]);
+      setFormData((prev) => ({ ...prev, city: "" }));
+    }
   }, [formData?.country]);
+  // useEffect(() => {
+  //   if (!formData?.country) return;
+
+  //   const cityList = City.getCitiesOfCountry(formData?.country?.isoCode).map(
+  //     (city) => ({
+  //       label: city.name,
+  //       value: city.name,
+  //     })
+  //   );
+
+  //   setCities(cityList);
+  //   setFormData({ ...formData, city: "" });
+  // }, [formData?.country]);
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);

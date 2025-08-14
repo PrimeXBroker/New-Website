@@ -19,6 +19,7 @@
     "axios": "^1.7.2",
     "cookies-next": "^4.2.1",
     "country-state-city": "^3.2.1",
+    "countrycitystatejson": "^25.8.101",
     "dayjs": "^1.11.13",
     "draft-js": "^0.11.7",
     "formik": "^2.4.6",
