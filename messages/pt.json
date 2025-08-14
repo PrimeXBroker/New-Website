@@ -3213,5 +3213,121 @@
       "redirect_message": "Redirecionando para o Login em ",
       "redirect_message_second": "segundos"
     }
+  },
+  "newBonusPage": {
+    "metaData": {
+      "title": "Bônus de Depósito de 20% | PrimeX Capital",
+      "description": "Libere seu potencial de trading com o Bônus de Depósito de 20% da PrimeX Capital! Opere forex, metais, índices e ações com uma corretora global de confiança."
+    },
+    "bonusHero": {
+      "hero_title": "BÔNUS DE DEPÓSITO DE 20% DA PRIMEX",
+      "hero_subtitle": "Libere seu potencial de trading com",
+      "hero_description": "Receba um bônus de depósito de 20% instantaneamente em cada depósito de até $3000.",
+      "btnTxt": "Reivindique seu Bônus",
+      "label_1": "Dias",
+      "label_2": "Horas",
+      "label_3": "Minutos",
+      "label_4": "Segundos"
+    },
+    "accountTypes": {
+      "main_title1": "Bônus ",
+      "main_title2": "para ",
+      "main_title3": "Todos os Tipos de Conta",
+      "acc1": {
+        "title": "Standard",
+        "li1_key": "Porcentagem do Bônus",
+        "li1_value": "20%",
+        "li2_key": "Até",
+        "li2_value": "1000$",
+        "li3_key": "Depósito Mín. para Bônus",
+        "li3_value": "500$",
+        "btnTxt": "Conta Standard"
+      },
+      "acc2": {
+        "title": "Narrow",
+        "li1_key": "Porcentagem do Bônus",
+        "li1_value": "20%",
+        "li2_key": "Até",
+        "li2_value": "2000$",
+        "li3_key": "Depósito Mín. para Bônus",
+        "li3_value": "1000$",
+        "btnTxt": "Conta Narrow"
+      },
+      "acc3": {
+        "title": "Raw",
+        "li1_key": "Porcentagem do Bônus",
+        "li1_value": "20%",
+        "li2_key": "Até",
+        "li2_value": "3000$",
+        "li3_key": "Depósito Mín. para Bônus",
+        "li3_value": "5000$",
+        "btnTxt": "Conta Raw"
+      }
+    },
+    "bonusPrizeBreakdown": {
+      "title": "Como funciona",
+      "step1": "Cadastre-se",
+      "step1_desc": "Cadastre-se e verifique sua conta PrimeX.",
+      "step2": "Abra sua Conta",
+      "step2_desc": "Abra sua Conta de Trading.",
+      "step3": "Deposite",
+      "step3_desc": "Deposite um mínimo de $500 para a conta Standard, $1000 para a conta Narrow ou $5000 para a conta Raw.",
+      "step4": "Receba seu Bônus",
+      "step4_desc": "Receba um bônus de 20% adicionado à sua conta imediatamente."
+    },
+    "bonusRules": {
+      "title": "Termos e Condições",
+      "trading_rules_title": "Elegibilidade do Bônus",
+      "trading_rules_li1_desc": "O depósito mínimo exigido é de $500 para a conta Standard, $1000 para a conta Narrow e $5000 para a conta Raw.",
+      "trading_rules_li2_desc": "O valor máximo do bônus é de $1000 para a conta Standard, $2000 para a conta Narrow e $3000 para a conta Raw.",
+      "trading_rules_li3_desc": "Este bônus é válido por um ano a partir da data de abertura da conta.",
+      "general_rules_title": "Regras do Bônus",
+      "general_rules_li1_desc": "O valor do bônus é negociável e sujeito a perdas.",
+      "general_rules_li2_desc": "O valor do bônus não é sacável.",
+      "general_rules_li3_desc": "Esta oferta é exclusiva para residentes de países específicos.",
+      "general_rules_li4_desc": "Qualquer saque cancelará todos os valores de bônus acumulados.",
+      "timeline_title": "Regras Gerais",
+      "timeline_li1_desc": "A PrimeX Capital se reserva o direito de modificar, alterar ou cancelar os termos e condições desta promoção a qualquer momento, sem aviso prévio.",
+      "timeline_li2_desc": "Esta oferta de bônus é estritamente limitada a um por cliente, por endereço de IP e por residência. É proibido criar várias contas para reivindicar o bônus várias vezes.",
+      "timeline_li3_desc": "Esta oferta de bônus não pode ser usada em conjunto com qualquer outra promoção ou oferta da PrimeX Capital, a menos que seja explicitamente declarado o contrário.",
+      "works_title": "Estratégias de Trading Proibidas",
+      "works_li1_desc": "Hedge cruzado (cross-hedging) entre contas diferentes.",
+      "works_li2_desc": "Trading de Alta Frequência (HFT).",
+      "works_li3_desc": "Todos os pontos de abuso de mercado no acordo de termos e condições."
+    },
+    "bonusFaqs": {
+      "title": "Perguntas Frequentes",
+      "question1": "Qual é a porcentagem do bônus?",
+      "answer1": "O bônus é de 20% de qualquer depósito qualificado feito em sua conta de trading real.",
+      "question2": "Qual é o depósito mínimo necessário para se qualificar para o bônus?",
+      "answer2": "O depósito mínimo depende do tipo de conta que você escolher:",
+      "answer2_li1": "Conta Standard: $500",
+      "answer2_li2": "Conta Narrow: $1,000",
+      "answer2_li3": "Conta Raw: $5,000",
+      "question3": "Qual o valor máximo de bônus que posso receber?",
+      "answer3": "O bônus máximo que você pode receber também depende do seu tipo de conta:",
+      "answer3_li1": "Conta Standard: Até $1,000",
+      "answer3_li2": "Conta Narrow: Até $2,000",
+      "answer3_li3": "Conta Raw: Até $3,000",
+      "question4": "Por quanto tempo o bônus é válido?",
+      "answer4": "O bônus é válido por um ano a partir da data de abertura da sua conta.",
+      "question5": "Posso sacar o valor do bônus?",
+      "answer5": "Não, o valor do bônus em si é um crédito de negociação não sacável e não pode ser convertido em dinheiro.",
+      "question6": "Posso sacar meus lucros de trading?",
+      "answer6": "Você pode sacar todos os seus lucros de trading e seu capital. No entanto, qualquer saque cancelará todos os valores de bônus acumulados em sua conta.",
+      "question7": "Quem é elegível para este bônus?",
+      "answer7": "O bônus está disponível para todos os clientes novos e existentes da PrimeX Capital que são residentes de países selecionados e que atendem aos requisitos de depósito mínimo da promoção.",
+      "question8": "Preciso abrir um tipo de conta específico para me qualificar para o bônus?",
+      "answer8": "Sim, o bônus é oferecido em nossas contas Standard, Narrow e Raw. Você deve escolher uma delas e atender ao seu requisito de depósito mínimo para se qualificar.",
+      "question9": "Quantos bônus posso reivindicar?",
+      "answer9": "Você pode reivindicar este bônus apenas uma vez. A oferta é estritamente limitada a um por cliente, por endereço de IP e por residência para garantir uma distribuição justa.",
+      "question10": "Existem estratégias de trading proibidas?",
+      "answer10": "Sim, as seguintes estratégias de trading são proibidas: Hedge cruzado (cross-hedging) entre contas diferentes e Trading de Alta Frequência (HFT)."
+    },
+    "bonusJoinNow": {
+      "title1": "Pronto para impulsionar seu trading?",
+      "subtitle": "Abra sua conta hoje!",
+      "btnTxt": "Reivindique seu Bônus de 20% Agora!"
+    }
   }
 }

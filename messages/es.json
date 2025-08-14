@@ -3213,5 +3213,121 @@
       "redirect_message": "Redirigiendo al inicio de sesión en ",
       "redirect_message_second": "segundos"
     }
+  },
+  "newBonusPage": {
+    "metaData": {
+      "title": "Bono del 20% por Depósito | PrimeX Capital",
+      "description": "¡Libera tu potencial de trading con el Bono de Depósito del 20% de PrimeX Capital! Opera forex, metales, índices y acciones con un bróker global de confianza."
+    },
+    "bonusHero": {
+      "hero_title": "BONO DE DEPÓSITO DEL 20% DE PRIMEX",
+      "hero_subtitle": "Libera tu potencial de trading con",
+      "hero_description": "Recibe un bono de depósito del 20% al instante en cada depósito hasta $3000.",
+      "btnTxt": "Reclama tu Bono",
+      "label_1": "Días",
+      "label_2": "Horas",
+      "label_3": "Minutos",
+      "label_4": "Segundos"
+    },
+    "accountTypes": {
+      "main_title1": "Bono ",
+      "main_title2": "para ",
+      "main_title3": "Todos los Tipos de Cuenta",
+      "acc1": {
+        "title": "Estándar",
+        "li1_key": "Porcentaje de Bono",
+        "li1_value": "20%",
+        "li2_key": "Hasta",
+        "li2_value": "1000$",
+        "li3_key": "Depósito Mín. para Bono",
+        "li3_value": "500$",
+        "btnTxt": "Cuenta Estándar"
+      },
+      "acc2": {
+        "title": "Narrow",
+        "li1_key": "Porcentaje de Bono",
+        "li1_value": "20%",
+        "li2_key": "Hasta",
+        "li2_value": "2000$",
+        "li3_key": "Depósito Mín. para Bono",
+        "li3_value": "1000$",
+        "btnTxt": "Cuenta Narrow"
+      },
+      "acc3": {
+        "title": "Raw",
+        "li1_key": "Porcentaje de Bono",
+        "li1_value": "20%",
+        "li2_key": "Hasta",
+        "li2_value": "3000$",
+        "li3_key": "Depósito Mín. para Bono",
+        "li3_value": "5000$",
+        "btnTxt": "Cuenta Raw"
+      }
+    },
+    "bonusPrizeBreakdown": {
+      "title": "Cómo funciona",
+      "step1": "Regístrate",
+      "step1_desc": "Regístrate y verifica tu cuenta de PrimeX.",
+      "step2": "Abre una Cuenta",
+      "step2_desc": "Abre tu Cuenta de Trading.",
+      "step3": "Deposita",
+      "step3_desc": "Deposita un mínimo de $500 para la cuenta Estándar, $1000 para la cuenta Narrow o $5000 para la cuenta Raw.",
+      "step4": "Recibe tu Bono",
+      "step4_desc": "Recibe un bono del 20% agregado a tu cuenta al instante."
+    },
+    "bonusRules": {
+      "title": "Términos y Condiciones",
+      "trading_rules_title": "Elegibilidad para el Bono",
+      "trading_rules_li1_desc": "El depósito mínimo requerido es de $500 para la cuenta Estándar, $1000 para la cuenta Narrow y $5000 para la cuenta Raw.",
+      "trading_rules_li2_desc": "El monto máximo del bono es de $1000 para la cuenta Estándar, $2000 para la cuenta Narrow y $3000 para la cuenta Raw.",
+      "trading_rules_li3_desc": "Este bono es válido por un año desde la fecha de apertura de la cuenta.",
+      "general_rules_title": "Reglas del Bono",
+      "general_rules_li1_desc": "El monto del bono es operable y está sujeto a pérdidas.",
+      "general_rules_li2_desc": "El monto del bono no es retirable.",
+      "general_rules_li3_desc": "Esta oferta es exclusiva para residentes de países específicos.",
+      "general_rules_li4_desc": "Cualquier retiro de fondos cancelará todos los montos de bono acumulados.",
+      "timeline_title": "Reglas Generales",
+      "timeline_li1_desc": "PrimeX Capital se reserva el derecho de modificar, enmendar o cancelar los términos y condiciones de esta promoción en cualquier momento sin previo aviso.",
+      "timeline_li2_desc": "Esta oferta de bono está estrictamente limitada a uno por cliente, por dirección IP y por hogar. Se prohíbe la creación de múltiples cuentas para reclamar el bono varias veces.",
+      "timeline_li3_desc": "Esta oferta de bono no puede ser utilizada en conjunto con ninguna otra promoción u oferta de PrimeX Capital, a menos que se indique explícitamente lo contrario.",
+      "works_title": "Estrategias de Trading Prohibidas",
+      "works_li1_desc": "Realizar cobertura cruzada (cross-hedging) entre diferentes cuentas.",
+      "works_li2_desc": "Trading de Alta Frecuencia (HFT).",
+      "works_li3_desc": "Todos los puntos de abuso de mercado detallados en el acuerdo de términos y condiciones."
+    },
+    "bonusFaqs": {
+      "title": "Preguntas Frecuentes",
+      "question1": "¿Cuál es el porcentaje del bono?",
+      "answer1": "El bono es del 20% de cualquier depósito calificado que realices en tu cuenta de trading real.",
+      "question2": "¿Cuál es el depósito mínimo requerido para calificar para el bono?",
+      "answer2": "El depósito mínimo depende del tipo de cuenta que elijas:",
+      "answer2_li1": "Cuenta Estándar: $500",
+      "answer2_li2": "Cuenta Narrow: $1,000",
+      "answer2_li3": "Cuenta Raw: $5,000",
+      "question3": "¿Cuál es el monto máximo de bono que puedo recibir?",
+      "answer3": "El bono máximo que puedes recibir también depende de tu tipo de cuenta:",
+      "answer3_li1": "Cuenta Estándar: Hasta $1,000",
+      "answer3_li2": "Cuenta Narrow: Hasta $2,000",
+      "answer3_li3": "Cuenta Raw: Hasta $3,000",
+      "question4": "¿Por cuánto tiempo es válido el bono?",
+      "answer4": "El bono es válido por un año desde la fecha de apertura de tu cuenta.",
+      "question5": "¿Puedo retirar el monto del bono?",
+      "answer5": "No, el monto del bono en sí es un crédito de trading no retirable y no se puede canjear por efectivo.",
+      "question6": "¿Puedo retirar mis ganancias de trading?",
+      "answer6": "Puedes retirar todas tus ganancias de trading y tu capital. Sin embargo, cualquier retiro cancelará todos los montos de bono acumulados en tu cuenta.",
+      "question7": "¿Quién es elegible para este bono?",
+      "answer7": "El bono está disponible para todos los clientes nuevos y existentes de PrimeX Capital que sean residentes de países seleccionados y que cumplan con los requisitos de depósito mínimo para la promoción.",
+      "question8": "¿Necesito abrir un tipo de cuenta específico para calificar para el bono?",
+      "answer8": "Sí, el bono se ofrece en nuestras cuentas Estándar, Narrow y Raw. Debes elegir una de estas y cumplir con su requisito de depósito mínimo para calificar.",
+      "question9": "¿Cuántos bonos puedo reclamar?",
+      "answer9": "Puedes reclamar este bono una sola vez. La oferta está estrictamente limitada a un bono por cliente, por dirección IP y por hogar para garantizar una distribución justa.",
+      "question10": "¿Existen estrategias de trading prohibidas?",
+      "answer10": "Sí, las siguientes estrategias de trading están prohibidas: la cobertura cruzada (cross-hedging) entre diferentes cuentas y el Trading de Alta Frecuencia (HFT)."
+    },
+    "bonusJoinNow": {
+      "title1": "¿Estás listo para potenciar tu trading?",
+      "subtitle": "¡Abre tu cuenta hoy!",
+      "btnTxt": "¡Reclama tu Bono del 20% Ahora!"
+    }
   }
 }

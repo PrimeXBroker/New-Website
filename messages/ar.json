@@ -3055,5 +3055,121 @@
       "redirect_message": "جاري التحويل إلى تسجيل الدخول في ",
       "redirect_message_second": "ثوانٍ"
     }
+  },
+  "newBonusPage": {
+    "metaData": {
+      "title": "20% Deposit Bonus | PrimeX Capital",
+      "description": "Unlock your trading potential with PrimeX Capital's 20% Deposit Bonus! Trade forex, metals, indices & stocks with a trusted global broker."
+    },
+    "bonusHero": {
+      "hero_title": "PRIMEX 20% DEPOSIT BONUS",
+      "hero_subtitle": "Unlock Your Trading Potential With ",
+      "hero_description": "Receive a 20% deposit bonus instantly on every deposit up to $3000",
+      "btnTxt": "Claim Your Bonus",
+      "label_1": "Days",
+      "label_2": "Hours",
+      "label_3": "Minutes",
+      "label_4": "Seconds"
+    },
+    "accountTypes": {
+      "main_title1": "Bonus ",
+      "main_title2": "Across ",
+      "main_title3": "All Account Types",
+      "acc1": {
+        "title": "Standard",
+        "li1_key": "Bonus Percentage",
+        "li1_value": "20%",
+        "li2_key": "Up To",
+        "li2_value": "1000$",
+        "li3_key": "Min. Deposit to Get Bonus",
+        "li3_value": "500$",
+        "btnTxt": "Standard Account"
+      },
+      "acc2": {
+        "title": "Narrow",
+        "li1_key": "Bonus Percentage",
+        "li1_value": "20%",
+        "li2_key": "Up To",
+        "li2_value": "2000$",
+        "li3_key": "Min. Deposit to Get Bonus",
+        "li3_value": "1000$",
+        "btnTxt": "Narrow Account"
+      },
+      "acc3": {
+        "title": "Raw",
+        "li1_key": "Bonus Percentage",
+        "li1_value": "20% ",
+        "li2_key": "Up To",
+        "li2_value": "3000$",
+        "li3_key": "Min. Deposit to Get Bonus",
+        "li3_value": "5000$",
+        "btnTxt": "Raw Account"
+      }
+    },
+    "bonusPrizeBreakdown": {
+      "title": "How it works",
+      "step1": "Register",
+      "step1_desc": "Sign up and verify your PrimeX account.",
+      "step2": "Open Account",
+      "step2_desc": "Open your Trading Account.",
+      "step3": "Deposit",
+      "step3_desc": "Deposit a minimum of 500$ for standard account 1000$ for narrow account 5000$ for raw account.",
+      "step4": "Receive Bonus",
+      "step4_desc": "Get a 20% bonus added to your account immediately."
+    },
+    "bonusRules": {
+      "title": "Terms and Conditions",
+      "trading_rules_title": "Bonus Eligibility",
+      "trading_rules_li1_desc": "Minimum deposit required is $500 for standard account, 1000$ for narrow account, 5000$ for raw account.",
+      "trading_rules_li2_desc": "Maximum bonus amount is $1000  for standard account and 2000$ for Narrow account and 3000$ for Raw account.",
+      "trading_rules_li3_desc": "This bonus is valid for one year from account opening.",
+      "general_rules_title": "Bonus Rules",
+      "general_rules_li1_desc": "The bonus amount is tradable and subject to loss.",
+      "general_rules_li2_desc": "The bonus amount is not withdrawable.",
+      "general_rules_li3_desc": "This offer is exclusively for residents of specific countries.",
+      "general_rules_li4_desc": "Any withdrawal will cancel all accumulated bonus amounts.",
+      "timeline_title": "General rules",
+      "timeline_li1_desc": "PrimeX Capital reserves the right to modify, amend, or cancel the terms and conditions of this promotion at any time without prior notice.",
+      "timeline_li2_desc": "This bonus offer is strictly limited to one per client, per IP address, and per household. Creating multiple accounts to claim the bonus multiple times is prohibited.",
+      "timeline_li3_desc": "This bonus offer cannot be used in conjunction with any other promotion or offer from PrimeX Capital unless explicitly stated otherwise. ",
+      "works_title": "Prohibited Trading Strategies",
+      "works_li1_desc": "Cross-hedging between different accounts.",
+      "works_li2_desc": "(HFT) High-Frequency Trading.",
+      "works_li3_desc": "All market abuse points in terms and conditions agreement."
+    },
+    "bonusFaqs": {
+      "title": " Frequently asked questions",
+      "question1": "What is the bonus percentage?",
+      "answer1": "The bonus is 20% of any qualifying deposit made to your live trading account.",
+      "question2": "What is the minimum deposit required to qualify for the bonus?",
+      "answer2": "The minimum deposit depends on the account type you choose:",
+      "answer2_li1": "Standard Account: $500",
+      "answer2_li2": "Narrow Account: $1,000",
+      "answer2_li3": "Raw Account: $5,000",
+      "question3": "What is the maximum bonus amount I can receive?",
+      "answer3": "The maximum bonus you can receive also depends on your account type:",
+      "answer3_li1": "Standard Account: Up to $1,000",
+      "answer3_li2": "Narrow Account: Up to $2,000",
+      "answer3_li3": "Raw Account: Up to $3,000",
+      "question4": "How long is the bonus valid?",
+      "answer4": "The bonus is valid for one year from the date you open your account.",
+      "question5": "Can I withdraw the bonus amount?",
+      "answer5": "No, the bonus amount itself is a non-withdrawable trading credit and cannot be cashed out.",
+      "question6": "Can I withdraw my trading profits?",
+      "answer6": "You can withdraw all your trading profits and capital. However, any withdrawal will cancel all accumulated bonus amounts in your account.",
+      "question7": "Who is eligible for this bonus?",
+      "answer7": "The bonus is available to all new and existing PrimeX Capital clients who are residents of selected countries and have who meet the minimum deposit requirements for the promotion.",
+      "question8": "Do I need to open a specific type of account to qualify for the bonus?",
+      "answer8": " No, the bonus is offered on our Standard, Narrow, and Raw account types. You must choose one of these and meet its specific minimum deposit requirement to qualify.",
+      "question9": "How many bonuses can I claim?",
+      "answer9": "You can claim this bonus one time only. The offer is strictly limited to one per client, per IP address, and per household to ensure fair distribution.",
+      "question10": "Are there any prohibited trading strategies?",
+      "answer10": "Yes, the following trading strategies are prohibited: Cross-hedging between different accounts and High-Frequency Trading (HFT)."
+    },
+    "bonusJoinNow": {
+      "title1": "Ready to boost your trading?",
+      "subtitle": "Open your Account today!",
+      "btnTxt": "Claim 20% Your Bonus Now!"
+    }
   }
 }
