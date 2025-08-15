@@ -37,7 +37,7 @@ const BonusRules = () => {
       icon: generalRules,
       items: [
         t("timeline_li1_desc"),
-        t("timeline_li2_desc"),
+        // t("timeline_li2_desc"),
         t("timeline_li3_desc"),
       ],
     },
