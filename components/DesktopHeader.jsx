@@ -438,13 +438,11 @@ const DesktopHeader = ({ locale }) => {
                 </ul>
               )}
             </li>
-            <li className="flex items-center h-full relative">
-              <LocaleLink
-                href="/bonus"
-                className="text-tm dark:text-tm-dark text-[.8em]"
-              >
-                {t("bonus")}
-              </LocaleLink>
+            <li
+              className="relative flex items-center h-full"
+              onMouseEnter={() => openDropdown(8)}
+              onMouseLeave={closeDropdown}
+            >
               <Image
                 unoptimized={true}
                 width="18"
@@ -457,6 +455,48 @@ const DesktopHeader = ({ locale }) => {
                     : "-right-0"
                 }`}
               />
+              <button className="text-tm dark:text-tm-dark text-[.8em] flex items-center">
+                {t("offers")}
+                <svg
+                  className={`fill-current h-4 w-4 ${
+                    locale === "ar" || locale === "ps" || locale === "ku"
+                      ? "mr-1"
+                      : "ml-1"
+                  }`}
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                </svg>
+              </button>
+              {activeDropdown === 8 && (
+                <ul
+                  className={`absolute top-full mt-[4px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] ${
+                    locale === "ar" || locale === "ps" || locale === "ku"
+                      ? "min-w-[180px]"
+                      : "min-w-[180px]"
+                  } rounded-[6px]`}
+                >
+                  <li>
+                    <LocaleLink
+                      href="/bonus"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                    >
+                      {t("bonus")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
+                      href="/trade-gold"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                    >
+                      {t("contest")}
+                    </LocaleLink>
+                  </li>
+                </ul>
+              )}
             </li>
             {/* <li className="flex items-center h-full relative">
               <LocaleLink

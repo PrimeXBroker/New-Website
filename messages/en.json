@@ -48,7 +48,9 @@
     "account_types": "Account Types",
     "local_depositor": "Local Deposit (Iraq)",
     "platforms": "Platforms",
-    "market": "Markets"
+    "market": "Markets",
+    "offers": "Offers",
+    "contest": "Contest"
   },
   "home": {
     "metaData": {
@@ -3384,7 +3386,7 @@
       "participation_rules_li2_desc": "No Withdrawals: Any withdrawal from your account during the contest period will result in automatic disqualification.",
       "participation_rules_li3_desc": "Prohibited Strategies: Accounts found using cross-hedging or High-Frequency Trading (HFT) will be disqualified.",
       "duration_title": "Duration",
-      "duration_li1_desc": "Contest Duration: 15th August – 15th September 2025.",
+      "duration_li1_desc": "Contest Duration: 19th August – 19th September 2025.",
       "duration_li2_desc": "Winner Announcement: Winners will be ranked and announced by Friday, 19th September 2025.",
       "general_title": "General Rules",
       "general_li1_desc": "PrimeX Capital reserves the right to adjust the contest terms and conditions if necessary.",
@@ -3404,7 +3406,7 @@
       "question4": "Are there any prohibited trading strategies?",
       "answer4": "Yes. Using prohibited strategies such as High-Frequency Trading (HFT) or cross-hedging between different accounts will lead to disqualification from the contest.",
       "question5": "How long does the contest run?",
-      "answer5": "The contest starts on August 15th, 2025, and ends on September 15th, 2025.",
+      "answer5": "The contest starts on August 19th, 2025, and ends on September 19th, 2025.",
       "question6": "When will the winners be announced? ",
       "answer6": "The winners will be officially announced by Friday, September 19th, 2025."
     },

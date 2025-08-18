@@ -48,7 +48,9 @@
     "account_types": "Tipos de Cuenta",
     "local_depositor": "Depósito Local (Irak)",
     "platforms": "Plataformas",
-    "market": "Mercados"
+    "market": "Mercados",
+    "offers": "Ofertas",
+    "contest": "Concurso"
   },
   "home": {
     "metaData": {
@@ -3383,7 +3385,7 @@
       "participation_rules_li2_desc": "Sin Retiros: Cualquier retiro de su cuenta durante el período del concurso resultará en la descalificación automática.",
       "participation_rules_li3_desc": "Estrategias Prohibidas: Las cuentas que utilicen cobertura cruzada (cross-hedging) o trading de alta frecuencia (HFT) serán descalificadas.",
       "duration_title": "Duración",
-      "duration_li1_desc": "Duración del Concurso: 15 de agosto – 15 de septiembre de 2025.",
+      "duration_li1_desc": "Duración del Concurso: 19 de agosto – 19 de septiembre de 2025.",
       "duration_li2_desc": "Anuncio de Ganadores: Los ganadores serán clasificados y anunciados antes del viernes, 19 de septiembre de 2025.",
       "general_title": "Reglas Generales",
       "general_li1_desc": "PrimeX Capital se reserva el derecho de ajustar los términos y condiciones del concurso si es necesario.",
@@ -3403,7 +3405,7 @@
       "question4": "¿Existen estrategias de trading prohibidas?",
       "answer4": "Sí. El uso de estrategias prohibidas como el trading de alta frecuencia (HFT) o la cobertura cruzada entre diferentes cuentas llevará a la descalificación del concurso.",
       "question5": "¿Cuánto dura el concurso?",
-      "answer5": "El concurso comienza el 15 de agosto de 2025 y finaliza el 15 de septiembre de 2025.",
+      "answer5": "El concurso comienza el 19 de agosto de 2025 y finaliza el 19 de septiembre de 2025.",
       "question6": "¿Cuándo se anunciarán los ganadores?",
       "answer6": "Los ganadores serán anunciados oficialmente antes del viernes, 19 de septiembre de 2025."
     },

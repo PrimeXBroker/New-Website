@@ -48,7 +48,9 @@
     "account_types": "Tipos de Conta",
     "local_depositor": "Depósito Local",
     "platforms": "Plataformas",
-    "market": "Mercados"
+    "market": "Mercados",
+    "offers": "Ofertas",
+    "contest": "Concurso"
   },
   "home": {
     "metaData": {
@@ -3328,6 +3330,89 @@
       "title1": "Pronto para impulsionar seu trading?",
       "subtitle": "Abra sua conta hoje!",
       "btnTxt": "Reivindique seu Bônus de 20% Agora!"
+    }
+  },
+  "trdaeGold": {
+    "metaData": {
+      "title": "Concurso de Ouro | Ganhe Barras de Ouro Reais com a PrimeX Capital",
+      "description": "Participe do concurso de trading de ouro e ganhe ouro com a PrimeX Capital. Deposite US$500 e negocie XAU/USD para ter a chance de ganhar barras de ouro reais. Participe agora!"
+    },
+    "hero": {
+      "hero_title1": "Negocie Ouro ",
+      "hero_title2": "Ganhe Ouro",
+      "hero_subtitle": "Um mês, um objetivo, três vencedores de ouro real!",
+      "hero_description": "Esta é a sua chance de transformar seu volume de trading em XAU/USD em barras de ouro reais. De 15 de agosto a 15 de setembro, cada operação em ouro aproxima você da vitória.",
+      "btnTxt": "Comece o Desafio Agora"
+    },
+    "goldRushSteps": {
+      "title1": "Participe da ",
+      "title2": "Corrida do Ouro ",
+      "title3": "em 3 Passos Simples",
+      "description": "Tornamos fácil participar. Siga estes passos para se qualificar para os grandes prêmios.",
+      "step1": "Depositar",
+      "step1_desc": "Faça um depósito mínimo de US$500 durante o período do concurso para entrar oficialmente no desafio.",
+      "step2": "Negocie XAU/USD",
+      "step2_desc": "Concentre sua estratégia no Ouro (XAU/USD). Somente o seu volume de trading em ouro contará para a classificação final.",
+      "step3": "Ganhe Ouro Real",
+      "step3_desc": "Mantenha-se ativo e evite retiradas. Os três melhores traders com base em nossos critérios ganharão barras de ouro puro."
+    },
+    "prizes": {
+      "title1": "Prêmios ",
+      "title2": "Que Brilham como ",
+      "title3": "Suas Operações",
+      "description": "Os melhores participantes serão recompensados com ativos valiosos e atemporais, barras de ouro reais.",
+      "step1_place": "1º Lugar",
+      "step1_count": "10",
+      "step1": "Gramas Barra de Ouro",
+      "step1_desc": "(Valor Aproximado: US$1.500)",
+      "step2_place": "2º Lugar",
+      "step2_count": "5",
+      "step2": "Gramas Barra de Ouro",
+      "step2_desc": "(Valor Aproximado: US$1.000)",
+      "step3_place": "3º Lugar",
+      "step3_count": "2,5",
+      "step3": "Gramas Barra de Ouro",
+      "step3_desc": "(Valor Aproximado: US$500)"
+    },
+    "rules": {
+      "title": "Termos e Condições",
+      "win_rules_title": "Como Vencer",
+      "win_rules_li1_desc": "Depósitos Totais: O valor total e a frequência dos seus depósitos.",
+      "win_rules_li2_desc": "Volume de Trading XAU/USD: O número total de lotes negociados em Ouro.",
+      "win_rules_li3_desc": "Consistência de Trading: Sua atividade diária de trading durante o concurso.",
+      "participation_rules_title": "Regras de Participação",
+      "participation_rules_li1_desc": "Elegibilidade: Aberto a todos os clientes novos e existentes da PrimeX Capital.",
+      "participation_rules_li2_desc": "Sem Saques: Qualquer saque da sua conta durante o período do concurso resultará em desclassificação automática.",
+      "participation_rules_li3_desc": "Estratégias Proibidas: Contas que utilizarem cross-hedging ou High-Frequency Trading (HFT) serão desclassificadas.",
+      "duration_title": "Duração",
+      "duration_li1_desc": "Duração do Concurso: 19 de agosto – 19 de setembro de 2025.",
+      "duration_li2_desc": "Anúncio dos Vencedores: Os vencedores serão classificados e anunciados até sexta-feira, 19 de setembro de 2025.",
+      "general_title": "Regras Gerais",
+      "general_li1_desc": "A PrimeX Capital reserva-se o direito de ajustar os termos e condições do concurso se necessário.",
+      "general_li2_desc": "Os vencedores concordam em ser apresentados em materiais promocionais."
+    },
+    "faqs": {
+      "title": " Perguntas frequentes",
+      "question1": "Como os vencedores são selecionados?",
+      "answer1": "Os vencedores são classificados com base em uma combinação de três fatores:",
+      "answer1_li1": "O valor total e a frequência dos seus depósitos.",
+      "answer1_li2": "Seu volume total de trading em XAU/USD (em lotes).",
+      "answer1_li3": "Sua consistência diária de trading durante o concurso.",
+      "question2": "Quem pode participar deste concurso?",
+      "answer2": "O concurso está aberto a todos os clientes novos e existentes da PrimeX Capital.",
+      "question3": "Posso fazer um saque durante o período do concurso?",
+      "answer3": "Não. Para permanecer elegível a vencer, você não deve fazer nenhum saque da sua conta entre 15 de agosto e 15 de setembro de 2025. Qualquer saque resultará em desclassificação automática.",
+      "question4": "Existem estratégias de trading proibidas?",
+      "answer4": "Sim. O uso de estratégias proibidas como High-Frequency Trading (HFT) ou cross-hedging entre diferentes contas levará à desclassificação do concurso.",
+      "question5": "Quanto tempo dura o concurso?",
+      "answer5": "O concurso começa em 19 de agosto de 2025 e termina em 19 de setembro de 2025.",
+      "question6": "Quando os vencedores serão anunciados?",
+      "answer6": "Os vencedores serão oficialmente anunciados até sexta-feira, 19 de setembro de 2025."
+    },
+    "joinNow": {
+      "title1": "Pronto para Transformar suas Operações em Ouro?",
+      "subtitle": "O desafio já começou. Deposite agora e comece a construir seu XAU/USD.",
+      "btnTxt": "Abra uma Conta Real"
     }
   }
 }

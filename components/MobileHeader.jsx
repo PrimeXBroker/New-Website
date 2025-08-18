@@ -856,11 +856,7 @@ const MobileHeader = ({ locale }) => {
               </div>
             )}
           </div>
-          <LocaleLink
-            href="/bonus"
-            className="text-tm dark:text-tm-dark text-base relative pt-[3px]"
-            onClick={toggleDrawer}
-          >
+          <div className="relative">
             <Image
               unoptimized={true}
               width="20"
@@ -873,8 +869,36 @@ const MobileHeader = ({ locale }) => {
                   : "left-[59px]"
               }`}
             />
-            {t("bonus")}
-          </LocaleLink>
+            <button
+              onClick={() => toggleSubMenu(8)}
+              className="text-tm dark:text-tm-dark text-base relative flex justify-between items-center w-full pt-[3px]"
+            >
+              {t("offers")}
+              {openSubMenu === 7 ? (
+                <FaChevronUp size={16} />
+              ) : (
+                <FaChevronDown size={16} />
+              )}
+            </button>
+            {openSubMenu === 8 && (
+              <div className="">
+                <LocaleLink
+                  href="/bonus"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("bonus")}
+                </LocaleLink>
+                <LocaleLink
+                  href="/trade-gold"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("contest")}
+                </LocaleLink>
+              </div>
+            )}
+          </div>
           {/* <LocaleLink
             href="/ramadan-contest"
             className="text-tm dark:text-tm-dark text-base relative"
