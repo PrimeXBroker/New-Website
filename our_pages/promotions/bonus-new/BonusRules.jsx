@@ -2,51 +2,11 @@
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import React from "react";
-import bonusEligibility from "@/public/animations/bonus/bonus-eligibility.json";
-import bonusRules from "@/public/animations/bonus/bonus-rules.json";
-import generalRules from "@/public/animations/bonus/general-rules.json";
-import tradingStrategies from "@/public/animations/bonus/prohibited-trading-strategies.json";
 import Lottie from "lottie-react";
 
-const BonusRules = () => {
+const BonusRules = ({ rulesData, translation }) => {
   const { theme } = useTheme();
-  const t = useTranslations("newBonusPage.bonusRules");
-
-  const rulesData = [
-    {
-      category: t("trading_rules_title"),
-      icon: bonusEligibility,
-      items: [
-        t("trading_rules_li1_desc"),
-        t("trading_rules_li2_desc"),
-        t("trading_rules_li3_desc"),
-      ],
-    },
-    {
-      category: t("general_rules_title"),
-      icon: bonusRules,
-      items: [
-        t("general_rules_li1_desc"),
-        t("general_rules_li2_desc"),
-        t("general_rules_li3_desc"),
-        t("general_rules_li4_desc"),
-      ],
-    },
-    {
-      category: t("timeline_title"),
-      icon: generalRules,
-      items: [
-        t("timeline_li1_desc"),
-        // t("timeline_li2_desc"),
-        t("timeline_li3_desc"),
-      ],
-    },
-    {
-      category: t("works_title"),
-      icon: tradingStrategies,
-      items: [t("works_li1_desc"), t("works_li2_desc"), t("works_li3_desc")],
-    },
-  ];
+  const t = useTranslations(translation);
 
   return (
     <div className="bg-p dark:bg-p-dark text-tm dark:text-tm-dark">

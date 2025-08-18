@@ -213,6 +213,12 @@ export default function SitemapIndexPage() {
       priority: 0.7,
       changeFrequency: "Daily",
     },
+    {
+      url: "https://primexcapital.com/en/trade-gold",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
   ];
 
   return (

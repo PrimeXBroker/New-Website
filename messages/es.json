@@ -3329,5 +3329,88 @@
       "subtitle": "¡Abre tu cuenta hoy!",
       "btnTxt": "¡Reclama tu Bono del 20% Ahora!"
     }
+  },
+  "trdaeGold": {
+    "metaData": {
+      "title": "Concurso de Trading de Oro | Gane Lingotes de Oro Real con PrimeX Capital",
+      "description": "Participe en el concurso de trading de oro y gane oro con PrimeX Capital. Deposite $500 y opere XAU/USD para tener la oportunidad de ganar lingotes de oro real. ¡Únase ahora!"
+    },
+    "hero": {
+      "hero_title1": "Opere Oro ",
+      "hero_title2": "Gane Oro",
+      "hero_subtitle": "¡Un mes, un objetivo, tres ganadores de oro real!",
+      "hero_description": "Esta es su oportunidad de convertir su volumen de operaciones en XAU/USD en lingotes de oro real. Del 15 de agosto al 15 de septiembre de 2025, cada operación en oro lo acerca a la victoria.",
+      "btnTxt": "Inicie el Desafío Ahora"
+    },
+    "goldRushSteps": {
+      "title1": "Únase a la ",
+      "title2": "Fiebre del Oro ",
+      "title3": "en 3 Sencillos Pasos",
+      "description": "Hemos facilitado la participación. Siga estos pasos para calificar para los grandes premios.",
+      "step1": "Depósito",
+      "step1_desc": "Realice un depósito mínimo de $500 durante el período del concurso para entrar oficialmente al desafío.",
+      "step2": "Opere XAU/USD",
+      "step2_desc": "Enfoque su estrategia en el Oro (XAU/USD). Solo su volumen de operaciones en oro contará para su clasificación final.",
+      "step3": "Gane Oro Real",
+      "step3_desc": "Manténgase activo y evite cualquier retiro. Los tres mejores operadores según nuestros criterios ganarán lingotes de oro puro."
+    },
+    "prizes": {
+      "title1": "Premios ",
+      "title2": "que Brillan tanto ",
+      "title3": "como sus Operaciones",
+      "description": "Los operadores con el mejor desempeño serán recompensados con activos valiosos y atemporales: lingotes de oro real.",
+      "step1_place": "1er Lugar",
+      "step1_count": "10",
+      "step1": "Lingote de Oro de Gramos",
+      "step1_desc": "(Valor aprox.: $1,500)",
+      "step2_place": "2do Lugar",
+      "step2_count": "5",
+      "step2": "Lingote de Oro de Gramos",
+      "step2_desc": "(Valor aprox.: $1,000)",
+      "step3_place": "3er Lugar",
+      "step3_count": "2.5",
+      "step3": "Lingote de Oro de Gramos",
+      "step3_desc": "(Valor aprox.: $500)"
+    },
+    "rules": {
+      "title": "Términos y Condiciones",
+      "win_rules_title": "Cómo Ganar",
+      "win_rules_li1_desc": "Depósitos Totales: La cantidad total y la frecuencia de sus depósitos.",
+      "win_rules_li2_desc": "Volumen de Operaciones en XAU/USD: El número total de lotes operados en Oro.",
+      "win_rules_li3_desc": "Consistencia de Operaciones: Su actividad de operaciones diaria durante todo el concurso.",
+      "participation_rules_title": "Reglas de Participación",
+      "participation_rules_li1_desc": "Elegibilidad: Abierto a todos los clientes nuevos y existentes de PrimeX Capital.",
+      "participation_rules_li2_desc": "Sin Retiros: Cualquier retiro de su cuenta durante el período del concurso resultará en la descalificación automática.",
+      "participation_rules_li3_desc": "Estrategias Prohibidas: Las cuentas que utilicen cobertura cruzada (cross-hedging) o trading de alta frecuencia (HFT) serán descalificadas.",
+      "duration_title": "Duración",
+      "duration_li1_desc": "Duración del Concurso: 15 de agosto – 15 de septiembre de 2025.",
+      "duration_li2_desc": "Anuncio de Ganadores: Los ganadores serán clasificados y anunciados antes del viernes, 19 de septiembre de 2025.",
+      "general_title": "Reglas Generales",
+      "general_li1_desc": "PrimeX Capital se reserva el derecho de ajustar los términos y condiciones del concurso si es necesario.",
+      "general_li2_desc": "Los ganadores aceptan ser presentados en materiales promocionales."
+    },
+    "faqs": {
+      "title": "Preguntas Frecuentes",
+      "question1": "¿Cómo se seleccionan los ganadores?",
+      "answer1": "Los ganadores se clasifican según una combinación de tres factores:",
+      "answer1_li1": "La cantidad total y la frecuencia de sus depósitos.",
+      "answer1_li2": "Su volumen total de operaciones en XAU/USD (en lotes).",
+      "answer1_li3": "Su consistencia de operaciones diaria durante el concurso.",
+      "question2": "¿Quién es elegible para participar en este concurso?",
+      "answer2": "El concurso está abierto a todos los clientes nuevos y existentes de PrimeX Capital.",
+      "question3": "¿Puedo realizar un retiro durante el período del concurso?",
+      "answer3": "No. Para seguir siendo elegible para ganar, no debe realizar ningún retiro de su cuenta entre el 15 de agosto y el 15 de septiembre de 2025. Cualquier retiro resultará en la descalificación automática.",
+      "question4": "¿Existen estrategias de trading prohibidas?",
+      "answer4": "Sí. El uso de estrategias prohibidas como el trading de alta frecuencia (HFT) o la cobertura cruzada entre diferentes cuentas llevará a la descalificación del concurso.",
+      "question5": "¿Cuánto dura el concurso?",
+      "answer5": "El concurso comienza el 15 de agosto de 2025 y finaliza el 15 de septiembre de 2025.",
+      "question6": "¿Cuándo se anunciarán los ganadores?",
+      "answer6": "Los ganadores serán anunciados oficialmente antes del viernes, 19 de septiembre de 2025."
+    },
+    "joinNow": {
+      "title1": "¿Listo para Convertir sus Operaciones en Oro?",
+      "subtitle": "El desafío ha comenzado. Deposite ahora y comience a construir su volumen en XAU/USD.",
+      "btnTxt": "Abra una Cuenta Real"
+    }
   }
 }

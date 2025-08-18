@@ -5,10 +5,10 @@ import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import React from "react";
 
-const JoinNow = () => {
+const JoinNow = ({ translation, customStyle }) => {
   const router = useRouter();
   const locale = useLocale();
-  const t = useTranslations("newBonusPage.bonusJoinNow");
+  const t = useTranslations(translation);
 
   const handleClick = () => {
     const url = getRegisterUrl(locale);
@@ -16,12 +16,20 @@ const JoinNow = () => {
   };
 
   return (
-    <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
+    <section
+      className={`bg-p dark:bg-p-dark ${
+        customStyle === true ? "pb-16 sm:pb-28" : "py-16 sm:py-28"
+      }`}
+    >
       <div className="container mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-semibold text-tm dark:text-tm-dark uppercase">
           {t("title1")}
         </h2>
-        <p className="text-xl sm:text-2xl font-semibold text-pcp dark:text-pcp-dark mt-4 mb-10">
+        <p
+          className={`text-xl sm:text-2xl font-semibold text-pcp dark:text-pcp-dark mt-4 mb-10 ${
+            customStyle === true && "md:w-[80%] lg:w-[60%] xl:w-[40%] mx-auto"
+          }`}
+        >
           {t("subtitle")}
         </p>
         <div className="flex justify-center">

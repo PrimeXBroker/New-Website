@@ -213,6 +213,12 @@ export default function EsSitemapPage() {
       priority: 0.7,
       changeFrequency: "Daily",
     },
+    {
+      url: "https://primexcapital.com/es/trade-gold",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
   ];
 
   return (
