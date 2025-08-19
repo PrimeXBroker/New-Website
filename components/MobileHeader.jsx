@@ -846,13 +846,6 @@ const MobileHeader = ({ locale }) => {
                 >
                   {foo("company.title_part1_link7")}
                 </LocaleLink>
-                <LocaleLink
-                  href="/local-depositor"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("local_depositor")}
-                </LocaleLink>
               </div>
             )}
           </div>
@@ -895,6 +888,13 @@ const MobileHeader = ({ locale }) => {
                   onClick={toggleDrawer}
                 >
                   {t("contest")}
+                </LocaleLink>
+                <LocaleLink
+                  href="/local-depositor"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("local_depositor")}
                 </LocaleLink>
               </div>
             )}

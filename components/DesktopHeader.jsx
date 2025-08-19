@@ -426,15 +426,6 @@ const DesktopHeader = ({ locale }) => {
                       {foo("company.title_part1_link7")}
                     </LocaleLink>
                   </li>
-                  <li>
-                    <LocaleLink
-                      href="/local-depositor"
-                      onClick={closeDropdown}
-                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
-                    >
-                      {t("local_depositor")}
-                    </LocaleLink>
-                  </li>
                 </ul>
               )}
             </li>
@@ -493,6 +484,15 @@ const DesktopHeader = ({ locale }) => {
                       className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("contest")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
+                      href="/local-depositor"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                    >
+                      {t("local_depositor")}
                     </LocaleLink>
                   </li>
                 </ul>
