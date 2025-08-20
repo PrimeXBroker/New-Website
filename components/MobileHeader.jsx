@@ -933,13 +933,6 @@ const MobileHeader = ({ locale }) => {
             {openSubMenu === 3 && (
               <div className="mt-2">
                 <LocaleLink
-                  href="/social-trading"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("social_trading")}
-                </LocaleLink>
-                <LocaleLink
                   href="/ib-program"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                   onClick={toggleDrawer}
@@ -952,6 +945,13 @@ const MobileHeader = ({ locale }) => {
                   onClick={toggleDrawer}
                 >
                   {t("regional")}
+                </LocaleLink>
+                <LocaleLink
+                  href="/social-trading"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("social_trading")}
                 </LocaleLink>
                 {/* <LocaleLink
                   href="/grey-label-partner"
