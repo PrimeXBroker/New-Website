@@ -33,6 +33,12 @@ function BlogsNewsBody({ slug }) {
               ? res?.data?.data?.contentKd
               : res?.data?.data?.contentEn
           );
+        } else if (locale === "pt") {
+          setContent(
+            res?.data?.data?.contentPt
+              ? res?.data?.data?.contentPt
+              : res?.data?.data?.contentEn
+          );
         } else {
           setContent(res?.data?.data?.contentEn);
         }
@@ -79,13 +85,19 @@ function BlogsNewsBody({ slug }) {
               ? "العودة إلى المدونات"
               : locale === "ku"
               ? "گەڕانەوە بۆ بڵاگ"
+              : locale === "pt"
+              ? "Voltar aos Blogs"
               : "Back to Blogs"}
           </Link>
 
           <div className="text-ts dark:text-ts-dark text-sm mb-2 text-center">
             <Moment
               date={detail?.postedOn ? detail?.postedOn : detail?.createdOn}
-              format={locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"}
+              format={
+                locale === "ar" || locale === "ku"
+                  ? "Do MMM YYYY"
+                  : "Do MMM YYYY"
+              }
             />{" "}
             • 5 Min Read
           </div>
@@ -95,6 +107,8 @@ function BlogsNewsBody({ slug }) {
               ? detail?.titleAr
               : locale === "ku"
               ? detail?.titleKd || detail?.titleEn
+              : locale === "pt"
+              ? detail?.titlePt || detail?.titleEn
               : detail?.titleEn}
           </h2>
         </div>
@@ -105,6 +119,8 @@ function BlogsNewsBody({ slug }) {
                 ? detail?.imageAr || detail?.image
                 : locale === "ku"
                 ? detail?.imageKd || detail?.image
+                : locale === "pt"
+                ? detail?.imagePt || detail?.image
                 : detail?.image
             }
             alt={detail?.altTag}

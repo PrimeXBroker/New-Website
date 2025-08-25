@@ -99,6 +99,15 @@ function AnalysisNewsBody({ slug }) {
             decorator
           );
           setContent(editorState);
+        } else if (locale === "pt") {
+          const contentState = convertFromRaw(
+            JSON.parse(res?.data?.data?.contentPt || res?.data?.data?.contentEn)
+          );
+          const editorState = EditorState.createWithContent(
+            contentState,
+            decorator
+          );
+          setContent(editorState);
         } else {
           const contentState = convertFromRaw(
             JSON.parse(res?.data?.data?.contentEn)
@@ -160,13 +169,19 @@ function AnalysisNewsBody({ slug }) {
                 : "Back to Technical Analysis"
               : locale === "ar"
               ? "العودة إلى المدونات"
+              : locale === "pt"
+              ? "De volta à Análise Técnica"
               : "Back to Blogs"}
           </Link>
 
           <div className="text-ts dark:text-ts-dark text-sm mb-2 text-center">
             <Moment
               date={detail?.postedOn ? detail?.postedOn : detail?.createdOn}
-              format={locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"}
+              format={
+                locale === "ar" || locale === "ku"
+                  ? "Do MMM YYYY"
+                  : "Do MMM YYYY"
+              }
             />{" "}
             • 5 Min Read
           </div>
@@ -176,6 +191,8 @@ function AnalysisNewsBody({ slug }) {
               ? detail?.titleAr
               : locale === "ku"
               ? detail?.titleKd || detail?.titleEn
+              : locale === "pt"
+              ? detail?.titlePt || detail?.titleEn
               : detail?.titleEn}
           </h2>
           {/* <div className="flex items-center space-x-4">
@@ -214,6 +231,8 @@ function AnalysisNewsBody({ slug }) {
                 ? detail?.imageAr || detail?.image
                 : locale === "ku"
                 ? detail?.imageKd || detail?.image
+                : locale === "pt"
+                ? detail?.imagePt || detail?.image
                 : detail?.image
             }
             alt="PrimeX Capital"

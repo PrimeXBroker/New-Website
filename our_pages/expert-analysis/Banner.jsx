@@ -101,9 +101,11 @@ const Banner = ({ news, titleEn }) => {
                       ? newsDetails?.imageAr || newsDetails?.image
                       : locale === "ku"
                       ? newsDetails?.imageKd || newsDetails?.image
+                      : locale === "pt"
+                      ? newsDetails?.imagePt || newsDetails?.image
                       : newsDetails?.image
                   }
-                  alt="PrimeX Broker Crypto Trading"
+                  alt="Technical Analysis Image"
                   className="rounded-lg w-full h-full"
                 />
               </Link>
@@ -122,6 +124,8 @@ const Banner = ({ news, titleEn }) => {
                     ? newsDetails?.titleAr
                     : locale === "ku"
                     ? newsDetails?.titleKd || newsDetails?.titleEn
+                    : locale === "pt"
+                    ? newsDetails?.titlePt || newsDetails?.titleEn
                     : newsDetails?.titleEn}
                 </Link>
               )}
@@ -130,7 +134,11 @@ const Banner = ({ news, titleEn }) => {
               <span>
                 <Moment
                   date={newsDetails?.createdOn}
-                  format={locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"}
+                  format={
+                    locale === "ar" || locale === "ku"
+                      ? "Do MMM YYYY"
+                      : "Do MMM YYYY"
+                  }
                 />
               </span>
               <span>5 Min Read</span>
@@ -194,6 +202,8 @@ const Banner = ({ news, titleEn }) => {
                             ? blog?.imageAr || blog?.image
                             : locale === "ku"
                             ? blog?.imageKd || blog?.image
+                            : locale === "pt"
+                            ? blog?.imagePt || blog?.image
                             : blog?.image
                         }
                         alt={`Thumbnail ${index}`}

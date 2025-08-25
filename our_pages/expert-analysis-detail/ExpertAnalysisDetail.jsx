@@ -100,6 +100,8 @@ const ExpertAnalysisDetail = ({ slug }) => {
                 ? "هل أنت مستعد للاستثمار؟"
                 : locale === "ku"
                 ? "ئامادە بۆ سەرمایەکەردن"
+                : locale === "pt"
+                ? "Pronto para Investir"
                 : "Ready to Invest"}
             </h2>
             <p
@@ -113,6 +115,8 @@ const ExpertAnalysisDetail = ({ slug }) => {
                 ? "افتح حسابًا حقيقيًا وابدأ الاستثمار الآن! تداول أكثر من 500 من الأدوات المالية العالمية دون أي متاعب."
                 : locale === "ku"
                 ? "حسابە کە بەرەوە بکە و ئێستا سەرمایەکەردن پەڕە بکە! 330+ دارایی جیهانی بە بێ مەشقی فەرمی فڕۆشە."
+                : locale === "pt"
+                ? "Abra uma conta real e comece a investir AGORA! Negocie mais de 330 ativos globais sem complicação."
                 : "Open live account & Start investing NOW! Trade 330+ global assets hassle-free."}
             </p>
           </div>
@@ -123,6 +127,8 @@ const ExpertAnalysisDetail = ({ slug }) => {
                   ? "ابدأ"
                   : locale === "ku"
                   ? "دەست پێ بکە"
+                  : locale === "pt"
+                  ? "Começar"
                   : "Get Started"
               }
               onClick={handleClick}

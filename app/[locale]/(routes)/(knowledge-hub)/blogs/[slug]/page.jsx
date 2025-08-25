@@ -19,12 +19,16 @@ export async function generateMetadata({ params: { locale, slug } }) {
           ? blo?.titleAr
           : locale === "ku"
           ? blo?.titleKd
+          : locale === "pt"
+          ? blo?.titlePt
           : blo?.titleEn,
       description:
         locale === "ar"
           ? blo?.metaDescriptionAr
           : locale === "ku"
           ? blo?.metaDescriptionKd
+          : locale === "pt"
+          ? blo?.metaDescriptionPt
           : blo?.metaDescriptionEn,
       alternates: {
         canonical: url,
@@ -38,12 +42,16 @@ export async function generateMetadata({ params: { locale, slug } }) {
             ? blo?.titleAr
             : locale === "ku"
             ? blo?.titleKd
+            : locale === "pt"
+            ? blo?.titlePt
             : blo?.titleEn,
         description:
           locale === "ar"
             ? blo?.metaDescriptionAr
             : locale === "ku"
             ? blo?.metaDescriptionKd
+            : locale === "pt"
+            ? blo?.metaDescriptionPt
             : blo?.metaDescriptionEn,
         images: [
           {
@@ -52,6 +60,8 @@ export async function generateMetadata({ params: { locale, slug } }) {
                 ? blo?.imageAr || blo?.image
                 : locale === "ku"
                 ? blo?.imageKd || blo?.image
+                : locale === "pt"
+                ? blo?.imagePt || blo?.image
                 : blo?.image,
             width: 1200,
             height: 630,

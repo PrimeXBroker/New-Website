@@ -93,6 +93,8 @@ const Banner = ({ news }) => {
                       ? newsDetails?.imageAr || newsDetails?.image
                       : locale === "ku"
                       ? newsDetails?.imageKd || newsDetails?.image
+                      : locale === "pt"
+                      ? newsDetails?.imagePt || newsDetails?.image
                       : newsDetails?.image
                   }
                   alt={newsDetails?.altTag}
@@ -110,6 +112,8 @@ const Banner = ({ news }) => {
                     ? newsDetails?.titleAr
                     : locale === "ku"
                     ? newsDetails?.titleKd || newsDetails?.titleEn
+                    : locale === "pt"
+                    ? newsDetails?.titlePt || newsDetails?.titleEn
                     : newsDetails?.titleEn}
                 </Link>
               )}
@@ -118,7 +122,11 @@ const Banner = ({ news }) => {
               <span>
                 <Moment
                   date={newsDetails?.createdOn}
-                  format={locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"}
+                  format={
+                    locale === "ar" || locale === "pt"
+                      ? "Do MMM YYYY"
+                      : "Do MMM YYYY"
+                  }
                 />
               </span>
               <span>5 Min Read</span>
@@ -178,6 +186,8 @@ const Banner = ({ news }) => {
                             ? blog?.imageAr || blog?.image
                             : locale === "ku"
                             ? blog?.imageKd || blog?.image
+                            : locale === "pt"
+                            ? blog?.imagePt || blog?.image
                             : blog?.image
                         }
                         alt={blog?.altTag}

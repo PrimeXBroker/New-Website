@@ -16,14 +16,14 @@ const Promotions = () => {
   const t = useTranslations("home.promotions");
 
   const promotionsData = [
-    {
-      id: 1,
-      title: t("promotion1.title"),
-      description: t("promotion1.desc"),
-      image:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/bonus-promotion.webp",
-      link: `/${locale}/bonus`,
-    },
+    // {
+    //   id: 1,
+    //   title: t("promotion1.title"),
+    //   description: t("promotion1.desc"),
+    //   image:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/bonus-promotion.webp",
+    //   link: `/${locale}/bonus`,
+    // },
     {
       id: 2,
       title: t("promotion2.title"),

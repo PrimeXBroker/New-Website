@@ -63,6 +63,8 @@ const BlogsWrapper = () => {
                           ? blog?.imageAr || blog?.image
                           : locale === "ku"
                           ? blog?.imageKd || blog?.image
+                          : locale === "pt"
+                          ? blog?.imagePt || blog?.image
                           : blog?.image
                       }
                       width="100"
@@ -78,6 +80,8 @@ const BlogsWrapper = () => {
                           ? blog?.titleAr
                           : locale === "ku"
                           ? blog?.titleKd || blog?.titleEn
+                          : locale === "pt"
+                          ? blog?.titlePt || blog?.titleEn
                           : blog?.titleEn}
                       </h4>
                     </div>
@@ -88,7 +92,9 @@ const BlogsWrapper = () => {
                             blog?.postedOn ? blog?.postedOn : blog?.createdOn
                           }
                           format={
-                            locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"
+                            locale === "ar" || locale === "ku"
+                              ? "Do MMM YYYY"
+                              : "Do MMM YYYY"
                           }
                         />
                       </p>
