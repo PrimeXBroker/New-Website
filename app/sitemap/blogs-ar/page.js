@@ -1,11 +1,12 @@
 import SitemapTable from "@/components/SitemapTable";
+import axios from "axios";
 
 async function fetchArabicBlogs() {
   try {
-    const response = await fetch(
+    const response = await axios.get(
       `https://primexbroker.com/api/fetch/all-blogs-ar-slugs`
     );
-    const data = await response.json();
+    const data = response.data;
     const links = data.map((item) => ({
       url: `https://primexcapital.com/ar/blogs/${item.slug}`,
       priority: 0.8,

@@ -1,12 +1,13 @@
 import SitemapTable from "@/components/SitemapTable";
+import axios from "axios";
 
 async function fetchEnglishTechnicalAnalysis() {
   const categoryId = "6641f01d7c9be5623e1092a4";
   try {
-    const response = await fetch(
+    const response = await axios.get(
       `https://primexbroker.com/api/fetch/technical-analysis-en-slugs/${categoryId}`
     );
-    const data = await response.json();
+    const data = response.data;
     const links = data.map((item) => ({
       url: `https://primexcapital.com/en/details/technical-analysis/${item.slug}`,
       priority: 0.8,

@@ -1,12 +1,13 @@
 import SitemapTable from "@/components/SitemapTable";
+import axios from "axios";
 
 async function fetchEnglishMarketNews() {
   const categoryId = "664dd9c93f02939fcd48959e";
   try {
-    const response = await fetch(
+    const response = await axios.get(
       `https://primexbroker.com/api/fetch/market-news-en-slugs/${categoryId}`
     );
-    const data = await response.json();
+    const data = response.data;
     const links = data.map((item) => ({
       url: `https://primexcapital.com/en/market-news/${item.slug}`,
       priority: 0.8,
