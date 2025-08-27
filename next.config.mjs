@@ -115,54 +115,6 @@ const nextConfig = {
         source: "/sitemap/blogs-ar",
         destination: "/sitemap/blogs-ar",
       },
-      {
-        source: "/sitemap/starting-gateway-en.xml",
-        destination: "/sitemap/starting-gateway-en.xml",
-      },
-      {
-        source: "/sitemap/starting-gateway-en",
-        destination: "/sitemap/starting-gateway-en",
-      },
-      {
-        source: "/sitemap/starting-gateway-ar.xml",
-        destination: "/sitemap/starting-gateway-ar.xml",
-      },
-      {
-        source: "/sitemap/starting-gateway-ar",
-        destination: "/sitemap/starting-gateway-ar",
-      },
-      {
-        source: "/sitemap/press-release-en.xml",
-        destination: "/sitemap/press-release-en.xml",
-      },
-      {
-        source: "/sitemap/press-release-en",
-        destination: "/sitemap/press-release-en",
-      },
-      {
-        source: "/sitemap/press-release-ar.xml",
-        destination: "/sitemap/press-release-ar.xml",
-      },
-      {
-        source: "/sitemap/press-release-ar",
-        destination: "/sitemap/press-release-ar",
-      },
-      {
-        source: "/sitemap/learning-hub-en.xml",
-        destination: "/sitemap/learning-hub-en.xml",
-      },
-      {
-        source: "/sitemap/learning-hub-en",
-        destination: "/sitemap/learning-hub-en",
-      },
-      {
-        source: "/sitemap/learning-hub-ar.xml",
-        destination: "/sitemap/learning-hub-ar.xml",
-      },
-      {
-        source: "/sitemap/learning-hub-ar",
-        destination: "/sitemap/learning-hub-ar",
-      },
     ];
   },
 };

@@ -12,9 +12,4 @@ Sitemap: https://primexcapital.com/sitemap/technical-analysis-en.xml
 Sitemap: https://primexcapital.com/sitemap/technical-analysis-ar.xml
 Sitemap: https://primexcapital.com/sitemap/blogs-en.xml
 Sitemap: https://primexcapital.com/sitemap/blogs-ar.xml
-Sitemap: https://primexcapital.com/sitemap/starting-gateway-en.xml
-Sitemap: https://primexcapital.com/sitemap/starting-gateway-ar.xml
-Sitemap: https://primexcapital.com/sitemap/press-release-en.xml
-Sitemap: https://primexcapital.com/sitemap/press-release-ar.xml
-Sitemap: https://primexcapital.com/sitemap/learning-hub-en.xml
-Sitemap: https://primexcapital.com/sitemap/learning-hub-ar.xml
+
