@@ -1,9 +1,11 @@
+import axios from "axios";
+
 async function fetchEnglishBlogs() {
   try {
-    const response = await fetch(
+    const response = await axios.get(
       `https://primexbroker.com/api/fetch/all-blogs-en-slugs`
     );
-    const data = await response.json();
+    const data = response.data;
     const links = data.map((item) => ({
       url: `https://primexcapital.com/en/blogs/${item.slug}`,
       priority: 0.8,
