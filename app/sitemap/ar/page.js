@@ -75,12 +75,6 @@ export default function ArSitemapPage() {
       changeFrequency: "Daily",
     },
     {
-      url: "https://primexcapital.com/ar/bonus",
-      lastModified: new Date(),
-      priority: 0.8,
-      changeFrequency: "Daily",
-    },
-    {
       url: "https://primexcapital.com/ar/social-trading",
       lastModified: new Date(),
       priority: 0.8,

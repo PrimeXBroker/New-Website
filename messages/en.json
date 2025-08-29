@@ -50,7 +50,8 @@
     "platforms": "Platforms",
     "market": "Markets",
     "offers": "Offers",
-    "contest": "Contest"
+    "contest": "Contest",
+    "ecn_broker": "ECN Broker"
   },
   "home": {
     "metaData": {
@@ -3414,6 +3415,85 @@
       "title1": "Ready to Turn Your Trades into Gold?",
       "subtitle": "The challenge is on. Deposit now and start building your XAU/USD.",
       "btnTxt": "Open a Live Account"
+    }
+  },
+  "ecnBroker": {
+    "metaData": {
+      "title": "Forex Broker ECN",
+      "description": "Start trading with PrimeX Capital, a trusted global ECN broker. Enjoy fast execution, low spreads, and full transparency with a minimum deposit of $10. Open your account now!"
+    },
+    "hero": {
+      "hero_title": "Start your Journey with the Most Trusted Broker",
+      "hero_subtitle": "Global ECN Broker",
+      "hero_description": "Enjoy a global and secure experience with Fast execution with a minimum deposit of $10!",
+      "btnTxt": "Open Account"
+    },
+    "aboutECN": {
+      "title1": "What is an ",
+      "title2": "ECN Broker?",
+      "description": "PrimeX Capital connects traders directly to global markets. Instead of dealing with a traditional broker, it allows you to execute trades directly with liquidity providers, offering fast executions, low spreads, and complete transparency in all your trades. With PrimeX Capital, you'll get the best available prices in the market with no broker intervention."
+    },
+    "accountTypes": {
+      "title1": "Choose Your ",
+      "title2": "Account Type",
+      "acc1": {
+        "title": "Standard",
+        "subtitle": "Best for Beginners",
+        "description": "Easy to Use, No Swap Commission, and Low Spread.",
+        "btnTxt": "Standard Account"
+      },
+      "acc2": {
+        "title": "Narrow",
+        "subtitle": "Ideal for Scalpers",
+        "description": "Low Spread with no Commissions to Boost Profit Opportunities.",
+        "btnTxt": "Narrow Account"
+      },
+      "acc3": {
+        "title": "Raw",
+        "subtitle": "Best for Professionals",
+        "description": "Offers Raw Spread and fast Execution for Optimal Performance.",
+        "btnTxt": "Raw Account"
+      }
+    },
+    "signUpECN": {
+      "title": "Sign Up Now",
+      "subtitle": "Enjoy a premium trading experience",
+      "description": "With The Most Trusted Broker",
+      "btnTxt": "Open Account"
+    },
+    "whyChooseECN": {
+      "title1": "Why choose an ",
+      "title2": "ECN Broker?",
+      "card1_title": "High transparency",
+      "card1_desc": " Displays actual market prices from liquidity providers, offering a clear view of the market.",
+      "card2_title1": "Direct connection ",
+      "card2_title2": "to markets",
+      "card2_desc": "Allows access to a wide range of liquidity providers, increasing the best chances for the best prices.",
+      "card3_title1": "Greater control ",
+      "card3_title2": "with lower costs",
+      "card3_desc": "Traders can set buy & sell prices, offering more freedom & a lower spread than traditional systems.",
+      "card4_title": "Fast execution",
+      "card4_desc": "Orders are executed directly without the need for brokers or traders."
+    },
+    "differentTypesBroker": {
+      "title1": "The ",
+      "title2": "difference ",
+      "title3": " between ",
+      "title4": "different ",
+      "title5": "types of brokers",
+      "description": "PrimeX Capital offers high transparency and direct execution as an ECN broker, while STP brokers send orders directly between the client and markets, and Market Makers set prices and intervene more in the trading process.",
+      "card1_title": "ECN",
+      "card1_li1": "Allows direct access to liquidity providers, increasing the chances of getting the best prices.",
+      "card1_li2": "No price slippage, allows instant execution at market prices.",
+      "card1_li3": "Prices and spreads are not set by the broker.",
+      "card2_title": "STP",
+      "card2_li1": "Does not intervene in price setting or impose spreads.",
+      "card2_li2": "Sends orders to liquidity providers after execution, resulting in price slippage.",
+      "card2_li3": "May include some execution delays due to intermediary processes.",
+      "card3_title": "Market Maker",
+      "card3_li1": "Sets prices and manages the trading process.",
+      "card3_li2": "Often has fixed spreads that remain unchanged regardless of market conditions.",
+      "card3_li3": "Typically does not deal with its own trading positions."
     }
   }
 }

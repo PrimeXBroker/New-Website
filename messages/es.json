@@ -50,7 +50,8 @@
     "platforms": "Plataformas",
     "market": "Mercados",
     "offers": "Ofertas",
-    "contest": "Concurso"
+    "contest": "Concurso",
+    "ecn_broker": "Corredor ECN"
   },
   "home": {
     "metaData": {
@@ -3413,6 +3414,85 @@
       "title1": "¿Listo para Convertir sus Operaciones en Oro?",
       "subtitle": "El desafío ha comenzado. Deposite ahora y comience a construir su volumen en XAU/USD.",
       "btnTxt": "Abra una Cuenta Real"
+    }
+  },
+  "ecnBroker": {
+    "metaData": {
+      "title": "El Mejor Bróker ECN",
+      "description": "Opera con el mejor bróker ECN de Forex. Disfruta de acceso directo al mercado, spreads bajos desde 0.0 pips y ejecución rápida para una experiencia de mercado superior."
+    },
+    "hero": {
+      "hero_title": "Comienza tu viaje con el bróker más confiable",
+      "hero_subtitle": "Bróker ECN Global",
+      "hero_description": "¡Disfruta de una experiencia global y segura con ejecución rápida y un depósito mínimo de $10!",
+      "btnTxt": "Abrir Cuenta"
+    },
+    "aboutECN": {
+      "title1": "¿Qué es un ",
+      "title2": "Bróker ECN?",
+      "description": "PrimeX Capital conecta a los traders directamente con los mercados globales. En lugar de tratar con un bróker tradicional, te permite ejecutar operaciones directamente con proveedores de liquidez, ofreciendo ejecuciones rápidas, spreads bajos y total transparencia en todas tus operaciones. Con PrimeX Capital, obtendrás los mejores precios disponibles en el mercado sin intervención del bróker."
+    },
+    "accountTypes": {
+      "title1": "Elige tu ",
+      "title2": "Tipo de Cuenta",
+      "acc1": {
+        "title": "Estándar",
+        "subtitle": "Ideal para principiantes",
+        "description": "Fácil de usar, sin comisión de Swap y con spreads bajos.",
+        "btnTxt": "Cuenta Estándar"
+      },
+      "acc2": {
+        "title": "Ajustada",
+        "subtitle": "Ideal para scalpers",
+        "description": "Spreads bajos sin comisiones para potenciar las oportunidades de ganancia.",
+        "btnTxt": "Cuenta Ajustada"
+      },
+      "acc3": {
+        "title": "Raw",
+        "subtitle": "Ideal para profesionales",
+        "description": "Ofrece spreads Raw y ejecución rápida para un rendimiento óptimo.",
+        "btnTxt": "Cuenta Raw"
+      }
+    },
+    "signUpECN": {
+      "title": "Regístrate Ahora",
+      "subtitle": "Disfruta de una experiencia de trading premium",
+      "description": "Con el bróker más confiable",
+      "btnTxt": "Abrir Cuenta"
+    },
+    "whyChooseECN": {
+      "title1": "¿Por qué elegir un ",
+      "title2": "Bróker ECN?",
+      "card1_title": "Alta transparencia",
+      "card1_desc": "Muestra los precios reales del mercado de los proveedores de liquidez, ofreciendo una visión clara del mercado.",
+      "card2_title1": "Conexión directa ",
+      "card2_title2": "a los mercados",
+      "card2_desc": "Permite el acceso a una amplia gama de proveedores de liquidez, aumentando las posibilidades de obtener los mejores precios.",
+      "card3_title1": "Mayor control ",
+      "card3_title2": "con costos más bajos",
+      "card3_desc": "Los traders pueden establecer precios de compra y venta, ofreciendo más libertad y un spread más bajo que los sistemas tradicionales.",
+      "card4_title": "Ejecución rápida",
+      "card4_desc": "Las órdenes se ejecutan directamente sin necesidad de intermediarios o traders."
+    },
+    "differentTypesBroker": {
+      "title1": "La ",
+      "title2": "diferencia ",
+      "title3": " entre ",
+      "title4": "los diferentes ",
+      "title5": "tipos de brókers",
+      "description": "PrimeX Capital ofrece alta transparencia y ejecución directa como bróker ECN, mientras que los brókers STP envían órdenes directamente entre el cliente y los mercados, y los Market Makers establecen los precios e intervienen más en el proceso de trading.",
+      "card1_title": "ECN",
+      "card1_li1": "Permite acceso directo a los proveedores de liquidez, aumentando las posibilidades de obtener los mejores precios.",
+      "card1_li2": "Sin deslizamiento de precios, permite la ejecución instantánea a precios de mercado.",
+      "card1_li3": "Los precios y los spreads no son establecidos por el bróker.",
+      "card2_title": "STP",
+      "card2_li1": "No interviene en la fijación de precios ni impone spreads.",
+      "card2_li2": "Envía las órdenes a los proveedores de liquidez después de la ejecución, lo que resulta en deslizamiento de precios.",
+      "card2_li3": "Puede incluir algunos retrasos en la ejecución debido a procesos intermediarios.",
+      "card3_title": "Market Maker",
+      "card3_li1": "Establece los precios y gestiona el proceso de trading.",
+      "card3_li2": "A menudo tiene spreads fijos que no cambian independientemente de las condiciones del mercado.",
+      "card3_li3": "Generalmente no opera con sus propias posiciones de trading."
     }
   }
 }

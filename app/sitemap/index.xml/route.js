@@ -73,12 +73,6 @@ export async function GET() {
       changeFrequency: "Daily",
     },
     {
-      url: "https://primexcapital.com/en/bonus",
-      lastModified: new Date(),
-      priority: 0.8,
-      changeFrequency: "Daily",
-    },
-    {
       url: "https://primexcapital.com/en/social-trading",
       lastModified: new Date(),
       priority: 0.8,

@@ -50,7 +50,8 @@
     "platforms": "Plataformas",
     "market": "Mercados",
     "offers": "Ofertas",
-    "contest": "Concurso"
+    "contest": "Concurso",
+    "ecn_broker": "Corretor ECN"
   },
   "home": {
     "metaData": {
@@ -3413,6 +3414,85 @@
       "title1": "Pronto para Transformar suas Operações em Ouro?",
       "subtitle": "O desafio já começou. Deposite agora e comece a construir seu XAU/USD.",
       "btnTxt": "Abra uma Conta Real"
+    }
+  },
+  "ecnBroker": {
+    "metaData": {
+      "title": "A Melhor Corretora ECN",
+      "description": "Opere com a melhor corretora Forex ECN. Desfrute de acesso direto ao mercado, spreads baixos a partir de 0.0 pips e execução rápida para uma experiência de mercado superior."
+    },
+    "hero": {
+      "hero_title": "Comece sua jornada com a corretora mais confiável",
+      "hero_subtitle": "Corretora ECN Global",
+      "hero_description": "Desfrute de uma experiência global e segura com execução rápida e um depósito mínimo de $10!",
+      "btnTxt": "Abrir Conta"
+    },
+    "aboutECN": {
+      "title1": "O que é uma ",
+      "title2": "Corretora ECN?",
+      "description": "A PrimeX Capital conecta traders diretamente aos mercados globais. Em vez de lidar com uma corretora tradicional, ela permite que você execute negociações diretamente com provedores de liquidez, oferecendo execuções rápidas, spreads baixos e total transparência em todas as suas operações. Com a PrimeX Capital, você obterá os melhores preços disponíveis no mercado, sem intervenção da corretora."
+    },
+    "accountTypes": {
+      "title1": "Escolha seu ",
+      "title2": "Tipo de Conta",
+      "acc1": {
+        "title": "Standard",
+        "subtitle": "Ideal para iniciantes",
+        "description": "Fácil de usar, sem comissão de Swap e com Spread Baixo.",
+        "btnTxt": "Conta Standard"
+      },
+      "acc2": {
+        "title": "Ajustada",
+        "subtitle": "Ideal para Scalpers",
+        "description": "Spread Baixo sem comissões para impulsionar as oportunidades de lucro.",
+        "btnTxt": "Conta Ajustada"
+      },
+      "acc3": {
+        "title": "Raw",
+        "subtitle": "Ideal para Profissionais",
+        "description": "Oferece Spread Raw e execução rápida para um desempenho ideal.",
+        "btnTxt": "Conta Raw"
+      }
+    },
+    "signUpECN": {
+      "title": "Cadastre-se Agora",
+      "subtitle": "Desfrute de uma experiência de trading premium",
+      "description": "Com a Corretora Mais Confiável",
+      "btnTxt": "Abrir Conta"
+    },
+    "whyChooseECN": {
+      "title1": "Por que escolher uma ",
+      "title2": "Corretora ECN?",
+      "card1_title": "Alta transparência",
+      "card1_desc": "Exibe os preços reais do mercado dos provedores de liquidez, oferecendo uma visão clara do mercado.",
+      "card2_title1": "Conexão direta ",
+      "card2_title2": "com os mercados",
+      "card2_desc": "Permite acesso a uma vasta gama de provedores de liquidez, aumentando as chances de obter os melhores preços.",
+      "card3_title1": "Maior controle ",
+      "card3_title2": "com custos mais baixos",
+      "card3_desc": "Os traders podem definir preços de compra e venda, oferecendo mais liberdade e um spread mais baixo que os sistemas tradicionais.",
+      "card4_title": "Execução rápida",
+      "card4_desc": "As ordens são executadas diretamente, sem a necessidade de intermediários ou traders."
+    },
+    "differentTypesBroker": {
+      "title1": "A ",
+      "title2": "diferença ",
+      "title3": " entre ",
+      "title4": "os diferentes ",
+      "title5": "tipos de corretoras",
+      "description": "A PrimeX Capital oferece alta transparência e execução direta como uma corretora ECN, enquanto as corretoras STP enviam ordens diretamente entre o cliente e os mercados, e os Market Makers (Formadores de Mercado) definem os preços e intervêm mais no processo de negociação.",
+      "card1_title": "ECN",
+      "card1_li1": "Permite acesso direto aos provedores de liquidez, aumentando as chances de obter os melhores preços.",
+      "card1_li2": "Sem derrapagem de preço (price slippage), permite execução instantânea aos preços de mercado.",
+      "card1_li3": "Os preços e os spreads não são definidos pela corretora.",
+      "card2_title": "STP",
+      "card2_li1": "Não intervém na definição de preços nem impõe spreads.",
+      "card2_li2": "Envia as ordens aos provedores de liquidez após a execução, resultando em derrapagem de preço.",
+      "card2_li3": "Pode incluir alguns atrasos na execução devido a processos intermediários.",
+      "card3_title": "Market Maker",
+      "card3_li1": "Define os preços e gerencia o processo de negociação.",
+      "card3_li2": "Frequentemente possui spreads fixos que permanecem inalterados, independentemente das condições do mercado.",
+      "card3_li3": "Normalmente não lida com suas próprias posições de negociação."
     }
   }
 }

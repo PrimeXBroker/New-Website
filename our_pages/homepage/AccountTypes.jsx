@@ -57,31 +57,37 @@ const AccountTypes = ({ accounts }) => {
                       </p>
                     </div>
                   </div>
-                  <Link href={`/${locale}/account-types`}>
-                    <div className="w-[33px] h-[33px] rounded-[5.73px] bg-e1 dark:bg-e1-dark flex justify-center items-center group-hover:bg-tm dark:group-hover:bg-tm-dark transition-all duration-500 ease-in-out">
-                      {locale === "ar" || locale === "ps" || locale === "ku" ? (
-                        <RiArrowLeftUpLine
-                          className={`text-xl transition-transform duration-500 ease-in-out ${
-                            hovered === account.id
-                              ? "rotate-[-45deg] text-p dark:text-p-dark"
-                              : "text-ts dark:text-ts-dark"
-                          }`}
-                        />
-                      ) : (
-                        <RiArrowRightUpLine
-                          className={`text-xl transition-transform duration-500 ease-in-out ${
-                            hovered === account.id
-                              ? "rotate-45 text-p dark:text-p-dark"
-                              : "text-ts dark:text-ts-dark"
-                          }`}
-                        />
-                      )}
-                    </div>
-                  </Link>
+                  <div className="bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/ecn-gradient-bg.svg)] bg-cover bg-center text-lg text-nb dark:text-nb font-bold w-[58px] h-[34px] rounded-md flex justify-center items-center">
+                    ECN
+                  </div>
                 </div>
                 <p className="text-ts dark:text-ts-dark mt-4 text-sm sm:text-base">
                   {account.description}
                 </p>
+                <Link
+                  href={`/${locale}/account-types`}
+                  className="float-end mt-1"
+                >
+                  <div className="w-[33px] h-[33px] rounded-[5.73px] bg-e1 dark:bg-e1-dark flex justify-center items-center group-hover:bg-tm dark:group-hover:bg-tm-dark transition-all duration-500 ease-in-out">
+                    {locale === "ar" || locale === "ps" || locale === "ku" ? (
+                      <RiArrowLeftUpLine
+                        className={`text-xl transition-transform duration-500 ease-in-out ${
+                          hovered === account.id
+                            ? "rotate-[-45deg] text-p dark:text-p-dark"
+                            : "text-ts dark:text-ts-dark"
+                        }`}
+                      />
+                    ) : (
+                      <RiArrowRightUpLine
+                        className={`text-xl transition-transform duration-500 ease-in-out ${
+                          hovered === account.id
+                            ? "rotate-45 text-p dark:text-p-dark"
+                            : "text-ts dark:text-ts-dark"
+                        }`}
+                      />
+                    )}
+                  </div>
+                </Link>
               </Link>
             </div>
           ))}

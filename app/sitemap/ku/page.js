@@ -75,12 +75,6 @@ export default function KuSitemapPage() {
       changeFrequency: "Daily",
     },
     {
-      url: "https://primexcapital.com/ku/bonus",
-      lastModified: new Date(),
-      priority: 0.8,
-      changeFrequency: "Daily",
-    },
-    {
       url: "https://primexcapital.com/ku/social-trading",
       lastModified: new Date(),
       priority: 0.8,

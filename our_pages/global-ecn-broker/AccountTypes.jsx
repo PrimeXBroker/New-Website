@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
-import AccountTypesPricingTable from "./AccountTypesPricingTable";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
 import { useRouter } from "next/navigation";
@@ -10,7 +9,7 @@ import { useRouter } from "next/navigation";
 const AccountTypes = ({ accounts }) => {
   const router = useRouter();
   const locale = useLocale();
-  const t = useTranslations("accountTypes.accountTypes");
+  const t = useTranslations("ecnBroker.accountTypes");
 
   const handleClick = () => {
     const url = getRegisterUrl(locale);
@@ -18,20 +17,15 @@ const AccountTypes = ({ accounts }) => {
   };
 
   return (
-    <section className="bg-p dark:bg-p-dark text-tm dark:text-tm-dark py-16 sm:py-28 px-4">
+    <section className="bg-p dark:bg-p-dark text-tm dark:text-tm-dark">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="flex items-center justify-center md:justify-start">
-            <h2
-              className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-pcp dark:text-pcp-dark`}
-            >
-              {t("main_title1")} <br className="hidden md:block" />
-              <span className="text-tm dark:text-tm-dark">
-                {" "}
-                {t("main_title2")}
-              </span>
-            </h2>
-          </div>
+        <div className="text-center md:text-center mb-10">
+          <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-tm dark:text-tm-dark uppercase">
+            {t("title1")} <br className="hidden md:block" />
+            <span className="text-pcp dark:text-pcp-dark">{t("title2")}</span>
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {accounts.map((account) => (
             <>
               <div
@@ -42,12 +36,14 @@ const AccountTypes = ({ accounts }) => {
               >
                 <div>
                   <div className="flex justify-between items-center">
-                    <div className="flex items-center gap-2">
-                      <h3 className="text-xl sm:text-2xl font-semibold text-tm dark:text-tm-dark">
-                        {account.title}
-                      </h3>
-                      <div className="bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/ecn-gradient-bg.svg)] bg-cover bg-center text-sm text-nb dark:text-nb font-bold w-[43px] h-[25px] rounded-[4px] flex justify-center items-center">
-                        ECN
+                    <div className="flex items-start gap-3">
+                      <div>
+                        <h3 className="text-xl sm:text-2xl font-semibold text-tm dark:text-tm-dark">
+                          {account.title}
+                        </h3>
+                        <p className="text-ts dark:text-ts-dark font-semibold text-lg">
+                          {account.subtitle}
+                        </p>
                       </div>
                     </div>
                     <div className="w-[54px] h-[54px]">
@@ -61,22 +57,19 @@ const AccountTypes = ({ accounts }) => {
                       />
                     </div>
                   </div>
-                  <p className="text-ts dark:text-ts-dark mt-4 text-sm sm:text-base">
+                  <p className="text-ts dark:text-ts-dark my-6 text-sm sm:text-base">
                     {account.description}
                   </p>
                 </div>
                 <CustomYellowButton
                   title={account.btnTxt}
                   onClick={handleClick}
-                  className="py-5 md:py-4 lg:py-4 text-base w-full justify-between sm:justify-center mt-3"
+                  className="px-5 py-4 text-base w-full justify-between sm:justify-center"
                 />
               </div>
             </>
           ))}
         </div>
-      </div>
-      <div className="hidden lg:block">
-        <AccountTypesPricingTable />
       </div>
     </section>
   );

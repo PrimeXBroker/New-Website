@@ -1044,6 +1044,13 @@ const MobileHeader = ({ locale }) => {
                   {t("blog")}
                 </LocaleLink>
                 {/* )} */}
+                <LocaleLink
+                  href="/ecn-broker"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("ecn_broker")}
+                </LocaleLink>
               </div>
             )}
           </div>
