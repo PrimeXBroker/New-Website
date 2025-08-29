@@ -43,7 +43,7 @@ const BestPerformanceWidget = () => {
   };
 
   return (
-    <section className="bg-p dark:bg-p-dark py-28">
+    <section className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
       <div className="container  ">
         <div
           className="rounded-2xl p-1"
@@ -65,8 +65,8 @@ const BestPerformanceWidget = () => {
             }}
             src={
               theme === "dark"
-                ? `https://socialratings.primexcapital.com/widgets/ratings?widgetKey=Best_performance&theme=dark&lang=${locale}`
-                : `https://socialratings.primexcapital.com/widgets/ratings?widgetKey=Best_performance&theme=light&lang=${locale}`
+                ? `https://socialratings.primexcapital.com/widgets/ratings?widgetKey=CRM1&theme=dark&lang=${locale}`
+                : `https://socialratings.primexcapital.com/widgets/ratings?widgetKey=CRM1&theme=light&lang=${locale}`
             }
             scrolling="no"
             frameBorder="0"

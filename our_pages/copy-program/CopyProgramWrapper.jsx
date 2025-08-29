@@ -11,6 +11,7 @@ import PrimeTrade from "./PrimeTrade";
 import Features from "./Features";
 import FeaturesMobile from "./FeaturesMobile";
 import WidgetCards from "./WidgetCards";
+import BestPerformanceWidget from "./Widgets/best-performance/BestPerformanceWidget";
 
 const CopyProgramWrapper = () => {
   const locale = useLocale();
@@ -74,7 +75,8 @@ const CopyProgramWrapper = () => {
         <FeaturesMobile />
       </div>
       <AboutCopyProgram />
-      <WidgetCards />
+      <BestPerformanceWidget />
+      {/* <WidgetCards /> */}
       <Benefits />
       <Steps />
       <PrimeTrade />
