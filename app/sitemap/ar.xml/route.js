@@ -211,6 +211,12 @@ export async function GET() {
       priority: 0.8,
       changeFrequency: "Daily",
     },
+    {
+      url: "https://primexcapital.com/ar/ecn-broker",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

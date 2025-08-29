@@ -213,6 +213,12 @@ export default function EnSitemapPage() {
       priority: 0.8,
       changeFrequency: "Daily",
     },
+    {
+      url: "https://primexcapital.com/en/ecn-broker",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "Daily",
+    },
   ];
 
   return (
