@@ -7,6 +7,7 @@ const BestPerformanceWidget = () => {
   const locale = useLocale();
   const { theme } = useTheme();
   const t = useTranslations("copyProgram.bestPerformanceWidget");
+  const w = useTranslations("copyProgram");
   const iframeRef = useRef(null);
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
 
@@ -44,7 +45,13 @@ const BestPerformanceWidget = () => {
 
   return (
     <section className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
-      <div className="container  ">
+      <div className="container ">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark text-center mb-10">
+          {w("widgetCards.title1")}
+          <span className="text-pcp dark:text-pcp-dark">
+            {w("widgetCards.title2")}
+          </span>
+        </h2>
         <div
           className="rounded-2xl p-1"
           style={{
