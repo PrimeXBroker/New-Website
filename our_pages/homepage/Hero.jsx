@@ -2,6 +2,7 @@
 import CustomYellowButton from "@/components/common/CustomYellowButton";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useLocale, useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useRef } from "react";
@@ -9,6 +10,7 @@ import React, { useRef } from "react";
 const Hero = () => {
   const router = useRouter();
   const locale = useLocale();
+  const { theme } = useTheme();
   const t = useTranslations("home.hero");
   const homeVideoPlayer = useRef(null);
 
@@ -67,8 +69,12 @@ const Hero = () => {
                 ref={homeVideoPlayer}
                 src={
                   locale === "ar" || locale === "ps" || locale === "ku"
-                    ? "/assets/home-hero-desktop-ar.mp4"
-                    : "/assets/home-hero-desktop-en.mp4"
+                    ? theme === "dark"
+                      ? "/assets/home-hero-desktop-ar.mp4"
+                      : "/assets/home-hero-desktop-ar-light.mp4"
+                    : theme === "dark"
+                    ? "/assets/home-hero-desktop-en.mp4"
+                    : "/assets/home-hero-desktop-en-light.mp4"
                 }
                 type="video/mp4"
                 autoPlay
