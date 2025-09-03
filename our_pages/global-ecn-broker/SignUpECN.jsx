@@ -12,6 +12,11 @@ const SignUpECN = () => {
   const { theme } = useTheme();
   const t = useTranslations("ecnBroker.signUpECN");
 
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
+
   return (
     <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
       <div className="container mx-auto">
@@ -30,7 +35,7 @@ const SignUpECN = () => {
               <div className="mt-6 flex flex-col md:flex-row gap-3 w-full md:w-auto">
                 <CustomYellowButton
                   title={t("btnTxt")}
-                  onClick={() => router.push(`/${locale}/ib-program`)}
+                  onClick={handleClick}
                   className="py-4 px-7 w-full md:w-auto text-base justify-between md:justify-center"
                 />
               </div>
