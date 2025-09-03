@@ -1,5 +1,6 @@
 "use client";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useLocale, useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import Image from "next/image";
