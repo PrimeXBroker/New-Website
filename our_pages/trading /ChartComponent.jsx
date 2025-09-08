@@ -6,9 +6,10 @@ export default function ChartComponent() {
   const chartContainerRef = useRef();
 
   useEffect(() => {
+    const chartContainer = chartContainerRef.current;
     const chart = createChart(chartContainerRef.current, {
-      // width: 600,
-      height: 400,
+      width: chartContainer.clientWidth || 600,
+      height: chartContainer.clientHeight || 400,
       layout: {
         backgroundColor: "#ffffff",
         textColor: "#333",
@@ -97,6 +98,6 @@ export default function ChartComponent() {
   }, []);
 
   return (
-    <div ref={chartContainerRef} style={{ width: "100%", height: "400px" }} />
+    <div ref={chartContainerRef} style={{ width: "100%", height: "100vh" }} />
   );
 }
