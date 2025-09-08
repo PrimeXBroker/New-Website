@@ -1,4 +1,4 @@
-import GraphComp from "@/our_pages/trading /GraphComp";
+import GraphComp from "@/our_pages/trading/GraphComp";
 import { convertToSeconds } from "@/utils/data";
 import axios from "axios";
 import React from "react";
