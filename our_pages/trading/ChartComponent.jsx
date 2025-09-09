@@ -1,4 +1,4 @@
-// components/ChartComponent.js
+"use client"
 import { useEffect,useLayoutEffect, useRef, useState } from "react";
 import { createChart, CandlestickSeries } from "lightweight-charts";
 import axios from "axios";
