@@ -8,42 +8,35 @@ export default function ChartComponent({ symbol }) {
   const chartContainerRef = useRef();
   const [dateTime, setDateTime] = useState("Current Month");
   const [loading, setLoading] = useState(true);
+  function createCandlesFromTicks(ticks, durationMs = 60000) {
+    const candlesMap = new Map();
 
-  const timestampToDateString = (timestamp) => {
-    const date = new Date(timestamp);
-    return `${date.getFullYear()}-${(date.getMonth() + 1)
-      .toString()
-      .padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`;
-  };
+    for (const [timeMs, bid, ask] of ticks) {
+      const price = (bid + ask) / 2;
 
-  const processGraphData = (data) => {
-    // Group data by day
-    const dataByDay = {};
+      const minuteBucket = Math.floor(timeMs / durationMs) * durationMs;
 
-    data?.forEach(([timestamp, value1, value2]) => {
-      const dateStr = timestampToDateString(timestamp);
-      const midPrice = (value1 + value2) / 2; // Calculate mid price
+      const time = Math.floor(minuteBucket / 1000);
 
-      if (!dataByDay[dateStr]) {
-        // Initialize day data with first values
-        dataByDay[dateStr] = {
-          time: dateStr,
-          open: midPrice,
-          high: midPrice,
-          low: midPrice,
-          close: midPrice,
-        };
+      if (!candlesMap.has(time)) {
+        candlesMap.set(time, {
+          time: time,
+          open: price,
+          high: price,
+          low: price,
+          close: price,
+        });
       } else {
-        // Update day data with new values
-        dataByDay[dateStr].high = Math.max(dataByDay[dateStr].high, midPrice);
-        dataByDay[dateStr].low = Math.min(dataByDay[dateStr].low, midPrice);
-        dataByDay[dateStr].close = midPrice;
+        const candle = candlesMap.get(time);
+        candle.high = Math.max(candle.high, price);
+        candle.low = Math.min(candle.low, price);
+        candle.close = price;
       }
-    });
+    }
 
-    // Convert to array and return
-    return Object.values(dataByDay);
-  };
+    // Return sorted candles by time
+    return Array.from(candlesMap.values()).sort((a, b) => a.time - b.time);
+  }
 
   const graphAPI = async () => {
     setLoading(true);
@@ -55,7 +48,8 @@ export default function ChartComponent({ symbol }) {
       console.log(JSON.stringify(response.data, null, 2), "response");
       if (response?.data?.success) {
         const data = response?.data?.result?.answer;
-        const processedData = processGraphData(data);
+        const processedData = createCandlesFromTicks(data);
+        console.log(processedData, "processedData");
 
         const chartContainer = chartContainerRef.current;
         const chart = createChart(chartContainerRef.current, {
