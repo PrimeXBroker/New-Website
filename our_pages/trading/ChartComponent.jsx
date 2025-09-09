@@ -145,7 +145,6 @@ export default function ChartComponent({ symbol }) {
           width: "100%",
           height: "96vh",
           position: "relative",
-          border: "1px solid #000", // Add border for debugging
         }}
       />
     </div>
