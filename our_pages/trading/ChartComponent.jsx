@@ -1,5 +1,6 @@
-"use client"
-import { useEffect,useLayoutEffect, useRef, useState } from "react";
+"use client";  // Ensure client-side rendering
+
+import { useEffect, useRef, useState } from "react";
 import { createChart, CandlestickSeries } from "lightweight-charts";
 import axios from "axios";
 import { convertToSeconds, graphTimeList } from "@/utils/data";
@@ -8,15 +9,15 @@ export default function ChartComponent({ symbol }) {
   const chartContainerRef = useRef();
   const [dateTime, setDateTime] = useState("Today");
   const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
 
+  // Function to create candlesticks from ticks data
   function createCandlesFromTicks(ticks, durationMs = 60000) {
     const candlesMap = new Map();
 
     for (const [timeMs, bid, ask] of ticks) {
       const price = (bid + ask) / 2;
-
       const minuteBucket = Math.floor(timeMs / durationMs) * durationMs;
-
       const time = Math.floor(minuteBucket / 1000);
 
       if (!candlesMap.has(time)) {
@@ -35,27 +36,40 @@ export default function ChartComponent({ symbol }) {
       }
     }
 
-    // Return sorted candles by time
     return Array.from(candlesMap.values()).sort((a, b) => a.time - b.time);
   }
 
+  // Fetch the graph data
   const graphAPI = async () => {
     setLoading(true);
     const { from, to } = convertToSeconds(dateTime);
     const url = `https://primexbroker.com/api/trade/graph?symbol=${symbol}&from=${from}&to=${to}`;
-    console.log(url, "urlgraph");
+
     try {
       const response = await axios.get(url);
-      console.log(JSON.stringify(response.data, null, 2), "response");
       if (response?.data?.success) {
-        const data = response?.data?.result?.answer;
-        const processedData = createCandlesFromTicks(data);
-        console.log(processedData, "processedData");
+        const rawData = response?.data?.result?.answer;
+        const processedData = createCandlesFromTicks(rawData);
+        setData(processedData);
+      } else {
+        console.error("Error: No data returned");
+      }
+    } catch (error) {
+      console.error("API error:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
+  // Ensure the chart is created only when the container is available
+  useEffect(() => {
+    const checkContainerAvailability = () => {
+      if (chartContainerRef.current) {
+        console.log("Chart container is available");
+
+        // Create the chart once the container is available
         const chartContainer = chartContainerRef.current;
-        const chart = createChart(chartContainerRef.current, {
-          // width: 600,
-          // height: 400,
+        const chart = createChart(chartContainer, {
           layout: {
             backgroundColor: "#ffffff",
             textColor: "#333",
@@ -69,14 +83,6 @@ export default function ChartComponent({ symbol }) {
           },
         });
 
-        new ResizeObserver((entries) => {
-          if (entries.length === 0 || entries[0].target !== chartContainerRef.current) {
-            return;
-          }
-          const newRect = entries[0].contentRect;
-          chart.applyOptions({ height: newRect.height, width: newRect.width });
-        }).observe(chartContainerRef.current);
-
         const candlestickSeries = chart.addSeries(CandlestickSeries, {
           upColor: "#26a69a", // Green for up candles
           downColor: "#ef5350", // Red for down candles
@@ -85,32 +91,43 @@ export default function ChartComponent({ symbol }) {
           wickDownColor: "#ef5350", // Wick color for down
         });
 
-        // Set OHLC data
-        candlestickSeries.setData(processedData);
-
+        candlestickSeries.setData(data);
         chart.timeScale().fitContent();
 
-        // Cleanup on unmount
+        // Resize the chart when the container size changes
+        new ResizeObserver((entries) => {
+          if (entries.length === 0 || entries[0].target !== chartContainer) {
+            return;
+          }
+          const newRect = entries[0].contentRect;
+          chart.applyOptions({ height: newRect.height, width: newRect.width });
+        }).observe(chartContainer);
+
+        // Cleanup when the component unmounts
         return () => {
           chart.remove();
         };
+      } else {
+        console.log("Chart container is not available yet");
+        setTimeout(checkContainerAvailability, 100); // Retry after 100ms
       }
-    } catch (error) {
-      console.log(error, "error");
-    } finally {
-      setLoading(false);
-    }
-  };
+    };
+
+    checkContainerAvailability(); // Start checking
+
+  }, [data]); // Run once data is set
 
   useEffect(() => {
-    graphAPI();
+    graphAPI(); // Fetch data when component mounts or `symbol`/`dateTime` changes
   }, [symbol, dateTime]);
 
+  // Loading state
   if (loading) {
     return <div>Loading...</div>;
   }
+
   return (
-    <div className="">
+    <div>
       <div style={{ display: "flex", gap: "5px" }}>
         {graphTimeList?.map((item, index) => (
           <button
@@ -122,7 +139,15 @@ export default function ChartComponent({ symbol }) {
           </button>
         ))}
       </div>
-      <div ref={chartContainerRef} style={{ width: "100%", height: "96vh" }} />
+      <div
+        ref={chartContainerRef}
+        style={{
+          width: "100%",
+          height: "96vh",
+          position: "relative",
+          border: "1px solid #000", // Add border for debugging
+        }}
+      />
     </div>
   );
 }
