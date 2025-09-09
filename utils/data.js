@@ -29,14 +29,22 @@ export const convertToSeconds = (filter, customDate) => {
 
   switch (filter) {
     case "Minute":
-      fromDate = Math.floor(
-        new Date(now.setMinutes(now.getMinutes() - 1)).getTime() / 1000
-      );
+      fromDate = Math.floor(now.getTime() / 1000) - 60;
+      break;
+    case "5 Minutes":
+      fromDate = Math.floor(now.getTime() / 1000) - 5 * 60;
+      break;
+    case "15 Minutes":
+      fromDate = Math.floor(now.getTime() / 1000) - 15 * 60;
+      break;
+    case "30 Minutes":
+      fromDate = Math.floor(now.getTime() / 1000) - 30 * 60;
       break;
     case "Hour":
-      fromDate = Math.floor(
-        new Date(now.setHours(now.getHours() - 1)).getTime() / 1000
-      );
+      fromDate = Math.floor(now.getTime() / 1000) - 3600;
+      break;
+    case "4 Hours":
+      fromDate = Math.floor(now.getTime() / 1000) - 4 * 3600;
       break;
     case "Today":
       fromDate = Math.floor(
@@ -47,42 +55,14 @@ export const convertToSeconds = (filter, customDate) => {
       );
       break;
     case "Current Week":
-      const dayOfWeek = now.getUTCDay();
-      const daysToMonday = (dayOfWeek + 6) % 7;
-      const startOfWeek = new Date(now);
-      startOfWeek.setUTCDate(now.getUTCDate() - daysToMonday);
-      startOfWeek.setUTCHours(0, 0, 0, 0);
-      fromDate = Math.floor(startOfWeek.getTime() / 1000);
-      toDate = Math.floor(
-        new Date(now.setUTCHours(23, 59, 59, 999)).getTime() / 1000
-      );
+      const weekStart = new Date(now);
+      weekStart.setUTCDate(now.getUTCDate() - now.getUTCDay());
+      weekStart.setHours(0, 0, 0, 0);
+      fromDate = Math.floor(weekStart.getTime() / 1000);
       break;
     case "Current Month":
-      const startOfMonth = new Date(
-        Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1)
-      );
-      fromDate = Math.floor(startOfMonth.getTime() / 1000);
-      toDate = Math.floor(
-        new Date(now.setUTCHours(23, 59, 59, 999)).getTime() / 1000
-      );
-      break;
-    case "Three Months":
-      const startOfThreeMonths = new Date(now);
-      startOfThreeMonths.setMonth(now.getUTCMonth() - 3);
-      startOfThreeMonths.setUTCHours(0, 0, 0, 0);
-      fromDate = Math.floor(startOfThreeMonths.getTime() / 1000);
-      break;
-    case "6 Month":
-      const startOfSixMonths = new Date(now);
-      startOfSixMonths.setMonth(now.getUTCMonth() - 6);
-      startOfSixMonths.setUTCHours(0, 0, 0, 0);
-      fromDate = Math.floor(startOfSixMonths.getTime() / 1000);
-      break;
-    case "1 Year":
-      const startOfOneYear = new Date(now);
-      startOfOneYear.setFullYear(now.getUTCFullYear() - 1);
-      startOfOneYear.setUTCHours(0, 0, 0, 0);
-      fromDate = Math.floor(startOfOneYear.getTime() / 1000);
+      const monthStart = new Date(now.getUTCFullYear(), now.getUTCMonth(), 1);
+      fromDate = Math.floor(monthStart.getTime() / 1000);
       break;
     case "custom":
       const from = new Date(customDate?.from);
@@ -103,3 +83,42 @@ export const convertToSeconds = (filter, customDate) => {
 
   return { from: fromDate, to: toDate };
 };
+
+export const graphTimeList = [
+  {
+    time: "Minute",
+    label: "M1",
+  },
+  {
+    time: "5 Minutes",
+    label: "M5",
+  },
+  {
+    time: "15 Minutes",
+    label: "M15",
+  },
+  {
+    time: "30 Minutes",
+    label: "M30",
+  },
+  {
+    time: "Hour",
+    label: "H1",
+  },
+  {
+    time: "4 Hours",
+    label: "H4",
+  },
+  {
+    time: "Today",
+    label: "D1",
+  },
+  {
+    time: "Current Week",
+    label: "W1",
+  },
+  {
+    time: "Current Month",
+    label: "MN",
+  },
+];
