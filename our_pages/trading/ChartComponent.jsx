@@ -68,6 +68,15 @@ export default function ChartComponent({ symbol }) {
             borderColor: "#D1D4DC",
           },
         });
+
+        new ResizeObserver((entries) => {
+          if (entries.length === 0 || entries[0].target !== chartContainerRef.current) {
+            return;
+          }
+          const newRect = entries[0].contentRect;
+          chart.applyOptions({ height: newRect.height, width: newRect.width });
+        }).observe(chartContainerRef.current);
+
         const candlestickSeries = chart.addSeries(CandlestickSeries, {
           upColor: "#26a69a", // Green for up candles
           downColor: "#ef5350", // Red for down candles
@@ -93,7 +102,7 @@ export default function ChartComponent({ symbol }) {
     }
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     graphAPI();
   }, [symbol, dateTime]);
 
