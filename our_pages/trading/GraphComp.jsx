@@ -7,5 +7,5 @@ const ChartComponent = dynamic(() => import("./ChartComponent"), {
 });
 
 export default function ChartComp({ symbol }) {
-  return <ChartComponent symbol={"AUDCHF.x"} />;
+  return <ChartComponent symbol={"AUDUSD.x"} />;
 }
