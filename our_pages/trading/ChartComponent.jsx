@@ -1,5 +1,5 @@
 // components/ChartComponent.js
-import { useEffect, useRef, useState } from "react";
+import { useEffect,useLayoutEffect, useRef, useState } from "react";
 import { createChart, CandlestickSeries } from "lightweight-charts";
 import axios from "axios";
 import { convertToSeconds, graphTimeList } from "@/utils/data";
@@ -93,7 +93,7 @@ export default function ChartComponent({ symbol }) {
     }
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     graphAPI();
   }, [symbol, dateTime]);
 
