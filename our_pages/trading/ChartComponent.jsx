@@ -6,7 +6,7 @@ import { convertToSeconds, graphTimeList } from "@/utils/data";
 
 export default function ChartComponent({ symbol }) {
   const chartContainerRef = useRef();
-  const [dateTime, setDateTime] = useState("Current Month");
+  const [dateTime, setDateTime] = useState("Today");
   const [loading, setLoading] = useState(true);
   function createCandlesFromTicks(ticks, durationMs = 60000) {
     const candlesMap = new Map();
