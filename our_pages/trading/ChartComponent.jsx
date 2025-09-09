@@ -8,6 +8,7 @@ export default function ChartComponent({ symbol }) {
   const chartContainerRef = useRef();
   const [dateTime, setDateTime] = useState("Today");
   const [loading, setLoading] = useState(true);
+
   function createCandlesFromTicks(ticks, durationMs = 60000) {
     const candlesMap = new Map();
 
@@ -53,8 +54,8 @@ export default function ChartComponent({ symbol }) {
 
         const chartContainer = chartContainerRef.current;
         const chart = createChart(chartContainerRef.current, {
-          width: chartContainer.clientWidth || 600,
-          height: chartContainer.clientHeight || 400,
+          // width: 600,
+          // height: 400,
           layout: {
             backgroundColor: "#ffffff",
             textColor: "#333",
