@@ -1,24 +1,32 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createChart, CandlestickSeries } from "lightweight-charts";
 import axios from "axios";
-import { convertToSeconds, graphTimeList } from "@/utils/data";
+import { convertToSeconds, graphDurationList, graphTimeList } from "@/utils/data";
 
 // Helper function to create candles from tick data
-const createCandlesFromTicks = (ticks) => {
+const createCandlesFromTicks = (ticks, intervalInMinutes) => {
+  const MS_PER_MINUTE = 60 * 1000;
+  const durationMs = intervalInMinutes * MS_PER_MINUTE;
+
   const candlesMap = new Map();
-  for (const [timeMs, open, high, low, close] of ticks) {
-    if (!candlesMap.has(timeMs)) {
-      candlesMap.set(timeMs, {
-        time: timeMs,
+  for (const [timeSec, open, high, low, close] of ticks) {
+    const timeMs = timeSec * 1000;
+
+    // Round timestamp down to nearest interval
+    const intervalTime = Math.floor(timeMs / durationMs) * durationMs;
+    const intervalTimeSec = intervalTime / 1000;
+    if (!candlesMap.has(intervalTimeSec)) {
+      candlesMap.set(intervalTimeSec, {
+        time: intervalTimeSec,
         open,
         high,
         low,
         close,
       });
     } else {
-      const candle = candlesMap.get(timeMs);
-      candle.high = high;
-      candle.low = low;
+      const candle = candlesMap.get(intervalTimeSec);
+      candle.high = Math.max(candle.high, high);
+      candle.low = Math.min(candle.low, low);
       candle.close = close;
     }
   }
@@ -26,7 +34,8 @@ const createCandlesFromTicks = (ticks) => {
 };
 
 // Custom hook for safe data fetching
-const useFetchCandles = (symbol, dateTime) => {
+const useFetchCandles = (symbol, dateTime,timeInterval) => {
+  
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -47,7 +56,8 @@ const useFetchCandles = (symbol, dateTime) => {
 
         if (response?.data?.success) {
           const rawData = response?.data?.result?.answer;
-          const processedData = rawData?.length > 0 ? createCandlesFromTicks(rawData) : [];
+          const processedData =
+            rawData?.length > 0 ? createCandlesFromTicks(rawData,timeInterval) : [];
           setData(processedData);
         } else {
           console.error("API response was unsuccessful.", response);
@@ -67,16 +77,17 @@ const useFetchCandles = (symbol, dateTime) => {
     return () => {
       controller.abort();
     };
-  }, [symbol, dateTime]);
+  }, [symbol, dateTime,timeInterval]);
 
   return { data, loading };
 };
 
 export default function ChartComponent({ symbol }) {
-  console.log(symbol, "symbol")
+  console.log(symbol, "symbol");
   const chartContainerRef = useRef();
   const [dateTime, setDateTime] = useState("Today");
-  const { data: initialData, loading } = useFetchCandles(symbol, dateTime);
+  const [timeInterval, setTimeInterval] = useState(1); 
+  const { data: initialData, loading } = useFetchCandles(symbol, dateTime,timeInterval);
 
   const chartInstanceRef = useRef(null);
   const candlestickSeriesRef = useRef(null);
@@ -88,9 +99,16 @@ export default function ChartComponent({ symbol }) {
       const chartContainer = chartContainerRef.current;
 
       const chart = createChart(chartContainer, {
-        layout: { backgroundColor: "#ffffff", textColor: "#333",   attributionLogo: false },
-        grid: { vertLines: { color: "rgba(197, 203, 206, 0.5)" }, horzLines: { color: "rgba(197, 203, 206, 0.5)" } },
-        timeScale: { borderColor: "#D1D4DC",  barSpacing: 10, rightOffset: 0 },
+        layout: {
+          backgroundColor: "#ffffff",
+          textColor: "#333",
+          attributionLogo: false,
+        },
+        grid: {
+          vertLines: { color: "rgba(197, 203, 206, 0.5)" },
+          horzLines: { color: "rgba(197, 203, 206, 0.5)" },
+        },
+        timeScale: { borderColor: "#D1D4DC", barSpacing: 10, rightOffset: 0 },
         priceScale: { borderColor: "#D1D4DC" },
       });
 
@@ -130,7 +148,7 @@ export default function ChartComponent({ symbol }) {
         resizeObserver.disconnect();
       };
     }
-  }, [initialData]);
+  }, [initialData,timeInterval]);
 
   // Effect for handling real-time data updates (once initial data is loaded)
   useEffect(() => {
@@ -150,7 +168,7 @@ export default function ChartComponent({ symbol }) {
         if (response?.data?.success) {
           const rawData = response?.data?.result?.answer;
           if (rawData?.length > 0) {
-            const processedData = createCandlesFromTicks(rawData);
+            const processedData = createCandlesFromTicks(rawData,timeInterval);
             const lastDataPoint = processedData[processedData.length - 1];
 
             if (lastDataPoint?.time) {
@@ -166,7 +184,7 @@ export default function ChartComponent({ symbol }) {
     const intervalId = setInterval(updateChartData, 1000);
 
     return () => clearInterval(intervalId);
-  }, [symbol, dateTime, initialData]);
+  }, [symbol, dateTime, initialData,timeInterval]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -178,17 +196,48 @@ export default function ChartComponent({ symbol }) {
 
   return (
     <div style={{ width: "100%", height: "96vh" }}>
-      <div style={{ display: "flex", gap: "5px" }}>
-        {graphTimeList?.map((item, index) => (
-          <button
-            key={index}
-            className="h-16 w-10 flex justify-center items-center p-1"
-            onClick={() => setDateTime(item.time)}
-          >
-            <span>{item?.label}</span>
-          </button>
-        ))}
-      </div>
+         <div style={{ display: "flex", justifyContent: "space-between", padding: "10px", backgroundColor: '#f5f5f5' }}>
+                {/* Time interval buttons */}
+                <div style={{ display: "flex", gap: "5px" }}>
+                    {graphTimeList.map(item => (
+                        <button
+                            key={item.interval}
+                            style={{
+                                padding: "8px 16px",
+                                border: "1px solid #ddd",
+                                borderRadius: "4px",
+                                backgroundColor: timeInterval === item.interval ? "#e0e0e0" : "white",
+                                cursor: "pointer",
+                                fontWeight: timeInterval === item.interval ? 'bold' : 'normal'
+                            }}
+                            onClick={() => setTimeInterval(item.interval)}
+                        >
+                            {item.label}
+                        </button>
+                    ))}
+                </div>
+                
+                {/* Date range buttons */}
+                {/* <div style={{ display: "flex", gap: "5px" }}>
+                    {graphDurationList?.map((item, index) => (
+                        <button
+                            key={index}
+                            style={{
+                                padding: "8px 16px",
+                                border: "1px solid #ddd",
+                                borderRadius: "4px",
+                                backgroundColor: dateTime === item.time ? "#e0e0e0" : "white",
+                                cursor: "pointer",
+                                fontWeight: dateTime === item.time ? 'bold' : 'normal'
+                            }}
+                            onClick={() => setDateTime(item.time)}
+                        >
+                            {item?.time}
+                        </button>
+                    ))}
+                </div> */}
+            </div>
+            
       <div
         ref={chartContainerRef}
         style={{

@@ -85,40 +85,26 @@ export const convertToSeconds = (filter, customDate) => {
 };
 
 export const graphTimeList = [
+  { label: "M1", time: "Minute", interval: 1 },
+  { label: "M5", time: "5 Minutes", interval: 5 },
+  { label: "M15", time: "15 Minutes", interval: 15 },
+  { label: "M30", time: "30 Minutes", interval: 30 },
+  { label: "H1", time: "Hour", interval: 60 },
+  { label: "H4", time: "4 Hours", interval: 240 },
+  { label: "D", time: "Today", time: "Today", interval: 1440 },
+  { label: "W", item: "Current Week", interval: 10080 },
   {
-    time: "Minute",
-    label: "M1",
+    label: "M",
+    item: "Current Month",
+    interval: 43800,
   },
+];
+
+export const graphDurationList = [
+  { label: "D", time: "Today" },
+  { label: "W", time: "Current Week" },
   {
-    time: "5 Minutes",
-    label: "M5",
-  },
-  {
-    time: "15 Minutes",
-    label: "M15",
-  },
-  {
-    time: "30 Minutes",
-    label: "M30",
-  },
-  {
-    time: "Hour",
-    label: "H1",
-  },
-  {
-    time: "4 Hours",
-    label: "H4",
-  },
-  {
-    time: "Today",
-    label: "D1",
-  },
-  {
-    time: "Current Week",
-    label: "W1",
-  },
-  {
+    label: "M",
     time: "Current Month",
-    label: "MN",
   },
 ];
