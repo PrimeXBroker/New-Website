@@ -2404,8 +2404,8 @@
       "experience_required_error": "¡La experiencia es obligatoria!",
       "nationality_required_error": "¡La nacionalidad es obligatoria!",
       "country_required_error": "¡El país es obligatorio!",
-      "success_title": "Éxito",
-      "success_desc": "Formulario Enviado Correctamente",
+      "success_title": "Formulario enviado con éxito",
+      "success_desc": "¡Gracias! Nuestro equipo revisará su solicitud y se pondrá en contacto con usted con respecto a los siguientes pasos.",
       "close_btn": "Cerrar"
     },
     "becomeTrader": {

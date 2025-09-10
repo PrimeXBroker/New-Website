@@ -2406,8 +2406,8 @@
       "experience_required_error": "ئەزموون پێویستە!",
       "nationality_required_error": "ڕەگەزنامە پێویستە!",
       "country_required_error": "وڵات پێویستە!",
-      "success_title": "سەرکەوتوو بوو",
-      "success_desc": "فۆرمەکە بە سەرکەوتوویی نێردرا",
+      "success_title": "فۆرمەکە بە سەرکەوتوویی نێردرا",
+      "success_desc": "سوپاس! تیمەکەمان پێداچوونەوە بە داواکارییەکەتدا دەکات و سەبارەت بە هەنگاوەکانی داهاتوو پەیوەندیت پێوە دەکات.",
       "close_btn": "داخستن"
     },
     "becomeTrader": {

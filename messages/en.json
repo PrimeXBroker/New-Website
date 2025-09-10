@@ -2405,8 +2405,8 @@
       "experience_required_error": "Experience is required!",
       "nationality_required_error": "Nationality is required!",
       "country_required_error": "Country is required!",
-      "success_title": "Success",
-      "success_desc": "Form Submitted Successfully",
+      "success_title": "Form submitted successfully",
+      "success_desc": "Thank you! Our team will review your application and contact you regarding the next steps.",
       "close_btn": "Close"
     },
     "becomeTrader": {

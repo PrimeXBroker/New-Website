@@ -2333,8 +2333,8 @@
       "experience_required_error": "الخبرة مطلوبة!",
       "nationality_required_error": "الجنسية مطلوبة!",
       "country_required_error": "البلد مطلوب!",
-      "success_title": "تم بنجاح",
-      "success_desc": "تم إرسال النموذج بنجاح",
+      "success_title": "تم التقديم بنجاح",
+      "success_desc": "شكرًا لك! سيقوم فريقنا بمراجعة طلبك والتواصل معك بخصوص الخطوات التالية.",
       "close_btn": "إغلاق"
     },
     "becomeTrader": {
