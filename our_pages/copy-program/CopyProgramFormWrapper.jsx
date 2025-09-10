@@ -6,7 +6,7 @@ const CopyProgramFormWrapper = () => {
   const locale = useLocale();
   const t = useTranslations("copyProgram.copyProgramForm");
   return (
-    <section className="py-6">
+    <section className="bg-p dark:bg-p-dark">
       <div
         className="container grid grid-cols-12 items-center"
         dir={
@@ -15,13 +15,13 @@ const CopyProgramFormWrapper = () => {
       >
         <div className="col-span-12 lg:col-span-6 mb-7 lg:mb-0 text-center lg:text-start">
           <div className="">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold text-[#ffffff] mb-2">
-              {t("main_title1")} <br className="hidden lg:block" />
-              <span className="text-[#FED100] inline-block my-1 lg:my-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-semibold text-tm dark:text-tm-dark mb-2">
+              {t("main_title1")}
+              <span className="text-pc dark:text-pc-dark inline-block my-1 lg:my-2">
                 {t("main_title2")}
               </span>
             </h2>
-            <p className="text-[#c6c6c6] text-sm sm:text-base md:text-xl sm:w-[80%] mx-auto lg:mx-0">
+            <p className="text-ts dark:text-ts-dark text-sm sm:text-base md:text-xl sm:w-[80%] mx-auto lg:mx-0 font-medium">
               {t("description")}
             </p>
           </div>
