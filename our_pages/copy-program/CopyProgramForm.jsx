@@ -7,6 +7,7 @@ import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import axios from "axios";
 import nationality from "../../public/assets/data/nationality.json";
+import countries from "../../public/assets/data/nationality.json";
 
 import {
   Modal,
@@ -47,31 +48,26 @@ function CopyProgramForm() {
 
   const formik = useFormik({
     initialValues: {
-      first_name: "",
-      last_name: "",
+      full_name: "",
       email: "",
       contact: "",
+      experience: "",
+      nationality: "",
       country: "",
-      message: "",
     },
     validationSchema: Yup.object({
-      first_name: Yup.string()
+      full_name: Yup.string()
         .matches(
           /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-          t("first_name_validation_error")
+          t("full_name_validation_error")
         )
-        .required(t("first_name_required_error")),
-      last_name: Yup.string()
-        .matches(
-          /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-          t("last_name_validation_error")
-        )
-        .required(t("last_name_required_error")),
+        .required(t("full_name_required_error")),
       email: Yup.string()
         .email(t("email_validation_error"))
         .required(t("email_required_error")),
+      experience: Yup.string().required(t("experience_required_error")),
+      nationality: Yup.string().required(t("nationality_required_error")),
       country: Yup.string().required(t("country_required_error")),
-      message: Yup.string().required(t("question_required_error")),
     }),
     validate: (values) => {
       const errors = {};
@@ -83,15 +79,16 @@ function CopyProgramForm() {
     onSubmit: async (values) => {
       setLoading(true);
       const updatedValues = {
-        name: `${values.first_name} ${values.last_name}`,
+        full_name: values.full_name,
         email: values.email,
         contact: values.contact,
+        experience: values.experience,
+        nationality: values.nationality,
         country: values.country,
-        message: values.message,
       };
       try {
         const res = await axios.post(
-          `https://primexbroker.com/api/copy-program`,
+          "https://primexbroker.com/api/copy-program",
           updatedValues
         );
         if (res.data.success) {
@@ -111,59 +108,38 @@ function CopyProgramForm() {
   return (
     <section className="container px-0">
       <div
-        className={`bg-[#111111] border-[#1d1d1d] border-3 md:w-[80%] lg:w-[100%] rounded-[12px] p-[24px] ms:p-[40px] mx-auto`}
+        className={`bg-cc dark:bg-cc-dark md:w-[80%] lg:w-[100%] rounded-[12px] p-[24px] ms:p-[40px] mx-auto`}
       >
         <form
           onSubmit={formik.handleSubmit}
           className="flex flex-col justify-center items-center relative gap-4"
         >
-          <div className="w-full my-4">
-            <h2 className="text-[24px] font-semibold text-[#ffffff] mb-1">
+          <div className="w-full">
+            <h2 className="text-[24px] font-semibold text-tm dark:text-tm-dark">
               {t("title")}
             </h2>
-            <p className="text-xs text-[#c6c6c6]">{t("desc")}</p>
           </div>
           <div className="md:flex w-full justify-between">
             <div className="w-full md:w-[48%] mb-3 md:mb-0">
-              <label className="text-xs text-[#c6c6c6]">
-                {t("first_name_label")}
+              <label className="text-xs text-ts dark:text-ts-dark">
+                {t("full_name_label")}
                 <input
                   type="text"
-                  name="first_name"
+                  name="full_name"
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  value={formik.values.first_name}
-                  placeholder={t("first_name_placeholder")}
-                  className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
-                    formik.touched.first_name && formik.errors.first_name
-                      ? "border border-red-600"
+                  value={formik.values.full_name}
+                  placeholder={t("full_name_placeholder")}
+                  className={`appearance-none border-2 border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
+                    formik.touched.full_name && formik.errors.full_name
+                      ? "border-2 border-rc dark:border-rc-dark"
                       : ""
                   }`}
                 />
               </label>
             </div>
-            <div className="w-full md:w-[48%] ">
-              <label className="text-xs text-[#c6c6c6]">
-                {t("last_name_label")}
-                <input
-                  type="text"
-                  name="last_name"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.last_name}
-                  placeholder={t("last_name_placeholder")}
-                  className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
-                    formik.touched.last_name && formik.errors.last_name
-                      ? "border border-red-600"
-                      : ""
-                  }`}
-                />
-              </label>
-            </div>
-          </div>
-          <div className="md:flex w-full justify-between">
-            <div className="w-full md:w-[48%] mb-3 md:mb-0">
-              <label className="text-xs text-[#c6c6c6]">
+            <div className="w-full md:w-[48%]">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("email_label")}
                 <input
                   type="email"
@@ -172,16 +148,18 @@ function CopyProgramForm() {
                   onBlur={formik.handleBlur}
                   value={formik.values.email}
                   placeholder={t("email_placeholder")}
-                  className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`appearance-none border-2 border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.email && formik.errors.email
-                      ? "border-b border-red-600"
+                      ? "border-2 border-rc dark:border-rc-dark"
                       : ""
                   }`}
                 />
               </label>
             </div>
-            <div className="w-full md:w-[48%] ib-contact">
-              <label className="text-xs text-[#c6c6c6]">
+          </div>
+          <div className="md:flex w-full justify-between">
+            <div className="w-full md:w-[48%] mb-3 md:mb-0 ib-contact">
+              <label className="text-xs text-ts dark:text-ts-dark">
                 {t("contact_label")}
                 <PhoneInput
                   international
@@ -190,72 +168,105 @@ function CopyProgramForm() {
                   onBlur={formik.handleBlur}
                   name="contact"
                   value={formik.values.contact}
-                  className={`ib-phone-input appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
+                  className={`ib-phone-input appearance-none border-2 border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
                     formik.touched.contact && formik.errors.contact
-                      ? "border-b border-red-600"
+                      ? "border-2 border-rc dark:border-rc-dark"
                       : ""
                   }`}
-                  placeholder={t("number")}
+                  placeholder={t("contact_placeholder")}
+                />
+              </label>
+            </div>
+            <div className="w-full md:w-[48%]">
+              <label className="text-xs text-ts dark:text-ts-dark">
+                {t("experience_label")}
+                <input
+                  type="number"
+                  name="experience"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.experience}
+                  placeholder={t("experience_placeholder")}
+                  className={`appearance-none border-2 border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
+                    formik.touched.experience && formik.errors.experience
+                      ? "border-2 border-rc dark:border-rc-dark"
+                      : ""
+                  }`}
                 />
               </label>
             </div>
           </div>
-          <div className="w-full">
-            <label className="text-xs text-[#c6c6c6]">
-              {t("country_label")}
-              <select
-                className={`capitalize py-[16px] px-[12px] w-full text-base focus:outline-none border-2 border-[#222222] bg-[#1d1d1d]  text-[#c6c6c6] ${
-                  formik.touched.country && formik.errors.country
-                    ? "border border-red-600"
-                    : ""
-                }`}
-                name="country"
-                value={formik.values.country}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              >
-                <option value="" className="text-[#c6c6c6]">
-                  {t("country_placeholder")}
-                </option>
-                {nationality.map((country, index) => {
-                  return (
-                    <option
-                      key={index}
-                      value={country.en_short_name}
-                      className="text-black bg-white"
-                    >
-                      {country.en_short_name}
-                    </option>
-                  );
-                })}
-              </select>
-            </label>
+          <div className="md:flex w-full justify-between">
+            <div className="w-full md:w-[48%] mb-3 md:mb-0">
+              <label className="text-xs text-ts dark:text-ts-dark">
+                {t("nationality_label")}
+                <select
+                  className={`capitalize py-[16px] px-[12px] w-full text-base focus:outline-none  border-2 border-e1 dark:border-e1-dark text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark ${
+                    formik.touched.nationality && formik.errors.nationality
+                      ? "border-2 border-rc dark:border-rc-dark"
+                      : ""
+                  }`}
+                  name="nationality"
+                  value={formik.values.nationality}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                >
+                  <option value="" className="text-ts dark:text-ts-dark">
+                    {t("nationality_placeholder")}
+                  </option>
+                  {nationality.map((nation, index) => {
+                    return (
+                      <option
+                        key={index}
+                        value={nation.en_short_name}
+                        className="text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark"
+                      >
+                        {nation.en_short_name}
+                      </option>
+                    );
+                  })}
+                </select>
+              </label>
+            </div>
+            <div className="w-full md:w-[48%]">
+              <label className="text-xs text-ts dark:text-ts-dark">
+                {t("country_label")}
+                <select
+                  className={`capitalize py-[16px] px-[12px] w-full text-base focus:outline-none  border-2 border-e1 dark:border-e1-dark text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark ${
+                    formik.touched.country && formik.errors.country
+                      ? "border-2 border-rc dark:border-rc-dark"
+                      : ""
+                  }`}
+                  name="country"
+                  value={formik.values.country}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                >
+                  <option value="" className="text-ts dark:text-ts-dark">
+                    {t("country_placeholder")}
+                  </option>
+                  {countries.map((country, index) => {
+                    return (
+                      <option
+                        key={index}
+                        value={country.en_short_name}
+                        className="text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark"
+                      >
+                        {country.en_short_name}
+                      </option>
+                    );
+                  })}
+                </select>
+              </label>
+            </div>
           </div>
           <div className="w-full">
-            <label className="text-xs text-[#c6c6c6]">
-              {t("question_label")}
-              <textarea
-                name="message"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.message}
-                rows="4"
-                placeholder={t("question_placeholder")}
-                className={`appearance-none border-2 border-[#222222] rounded-[4px] w-full py-[16px] px-[12px] text-[#c6c6c6] placeholder:text-[#c6c6c6] bg-[#1d1d1d] focus:outline-none text-base ${
-                  formik.touched.message && formik.errors.message
-                    ? "border-b border-red-600"
-                    : ""
-                }`}
-              />
-            </label>
-          </div>
-          <div className="w-full">
-            <p className="text-xs text-[#c6c6c6] mb-1">{t("condition")}</p>
-
+            <p className="text-xs text-ts dark:text-ts-dark mb-1 font-normal">
+              {t("condition")}
+            </p>
             <button
               disabled={loading}
-              className="font-semibold py-[16px] px-[10px] text-[#111111] w-full custom-button"
-              style={{ borderRadius: "5px" }}
+              className="transition-colors duration-300 ease-in-out rounded-lg font-bold w-full flex items-center justify-center gap-3 group bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark group py-4 px-3"
             >
               <div className="flex gap-1 items-center justify-center">
                 {loading ? (
