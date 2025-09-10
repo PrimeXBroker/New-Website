@@ -1,4 +1,4 @@
-"use client";  // Ensure client-side rendering
+"use client"; // Ensure client-side rendering
 
 import { useEffect, useRef, useState } from "react";
 import { createChart, CandlestickSeries } from "lightweight-charts";
@@ -7,32 +7,44 @@ import { convertToSeconds, graphTimeList } from "@/utils/data";
 
 export default function ChartComponent({ symbol }) {
   const chartContainerRef = useRef();
-  const [dateTime, setDateTime] = useState("Today");
+  const [dateTime, setDateTime] = useState("Current Month");
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
-
+  const [interval, setInterval] = useState(1);
+  const [timeInterval, setTimeInterval] = useState(1);
   // Function to create candlesticks from ticks data
-  function createCandlesFromTicks(ticks, durationMs = 60000) {
+  function createCandlesFromTicks(ticks, intervalInMinutes = 5) {
+    // Since your timestamps are already in seconds, we need to convert to ms for interval calculation
+    const MS_PER_MINUTE = 60 * 1000;
+    const durationMs = intervalInMinutes * MS_PER_MINUTE;
+
+    // Group ticks by time interval
     const candlesMap = new Map();
 
-    for (const [timeMs, bid, ask] of ticks) {
-      const price = (bid + ask) / 2;
-      const minuteBucket = Math.floor(timeMs / durationMs) * durationMs;
-      const time = Math.floor(minuteBucket / 1000);
+    for (const [timeSec, open, high, low, close] of ticks) {
+      // Convert timestamp to milliseconds for interval calculation
+      const timeMs = timeSec * 1000;
 
-      if (!candlesMap.has(time)) {
-        candlesMap.set(time, {
-          time: time,
-          open: price,
-          high: price,
-          low: price,
-          close: price,
+      // Round timestamp down to nearest interval
+      const intervalTime = Math.floor(timeMs / durationMs) * durationMs;
+      const intervalTimeSec = intervalTime / 1000; // Convert back to seconds
+
+      if (!candlesMap.has(intervalTimeSec)) {
+        // Create new candle
+        candlesMap.set(intervalTimeSec, {
+          time: intervalTimeSec,
+          open,
+          high,
+          low,
+          close,
         });
       } else {
-        const candle = candlesMap.get(time);
-        candle.high = Math.max(candle.high, price);
-        candle.low = Math.min(candle.low, price);
-        candle.close = price;
+        // Update existing candle
+        const candle = candlesMap.get(intervalTimeSec);
+        candle.high = Math.max(candle.high, high);
+        candle.low = Math.min(candle.low, low);
+        candle.close = close;
+        // Note: We keep the original open price
       }
     }
 
@@ -43,13 +55,15 @@ export default function ChartComponent({ symbol }) {
   const graphAPI = async () => {
     setLoading(true);
     const { from, to } = convertToSeconds(dateTime);
-    const url = `https://primexbroker.com/api/trade/graph?symbol=${symbol}&from=${from}&to=${to}`;
+    const url = `https://primexbroker.com/api/trade/graph?symbol=${symbol}&from=${from}&to=${to}&type=minutes`;
 
     try {
       const response = await axios.get(url);
       if (response?.data?.success) {
         const rawData = response?.data?.result?.answer;
-        const processedData = createCandlesFromTicks(rawData);
+        console.log(rawData, "rawData");
+
+        const processedData = createCandlesFromTicks(rawData, timeInterval);
         setData(processedData);
       } else {
         console.error("Error: No data returned");
@@ -113,13 +127,12 @@ export default function ChartComponent({ symbol }) {
       }
     };
 
-    checkContainerAvailability(); // Start checking
-
-  }, [data]); // Run once data is set
+    checkContainerAvailability();
+  }, [data]);
 
   useEffect(() => {
-    graphAPI(); // Fetch data when component mounts or `symbol`/`dateTime` changes
-  }, [symbol, dateTime]);
+    graphAPI();
+  }, [symbol, dateTime, timeInterval]);
 
   // Loading state
   if (loading) {
@@ -127,23 +140,62 @@ export default function ChartComponent({ symbol }) {
   }
 
   return (
-    <div>
-      <div style={{ display: "flex", gap: "5px" }}>
-        {graphTimeList?.map((item, index) => (
-          <button
-            key={index}
-            className="h-16 w-10 flex justify-center items-center p-1"
-            onClick={() => setDateTime(item.time)}
-          >
-            <span>{item?.label}</span>
-          </button>
-        ))}
+    <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          padding: "10px",
+          backgroundColor: "#f5f5f5",
+        }}
+      >
+        {/* Time interval buttons */}
+        <div style={{ display: "flex", gap: "5px" }}>
+          {graphTimeList.map((item) => (
+            <button
+              key={item.interval}
+              style={{
+                padding: "8px 16px",
+                border: "1px solid #ddd",
+                borderRadius: "4px",
+                backgroundColor:
+                  timeInterval === item.interval ? "#e0e0e0" : "white",
+                cursor: "pointer",
+                fontWeight: timeInterval === item.interval ? "bold" : "normal",
+              }}
+              onClick={() => setTimeInterval(item.interval)}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Date range buttons */}
+        {/* <div style={{ display: "flex", gap: "5px" }}>
+          {graphTimeList?.map((item, index) => (
+            <button
+              key={index}
+              style={{
+                padding: "8px 16px",
+                border: "1px solid #ddd",
+                borderRadius: "4px",
+                backgroundColor: dateTime === item.time ? "#e0e0e0" : "white",
+                cursor: "pointer",
+                fontWeight: dateTime === item.time ? "bold" : "normal",
+              }}
+              onClick={() => setDateTime(item.time)}
+            >
+              {item?.label}
+            </button>
+          ))}
+        </div> */}
       </div>
+
       <div
         ref={chartContainerRef}
         style={{
           width: "100%",
-          height: "96vh",
+          height: "90vh",
           position: "relative",
         }}
       />
