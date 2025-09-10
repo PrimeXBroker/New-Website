@@ -80,7 +80,8 @@ const CopyProgramWrapper = () => {
       <Benefits />
       <Steps />
       <PrimeTrade />
-      <div className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
+      <CopyProgramFormWrapper />
+      <div className="bg-p dark:bg-p-dark py-16 sm:py-28">
         <FAQ faqs={faqs} />
       </div>
     </>
