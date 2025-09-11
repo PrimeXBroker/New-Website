@@ -6,6 +6,6 @@ const ChartComponent = dynamic(() => import("./ChartComponent"), {
   ssr: false,
 });
 
-export default function ChartComp({ symbol ,interval,mode}) {
+export default function ChartComp({ symbol, interval, mode }) {
   return <ChartComponent symbol={symbol} interval={interval} mode={mode} />;
 }
