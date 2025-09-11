@@ -33,39 +33,27 @@ console.log(interval,"interval",typeof interval);
 
   switch (interval) {
     case 1:
-        fromDate = Math.floor(
-        new Date(now.setUTCHours(0, 0, 0, 0)).getTime() / 1000
-      );
-      break;
     case 5:
-         fromDate = Math.floor(
-        new Date(now.setUTCHours(0, 0, 0, 0)).getTime() / 1000
-      );
+      // Today 00:00 UTC
+      now.setUTCHours(0, 0, 0, 0);
+      fromDate = Math.floor(now.getTime() / 1000);
       break;
     case 15:
-        fifteenDaysAgo.setUTCDate(now.getUTCDate() - 15);
-        fifteenDaysAgo.setUTCHours(0, 0, 0, 0);
-        fromDate = Math.floor(fifteenDaysAgo.getTime() / 1000);
-      break;
     case 30:
-        fifteenDaysAgo.setUTCDate(now.getUTCDate() - 15);
-        fifteenDaysAgo.setUTCHours(0, 0, 0, 0);
-        fromDate = Math.floor(fifteenDaysAgo.getTime() / 1000);
-      break;
     case 60:
-        fifteenDaysAgo.setUTCDate(now.getUTCDate() - 15);
-        fifteenDaysAgo.setUTCHours(0, 0, 0, 0);
-        fromDate = Math.floor(fifteenDaysAgo.getTime() / 1000);
-      break;
     case 240:
-        fifteenDaysAgo.setUTCDate(now.getUTCDate() - 15);
-        fifteenDaysAgo.setUTCHours(0, 0, 0, 0);
-        fromDate = Math.floor(fifteenDaysAgo.getTime() / 1000);
+      // 15 days ago, 00:00 UTC
+      const fifteenDaysAgo = new Date(now);
+      fifteenDaysAgo.setUTCDate(now.getUTCDate() - 15);
+      fifteenDaysAgo.setUTCHours(0, 0, 0, 0);
+      fromDate = Math.floor(fifteenDaysAgo.getTime() / 1000);
       break;
     case 1440:
-    fifteenDaysAgo.setUTCDate(now.getUTCDate() - 30);
-    fifteenDaysAgo.setUTCHours(0, 0, 0, 0);
-    fromDate = Math.floor(fifteenDaysAgo.getTime() / 1000);
+      // 30 days ago, 00:00 UTC
+      const thirtyDaysAgo = new Date(now);
+      thirtyDaysAgo.setUTCDate(now.getUTCDate() - 30);
+      thirtyDaysAgo.setUTCHours(0, 0, 0, 0);
+      fromDate = Math.floor(thirtyDaysAgo.getTime() / 1000);
       break;
     // case "Current Week":
     //   const weekStart = new Date(now);

@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createChart, CandlestickSeries } from "lightweight-charts";
 import axios from "axios";
-import { convertToSeconds } from "@/utils/data";
+import {
+  convertToSeconds,
+} from "@/utils/data";
+
 
 // Helper function to create candles from tick data
 const createCandlesFromTicks = (ticks, intervalInMinutes) => {
@@ -86,23 +89,24 @@ const useFetchCandles = (symbol, interval) => {
 export default function ChartComponent({ symbol, interval, mode }) {
   console.log(symbol, "symbol");
   const chartContainerRef = useRef();
-  const { data: initialData, loading } = useFetchCandles(symbol, interval);
+  const { data: initialData, loading } = useFetchCandles(
+    symbol,
+    interval
+  );
 
   const chartInstanceRef = useRef(null);
   const candlestickSeriesRef = useRef(null);
 
+
   const colors = {
     background: mode === "light" ? "#fcfcfc" : "#030303",
     text: mode === "light" ? "#333" : "#ddd",
-    grid:
-      mode === "light"
-        ? "rgba(197, 203, 206, 0.5)"
-        : "rgba(100, 100, 100, 0.5)",
+    grid: mode === "light" ? "rgba(197, 203, 206, 0.5)" : "rgba(100, 100, 100, 0.5)",
     border: mode === "light" ? "#D1D4DC" : "#444",
-    upCandle: mode === "light" ? "#00773D" : "#12BA68",
-    downCandle: mode === "light" ? "#CD1414" : "#F83232",
+    upCandle: mode === "light" ? "#00773D" : "#12BA68", 
+    downCandle: mode === "light" ? "#CD1414" : "#F83232", 
     upWick: mode === "light" ? "#00773D" : "#12BA68",
-    downWick: mode === "light" ? "#CD1414" : "#F83232",
+    downWick: mode === "light" ? "#CD1414" : "#F83232", 
   };
   // Effect to create and initialize the chart ONLY when initialData is available
   useEffect(() => {
@@ -111,7 +115,7 @@ export default function ChartComponent({ symbol, interval, mode }) {
 
       const chart = createChart(chartContainer, {
         layout: {
-          background: { type: "solid", color: colors.background },
+           background: { type: "solid", color: colors.background },
           textColor: colors.text,
           attributionLogo: false,
         },
@@ -119,16 +123,12 @@ export default function ChartComponent({ symbol, interval, mode }) {
           vertLines: { color: colors.grid },
           horzLines: { color: colors.grid },
         },
-        timeScale: {
-          borderColor: colors.border,
-          barSpacing: 10,
-          rightOffset: 0,
-        },
+        timeScale: { borderColor: colors.border, barSpacing: 10, rightOffset: 0 },
         priceScale: { borderColor: colors.border },
       });
 
       const series = chart.addSeries(CandlestickSeries, {
-        upColor: colors.upCandle,
+       upColor: colors.upCandle,
         downColor: colors.downCandle,
         borderVisible: false,
         wickUpColor: colors.upWick,
@@ -199,28 +199,22 @@ export default function ChartComponent({ symbol, interval, mode }) {
     const intervalId = setInterval(updateChartData, 1000);
 
     return () => clearInterval(intervalId);
-  }, [symbol, initialData, interval]);
+  }, [symbol,  initialData, interval]);
 
   if (loading) {
     return <div>Loading...</div>;
   }
 
   if (!initialData || initialData.length === 0) {
-    return (
-      <div
-        style={{
-          width: "100%",
-          height: "100vh",
-          background: colors.background,
-        }}
-      >
-        No data to display.
-      </div>
-    );
+    return <div style={{width: "100%", height: "100vh",
+      background:colors.background
+
+    }}>No data to display.</div>;
   }
 
   return (
-    <div style={{ width: "100%", height: "100vh" }}>
+    <div style={{ width: "100%", height: "100vh",
+     }}>
       <div
         ref={chartContainerRef}
         style={{
