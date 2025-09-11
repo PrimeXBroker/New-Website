@@ -1,7 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createChart, CandlestickSeries } from "lightweight-charts";
 import axios from "axios";
-import { convertToSeconds, graphDurationList, graphTimeList } from "@/utils/data";
+import {
+  convertToSeconds,
+  graphDurationList,
+  graphTimeList,
+} from "@/utils/data";
 
 // Helper function to create candles from tick data
 const createCandlesFromTicks = (ticks, intervalInMinutes) => {
@@ -34,8 +38,7 @@ const createCandlesFromTicks = (ticks, intervalInMinutes) => {
 };
 
 // Custom hook for safe data fetching
-const useFetchCandles = (symbol, dateTime,timeInterval) => {
-  
+const useFetchCandles = (symbol, interval) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -45,7 +48,7 @@ const useFetchCandles = (symbol, dateTime,timeInterval) => {
 
     const fetchData = async () => {
       setLoading(true);
-      const { from, to } = convertToSeconds(dateTime);
+      const { from, to } = convertToSeconds(interval);
       const url = `https://primexbroker.com/api/trade/graph?symbol=${symbol}&from=${from}&to=${to}&type=${"minutes"}`;
 
       try {
@@ -57,7 +60,9 @@ const useFetchCandles = (symbol, dateTime,timeInterval) => {
         if (response?.data?.success) {
           const rawData = response?.data?.result?.answer;
           const processedData =
-            rawData?.length > 0 ? createCandlesFromTicks(rawData,timeInterval) : [];
+            rawData?.length > 0
+              ? createCandlesFromTicks(rawData, interval)
+              : [];
           setData(processedData);
         } else {
           console.error("API response was unsuccessful.", response);
@@ -77,21 +82,22 @@ const useFetchCandles = (symbol, dateTime,timeInterval) => {
     return () => {
       controller.abort();
     };
-  }, [symbol, dateTime,timeInterval]);
+  }, [symbol, interval]);
 
   return { data, loading };
 };
 
-export default function ChartComponent({ symbol }) {
+export default function ChartComponent({ symbol, interval, mode }) {
   console.log(symbol, "symbol");
   const chartContainerRef = useRef();
   const [dateTime, setDateTime] = useState("Today");
-  const [timeInterval, setTimeInterval] = useState(1); 
-  const { data: initialData, loading } = useFetchCandles(symbol, dateTime,timeInterval);
+  const { data: initialData, loading } = useFetchCandles(
+    symbol,
+    interval
+  );
 
   const chartInstanceRef = useRef(null);
   const candlestickSeriesRef = useRef(null);
-  const componentIsMounted = useRef(true);
 
   // Effect to create and initialize the chart ONLY when initialData is available
   useEffect(() => {
@@ -148,7 +154,7 @@ export default function ChartComponent({ symbol }) {
         resizeObserver.disconnect();
       };
     }
-  }, [initialData,timeInterval]);
+  }, [initialData, interval]);
 
   // Effect for handling real-time data updates (once initial data is loaded)
   useEffect(() => {
@@ -157,7 +163,7 @@ export default function ChartComponent({ symbol }) {
     }
 
     const updateChartData = async () => {
-      const { from, to } = convertToSeconds(dateTime);
+      const { from, to } = convertToSeconds(interval);
       const url = `https://primexbroker.com/api/trade/graph?symbol=${symbol}&from=${from}&to=${to}&type=${"minutes"}`;
 
       try {
@@ -168,7 +174,7 @@ export default function ChartComponent({ symbol }) {
         if (response?.data?.success) {
           const rawData = response?.data?.result?.answer;
           if (rawData?.length > 0) {
-            const processedData = createCandlesFromTicks(rawData,timeInterval);
+            const processedData = createCandlesFromTicks(rawData, interval);
             const lastDataPoint = processedData[processedData.length - 1];
 
             if (lastDataPoint?.time) {
@@ -184,7 +190,7 @@ export default function ChartComponent({ symbol }) {
     const intervalId = setInterval(updateChartData, 1000);
 
     return () => clearInterval(intervalId);
-  }, [symbol, dateTime, initialData,timeInterval]);
+  }, [symbol,  initialData, interval]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -195,49 +201,7 @@ export default function ChartComponent({ symbol }) {
   }
 
   return (
-    <div style={{ width: "100%", height: "96vh" }}>
-         <div style={{ display: "flex", justifyContent: "space-between", padding: "10px", backgroundColor: '#f5f5f5' }}>
-                {/* Time interval buttons */}
-                <div style={{ display: "flex", gap: "5px" }}>
-                    {graphTimeList.map(item => (
-                        <button
-                            key={item.interval}
-                            style={{
-                                padding: "8px 16px",
-                                border: "1px solid #ddd",
-                                borderRadius: "4px",
-                                backgroundColor: timeInterval === item.interval ? "#e0e0e0" : "white",
-                                cursor: "pointer",
-                                fontWeight: timeInterval === item.interval ? 'bold' : 'normal'
-                            }}
-                            onClick={() => setTimeInterval(item.interval)}
-                        >
-                            {item.label}
-                        </button>
-                    ))}
-                </div>
-                
-                {/* Date range buttons */}
-                {/* <div style={{ display: "flex", gap: "5px" }}>
-                    {graphDurationList?.map((item, index) => (
-                        <button
-                            key={index}
-                            style={{
-                                padding: "8px 16px",
-                                border: "1px solid #ddd",
-                                borderRadius: "4px",
-                                backgroundColor: dateTime === item.time ? "#e0e0e0" : "white",
-                                cursor: "pointer",
-                                fontWeight: dateTime === item.time ? 'bold' : 'normal'
-                            }}
-                            onClick={() => setDateTime(item.time)}
-                        >
-                            {item?.time}
-                        </button>
-                    ))}
-                </div> */}
-            </div>
-            
+    <div style={{ width: "100%", height: "100vh" }}>
       <div
         ref={chartContainerRef}
         style={{

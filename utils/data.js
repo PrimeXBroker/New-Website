@@ -21,61 +21,62 @@ export const phoneOptions = [
   },
 ];
 
-export const convertToSeconds = (filter, customDate) => {
+export const convertToSeconds = (interval) => {
   const now = new Date();
+console.log(interval,"interval",typeof interval);
 
   let fromDate;
-  let toDate = Math.floor(now.getTime() / 1000);
-
-  switch (filter) {
-    case "Minute":
-      fromDate = Math.floor(now.getTime() / 1000) - 60;
-      break;
-    case "5 Minutes":
-      fromDate = Math.floor(now.getTime() / 1000) - 5 * 60;
-      break;
-    case "15 Minutes":
-      fromDate = Math.floor(now.getTime() / 1000) - 15 * 60;
-      break;
-    case "30 Minutes":
-      fromDate = Math.floor(now.getTime() / 1000) - 30 * 60;
-      break;
-    case "Hour":
-      fromDate = Math.floor(now.getTime() / 1000) - 3600;
-      break;
-    case "4 Hours":
-      fromDate = Math.floor(now.getTime() / 1000) - 4 * 3600;
-      break;
-    case "Today":
-      fromDate = Math.floor(
-        new Date(now.setUTCHours(0, 0, 0, 0)).getTime() / 1000
-      );
-      toDate = Math.floor(
+  let toDate = Math.floor(
         new Date(now.setUTCHours(23, 59, 59, 999)).getTime() / 1000
       );
-      break;
-    case "Current Week":
-      const weekStart = new Date(now);
-      weekStart.setUTCDate(now.getUTCDate() - now.getUTCDay());
-      weekStart.setHours(0, 0, 0, 0);
-      fromDate = Math.floor(weekStart.getTime() / 1000);
-      break;
-    case "Current Month":
-      const monthStart = new Date(now.getUTCFullYear(), now.getUTCMonth(), 1);
-      fromDate = Math.floor(monthStart.getTime() / 1000);
-      break;
-    case "custom":
-      const from = new Date(customDate?.from);
-      const to = new Date(customDate?.to);
-      // Start of from day
-      fromDate = Math.floor(
-        new Date(from.setHours(0, 0, 0, 0)).getTime() / 1000
-      );
-      // End of to day
-      toDate = Math.floor(
-        new Date(to.setHours(23, 59, 59, 999)).getTime() / 1000
+  const fifteenDaysAgo = new Date(now);
+
+  switch (interval) {
+    case 1:
+        fromDate = Math.floor(
+        new Date(now.setUTCHours(0, 0, 0, 0)).getTime() / 1000
       );
       break;
+    case 5:
+         fromDate = Math.floor(
+        new Date(now.setUTCHours(0, 0, 0, 0)).getTime() / 1000
+      );
+      break;
+    case 15:
+        fifteenDaysAgo.setUTCDate(now.getUTCDate() - 15);
+        fifteenDaysAgo.setUTCHours(0, 0, 0, 0);
+        fromDate = Math.floor(fifteenDaysAgo.getTime() / 1000);
+      break;
+    case 30:
+        fifteenDaysAgo.setUTCDate(now.getUTCDate() - 15);
+        fifteenDaysAgo.setUTCHours(0, 0, 0, 0);
+        fromDate = Math.floor(fifteenDaysAgo.getTime() / 1000);
+      break;
+    case 60:
+        fifteenDaysAgo.setUTCDate(now.getUTCDate() - 15);
+        fifteenDaysAgo.setUTCHours(0, 0, 0, 0);
+        fromDate = Math.floor(fifteenDaysAgo.getTime() / 1000);
+      break;
+    case 240:
+        fifteenDaysAgo.setUTCDate(now.getUTCDate() - 15);
+        fifteenDaysAgo.setUTCHours(0, 0, 0, 0);
+        fromDate = Math.floor(fifteenDaysAgo.getTime() / 1000);
+      break;
+    case 1440:
+    fifteenDaysAgo.setUTCDate(now.getUTCDate() - 30);
+    fifteenDaysAgo.setUTCHours(0, 0, 0, 0);
+    fromDate = Math.floor(fifteenDaysAgo.getTime() / 1000);
+      break;
+    // case "Current Week":
+    //   const weekStart = new Date(now);
+    //   weekStart.setUTCDate(now.getUTCDate() - now.getUTCDay());
+    //   weekStart.setHours(0, 0, 0, 0);
+    //   fromDate = Math.floor(weekStart.getTime() / 1000);
+    //   break;
+    // case "Current Month":
+    //   const monthStart = new Date(now.getUTCFullYear(), now.getUTCMonth(), 1);
+    //   fromDate = Math.floor(monthStart.getTime() / 1000);
+    //   break;
     default:
       fromDate = 0;
       break;
