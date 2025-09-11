@@ -868,7 +868,13 @@
       "para_4": "Operar con Forex e Instrumentos Financieros Apalancados implica un riesgo significativo y puede resultar en la pérdida de tu capital invertido. No debes invertir más de lo que puedes permitirte perder y debes asegurarte de comprender completamente los riesgos involucrados.",
       "para_5": "Operar con CFDs y Opciones FX implica riesgo y podría resultar en la pérdida de tu capital.",
       "heading_6": "PrimeX Broker (Pty) Ltd",
-      "para_6": "con número de registro 2021/590477/07 y dirección de registro en SUITE NO 8, PRIMER PISO, KATHERINE AND WEST BUILDING, 114 WEST STREET, SANDTON, GAUTENG, 2196 Sudáfrica, está regulada por la Autoridad de Supervisión del Sector Financiero con número de licencia FSP 51864."
+      "para_6": "con número de registro 2021/590477/07 y dirección de registro en SUITE NO 8, PRIMER PISO, KATHERINE AND WEST BUILDING, 114 WEST STREET, SANDTON, GAUTENG, 2196 Sudáfrica, está regulada por la Autoridad de Supervisión del Sector Financiero con número de licencia FSP 51864.",
+      "heading_7": "PrimeX Capital Ltd",
+      "para_7": "con número de registro 2025-00584 y dirección registrada en Planta Baja, The Sotheby Building, Rodney Village, Rodney Bay, Gros-Islet, Santa Lucía, está incorporada bajo la Ley de Compañías Internacionales de Negocios de Santa Lucía.",
+      "heading_8": "PrimeX Broker (Pty) Ltd",
+      "para_8": "con número de registro 2021/590477/07 y dirección registrada en SUITE N.º 8 PRIMER PISO, KATHERINE AND WEST BUILDING, 114 WEST STREET, SANDTON, GAUTENG, 2196 Sudáfrica, está regulada por la Autoridad de Conducta del Sector Financiero con licencia número FSP 51864.",
+      "heading_9": "PrimeX Capital Ltd",
+      "para_9": "con número de registro 203687 GBC y dirección registrada en 4º Piso, Docks 4, Caudan, Port Louis, 11101, República de Mauricio, está regulada por la Comisión de Servicios Financieros de la República de Mauricio con una Licencia de Distribuidor de Inversiones con número de licencia GB23202141."
     },
     "logos": {
       "title": "Aceptamos:",
@@ -2600,7 +2606,12 @@
       "platform_query": "Plataforma/Productos",
       "trading_query": "Condiciones de trading",
       "liquidity_query": "Liquidez",
-      "competition_query": "Competencias"
+      "competition_query": "Competencias",
+      "select_entity": "Seleccionar entidad",
+      "entity_required_error": "¡La entidad es obligatoria!",
+      "lucia": "PrimeX Capital LTD - ST. Lucia",
+      "mauritius": "PrimeX Capital LTD - Mauritius FSC",
+      "south_africa": "PrimeX Broker (PTY) LTD - South Africa FSCA"
     },
     "globalLocation": {
       "title1": "Nuestras Ubicaciones ",

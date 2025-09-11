@@ -32,20 +32,14 @@ function ComplaintForm() {
 
   const handleOptionClick = (option) => {
     setSelectedOption(option.name);
-    formik.setFieldValue("qtype", option.name);
+    formik.setFieldValue("entity", option.name);
     setIsOpenDropdown(false);
   };
 
-  const questionTypes = [
-    { id: 1, name: t("general_inquiry"), value: "general" },
-    { id: 2, name: t("account_funding"), value: "account_funding" },
-    { id: 3, name: t("withdrawal_query"), value: "withdrawal_query" },
-    { id: 3, name: t("deposit_query"), value: "deposit_query" },
-    { id: 4, name: t("partnerships_query"), value: "partnerships_query" },
-    { id: 5, name: t("platform_query"), value: "platform_query" },
-    { id: 6, name: t("trading_query"), value: "trading_query" },
-    { id: 7, name: t("liquidity_query"), value: "liquidity_query" },
-    { id: 8, name: t("competition_query"), value: "competition_query" },
+  const entityTypes = [
+    { id: 1, name: t("lucia"), value: "lucia" },
+    { id: 2, name: t("mauritius"), value: "mauritius" },
+    { id: 3, name: t("south_africa"), value: "south_africa" },
   ];
 
   useEffect(() => {
@@ -74,7 +68,7 @@ function ComplaintForm() {
       email: "",
       contact: "",
       country: "",
-      qtype: "",
+      entity: "",
       message: "",
     },
     validationSchema: Yup.object({
@@ -94,7 +88,7 @@ function ComplaintForm() {
         .email(t("email_validation_error"))
         .required(t("email_required_error")),
       country: Yup.string().required(t("country_required_error")),
-      qtype: Yup.string().required(t("query_required_error")),
+      entity: Yup.string().required(t("query_required_error")),
       message: Yup.string().required(t("question_required_error")),
     }),
     validate: (values) => {
@@ -111,7 +105,7 @@ function ComplaintForm() {
         email: values.email,
         contact: values.contact,
         country: values.country,
-        qtype: values.qtype,
+        entity: values.entity,
         message: values.message,
       };
       try {
@@ -257,16 +251,16 @@ function ComplaintForm() {
             </div>
             <div className="w-full md:w-[48%] mb-3 md:mb-0">
               <label className="text-xs text-ts dark:text-ts-dark">
-                {t("query_category_label")}
+                {t("select_entity")}
                 <div
                   className={`text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark rounded-[4px] py-[16px] px-[12px] w-full flex justify-between items-center cursor-pointer text-base ${
-                    formik.touched.qtype && formik.errors.qtype
+                    formik.touched.entity && formik.errors.entity
                       ? "border border-rc dark:border-rc-dark"
                       : ""
                   }`}
                   onClick={() => setIsOpenDropdown(!isOpenDropdown)}
                 >
-                  <span>
+                  <span className="flex-1 min-w-0 truncate">
                     {selectedOption || t("query_category_placeholder")}
                   </span>
                   {isOpenDropdown ? (
@@ -277,7 +271,7 @@ function ComplaintForm() {
                 </div>
                 {isOpenDropdown && (
                   <ul className="absolute left-0 right-0 mt-2 bg-e1 dark:bg-e1-dark rounded-[4px] z-10 text-base">
-                    {questionTypes.map((option) => (
+                    {entityTypes.map((option) => (
                       <li
                         key={option.id}
                         className="py-[16px] px-[12px] cursor-pointer hover:bg-tm dark:hover:bg-tm-dark hover:text-p dark:hover:text-p-dark text-ts dark:text-ts-dark text-base"

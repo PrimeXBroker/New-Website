@@ -52,6 +52,11 @@ const MobileHeader = ({ locale }) => {
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
         : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
   });
+  const [selectedLocation, setSelectedLocation] = useState({
+    name: "St. Lucia",
+    code: "lc",
+    flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/lucia.png",
+  });
 
   let dropdownTimeout;
 
@@ -169,8 +174,48 @@ const MobileHeader = ({ locale }) => {
     setIsOpen(false);
   };
 
+  const locations = [
+    {
+      name: "St. Lucia",
+      code: "lc",
+      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/lucia.png",
+    },
+    {
+      name: "South Africa",
+      code: "za",
+      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/south-africa.png",
+    },
+    {
+      name: "Mauritius",
+      code: "mu",
+      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/mauritius.png",
+    },
+  ];
+
+  useEffect(() => {
+    const saved = localStorage.getItem("selectedLocation");
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        if (parsed?.name && parsed?.flag) setSelectedLocation(parsed);
+      } catch {}
+    } else {
+      localStorage.setItem(
+        "selectedLocation",
+        JSON.stringify(selectedLocation)
+      );
+    }
+  }, []);
+
+  const handleLocationPick = (loc) => {
+    setSelectedLocation(loc);
+    localStorage.setItem("selectedLocation", JSON.stringify(loc));
+    setActiveDropdown(null);
+    setIsOpen(false);
+  };
+
   return (
-    <header className="container w-full z-50 transition-all duration-300 block lg:hidden fixed top-0 left-0">
+    <header className="container w-full z-50 transition-all duration-300 block xl:hidden fixed top-0 left-0">
       <div
         className="fixed top-0 left-0 h-[4px] bg-pcp dark:bg-pcp-dark z-50"
         style={{ width: `${scrollProgress}%` }}
@@ -193,7 +238,6 @@ const MobileHeader = ({ locale }) => {
             />
           </LocaleLink>
         </div>
-
         <div className="flex gap-5">
           <div>
             <ul className=" h-full">
@@ -423,7 +467,7 @@ const MobileHeader = ({ locale }) => {
         </div>
       </div>
       <div
-        className={`fixed top-0 right-0 h-full w-full bg-cc dark:bg-cc-dark text-tm dark:text-tm-dark z-40 transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-full bg-p dark:bg-p-dark text-tm dark:text-tm-dark z-40 transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -672,16 +716,16 @@ const MobileHeader = ({ locale }) => {
             </div>
           </div>
         </div>
-        <div className="flex items-center gap-4 mt-6 mb-4 ps-[6%] pe-[5%]">
+        <div className="flex items-center justify-between gap-3 mt-6 mb-4 ps-[6%] pe-[5%]">
           <button
             onClick={() => window.open(getLoginUrl(locale))}
-            className="w-[30%] mb-2 py-3 rounded-lg font-bold flex items-center justify-center bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark"
+            className="w-full mb-2 py-3 rounded-md font-bold flex items-center justify-center bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark"
           >
             {t("login")}
           </button>
           <button
             onClick={handleRegisterClick}
-            className="w-[30%] mb-2 py-3 rounded-lg font-bold flex items-center justify-center bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark"
+            className="w-full mb-2 py-3 rounded-md font-bold flex items-center justify-center bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark"
           >
             {t("register")}
           </button>
@@ -1175,6 +1219,85 @@ const MobileHeader = ({ locale }) => {
             )}
           </div>
         </nav>
+        <div className="relative w-full pt-4 ps-[6%] pe-[5%]" dir="ltr">
+          <div className="w-full rounded-xl overflow-hidden bg-cc dark:bg-cc-dark border border-e1 dark:border-e1-dark">
+            <button
+              onClick={() =>
+                setActiveDropdown(activeDropdown === 10 ? null : 10)
+              }
+              className="w-full flex items-center justify-between p-4"
+            >
+              <span className="flex items-center gap-2">
+                <Image
+                  unoptimized
+                  width="18"
+                  height="18"
+                  src={selectedLocation.flag}
+                  alt={`${selectedLocation.name} flag`}
+                  className="rounded-full"
+                />
+                <span className="text-base text-tm dark:text-tm-dark">
+                  {selectedLocation.name}
+                </span>
+              </span>
+              {activeDropdown === 10 ? (
+                <div className="w-5 h-5 bg-tm dark:bg-tm-dark rounded-full flex items-center self-center justify-center">
+                  <FaChevronUp className="text-nw dark:text-nb text-xs" />
+                </div>
+              ) : (
+                <div className="w-5 h-5 bg-tm dark:bg-tm-dark rounded-full flex items-center self-center justify-center">
+                  <FaChevronDown className="text-nw dark:text-nb text-xs" />
+                </div>
+              )}
+            </button>
+            {activeDropdown === 10 && (
+              <div className="px-4 pb-4">
+                <ul className="w-full bg-e1 dark:bg-e1-dark border border-e2 dark:border-e2-dark p-2 rounded-lg">
+                  {locations.map((loc) => {
+                    const isActive = loc.code === selectedLocation.code;
+                    return (
+                      <li key={loc.code} className="mb-1 last:mb-0">
+                        <button
+                          onClick={() => handleLocationPick(loc)}
+                          className={`w-full flex items-center justify-between p-4 rounded-md text-base
+                            ${
+                              isActive
+                                ? "bg-e2 dark:bg-e2-dark border border-tl dark:border-tl-dark"
+                                : "hover:bg-e2 dark:hover:bg-e2-dark hover:border hover:border-tl dark:hover:border-tl-dark"
+                            }`}
+                        >
+                          <span className="flex items-center gap-2">
+                            <Image
+                              unoptimized
+                              width="18"
+                              height="18"
+                              src={loc.flag}
+                              alt={`${loc.name} flag`}
+                            />
+                            {loc.name}
+                          </span>
+                          {isActive && (
+                            <div className="w-4 h-4 bg-tm dark:bg-tm-dark rounded-full flex items-center self-center justify-center">
+                              <svg
+                                viewBox="0 0 20 20"
+                                width="14"
+                                height="14"
+                                className="fill-current text-nw dark:text-nb"
+                                aria-hidden="true"
+                              >
+                                <path d="M7.629 14.314l-3.95-3.95 1.414-1.414 2.536 2.536 6.364-6.364 1.414 1.414z" />
+                              </svg>
+                            </div>
+                          )}
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
       {isOpen && (
         <div
