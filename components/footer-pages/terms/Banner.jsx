@@ -44,7 +44,7 @@ const Banner = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-x-4">
             <a
-              href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/assets/PDF/terms/PrimeX_Capital_Terms_of_Business.pdf"
+              href="https://primexcapital.s3.eu-north-1.amazonaws.com/website/PDF/PrimeX_Capital_Terms_Conditions.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="font-bold py-4 sm:py-3 sm:w-1/2 rounded-lg flex justify-center items-center bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark mb-5 sm:mb-0 cursor-pointer"
@@ -71,7 +71,7 @@ const Banner = () => {
             <a
               onClick={() =>
                 handleDownload(
-                  "/assets/pdf/PrimeX_Capital_Terms_of_Business.pdf",
+                  "/assets/pdf/PrimeX_Capital_Terms_Conditions.pdf",
                   "PrimeX Capital Terms of Business"
                 )
               }

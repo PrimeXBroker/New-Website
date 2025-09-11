@@ -123,7 +123,12 @@ export default function ChartComponent({ symbol, interval, mode }) {
           vertLines: { color: colors.grid },
           horzLines: { color: colors.grid },
         },
-        timeScale: { borderColor: colors.border, barSpacing: 10, rightOffset: 0 },
+        timeScale: {
+          borderColor: colors.border,
+          barSpacing: 10,
+          rightOffset: 0,
+          timeVisible: true
+        },
         priceScale: { borderColor: colors.border },
       });
 
