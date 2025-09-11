@@ -37,6 +37,13 @@ export default function SignUpStep({
   const t = useTranslations("registration.signUpStep");
   const t1 = useTranslations("registration.personalInfoStep");
   const t2 = useTranslations("registration.createPassword");
+  const t3 = useTranslations("contactUs.suggestionForm");
+
+  const entityOptions = [
+    { label: t3("lucia"), value: "lucia" },
+    { label: t3("mauritius"), value: "mauritius" },
+    { label: t3("south_africa"), value: "south_africa" },
+  ];
 
   const [countries, setCountries] = useState([]);
   const [cities, setCities] = useState([]);
@@ -54,7 +61,12 @@ export default function SignUpStep({
     language: "",
     password: "",
   });
+  const [selectedEntity, setSelectedEntity] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const handleEntityChange = (selectedOption) => {
+    setSelectedEntity(selectedOption); // Update selected entity
+  };
 
   // useEffect(() => {
   //   const countriesList = Country.getAllCountries().map((country) => ({
@@ -544,6 +556,18 @@ export default function SignUpStep({
               {errors?.language}
             </p>
           )}
+        </div>
+      </div>
+      <div className="mb-3">
+        <div className="w-full">
+          <CustomSelectDropdown
+            label={t3("select_entity")}
+            options={entityOptions}
+            selected={selectedEntity}
+            onChange={handleEntityChange}
+            searchInput={false}
+            flag={false}
+          />
         </div>
       </div>
       <div className="flex items-center justify-between gap-2 mb-3">
