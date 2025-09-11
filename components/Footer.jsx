@@ -31,6 +31,89 @@ const Footer = () => {
   const locale = useLocale();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isRegisterPage, setIsRegisterPage] = useState(false);
+  const [selectedLocation, setSelectedLocation] = useState(null);
+  const [footerNotice, setFooterNotice] = useState([]);
+
+  const getSelectedLocation = () => {
+    const savedLocation = localStorage.getItem("selectedLocation");
+    if (savedLocation) {
+      try {
+        return JSON.parse(savedLocation);
+      } catch (e) {
+        console.error("Error retrieving location from localStorage:", e);
+      }
+    }
+    return null;
+  };
+
+  useEffect(() => {
+    const initialLocation = getSelectedLocation();
+    if (initialLocation) {
+      setSelectedLocation(initialLocation);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (selectedLocation) {
+      if (selectedLocation.name === "St. Lucia") {
+        setFooterNotice([
+          {
+            heading: t("footerNotice.heading_7"),
+            paragraph: t("footerNotice.para_7"),
+          },
+          {
+            heading: t("footerNotice.heading_3"),
+            paragraph: t("footerNotice.para_3"),
+          },
+          {
+            heading: t("footerNotice.heading_4"),
+            paragraph: t("footerNotice.para_4"),
+          },
+        ]);
+      } else if (selectedLocation.name === "South Africa") {
+        setFooterNotice([
+          {
+            heading: t("footerNotice.heading_8"),
+            paragraph: t("footerNotice.para_8"),
+          },
+          {
+            heading: t("footerNotice.heading_3"),
+            paragraph: t("footerNotice.para_3"),
+          },
+          {
+            heading: t("footerNotice.heading_4"),
+            paragraph: t("footerNotice.para_4"),
+          },
+        ]);
+      } else if (selectedLocation.name === "Mauritius") {
+        setFooterNotice([
+          {
+            heading: t("footerNotice.heading_9"),
+            paragraph: t("footerNotice.para_9"),
+          },
+          {
+            heading: t("footerNotice.heading_3"),
+            paragraph: t("footerNotice.para_3"),
+          },
+          {
+            heading: t("footerNotice.heading_4"),
+            paragraph: t("footerNotice.para_4"),
+          },
+        ]);
+      }
+    }
+  }, [selectedLocation, t]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const updatedLocation = getSelectedLocation();
+      if (updatedLocation && updatedLocation.name !== selectedLocation?.name) {
+        setSelectedLocation(updatedLocation);
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [selectedLocation]);
 
   useEffect(() => {
     setMounted(true);
@@ -154,24 +237,28 @@ const Footer = () => {
     },
   ];
 
-  const footerNotice = [
-    {
-      heading: t("footerNotice.heading_1"),
-      paragraph: t("footerNotice.para_1"),
-    },
-    {
-      heading: t("footerNotice.heading_6"),
-      paragraph: t("footerNotice.para_6"),
-    },
-    {
-      heading: t("footerNotice.heading_3"),
-      paragraph: t("footerNotice.para_3"),
-    },
-    {
-      heading: t("footerNotice.heading_4"),
-      paragraph: t("footerNotice.para_4"),
-    },
-  ];
+  // const footerNotice = [
+  //   {
+  //     heading: t("footerNotice.heading_6"),
+  //     paragraph: t("footerNotice.para_6"),
+  //   },
+  //   {
+  //     heading: t("footerNotice.heading_7"),
+  //     paragraph: t("footerNotice.para_7"),
+  //   },
+  //   {
+  //     heading: t("footerNotice.heading_8"),
+  //     paragraph: t("footerNotice.para_8"),
+  //   },
+  //   {
+  //     heading: t("footerNotice.heading_3"),
+  //     paragraph: t("footerNotice.para_3"),
+  //   },
+  //   {
+  //     heading: t("footerNotice.heading_4"),
+  //     paragraph: t("footerNotice.para_4"),
+  //   },
+  // ];
 
   const paymentOptions = [
     {

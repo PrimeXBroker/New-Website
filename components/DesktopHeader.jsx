@@ -47,6 +47,12 @@ const DesktopHeader = ({ locale }) => {
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
         : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
   });
+  const [selectedLocation, setSelectedLocation] = useState({
+    name: "St. Lucia",
+    code: "lc",
+    flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/lucia.png",
+  });
+
   const router = useRouter();
   let dropdownTimeout;
 
@@ -146,9 +152,48 @@ const DesktopHeader = ({ locale }) => {
     router.push(url);
   };
 
+  const locations = [
+    {
+      name: "St. Lucia",
+      code: "lc",
+      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/lucia.png",
+    },
+    {
+      name: "South Africa",
+      code: "za",
+      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/south-africa.png",
+    },
+    {
+      name: "Mauritius",
+      code: "mu",
+      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/mauritius.png",
+    },
+  ];
+
+  useEffect(() => {
+    const saved = localStorage.getItem("selectedLocation");
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        if (parsed?.name && parsed?.flag) setSelectedLocation(parsed);
+      } catch {}
+    } else {
+      localStorage.setItem(
+        "selectedLocation",
+        JSON.stringify(selectedLocation)
+      );
+    }
+  }, []);
+
+  const handleLocationPick = (loc) => {
+    setSelectedLocation(loc);
+    localStorage.setItem("selectedLocation", JSON.stringify(loc));
+    closeDropdown();
+  };
+
   return (
     <header
-      className={`w-full z-50 transition-all duration-300 hidden lg:block ${
+      className={`w-full z-50 transition-all duration-300 hidden xl:block ${
         isSticky ? "fixed top-0 left-0" : "absolute top-0 left-0"
       }`}
     >
@@ -175,7 +220,15 @@ const DesktopHeader = ({ locale }) => {
           </LocaleLink>
         </div>
         <nav className="flex items-center h-full">
-          <ul className="flex gap-[16px] h-full">
+          <ul
+            className={`flex h-full ${
+              locale === "ar" || locale === "ku" || locale === "ps"
+                ? "gap-4"
+                : locale === "pt"
+                ? "gap-0"
+                : "gap-3"
+            }`}
+          >
             {/* <li className="flex items-center h-full">
               <LocaleLink href="/" className="text-tm dark:text-tm-dark text-[.8em]">
                 {t("home")}
@@ -1001,6 +1054,69 @@ const DesktopHeader = ({ locale }) => {
                       <span className="ml-[5px]">Português</span>
                     </Link>
                   </li>
+                </ul>
+              )}
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul className="flex gap-[16px] h-full">
+            <li
+              className="relative flex items-center h-full"
+              onMouseEnter={() => openDropdown(9)}
+              onMouseLeave={closeDropdown}
+            >
+              <button className="text-tm dark:text-tm-dark text-[.8em] flex items-center">
+                <Image
+                  unoptimized={true}
+                  width="15"
+                  height="15"
+                  src={selectedLocation.flag}
+                  alt={`${selectedLocation.name} flag`}
+                />
+                <span
+                  className={`${
+                    locale === "ar" || locale === "ps" || locale === "ku"
+                      ? "mr-[5px]"
+                      : "ml-[5px]"
+                  }`}
+                >
+                  {selectedLocation.name}
+                </span>
+                <svg
+                  className={`fill-current h-4 w-4 ${
+                    locale === "ar" || locale === "ps" || locale === "ku"
+                      ? "mr-1"
+                      : "ml-1"
+                  }`}
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                </svg>
+              </button>
+              {activeDropdown === 9 && (
+                <ul
+                  className="absolute top-full mt-[20px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] min-w-[170px] rounded-[6px] z-50"
+                  dir="ltr"
+                >
+                  {locations.map((loc) => (
+                    <li key={loc.code}>
+                      <button
+                        onClick={() => handleLocationPick(loc)}
+                        className="w-full text-left px-4 py-2 text-tm dark:text-tm-dark text-[.8em] hover:text-nb dark:hover:text-nb-dark hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
+                      >
+                        <Image
+                          unoptimized={true}
+                          width="15"
+                          height="15"
+                          src={loc.flag}
+                          alt={`${loc.name} flag`}
+                        />
+                        <span className="ml-[8px]">{loc.name}</span>
+                      </button>
+                    </li>
+                  ))}
                 </ul>
               )}
             </li>
