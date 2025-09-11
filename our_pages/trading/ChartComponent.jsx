@@ -123,6 +123,7 @@ export default function ChartComponent({ symbol, interval, mode }) {
           borderColor: colors.border,
           barSpacing: 10,
           rightOffset: 0,
+          timeVisible: true
         },
         priceScale: { borderColor: colors.border },
       });
