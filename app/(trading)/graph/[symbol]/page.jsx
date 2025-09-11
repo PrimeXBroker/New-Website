@@ -6,7 +6,7 @@ import React from "react";
 const Graph = async ({ params,searchParams }) => {
   const { symbol } = params;
   const {interval,mode} = searchParams
-  console.log(symbol, "params");
+  console.log(mode, "mode");
 
 
   return <GraphComp symbol={symbol} interval={parseInt(interval || 1)} mode={mode}/>;

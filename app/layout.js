@@ -1,4 +1,5 @@
 import ReduxProvider from "@/redux/ReduxProvider";
+import "./globals.css";
 
 export default async function LocaleLayout({ children, params: { locale } }) {
   return (
