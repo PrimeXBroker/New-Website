@@ -2607,7 +2607,12 @@
       "platform_query": "Plataforma/Produtos",
       "trading_query": "Condições de Negociação",
       "liquidity_query": "Liquidez",
-      "competition_query": "Competições"
+      "competition_query": "Competições",
+      "select_entity": "Selecionar Entidade",
+      "entity_required_error": "a entidade é obrigatória!",
+      "lucia": "PrimeX Capital LTD - ST. Lucia",
+      "mauritius": "PrimeX Capital LTD - Mauritius FSC",
+      "south_africa": "PrimeX Broker (PTY) LTD - South Africa FSCA"
     },
     "globalLocation": {
       "title1": "Nossas Localizações Globais",

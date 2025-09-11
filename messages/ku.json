@@ -2521,7 +2521,12 @@
       "platform_query": "پلاتفۆرم/بەرهەمەکان",
       "trading_query": "مەرجەکانی ئاڵوگۆڕکردن",
       "liquidity_query": "نەختینە",
-      "competition_query": "پێشبڕکێکان"
+      "competition_query": "پێشبڕکێکان",
+      "select_entity": "هەڵبژاردنی یەکە",
+      "entity_required_error": "پێویستە یەکە هەڵبژێریت!",
+      "lucia": "PrimeX Capital LTD - ST. Lucia",
+      "mauritius": "PrimeX Capital LTD - Mauritius FSC",
+      "south_africa": "PrimeX Broker (PTY) LTD - South Africa FSCA"
     },
     "globalLocation": {
       "title1": "ناونیشانە",

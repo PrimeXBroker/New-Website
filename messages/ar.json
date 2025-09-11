@@ -2447,7 +2447,12 @@
       "platform_query": "المنصة/المنتجات",
       "trading_query": "شروط التداول",
       "liquidity_query": "السيولة",
-      "competition_query": "المسابقات"
+      "competition_query": "المسابقات",
+      "select_entity": "اختر الكيان",
+      "entity_required_error": "الكيان مطلوب!",
+      "lucia": "PrimeX Capital LTD - ST. Lucia",
+      "mauritius": "PrimeX Capital LTD - Mauritius FSC",
+      "south_africa": "PrimeX Broker (PTY) LTD - South Africa FSCA"
     },
     "globalLocation": {
       "title1": "مواقعنا",

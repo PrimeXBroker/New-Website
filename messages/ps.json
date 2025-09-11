@@ -2606,7 +2606,12 @@
       "platform_query": "پلیټفارم/محصولات",
       "trading_query": "د سوداګرۍ شرایط",
       "liquidity_query": "مائعیت",
-      "competition_query": "سیالۍ"
+      "competition_query": "سیالۍ",
+      "select_entity": "نهاد وټاکئ",
+      "entity_required_error": "نهاد اړین دی!",
+      "lucia": "PrimeX Capital LTD - ST. Lucia",
+      "mauritius": "PrimeX Capital LTD - Mauritius FSC",
+      "south_africa": "PrimeX Broker (PTY) LTD - South Africa FSCA"
     },
     "globalLocation": {
       "title1": "زموږ نړیوال",
