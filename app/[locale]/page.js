@@ -22,7 +22,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("home.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/World+map+hero+bg.webp",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/X-Icon.png",
           width: 1200,
           height: 630,
           alt: t("home.metaData.title"),
