@@ -251,16 +251,29 @@ export default function ChartComponent({ symbol, interval, mode }) {
   }, [symbol, initialData, interval]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div
+        className="flex justify-center items-center min-h-[100vh]"
+        style={{
+          background: colors.background,
+        }}
+      >
+        <div className="ellipsis">
+          <span className="dot text-pcp dark:text-pcp-dark">.</span>
+          <span className="dot text-pcp dark:text-pcp-dark">.</span>
+          <span className="dot text-pcp dark:text-pcp-dark">.</span>
+        </div>
+      </div>
+    );
   }
 
   if (!initialData || initialData.length === 0) {
     return (
       <div
+        className="flex justify-center items-center min-h-[100vh] font-montserrat font-medium text-base"
         style={{
-          width: "100%",
-          height: "100vh",
           background: colors.background,
+          color: mode === "light" ? "#111111" : "#F9F9F9",
         }}
       >
         No data to display.
@@ -269,7 +282,9 @@ export default function ChartComponent({ symbol, interval, mode }) {
   }
 
   return (
-    <div style={{ width: "100%", height: "100vh" }}>
+    <div
+      style={{ width: "100%", height: "100vh", background: colors.background }}
+    >
       <div
         ref={chartContainerRef}
         style={{
