@@ -2555,6 +2555,17 @@
       "title": "Fale Conosco | PrimeX Capital",
       "description": "Entre em contato com a PrimeX Capital para quaisquer dúvidas ou suporte. Estamos aqui para ajudá-lo com suas necessidades de negociação. Clique para entrar em contato e obter ajuda hoje mesmo!"
     },
+    "bannerSuggestion": {
+      "main_title": "Fale Conosco",
+      "support_title": "Suporte Multilíngue 24/7",
+      "connect_title": "Conecte-se com os Especialistas Globais da PrimeX Capital",
+      "help_center": "Centro de Ajuda",
+      "copy_email": "Copiar Email",
+      "live_chat": "Chat Ao Vivo",
+      "suggestion_form_title": "Sugestão",
+      "complaint_form_title": "Reclamação",
+      "email_copied_message": "Email Copiado!"
+    },
     "banner": {
       "main_title": "Fale Conosco",
       "support_title": "Suporte Multilíngue 24/7",

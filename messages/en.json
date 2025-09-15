@@ -2555,6 +2555,17 @@
       "title": "Contact Us | PrimeX Capital",
       "description": "Get in touch with PrimeX Capital for any inquiries or support. We're here to assist you with your trading needs. Click to contact us and get help today!"
     },
+    "bannerSuggestion": {
+      "main_title": "Contact us",
+      "support_title": "24/7 Multilingual Support",
+      "connect_title": "Connect with PrimeX Capital’s Global Experts",
+      "help_center": "Help Center",
+      "copy_email": "Copy Email",
+      "live_chat": "Live Chat",
+      "suggestion_form_title": "Suggestion",
+      "complaint_form_title": "Complaint",
+      "email_copied_message": "Email Copied!"
+    },
     "banner": {
       "main_title": "Contact us",
       "support_title": "24/7 Multilingual Support",
