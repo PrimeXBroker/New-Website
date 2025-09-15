@@ -41,13 +41,13 @@ const ContactFormWrapper = ({ active, setActive }) => {
     },
     {
       country: "South Africa",
-      complianceEmail: "FSCA_compliance@primexcapital.com",
+      complianceEmail: "SA_compliance@primexcapital.com",
       flagUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/south-africa.png",
     },
     {
       country: "Mauritius",
-      complianceEmail: "FSC_compliance@primexcapital.com",
+      complianceEmail: "MAU_compliance@primexcapital.com",
       flagUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/mauritius.png",
     },
