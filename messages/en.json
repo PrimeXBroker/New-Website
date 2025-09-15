@@ -2558,13 +2558,11 @@
     "banner": {
       "main_title": "Contact us",
       "support_title": "24/7 Multilingual Support",
-      "connect_title": "Connect with PrimeX Capital’s Global Experts",
-      "help_center": "Help Center",
-      "copy_email": "Copy Email",
+      "connect_title": "For any complaints, you may reach us via below emails for each regulatory by entity wise:-",
+      "contact_via_email": "Contact us via Email",
       "live_chat": "Live Chat",
       "suggestion_form_title": "Suggestion",
-      "complaint_form_title": "Complaint",
-      "email_copied_message": "Email Copied!"
+      "complaint_form_title": "Complaint"
     },
     "suggestionForm": {
       "title": "Write to Us",

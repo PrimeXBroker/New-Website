@@ -2558,9 +2558,8 @@
     "banner": {
       "main_title": "Fale Conosco",
       "support_title": "Suporte Multilíngue 24/7",
-      "connect_title": "Conecte-se com os Especialistas Globais da PrimeX Capital",
-      "help_center": "Centro de Ajuda",
-      "copy_email": "Copiar Email",
+      "connect_title": "Para qualquer reclamação, você pode nos contatar através dos e-mails abaixo, de acordo com cada entidade regulatória:-",
+      "contact_via_email": "Contate-nos por e-mail",
       "live_chat": "Chat Ao Vivo",
       "suggestion_form_title": "Sugestão",
       "complaint_form_title": "Reclamação",
