@@ -3429,5 +3429,22 @@
       "card3_li2": "زۆرجار بڵاوبوونەوەی جێگیری هەیە کە بەبێ گوێدانە بارودۆخی بازاڕ بە نەگۆڕی دەمێنێتەوە.",
       "card3_li3": "بە شێوەیەکی گشتی مامەڵە لەگەڵ پۆستەکانی بازرگانی خۆیدا ناکات."
     }
+  },
+  "tutorials": {
+    "metaData": {
+      "title": "",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "Expert",
+      "title_2": "Video Lessons",
+      "subtitle": "Stop guessing, start trading smarter",
+      "description": "Curated trading videos from PrimeX Capital. Strategies, tools, and insights to help you trade smarter."
+    },
+    "tradingTutorials": {
+      "title_1": " Trading",
+      "title_2": "Courses & Tutorials",
+      "description": " Watch curated video lessons covering strategies, tools, and real market insights — all in one place."
+    }
   }
 }

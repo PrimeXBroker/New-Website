@@ -3512,5 +3512,22 @@
       "card3_li2": "A menudo tiene spreads fijos que no cambian independientemente de las condiciones del mercado.",
       "card3_li3": "Generalmente no opera con sus propias posiciones de trading."
     }
+  },
+  "tutorials": {
+    "metaData": {
+      "title": "",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "Expert",
+      "title_2": "Video Lessons",
+      "subtitle": "Stop guessing, start trading smarter",
+      "description": "Curated trading videos from PrimeX Capital. Strategies, tools, and insights to help you trade smarter."
+    },
+    "tradingTutorials": {
+      "title_1": " Trading",
+      "title_2": "Courses & Tutorials",
+      "description": " Watch curated video lessons covering strategies, tools, and real market insights — all in one place."
+    }
   }
 }

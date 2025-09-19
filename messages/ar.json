@@ -3354,5 +3354,22 @@
       "card3_li2": "غالباً ما يكون للسبريد أسعار ثابتة.",
       "card3_li3": "غالبًا لا يتعامل مع مراكز التداول الموثوقة."
     }
+  },
+  "tutorials": {
+    "metaData": {
+      "title": "",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "Expert",
+      "title_2": "Video Lessons",
+      "subtitle": "Stop guessing, start trading smarter",
+      "description": "Curated trading videos from PrimeX Capital. Strategies, tools, and insights to help you trade smarter."
+    },
+    "tradingTutorials": {
+      "title_1": " Trading",
+      "title_2": "Courses & Tutorials",
+      "description": " Watch curated video lessons covering strategies, tools, and real market insights — all in one place."
+    }
   }
 }
