@@ -5,7 +5,7 @@ export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });
-  const url = `https://www.primexcapital.com/${locale}/tutorials`;
+  const url = `https://www.primexcapital.com/${locale}/forex-in-three-steps`;
 
   return {
     title: t("tutorials.metaData.title"),
@@ -47,7 +47,7 @@ const page = () => {
           <link
             key={item.lng}
             rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/tutorials`}
+            href={`https://www.primexcapital.com/${item.url}/forex-in-three-steps`}
             hreflang={item.lng}
           />
         ))}

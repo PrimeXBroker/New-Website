@@ -3361,15 +3361,15 @@
       "description": ""
     },
     "hero": {
-      "title_1": "Expert",
-      "title_2": "Video Lessons",
-      "subtitle": "Stop guessing, start trading smarter",
-      "description": "Curated trading videos from PrimeX Capital. Strategies, tools, and insights to help you trade smarter."
+      "title_1": "تعلم من الخبراء",
+      "title_2": "وتداول بثقة",
+      "subtitle": "طور مهاراتك في التداول",
+      "description": "برايم اكس كابيتال تقدم لك كورس تعليمي احترافي متكامل لتداول أوضح وأسهل. اكتشف استراتيجيات عملية، أتقن الأدوات، واكتسب خبرة مباشرة من السوق."
     },
     "tradingTutorials": {
-      "title_1": " Trading",
-      "title_2": "Courses & Tutorials",
-      "description": " Watch curated video lessons covering strategies, tools, and real market insights — all in one place."
+      "title_1": "تعلم الفوركس ",
+      "title_2": "في ثلاث خطوات",
+      "description": "رحلة تعليمية متكاملة تبدأ من الصفر للإحتراف تشمل الاستراتيجيات، الأدوات، وأمثلة واقعية من السوق لتتداول بكفاءة أكبر، كل هذا بمكان واحد."
     }
   }
 }

@@ -73,28 +73,26 @@ const TutorialVideos = () => {
   };
 
   return (
-    <section className="bg-p dark:bg-p-dark text-tm dark:text-tm-dark py-16 sm:py-28">
+    <section
+      className="bg-p dark:bg-p-dark text-tm dark:text-tm-dark py-16 sm:py-28"
+      dir={locale === "ar" ? "rtl" : "ltr"}
+    >
       <div className="container">
         <div className="text-center md:text-center mb-10">
-          <h2 className="text-tm dark:text-tm-dark text-3xl sm:text-3xl lg:text-5xl font-bold uppercase">
+          <h2 className="text-pcp dark:text-pc-dark text-3xl sm:text-3xl lg:text-4xl font-bold uppercase">
             {t("title_1")}
-            <span className="text-pcp dark:text-pcp-dark uppercase sm:hidden">
-              {t("title_2")}
-            </span>
+            <span className="text-tm dark:text-tm-dark">{t("title_2")}</span>
           </h2>
-          <h2 className="text-pcp dark:text-pcp-dark text-3xl sm:text-3xl lg:text-4xl font-bold uppercase hidden sm:block">
-            {t("title_2")}
-          </h2>
-          <p className="text-sm sm:text-base lg:text-lg mt-2 md:w-[540px] mx-auto text-ts dark:text-ts-dark">
+          <p className="text-sm sm:text-base lg:text-lg mt-2 md:w-[75%] mx-auto text-ts dark:text-ts-dark">
             {t("description")}
           </p>
         </div>
-        <div className="flex flex-wrap md:flex-nowrap justify-center bg-cc dark:bg-cc-dark border border-e2 dark:border-e2-dark mb-10 rounded-lg p-2 gap-y-2">
+        <div className="w-full flex flex-wrap md:flex-nowrap justify-center bg-cc dark:bg-cc-dark border border-e2 dark:border-e2-dark mb-10 rounded-lg p-2 gap-y-2">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => handleTabChange(cat.id)}
-              className={`w-1/2 md:w-1/4 text-sm sm:text-base font-normal rounded-[5px] px-2 md:px-4 py-2 md:py-3 ${
+              className={`w-1/2 md:w-auto md:flex-1 text-sm sm:text-base font-normal rounded-[5px] px-2 md:px-4 py-2 md:py-3 ${
                 activeTab === cat.id
                   ? "bg-tm dark:bg-tm-dark text-nw dark:text-nb"
                   : "bg-transparent text-tm dark:text-tm-dark"
@@ -115,9 +113,12 @@ const TutorialVideos = () => {
         ) : (
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {videos.map((video) => (
-              <div
+              <a
                 key={video.id}
-                className="relative overflow-hidden bg-e1 dark:bg-e1-dark border border-e2 dark:border-e2-dark rounded-[20px] p-[6px]"
+                data-vbtype="youtube"
+                data-autoplay="true"
+                href={`https://youtu.be/${video.videoId}`}
+                className="video-vemo-icon venobox vbox-item relative overflow-hidden bg-e1 dark:bg-e1-dark border border-e2 dark:border-e2-dark rounded-[20px] p-[6px]"
               >
                 <div className="relative overflow-hidden h-[266px] rounded-2xl">
                   <Image
@@ -133,14 +134,9 @@ const TutorialVideos = () => {
                       : video.category.titleEn}
                   </span>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <a
-                      data-vbtype="youtube"
-                      data-autoplay="true"
-                      href={`https://www.youtube.com/watch?v=${video.videoId}`}
-                      className="video-vemo-icon flex justify-center items-center venobox vbox-item rounded-full bg-nw dark:bg-nw-dark border-3 border-nw dark:border-nw-dark"
-                    >
+                    <div className="flex justify-center items-center rounded-full bg-nw dark:bg-nw-dark border-3 border-nw dark:border-nw-dark">
                       <BsPlayCircleFill className="text-5xl text-tl dark:text-tl-dark" />
-                    </a>
+                    </div>
                   </div>
                 </div>
                 <div className="bg-e2 dark:bg-e2-dark border border-tl dark:border-tl-dark p-4 rounded-2xl mt-2">
@@ -151,9 +147,9 @@ const TutorialVideos = () => {
                     <span className="text-ts dark:text-ts-dark font-medium text-base lg:text-sm xl:text-base">
                       {locale === "ar" ? "المبتدئين" : "Beginners"}
                     </span>
-                    <div dir="ltr">
+                    <div>
                       <span className="text-ts dark:text-ts-dark font-medium text-base lg:text-sm xl:text-base">
-                        {moment(video.createdOn).fromNow()}
+                        {video.duration}
                       </span>
                       <span className="text-ts dark:text-ts-dark mx-2">•</span>
                       <span className="text-ts dark:text-ts-dark font-medium text-base lg:text-sm xl:text-base">
@@ -162,7 +158,7 @@ const TutorialVideos = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         )}

@@ -1,13 +1,17 @@
 "use client";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
 const Hero = () => {
+  const locale = useLocale();
   const t = useTranslations("tutorials.hero");
 
   return (
-    <section className="bg-p dark:bg-p-dark pt-28 sm:pt-28">
+    <section
+      className="bg-p dark:bg-p-dark pt-28 sm:pt-32"
+      dir={locale === "ar" ? "rtl" : "ltr"}
+    >
       <div className="container">
         <div className="grid grid-cols-12 items-center md:py-10 lg:py-0">
           <div className="col-span-12 md:col-span-6 text-center md:text-start">
@@ -16,10 +20,10 @@ const Hero = () => {
             >
               {t("subtitle")}
             </div>
-            <h1 className="text-tm dark:text-tm-dark font-semibold text-4xl lg:text-6xl my-3">
+            <h1 className="text-tm dark:text-tm-dark font-semibold text-4xl lg:text-5xl my-3">
               {t("title_1")}
             </h1>
-            <h2 className="text-pcp dark:text-pcp-dark font-semibold text-4xl lg:text-6xl my-3">
+            <h2 className="text-pcp dark:text-pcp-dark font-semibold text-4xl lg:text-5xl my-3">
               {t("title_2")}
             </h2>
             <p
