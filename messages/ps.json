@@ -2554,12 +2554,22 @@
       "title": "موږ سره اړیکه ونیسئ | پرایم ایکس کپیتال",
       "description": "د هر ډول پوښتنو یا ملاتړ لپاره له پرایم ایکس کپیتال سره اړيکه ونيزئ. موږ دلته يو چې ستاسو د سوداګرۍ اړتياو سره مرسته وکړو. د تماس لپاره دلته کليک وکړئ او نن مرسته ترلاسه کړئ!"
     },
-    "banner": {
+    "bannerSuggestion": {
       "main_title": "موږ سره اړیکه ونیسئ",
       "support_title": "24/7 څو ژبني ملاتړ",
       "connect_title": "د پرایم ایکس کپیتال نړیوالو متخصصینو سره اړیکه ونیسئ",
       "help_center": "مرستې مرکز",
       "copy_email": "ایمیل کاپي کړئ",
+      "live_chat": "ژوندی چټ",
+      "suggestion_form_title": "سفارش",
+      "complaint_form_title": "شکایت",
+      "email_copied_message": "ایمیل کاپي شو!"
+    },
+    "banner": {
+      "main_title": "موږ سره اړیکه ونیسئ",
+      "support_title": "24/7 څو ژبني ملاتړ",
+      "connect_title": "د هر ډول شکایتونو لپاره، تاسو کولی شئ موږ سره د هر تنظیمي ادارې لپاره لاندې بریښنالیکونو له لارې اړیکه ونیسئ:",
+      "contact_via_email": "زموږ سره د بریښنالیک له لارې اړیکه ونیسئ",
       "live_chat": "ژوندی چټ",
       "suggestion_form_title": "سفارش",
       "complaint_form_title": "شکایت",
@@ -3501,6 +3511,23 @@
       "card3_li1": "نرخونه ټاکي او د سوداګرۍ پروسه اداره کوي.",
       "card3_li2": "ډیری وختونه ثابت سپریډونه لري چې د بازار شرایطو ته په پام سره بدل نه پاتې کیږي.",
       "card3_li3": "عموما د خپلو سوداګریزو پوستونو سره معامله نه کوي."
+    }
+  },
+  "tutorials": {
+    "metaData": {
+      "title": "",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "Learn from Experts",
+      "title_2": "Trade with Confidence",
+      "subtitle": "Level Up Your Trading Skills",
+      "description": "PrimeX Capital brings you professional video courses designed to make trading clearer and smarter. Discover strategies, master the tools, and gain real insights from the markets."
+    },
+    "tradingTutorials": {
+      "title_1": " Learn forex ",
+      "title_2": "in 3 steps",
+      "description": "Access an all-in-one learning journey that guides you from beginner to pro, with strategies, tools, and real market examples designed to make your trading more effective — all in one place."
     }
   }
 }

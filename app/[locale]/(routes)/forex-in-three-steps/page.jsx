@@ -1,15 +1,15 @@
-import ECNBrokerWrapper from "@/our_pages/global-ecn-broker/ECNBrokerWrapper";
+import TutorialsWrapper from "@/our_pages/tutorials/TutorialsWrapper";
 import { createTranslator } from "next-intl";
 
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });
-  const url = `https://www.primexcapital.com/${locale}/ecn-broker`;
+  const url = `https://www.primexcapital.com/${locale}/forex-in-three-steps`;
 
   return {
-    title: t("ecnBroker.metaData.title"),
-    description: t("ecnBroker.metaData.description"),
+    title: t("tutorials.metaData.title"),
+    description: t("tutorials.metaData.description"),
     alternates: {
       canonical: url,
     },
@@ -17,14 +17,14 @@ export async function generateMetadata({ params: { locale } }) {
       type: "website",
       locale: locale,
       url: url,
-      title: t("ecnBroker.metaData.title"),
-      description: t("ecnBroker.metaData.description"),
+      title: t("tutorials.metaData.title"),
+      description: t("tutorials.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/ecn-hero.webp",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/tutorials/tutorials-hero.png",
           width: 1200,
           height: 630,
-          alt: t("ecnBroker.metaData.title"),
+          alt: t("tutorials.metaData.title"),
         },
       ],
     },
@@ -40,6 +40,7 @@ const page = () => {
     { lng: "ps", url: "ps" },
     { lng: "pt", url: "pt" },
   ];
+
   return (
     <>
       <head>
@@ -47,12 +48,12 @@ const page = () => {
           <link
             key={item.lng}
             rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/ecn-broker`}
+            href={`https://www.primexcapital.com/${item.url}/forex-in-three-steps`}
             hreflang={item.lng}
           />
         ))}
       </head>
-      <ECNBrokerWrapper />
+      <TutorialsWrapper />
     </>
   );
 };

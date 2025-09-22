@@ -21,15 +21,15 @@ export async function generateMetadata({ params: { locale } }) {
 
 export default function NotFound() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-white">
+    <div className="flex items-center justify-center min-h-screen bg-p dark:bg-p-dark">
       <div className="flex flex-col md:flex-row items-center text-center md:text-left">
         <div className="md:mr-8">
-          <h1 className="text-9xl font-bold text-gray-800">404</h1>
-          <p className="text-xl font-medium text-secondary">
+          <h1 className="text-9xl font-bold text-tm dark:text-tm-dark">404</h1>
+          <p className="text-xl font-medium text-ts dark:text-ts-dark">
             Oops sorry! The page you're looking for doesn't exist.
           </p>
           <Link
-            className="inline-block px-6 py-3 mt-4 text-lg font-semibold text-white bg-primary rounded-full hover:bg-yellow-600"
+            className="inline-block px-6 py-3 mt-4 text-lg font-semibold text-nb dark:text-nb-dark bg-pcp dark:bg-pcp-dark rounded-full"
             href="/"
           >
             Go Back!

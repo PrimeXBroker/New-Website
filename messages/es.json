@@ -2554,12 +2554,22 @@
       "title": "Contáctanos | PrimeX Capital",
       "description": "Póngase en contacto con PrimeX Capital para cualquier consulta o soporte. Estamos aquí para asistirle con sus necesidades de trading. ¡Haga clic para contactarnos y obtener ayuda hoy mismo!"
     },
-    "banner": {
+    "bannerSuggestion": {
       "main_title": "Contáctanos",
       "support_title": "Soporte Multilingüe 24/7",
       "connect_title": "Conéctate con los expertos globales de PrimeX Capital",
       "help_center": "Centro de ayuda",
       "copy_email": "Copiar correo electrónico",
+      "live_chat": "Chat en vivo",
+      "suggestion_form_title": "Sugerencia",
+      "complaint_form_title": "Queja",
+      "email_copied_message": "¡Correo electrónico copiado!"
+    },
+    "banner": {
+      "main_title": "Contáctanos",
+      "support_title": "Soporte Multilingüe 24/7",
+      "connect_title": "Para cualquier queja, puede contactarnos a través de los siguientes correos electrónicos según cada entidad reguladora:",
+      "contact_via_email": "Contáctenos por correo electrónico",
       "live_chat": "Chat en vivo",
       "suggestion_form_title": "Sugerencia",
       "complaint_form_title": "Queja",
@@ -3501,6 +3511,23 @@
       "card3_li1": "Establece los precios y gestiona el proceso de trading.",
       "card3_li2": "A menudo tiene spreads fijos que no cambian independientemente de las condiciones del mercado.",
       "card3_li3": "Generalmente no opera con sus propias posiciones de trading."
+    }
+  },
+  "tutorials": {
+    "metaData": {
+      "title": "",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "Learn from Experts",
+      "title_2": "Trade with Confidence",
+      "subtitle": "Level Up Your Trading Skills",
+      "description": "PrimeX Capital brings you professional video courses designed to make trading clearer and smarter. Discover strategies, master the tools, and gain real insights from the markets."
+    },
+    "tradingTutorials": {
+      "title_1": " Learn forex ",
+      "title_2": "in 3 steps",
+      "description": "Access an all-in-one learning journey that guides you from beginner to pro, with strategies, tools, and real market examples designed to make your trading more effective — all in one place."
     }
   }
 }

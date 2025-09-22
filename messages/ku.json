@@ -2468,13 +2468,22 @@
       "title": "پەیوەندیمان پێوە بکەن | پرایم ئێکس کاپیتاڵ",
       "description": "پەیوەندی بە پرایم ئێکس کاپیتاڵ بکە بۆ هەر پرسیارێک یان پشتگیرییەک . ئێمە لێرەین بۆ ئەوەی یارمەتیت بدەین لە پێداویستییە بازرگانییەکانت. کلیک بکە بۆ پەیوەندیکردن و وەرگرتنی یارمەتی ئەمڕۆ!"
     },
-
-    "banner": {
+    "bannerSuggestion": {
       "main_title": "پەیوەندیمان پێوە بکە",
       "support_title": "پشتیوانی 24 کاتژمێری بە زمانە جیاوازەکان",
       "connect_title": "پەیوەندی لەگەڵ پسپۆڕانی جیهانیی پرایم ئێکس کاپیتاڵ بکە",
       "help_center": "ناوەندی پاڵپشتی",
       "copy_email": "ئیمەیڵ کۆپی بکە",
+      "live_chat": "لایڤ چات",
+      "suggestion_form_title": "پێشنیار",
+      "complaint_form_title": "سکاڵا",
+      "email_copied_message": "ئیمەیڵ کۆپی کرا!"
+    },
+    "banner": {
+      "main_title": "پەیوەندیمان پێوە بکە",
+      "support_title": "پشتیوانی 24 کاتژمێری بە زمانە جیاوازەکان",
+      "connect_title": "بۆ هەموو شیکاریەکان، دەتوانیت بە ڕوونەماوەی خوارەوە پەیوەندیمان پێوە بکەیت بۆ هەر پەیوەندیدانی یاسایی بە شێوەی تایبەتیەکان:",
+      "contact_via_email": "پەیوەندیمان پێوە بکە بە ئیمەیڵ",
       "live_chat": "لایڤ چات",
       "suggestion_form_title": "پێشنیار",
       "complaint_form_title": "سکاڵا",
@@ -3419,6 +3428,23 @@
       "card3_li1": "نرخەکان دادەنێت و پڕۆسەی بازرگانی بەڕێوەدەبات.",
       "card3_li2": "زۆرجار بڵاوبوونەوەی جێگیری هەیە کە بەبێ گوێدانە بارودۆخی بازاڕ بە نەگۆڕی دەمێنێتەوە.",
       "card3_li3": "بە شێوەیەکی گشتی مامەڵە لەگەڵ پۆستەکانی بازرگانی خۆیدا ناکات."
+    }
+  },
+  "tutorials": {
+    "metaData": {
+      "title": "",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "Learn from Experts",
+      "title_2": "Trade with Confidence",
+      "subtitle": "Level Up Your Trading Skills",
+      "description": "PrimeX Capital brings you professional video courses designed to make trading clearer and smarter. Discover strategies, master the tools, and gain real insights from the markets."
+    },
+    "tradingTutorials": {
+      "title_1": " Learn forex ",
+      "title_2": "in 3 steps",
+      "description": "Access an all-in-one learning journey that guides you from beginner to pro, with strategies, tools, and real market examples designed to make your trading more effective — all in one place."
     }
   }
 }

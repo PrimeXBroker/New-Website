@@ -2555,7 +2555,7 @@
       "title": "Contact Us | PrimeX Capital",
       "description": "Get in touch with PrimeX Capital for any inquiries or support. We're here to assist you with your trading needs. Click to contact us and get help today!"
     },
-    "banner": {
+    "bannerSuggestion": {
       "main_title": "Contact us",
       "support_title": "24/7 Multilingual Support",
       "connect_title": "Connect with PrimeX Capital’s Global Experts",
@@ -2565,6 +2565,15 @@
       "suggestion_form_title": "Suggestion",
       "complaint_form_title": "Complaint",
       "email_copied_message": "Email Copied!"
+    },
+    "banner": {
+      "main_title": "Contact us",
+      "support_title": "24/7 Multilingual Support",
+      "connect_title": "For any complaints, you may reach us via below emails for each regulatory by entity wise:-",
+      "contact_via_email": "Contact us via Email",
+      "live_chat": "Live Chat",
+      "suggestion_form_title": "Suggestion",
+      "complaint_form_title": "Complaint"
     },
     "suggestionForm": {
       "title": "Write to Us",
@@ -3502,6 +3511,23 @@
       "card3_li1": "Sets prices and manages the trading process.",
       "card3_li2": "Often has fixed spreads that remain unchanged regardless of market conditions.",
       "card3_li3": "Typically does not deal with its own trading positions."
+    }
+  },
+  "tutorials": {
+    "metaData": {
+      "title": "",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "Learn from Experts",
+      "title_2": "Trade with Confidence",
+      "subtitle": "Level Up Your Trading Skills",
+      "description": "PrimeX Capital brings you professional video courses designed to make trading clearer and smarter. Discover strategies, master the tools, and gain real insights from the markets."
+    },
+    "tradingTutorials": {
+      "title_1": " Learn forex ",
+      "title_2": "in 3 steps",
+      "description": "Access an all-in-one learning journey that guides you from beginner to pro, with strategies, tools, and real market examples designed to make your trading more effective — all in one place."
     }
   }
 }
