@@ -44,7 +44,7 @@ const useFetchCandles = (symbol, interval) => {
 
     const fetchData = async () => {
       setLoading(true);
-      const { from, to } = convertToSeconds();
+      const { from, to } = convertToSeconds(interval);
       const url = `https://primexbroker.com/api/trade/graph?symbol=${symbol}&from=${from}&to=${to}&type=${"minutes"}`;
 
       try {
@@ -152,51 +152,51 @@ export default function ChartComponent({ symbol, interval, mode }) {
       chartInstanceRef.current = chart;
       candlestickSeriesRef.current = series;
 
-      chart
-        .timeScale()
-        .subscribeVisibleLogicalRangeChange(async (logicalRange) => {
-          if (
-            logicalRange.from < -100 &&
-            (from !== lastRange.from || to !== lastRange.to) &&
-            isAPITriggerRef.current
-          ) {
-            const { from, to } = convertToSeconds();
-            setLastRange({ from, to });
-            isAPITriggerRef.current = false;
+      // chart
+      //   .timeScale()
+      //   .subscribeVisibleLogicalRangeChange(async (logicalRange) => {
+      //     if (
+      //       logicalRange.from < -100 &&
+      //       (from !== lastRange.from || to !== lastRange.to) &&
+      //       isAPITriggerRef.current
+      //     ) {
+      //       const { from, to } = convertToSeconds();
+      //       setLastRange({ from, to });
+      //       isAPITriggerRef.current = false;
 
-            const fetchUpdatedData = async () => {
-              const controller = new AbortController();
-              const signal = controller.signal;
+      //       const fetchUpdatedData = async () => {
+      //         const controller = new AbortController();
+      //         const signal = controller.signal;
 
-              const url = `https://primexbroker.com/api/trade/graph?symbol=${symbol}&from=${from}&to=${to}&type=${"minutes"}`;
+      //         const url = `https://primexbroker.com/api/trade/graph?symbol=${symbol}&from=${from}&to=${to}&type=${"minutes"}`;
 
-              try {
-                const response = await axios.get(url, {
-                  signal,
-                  validateStatus: (status) => status >= 200 && status < 300,
-                });
-                console.log(response, "response");
+      //         try {
+      //           const response = await axios.get(url, {
+      //             signal,
+      //             validateStatus: (status) => status >= 200 && status < 300,
+      //           });
+      //           console.log(response, "response");
 
-                if (response?.data?.success) {
-                  const rawData = response?.data?.result?.answer;
-                  const processedData =
-                    rawData?.length > 0
-                      ? createCandlesFromTicks(rawData, interval)
-                      : [];
-                  // setData(processedData);
-                  setTimeout(() => {
-                    series.setData(processedData);
-                    isAPITriggerRef.current = true;
-                  }, 1000);
-                } else {
-                  console.error("API response was unsuccessful.", response);
-                  setData([]);
-                }
-              } catch (error) {}
-            };
-            fetchUpdatedData();
-          }
-        });
+      //           if (response?.data?.success) {
+      //             const rawData = response?.data?.result?.answer;
+      //             const processedData =
+      //               rawData?.length > 0
+      //                 ? createCandlesFromTicks(rawData, interval)
+      //                 : [];
+      //             // setData(processedData);
+      //             setTimeout(() => {
+      //               series.setData(processedData);
+      //               isAPITriggerRef.current = true;
+      //             }, 1000);
+      //           } else {
+      //             console.error("API response was unsuccessful.", response);
+      //             setData([]);
+      //           }
+      //         } catch (error) {}
+      //       };
+      //       fetchUpdatedData();
+      //     }
+      //   });
 
       const resizeObserver = new ResizeObserver((entries) => {
         const entry = entries[0];
@@ -221,7 +221,7 @@ export default function ChartComponent({ symbol, interval, mode }) {
     }
 
     const updateChartData = async () => {
-      const { from, to } = convertToSeconds();
+      const { from, to } = convertToSeconds(interval);
       const url = `https://primexbroker.com/api/trade/graph?symbol=${symbol}&from=${from}&to=${to}&type=${"minutes"}`;
 
       try {
