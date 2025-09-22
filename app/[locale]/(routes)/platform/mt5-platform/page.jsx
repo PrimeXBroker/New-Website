@@ -39,6 +39,7 @@ const Mt5Platform = () => {
     { lng: "ku", url: "ku" },
     { lng: "es", url: "es" },
     { lng: "ps", url: "ps" },
+    { lng: "pt", url: "pt" },
   ];
 
   return (
