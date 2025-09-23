@@ -81,6 +81,7 @@ const Hero = () => {
                 muted
                 controls={false}
                 playsInline
+                className="w-full block [clip-path:inset(1px_1px)]"
               ></video>
             </div>
             <div
