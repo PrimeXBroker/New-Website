@@ -87,12 +87,12 @@ const TutorialVideos = () => {
             {t("description")}
           </p>
         </div>
-        <div className="w-full flex flex-wrap md:flex-nowrap justify-center bg-cc dark:bg-cc-dark border border-e2 dark:border-e2-dark mb-10 rounded-lg p-2 gap-y-2">
+        <div className="w-full flex flex-wrap justify-center bg-cc dark:bg-cc-dark border border-e2 dark:border-e2-dark mb-10 rounded-lg p-2 gap-y-2">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => handleTabChange(cat.id)}
-              className={`w-1/2 md:w-auto md:flex-1 text-sm sm:text-base font-normal rounded-[5px] px-2 md:px-4 py-2 md:py-3 ${
+              className={`w-full md:w-1/2 text-sm sm:text-base font-normal rounded-[5px] px-2 md:px-4 py-2 md:py-3 ${
                 activeTab === cat.id
                   ? "bg-tm dark:bg-tm-dark text-nw dark:text-nb"
                   : "bg-transparent text-tm dark:text-tm-dark"
@@ -128,7 +128,11 @@ const TutorialVideos = () => {
                     className="object-cover rounded-2xl"
                     priority
                   />
-                  <span className="absolute right-3 top-3 bg-tm dark:bg-tm-dark text-nb rounded-[4px] text-xs font-semibold px-2 py-[5px]">
+                  <span
+                    className={`absolute ${
+                      locale === "ar" ? "left-3" : "right-3"
+                    } top-3 bg-tm dark:bg-tm-dark text-nb rounded-[4px] text-[10px] leading-tight font-semibold px-2 py-[5px]`}
+                  >
                     {locale === "ar"
                       ? video.category.titleAr
                       : video.category.titleEn}
@@ -139,7 +143,7 @@ const TutorialVideos = () => {
                     </div>
                   </div>
                 </div>
-                <div className="bg-e2 dark:bg-e2-dark border border-tl dark:border-tl-dark p-4 rounded-2xl mt-2">
+                <div className="flex flex-col  justify-between bg-e2 dark:bg-e2-dark border border-tl dark:border-tl-dark p-4 rounded-2xl mt-2 h-[157px]">
                   <h3 className="text-tm dark:text-tm-dark font-medium text-lg">
                     {locale === "ar" ? video.titleAr : video.titleEn}
                   </h3>
