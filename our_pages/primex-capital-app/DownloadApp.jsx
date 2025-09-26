@@ -102,7 +102,7 @@ const DownloadApp = () => {
                   </p>
                 </div>
               </a>
-              <a
+              {/* <a
                 href="https://appgallery.cloud.huawei.com/ag/n/app/C114072661?locale=en_GB&source=appshare&subsource=C114072661&shareTo=com.android.bluetooth&shareFrom=appmarket&shareIds=e02c3da07c89442dbb99f53adb01464d_com.android.bluetooth&callType=SHARE"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -132,7 +132,7 @@ const DownloadApp = () => {
                     {t("app_gallery_btn_part2")}
                   </p>
                 </div>
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="col-span-12 lg:col-span-6 flex justify-center lg:justify-end mt-5 lg:mt-0">
