@@ -3155,7 +3155,28 @@
       "app_store_btn_part1": "Baixe na",
       "app_store_btn_part2": "App Store",
       "app_gallery_btn_part1": "Explore na",
-      "app_gallery_btn_part2": "AppGallery"
+      "app_gallery_btn_part2": "AppGallery",
+      "btn": "Baixe Agora!"
+    },
+    "whyPrimex": {
+      "title1": "Conta Demo",
+      "desc1": "Pratique sem riscos com uma conta demo totalmente funcional.",
+      "title2": "Modo Escuro",
+      "desc2": "Opere com facilidade no modo escuro, projetado para seu conforto e foco.",
+      "title3": "Suporte ao Vivo",
+      "desc3": "Suporte especializado 24/7 para todas as suas necessidades de trading.",
+      "title4": "Baixe o App Agora e Explore os Recursos!",
+      "desc4": "Baixar o app",
+      "title5": "Acesso Seguro",
+      "desc5": "Faça login com Face ID, impressão digital ou PIN. Acesso rápido e seguro ao app.",
+      "title6": "Comece com apenas US$10",
+      "desc6": "Comece a operar hoje com um depósito mínimo baixo.",
+      "title7": "Trading Inteligente",
+      "desc7": "Execute ordens em tempo real com velocidade e confiança.",
+      "title8": "Educação Gratuita",
+      "desc8": "Aprenda com especialistas do setor e eleve seu nível de trading.",
+      "title9": "Calendário Econômico",
+      "desc9": "Fique à frente do mercado acompanhando eventos financeiros em tempo real."
     }
   },
   "registration": {

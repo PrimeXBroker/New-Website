@@ -3125,7 +3125,8 @@
       "app_store_btn_part1": "Descarga la aplicación desde",
       "app_store_btn_part2": "App Store",
       "app_gallery_btn_part1": "Explóralo en",
-      "app_gallery_btn_part2": "AppGallery"
+      "app_gallery_btn_part2": "AppGallery",
+      "btn": "¡Descarga Ahora!"
     },
     "appBenefits": {
       "main_title1": "¿Por qué ",
@@ -3156,6 +3157,26 @@
       "app_store_btn_part2": "App Store",
       "app_gallery_btn_part1": "Explóralo en",
       "app_gallery_btn_part2": "AppGallery"
+    },
+    "whyPrimex": {
+      "title1": "Cuenta Demo",
+      "desc1": "Practica sin riesgo con una cuenta demo totalmente funcional.",
+      "title2": "Modo Oscuro",
+      "desc2": "Opera con facilidad en el modo oscuro, diseñado para tu comodidad y concentración.",
+      "title3": "Soporte en Vivo",
+      "desc3": "Soporte experto 24/7 para todas tus necesidades de trading.",
+      "title4": "¡Descarga la App Ahora y Explora sus Funciones!",
+      "desc4": "Descargar la app",
+      "title5": "Acceso Seguro",
+      "desc5": "Inicia sesión con Face ID, huella digital o PIN. Acceso rápido y seguro a la app.",
+      "title6": "Empieza con solo $10",
+      "desc6": "Comienza a operar hoy con un depósito mínimo bajo.",
+      "title7": "Trading Inteligente",
+      "desc7": "Ejecuta operaciones en tiempo real con rapidez y confianza.",
+      "title8": "Educación Gratuita",
+      "desc8": "Aprende de expertos de la industria y eleva tu nivel de trading.",
+      "title9": "Calendario Económico",
+      "desc9": "Anticípate al mercado con el seguimiento de eventos financieros en tiempo real."
     }
   },
   "registration": {

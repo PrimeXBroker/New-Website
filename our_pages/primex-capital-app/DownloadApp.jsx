@@ -18,11 +18,7 @@ const DownloadApp = () => {
           </h2>
         </div>
         <div
-          className={`grid grid-cols-12 bg-cc dark:bg-cc-dark rounded-[20px] items-center pt-8 lg:pt-0 ${
-            locale === "ar" || locale === "ps" || locale === "ku"
-              ? "pr-5 lg:pr-10 pl-5 lg:pl-0"
-              : "pl-5 lg:pl-10 pr-5 lg:pr-0"
-          }`}
+          className={`grid grid-cols-12 bg-cc dark:bg-cc-dark rounded-[20px] items-center pt-8 lg:pt-0 px-5 lg:px-6 xl:px-10`}
         >
           <div className="col-span-12 lg:col-span-6">
             <h2
@@ -52,7 +48,7 @@ const DownloadApp = () => {
                 href="https://play.google.com/store/apps/details?id=com.primex.primexmobileapp"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-e1 dark:bg-e1-dark border-1 border-e1 dark:border-e1-dark hover:border-e2 dark:hover:border-e2-dark transition-all duration-500 ease-in-out flex items-center justify-center gap-3 sm:gap-0 w-full sm:w-[200px] h-[60px] rounded-lg group"
+                className="bg-e1 dark:bg-e1-dark border-2 border-e2 dark:border-e2-dark hover:border-e2 dark:hover:border-e2-dark transition-all duration-500 ease-in-out flex items-center justify-center gap-3 sm:gap-0 w-full sm:w-[200px] lg:w-[170px] xl:w-[200px] h-[60px] rounded-lg group"
               >
                 <Image
                   src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/google-play_3128279+1.svg"
@@ -67,10 +63,10 @@ const DownloadApp = () => {
                       : "ml-3 text-left"
                   }`}
                 >
-                  <p className="text-xs text-ts dark:text-ts-dark">
+                  <p className="text-xs lg:text-[11px] xl:text-xs text-ts dark:text-ts-dark">
                     {t("google_play-btn_part1")}
                   </p>
-                  <p className="text-lg font-semibold">
+                  <p className="text-lg lg:text-base xl:text-lg font-semibold">
                     {t("google_play-btn_part2")}
                   </p>
                 </div>
@@ -79,7 +75,7 @@ const DownloadApp = () => {
                 href=" https://apps.apple.com/ae/app/primex-online-trading/id6741466188"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-e1 dark:bg-e1-dark border-1 border-e1 dark:border-e1-dark hover:border-e2 dark:hover:border-e2-dark transition-all duration-500 ease-in-out flex items-center justify-center gap-3 sm:gap-0 w-full sm:w-[200px] h-[60px] rounded-lg group"
+                className="bg-e1 dark:bg-e1-dark border-2 border-e2 dark:border-e2-dark hover:border-e2 dark:hover:border-e2-dark transition-all duration-500 ease-in-out flex items-center justify-center gap-3 sm:gap-0 w-full sm:w-[200px] lg:w-[170px] xl:w-[200px] h-[60px] rounded-lg group"
               >
                 <Image
                   src={
@@ -98,10 +94,10 @@ const DownloadApp = () => {
                       : "ml-3 text-left"
                   }`}
                 >
-                  <p className="text-xs text-ts dark:text-ts-dark">
+                  <p className="text-xs lg:text-[11px] xl:text-xs text-ts dark:text-ts-dark">
                     {t("app_store_btn_part1")}
                   </p>
-                  <p className="text-lg font-semibold">
+                  <p className="text-lg lg:text-base xl:text-lg font-semibold">
                     {t("app_store_btn_part2")}
                   </p>
                 </div>
@@ -110,7 +106,7 @@ const DownloadApp = () => {
                 href="https://appgallery.cloud.huawei.com/ag/n/app/C114072661?locale=en_GB&source=appshare&subsource=C114072661&shareTo=com.android.bluetooth&shareFrom=appmarket&shareIds=e02c3da07c89442dbb99f53adb01464d_com.android.bluetooth&callType=SHARE"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-e1 dark:bg-e1-dark border-1 border-e1 dark:border-e1-dark hover:border-e2 dark:hover:border-e2-dark transition-all duration-500 ease-in-out flex items-center justify-center gap-3 sm:gap-0 w-full sm:w-[200px] h-[60px] rounded-lg group"
+                className="bg-e1 dark:bg-e1-dark border-2 border-e2 dark:border-e2-dark hover:border-e2 dark:hover:border-e2-dark transition-all duration-500 ease-in-out flex items-center justify-center gap-3 sm:gap-0 w-full sm:w-[200px] lg:w-[170px] xl:w-[200px] h-[60px] rounded-lg group"
               >
                 <Image
                   src={
@@ -129,23 +125,23 @@ const DownloadApp = () => {
                       : "ml-3 text-left"
                   }`}
                 >
-                  <p className="text-xs text-ts dark:text-ts-dark">
+                  <p className="text-xs lg:text-[11px] xl:text-xs text-ts dark:text-ts-dark">
                     {t("app_gallery_btn_part1")}
                   </p>
-                  <p className="text-lg font-semibold">
+                  <p className="text-lg lg:text-base xl:text-lg font-semibold">
                     {t("app_gallery_btn_part2")}
                   </p>
                 </div>
               </a>
             </div>
           </div>
-          <div className="col-span-12 lg:col-span-6 flex justify-center mt-8 lg:mt-0">
+          <div className="col-span-12 lg:col-span-6 flex justify-center lg:justify-end mt-5 lg:mt-0">
             <Image
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-online-trading/CTA+Image.webp"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/download-app-cta.png"
               width="470"
               height="300"
-              alt="MT5 Banner Image"
-              className="w-full sm:w-[72%] h-full"
+              alt="Download Image"
+              className="w-full sm:w-[84%] h-full"
             />
           </div>
         </div>
