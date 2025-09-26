@@ -152,7 +152,7 @@ const Hero = () => {
                 </p>
               </div>
               <p className="text-tm dark:text-tm-dark font-semibold text-sm text-center mt-5">
-                Download Now
+                {t("btn")}
               </p>
               <div className="flex justify-center items-center gap-4 mb-8 mt-2">
                 <a

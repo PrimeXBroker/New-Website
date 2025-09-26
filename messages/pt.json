@@ -3125,7 +3125,8 @@
       "app_store_btn_part1": "Baixe na",
       "app_store_btn_part2": "App Store",
       "app_gallery_btn_part1": "Explore na",
-      "app_gallery_btn_part2": "AppGallery"
+      "app_gallery_btn_part2": "AppGallery",
+      "btn": "Baixe Agora!"
     },
     "appBenefits": {
       "main_title1": "Por que ",
@@ -3155,8 +3156,7 @@
       "app_store_btn_part1": "Baixe na",
       "app_store_btn_part2": "App Store",
       "app_gallery_btn_part1": "Explore na",
-      "app_gallery_btn_part2": "AppGallery",
-      "btn": "Baixe Agora!"
+      "app_gallery_btn_part2": "AppGallery"
     },
     "whyPrimex": {
       "title1": "Conta Demo",
