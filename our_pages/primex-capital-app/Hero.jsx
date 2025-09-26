@@ -185,7 +185,7 @@ const Hero = () => {
                     height={28}
                   />
                 </a>
-                <a
+                {/* <a
                   href="https://appgallery.cloud.huawei.com/ag/n/app/C114072661?locale=en_GB&source=appshare&subsource=C114072661&shareTo=com.android.bluetooth&shareFrom=appmarket&shareIds=e02c3da07c89442dbb99f53adb01464d_com.android.bluetooth&callType=SHARE"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -201,7 +201,7 @@ const Hero = () => {
                     width={28}
                     height={28}
                   />
-                </a>
+                </a> */}
               </div>
               <Image
                 unoptimized={true}
