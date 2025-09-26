@@ -42,7 +42,7 @@ const Hero = () => {
                   href="https://play.google.com/store/apps/details?id=com.primex.primexmobileapp"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-e1 dark:bg-e1-dark border-2 border-e2 dark:border-e2-dark hover:border-e2 dark:hover:border-e2-dark transition-all duration-500 ease-in-out flex items-center justify-center w-full lg:w-[200px] h-[60px] rounded-lg group"
+                  className="bg-e1 dark:bg-e1-dark hover:bg-e2 dark:hover:bg-e2-dark border-2 border-e2 dark:border-e2-dark  hover:border-tl dark:hover:border-tl-dark transition-all duration-500 ease-in-out flex items-center justify-center w-full lg:w-[200px] h-[60px] rounded-lg group"
                 >
                   <Image
                     src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-platform/google-play_3128279+1.svg"
@@ -69,7 +69,7 @@ const Hero = () => {
                   href=" https://apps.apple.com/ae/app/primex-online-trading/id6741466188"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-e1 dark:bg-e1-dark border-2 border-e2 dark:border-e2-dark hover:border-e2 dark:hover:border-e2-dark transition-all duration-500 ease-in-out flex items-center justify-center w-full lg:w-[200px] h-[60px] rounded-lg group"
+                  className="bg-e1 dark:bg-e1-dark hover:bg-e2 dark:hover:bg-e2-dark border-2 border-e2 dark:border-e2-dark  hover:border-tl dark:hover:border-tl-dark transition-all duration-500 ease-in-out flex items-center justify-center w-full lg:w-[200px] h-[60px] rounded-lg group"
                 >
                   <Image
                     src={
