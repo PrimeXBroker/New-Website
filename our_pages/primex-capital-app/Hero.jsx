@@ -130,7 +130,11 @@ const Hero = () => {
               </div>
             </div>
             <div
-              className={`bg-cc dark:bg-cc-dark bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/features-dark/mobile-hero/BG+Mobile.png)] bg-cover bg-bottom ${
+              className={`bg-cc dark:bg-cc-dark ${
+                theme === "dark"
+                  ? "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/features-dark/mobile-hero/BG+Mobile.png)]"
+                  : "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/features-light/mobile-hero/Background+shadow.png)]"
+              } bg-cover bg-bottom ${
                 locale === "ku" || locale === "pt" || locale === "es" ? "" : ""
               } rounded-3xl md:hidden`}
             >
@@ -201,7 +205,11 @@ const Hero = () => {
               </div>
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/features-dark/mobile-hero/Mockup+Mobile.png"
+                src={
+                  theme === "dark"
+                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/features-dark/mobile-hero/Mockup+Mobile.png"
+                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/features-light/mobile-hero/Mobile+Mockup.png"
+                }
                 alt="Mobile Mockup"
                 width={32}
                 height={32}
