@@ -2384,10 +2384,10 @@
       "answer_9": "Yes, you can close the positions copied from your master; you can also automatically close them."
     },
     "copyProgramForm": {
-      "main_title1": "Join as an ",
-      "main_title2": "Expert",
+      "main_title1": "Join as a ",
+      "main_title2": "Provider",
       "description": "Please fill the following form, and a member of our social trading program team will reach out to you to coordinate your onboarding process.",
-      "title": "Registration Form",
+      "title": "Become Provider",
       "desc": "Drop your details, we will get in touch with you soon.",
       "full_name_label": "Full Name",
       "full_name_placeholder": "Enter Your Full Name",
