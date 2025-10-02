@@ -29,7 +29,9 @@ function BookSession() {
   const [loading, setLoading] = useState(false);
   const [availableSlots, setAvailableSlots] = useState([]);
   const countryCode = useSelector((state) => state.location.location);
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const [selectedDate, setSelectedDate] = useState(tomorrow);
 
   useEffect(() => {
     const fetchLocation = async () => {

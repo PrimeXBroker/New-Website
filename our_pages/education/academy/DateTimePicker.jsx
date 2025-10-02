@@ -22,6 +22,15 @@ export default function DateTimePicker({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [open]);
 
+  // Set the default date to tomorrow
+  useEffect(() => {
+    if (!selectedDate) {
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      onChange(tomorrow);
+    }
+  }, [selectedDate, onChange]);
+
   const startDay = new Date(
     viewDate.getFullYear(),
     viewDate.getMonth(),
@@ -32,7 +41,6 @@ export default function DateTimePicker({
     viewDate.getMonth() + 1,
     0
   ).getDate();
-
   const weeks = [];
   let dayNum = 1 - startDay;
   for (let w = 0; w < 6; w++) {
@@ -66,8 +74,10 @@ export default function DateTimePicker({
       viewDate.getMonth(),
       day
     ).getDay();
-    // Prevent selection of Saturday (6) and Sunday (0)
-    if (selectedDay === 6 || selectedDay === 0) {
+    // Disable past dates only, but allow Saturdays and Sundays
+    if (
+      new Date(viewDate.getFullYear(), viewDate.getMonth(), day) <= new Date()
+    ) {
       return;
     }
     const newDate = new Date(viewDate.getFullYear(), viewDate.getMonth(), day);
@@ -136,7 +146,6 @@ export default function DateTimePicker({
         </span>
         <IoMdCalendar className="text-ts dark:text-ts-dark text-xl sm:text-2xl" />
       </button>
-
       {open && (
         <div
           role="dialog"
@@ -152,7 +161,6 @@ export default function DateTimePicker({
             >
               &#8592;
             </button>
-
             <div className="flex space-x-2 items-center">
               <button
                 type="button"
@@ -171,7 +179,6 @@ export default function DateTimePicker({
                 {viewDate.getFullYear()}
               </button>
             </div>
-
             <button
               type="button"
               onClick={nextPage}
@@ -181,7 +188,6 @@ export default function DateTimePicker({
               &#8594;
             </button>
           </div>
-
           {viewMode === "date" && (
             <>
               <div className="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-tm dark:text-tm-dark select-none mb-2">
@@ -197,13 +203,11 @@ export default function DateTimePicker({
                       type="button"
                       disabled={
                         !day ||
-                        [0, 6].includes(
-                          new Date(
-                            viewDate.getFullYear(),
-                            viewDate.getMonth(),
-                            day
-                          ).getDay()
-                        )
+                        new Date(
+                          viewDate.getFullYear(),
+                          viewDate.getMonth(),
+                          day
+                        ) <= new Date()
                       }
                       onClick={() => day && onSelectDate(day)}
                       className={`rounded py-1 ${
@@ -240,7 +244,6 @@ export default function DateTimePicker({
               </div>
             </>
           )}
-
           {viewMode === "month" && (
             <div className="grid grid-cols-3 gap-2 text-center text-sm font-medium select-none">
               {months.map((month, idx) => (
@@ -259,7 +262,6 @@ export default function DateTimePicker({
               ))}
             </div>
           )}
-
           {viewMode === "year" && (
             <div className="grid grid-cols-4 gap-2 text-center text-sm font-medium select-none">
               {years.map((year) => (
