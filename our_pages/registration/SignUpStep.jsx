@@ -61,7 +61,7 @@ export default function SignUpStep({
     language: "",
     password: "",
   });
-  const [selectedEntity, setSelectedEntity] = useState("");
+  const [selectedEntity, setSelectedEntity] = useState("lucia");
   const [loading, setLoading] = useState(false);
 
   const handleEntityChange = (selectedOption) => {
