@@ -23,8 +23,8 @@ const RegistrationWrapper = () => {
               height="18"
               src={
                 locale === "ar" || locale === "ku" || locale === "ps"
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/mockup-ar.webp"
-                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/mockup-en.webp"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/registration-mockup-ar.png"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/registration-mockup-en.png"
               }
               alt="Registration Mockup"
               className="w-full"
