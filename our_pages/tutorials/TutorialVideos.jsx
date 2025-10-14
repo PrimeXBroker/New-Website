@@ -117,13 +117,17 @@ const TutorialVideos = () => {
                 key={video.id}
                 data-vbtype="youtube"
                 data-autoplay="true"
-                href={`https://youtu.be/${video.videoId}`}
+                href={
+                  locale === "ar"
+                    ? `https://youtu.be/${video.videoId}`
+                    : `https://youtu.be/${video.videoIdEn}`
+                }
                 className="video-vemo-icon venobox vbox-item relative overflow-hidden bg-e1 dark:bg-e1-dark border border-e2 dark:border-e2-dark rounded-[20px] p-[6px]"
               >
                 <div className="relative overflow-hidden h-[266px] rounded-2xl">
                   <Image
-                    src={video.image}
-                    alt={video.titleEn}
+                    src={locale === "ar" ? video.imageAr : video.image}
+                    alt={locale === "ar" ? video.titleAr : video.titleEn}
                     fill
                     className="object-cover rounded-2xl"
                     priority
