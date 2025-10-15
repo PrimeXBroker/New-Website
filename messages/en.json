@@ -51,7 +51,8 @@
     "market": "Markets",
     "offers": "Offers",
     "contest": "Contest",
-    "ecn_broker": "ECN Broker"
+    "ecn_broker": "ECN Broker",
+    "courses": "Educational Courses"
   },
   "home": {
     "metaData": {

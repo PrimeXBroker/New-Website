@@ -1095,6 +1095,13 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("ecn_broker")}
                 </LocaleLink>
+                <LocaleLink
+                  href="/forex-in-three-steps"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("courses")}
+                </LocaleLink>
               </div>
             )}
           </div>

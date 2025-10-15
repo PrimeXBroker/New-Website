@@ -51,7 +51,8 @@
     "market": "Mercados",
     "offers": "Ofertas",
     "contest": "Concurso",
-    "ecn_broker": "Corredor ECN"
+    "ecn_broker": "Corredor ECN",
+    "courses": "Cursos Educativos"
   },
   "home": {
     "metaData": {
