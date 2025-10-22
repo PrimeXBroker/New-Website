@@ -43,7 +43,11 @@ const AccountTypes = ({ accounts }) => {
                 <div>
                   <div className="flex justify-between items-center">
                     <div className="flex items-center gap-2">
-                      <h3 className="text-xl sm:text-2xl font-semibold text-tm dark:text-tm-dark">
+                      <h3
+                        className={`text-xl sm:text-2xl font-semibold text-tm dark:text-tm-dark ${
+                          account.id === 3 && locale === "ar" ? "w-[104px]" : ""
+                        }`}
+                      >
                         {account.title}
                       </h3>
                       <div className="bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/ecn-gradient-bg.svg)] bg-cover bg-center text-sm text-nb dark:text-nb font-bold w-[43px] h-[25px] rounded-[4px] flex justify-center items-center">
