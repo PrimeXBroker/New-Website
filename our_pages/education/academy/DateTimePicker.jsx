@@ -68,20 +68,31 @@ export default function DateTimePicker({
     );
   }
 
+  // function onSelectDate(day) {
+  //   const selectedDay = new Date(
+  //     viewDate.getFullYear(),
+  //     viewDate.getMonth(),
+  //     day
+  //   ).getDay();
+  //   // Disable past dates only, but allow Saturdays and Sundays
+  //   if (
+  //     new Date(viewDate.getFullYear(), viewDate.getMonth(), day) <= new Date()
+  //   ) {
+  //     return;
+  //   }
+  //   const newDate = new Date(viewDate.getFullYear(), viewDate.getMonth(), day);
+  //   onChange(newDate);
+  //   setOpen(false);
+  // }
+
   function onSelectDate(day) {
-    const selectedDay = new Date(
-      viewDate.getFullYear(),
-      viewDate.getMonth(),
-      day
-    ).getDay();
-    // Disable past dates only, but allow Saturdays and Sundays
-    if (
-      new Date(viewDate.getFullYear(), viewDate.getMonth(), day) <= new Date()
-    ) {
+    const dateObj = new Date(viewDate.getFullYear(), viewDate.getMonth(), day);
+    const selectedDay = dateObj.getDay();
+    if (dateObj <= new Date() || selectedDay === 0 || selectedDay === 6) {
       return;
     }
-    const newDate = new Date(viewDate.getFullYear(), viewDate.getMonth(), day);
-    onChange(newDate);
+
+    onChange(dateObj);
     setOpen(false);
   }
 
@@ -207,7 +218,14 @@ export default function DateTimePicker({
                           viewDate.getFullYear(),
                           viewDate.getMonth(),
                           day
-                        ) <= new Date()
+                        ) <= new Date() ||
+                        [0, 6].includes(
+                          new Date(
+                            viewDate.getFullYear(),
+                            viewDate.getMonth(),
+                            day
+                          ).getDay()
+                        )
                       }
                       onClick={() => day && onSelectDate(day)}
                       className={`rounded py-1 ${
@@ -224,7 +242,24 @@ export default function DateTimePicker({
                             : "hover:bg-pcp dark:hover:bg-pcp-dark hover:text-nb dark:hover:text-nb-dark text-ts dark:text-ts-dark"
                           : "cursor-default"
                       }`}
-                      tabIndex={day ? 0 : -1}
+                      tabIndex={
+                        !day ||
+                        new Date(
+                          viewDate.getFullYear(),
+                          viewDate.getMonth(),
+                          day
+                        ) <= new Date() ||
+                        [0, 6].includes(
+                          // CHANGED
+                          new Date( // CHANGED
+                            viewDate.getFullYear(), // CHANGED
+                            viewDate.getMonth(), // CHANGED
+                            day // CHANGED
+                          ).getDay() // CHANGED
+                        ) // CHANGED
+                          ? -1
+                          : 0
+                      } // CHANGED
                       aria-pressed={
                         day &&
                         sameDate(
