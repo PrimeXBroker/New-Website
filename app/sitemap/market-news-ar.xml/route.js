@@ -12,7 +12,7 @@ async function fetchArabicMarketNews() {
       language: item.language,
       createdOn: item.createdOn,
       priority: 0.8,
-      changeFrequency: "daily",
+      changefreq: "daily",
     }));
     return links.map((link) => ({
       ...link,

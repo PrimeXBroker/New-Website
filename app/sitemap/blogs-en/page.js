@@ -10,7 +10,7 @@ async function fetchEnglishBlogs() {
     const links = data.map((item) => ({
       url: `https://primexcapital.com/en/blogs/${item.slug}`,
       priority: 0.8,
-      changeFrequency: "daily",
+      changefreq: "daily",
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links.map((link) => ({

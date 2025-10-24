@@ -11,7 +11,7 @@ async function fetchArabicMarketNews() {
     const links = data.map((item) => ({
       url: `https://primexcapital.com/ar/market-news/${item.slug}`,
       priority: 0.8,
-      changeFrequency: "daily",
+      changefreq: "daily",
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links.map((link) => ({

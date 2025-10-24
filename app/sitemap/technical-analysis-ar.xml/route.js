@@ -10,7 +10,7 @@ async function fetchArabicTechnicalAnalysis() {
     const links = data.map((item) => ({
       url: `https://primexcapital.com/ar/details/technical-analysis/${item.slug}`,
       priority: 0.8,
-      changeFrequency: "daily",
+      changefreq: "daily",
       lastModified: new Date(item.lastModified || Date.now()),
     }));
     return links.map((link) => ({
@@ -36,7 +36,7 @@ export async function GET() {
       <url>
         <loc>${url}</loc>
          <priority>${priority}</priority>
-          <frequency>${changeFrequency}</frequency>
+          <changefreq>${changefreq}</changefreq>
         <lastmod>${lastModified.toISOString()}</lastmod>
       </url>`
       )
