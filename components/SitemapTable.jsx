@@ -119,7 +119,7 @@ export default function SitemapTable({ sitemaps }) {
                   textAlign: "center",
                 }}
               >
-                {item.changeFrequency}
+                {item.changefreq}
               </td>
               <td
                 style={{

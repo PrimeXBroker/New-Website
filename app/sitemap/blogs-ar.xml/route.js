@@ -31,7 +31,7 @@ export async function GET() {
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${technicalAnalysisArUrls
       .map(
-        ({ url, priority, changeFrequency, lastModified }) => `
+        ({ url, priority, changefreq, lastModified }) => `
       <url>
         <loc>${url}</loc>
          <priority>${priority}</priority>
