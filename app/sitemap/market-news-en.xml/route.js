@@ -61,7 +61,7 @@ export async function GET() {
           <news:title>${article.title}</news:title>
         </news:news>
          <priority>${article.priority}</priority>
-        <changefreq>${article.changeFrequency}</changefreq>
+        <changefreq>${article.changefreq}</changefreq>
       </url>`
       )
       .join("")}
