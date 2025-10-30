@@ -68,6 +68,14 @@ const nextConfig = {
         destination: "/sitemap/es",
       },
       {
+        source: "/sitemap/pt.xml",
+        destination: "/sitemap/pt.xml",
+      },
+      {
+        source: "/sitemap/pt",
+        destination: "/sitemap/pt",
+      },
+      {
         source: "/sitemap/market-news-en.xml",
         destination: "/sitemap/market-news-en.xml",
       },
