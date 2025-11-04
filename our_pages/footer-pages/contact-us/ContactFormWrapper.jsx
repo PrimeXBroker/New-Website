@@ -90,7 +90,10 @@ const ContactFormWrapper = ({ active, setActive }) => {
                 >
                   <span
                     className={`${
-                      locale === "ar" || locale === "ps" || locale === "ku"
+                      locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
                         ? "ml-2"
                         : "mr-2"
                     }`}
@@ -109,7 +112,10 @@ const ContactFormWrapper = ({ active, setActive }) => {
                     {copiedComplaintEmail ? (
                       <FaCheck
                         className={`text-gc dark:text-gc-dark text-xl ${
-                          locale === "ar" || locale === "ps" || locale === "ku"
+                          locale === "ar" ||
+                          locale === "ps" ||
+                          locale === "ku" ||
+                          locale === "fa"
                             ? "mr-3"
                             : "ml-3"
                         }`}
@@ -117,7 +123,10 @@ const ContactFormWrapper = ({ active, setActive }) => {
                     ) : (
                       <MdContentCopy
                         className={`text-xl text-ts dark:text-ts-dark ${
-                          locale === "ar" || locale === "ps" || locale === "ku"
+                          locale === "ar" ||
+                          locale === "ps" ||
+                          locale === "ku" ||
+                          locale === "fa"
                             ? "mr-3"
                             : "ml-3"
                         }`}
@@ -132,7 +141,10 @@ const ContactFormWrapper = ({ active, setActive }) => {
                 >
                   <span
                     className={`${
-                      locale === "ar" || locale === "ps" || locale === "ku"
+                      locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
                         ? "ml-3"
                         : "mr-3"
                     }`}
@@ -144,10 +156,16 @@ const ContactFormWrapper = ({ active, setActive }) => {
                     />
                   </span>
                   {t("live_chat")}
-                  {locale === "ar" || locale === "ps" || locale === "ku" ? (
+                  {locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa" ? (
                     <FaArrowLeft
                       className={`text-xl text-ts dark:text-ts-dark ${
-                        locale === "ar" || locale === "ps" || locale === "ku"
+                        locale === "ar" ||
+                        locale === "ps" ||
+                        locale === "ku" ||
+                        locale === "fa"
                           ? "mr-3"
                           : "ml-3"
                       }`}
@@ -155,7 +173,10 @@ const ContactFormWrapper = ({ active, setActive }) => {
                   ) : (
                     <FaArrowRight
                       className={`text-xl text-ts dark:text-ts-dark ${
-                        locale === "ar" || locale === "ps" || locale === "ku"
+                        locale === "ar" ||
+                        locale === "ps" ||
+                        locale === "ku" ||
+                        locale === "fa"
                           ? "mr-3"
                           : "ml-3"
                       }`}
@@ -242,7 +263,10 @@ const ContactFormWrapper = ({ active, setActive }) => {
                   />
                   {t("live_chat")}
                 </div>
-                {locale === "ar" || locale === "ku" || locale === "ps" ? (
+                {locale === "ar" ||
+                locale === "ku" ||
+                locale === "ps" ||
+                locale === "fa" ? (
                   <div
                     className={`w-[20px] h-[20px] flex justify-center items-center rounded-full bg-nb dark:bg-nb-dark`}
                   >

@@ -52,7 +52,10 @@ const Hero = () => {
                   />
                   <div
                     className={`text-tm dark:text-tm-dark ${
-                      locale === "ar" || locale === "ps" || locale === "ku"
+                      locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
                         ? "mr-3 text-right"
                         : "ml-3 text-left"
                     }`}
@@ -83,7 +86,10 @@ const Hero = () => {
                   />
                   <div
                     className={`text-tm dark:text-tm-dark ${
-                      locale === "ar" || locale === "ps" || locale === "ku"
+                      locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
                         ? "mr-3 text-right"
                         : "ml-3 text-left"
                     }`}
@@ -114,7 +120,7 @@ const Hero = () => {
                   />
                   <div
                     className={`text-tm dark:text-tm-dark ${
-                      locale === "ar" || locale === "ps" || locale === "ku"
+                      locale === "ar" || locale === "ps" || locale === "ku" || locale === "fa"
                         ? "mr-3 text-right"
                         : "ml-3 text-left"
                     }`}

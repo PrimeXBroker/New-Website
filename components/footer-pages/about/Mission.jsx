@@ -36,7 +36,10 @@ const Mission = () => {
               className={`flex items-center group p-8 ${
                 index === 0
                   ? `${
-                      locale === "ar" || locale === "ps" || locale === "ku"
+                      locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
                         ? "md:border-l-2 md:border-e1 md:dark:border-e1-dark md:pl-12"
                         : "md:border-r-2 md:border-e1 md:dark:border-e1-dark md:pr-12"
                     }`

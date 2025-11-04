@@ -21,7 +21,10 @@ const DepositorSection1 = () => {
       <div className="flex-1 flex flex-col justify-center items-enter md:items-start md:w-[70%]">
         <h2
           className={`text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-tm dark:text-tm-dark pb-1 ${
-            locale === "ar" || locale === "ps" || locale === "ku"
+            locale === "ar" ||
+            locale === "ps" ||
+            locale === "ku" ||
+            locale === "fa"
               ? "text-center md:text-right"
               : "text-center md:text-left"
           }`}
@@ -30,7 +33,10 @@ const DepositorSection1 = () => {
         </h2>
         <p
           className={`text-ts dark:text-ts-dark  mt-2 text-sm sm:text-base ${
-            locale === "ar" || locale === "ps" || locale === "ku"
+            locale === "ar" ||
+            locale === "ps" ||
+            locale === "ku" ||
+            locale === "fa"
               ? "text-center md:text-right"
               : "text-center md:text-left"
           }`}

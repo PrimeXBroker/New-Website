@@ -24,14 +24,20 @@ const MaximizeProfit = () => {
         <div className="grid grid-cols-12 justify-center items-center bg-cc dark:bg-cc-dark rounded-[20px] px-14 pt-8">
           <div
             className={`col-span-12 lg:col-span-6 ${
-              locale === "ar" || locale === "ps" || locale === "ku"
+              locale === "ar" ||
+              locale === "ps" ||
+              locale === "ku" ||
+              locale === "fa"
                 ? "text-center lg:text-right"
                 : "text-center lg:text-left"
             }`}
           >
             <h2
               className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-pcp dark:text-pcp-dark mb-2 ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center lg:text-right"
                   : "text-center lg:text-left"
               }`}
@@ -40,7 +46,10 @@ const MaximizeProfit = () => {
             </h2>
             <h2
               className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center lg:text-right"
                   : "text-center lg:text-left"
               }`}
@@ -49,7 +58,10 @@ const MaximizeProfit = () => {
             </h2>
             <div
               className={`${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center lg:text-right"
                   : "text-center lg:text-left"
               }`}
@@ -64,7 +76,10 @@ const MaximizeProfit = () => {
                 onClick={() => window.open(getLoginUrl(locale))}
                 target="_blank"
                 className={`text-xs text-tm dark:text-tm-dark font-normal block mt-2 ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
                     ? "text-center lg:text-start"
                     : "text-center lg:text-start"
                 }`}

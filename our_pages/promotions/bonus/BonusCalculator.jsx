@@ -98,7 +98,10 @@ function BonusCalculator() {
           <div className="flex flex-col justify-center flex-1">
             <h2
               className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#ffffff] md:mb-2 ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center lg:text-right"
                   : "text-center lg:text-left"
               }`}
@@ -107,7 +110,10 @@ function BonusCalculator() {
             </h2>
             <h2
               className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#FED100] ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center lg:text-right"
                   : "text-center lg:text-left"
               }`}
@@ -116,7 +122,10 @@ function BonusCalculator() {
             </h2>
             <p
               className={`text-[#c6c6c6] mt-4 w-[90%] sm:w-[60%] mx-auto lg:mx-0 ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center lg:text-right"
                   : "text-center lg:text-left"
               }`}
@@ -129,7 +138,10 @@ function BonusCalculator() {
               {t("deposit_calculator")}{" "}
               <span
                 className={`text-[#FED100] ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
                     ? "hidden"
                     : ""
                 }`}
@@ -152,7 +164,10 @@ function BonusCalculator() {
             <div className="flex ">
               <div
                 className={`text-center ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
                     ? "border-l-1 border-l-[#2D2D2D]"
                     : "border-r-1 border-r-[#2D2D2D]"
                 }`}

@@ -193,7 +193,10 @@ const Rewards = () => {
               <Image
                 unoptimized={true}
                 src={`${
-                  locale === "ar" || locale === "ps" || locale === "kur"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "kur" ||
+                  locale === "fa"
                     ? theme === "dark"
                       ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/rewards-dark/Maldives+Ar.webp"
                       : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/rewards-light/Maldives+Ar.webp"
@@ -222,7 +225,10 @@ const Rewards = () => {
               <Image
                 unoptimized={true}
                 src={`${
-                  locale === "ar" || locale === "ps" || locale === "kur"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "kur" ||
+                  locale === "fa"
                     ? theme === "dark"
                       ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/rewards-dark/Family+Trip+Ar.webp"
                       : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/ib/rewards-light/Family+Trip+Ar.webp"

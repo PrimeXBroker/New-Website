@@ -29,7 +29,10 @@ const Promotions = ({ promotions }) => {
                     </span>{" "}
                     <br
                       className={`${
-                        locale === "ar" || locale === "ps" || locale === "ku"
+                        locale === "ar" ||
+                        locale === "ps" ||
+                        locale === "ku" ||
+                        locale === "fa"
                           ? "hidden"
                           : "block"
                       }`}

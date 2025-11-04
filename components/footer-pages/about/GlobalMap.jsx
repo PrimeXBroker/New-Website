@@ -16,7 +16,10 @@ const GlobalMap = () => {
       <div className="container mx-auto h-full relative flex justify-center items-center">
         <div
           className={`absolute top-0 block lg:hidden ${
-            locale === "ar" || locale === "ps" || locale === "ku"
+            locale === "ar" ||
+            locale === "ps" ||
+            locale === "ku" ||
+            locale === "fa"
               ? "right-5 md:right-10"
               : "left-5 md:left-10"
           }`}
@@ -28,7 +31,10 @@ const GlobalMap = () => {
         </div>
         <div
           className={`absolute top-[16%] sm:top-[22%] flex items-center gap-2 ${
-            locale === "ar" || locale === "ps" || locale === "ku"
+            locale === "ar" ||
+            locale === "ps" ||
+            locale === "ku" ||
+            locale === "fa"
               ? "right-[5%] sm:right-[21%] md:right-[29%] lg:right-[29%]"
               : "left-[6%] sm:left-[12%] lg:left-[31%]"
           }`}
@@ -63,7 +69,10 @@ const GlobalMap = () => {
                   </div>
                 </div>
                 <div className="w-[33px] h-[33px] rounded-[5.73px] bg-[#1D1D1D] flex justify-center items-center group-hover:bg-[#F9F9F9] transition-all duration-500 ease-in-out">
-                  {locale === "ar" || locale === "ps" || locale === "ku" ? (
+                  {locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa" ? (
                     <RiArrowLeftUpLine
                       className={`text-xl transition-transform duration-500 ease-in-out ${
                         hovered === 0
@@ -97,7 +106,7 @@ const GlobalMap = () => {
         </div>
         {/* <div
           className={`absolute top-[57%] sm:top-[64%] md:top-[57%] lg:top-[54%] flex items-center gap-2 ${
-            locale === "ar" || locale === "ps" || locale === "ku"
+            locale === "ar" || locale === "ps" || locale === "ku" || locale === "fa"
               ? "right-[18%] sm:right-[27%] md:right-[38%] lg:right-[50%]"
               : "left-[17%] sm:left-[28%] lg:left-[50%]"
           }`}
@@ -142,7 +151,7 @@ const GlobalMap = () => {
                   </div>
                 </div>
                 <div className="w-[33px] h-[33px] rounded-[5.73px] bg-[#1D1D1D] flex justify-center items-center group-hover:bg-[#F9F9F9] transition-all duration-500 ease-in-out">
-                  {locale === "ar" || locale === "ps" || locale === "ku" ? (
+                  {locale === "ar" || locale === "ps" || locale === "ku" || locale === "fa" ? (
                     <RiArrowLeftUpLine
                       className={`text-xl transition-transform duration-500 ease-in-out ${
                         hovered === 1
@@ -169,7 +178,10 @@ const GlobalMap = () => {
         </div> */}
         <div
           className={`absolute bottom-10 hidden lg:block ${
-            locale === "ar" || locale === "ps" || locale === "ku"
+            locale === "ar" ||
+            locale === "ps" ||
+            locale === "ku" ||
+            locale === "fa"
               ? "right-5 md:right-10"
               : "left-5 md:left-10"
           }`}

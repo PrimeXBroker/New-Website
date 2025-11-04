@@ -50,10 +50,16 @@ const Banner = () => {
               className="font-bold py-4 sm:py-3 sm:w-1/2 rounded-lg flex justify-center items-center bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark mb-5 sm:mb-0 cursor-pointer"
             >
               {t("view_btn")}{" "}
-              {locale === "ar" || locale === "ps" || locale === "ku" ? (
+              {locale === "ar" ||
+              locale === "ps" ||
+              locale === "ku" ||
+              locale === "fa" ? (
                 <FiArrowUpLeft
                   className={`text-lg font-bold text-nb dark:text-nb-dark ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-2"
                       : "ml-2"
                   }`}
@@ -61,7 +67,10 @@ const Banner = () => {
               ) : (
                 <FiArrowUpRight
                   className={`text-lg font-bold text-nb dark:text-nb-dark ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-2"
                       : "ml-2"
                   }`}
@@ -78,10 +87,16 @@ const Banner = () => {
               className="font-bold py-4 sm:py-3 sm:w-1/2 rounded-lg flex justify-center items-center bg-tm dark:bg-tm-dark text-p dark:text-p-dark mb-5 sm:mb-0 cursor-pointer"
             >
               {t("download_btn")}{" "}
-              {locale === "ar" || locale === "ps" || locale === "ku" ? (
+              {locale === "ar" ||
+              locale === "ps" ||
+              locale === "ku" ||
+              locale === "fa" ? (
                 <FiDownload
                   className={`text-lg font-bold text-p dark:text-p-dark ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-2"
                       : "ml-2"
                   }`}
@@ -89,7 +104,10 @@ const Banner = () => {
               ) : (
                 <FiDownload
                   className={`text-lg font-bold text-p dark:text-p-dark ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-2"
                       : "ml-2"
                   }`}

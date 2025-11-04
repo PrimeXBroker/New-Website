@@ -67,7 +67,10 @@ const PrivateSessions = ({ setActive }) => {
                     className="py-2 px-4 sm:px-6 w-full text-xs sm:text-sm mx-auto mt-3 md:mt-4 bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark group rounded-lg font-bold flex items-center justify-center gap-1"
                   >
                     {t("book_session_btn")}
-                    {locale === "ar" || locale === "ku" || locale === "ps" ? (
+                    {locale === "ar" ||
+                    locale === "ku" ||
+                    locale === "ps" ||
+                    locale === "fa" ? (
                       <div
                         className={`w-[14px] h-[14px] flex justify-center items-center rounded-full bg-nb dark:bg-nb-dark`}
                       >

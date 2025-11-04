@@ -62,7 +62,10 @@ const AwardsTimeline = () => {
                   ? "bg-pcp dark:bg-pcp-dark"
                   : "bg-cc dark:bg-cc-dark"
               } rounded-full flex items-center justify-center ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "right-1/2 translate-x-1/2"
                   : "left-1/2 -translate-x-1/2"
               }`}
@@ -84,7 +87,10 @@ const AwardsTimeline = () => {
                       ? "border-l-[12px] border-l-pcp dark:border-l-pcp-dark"
                       : "border-l-[12px] border-l-cc dark:border-l-cc-dark"
                   } ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "-translate-y-1/2 -left-2 rotate-180"
                       : "-right-2 -translate-y-1/2"
                   }`}
@@ -96,7 +102,10 @@ const AwardsTimeline = () => {
                       ? "border-r-[12px] border-r-pcp dark:border-r-pcp-dark"
                       : "border-r-[12px] border-r-cc dark:border-r-cc-dark"
                   } ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "-right-2 -translate-y-1/2 rotate-180"
                       : "-left-2 -translate-y-1/2"
                   }`}
@@ -107,17 +116,29 @@ const AwardsTimeline = () => {
               className={`${
                 activeIndex >= i + 1
                   ? i % 2 === 0
-                    ? locale === "ar" || locale === "ps" || locale === "ku"
+                    ? locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
                       ? "mr-auto -translate-y-0 opacity-100"
                       : "ml-auto translate-y-0 opacity-100"
-                    : locale === "ar" || locale === "ps" || locale === "ku"
+                    : locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
                     ? "ml-auto -translate-y-0 opacity-100"
                     : "mr-auto translate-y-0 opacity-100"
                   : i % 2 === 0
-                  ? locale === "ar" || locale === "ps" || locale === "ku"
+                  ? locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                     ? "mr-auto -translate-y-[100%] opacity-0"
                     : "ml-auto translate-y-[100%] opacity-0"
-                  : locale === "ar" || locale === "ps" || locale === "ku"
+                  : locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                   ? "ml-auto translate-y-[100%] opacity-0"
                   : "mr-auto -translate-y-[100%] opacity-0"
               } w-96 md:w-80 lg:w-96 transition-all duration-700`}

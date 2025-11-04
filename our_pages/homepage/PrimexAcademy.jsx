@@ -82,7 +82,10 @@ const PrimexAcademy = () => {
                 </h3>
                 <Link href={item.link}>
                   <div className="w-[28px] h-[28px] rounded-[5.73px] bg-e1 dark:bg-e1-dark flex justify-center items-center group-hover:bg-tm dark:group-hover:bg-tm-dark transition-all duration-500 ease-in-out">
-                    {locale === "ar" || locale === "ps" || locale === "ku" ? (
+                    {locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa" ? (
                       <RiArrowLeftUpLine
                         className={`text-lg transition-transform duration-500 ease-in-out ${
                           hovered === item.id

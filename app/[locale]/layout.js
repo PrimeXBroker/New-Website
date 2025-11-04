@@ -78,7 +78,12 @@ const portada = localFont({
 export default async function layout({ children, params: { locale } }) {
   const messages = await getMessages();
   const detectLanguage = () => {
-    if (locale === "ar" || locale === "ps" || locale === "ku") {
+    if (
+      locale === "ar" ||
+      locale === "ps" ||
+      locale === "ku" ||
+      locale === "fa"
+    ) {
       return "rtl";
     } else {
       return "ltr";

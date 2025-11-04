@@ -17,7 +17,10 @@ const Banner = ({ setActive }) => {
           <div className="max-w-2xl flex flex-col justify-center items-enter md:items-start md:w-[70%]">
             <h1
               className={`text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-tm dark:text-tm-dark pb-1 ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -26,7 +29,10 @@ const Banner = ({ setActive }) => {
             </h1>
             <h2
               className={`text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-pcp dark:text-pcp-dark ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -35,7 +41,10 @@ const Banner = ({ setActive }) => {
             </h2>
             <p
               className={`text-ts dark:text-ts-dark w-[95%] sm:w-[90%] mx-auto md:mx-0 md:w-[75%] mb-5 text-sm sm:text-base mt-2 ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -49,7 +58,10 @@ const Banner = ({ setActive }) => {
               className="text-center py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full flex items-center justify-center gap-3 sm:w-auto rounded-lg font-bold md:m-0 mx-auto group bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark"
             >
               {h("join_btn")}
-              {locale === "ar" || locale === "ku" || locale === "ps" ? (
+              {locale === "ar" ||
+              locale === "ku" ||
+              locale === "ps" ||
+              locale === "fa" ? (
                 <div
                   className={`w-[20px] h-[20px] flex justify-center items-center rounded-full bg-nb dark:bg-nb-dark`}
                 >

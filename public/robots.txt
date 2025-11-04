@@ -7,6 +7,7 @@ Sitemap: https://primexcapital.com/sitemap/ku.xml
 Sitemap: https://primexcapital.com/sitemap/ps.xml
 Sitemap: https://primexcapital.com/sitemap/es.xml
 Sitemap: https://primexcapital.com/sitemap/pt.xml
+Sitemap: https://primexcapital.com/sitemap/fa.xml
 Sitemap: https://primexcapital.com/sitemap/market-news-en.xml
 Sitemap: https://primexcapital.com/sitemap/market-news-ar.xml
 Sitemap: https://primexcapital.com/sitemap/technical-analysis-en.xml

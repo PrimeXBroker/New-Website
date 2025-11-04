@@ -35,7 +35,10 @@ const Banner = () => {
                 </span>
                 <span
                   className={`text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold text-pcp dark:text-pcp-dark mb-2 inline-block md:mb-1 lg:mb-2 ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-2 md:mr-2"
                       : "ml-2 md:ml-0"
                   }`}

@@ -12,7 +12,10 @@ const Partnerships = () => {
         <div
           className="bg-cover px-8 pt-8 pb-12 bg-[#111111] border-2 border-[#1D1D1D] rounded-[20px] partnerships-background"
           style={
-            locale === "ar" || locale === "ps" || locale === "ku"
+            locale === "ar" ||
+            locale === "ps" ||
+            locale === "ku" ||
+            locale === "fa"
               ? {
                   backgroundImage:
                     "url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/home/CTA+BG+D-Ar.webp')",

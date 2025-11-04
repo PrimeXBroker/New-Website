@@ -68,7 +68,10 @@ const Hero = () => {
               <video
                 ref={homeVideoPlayer}
                 src={
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
                     ? theme === "dark"
                       ? "/assets/home-hero-desktop-ar.mp4"
                       : "/assets/home-hero-desktop-ar-light.mp4"
@@ -86,7 +89,10 @@ const Hero = () => {
             </div>
             <div
               className={`absolute bottom-6 lg:bottom-10 hidden md:block ${
-                locale === "ar" || locale === "ku" || locale === "ps"
+                locale === "ar" ||
+                locale === "ku" ||
+                locale === "ps" ||
+                locale === "fa"
                   ? "md:left-6 lg:left-10"
                   : "md:right-6 lg:right-10"
               }`}
@@ -101,7 +107,10 @@ const Hero = () => {
               width="100"
               height="100"
               src={
-                locale === "ar" || locale === "ku" || locale === "ps"
+                locale === "ar" ||
+                locale === "ku" ||
+                locale === "ps" ||
+                locale === "fa"
                   ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/home-banner-ar-mbl.webp"
                   : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/home-hero-mobile-en.webp"
               }
@@ -110,7 +119,10 @@ const Hero = () => {
             />
             <div
               className={`absolute bottom-2 sm:bottom-3 md:hidden ${
-                locale === "ar" || locale === "ku" || locale === "ps"
+                locale === "ar" ||
+                locale === "ku" ||
+                locale === "ps" ||
+                locale === "fa"
                   ? "right-4"
                   : "left-4"
               }`}

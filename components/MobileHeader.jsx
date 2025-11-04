@@ -38,6 +38,8 @@ const MobileHeader = ({ locale }) => {
         ? "کوردی"
         : locale === "pt"
         ? "Português"
+        : locale === "fa"
+        ? "Persian"
         : "English",
     flag:
       locale === "ar"
@@ -50,6 +52,8 @@ const MobileHeader = ({ locale }) => {
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
         : locale === "pt"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
+        : locale === "fa"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
         : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
   });
   const [selectedLocation, setSelectedLocation] = useState({
@@ -150,6 +154,8 @@ const MobileHeader = ({ locale }) => {
         ? "کوردی"
         : locale === "pt"
         ? "Português"
+        : locale === "fa"
+        ? "Persian"
         : "English";
     const flag =
       locale === "ar"
@@ -162,6 +168,8 @@ const MobileHeader = ({ locale }) => {
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
         : locale === "pt"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
+        : locale === "fa"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
         : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg";
     const initialLanguage = { text, flag };
     setLanguage(initialLanguage);
@@ -256,7 +264,10 @@ const MobileHeader = ({ locale }) => {
                   />
                   <span
                     className={`${
-                      locale === "ar" || locale === "ps" || locale === "ku"
+                      locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
                         ? "mr-[5px]"
                         : "ml-[5px]"
                     }`}
@@ -265,7 +276,10 @@ const MobileHeader = ({ locale }) => {
                   </span>
                   <svg
                     className={`fill-current h-4 w-4 ${
-                      locale === "ar" || locale === "ps" || locale === "ku"
+                      locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
                         ? "mr-1"
                         : "ml-1"
                     }`}
@@ -453,6 +467,32 @@ const MobileHeader = ({ locale }) => {
                         <span className="ml-[5px]">Português</span>
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        href={
+                          currentLocale === "fa"
+                            ? `/${currentLocale}/${restOfPath}`
+                            : `/fa/${restOfPath}`
+                        }
+                        onClick={() =>
+                          handleClick(
+                            "Persian",
+                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
+                          )
+                        }
+                        className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
+                        dir="ltr"
+                      >
+                        <Image
+                          unoptimized={true}
+                          width="15"
+                          height="15"
+                          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
+                          alt="Persian Flag"
+                        />
+                        <span className="ml-[5px]">Persian</span>
+                      </Link>
+                    </li>
                   </ul>
                 )}
               </li>
@@ -505,7 +545,10 @@ const MobileHeader = ({ locale }) => {
                     />
                     <span
                       className={`${
-                        locale === "ar" || locale === "ps" || locale === "ku"
+                        locale === "ar" ||
+                        locale === "ps" ||
+                        locale === "ku" ||
+                        locale === "fa"
                           ? "mr-[5px]"
                           : "ml-[5px]"
                       }`}
@@ -514,7 +557,10 @@ const MobileHeader = ({ locale }) => {
                     </span>
                     <svg
                       className={`fill-current h-4 w-4 ${
-                        locale === "ar" || locale === "ps" || locale === "ku"
+                        locale === "ar" ||
+                        locale === "ps" ||
+                        locale === "ku" ||
+                        locale === "fa"
                           ? "mr-1"
                           : "ml-1"
                       }`}
@@ -700,6 +746,32 @@ const MobileHeader = ({ locale }) => {
                             alt="Português Flag"
                           />
                           <span className="ml-[5px]">Português</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href={
+                            currentLocale === "fa"
+                              ? `/${currentLocale}/${restOfPath}`
+                              : `/fa/${restOfPath}`
+                          }
+                          onClick={() =>
+                            handleClick(
+                              "Persian",
+                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
+                            )
+                          }
+                          className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
+                          dir="ltr"
+                        >
+                          <Image
+                            unoptimized={true}
+                            width="15"
+                            height="15"
+                            src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
+                            alt="Persian Flag"
+                          />
+                          <span className="ml-[5px]">Persian</span>
                         </Link>
                       </li>
                     </ul>
@@ -901,7 +973,10 @@ const MobileHeader = ({ locale }) => {
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
               alt="Hot Image"
               className={`absolute ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "right-[41px]"
                   : "left-[59px]"
               }`}
@@ -955,7 +1030,7 @@ const MobileHeader = ({ locale }) => {
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
               alt="Hot Image"
               className={`absolute top-[-15px] ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" || locale === "ps" || locale === "ku" || locale === "fa"
                   ? "right-[60px]"
                   : "left-[124px]"
               }`}
@@ -1040,7 +1115,7 @@ const MobileHeader = ({ locale }) => {
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
               alt="Hot Image"
               className={`absolute top-[-15px] ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" || locale === "ps" || locale === "ku" || locale === "fa"
                   ? "right-[60px]"
                   : "left-[59px]"
               }`}

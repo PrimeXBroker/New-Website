@@ -22,7 +22,10 @@ const Banner = ({
           ={" "}
           <h1
             className={`${titleColor} text-xl md:text-3xl font-semibold mb-5 ${
-              locale === "ar" || locale === "ps" || locale === "ku"
+              locale === "ar" ||
+              locale === "ps" ||
+              locale === "ku" ||
+              locale === "fa"
                 ? "md:text-right text-center"
                 : "md:text-left text-center"
             }`}
@@ -32,7 +35,10 @@ const Banner = ({
           </h1>
           <p
             className={`${descriptionColor} text-lg font-[500]  ${
-              locale === "ar" || locale === "ps" || locale === "ku"
+              locale === "ar" ||
+              locale === "ps" ||
+              locale === "ku" ||
+              locale === "fa"
                 ? "md:text-right text-center"
                 : "md:text-left text-center"
             }`}

@@ -62,7 +62,10 @@ const WidgetCards = () => {
                 style={{ borderRadius: "8px" }}
               >
                 {t("widgetCards.btnTxt")}
-                {locale === "ar" || locale === "ku" || locale === "ps" ? (
+                {locale === "ar" ||
+                locale === "ku" ||
+                locale === "ps" ||
+                locale === "fa" ? (
                   <div
                     className={`w-[16px] h-[16px] flex justify-center items-center rounded-full bg-nb dark:bg-nb-dark`}
                   >

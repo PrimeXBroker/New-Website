@@ -54,7 +54,10 @@ const TradeGoldWrapper = () => {
           <p className="mb-2">{f("answer1")}</p>
           <ul
             className={`list-disc ${
-              locale === "ar" || locale === "ps" || locale === "ku"
+              locale === "ar" ||
+              locale === "ps" ||
+              locale === "ku" ||
+              locale === "fa"
                 ? "pr-5"
                 : "pl-5"
             } space-y-1 marker:text-tm dark:marker:text-tm-dark`}

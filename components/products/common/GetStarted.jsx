@@ -23,7 +23,10 @@ const GetStarted = ({ getStarted, main_title1, main_title2 }) => {
             </div>
             <div
               className={`${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "mr-4"
                   : "ml-4"
               }`}

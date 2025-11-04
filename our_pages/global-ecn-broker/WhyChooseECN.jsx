@@ -23,17 +23,26 @@ const WhyChooseECN = () => {
             <div
               className={`relative ${
                 theme === "dark"
-                  ? locale === "ar" || locale === "ps" || locale === "ku"
+                  ? locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                     ? "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/mobile-images/Mobile+Dark+1st.svg)] sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/arabic-bg/Flipped+arabic+Desktop+Dark+High++transparency.svg)]"
                     : "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/mobile-images/Mobile+Dark+1st.svg)] sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/BG+1st+Dark+Mode.svg)]"
-                  : locale === "ar" || locale === "ps" || locale === "ku"
+                  : locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                   ? "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/mobile-images/Mobile+Light+1st.svg)] sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/arabic-bg/Flipped+arabic+Desktop+Light+High++transparency.svg)]"
                   : "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/mobile-images/Mobile+Light+1st.svg)] sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/BG+1st+Light+Mode.svg)]"
               } bg-cover h-auto lg:h-[394px] rounded-2xl p-8 flex flex-col justify-between sm:justify-end`}
             >
               <div
                 className={`absolute ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
                     ? "-left-1"
                     : "-right-1"
                 } bottom-[70px] hidden lg:block`}
@@ -71,17 +80,26 @@ const WhyChooseECN = () => {
             <div
               className={`relative ${
                 theme === "dark"
-                  ? locale === "ar" || locale === "ps" || locale === "ku"
+                  ? locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                     ? "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/mobile-images/Mobile+Dark+2nd.svg)] sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/arabic-bg/Flipped+arabic+Desktop+Dark+Direct+connection+to+markets.svg)]"
                     : "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/mobile-images/Mobile+Dark+2nd.svg)] sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/BG+2nd+Dark+Mode.svg)]"
-                  : locale === "ar" || locale === "ps" || locale === "ku"
+                  : locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                   ? "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/mobile-images/Mobile+Light+2nd.svg)] sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/arabic-bg/Flipped+arabic+Desktop+Light+Direct+connection+to+markets.svg)]"
                   : "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/mobile-images/Mobile+Light+2nd.svg)] sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/BG+2nd+Light+Mode.svg)]"
               } bg-cover h-auto lg:h-[394px] rounded-2xl p-8 flex flex-col justify-between sm:justify-end`}
             >
               <div
                 className={`absolute ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
                     ? "left-0"
                     : "right-0"
                 } bottom-12 hidden lg:block`}
@@ -119,17 +137,26 @@ const WhyChooseECN = () => {
             <div
               className={`relative ${
                 theme === "dark"
-                  ? locale === "ar" || locale === "ps" || locale === "ku"
+                  ? locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                     ? "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/mobile-images/Mobile+Dark+3rd.svg)] sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/arabic-bg/Flipped+arabic+Desktop+Dark+Greater+control++with+lower+costs.svg)]"
                     : "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/mobile-images/Mobile+Dark+3rd.svg)] sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/BG+3rd+Dark+Mode.svg)]"
-                  : locale === "ar" || locale === "ps" || locale === "ku"
+                  : locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                   ? "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/mobile-images/Mobile+Light+3rd.svg)] sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/arabic-bg/Flipped+arabic+Desktop+Light+Greater+control++with+lower+costs.svg)]"
                   : "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/mobile-images/Mobile+Light+3rd.svg)] sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/BG+3rd+Light+Mode.svg)]"
               } bg-cover h-auto lg:h-[394px] rounded-2xl p-8 flex flex-col justify-between sm:justify-end`}
             >
               <div
                 className={`absolute ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
                     ? "left-0"
                     : "right-0"
                 } bottom-20 hidden lg:block`}
@@ -167,17 +194,26 @@ const WhyChooseECN = () => {
             <div
               className={`relative ${
                 theme === "dark"
-                  ? locale === "ar" || locale === "ps" || locale === "ku"
+                  ? locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                     ? "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/mobile-images/Mobile+Dark+4th.svg)] sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/arabic-bg/Flipped+arabic+Desktop+Dark+High++transparency.svg)]"
                     : "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/mobile-images/Mobile+Dark+4th.svg)] sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/BG+4th+Dark+Mode.svg)]"
-                  : locale === "ar" || locale === "ps" || locale === "ku"
+                  : locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                   ? "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/mobile-images/Mobile+Light+4th.svg)] sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/arabic-bg/Flipped+arabic+Desktop+Light+High++transparency.svg)]"
                   : "bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/mobile-images/Mobile+Light+4th.svg)] sm:bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/BG+4th+Light+Mode.svg)]"
               } bg-cover h-auto lg:h-[394px] rounded-2xl p-8 flex flex-col justify-between sm:justify-end`}
             >
               <div
                 className={`absolute ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
                     ? "left-4"
                     : "right-4"
                 } bottom-24 hidden lg:block`}

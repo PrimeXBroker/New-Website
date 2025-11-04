@@ -40,7 +40,10 @@ const Banner = () => {
                 href={getLoginUrl(locale)}
                 target="_blank"
                 className={`text-xs text-tm dark:text-tm-dark font-normal block mt-2 ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
                     ? "text-center md:text-start mr-6"
                     : "text-center md:text-start md:ml-6"
                 }`}

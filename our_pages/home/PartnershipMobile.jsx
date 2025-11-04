@@ -20,7 +20,10 @@ const PartnershipMobile = () => {
         >
           <div
             className={`w-full md:w-[70%] lg:w-[50%]  ${
-              locale === "ar" || locale === "ps" || locale === "ku"
+              locale === "ar" ||
+              locale === "ps" ||
+              locale === "ku" ||
+              locale === "fa"
                 ? "text-center md:text-right"
                 : "text-center md:text-left"
             }`}

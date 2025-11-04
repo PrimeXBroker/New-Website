@@ -49,7 +49,10 @@ const HomeStats = () => {
       <div className="container mx-auto">
         <div
           className={`grid grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-tl lg:dark:divide-tl-dark ${
-            locale === "ar" || locale === "ku" || locale === "ps"
+            locale === "ar" ||
+            locale === "ku" ||
+            locale === "ps" ||
+            locale === "fa"
               ? "lg:divide-x-reverse"
               : ""
           }`}

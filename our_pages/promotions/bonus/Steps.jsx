@@ -20,14 +20,20 @@ const Steps = () => {
             <div className="md:w-[700px] lg:w-[900px] m-auto relative">
               <div
                 className={`md:w-[233px] lg:w-[300px] absolute bottom-0  ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
                     ? "right-0"
                     : "left-0"
                 }`}
               >
                 <div
                   className={`md:w-40 lg:w-48 md:h-40 lg:h-48 bg-[#111111] rounded-full flex justify-center items-center relative  ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "md:right-[19px] lg:right-[30px] md:-top-[20px] lg:-top-[30px]"
                       : "md:left-[19px] lg:left-[30px] md:-top-[20px] lg:-top-[30px]"
                   }`}
@@ -43,14 +49,20 @@ const Steps = () => {
               </div>
               <div
                 className={`md:w-[233px] lg:w-[300px] absolute bottom-0 ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
                     ? "right-[300px] "
                     : "left-[300px] "
                 }`}
               >
                 <div
                   className={`md:w-40 lg:w-48 md:h-40 lg:h-48 bg-[#111111] rounded-full flex justify-center items-center relative ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "md:-right-[29px] lg:right-[54px] md:-top-[20px] lg:-top-[30px]"
                       : "md:-left-[29px] lg:left-[54px] md:-top-[20px] lg:-top-[30px]"
                   }`}
@@ -66,14 +78,20 @@ const Steps = () => {
               </div>
               <div
                 className={`md:w-[233px] lg:w-[300px] absolute bottom-0 ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
                     ? "left-0"
                     : "right-0"
                 }`}
               >
                 <div
                   className={`md:w-40 lg:w-48 md:h-40 lg:h-48 bg-[#111111] rounded-full flex justify-center items-center relative ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "md:right-[56px] lg:right-[78px] md:-top-[20px] lg:-top-[30px]"
                       : "md:left-[56px] lg:left-[78px] md:-top-[20px] lg:-top-[30px]"
                   }`}
@@ -99,7 +117,10 @@ const Steps = () => {
               <div className="md:w-[233px] lg:w-[300px]">
                 <div
                   className={`inline-block relative px-8 ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "left-[17px]"
                       : "right-[17px]"
                   }`}
@@ -117,7 +138,10 @@ const Steps = () => {
               <div className="md:w-[233px] lg:w-[300px]">
                 <div
                   className={`inline-block relative px-8 ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "right-[4px]"
                       : "left-[4px] "
                   }`}
@@ -135,7 +159,10 @@ const Steps = () => {
               <div className="md:w-[233px] lg:w-[300px]">
                 <div
                   className={`inline-block relative px-8 ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "right-[34px]"
                       : "left-[34px]"
                   }`}

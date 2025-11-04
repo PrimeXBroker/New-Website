@@ -79,7 +79,10 @@ const WhyTrade = ({
               </h2>
               <p
                 className={`text-ts dark:text-ts-dark mt-4 sm:w-[84%] lg:w-auto mx-auto lg:mx-0 ${
-                  locale === "ar" || locale === "ku" || locale === "ps"
+                  locale === "ar" ||
+                  locale === "ku" ||
+                  locale === "ps" ||
+                  locale === "fa"
                     ? "text-center lg:text-right"
                     : "text-center lg:text-left"
                 }`}
@@ -91,7 +94,10 @@ const WhyTrade = ({
           <div className="col-span-12 lg:col-span-7 mt-5 sm:mt-0">
             <div
               className={`flex justify-center items-center mt-6 md:mt-0 w-full sm:w-[86%] h-[644px] sm:h-[400px] rounded-3xl relative z-0 bg-cc dark:bg-cc-dark bg-no-repeat sm:bg-cover bg-center ${
-                locale === "ar" || locale === "ku" || locale === "ps"
+                locale === "ar" ||
+                locale === "ku" ||
+                locale === "ps" ||
+                locale === "fa"
                   ? "mx-auto lg:mx-0 lg:mr-auto"
                   : "mx-auto lg:mx-0 lg:ml-auto"
               }`}

@@ -144,7 +144,10 @@ export default function Register({ step, setStep }) {
                 />
                 <div
                   className={`text-tm-dark dark:text-tm-dark ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-3 text-right"
                       : "ml-3 text-left"
                   }`}
@@ -175,7 +178,10 @@ export default function Register({ step, setStep }) {
                 />
                 <div
                   className={`text-tm-dark dark:text-tm-dark ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-3 text-right"
                       : "ml-3 text-left"
                   }`}
@@ -197,7 +203,10 @@ export default function Register({ step, setStep }) {
           <Image
             unoptimized={true}
             src={
-              locale === "ar" || locale === "ps" || locale === "ku"
+              locale === "ar" ||
+              locale === "ps" ||
+              locale === "ku" ||
+              locale === "fa"
                 ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/tablet-mockup-ar.webp"
                 : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/tablet-mockup.webp"
             }
@@ -231,7 +240,10 @@ export default function Register({ step, setStep }) {
                   />
                   <div
                     className={`text-tm-dark dark:text-tm-dark ${
-                      locale === "ar" || locale === "ps" || locale === "ku"
+                      locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
                         ? "mr-3 text-right"
                         : "ml-3 text-left"
                     }`}
@@ -262,7 +274,10 @@ export default function Register({ step, setStep }) {
                   />
                   <div
                     className={`text-tm-dark dark:text-tm-dark ${
-                      locale === "ar" || locale === "ps" || locale === "ku"
+                      locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
                         ? "mr-3 text-right"
                         : "ml-3 text-left"
                     }`}

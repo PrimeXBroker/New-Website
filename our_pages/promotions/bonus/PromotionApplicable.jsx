@@ -31,7 +31,10 @@ const PromotionApplicable = () => {
         <div className="sm:w-[100%] md:w-[35%] lg:w-[30%] xl:w-[25%] mb-14 md:mb-0">
           <h2
             className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff]  md:mb-2 ${
-              locale === "ar" || locale === "ps" || locale === "ku"
+              locale === "ar" ||
+              locale === "ps" ||
+              locale === "ku" ||
+              locale === "fa"
                 ? "text-center md:text-right"
                 : "text-center md:text-left"
             }`}
@@ -40,7 +43,10 @@ const PromotionApplicable = () => {
           </h2>
           <h2
             className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#ffffff]  ${
-              locale === "ar" || locale === "ps" || locale === "ku"
+              locale === "ar" ||
+              locale === "ps" ||
+              locale === "ku" ||
+              locale === "fa"
                 ? "text-center md:text-right"
                 : "text-center md:text-left"
             }`}

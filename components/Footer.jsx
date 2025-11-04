@@ -364,7 +364,10 @@ const Footer = () => {
               >
                 <p
                   className={`text-pcp dark:text-pcp-dark font-semibold md:pt-0 pt-5 ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "text-right"
                       : "text-left"
                   }`}
@@ -375,7 +378,10 @@ const Footer = () => {
                 {el.column.heading === "Platform" ? (
                   <ul
                     className={`pt-0 md:pt-2 text-sm ${
-                      locale === "ar" || locale === "ps" || locale === "ku"
+                      locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
                         ? "text-right"
                         : "text-left"
                     }`}
@@ -387,7 +393,8 @@ const Footer = () => {
                           className={`text-tm dark:text-tm-dark py-1 ${
                             language === "ar" ||
                             locale === "ps" ||
-                            locale === "ku"
+                            locale === "ku" ||
+                            locale === "fa"
                               ? "text-right"
                               : "text-left"
                           }`}
@@ -402,7 +409,10 @@ const Footer = () => {
                 ) : (
                   <ul
                     className={`pt-0 md:pt-2 footer text-sm ${
-                      locale === "ar" || locale === "ps" || locale === "ku"
+                      locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
                         ? "text-right"
                         : "text-left"
                     }`}
@@ -413,7 +423,8 @@ const Footer = () => {
                         className={`text-tm dark:text-tm-dark py-1 ${
                           language === "ar" ||
                           locale === "ps" ||
-                          locale === "ku"
+                          locale === "ku" ||
+                          locale === "fa"
                             ? "text-right"
                             : "text-left"
                         }`}

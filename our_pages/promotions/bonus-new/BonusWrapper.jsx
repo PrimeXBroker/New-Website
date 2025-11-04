@@ -69,7 +69,10 @@ const BonusWrapper = () => {
           <p className="mb-2">{f("answer2")}</p>
           <ul
             className={`list-disc ${
-              locale === "ar" || locale === "ps" || locale === "ku"
+              locale === "ar" ||
+              locale === "ps" ||
+              locale === "ku" ||
+              locale === "fa"
                 ? "pr-5"
                 : "pl-5"
             } space-y-1 marker:text-tm dark:marker:text-tm-dark`}
@@ -88,7 +91,10 @@ const BonusWrapper = () => {
           <p className="mb-2">{f("answer3")}</p>
           <ul
             className={`list-disc ${
-              locale === "ar" || locale === "ps" || locale === "ku"
+              locale === "ar" ||
+              locale === "ps" ||
+              locale === "ku" ||
+              locale === "fa"
                 ? "pr-5"
                 : "pl-5"
             } space-y-1 marker:text-tm dark:marker:text-tm-dark`}

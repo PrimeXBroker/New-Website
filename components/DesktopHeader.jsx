@@ -33,6 +33,8 @@ const DesktopHeader = ({ locale }) => {
         ? "کوردی"
         : locale === "pt"
         ? "Português"
+        : locale === "fa"
+        ? "Persian"
         : "English",
     flag:
       locale === "ar"
@@ -45,6 +47,8 @@ const DesktopHeader = ({ locale }) => {
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
         : locale === "pt"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
+        : locale === "fa"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
         : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
   });
   const [selectedLocation, setSelectedLocation] = useState({
@@ -129,6 +133,8 @@ const DesktopHeader = ({ locale }) => {
         ? "کوردی"
         : locale === "pt"
         ? "Português"
+        : locale === "fa"
+        ? "Persian"
         : "English";
     const flag =
       locale === "ar"
@@ -141,6 +147,8 @@ const DesktopHeader = ({ locale }) => {
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
         : locale === "pt"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
+        : locale === "fa"
+        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
         : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg";
     const initialLanguage = { text, flag };
     setLanguage(initialLanguage);
@@ -222,7 +230,10 @@ const DesktopHeader = ({ locale }) => {
         <nav className="flex items-center h-full">
           <ul
             className={`flex h-full ${
-              locale === "ar" || locale === "ku" || locale === "ps"
+              locale === "ar" ||
+              locale === "ku" ||
+              locale === "ps" ||
+              locale === "fa"
                 ? "gap-4"
                 : locale === "pt"
                 ? "gap-0"
@@ -243,7 +254,10 @@ const DesktopHeader = ({ locale }) => {
                 {t("trading")}
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-1"
                       : "ml-1"
                   }`}
@@ -443,7 +457,10 @@ const DesktopHeader = ({ locale }) => {
                 {t("accounts")}
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-1"
                       : "ml-1"
                   }`}
@@ -456,7 +473,10 @@ const DesktopHeader = ({ locale }) => {
               {activeDropdown === 7 && (
                 <ul
                   className={`absolute top-full mt-[4px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "min-w-[180px]"
                       : "min-w-[180px]"
                   } rounded-[6px]`}
@@ -494,7 +514,10 @@ const DesktopHeader = ({ locale }) => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
                 alt="Hot Image"
                 className={`absolute top-1 ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
                     ? "-left-0"
                     : "-right-0"
                 }`}
@@ -503,7 +526,10 @@ const DesktopHeader = ({ locale }) => {
                 {t("offers")}
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-1"
                       : "ml-1"
                   }`}
@@ -516,7 +542,10 @@ const DesktopHeader = ({ locale }) => {
               {activeDropdown === 8 && (
                 <ul
                   className={`absolute top-full mt-[4px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "min-w-[180px]"
                       : "min-w-[180px]"
                   } rounded-[6px]`}
@@ -565,7 +594,7 @@ const DesktopHeader = ({ locale }) => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
                 alt="Hot Image"
                 className={`absolute top-1 ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" || locale === "ps" || locale === "ku" || locale === "fa"
                     ? "-left-0"
                     : "-right-0"
                 }`}
@@ -580,7 +609,10 @@ const DesktopHeader = ({ locale }) => {
                 {t("partners")}
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-1"
                       : "ml-1"
                   }`}
@@ -593,7 +625,10 @@ const DesktopHeader = ({ locale }) => {
               {activeDropdown === 2 && (
                 <ul
                   className={`absolute top-full mt-[4px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "min-w-[250px]"
                       : "min-w-[250px]"
                   } rounded-[6px]`}
@@ -663,7 +698,10 @@ const DesktopHeader = ({ locale }) => {
                 {t("knowledge-hub")}
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-1"
                       : "ml-1"
                   }`}
@@ -680,7 +718,7 @@ const DesktopHeader = ({ locale }) => {
                 src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
                 alt="Hot Image"
                 className={`absolute top-1 ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" || locale === "ps" || locale === "ku" || locale === "fa"
                     ? "left-[16px]"
                     : "right-[16px]"
                 }`}
@@ -768,7 +806,10 @@ const DesktopHeader = ({ locale }) => {
                 {t("company")}
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-1"
                       : "ml-1"
                   }`}
@@ -781,7 +822,10 @@ const DesktopHeader = ({ locale }) => {
               {activeDropdown === 6 && (
                 <ul
                   className={`absolute top-full mt-[4px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "min-w-[180px]"
                       : "min-w-[180px]"
                   } rounded-[6px]`}
@@ -851,7 +895,10 @@ const DesktopHeader = ({ locale }) => {
           <button
             onClick={() => window.open(getLoginUrl(locale))}
             className={`group ${
-              locale === "ar" || locale === "ps" || locale === "ku"
+              locale === "ar" ||
+              locale === "ps" ||
+              locale === "ku" ||
+              locale === "fa"
                 ? "w-[140px]"
                 : "w-[120px]"
             }   py-[6px] rounded-lg font-bold flex items-center justify-center bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark`}
@@ -861,7 +908,10 @@ const DesktopHeader = ({ locale }) => {
           <button
             onClick={handleRegisterClick}
             className={`group ${
-              locale === "ar" || locale === "ps" || locale === "ku"
+              locale === "ar" ||
+              locale === "ps" ||
+              locale === "ku" ||
+              locale === "fa"
                 ? "w-[140px]"
                 : "w-[120px]"
             }   py-[6px] rounded-lg font-bold flex items-center justify-center bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark`}
@@ -886,7 +936,10 @@ const DesktopHeader = ({ locale }) => {
                 />
                 <span
                   className={`${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-[5px]"
                       : "ml-[5px]"
                   }`}
@@ -895,7 +948,10 @@ const DesktopHeader = ({ locale }) => {
                 </span>
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-1"
                       : "ml-1"
                   }`}
@@ -1063,6 +1119,32 @@ const DesktopHeader = ({ locale }) => {
                       <span className="ml-[5px]">Português</span>
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      href={
+                        currentLocale === "fa"
+                          ? `/${currentLocale}/${restOfPath}`
+                          : `/fa/${restOfPath}`
+                      }
+                      onClick={() =>
+                        handleClick(
+                          "Persian",
+                          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
+                        )
+                      }
+                      className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
+                      dir="ltr"
+                    >
+                      <Image
+                        unoptimized={true}
+                        width="15"
+                        height="15"
+                        src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
+                        alt="Persian Flag"
+                      />
+                      <span className="ml-[5px]">Persian</span>
+                    </Link>
+                  </li>
                 </ul>
               )}
             </li>
@@ -1085,7 +1167,10 @@ const DesktopHeader = ({ locale }) => {
                 />
                 <span
                   className={`${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-[5px]"
                       : "ml-[5px]"
                   }`}
@@ -1094,7 +1179,10 @@ const DesktopHeader = ({ locale }) => {
                 </span>
                 <svg
                   className={`fill-current h-4 w-4 ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-1"
                       : "ml-1"
                   }`}

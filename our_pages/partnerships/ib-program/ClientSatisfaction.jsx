@@ -35,7 +35,10 @@ const ClientSatisfaction = () => {
               </h2>
               <h2
                 className={`text-2xl sm:text-3xl lg:text-5xl font-semibold text-pcp dark:text-pcp-dark mb-2 ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
                     ? "hidden"
                     : ""
                 }`}
@@ -57,7 +60,10 @@ const ClientSatisfaction = () => {
               {t("main_title4")}
               <span
                 className={`text-pcp dark:text-pcp-dark ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
                     ? "hidden"
                     : ""
                 }`}
@@ -72,7 +78,10 @@ const ClientSatisfaction = () => {
               <div>
                 <div
                   className={`bg-cc dark:bg-cc-dark p-6 rounded-lg text-tm dark:text-tm-dark flex flex-col gap-2 sm:w-[400px] h-[px] group ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-auto ml-0"
                       : "ml-auto mr-0"
                   }`}
@@ -97,7 +106,10 @@ const ClientSatisfaction = () => {
               <div>
                 <div
                   className={`bg-cc dark:bg-cc-dark p-6 rounded-lg text-tm dark:text-tm-dark flex flex-col gap-2 sm:w-[400px] h-[px] group ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-auto ml-0"
                       : "ml-auto mr-0"
                   }`}
@@ -122,7 +134,10 @@ const ClientSatisfaction = () => {
               <div>
                 <div
                   className={`bg-cc dark:bg-cc-dark p-6 rounded-lg text-tm dark:text-tm-dark flex flex-col gap-2 sm:w-[400px] h-[px] group ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-auto ml-0"
                       : "ml-auto mr-0"
                   }`}
@@ -147,7 +162,10 @@ const ClientSatisfaction = () => {
               <div>
                 <div
                   className={`bg-cc dark:bg-cc-dark p-6 rounded-lg text-tm dark:text-tm-dark flex flex-col gap-2 sm:w-[400px] h-[px] group ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-auto ml-0"
                       : "ml-auto mr-0"
                   }`}
@@ -172,7 +190,10 @@ const ClientSatisfaction = () => {
               <div>
                 <div
                   className={`bg-cc dark:bg-cc-dark p-6 rounded-lg text-tm dark:text-tm-dark flex flex-col gap-2 sm:w-[400px] h-[px] group ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-auto ml-0"
                       : "ml-auto mr-0"
                   } `}

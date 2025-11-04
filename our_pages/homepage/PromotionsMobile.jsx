@@ -78,7 +78,10 @@ const PromotionsMobile = () => {
               <div className="flex items-center justify-between">
                 <Link href={promo.link}>
                   <div className="w-[24px] h-[24px] rounded-[5.73px] bg-e1 dark:bg-e1-dark flex justify-center items-center group-hover:bg-tm dark:group-hover:bg-tm-dark transition-all duration-500 ease-in-out">
-                    {locale === "ar" || locale === "ps" || locale === "ku" ? (
+                    {locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa" ? (
                       <RiArrowLeftUpLine
                         className={`text-base transition-transform duration-500 ease-in-out ${
                           hovered === promo.id

@@ -17,7 +17,10 @@ const LocalDepositorWrapper = () => {
         <DepositorSection1 />
         <p
           className={`text-tm dark:text-tm-dark text-xl sm:text-2xl md:text-xl lg:text-2xl xl:text-3xl font-semibold my-5 ${
-            locale === "ar" || locale === "ps" || locale === "ku"
+            locale === "ar" ||
+            locale === "ps" ||
+            locale === "ku" ||
+            locale === "fa"
               ? "text-center md:text-right"
               : "text-center md:text-left"
           }`}

@@ -60,7 +60,10 @@ const ParticipateDraw = () => {
             width={200}
             height={200}
             className={`absolute top-0 w-[26%] sm:w-[16%] lg:w-[10%] ${
-              locale === "ar" || locale === "ps" || locale === "ku"
+              locale === "ar" ||
+              locale === "ps" ||
+              locale === "ku" ||
+              locale === "fa"
                 ? "right-[-10px] sm:right-[-12px] md:right-[9px] lg:right-[18px]"
                 : "left-[-10px] sm:left-[-12px] md:left-[9px] lg:left-[18px]"
             }`}
@@ -117,7 +120,10 @@ const ParticipateDraw = () => {
             width={200}
             height={200}
             className={`absolute top-0 w-[26%] sm:w-[16%] lg:w-[10%] ${
-              locale === "ar" || locale === "ps" || locale === "ku"
+              locale === "ar" ||
+              locale === "ps" ||
+              locale === "ku" ||
+              locale === "fa"
                 ? "left-[-11px] md:left-[8px]"
                 : "right-[-11px] md:right-[8px]"
             }`}

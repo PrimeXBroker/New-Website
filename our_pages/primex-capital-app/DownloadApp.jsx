@@ -23,7 +23,10 @@ const DownloadApp = () => {
           <div className="col-span-12 lg:col-span-6">
             <h2
               className={`text-tm dark:text-tm-dark sm:mx-auto lg:mx-0 text-2xl md:text-3xl font-semibold mb-5 ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center lg:text-start"
                   : "text-center lg:text-start"
               }`}
@@ -35,7 +38,10 @@ const DownloadApp = () => {
             </h2>
             <p
               className={`text-ts dark:text-ts-dark sm:max-w-xl sm:mx-auto lg:mx-0 text-sm sm:text-[15px] font-[500] ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center lg:text-start"
                   : "text-center lg:text-start"
               }`}
@@ -58,7 +64,10 @@ const DownloadApp = () => {
                 />
                 <div
                   className={`text-tm dark:text-tm-dark ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-3 text-right"
                       : "ml-3 text-left"
                   }`}
@@ -89,7 +98,10 @@ const DownloadApp = () => {
                 />
                 <div
                   className={`text-tm dark:text-tm-dark ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "mr-3 text-right"
                       : "ml-3 text-left"
                   }`}
@@ -120,7 +132,7 @@ const DownloadApp = () => {
                 />
                 <div
                   className={`text-tm dark:text-tm-dark ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" || locale === "ps" || locale === "ku" || locale === "fa"
                       ? "mr-3 text-right"
                       : "ml-3 text-left"
                   }`}

@@ -220,12 +220,20 @@ const Recognition = () => {
         </Swiper>
         <div
           className={`promotion-swiper-navigation-buttons flex gap-4 w-fit float-right relative bottom-[37px] z-[10] ${
-            locale === "ar" || locale === "ps" || locale === "ku"
+            locale === "ar" ||
+            locale === "ps" ||
+            locale === "ku" ||
+            locale === "fa"
               ? "float-left"
               : "float-right"
           }`}
           dir={
-            locale === "ar" || locale === "ps" || locale === "ku" ? "ltr" : ""
+            locale === "ar" ||
+            locale === "ps" ||
+            locale === "ku" ||
+            locale === "fa"
+              ? "ltr"
+              : ""
           }
         >
           <button className="promotions-swiper-button-prev group !bg-tl dark:!bg-tl-dark hover:!bg-pcp dark:hover:!bg-pcp group transition-colors duration-300 ease-in-out">

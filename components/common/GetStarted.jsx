@@ -23,7 +23,10 @@ const GetStarted = () => {
           <div className="lg:w-[60%]">
             <h3
               className={`sectionHeading text-xl text-nb dark:text-nb-dark font-semibold ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -32,7 +35,10 @@ const GetStarted = () => {
             </h3>
             <p
               className={`sectionPara text-nb dark:text-nb-dark ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -47,7 +53,10 @@ const GetStarted = () => {
               className={`transition-colors duration-300 ease-in-out rounded-lg font-bold flex items-center justify-center gap-3 group bg-nw dark:bg-nw-dark text-nb dark:text-nb-dark group py-5 px-9 w-auto tablet-md:text-[12px] laptop-sm:text-[15px] laptop-md:text-base`}
             >
               {t("getStarted.get_started_btn1")}
-              {locale === "ar" || locale === "ku" || locale === "ps" ? (
+              {locale === "ar" ||
+              locale === "ku" ||
+              locale === "ps" ||
+              locale === "fa" ? (
                 <div
                   className={`w-[20px] h-[20px] flex justify-center items-center rounded-full bg-nb dark:bg-nb-dark`}
                 >

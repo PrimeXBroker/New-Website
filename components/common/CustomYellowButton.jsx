@@ -10,7 +10,10 @@ const CustomYellowButton = ({ title, className, onClick }) => {
       onClick={onClick}
     >
       {title}
-      {locale === "ar" || locale === "ku" || locale === "ps" ? (
+      {locale === "ar" ||
+      locale === "ku" ||
+      locale === "ps" ||
+      locale === "fa" ? (
         <div
           className={`w-[20px] h-[20px] flex justify-center items-center rounded-full bg-nb dark:bg-nb-dark`}
         >

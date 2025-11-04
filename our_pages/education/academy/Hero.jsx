@@ -15,7 +15,7 @@ const Hero = ({ setActive }) => {
           <div className="max-w-2xl flex flex-col justify-center items-enter md:items-start md:w-[70%]">
             {/* <div
               className={`text-center md:text-start relative ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" || locale === "ps" || locale === "ku" || locale === "fa"
                   ? "left-[137px]"
                   : "right-[137px]"
               }`}
@@ -24,7 +24,10 @@ const Hero = ({ setActive }) => {
             </div> */}
             <h1
               className={`text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-tm dark:text-tm-dark pb-1 ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -33,7 +36,10 @@ const Hero = ({ setActive }) => {
             </h1>
             <h2
               className={`text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-pcp dark:text-pcp-dark ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -42,7 +48,10 @@ const Hero = ({ setActive }) => {
             </h2>
             <p
               className={`text-ts dark:text-ts-dark w-[95%] sm:w-[90%] mx-auto md:mx-0 md:w-[75%] mb-5 text-sm sm:text-base mt-2 ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}

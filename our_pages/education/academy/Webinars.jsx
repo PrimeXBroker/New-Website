@@ -36,7 +36,10 @@ const Webinars = ({ active, setActive }) => {
             <div className="lg:mt-10">
               <h2
                 className={`text-2xl sm:text-3xl lg:text-5xl font-semibold text-pcp dark:text-pcp-dark lg:mb-4 ${
-                  locale === "ar" || locale === "ku" || locale === "ps"
+                  locale === "ar" ||
+                  locale === "ku" ||
+                  locale === "ps" ||
+                  locale === "fa"
                     ? "text-center lg:text-right"
                     : "text-center lg:text-left"
                 }`}
@@ -45,7 +48,10 @@ const Webinars = ({ active, setActive }) => {
               </h2>
               <h2
                 className={`text-2xl sm:text-3xl lg:text-5xl font-semibold text-rm dark:text-tm-dark ${
-                  locale === "ar" || locale === "ku" || locale === "ps"
+                  locale === "ar" ||
+                  locale === "ku" ||
+                  locale === "ps" ||
+                  locale === "fa"
                     ? "text-center lg:text-right"
                     : "text-center lg:text-left"
                 }`}

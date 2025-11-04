@@ -26,7 +26,7 @@ const Banner = () => {
           <div className="col-span-12 md:col-span-5">
             {/* <div
               className={`text-center md:text-start relative ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" || locale === "ps" || locale === "ku" || locale === "fa"
                   ? "left-[137px]"
                   : "right-[137px]"
               }`}

@@ -45,7 +45,10 @@ const Discount = () => {
                 </p>
                 <div
                   className={`absolute right-0 top-0 h-full w-px bg-[#C6C6C6] ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "hidden"
                       : "hidden md:block"
                   }`}
@@ -88,7 +91,10 @@ const Discount = () => {
                 </p>
                 <div
                   className={`absolute right-0 top-0 h-full w-px bg-[#C6C6C6] ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "hidden md:block"
                       : "hidden"
                   }`}

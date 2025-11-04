@@ -22,7 +22,10 @@ const RegistrationWrapper = () => {
               width="18"
               height="18"
               src={
-                locale === "ar" || locale === "ku" || locale === "ps"
+                locale === "ar" ||
+                locale === "ku" ||
+                locale === "ps" ||
+                locale === "fa"
                   ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/registration-mockup-ar.png"
                   : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/registration-mockup-en.png"
               }
@@ -53,7 +56,10 @@ const RegistrationWrapper = () => {
                   />
                   <div
                     className={`text-tm-dark dark:text-tm-dark ${
-                      locale === "ar" || locale === "ps" || locale === "ku"
+                      locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
                         ? "mr-3 text-right"
                         : "ml-3 text-left"
                     }`}
@@ -84,7 +90,10 @@ const RegistrationWrapper = () => {
                   />
                   <div
                     className={`text-tm-dark dark:text-tm-dark ${
-                      locale === "ar" || locale === "ps" || locale === "ku"
+                      locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
                         ? "mr-3 text-right"
                         : "ml-3 text-left"
                     }`}

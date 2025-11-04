@@ -53,7 +53,10 @@ const Features = () => {
                 key={index}
                 className={`flex items-center gap-4 md:px-6 xl:px-12 group ${
                   index !== 0
-                    ? locale === "ar" || locale === "ps" || locale === "ku"
+                    ? locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
                       ? "border-r-2 border-e1 dark:border-e1-dark"
                       : "border-l-2 border-e1 dark:border-e1-dark"
                     : ""
@@ -76,7 +79,10 @@ const Features = () => {
                 key={index}
                 className={`flex items-center gap-4 px-12 group ${
                   index !== 0
-                    ? locale === "ar" || locale === "ps" || locale === "ku"
+                    ? locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
                       ? "border-r-2 border-e1 dark:border-e1-dark"
                       : "border-l-2 border-e1 dark:border-e1-dark"
                     : ""

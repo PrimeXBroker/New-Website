@@ -26,7 +26,10 @@ const GetStarted = () => {
           <div className="lg:w-[60%]">
             <h1
               className={`sectionHeading text-xl text-black font-semibold ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -35,7 +38,10 @@ const GetStarted = () => {
             </h1>
             <p
               className={`sectionPara text-black ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -50,7 +56,10 @@ const GetStarted = () => {
               className="custom-button-brown px-6 py-4 rounded-[12px] w-full lg:w-auto flex items-center justify-center gap-3 font-semibold "
             >
               {b("btn1Txt")}
-              {locale === "ar" || locale === "ku" || locale === "ps" ? (
+              {locale === "ar" ||
+              locale === "ku" ||
+              locale === "ps" ||
+              locale === "fa" ? (
                 <BsArrowUpLeftCircleFill />
               ) : (
                 <BsArrowUpRightCircleFill />

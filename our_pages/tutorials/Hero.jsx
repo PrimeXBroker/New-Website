@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section
       className="bg-p dark:bg-p-dark pt-28 sm:pt-32"
-      dir={locale === "ar" ? "rtl" : "ltr"}
+      dir={locale === "ar" || locale === "fa" ? "rtl" : "ltr"}
     >
       <div className="container">
         <div className="grid grid-cols-12 items-center md:py-10 lg:py-0">

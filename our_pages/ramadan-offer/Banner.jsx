@@ -24,7 +24,7 @@ const Banner = () => {
           <div className="max-w-2xl flex flex-col justify-center items-center md:items-start md:w-[70%]">
             {/* <div
               className={`text-center md:text-start relative ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" || locale === "ps" || locale === "ku" || locale === "fa"
                   ? "left-[137px]"
                   : "right-[137px]"
               }`}
@@ -33,7 +33,10 @@ const Banner = () => {
             </div> */}
             <h2
               className={`text-base sm:text-lg md:text-base lg:text-lg xl:text-lg text-[#ffffff] ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -42,7 +45,10 @@ const Banner = () => {
             </h2>
             <h1
               className={`text-4xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-[#FED100] py-2 ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -52,7 +58,10 @@ const Banner = () => {
             </h1>
             <p
               className={`text-[#ffffff] text-xl sm:text-3xl md:text-xl lg:text-3xl mt-1 ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -71,7 +80,10 @@ const Banner = () => {
                 />
                 <p
                   className={`text-[#ffffff] text-xl md:text-base lg:text-xl ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "text-center md:text-right"
                       : "text-center md:text-left"
                   }`}
@@ -90,7 +102,10 @@ const Banner = () => {
                 />
                 <p
                   className={`text-[#ffffff] text-xl md:text-base lg:text-xl ${
-                    locale === "ar" || locale === "ps" || locale === "ku"
+                    locale === "ar" ||
+                    locale === "ps" ||
+                    locale === "ku" ||
+                    locale === "fa"
                       ? "text-center md:text-right"
                       : "text-center md:text-left"
                   }`}
@@ -111,7 +126,10 @@ const Banner = () => {
                 href={getLoginUrl(locale)}
                 target="_blank"
                 className={`text-xs text-[#ffffff] font-normal block mt-2 ${
-                  locale === "ar" || locale === "ps" || locale === "ku"
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
                     ? "text-center md:text-start mr-6"
                     : "text-center md:text-start md:ml-6"
                 }`}

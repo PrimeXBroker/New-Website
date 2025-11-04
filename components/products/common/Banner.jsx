@@ -48,7 +48,10 @@ const Banner = ({
             </div>
             <div
               className={`mt-10 md:mt-9 lg:mt-10 flex ${
-                locale === "ar" || locale === "ps" || locale === "ku"
+                locale === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "justify-center md:justify-start"
                   : "justify-center md:justify-start"
               }`}
