@@ -172,7 +172,8 @@ const GlobalMarketWidget = () => {
                               className={`w-[40px] h-[40px] bg-e1 dark:bg-e1-dark ${
                                 locale === "ar" ||
                                 locale === "ps" ||
-                                locale === "ku"
+                                locale === "ku" ||
+                                locale === "fa"
                                   ? "ml-3"
                                   : "mr-3"
                               }`}
