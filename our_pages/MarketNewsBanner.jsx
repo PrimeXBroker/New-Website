@@ -121,7 +121,7 @@ const MarketNewsBanner = ({ news }) => {
                 <Moment
                   date={newsDetails?.createdOn}
                   format={
-                    locale === "ar" || locale === "pt"
+                    locale === "ar" || locale === "pt" || locale === "fa"
                       ? "Do MMM YYYY"
                       : "Do MMM YYYY"
                   }
@@ -146,7 +146,7 @@ const MarketNewsBanner = ({ news }) => {
                     size="icon"
                     className="rounded-full"
                   >
-                    {locale === "ar" || locale === "ku" ? (
+                    {locale === "ar" || locale === "ku" || locale === "fa" ? (
                       <IoMdArrowForward className="h-4 w-4 text-tm dark:text-tm-dark" />
                     ) : (
                       <IoMdArrowBack className="h-4 w-4 text-tm dark:text-tm-dark" />
@@ -160,7 +160,7 @@ const MarketNewsBanner = ({ news }) => {
                     size="icon"
                     className="rounded-full"
                   >
-                    {locale === "ar" || locale === "ku" ? (
+                    {locale === "ar" || locale === "ku" || locale === "fa" ? (
                       <IoMdArrowBack className="h-4 w-4 text-tm dark:text-tm-dark" />
                     ) : (
                       <IoMdArrowForward className="h-4 w-4 text-tm dark:text-tm-dark" />

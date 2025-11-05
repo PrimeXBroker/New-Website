@@ -83,7 +83,9 @@ const MarketNews = ({ news, totalPages, lang }) => {
                             blog?.postedOn ? blog?.postedOn : blog?.createdOn
                           }
                           format={
-                            locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"
+                            locale === "ar" || locale === "fa"
+                              ? "Do MMM YYYY"
+                              : "Do MMM YYYY"
                           }
                         />
                       </p>

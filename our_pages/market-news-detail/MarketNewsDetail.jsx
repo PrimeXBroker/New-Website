@@ -56,7 +56,14 @@ const MarketNewsDetail = ({ slug }) => {
   return (
     <section
       className="bg-p dark:bg-p-dark py-20"
-      dir={detail?.language === "ar" ? "rtl" : "ltr"}
+      dir={
+        detail?.language === "ar" ||
+        detail?.language === "ps" ||
+        detail?.language === "ku" ||
+        detail?.language === "fa"
+          ? "rtl"
+          : "ltr"
+      }
     >
       <div className="container">
         <div className="flex justify-center">
@@ -68,24 +75,42 @@ const MarketNewsDetail = ({ slug }) => {
           <div className="lg:w-[70%] w-full mb-5 md:mb-0">
             <h2
               className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark mb-3 ${
-                detail?.language === "ar" || locale === "ps" || locale === "ku"
+                detail?.language === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
             >
               {detail?.language === "ar"
                 ? "هل أنت مستعد للاستثمار؟"
+                : locale === "ku"
+                ? "ئامادە بۆ سەرمایەکەردن"
+                : locale === "pt"
+                ? "Pronto para Investir"
+                : locale === "fa"
+                ? "آماده برای سرمایه‌گذاری"
                 : "Ready to Invest"}
             </h2>
             <p
               className={` text-ts dark:text-ts-dark text-sm sm:text-base ${
-                detail?.language === "ar" || locale === "ps" || locale === "ku"
+                detail?.language === "ar" ||
+                locale === "ps" ||
+                locale === "ku" ||
+                locale === "fa"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
             >
               {detail?.language === "ar"
                 ? "افتح حسابًا حقيقيًا وابدأ الاستثمار الآن! تداول أكثر من 500 من الأدوات المالية العالمية دون أي متاعب."
+                : locale === "ku"
+                ? "حسابە کە بەرەوە بکە و ئێستا سەرمایەکەردن پەڕە بکە! 330+ دارایی جیهانی بە بێ مەشقی فەرمی فڕۆشە."
+                : locale === "pt"
+                ? "Abra uma conta real e comece a investir AGORA! Negocie mais de 330 ativos globais sem complicação."
+                : locale === "fa"
+                ? "اکانت زنده باز کنید و همین حالا سرمایه‌گذاری را شروع کنید! بیش از ۳۳۰ دارایی جهانی را بدون دردسر معامله کنید."
                 : "Open live account & Start investing NOW! Trade 330+ global assets hassle-free."}
             </p>
           </div>
@@ -96,7 +121,15 @@ const MarketNewsDetail = ({ slug }) => {
                 target="_blank"
                 className="text-[#111111] font-semibold"
               >
-                {detail?.language === "ar" ? "ابدأ" : "Get Started"}
+                {detail?.language === "ar"
+                  ? "ابدأ"
+                  : locale === "ku"
+                  ? "دەست پێ بکە"
+                  : locale === "pt"
+                  ? "Começar"
+                  : locale === "fa"
+                  ? "شروع کنید"
+                  : "Get Started"}
               </a>
             </button>
           </div>
@@ -105,7 +138,6 @@ const MarketNewsDetail = ({ slug }) => {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-pcp dark:text-pcp-dark text-center">
             {t("relatedBlogs.title1")}
             <span className="text-tm dark:text-tm-dark">
-              {" "}
               {t("relatedBlogs.title2")}
             </span>
           </h2>
@@ -139,7 +171,12 @@ const MarketNewsDetail = ({ slug }) => {
                             blog?.postedOn ? blog?.postedOn : blog?.createdOn
                           }
                           format={
-                            locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"
+                            locale === "ar" ||
+                            locale === "fa" ||
+                            locale === "ps" ||
+                            locale === "ku"
+                              ? "Do MMM YYYY"
+                              : "Do MMM YYYY"
                           }
                         />
                       </p>

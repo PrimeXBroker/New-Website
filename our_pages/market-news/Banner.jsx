@@ -95,6 +95,8 @@ const Banner = ({ news }) => {
                       ? newsDetails?.imageKd || newsDetails?.image
                       : locale === "pt"
                       ? newsDetails?.imagePt || newsDetails?.image
+                      : locale === "fa"
+                      ? newsDetails?.imageFa || newsDetails?.image
                       : newsDetails?.image
                   }
                   alt={newsDetails?.altTag}
@@ -114,6 +116,8 @@ const Banner = ({ news }) => {
                     ? newsDetails?.titleKd || newsDetails?.titleEn
                     : locale === "pt"
                     ? newsDetails?.titlePt || newsDetails?.titleEn
+                    : locale === "fa"
+                    ? newsDetails?.titleFa || newsDetails?.titleEn
                     : newsDetails?.titleEn}
                 </Link>
               )}
@@ -123,7 +127,7 @@ const Banner = ({ news }) => {
                 <Moment
                   date={newsDetails?.createdOn}
                   format={
-                    locale === "ar" || locale === "pt"
+                    locale === "ar" || locale === "pt" || locale === "fa"
                       ? "Do MMM YYYY"
                       : "Do MMM YYYY"
                   }
@@ -148,7 +152,7 @@ const Banner = ({ news }) => {
                     size="icon"
                     className="rounded-full"
                   >
-                    {locale === "ar" || locale === "ku" ? (
+                    {locale === "ar" || locale === "ku" || locale === "fa" ? (
                       <IoMdArrowForward className="h-4 w-4 text-tm dark:text-tm-dark" />
                     ) : (
                       <IoMdArrowBack className="h-4 w-4 text-tm dark:text-tm-dark" />
@@ -162,7 +166,7 @@ const Banner = ({ news }) => {
                     size="icon"
                     className="rounded-full"
                   >
-                    {locale === "ar" || locale === "ku" ? (
+                    {locale === "ar" || locale === "ku" || locale === "fa" ? (
                       <IoMdArrowBack className="h-4 w-4 text-tm dark:text-tm-dark" />
                     ) : (
                       <IoMdArrowForward className="h-4 w-4 text-tm dark:text-tm-dark" />
@@ -188,6 +192,8 @@ const Banner = ({ news }) => {
                             ? blog?.imageKd || blog?.image
                             : locale === "pt"
                             ? blog?.imagePt || blog?.image
+                            : locale === "fa"
+                            ? blog?.imageFa || blog?.image
                             : blog?.image
                         }
                         alt={blog?.altTag}

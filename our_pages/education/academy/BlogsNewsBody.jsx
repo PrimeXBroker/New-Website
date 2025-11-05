@@ -39,6 +39,12 @@ function BlogsNewsBody({ slug }) {
               ? res?.data?.data?.contentPt
               : res?.data?.data?.contentEn
           );
+        } else if (locale === "fa") {
+          setContent(
+            res?.data?.data?.contentFa
+              ? res?.data?.data?.contentFa
+              : res?.data?.data?.contentEn
+          );
         } else {
           setContent(res?.data?.data?.contentEn);
         }
@@ -72,10 +78,12 @@ function BlogsNewsBody({ slug }) {
           >
             <span
               className={`${
-                locale === "ar" || locale === "ku" ? "ml-2 " : "mr-2 "
+                locale === "ar" || locale === "ku" || locale === "fa"
+                  ? "ml-2 "
+                  : "mr-2 "
               }`}
             >
-              {locale === "ar" || locale === "ku" ? (
+              {locale === "ar" || locale === "ku" || locale === "fa" ? (
                 <FaArrowRight />
               ) : (
                 <FaArrowLeft />
@@ -87,6 +95,8 @@ function BlogsNewsBody({ slug }) {
               ? "گەڕانەوە بۆ بڵاگ"
               : locale === "pt"
               ? "Voltar aos Blogs"
+              : locale === "fa"
+              ? "بازگشت به بلاگ‌ها"
               : "Back to Blogs"}
           </Link>
 
@@ -94,7 +104,7 @@ function BlogsNewsBody({ slug }) {
             <Moment
               date={detail?.postedOn ? detail?.postedOn : detail?.createdOn}
               format={
-                locale === "ar" || locale === "ku"
+                locale === "ar" || locale === "ku" || locale === "fa"
                   ? "Do MMM YYYY"
                   : "Do MMM YYYY"
               }
@@ -109,6 +119,8 @@ function BlogsNewsBody({ slug }) {
               ? detail?.titleKd || detail?.titleEn
               : locale === "pt"
               ? detail?.titlePt || detail?.titleEn
+              : locale === "fa"
+              ? detail?.titleFa || detail?.titleEn
               : detail?.titleEn}
           </h2>
         </div>
@@ -121,6 +133,8 @@ function BlogsNewsBody({ slug }) {
                 ? detail?.imageKd || detail?.image
                 : locale === "pt"
                 ? detail?.imagePt || detail?.image
+                : locale === "fa"
+                ? detail?.imageFa || detail?.image
                 : detail?.image
             }
             alt={detail?.altTag}

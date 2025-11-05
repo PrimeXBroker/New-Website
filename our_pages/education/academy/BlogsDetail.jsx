@@ -76,7 +76,7 @@ const BlogDetail = () => {
           <div className="lg:w-[70%] w-full mb-5 md:mb-0">
             <h2
               className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark mb-3 ${
-                locale === "ar" || locale === "ku"
+                locale === "ar" || locale === "ku" || locale === "fa"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -87,11 +87,13 @@ const BlogDetail = () => {
                 ? "ئامادە بۆ سەرمایەکەردن"
                 : locale === "pt"
                 ? "Pronto para Investir"
+                : locale === "fa"
+                ? "آماده برای سرمایه‌گذاری"
                 : "Ready to Invest"}
             </h2>
             <p
               className={` text-ts dark:text-ts-dark text-sm sm:text-base ${
-                locale === "ar" || locale === "ku"
+                locale === "ar" || locale === "ku" || locale === "fa"
                   ? "text-center md:text-right"
                   : "text-center md:text-left"
               }`}
@@ -102,6 +104,8 @@ const BlogDetail = () => {
                 ? "حسابە کە بەرەوە بکە و ئێستا سەرمایەکەردن پەڕە بکە! 330+ دارایی جیهانی بە بێ مەشقی فەرمی فڕۆشە."
                 : locale === "pt"
                 ? "Abra uma conta real e comece a investir AGORA! Negocie mais de 330 ativos globais sem complicação."
+                : locale === "fa"
+                ? "اکانت زنده باز کنید و همین حالا سرمایه‌گذاری را شروع کنید! بیش از ۳۳۰ دارایی جهانی را بدون دردسر معامله کنید."
                 : "Open live account & Start investing NOW! Trade 330+ global assets hassle-free."}
             </p>
           </div>
@@ -114,6 +118,8 @@ const BlogDetail = () => {
                   ? "دەست پێ بکە"
                   : locale === "pt"
                   ? "Começar"
+                  : locale === "fa"
+                  ? "شروع کنید"
                   : "Get Started"
               }
               onClick={handleClick}

@@ -99,6 +99,8 @@ const ExpertAnalysis = ({ id }) => {
                           ? blog?.imageKd || blog?.image
                           : locale === "pt"
                           ? blog?.imagePt || blog?.image
+                          : locale === "fa"
+                          ? blog?.imageFa || blog?.image
                           : blog?.image
                       }
                       width="100"
@@ -116,6 +118,8 @@ const ExpertAnalysis = ({ id }) => {
                           ? blog?.titleKd || blog?.titleEn
                           : locale === "pt"
                           ? blog?.titlePt || blog?.titleEn
+                          : locale === "fa"
+                          ? blog?.titleFa || blog?.titleEn
                           : blog?.titleEn}
                       </h4>
                     </div>

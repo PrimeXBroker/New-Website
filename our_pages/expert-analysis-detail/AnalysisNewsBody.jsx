@@ -108,6 +108,15 @@ function AnalysisNewsBody({ slug }) {
             decorator
           );
           setContent(editorState);
+        } else if (locale === "fa") {
+          const contentState = convertFromRaw(
+            JSON.parse(res?.data?.data?.contentFa || res?.data?.data?.contentEn)
+          );
+          const editorState = EditorState.createWithContent(
+            contentState,
+            decorator
+          );
+          setContent(editorState);
         } else {
           const contentState = convertFromRaw(
             JSON.parse(res?.data?.data?.contentEn)
@@ -152,10 +161,12 @@ function AnalysisNewsBody({ slug }) {
           >
             <span
               className={`${
-                locale === "ar" || locale === "ku" ? "ml-2 " : "mr-2 "
+                locale === "ar" || locale === "ku" || locale === "fa"
+                  ? "ml-2 "
+                  : "mr-2 "
               }`}
             >
-              {locale === "ar" || locale === "ku" ? (
+              {locale === "ar" || locale === "ku" || locale === "fa" ? (
                 <FaArrowRight />
               ) : (
                 <FaArrowLeft />
@@ -171,6 +182,8 @@ function AnalysisNewsBody({ slug }) {
               ? "العودة إلى المدونات"
               : locale === "pt"
               ? "De volta à Análise Técnica"
+              : locale === "fa"
+              ? "بازگشت به بلاگ‌ها"
               : "Back to Blogs"}
           </Link>
 
@@ -178,7 +191,7 @@ function AnalysisNewsBody({ slug }) {
             <Moment
               date={detail?.postedOn ? detail?.postedOn : detail?.createdOn}
               format={
-                locale === "ar" || locale === "ku"
+                locale === "ar" || locale === "ku" || locale === "fa"
                   ? "Do MMM YYYY"
                   : "Do MMM YYYY"
               }
@@ -193,6 +206,8 @@ function AnalysisNewsBody({ slug }) {
               ? detail?.titleKd || detail?.titleEn
               : locale === "pt"
               ? detail?.titlePt || detail?.titleEn
+              : locale === "fa"
+              ? detail?.titleFa || detail?.titleEn
               : detail?.titleEn}
           </h2>
           {/* <div className="flex items-center space-x-4">
@@ -233,6 +248,8 @@ function AnalysisNewsBody({ slug }) {
                 ? detail?.imageKd || detail?.image
                 : locale === "pt"
                 ? detail?.imagePt || detail?.image
+                : locale === "fa"
+                ? detail?.imageFa || detail?.image
                 : detail?.image
             }
             alt="PrimeX Capital"

@@ -125,7 +125,11 @@ function NewsBody({ slug, date }) {
             }
           >
             <span
-              className={`${detail?.language === "ar" ? "ml-2 " : "mr-2 "}`}
+              className={`${
+                detail?.language === "ar" || detail?.language === "fa"
+                  ? "ml-2 "
+                  : "mr-2 "
+              }`}
             >
               {detail?.language === "ar" ? <FaArrowRight /> : <FaArrowLeft />}
             </span>
@@ -135,13 +139,19 @@ function NewsBody({ slug, date }) {
                 : "Back to Market News"
               : locale === "ar"
               ? "العودة إلى المدونات"
+              : locale === "ar"
+              ? "بازگشت به بلاگ‌ها"
               : "Back to Blogs"}
           </Link>
 
           <div className="text-ts dark:text-ts-dark text-sm mb-2 text-center">
             <Moment
               date={detail?.postedOn ? detail?.postedOn : detail?.createdOn}
-              format={locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"}
+              format={
+                locale === "ar" || locale === "fa"
+                  ? "Do MMM YYYY"
+                  : "Do MMM YYYY"
+              }
             />{" "}
             • 5 Min Read
           </div>

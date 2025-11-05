@@ -46,7 +46,13 @@ const page = async ({ params }) => {
   let totalPages,
     news = [];
   const lang =
-    locale === "ar" ? "news" : locale === "pt" ? "market-news-pt" : "all";
+    locale === "ar"
+      ? "news"
+      : locale === "pt"
+      ? "market-news-pt"
+      : locale === "fa"
+      ? "market-news-fa"
+      : "all";
 
   // news
   const response = await getNews(page, lang, locale);
