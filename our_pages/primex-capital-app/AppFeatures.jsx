@@ -26,6 +26,130 @@ const AppFeatures = () => {
             </span>
           </h2>
         </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+          <div className="relative">
+            <Image
+              unoptimized={true}
+              width="46"
+              height="32"
+              src={
+                theme === "dark"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/community-features/Community+Desktop+Dark+Mode.png"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/community-features/Community+Desktop+Light+Mode.png"
+              }
+              alt="In App Community Image"
+              className="w-full h-full rounded-2xl hidden md:block"
+            />
+            <Image
+              unoptimized={true}
+              width="46"
+              height="32"
+              src={
+                theme === "dark"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/community-features/Community+Mobile+Dark+Mode.png"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/community-features/Community+Mobile+Light+Mode.png"
+              }
+              alt="In App Community Image"
+              className="w-full h-full rounded-2xl md:hidden"
+            />
+            <div className="bg-p dark:bg-p-dark rounded-xl px-5 py-4 absolute bottom-0 mx-2 mb-2 sm:w-[85%]">
+              <div className="flex items-center justify-between">
+                <h5 className="text-tm dark:text-tm-dark font-bold text-xl sm:text-2xl lg:text-lg xl:text-2xl">
+                  {t1("title10")}
+                </h5>
+                <Image
+                  unoptimized={true}
+                  width="32"
+                  height="32"
+                  src={
+                    theme === "dark"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/community-features/Community+-+Dark.png"
+                      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/community-features/Community+-+Light.svg"
+                  }
+                  alt="In App Community Icon"
+                  className="w-[24px] h-[24px] sm:w-[32px] sm:h-[32px]"
+                />
+              </div>
+              <p className="text-ts dark:text-ts-dark font-medium text-sm sm:text-base lg:text-sm xl:text-base !leading-tight mt-2">
+                {t1("desc10")}
+              </p>
+            </div>
+          </div>
+          <div className="relative">
+            <Image
+              unoptimized={true}
+              width="46"
+              height="32"
+              src={
+                theme === "dark"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/community-features/Languages+Desktop+Dark+Mode.png"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/community-features/Languages+Desktop+Light+Mode.png"
+              }
+              alt="Language Image"
+              className="w-full h-full rounded-2xl hidden md:block"
+            />
+            <Image
+              unoptimized={true}
+              width="46"
+              height="32"
+              src={
+                theme === "dark"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/community-features/Languages+Mobile+Dark+Mode.png"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/community-features/Languages+Mobile+Light+Mode.png"
+              }
+              alt="Language Image"
+              className="w-full h-full rounded-2xl md:hidden"
+            />
+            <div
+              className={`bg-p dark:bg-p-dark rounded-xl px-5 py-4 absolute bottom-0 mx-2 mb-2 w-[85%] hidden md:block ${
+                locale === "ar" ? "left-0" : ""
+              }`}
+            >
+              <div className="flex items-center justify-between">
+                <h5 className="text-tm dark:text-tm-dark font-bold text-xl sm:text-2xl lg:text-lg xl:text-2xl">
+                  {t1("title11")}
+                </h5>
+                <Image
+                  unoptimized={true}
+                  width="32"
+                  height="32"
+                  src={
+                    theme === "dark"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/community-features/Languages+-+Dark.png"
+                      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/community-features/Languages+-+Light.svg"
+                  }
+                  alt="Language Icon"
+                  className="w-[24px] h-[24px] sm:w-[32px] sm:h-[32px]"
+                />
+              </div>
+              <p className="text-ts dark:text-ts-dark font-medium text-sm sm:text-base lg:text-sm xl:text-base !leading-tight mt-2">
+                {t1("desc11")}
+              </p>
+            </div>
+            <div className="bg-p dark:bg-p-dark rounded-xl px-5 py-4 absolute bottom-0 mx-2 mb-2 md:hidden">
+              <div className="flex items-center justify-between">
+                <h5 className="text-tm dark:text-tm-dark font-bold text-xl sm:text-2xl lg:text-lg xl:text-2xl">
+                  {t1("title11")}
+                </h5>
+                <Image
+                  unoptimized={true}
+                  width="32"
+                  height="32"
+                  src={
+                    theme === "dark"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/community-features/Languages+-+Dark.png"
+                      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/community-features/Languages+-+Light.svg"
+                  }
+                  alt="Economic Calendar Icon"
+                  className="w-[24px] h-[24px] sm:w-[32px] sm:h-[32px]"
+                />
+              </div>
+              <p className="text-ts dark:text-ts-dark font-medium text-sm sm:text-base lg:text-sm xl:text-base !leading-tight mt-2">
+                {t1("desc11")}
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
           <div>
             <div className="relative mb-6">
