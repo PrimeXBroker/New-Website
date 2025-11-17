@@ -10,7 +10,7 @@ const AccountTypesPricingTableMobile = () => {
   const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("accountTypes.accountsTable");
-  const [activeTab, setActiveTab] = useState("standard");
+  const [activeTab, setActiveTab] = useState("cent");
   const o = useTranslations("accountTypes.accountsTable");
   const l = useTranslations("accountTypes.accountTypes");
 
