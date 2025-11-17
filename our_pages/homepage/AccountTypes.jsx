@@ -24,11 +24,11 @@ const AccountTypes = ({ accounts }) => {
             {t("desc")}
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
           {accounts.map((account) => (
             <div
               key={account.id}
-              className="bg-cc dark:bg-cc-dark p-6 rounded-xl border-2 border-cc dark:border-cc-dark hover:shadow-xl hover:border-tl dark:hover:border-tl-dark group transition-all duration-500 ease-in-out"
+              className="bg-cc dark:bg-cc-dark px-4 py-5 rounded-xl border-2 border-cc dark:border-cc-dark hover:shadow-xl hover:border-tl dark:hover:border-tl-dark group transition-all duration-500 ease-in-out"
               onMouseEnter={() => setHovered(account.id)}
               onMouseLeave={() => setHovered(null)}
             >
@@ -51,13 +51,13 @@ const AccountTypes = ({ accounts }) => {
                       </h3>
                       <p className="text-sm text-ts dark:text-ts-dark mt-1">
                         {t("deposit")}
-                        <span className="font-bold text-base text-tm dark:text-tm-dark">
+                        <span className="font-bold text-sm text-tm dark:text-tm-dark">
                           {account.minimumDeposit}
                         </span>
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/ecn-gradient-bg.svg)] bg-cover bg-center text-lg text-nb dark:text-nb font-bold w-[58px] h-[34px] rounded-md flex justify-center items-center">
+                  <div className="bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/ecn-gradient-bg.svg)] bg-cover bg-center text-sm text-nb dark:text-nb font-bold w-[43px] h-[25px] rounded-[4px] flex justify-center items-center">
                     ECN
                   </div>
                 </div>

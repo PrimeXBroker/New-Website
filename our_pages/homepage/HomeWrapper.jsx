@@ -17,13 +17,13 @@ import AdvancedPlatformMobile from "./AdvancedPlatformMobile";
 const HomeWrapper = () => {
   const t = useTranslations("home.accountTypes");
   const accountTypesData = [
-    // {
-    //   id: 1,
-    //   title: t("acc1.title"),
-    //   icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/cent-account-icon.png",
-    //   minimumDeposit: t("acc1.minimumDeposit"),
-    //   description: t("acc1.description"),
-    // },
+    {
+      id: 1,
+      title: t("acc1.title"),
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/cent-account-icon.png",
+      minimumDeposit: t("acc1.minimumDeposit"),
+      description: t("acc1.description"),
+    },
     {
       id: 2,
       title: t("acc2.title"),
