@@ -122,16 +122,21 @@
       "desc": "Explore nossas opções de conta e encontre a que se adapta às suas necessidades. Selecione o plano perfeito para você.",
       "deposit": "Depósito Mínimo: ",
       "acc1": {
+        "title": "Cent",
+        "description": "Projetada para traders iniciantes, começa com um depósito de apenas $10 e oferece um ambiente de negociação flexível sem taxas ocultas.",
+        "minimumDeposit": " $10"
+      },
+      "acc2": {
         "title": "Padrão",
         "minimumDeposit": " $10",
         "description": "A Conta Padrão é uma das escolhas principais entre os traders devido às suas comissões sem swap, oferecendo eficiência de custos ao eliminar estas taxas."
       },
-      "acc2": {
+      "acc3": {
         "title": "Narrow",
         "minimumDeposit": " $1000",
         "description": "Esta conta é ideal para scalpers, com o spread mais baixo para maximizar os lucros com movimentos de mercado de curto prazo."
       },
-      "acc3": {
+      "acc4": {
         "title": "Raw",
         "minimumDeposit": " $5000",
         "description": "A Conta Raw é projetada para traders profissionais, oferecendo um 'spread bruto' para uma experiência de negociação incomparável."
@@ -1472,16 +1477,21 @@
       "desc": "Explore nossas opções de conta e encontre a que se adapta às suas necessidades. Selecione o plano perfeito para você.",
       "deposit": "Depósito Mínimo: ",
       "acc1": {
+        "title": "Cent",
+        "description": "Projetada para traders iniciantes, começa com um depósito de apenas $10 e oferece um ambiente de negociação flexível sem taxas ocultas.",
+        "btnTxt": "Conta Cent"
+      },
+      "acc2": {
         "title": "Standard",
         "description": "Favorita por comissões sem swap, oferecendo negociação econômica sem taxas ocultas.",
         "btnTxt": "Conta Standard"
       },
-      "acc2": {
+      "acc3": {
         "title": "Narrow",
         "description": "Criada para scalpers, oferecendo os spreads mais baixos para otimizar lucros de curto prazo.",
         "btnTxt": "Conta Narrow"
       },
-      "acc3": {
+      "acc4": {
         "title": "Raw",
         "description": "Projetada para profissionais, oferecendo spreads básicos para uma experiência de negociação incomparável.",
         "btnTxt": "Conta Raw"
@@ -1564,6 +1574,25 @@
         "webinars": "Semanal",
         "expertAdvice": "Acima de $1,000",
         "btnTxt": "Conta Raw"
+      },
+      "cent": {
+        "title": "Cent",
+        "deposit": "$10",
+        "spread": "A partir de 0.8 pips",
+        "commissions": "$0",
+        "leverage": "1:500",
+        "marginRequired": "1%",
+        "minimumLotSize": "0.01 Lote Cent",
+        "stopOutLevel": "30%",
+        "marginCallLevel": "100%",
+        "executionType": "Non-Dealing Desk",
+        "vps": "✔",
+        "metaTrader5": "✔",
+        "automaticTrading": "✔",
+        "demoAccount": "✔",
+        "webinars": "Semanalmente",
+        "expertAdvice": "Acima de $1,000",
+        "btnTxt": "Conta Cent"
       }
     },
     "faq": {

@@ -20,7 +20,7 @@ const AccountTypesPricingTableMobile = () => {
   };
 
   const tabContent = {
-    standard: {
+    cent: {
       id: 1,
       deposit: t("standard.deposit"),
       spread: t("standard.spread"),
@@ -40,8 +40,28 @@ const AccountTypesPricingTableMobile = () => {
       swap: t("swapFreeNote"),
       btnTxt: t("standard.btnTxt"),
     },
-    narrow: {
+    standard: {
       id: 2,
+      deposit: t("standard.deposit"),
+      spread: t("standard.spread"),
+      commissions: t("standard.commissions"),
+      leverage: t("standard.leverage"),
+      marginRequired: t("standard.marginRequired"),
+      minimumLotSize: t("standard.minimumLotSize"),
+      stopOutLevel: t("standard.stopOutLevel"),
+      marginCallLevel: t("standard.marginCallLevel"),
+      executionType: t("standard.executionType"),
+      vps: t("standard.vps"),
+      metaTrader5: t("standard.metaTrader5"),
+      automaticTrading: t("standard.automaticTrading"),
+      demoAccount: t("standard.demoAccount"),
+      webinars: t("standard.webinars"),
+      expertAdvice: t("standard.expertAdvice"),
+      swap: t("swapFreeNote"),
+      btnTxt: t("standard.btnTxt"),
+    },
+    narrow: {
+      id: 3,
       deposit: t("narrow.deposit"),
       depositOffer: o("narrow.deposit-offer"),
       spread: t("narrow.spread"),
@@ -62,7 +82,7 @@ const AccountTypesPricingTableMobile = () => {
       swap: t("swapFreeNote"),
     },
     raw: {
-      id: 3,
+      id: 4,
       deposit: t("raw.deposit"),
       depositOffer: o("raw.deposit-offer"),
       spread: t("raw.spread"),
@@ -87,8 +107,8 @@ const AccountTypesPricingTableMobile = () => {
   return (
     <section className="bg-p dark:bg-p-dark pb-16">
       <div className="container">
-        <div className="flex space-x-4 mb-6">
-          {["standard", "narrow", "raw"].map((tab) => (
+        <div className="flex space-x-4 mb-6 flex-wrap">
+          {["cent", "standard", "narrow", "raw"].map((tab) => (
             <button
               key={tab}
               className={`px-6 py-3 font-semibold relative ${
@@ -222,7 +242,7 @@ const AccountTypesPricingTableMobile = () => {
             <CustomYellowButton
               title={tabContent[activeTab].btnTxt}
               onClick={handleClick}
-              className="py-4 md:py-3 lg:py-3 text-base w-full justify-between sm:justify-center mt-5"
+              className="py-4 md:py-3 lg:py-3 text-base w-full justify-between sm:justify-center mt-5 px-5"
             />
           </div>
         </div>

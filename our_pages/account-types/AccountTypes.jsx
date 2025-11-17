@@ -20,18 +20,13 @@ const AccountTypes = ({ accounts }) => {
   return (
     <section className="bg-p dark:bg-p-dark text-tm dark:text-tm-dark py-16 sm:py-28 px-4">
       <div className="container">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark text-center mb-7">
+          {t("main_title1")}{" "}
+          <span className="text-pcp dark:text-pcp-dark">
+            {t("main_title2")}
+          </span>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="flex items-center justify-center md:justify-start">
-            <h2
-              className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-pcp dark:text-pcp-dark`}
-            >
-              {t("main_title1")} <br className="hidden md:block" />
-              <span className="text-tm dark:text-tm-dark">
-                {" "}
-                {t("main_title2")}
-              </span>
-            </h2>
-          </div>
           {accounts.map((account) => (
             <>
               <div
@@ -72,7 +67,7 @@ const AccountTypes = ({ accounts }) => {
                 <CustomYellowButton
                   title={account.btnTxt}
                   onClick={handleClick}
-                  className="py-5 md:py-4 lg:py-4 text-base w-full justify-between sm:justify-center mt-3"
+                  className="py-5 md:py-4 lg:py-4 text-base w-full justify-between sm:justify-center mt-3 px-5"
                 />
               </div>
             </>

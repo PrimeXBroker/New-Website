@@ -17,16 +17,28 @@ const AccountTypesPricingTable = () => {
 
   return (
     <div className="container mt-10">
-      <div className="grid grid-cols-4 text-tm dark:text-tm-dark">
+      <div className="grid grid-cols-5 text-tm dark:text-tm-dark">
         <div className="text-ts dark:text-ts-dark font-semibold bg-p dark:bg-p-dark px-5 py-6 text-2xl">
           {t("specifications")}
         </div>
-        <div className=""></div>
-        <div className=""></div>
-        <div className=""></div>
+        <div className="text-ts dark:text-ts-dark font-semibold bg-p dark:bg-p-dark px-5 py-6 text-center">
+          {t("cent.btnTxt")}
+        </div>
+        <div className="text-ts dark:text-ts-dark font-semibold bg-p dark:bg-p-dark px-5 py-6 text-center">
+          {t("standard.btnTxt")}
+        </div>
+        <div className="text-ts dark:text-ts-dark font-semibold bg-p dark:bg-p-dark px-5 py-6 text-center">
+          {t("narrow.btnTxt")}
+        </div>
+        <div className="text-ts dark:text-ts-dark font-semibold bg-p dark:bg-p-dark px-5 py-6 text-center">
+          {t("raw.btnTxt")}
+        </div>
         {/* First Row - Black Background */}
         <div className="text-ts dark:text-ts-dark font-semibold bg-p dark:bg-p-dark px-5 py-6">
           {t("minimumDeposit")}
+        </div>
+        <div className="text-center text-ts dark:text-ts-dark bg-p dark:bg-p-dark px-5 py-6">
+          {t("cent.deposit")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-p dark:bg-p-dark px-5 py-6">
           {t("standard.deposit")}
@@ -47,6 +59,9 @@ const AccountTypesPricingTable = () => {
           {t("spread")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
+          {t("cent.spread")}
+        </div>
+        <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
           {t("standard.spread")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
@@ -59,6 +74,9 @@ const AccountTypesPricingTable = () => {
         {/* Third Row - Black Background */}
         <div className="text-ts dark:text-ts-dark font-semibold bg-p dark:bg-p-dark px-5 py-6">
           {t("commissions")}
+        </div>
+        <div className="text-center text-ts dark:text-ts-dark bg-p dark:bg-p-dark px-5 py-6">
+          {t("cent.commissions")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-p dark:bg-p-dark px-5 py-6">
           {t("standard.commissions")}
@@ -75,6 +93,9 @@ const AccountTypesPricingTable = () => {
           {t("leverage")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
+          {t("cent.leverage")}
+        </div>
+        <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
           {t("standard.leverage")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
@@ -87,6 +108,9 @@ const AccountTypesPricingTable = () => {
         {/* Fifth Row - Black Background */}
         <div className="text-ts dark:text-ts-dark font-semibold bg-p dark:bg-p-dark px-5 py-6">
           {t("marginRequired")}
+        </div>
+        <div className="text-center text-ts dark:text-ts-dark bg-p dark:bg-p-dark px-5 py-6">
+          {t("cent.marginRequired")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-p dark:bg-p-dark px-5 py-6">
           {t("standard.marginRequired")}
@@ -103,6 +127,9 @@ const AccountTypesPricingTable = () => {
           {t("minimumLotSize")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
+          {t("cent.minimumLotSize")}
+        </div>
+        <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
           {t("standard.minimumLotSize")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
@@ -115,6 +142,9 @@ const AccountTypesPricingTable = () => {
         {/* Seventh Row - Black Background */}
         <div className="text-ts dark:text-ts-dark font-semibold bg-p dark:bg-p-dark px-5 py-6">
           {t("stopOutLevel")}
+        </div>
+        <div className="text-center text-ts dark:text-ts-dark bg-p dark:bg-p-dark px-5 py-6">
+          {t("cent.stopOutLevel")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-p dark:bg-p-dark px-5 py-6">
           {t("standard.stopOutLevel")}
@@ -131,6 +161,9 @@ const AccountTypesPricingTable = () => {
           {t("marginCallLevel")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
+          {t("cent.marginCallLevel")}
+        </div>
+        <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
           {t("standard.marginCallLevel")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
@@ -145,6 +178,9 @@ const AccountTypesPricingTable = () => {
           {t("executionType")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-p dark:bg-p-dark px-5 py-6">
+          {t("cent.executionType")}
+        </div>
+        <div className="text-center text-ts dark:text-ts-dark bg-p dark:bg-p-dark px-5 py-6">
           {t("standard.executionType")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-p dark:bg-p-dark px-5 py-6">
@@ -157,6 +193,11 @@ const AccountTypesPricingTable = () => {
         {/* Tenth Row - Dark Gray Background */}
         <div className="text-ts dark:text-ts-dark font-semibold bg-cc dark:bg-cc-dark px-5 py-6">
           {t("vps")}
+        </div>
+        <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
+          <div className="text-gc dark:text-gc-dark bg-e1 dark:bg-e1-dark h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
+            {t("cent.vps")}
+          </div>
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
           <div className="text-gc dark:text-gc-dark bg-e1 dark:bg-e1-dark h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
@@ -180,6 +221,11 @@ const AccountTypesPricingTable = () => {
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-p dark:bg-p-dark px-5 py-6">
           <div className="text-gc dark:text-gc-dark bg-e1 dark:bg-e1-dark h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
+            {t("cent.metaTrader5")}
+          </div>
+        </div>
+        <div className="text-center text-ts dark:text-ts-dark bg-p dark:bg-p-dark px-5 py-6">
+          <div className="text-gc dark:text-gc-dark bg-e1 dark:bg-e1-dark h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
             {t("standard.metaTrader5")}
           </div>
         </div>
@@ -197,6 +243,11 @@ const AccountTypesPricingTable = () => {
         {/* Twelfth Row - Dark Gray Background */}
         <div className="text-ts dark:text-ts-dark font-semibold bg-cc dark:bg-cc-dark px-5 py-6">
           {t("automaticTrading")}
+        </div>
+        <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
+          <div className="text-gc dark:text-gc-dark bg-e1 dark:bg-e1-dark h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
+            {t("cent.automaticTrading")}
+          </div>
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
           <div className="text-gc dark:text-gc-dark bg-e1 dark:bg-e1-dark h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
@@ -219,6 +270,11 @@ const AccountTypesPricingTable = () => {
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-p dark:bg-p-dark px-5 py-6">
           <div className="text-gc dark:text-gc-dark bg-e1 dark:bg-e1-dark h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
+            {t("cent.demoAccount")}
+          </div>
+        </div>
+        <div className="text-center text-ts dark:text-ts-dark bg-p dark:bg-p-dark px-5 py-6">
+          <div className="text-gc dark:text-gc-dark bg-e1 dark:bg-e1-dark h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
             {t("standard.demoAccount")}
           </div>
         </div>
@@ -237,6 +293,9 @@ const AccountTypesPricingTable = () => {
           {t("webinars")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
+          {t("cent.webinars")}
+        </div>
+        <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
           {t("standard.webinars")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
@@ -249,6 +308,9 @@ const AccountTypesPricingTable = () => {
         {/* Fourteenth Row - Dark Gray Background */}
         <div className="text-ts dark:text-ts-dark font-semibold bg-p dark:bg-p-dark px-5 py-6">
           {t("expertAdvice")}
+        </div>
+        <div className="text-center text-ts dark:text-ts-dark bg-p dark:bg-p-dark px-5 py-6">
+          {t("cent.expertAdvice")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-p dark:bg-p-dark px-5 py-6">
           {t("standard.expertAdvice")}
@@ -273,26 +335,36 @@ const AccountTypesPricingTable = () => {
         <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
           {t("swapFreeNote")}
         </div>
+        <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
+          {t("swapFreeNote")}
+        </div>
         <div></div>
+        <div className="mx-5">
+          <CustomYellowButton
+            title={t("cent.btnTxt")}
+            onClick={handleClick}
+            className="py-4 md:py-3 lg:py-3 text-sm w-full justify-between sm:justify-center mt-5"
+          />
+        </div>
         <div className="mx-5">
           <CustomYellowButton
             title={t("standard.btnTxt")}
             onClick={handleClick}
-            className="py-4 md:py-3 lg:py-3 text-base w-full justify-between sm:justify-center mt-5"
+            className="py-4 md:py-3 lg:py-3 text-sm w-full justify-between sm:justify-center mt-5"
           />
         </div>
         <div className="mx-5">
           <CustomYellowButton
             title={t("narrow.btnTxt")}
             onClick={handleClick}
-            className="py-4 md:py-3 lg:py-3 text-base w-full justify-between sm:justify-center mt-5"
+            className="py-4 md:py-3 lg:py-3 text-sm w-full justify-between sm:justify-center mt-5"
           />
         </div>
         <div className="mx-5">
           <CustomYellowButton
             title={t("raw.btnTxt")}
             onClick={handleClick}
-            className="py-4 md:py-3 lg:py-3 text-base w-full justify-between sm:justify-center mt-5"
+            className="py-4 md:py-3 lg:py-3 text-sm w-full justify-between sm:justify-center mt-5"
           />
         </div>
       </div>

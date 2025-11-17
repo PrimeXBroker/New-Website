@@ -56,23 +56,30 @@ const AccountTypesWrapper = () => {
     {
       id: 1,
       title: a("acc1.title"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/Standard-Account.webp",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/cent-account-icon.png",
       description: a("acc1.description"),
       btnTxt: a("acc1.btnTxt"),
     },
     {
       id: 2,
       title: a("acc2.title"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/Narrow-Account.webp",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/Standard-Account.webp",
       description: a("acc2.description"),
       btnTxt: a("acc2.btnTxt"),
     },
     {
       id: 3,
       title: a("acc3.title"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/Raw-Account.webp",
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/Narrow-Account.webp",
       description: a("acc3.description"),
       btnTxt: a("acc3.btnTxt"),
+    },
+    {
+      id: 4,
+      title: a("acc4.title"),
+      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/Raw-Account.webp",
+      description: a("acc4.description"),
+      btnTxt: a("acc4.btnTxt"),
     },
   ];
 

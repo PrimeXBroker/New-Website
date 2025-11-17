@@ -122,16 +122,21 @@
       "desc": "Explore our account options and find the one that fits your needs. Select the perfect plan for you.",
       "deposit": "Minimum Deposit: ",
       "acc1": {
+        "title": "Cent",
+        "description": "Designed for beginner traders, starts with a deposit of only $10 and provides a flexible trading environment with no hidden fees.",
+        "minimumDeposit": " $10"
+      },
+      "acc2": {
         "title": "Standard",
         "minimumDeposit": " $10",
         "description": "The Standard Account is a top choice among traders due to its no-swap commissions, offering cost-efficiency by eliminating these fees."
       },
-      "acc2": {
+      "acc3": {
         "title": "Narrow",
         "minimumDeposit": " $1000",
         "description": "This account is tailored for scalpers, featuring the lowest spread to maximize profits from short-term market movements."
       },
-      "acc3": {
+      "acc4": {
         "title": "Raw",
         "minimumDeposit": " $5000",
         "description": "The Raw Account is designed for professional traders, offering a 'raw spread' for an unmatched trading experience."
@@ -1472,16 +1477,21 @@
       "desc": "Explore our account options and find the one that fits your needs. Select the perfect plan for you.",
       "deposit": "Minimum Deposit: ",
       "acc1": {
+        "title": "Cent",
+        "description": "Designed for beginner traders, starts with a deposit of only $10 and provides a flexible trading environment with no hidden fees.",
+        "btnTxt": "Cent Account"
+      },
+      "acc2": {
         "title": "Standard",
         "description": "Favored for no-swap commissions, offering cost-effective trading with no hidden fees.",
         "btnTxt": "Standard Account"
       },
-      "acc2": {
+      "acc3": {
         "title": "Narrow",
         "description": "Built for scalpers, offering the lowest spreads to optimize short-term profits.",
         "btnTxt": "Narrow Account"
       },
-      "acc3": {
+      "acc4": {
         "title": "Raw",
         "description": "Designed for pros, delivering raw spreads for an unmatched trading experience.",
         "btnTxt": "Raw Account"
@@ -1564,6 +1574,25 @@
         "webinars": "Weekly",
         "expertAdvice": "Above $1,000",
         "btnTxt": "Raw Account"
+      },
+      "cent": {
+        "title": "Cent",
+        "deposit": "$10",
+        "spread": "From 0.8 pips",
+        "commissions": "$0",
+        "leverage": "1:500",
+        "marginRequired": "1%",
+        "minimumLotSize": "0.01 Cent Lot",
+        "stopOutLevel": "30%",
+        "marginCallLevel": "100%",
+        "executionType": "Non-Dealing Desk",
+        "vps": "✔",
+        "metaTrader5": "✔",
+        "automaticTrading": "✔",
+        "demoAccount": "✔",
+        "webinars": "Weekly",
+        "expertAdvice": "Above $1,000",
+        "btnTxt": "Cent Account"
       }
     },
     "faq": {
