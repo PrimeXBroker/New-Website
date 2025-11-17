@@ -107,7 +107,13 @@ const AccountTypesPricingTableMobile = () => {
   return (
     <section className="bg-p dark:bg-p-dark pb-16">
       <div className="container">
-        <div className="flex space-x-4 mb-6 flex-wrap">
+        <div
+          className="flex space-x-4 mb-6 overflow-x-auto"
+          style={{
+            "-ms-overflow-style": "none",
+            "scrollbar-width": "none",
+          }}
+        >
           {["cent", "standard", "narrow", "raw"].map((tab) => (
             <button
               key={tab}
