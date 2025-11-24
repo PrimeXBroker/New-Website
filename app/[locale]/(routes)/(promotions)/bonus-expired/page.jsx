@@ -1,4 +1,4 @@
-import BonusWrapper from "@/our_pages/promotions/bonus-new/BonusWrapper";
+import BonusWrapper from "@/our_pages/promotions/primex-bonus/BonusWrapper";
 import { createTranslator } from "next-intl";
 import React from "react";
 
