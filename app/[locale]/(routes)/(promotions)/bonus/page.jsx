@@ -22,7 +22,21 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("bonusPage.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/cover-new.png",
+          url:
+            locale === "ar"
+              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(AR).png"
+              : locale === "es"
+              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(ES).png"
+              : locale === "fa"
+              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(Farsi).png"
+              : locale === "ku"
+              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(KR).png"
+              : locale === "ps"
+              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(PS).png"
+              : locale === "pt"
+              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(PT).png"
+              : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(EN).png",
+
           width: 1200,
           height: 630,
           alt: t("bonusPage.metaData.title"),
