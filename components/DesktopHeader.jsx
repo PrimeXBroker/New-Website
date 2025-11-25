@@ -550,7 +550,7 @@ const DesktopHeader = ({ locale }) => {
                       : "min-w-[180px]"
                   } rounded-[6px]`}
                 >
-                  <li>
+                  {/* <li>
                     <LocaleLink
                       href="/bonus"
                       onClick={closeDropdown}
@@ -558,7 +558,7 @@ const DesktopHeader = ({ locale }) => {
                     >
                       {t("bonus")}
                     </LocaleLink>
-                  </li>
+                  </li> */}
                   {/* <li>
                     <LocaleLink
                       href="/trade-gold"

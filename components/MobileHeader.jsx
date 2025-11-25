@@ -994,13 +994,13 @@ const MobileHeader = ({ locale }) => {
             </button>
             {openSubMenu === 8 && (
               <div className="">
-                <LocaleLink
+                {/* <LocaleLink
                   href="/bonus"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("bonus")}
-                </LocaleLink>
+                </LocaleLink> */}
                 {/* <LocaleLink
                   href="/trade-gold"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
