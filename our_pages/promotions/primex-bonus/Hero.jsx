@@ -44,11 +44,25 @@ const Hero = () => {
               <div className="flex justify-center">
                 <Image
                   unoptimized={true}
-                  src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/ib-program/Cover.webp"
+                  src={
+                    locale === "ar"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(AR).png"
+                      : locale === "es"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(ES).png"
+                      : locale === "fa"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(Farsi).png"
+                      : locale === "ku"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(KR).png"
+                      : locale === "ps"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(PS).png"
+                      : locale === "pt"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(PT).png"
+                      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(EN).png"
+                  }
                   width="100"
                   height="100"
                   alt="Bonus Hero"
-                  className="w-full"
+                  className="w-[86%]"
                 />
               </div>
               {/* <div className="pe-3 ps-3 sm:pe-12 sm:ps-12 md:ps-0 mt-6 md:mt-4">

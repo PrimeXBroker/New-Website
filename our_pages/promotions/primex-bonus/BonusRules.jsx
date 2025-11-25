@@ -39,7 +39,6 @@ const BonusRules = () => {
         t("timeline_li1_desc"),
         t("timeline_li2_desc"),
         t("timeline_li3_desc"),
-        t("timeline_li4_desc"),
       ],
     },
     {

@@ -9,8 +9,8 @@ export async function generateMetadata({ params: { locale } }) {
   const url = `https://www.primexcapital.com/${locale}/bonus`;
 
   return {
-    title: t("newBonusPage.metaData.title"),
-    description: t("newBonusPage.metaData.description"),
+    title: t("bonusPage.metaData.title"),
+    description: t("bonusPage.metaData.description"),
     alternates: {
       canonical: url,
     },
@@ -18,14 +18,14 @@ export async function generateMetadata({ params: { locale } }) {
       type: "website",
       locale: locale,
       url: url,
-      title: t("newBonusPage.metaData.title"),
-      description: t("newBonusPage.metaData.description"),
+      title: t("bonusPage.metaData.title"),
+      description: t("bonusPage.metaData.description"),
       images: [
         {
           url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/cover-new.png",
           width: 1200,
           height: 630,
-          alt: t("newBonusPage.metaData.title"),
+          alt: t("bonusPage.metaData.title"),
         },
       ],
     },

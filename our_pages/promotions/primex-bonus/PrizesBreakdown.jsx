@@ -13,12 +13,12 @@ const PrizesBreakdown = () => {
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/Register.png",
       description: t("step1_desc"),
     },
-    {
-      title: t("step2"),
-      imageSrc:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/Open_Account.png",
-      description: t("step2_desc"),
-    },
+    // {
+    //   title: t("step2"),
+    //   imageSrc:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/Open_Account.png",
+    //   description: t("step2_desc"),
+    // },
     {
       title: t("step3"),
       imageSrc:
@@ -45,7 +45,11 @@ const PrizesBreakdown = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="bg-cc dark:bg-cc-dark px-10 md:px-3 lg:px-10 py-8 rounded-2xl shadow-xl flex flex-col sm:flex-row items-center"
+              className={`bg-cc dark:bg-cc-dark px-10 md:px-3 lg:px-10 py-8 rounded-2xl shadow-xl flex flex-col sm:flex-row items-center ${
+                index === cards.length - 1
+                  ? "md:col-span-2 md:w-1/2 md:mx-auto"
+                  : ""
+              }`}
             >
               <div className="w-full sm:w-1/2 flex justify-center items-center mb-4 sm:mb-0">
                 <Image
