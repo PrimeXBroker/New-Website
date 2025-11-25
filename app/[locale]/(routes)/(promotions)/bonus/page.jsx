@@ -48,7 +48,7 @@ const page = () => {
           <link
             key={item.lng}
             rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/bonus-new`}
+            href={`https://www.primexcapital.com/${item.url}/bonus`}
             hreflang={item.lng}
           />
         ))}

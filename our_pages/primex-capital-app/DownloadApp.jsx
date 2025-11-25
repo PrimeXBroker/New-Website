@@ -149,7 +149,7 @@ const DownloadApp = () => {
           </div>
           <div className="col-span-12 lg:col-span-6 flex justify-center lg:justify-end mt-5 lg:mt-0">
             <Image
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/community-features/CTA+Image.png"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/signals-feature/CTA+Image.png"
               width="470"
               height="300"
               alt="Download Image"

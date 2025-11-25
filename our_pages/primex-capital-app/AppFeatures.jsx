@@ -26,6 +26,56 @@ const AppFeatures = () => {
             </span>
           </h2>
         </div>
+        <div className="grid grid-cols-1 gap-6 mb-6">
+          <div className="relative">
+            <Image
+              unoptimized={true}
+              width="46"
+              height="32"
+              src={
+                theme === "dark"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/signals-feature/Signal+Desktop+Dark+Mode.png"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/signals-feature/Signal+Desktop+Light+Mode.png"
+              }
+              alt="Signals Image"
+              className="w-full h-full rounded-2xl hidden md:block"
+            />
+            <Image
+              unoptimized={true}
+              width="46"
+              height="32"
+              src={
+                theme === "dark"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/signals-feature/Signal+Mobile+Dark+Mode.png"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/signals-feature/Signal+Mobile+Light+Mode.png"
+              }
+              alt="Signals Image"
+              className="w-full h-full rounded-2xl md:hidden"
+            />
+            <div className="bg-p dark:bg-p-dark rounded-xl px-5 py-4 absolute bottom-0 mx-2 mb-2 sm:w-[40%]">
+              <div className="flex items-center justify-between">
+                <h5 className="text-tm dark:text-tm-dark font-bold text-xl sm:text-2xl lg:text-lg xl:text-2xl">
+                  {t1("title12")}
+                </h5>
+                <Image
+                  unoptimized={true}
+                  width="32"
+                  height="32"
+                  src={
+                    theme === "dark"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/signals-feature/Signals+-+Dark+Mode.png"
+                      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-mobile-app/signals-feature/Signals+-+Light+Mode.svg"
+                  }
+                  alt="Signals Icon"
+                  className="w-[24px] h-[24px] sm:w-[32px] sm:h-[32px]"
+                />
+              </div>
+              <p className="text-ts dark:text-ts-dark font-medium text-sm sm:text-base lg:text-sm xl:text-base !leading-tight mt-2">
+                {t1("desc12")}
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
           <div className="relative">
             <Image
