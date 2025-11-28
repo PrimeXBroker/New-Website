@@ -31,10 +31,7 @@ export default createMiddleware({
 
   // Your default locale
   defaultLocale: "en",
-  
-  // SOLUTION: Tells next-intl to omit the locale prefix for the default locale ("en").
-  // This will prevent the automatic redirect from /path to /en/path.
-  localePrefix: 'as-needed',
+
 });
 
 export const config = {
