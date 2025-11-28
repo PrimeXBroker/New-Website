@@ -52,7 +52,8 @@
     "offers": "Offers",
     "contest": "Contest",
     "ecn_broker": "ECN Broker",
-    "courses": "Educational Courses"
+    "courses": "Educational Courses",
+    "hammurabi_account": "Hammurabi Account"
   },
   "home": {
     "metaData": {
@@ -3580,6 +3581,59 @@
       "title_1": " Learn forex ",
       "title_2": "in 3 steps",
       "description": "Access an all-in-one learning journey that guides you from beginner to pro, with strategies, tools, and real market examples designed to make your trading more effective — all in one place."
+    }
+  },
+  "hammurabiAccount": {
+    "metaData": {
+      "title": "Hammurabi Account",
+      "description": "The first trading account designed specifically for Iraqis , offered with the best ECN broker, Prime X Capital. It operates in Iraqi Dinar (IQD). Enjoy commission-free trading , leverage up to 1:400 , and no swap charges presented by PrimeX Capital."
+    },
+    "banner": {
+      "title1": "Hammurabi ",
+      "title2": "Account",
+      "subtitle": "The first trading account designed exclusively for Iraqis.",
+      "description": "Enter the world of trading with the first account denominated in Iraqi Dinar (IQD) and enjoy powerful features and a better trading experience.",
+      "btnTxt": "Register Now"
+    },
+    "faq": {
+      "title": "Frequently Asked ",
+      "title1": "Questions",
+      "question_1": "What is the Hammurabi Account?",
+      "answer_1": "A trading account designed specifically for Iraqi traders. It operates in Iraqi Dinar (IQD) and offers stable trading conditions tailored to the local market.",
+      "question_2": "What is the minimum deposit?",
+      "answer_2": "Only 14,000 Iraqi Dinars.",
+      "question_3": "Are there any trading fees?",
+      "answer_3": "There are no trading fees and no swap charges.",
+      "question_4": "Is MT5 supported?",
+      "answer_4": "Yes, trading is available on the MetaTrader 5 platform.",
+      "question_5": "How do I open the account?",
+      "answer_5": "Click the sign-up button, fill in your details, make your deposit, and start trading."
+    },
+    "openLiveAccount": {
+      "subtitle": "Start Now",
+      "title": "Trade with a global experience brought closer to you with PrimeX Capital",
+      "btnTxt": "Register Now"
+    },
+    "whyChooseHammurabi": {
+      "title1": "Why Choose the ",
+      "title2": "Hammurabi Account?",
+      "desc1": "PrimeX Capital is the first broker worldwide to offer a trading account tailored specifically for Iraqi traders.",
+      "desc2": "You get a new trading experience with an authentic Iraqi touch, giving you the opportunity to enter the market using your local currency.",
+      "feature1": "Minimum Deposit: 14,000 IQD",
+      "feature2": "Spread: From 0.8 pip",
+      "feature3": "Zero Commission",
+      "feature4": "Leverage: 1:400",
+      "feature5": "Required Margin: 1%",
+      "feature6": "Minimum Lot Size: 0.01",
+      "feature7": "Stop-Out Level: 30%",
+      "feature8": "Margin Call Level: 100%",
+      "feature9": "Weekly Webinars",
+      "feature10": "Expert Guidance for deposits above $1,000",
+      "feature11": "Swap-Free",
+      "feature12": "VPS Included",
+      "feature13": "MetaTrader 5",
+      "feature14": "Automated Trading Support",
+      "feature15": "Demo Account Available"
     }
   }
 }

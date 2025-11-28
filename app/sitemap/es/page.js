@@ -219,6 +219,12 @@ export default function EsSitemapPage() {
       priority: 0.8,
       changefreq: "daily",
     },
+    {
+      url: "https://primexcapital.com/es/hammurabi-account",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
   ];
 
   return (

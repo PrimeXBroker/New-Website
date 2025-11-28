@@ -472,7 +472,7 @@ const DesktopHeader = ({ locale }) => {
               </button>
               {activeDropdown === 7 && (
                 <ul
-                  className={`absolute top-full mt-[4px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] ${
+                  className={`absolute top-full mt-[4px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] min-w-[250px] ${
                     locale === "ar" ||
                     locale === "ps" ||
                     locale === "ku" ||
@@ -488,6 +488,15 @@ const DesktopHeader = ({ locale }) => {
                       className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("account_types")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
+                      href="/hammurabi-account"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                    >
+                      {t("hammurabi_account")}
                     </LocaleLink>
                   </li>
                   <li>

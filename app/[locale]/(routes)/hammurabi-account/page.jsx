@@ -1,16 +1,15 @@
-import ProviderAgreementPage from "@/our_pages/footer-pages/provider-agreement/ProviderAgreementPage";
+import HammurabiWrapper from "@/our_pages/hammurabi-account/HammurabiWrapper";
 import { createTranslator } from "next-intl";
-import React from "react";
 
 export async function generateMetadata({ params: { locale } }) {
-  const messages = (await import(`../../../../../messages/${locale}.json`))
+  const messages = (await import(`../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });
-  const url = `https://www.primexcapital.com/${locale}/provider-agreement`;
+  const url = `https://www.primexcapital.com/${locale}/hammurabi-account`;
 
   return {
-    title: t("footer.providerAgreement.metaData.title"),
-    description: t("footer.providerAgreement.metaData.description"),
+    title: t("hammurabiAccount.metaData.title"),
+    description: t("hammurabiAccount.metaData.description"),
     alternates: {
       canonical: url,
     },
@@ -18,14 +17,14 @@ export async function generateMetadata({ params: { locale } }) {
       type: "website",
       locale: locale,
       url: url,
-      title: t("footer.providerAgreement.metaData.title"),
-      description: t("footer.providerAgreement.metaData.description"),
+      title: t("hammurabiAccount.metaData.title"),
+      description: t("hammurabiAccount.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/footer-pages/provider-meta.webp",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/hammurabic-account/Hero+Image.png",
           width: 1200,
           height: 630,
-          alt: t("footer.providerAgreement.metaData.title"),
+          alt: t("hammurabiAccount.metaData.title"),
         },
       ],
     },
@@ -42,6 +41,7 @@ const page = () => {
     { lng: "pt", url: "pt" },
     { lng: "fa", url: "fa" },
   ];
+
   return (
     <>
       <head>
@@ -49,12 +49,12 @@ const page = () => {
           <link
             key={item.lng}
             rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/provider-agreement`}
+            href={`https://www.primexcapital.com/${item.url}/hammurabi-account`}
             hreflang={item.lng}
           />
         ))}
       </head>
-      <ProviderAgreementPage />
+      <HammurabiWrapper />
     </>
   );
 };

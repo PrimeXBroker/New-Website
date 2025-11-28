@@ -52,7 +52,8 @@
     "offers": "Ofertas",
     "contest": "Concurso",
     "ecn_broker": "Corredor ECN",
-    "courses": "Cursos Educativos"
+    "courses": "Cursos Educativos",
+    "hammurabi_account": "Cuenta Hammurabi"
   },
   "home": {
     "metaData": {
@@ -3580,6 +3581,59 @@
       "title_1": " Learn forex ",
       "title_2": "in 3 steps",
       "description": "Access an all-in-one learning journey that guides you from beginner to pro, with strategies, tools, and real market examples designed to make your trading more effective — all in one place."
+    }
+  },
+  "hammurabiAccount": {
+    "metaData": {
+      "title": "Cuenta Hammurabi",
+      "description": "La primera cuenta de trading diseñada específicamente para iraquíes, ofrecida por el mejor bróker ECN, Prime X Capital. Opera en Dinar Iraquí (IQD). Disfrute de trading sin comisión, apalancamiento de hasta 1:400 y sin cargos por swap, presentado por PrimeX Capital."
+    },
+    "banner": {
+      "title1": "Cuenta ",
+      "title2": "Hammurabi",
+      "subtitle": "La primera cuenta de trading diseñada exclusivamente para iraquíes.",
+      "description": "Ingrese al mundo del trading con la primera cuenta denominada en Dinar Iraquí (IQD) y disfrute de potentes funciones y una mejor experiencia de trading.",
+      "btnTxt": "Regístrese Ahora"
+    },
+    "faq": {
+      "title": "Preguntas ",
+      "title1": "Frecuentes",
+      "question_1": "¿Qué es la Cuenta Hammurabi?",
+      "answer_1": "Una cuenta de trading diseñada específicamente para traders iraquíes. Opera en Dinar Iraquí (IQD) y ofrece condiciones de trading estables adaptadas al mercado local.",
+      "question_2": "¿Cuál es el depósito mínimo?",
+      "answer_2": "Solo 14.000 Dinares Iraquíes.",
+      "question_3": "¿Hay alguna tarifa de trading?",
+      "answer_3": "No hay tarifas de trading ni cargos por swap.",
+      "question_4": "¿Es compatible con MT5?",
+      "answer_4": "Sí, el trading está disponible en la plataforma MetaTrader 5.",
+      "question_5": "¿Cómo abro la cuenta?",
+      "answer_5": "Haga clic en el botón de registro, complete sus datos, realice su depósito y comience a operar."
+    },
+    "openLiveAccount": {
+      "subtitle": "Comience Ahora",
+      "title": "Opere con una experiencia global acercada a usted con PrimeX Capital",
+      "btnTxt": "Regístrese Ahora"
+    },
+    "whyChooseHammurabi": {
+      "title1": "¿Por qué Elegir la ",
+      "title2": "Cuenta Hammurabi?",
+      "desc1": "PrimeX Capital es el primer bróker a nivel mundial en ofrecer una cuenta de trading adaptada específicamente para traders iraquíes.",
+      "desc2": "Obtendrá una nueva experiencia de trading con un toque iraquí auténtico, dándole la oportunidad de ingresar al mercado utilizando su moneda local.",
+      "feature1": "Depósito Mínimo: 14.000 IQD",
+      "feature2": "Spread: Desde 0.8 pip",
+      "feature3": "Cero Comisión",
+      "feature4": "Apalancamiento: 1:400",
+      "feature5": "Margen Requerido: 1%",
+      "feature6": "Tamaño Mínimo de Lote: 0.01",
+      "feature7": "Nivel de Stop-Out: 30%",
+      "feature8": "Nivel de Llamada de Margen: 100%",
+      "feature9": "Webinars Semanales",
+      "feature10": "Orientación de Expertos para depósitos superiores a $1.000",
+      "feature11": "Sin Swap",
+      "feature12": "VPS Incluido",
+      "feature13": "MetaTrader 5",
+      "feature14": "Soporte para Trading Automatizado",
+      "feature15": "Cuenta Demo Disponible"
     }
   }
 }

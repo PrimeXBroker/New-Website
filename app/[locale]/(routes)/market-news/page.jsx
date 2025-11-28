@@ -68,6 +68,7 @@ const page = async ({ params }) => {
     { lng: "es", url: "es" },
     { lng: "ps", url: "ps" },
     { lng: "pt", url: "pt" },
+    { lng: "fa", url: "fa" },
   ];
 
   return (
