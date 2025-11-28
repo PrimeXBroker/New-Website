@@ -5,9 +5,14 @@ import FAQ from "@/components/NewFaq";
 import { useTranslations } from "next-intl";
 import OpenAccount from "./OpenAccount";
 import WhyChooseHammurabi from "./WhyChooseHammurabi";
+import PartnerFeatures from "@/components/partnership/PartnerFeatures";
+import customerSupport from "@/public/animations/account-types/customer-support.json";
+import optimalTradingConditions from "@/public/animations/account-types/optimal-trading-conditions.json";
+import primexAcademy from "@/public/animations/account-types/primex-academy.json";
 
 const HammurabiWrapper = () => {
   const f = useTranslations("hammurabiAccount");
+  const t = useTranslations("accountTypes.accountTypesBenefits");
 
   const faqs = [
     {
@@ -37,10 +42,46 @@ const HammurabiWrapper = () => {
     },
   ];
 
+  const features = [
+    {
+      title: t("title1"),
+      title1: t("title1_1"),
+      description: t("description1"),
+      icon: customerSupport,
+    },
+    {
+      title: t("title2"),
+      title1: t("title2_1"),
+      description: t("description2"),
+      iconDark:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-account-types/MT5+Platform.svg",
+      iconLight:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-account-types/MT5+Platform.svg",
+    },
+    {
+      title: t("title3"),
+      title1: t("title3_1"),
+      description: t("description3"),
+      icon: optimalTradingConditions,
+    },
+    {
+      title: t("title4"),
+      title1: t("title4_1"),
+      description: t("description4"),
+      icon: primexAcademy,
+    },
+  ];
+
+  const featureTitle = {
+    title1: t("main_title1"),
+    title2: t("main_title2"),
+  };
+
   return (
     <>
       <Hero />
       <WhyChooseHammurabi />
+      <PartnerFeatures features={features} featureTitle={featureTitle} />
       <FAQ faqs={faqs} />
       <OpenAccount />
     </>
