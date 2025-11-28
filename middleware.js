@@ -1,14 +1,19 @@
+// middleware.ts
 import createMiddleware from "next-intl/middleware";
+import { deepLinkMiddleware } from "./middleware/deepLinkMiddleware";
 
 export default createMiddleware({
-  // A list of all locales that are supported
+  middleware: deepLinkMiddleware,
+
   locales: ["en", "ar", "ku", "es", "ps", "pt", "fa"],
 
-  // Used when no locale matches
   defaultLocale: "en",
 });
 
 export const config = {
-  // Match only internationalized pathnames
-  matcher: ["/", "/(en|ar|ku|es|ps|pt|fa)/:path*"],
+  matcher: [
+    "/", // Root
+    "/(en|ar|ku|es|ps|pt|fa)/:path*",
+    "/community/posts/detail/:path*",
+  ],
 };
