@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appID": "XTM8FN6NY3.com.mehtabkazmi.primexmobileapp",
+        "paths": [
+          "/community/posts/detail/*",
+          "/community/posts/detail/"
+        ]
+      }
+    ]
+  }
+}
