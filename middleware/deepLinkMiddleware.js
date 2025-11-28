@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 // IMPORTANT: Replace 'primex://' with your actual app's custom URI scheme.
-const APP_URI_SCHEME = "primex://";
+const APP_URI_SCHEME = "myapp://";
 
 // Replace these with your actual store URLs
 const androidStoreUrl =
