@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.primex.primexmobileapp",
+      "sha256_cert_fingerprints": [
+        "FA:29:2C:E2:5B:5C:94:95:8F:45:5E:9B:C3:0E:CE:BE:10:A2:C5:82:72:58:0D:33:68:B9:9D:48:CD:12:17:6F"
+      ]
+    }
+  }
+]
