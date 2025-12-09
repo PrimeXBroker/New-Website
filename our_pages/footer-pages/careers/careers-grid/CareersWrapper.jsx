@@ -10,21 +10,19 @@ const CareersWrapper = () => {
   const locale = useLocale();
   const router = useRouter();
 
-  useEffect(() => {
-    if (locale !== "en") {
-      router.push(`/${locale}`);
-    }
-  }, [locale, router]);
+  // useEffect(() => {
+  //   if (locale !== "en") {
+  //     router.push(`/${locale}`);
+  //   }
+  // }, [locale, router]);
 
   return (
     <>
-      {locale === "en" && (
-        <>
-          <Banner />
-          <DrivingSuccess />
-          <OpenPosition />
-        </>
-      )}
+      <>
+        <Banner />
+        <DrivingSuccess />
+        <OpenPosition />
+      </>
     </>
   );
 };

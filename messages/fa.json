@@ -2537,7 +2537,7 @@
     },
     "openPositions": {
       "title_part1": "موقعیت‌های",
-      "title_part2": "باز"
+      "title_part2": " باز"
     },
     "careersForm": {
       "title": "درخواست",
@@ -2557,7 +2557,7 @@
       "years_of_experience_placeholder": "سال‌های تجربه را وارد کنید",
       "portfolio_label": "لینک پورتفولیو*",
       "portfolio_placeholder": "لینک پورتفولیو را وارد کنید",
-      "resume_label": "رزومه خود را بارگذاری کنید*",
+      "resume_label": "رزومه خود را بارگذاری کنید",
       "resume_placeholder": "رزومه را بارگذاری کنید",
       "condition": "با ارسال این فرم، موافقت می‌کنید که تیم ما با شما تماس بگیرد.",
       "submit_btn": "ارسال",

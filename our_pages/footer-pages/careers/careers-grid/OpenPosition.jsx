@@ -82,18 +82,20 @@ const OpenPosition = () => {
   });
 
   return (
-    <section className="bg-[#000000] pb-16 sm:pb-28">
+    <section className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
       <div className="container">
         <div className="text-center md:text-start">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#ffffff] mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-tm dark:text-tm-dark mb-6">
             {t("title_part1")}
-            <span className="text-[#FED100]">{t("title_part2")}</span>
+            <span className="text-pcp dark:text-pcp-dark">
+              {t("title_part2")}
+            </span>
           </h2>
         </div>
-        <div className="flex justify-center md:justify-end gap-5">
+        <div className="flex justify-center md:justify-end gap-5" dir="ltr">
           <div className="relative w-56 mb-6">
             <div
-              className="bg-[#111111] text-[#c6c6c6] border-1 border-[#1D1D1D] rounded-lg py-[16px] px-[12px] w-full flex justify-between items-center cursor-pointer text-xs sm:text-sm"
+              className="bg-cc dark:bg-cc-dark text-ts dark:text-ts-dark border border-e1 dark:border-e1-dark rounded-lg py-[16px] px-[12px] w-full flex justify-between items-center cursor-pointer text-xs sm:text-sm"
               onClick={() => {
                 setIsDepartmentOpen(!isDepartmentOpen);
                 setIsLocationOpen(false);
@@ -105,18 +107,21 @@ const OpenPosition = () => {
                 )?.name || "Departments"}
               </span>
               {isDepartmentOpen ? (
-                <BiChevronUp size={18} color="#ffffff" />
+                <BiChevronUp size={18} className="text-tm dark:text-tm-dark" />
               ) : (
-                <BiChevronDown size={18} color="#ffffff" />
+                <BiChevronDown
+                  size={18}
+                  className="text-tm dark:text-tm-dark"
+                />
               )}
             </div>
 
             {isDepartmentOpen && (
-              <ul className="absolute left-0 right-0 mt-2 bg-[#1d1d1d] border-1 border-[#222222] rounded-lg z-10 text-xs sm:text-sm">
+              <ul className="absolute left-0 right-0 mt-2 bg-cc dark:bg-cc-dark border border-e1 dark:border-e1-dark rounded-lg z-10 text-xs sm:text-sm">
                 {departmentOptions.map((option) => (
                   <li
                     key={option.id}
-                    className="py-[12px] px-[14px] cursor-pointer hover:bg-[#ffffff] hover:text-[#111111] text-[#c6c6c6] text-xs sm:text-sm"
+                    className="py-[12px] px-[14px] cursor-pointer hover:bg-tm dark:hover:bg-tm-dark hover:text-p dark:hover:text-p-dark text-ts dark:text-ts-dark text-xs sm:text-sm"
                     onClick={() => handleDepartmentClick(option)}
                   >
                     {option.name}
@@ -127,7 +132,7 @@ const OpenPosition = () => {
           </div>
           <div className="relative w-56">
             <div
-              className="bg-[#111111] text-[#c6c6c6] border-1 border-[#1D1D1D] rounded-lg py-[16px] px-[12px] w-full flex justify-between items-center cursor-pointer text-xs sm:text-sm"
+              className="bg-cc dark:bg-cc-dark text-ts dark:text-ts-dark border border-e1 dark:border-e1-dark rounded-lg py-[16px] px-[12px] w-full flex justify-between items-center cursor-pointer text-xs sm:text-sm"
               onClick={() => {
                 setIsLocationOpen(!isLocationOpen);
                 setIsDepartmentOpen(false);
@@ -139,18 +144,21 @@ const OpenPosition = () => {
                 )?.name || "Location"}
               </span>
               {isLocationOpen ? (
-                <BiChevronUp size={18} color="#ffffff" />
+                <BiChevronUp size={18} className="text-tm dark:text-tm-dark" />
               ) : (
-                <BiChevronDown size={18} color="#ffffff" />
+                <BiChevronDown
+                  size={18}
+                  className="text-tm dark:text-tm-dark"
+                />
               )}
             </div>
 
             {isLocationOpen && (
-              <ul className="absolute left-0 right-0 mt-2 bg-[#1d1d1d] border-1 border-[#222222] rounded-lg z-10 text-xs sm:text-sm">
+              <ul className="absolute left-0 right-0 mt-2 bg-cc dark:bg-cc-dark border border-e1 dark:border-e1-dark rounded-lg z-10 text-xs sm:text-sm">
                 {locationOptions.map((option) => (
                   <li
                     key={option.id}
-                    className="py-[12px] px-[14px] cursor-pointer hover:bg-[#ffffff] hover:text-[#111111] text-[#c6c6c6] text-xs sm:text-sm"
+                    className="py-[12px] px-[14px] cursor-pointer hover:bg-tm dark:hover:bg-tm-dark hover:text-p dark:hover:text-p-dark text-ts dark:text-ts-dark text-xs sm:text-sm"
                     onClick={() => handleLocationClick(option)}
                   >
                     {option.name}
@@ -163,79 +171,80 @@ const OpenPosition = () => {
         {loading ? (
           <div className="flex justify-center items-center h-[50vh]">
             <div className="ellipsis">
-              <span className="dot text-[#FED100]">.</span>
-              <span className="dot text-[#FED100]">.</span>
-              <span className="dot text-[#FED100]">.</span>
+              <span className="dot text-pcp">.</span>
+              <span className="dot text-pcp">.</span>
+              <span className="dot text-pcp">.</span>
             </div>
           </div>
         ) : filteredJobs.length > 0 ? (
           filteredJobs.map((job, index) => (
             <div
-              className="bg-[#111111] border-2 border-[#1D1D1D] rounded-[20px] p-6 sm:p-8 mb-6 hover:border-[#333333] group transition-all duration-500 ease-in-out"
+              className="bg-cc dark:bg-cc-dark border-2 border-cc dark:border-cc-dark hover:border-tl dark:hover:border-tl-dark rounded-lg p-6 sm:p-8 mb-6  group transition-all duration-500 ease-in-out"
               key={index}
               onMouseEnter={() => setHovered(job.id)}
               onMouseLeave={() => setHovered(null)}
+              dir="ltr"
             >
               <Link href={`/${locale}/careers/${job._id}`}>
                 <div>
                   <div className="flex justify-between w-full">
-                    <p className="text-[#C6C6C6] text-xs sm:text-sm">
+                    <p className="text-ts dark:text-ts-dark text-xs sm:text-sm">
                       {job.department}
                     </p>
-                    <div className="text-[#ffffff]">
+                    <div className="text-tm dark:text-tm-dark">
                       <Link
                         href={`/${locale}/careers/${job._id}`}
-                        className="flex items-center gap-x-1 text-xs sm:text-sm group-hover:text-[#FED100]"
+                        className="flex items-center gap-x-1 text-xs sm:text-sm group-hover:text-pcp"
                       >
                         View Job
                         {locale === "ar" ||
                         locale === "ps" ||
                         locale === "ku" ? (
                           <FiArrowUpLeft
-                            className={`text-base font-semibold transition-transform duration-500 ease-in-out group-hover:text-[#FED100] ${
+                            className={`text-base font-semibold transition-transform duration-500 ease-in-out group-hover:text-pcp ${
                               hovered === job.id
-                                ? "rotate-[-45deg] text-[#C6C6C6]"
-                                : "text-[#C6C6C6]"
+                                ? "rotate-[-45deg] text-ts dark:text-ts-dark"
+                                : "text-ts dark:text-ts-dark"
                             }`}
                           />
                         ) : (
                           <FiArrowUpRight
-                            className={`text-base font-semibold transition-transform duration-500 ease-in-out group-hover:text-[#FED100] ${
+                            className={`text-base font-semibold transition-transform duration-500 ease-in-out group-hover:text-pcp ${
                               hovered === job.id
-                                ? "rotate-45 text-[#C6C6C6]"
-                                : "text-[#C6C6C6]"
+                                ? "rotate-45 text-ts dark:text-ts-dark"
+                                : "text-ts dark:text-ts-dark"
                             }`}
                           />
                         )}
                       </Link>
                     </div>
                   </div>
-                  <h2 className="text-lg sm:text-2xl font-semibold mt-2 text-[#FFFFFF]">
+                  <h2 className="text-lg sm:text-2xl font-semibold mt-2 text-tm dark:text-tm-dark">
                     {job.title}
                   </h2>
                 </div>
                 <div className="flex flex-wrap gap-x-4 gap-y-4 mt-7">
-                  <div className="flex items-center justify-center gap-x-1 bg-[#1D1D1D] border-[#222222] border-2 rounded px-3 py-1">
-                    <MdOutlineLocationOn className="text-[15px] text-[#ffffff] font-semibold" />
-                    <span className="text-[#FFFFFF] text-xs sm:text-[13px]">
+                  <div className="flex items-center justify-center gap-x-2 bg-e1 dark:bg-e1-dark border-2 border-e2 dark:border-e2-dark rounded px-3 py-1">
+                    <MdOutlineLocationOn className="text-[15px] text-tm dark:text-tm-dark font-semibold" />
+                    <span className="text-tm dark:text-tm-dark text-xs sm:text-xs">
                       {job.location}
                     </span>
                   </div>
-                  <div className="flex items-center justify-center gap-x-1 bg-[#1D1D1D] border-[#222222] border-2 rounded px-3 py-1">
-                    <IoMdTime className="text-[16px] text-[#ffffff] font-semibold" />
-                    <span className="text-[#FFFFFF]  text-xs sm:text-[13px]">
+                  <div className="flex items-center justify-center gap-x-2 bg-e1 dark:bg-e1-dark border-2 border-e2 dark:border-e2-dark rounded px-3 py-1">
+                    <IoMdTime className="text-[16px] text-tm dark:text-tm-dark font-semibold" />
+                    <span className="text-tm dark:text-tm-dark  text-xs sm:text-xs">
                       {job.type}
                     </span>
                   </div>
-                  <div className="flex items-center justify-center gap-x-1 bg-[#1D1D1D] border-[#222222] border-2 rounded px-3 py-1">
-                    <GrBriefcase className="text-[13px] text-[#ffffff] font-semibold" />
-                    <span className="text-[#FFFFFF]  text-xs sm:text-[13px]">
+                  <div className="flex items-center justify-center gap-x-2 bg-e1 dark:bg-e1-dark border-2 border-e2 dark:border-e2-dark rounded px-3 py-1">
+                    <GrBriefcase className="text-[13px] text-tm dark:text-tm-dark font-semibold" />
+                    <span className="text-tm dark:text-tm-dark  text-xs sm:text-xs">
                       {job.experience} Years Experience
                     </span>
                   </div>
-                  <div className="flex items-center justify-center gap-x-1 bg-[#1D1D1D] border-[#222222] border-2 rounded px-3 py-1">
-                    <CgProfile className="text-[15px] text-[#ffffff] font-semibold" />
-                    <span className="text-[#FFFFFF]  text-xs sm:text-[13px]">
+                  <div className="flex items-center justify-center gap-x-2 bg-e1 dark:bg-e1-dark border-2 border-e2 dark:border-e2-dark rounded px-3 py-1">
+                    <CgProfile className="text-[15px] text-tm dark:text-tm-dark font-semibold" />
+                    <span className="text-tm dark:text-tm-dark  text-xs sm:text-xs">
                       {job.position} Openings
                     </span>
                   </div>
@@ -246,7 +255,7 @@ const OpenPosition = () => {
         ) : (
           hasFiltered && (
             <div className="flex justify-center items-center pt-20">
-              <p className="text-[#c6c6c6]">
+              <p className="text-ts dark:text-ts-dark">
                 No jobs found matching your criteria.
               </p>
             </div>

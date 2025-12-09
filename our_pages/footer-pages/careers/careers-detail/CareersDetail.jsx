@@ -10,6 +10,7 @@ import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa6";
 import axios from "axios";
 import CareersForm from "./CareersForm";
+import CustomYellowButton from "@/components/common/CustomYellowButton";
 
 const CareersDetail = ({ id }) => {
   const locale = useLocale();
@@ -79,21 +80,21 @@ const CareersDetail = ({ id }) => {
   };
 
   return (
-    <section className="bg-[#000000] pt-24 sm:pt-28 md:pt-32">
+    <section className="bg-p dark:bg-p-dark pt-24 sm:pt-28 md:pt-32" dir="ltr">
       <div className="container">
         <div className="sm:w-[95%] lg:w-[80%] mx-auto">
           {loading ? (
             <div className="flex justify-center items-center h-[50vh]">
               <div className="ellipsis">
-                <span className="dot text-[#FED100]">.</span>
-                <span className="dot text-[#FED100]">.</span>
-                <span className="dot text-[#FED100]">.</span>
+                <span className="dot text-pcp dark:text-pcp-dark">.</span>
+                <span className="dot text-pcp dark:text-pcp-dark">.</span>
+                <span className="dot text-pcp dark:text-pcp-dark">.</span>
               </div>
             </div>
           ) : (
             <main>
               <Link
-                className="text-[#ffffff] hover:text-[#FED100] font-medium flex justify-center sm:justify-start items-center mb-8"
+                className="text-tm dark:text-tm-dark hover:text-pcp dark:hover:text-pcp font-medium flex justify-center sm:justify-start items-center mb-8"
                 href={`/${locale}/careers`}
               >
                 <span className="mr-2">
@@ -103,55 +104,54 @@ const CareersDetail = ({ id }) => {
               </Link>
               <div className="flex flex-col md:flex-row md:justify-between w-full">
                 <div>
-                  <p className="text-[#C6C6C6] text-xs sm:text-lg text-center sm:text-left">
+                  <p className="text-ts dark:text-ts-dark text-xs sm:text-lg text-center sm:text-left">
                     {detail.department}
                   </p>
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mt-2 text-[#FFFFFF] group-hover:text-[#FED100] text-center sm:text-left">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mt-2 text-tm dark:text-tm-dark text-center sm:text-left">
                     {detail.title}
                   </h2>
                 </div>
                 <div className="mt-2 md:mt-5 flex justify-center sm:justify-start">
-                  <button
-                    className="py-[16px] px-[46px] font-semibold mt-5 w-full sm:w-[50%] md:w-auto custom-button"
+                  <CustomYellowButton
+                    title="Apply Now"
                     onClick={handleApplyClick}
-                  >
-                    Apply Now
-                  </button>
+                    className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full sm:w-auto justify-between sm:justify-center mt-5"
+                  />
                 </div>
               </div>
               <div className="flex flex-wrap justify-center sm:justify-start gap-x-4 gap-y-4 mt-10">
-                <div className="flex items-center justify-center gap-x-1 bg-[#1D1D1D] border-[#222222] border-2 rounded px-3 py-1">
-                  <MdOutlineLocationOn className="text-[15px] text-[#ffffff] font-semibold" />
-                  <span className="text-[#FFFFFF] text-xs sm:text-[15px]">
+                <div className="flex items-center justify-center gap-x-2 bg-e1 dark:bg-e1-dark border-2 border-e2 dark:border-e2-dark rounded px-3 py-1">
+                  <MdOutlineLocationOn className="text-[15px] text-tm dark:text-tm-dark font-semibold" />
+                  <span className="text-tm dark:text-tm-dark text-xs sm:text-sm">
                     {detail.location}
                   </span>
                 </div>
-                <div className="flex items-center justify-center gap-x-1 bg-[#1D1D1D] border-[#222222] border-2 rounded px-3 py-1">
-                  <IoMdTime className="text-[16px] text-[#ffffff] font-semibold" />
-                  <span className="text-[#FFFFFF]  text-xs sm:text-[15px]">
+                <div className="flex items-center justify-center gap-x-2 bg-e1 dark:bg-e1-dark border-2 border-e2 dark:border-e2-dark rounded px-3 py-1">
+                  <IoMdTime className="text-[16px] text-tm dark:text-tm-dark font-semibold" />
+                  <span className="text-tm dark:text-tm-dark  text-xs sm:text-sm">
                     {detail.type}
                   </span>
                 </div>
-                <div className="flex items-center justify-center gap-x-1 bg-[#1D1D1D] border-[#222222] border-2 rounded px-3 py-1">
-                  <GrBriefcase className="text-[13px] text-[#ffffff] font-semibold" />
-                  <span className="text-[#FFFFFF]  text-xs sm:text-[15px]">
+                <div className="flex items-center justify-center gap-x-2 bg-e1 dark:bg-e1-dark border-2 border-e2 dark:border-e2-dark rounded px-3 py-1">
+                  <GrBriefcase className="text-[13px] text-tm dark:text-tm-dark font-semibold" />
+                  <span className="text-tm dark:text-tm-dark  text-xs sm:text-sm">
                     {`${detail.experience} Years Experience`}
                   </span>
                 </div>
-                <div className="flex items-center justify-center gap-x-1 bg-[#1D1D1D] border-[#222222] border-2 rounded px-3 py-1">
-                  <CgProfile className="text-[15px] text-[#ffffff] font-semibold" />
-                  <span className="text-[#FFFFFF]  text-xs sm:text-[15px]">
+                <div className="flex items-center justify-center gap-x-2 bg-e1 dark:bg-e1-dark border-2 border-e2 dark:border-e2-dark rounded px-3 py-1">
+                  <CgProfile className="text-[15px] text-tm dark:text-tm-dark font-semibold" />
+                  <span className="text-tm dark:text-tm-dark  text-xs sm:text-sm">
                     {`${detail.position} Openings`}
                   </span>
                 </div>
               </div>
-              <div className="mt-12 text-[#ffffff]">
+              <div className="mt-12 text-tm dark:text-tm-dark">
                 <MyEditor editorState={content} readOnly={true} />
               </div>
             </main>
           )}
           <div ref={formRef}>
-            <CareersForm jobTitle={detail?.title} />
+            <CareersForm jobTitle={detail?.title} formId={detail?.formId} />
           </div>
         </div>
       </div>
