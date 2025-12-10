@@ -2,6 +2,13 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import EmployeesOfTheMonth from "@/public/animations/careers/employees-of-the-month.json";
+import EthicsAndTransparency from "@/public/animations/careers/ethics-and-transparency.json";
+import IncentivesAndRewards from "@/public/animations/careers/incentives-and-rewards.json";
+import MarketCompetitiveRemuneration from "@/public/animations/careers/market-competitive-remuneration.json";
+import MulticulturalOrganization from "@/public/animations/careers/multicultural-organization.json";
+import TrainingAndDevelopment from "@/public/animations/careers/training-and-development.json";
+import Lottie from "lottie-react";
 
 const DrivingSuccess = () => {
   const { theme } = useTheme();
@@ -12,7 +19,7 @@ const DrivingSuccess = () => {
       title: t("title1"),
       title1: t("title1_1"),
       description: t("description1"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/Multicultural+Organization.svg",
+      icon: MulticulturalOrganization,
       titleColor: "#FED100",
       title1Color: "#F9F9F9",
       title1ColorLight: "#111111",
@@ -21,7 +28,7 @@ const DrivingSuccess = () => {
       title: t("title2"),
       title1: t("title2_1"),
       description: t("description2"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/Market+Competitive+Remuneration.svg",
+      icon: MarketCompetitiveRemuneration,
       titleColor: "#FED100",
       title1Color: "#F9F9F9",
       title1ColorLight: "#111111",
@@ -30,7 +37,7 @@ const DrivingSuccess = () => {
       title: t("title3"),
       title1: t("title3_1"),
       description: t("description3"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/Employees++of+the+Month.svg",
+      icon: EmployeesOfTheMonth,
       titleColor: "#F9F9F9",
       titleColorLight: "#111111",
       title1Color: "#FED100",
@@ -40,7 +47,7 @@ const DrivingSuccess = () => {
       title1: t("title4_1"),
       title2: t("title4_2"),
       description: t("description4"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/Training+and+Development.svg",
+      icon: TrainingAndDevelopment,
       titleColor: "#FED100",
       title1Color: "#FED100",
     },
@@ -49,7 +56,7 @@ const DrivingSuccess = () => {
       title1: t("title5_1"),
       title2: t("title5_2"),
       description: t("description5"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/Ethics+and+Transparency.svg",
+      icon: EthicsAndTransparency,
       titleColor: "#FED100",
       title1Color: "#FED100",
     },
@@ -58,7 +65,7 @@ const DrivingSuccess = () => {
       title1: t("title6_1"),
       title2: t("title6_2"),
       description: t("description6"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/Incentives+and+Rewards.svg",
+      icon: IncentivesAndRewards,
       titleColor: "#FED100",
       title1Color: "#FED100",
     },
@@ -124,12 +131,10 @@ const DrivingSuccess = () => {
                   </h3>
                 </div>
                 <div className="w-16 h-16 bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-lg flex items-center justify-center">
-                  <Image
-                    src={feature.icon}
-                    alt={feature.title}
-                    width="40"
-                    height="200"
-                    className="w-[34px] sm:w-[40px]"
+                  <Lottie
+                    animationData={feature.icon}
+                    loop={true}
+                    style={{ width: "52px", height: "52px" }}
                   />
                 </div>
               </div>
