@@ -52,9 +52,9 @@ const DesktopHeader = ({ locale }) => {
         : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
   });
   const [selectedLocation, setSelectedLocation] = useState({
-    name: "St. Lucia",
-    code: "lc",
-    flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/lucia.png",
+    name: "SCA UAE",
+    code: "uae",
+    flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/united-arab-emirates.png",
   });
 
   const router = useRouter();
@@ -162,19 +162,19 @@ const DesktopHeader = ({ locale }) => {
 
   const locations = [
     {
+      name: "SCA UAE",
+      code: "uae",
+      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/united-arab-emirates.png",
+    },
+    {
+      name: "FSC Mauritius",
+      code: "mu",
+      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/mauritius.png",
+    },
+    {
       name: "St. Lucia",
       code: "lc",
       flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/lucia.png",
-    },
-    {
-      name: "South Africa",
-      code: "za",
-      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/south-africa.png",
-    },
-    {
-      name: "Mauritius",
-      code: "mu",
-      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/mauritius.png",
     },
   ];
 

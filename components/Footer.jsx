@@ -70,7 +70,7 @@ const Footer = () => {
             paragraph: t("footerNotice.para_4"),
           },
         ]);
-      } else if (selectedLocation.name === "South Africa") {
+      } else if (selectedLocation.name === "SCA UAE") {
         setFooterNotice([
           {
             heading: t("footerNotice.heading_8"),
@@ -85,7 +85,7 @@ const Footer = () => {
             paragraph: t("footerNotice.para_4"),
           },
         ]);
-      } else if (selectedLocation.name === "Mauritius") {
+      } else if (selectedLocation.name === "FSC Mauritius") {
         setFooterNotice([
           {
             heading: t("footerNotice.heading_9"),
