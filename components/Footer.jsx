@@ -375,7 +375,7 @@ const Footer = () => {
                   {el.column.heading}
                 </p>
 
-                {el.column.heading === "Platform" ? (
+                {el.column.heading === t("Platform.title_part4") ? (
                   <ul
                     className={`pt-0 md:pt-2 text-sm ${
                       locale === "ar" ||
