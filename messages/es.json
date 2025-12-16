@@ -61,10 +61,11 @@
       "description": "Comercia forex, metales, acciones y materias primas en línea con Primex Capital: un bróker global que ofrece plataformas seguras, herramientas avanzadas y soporte experto."
     },
     "hero": {
-      "title1": "La ",
-      "title2": "Elección #1 ",
-      "title3": "de los Comerciantes de Clase Mundial",
-      "desc": "Comercia con bajas comisiones y spreads sin comisiones",
+      "subtitle1": "Con licencia en los EAU por ",
+      "subtitle2": "SCA",
+      "title1": "Opera con ",
+      "title2": "Confianza",
+      "desc": "Un bróker con licencia que opera bajo estándares regulatorios aprobados",
       "btnTxt1": "Abrir Cuenta",
       "btnTxt2": "Probar Demo Gratis",
       "imgTxt1": "Explora 330+",

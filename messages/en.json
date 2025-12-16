@@ -61,10 +61,11 @@
       "description": "Trade forex, metals, shares & commodities online with PrimeX Capital – a global broker offering secure platforms, advanced tools, and expert support."
     },
     "hero": {
-      "title1": "The ",
-      "title2": "#1 Choice ",
-      "title3": "of World-class Traders",
-      "desc": "Trade with low commissions and raw spreads",
+      "subtitle1": "Licensed in UAE by ",
+      "subtitle2": "SCA",
+      "title1": "Trade with ",
+      "title2": "Confidence",
+      "desc": "A licensed broker operating under approved regulatory standards",
       "btnTxt1": "Open Account",
       "btnTxt2": "Try Free Demo",
       "imgTxt1": "Explore 330+",

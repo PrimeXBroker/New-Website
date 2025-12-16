@@ -25,7 +25,7 @@ const FieldTypes = {
   TEXTAREA: "textarea",
 };
 
-function CareersForm({ jobTitle, formId }) {
+function CareersForm({ jobTitle, formId, jobId }) {
   const t = useTranslations("careersPage.careersForm");
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [loading, setLoading] = useState(false);
@@ -151,15 +151,12 @@ function CareersForm({ jobTitle, formId }) {
         const fieldName = field.name.toLowerCase().replace(/\s/g, "_");
         dynamicData[fieldName] = values[fieldName];
       });
-      const firstName = dynamicData.first_name || "";
-      const lastName = dynamicData.last_name || "";
-      const combinedName = `${firstName} ${lastName}`.trim();
 
       const submissionPayload = {
         ...dynamicData,
         resume: values.resume,
         job_title: jobTitle,
-        name: combinedName,
+        job_id: jobId,
       };
       console.log("Submitting form with payload:", submissionPayload);
       try {

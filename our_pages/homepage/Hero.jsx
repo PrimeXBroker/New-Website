@@ -39,22 +39,42 @@ const Hero = () => {
                 locale === "es" || locale === "ps" ? "lg:pt-0" : "lg:pt-5"
               }`}
             >
+              <div className="w-auto">
+                <div className="flex items-center bg-e1 dark:bg-e1-dark border border-e2 dark:border-e2-dark rounded-lg px-3 py-[10px] w-fit gap-2 mb-3 mx-auto md:mx-0">
+                  <Image
+                    unoptimized={true}
+                    width="26"
+                    height="26"
+                    src={
+                      theme === "dark"
+                        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/shield-dark.svg"
+                        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/shield-light.svg"
+                    }
+                    alt="Licensed Image"
+                    className=""
+                  />
+                  <p className="text-tm dark:text-tm-dark text-lg font-semibold leading-tight">
+                    {t("subtitle1")}
+                    <span className="text-pcp dark:text-pc-p-dark font-bold leading-tight">
+                      {t("subtitle2")}
+                    </span>
+                  </p>
+                </div>
+              </div>
               <h1 className="text-tm dark:text-tm-dark text-4xl sm:text-5xl md:text-4xl lg:text-[52px] font-bold xs:leading-tight sm:leading-tight md:leading-tight lg:leading-tight text-center sm:text-start">
                 {t("title1")}
                 <span className="text-pcp dark:text-pcp-dark">
                   {t("title2")}
                 </span>
-                <br className="hidden sm:block" />
-                {t("title3")}
               </h1>
-              <p className="text-ts dark:text-ts-dark font-medium text-lg sm:text-xl md:text-base lg:text-xl mb-0 mt-3 text-center sm:text-start">
+              <p className="text-ts dark:text-ts-dark font-medium text-lg sm:text-xl md:text-base lg:text-xl mb-0 mt-3 text-center sm:text-start lg:pe-10">
                 {t("desc")}
               </p>
               <div
                 className={`flex gap-5 ${
                   locale === "es" || locale === "ps"
                     ? " mt-6 md:mt-3 lg:mt-3"
-                    : " mt-6 lg:mt-8"
+                    : " mt-6 md:mt-2 lg:mt-8"
                 }`}
               >
                 <CustomYellowButton

@@ -151,7 +151,11 @@ const CareersDetail = ({ id }) => {
             </main>
           )}
           <div ref={formRef}>
-            <CareersForm jobTitle={detail?.title} formId={detail?.formId} />
+            <CareersForm
+              jobTitle={detail?.title}
+              formId={detail?.formId}
+              jobId={id}
+            />
           </div>
         </div>
       </div>

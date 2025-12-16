@@ -61,10 +61,11 @@
       "description": "Negocie forex, metais, ações e commodities online com a PrimeX Capital – uma corretora global que oferece plataformas seguras, ferramentas avançadas e suporte especializado."
     },
     "hero": {
-      "title1": "A ",
-      "title2": "Escolha #1 ",
-      "title3": "dos Traders de Classe Mundial",
-      "desc": "Negocie com comissões baixas e spreads brutos",
+      "subtitle1": "Licenciado nos Emirados Árabes Unidos pela ",
+      "subtitle2": "SCA",
+      "title1": "Negocie com ",
+      "title2": "Confiança",
+      "desc": "Uma corretora licenciada que opera sob padrões regulatórios aprovados",
       "btnTxt1": "Abrir Conta",
       "btnTxt2": "Tentar Demo Grátis",
       "imgTxt1": "Explore 330+",
