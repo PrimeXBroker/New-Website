@@ -1,0 +1,46 @@
+{
+  "regulationCompliance": {
+    "metaData": {
+      "title": "",
+      "description": ""
+    },
+    "hero": {
+      "title": "Regulation and Compliance",
+      "description": "We operate under strict regulatory frameworks enforced by recognized financial authorities."
+    },
+    "tradeSecurelySCA": {
+      "title_1": "Trade ",
+      "title_2": "securely",
+      "description": "with a registered and licensed broker authorized by recognized regulatory authorities.",
+      "sca_title": "SCA",
+      "sca_full_name": "Securities and Commodities Authority",
+      "para_1": "The Securities and Commodities Authority is the federal regulatory body responsible for licensing, regulating, enforcing compliance requirements, and supervising financial markets and brokerage activities in the United Arab Emirates.",
+      "para_2": "PrimeX Capital is a licensed financial intermediary authorized and regulated by the Securities and Commodities Authority SCA under UAE law, subject to continuous regulatory oversight and compliance obligations.",
+      "para_3": "PrimeX Capital operates under this license for the provision of regulated financial services within the scope approved by the Authority and in accordance with applicable UAE regulations.",
+      "para_4": "PrimeX Capital’s regulatory status can be verified directly through the official register of licensed entities maintained by the Securities and Commodities Authority of the United Arab Emirates.",
+      "license_label": "License number issued by the Authority: 20200000362",
+      "button_text": "Verify Status"
+    },
+    "tradeSecurelyFSC": {
+      "fsc_title": "FSC",
+      "fsc_full_name": "Financial Services Commission",
+      "para_1": "The Financial Services Commission is the regulatory authority responsible for licensing, regulating, monitoring, and supervising non-bank financial service providers in its jurisdiction.",
+      "para_2": "PrimeX Capital is authorized and regulated by the Financial Services Commission FSC of the Republic of Mauritius with an Investment Dealer License with license number GB23202141.",
+      "para_3": "PrimeX Capital operates under this authorization to provide financial services to selected jurisdictions outside the European Economic Area EEA, subject to FSC regulatory standards and supervision."
+    },
+    "faq": {
+      "title": "Frequently Asked ",
+      "title1": "Questions",
+      "question_1": "Is PrimeX Capital officially licensed?",
+      "answer_1": "Yes, PrimeX Capital is licensed by the Securities and Commodities Authority SCA in the United Arab Emirates. License number 20200000362.",
+      "question_2": "What is the Securities and Commodities Authority SCA?",
+      "answer_2": "It is the federal regulator responsible for overseeing financial markets and brokerage activities in the UAE. It enforces compliance and protects client rights.",
+      "question_3": "Is PrimeX Capital subject to ongoing regulatory supervision?",
+      "answer_3": "Yes, the company operates under continuous regulatory oversight. It follows strict transparency and governance standards.",
+      "question_4": "What is the FSC license and its scope?",
+      "answer_4": "PrimeX Capital is licensed by the Financial Services Commission FSC in Mauritius. Investment Dealer License number GB23202141. This license allows the company to provide financial services in selected jurisdictions outside the European Economic Area.",
+      "question_5": "Does being licensed mean profits are guaranteed?",
+      "answer_5": "No, Licensing does not guarantee profits. It ensures a regulated trading environment that protects traders’ rights."
+    }
+  }
+}

@@ -3636,5 +3636,49 @@
       "feature14": "Soporte para Trading Automatizado",
       "feature15": "Cuenta Demo Disponible"
     }
+  },
+  "regulationCompliance": {
+    "metaData": {
+      "title": "Regulación y Cumplimiento",
+      "description": "Conozca las licencias oficiales de PrimeX Capital. Un bróker financiero autorizado y regulado por la Securities and Commodities Authority (SCA) en los EAU y la Financial Services Commission (FSC). Opere con seguridad con una entidad que cumple con los más altos estándares globales de supervisión y gobernanza."
+    },
+    "hero": {
+      "title": "Regulación y Cumplimiento",
+      "description": "Operamos bajo estrictos marcos regulatorios aplicados por autoridades financieras reconocidas."
+    },
+    "tradeSecurelySCA": {
+      "title_1": "Opere ",
+      "title_2": "con seguridad",
+      "description": "con un bróker registrado y autorizado por autoridades regulatorias reconocidas.",
+      "sca_title": "SCA",
+      "sca_full_name": "Securities and Commodities Authority",
+      "para_1": "La Securities and Commodities Authority es el organismo regulador federal responsable de otorgar licencias, regular, hacer cumplir los requisitos de cumplimiento y supervisar los mercados financieros y las actividades de intermediación en los Emiratos Árabes Unidos.",
+      "para_2": "PrimeX Capital es una entidad financiera licenciada, autorizada y regulada por la Securities and Commodities Authority (SCA) bajo la legislación de los EAU, sujeta a supervisión regulatoria continua y obligaciones de cumplimiento.",
+      "para_3": "PrimeX Capital opera bajo esta licencia para la prestación de servicios financieros regulados dentro del alcance aprobado por la Autoridad y de acuerdo con la normativa aplicable de los Emiratos Árabes Unidos.",
+      "para_4": "El estatus regulatorio de PrimeX Capital puede verificarse directamente a través del registro oficial de entidades licenciadas mantenido por la Securities and Commodities Authority de los Emiratos Árabes Unidos.",
+      "license_label": "Número de licencia emitido por la Autoridad: 20200000362",
+      "button_text": "Verificar estatus"
+    },
+    "tradeSecurelyFSC": {
+      "fsc_title": "FSC",
+      "fsc_full_name": "Financial Services Commission",
+      "para_1": "La Financial Services Commission es la autoridad reguladora responsable de otorgar licencias, regular, monitorear y supervisar a los proveedores de servicios financieros no bancarios en su jurisdicción.",
+      "para_2": "PrimeX Capital está autorizada y regulada por la Financial Services Commission (FSC) de la República de Mauricio con una Investment Dealer License con número de licencia GB23202141.",
+      "para_3": "PrimeX Capital opera bajo esta autorización para proporcionar servicios financieros a jurisdicciones seleccionadas fuera del Espacio Económico Europeo (EEE), sujeta a las normas y supervisión regulatoria de la FSC."
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes ",
+      "title1": "Frecuentes",
+      "question_1": "¿PrimeX Capital está oficialmente autorizada?",
+      "answer_1": "Sí, PrimeX Capital está autorizada por la Securities and Commodities Authority (SCA) en los Emiratos Árabes Unidos. Número de licencia 20200000362.",
+      "question_2": "¿Qué es la Securities and Commodities Authority (SCA)?",
+      "answer_2": "Es el regulador federal responsable de supervisar los mercados financieros y las actividades de intermediación en los EAU. Hace cumplir los requisitos de cumplimiento y protege los derechos de los clientes.",
+      "question_3": "¿PrimeX Capital está sujeta a supervisión regulatoria continua?",
+      "answer_3": "Sí, la empresa opera bajo supervisión regulatoria continua. Cumple con estrictos estándares de transparencia y gobernanza.",
+      "question_4": "¿Qué es la licencia de la FSC y cuál es su alcance?",
+      "answer_4": "PrimeX Capital está autorizada por la Financial Services Commission (FSC) en Mauricio. Licencia de Investment Dealer número GB23202141. Esta licencia permite a la empresa prestar servicios financieros en jurisdicciones seleccionadas fuera del Espacio Económico Europeo.",
+      "question_5": "¿Estar autorizado significa que las ganancias están garantizadas?",
+      "answer_5": "No, la autorización no garantiza ganancias. Garantiza un entorno de trading regulado que protege los derechos de los traders."
+    }
   }
 }

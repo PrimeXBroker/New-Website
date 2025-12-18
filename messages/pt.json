@@ -3636,5 +3636,49 @@
       "feature14": "Suporte a Negociação Automatizada",
       "feature15": "Conta Demo Disponível"
     }
+  },
+  "regulationCompliance": {
+    "metaData": {
+      "title": "Regulamentos e Conformidade",
+      "description": "Saiba mais sobre as licenças oficiais da PrimeX Capital. Uma corretora financeira licenciada e regulamentada pela Securities and Commodities Authority (SCA) nos Emirados Árabes Unidos e pela Financial Services Authority (FSC). Negocie com segurança com uma instituição que adere aos mais altos padrões globais de supervisão e governança."
+    },
+    "hero": {
+      "title": "Regulação e Conformidade",
+      "description": "Operamos sob rigorosos quadros regulatórios aplicados por autoridades financeiras reconhecidas."
+    },
+    "tradeSecurelySCA": {
+      "title_1": "Negocie ",
+      "title_2": "com segurança",
+      "description": "com um corretor registrado e licenciado, autorizado por autoridades regulatórias reconhecidas.",
+      "sca_title": "SCA",
+      "sca_full_name": "Securities and Commodities Authority",
+      "para_1": "A Securities and Commodities Authority é o órgão regulador federal responsável por licenciar, regular, aplicar requisitos de conformidade e supervisionar os mercados financeiros e as atividades de corretagem nos Emirados Árabes Unidos.",
+      "para_2": "A PrimeX Capital é uma intermediária financeira licenciada, autorizada e regulada pela Securities and Commodities Authority (SCA) sob a lei dos Emirados Árabes Unidos, sujeita a supervisão regulatória contínua e a obrigações de conformidade.",
+      "para_3": "A PrimeX Capital opera sob esta licença para a prestação de serviços financeiros regulados dentro do escopo aprovado pela Autoridade e em conformidade com os regulamentos aplicáveis dos Emirados Árabes Unidos.",
+      "para_4": "O status regulatório da PrimeX Capital pode ser verificado diretamente por meio do registro oficial de entidades licenciadas mantido pela Securities and Commodities Authority dos Emirados Árabes Unidos.",
+      "license_label": "Número de licença emitido pela Autoridade: 20200000362",
+      "button_text": "Verificar status"
+    },
+    "tradeSecurelyFSC": {
+      "fsc_title": "FSC",
+      "fsc_full_name": "Financial Services Commission",
+      "para_1": "A Financial Services Commission é a autoridade reguladora responsável por licenciar, regular, monitorar e supervisionar os prestadores de serviços financeiros não bancários em sua jurisdição.",
+      "para_2": "A PrimeX Capital é autorizada e regulada pela Financial Services Commission (FSC) da República das Maurícias, com uma Investment Dealer License, sob o número de licença GB23202141.",
+      "para_3": "A PrimeX Capital opera sob esta autorização para fornecer serviços financeiros a jurisdições selecionadas fora do Espaço Econômico Europeu (EEE), em conformidade com os padrões regulatórios e a supervisão da FSC."
+    },
+    "faq": {
+      "title": "Perguntas Frequentes ",
+      "title1": "Frequentes",
+      "question_1": "A PrimeX Capital é oficialmente licenciada?",
+      "answer_1": "Sim, a PrimeX Capital é licenciada pela Securities and Commodities Authority (SCA) nos Emirados Árabes Unidos. Número de licença 20200000362.",
+      "question_2": "O que é a Securities and Commodities Authority (SCA)?",
+      "answer_2": "É o regulador federal responsável por supervisionar os mercados financeiros e as atividades de corretagem nos EAU. Aplica requisitos de conformidade e protege os direitos dos clientes.",
+      "question_3": "A PrimeX Capital está sujeita à supervisão regulatória contínua?",
+      "answer_3": "Sim, a empresa opera sob supervisão regulatória contínua. Segue rigorosos padrões de transparência e governança.",
+      "question_4": "O que é a licença FSC e qual é o seu escopo?",
+      "answer_4": "A PrimeX Capital é licenciada pela Financial Services Commission (FSC) nas Maurícias. Licença de Investment Dealer número GB23202141. Esta licença permite à empresa prestar serviços financeiros em jurisdições selecionadas fora do Espaço Econômico Europeu.",
+      "question_5": "Ser licenciada significa que os lucros são garantidos?",
+      "answer_5": "Não. Ser licenciada não garante lucros. Garante um ambiente de negociação regulado que protege os direitos dos traders."
+    }
   }
 }

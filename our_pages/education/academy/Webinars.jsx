@@ -73,12 +73,16 @@ const Webinars = ({ active, setActive }) => {
                     />
                     <div className="w-[70%] lg:w-[100%]">
                       <p className="text-tm dark:text-tm-dark text-sm mb-1 sm:mb-0">
-                        {webinar._id === "682d9c0884d8dd7225a52071"
+                        {webinar.speakerName
+                          ? webinar.speakerName
+                          : webinar._id === "682d9c0884d8dd7225a52071"
                           ? t("webinar_title3")
                           : t("webinar_title1")}
                       </p>
                       <p className="text-tm dark:text-tm-dark text-xs">
-                        {webinar._id === "682d9c0884d8dd7225a52071"
+                        {webinar.speakerDesignation
+                          ? webinar.speakerDesignation
+                          : webinar._id === "682d9c0884d8dd7225a52071"
                           ? ""
                           : t("Webinar1_by")}
                       </p>
