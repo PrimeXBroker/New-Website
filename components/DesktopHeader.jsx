@@ -875,6 +875,15 @@ const DesktopHeader = ({ locale }) => {
                       {t("contact")}
                     </LocaleLink>
                   </li>
+                  <li>
+                    <LocaleLink
+                      href="/regulation-and-compliance"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                    >
+                      {t("regulations")}
+                    </LocaleLink>
+                  </li>
                   {/* <li>
                     <LocaleLink
                       href="/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e"

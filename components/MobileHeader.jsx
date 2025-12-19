@@ -1288,6 +1288,13 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("contact")}
                 </LocaleLink>
+                <LocaleLink
+                  href="/regulation-and-compliance"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("regulations")}
+                </LocaleLink>
                 {/* <LocaleLink
                   href="/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
@@ -1295,7 +1302,7 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("press_release")}
                 </LocaleLink> */}
-                {locale === "en" && (
+                {/* {locale === "en" && (
                   <LocaleLink
                     href="/careers"
                     className="block text-tm dark:text-tm-dark text-base pt-[16px]"
@@ -1303,7 +1310,7 @@ const MobileHeader = ({ locale }) => {
                   >
                     {t("careers")}
                   </LocaleLink>
-                )}
+                )} */}
               </div>
             )}
           </div>

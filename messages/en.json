@@ -53,7 +53,8 @@
     "contest": "Contest",
     "ecn_broker": "ECN Broker",
     "courses": "Educational Courses",
-    "hammurabi_account": "Hammurabi Account"
+    "hammurabi_account": "Hammurabi Account",
+    "regulations": "Regulations"
   },
   "home": {
     "metaData": {
