@@ -3,10 +3,12 @@ import CustomYellowButton from "@/components/common/CustomYellowButton";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const Hero = () => {
   const locale = useLocale();
+  const router = useRouter();
   const t = useTranslations("investmentFunds.hero");
 
   const handleClick = () => {
