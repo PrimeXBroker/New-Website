@@ -39,7 +39,6 @@ function ComplaintForm() {
   const entityTypes = [
     { id: 1, name: t("lucia"), value: "lucia" },
     { id: 2, name: t("mauritius"), value: "mauritius" },
-    { id: 3, name: t("south_africa"), value: "south_africa" },
   ];
 
   useEffect(() => {

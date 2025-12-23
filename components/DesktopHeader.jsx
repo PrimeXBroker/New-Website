@@ -52,9 +52,9 @@ const DesktopHeader = ({ locale }) => {
         : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
   });
   const [selectedLocation, setSelectedLocation] = useState({
-    name: "St. Lucia",
-    code: "lc",
-    flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/lucia.png",
+    name: "SCA UAE",
+    code: "uae",
+    flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/united-arab-emirates.png",
   });
 
   const router = useRouter();
@@ -162,19 +162,19 @@ const DesktopHeader = ({ locale }) => {
 
   const locations = [
     {
+      name: "SCA UAE",
+      code: "uae",
+      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/united-arab-emirates.png",
+    },
+    {
+      name: "FSC Mauritius",
+      code: "mu",
+      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/mauritius.png",
+    },
+    {
       name: "St. Lucia",
       code: "lc",
       flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/lucia.png",
-    },
-    {
-      name: "South Africa",
-      code: "za",
-      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/south-africa.png",
-    },
-    {
-      name: "Mauritius",
-      code: "mu",
-      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/mauritius.png",
     },
   ];
 
@@ -559,7 +559,7 @@ const DesktopHeader = ({ locale }) => {
                       : "min-w-[180px]"
                   } rounded-[6px]`}
                 >
-                  <li>
+                  {/* <li>
                     <LocaleLink
                       href="/bonus"
                       onClick={closeDropdown}
@@ -567,7 +567,7 @@ const DesktopHeader = ({ locale }) => {
                     >
                       {t("bonus")}
                     </LocaleLink>
-                  </li>
+                  </li> */}
                   {/* <li>
                     <LocaleLink
                       href="/trade-gold"
@@ -577,6 +577,15 @@ const DesktopHeader = ({ locale }) => {
                       {t("contest")}
                     </LocaleLink>
                   </li> */}
+                  <li>
+                    <LocaleLink
+                      href="/investment-fund"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                    >
+                      {t("investment")}
+                    </LocaleLink>
+                  </li>
                   <li>
                     <LocaleLink
                       href="/local-depositor"
@@ -873,6 +882,15 @@ const DesktopHeader = ({ locale }) => {
                       className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
                       {t("contact")}
+                    </LocaleLink>
+                  </li>
+                  <li>
+                    <LocaleLink
+                      href="/regulation-and-compliance"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                    >
+                      {t("regulations")}
                     </LocaleLink>
                   </li>
                   {/* <li>

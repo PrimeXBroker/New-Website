@@ -70,7 +70,7 @@ const Footer = () => {
             paragraph: t("footerNotice.para_4"),
           },
         ]);
-      } else if (selectedLocation.name === "South Africa") {
+      } else if (selectedLocation.name === "SCA UAE") {
         setFooterNotice([
           {
             heading: t("footerNotice.heading_8"),
@@ -85,7 +85,7 @@ const Footer = () => {
             paragraph: t("footerNotice.para_4"),
           },
         ]);
-      } else if (selectedLocation.name === "Mauritius") {
+      } else if (selectedLocation.name === "FSC Mauritius") {
         setFooterNotice([
           {
             heading: t("footerNotice.heading_9"),
@@ -375,7 +375,7 @@ const Footer = () => {
                   {el.column.heading}
                 </p>
 
-                {el.column.heading === "Platform" ? (
+                {el.column.heading === t("Platform.title_part4") ? (
                   <ul
                     className={`pt-0 md:pt-2 text-sm ${
                       locale === "ar" ||

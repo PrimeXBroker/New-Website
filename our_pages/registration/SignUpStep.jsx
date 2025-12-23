@@ -42,7 +42,6 @@ export default function SignUpStep({
   const entityOptions = [
     { label: t3("lucia"), value: "lucia" },
     { label: t3("mauritius"), value: "mauritius" },
-    { label: t3("south_africa"), value: "south_africa" },
   ];
 
   const [countries, setCountries] = useState([]);

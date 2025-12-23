@@ -8,13 +8,17 @@ const CareersDetailWrapper = ({ id }) => {
   const locale = useLocale();
   const router = useRouter();
 
-  useEffect(() => {
-    if (locale !== "en") {
-      router.push(`/${locale}`);
-    }
-  }, [locale, router]);
+  // useEffect(() => {
+  //   if (locale !== "en") {
+  //     router.push(`/${locale}`);
+  //   }
+  // }, [locale, router]);
 
-  return <>{locale === "en" && <CareersDetail id={id} />}</>;
+  return (
+    <>
+      <CareersDetail id={id} />
+    </>
+  );
 };
 
 export default CareersDetailWrapper;

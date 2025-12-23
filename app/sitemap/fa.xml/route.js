@@ -223,6 +223,18 @@ export async function GET() {
       priority: 0.8,
       changefreq: "daily",
     },
+    {
+      url: "https://primexcapital.com/fa/regulation-and-compliance",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
+    {
+      url: "https://primexcapital.com/fa/investment-fund",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

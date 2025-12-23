@@ -12,7 +12,7 @@ const FAQ = ({ faqs }) => {
   return (
     <section className="bg-p dark:bg-p-dark">
       <div className="container">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-10 text-tm dark:text-tm-dark text-center">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-10 text-tm dark:text-tm-dark text-center capitalize">
           {f("faq.title")}{" "}
           <span className="text-pcp dark:text-pcp-dark">{f("faq.title1")}</span>
         </h2>

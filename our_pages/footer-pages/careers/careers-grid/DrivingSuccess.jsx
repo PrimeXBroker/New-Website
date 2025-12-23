@@ -1,9 +1,17 @@
 import React from "react";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { useTheme } from "next-themes";
+import EmployeesOfTheMonth from "@/public/animations/careers/employees-of-the-month.json";
+import EthicsAndTransparency from "@/public/animations/careers/ethics-and-transparency.json";
+import IncentivesAndRewards from "@/public/animations/careers/incentives-and-rewards.json";
+import MarketCompetitiveRemuneration from "@/public/animations/careers/market-competitive-remuneration.json";
+import MulticulturalOrganization from "@/public/animations/careers/multicultural-organization.json";
+import TrainingAndDevelopment from "@/public/animations/careers/training-and-development.json";
+import Lottie from "lottie-react";
 
 const DrivingSuccess = () => {
-  const locale = useLocale();
+  const { theme } = useTheme();
   const t = useTranslations("careersPage.drivingSuccess");
 
   const features = [
@@ -11,24 +19,27 @@ const DrivingSuccess = () => {
       title: t("title1"),
       title1: t("title1_1"),
       description: t("description1"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/Multicultural+Organization.svg",
+      icon: MulticulturalOrganization,
       titleColor: "#FED100",
-      title1Color: "#FFFFFF",
+      title1Color: "#F9F9F9",
+      title1ColorLight: "#111111",
     },
     {
       title: t("title2"),
       title1: t("title2_1"),
       description: t("description2"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/Market+Competitive+Remuneration.svg",
+      icon: MarketCompetitiveRemuneration,
       titleColor: "#FED100",
-      title1Color: "#FFFFFF",
+      title1Color: "#F9F9F9",
+      title1ColorLight: "#111111",
     },
     {
       title: t("title3"),
       title1: t("title3_1"),
       description: t("description3"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/Employees++of+the+Month.svg",
-      titleColor: "#FFFFFF",
+      icon: EmployeesOfTheMonth,
+      titleColor: "#F9F9F9",
+      titleColorLight: "#111111",
       title1Color: "#FED100",
     },
     {
@@ -36,7 +47,7 @@ const DrivingSuccess = () => {
       title1: t("title4_1"),
       title2: t("title4_2"),
       description: t("description4"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/Training+and+Development.svg",
+      icon: TrainingAndDevelopment,
       titleColor: "#FED100",
       title1Color: "#FED100",
     },
@@ -45,7 +56,7 @@ const DrivingSuccess = () => {
       title1: t("title5_1"),
       title2: t("title5_2"),
       description: t("description5"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/Ethics+and+Transparency.svg",
+      icon: EthicsAndTransparency,
       titleColor: "#FED100",
       title1Color: "#FED100",
     },
@@ -54,26 +65,28 @@ const DrivingSuccess = () => {
       title1: t("title6_1"),
       title2: t("title6_2"),
       description: t("description6"),
-      icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/careers/Incentives+and+Rewards.svg",
+      icon: IncentivesAndRewards,
       titleColor: "#FED100",
       title1Color: "#FED100",
     },
   ];
 
   return (
-    <section className="bg-[#000000] py-16 sm:py-28">
+    <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
       <div className="container">
         <div className="grid grid-cols-12">
           <div className="col-span-12">
             <div className="text-center md:text-start">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#ffffff] mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-tm dark:text-tm-dark mb-6">
                 {t("title_part1")}
-                <span className="text-[#FED100]">{t("title_part2")}</span>
+                <span className="text-pcp dark:text-pcp-dark">
+                  {t("title_part2")}
+                </span>
               </h2>
-              <p className="text-[#c6c6c6] text-sm sm:text-base">
+              <p className="text-ts dark:text-ts-dark text-sm sm:text-base">
                 {t("desc_part1")}
               </p>
-              <p className="text-[#c6c6c6] text-sm sm:text-base mt-4">
+              <p className="text-ts dark:text-ts-dark text-sm sm:text-base mt-4">
                 {t("desc_part2")}
               </p>
             </div>
@@ -83,39 +96,49 @@ const DrivingSuccess = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-[#111111] p-6 rounded-lg shadow-lg border-2 border-[#1d1d1d] text-[#FED100] flex flex-col gap-2 "
+              className="bg-cc dark:bg-cc-dark p-6 rounded-lg text-pcp dark:text-pcp-dark flex flex-col gap-2 "
             >
               <div className="flex justify-between items-center">
                 <div>
                   <h3
                     className="text-xl font-semibold"
-                    style={{ color: feature.titleColor }}
+                    style={{
+                      color:
+                        feature.titleColorLight && theme === "light"
+                          ? feature.titleColorLight
+                          : feature.titleColor,
+                    }}
                   >
                     {feature.title}
                     {feature.title2 ? (
-                      <span className="text-[#ffffff]">{feature.title2}</span>
+                      <span className="text-tm dark:text-tm-dark">
+                        {feature.title2}
+                      </span>
                     ) : (
                       ""
                     )}
                   </h3>
                   <h3
                     className="text-xl font-semibold"
-                    style={{ color: feature.title1Color }}
+                    style={{
+                      color:
+                        feature.title1ColorLight && theme === "light"
+                          ? feature.title1ColorLight
+                          : feature.title1Color,
+                    }}
                   >
                     {feature.title1}
                   </h3>
                 </div>
-                <div className="w-16 h-16 border-2 border-[#222222] bg-[#1D1D1D] rounded-lg flex items-center justify-center">
-                  <Image
-                    src={feature.icon}
-                    alt={feature.title}
-                    width="40"
-                    height="200"
-                    className="w-[34px] sm:w-[40px]"
+                <div className="w-16 h-16 bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-lg flex items-center justify-center">
+                  <Lottie
+                    animationData={feature.icon}
+                    loop={true}
+                    style={{ width: "52px", height: "52px" }}
                   />
                 </div>
               </div>
-              <p className="text-[#c6c6c6] mt-2 text-sm sm:text-base">
+              <p className="text-ts dark:text-ts-dark mt-2 text-sm sm:text-base">
                 {feature.description}
               </p>
             </div>

@@ -9,6 +9,8 @@ const AwardsTimeline = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const timelineRefs = useRef([]);
 
+  const awardIds = [13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -43,13 +45,13 @@ const AwardsTimeline = () => {
         <div
           className="absolute left-1/2 transform -translate-x-1/2 w-2 bg-pcp dark:bg-pcp-dark"
           style={{
-            height: `${(activeIndex / timelineRefs.current.length) * 100}%`,
+            height: `${(activeIndex / awardIds.length) * 100}%`,
             transition: "height 0.5s ease-in-out",
           }}
         ></div>
-        {Array.from({ length: 11 }, (_, i) => (
+        {awardIds.map((id, i) => (
           <div
-            key={i}
+            key={id}
             className={`relative flex items-center py-10 timeline-card transition-all duration-700 ${
               activeIndex >= i + 1 ? "active" : ""
             }`}
@@ -78,7 +80,7 @@ const AwardsTimeline = () => {
                     : "text-ts dark:text-ts-dark"
                 } font-semibold text-lg`}
               >
-                {t(`awardYear${i + 1}`)}
+                {t(`awardYear${id}`)}
               </span>
               {i % 2 === 0 ? (
                 <div
@@ -173,9 +175,7 @@ const AwardsTimeline = () => {
                       unoptimized={true}
                       width="120"
                       height="120"
-                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/awards/award+${
-                        i + 1
-                      }.png`}
+                      src={`https://primexcapital.s3.eu-north-1.amazonaws.com/website/light-mode-icons/primex-awards/award+${id}.png`}
                       alt="Award"
                       className="w-[106px] h-[106px]"
                     />
@@ -197,7 +197,7 @@ const AwardsTimeline = () => {
                         : "text-ts dark:text-ts-dark"
                     }`}
                   >
-                    {t(`subtitle${i + 1}`)}
+                    {t(`subtitle${id}`)}
                   </h3>
                   <h2
                     className={`text-[22px] md:text-lg lg:text-[22px] font-semibold mt-1 ${
@@ -206,7 +206,7 @@ const AwardsTimeline = () => {
                         : "text-tm dark:text-tm-dark"
                     }`}
                   >
-                    {t(`title${i + 1}`)}
+                    {t(`title${id}`)}
                   </h2>
                   <p
                     className={`text-sm mt-2 ${
@@ -215,7 +215,7 @@ const AwardsTimeline = () => {
                         : "text-ts dark:text-ts-dark"
                     }`}
                   >
-                    {t(`description${i + 1}`)}
+                    {t(`description${id}`)}
                   </p>
                 </div>
               </div>

@@ -1933,3 +1933,11 @@ html.dark .terms-checkbox:checked + .terms-label .terms-custom-checkbox {
 .editor a:hover {
   color: darkblue; /* Dark blue on hover */
 }
+
+[data-rmiz-modal-overlay] {
+  background-color: #f2f2f2 !important;
+}
+
+.dark [data-rmiz-modal-overlay] {
+  background-color: #030303 !important;
+}

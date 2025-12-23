@@ -57,9 +57,9 @@ const MobileHeader = ({ locale }) => {
         : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
   });
   const [selectedLocation, setSelectedLocation] = useState({
-    name: "St. Lucia",
-    code: "lc",
-    flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/lucia.png",
+    name: "SCA UAE",
+    code: "uae",
+    flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/united-arab-emirates.png",
   });
 
   let dropdownTimeout;
@@ -184,19 +184,19 @@ const MobileHeader = ({ locale }) => {
 
   const locations = [
     {
+      name: "SCA UAE",
+      code: "uae",
+      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/united-arab-emirates.png",
+    },
+    {
+      name: "FSC Mauritius",
+      code: "mu",
+      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/mauritius.png",
+    },
+    {
       name: "St. Lucia",
       code: "lc",
       flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/lucia.png",
-    },
-    {
-      name: "South Africa",
-      code: "za",
-      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/south-africa.png",
-    },
-    {
-      name: "Mauritius",
-      code: "mu",
-      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/mauritius.png",
     },
   ];
 
@@ -1001,13 +1001,13 @@ const MobileHeader = ({ locale }) => {
             </button>
             {openSubMenu === 8 && (
               <div className="">
-                <LocaleLink
+                {/* <LocaleLink
                   href="/bonus"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("bonus")}
-                </LocaleLink>
+                </LocaleLink> */}
                 {/* <LocaleLink
                   href="/trade-gold"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
@@ -1015,6 +1015,13 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("contest")}
                 </LocaleLink> */}
+                <LocaleLink
+                  href="/investment-fund"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("investment")}
+                </LocaleLink>
                 <LocaleLink
                   href="/local-depositor"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
@@ -1288,6 +1295,13 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("contact")}
                 </LocaleLink>
+                <LocaleLink
+                  href="/regulation-and-compliance"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("regulations")}
+                </LocaleLink>
                 {/* <LocaleLink
                   href="/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
@@ -1295,7 +1309,7 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("press_release")}
                 </LocaleLink> */}
-                {locale === "en" && (
+                {/* {locale === "en" && (
                   <LocaleLink
                     href="/careers"
                     className="block text-tm dark:text-tm-dark text-base pt-[16px]"
@@ -1303,7 +1317,7 @@ const MobileHeader = ({ locale }) => {
                   >
                     {t("careers")}
                   </LocaleLink>
-                )}
+                )} */}
               </div>
             )}
           </div>
