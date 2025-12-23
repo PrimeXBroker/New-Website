@@ -21,7 +21,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("investmentFunds.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/Hero+Image.png",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/investment-hero.png",
           width: 1200,
           height: 630,
           alt: t("investmentFunds.metaData.title"),

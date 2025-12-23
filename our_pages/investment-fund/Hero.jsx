@@ -49,11 +49,11 @@ const Hero = () => {
             <div className="flex justify-center md:justify-end">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/Hero+Image.png"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/investment-hero.png"
                 width="100"
                 height="100"
                 alt="Hero Image"
-                className={`w-full sm:w-[80%] h-full rounded-3xl`}
+                className={`w-full sm:w-[80%] h-full`}
               />
             </div>
           </div>
