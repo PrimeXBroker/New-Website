@@ -4,8 +4,6 @@ import Image from "next/image";
 
 const AwardsTimelineMobile = () => {
   const t = useTranslations("newAwards.awardCards");
-
-  // 13 se 1 tak ki IDs ka array
   const awardIds = [13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 
   return (
@@ -14,14 +12,12 @@ const AwardsTimelineMobile = () => {
         <div className="timeline-mobile flex justify-center">
           <div className="outer inline-block">
             {awardIds.map((id, index) => {
-              // Aapke design ke mutabiq circle ki position decide karne ke liye
               const isFirst = index === 0;
               const isLast = index === awardIds.length - 1;
               const isEven = index % 2 === 0;
 
               return (
                 <div key={id} className="card-mobile relative">
-                  {/* Circle (Award Count) - Logic to keep your left/right design */}
                   <div
                     className={`bg-cc dark:bg-cc-dark w-8 h-8 rounded-full absolute flex justify-center items-center ${
                       isFirst
@@ -37,8 +33,6 @@ const AwardsTimelineMobile = () => {
                       {t(`award_count${id}`)}
                     </span>
                   </div>
-
-                  {/* Card Body */}
                   <div className="rounded-[20px] p-5 transition-all duration-700 bg-cc dark:bg-cc-dark text-tm dark:text-tm-dark">
                     <div
                       className="relative bg-e2 dark:bg-e2-dark p-10 rounded-[12px]"
@@ -53,7 +47,6 @@ const AwardsTimelineMobile = () => {
                           alt="Left Leaf"
                           className="w-full"
                         />
-                        {/* New Image URL as requested */}
                         <Image
                           unoptimized={true}
                           width="120"
@@ -75,7 +68,6 @@ const AwardsTimelineMobile = () => {
                         {t(`awardYear${id}`)}
                       </div>
                     </div>
-
                     <div className="mt-4">
                       <h3 className="text-xs sm:text-sm md:text-xs lg:text-sm font-normal text-ts dark:text-ts-dark">
                         {t(`subtitle${id}`)}

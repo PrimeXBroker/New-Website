@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
 import { useTranslations } from "next-intl";
-import realTimeTrading from "@/public/animations/social-trading/real-time-trading.json";
-import diversifyPortfolio from "@/public/animations/social-trading/diversify-portfolio.json";
-import automateAndSaveTime from "@/public/animations/social-trading/automate-and-save-time.json";
-import agileCustomerService from "@/public/animations/social-trading/agile-customer-service.json";
-import multiAssetPortfolio from "@/public/animations/social-trading/multi-asset-portfolio.json";
+import structuredInvestmentModel from "@/public/animations/investment-fund/structured-investment-model.json";
+import professionalManagement from "@/public/animations/investment-fund/professional-management.json";
+import handsFreeInvesting from "@/public/animations/investment-fund/hands-free-investing.json";
+import flexibleTransactions from "@/public/animations/investment-fund/flexible-transactions.json";
+import fairProfitDistribution from "@/public/animations/investment-fund/fair-profit-distribution.json";
+import dedicatedSupport from "@/public/animations/investment-fund/dedicated-support.json";
 import Lottie from "lottie-react";
 
 const WhyChoose = () => {
@@ -16,37 +17,37 @@ const WhyChoose = () => {
       title1: t("title1"),
       title2: t("title1_1"),
       description: t("description1"),
-      icon: realTimeTrading,
+      icon: professionalManagement,
     },
     {
       title1: t("title2"),
       title2: t("title2_1"),
       description: t("description2"),
-      icon: diversifyPortfolio,
+      icon: flexibleTransactions,
     },
     {
       title1: t("title3"),
       title2: t("title3_1"),
       description: t("description3"),
-      icon: automateAndSaveTime,
+      icon: structuredInvestmentModel,
     },
     {
       title1: t("title4"),
       title2: t("title4_1"),
       description: t("description4"),
-      icon: agileCustomerService,
+      icon: handsFreeInvesting,
     },
     {
       title1: t("title5"),
       title2: t("title5_1"),
       description: t("description5"),
-      icon: multiAssetPortfolio,
+      icon: dedicatedSupport,
     },
     {
       title1: t("title6"),
       title2: t("title6_1"),
       description: t("description6"),
-      icon: multiAssetPortfolio,
+      icon: fairProfitDistribution,
     },
   ];
 
