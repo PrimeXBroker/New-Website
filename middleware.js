@@ -1,45 +1,33 @@
 // middleware.ts
-// import createMiddleware from "next-intl/middleware";
-// import { deepLinkMiddleware } from "./middleware/deepLinkMiddleware";
-
-// export default createMiddleware({
-//   middleware: deepLinkMiddleware,
-
-//   locales: ["en", "ar", "ku", "es", "ps", "pt", "fa"],
-
-//   defaultLocale: "en",
-// });
-
-// export const config = {
-//   matcher: [
-//     "/", // Root
-//     "/(en|ar|ku|es|ps|pt|fa)/:path*",
-//     "/community/posts/detail/:path*",
-//   ],
-// };
-
 import createMiddleware from "next-intl/middleware";
 import { deepLinkMiddleware } from "./middleware/deepLinkMiddleware";
 
-// --- Configuration ---
-export default createMiddleware({
-  // Use the custom deep link middleware
-  middleware: deepLinkMiddleware,
-
-  // Your list of supported locales
+const intlMiddleware = createMiddleware({
   locales: ["en", "ar", "ku", "es", "ps", "pt", "fa"],
-
-  // Your default locale
   defaultLocale: "en",
-
 });
 
+export default function middleware(request) {
+  console.log("=== MAIN MIDDLEWARE ENTRY ===");
+
+  // First, try deep link handling
+  const deepLinkResponse = deepLinkMiddleware(request);
+  if (deepLinkResponse) {
+    console.log("Deep link middleware returned a response");
+    return deepLinkResponse;
+  }
+
+  console.log("Passing to intl middleware");
+  // Then, handle internationalization
+  return intlMiddleware(request);
+}
+
 export const config = {
-  // Matches all paths that should be checked by the middleware
   matcher: [
+    // Match all paths except static files
+    "/((?!_next|_vercel|.*\\..*).*)",
     "/", // Root
-    "/(en|ar|ku|es|ps|pt|fa)/:path*", // Catches all prefixed paths (e.g., /ar/...)
-    "/community/posts/detail/:path*", // Catches the default locale path (e.g., /community/...)
-    "/deeplink-handler", // Ensure the handler path is included
+    "/(en|ar|ku|es|ps|pt|fa)/:path*", // Locale paths
+    "/community/posts/detail/:path*", // Your deep link path
   ],
 };
