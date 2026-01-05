@@ -3752,5 +3752,102 @@
       "question_5": "Preciso de experiência em trading?",
       "answer_5": "Não. O fundo é adequado para investidores sem experiência em trading, pois todas as operações são totalmente geridas pela equipa especializada."
     }
+  },
+  "newYearBonus": {
+    "metaData": {
+      "title": "Bônus de Boas-Vindas de $30 - Presente de Ano Novo",
+      "description": "Comece o Ano Novo com um Bônus de Boas-Vindas de $30 da PrimeX Capital. Sem depósito, registre-se agora e comece a negociar."
+    },
+    "bonusHero": {
+      "hero_title": "Bônus de Boas-Vindas de $30 de Ano Novo!",
+      "hero_subtitle": "Aumente suas oportunidades de negociação com",
+      "hero_description": "Sem depósito necessário, registre-se agora para resgatar seu presente!",
+      "btnTxt": "Resgatar Bônus de $30"
+    },
+    "bonusPrizeBreakdown": {
+      "title": "Como funciona?",
+      "step1": "Registre-se e Verifique",
+      "step1_desc": "Abra uma nova conta e verifique seu perfil para desbloquear seu presente.",
+      "step2": "Receba o Bônus",
+      "step2_desc": "O Bônus de Boas-Vindas de $30 será creditado em sua conta imediatamente após a verificação.",
+      "step3": "Negocie",
+      "step3_desc": "Complete 10 lotes e alcance $100 em lucros dentro de 30 dias para poder sacar."
+    },
+    "bonusRules": {
+      "title": "Termos e Condições",
+      "trading_rules_title": "Elegibilidade do Bônus",
+      "trading_rules_li1_desc": "Oferta disponível apenas para novas contas registradas.",
+      "trading_rules_li2_desc": "Estritamente um bônus por cliente.",
+      "trading_rules_li3_desc": "Esta oferta está disponível exclusivamente para novos clientes residentes em regiões geográficas selecionadas.",
+      "general_rules_title": "Regras do Bônus",
+      "general_rules_li1_desc": "O saldo do bônus é negociável e sujeito a perdas.",
+      "general_rules_li2_desc": "Você deve gerar $100 de lucro para ser elegível para saque.",
+      "general_rules_li3_desc": "Um volume total de negociação de 10 lotes padrão deve ser completado.",
+      "general_rules_li4_desc": "O pagamento máximo é limitado a $100.",
+      "timeline_title": "Regras Gerais",
+      "timeline_li1_desc": "O bônus é válido por 30 dias a partir da data de ativação.",
+      "timeline_li2_desc": "Se o objetivo não for atingido em 30 dias, o bônus é removido e a conta é encerrada.",
+      "timeline_li3_desc": "Após um saque bem-sucedido, a conta será encerrada automaticamente.",
+      "works_title": "Estratégias de Negociação Proibidas",
+      "works_li1_desc": "Hedging (cobertura) de posições entre contas diferentes é proibido.",
+      "works_li2_desc": "Negociação de Alta Frequência (HFT).",
+      "works_li3_desc": "O uso de múltiplas contas do mesmo endereço IP é estritamente proibido.",
+      "works_li4_desc": "Aplicam-se os Termos e Condições Gerais."
+    },
+    "iconicFeatures": {
+      "home_heading": "Por que PrimeX Capital?",
+      "home_description": "PrimeX Capital lidera com inovação contínua e uma visão global, conquistando a confiança de traders de elite em todo o mundo. Nosso compromisso com a excelência garante uma experiência de negociação de primeira linha para cada cliente.",
+      "home_feature_1_title1": "Corretora Global",
+      "home_feature_1_title2": "Confiável",
+      "home_feature_1_description": "A PrimeX Capital é conhecida por fornecer serviços financeiros confiáveis e excepcionais em todo o mundo.",
+      "home_feature_2_title1": "Execução de",
+      "home_feature_2_title2": "Negociação Ultra-Rápida",
+      "home_feature_2_description": "Desfrute de latência mínima para uma experiência de negociação perfeita.",
+      "home_feature_3_title1": "Tecnologia",
+      "home_feature_3_title2": "Inovadora",
+      "home_feature_3_description": "Experimente estabilidade e precisão com plataformas de negociação avançadas para negociações em tempo real.",
+      "home_feature_4_title1": "Suporte Multilíngue",
+      "home_feature_4_title2": "24/7 Dedicado",
+      "home_feature_4_description": "Acesse suporte a qualquer hora, em vários idiomas.",
+      "home_feature_5_title1": "Programas de",
+      "home_feature_5_title2": "Parceria Lucrativa",
+      "home_feature_5_description": "Aproveite opções diversas como IB, Parceiro Regional e Grey Label.",
+      "home_feature_6_title1": "Segurança",
+      "home_feature_6_title2": "dos Fundos",
+      "home_feature_6_description": "Negocie com confiança, sabendo que seus fundos estão protegidos por regulamentações fortes.",
+      "home_feature_7_title1": "Portfólio de",
+      "home_feature_7_title2": "Multi-Ativos",
+      "home_feature_7_description": "Negocie uma ampla gama de instrumentos, incluindo forex, metais, índices e ações.",
+      "home_feature_8_title1": "Depósito/Saque",
+      "home_feature_8_title2": "Fácil",
+      "home_feature_8_description": "Processos rápidos e sem complicações de depósito e saque para investidores."
+    },
+    "bonusFaqs": {
+      "title": "Perguntas Frequentes",
+      "question1": "O que é o Bônus de Boas-Vindas de Ano Novo?",
+      "answer1": "É um crédito de negociação de $30 dado a novos clientes como um presente de Ano Novo, permitindo que você negocie e teste nossa execução sem arriscar seu próprio capital.",
+      "question2": "Preciso depositar dinheiro para obter o bônus?",
+      "answer2": "Não, este é um presente de boas-vindas para novos registros. Nenhum depósito inicial é necessário para resgatar os $30.",
+      "question3": "Qual é o valor máximo de bônus que posso receber?",
+      "answer3": "O valor do bônus é fixo em $30.",
+      "question4": "Qual é a validade do bônus?",
+      "answer4": "O período da campanha é de 30 dias. Você deve cumprir os requisitos de negociação dentro deste prazo. Se o objetivo não for atingido até o 30º dia, a conta será encerrada.",
+      "question5": "Posso sacar o valor do bônus?",
+      "answer5": "Não. Os $30 são apenas para fins de negociação. No entanto, você pode sacar seus lucros.",
+      "question6": "Posso sacar meus lucros de negociação?",
+      "answer6": "Sim, mas você deve cumprir metas específicas primeiro. Você precisa completar 10 lotes padrão de volume e atingir $100 em lucro. Uma vez alcançado, você pode sacar os $100.",
+      "question7": "Quem é elegível para este bônus?",
+      "answer7": "Esta oferta é exclusiva para novos clientes residentes em regiões selecionadas que nunca se registraram na PrimeX Capital antes. Clientes de outras regiões não são elegíveis para esta promoção específica.",
+      "question8": "Preciso abrir um tipo específico de conta?",
+      "answer8": "Sim, ao se registrar, certifique-se de selecionar o tipo de conta \"$30 Welcome Bonus Account\" (ou contate o suporte se não tiver certeza).",
+      "question9": "Quantos bônus posso resgatar?",
+      "answer9": "Apenas um bônus por pessoa e por endereço IP é permitido.",
+      "question10": "Existem estratégias de negociação proibidas?",
+      "answer10": "Sim. As seguintes estratégias são estritamente proibidas: Hedging entre contas diferentes, Arbitragem, Negociação de Alta Frequência (HFT) e acesso a múltiplas contas do mesmo endereço IP."
+    },
+    "bonusJoinNow": {
+      "title1": "Você está pronto para receber seu presente?",
+      "btnTxt": "Resgatar Bônus de $30 Agora!"
+    }
   }
 }

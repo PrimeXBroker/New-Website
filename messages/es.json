@@ -3752,5 +3752,102 @@
       "question_5": "¿Necesito experiencia en trading?",
       "answer_5": "No. El fondo es adecuado para inversores sin experiencia en trading, ya que todas las operaciones son gestionadas por el equipo especializado."
     }
+  },
+  "newYearBonus": {
+    "metaData": {
+      "title": "Bono de Bienvenida de $30 - Regalo de Año Nuevo",
+      "description": "Comienza el Año Nuevo con un Bono de Bienvenida de $30 de PrimeX Capital. Sin depósito, regístrate ahora y comienza a operar."
+    },
+    "bonusHero": {
+      "hero_title": "¡Bono de Bienvenida de $30 de Año Nuevo!",
+      "hero_subtitle": "Aumenta tus oportunidades de trading con",
+      "hero_description": "Sin depósito requerido, ¡simplemente regístrate ahora para reclamar tu regalo!",
+      "btnTxt": "Reclamar Bono de $30"
+    },
+    "bonusPrizeBreakdown": {
+      "title": "¿Cómo funciona?",
+      "step1": "Regístrate y Verifica",
+      "step1_desc": "Abre una cuenta nueva y verifica tu perfil para desbloquear tu regalo.",
+      "step2": "Recibe el Bono",
+      "step2_desc": "El Bono de Bienvenida de $30 se acreditará en tu cuenta inmediatamente después de la verificación.",
+      "step3": "Opera",
+      "step3_desc": "Completa 10 lotes y alcanza $100 en ganancias dentro de 30 días para poder retirar."
+    },
+    "bonusRules": {
+      "title": "Términos y Condiciones",
+      "trading_rules_title": "Elegibilidad del Bono",
+      "trading_rules_li1_desc": "Oferta disponible únicamente para cuentas nuevas registradas.",
+      "trading_rules_li2_desc": "Estrictamente un bono por cliente.",
+      "trading_rules_li3_desc": "Esta oferta está disponible exclusivamente para clientes nuevos residentes en regiones geográficas seleccionadas.",
+      "general_rules_title": "Reglas del Bono",
+      "general_rules_li1_desc": "El saldo del bono es operable y está sujeto a pérdidas.",
+      "general_rules_li2_desc": "Debes generar $100 de ganancia para ser elegible para el retiro.",
+      "general_rules_li3_desc": "Se debe completar un volumen total de trading de 10 lotes estándar.",
+      "general_rules_li4_desc": "El retiro máximo está limitado a $100.",
+      "timeline_title": "Reglas Generales",
+      "timeline_li1_desc": "El bono es válido por 30 días a partir de la fecha de activación.",
+      "timeline_li2_desc": "Si el objetivo no se cumple dentro de los 30 días, el bono se elimina y la cuenta se cierra.",
+      "timeline_li3_desc": "Tras un retiro exitoso, la cuenta se cerrará automáticamente.",
+      "works_title": "Estrategias de Trading Prohibidas",
+      "works_li1_desc": "La cobertura (Hedging) de posiciones entre cuentas diferentes está prohibida.",
+      "works_li2_desc": "Trading de Alta Frecuencia (HFT).",
+      "works_li3_desc": "El uso de múltiples cuentas desde la misma dirección IP está estrictamente prohibido.",
+      "works_li4_desc": "Se aplican los Términos y Condiciones Generales."
+    },
+    "iconicFeatures": {
+      "home_heading": "¿Por qué PrimeX Capital?",
+      "home_description": "PrimeX Capital lidera con innovación continua y una visión global, ganando la confianza de Operadors de élite en todo el mundo. Nuestro compromiso con la excelencia asegura una experiencia de trading de primer nivel para cada cliente.",
+      "home_feature_1_title1": "Marca Global",
+      "home_feature_1_title2": "Confiable",
+      "home_feature_1_description": "PrimeX Capital es conocida por ofrecer servicios financieros confiables y excepcionales a nivel mundial.",
+      "home_feature_2_title1": "Ejecución de Trades",
+      "home_feature_2_title2": "Rápida como un Rayo",
+      "home_feature_2_description": "Disfruta de latencia mínima para una experiencia de trading sin interrupciones.",
+      "home_feature_3_title1": "Tecnología Innovadora",
+      "home_feature_3_title2": "Pionera",
+      "home_feature_3_description": "Experimenta estabilidad y precisión con plataformas de trading avanzadas para operaciones en tiempo real.",
+      "home_feature_4_title1": "Soporte Multilingüe",
+      "home_feature_4_title2": "24/7",
+      "home_feature_4_description": "Accede a soporte en cualquier momento en varios idiomas.",
+      "home_feature_5_title1": "Programas de Asociación",
+      "home_feature_5_title2": "Lucrativos",
+      "home_feature_5_description": "Benefíciate de diversas opciones como IB, Socio Regional y Grey Label.",
+      "home_feature_6_title1": "Seguridad",
+      "home_feature_6_title2": "de los Fondos",
+      "home_feature_6_description": "Opera con confianza, sabiendo que tus fondos están protegidos por fuertes regulaciones.",
+      "home_feature_7_title1": "Portafolio de Múltiples Activos",
+      "home_feature_7_title2": "Multi-activos",
+      "home_feature_7_description": "Opera una amplia gama de instrumentos, incluyendo forex, metales, índices y acciones.",
+      "home_feature_8_title1": "Fácil",
+      "home_feature_8_title2": "Depósito/Retiro",
+      "home_feature_8_description": "Procesos de depósito y retiro rápidos y sin complicaciones para los inversores."
+    },
+    "bonusFaqs": {
+      "title": "Preguntas Frecuentes",
+      "question1": "¿Qué es el Bono de Bienvenida de Año Nuevo?",
+      "answer1": "Es un crédito de trading de $30 otorgado a clientes nuevos como regalo de Año Nuevo, permitiéndote operar y probar nuestra ejecución sin arriesgar tu propio capital.",
+      "question2": "¿Necesito depositar dinero para obtener el bono?",
+      "answer2": "No, este es un regalo de bienvenida para nuevos registros. No se requiere ningún depósito inicial para reclamar los $30.",
+      "question3": "¿Cuál es la cantidad máxima de bono que puedo recibir?",
+      "answer3": "El monto del bono es fijo de $30.",
+      "question4": "¿Cuánto tiempo es válido el bono?",
+      "answer4": "El período de la campaña es de 30 días. Debes cumplir con los requisitos de trading dentro de este tiempo. Si el objetivo no se cumple para el día 30, la cuenta se cerrará.",
+      "question5": "¿Puedo retirar el monto del bono?",
+      "answer5": "No. Los $30 son solo para fines de trading. Sin embargo, puedes retirar tus ganancias.",
+      "question6": "¿Puedo retirar mis ganancias de trading?",
+      "answer6": "Sí, pero primero debes cumplir objetivos específicos. Necesitas completar 10 lotes estándar de volumen y alcanzar $100 en ganancias. Una vez logrado, puedes retirar los $100.",
+      "question7": "¿Quién es elegible para este bono?",
+      "answer7": "Esta oferta es exclusiva para clientes nuevos residentes en regiones seleccionadas que nunca se hayan registrado antes en PrimeX Capital. Los clientes de otras regiones no son elegibles para esta promoción específica.",
+      "question8": "¿Necesito abrir un tipo de cuenta específico?",
+      "answer8": "Sí, al registrarte, asegúrate de seleccionar el tipo de cuenta \"$30 Welcome Bonus Account\" (o contacta a soporte si no estás seguro).",
+      "question9": "¿Cuántos bonos puedo reclamar?",
+      "answer9": "Solo se permite un bono por persona y por dirección IP.",
+      "question10": "¿Existen estrategias de trading prohibidas?",
+      "answer10": "Sí. Las siguientes estrategias están estrictamente prohibidas: Cobertura (Hedging) entre cuentas diferentes, Arbitraje, Trading de Alta Frecuencia (HFT) y el acceso a múltiples cuentas desde la misma dirección IP."
+    },
+    "bonusJoinNow": {
+      "title1": "¿Estás listo para recibir tu regalo?",
+      "btnTxt": "¡Reclamar Bono de $30 Ahora!"
+    }
   }
 }

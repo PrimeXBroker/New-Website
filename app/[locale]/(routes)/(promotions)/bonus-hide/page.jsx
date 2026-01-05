@@ -1,4 +1,4 @@
-import BonusWrapper from "@/our_pages/promotions/primex-bonus/BonusWrapper";
+import BonusWrapper from "@/our_pages/promotions/new-year-bonus/BonusWrapper";
 import { createTranslator } from "next-intl";
 import React from "react";
 
@@ -9,8 +9,8 @@ export async function generateMetadata({ params: { locale } }) {
   const url = `https://www.primexcapital.com/${locale}/bonus`;
 
   return {
-    title: t("bonusPage.metaData.title"),
-    description: t("bonusPage.metaData.description"),
+    title: t("newYearBonus.metaData.title"),
+    description: t("newYearBonus.metaData.description"),
     alternates: {
       canonical: url,
     },
@@ -18,28 +18,14 @@ export async function generateMetadata({ params: { locale } }) {
       type: "website",
       locale: locale,
       url: url,
-      title: t("bonusPage.metaData.title"),
-      description: t("bonusPage.metaData.description"),
+      title: t("newYearBonus.metaData.title"),
+      description: t("newYearBonus.metaData.description"),
       images: [
         {
-          url:
-            locale === "ar"
-              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(AR).png"
-              : locale === "es"
-              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(ES).png"
-              : locale === "fa"
-              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(Farsi).png"
-              : locale === "ku"
-              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(KR).png"
-              : locale === "ps"
-              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(PS).png"
-              : locale === "pt"
-              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(PT).png"
-              : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/50%25+Hero+Page+photo(EN).png",
-
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/new-year-bonus/new-year-hero.png",
           width: 1200,
           height: 630,
-          alt: t("bonusPage.metaData.title"),
+          alt: t("newYearBonus.metaData.title"),
         },
       ],
     },

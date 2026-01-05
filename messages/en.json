@@ -3752,5 +3752,102 @@
       "question_5": "Do I need trading experience?",
       "answer_5": "No. The fund is suitable for investors with no trading experience, as all trading is fully managed by the specialized team."
     }
+  },
+  "newYearBonus": {
+    "metaData": {
+      "title": "New Year $30 Welcome Bonus",
+      "description": "Start the new year with a $30 welcome bonus from PrimeX Capital. Get free credit to trade with no deposit and no risk. Make profits and withdraw them now. Sign up for free!"
+    },
+    "bonusHero": {
+      "hero_title": "New Year $30 Welcome Bonus!",
+      "hero_subtitle": "Boost your Trading Opportunities with",
+      "hero_description": "No Deposit Required, Simply Register Now to Claim your Bonus!",
+      "btnTxt": "Claim Your $30 Bonus"
+    },
+    "bonusPrizeBreakdown": {
+      "title": "How it works",
+      "step1": "Register & Verify",
+      "step1_desc": "Sign up for a new account and verify your profile to unlock your gift.",
+      "step2": "Get Bonus",
+      "step2_desc": "The $30 Welcome Bonus will be credited to your account immediately upon verification.",
+      "step3": "Trade",
+      "step3_desc": "Complete 10 lots and reach $100 in profits within 30 days to cash out."
+    },
+    "bonusRules": {
+      "title": "Terms and Conditions",
+      "trading_rules_title": "Bonus Eligibility",
+      "trading_rules_li1_desc": "Offer available to newly registered accounts only.",
+      "trading_rules_li2_desc": "Strictly one bonus per client.",
+      "trading_rules_li3_desc": "This offer is exclusively available to new clients residing in selected regions.",
+      "general_rules_title": "Bonus Rules",
+      "general_rules_li1_desc": "The bonus balance is tradeable and subject to loss.",
+      "general_rules_li2_desc": "You must generate $100 profit to be eligible for withdrawal.",
+      "general_rules_li3_desc": "A total trading volume of 10 standard lots must be completed.",
+      "general_rules_li4_desc": "The maximum payout is capped at $100.",
+      "timeline_title": "General Rules",
+      "timeline_li1_desc": "The bonus is valid for 30 days from the date of activation.",
+      "timeline_li2_desc": "If the target is not met within 30 days, the bonus is removed and the account is closed.",
+      "timeline_li3_desc": "Upon a successful withdrawal, the account will be automatically closed.",
+      "works_title": "Prohibited Trading Strategies",
+      "works_li1_desc": "Hedging positions between different accounts is prohibited.",
+      "works_li2_desc": "HFT (High-Frequency Trading)",
+      "works_li3_desc": "Multiple accounts from the same IP address are strictly prohibited.",
+      "works_li4_desc": "General Terms and Conditions apply."
+    },
+    "iconicFeatures": {
+      "home_heading": "Why PrimeX Capital?",
+      "home_description": "PrimeX Capital leads with continuous innovation and a global vision, earning the trust of elite traders worldwide. Our commitment to excellence ensures a top-tier trading experience for every client.",
+      "home_feature_1_title1": "Trusted",
+      "home_feature_1_title2": "Global Broker",
+      "home_feature_1_description": "PrimeX Capital is known for providing reliable and exceptional financial services worldwide.",
+      "home_feature_2_title1": "Lightning-Fast",
+      "home_feature_2_title2": "Trade Execution",
+      "home_feature_2_description": "Enjoy minimal latency for a seamless trading experience.",
+      "home_feature_3_title1": "Trailblazing",
+      "home_feature_3_title2": "Technology",
+      "home_feature_3_description": "Experience stability and precision with advanced trading platforms for real-time trading.",
+      "home_feature_4_title1": "24/7 Dedicated",
+      "home_feature_4_title2": "Multilingual Support",
+      "home_feature_4_description": "Access support around the clock in multiple languages.",
+      "home_feature_5_title1": "Lucrative",
+      "home_feature_5_title2": "Partnership Programs",
+      "home_feature_5_description": "Benefit from diverse options like IB, Regional Partner, and Grey Label.",
+      "home_feature_6_title1": "Security",
+      "home_feature_6_title2": "of Funds",
+      "home_feature_6_description": "Trade with confidence, knowing your funds are protected by strong regulations.",
+      "home_feature_7_title1": "Multi-Asset",
+      "home_feature_7_title2": "Portfolio",
+      "home_feature_7_description": "Trade a wide range of instruments, including forex, metals, indices, and stocks.",
+      "home_feature_8_title1": "Easy",
+      "home_feature_8_title2": "Deposit/Withdrawal",
+      "home_feature_8_description": "Quick and hassle-free deposit and withdrawal processes for investors."
+    },
+    "bonusFaqs": {
+      "title": " Frequently asked questions",
+      "question1": "What is the New Year Welcome Bonus?",
+      "answer1": "It is a $30 trading credit given to new clients as a New Year gift, allowing you to trade and test our execution without risking your own capital.",
+      "question2": "Do I need to deposit money to get the bonus?",
+      "answer2": "No, this is a welcome gift for new registrations. No initial deposit is required to claim the $30.",
+      "question3": "What is the maximum bonus amount I can receive?",
+      "answer3": "The bonus amount is fixed at $30.",
+      "question4": " How long is the bonus valid?",
+      "answer4": "The period is 30 days. You must meet the trading requirements within this time. If the target is not met by day 30, the account is closed.",
+      "question5": "Can I withdraw the bonus amount?",
+      "answer5": "No. The $30 is for trading purposes only. However, you can withdraw your profits.",
+      "question6": "Can I withdraw my trading profits?",
+      "answer6": "Yes, but you must meet specific targets first. You need to complete 10 standard lots of volume and reach $100 in profit. Once achieved, you can withdraw the $100.",
+      "question7": "Who is eligible for this bonus?",
+      "answer7": "This offer is exclusively for new clients residing in Iraq and Iran who have never registered with PrimeX Capital before. Clients from other regions are not eligible for this specific promotion.",
+      "question8": "Do I need to open a specific type of account?",
+      "answer8": "Yes, when you register, ensure you select the \"$30 Welcome Bonus Account\" account type (or contact support if you are unsure).",
+      "question9": " How many bonuses can I claim?",
+      "answer9": " Only one bonus per person and per IP address is allowed.",
+      "question10": "Are there any prohibited trading strategies?",
+      "answer10": "Yes. The following strategies are strictly prohibited: Hedging positions between different accounts, High-Frequency Trading (HFT), and accessing multiple accounts from the same IP address."
+    },
+    "bonusJoinNow": {
+      "title1": "Ready to boost your trading?",
+      "btnTxt": "Claim Your 30% Bonus Now!"
+    }
   }
 }
