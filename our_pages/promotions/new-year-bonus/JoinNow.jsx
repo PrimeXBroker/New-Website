@@ -28,7 +28,7 @@ const JoinNow = () => {
           <CustomYellowButton
             title={t("btnTxt")}
             onClick={handleClick}
-            className="sm:px-12 py-4 text-lg w-full sm:w-auto mx-auto justify-between sm:justify-center"
+            className="px-12 py-4 text-lg w-full sm:w-auto mx-auto justify-between sm:justify-center"
           />
         </div>
       </div>
