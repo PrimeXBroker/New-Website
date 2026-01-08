@@ -1592,7 +1592,7 @@
         "executionType": "Non-Dealing Desk",
         "vps": "✔",
         "metaTrader5": "✔",
-        "automaticTrading": "✔",
+        "automaticTrading": "X",
         "demoAccount": "✔",
         "webinars": "Semanalmente",
         "expertAdvice": "Acima de $1,000",
