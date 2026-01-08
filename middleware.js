@@ -1,6 +1,7 @@
 // middleware.ts
 import createMiddleware from "next-intl/middleware";
 import { deepLinkMiddleware } from "./middleware/deepLinkMiddleware";
+import { NextResponse } from "next/server";
 
 const intlMiddleware = createMiddleware({
   locales: ["en", "ar", "ku", "es", "ps", "pt", "fa"],
@@ -9,7 +10,11 @@ const intlMiddleware = createMiddleware({
 
 export default function middleware(request) {
   console.log("=== MAIN MIDDLEWARE ENTRY ===");
+  const { pathname } = new URL(request.url);
 
+  if (pathname.startsWith("/graph")) {
+    return NextResponse.next();
+  }
   // First, try deep link handling
   const deepLinkResponse = deepLinkMiddleware(request);
   if (deepLinkResponse) {
