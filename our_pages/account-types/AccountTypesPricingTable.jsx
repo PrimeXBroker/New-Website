@@ -245,7 +245,13 @@ const AccountTypesPricingTable = () => {
           {t("automaticTrading")}
         </div>
         <div className="text-center text-ts dark:text-ts-dark bg-cc dark:bg-cc-dark px-5 py-6">
-          <div className="text-gc dark:text-gc-dark bg-e1 dark:bg-e1-dark h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg">
+          <div
+            className={`${
+              t("cent.automaticTrading") === "X"
+                ? "text-rc dark:text-rc-dark"
+                : "text-gc dark:text-gc-dark"
+            } bg-e1 dark:bg-e1-dark h-[28px] w-[28px] mx-auto flex justify-center items-center rounded-lg`}
+          >
             {t("cent.automaticTrading")}
           </div>
         </div>
