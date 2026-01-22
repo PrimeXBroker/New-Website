@@ -1,9 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import axios from "axios";
 
-const FAQ = ({ faqs }) => {
+const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const f = useTranslations("accountTypes");
+  const [faqs, setFaqs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchFAQs = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.get(
+        `https://primexbroker.com/api/fetch/publish/investment-faqs`
+      );
+
+      const data = await response.data;
+      console.log(data, "data");
+
+      if (data.success) {
+        setFaqs(data.data);
+      }
+    } catch (error) {
+      console.error("Error fetching reviews:", error);
+      setError(error.message);
+      setFaqs([]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchFAQs();
+  }, []);
 
   const toggleFAQ = (index) => {
     setActiveIndex(index === activeIndex ? null : index);
@@ -19,14 +48,14 @@ const FAQ = ({ faqs }) => {
       </div>
       <div className="container">
         <div className="space-y-4 bg-cc dark:bg-cc-dark rounded-xl p-8">
-          {faqs.map((faq, index) => (
+          {faqs?.map((faq, index) => (
             <div key={index}>
               <div
                 onClick={() => toggleFAQ(index)}
                 className="cursor-pointer flex justify-between items-center py-2"
               >
                 <h3 className="text-lg font-semibold text-ts dark:text-ts-dark">
-                  {faq.question}
+                  {faq?.titleEn}
                 </h3>
                 <span className="text-ts dark:text-ts-dark text-2xl">
                   {activeIndex === index ? "-" : "+"}
@@ -34,7 +63,7 @@ const FAQ = ({ faqs }) => {
               </div>
               {activeIndex === index && (
                 <div className="p-[24px] bg-e1 dark:bg-e1-dark rounded-xl">
-                  {faq.answer.split("\n").map((line, idx) => {
+                  {faq.contentEn.split("\n").map((line, idx) => {
                     if (line.startsWith(".")) {
                       return (
                         <ul

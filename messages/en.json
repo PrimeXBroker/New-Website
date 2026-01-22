@@ -3751,6 +3751,37 @@
       "answer_4": "Yes. Deposits and withdrawals are available daily according to the fund’s terms.",
       "question_5": "Do I need trading experience?",
       "answer_5": "No. The fund is suitable for investors with no trading experience, as all trading is fully managed by the specialized team."
+    },
+    "successStories": {
+      "title": "Success Stories",
+      "description": "Read inspiring Testimonials And Discover How Our Students Have succeeded with Academy of PrimeX Capital",
+      "createReviewBtn": "Write a Review",
+      "modal": {
+        "title1": "Share Your",
+        "title2": "Experience",
+        "description": "Your feedback helps us refine our designs and serve you better.",
+        "form": {
+          "title": "Write a Review",
+          "description": "Tell us about the overall experience. Your review will be visible after approval.",
+          "full_name_label": "Full Name",
+          "full_name_placeholder": "Enter Full Name",
+          "rating_label": "Rating",
+          "nationality_label": "Select Country",
+          "nationality_placeholder": "Select Nationality",
+          "review_label": "Review",
+          "write_review": "Write your review",
+          "submit_btn": "Submit",
+          "full_name_required_error": "Full Name is required",
+          "nationality_required_error": "Nationality is required",
+          "review_min_length_error": "Review must be at least {min} characters",
+          "review_max_length_error": "Review must be at most {max} characters",
+          "review_required_error": "Review is required",
+          "submitting": "Submitting...",
+          "successTitle": "Thank You for Your Review",
+          "successDesc": "Your review has been submitted successfully and is currently pending approval.",
+          "successFooter": "Once reviewed, it will be published on this page."
+        }
+      }
     }
   },
   "newYearBonus": {

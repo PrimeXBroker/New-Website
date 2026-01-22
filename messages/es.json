@@ -3751,6 +3751,37 @@
       "answer_4": "Sí. Los depósitos y retiros están disponibles a diario según las condiciones del fondo.",
       "question_5": "¿Necesito experiencia en trading?",
       "answer_5": "No. El fondo es adecuado para inversores sin experiencia en trading, ya que todas las operaciones son gestionadas por el equipo especializado."
+    },
+    "SuccessStories": {
+      "title": "Historias de Éxito",
+      "description": "Lea testimonios inspiradores y descubra cómo nuestros estudiantes han alcanzado el éxito con la Academia de PrimeX Capital",
+      "createReviewBtn": "Escribir una Reseña",
+      "modal": {
+        "title1": "Comparta Su",
+        "title2": "Experiencia",
+        "description": "Sus comentarios nos ayudan a perfeccionar nuestros diseños y servirle mejor.",
+        "form": {
+          "title": "Escribir una Reseña",
+          "description": "Cuéntenos sobre su experiencia general. Su reseña será visible después de la aprobación.",
+          "full_name_label": "Nombre Completo",
+          "full_name_placeholder": "Ingrese su Nombre Completo",
+          "rating_label": "Calificación",
+          "nationality_label": "Seleccionar País",
+          "nationality_placeholder": "Seleccione Nacionalidad",
+          "review_label": "Reseña",
+          "write_review": "Escriba su reseña aquí",
+          "submit_btn": "Enviar",
+          "full_name_required_error": "El Nombre Completo es obligatorio",
+          "nationality_required_error": "La Nacionalidad es obligatoria",
+          "review_min_length_error": "La reseña debe tener al menos {min} caracteres",
+          "review_max_length_error": "La reseña debe tener como máximo {max} caracteres",
+          "review_required_error": "La reseña es obligatoria",
+          "submitting": "Enviando...",
+          "successTitle": "Gracias por su Reseña",
+          "successDesc": "Su reseña se ha enviado con éxito y actualmente está pendiente de aprobación.",
+          "successFooter": "Una vez revisada, se publicará en esta página."
+        }
+      }
     }
   },
   "newYearBonus": {
