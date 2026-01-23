@@ -5,10 +5,10 @@ import AboutInvestmentFund from "./AboutInvestmentFund";
 import WhyChoose from "./WhyChoose";
 import Steps from "./Steps";
 import PartnershipProgram from "../homepage/PartnershipProgram";
-import FAQ from "@/components/NewFaq";
 import { useTranslations } from "next-intl";
 import Support from "../homepage/Support";
 import ClientReviews from "./ClientsReviews";
+import Faqs from "./Faqs";
 
 const InvestmentFundWrapper = () => {
   const f = useTranslations("investmentFunds");
@@ -48,7 +48,7 @@ const InvestmentFundWrapper = () => {
       <Steps />
       <PartnershipProgram />
       <div className="bg-p dark:bg-p-dark py-16 sm:py-28">
-        <FAQ faqs={faqs} />
+        <Faqs />
       </div>
       <ClientReviews />
       <Support />
