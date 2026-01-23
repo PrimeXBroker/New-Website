@@ -47,10 +47,12 @@ const InvestmentFundWrapper = () => {
       <WhyChoose />
       <Steps />
       <PartnershipProgram />
-      <div className="bg-p dark:bg-p-dark py-16 sm:py-28">
+      <div className="bg-p dark:bg-p-dark pt-16 sm:pt-28">
+        <ClientReviews />
+      </div>
+      <div className="bg-p dark:bg-p-dark pt-16 sm:pt-28">
         <FAQ faqs={faqs} />
       </div>
-      <ClientReviews />
       <Support />
     </>
   );

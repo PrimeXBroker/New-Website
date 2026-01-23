@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import axios from "axios";
@@ -33,10 +34,19 @@ const Faqs = () => {
 
   useEffect(() => {
     fetchFAQs();
-  }, []);
+  }, [locale]);
 
   const toggleFAQ = (index) => {
     setActiveIndex(index === activeIndex ? null : index);
+  };
+
+  const parseContent = (contentString) => {
+    try {
+      const rawData = JSON.parse(contentString);
+      return rawData.blocks.map((block) => block.text).join("\n");
+    } catch (e) {
+      return contentString;
+    }
   };
 
   return (
@@ -50,7 +60,7 @@ const Faqs = () => {
       <div className="container">
         <div className="space-y-4 bg-cc dark:bg-cc-dark rounded-xl p-8">
           {faqs?.map((faq, index) => {
-            const content =
+            const rawContent =
               locale === "ar"
                 ? faq?.contentAr
                 : locale === "ku"
@@ -64,6 +74,7 @@ const Faqs = () => {
                         : locale === "fa"
                           ? faq?.contentFa
                           : faq?.contentEn;
+            const cleanContent = parseContent(rawContent);
             return (
               <div key={index}>
                 <div
@@ -91,7 +102,7 @@ const Faqs = () => {
                 </div>
                 {activeIndex === index && (
                   <div className="p-[24px] bg-e1 dark:bg-e1-dark rounded-xl">
-                    {content.split("\n").map((line, idx) => {
+                    {cleanContent.split("\n").map((line, idx) => {
                       if (line.startsWith(".")) {
                         return (
                           <ul
