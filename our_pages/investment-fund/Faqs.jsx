@@ -17,11 +17,8 @@ const Faqs = () => {
         `https://primexbroker.com/api/fetch/publish/investment-faqs`,
       );
 
-      const data = await response.data;
-      console.log(data, "data");
-
-      if (data.success) {
-        setFaqs(data.data);
+      if (response.data.success) {
+        setFaqs(response.data.data);
       }
     } catch (error) {
       console.error("Error fetching reviews:", error);
