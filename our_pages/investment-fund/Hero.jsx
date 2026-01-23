@@ -49,7 +49,7 @@ const Hero = () => {
             <div className="flex justify-center md:justify-end">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/investment-hero.png"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/hero-investment.png"
                 width="100"
                 height="100"
                 alt="Hero Image"

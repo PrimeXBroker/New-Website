@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import axios from "axios";
 
 const FAQ = () => {
+  const locale = useLocale();
   const [activeIndex, setActiveIndex] = useState(null);
   const f = useTranslations("accountTypes");
   const [faqs, setFaqs] = useState([]);
@@ -12,7 +13,7 @@ const FAQ = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://primexbroker.com/api/fetch/publish/investment-faqs`
+        `https://primexbroker.com/api/fetch/publish/investment-faqs`,
       );
 
       const data = await response.data;
@@ -55,7 +56,7 @@ const FAQ = () => {
                 className="cursor-pointer flex justify-between items-center py-2"
               >
                 <h3 className="text-lg font-semibold text-ts dark:text-ts-dark">
-                  {faq?.titleEn}
+                  {locale === "ar" ? faq?.titleAr : faq?.titleEn}
                 </h3>
                 <span className="text-ts dark:text-ts-dark text-2xl">
                   {activeIndex === index ? "-" : "+"}
@@ -63,27 +64,29 @@ const FAQ = () => {
               </div>
               {activeIndex === index && (
                 <div className="p-[24px] bg-e1 dark:bg-e1-dark rounded-xl">
-                  {faq.contentEn.split("\n").map((line, idx) => {
-                    if (line.startsWith(".")) {
-                      return (
-                        <ul
-                          key={idx}
-                          className="list-disc ml-5 text-tm dark:text-tm-dark"
-                        >
-                          <li>{line.substring(1).trim()}</li>
-                        </ul>
-                      );
-                    } else {
-                      return (
-                        <p
-                          key={idx}
-                          className="text-tm dark:text-tm-dark text-sm sm:text-base"
-                        >
-                          {line.trim()}
-                        </p>
-                      );
-                    }
-                  })}
+                  {(locale === "ar" ? faq?.contentAr : faq?.contentEn)
+                    .split("\n")
+                    .map((line, idx) => {
+                      if (line.startsWith(".")) {
+                        return (
+                          <ul
+                            key={idx}
+                            className="list-disc ml-5 text-tm dark:text-tm-dark"
+                          >
+                            <li>{line.substring(1).trim()}</li>
+                          </ul>
+                        );
+                      } else {
+                        return (
+                          <p
+                            key={idx}
+                            className="text-tm dark:text-tm-dark text-sm sm:text-base"
+                          >
+                            {line.trim()}
+                          </p>
+                        );
+                      }
+                    })}
                 </div>
               )}
               {index < faqs.length - 1 && (
