@@ -49,49 +49,49 @@ const Faqs = () => {
       </div>
       <div className="container">
         <div className="space-y-4 bg-cc dark:bg-cc-dark rounded-xl p-8">
-          {faqs?.map((faq, index) => (
-            <div key={index}>
-              <div
-                onClick={() => toggleFAQ(index)}
-                className="cursor-pointer flex justify-between items-center py-2"
-              >
-                <h3 className="text-lg font-semibold text-ts dark:text-ts-dark">
-                  {locale === "ar"
-                    ? faq?.titleAr
-                    : locale === "ku"
-                      ? faq?.titleKu
-                      : locale === "es"
-                        ? faq?.titleEs
-                        : locale === "ps"
-                          ? faq?.titlePs
-                          : locale === "pt"
-                            ? faq?.titlePt
-                            : locale === "fa"
-                              ? faq?.titleFa
-                              : faq?.titleEn}
-                </h3>
-                <span className="text-ts dark:text-ts-dark text-2xl">
-                  {activeIndex === index ? "-" : "+"}
-                </span>
-              </div>
-              {activeIndex === index && (
-                <div className="p-[24px] bg-e1 dark:bg-e1-dark rounded-xl">
-                  {(locale === "ar"
-                    ? faq?.contentAr
-                    : locale === "ku"
-                      ? faq?.contentKu
-                      : locale === "es"
-                        ? faq?.contentEs
-                        : locale === "ps"
-                          ? faq?.contentPs
-                          : locale === "pt"
-                            ? faq?.contentPt
-                            : locale === "fa"
-                              ? faq?.contentFa
-                              : faq?.contentEn
-                  )
-                    .split("\n")
-                    .map((line, idx) => {
+          {faqs?.map((faq, index) => {
+            const content =
+              locale === "ar"
+                ? faq?.contentAr
+                : locale === "ku"
+                  ? faq?.contentKu
+                  : locale === "es"
+                    ? faq?.contentEs
+                    : locale === "ps"
+                      ? faq?.contentPs
+                      : locale === "pt"
+                        ? faq?.contentPt
+                        : locale === "fa"
+                          ? faq?.contentFa
+                          : faq?.contentEn;
+            return (
+              <div key={index}>
+                <div
+                  onClick={() => toggleFAQ(index)}
+                  className="cursor-pointer flex justify-between items-center py-2"
+                >
+                  <h3 className="text-lg font-semibold text-ts dark:text-ts-dark">
+                    {locale === "ar"
+                      ? faq?.titleAr
+                      : locale === "ku"
+                        ? faq?.titleKu
+                        : locale === "es"
+                          ? faq?.titleEs
+                          : locale === "ps"
+                            ? faq?.titlePs
+                            : locale === "pt"
+                              ? faq?.titlePt
+                              : locale === "fa"
+                                ? faq?.titleFa
+                                : faq?.titleEn}
+                  </h3>
+                  <span className="text-ts dark:text-ts-dark text-2xl">
+                    {activeIndex === index ? "-" : "+"}
+                  </span>
+                </div>
+                {activeIndex === index && (
+                  <div className="p-[24px] bg-e1 dark:bg-e1-dark rounded-xl">
+                    {content.split("\n").map((line, idx) => {
                       if (line.startsWith(".")) {
                         return (
                           <ul
@@ -112,13 +112,14 @@ const Faqs = () => {
                         );
                       }
                     })}
-                </div>
-              )}
-              {index < faqs.length - 1 && (
-                <hr className="border-e1 dark:border-e1-dark border my-4" />
-              )}
-            </div>
-          ))}
+                  </div>
+                )}
+                {index < faqs.length - 1 && (
+                  <hr className="border-e1 dark:border-e1-dark border my-4" />
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

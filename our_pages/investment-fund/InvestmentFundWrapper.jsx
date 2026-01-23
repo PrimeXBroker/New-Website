@@ -8,7 +8,7 @@ import PartnershipProgram from "../homepage/PartnershipProgram";
 import { useTranslations } from "next-intl";
 import Support from "../homepage/Support";
 import ClientReviews from "./ClientsReviews";
-import Faqs from "./Faqs";
+import FAQ from "@/components/NewFaq";
 
 const InvestmentFundWrapper = () => {
   const f = useTranslations("investmentFunds");
@@ -48,7 +48,7 @@ const InvestmentFundWrapper = () => {
       <Steps />
       <PartnershipProgram />
       <div className="bg-p dark:bg-p-dark py-16 sm:py-28">
-        <Faqs />
+        <FAQ faqs={faqs} />
       </div>
       <ClientReviews />
       <Support />
