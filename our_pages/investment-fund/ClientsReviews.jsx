@@ -211,7 +211,7 @@ const ClientReviews = () => {
                     </div>
                     <div className="">
                       <div className="text-ts dark:text-ts-dark text-sm sm:text-base font-medium">
-                        {review?.reason}
+                        {review?.review}
                       </div>
                     </div>
                   </div>
