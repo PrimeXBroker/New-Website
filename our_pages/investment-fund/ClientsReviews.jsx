@@ -114,7 +114,7 @@ const ClientReviews = () => {
             <span className="text-tm dark:text-tm-dark">{r("title3")}</span>
           </h2>
           <p className="text-sm sm:text-base lg:text-lg mt-2 md:w-[600px] mx-auto text-ts dark:text-ts-dark">
-            {r("desc")}
+            {t("description")}
           </p>
           <button
             className={`text-sm sm:px-5 py-2 w-full sm:w-auto mx-auto sm:justify-center rounded-lg font-medium flex items-center justify-center gap-2 group bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark group mt-3`}

@@ -3752,7 +3752,7 @@
       "question_5": "¿Necesito experiencia en trading?",
       "answer_5": "No. El fondo es adecuado para inversores sin experiencia en trading, ya que todas las operaciones son gestionadas por el equipo especializado."
     },
-    "SuccessStories": {
+    "successStories": {
       "title": "Historias de Éxito",
       "description": "Lea testimonios inspiradores y descubra cómo nuestros estudiantes han alcanzado el éxito con la Academia de PrimeX Capital",
       "createReviewBtn": "Escribir una Reseña",
