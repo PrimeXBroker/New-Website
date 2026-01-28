@@ -8,11 +8,13 @@ import PartnershipProgram from "../homepage/PartnershipProgram";
 import Support from "../homepage/Support";
 import ClientReviews from "./ClientsReviews";
 import Faqs from "./Faqs";
+import ROIChart from "@/components/investments/ROIChart";
 
 const InvestmentFundWrapper = () => {
   return (
     <>
       <Hero />
+      <ROIChart />
       <AboutInvestmentFund />
       <WhyChoose />
       <Steps />
