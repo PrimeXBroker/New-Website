@@ -3782,6 +3782,24 @@
           "successFooter": "Una vez revisada, se publicará en esta página."
         }
       }
+    },
+    "investmentVision": {
+      "main_title1": "Nuestra Visión ",
+      "main_title2": "",
+      "card_title_part1": "Visión ",
+      "card_title_part2": "Fondo de Inversión PrimeX",
+      "card_description": "El Fondo de Inversión PrimeX se basa en la diversificación de activos y la gestión de riesgos junto con el crecimiento del capital, con el objetivo de construir valor sostenible y lograr un crecimiento equilibrado a largo plazo.",
+      "footer_text": "El plan se ejecuta por etapas vinculadas al tamaño del capital del fondo. La estrategia comienza con el trading en forex y luego se expande gradualmente hacia otros activos, el sector inmobiliario y las startups, siguiendo criterios claros y un crecimiento estructurado y bien planificado.",
+      "stages": {
+        "title1": "4Menos de un millón de dólares",
+        "description1": "Enfoque total en el trading de forex para gestionar la liquidez y construir capital.",
+        "title2": "Al alcanzar un millón de dólares",
+        "description2": "Comienza la expansión hacia inversiones en activos como el oro, la plata y las criptomonedas.",
+        "title3": "Al alcanzar los 3 millones de dólares",
+        "description3": "Se incorpora la inversión inmobiliaria como parte de la estrategia de diversificación de activos a largo plazo.",
+        "title4": "Al alcanzar los 10 millones de dólares",
+        "description4": "Ingreso en inversiones de startups con alto potencial de crecimiento."
+      }
     }
   },
   "newYearBonus": {

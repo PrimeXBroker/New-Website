@@ -205,17 +205,17 @@ const Footer = () => {
           {
             name: t("Platform.title_part4_link1"),
             target: "_blank",
-            href: "https://download.mql5.com/cdn/web/primex.capital.ltd/mt5/primexcapital5setup.exe",
+            href: "https://download.terminal.free/cdn/web/primex.capital.ltd/mt5/primexcapital5setup.exe",
           },
           {
             name: t("Platform.title_part4_link2"),
             target: "_blank",
-            href: "https://download.mql5.com/cdn/mobile/mt5/android?server=PrimeXCapital-Live",
+            href: "https://download.terminal.free/cdn/mobile/mt5/android?server=PrimeXCapital-Live",
           },
           {
             name: t("Platform.title_part4_link3"),
             target: "_blank",
-            href: "https://download.mql5.com/cdn/mobile/mt5/ios?server=PrimeXCapital-Live",
+            href: "https://download.terminal.free/cdn/mobile/mt5/ios?server=PrimeXCapital-Live",
           },
         ],
       },
@@ -469,8 +469,8 @@ const Footer = () => {
                   !mounted
                     ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
                     : resolvedTheme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-black.webp"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
+                      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-black.webp"
                 }
                 alt="Footer Logo"
                 className="block sm:mx-0 mx-auto pb-6 sm:pb-0"
@@ -485,14 +485,14 @@ const Footer = () => {
                   locale === "ar"
                     ? "https://www.facebook.com/PrimeX.Arabic/"
                     : locale === "ku"
-                    ? "https://www.facebook.com/PrimeX.Global.Ku/"
-                    : locale === "es"
-                    ? "https://www.facebook.com/PrimeX.Global.Es"
-                    : locale === "ps"
-                    ? "https://www.facebook.com/PrimeX.Pashto/"
-                    : locale === "pt"
-                    ? "https://www.facebook.com/PrimeX.Global.Pt/"
-                    : "https://www.facebook.com/PrimeX.Global.En"
+                      ? "https://www.facebook.com/PrimeX.Global.Ku/"
+                      : locale === "es"
+                        ? "https://www.facebook.com/PrimeX.Global.Es"
+                        : locale === "ps"
+                          ? "https://www.facebook.com/PrimeX.Pashto/"
+                          : locale === "pt"
+                            ? "https://www.facebook.com/PrimeX.Global.Pt/"
+                            : "https://www.facebook.com/PrimeX.Global.En"
                 }`}
                 target="_blank"
               >
@@ -507,14 +507,14 @@ const Footer = () => {
                   locale === "ar"
                     ? "https://t.me/PrimeX_Capital_ar"
                     : locale === "ku"
-                    ? "https://t.me/primex_capital_kd"
-                    : locale === "es"
-                    ? "https://t.me/primexcapital_es"
-                    : locale === "ps"
-                    ? "https://t.me/primexcapital_ps"
-                    : locale === "pt"
-                    ? "https://t.me/primexcapital_pt"
-                    : "https://t.me/PrimeX_Capital"
+                      ? "https://t.me/primex_capital_kd"
+                      : locale === "es"
+                        ? "https://t.me/primexcapital_es"
+                        : locale === "ps"
+                          ? "https://t.me/primexcapital_ps"
+                          : locale === "pt"
+                            ? "https://t.me/primexcapital_pt"
+                            : "https://t.me/PrimeX_Capital"
                 }`}
                 target="_blank"
               >
@@ -529,14 +529,14 @@ const Footer = () => {
                   locale === "ar"
                     ? "https://www.instagram.com/primexcapital.ar"
                     : locale === "ku"
-                    ? "https://www.instagram.com/primexcapital.kd"
-                    : locale === "es"
-                    ? "https://www.instagram.com/primexcapital.es"
-                    : locale === "ps"
-                    ? "https://www.instagram.com/primexcapital.ps"
-                    : locale === "pt"
-                    ? "https://www.instagram.com/primexcapital.pt"
-                    : "https://www.instagram.com/primexcapital.en"
+                      ? "https://www.instagram.com/primexcapital.kd"
+                      : locale === "es"
+                        ? "https://www.instagram.com/primexcapital.es"
+                        : locale === "ps"
+                          ? "https://www.instagram.com/primexcapital.ps"
+                          : locale === "pt"
+                            ? "https://www.instagram.com/primexcapital.pt"
+                            : "https://www.instagram.com/primexcapital.en"
                 }`}
                 target="_blank"
               >
@@ -551,14 +551,14 @@ const Footer = () => {
                   locale === "ar"
                     ? "https://whatsapp.com/channel/0029Vb7M9j5EawdyFPPOWh3L"
                     : locale === "ku"
-                    ? "https://whatsapp.com/channel/0029VbB6OC71SWt00NiUAL1t"
-                    : locale === "es"
-                    ? "https://whatsapp.com/channel/0029Vb5kNFU9xVJcwh9aD90N"
-                    : locale === "ps"
-                    ? "https://whatsapp.com/channel/0029VbAMPjU3QxS6L63Dh01k"
-                    : locale === "pt"
-                    ? "https://whatsapp.com/channel/0029VbAjXdhDjiOgrjoD6o2L"
-                    : "https://whatsapp.com/channel/0029VbAjXdhDjiOgrjoD6o2L"
+                      ? "https://whatsapp.com/channel/0029VbB6OC71SWt00NiUAL1t"
+                      : locale === "es"
+                        ? "https://whatsapp.com/channel/0029Vb5kNFU9xVJcwh9aD90N"
+                        : locale === "ps"
+                          ? "https://whatsapp.com/channel/0029VbAMPjU3QxS6L63Dh01k"
+                          : locale === "pt"
+                            ? "https://whatsapp.com/channel/0029VbAjXdhDjiOgrjoD6o2L"
+                            : "https://whatsapp.com/channel/0029VbAjXdhDjiOgrjoD6o2L"
                 }`}
                 target="_blank"
               >

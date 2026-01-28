@@ -9,6 +9,7 @@ import Support from "../homepage/Support";
 import ClientReviews from "./ClientsReviews";
 import Faqs from "./Faqs";
 import ROIChart from "@/components/investments/ROIChart";
+import OurVision from "./OurVision";
 
 const InvestmentFundWrapper = () => {
   return (
@@ -16,6 +17,9 @@ const InvestmentFundWrapper = () => {
       <Hero />
       <ROIChart />
       <AboutInvestmentFund />
+      <div className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
+        <OurVision />
+      </div>
       <WhyChoose />
       <Steps />
       <PartnershipProgram />
