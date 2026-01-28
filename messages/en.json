@@ -3782,6 +3782,24 @@
           "successFooter": "Once reviewed, it will be published on this page."
         }
       }
+    },
+    "investmentVision": {
+      "main_title1": "Our ",
+      "main_title2": "Vision",
+      "card_title_part1": "PrimeX ",
+      "card_title_part2": "Investment Fund Vision",
+      "card_description": "The PrimeX Investment Fund is built on asset diversification and risk management alongside capital growth, with the goal of creating sustainable value and achieving balanced long-term growth.",
+      "footer_text": "The plan is executed in stages linked to the fund’s capital size. The strategy starts with Forex, then gradually expands into assets, real estate, and startups based on clear criteria and structured growth.",
+      "stages": {
+        "title1": "Less than $1 million",
+        "description1": "Full focus on Forex trading to manage liquidity and build capital.",
+        "title2": "Upon reaching $1 million",
+        "description2": "Expansion begins into asset investments such as gold, silver, and cryptocurrencies.",
+        "title3": "Upon reaching $3 million",
+        "description3": "Real estate investment is introduced as part of the long-term asset diversification strategy.",
+        "title4": "Upon reaching $10 million",
+        "description4": "Entry into high-growth startup investments."
+      }
     }
   },
   "newYearBonus": {

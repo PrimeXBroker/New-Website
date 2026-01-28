@@ -8,12 +8,16 @@ import PartnershipProgram from "../homepage/PartnershipProgram";
 import Support from "../homepage/Support";
 import ClientReviews from "./ClientsReviews";
 import Faqs from "./Faqs";
+import OurVision from "./OurVision";
 
 const InvestmentFundWrapper = () => {
   return (
     <>
       <Hero />
       <AboutInvestmentFund />
+      <div className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
+        <OurVision />
+      </div>
       <WhyChoose />
       <Steps />
       <PartnershipProgram />
