@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Hero from "./Hero";
 import AboutInvestmentFund from "./AboutInvestmentFund";
 import WhyChoose from "./WhyChoose";
@@ -10,12 +10,33 @@ import ClientReviews from "./ClientsReviews";
 import Faqs from "./Faqs";
 import ROIChart from "@/components/investments/ROIChart";
 import OurVision from "./OurVision";
+import axios from "axios";
 
 const InvestmentFundWrapper = () => {
+  const [chartOptions, setChartOptions] = useState(null);
+
+  const getChartOptions = async () => {
+    try {
+      const res = await axios.get(`https://primexbroker.com/api/chart/options`);
+      console.log(res, "res");
+
+      const response = res?.data;
+      if (response.success) {
+        setChartOptions(response.data);
+      }
+    } catch (error) {
+      console.log(error, "error");
+      setChartOptions(null);
+    }
+  };
+
+  useEffect(() => {
+    getChartOptions();
+  }, []);
   return (
     <>
       <Hero />
-      <ROIChart />
+      {chartOptions?.visible ? <ROIChart chartOptions={chartOptions} /> : null}
       <AboutInvestmentFund />
       <div className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
         <OurVision />

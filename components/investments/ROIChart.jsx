@@ -7,12 +7,13 @@ import { Chart } from "react-chartjs-2";
 
 ChartJS.register(...registerables);
 
-export default function DailyRoiChart() {
+export default function DailyRoiChart({ chartOptions }) {
   const { theme: mode } = useNextTheme();
   const [labels, setLabels] = useState([]);
   const [dailyROI, setDailyROI] = useState([]);
   const [accumulativeROI, setAccumulativeROI] = useState([]);
   const [loading, setLoading] = useState(true);
+
   console.log(mode, "mode");
 
   const isDark = mode === "dark";
@@ -150,8 +151,20 @@ export default function DailyRoiChart() {
   };
 
   return (
-    <div className="p-3 md:p-10 mt-20 h-[400px] md:h-[500px]">
-      <Chart data={data} options={options} />
-    </div>
+    <section className="md:py-10 mt-20">
+      <div className="container">
+        <div className="text-center mb-5">
+          <h2 className="text-2xl md:text-4xl font-semibold text-tm dark:text-tm-dark">
+            {chartOptions?.title}
+          </h2>
+          <p className="text-ts dark:text-ts-dark font-medium text-base">
+            {chartOptions?.description}
+          </p>
+        </div>
+        <div className="h-[400px] md:h-[500px]">
+          <Chart data={data} options={options} />
+        </div>
+      </div>
+    </section>
   );
 }
