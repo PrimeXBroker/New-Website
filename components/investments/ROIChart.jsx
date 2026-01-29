@@ -150,7 +150,7 @@ export default function DailyRoiChart() {
   };
 
   return (
-    <div className="p-10 mt-20 h-[500px]">
+    <div className="p-3 md:p-10 mt-20 h-[400px] md:h-[500px]">
       <Chart data={data} options={options} />
     </div>
   );
