@@ -48,18 +48,18 @@ export default function DailyRoiChart() {
       const apiData = json.data;
 
       setLabels(
-        apiData.map((item) =>
-          new Date(item.date).toLocaleDateString("en-US", {
+        apiData?.map((item) =>
+          new Date(item?.date)?.toLocaleDateString("en-US", {
             month: "short",
             day: "2-digit",
           })
         )
       );
 
-      setDailyROI(apiData.map((item) => item.dailyROI));
-      setAccumulativeROI(apiData.map((item) => item.accumulativeROI));
+      setDailyROI(apiData?.map((item) => item?.dailyROI));
+      setAccumulativeROI(apiData?.map((item) => item?.accumulativeROI));
     } catch (err) {
-      console.error(err);
+      console.log(err);
     } finally {
       setLoading(false);
     }
