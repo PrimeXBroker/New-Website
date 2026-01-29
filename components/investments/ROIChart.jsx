@@ -2,27 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { useTheme as useNextTheme } from "next-themes";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  LineElement,
-  PointElement,
-  Tooltip,
-  Legend,
-} from "chart.js";
+import { Chart as ChartJS, registerables } from "chart.js";
 import { Chart } from "react-chartjs-2";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  LineElement,
-  PointElement,
-  Tooltip,
-  Legend
-);
+ChartJS.register(...registerables);
 
 export default function DailyRoiChart() {
   const { theme: mode } = useNextTheme();
@@ -43,21 +26,29 @@ export default function DailyRoiChart() {
       const res = await fetch("https://primexbroker.com/api/chart/get");
       const json = await res.json();
 
-      if (!json.success) return;
+      const apiData = json?.data;
 
-      const apiData = json.data;
+      if (!json?.success || !Array.isArray(apiData)) {
+        console.log("Unexpected API response", json);
+        return;
+      }
 
+      // ✅ Safe label generation
       setLabels(
-        apiData?.map((item) =>
-          new Date(item?.date)?.toLocaleDateString("en-US", {
-            month: "short",
-            day: "2-digit",
-          })
-        )
+        apiData.map((item) => {
+          if (!item?.date) return "N/A";
+          const d = new Date(item.date);
+          return isNaN(d.getTime())
+            ? "Invalid"
+            : d.toLocaleDateString("en-US", { month: "short", day: "2-digit" });
+        })
       );
 
-      setDailyROI(apiData?.map((item) => item?.dailyROI));
-      setAccumulativeROI(apiData?.map((item) => item?.accumulativeROI));
+      // ✅ Ensure numeric arrays
+      setDailyROI(apiData.map((item) => parseFloat(item.dailyROI) || 0));
+      setAccumulativeROI(
+        apiData.map((item) => parseFloat(item.accumulativeROI) || 0)
+      );
     } catch (err) {
       console.log(err);
     } finally {
