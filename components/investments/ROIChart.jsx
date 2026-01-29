@@ -40,9 +40,7 @@ export default function DailyRoiChart() {
   // 🔗 Fetch API data
   const fetchChartData = async () => {
     try {
-      const res = await fetch(
-        "https://primexbroker.com/api/chart/get?type=month"
-      );
+      const res = await fetch("https://primexbroker.com/api/chart/get");
       const json = await res.json();
 
       if (!json.success) return;

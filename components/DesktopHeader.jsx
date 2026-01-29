@@ -81,22 +81,22 @@ const DesktopHeader = ({ locale }) => {
   const restOfPath = isLocaleOnly ? "" : pathname.split("/").slice(2).join("/");
 
   const handleScroll = () => {
-    if (window.scrollY > 400) {
+    if (window?.scrollY > 400) {
       setIsSticky(true);
     } else {
       setIsSticky(false);
     }
-    const scrollTop = window.scrollY;
+    const scrollTop = window?.scrollY;
     const docHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
+      document.documentElement.scrollHeight - window?.innerHeight;
     const progress = (scrollTop / docHeight) * 100;
     setScrollProgress(progress);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window?.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window?.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
