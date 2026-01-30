@@ -10,6 +10,7 @@ ChartJS.register(...registerables);
 
 export default function DailyRoiChart({ chartOptions }) {
   const locale = useLocale();
+  const isRTL = ["ar", "fa", "ku", "ps"].includes(locale);
   const { theme: mode } = useNextTheme();
   const [labels, setLabels] = useState([]);
   const [dailyROI, setDailyROI] = useState([]);
@@ -64,7 +65,15 @@ export default function DailyRoiChart({ chartOptions }) {
   }, []);
 
   if (loading) {
-    return <div className="p-10">Loading chart...</div>;
+    return (
+      <div className="flex justify-center items-center min-h-[20vh] bg-p dark:bg-p-dark">
+        <div className="ellipsis">
+          <span className="dot text-pcp dark:text-pcp-dark">.</span>
+          <span className="dot text-pcp dark:text-pcp-dark">.</span>
+          <span className="dot text-pcp dark:text-pcp-dark">.</span>
+        </div>
+      </div>
+    );
   }
 
   const data = {
@@ -94,6 +103,9 @@ export default function DailyRoiChart({ chartOptions }) {
   const options = {
     responsive: true,
     maintainAspectRatio: false,
+    layout: {
+      rtl: isRTL, // ✅ IMPORTANT
+    },
     plugins: {
       legend: {
         position: "bottom",
@@ -113,8 +125,10 @@ export default function DailyRoiChart({ chartOptions }) {
     },
     scales: {
       x: {
+        reverse: isRTL,
         ticks: {
           color: textColor,
+          align: isRTL ? "end" : "center",
         },
         grid: {
           color: gridColor,
@@ -122,6 +136,7 @@ export default function DailyRoiChart({ chartOptions }) {
       },
       y: {
         beginAtZero: true,
+        position: isRTL ? "right" : "left",
         ticks: {
           color: textColor,
         },
@@ -136,7 +151,7 @@ export default function DailyRoiChart({ chartOptions }) {
       },
       y1: {
         beginAtZero: true,
-        position: "right",
+        position: isRTL ? "left" : "right",
         ticks: {
           color: textColor,
         },
