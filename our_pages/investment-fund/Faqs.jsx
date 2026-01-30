@@ -14,7 +14,7 @@ const Faqs = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://primexbroker.com/api/fetch/publish/investment-faqs`,
+        `https://primexbroker.com/api/fetch/publish/investment-faqs`
       );
 
       if (response.data.success) {
@@ -61,16 +61,16 @@ const Faqs = () => {
               locale === "ar"
                 ? faq?.contentAr
                 : locale === "ku"
-                  ? faq?.contentKu
-                  : locale === "es"
-                    ? faq?.contentEs
-                    : locale === "ps"
-                      ? faq?.contentPs
-                      : locale === "pt"
-                        ? faq?.contentPt
-                        : locale === "fa"
-                          ? faq?.contentFa
-                          : faq?.contentEn;
+                ? faq?.contentKu
+                : locale === "es"
+                ? faq?.contentEs
+                : locale === "ps"
+                ? faq?.contentPs
+                : locale === "pt"
+                ? faq?.contentPt
+                : locale === "fa"
+                ? faq?.contentFa
+                : faq?.contentEn;
             const cleanContent = parseContent(rawContent);
             return (
               <div key={index}>
@@ -82,16 +82,16 @@ const Faqs = () => {
                     {locale === "ar"
                       ? faq?.titleAr
                       : locale === "ku"
-                        ? faq?.titleKu
-                        : locale === "es"
-                          ? faq?.titleEs
-                          : locale === "ps"
-                            ? faq?.titlePs
-                            : locale === "pt"
-                              ? faq?.titlePt
-                              : locale === "fa"
-                                ? faq?.titleFa
-                                : faq?.titleEn}
+                      ? faq?.titleKu
+                      : locale === "es"
+                      ? faq?.titleEs
+                      : locale === "ps"
+                      ? faq?.titlePs
+                      : locale === "pt"
+                      ? faq?.titlePt
+                      : locale === "fa"
+                      ? faq?.titleFa
+                      : faq?.titleEn}
                   </h3>
                   <span className="text-ts dark:text-ts-dark text-2xl">
                     {activeIndex === index ? "-" : "+"}

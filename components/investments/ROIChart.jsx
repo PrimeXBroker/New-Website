@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import { useTheme as useNextTheme } from "next-themes";
 import { Chart as ChartJS, registerables } from "chart.js";
 import { Chart } from "react-chartjs-2";
+import { useLocale } from "next-intl";
 
 ChartJS.register(...registerables);
 
 export default function DailyRoiChart({ chartOptions }) {
+  const locale = useLocale();
   const { theme: mode } = useNextTheme();
   const [labels, setLabels] = useState([]);
   const [dailyROI, setDailyROI] = useState([]);
@@ -155,10 +157,20 @@ export default function DailyRoiChart({ chartOptions }) {
       <div className="container">
         <div className="text-center mb-5">
           <h2 className="text-2xl md:text-4xl font-semibold text-tm dark:text-tm-dark">
-            {chartOptions?.title}
+            {
+              chartOptions?.[
+                `title${locale?.charAt(0)?.toUpperCase() + locale?.slice(1)}`
+              ]
+            }
           </h2>
           <p className="text-ts dark:text-ts-dark font-medium text-base">
-            {chartOptions?.description}
+            {
+              chartOptions?.[
+                `description${
+                  locale?.charAt(0)?.toUpperCase() + locale?.slice(1)
+                }`
+              ]
+            }
           </p>
         </div>
         <div className="h-[400px] md:h-[500px]">

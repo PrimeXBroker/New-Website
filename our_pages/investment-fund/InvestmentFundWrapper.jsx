@@ -18,7 +18,7 @@ const InvestmentFundWrapper = () => {
   const getChartOptions = async () => {
     try {
       const res = await axios.get(`https://primexbroker.com/api/chart/options`);
-      console.log(res, "res");
+      console.log(res, "res1");
 
       const response = res?.data;
       if (response.success) {
@@ -36,7 +36,7 @@ const InvestmentFundWrapper = () => {
   return (
     <>
       <Hero />
-      {chartOptions?.visible ? <ROIChart chartOptions={chartOptions} /> : null}
+      {!chartOptions?.visible ? <ROIChart chartOptions={chartOptions} /> : null}
       <AboutInvestmentFund />
       <div className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
         <OurVision />
