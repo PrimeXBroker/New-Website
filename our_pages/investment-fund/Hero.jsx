@@ -17,7 +17,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-p dark:bg-p-dark pt-28 sm:pt-32">
+    <section className="bg-p dark:bg-p-dark py-28 sm:py-32">
       <div className="container">
         <div className="grid grid-cols-12 items-center md:py-10 lg:py-0">
           <div className="col-span-12 md:col-span-6 text-center md:text-start">
