@@ -115,7 +115,7 @@ export default function SignUpStep({
       .then((res) => {
         const userCountryCode = res.data?.trim().toUpperCase();
         const detectedCountry = countriesList.find(
-          (c) => c.isoCode === userCountryCode
+          (c) => c.isoCode === userCountryCode,
         );
         if (detectedCountry) setSelectedPhone(detectedCountry);
       })
@@ -140,14 +140,14 @@ export default function SignUpStep({
         for (const stateName of states) {
           const stateCities = csc.getCities(
             formData.country.isoCode,
-            stateName
+            stateName,
           );
           if (Array.isArray(stateCities)) {
             cityList = cityList.concat(
               stateCities.map((city) => ({
                 label: typeof city === "object" ? city.name : city,
                 value: typeof city === "object" ? city.name : city,
-              }))
+              })),
             );
           }
         }
@@ -156,12 +156,12 @@ export default function SignUpStep({
       }
 
       const uniqueCities = Array.from(
-        new Map(cityList.map((city) => [city.label, city])).values()
+        new Map(cityList.map((city) => [city.label, city])).values(),
       );
 
       // // Sort alphabetically
       const sortedCities = uniqueCities.sort((a, b) =>
-        a.label.localeCompare(b.label)
+        a.label.localeCompare(b.label),
       );
 
       setCities(sortedCities);
@@ -288,10 +288,24 @@ export default function SignUpStep({
       newError.lastName = "Last Name must contain only alphabets";
     }
 
+    const allowedDomains = [
+      "icloud.com",
+      "gmail.com",
+      "outlook.com",
+      "yahoo.com",
+      "primexcapital.com",
+    ];
+
     if (!formData.email) {
       newError.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newError.email = "Please enter a valid email";
+    } else {
+      const domain = formData.email.split("@")[1]?.toLowerCase();
+      if (!allowedDomains.includes(domain)) {
+        newError.email =
+          "Please use gmail.com, icloud.com, outlook.com, yahoo.com, or primexcapital.com.";
+      }
     }
     if (!formData.phone) {
       newError.phone = "Phone Number is required";
