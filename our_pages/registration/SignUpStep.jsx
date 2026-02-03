@@ -304,7 +304,7 @@ export default function SignUpStep({
       const domain = formData.email.split("@")[1]?.toLowerCase();
       if (!allowedDomains.includes(domain)) {
         newError.email =
-          "Please use gmail.com, icloud.com, outlook.com, yahoo.com, or primexcapital.com.";
+          "Please use gmail.com, icloud.com, outlook.com or yahoo.com.";
       }
     }
     if (!formData.phone) {
