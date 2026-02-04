@@ -3808,7 +3808,7 @@
       "description": "Comece o Ano Novo com um Bônus de Boas-Vindas de $30 da PrimeX Capital. Sem depósito, registre-se agora e comece a negociar."
     },
     "bonusHero": {
-      "hero_title": "Bônus de Boas-Vindas de $30 de Ano Novo!",
+      "hero_title": "Bônus de Boas-vindas de $30 na PrimeX!",
       "hero_subtitle": "Aumente suas oportunidades de negociação com",
       "hero_description": "Sem depósito necessário, registre-se agora para resgatar seu presente!",
       "btnTxt": "Resgatar Bônus de $30"
@@ -3838,10 +3838,12 @@
       "timeline_li2_desc": "Se o objetivo não for atingido em 30 dias, o bônus é removido e a conta é encerrada.",
       "timeline_li3_desc": "Após um saque bem-sucedido, a conta será encerrada automaticamente.",
       "works_title": "Estratégias de Negociação Proibidas",
-      "works_li1_desc": "Hedging (cobertura) de posições entre contas diferentes é proibido.",
-      "works_li2_desc": "Negociação de Alta Frequência (HFT).",
-      "works_li3_desc": "O uso de múltiplas contas do mesmo endereço IP é estritamente proibido.",
-      "works_li4_desc": "Aplicam-se os Termos e Condições Gerais."
+      "works_li1_desc": "Estratégia de Hedging entre contas diferentes.",
+      "works_li2_desc": "HFT (Negociação de Alta Frequência).",
+      "works_li3_desc": "Múltiplas contas a partir do mesmo endereço IP.",
+      "works_li4_desc": "Alterar, mascarar ou ocultar o seu endereço IP.",
+      "works_li5_desc": "Abuso de gaps de abertura/fechamento de mercado.",
+      "works_li6_desc": "Termos e condições aplicáveis."
     },
     "iconicFeatures": {
       "home_heading": "Por que PrimeX Capital?",
@@ -3892,7 +3894,7 @@
       "question9": "Quantos bônus posso resgatar?",
       "answer9": "Apenas um bônus por pessoa e por endereço IP é permitido.",
       "question10": "Existem estratégias de negociação proibidas?",
-      "answer10": "Sim. As seguintes estratégias são estritamente proibidas: Hedging entre contas diferentes, Arbitragem, Negociação de Alta Frequência (HFT) e acesso a múltiplas contas do mesmo endereço IP."
+      "answer10": "Sim. As seguintes estratégias são estritamente proibidas: Estratégia de Hedging entre contas diferentes, HFT (Negociação de Alta Frequência), múltiplas contas do mesmo endereço IP, alterar, mascarar ou ocultar o seu endereço IP, e abuso de gaps de abertura/fechamento de mercado. Termos e condições aplicáveis."
     },
     "bonusJoinNow": {
       "title1": "Você está pronto para receber seu presente?",

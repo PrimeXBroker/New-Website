@@ -3808,7 +3808,7 @@
       "description": "Start the new year with a $30 welcome bonus from PrimeX Capital. Get free credit to trade with no deposit and no risk. Make profits and withdraw them now. Sign up for free!"
     },
     "bonusHero": {
-      "hero_title": "New Year $30 Welcome Bonus!",
+      "hero_title": "PrimeX $30 Welcome Bonus!",
       "hero_subtitle": "Boost your Trading Opportunities with",
       "hero_description": "No Deposit Required, Simply Register Now to Claim your Bonus!",
       "btnTxt": "Claim Your $30 Bonus"
@@ -3838,10 +3838,12 @@
       "timeline_li2_desc": "If the target is not met within 30 days, the bonus is removed and the account is closed.",
       "timeline_li3_desc": "Upon a successful withdrawal, the account will be automatically closed.",
       "works_title": "Prohibited Trading Strategies",
-      "works_li1_desc": "Hedging positions between different accounts is prohibited.",
-      "works_li2_desc": "HFT (High-Frequency Trading)",
-      "works_li3_desc": "Multiple accounts from the same IP address are strictly prohibited.",
-      "works_li4_desc": "General Terms and Conditions apply."
+      "works_li1_desc": "Hedging positions between different accounts.",
+      "works_li2_desc": "HFT (High-Frequency-Trading).",
+      "works_li3_desc": "Multiple accounts from the same IP address.",
+      "works_li4_desc": "Changing, masking or hiding your IP address.",
+      "works_li5_desc": "Abusing market close/open gaps.",
+      "works_li6_desc": "Terms and conditions apply."
     },
     "iconicFeatures": {
       "home_heading": "Why PrimeX Capital?",
@@ -3892,7 +3894,7 @@
       "question9": " How many bonuses can I claim?",
       "answer9": " Only one bonus per person and per IP address is allowed.",
       "question10": "Are there any prohibited trading strategies?",
-      "answer10": "Yes. The following strategies are strictly prohibited: Hedging positions between different accounts, High-Frequency Trading (HFT), and accessing multiple accounts from the same IP address."
+      "answer10": "Yes. The following strategies are strictly prohibited: Hedging positions between different account, HFT (High-Frequency-Trading), Multiple accounts from the same IP address, Changing, masking or hiding your IP address, Abusing market close/open gaps, Terms and conditions apply."
     },
     "bonusJoinNow": {
       "title1": "Ready to boost your trading?",

@@ -49,6 +49,8 @@ const BonusRules = () => {
         t("works_li2_desc"),
         t("works_li3_desc"),
         t("works_li4_desc"),
+        t("works_li5_desc"),
+        t("works_li6_desc"),
       ],
     },
   ];
