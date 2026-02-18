@@ -5,7 +5,7 @@ export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });
-  const url = `https://www.primexcapital.com/${locale}/trade-gold`;
+  const url = `https://www.primexcapital.com/${locale}/trade-gold-expire`;
 
   return {
     title: t("trdaeGold.metaData.title"),
@@ -21,7 +21,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("trdaeGold.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/trade-gold/trade-gold-hero-dark.png",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/trade-gold/trade-gold-banner-dark.webp",
           width: 1200,
           height: 630,
           alt: t("trdaeGold.metaData.title"),
@@ -49,7 +49,7 @@ const page = () => {
           <link
             key={item.lng}
             rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/trade-gold`}
+            href={`https://www.primexcapital.com/${item.url}/trade-gold-expire`}
             hreflang={item.lng}
           />
         ))}
