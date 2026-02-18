@@ -1,6 +1,4 @@
 import React from "react";
-import Hero from "../promotions/bonus-new/Hero";
-import GoldRushSteps from "./GoldRushSteps";
 import Prizes from "./Prizes";
 import howWin from "@/public/animations/trade-gold/how-to-win.json";
 import rulesParticipation from "@/public/animations/trade-gold/rules-of-participation.json";
@@ -10,6 +8,8 @@ import { useLocale, useTranslations } from "next-intl";
 import BonusFaqs from "../promotions/bonus-new/BonusFaqs";
 import JoinNow from "../promotions/bonus-new/JoinNow";
 import BonusRules from "../promotions/bonus-new/BonusRules";
+import WinGoldSteps from "./WinGoldSteps";
+import Hero from "./Hero";
 
 const TradeGoldWrapper = () => {
   const locale = useLocale();
@@ -115,10 +115,11 @@ const TradeGoldWrapper = () => {
     <>
       <Hero
         translation="trdaeGold.hero"
-        heroImage="https://primexcapital.s3.eu-north-1.amazonaws.com/website/trade-gold/trade-gold-hero.svg"
+        heroImageLight="https://primexcapital.s3.eu-north-1.amazonaws.com/website/trade-gold/trade-gold-hero-light.png"
+        heroImageDark="https://primexcapital.s3.eu-north-1.amazonaws.com/website/trade-gold/trade-gold-hero-dark.png"
         textChange={true}
       />
-      <GoldRushSteps />
+      <WinGoldSteps />
       <Prizes />
       <BonusRules rulesData={rulesData} translation="trdaeGold.rules" />
       <BonusFaqs faqs={faqs} translation="trdaeGold.faqs" />

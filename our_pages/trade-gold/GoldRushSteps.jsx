@@ -37,8 +37,6 @@ const GoldRushSteps = () => {
           <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-tm dark:text-tm-dark uppercase">
             {t("title1")}
             <span className="text-pcp dark:text-pcp-dark">{t("title2")}</span>
-            <br className="hidden md:block" />
-            {t("title3")}
           </h2>
           <p className="text-sm sm:text-base lg:text-lg mt-2 md:w-[540px] mx-auto text-ts dark:text-ts-dark">
             {t("description")}

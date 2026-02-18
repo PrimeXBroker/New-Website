@@ -3415,44 +3415,42 @@
   "trdaeGold": {
     "metaData": {
       "title": "Trade Gold Contest | Win Real Gold Bars with PrimeX Capital",
-      "description": "Participate in the gold trading contest and win gold from PrimeX Capital. Deposit $500 and trade XAU/USD for a chance to win real gold bars. Join now!"
+      "description": "Join PrimeX Capital’s Gold Trading Contest. Deposit $500, trade XAU/USD, increase volume, climb the leaderboard, and win real gold bars. Register now today!"
     },
     "hero": {
       "hero_title1": "Trade Gold ",
       "hero_title2": "Win Gold",
-      "hero_subtitle": "One month, one goal, Three Real Gold Winners!",
-      "hero_description": "This is your chance to turn your XAU/USD trading volume into real gold bars. From August 19th to September 19th, every gold trade brings you closer to winning.",
-      "btnTxt": "Start the Challenge Now"
+      "hero_subtitle": "Ramadan Trading Contest 2026",
+      "hero_description": "Your chance to turn your trading volume on Gold vs. Dollar (XAU/USD) into real gold bars. Throughout the month of Ramadan, every gold trade brings you closer to winning.",
+      "btnTxt": "Start Now"
     },
     "goldRushSteps": {
-      "title1": "Join the ",
-      "title2": "Gold Rush ",
-      "title3": "in 3 Simple Steps",
-      "description": "We've made it easy to enter. Follow these steps to qualify for the grand prizes.",
-      "step1": "Deposit",
-      "step1_desc": "Make a minimum deposit of $500 during the contest period to officially enter the challenge.",
-      "step2": "Trade XAU/USD",
-      "step2_desc": "Focus your strategy on Gold (XAU/USD). Only your trading volume on gold will count toward your final ranking.",
-      "step3": "Win Real Gold",
-      "step3_desc": "Stay active and avoid any withdrawals. The top three traders based on our criteria will win pure gold bars."
+      "title1": "Win Gold ",
+      "title2": "in 3 Simple Steps",
+      "description": "Follow these steps to qualify for the grand prizes.",
+      "step1": "Make a Deposit",
+      "step1_desc": "Deposit at least $500 to join the Contest.",
+      "step2": "Trade Consistently",
+      "step2_desc": "Trade gold actively throughout Ramadan to improve your rank.",
+      "step3": "Avoid Withdrawals",
+      "step3_desc": "Do not make withdrawals so your results remain valid."
     },
     "prizes": {
       "title1": "Prizes ",
-      "title2": "That Shine as ",
-      "title3": "Bright as Your Trades",
-      "description": "The top performers will be rewarded with timeless, valuable assets, real gold bars.",
+      "title2": "That Shine Like Your Trades",
+      "description": "Top-performing traders will be rewarded with real gold bars.",
       "step1_place": "1st Place",
       "step1_count": "10",
       "step1": "Gram Gold Bar",
-      "step1_desc": "(Approx. Value: $1,500)",
+      "step1_desc": "(Approximate value: $1,500)",
       "step2_place": "2nd Place",
-      "step2_count": "5",
+      "step2_count": "6",
       "step2": "Gram Gold Bar",
-      "step2_desc": "(Approx. Value: $1,000)",
+      "step2_desc": "(Approximate value: $1,000)",
       "step3_place": "3rd Place",
-      "step3_count": "2.5",
+      "step3_count": "3",
       "step3": "Gram Gold Bar",
-      "step3_desc": "(Approx. Value: $500)"
+      "step3_desc": "(Approximate value: $500)"
     },
     "rules": {
       "title": "Terms and Conditions",
@@ -3464,9 +3462,9 @@
       "participation_rules_li1_desc": "Eligibility: Open to all new and existing PrimeX Capital clients.",
       "participation_rules_li2_desc": "No Withdrawals: Any withdrawal from your account during the contest period will result in automatic disqualification.",
       "participation_rules_li3_desc": "Prohibited Strategies: Accounts found using cross-hedging or High-Frequency Trading (HFT) will be disqualified.",
-      "duration_title": "Duration",
-      "duration_li1_desc": "Contest Duration: 19th August – 19th September 2025.",
-      "duration_li2_desc": "Winner Announcement: Winners will be ranked and announced by Friday, 26th September 2025.",
+      "duration_title": "Contest Duration",
+      "duration_li1_desc": "Contest period: From February 19 to March 20, 2026.",
+      "duration_li2_desc": "Winners announcement: Winners will be ranked and officially announced by Wednesday, March 25, 2026.",
       "general_title": "General Rules",
       "general_li1_desc": "PrimeX Capital reserves the right to adjust the contest terms and conditions if necessary.",
       "general_li2_desc": "Winners agree to be featured in promotional materials."
@@ -3484,10 +3482,10 @@
       "answer3": "No. To remain eligible to win, you must not make any withdrawals from your account between August 19th and September 19th, 2025. Any withdrawal will result in automatic disqualification.",
       "question4": "Are there any prohibited trading strategies?",
       "answer4": "Yes. Using prohibited strategies such as High-Frequency Trading (HFT) or cross-hedging between different accounts will lead to disqualification from the contest.",
-      "question5": "How long does the contest run?",
-      "answer5": "The contest starts on August 19th, 2025, and ends on September 19th, 2025.",
-      "question6": "When will the winners be announced? ",
-      "answer6": "The winners will be officially announced by Friday, September 26th, 2025."
+      "question5": "What is the contest duration?",
+      "answer5": "The contest runs from February 19 to March 20, 2026.",
+      "question6": "When will the winners be announced?",
+      "answer6": " The official winners' announcement will be made by Wednesday, March 25, 2026."
     },
     "joinNow": {
       "title1": "Ready to Turn Your Trades into Gold?",

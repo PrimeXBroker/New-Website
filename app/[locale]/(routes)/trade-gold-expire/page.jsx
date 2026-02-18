@@ -21,7 +21,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("trdaeGold.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/trade-gold/trade-gold-hero.svg",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/trade-gold/trade-gold-hero-dark.png",
           width: 1200,
           height: 630,
           alt: t("trdaeGold.metaData.title"),
