@@ -115,8 +115,8 @@ const TradeGoldWrapper = () => {
     <>
       <Hero
         translation="trdaeGold.hero"
-        heroImageLight="https://primexcapital.s3.eu-north-1.amazonaws.com/website/trade-gold/trade-gold-banner-light.webp"
-        heroImageDark="https://primexcapital.s3.eu-north-1.amazonaws.com/website/trade-gold/trade-gold-banner-dark.webp"
+        heroImageLight="https://primexcapital.s3.eu-north-1.amazonaws.com/website/trade-gold/contest-hero-light.webp"
+        heroImageDark="https://primexcapital.s3.eu-north-1.amazonaws.com/website/trade-gold/contest-hero-dark.webp"
         textChange={true}
       />
       <WinGoldSteps />
