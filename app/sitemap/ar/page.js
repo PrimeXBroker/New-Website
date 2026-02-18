@@ -208,7 +208,7 @@ export default function ArSitemapPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/ar/trade-gold",
+      url: "https://primexcapital.com/ar/ramadan-contest",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",

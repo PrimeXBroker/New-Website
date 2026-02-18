@@ -206,7 +206,7 @@ export async function GET() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/ps/trade-gold",
+      url: "https://primexcapital.com/ps/ramadan-contest",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",
@@ -247,7 +247,7 @@ export async function GET() {
           <priority>${priority}</priority>
           <changefreq>${changefreq}</changefreq>
           <lastmod>${lastModified.toISOString()}</lastmod>
-        </url>`
+        </url>`,
         )
         .join("")}
     </urlset>`;

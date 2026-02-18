@@ -208,7 +208,7 @@ export default function KuSitemapPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/ku/trade-gold",
+      url: "https://primexcapital.com/ku/ramadan-contest",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",

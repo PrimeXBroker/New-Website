@@ -208,7 +208,7 @@ export default function PtSitemapPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/pt/trade-gold",
+      url: "https://primexcapital.com/pt/ramadan-contest",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",
