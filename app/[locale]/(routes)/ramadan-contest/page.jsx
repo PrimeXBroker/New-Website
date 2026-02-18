@@ -5,7 +5,7 @@ export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });
-  const url = `https://www.primexcapital.com/${locale}/trade-gold-expire`;
+  const url = `https://www.primexcapital.com/${locale}/ramadan-contest`;
 
   return {
     title: t("trdaeGold.metaData.title"),
@@ -49,7 +49,7 @@ const page = () => {
           <link
             key={item.lng}
             rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/trade-gold-expire`}
+            href={`https://www.primexcapital.com/${item.url}/ramadan-contest`}
             hreflang={item.lng}
           />
         ))}

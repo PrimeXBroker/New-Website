@@ -31,30 +31,30 @@ const MobileHeader = ({ locale }) => {
       locale === "ar"
         ? "عربي"
         : locale === "es"
-        ? "Español"
-        : locale === "ps"
-        ? "پښتو"
-        : locale === "ku"
-        ? "کوردی"
-        : locale === "pt"
-        ? "Português"
-        : locale === "fa"
-        ? "Persian"
-        : "English",
+          ? "Español"
+          : locale === "ps"
+            ? "پښتو"
+            : locale === "ku"
+              ? "کوردی"
+              : locale === "pt"
+                ? "Português"
+                : locale === "fa"
+                  ? "Persian"
+                  : "English",
     flag:
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
         : locale === "es"
-        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
-        : locale === "ps"
-        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
-        : locale === "ku"
-        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
-        : locale === "pt"
-        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
-        : locale === "fa"
-        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
-        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
+          ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
+          : locale === "ps"
+            ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
+            : locale === "ku"
+              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
+              : locale === "pt"
+                ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
+                : locale === "fa"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
   });
   const [selectedLocation, setSelectedLocation] = useState({
     name: "SCA UAE",
@@ -147,30 +147,30 @@ const MobileHeader = ({ locale }) => {
       locale === "ar"
         ? "عربي"
         : locale === "es"
-        ? "Español"
-        : locale === "ps"
-        ? "پښتو"
-        : locale === "ku"
-        ? "کوردی"
-        : locale === "pt"
-        ? "Português"
-        : locale === "fa"
-        ? "Persian"
-        : "English";
+          ? "Español"
+          : locale === "ps"
+            ? "پښتو"
+            : locale === "ku"
+              ? "کوردی"
+              : locale === "pt"
+                ? "Português"
+                : locale === "fa"
+                  ? "Persian"
+                  : "English";
     const flag =
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
         : locale === "es"
-        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
-        : locale === "ps"
-        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
-        : locale === "ku"
-        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
-        : locale === "pt"
-        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
-        : locale === "fa"
-        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
-        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg";
+          ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
+          : locale === "ps"
+            ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
+            : locale === "ku"
+              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
+              : locale === "pt"
+                ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
+                : locale === "fa"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg";
     const initialLanguage = { text, flag };
     setLanguage(initialLanguage);
     localStorage.setItem("language", JSON.stringify(initialLanguage));
@@ -210,7 +210,7 @@ const MobileHeader = ({ locale }) => {
     } else {
       localStorage.setItem(
         "selectedLocation",
-        JSON.stringify(selectedLocation)
+        JSON.stringify(selectedLocation),
       );
     }
   }, []);
@@ -239,8 +239,8 @@ const MobileHeader = ({ locale }) => {
                 !mounted
                   ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
                   : resolvedTheme === "dark"
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
-                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-black.webp"
+                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
+                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-black.webp"
               }
               alt="Logo Image"
             />
@@ -301,7 +301,7 @@ const MobileHeader = ({ locale }) => {
                         onClick={() =>
                           handleClick(
                             "English",
-                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg"
+                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
                           )
                         }
                         className="px-4 py-2 text-tm dark:text-tm-dark text-[.8em] hover:text-nb dark:hover:text-nb-dark hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
@@ -327,7 +327,7 @@ const MobileHeader = ({ locale }) => {
                         onClick={() =>
                           handleClick(
                             "عربي",
-                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
+                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg",
                           )
                         }
                         className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
@@ -353,7 +353,7 @@ const MobileHeader = ({ locale }) => {
                         onClick={() =>
                           handleClick(
                             "Kurdish",
-                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
+                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp",
                           )
                         }
                         className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
@@ -389,7 +389,7 @@ const MobileHeader = ({ locale }) => {
                         onClick={() =>
                           handleClick(
                             "Español",
-                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
+                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png",
                           )
                         }
                         className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
@@ -415,7 +415,7 @@ const MobileHeader = ({ locale }) => {
                         onClick={() =>
                           handleClick(
                             "پښتو",
-                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
+                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png",
                           )
                         }
                         className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
@@ -451,7 +451,7 @@ const MobileHeader = ({ locale }) => {
                         onClick={() =>
                           handleClick(
                             "Português",
-                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
+                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png",
                           )
                         }
                         className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
@@ -477,7 +477,7 @@ const MobileHeader = ({ locale }) => {
                         onClick={() =>
                           handleClick(
                             "Persian",
-                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
+                            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png",
                           )
                         }
                         className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
@@ -521,8 +521,8 @@ const MobileHeader = ({ locale }) => {
                 !mounted
                   ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
                   : resolvedTheme === "dark"
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
-                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-black.webp"
+                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-white.webp"
+                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-logos/logo-black.webp"
               }
               alt="Logo Image"
             />
@@ -582,7 +582,7 @@ const MobileHeader = ({ locale }) => {
                           onClick={() =>
                             handleClick(
                               "English",
-                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg"
+                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
                             )
                           }
                           className="px-4 py-2 text-tm dark:text-tm-dark text-[.8em] hover:text-nb dark:hover:text-nb-dark hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
@@ -608,7 +608,7 @@ const MobileHeader = ({ locale }) => {
                           onClick={() =>
                             handleClick(
                               "عربي",
-                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
+                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg",
                             )
                           }
                           className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
@@ -634,7 +634,7 @@ const MobileHeader = ({ locale }) => {
                           onClick={() =>
                             handleClick(
                               "Kurdish",
-                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
+                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp",
                             )
                           }
                           className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
@@ -670,7 +670,7 @@ const MobileHeader = ({ locale }) => {
                           onClick={() =>
                             handleClick(
                               "Español",
-                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
+                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png",
                             )
                           }
                           className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
@@ -696,7 +696,7 @@ const MobileHeader = ({ locale }) => {
                           onClick={() =>
                             handleClick(
                               "پښتو",
-                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
+                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png",
                             )
                           }
                           className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
@@ -732,7 +732,7 @@ const MobileHeader = ({ locale }) => {
                           onClick={() =>
                             handleClick(
                               "Português",
-                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
+                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png",
                             )
                           }
                           className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
@@ -758,7 +758,7 @@ const MobileHeader = ({ locale }) => {
                           onClick={() =>
                             handleClick(
                               "Persian",
-                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
+                              "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png",
                             )
                           }
                           className="px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"
@@ -1001,6 +1001,13 @@ const MobileHeader = ({ locale }) => {
             </button>
             {openSubMenu === 8 && (
               <div className="">
+                <LocaleLink
+                  href="/ramadan-contest"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("ramadan-contest")}
+                </LocaleLink>
                 <LocaleLink
                   href="/bonus"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
