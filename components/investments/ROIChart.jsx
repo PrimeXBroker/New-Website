@@ -37,22 +37,39 @@ export default function DailyRoiChart({ chartOptions }) {
         return;
       }
 
-      // ✅ Safe label generation
-      setLabels(
-        apiData.map((item) => {
-          if (!item?.date) return "N/A";
-          const d = new Date(item.date);
-          return isNaN(d.getTime())
-            ? "Invalid"
-            : d.toLocaleDateString("en-US", { month: "short", day: "2-digit" });
-        })
-      );
+      const monthlyMap = {};
 
-      // ✅ Ensure numeric arrays
-      setDailyROI(apiData.map((item) => parseFloat(item.dailyROI) || 0));
-      setAccumulativeROI(
-        apiData.map((item) => parseFloat(item.accumulativeROI) || 0)
-      );
+      apiData.forEach((item) => {
+        if (!item?.date) return;
+
+        const d = new Date(item.date);
+        if (isNaN(d.getTime())) return;
+
+        const monthKey = `${d.getFullYear()}-${d.getMonth()}`;
+
+        if (!monthlyMap[monthKey]) {
+          monthlyMap[monthKey] = {
+            monthLabel: d.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "short",
+            }),
+            monthlyROI: 0,
+            accumulativeROI: 0,
+          };
+        }
+
+        monthlyMap[monthKey].monthlyROI += parseFloat(item.dailyROI) || 0;
+
+        // Keep last accumulative ROI of month
+        monthlyMap[monthKey].accumulativeROI =
+          parseFloat(item.accumulativeROI) || 0;
+      });
+
+      const monthlyData = Object.values(monthlyMap);
+
+      setLabels(monthlyData.map((m) => m.monthLabel));
+      setDailyROI(monthlyData.map((m) => m.monthlyROI));
+      setAccumulativeROI(monthlyData.map((m) => m.accumulativeROI));
     } catch (err) {
       console.log(err);
     } finally {
@@ -91,7 +108,7 @@ export default function DailyRoiChart({ chartOptions }) {
       },
       {
         type: "bar",
-        label: "Daily ROI",
+        label: "Monthly ROI",
         data: dailyROI,
         backgroundColor: "#e5a801",
         borderRadius: 5,
@@ -145,7 +162,7 @@ export default function DailyRoiChart({ chartOptions }) {
         },
         title: {
           display: true,
-          text: "Daily ROI (%)",
+          text: "Monthly ROI (%)",
           color: textColor,
         },
       },
