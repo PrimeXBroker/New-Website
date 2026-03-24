@@ -559,7 +559,7 @@ const DesktopHeader = ({ locale }) => {
                       : "min-w-[180px]"
                   } rounded-[6px]`}
                 >
-                  <li>
+                  {/* <li>
                     <LocaleLink
                       href="/ramadan-contest"
                       onClick={closeDropdown}
@@ -567,7 +567,7 @@ const DesktopHeader = ({ locale }) => {
                     >
                       {t("ramadan-contest")}
                     </LocaleLink>
-                  </li>
+                  </li> */}
                   <li>
                     <LocaleLink
                       href="/bonus"
