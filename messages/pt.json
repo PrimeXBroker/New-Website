@@ -15,7 +15,7 @@
     "deposit": "depósito",
     "login": "Entrar",
     "register": "Registrar",
-    "forex": "Forex",
+    "forex": "CFDs de FX",
     "stocks": "Ações",
     "commodities": "Commodities",
     "crypto": "Cripto",
@@ -59,8 +59,8 @@
   },
   "home": {
     "metaData": {
-      "title": "Corretora de Forex & CFDs | Plataforma de Negociação FX | PrimeX Capital",
-      "description": "Negocie forex, metais, ações e commodities online com a PrimeX Capital – uma corretora global que oferece plataformas seguras, ferramentas avançadas e suporte especializado."
+      "title": "Corretora de FX e CFDs | PrimeX Capital",
+      "description": "Negocie CFDs de FX, metais, ações e commodities online com a PrimeX Capital – uma corretora global que oferece plataformas seguras, ferramentas avançadas e suporte especializado."
     },
     "hero": {
       "subtitle1": "Licenciado nos Emirados Árabes Unidos pela ",
@@ -109,7 +109,7 @@
       },
       "promotion4": {
         "title": "Spreads PrimeX",
-        "desc": "Negocie Forex e Metais com os Melhores Spreads de Sempre"
+        "desc": "Negocie CFDs de FX e Metais com os Melhores Spreads de Sempre"
       },
       "btnTxt": "Saiba Mais"
     },
@@ -118,7 +118,7 @@
       "title2": "Diversos",
       "title3": "Globais",
       "title4": "Mercados",
-      "desc": "Descubra oportunidades de negociação com CFDs em commodities como Petróleo, Ouro e Gás Natural. Explore CFDs em Forex, índices como S&P 500, Dow, Nasdaq, e aproveite a exposição aos mercados de ações com CFDs em ações de empresas como Amazon e Tesla."
+      "desc": "Descubra oportunidades de negociação com CFDs em commodities como Petróleo, Ouro e Gás Natural. Explore CFDs em CFDs de FX, índices como S&P 500, Dow, Nasdaq, e aproveite a exposição aos mercados de ações com CFDs em ações de empresas como Amazon e Tesla."
     },
     "accountTypes": {
       "title1": "Escolha o Seu ",
@@ -189,7 +189,7 @@
       "academy_card_1_title_1": "Webinários Gratuitos",
       "academy_card_1_desc_1": "Participe de sessões ao vivo com especialistas da indústria para obter insights valiosos e orientação profissional. Mantenha-se à frente com as últimas tendências, estratégias e ferramentas.",
       "academy_card_2_title_1": "Atualizações Diárias do Mercado",
-      "academy_card_2_desc_1": "Mantenha-se atualizado com as principais notícias diárias do mercado e análises especializadas sobre Forex, Commodities, Economia e Ações. Tenha acesso a insights valiosos para embasar suas decisões estratégicas de negociação e ampliar seu potencial no mercado financeiro.",
+      "academy_card_2_desc_1": "Mantenha-se atualizado com as principais notícias diárias do mercado e análises especializadas sobre CFDs de FX, Commodities, Economia e Ações. Tenha acesso a insights valiosos para embasar suas decisões estratégicas de negociação e ampliar seu potencial no mercado financeiro.",
       "academy_card_3_title_1": "Análise Especializada de Mercado",
       "academy_card_3_desc_1": "Esteja sempre à frente acompanhando os insights mais recentes e as tendências emergentes do setor. Assim, você terá a base necessária para tomar decisões estratégicas, informadas e impulsionar o sucesso contínuo dos seus trades."
     },
@@ -201,12 +201,12 @@
       "award1_title1": "Corretora",
       "award1_desc": "Oman Smart Vision Summit",
       "award2_badge": "Melhor",
-      "award2_title1": "Corretora de Forex",
+      "award2_title1": "Corretora de CFDs de FX",
       "award2_title2": "na África do Sul",
       "award2_desc": "Traders Fair & Award 2024",
       "award3_badge": "Melhor Global",
       "award3_title1": "Corretora 2024",
-      "award3_desc": "Forex Expo Dubai",
+      "award3_desc": "CFDs de FX Expo Dubai",
       "award4_badge": "Top 100 Confiáveis",
       "award4_title1": "Instituições",
       "award4_title2": "Financeiras 2024",
@@ -220,17 +220,17 @@
       "award7_badge": "Melhor",
       "award7_title1": "Programa de Copy",
       "award7_desc": "World Business Outlook",
-      "award8_badge": "Melhor Forex",
+      "award8_badge": "Melhor CFDs de FX",
       "award8_title1": "Corretora ECN",
-      "award8_desc": "Forex Expo Dubai",
+      "award8_desc": "CFDs de FX Expo Dubai",
       "award9_badge": "Mais Confiável",
-      "award9_title1": "Corretora de Forex",
+      "award9_title1": "Corretora de CFDs de FX",
       "award9_desc": "Global Business & Finance Magazine",
       "award10_badge": "Mais Confiável",
       "award10_title1": "Corretora ECN",
       "award10_desc": "International Business Magazine",
       "award11_badge": "Melhor Copy Trading",
-      "award11_title1": "Corretora de Forex",
+      "award11_title1": "Corretora de CFDs de FX",
       "award11_desc": "Egypt Expo",
       "award12_badge": "Top 100 Confiáveis",
       "award12_title1": "Corretoras",
@@ -309,7 +309,7 @@
   "metaTrader5": {
     "metaData": {
       "title": "Negocie de Forma Mais Inteligente com a Plataforma MT5 | PrimeX Capital",
-      "description": "Descubra o poder da plataforma MT5 com a PrimeX Capital. Negocie forex, commodities e CFDs com ferramentas avançadas, dados em tempo real e execução ultra-rápida."
+      "description": "Descubra o poder da plataforma MT5 com a PrimeX Capital. Negocie CFDs de FX, commodities e CFDs com ferramentas avançadas, dados em tempo real e execução ultra-rápida."
     },
     "banner": {
       "title1": "MetaTrader 5",
@@ -323,7 +323,7 @@
       "feature1_main_title1": "Plataforma Multi-Ativos",
       "feature1_main_title2": "Plataforma",
       "feature1_title1": "Versatilidade",
-      "feature1_desc1": "O MT5 suporta negociação em várias classes de ativos, incluindo forex, ações, commodities, futuros e criptomoedas.",
+      "feature1_desc1": "O MT5 permite negociar diferentes classes de ativos, incluindo CFDs de forex, ações, commodities e futuros.",
       "feature1_title2": "Ferramentas Integradas",
       "feature1_desc2": "Combina todas as ferramentas necessárias de negociação em uma plataforma, facilitando para os traders gerenciarem diferentes classes de ativos.",
       "feature2_main_title1": "Negociação Automatizada",
@@ -387,10 +387,10 @@
       "step4_title2": "Negociando"
     },
     "joinPrimex": {
-      "title1": "Junte-se ao PrimeX e ",
-      "title2": "negocie com MT5 ",
-      "title3": "Hoje!",
-      "description": "Descubra o futuro da negociação com o MetaTrader 5 na PrimeX. Seja você um iniciante ou um trader experiente, o MT5 proporciona recursos avançados e ferramentas completas para impulsionar seu sucesso nos mercados financeiros. Junte-se à PrimeX hoje e eleve sua experiência de trading a um novo patamar.",
+      "title1": "Junte-se à PrimeX Capital e ",
+      "title2": "negocie com MT5",
+      "title3": "hoje!",
+      "description": "Viva o futuro do trading com o MetaTrader 5 na PrimeX Capital. Seja você iniciante ou experiente, o MT5 oferece as ferramentas certas para atuar nos mercados financeiros. Comece hoje e evolua sua experiência de trading.",
       "download_window_btn_part1": "Obtenha no",
       "download_window_btn_part2": "Microsoft",
       "google_play-btn_part1": "Obtenha no",
@@ -528,7 +528,7 @@
     "hero": {
       "title1": "Nós Estamos, Onde ",
       "title2": "A Excelência é Reconhecida!",
-      "description": "Explore nossas conquistas premiadas que nos destacam como uma das principais corretoras de forex."
+      "description": "Explore nossas conquistas premiadas que nos destacam como uma das principais corretoras de CFDs de FX."
     },
     "tabs": {
       "award_year_1": "2024",
@@ -538,20 +538,20 @@
       "award_year_5": "2020",
       "award_1_title": "Melhor Programa de Copy Trading",
       "award_1_location": "EAU 2023",
-      "award_2_title": "Melhor Corretora de Copy Trading Forex",
+      "award_2_title": "Melhor Corretora de Copy Trading CFDs de FX",
       "award_2_location": "África 2023",
       "award_3_title": "A Corretora ECN Mais Confiável",
       "award_3_location": "EAU 2023",
-      "award_4_title": "A Corretora de Forex Mais Confiável",
+      "award_4_title": "A Corretora de CFDs de FX Mais Confiável",
       "award_4_location": "Oriente Médio 2023",
       "award_5_title": "Melhor Corretora ECN",
       "award_5_location": "India Financial Expo 2023",
-      "award_6_title": "Melhor Corretora Forex ECN",
+      "award_6_title": "Melhor Corretora CFDs de FX ECN",
       "award_6_location": "Expo Dubai 2023",
       "award_8_title": "Melhor Corretora FX de Varejo",
       "award_8_location": "PROFX Awards Dubai 2024",
       "award_9_title": "Melhor Corretora Global",
-      "award_9_location": "Forex Expo Dubai 2024",
+      "award_9_location": "CFDs de FX Expo Dubai 2024",
       "award_10_title": "Top 100 Instituições Financeiras Confiáveis",
       "award_10_location": "MEFM Awards Dubai 2024"
     }
@@ -682,7 +682,7 @@
     "instruments": {
       "title": "Acesso",
       "title_2": "330+ Instrumentos",
-      "instruments_0_h": "Forex",
+      "instruments_0_h": "CFDs de FX",
       "instruments_1_h": "Metais",
       "instruments_2_h": "Índices",
       "instruments_3_h": "Comodidades",
@@ -875,7 +875,7 @@
       "heading_3": "Regiões Restritas:",
       "para_3": "Não fornecemos serviços para cidadãos/residentes da Coreia do Norte, Estados Unidos, Canadá, Cuba, Índia, China, Paquistão, Hong Kong SAR China, Tailândia, Vietnã, Bangladesh, Filipinas, Coreia do Sul, Japão, Indonésia, Malásia, Mianmar (Birmânia), Nepal, Rússia. Os serviços da PrimeX Capital LTD não são destinados à distribuição ou uso por qualquer pessoa em qualquer país ou jurisdição onde tal distribuição ou uso seja contrário à lei ou regulamentação local.",
       "heading_4": "Aviso de Risco:",
-      "para_4": "A negociação de Forex e Instrumentos Financeiros Alavancados envolve risco significativo e pode resultar na perda de seu capital investido. Você não deve investir mais do que pode perder e deve garantir que compreenda totalmente os riscos envolvidos.",
+      "para_4": "A negociação de CFDs de FX e Instrumentos Financeiros Alavancados envolve risco significativo e pode resultar na perda de seu capital investido. Você não deve investir mais do que pode perder e deve garantir que compreenda totalmente os riscos envolvidos.",
       "para_5": "Negociar CFDs e Opções de FX envolve risco e pode resultar na perda de seu capital.",
       "heading_6": "PrimeX Broker (Pty) Ltd",
       "para_6": "Com número de registro 2021/590477/07 e endereço de registro na SUITE NO 8 FIRST FLOOR, KATHERINE AND WEST BUILDING, 114 WEST STREET, SANDTON, GAUTENG, 2196 África do Sul, é regulamentado pela Autoridade de Conduta do Setor Financeiro com número de licença FSP 51864.",
@@ -1234,7 +1234,7 @@
       "main_title4": "Garantida",
       "main_title5": "pois eles",
       "title1": "Descubra",
-      "description1": "Descubra mais de 330 instrumentos em diversos mercados, incluindo 100 opções de Forex. Acesse a maior coleção de criptoativos da MENA e negocie CFDs com alavancagem para mais oportunidades.",
+      "description1": "Descubra mais de 330 instrumentos em diversos mercados, incluindo 100 CFDs de FX. Negocie CFDs com alavancagem e amplie suas oportunidades.",
       "title2": "Beneficie-se",
       "description2": "Beneficie-se da nossa Academia com blogs educacionais, notícias de mercado e artigos em destaque. Participe de webinars interativos e fique informado com análises técnicas diárias.",
       "title3": "Experimente",
@@ -1739,7 +1739,7 @@
       "title2": "Webinars Gratuitos",
       "no_webinars": "Não há webinars futuros disponíveis no momento. Por favor, verifique novamente mais tarde.",
       "webinar_title1": "Zyad Atta",
-      "Webinar1_by": "Analista de Forex",
+      "Webinar1_by": "Analista de CFDs de FX",
       "webinar_title2": "Aniket Bhoir",
       "Webinar2_by": "Analista de Mercado",
       "webinar_title3": "Webinar devido"
@@ -1819,7 +1819,7 @@
       "expert_1_name": "Rose Shawish",
       "expert_1_position": "Analista Fundamentalista",
       "expert_2_name": "Zyad Atta",
-      "expert_2_position": "Analista de Forex",
+      "expert_2_position": "Analista de CFDs de FX",
       "book_session_btn": "Agendar uma Sessão"
     },
     "joinAcademy": {
@@ -1940,7 +1940,7 @@
       "title4": "Reconhecida!",
       "img_title1": "Excelência",
       "img_title2": "Reconhecida Globalmente",
-      "description": "Explore nossas conquistas premiadas que nos destacam como uma das principais corretoras de forex."
+      "description": "Explore nossas conquistas premiadas que nos destacam como uma das principais corretoras de CFDs de FX."
     },
     "awardCards": {
       "title13": "Melhor aplicativo de trading",
@@ -1949,9 +1949,9 @@
       "title12": "Oman Smart Vision Summit",
       "subtitle12": "Melhor Corretora Inovadora",
       "description12": "Honrado em ser nomeado a Melhor Corretora Inovadora pela excelente performance financeira no Oman SVS 2025!",
-      "title11": "Melhor Corretora Forex na África do Sul",
+      "title11": "Melhor Corretora CFDs de FX na África do Sul",
       "subtitle11": "Traders Fair & Award 2024",
-      "description11": "Temos o orgulho de anunciar que a PrimeX Capital foi premiada como Melhor Corretora Forex na África do Sul no Traders Fair e Awards 2024, com base nos votos dos traders 'Traders Choice'.",
+      "description11": "Temos o orgulho de anunciar que a PrimeX Capital foi premiada como Melhor Corretora CFDs de FX na África do Sul no Traders Fair e Awards 2024, com base nos votos dos traders 'Traders Choice'.",
       "title8": "Melhor Corretora FX de Varejo",
       "subtitle8": "MEFM Awards Dubai",
       "description8": "Fomos celebrados como a Melhor Corretora FX de Varejo pelos excelentes serviços financeiros e performance nos PROFX Awards Dubai 2024.",
@@ -1959,23 +1959,23 @@
       "subtitle9": "MEFM Awards Dubai",
       "description9": "Reconhecida como uma das Top 100 Instituições Financeiras Confiáveis nos Middle East Financial Markets Awards 2024 por oferecer excelência em serviços financeiros.",
       "title10": "Melhor Corretora Global 2024",
-      "subtitle10": "Forex Expo Dubai",
-      "description10": "Honrados com o prêmio de Melhor Corretora Global em todo o mundo pelo nosso compromisso inabalável com a inovação no mercado de forex na Dubai Forex Expo 2024.",
+      "subtitle10": "CFDs de FX Expo Dubai",
+      "description10": "Honrados com o prêmio de Melhor Corretora Global em todo o mundo pelo nosso compromisso inabalável com a inovação no mercado de CFDs de FX na Dubai CFDs de FX Expo 2024.",
       "title1": "Top 100 Corretoras Confiáveis",
       "subtitle1": "MEFM Awards Dubai",
       "description1": "Reconhecida como uma das Top 100 Corretoras Confiáveis no Middle East Financial Markets Awards 2023 por entregar excelência em serviços financeiros.",
-      "title2": "Melhor Corretora Forex de Copy Trading",
+      "title2": "Melhor Corretora CFDs de FX de Copy Trading",
       "subtitle2": "EGYPT EXPO",
-      "description2": "Recebemos o prêmio principal de Melhor Corretora Forex de Copy Trading na África para 2023 pelos excepcionais serviços de copy trading e atendimento ao cliente.",
+      "description2": "Recebemos o prêmio principal de Melhor Corretora CFDs de FX de Copy Trading na África para 2023 pelos excepcionais serviços de copy trading e atendimento ao cliente.",
       "title3": "Corretora ECN Mais Confiável",
       "subtitle3": "International Business Magazine",
       "description3": "Obteve um enorme sucesso com a Corretora ECN Mais Confiável nos Emirados Árabes Unidos em 2023 devido ao compromisso com a transparência e práticas de negociação justas.",
-      "title4": "Corretora Forex Mais Confiável",
+      "title4": "Corretora CFDs de FX Mais Confiável",
       "subtitle4": "Global Business & Finance Magazine",
-      "description4": "Foi celebrada como a Corretora Forex Mais Confiável no Oriente Médio em 2023, com trabalho árduo e constante para ganhar a confiança dos clientes por meio de serviços de negociação de alta qualidade.",
-      "title5": "Melhor Corretora Forex ECN",
-      "subtitle5": "FOREX EXPO DUBAI",
-      "description5": "Orgulhosamente eleita como a Melhor Corretora Forex ECN na Expo Dubai 2023 pela excelência em fornecer soluções de negociação eficientes, avançadas e personalizáveis.",
+      "description4": "Foi celebrada como a Corretora CFDs de FX Mais Confiável no Oriente Médio em 2023, com trabalho árduo e constante para ganhar a confiança dos clientes por meio de serviços de negociação de alta qualidade.",
+      "title5": "Melhor Corretora CFDs de FX ECN",
+      "subtitle5": "CFDs de FX EXPO DUBAI",
+      "description5": "Orgulhosamente eleita como a Melhor Corretora CFDs de FX ECN na Expo Dubai 2023 pela excelência em fornecer soluções de negociação eficientes, avançadas e personalizáveis.",
       "title6": "Melhor Programa de Copy Trading",
       "subtitle6": "World Business Outlook",
       "description6": "Ganhou o prêmio de Melhor Programa de Copy Trading nos Emirados Árabes Unidos em 2023, destacando o avanço e as estratégias de copy trading de ponta.",
@@ -2036,22 +2036,22 @@
   },
   "forexProduct": {
     "metaData": {
-      "title": "Negocie Forex Online | PrimeX Capital",
-      "description": "Negocie forex online com PrimeX Capital para uma experiência de negociação eficiente e sem interrupções. Acesse ferramentas e estratégias avançadas para começar a negociar com confiança hoje mesmo!"
+      "title": "Negocie CFDs de FX Online | PrimeX Capital",
+      "description": "Negocie CFDs de FX online com PrimeX Capital para uma experiência de negociação eficiente e sem interrupções. Acesse ferramentas e estratégias avançadas para começar a negociar com confiança hoje mesmo!"
     },
     "hero": {
-      "title1": "Com confiança",
-      "title2": "Negocie o maior",
-      "title3": "Mercado",
-      "title4": "Forex",
-      "title5": "do mundo"
+      "title1": "Negocie o",
+      "title2": "maior ",
+      "title3": "mercado de CFDs",
+      "title4": "de FX do mundo",
+      "title5": "com confiança"
     },
     "getStarted": {
       "main_title1": "Como Começar",
       "main_title2": "Agora",
       "step1_count": "1",
       "step1_title1": "Abra uma",
-      "step1_title2": "Conta PrimeX",
+      "step1_title2": "Conta PrimeX Capital",
       "step2_count": "2",
       "step2_title1": "Deposite",
       "step2_title2": "Fundos",
@@ -2064,27 +2064,27 @@
     },
     "openLiveAccount": {
       "title_part1": "Comece com a",
-      "title_part2": "Negociação de Forex",
+      "title_part2": "Negociação de CFDs de FX",
       "title_part3": "hoje na",
       "title_part4": "PrimeX!",
-      "description": "Abra uma Conta Real e explore nossa gama de opções Forex"
+      "description": "Abra uma Conta Real e explore nossa gama de opções CFDs de FX"
     },
     "faq": {
       "title": "Perguntas Frequentes",
       "title1": "Questões",
-      "question_1": "O que significa 'Pip' na Negociação Forex?",
-      "answer_1": "Um pip, abreviação de 'price interest point' ou 'percentage in point', é o menor movimento de preço possível na taxa de câmbio de um par de moedas de acordo com os padrões do mercado forex.",
-      "question_2": "Apenas Traders Profissionais Podem Participar da Negociação Forex?",
-      "answer_2": "Não, a negociação forex não é limitada a traders profissionais. Qualquer pessoa pode participar, incluindo iniciantes, que podem começar com uma conta demo para praticar e ganhar experiência antes de negociar com dinheiro real.",
-      "question_3": "O que é um 'Stop Loss' na Negociação Forex?",
-      "answer_3": "Um stop loss na negociação forex é uma ferramenta recomendada pelos corretores para ajudar os traders a limitar perdas potenciais, fechando automaticamente uma posição em um preço predefinido.",
-      "question_4": "O que é Hedging na Negociação Forex?",
-      "answer_4": "Hedging em negociação Forex é uma estratégia de gestão de risco utilizada para proteger operações contra movimentos desfavoráveis nos preços das moedas. O objetivo do hedging é limitar ou compensar possíveis perdas decorrentes da volatilidade do mercado cambial, funcionando como uma espécie de \"seguro\" para suas operações."
+      "question_1": "O que significa 'Pip' na Negociação CFDs de FX?",
+      "answer_1": "Um pip, abreviação de 'price interest point' ou 'percentage in point', é o menor movimento de preço possível na taxa de câmbio de um par de moedas de acordo com os padrões do mercado CFDs de FX.",
+      "question_2": "Apenas Traders Profissionais Podem Participar da Negociação CFDs de FX?",
+      "answer_2": "Não, a negociação CFDs de FX não é limitada a traders profissionais. Qualquer pessoa pode participar, incluindo iniciantes, que podem começar com uma conta demo para praticar e ganhar experiência antes de negociar com dinheiro real.",
+      "question_3": "O que é um 'Stop Loss' na Negociação CFDs de FX?",
+      "answer_3": "Um stop loss na negociação CFDs de FX é uma ferramenta recomendada pelos corretores para ajudar os traders a limitar perdas potenciais, fechando automaticamente uma posição em um preço predefinido.",
+      "question_4": "O que é Hedging na Negociação CFDs de FX?",
+      "answer_4": "Hedging em negociação CFDs de FX é uma estratégia de gestão de risco utilizada para proteger operações contra movimentos desfavoráveis nos preços das moedas. O objetivo do hedging é limitar ou compensar possíveis perdas decorrentes da volatilidade do mercado cambial, funcionando como uma espécie de \"seguro\" para suas operações."
     },
     "whyTrade": {
       "title_part1": "Por Que Negociar",
-      "title_part2": "Forex?",
-      "description": "A negociação de Forex oferece diversas oportunidades. Seja um day trader, swing trader ou investidor de longo prazo, você encontrará várias oportunidades para negociar pares de moedas. Analise tendências de mercado, indicadores econômicos e eventos geopolíticos para tomar decisões de negociação informadas."
+      "title_part2": "CFDs de FX?",
+      "description": "A negociação de CFDs de FX oferece diversas oportunidades. Seja um day trader, swing trader ou investidor de longo prazo, você encontrará várias oportunidades para negociar pares de moedas. Analise tendências de mercado, indicadores econômicos e eventos geopolíticos para tomar decisões de negociação informadas."
     }
   },
   "metalsProduct": {
@@ -2104,7 +2104,7 @@
       "main_title2": "Agora",
       "step1_count": "1",
       "step1_title1": "Abra uma",
-      "step1_title2": "Conta PrimeX",
+      "step1_title2": "Conta PrimeX Capital",
       "step2_count": "2",
       "step2_title1": "Deposite",
       "step2_title2": "Fundos",
@@ -2159,7 +2159,7 @@
       "main_title2": "a investir",
       "step1_count": "1",
       "step1_title1": "Abra uma",
-      "step1_title2": "Conta PrimeX",
+      "step1_title2": "Conta PrimeX Capital",
       "step2_count": "2",
       "step2_title1": "Deposite",
       "step2_title2": "Fundos",
@@ -2212,7 +2212,7 @@
       "main_title2": "a negociar",
       "step1_count": "1",
       "step1_title1": "Abra uma",
-      "step1_title2": "Conta PrimeX",
+      "step1_title2": "Conta PrimeX Capital",
       "step2_count": "2",
       "step2_title1": "Deposite",
       "step2_title2": "Fundos",
@@ -2267,7 +2267,7 @@
       "main_title2": "Começar",
       "step1_count": "1",
       "step1_title1": "Abra uma",
-      "step1_title2": "Conta PrimeX",
+      "step1_title2": "Conta PrimeX Capital",
       "step2_count": "2",
       "step2_title1": "Deposite",
       "step2_title2": "Fundos",
@@ -2309,17 +2309,17 @@
       "description": "Compre e venda commodities online com a PrimeX Capital, com mercados como ouro, petróleo e gás natural. Aproveite spreads competitivos e opções de alavancagem. Clique para negociar agora!"
     },
     "hero": {
-      "title1": "Invista com Confiança",
-      "title2": "em Commodities",
-      "title4": "Globalmente",
-      "title5": "Commodities"
+      "title1": "Invista com",
+      "title2": "confiança em",
+      "title4": "Commodities",
+      "title5": "no mundo todo"
     },
     "getStarted": {
       "main_title1": "Como ",
       "main_title2": "Começar",
       "step1_count": "1",
       "step1_title1": "Abra uma",
-      "step1_title2": "Conta PrimeX",
+      "step1_title2": "Conta PrimeX Capital",
       "step2_count": "2",
       "step2_title1": "Deposite",
       "step2_title2": "Fundos",
@@ -2727,7 +2727,7 @@
       "description6": "Negocie com confiança, com regulamentações robustas que garantem o mais alto nível de proteção dos fundos dos clientes.",
       "title7": "Portfólio Multi-Ativos",
       "title7_1": "Diversificado",
-      "description7": "Acesse uma ampla gama de ativos, incluindo forex, metais, índices e ações.",
+      "description7": "Acesse uma ampla gama de ativos, incluindo CFDs de FX, metais, índices e ações.",
       "title8": "Retiradas",
       "title8_1": "Instantâneas",
       "description8": "Desfrute de um processo de retirada rápido e fácil, projetado para beneficiar os investidores."
@@ -2896,7 +2896,7 @@
     "explore": {
       "title1": "Explore",
       "title2": "Oportunidade de Negociação",
-      "description": "Mergulhe em uma ampla gama de ativos, incluindo Forex, Índices, Commodities, Criptomoedas e Ações.",
+      "description": "Explore uma ampla variedade de ativos, incluindo CFDs de FX, índices, commodities e ações.",
       "buttonText": "Abrir Conta"
     }
   },
@@ -3007,12 +3007,12 @@
   },
   "spreadPage": {
     "metaData": {
-      "title": "Melhores Spreads de Forex e Metais | PrimeX Capital",
-      "description": "Negocie Forex e metais com spreads ultra-competitivos a partir de 0,8 pips na conta Standard. Abra uma conta hoje na PrimeX Capital."
+      "title": "Melhores Spreads de CFDs de FX e Metais | PrimeX Capital",
+      "description": "Negocie CFDs de FX e metais com spreads ultra-competitivos a partir de 0,8 pips na conta Standard. Abra uma conta hoje na PrimeX Capital."
     },
     "hero": {
-      "title": "Negocie Forex e Metais com os Melhores Spreads de Todos!",
-      "description1": "Com a PrimeX Capital, você obtém os melhores spreads em Forex e metais, juntamente com uma variedade de instrumentos financeiros, a partir de apenas 0,8 pips na conta Standard. Sem comissões ocultas.",
+      "title": "Negocie CFDs de FX e Metais com os Melhores Spreads de Todos!",
+      "description1": "Com a PrimeX Capital, você obtém os melhores spreads em CFDs de FX e metais, juntamente com uma variedade de instrumentos financeiros, a partir de apenas 0,8 pips na conta Standard. Sem comissões ocultas.",
       "description2": "Nossos spreads ultra-competitivos reduzem dramaticamente seus custos de negociação, preservando mais de seu capital.",
       "btnTxt": "Abrir Conta"
     },
@@ -3049,7 +3049,7 @@
   "bonusPage": {
     "metaData": {
       "title": "Bônus de Depósito de 50% | PrimeX Capital",
-      "description": "Desbloqueie seu potencial de negociação com o Bônus de Depósito de 50% da PrimeX Capital! Negocie forex, metais, índices e ações com um corretor global confiável."
+      "description": "Desbloqueie seu potencial de negociação com o Bônus de Depósito de 50% da PrimeX Capital! Negocie CFDs de FX, metais, índices e ações com um corretor global confiável."
     },
     "bonusHero": {
       "hero_title": "Bônus de Depósito de 50% da PrimeX Capital",
@@ -3110,7 +3110,7 @@
       "home_feature_6_description": "Negocie com confiança, sabendo que seus fundos estão protegidos por regulamentações fortes.",
       "home_feature_7_title1": "Portfólio de",
       "home_feature_7_title2": "Multi-Ativos",
-      "home_feature_7_description": "Negocie uma ampla gama de instrumentos, incluindo forex, metais, índices e ações.",
+      "home_feature_7_description": "Negocie uma ampla gama de instrumentos, incluindo CFDs de FX, metais, índices e ações.",
       "home_feature_8_title1": "Depósito/Saque",
       "home_feature_8_title2": "Fácil",
       "home_feature_8_description": "Processos rápidos e sem complicações de depósito e saque para investidores."
@@ -3147,13 +3147,13 @@
   "primeXTradingApp": {
     "metaData": {
       "title": "Gerencie Seu Portfólio de Negociação | PrimeX App | PrimeX Capital",
-      "description": "Baixe o aplicativo PrimeX Capital para gerenciar sua conta de negociação em qualquer lugar. Negocie forex, metais e CFDs com controle total, atualizações em tempo real e suporte 24/7."
+      "description": "Baixe o aplicativo PrimeX Capital para gerenciar sua conta de negociação em qualquer lugar. Negocie CFDs de FX, metais e CFDs com controle total, atualizações em tempo real e suporte 24/7."
     },
     "banner": {
-      "title1": "O aplicativo PrimeX ",
-      "title2": "Capital",
-      "title3": "Sempre Conectado",
-      "description": "Gerencie sua conta PrimeX Capital a qualquer hora, em qualquer lugar — Tudo através de um aplicativo seguro e intuitivo.",
+      "title1": "App ",
+      "title2": "PrimeX",
+      "title3": "sempre conectado",
+      "description": "Gerencie sua conta onde estiver, com segurança e praticidade em um único app.",
       "google_play-btn_part1": "Obtenha no",
       "google_play-btn_part2": "Google Play",
       "app_store_btn_part1": "Baixe na",
@@ -3182,9 +3182,9 @@
     "downloadAppToady": {
       "heading": "Baixe o Aplicativo Hoje",
       "title1": "Sua ",
-      "title2": "Conta PrimeX Capital, ",
-      "title3": "Sempre ao Seu Alcance",
-      "description": "Fique conectado com sua jornada de negociação. Gerencie sua conta e monitore atividades — a qualquer hora, em qualquer lugar com o aplicativo PrimeX Capital.",
+      "title2": "conta ",
+      "title3": "sempre com você",
+      "description": "Fique conectado à sua jornada de trading. Gerencie sua conta e acompanhe suas operações a qualquer hora e lugar com o app PrimeX.",
       "google_play-btn_part1": "Obtenha no",
       "google_play-btn_part2": "Google Play",
       "app_store_btn_part1": "Baixe na",
@@ -3299,7 +3299,7 @@
   "newBonusPage": {
     "metaData": {
       "title": "Bônus de Depósito de 20% | PrimeX Capital",
-      "description": "Libere seu potencial de trading com o Bônus de Depósito de 20% da PrimeX Capital! Opere forex, metais, índices e ações com uma corretora global de confiança."
+      "description": "Libere seu potencial de trading com o Bônus de Depósito de 20% da PrimeX Capital! Opere CFDs de FX, metais, índices e ações com uma corretora global de confiança."
     },
     "bonusHero": {
       "hero_title": "BÔNUS DE DEPÓSITO DE 20% DA PRIMEX",
@@ -3496,7 +3496,7 @@
   "ecnBroker": {
     "metaData": {
       "title": "A Melhor Corretora ECN",
-      "description": "Opere com a melhor corretora Forex ECN. Desfrute de acesso direto ao mercado, spreads baixos a partir de 0.0 pips e execução rápida para uma experiência de mercado superior."
+      "description": "Opere com a melhor corretora CFDs de FX ECN. Desfrute de acesso direto ao mercado, spreads baixos a partir de 0.0 pips e execução rápida para uma experiência de mercado superior."
     },
     "hero": {
       "hero_title": "Comece sua jornada com a corretora mais confiável",
@@ -3574,8 +3574,8 @@
   },
   "tutorials": {
     "metaData": {
-      "title": "Forex in Three Steps Course",
-      "description": "Go from beginner to professional with our step-by-step trading course. Master the successful trader's mindset, navigate the world of Forex, use trading platforms with confidence, and apply the core principles of technical and fundamental analysis to succeed in the markets."
+      "title": "CFDs de FX in Three Steps Course",
+      "description": "Go from beginner to professional with our step-by-step trading course. Master the successful trader's mindset, navigate the world of CFDs de FX, use trading platforms with confidence, and apply the core principles of technical and fundamental analysis to succeed in the markets."
     },
     "hero": {
       "title_1": "Learn from Experts",
@@ -3584,7 +3584,7 @@
       "description": "PrimeX Capital brings you professional video courses designed to make trading clearer and smarter. Discover strategies, master the tools, and gain real insights from the markets."
     },
     "tradingTutorials": {
-      "title_1": " Learn forex ",
+      "title_1": " Learn CFDs de FX ",
       "title_2": "in 3 steps",
       "description": "Access an all-in-one learning journey that guides you from beginner to pro, with strategies, tools, and real market examples designed to make your trading more effective — all in one place."
     }
@@ -3787,12 +3787,12 @@
       "card_title_part1": "Visão ",
       "card_title_part2": "Fundo de Investimento PrimeX",
       "card_description": "O Fundo de Investimento PrimeX é baseado na diversificação de ativos e na gestão de risco em paralelo ao crescimento do capital, com o objetivo de construir valor sustentável e alcançar um crescimento equilibrado no longo prazo.",
-      "footer_text": "O plano é executado em etapas de acordo com o tamanho do capital do fundo. A estratégia começa no mercado forex e, em seguida, se expande gradualmente para outros ativos, o setor imobiliário e startups, seguindo critérios claros e um crescimento estruturado e bem planejado.",
+      "footer_text": "O plano é executado em etapas de acordo com o tamanho do capital do fundo. A estratégia começa no mercado CFDs de FX e, em seguida, se expande gradualmente para outros ativos, o setor imobiliário e startups, seguindo critérios claros e um crescimento estruturado e bem planejado.",
       "stages": {
         "title1": "Menos de um milhão de dólares",
-        "description1": "Foco total no trading forex para gerenciar a liquidez e construir capital.",
+        "description1": "Foco total no trading CFDs de FX para gerenciar a liquidez e construir capital.",
         "title2": "Ao atingir um milhão de dólares",
-        "description2": "Inicia-se a expansão para investimentos em ativos como ouro, prata e criptomoedas.",
+        "description2": "A expansão começa com investimentos em ativos como ouro e prata.",
         "title3": "Ao atingir 3 milhões de dólares",
         "description3": "O investimento imobiliário é incorporado como parte da estratégia de diversificação de ativos de longo prazo.",
         "title4": "Ao atingir 10 milhões de dólares",
@@ -3866,7 +3866,7 @@
       "home_feature_6_description": "Negocie com confiança, sabendo que seus fundos estão protegidos por regulamentações fortes.",
       "home_feature_7_title1": "Portfólio de",
       "home_feature_7_title2": "Multi-Ativos",
-      "home_feature_7_description": "Negocie uma ampla gama de instrumentos, incluindo forex, metais, índices e ações.",
+      "home_feature_7_description": "Negocie uma ampla gama de instrumentos, incluindo CFDs de FX, metais, índices e ações.",
       "home_feature_8_title1": "Depósito/Saque",
       "home_feature_8_title2": "Fácil",
       "home_feature_8_description": "Processos rápidos e sem complicações de depósito e saque para investidores."

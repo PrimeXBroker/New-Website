@@ -15,7 +15,7 @@
     "deposit": "20% Bonus",
     "login": "Login",
     "register": "Register",
-    "forex": "Forex",
+    "forex": "FX CFDs",
     "stocks": "Stocks",
     "commodities": "Commodities",
     "crypto": "Crypto",
@@ -59,8 +59,8 @@
   },
   "home": {
     "metaData": {
-      "title": "Forex & CFDs Broker | FX Trading Platform | PrimeX Capital",
-      "description": "Trade forex, metals, shares & commodities online with PrimeX Capital – a global broker offering secure platforms, advanced tools, and expert support."
+      "title": "CFDs & FX Trading Broker | PrimeX Capital",
+      "description": "Trade FX CFDs, metals, shares & commodities online with PrimeX Capital – a global broker offering secure platforms, advanced tools, and expert support."
     },
     "hero": {
       "subtitle1": "Licensed in UAE by ",
@@ -109,7 +109,7 @@
       },
       "promotion4": {
         "title": "PrimeX Spreads",
-        "desc": "Trade Forex and Metals with the Best Spreads Ever"
+        "desc": "Trade FX CFDs and Metals with the Best Spreads Ever"
       },
       "btnTxt": "Learn More"
     },
@@ -118,7 +118,7 @@
       "title2": "Diverse",
       "title3": "Global",
       "title4": "Markets",
-      "desc": "Discover trading opportunities with CFDs on commodities like Oil, Gold, and Natural Gas. Explore CFDs in Forex, indices such as S&P 500, the Dow, Nasdaq, and seize exposure to equity markets with CFDs on shares in companies like Amazon and Tesla."
+      "desc": "Discover trading opportunities with CFDs on commodities like Oil, Gold, and Natural Gas. Explore CFDs in FX CFDs, indices such as S&P 500, the Dow, Nasdaq, and seize exposure to equity markets with CFDs on shares in companies like Amazon and Tesla."
     },
     "accountTypes": {
       "title1": "Choose Your ",
@@ -189,7 +189,7 @@
       "academy_card_1_title_1": "Free Webinars",
       "academy_card_1_desc_1": "Join live sessions with industry experts for valuable insights and professional guidance. Stay ahead with the latest trends, strategies, and tools.",
       "academy_card_2_title_1": "Daily Market Updates",
-      "academy_card_2_desc_1": "Stay ahead with daily market news and expert analysis on Forex, Commodities, Economies, and Stocks. Get the insights you need for informed trading decisions.",
+      "academy_card_2_desc_1": "Stay ahead with daily market news and expert analysis on FX CFDs, Commodities, Economies, and Stocks. Get the insights you need for informed trading decisions.",
       "academy_card_3_title_1": "Expert Market Analysis",
       "academy_card_3_desc_1": "Keep Yourself Updated with the Latest Insights and Emerging Trends in the Industry to Make Informed and Strategic Decisions for Continued Success."
     },
@@ -201,12 +201,12 @@
       "award1_title1": "Broker",
       "award1_desc": "Oman Smart Vision Summit",
       "award2_badge": "Best",
-      "award2_title1": "Forex Broker",
+      "award2_title1": "FX CFDs Broker",
       "award2_title2": "in South Africa",
       "award2_desc": "Traders Fair & Award 2024",
       "award3_badge": "Best Global",
       "award3_title1": "Broker 2024",
-      "award3_desc": "Forex Expo Dubai",
+      "award3_desc": "FX CFDs Expo Dubai",
       "award4_badge": "Top 100 Trusted",
       "award4_title1": "Financial",
       "award4_title2": "Institutions 2024",
@@ -220,17 +220,17 @@
       "award7_badge": "Best",
       "award7_title1": "Copy Program",
       "award7_desc": "World Business Outlook",
-      "award8_badge": "Best Forex",
+      "award8_badge": "Best FX CFDs",
       "award8_title1": "ECN Broker",
-      "award8_desc": "Forex Expo Dubai",
+      "award8_desc": "FX CFDs Expo Dubai",
       "award9_badge": "Most Reliable",
-      "award9_title1": "Forex Broker",
+      "award9_title1": "FX CFDs Broker",
       "award9_desc": "Global Business & Finance Magazine",
       "award10_badge": "Most Trusted",
       "award10_title1": "ECN Broker",
       "award10_desc": "International Business Magazine",
       "award11_badge": "Best Copy Trading",
-      "award11_title1": "Forex Broker",
+      "award11_title1": "FX CFDs Broker",
       "award11_desc": "Egypt Expo",
       "award12_badge": "Top 100 Trusted",
       "award12_title1": "Brokerages",
@@ -309,7 +309,7 @@
   "metaTrader5": {
     "metaData": {
       "title": "Trade Smarter with the MT5 Platform | PrimeX Capital",
-      "description": "Discover the power of the MT5 platform with PrimeX Capital. Trade forex, commodities & CFDs with advanced tools, real-time data & lightning-fast execution."
+      "description": "Discover the power of the MT5 platform with PrimeX Capital. Trade FX CFDs, commodities & CFDs with advanced tools, real-time data & lightning-fast execution."
     },
     "banner": {
       "title1": "MetaTrader 5",
@@ -323,7 +323,7 @@
       "feature1_main_title1": "Multi Asset ",
       "feature1_main_title2": "Platform",
       "feature1_title1": "Versatility",
-      "feature1_desc1": "MT5 supports trading across various asset classes, including forex, stocks, commodities, futures, and cryptocurrencies.",
+      "feature1_desc1": " MT5 supports trading across various asset classes, including FX CFDs, stocks, commodities and futures.",
       "feature1_title2": "Integrated Tools",
       "feature1_desc2": "Combines all the necessary trading tools in one platform, making it easier for traders to manage different asset classes.",
       "feature2_main_title1": "Automated ",
@@ -387,10 +387,10 @@
       "step4_title2": "Trading"
     },
     "joinPrimex": {
-      "title1": "Join PrimeX and ",
+      "title1": "Join PrimeX Capital and ",
       "title2": "trade with MT5 ",
       "title3": "Today!",
-      "description": "Experience the future of trading with MetaTrader 5 at PrimeX. Whether you're a beginner or a seasoned trader, MT5 offers the tools and features you need to succeed in the financial markets. Join us today and elevate your trading experience.",
+      "description": "Experience the future of trading with MetaTrader 5 at PrimeX Capital. Whether you're a beginner or a seasoned trader, MT5 offers the tools and features you need to succeed in the financial markets. Join us today and elevate your trading experience.",
       "download_window_btn_part1": "Get it from",
       "download_window_btn_part2": "Microsoft",
       "google_play-btn_part1": "Get it on",
@@ -528,7 +528,7 @@
     "hero": {
       "title1": "We Are, Where ",
       "title2": "Excellence Is Recognized!",
-      "description": "Explore our award-winning achievements that set us apart as a leading forex brokerage house"
+      "description": "Explore our award-winning achievements that set us apart as a leading FX CFDs brokerage house"
     },
     "tabs": {
       "award_year_1": "2024",
@@ -538,20 +538,20 @@
       "award_year_5": "2020",
       "award_1_title": "Best Copy Trading Program",
       "award_1_location": "UAE 2023",
-      "award_2_title": "Best Copy Trading Forex Broker",
+      "award_2_title": "Best Copy Trading FX CFDs Broker",
       "award_2_location": "Africa 2023",
       "award_3_title": "The Most Trusted ECN Broker",
       "award_3_location": "UAE 2023",
-      "award_4_title": "Most Reliable Forex Broker",
+      "award_4_title": "Most Reliable FX CFDs Broker",
       "award_4_location": "Middle East 2023",
       "award_5_title": "Best ECN Broker",
       "award_5_location": "India Financial Expo 2023",
-      "award_6_title": "Best Forex ECN Broker",
+      "award_6_title": "Best FX CFDs ECN Broker",
       "award_6_location": "Expo Dubai 2023",
       "award_8_title": "Best Retail FX Broker",
       "award_8_location": "PROFX Awards Dubai 2024",
       "award_9_title": "Best Global Broker",
-      "award_9_location": "Forex Expo Dubai 2024",
+      "award_9_location": "FX CFDs Expo Dubai 2024",
       "award_10_title": "Top 100 Trusted Financial Institutions",
       "award_10_location": "MEFM Awards Dubai 2024"
     }
@@ -682,7 +682,7 @@
     "instruments": {
       "title": "Access",
       "title_2": "330+ Instruments",
-      "instruments_0_h": "Forex",
+      "instruments_0_h": "FX CFDs",
       "instruments_1_h": "Metals",
       "instruments_2_h": "Indices",
       "instruments_3_h": "Commodities",
@@ -875,7 +875,7 @@
       "heading_3": "Restricted Regions :",
       "para_3": "We don't provide services for citizens/residents of the North Korea, United States, Canada, Cuba, India, China, Pakistan, Hong Kong SAR China, Thailand, Vietnam, Bangladesh, Philippines, South Korea, Japan, Indonesia, Malaysia, Myanmar (Burma), Nepal, Russia. The services of PrimeX Capital LTD are not intended for distribution to, or use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.",
       "heading_4": "Risk Warning :",
-      "para_4": "Trading Forex and Leveraged Financial Instruments involves significant risk and can result in the loss of your invested capital. You should not invest more than you can afford to lose and should ensure that you fully understand the risks involved.",
+      "para_4": "Trading FX CFDs and Leveraged Financial Instruments involves significant risk and can result in the loss of your invested capital. You should not invest more than you can afford to lose and should ensure that you fully understand the risks involved.",
       "para_5": "Trading CFDs and FX Options entails risk and could result in the loss of your capital",
       "heading_6": "PrimeX Broker (Pty) Ltd",
       "para_6": "with registration number 2021/590477/07 and registration address at SUITE NO 8 FIRST FLOOR, KATHERINE AND WEST BUILDING, 114 WEST STREET, SANDTON, GAUTENG, 2196 South Africa is regulated by the Financial Sector Conduct Authority with license number FSP 51864.",
@@ -1234,7 +1234,7 @@
       "main_title4": "Guaranteed",
       "main_title5": "as they",
       "title1": "Discover",
-      "description1": "Discover over 330 instruments across various markets, including 100 Forex options. Access the largest crypto collection in MENA, and trade CFDs with leverage for more opportunities.",
+      "description1": "Discover over 330 instruments across various markets, including 100 FX CFDs. Access and trade CFDs with leverage for more opportunities.",
       "title2": "Benefit",
       "description2": "Benefit from of our Academy with educational blogs, market news, and featured articles. Join interactive webinars and stay informed with daily technical analysis.",
       "title3": "Experience",
@@ -1739,7 +1739,7 @@
       "title2": "Free Webinars",
       "no_webinars": "No upcoming webinars available at this time. Please check back later.",
       "webinar_title1": "Zyad Atta",
-      "Webinar1_by": "Forex Analyst",
+      "Webinar1_by": "FX CFDs Analyst",
       "webinar_title2": "Aniket Bhoir",
       "Webinar2_by": "Market Analyst",
       "webinar_title3": "Due webinar"
@@ -1819,7 +1819,7 @@
       "expert_1_name": "Rose Shawish",
       "expert_1_position": "Fundamental Analyst",
       "expert_2_name": "Zyad Atta",
-      "expert_2_position": "Forex Analyst",
+      "expert_2_position": "FX CFDs Analyst",
       "book_session_btn": "Book a Session"
     },
     "joinAcademy": {
@@ -1940,42 +1940,42 @@
       "title4": "Exists!",
       "img_title1": "Our Excellence",
       "img_title2": "Is Globally Recognized",
-      "description": "Discover our award-winning achievements that set us apart as a leading Forex brokerage."
+      "description": "Discover our award-winning achievements that set us apart as a leading FX CFDs brokerage."
     },
     "awardCards": {
       "title1": "Top 100 Trusted Brokers",
       "subtitle1": "Dubai Financial Markets Awards",
       "description1": "We were recognized as one of the Top 100 Trusted Brokers at the Middle East Financial Markets Awards 2023 for providing outstanding financial services.",
-      "title2": "Best Copy Trading Forex Broker",
+      "title2": "Best Copy Trading FX CFDs Broker",
       "subtitle2": "Egypt Expo",
-      "description2": "We won the Best Copy Trading Forex Broker in Africa for 2023 for our excellence in copy trading services and customer support.",
+      "description2": "We won the Best Copy Trading FX CFDs Broker in Africa for 2023 for our excellence in copy trading services and customer support.",
       "title3": "Most Trusted ECN Broker",
       "subtitle3": "International Business Magazine",
       "description3": "We achieved tremendous success as the Most Trusted ECN Broker in the UAE for 2023 due to our commitment to transparency and fair trading practices.",
-      "title4": "Most Trusted Forex Broker",
+      "title4": "Most Trusted FX CFDs Broker",
       "subtitle4": "Global Business & Finance Magazine",
-      "description4": "We were celebrated as the Most Trusted Forex Broker in the Middle East for 2023 for our significant efforts to earn client trust by providing high-quality trading services.",
-      "title5": "Best ECN Forex Broker",
-      "subtitle5": "Dubai Forex Expo",
-      "description5": "We won the Best ECN Forex Broker award at the Dubai Expo 2023 for providing effective, advanced, and customizable trading solutions.",
+      "description4": "We were celebrated as the Most Trusted FX CFDs Broker in the Middle East for 2023 for our significant efforts to earn client trust by providing high-quality trading services.",
+      "title5": "Best ECN FX CFDs Broker",
+      "subtitle5": "Dubai FX CFDs Expo",
+      "description5": "We won the Best ECN FX CFDs Broker award at the Dubai Expo 2023 for providing effective, advanced, and customizable trading solutions.",
       "title6": "Best Copy Trading Program",
       "subtitle6": "World Business Outlook",
       "description6": "We won the Best Copy Trading Program in the UAE for 2023, highlighting our progress in premium copy trading strategies.",
       "title7": "Best ECN Broker",
       "subtitle7": "Money Expo Mumbai",
       "description7": "We stood out as the Best ECN Broker at the India Money Expo 2023 thanks to our exceptional trading infrastructure and commitment to client success.",
-      "title8": "Best Retail Forex Broker",
+      "title8": "Best Retail FX CFDs Broker",
       "subtitle8": "MEFM Awards Dubai",
-      "description8": "We were celebrated as the Best Retail Forex Broker for outstanding financial performance at the PROFX Awards Dubai 2024.",
+      "description8": "We were celebrated as the Best Retail FX CFDs Broker for outstanding financial performance at the PROFX Awards Dubai 2024.",
       "title9": "Top 100 Trusted Financial Institutions",
       "subtitle9": "Dubai Financial Markets Awards",
       "description9": "We were recognized as one of the Top 100 Trusted Financial Institutions at the Middle East Financial Markets Awards 2024 for providing outstanding financial services.",
       "title10": "Best Global Broker 2024",
-      "subtitle10": "Dubai Forex Expo",
-      "description10": "We were honored with the Best Global Broker 2024 award at the Dubai Forex Expo for our continuous commitment to innovation in Forex trading.",
-      "title11": "Best Forex Broker in South Africa",
+      "subtitle10": "Dubai FX CFDs Expo",
+      "description10": "We were honored with the Best Global Broker 2024 award at the Dubai FX CFDs Expo for our continuous commitment to innovation in FX CFDs trading.",
+      "title11": "Best FX CFDs Broker in South Africa",
       "subtitle11": "Traders Fair & Awards 2024",
-      "description11": "We are proud to announce that PrimeX Capital has been awarded Best Forex Broker in South Africa at the Traders Fair & Awards 2024, based on the 'Traders' Choice' vote.",
+      "description11": "We are proud to announce that PrimeX Capital has been awarded Best FX CFDs Broker in South Africa at the Traders Fair & Awards 2024, based on the 'Traders' Choice' vote.",
       "title12": "Most Innovative Broker",
       "subtitle12": "Smart Vision Summit Oman 2025",
       "description12": "We are honored to be chosen as the Most Innovative Broker for outstanding financial performance at the SVS Oman Summit 2025!",
@@ -2014,7 +2014,7 @@
     "sign_up_btn": "Sign Up Now",
     "open_account_btn": "Open Live Account",
     "features": {
-      "feature_1_title": "Diverse Assets Options",
+      "feature_1_title": "Diverse Asset Options",
       "feature_1_desc": "Trade a wide range of global stocks.",
       "feature_2_title": "Tight Spreads",
       "feature_2_desc": "Experience low spreads and high volumes.",
@@ -2036,22 +2036,22 @@
   },
   "forexProduct": {
     "metaData": {
-      "title": "Trade Forex Online | PrimeX Capital",
-      "description": "Trade forex online with PrimeX Capital for a seamless and efficient trading experience. Access advanced tools and strategies to start trading confidently today!"
+      "title": "Trade FX CFDs Online | PrimeX Capital",
+      "description": "Trade FX CFDs online with PrimeX Capital for a seamless and efficient trading experience. Access advanced tools and strategies to start trading confidently today!"
     },
     "hero": {
-      "title1": "Confidently",
-      "title2": "Trade World’s",
-      "title3": "Largest ",
-      "title4": "Forex",
-      "title5": "Market"
+      "title1": "Trade World’s",
+      "title2": "Largest ",
+      "title3": "FX CFDs",
+      "title4": "Market",
+      "title5": "Confidently"
     },
     "getStarted": {
       "main_title1": "How to ",
       "main_title2": "Get Started",
       "step1_count": "1",
       "step1_title1": "Open a",
-      "step1_title2": "PrimeX Account",
+      "step1_title2": "PrimeX Capital Account",
       "step2_count": "2",
       "step2_title1": "Deposit",
       "step2_title2": "Funds",
@@ -2064,27 +2064,27 @@
     },
     "openLiveAccount": {
       "title_part1": "Get started with ",
-      "title_part2": "Forex Trading ",
+      "title_part2": "FX CFDs Trading ",
       "title_part3": "today at ",
       "title_part4": "PrimeX!",
-      "description": "Open Live Account and explore our range of Forex options"
+      "description": "Open Live Account and explore our range of FX CFDs options"
     },
     "faq": {
       "title": "Frequently Asked ",
       "title1": "Questions",
-      "question_1": "What Does \"Pip\" Mean in Forex Trading?",
-      "answer_1": "A pip, short for \"price interest point\" or \"percentage in point,\" is the smallest price movement possible in the exchange rate of a currency pair according to forex market standards.",
-      "question_2": "Can Only Professional Traders Participate in Forex Trading?",
-      "answer_2": "No, forex trading is not limited to professional traders. Anyone can participate, including beginners, who can start with a demo account to practice and gain experience before trading with real money.",
-      "question_3": "What is a 'Stop Loss' in Forex Trading?",
-      "answer_3": "A stop loss in forex trading is a tool recommended by brokers to help traders limit potential losses by automatically closing a position at a predetermined price.",
-      "question_4": "What is Hedging in Forex Trading?",
-      "answer_4": "Hedging in forex trading involves companies locking in a specific exchange rate for future transactions to mitigate the risk of currency fluctuations when dealing with foreign countries."
+      "question_1": "What Does \"Pip\" Mean in FX CFDs Trading?",
+      "answer_1": "A pip, short for \"price interest point\" or \"percentage in point,\" is the smallest price movement possible in the exchange rate of a currency pair according to FX CFDs market standards.",
+      "question_2": "Can Only Professional Traders Participate in FX CFDs Trading?",
+      "answer_2": "No, FX CFDs trading is not limited to professional traders. Anyone can participate, including beginners, who can start with a demo account to practice and gain experience before trading with real money.",
+      "question_3": "What is a 'Stop Loss' in FX CFDs Trading?",
+      "answer_3": "A stop loss in FX CFDs trading is a tool recommended by brokers to help traders limit potential losses by automatically closing a position at a predetermined price.",
+      "question_4": "What is Hedging in FX CFDs Trading?",
+      "answer_4": "Hedging in FX CFDs trading involves companies locking in a specific exchange rate for future transactions to mitigate the risk of currency fluctuations when dealing with foreign countries."
     },
     "whyTrade": {
       "title_part1": "Why Trade",
-      "title_part2": "Forex?",
-      "description": "Forex trading offers diverse opportunities. Whether a day trader, swing trader, or long-term investor, you’ll find ample opportunities to trade currency pairs. Analyze market trends, economic indicators, and geopolitical events to make informed trading decisions."
+      "title_part2": "FX CFDs?",
+      "description": "FX CFDs trading offers diverse opportunities. Whether a day trader, swing trader, or long-term investor, you’ll find ample opportunities to trade currency pairs. Analyze market trends, economic indicators, and geopolitical events to make informed trading decisions."
     }
   },
   "metalsProduct": {
@@ -2104,7 +2104,7 @@
       "main_title2": "Get Started",
       "step1_count": "1",
       "step1_title1": "Open a",
-      "step1_title2": "PrimeX Account",
+      "step1_title2": "PrimeX Capital Account",
       "step2_count": "2",
       "step2_title1": "Deposit",
       "step2_title2": "Funds",
@@ -2159,7 +2159,7 @@
       "main_title2": "Get Started",
       "step1_count": "1",
       "step1_title1": "Open a",
-      "step1_title2": "PrimeX Account",
+      "step1_title2": "PrimeX Capital Account",
       "step2_count": "2",
       "step2_title1": "Deposit",
       "step2_title2": "Funds",
@@ -2212,7 +2212,7 @@
       "main_title2": "Get Started",
       "step1_count": "1",
       "step1_title1": "Open a",
-      "step1_title2": "PrimeX Account",
+      "step1_title2": "PrimeX Capital Account",
       "step2_count": "2",
       "step2_title1": "Deposit",
       "step2_title2": "Funds",
@@ -2267,7 +2267,7 @@
       "main_title2": "Get Started",
       "step1_count": "1",
       "step1_title1": "Open a",
-      "step1_title2": "PrimeX Account",
+      "step1_title2": "PrimeX Capital Account",
       "step2_count": "2",
       "step2_title1": "Deposit",
       "step2_title2": "Funds",
@@ -2309,8 +2309,8 @@
       "description": "Trade commodities online with PrimeX Capital, featuring markets like gold, oil & natural gas. Enjoy competitive spreads & leverage options. Click to trade now!"
     },
     "hero": {
-      "title1": "Confidently",
-      "title2": "Invest in",
+      "title1": "Invest With",
+      "title2": "Confidence in",
       "title4": "Commodities",
       "title5": "Worldwide"
     },
@@ -2319,7 +2319,7 @@
       "main_title2": "Get Started",
       "step1_count": "1",
       "step1_title1": "Open a",
-      "step1_title2": "PrimeX Account",
+      "step1_title2": "PrimeX Capital Account",
       "step2_count": "2",
       "step2_title1": "Deposit",
       "step2_title2": "Funds",
@@ -2726,7 +2726,7 @@
       "description6": "Trade confidently with robust regulations that ensure the highest level of client fund protection.",
       "title7": "Multi-Asset",
       "title7_1": "Portfolio",
-      "description7": "Access a wide range of assets, including forex, metals, indices, and stocks.",
+      "description7": "Access a wide range of assets, including FX CFDs, metals, indices, and stocks.",
       "title8": "Instant",
       "title8_1": "Withdrawals",
       "description8": "Enjoy a quick and easy withdrawal process designed to benefit investors."
@@ -2896,7 +2896,7 @@
     "explore": {
       "title1": "Explore",
       "title2": "Trading Opportunity",
-      "description": "Immerse yourself in a diverse range of assets including Forex, Indices, Commodities, Cryptocurrencies, and Stocks..",
+      "description": "Immerse yourself in a diverse range of assets including FX CFDs, Indices, Commodities, and Stocks.",
       "buttonText": "Open Account"
     }
   },
@@ -3007,12 +3007,12 @@
   },
   "spreadPage": {
     "metaData": {
-      "title": "Best Forex and Metals Spreads | PrimeX Capital",
-      "description": "Trade Forex & metals with ultra-competitive spreads starting from 0.8 pips on the Standard account. Open an account today with PrimeX Capital."
+      "title": "Best FX CFDs and Metals Spreads | PrimeX Capital",
+      "description": "Trade FX CFDs & metals with ultra-competitive spreads starting from 0.8 pips on the Standard account. Open an account today with PrimeX Capital."
     },
     "hero": {
-      "title": "Trade Forex and Metals with the Best Spreads Ever!",
-      "description1": "With PrimeX Capital, you get the best spreads on Forex and metals, along with a variety of financial instruments, starting from just 0.8 pips on the Standard account. With no hidden commissions.",
+      "title": "Trade FX CFDs and Metals with the Best Spreads Ever!",
+      "description1": "With PrimeX Capital, you get the best spreads on FX CFDs and metals, along with a variety of financial instruments, starting from just 0.8 pips on the Standard account. With no hidden commissions.",
       "description2": "Our ultra-competitive spreads dramatically reduce your trading costs, preserving more of your capital.",
       "btnTxt": "Open Account"
     },
@@ -3049,7 +3049,7 @@
   "bonusPage": {
     "metaData": {
       "title": "50% Deposit Bonus | PrimeX Capital",
-      "description": "Unlock your trading potential with PrimeX Capital's 50% Deposit Bonus! Trade forex, metals, indices & stocks with a trusted global broker."
+      "description": "Unlock your trading potential with PrimeX Capital's 50% Deposit Bonus! Trade FX CFDs, metals, indices & stocks with a trusted global broker."
     },
     "bonusHero": {
       "hero_title": "PrimeX Capital 50% Deposit Bonus",
@@ -3110,7 +3110,7 @@
       "home_feature_6_description": "Trade with confidence, knowing your funds are protected by strong regulations.",
       "home_feature_7_title1": "Multi-Asset",
       "home_feature_7_title2": "Portfolio",
-      "home_feature_7_description": "Trade a wide range of instruments, including forex, metals, indices, and stocks.",
+      "home_feature_7_description": "Trade a wide range of instruments, including FX CFDs, metals, indices, and stocks.",
       "home_feature_8_title1": "Easy",
       "home_feature_8_title2": "Deposit/Withdrawal",
       "home_feature_8_description": "Quick and hassle-free deposit and withdrawal processes for investors."
@@ -3147,13 +3147,13 @@
   "primeXTradingApp": {
     "metaData": {
       "title": "Manage Your Trading Portfolio | PrimeX App | PrimeX Capital",
-      "description": "Download the PrimeX Capital app to manage your trading account on the go. Trade forex, metals & CFDs with full control, real-time updates, and 24/7 support."
+      "description": "Download the PrimeX Capital app to manage your trading account on the go. Trade FX CFDs, metals & CFDs with full control, real-time updates, and 24/7 support."
     },
     "banner": {
-      "title1": "The PrimeX ",
-      "title2": "Capital App",
+      "title1": "PrimeX ",
+      "title2": "App",
       "title3": "Always Connected",
-      "description": "Manage your PrimeX Capital account anytime, anywhere — All through a secure, intuitive app.",
+      "description": "Manage your account anytime, anywhere. All through a secure, intuitive app.",
       "google_play-btn_part1": "Get it on",
       "google_play-btn_part2": "Google Play",
       "app_store_btn_part1": "Download on the",
@@ -3182,9 +3182,9 @@
     "downloadAppToady": {
       "heading": "Download the App Today",
       "title1": "Your ",
-      "title2": "PrimeX Capital Account, ",
-      "title3": "Always Within Reach",
-      "description": "Stay connected to your trading journey. Manage your account and monitor activity — anytime, anywhere with the PrimeX Capital app.",
+      "title2": "Account ",
+      "title3": "Always In Reach",
+      "description": "Stay connected to your trading journey. Manage your account and monitor activity anytime, anywhere with the PrimeX app.",
       "google_play-btn_part1": "Get it on",
       "google_play-btn_part2": "Google Play",
       "app_store_btn_part1": "Download on the",
@@ -3299,7 +3299,7 @@
   "newBonusPage": {
     "metaData": {
       "title": "20% Deposit Bonus | PrimeX Capital",
-      "description": "Unlock your trading potential with PrimeX Capital's 20% Deposit Bonus! Trade forex, metals, indices & stocks with a trusted global broker."
+      "description": "Unlock your trading potential with PrimeX Capital's 20% Deposit Bonus! Trade FX CFDs, metals, indices & stocks with a trusted global broker."
     },
     "bonusHero": {
       "hero_title": "PRIMEX 20% DEPOSIT BONUS",
@@ -3349,7 +3349,7 @@
     "bonusPrizeBreakdown": {
       "title": "How it works",
       "step1": "Register",
-      "step1_desc": "Sign up and verify your PrimeX account.",
+      "step1_desc": "Sign up and verify your PrimeX Capital account.",
       "step2": "Open Account",
       "step2_desc": "Open your Trading Account.",
       "step3": "Deposit",
@@ -3495,7 +3495,7 @@
   },
   "ecnBroker": {
     "metaData": {
-      "title": "Forex Broker ECN",
+      "title": "FX CFDs Broker ECN",
       "description": "Start trading with PrimeX Capital, a trusted global ECN broker. Enjoy fast execution, low spreads, and full transparency with a minimum deposit of $10. Open your account now!"
     },
     "hero": {
@@ -3574,8 +3574,8 @@
   },
   "tutorials": {
     "metaData": {
-      "title": "Forex in Three Steps Course",
-      "description": "Go from beginner to professional with our step-by-step trading course. Master the successful trader's mindset, navigate the world of Forex, use trading platforms with confidence, and apply the core principles of technical and fundamental analysis to succeed in the markets."
+      "title": "FX CFDs in Three Steps Course",
+      "description": "Go from beginner to professional with our step-by-step trading course. Master the successful trader's mindset, navigate the world of FX CFDs, use trading platforms with confidence, and apply the core principles of technical and fundamental analysis to succeed in the markets."
     },
     "hero": {
       "title_1": "Learn from Experts",
@@ -3584,7 +3584,7 @@
       "description": "PrimeX Capital brings you professional video courses designed to make trading clearer and smarter. Discover strategies, master the tools, and gain real insights from the markets."
     },
     "tradingTutorials": {
-      "title_1": " Learn forex ",
+      "title_1": " Learn FX CFDs ",
       "title_2": "in 3 steps",
       "description": "Access an all-in-one learning journey that guides you from beginner to pro, with strategies, tools, and real market examples designed to make your trading more effective — all in one place."
     }
@@ -3787,12 +3787,12 @@
       "card_title_part1": "PrimeX ",
       "card_title_part2": "Investment Fund Vision",
       "card_description": "The PrimeX Investment Fund is built on asset diversification and risk management alongside capital growth, with the goal of creating sustainable value and achieving balanced long-term growth.",
-      "footer_text": "The plan is executed in stages linked to the fund’s capital size. The strategy starts with Forex, then gradually expands into assets, real estate, and startups based on clear criteria and structured growth.",
+      "footer_text": "The plan is executed in stages linked to the fund’s capital size. The strategy starts with FX CFDs, then gradually expands into assets, real estate, and startups based on clear criteria and structured growth.",
       "stages": {
         "title1": "Less than $1 million",
-        "description1": "Full focus on Forex trading to manage liquidity and build capital.",
+        "description1": "Full focus on FX CFDs trading to manage liquidity and build capital.",
         "title2": "Upon reaching $1 million",
-        "description2": "Expansion begins into asset investments such as gold, silver, and cryptocurrencies.",
+        "description2": "Expansion begins into asset investments such as gold and silver.",
         "title3": "Upon reaching $3 million",
         "description3": "Real estate investment is introduced as part of the long-term asset diversification strategy.",
         "title4": "Upon reaching $10 million",
@@ -3866,7 +3866,7 @@
       "home_feature_6_description": "Trade with confidence, knowing your funds are protected by strong regulations.",
       "home_feature_7_title1": "Multi-Asset",
       "home_feature_7_title2": "Portfolio",
-      "home_feature_7_description": "Trade a wide range of instruments, including forex, metals, indices, and stocks.",
+      "home_feature_7_description": "Trade a wide range of instruments, including FX CFDs, metals, indices, and stocks.",
       "home_feature_8_title1": "Easy",
       "home_feature_8_title2": "Deposit/Withdrawal",
       "home_feature_8_description": "Quick and hassle-free deposit and withdrawal processes for investors."

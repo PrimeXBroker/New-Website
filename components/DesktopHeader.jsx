@@ -427,7 +427,7 @@ const DesktopHeader = ({ locale }) => {
                                 {t("stocks")}
                               </LocaleLink>
                             </li>
-                            <li>
+                            {/* <li>
                               <LocaleLink
                                 href="/crypto"
                                 onClick={() => {
@@ -438,7 +438,7 @@ const DesktopHeader = ({ locale }) => {
                               >
                                 {t("crypto")}
                               </LocaleLink>
-                            </li>
+                            </li> */}
                           </ul>
                         )}
                       </li>

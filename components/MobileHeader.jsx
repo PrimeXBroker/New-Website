@@ -919,7 +919,7 @@ const MobileHeader = ({ locale }) => {
                           {t("stocks")}
                         </LocaleLink>
                       </li>
-                      <li>
+                      {/* <li>
                         <LocaleLink
                           href="/crypto"
                           onClick={toggleDrawer}
@@ -927,7 +927,7 @@ const MobileHeader = ({ locale }) => {
                         >
                           {t("crypto")}
                         </LocaleLink>
-                      </li>
+                      </li> */}
                     </ul>
                   )}
                 </li>

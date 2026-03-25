@@ -59,7 +59,7 @@ export const tradingTabs = [
     ],
   },
   {
-    name: "Forex",
+    name: "FX CFDs",
     icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Forex.svg",
     iconActive:
       "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Forex-Active.svg",
@@ -108,56 +108,56 @@ export const tradingTabs = [
       },
     ],
   },
-  {
-    name: "Crypto",
-    icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Crypto.svg",
-    iconActive:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Crypto-Active.svg",
-    symbol: [
-      {
-        tradingSymbol: "PrimeX_REST_RA||BTCUSD||BTCUSD",
-        image:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/new-icons/BTCUSD+1.svg",
-        name: "BTCUSD",
-      },
-      {
-        tradingSymbol: "PrimeX_REST_RA||DOGUSD||DOGUSD",
-        image:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/DOGUSD.svg",
-        name: "DOGUSD",
-      },
-      {
-        tradingSymbol: "PrimeX_REST_RA||DOTUSD||DOTUSD",
-        image:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/DOTUSD.svg",
-        name: "DOTUSD",
-      },
-      {
-        tradingSymbol: "PrimeX_REST_RA||ETHUSD||ETHUSD",
-        image:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/ETHUSD.svg",
-        name: "ETHUSD",
-      },
-      {
-        tradingSymbol: "PrimeX_REST_RA||TRXUSD||TRXUSD",
-        image:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/TRXUSD.svg",
-        name: "TRXUSD",
-      },
-      {
-        tradingSymbol: "PrimeX_REST_RA||XLMUSD||XLMUSD",
-        image:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/XLMUSD.svg",
-        name: "XLMUSD",
-      },
-      {
-        tradingSymbol: "PrimeX_REST_RA||XRPUSD||XRPUSD",
-        image:
-          "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/XPRUSD.svg",
-        name: "XRPUSD",
-      },
-    ],
-  },
+  // {
+  //   name: "Crypto",
+  //   icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Crypto.svg",
+  //   iconActive:
+  //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Crypto-Active.svg",
+  //   symbol: [
+  //     {
+  //       tradingSymbol: "PrimeX_REST_RA||BTCUSD||BTCUSD",
+  //       image:
+  //         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/new-icons/BTCUSD+1.svg",
+  //       name: "BTCUSD",
+  //     },
+  //     {
+  //       tradingSymbol: "PrimeX_REST_RA||DOGUSD||DOGUSD",
+  //       image:
+  //         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/DOGUSD.svg",
+  //       name: "DOGUSD",
+  //     },
+  //     {
+  //       tradingSymbol: "PrimeX_REST_RA||DOTUSD||DOTUSD",
+  //       image:
+  //         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/DOTUSD.svg",
+  //       name: "DOTUSD",
+  //     },
+  //     {
+  //       tradingSymbol: "PrimeX_REST_RA||ETHUSD||ETHUSD",
+  //       image:
+  //         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/ETHUSD.svg",
+  //       name: "ETHUSD",
+  //     },
+  //     {
+  //       tradingSymbol: "PrimeX_REST_RA||TRXUSD||TRXUSD",
+  //       image:
+  //         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/TRXUSD.svg",
+  //       name: "TRXUSD",
+  //     },
+  //     {
+  //       tradingSymbol: "PrimeX_REST_RA||XLMUSD||XLMUSD",
+  //       image:
+  //         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/XLMUSD.svg",
+  //       name: "XLMUSD",
+  //     },
+  //     {
+  //       tradingSymbol: "PrimeX_REST_RA||XRPUSD||XRPUSD",
+  //       image:
+  //         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/XPRUSD.svg",
+  //       name: "XRPUSD",
+  //     },
+  //   ],
+  // },
   {
     name: "Metals",
     icon: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/trading-widget/Metals.svg",
