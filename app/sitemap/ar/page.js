@@ -21,7 +21,7 @@ export default function ArSitemapPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/ar/forex",
+      url: "https://primexcapital.com/ar/fx-cfds",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",

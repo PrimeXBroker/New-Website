@@ -369,7 +369,7 @@ const DesktopHeader = ({ locale }) => {
                           >
                             <li>
                               <LocaleLink
-                                href="/forex"
+                                href="/fx-cfds"
                                 onClick={() => {
                                   closeDropdown();
                                   setActiveSubDropdown(null);

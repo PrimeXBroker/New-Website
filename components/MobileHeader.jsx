@@ -876,7 +876,7 @@ const MobileHeader = ({ locale }) => {
                     <ul className="pl-4 mt-2">
                       <li>
                         <LocaleLink
-                          href="/forex"
+                          href="/fx-cfds"
                           onClick={toggleDrawer}
                           className="block text-tm dark:text-tm-dark text-base pt-[10px]"
                         >

@@ -21,7 +21,7 @@ export default function KuSitemapPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/ku/forex",
+      url: "https://primexcapital.com/ku/fx-cfds",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",

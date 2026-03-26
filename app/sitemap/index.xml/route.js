@@ -19,7 +19,7 @@ export async function GET() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/en/forex",
+      url: "https://primexcapital.com/en/fx-cfds",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",

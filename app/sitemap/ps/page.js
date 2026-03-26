@@ -21,7 +21,7 @@ export default function PsSitemapPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/ps/forex",
+      url: "https://primexcapital.com/ps/fx-cfds",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",

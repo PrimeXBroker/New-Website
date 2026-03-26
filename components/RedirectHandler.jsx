@@ -9,9 +9,9 @@ export default function RedirectHandler() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const currentPath = window.location.pathname;
-      if (currentPath.includes("/ar/undefined/ar/forex")) {
+      if (currentPath.includes("/ar/undefined/ar/fx-cfds")) {
         router.replace(
-          "https://primexcapital.com/en/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e"
+          "https://primexcapital.com/en/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e",
         );
       }
     }
