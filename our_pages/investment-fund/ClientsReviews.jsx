@@ -36,10 +36,10 @@ const ClientReviews = () => {
 
   useEffect(() => {
     const swiperPrevButton = document.querySelector(
-      ".promotions-swiper-button-prev"
+      ".promotions-swiper-button-prev",
     );
     const swiperNextButton = document.querySelector(
-      ".promotions-swiper-button-next"
+      ".promotions-swiper-button-next",
     );
 
     if (swiperPrevButton && swiperNextButton) {
@@ -56,7 +56,7 @@ const ClientReviews = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://primexbroker.com/api/rating?page=${page}&limit=${pagination.limit}&status=approved`
+        `http://localhost:4002/api/rating?page=${page}&limit=${pagination.limit}&status=approved`,
       );
 
       const data = await response.data;
