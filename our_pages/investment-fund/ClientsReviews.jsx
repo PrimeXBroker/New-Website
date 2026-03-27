@@ -56,7 +56,7 @@ const ClientReviews = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `http://localhost:4002/api/rating?page=${page}&limit=${pagination.limit}&status=approved`,
+        `https://primexbroker.com/api/rating?page=${page}&limit=${pagination.limit}&status=approved`,
       );
 
       const data = await response.data;
