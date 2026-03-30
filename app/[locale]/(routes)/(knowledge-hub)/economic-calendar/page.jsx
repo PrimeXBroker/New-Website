@@ -6,7 +6,7 @@ export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });
-  const url = `https://www.primexcapital.com/${locale}/economic-calender`;
+  const url = `https://www.primexcapital.com/${locale}/economic-calendar`;
 
   return {
     title: t("economicCalender.metaData.title"),
