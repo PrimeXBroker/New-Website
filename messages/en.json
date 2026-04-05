@@ -3798,6 +3798,22 @@
         "title4": "Upon reaching $10 million",
         "description4": "Entry into high-growth startup investments."
       }
+    },
+    "compoundingInvestment": {
+      "main_title1": "Compounding ",
+      "main_title2": "Investment",
+      "card1_title_part1": "Grow Your Profits ",
+      "card1_title_part2": "with Consistency and Control",
+      "card1_description1": "Compounding means reinvesting your profits instead of withdrawing them, allowing those profits to become part of your capital and work in future trades. This approach separates accounts that grow randomly from those that build steadily over time. When you keep profits in your account, you do more than increase the balance. You improve the account’s efficiency and its ability to generate stronger results using the same performance level, without increasing risk. With each trading cycle, your profits act as added capital that supports the next phase of growth.",
+      "card1_description2": "In contrast, frequent withdrawals limit this effect. Every withdrawal reduces your account’s ability to benefit from previous gains and pulls you back from your growth path. An account built on compounding continues to build on its past results, which is why the difference becomes clear over time even when performance percentages remain the same.",
+      "card2_title_part1": "How does compounding ",
+      "card2_title_part2": "grow your profits?",
+      "card2_description1": "If you start with $10.000 and make a 10% return, your balance becomes $11.000. In the next cycle, the same 10% return applies to $11.000, not $10.000. Over time, this process accelerates your account growth. The key driver is not higher risk, but the continuous reinvestment of profits.",
+      "card3_title": "Why is compounding an effective strategy?",
+      "feature1": "Does not require large trades.",
+      "feature2": "Avoid increasing your risk exposure.",
+      "feature3": "Relying on consistent, controlled returns.",
+      "feature4": "Reducing pressure from chasing fast profits."
     }
   },
   "newYearBonus": {

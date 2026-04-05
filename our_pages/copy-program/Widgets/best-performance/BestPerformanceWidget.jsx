@@ -22,7 +22,7 @@ const BestPerformanceWidget = () => {
       if (iframeRef.current) {
         window.iFrameResize(
           { heightCalculationMethod: "max", checkOrigin: false },
-          iframeRef.current
+          iframeRef.current,
         );
       }
     };
@@ -38,7 +38,7 @@ const BestPerformanceWidget = () => {
     if (isScriptLoaded && iframeRef.current) {
       window.iFrameResize(
         { heightCalculationMethod: "max", checkOrigin: false },
-        iframeRef.current
+        iframeRef.current,
       );
     }
   };
@@ -72,8 +72,8 @@ const BestPerformanceWidget = () => {
             }}
             src={
               theme === "dark"
-                ? `https://socialratings.primexcapital.com/widgets/ratings?widgetKey=CRM1&theme=dark&lang=${locale}`
-                : `https://socialratings.primexcapital.com/widgets/ratings?widgetKey=CRM1&theme=light&lang=${locale}`
+                ? `https://socialratings.primexcapital.com/widgets/ratings?widgetKey=social_platform_ratings&theme=dark&lang=${locale}`
+                : `https://socialratings.primexcapital.com/widgets/ratings?widgetKey=social_platform_ratings&theme=light&lang=${locale}`
             }
             scrolling="no"
             frameBorder="0"

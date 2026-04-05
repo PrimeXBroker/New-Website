@@ -3798,6 +3798,22 @@
         "title4": "Ao atingir 10 milhões de dólares",
         "description4": "Entrada em investimentos em startups com alto potencial de crescimento."
       }
+    },
+    "compoundingInvestment": {
+      "main_title1": "Investimento ",
+      "main_title2": "Composto",
+      "card1_title_part1": "Faça seus lucros crescerem ",
+      "card1_title_part2": "com consistência e controle",
+      "card1_description1": "O efeito composto consiste em reinvestir seus lucros em vez de sacá-los, permitindo que esses ganhos se tornem parte do seu capital e sejam utilizados nas próximas operações. Essa abordagem diferencia contas que crescem de forma aleatória daquelas que evoluem de forma consistente ao longo do tempo. Ao manter os lucros na conta, você não apenas aumenta o saldo, mas também melhora a eficiência e a capacidade de gerar resultados mais sólidos com o mesmo nível de desempenho, sem aumentar o risco. A cada ciclo de trading, os lucros passam a atuar como capital adicional.",
+      "card1_description2": "Por outro lado, retiradas frequentes limitam esse efeito. Cada saque reduz a capacidade da conta de aproveitar os ganhos anteriores e interrompe o processo de crescimento. Já uma conta baseada em juros compostos continua evoluindo sobre seus próprios resultados, o que torna a diferença evidente ao longo do tempo, mesmo com a mesma performance.",
+      "card2_title_part1": "Como o efeito composto ",
+      "card2_title_part2": "faz seus lucros crescerem?",
+      "card2_description1": "Se você começa com $10.000 e obtém um retorno de 10%, seu saldo passa a ser $11.000. No próximo ciclo, os mesmos 10% são aplicados sobre $11.000, não sobre $10.000. Com o tempo, esse processo acelera o crescimento da conta. O fator principal não é aumentar o risco, mas reinvestir os lucros de forma contínua.",
+      "card3_title": "Por que o efeito composto é uma estratégia eficaz?",
+      "feature1": "Não exige operações grandes.",
+      "feature2": "Evita aumentar a exposição ao risco.",
+      "feature3": "Baseia-se em retornos consistentes e controlados.",
+      "feature4": "Reduz a pressão de buscar lucros rápidos."
     }
   },
   "newYearBonus": {

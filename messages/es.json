@@ -3798,6 +3798,22 @@
         "title4": "Al alcanzar los 10 millones de dólares",
         "description4": "Ingreso en inversiones de startups con alto potencial de crecimiento."
       }
+    },
+    "compoundingInvestment": {
+      "main_title1": "Inversión ",
+      "main_title2": "Compuesta",
+      "card1_title_part1": "Haz crecer tus ganancias ",
+      "card1_title_part2": "con consistencia y control",
+      "card1_description1": "El interés compuesto consiste en reinvertir tus ganancias en lugar de retirarlas, permitiendo que se conviertan en parte de tu capital y trabajen en futuras operaciones. Este enfoque diferencia las cuentas que crecen de forma aleatoria de aquellas que evolucionan de manera constante con el tiempo. Al mantener las ganancias en la cuenta, no solo aumentas el saldo, sino que mejoras su eficiencia y capacidad para generar mejores resultados con el mismo nivel de rendimiento, sin incrementar el riesgo.",
+      "card1_description2": "Por otro lado, los retiros frecuentes limitan este efecto. Cada retiro reduce la capacidad de la cuenta para beneficiarse de las ganancias anteriores y frena su crecimiento. Una cuenta basada en el interés compuesto sigue construyendo sobre sus resultados, por lo que la diferencia se hace evidente con el tiempo.",
+      "card2_title_part1": "¿Cómo el interés compuesto ",
+      "card2_title_part2": "hace crecer tus ganancias?",
+      "card2_description1": "Si comienzas con $10.000 y obtienes un 10% de rendimiento, tu saldo pasa a $11.000. En el siguiente ciclo, ese mismo 10% se aplica sobre $11.000, no sobre $10.000. Con el tiempo, este proceso acelera el crecimiento de tu cuenta. La clave no es aumentar el riesgo, sino reinvertir constantemente.",
+      "card3_title": "¿Por qué es una estrategia efectiva?",
+      "feature1": "No requiere grandes operaciones.",
+      "feature2": "Evita aumentar el riesgo.",
+      "feature3": "Se basa en rendimientos consistentes.",
+      "feature4": "Reduce la presión de buscar ganancias rápidas."
     }
   },
   "newYearBonus": {
