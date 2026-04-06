@@ -1,13 +1,21 @@
 "use client";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
+import { useParams } from "next/navigation";
 
 const EconomicCalendarWidget = () => {
   const { theme } = useTheme();
-
+  const params = useParams();
+  const locale = params?.locale || "en";
   useEffect(() => {
     const widgetContainer = document.getElementById("economicCalendarWidget");
     if (!widgetContainer) return;
+
+    widgetContainer.innerHTML = "";
+
+    if (window.calendarCompletedID) {
+      window.calendarCompletedID = [];
+    }
 
     const script = document.createElement("script");
     script.async = true;
@@ -20,19 +28,20 @@ const EconomicCalendarWidget = () => {
         width: "100%",
         height: "100%",
         mode: "2",
+        lang: locale,
         ...(theme === "dark" && { theme: 1 }),
-      })
+      }),
     );
 
     script.appendChild(scriptContent);
     widgetContainer.appendChild(script);
 
     return () => {
-      if (widgetContainer.contains(script)) {
-        widgetContainer.removeChild(script);
+      if (widgetContainer) {
+        widgetContainer.innerHTML = "";
       }
     };
-  }, []);
+  }, [theme, locale]);
 
   return (
     <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
