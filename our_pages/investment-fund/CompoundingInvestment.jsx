@@ -53,38 +53,18 @@ const CompoundingInvestment = () => {
               <p className="text-ts dark:text-ts-dark font-medium text-base">
                 {t("card1_description2")}
               </p>
-            </div>
-          </div>
-          <div className="mt-14 lg:mt-16">
-            <h3 className="text-tm dark:text-tm-dark font-semibold text-[20px] sm:text-[26px] leading-tight! mb-4">
-              {t("card2_title_part1")}
-              <span className="text-pcp dark:text-pcp-dark">
-                {t("card2_title_part2")}
-              </span>
-            </h3>
-          </div>
-          <div className="grid grid-cols-12 mt-8 sm:gap-x-8">
-            <div className="col-span-12 lg:col-span-6">
+              <h3 className="text-tm dark:text-tm-dark font-semibold text-[20px] sm:text-[22px] leading-tight! my-1">
+                {t("card2_title_part1")}
+                <span className="text-pcp dark:text-pcp-dark">
+                  {t("card2_title_part2")}
+                </span>
+              </h3>
               <p className="text-ts dark:text-ts-dark font-medium text-base">
                 {t("card2_description1")}
               </p>
             </div>
-            <div className="col-span-12 lg:col-span-6 mt-8 lg:mt-0">
-              <Image
-                unoptimized={true}
-                src={
-                  theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/Graphic+Top+Dark+Mode.png"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/Graphic+Bottom+Light+Mode.png"
-                }
-                width="100"
-                height="100"
-                alt="Compound Investment Placeholder"
-                className="w-full h-auto"
-              />
-            </div>
           </div>
-          <div className="mt-14 lg:mt-16">
+          <div className="mt-8">
             <h3 className="text-tm dark:text-tm-dark font-semibold text-[20px] sm:text-[26px] leading-tight! mb-4">
               {t("card3_title")}
             </h3>
