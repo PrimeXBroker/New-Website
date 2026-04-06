@@ -196,7 +196,7 @@ export default function PtSitemapPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/pt/economic-calender",
+      url: "https://primexcapital.com/pt/economic-calendar",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",

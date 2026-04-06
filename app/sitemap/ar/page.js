@@ -196,7 +196,7 @@ export default function ArSitemapPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/ar/economic-calender",
+      url: "https://primexcapital.com/ar/economic-calendar",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",

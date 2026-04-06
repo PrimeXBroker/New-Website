@@ -194,7 +194,7 @@ export async function GET() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/fa/economic-calender",
+      url: "https://primexcapital.com/fa/economic-calendar",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",

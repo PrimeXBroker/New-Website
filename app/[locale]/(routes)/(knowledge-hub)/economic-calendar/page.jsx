@@ -49,7 +49,7 @@ const page = () => {
           <link
             key={item.lng}
             rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/economic-calender`}
+            href={`https://www.primexcapital.com/${item.url}/economic-calendar`}
             hreflang={item.lng}
           />
         ))}

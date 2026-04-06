@@ -785,7 +785,7 @@ const DesktopHeader = ({ locale }) => {
                   </li>
                   <li>
                     <LocaleLink
-                      href="/economic-calender"
+                      href="/economic-calendar"
                       onClick={closeDropdown}
                       className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                     >
