@@ -44,9 +44,9 @@ const InvestmentFundWrapper = () => {
       </div>
       <WhyChoose />
       <Steps />
-      {/* <div className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
+      <div className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
         <CompoundingInvestment />
-      </div> */}
+      </div>
       <PartnershipProgram />
       <div className="bg-p dark:bg-p-dark pt-16 sm:pt-28">
         <ClientReviews />

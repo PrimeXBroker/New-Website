@@ -1,10 +1,12 @@
 "use client";
 import { useLocale, useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import React from "react";
 
 const CompoundingInvestment = () => {
   const locale = useLocale();
+  const { theme } = useTheme();
   const t = useTranslations("investmentFunds.compoundingInvestment");
 
   const features = [t("feature1"), t("feature2"), t("feature3"), t("feature4")];
@@ -36,7 +38,11 @@ const CompoundingInvestment = () => {
             <div className="col-span-12 lg:col-span-6 mb-8 lg:mb-0">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/compount-placehlder-large.png"
+                src={
+                  theme === "dark"
+                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/Graphic+Top+Dark+Mode.png"
+                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/Graphic+Top+Light+Mode.png"
+                }
                 width="100"
                 height="100"
                 alt="Compound Investment Placeholder"
@@ -66,7 +72,11 @@ const CompoundingInvestment = () => {
             <div className="col-span-12 lg:col-span-6 mt-8 lg:mt-0">
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/compount-placehlder-small.png"
+                src={
+                  theme === "dark"
+                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/Graphic+Top+Dark+Mode.png"
+                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/Graphic+Bottom+Light+Mode.png"
+                }
                 width="100"
                 height="100"
                 alt="Compound Investment Placeholder"
