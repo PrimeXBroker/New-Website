@@ -64,7 +64,7 @@
     },
     "hero": {
       "subtitle1": "Con licencia en los EAU por ",
-      "subtitle2": "SCA",
+      "subtitle2": "CMA",
       "title1": "Opera con ",
       "title2": "Confianza",
       "desc": "Un bróker con licencia que opera bajo estándares regulatorios aprobados",
@@ -882,7 +882,7 @@
       "heading_7": "PrimeX Capital Ltd",
       "para_7": "con número de registro 2025-00584 y dirección registrada en Planta Baja, The Sotheby Building, Rodney Village, Rodney Bay, Gros-Islet, Santa Lucía, está incorporada bajo la Ley de Compañías Internacionales de Negocios de Santa Lucía.",
       "heading_8": "PrimeX Capital Financial Products Promotion LLC",
-      "para_8": "con número de registro 1192905 y domicilio registrado en oficina 1801, piso 18, Churchill Towers, Business Bay, Dubai, EAU, está regulada por la Autoridad de Valores y Materias Primas (SCA) de los Emiratos Árabes Unidos con una Licencia Categoría 5, número de licencia 20200000362.",
+      "para_8": "con número de registro 1192905 y domicilio registrado en oficina 1801, piso 18, Churchill Towers, Business Bay, Dubai, EAU, está regulada por la Autoridad de Valores y Materias Primas (CMA) de los Emiratos Árabes Unidos con una Licencia Categoría 5, número de licencia 20200000362.",
       "heading_9": "PrimeX Capital Ltd",
       "para_9": "con número de registro 203687 GBC y dirección registrada en 4º Piso, Docks 4, Caudan, Port Louis, 11101, República de Mauricio, está regulada por la Comisión de Servicios Financieros de la República de Mauricio con una Licencia de Distribuidor de Inversiones con número de licencia GB23202141."
     },
@@ -3645,7 +3645,7 @@
   "regulationCompliance": {
     "metaData": {
       "title": "Regulación y Cumplimiento",
-      "description": "Conozca las licencias oficiales de PrimeX Capital. Un bróker financiero autorizado y regulado por la Securities and Commodities Authority (SCA) en los EAU y la Financial Services Commission (FSC). Opere con seguridad con una entidad que cumple con los más altos estándares globales de supervisión y gobernanza."
+      "description": "Conozca las licencias oficiales de PrimeX Capital. Un bróker financiero autorizado y regulado por la Securities and Commodities Authority (CMA) en los EAU y la Financial Services Commission (FSC). Opere con seguridad con una entidad que cumple con los más altos estándares globales de supervisión y gobernanza."
     },
     "hero": {
       "title": "Regulación y Cumplimiento",
@@ -3655,10 +3655,10 @@
       "title_1": "Opere ",
       "title_2": "con seguridad",
       "description": "con un bróker registrado y autorizado por autoridades regulatorias reconocidas.",
-      "sca_title": "SCA",
+      "sca_title": "CMA",
       "sca_full_name": "Securities and Commodities Authority",
       "para_1": "La Securities and Commodities Authority es el organismo regulador federal responsable de otorgar licencias, regular, hacer cumplir los requisitos de cumplimiento y supervisar los mercados financieros y las actividades de intermediación en los Emiratos Árabes Unidos.",
-      "para_2": "PrimeX Capital es una entidad financiera licenciada, autorizada y regulada por la Securities and Commodities Authority (SCA) bajo la legislación de los EAU, sujeta a supervisión regulatoria continua y obligaciones de cumplimiento.",
+      "para_2": "PrimeX Capital es una entidad financiera licenciada, autorizada y regulada por la Securities and Commodities Authority (CMA) bajo la legislación de los EAU, sujeta a supervisión regulatoria continua y obligaciones de cumplimiento.",
       "para_3": "PrimeX Capital opera bajo esta licencia para la prestación de servicios financieros regulados dentro del alcance aprobado por la Autoridad y de acuerdo con la normativa aplicable de los Emiratos Árabes Unidos.",
       "para_4": "El estatus regulatorio de PrimeX Capital puede verificarse directamente a través del registro oficial de entidades licenciadas mantenido por la Securities and Commodities Authority de los Emiratos Árabes Unidos.",
       "license_label": "Número de licencia emitido por la Autoridad: 20200000362",
@@ -3675,8 +3675,8 @@
       "title": "Preguntas Frecuentes ",
       "title1": "Frecuentes",
       "question_1": "¿PrimeX Capital está oficialmente autorizada?",
-      "answer_1": "Sí, PrimeX Capital está autorizada por la Securities and Commodities Authority (SCA) en los Emiratos Árabes Unidos. Número de licencia 20200000362.",
-      "question_2": "¿Qué es la Securities and Commodities Authority (SCA)?",
+      "answer_1": "Sí, PrimeX Capital está autorizada por la Securities and Commodities Authority (CMA) en los Emiratos Árabes Unidos. Número de licencia 20200000362.",
+      "question_2": "¿Qué es la Securities and Commodities Authority (CMA)?",
       "answer_2": "Es el regulador federal responsable de supervisar los mercados financieros y las actividades de intermediación en los EAU. Hace cumplir los requisitos de cumplimiento y protege los derechos de los clientes.",
       "question_3": "¿PrimeX Capital está sujeta a supervisión regulatoria continua?",
       "answer_3": "Sí, la empresa opera bajo supervisión regulatoria continua. Cumple con estrictos estándares de transparencia y gobernanza.",
