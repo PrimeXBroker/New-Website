@@ -57,7 +57,7 @@ const MobileHeader = ({ locale }) => {
                   : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
   });
   const [selectedLocation, setSelectedLocation] = useState({
-    name: "SCA UAE",
+    name: "CMA UAE",
     code: "uae",
     flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/united-arab-emirates.png",
   });
@@ -184,7 +184,7 @@ const MobileHeader = ({ locale }) => {
 
   const locations = [
     {
-      name: "SCA UAE",
+      name: "CMA UAE",
       code: "uae",
       flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/united-arab-emirates.png",
     },

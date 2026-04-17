@@ -70,7 +70,7 @@ const Footer = () => {
             paragraph: t("footerNotice.para_4"),
           },
         ]);
-      } else if (selectedLocation.name === "SCA UAE") {
+      } else if (selectedLocation.name === "CMA UAE") {
         setFooterNotice([
           {
             heading: t("footerNotice.heading_8"),
