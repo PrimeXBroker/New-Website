@@ -52,9 +52,9 @@ const DesktopHeader = ({ locale }) => {
                   : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
   });
   const [selectedLocation, setSelectedLocation] = useState({
-    name: "CMA UAE",
-    code: "uae",
-    flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/united-arab-emirates.png",
+    name: "FSC Mauritius",
+    code: "mu",
+    flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/mauritius.png",
   });
 
   const router = useRouter();
@@ -161,11 +161,11 @@ const DesktopHeader = ({ locale }) => {
   };
 
   const locations = [
-    {
-      name: "CMA UAE",
-      code: "uae",
-      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/united-arab-emirates.png",
-    },
+    // {
+    //   name: "CMA UAE",
+    //   code: "uae",
+    //   flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/united-arab-emirates.png",
+    // },
     {
       name: "FSC Mauritius",
       code: "mu",
