@@ -858,7 +858,9 @@
     "Location": {
       "title_part5": "Nuestras Direcciones",
       "title_part5_link1": "Oficina 1801, Churchill Towers, Business Bay, Dubái, EAU.",
-      "title_part5_link2": "Oficina de Representación en EAU: Oficina 1802, Churchill Towers, Business Bay, Dubái, EAU."
+      "title_part5_link2": "Oficina de Representación en EAU: Oficina 1802, Churchill Towers, Business Bay, Dubái, EAU.",
+      "lucia_address": "Oficina No. 302, Tercer Piso, Parcela No. 28, Manzana 21, Distrito Diez, Ciudad Nasr, El Cairo, Egipto.",
+      "mauritius_address": "4º Piso, Docks 4, Caudan, Port Louis, 11101, República de Mauricio"
     },
     "getStarted": {
       "get_started_title": "Comienza con PrimeX Capital",
