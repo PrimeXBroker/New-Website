@@ -33,11 +33,11 @@ const Hero = () => {
               />
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/regulation-compliance/SCA+Logo+with+radius.png"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/regulation-compliance/Capital+Market+Authority.jpg"
                 width="100"
                 height="100"
                 alt="SCA logo"
-                className={`w-[129px] h-[96px]`}
+                className={`w-[129px] h-[84px] rounded-xl`}
               />
             </div>
           </div>

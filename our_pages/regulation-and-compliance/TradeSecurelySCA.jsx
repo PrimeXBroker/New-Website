@@ -16,7 +16,7 @@ const TradeSecurelySCA = () => {
   const handleVerifyClick = () => {
     window.open(
       "https://beta.sca.gov.ae/en/open-data/licensed-companies.aspx?q=CP-0001872",
-      "_blank"
+      "_blank",
     );
   };
 
@@ -63,11 +63,11 @@ const TradeSecurelySCA = () => {
             <div>
               <Image
                 unoptimized={true}
-                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/regulation-compliance/SCA+Logo+with+radius.png"
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/regulation-compliance/Capital+Market+Authority.jpg"
                 width="100"
                 height="100"
                 alt="SCA logo"
-                className={`w-[129px] h-[96px]`}
+                className={`w-[129px] h-[96px] rounded-xl`}
               />
             </div>
           </div>
