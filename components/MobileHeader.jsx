@@ -1086,13 +1086,13 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("regional")}
                 </LocaleLink>
-                <LocaleLink
+                {/* <LocaleLink
                   href="/social-trading"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("social_trading")}
-                </LocaleLink>
+                </LocaleLink> */}
                 {/* <LocaleLink
                   href="/grey-label-partner"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"

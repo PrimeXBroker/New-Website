@@ -32,13 +32,29 @@ const Promotions = () => {
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/ib-promotion.webp",
       link: `/${locale}/ib-program`,
     },
+    // {
+    //   id: 3,
+    //   title: t("promotion3.title"),
+    //   description: t("promotion3.desc"),
+    //   image:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/social-trading-promotion.webp",
+    //   link: `/${locale}/social-trading`,
+    // },
     {
-      id: 3,
-      title: t("promotion3.title"),
-      description: t("promotion3.desc"),
+      id: 4,
+      title: t("promotion4.title"),
+      description: t("promotion4.desc"),
       image:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/social-trading-promotion.webp",
-      link: `/${locale}/social-trading`,
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/spread-promotion.webp",
+      link: `/${locale}/primex-spreads`,
+    },
+    {
+      id: 2,
+      title: t("promotion2.title"),
+      description: t("promotion2.desc"),
+      image:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/ib-promotion.webp",
+      link: `/${locale}/ib-program`,
     },
     {
       id: 4,
@@ -52,10 +68,10 @@ const Promotions = () => {
 
   useEffect(() => {
     const swiperPrevButton = document.querySelector(
-      ".reviews-swiper-button-prev"
+      ".reviews-swiper-button-prev",
     );
     const swiperNextButton = document.querySelector(
-      ".reviews-swiper-button-next"
+      ".reviews-swiper-button-next",
     );
 
     if (swiperPrevButton && swiperNextButton) {
