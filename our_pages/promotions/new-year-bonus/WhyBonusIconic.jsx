@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
-import { useTranslations, useLocale } from "next-intl";
-import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 import trustedGlobalBroker from "@/public/animations/bonus/trusted-global-broker.json";
 import lightningFast from "@/public/animations/bonus/lightning-fast-trade-execution.json";
 import trailblazingTechnology from "@/public/animations/bonus/trailblazing-technology.json";
@@ -13,8 +12,6 @@ import easyDeposit from "@/public/animations/bonus/easy-deposit-withdrawal.json"
 import Lottie from "lottie-react";
 
 const WhyBonusIconic = () => {
-  const locale = useLocale();
-  const { theme } = useTheme();
   const t = useTranslations("newYearBonus.iconicFeatures");
 
   const iconicFeatures = [
@@ -25,16 +22,16 @@ const WhyBonusIconic = () => {
       icon: trustedGlobalBroker,
     },
     {
-      title1: t("home_feature_2_title1"),
-      title2: t("home_feature_2_title2"),
-      description: t("home_feature_2_description"),
-      icon: lightningFast,
-    },
-    {
       title1: t("home_feature_3_title1"),
       title2: t("home_feature_3_title2"),
       description: t("home_feature_3_description"),
       icon: trailblazingTechnology,
+    },
+    {
+      title1: t("home_feature_5_title1"),
+      title2: t("home_feature_5_title2"),
+      description: t("home_feature_5_description"),
+      icon: lucrativePartnership,
     },
     {
       title1: t("home_feature_4_title1"),
@@ -43,10 +40,16 @@ const WhyBonusIconic = () => {
       icon: dedicatedMultilingual,
     },
     {
-      title1: t("home_feature_5_title1"),
-      title2: t("home_feature_5_title2"),
-      description: t("home_feature_5_description"),
-      icon: lucrativePartnership,
+      title1: t("home_feature_2_title1"),
+      title2: t("home_feature_2_title2"),
+      description: t("home_feature_2_description"),
+      icon: lightningFast,
+    },
+    {
+      title1: t("home_feature_8_title1"),
+      title2: t("home_feature_8_title2"),
+      description: t("home_feature_8_description"),
+      icon: easyDeposit,
     },
     {
       title1: t("home_feature_6_title1"),
@@ -60,19 +63,13 @@ const WhyBonusIconic = () => {
       description: t("home_feature_7_description"),
       icon: multiAssetPortfolio,
     },
-    {
-      title1: t("home_feature_8_title1"),
-      title2: t("home_feature_8_title2"),
-      description: t("home_feature_8_description"),
-      icon: easyDeposit,
-    },
   ];
 
   return (
     <div className="bg-p dark:bg-p-dark">
       <div className="container mx-auto">
         <div className="text-center md:text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-tm dark:text-tm-dark uppercase">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-tm dark:text-tm-dark capitalize">
             {t("home_heading")}
           </h2>
           {/* <p className="text-sm sm:text-base lg:text-lg mt-2 w-[70%] mx-auto text-tm dark:text-tm-dark">
@@ -87,7 +84,9 @@ const WhyBonusIconic = () => {
             >
               <div className="flex justify-between items-center">
                 <div>
-                  <h3 className="text-xl font-semibold">{benefit.title1}</h3>
+                  <h3 className="text-xl font-semibold text-pcp dark:text-pcp-dark">
+                    {benefit.title1}
+                  </h3>
                   <h3 className="text-xl font-semibold text-tm dark:text-tm-dark">
                     {benefit.title2}
                   </h3>
@@ -100,7 +99,7 @@ const WhyBonusIconic = () => {
                   />
                 </div>
               </div>
-              <p className="text-tm dark:text-tm-dark text-sm sm:text-base">
+              <p className="text-ts dark:text-ts-dark text-sm sm:text-base">
                 {benefit.description}
               </p>
             </div>

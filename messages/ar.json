@@ -3846,5 +3846,85 @@
       "title1": "هل أنت مستعد لاستلام هديتك؟",
       "btnTxt": "احصل على بونص 30$ الآن!"
     }
+  },
+  "competitions": {
+    "metaData": {
+      "title": "",
+      "description": ""
+    },
+    "hero": {
+      "title_1": "PrimeX Trading ",
+      "title_2": "Competition",
+      "description1": "Trade with zero financial risk on a demo account and get a chance to win a share of the $5000 total prize pool!",
+      "description2": "A trading competition on demo accounts is designed to evaluate real trader performance in a fully realistic market environment. Compete for a share of $5000 in total prizes awarded to the top performers based on their results throughout the competition period.",
+      "btnTxt": "Participate Now"
+    },
+    "prizeDistribution": {
+      "title_part1": "Prize ",
+      "title_part2": "Distribution",
+      "description": "The total prize pool of $5000 will be distributed among the top 10 winners as follows:",
+      "first_place_title": "1st Place",
+      "first_place_amount": "$1500",
+      "second_place_title": "2nd Place",
+      "second_place_amount": "$800",
+      "third_place_title": "3rd Place",
+      "third_place_amount": "$500",
+      "fourth_place_title": "4th - 10th place",
+      "fourth_place_amount": "$300 each"
+    },
+    "participateSteps": {
+      "title_part1": "How to ",
+      "title_part2": "Participate",
+      "count1": "01",
+      "step1": "Register your account and complete verification.",
+      "count2": "02",
+      "step2": "Start trading on a demo competition account.",
+      "count3": "03",
+      "step3": "Follow all rules and conditions throughout the competition period."
+    },
+    "competitionRules": {
+      "title": "Terms & Conditions",
+      "contest_eligibility_title": "Contest Eligibility",
+      "contest_eligibility_li1_desc": "Trading is strictly conducted through the competition demo account.",
+      "contest_eligibility_li2_desc": "PrimeX Capital reserves the right to amend the terms when necessary without prior notice.",
+      "contest_eligibility_li3_desc": "The competition runs for 3 weeks.",
+      "contest_eligibility_li4_desc": "Winners are evaluated based on performance percentage throughout the competition period.",
+      "general_rules_title": "General Rules",
+      "general_rules_li1_desc": "The demo account features are identical to the Standard account features.",
+      "general_rules_li2_desc": "This competition is exclusively available to clients residing in specific geographic regions.",
+      "general_rules_li3_desc": "Any violation will result in immediate disqualification.",
+      "general_rules_li4_desc": "The evaluation decision is final based on competition results and cannot be reviewed.",
+      "strategies_title": "Prohibited Trading Strategies",
+      "strategies_li1_desc": "Hedging across multiple accounts.",
+      "strategies_li2_desc": "High frequency trading HFT."
+    },
+    "faq": {
+      "title": "Frequently Asked ",
+      "title1": "Questions",
+      "question_1": "What is the PrimeX Trading Competition?",
+      "answer_1": "A demo-based trading competition with no real funds used, designed to measure trader performance.",
+      "question_2": "What are the features of the demo account?",
+      "answer_2": "It mirrors the Standard account, including: Minimum deposit of $10, Spreads starting from 0.8 pips, Zero commission, Leverage up to 1:400, Minimum lot size of 0.01, Swap-free trading.",
+      "question_3": "Is it required to register a new account to participate?",
+      "answer_3": "No, you can join using your existing account. A new dedicated demo trading account will be created for the competition.",
+      "question_4": "What is the duration of the competition?",
+      "answer_4": "The competition lasts for 3 weeks.",
+      "question_5": "Do the competition accounts have the same features as the Standard account?",
+      "answer_5": "Yes, they have the same features as the Standard account.",
+      "question_6": "Is there an initial balance for the accounts?",
+      "answer_6": "Yes, each participant starts with a virtual balance of $10.000.",
+      "question_7": "Is there any financial risk?",
+      "answer_7": "No, trading is fully simulated in a realistic market environment.",
+      "question_8": "Is account verification required?",
+      "answer_8": "Yes, full registration and verification are mandatory.",
+      "question_9": "How are the contest results calculated?",
+      "answer_9": "Based on performance growth and consistency during the competition period.",
+      "question_10": "Can I use multiple accounts?",
+      "answer_10": "No, only one account per participant is allowed.",
+      "question_11": "What happens if I violate the rules?",
+      "answer_11": "Immediate disqualification from the competition.",
+      "question_12": "When are the results announced?",
+      "answer_12": "After the competition ends, all accounts are reviewed."
+    }
   }
 }
