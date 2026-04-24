@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const PrizeDistribution = () => {
+  const locale = useLocale();
   const t = useTranslations("competitions.prizeDistribution");
+  const d = useTranslations("competitions.hero");
 
   const prizes = [
     {
@@ -84,6 +86,11 @@ const PrizeDistribution = () => {
             />
           </div>
         </div>
+        <p
+          className={`text-ts dark:text-ts-dark text-sm sm:text-base text-center w-full sm:w-[90%] lg:w-[80%] mx-auto mt-6`}
+        >
+          {d("description2")}
+        </p>
       </div>
     </section>
   );

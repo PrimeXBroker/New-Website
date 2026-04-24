@@ -18,7 +18,7 @@ const Banner = () => {
 
   return (
     <section className="">
-      <div className="bg-p dark:bg-p-dark pt-[40px] lg:pt-10">
+      <div className="bg-p dark:bg-p-dark pt-[40px] lg:pt-14">
         <div className="container flex flex-col lg:flex-row justify-around pt-16">
           <div className="lg:max-w-2xl flex flex-col justify-center lg:items-start lg:w-[70%]">
             <h1
@@ -57,7 +57,7 @@ const Banner = () => {
             >
               {t("description1")}
             </p>
-            <p
+            {/* <p
               className={`text-ts dark:text-ts-dark w-[95%] sm:w-[90%] mx-auto lg:mx-0 lg:w-[75%]text-sm sm:text-base ${
                 locale === "ar" ||
                 locale === "ps" ||
@@ -68,7 +68,7 @@ const Banner = () => {
               }`}
             >
               {t("description2")}
-            </p>
+            </p> */}
             <div className="mt-8">
               <CustomYellowButton
                 title={t("btnTxt")}
@@ -84,7 +84,7 @@ const Banner = () => {
               alt="Economic Calender Hero Image"
               width="550"
               height="500"
-              className={`w-full h-auto`}
+              className={`w-full sm:w-[90%] h-auto`}
             />
           </div>
         </div>
