@@ -21,7 +21,7 @@ export async function generateMetadata({ params: { locale } }) {
       description: t("competitions.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/global-ecn-broker/ecn-hero.webp",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/competitions/Hero+Image.png",
           width: 1200,
           height: 630,
           alt: t("competitions.metaData.title"),

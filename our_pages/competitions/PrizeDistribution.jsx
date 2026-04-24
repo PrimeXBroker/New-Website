@@ -53,7 +53,7 @@ const PrizeDistribution = () => {
               <p className="text-tm dark:text-tm-dark font-medium text-lg">
                 {prize.amount}
               </p>
-              <div className="absolute top-[-28px] right-8">
+              <div className="absolute top-[-28px] end-8">
                 <Image
                   src={prize.src}
                   alt={prize.alt}

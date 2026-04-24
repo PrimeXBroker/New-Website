@@ -78,9 +78,9 @@ const Banner = () => {
             </div>
           </div>
 
-          <div className="flex lg:justify-end justify-center pt-5 lg:mt-0">
+          <div className="flex lg:justify-end justify-center mt-5 lg:mt-0">
             <Image
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/knowledge-hub/economic-calender/economic-calendar-hero.webp"
+              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/competitions/Hero+Image.png"
               alt="Economic Calender Hero Image"
               width="550"
               height="500"
