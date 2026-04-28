@@ -3960,7 +3960,7 @@
     },
     "competitionRules": {
       "title": "شرایط و ضوابط",
-      "contest_eligibility_title": "شرایط واجد شرایط بودن",
+      "contest_eligibility_title": "قوانین مسابقه ",
       "contest_eligibility_li1_desc": "معاملات صرفاً از طریق حساب دموی مسابقه انجام می‌شود.",
       "contest_eligibility_li2_desc": "پرایم اکس کپیتال حق اصلاح شرایط را در صورت لزوم و بدون اطلاع قبلی برای خود محفوظ می‌دارد.",
       "contest_eligibility_li3_desc": "مدت زمان مسابقه 3 هفته است.",
