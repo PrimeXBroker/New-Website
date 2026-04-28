@@ -91,6 +91,13 @@ const PrizeDistribution = () => {
         >
           {d("description2")}
         </p>
+        {locale === "ar" && (
+          <p
+            className={`text-ts dark:text-ts-dark text-sm sm:text-base text-center w-full sm:w-[90%] lg:w-[80%] mx-auto mt-1`}
+          >
+            {d("description3")}
+          </p>
+        )}
       </div>
     </section>
   );

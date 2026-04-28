@@ -3938,7 +3938,7 @@
       "second_place_title": "2nd Place",
       "second_place_amount": "$800",
       "third_place_title": "3rd Place",
-      "third_place_amount": "$500",
+      "third_place_amount": "$600",
       "fourth_place_title": "4th - 10th place",
       "fourth_place_amount": "$300 each"
     },
@@ -3950,7 +3950,7 @@
       "count2": "02",
       "step2": "Start trading on a demo competition account.",
       "count3": "03",
-      "step3": "Follow all rules and conditions throughout the competition period."
+      "step3": "Follow all the rules throughout the competition."
     },
     "competitionRules": {
       "title": "Terms & Conditions",

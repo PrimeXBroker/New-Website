@@ -46,7 +46,7 @@ const Banner = () => {
               {t("title_2")}
             </h2>
             <p
-              className={`text-tm dark:text-tm-dark w-[95%] sm:w-[90%] mx-auto lg:mx-0 lg:w-[75%] my-4 text-sm sm:text-base ${
+              className={`text-tm dark:text-tm-dark w-[95%] sm:w-[90%] mx-auto lg:mx-0 lg:w-[75%] ${locale === "ar" ? "mt-6" : "my-4"} text-sm sm:text-base ${
                 locale === "ar" ||
                 locale === "ps" ||
                 locale === "ku" ||
@@ -57,6 +57,20 @@ const Banner = () => {
             >
               {t("description1")}
             </p>
+            {locale === "ar" && (
+              <p
+                className={`text-tm dark:text-tm-dark w-[95%] sm:w-[90%] mx-auto lg:mx-0 lg:w-[75%] mt-1 text-sm sm:text-base ${
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
+                    ? "text-center lg:text-right"
+                    : "text-center lg:text-left"
+                }`}
+              >
+                {t("description4")}
+              </p>
+            )}
             {/* <p
               className={`text-ts dark:text-ts-dark w-[95%] sm:w-[90%] mx-auto lg:mx-0 lg:w-[75%]text-sm sm:text-base ${
                 locale === "ar" ||
