@@ -225,15 +225,13 @@ const Footer = () => {
         heading: t("Location.title_part5"),
         links: [
           {
-            // Conditional logic for address name
-            name:
-              selectedLocation?.name === "FSC Mauritius"
-                ? t("Location.mauritius_address")
-                : selectedLocation?.name === "St. Lucia"
-                  ? t("Location.lucia_address")
-                  : t("Location.mauritius_address"), // Default fallback
+            name: t("Location.title_part5_link1"),
             href: "#",
           },
+          // {
+          //   name: t("Location.title_part5_link2"),
+          //   href: "#",
+          // },
         ],
       },
     },
