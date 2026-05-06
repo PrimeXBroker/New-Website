@@ -107,8 +107,8 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-p dark:bg-p-dark pt-14 sm:pt-16 md:pt-20 text-white">
-      <div className="relative container my-20">
+    <section className="bg-p dark:bg-p-dark py-14 sm:py-16 md:py-20 text-white">
+      <div className="relative container mt-20">
         <div className="grid grid-cols-2">
           <div>
             <motion.div
