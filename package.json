@@ -11,6 +11,8 @@
   "dependencies": {
     "@next/font": "^14.2.5",
     "@nextui-org/react": "^2.4.2",
+    "@react-three/drei": "^9.102.6",
+    "@react-three/fiber": "^8.17.10",
     "@reduxjs/toolkit": "^2.2.7",
     "@tsparticles/react": "^3.0.0",
     "ag-grid-community": "^32.0.2",
@@ -50,6 +52,7 @@
     "redux-persist": "^6.0.0",
     "sharp": "^0.33.4",
     "swiper": "^11.1.4",
+    "three": "^0.184.0",
     "tinymce": "^7.6.0",
     "tsparticles": "^3.5.0",
     "xlsx": "^0.18.5",
