@@ -15,7 +15,7 @@ const slides = [
   {
     id: 1,
     badgeIcon:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/chip-icon-slide1.svg",
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/chip-icon-slide1.svg",
     badgeLabel: "Licensed in UAE by ",
     badgeHighlight: "SCA",
     titlePrefix: "The ",
@@ -23,25 +23,25 @@ const slides = [
     titleSeparator: "of ",
     titleSuffix: "World-Class Traders",
     backgroundSvg:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/text-bg-slide1.png",
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/text-bg-slide1.png",
     description: "Trade with low commissions and raw spreads",
     buttonLabel: "Open Account",
     buttonLink: "/",
     coins: [
       {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/coin1-slide1.svg",
+        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/coin1-slide1.svg",
         pos: "top-[23%] left-[31%] w-[150px]",
         dirX: -40,
         dirY: 0,
       },
       {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/coin2-slide1.svg",
+        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/coin2-slide1.svg",
         pos: "top-[16%] right-[25%] w-[100px]",
         dirX: 0,
         dirY: -40,
       },
       {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/coin3-slide1.svg",
+        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/coin3-slide1.svg",
         pos: "bottom-[43%] right-[30%] w-[130px]",
         dirX: 40,
         dirY: 0,
@@ -51,7 +51,7 @@ const slides = [
   {
     id: 2,
     badgeIcon:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/chip-icon-slide2.svg",
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/chip-icon-slide2.svg",
     badgeLabel: "Built for Secure global ",
     badgeHighlight: "Trading",
     titlePrefix: "Take ",
@@ -59,25 +59,25 @@ const slides = [
     titleSeparator: "of ",
     titleSuffix: "every Single Trade",
     backgroundSvg:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/text-bg-slide2.png",
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/text-bg-slide2.png",
     description: "Full control with insights that actually matter",
     buttonLabel: "Learn More",
     buttonLink: "/",
     coins: [
       {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/coin1-slide2.svg",
+        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/coin1-slide2.svg",
         pos: "top-[23%] left-[31%] w-[150px]",
         dirX: -120,
         dirY: 0,
       },
       {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/coin2-slide2.svg",
+        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/coin2-slide2.svg",
         pos: "top-[16%] right-[25%] w-[100px]",
         dirX: 0,
         dirY: -120,
       },
       {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/coin3-slide2.svg",
+        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/coin3-slide2.svg",
         pos: "bottom-[43%] right-[30%] w-[130px]",
         dirX: 120,
         dirY: 0,
