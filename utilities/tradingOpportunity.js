@@ -1,11 +1,3 @@
-import {
-  BarChart2,
-  DollarSign,
-  LineChart,
-  Package,
-  TrendingUp,
-} from "lucide-react";
-
 export const tradingTabs = [
   {
     name: "Popular",
