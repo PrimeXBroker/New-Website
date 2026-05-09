@@ -205,17 +205,17 @@ const Footer = () => {
           {
             name: t("Platform.title_part4_link1"),
             target: "_blank",
-            href: "https://download.terminal.free/cdn/web/primex.capital.ltd/mt5/primexcapital5setup.exe",
+            href: "https://download.terminal.free/cdn/web/primex.capital.limited/mt5/primexcapitalltd5setup.exe",
           },
           {
             name: t("Platform.title_part4_link2"),
             target: "_blank",
-            href: "https://download.terminal.free/cdn/mobile/mt5/android?server=PrimeXCapital-Live",
+            href: "https://download.terminal.free/cdn/mobile/mt5/android?server=PrimeXCapitalLtd-Server",
           },
           {
             name: t("Platform.title_part4_link3"),
             target: "_blank",
-            href: "https://download.terminal.free/cdn/mobile/mt5/ios?server=PrimeXCapital-Live",
+            href: "https://download.terminal.free/cdn/mobile/mt5/ios?server=PrimeXCapitalLtd-Server",
           },
         ],
       },
