@@ -47,19 +47,19 @@ const PrivateSessions = ({ setActive }) => {
                 <div className="w-full h-40 overflow-hidden rounded-lg">
                   <Image
                     unoptimized={true}
-                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/knowledge-hub/speaker-ziad.webp"
+                    src="https://primexbroker.s3.eu-north-1.amazonaws.com/images/1778571459271_Ahmed_Al_Sajadi.webp"
                     width={250}
                     height={200}
-                    alt="Zyad"
+                    alt="Ahmed Alsajadi"
                     className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
                 <div>
-                  <h3 className="text-tm dark:text-tm-dark md:text-center text-base sm:text-lg">
-                    {t("expert_2_name")}
+                  <h3 className="text-tm dark:text-tm-dark md:text-center text-base sm:text-lg mt-1">
+                    {t("expert_1_name")}
                   </h3>
                   <h4 className="text-ts dark:text-ts-dark md:text-center text-xs sm:text-sm">
-                    {t("expert_2_position")}
+                    {t("expert_1_position")}
                   </h4>
                   <Link
                     href="#academy-form"
