@@ -86,19 +86,19 @@ const RegionalPartnershipWrapper = () => {
     {
       step_title: s("step1_title"),
       step_desc: s("step1_desc"),
-      step1_icon: register,
+      step_icon: register,
       count: s("step1_count"),
     },
     {
       step_title: s("step2_title"),
       step_desc: s("step2_desc"),
-      step2_icon: earn,
+      step_icon: earn,
       count: s("step2_count"),
     },
     {
       step_title: s("step3_title"),
       step_desc: s("step3_desc"),
-      step3_icon: promote,
+      step_icon: promote,
       count: s("step3_count"),
     },
   ];

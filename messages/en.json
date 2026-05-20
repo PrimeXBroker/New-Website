@@ -166,6 +166,28 @@
       "li7_desc": "Stay updated with real-time insights.",
       "btnTxt": "Open Account"
     },
+    "advancedTraderPlatforms": {
+      "advance_platform_title_1": "Advanced Platform for ",
+      "advance_platform_title_2": "Modern Traders",
+      "advance_platform_description": "Experience a cutting-edge platform built for modern traders—seamless performance, powerful analytics, and innovative tools to elevate your success.",
+      "li1": "Advanced Analytical Tool",
+      "li1_desc": "Make smarter decisions with advanced insights and stay ahead of market trends.",
+      "li2": "Multi-Asset Platform",
+      "li2_desc": "Access multiple markets in one place and trade seamlessly without limitations.",
+      "li3": "Seamless Automated Trading",
+      "li3_desc": "Boost efficiency with smart automation that executes trades seamlessly.",
+      "li4": "Fast Order Execution",
+      "li4_desc": "Execute trades instantly with high speed and enjoy smooth, reliable performance.",
+      "li5": "Cutting-edge platform built for modern traders",
+      "li5_desc": "Get Started Today",
+      "li6": "Charting Capabilities",
+      "li6_desc": "Analyze price movements with clear visuals and identify trading opportunities quickly.",
+      "li7": "Community & Support",
+      "li7_desc": "Connect with experts and active traders any time you need guidance or support.",
+      "li8": "Integrated Economic Calendar",
+      "li8_desc": "Stay updated with real-time market events and make informed trading decisions.",
+      "btnTxt": "Open Account"
+    },
     "testimonial": {
       "title1": "What Our ",
       "title2": "Clients ",
@@ -192,6 +214,17 @@
       "academy_card_2_desc_1": "Stay ahead with daily market news and expert analysis on FX CFDs, Commodities, Economies, and Stocks. Get the insights you need for informed trading decisions.",
       "academy_card_3_title_1": "Expert Market Analysis",
       "academy_card_3_desc_1": "Keep Yourself Updated with the Latest Insights and Emerging Trends in the Industry to Make Informed and Strategic Decisions for Continued Success."
+    },
+    "primeXAcademy": {
+      "academy_title1": "PrimeX Academy ",
+      "academy_title2": "Learn & Grow",
+      "academy_desc": "Boost your trading skills with our extensive educational resources and expert guidance.",
+      "academy_card_1_title_1": "Free Webinars",
+      "academy_card_1_desc_1": "Join expert-led live sessions for market insights, strategies, and trading guidance.",
+      "academy_card_2_title_1": "Daily Market Updates",
+      "academy_card_2_desc_1": "Stay updated with daily market news, expert insights, and trading analysis.",
+      "academy_card_3_title_1": "Expert Market Analysis",
+      "academy_card_3_desc_1": "Stay updated with the latest insights and trends for smarter decisions."
     },
     "ourRecognition": {
       "our_recognition_title1": "Our ",

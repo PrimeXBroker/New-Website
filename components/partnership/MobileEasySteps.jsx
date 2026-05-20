@@ -1,10 +1,8 @@
 "use client";
-import { useTheme } from "next-themes";
+import Lottie from "lottie-react";
 import React from "react";
 
 const EasyStepsMobile = ({ easySteps, easyStepsMobile }) => {
-  const { theme } = useTheme();
-
   return (
     <div className="bg-p dark:bg-p-dark py-10">
       <div className="container mb-7">
@@ -28,13 +26,11 @@ const EasyStepsMobile = ({ easySteps, easyStepsMobile }) => {
                   {step.step_title}
                 </h3>
               </div>
-              <div className="w-12 h-12 bg-e1 dark:bg-e1-dark rounded-lg flex items-center justify-center">
-                <img
-                  src={
-                    theme === "dark" ? step.step_img_dark : step.step_img_light
-                  }
-                  alt={step.step_title}
-                  className="w-[32px]"
+              <div className="w-14 h-14 bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-lg flex items-center justify-center">
+                <Lottie
+                  animationData={step.step_icon}
+                  loop={true}
+                  style={{ width: "48px", height: "48px" }}
                 />
               </div>
             </div>

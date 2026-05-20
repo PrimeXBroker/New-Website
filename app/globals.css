@@ -423,7 +423,8 @@
   place-items: center;
   overflow: hidden;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px,
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 10px 0px,
     rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
 
   @media screen and (max-width: 678px) {
@@ -448,7 +449,8 @@
   overflow: hidden;
   padding: 20px;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 60px -12px inset,
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;
 }
 .card .my_span {
@@ -690,7 +692,9 @@
 }
 
 .mt5-tabs {
-  transition: background-color 0.8s ease-in-out, border-color 0.8s ease-in-out;
+  transition:
+    background-color 0.8s ease-in-out,
+    border-color 0.8s ease-in-out;
 }
 
 .mt5-tabs.bg-primary {
@@ -1353,7 +1357,8 @@ html.dark .home-testimonial-pagination .swiper-pagination-bullet-active {
   left: 0;
   z-index: 0;
   /* opacity: 0.1; */
-  box-shadow: 0px 35px 77px 0px rgba(0, 0, 0, 0.1),
+  box-shadow:
+    0px 35px 77px 0px rgba(0, 0, 0, 0.1),
     0px 141px 141px 0px rgba(0, 0, 0, 0.09),
     0px 317px 190px 0px rgba(0, 0, 0, 0.05),
     0px 563px 225px 0px rgba(0, 0, 0, 0.01),
@@ -1584,7 +1589,9 @@ html.dark .home-testimonial-pagination .swiper-pagination-bullet-active {
 }
 
 .glow-text {
-  text-shadow: 0 0 5px #fed100, 0 0 10px #fed100;
+  text-shadow:
+    0 0 5px #fed100,
+    0 0 10px #fed100;
 }
 
 /* Base timeline line (always visible in #222222) */
@@ -1628,7 +1635,9 @@ html.dark .home-testimonial-pagination .swiper-pagination-bullet-active {
 .timeline-card {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transition:
+    opacity 0.8s ease-in-out,
+    transform 0.8s ease-in-out;
 }
 
 .timeline-card.active {
@@ -1789,8 +1798,11 @@ html.dark .card-mobile::before {
   height: 100%;
   left: 50%;
   background-color: #666666;
-  transition: border-radius 0.5s ease, background-color 0.5s ease,
-    width 0.5s ease, transform 0.5s ease;
+  transition:
+    border-radius 0.5s ease,
+    background-color 0.5s ease,
+    width 0.5s ease,
+    transform 0.5s ease;
 }
 
 #sun-moon:after {
@@ -1804,9 +1816,14 @@ html.dark .card-mobile::before {
   height: 100%;
   border-radius: 50%;
   border: 4px solid #fcfcfc;
-  box-shadow: 0 0 0 0 #fcfcfc, 0 0 0 3px #666666, 0 0 0 100px #f2f2f2;
+  box-shadow:
+    0 0 0 0 #fcfcfc,
+    0 0 0 3px #666666,
+    0 0 0 100px #f2f2f2;
   box-sizing: border-box;
-  transition: border-color 0.5s ease, box-shadow 0.5s ease;
+  transition:
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
   color: #666666;
 }
 
@@ -1823,7 +1840,10 @@ html.dark #sun-moon:before {
 
 html.dark #sun-moon:after {
   content: "";
-  box-shadow: 0 0 0 0 #030303, 0 0 0 0 #030303, 0 0 0 3px #999999,
+  box-shadow:
+    0 0 0 0 #030303,
+    0 0 0 0 #030303,
+    0 0 0 3px #999999,
     0 0 0 100px #030303;
   border-color: #030303;
   color: #999999;
@@ -1832,8 +1852,8 @@ html.dark #sun-moon:after {
 .promotion-swiper-navigation-buttons .promotions-swiper-button-prev {
   text: #111111 !important;
   padding: 2px !important;
-  width: 40px !important;
-  height: 40px !important;
+  width: 44px !important;
+  height: 44px !important;
   border-radius: 100px !important;
   display: flex !important;
   justify-content: center !important;
@@ -1848,8 +1868,8 @@ html.dark #sun-moon:after {
 .promotion-swiper-navigation-buttons .promotions-swiper-button-next {
   text: #111111 !important;
   padding: 2px !important;
-  width: 40px !important;
-  height: 40px !important;
+  width: 44px !important;
+  height: 44px !important;
   border-radius: 100px !important;
   display: flex !important;
   justify-content: center !important;
