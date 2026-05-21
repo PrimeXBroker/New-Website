@@ -27,14 +27,14 @@ const PromotionsMobile = () => {
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/ib-promotion.webp",
       link: `/${locale}/ib-program`,
     },
-    // {
-    //   id: 3,
-    //   title: t("promotion3.title"),
-    //   description: t("promotion3.desc"),
-    //   image:
-    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/social-trading-promotion.webp",
-    //   link: `/${locale}/social-trading`,
-    // },
+    {
+      id: 3,
+      title: t("promotion3.title"),
+      description: t("promotion3.desc"),
+      image:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-homepage/investment+fund.jpg",
+      link: `/${locale}/investment-fund`,
+    },
     {
       id: 4,
       title: t("promotion4.title"),
@@ -61,11 +61,11 @@ const PromotionsMobile = () => {
         {promotionsData.map((promo, index) => (
           <Link
             href={promo.link}
-            className={`flex bg-cc dark:bg-cc-dark rounded-xl overflow-hidden items-center gap-5 p-5 ${
+            className={`flex flex-col bg-cc dark:bg-cc-dark rounded-xl overflow-hidden gap-5 p-5 ${
               index === promotionsData.length - 1 ? "" : "mb-5"
             } border-2 border-cc dark:border-cc-dark hover:border-tl dark:hover:border-tl-dark group transition-all duration-500 ease-in-out cursor-pointer`}
           >
-            <div>
+            <div className="flex items-start justify-between">
               <Image
                 src={promo.image}
                 alt={promo.title}
@@ -73,8 +73,6 @@ const PromotionsMobile = () => {
                 height={200}
                 className="w-[80px] h-[80px] rounded-md"
               />
-            </div>
-            <div>
               <div className="flex items-center justify-between">
                 <Link href={promo.link}>
                   <div className="w-[24px] h-[24px] rounded-[5.73px] bg-e1 dark:bg-e1-dark flex justify-center items-center group-hover:bg-tm dark:group-hover:bg-tm-dark transition-all duration-500 ease-in-out">
@@ -101,6 +99,8 @@ const PromotionsMobile = () => {
                   </div>
                 </Link>
               </div>
+            </div>
+            <div>
               <h2 className="text-base font-semibold text-tm dark:text-tm-dark mb-2">
                 {promo.title}
               </h2>

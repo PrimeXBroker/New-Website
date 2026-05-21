@@ -8,19 +8,21 @@ import AdvancedPlatform from "./AdvancedPlatform";
 import ClientReviews from "./ClientReviews";
 import PrimeXAcademy from "./PrimeXAcademy";
 import AccountTypes from "./AccountTypes";
+import Promotions from "./Promotions";
 
 const HomeWrapper = () => {
   return (
     <>
-      <Hero />
-      {/* <TradingInstruments /> */}
-      <PrimeXAcademy />
+      {/* <Hero /> */}
+      <Promotions />
+      <TradingInstruments />
+      {/* <PrimeXAcademy />
       <AccountTypes />
       <ClientReviews />
       <AdvancedPlatform />
       <PartnershipProgram />
       <Support />
-      <Recognition />
+      <Recognition /> */}
     </>
   );
 };

@@ -73,6 +73,23 @@
       "imgTxt1": "Explore 330+",
       "imgTxt2": "Trading Opportunities"
     },
+    "heroSection": {
+      "slide1_badgeLabel": "Join 250,000+ traders worldwide",
+      "slide1_titlePrefix": "Trade in ",
+      "slide1_titleHighlight1": "Global ",
+      "slide1_titleHighlight2": "Markets ",
+      "slide1_titleSeparator1": "with Award",
+      "slide1_titleSuffix": "Winning Broker",
+      "slide1_description": "Regulated, secure, and powered by industry-leading experts to help you trade with confidence",
+      "slide2_badgeLabel": "Grow your savings",
+      "slide2_titlePrefix": "Trade ",
+      "slide2_titleHighlight1": "Smart ",
+      "slide2_titleSeparator1": "with ",
+      "slide2_titleHighlight2": "PrimeX ",
+      "slide2_titleSeparator2": "Investment",
+      "slide2_titleSuffix": "Fund",
+      "btnTxt": "Open Account"
+    },
     "stats": {
       "stat1": {
         "title": "Served Clients",
@@ -104,12 +121,12 @@
         "desc": "Earn up to $23 with PrimeX Capital's IB Program"
       },
       "promotion3": {
-        "title": "Social Trading",
-        "desc": "Start trading easily by copying expert strategies"
+        "title": "PrimeX Investment Fund",
+        "desc": "Start investing with a minimum deposit of $500, and let the experts manage your investment."
       },
       "promotion4": {
         "title": "PrimeX Spreads",
-        "desc": "Trade FX CFDs and Metals with the Best Spreads Ever"
+        "desc": "Trade FX CFDs and Metals with the Best Spreads Ever."
       },
       "btnTxt": "Learn More"
     },
@@ -119,6 +136,13 @@
       "title3": "Global",
       "title4": "Markets",
       "desc": "Discover trading opportunities with CFDs on commodities like Oil, Gold, and Natural Gas. Explore FX CFDs, indices such as S&P 500, the Dow, and Nasdaq, and seize exposure to equity markets with CFDs on shares in companies like Amazon and Tesla."
+    },
+    "tradingInstruments": {
+      "title1": "Unlock Diverse ",
+      "title2": "Global ",
+      "title3": "Markets",
+      "latestPrice": "Latest Price",
+      "speed": "Speed"
     },
     "accountTypes": {
       "title1": "Choose Your ",
@@ -145,6 +169,141 @@
         "minimumDeposit": " $5000",
         "description": "The Raw Account is designed for professional traders, offering a 'raw spread' for an unmatched trading experience."
       }
+    },
+    "chooseAccountTypes": {
+      "title1": "Choose Your ",
+      "title2": "Account Type",
+      "desc": "Explore our account options and find the one that fits your needs. Select the perfect plan for you.",
+      "deposit": "Min Deposit: ",
+      "acc1": {
+        "title": "Cent Account",
+        "description": "Designed for beginner traders, starts with a deposit of only $10 and provides a flexible trading environment with no hidden fees.",
+        "minimumDeposit": " $10",
+        "features": [
+          {
+            "leftText": "",
+            "highlight": "Spreads ",
+            "rightText": "start from 0.8 pips."
+          },
+          {
+            "leftText": "The account offers ",
+            "highlight": "$0 commissions ",
+            "rightText": "on trades."
+          },
+          {
+            "leftText": "The ",
+            "highlight": "margin ",
+            "rightText": "requirement for trades is 1%."
+          },
+          {
+            "leftText": "The ",
+            "highlight": "stop-out level ",
+            "rightText": "is set at 30%."
+          },
+          {
+            "leftText": "The ",
+            "highlight": "margin call",
+            "rightText": " level is 100%."
+          }
+        ]
+      },
+      "acc2": {
+        "title": "Standard Account",
+        "minimumDeposit": " $10",
+        "description": "The Standard Account is a top choice among traders due to its no-swap commissions, offering cost-efficiency by eliminating these fees.",
+        "features": [
+          {
+            "leftText": "",
+            "highlight": "Spreads ",
+            "rightText": "start from 0.8 pips."
+          },
+          {
+            "leftText": "The account offers ",
+            "highlight": "$0 commissions ",
+            "rightText": "on trades."
+          },
+          {
+            "leftText": "The ",
+            "highlight": "margin ",
+            "rightText": "requirement for trades is 1%."
+          },
+          {
+            "leftText": "The ",
+            "highlight": "stop-out level ",
+            "rightText": "is set at 30%."
+          },
+          {
+            "leftText": "The ",
+            "highlight": "margin call",
+            "rightText": " level is 100%."
+          }
+        ]
+      },
+      "acc3": {
+        "title": "Narrow Account",
+        "minimumDeposit": " $1000",
+        "description": "This account is tailored for scalpers, featuring the lowest spread to maximize profits from short-term market movements.",
+        "features": [
+          {
+            "leftText": "",
+            "highlight": "Spreads ",
+            "rightText": "start from 0.6 pips."
+          },
+          {
+            "leftText": "The account offers ",
+            "highlight": "$0 commissions ",
+            "rightText": "on trades."
+          },
+          {
+            "leftText": "The ",
+            "highlight": "margin ",
+            "rightText": "requirement for trades is 1%."
+          },
+          {
+            "leftText": "The ",
+            "highlight": "stop-out level ",
+            "rightText": "is set at 30%."
+          },
+          {
+            "leftText": "The ",
+            "highlight": "margin call",
+            "rightText": " level is 100%."
+          }
+        ]
+      },
+      "acc4": {
+        "title": "Raw Account",
+        "minimumDeposit": " $5000",
+        "description": "The Raw Account is designed for professional traders, offering a 'raw spread' for an unmatched trading experience.",
+        "features": [
+          {
+            "leftText": "",
+            "highlight": "Spreads ",
+            "rightText": "start from 0.1 pips."
+          },
+          {
+            "leftText": "The account offers ",
+            "highlight": "$0 commissions ",
+            "rightText": "on trades."
+          },
+          {
+            "leftText": "The ",
+            "highlight": "margin ",
+            "rightText": "requirement for trades is 1%."
+          },
+          {
+            "leftText": "The ",
+            "highlight": "stop-out level ",
+            "rightText": "is set at 30%."
+          },
+          {
+            "leftText": "The ",
+            "highlight": "margin call",
+            "rightText": " level is 100%."
+          }
+        ]
+      },
+      "btnText": "Open Account"
     },
     "advancedPlatforms": {
       "advance_platform_title_1": "Advanced Platform for ",
@@ -185,7 +344,7 @@
       "li7": "Community & Support",
       "li7_desc": "Connect with experts and active traders any time you need guidance or support.",
       "li8": "Integrated Economic Calendar",
-      "li8_desc": "Stay updated with real-time market events and make informed trading decisions.",
+      "li8_desc": "Stay updated with real-time market events and make informed trading decisions.",
       "btnTxt": "Open Account"
     },
     "testimonial": {

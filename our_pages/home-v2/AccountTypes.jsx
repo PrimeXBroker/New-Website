@@ -4,16 +4,17 @@ import { useTranslations, useLocale } from "next-intl";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import { RiArrowLeftUpLine, RiArrowRightUpLine } from "react-icons/ri";
+import CustomYellowButton from "@/components/common/CustomYellowButton";
 
 const AccountTypes = () => {
   const locale = useLocale();
   const { theme } = useTheme();
-  const t = useTranslations("home.accountTypes");
+  const t = useTranslations("home.chooseAccountTypes");
 
   const accountTypesData = [
     {
@@ -25,6 +26,7 @@ const AccountTypes = () => {
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Cent+Account+large+icon.png",
       minimumDeposit: t("acc1.minimumDeposit"),
       description: t("acc1.description"),
+      features: t.raw("acc1.features"),
     },
     {
       id: 2,
@@ -35,6 +37,7 @@ const AccountTypes = () => {
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Standard+Account+large+icon.png",
       minimumDeposit: t("acc2.minimumDeposit"),
       description: t("acc2.description"),
+      features: t.raw("acc2.features"),
     },
     {
       id: 3,
@@ -45,6 +48,7 @@ const AccountTypes = () => {
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Narrow+account+large+icon.png",
       minimumDeposit: t("acc3.minimumDeposit"),
       description: t("acc3.description"),
+      features: t.raw("acc3.features"),
     },
     {
       id: 4,
@@ -55,6 +59,7 @@ const AccountTypes = () => {
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Raw+Account+large+icon.png",
       minimumDeposit: t("acc4.minimumDeposit"),
       description: t("acc4.description"),
+      features: t.raw("acc4.features"),
     },
     {
       id: 5,
@@ -65,6 +70,7 @@ const AccountTypes = () => {
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Cent+Account+large+icon.png",
       minimumDeposit: t("acc1.minimumDeposit"),
       description: t("acc1.description"),
+      features: t.raw("acc1.features"),
     },
     {
       id: 6,
@@ -75,6 +81,7 @@ const AccountTypes = () => {
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Standard+Account+large+icon.png",
       minimumDeposit: t("acc2.minimumDeposit"),
       description: t("acc2.description"),
+      features: t.raw("acc2.features"),
     },
     {
       id: 7,
@@ -85,6 +92,7 @@ const AccountTypes = () => {
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Narrow+account+large+icon.png",
       minimumDeposit: t("acc3.minimumDeposit"),
       description: t("acc3.description"),
+      features: t.raw("acc3.features"),
     },
     {
       id: 8,
@@ -95,6 +103,7 @@ const AccountTypes = () => {
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Raw+Account+large+icon.png",
       minimumDeposit: t("acc4.minimumDeposit"),
       description: t("acc4.description"),
+      features: t.raw("acc4.features"),
     },
   ];
 
@@ -146,22 +155,18 @@ const AccountTypes = () => {
             640: {
               slidesPerView: 2,
               spaceBetween: 10,
-              centeredSlides: false,
             },
             768: {
               slidesPerView: 2,
               spaceBetween: 10,
-              centeredSlides: false,
             },
             1024: {
               slidesPerView: 3,
               spaceBetween: 20,
-              centeredSlides: true,
             },
             1440: {
               slidesPerView: 3,
               spaceBetween: 20,
-              centeredSlides: true,
             },
           }}
           slidesPerView={"auto"}
@@ -181,20 +186,48 @@ const AccountTypes = () => {
             prevEl: ".promotions-swiper-button-prev",
           }}
           modules={[Autoplay, Pagination, Navigation]}
-          className="home-testimonial-pagination"
+          className="home-testimonial-pagination !items-center !overflow-x-hidden !overflow-y-visible !pt-9"
         >
           {accountTypesData.map((account, index) => (
             <SwiperSlide key={index}>
               {({ isActive }) => (
                 <div
                   key={account.id}
-                  className={`relative overflow flex flex-col justify-between max-w-sm mx-auto bg-cc dark:bg-cc-dark border-[0.71px] border-[] dark:border-[#2d2d2d] rounded-xl p-6 min-h-[210px] sm:min-h-[377px] mb-9 transition-all duration-500 ease-in-out ${
-                    isActive ? "scale-100 md:scale-105 z-10" : "scale-90"
+                  className={`relative !overflow-visible flex flex-col items-center gap-6 justify-between mx-auto bg-cc dark:bg-cc-dark border-[0.71px] border-[] dark:border-[#2d2d2d] rounded-xl p-6 mb-9 transition-all duration-500 ease-in-out ${
+                    isActive ? "scale-105" : "scale-95"
                   }`}
                 >
+                  <div className="absolute top-[60px] right-0 z-0">
+                    <Image
+                      unoptimized={true}
+                      src={
+                        theme === "dark"
+                          ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Large+Background+X.png"
+                          : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Large+X.png"
+                      }
+                      alt="Background Accent"
+                      width={138}
+                      height={157}
+                      className="w-[138px] h-auto"
+                    />
+                  </div>
+                  <div className="absolute top-0 left-[98px]">
+                    <Image
+                      unoptimized={true}
+                      src={
+                        theme === "dark"
+                          ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Small+Background+X.png"
+                          : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Small+X.png"
+                      }
+                      alt="Background Accent"
+                      width={72}
+                      height={82}
+                      className="w-[72px] h-auto"
+                    />
+                  </div>
                   <Link
                     href={`/${locale}/account-types`}
-                    className="flex flex-col gap-7"
+                    className="flex flex-col gap-7 z-10"
                   >
                     <div className="flex justify-between items-start">
                       <Image
@@ -234,12 +267,44 @@ const AccountTypes = () => {
                         {account.description}
                       </p>
                     </div>
-                    <p className="text-sm text-ts dark:text-ts-dark mt-1">
+                    <p
+                      className={`text-sm text-tm dark:text-tm-dark font-medium ${isActive ? "text-base" : "text-sm"}`}
+                    >
                       {t("deposit")}
-                      <span className="font-bold text-sm text-tm dark:text-tm-dark">
-                        {account.minimumDeposit}
-                      </span>
+                      {account.minimumDeposit}
                     </p>
+                    <CustomYellowButton
+                      title={t("btnText")}
+                      className="py-4 md:py-3 lg:py-3 text-sm w-full justify-between sm:justify-center"
+                    />
+                    <div>
+                      {account.features?.map((item, index) => (
+                        <div
+                          key={index}
+                          className={`flex items-start gap-2 font-medium ${isActive ? "text-sm" : "text-[13px]"} text-ts dark:text-ts-dark ${index === account.features.length - 1 ? "" : "mb-4"}`}
+                        >
+                          <Image
+                            unoptimized={true}
+                            src={
+                              theme === "dark"
+                                ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Check+Circle+icon.png"
+                                : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Check+Circle+icon.png"
+                            }
+                            alt="Check"
+                            width={20}
+                            height={20}
+                            className={`${isActive ? "w-[20px]" : "w-[16px]"} h-auto mt-[1px]`}
+                          />
+                          <p>
+                            {item.leftText}
+                            <span className="text-tm dark:text-tm-dark">
+                              {item.highlight}
+                            </span>
+                            {item.rightText}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
                   </Link>
                 </div>
               )}

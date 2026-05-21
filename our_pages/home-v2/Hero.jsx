@@ -16,16 +16,16 @@ const slides = [
     id: 1,
     badgeIcon:
       "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/chip-icon-slide1.svg",
-    badgeLabel: "Licensed in UAE by ",
-    badgeHighlight: "SCA",
-    titlePrefix: "The ",
-    titleHighlight: "#1 Choice ",
-    titleSeparator: "of ",
-    titleSuffix: "World-Class Traders",
+    badgeLabel: "Join 250,000+ traders worldwide",
+    titlePrefix: "Trade in ",
+    titleHighlight1: "Global ",
+    titleHighlight2: "Markets ",
+    titleSeparator1: "with Award",
+    titleSuffix: "Winning Broker",
     backgroundSvg:
       "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/text-bg-slide1.png",
-    description: "Trade with low commissions and raw spreads",
-    buttonLabel: "Open Account",
+    description:
+      "Regulated, secure, and powered by industry-leading experts to help you trade with confidence",
     buttonLink: "/",
     coins: [
       {
@@ -52,16 +52,17 @@ const slides = [
     id: 2,
     badgeIcon:
       "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/chip-icon-slide2.svg",
-    badgeLabel: "Built for Secure global ",
-    badgeHighlight: "Trading",
-    titlePrefix: "Take ",
-    titleHighlight: "Control ",
-    titleSeparator: "of ",
-    titleSuffix: "every Single Trade",
+    badgeLabel: "Grow your savings",
+    titlePrefix: "Trade ",
+    titleHighlight1: "Smart ",
+    titleSeparator1: "with ",
+    titleHighlight2: "PrimeX ",
+    titleSeparator2: "Investment",
+    titleSuffix: "Fund",
     backgroundSvg:
       "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/text-bg-slide2.png",
-    description: "Full control with insights that actually matter",
-    buttonLabel: "Learn More",
+    description:
+      "Start investing with a minimum deposit of $500 and let PrimeX Capital experts  manage your investment",
     buttonLink: "/",
     coins: [
       {
@@ -96,10 +97,10 @@ const Hero = () => {
   const prevSlide = () =>
     setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
 
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 10000);
-    return () => clearInterval(interval);
-  }, [current]);
+  // useEffect(() => {
+  //   const interval = setInterval(nextSlide, 10000);
+  //   return () => clearInterval(interval);
+  // }, [current]);
 
   const handleClick = () => {
     const url = getRegisterUrl(locale);
@@ -128,9 +129,6 @@ const Hero = () => {
               />
               <p className="text-tm dark:text-tm-dark font-medium text-base">
                 {s.badgeLabel}
-                <span className="text-pcp dark:text-pcp-dark">
-                  {s.badgeHighlight}
-                </span>
               </p>
             </motion.div>
             <motion.h1
@@ -142,9 +140,9 @@ const Hero = () => {
             >
               {s.titlePrefix}
               <span className="text-pcp dark:text-pcp-dark">
-                {s.titleHighlight}
+                {s.titleHighlight1} <br /> {s.titleHighlight2}
               </span>
-              {s.titleSeparator} <br /> {s.titleSuffix}
+              {s.titleSeparator1} <br /> {s.titleSuffix}
             </motion.h1>
           </div>
         </div>
@@ -264,7 +262,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-ts dark:text-ts-dark font-medium text-lg sm:text-xl md:text-base lg:text-xl text-end w-[50%]"
+              className="text-ts dark:text-ts-dark font-medium text-lg sm:text-xl md:text-base lg:text-lg text-end w-[65%]"
             >
               {s.description}
             </motion.p>

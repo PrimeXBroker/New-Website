@@ -3,13 +3,12 @@ import { useLocale, useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 
 const PrimeXAcademy = () => {
   const locale = useLocale();
   const { theme } = useTheme();
   const t = useTranslations("home.primeXAcademy");
-  const [hovered, setHovered] = useState(null);
 
   const academyContent = [
     {
@@ -69,9 +68,7 @@ const PrimeXAcademy = () => {
             <Link
               href={item.link}
               key={index}
-              onMouseEnter={() => setHovered(item.id)}
-              onMouseLeave={() => setHovered(null)}
-              className="bg-cc dark:bg-cc-dark rounded-xl px-2 pt-2 pb-6 border-2 border-cc dark:border-cc-dark hover:border-tl dark:hover:border-tl-dark group transition-all duration-500 ease-in-out cursor-pointer"
+              className="bg-cc dark:bg-cc-dark rounded-xl px-2 pt-2 pb-6 border-2 border-cc dark:border-cc-dark cursor-pointer"
             >
               <div className="rounded-lg">
                 <Image

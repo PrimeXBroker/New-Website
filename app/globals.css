@@ -1961,3 +1961,7 @@ html.dark .terms-checkbox:checked + .terms-label .terms-custom-checkbox {
 .dark [data-rmiz-modal-overlay] {
   background-color: #030303 !important;
 }
+
+.swiper-wrapper {
+  align-items: center !important;
+}

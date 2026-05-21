@@ -1,14 +1,15 @@
 "use client";
 import { useEffect, useState, useOptimistic } from "react";
-import { useTranslations, useLocale } from "next-intl";
+import { useLocale } from "next-intl";
 import { tradingInstrumentsTabs } from "@/utilities/tradingInstruments";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { setTokenData } from "@/redux/slices/workspaceSlice";
 import axios from "axios";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 const TradingInstruments = () => {
-  const locale = useLocale();
+  const { theme } = useTheme();
   const { tokenData } = useAppSelector((state) => state.auth);
   const dispatch = useAppDispatch();
   const [activeTab, setActiveTab] = useState("Trending");
@@ -74,7 +75,7 @@ const TradingInstruments = () => {
   }, [activeTab]);
 
   return (
-    <div className="bg-p dark:bg-p-dark pb-20">
+    <div className="bg-p dark:bg-p-dark">
       <div className="container">
         <div className="text-center md:text-center mb-10">
           <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold">
@@ -84,20 +85,24 @@ const TradingInstruments = () => {
           </h2>
         </div>
         <div className="w-full mb-10">
-          <div className="flex items-center justify-center space-x-6 min-w-max">
+          <div className="flex items-center justify-center flex-wrap space-x-4 sm:space-x-6">
             {tradingInstrumentsTabs.map((tab) => {
               return (
                 <button
                   key={tab.name}
                   onClick={() => handleChange(tab)}
-                  className="relative text-xl md:text-2xl font-light tracking-wide transition-colors duration-200 focus:outline-none"
+                  className="relative text-xl md:text-2xl font-light tracking-wide transition-colors duration-200 focus:outline-none mb-2 sm:mb-0"
                 >
-                  <span className="text-tm dark:text-tm-dark text-lg font-light">
+                  <span className="text-tm dark:text-tm-dark text-base sm:text-lg font-light">
                     {tab.name}
                   </span>
-                  {activeTab === tab.name && (
-                    <span className="absolute left-1/2 -translate-x-1/2 -bottom-[4px] w-[90%] h-[2px] bg-pcp dark:bg-pcp-dark rounded-full" />
-                  )}
+                  <span
+                    className={`absolute left-1/2 -translate-x-1/2 -bottom-[4px] h-[2px] bg-pcp dark:bg-pcp-dark rounded-full transition-all duration-300 ease-in-out ${
+                      activeTab === tab.name
+                        ? "w-[50%] opacity-100 scale-100"
+                        : "w-0 opacity-0 scale-0"
+                    }`}
+                  />
                 </button>
               );
             })}
@@ -112,7 +117,7 @@ const TradingInstruments = () => {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {symbolList?.length
               ? symbolList.map((instrument) => {
                   const displayPrice = instrument?.bid_price
@@ -124,11 +129,15 @@ const TradingInstruments = () => {
                   return (
                     <div
                       key={instrument.symbol}
-                      className="relative flex flex-col justify-between bg-cc dark:bg-cc-dark rounded-xl p-6 h-[276px] overflow-hidden"
+                      className="relative flex flex-col justify-between bg-cc dark:bg-cc-dark rounded-xl p-6 overflow-hidden"
                     >
-                      <div className="absolute top-0 right-0 w-36 h-36 pointer-events-none select-none">
+                      <div className="absolute top-0 right-0 w-[100px] h-[113px] pointer-events-none select-none">
                         <img
-                          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/trading-instruments/X.png"
+                          src={
+                            theme === "dark"
+                              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/trading-instruments/Background+X.png"
+                              : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/trading-instruments/X+Light.png"
+                          }
                           alt="X overlay"
                           className="w-full h-full object-contain object-right-top"
                         />
@@ -137,35 +146,24 @@ const TradingInstruments = () => {
                         <Image
                           unoptimized={true}
                           src={instrument.image}
-                          width="24"
-                          height="24"
+                          width="40"
+                          height="40"
                           alt={instrument.name}
                           className="w-[40px] h-[40px]"
-                          style={{
-                            filter: `
-                            drop-shadow(1.75px 2.63px 6.13px rgba(0, 0, 0, 0.29))
-                            drop-shadow(5.25px 10.5px 11.38px rgba(0, 0, 0, 0.26))
-                            drop-shadow(12.25px 23.63px 15.75px rgba(0, 0, 0, 0.15))
-                            drop-shadow(21.88px 41.13px 18.38px rgba(0, 0, 0, 0.04))
-                            drop-shadow(35px 64.75px 20.13px rgba(0, 0, 0, 0.01))
-                            drop-shadow(0px 3.5px 3.5px rgba(0, 0, 0, 0.25))
-                            drop-shadow(0px 3.5px 3.5px rgba(0, 0, 0, 0.25))
-                          `,
-                          }}
                         />
-                        <h3 className="text-xl font-semibold text-pcp dark:text-pcp-dark uppercase mt-6 mb-3">
+                        <h3 className="text-xl sm:text-2xl font-semibold text-pcp dark:text-pcp-dark uppercase mt-6 mb-3">
                           {instrument.name}
                         </h3>
                         <div className="flex items-center space-x-1">
-                          <span className="px-3 py-1 bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/trading-instruments/category-bg.png)] bg-cover bg-center text-nb dark:text-nb-dark font-medium text-xs">
+                          <span className="px-3 py-1 bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/trading-instruments/category-bg.png)] bg-cover bg-center rounded text-nb dark:text-nb-dark font-medium text-xs">
                             {activeTab}
                           </span>
-                          <span className="px-3 py-1 bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/trading-instruments/trending-bg.png)] bg-cover bg-center text-ts dark:text-ts-dark font-medium text-xs">
+                          <span className="px-3 py-1 bg-[#f5f5f5] dark:bg-white dark:bg-opacity-[0.12] border-[0.7px] border-[#f5f5f5] dark:border-white dark:border-opacity-[0.15] rounded text-ts dark:text-ts-dark font-medium text-xs">
                             Popular
                           </span>
                         </div>
                       </div>
-                      <div className="relative z-10 border-t border-white border-opacity-[0.2] pt-4 flex items-center justify-between">
+                      <div className="relative z-10 border-t border-[#ececec] dark:border-[#262626] pt-4 mt-8 flex items-center justify-between">
                         <div>
                           <span className="block text-xs text-ts dark:text-ts-dark font-medium mb-[2px]">
                             Latest Price
@@ -174,7 +172,7 @@ const TradingInstruments = () => {
                             {displayPrice}
                           </span>
                         </div>
-                        <div className="text-right">
+                        <div>
                           <span className="block text-xs text-ts dark:text-ts-dark font-medium mb-[2px]">
                             Speed
                           </span>

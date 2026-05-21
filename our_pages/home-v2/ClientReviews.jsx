@@ -6,7 +6,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
-import { TiArrowLeftThick, TiArrowRightThick } from "react-icons/ti";
 import { useTheme } from "next-themes";
 
 const ClientReviews = () => {
@@ -188,7 +187,7 @@ const ClientReviews = () => {
                     unoptimized={true}
                     src={
                       theme === "dark"
-                        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/Review+card+Background+X.png"
+                        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/Background+X.png"
                         : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/Background+X.png"
                     }
                     alt="Background Accent"
