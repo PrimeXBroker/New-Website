@@ -13,7 +13,7 @@ import Promotions from "./Promotions";
 const HomeWrapper = () => {
   return (
     <>
-      {/* <Hero /> */}
+      <Hero />
       <Promotions />
       <TradingInstruments />
       <PrimeXAcademy />
