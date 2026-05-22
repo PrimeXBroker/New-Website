@@ -1,15 +1,16 @@
 "use client";
 import { useEffect, useState, useOptimistic } from "react";
-import { useLocale } from "next-intl";
 import { tradingInstrumentsTabs } from "@/utilities/tradingInstruments";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { setTokenData } from "@/redux/slices/workspaceSlice";
 import axios from "axios";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 
 const TradingInstruments = () => {
   const { theme } = useTheme();
+  const t = useTranslations("home.tradingInstruments");
   const { tokenData } = useAppSelector((state) => state.auth);
   const dispatch = useAppDispatch();
   const [activeTab, setActiveTab] = useState("Trending");
@@ -79,13 +80,14 @@ const TradingInstruments = () => {
       <div className="container">
         <div className="text-center md:text-center mb-10">
           <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold">
-            Unlock Diverse
+            {t("title1")}
             <br className="block sm:hidden" />
-            <span className="text-pcp dark:text-pcp-dark"> Global</span> Markets
+            <span className="text-pcp dark:text-pcp-dark">{t("title2")}</span>
+            {t("title3")}
           </h2>
         </div>
         <div className="w-full mb-10">
-          <div className="flex items-center justify-center flex-wrap space-x-4 sm:space-x-6">
+          <div className="flex items-center justify-center flex-wrap gap-x-4 sm:gap-x-6">
             {tradingInstrumentsTabs.map((tab) => {
               return (
                 <button
@@ -131,7 +133,7 @@ const TradingInstruments = () => {
                       key={instrument.symbol}
                       className="relative flex flex-col justify-between bg-cc dark:bg-cc-dark rounded-xl p-6 overflow-hidden"
                     >
-                      <div className="absolute top-0 right-0 w-[100px] h-[113px] pointer-events-none select-none">
+                      <div className="absolute top-0 end-0 w-[100px] h-[113px] pointer-events-none select-none">
                         <img
                           src={
                             theme === "dark"
@@ -154,7 +156,7 @@ const TradingInstruments = () => {
                         <h3 className="text-xl sm:text-2xl font-semibold text-pcp dark:text-pcp-dark uppercase mt-6 mb-3">
                           {instrument.name}
                         </h3>
-                        <div className="flex items-center space-x-1">
+                        <div className="flex items-center gap-x-1">
                           <span className="px-3 py-1 bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/trading-instruments/category-bg.png)] bg-cover bg-center rounded text-nb dark:text-nb-dark font-medium text-xs">
                             {activeTab}
                           </span>
@@ -166,7 +168,7 @@ const TradingInstruments = () => {
                       <div className="relative z-10 border-t border-[#ececec] dark:border-[#262626] pt-4 mt-8 flex items-center justify-between">
                         <div>
                           <span className="block text-xs text-ts dark:text-ts-dark font-medium mb-[2px]">
-                            Latest Price
+                            {t("latestPrice")}
                           </span>
                           <span className="text-base font-medium text-tm dark:text-tm-dark">
                             {displayPrice}
@@ -174,7 +176,7 @@ const TradingInstruments = () => {
                         </div>
                         <div>
                           <span className="block text-xs text-ts dark:text-ts-dark font-medium mb-[2px]">
-                            Speed
+                            {t("speed")}
                           </span>
                           <span className="text-base font-medium text-pcp dark:text-pcp-dark">
                             {displaySpeed}

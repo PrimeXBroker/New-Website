@@ -16,13 +16,13 @@ const HomeWrapper = () => {
       {/* <Hero /> */}
       <Promotions />
       <TradingInstruments />
-      {/* <PrimeXAcademy />
+      <PrimeXAcademy />
       <AccountTypes />
       <ClientReviews />
       <AdvancedPlatform />
       <PartnershipProgram />
       <Support />
-      <Recognition /> */}
+      <Recognition />
     </>
   );
 };

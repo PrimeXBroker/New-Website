@@ -61,50 +61,6 @@ const AccountTypes = () => {
       description: t("acc4.description"),
       features: t.raw("acc4.features"),
     },
-    {
-      id: 5,
-      title: t("acc1.title"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Cent+Account+large+icon.png",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Cent+Account+large+icon.png",
-      minimumDeposit: t("acc1.minimumDeposit"),
-      description: t("acc1.description"),
-      features: t.raw("acc1.features"),
-    },
-    {
-      id: 6,
-      title: t("acc2.title"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Standard+Account+large+icon.png",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Standard+Account+large+icon.png",
-      minimumDeposit: t("acc2.minimumDeposit"),
-      description: t("acc2.description"),
-      features: t.raw("acc2.features"),
-    },
-    {
-      id: 7,
-      title: t("acc3.title"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Narrow+account+large+icon.png",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Narrow+account+large+icon.png",
-      minimumDeposit: t("acc3.minimumDeposit"),
-      description: t("acc3.description"),
-      features: t.raw("acc3.features"),
-    },
-    {
-      id: 8,
-      title: t("acc4.title"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Raw+Account+large+icon.png",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Raw+Account+large+icon.png",
-      minimumDeposit: t("acc4.minimumDeposit"),
-      description: t("acc4.description"),
-      features: t.raw("acc4.features"),
-    },
   ];
 
   useEffect(() => {
@@ -153,7 +109,7 @@ const AccountTypes = () => {
               spaceBetween: 10,
             },
             640: {
-              slidesPerView: 2,
+              slidesPerView: 1,
               spaceBetween: 10,
             },
             768: {
@@ -161,7 +117,7 @@ const AccountTypes = () => {
               spaceBetween: 10,
             },
             1024: {
-              slidesPerView: 3,
+              slidesPerView: 2,
               spaceBetween: 20,
             },
             1440: {
@@ -171,11 +127,11 @@ const AccountTypes = () => {
           }}
           slidesPerView={"auto"}
           centeredSlides={true}
-          // autoplay={{
-          //   delay: 3000,
-          //   disableOnInteraction: false,
-          //   pauseOnMouseEnter: true,
-          // }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
           spaceBetween={20}
           loop
           pagination={{
@@ -186,7 +142,7 @@ const AccountTypes = () => {
             prevEl: ".promotions-swiper-button-prev",
           }}
           modules={[Autoplay, Pagination, Navigation]}
-          className="home-testimonial-pagination !items-center !overflow-x-hidden !overflow-y-visible !pt-9"
+          className="home-testimonial-pagination !items-center !overflow-x-hidden !overflow-y-visible md:!pt-4"
         >
           {accountTypesData.map((account, index) => (
             <SwiperSlide key={index}>
@@ -194,10 +150,10 @@ const AccountTypes = () => {
                 <div
                   key={account.id}
                   className={`relative !overflow-visible flex flex-col items-center gap-6 justify-between mx-auto bg-cc dark:bg-cc-dark border-[0.71px] border-[] dark:border-[#2d2d2d] rounded-xl p-6 mb-9 transition-all duration-500 ease-in-out ${
-                    isActive ? "scale-105" : "scale-95"
+                    isActive ? "xl:scale-105" : "xl:scale-95"
                   }`}
                 >
-                  <div className="absolute top-[60px] right-0 z-0">
+                  <div className="absolute top-[60px] end-0 z-0">
                     <Image
                       unoptimized={true}
                       src={
@@ -211,7 +167,7 @@ const AccountTypes = () => {
                       className="w-[138px] h-auto"
                     />
                   </div>
-                  <div className="absolute top-0 left-[98px]">
+                  <div className="absolute top-0 start-[98px]">
                     <Image
                       unoptimized={true}
                       src={
@@ -240,7 +196,7 @@ const AccountTypes = () => {
                         alt={account.title}
                         width={100}
                         height={100}
-                        className={`${isActive ? "w-[56px] h-[56px]" : "w-[46px] h-[46px]"} `}
+                        className={`${isActive ? "w-[46px] h-[46px] sm:w-[56px] sm:h-[56px]" : "w-[46px] h-[46px] sm:w-[56px] sm:h-[56px] xl:w-[46px] xl:h-[46px]"} `}
                       />
                       <Image
                         unoptimized={true}
@@ -257,31 +213,31 @@ const AccountTypes = () => {
                     </div>
                     <div>
                       <h3
-                        className={`font-semibold text-tm dark:text-tm-dark mb-[6px] ${isActive ? "text-2xl " : "text-[22px]"}`}
+                        className={`font-semibold text-tm dark:text-tm-dark mb-[6px] ${isActive ? "text-[22px] sm:text-2xl" : "text-[22px] sm:text-2xl xl:text-[22px]"}`}
                       >
                         {account.title}
                       </h3>
                       <p
-                        className={`text-ts dark:text-ts-dark font-medium ${isActive ? "text-sm" : "text-[13px]"}`}
+                        className={`text-ts dark:text-ts-dark font-medium ${isActive ? "text-[13px] sm:text-sm" : "text-[13px] sm:text-sm xl:text-[13px]"}`}
                       >
                         {account.description}
                       </p>
                     </div>
                     <p
-                      className={`text-sm text-tm dark:text-tm-dark font-medium ${isActive ? "text-base" : "text-sm"}`}
+                      className={`text-sm text-tm dark:text-tm-dark font-medium ${isActive ? "text-sm sm:text-base" : "text-sm sm:text-base xl:text-sm"}`}
                     >
                       {t("deposit")}
                       {account.minimumDeposit}
                     </p>
                     <CustomYellowButton
                       title={t("btnText")}
-                      className="py-4 md:py-3 lg:py-3 text-sm w-full justify-between sm:justify-center"
+                      className="py-4 md:py-3 lg:py-3 text-sm w-full justify-between sm:justify-center px-5"
                     />
                     <div>
                       {account.features?.map((item, index) => (
                         <div
                           key={index}
-                          className={`flex items-start gap-2 font-medium ${isActive ? "text-sm" : "text-[13px]"} text-ts dark:text-ts-dark ${index === account.features.length - 1 ? "" : "mb-4"}`}
+                          className={`flex items-start gap-2 font-medium ${isActive ? "text-[13px] sm:text-sm" : "text-[13px] sm:text-sm xl:text-[13px]"} text-ts dark:text-ts-dark ${index === account.features.length - 1 ? "" : "mb-4"}`}
                         >
                           <Image
                             unoptimized={true}
@@ -293,7 +249,7 @@ const AccountTypes = () => {
                             alt="Check"
                             width={20}
                             height={20}
-                            className={`${isActive ? "w-[20px]" : "w-[16px]"} h-auto mt-[1px]`}
+                            className={`${isActive ? "w-[16px] sm:w-[20px]" : "w-[16px] sm:w-[20px] xl:w-[16px]"} h-auto mt-[1px]`}
                           />
                           <p>
                             {item.leftText}

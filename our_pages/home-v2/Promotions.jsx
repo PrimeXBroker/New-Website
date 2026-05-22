@@ -114,11 +114,11 @@ const Promotions = () => {
           }}
           slidesPerView={"auto"}
           centeredSlides={false}
-          //   autoplay={{
-          //     delay: 3000,
-          //     disableOnInteraction: false,
-          //     pauseOnMouseEnter: true,
-          //   }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
           spaceBetween={20}
           loop
           pagination={{
@@ -132,26 +132,30 @@ const Promotions = () => {
           className="home-testimonial-pagination"
         >
           {promotionsData.map((item, index) => (
-            <SwiperSlide key={index}>
-              <div className="bg-cc dark:bg-cc-dark rounded-xl px-2 pt-2 pb-6 border-2 border-cc dark:border-cc-dark mb-9 h-[424px] sm:h-[630px] md:h-[448px] lg:h-[529px] 2xl:h-[496px]">
-                <Link href={item.link}>
-                  <div className="rounded-lg">
-                    <Image
-                      unoptimized={true}
-                      src={theme === "dark" ? item.imageDark : item.imageLight}
-                      alt={item.altText}
-                      width={100}
-                      height={100}
-                      className="w-full h-auto rounded-lg"
-                    />
-                  </div>
-                  <div className="px-4 mt-4">
-                    <h3 className="text-lg sm:text-xl font-semibold text-pcp dark:text-pcp-dark mb-2 uppercase">
-                      {item.title}
-                    </h3>
-                    <p className="text-ts dark:text-ts-dark font-medium text-sm sm:text-base">
-                      {item.description}
-                    </p>
+            <SwiperSlide key={index} className="!h-auto flex">
+              <div className="bg-cc dark:bg-cc-dark rounded-xl px-2 pt-2 pb-6 border-2 border-cc dark:border-cc-dark w-full flex flex-col flex-1 mb-9">
+                <Link href={item.link} className="flex flex-col flex-1 h-full">
+                  <div className="flex-1">
+                    <div className="rounded-lg">
+                      <Image
+                        unoptimized={true}
+                        src={
+                          theme === "dark" ? item.imageDark : item.imageLight
+                        }
+                        alt={item.altText}
+                        width={100}
+                        height={100}
+                        className="w-full h-auto rounded-lg"
+                      />
+                    </div>
+                    <div className="px-4 mt-4">
+                      <h3 className="text-xl font-semibold text-tm dark:text-tm-dark mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-ts dark:text-ts-dark font-medium text-sm sm:text-base">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
                 </Link>
               </div>

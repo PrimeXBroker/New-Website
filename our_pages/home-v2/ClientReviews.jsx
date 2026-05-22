@@ -162,11 +162,11 @@ const ClientReviews = () => {
           }}
           slidesPerView={"auto"}
           centeredSlides={true}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
+          // autoplay={{
+          //   delay: 3000,
+          //   disableOnInteraction: false,
+          //   pauseOnMouseEnter: true,
+          // }}
           spaceBetween={20}
           loop
           pagination={{
@@ -180,69 +180,78 @@ const ClientReviews = () => {
           className="home-testimonial-pagination"
         >
           {reviews.map((review, index) => (
-            <SwiperSlide key={index}>
-              <div className="relative overflow-hidden flex flex-col justify-between max-w-sm mx-auto bg-cc dark:bg-cc-dark rounded-xl p-8 min-h-[210px] sm:min-h-[377px] mb-9">
-                <div className="absolute top-[17px] right-[80px] w-28 h-28 pointer-events-none">
-                  <Image
-                    unoptimized={true}
-                    src={
-                      theme === "dark"
-                        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/Background+X.png"
-                        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/Background+X.png"
-                    }
-                    alt="Background Accent"
-                    width={71}
-                    height={81}
-                    className="w-[88px] h-auto"
-                  />
-                </div>
-                <div className="flex justify-between items-center mb-8">
-                  <Image
-                    unoptimized={true}
-                    src={
-                      theme === "dark"
-                        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/All+Stars.png"
-                        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/All+Stars.png"
-                    }
-                    alt="Star Reviews"
-                    width={132}
-                    height={132}
-                    className="w-[124px] h-auto"
-                  />
-                  <div className="flex gap-2 items-center bg-[#f5f5f5] dark:bg-white dark:bg-opacity-[0.12] border-[0.7px] border-[#f5f5f5] dark:border-white dark:border-opacity-[0.15] px-2 py-1 rounded-[4px]">
-                    <Image
-                      unoptimized={true}
-                      src={
-                        theme === "dark"
-                          ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/Location+Pin+Icon.png"
-                          : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/Location+Pin+Icon.png"
-                      }
-                      alt="Location Icon"
-                      width={16}
-                      height={16}
-                    />
-                    <span className="text-ts dark:text-ts-dark text-xs font-medium">
-                      {review.country}
-                    </span>
+            <SwiperSlide key={index} className="!h-auto flex">
+              <div className="relative overflow-hidden flex flex-col justify-between max-w-sm mx-auto bg-cc dark:bg-cc-dark rounded-xl p-8 w-full flex-1 mb-9">
+                <div className="flex flex-col flex-1 h-full">
+                  <div className="flex-1 flex flex-col justify-between">
+                    <div
+                      className={`absolute top-[17px] ${locale === "ar" || locale === "ku" ? "end-[100px]" : "end-[80px]"} w-28 h-28 pointer-events-none`}
+                    >
+                      <Image
+                        unoptimized={true}
+                        src={
+                          theme === "dark"
+                            ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/Background+X.png"
+                            : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/Background+X.png"
+                        }
+                        alt="Background Accent"
+                        width={71}
+                        height={81}
+                        className="w-[88px] h-auto"
+                      />
+                    </div>
+                    <div className="flex justify-between items-center mb-8">
+                      <Image
+                        unoptimized={true}
+                        src={
+                          theme === "dark"
+                            ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/All+Stars.png"
+                            : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/All+Stars.png"
+                        }
+                        alt="Star Reviews"
+                        width={132}
+                        height={132}
+                        className="w-[124px] h-auto"
+                      />
+                      <div className="flex gap-2 items-center bg-[#f5f5f5] dark:bg-white dark:bg-opacity-[0.12] border-[0.7px] border-[#f5f5f5] dark:border-white dark:border-opacity-[0.15] px-2 py-1 rounded-[4px]">
+                        <Image
+                          unoptimized={true}
+                          src={
+                            theme === "dark"
+                              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/Location+Pin+Icon.png"
+                              : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/Location+Pin+Icon.png"
+                          }
+                          alt="Location Icon"
+                          width={16}
+                          height={16}
+                        />
+                        <span className="text-ts dark:text-ts-dark text-xs font-medium">
+                          {review.country}
+                        </span>
+                      </div>
+                    </div>
+                    <div>
+                      <Image
+                        unoptimized={true}
+                        src={
+                          theme === "dark"
+                            ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/Double+Quotes.png"
+                            : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/Double+Quotes.png"
+                        }
+                        alt="Double Quotes"
+                        width={25}
+                        height={25}
+                        className={`${locale === "ar" || locale === "ku" || locale === "ps" || locale === "fa" ? "transform rotate-180" : ""}`}
+                      />
+                      <p className="text-tm dark:text-tm-dark text-sm sm:text-base font-medium mt-4 mb-8">
+                        {review.description}
+                      </p>
+                    </div>
+                    <p className="text-sm font-medium text-[#636363] dark:text-[#636363]">
+                      {review.name}
+                    </p>
                   </div>
                 </div>
-                <Image
-                  unoptimized={true}
-                  src={
-                    theme === "dark"
-                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/Double+Quotes.png"
-                      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/Double+Quotes.png"
-                  }
-                  alt="Double Quotes"
-                  width={25}
-                  height={25}
-                />
-                <p className="text-tm dark:text-tm-dark text-sm sm:text-base font-medium mt-4 mb-8">
-                  {review.description}
-                </p>
-                <p className="text-sm font-medium text-[#636363] dark:text-[#636363]">
-                  {review.name}
-                </p>
               </div>
             </SwiperSlide>
           ))}

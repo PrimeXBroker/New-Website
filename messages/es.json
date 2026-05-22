@@ -256,6 +256,198 @@
       "ib_btn": "Broker Introducido",
       "grey_label_btn": "Grey Label",
       "regional_btn": "Socio Regional"
+    },
+    "heroSection": {
+      "slide1_badgeLabel": "Únase a más de 250.000 traders en todo el mundo",
+      "slide1_titlePrefix": "Opere en los ",
+      "slide1_titleHighlight1": "Mercados ",
+      "slide1_titleHighlight2": "Globales ",
+      "slide1_titleSeparator1": "con un Bróker ",
+      "slide1_titleSuffix": "Galardonado",
+      "slide1_description": "Regulado, seguro y respaldado por expertos líderes de la industria para ayudarle a operar con total confianza",
+      "slide2_badgeLabel": "Haga crecer sus ahorros",
+      "slide2_titlePrefix": "Invierta de Forma ",
+      "slide2_titleHighlight1": "Inteligente ",
+      "slide2_titleSeparator1": "con el ",
+      "slide2_titleHighlight2": "Fundo de Inversión ",
+      "slide2_titleSeparator2": "PrimeX",
+      "slide2_titleSuffix": "",
+      "btnTxt": "Abrir Cuenta"
+    },
+    "tradingInstruments": {
+      "title1": "Explore Diversos ",
+      "title2": "Mercados ",
+      "title3": "Globales",
+      "latestPrice": "Último Precio",
+      "speed": "Velocidad"
+    },
+    "primeXAcademy": {
+      "academy_title1": "PrimeX Academy ",
+      "academy_title2": "Aprenda y Crezca",
+      "academy_desc": "Potencie sus habilidades de trading con nuestros amplios recursos educativos y la guía de expertos.",
+      "academy_card_1_title_1": "Webinars Gratuitos",
+      "academy_card_1_desc_1": "Participe en sesiones en vivo dirigidas por expertos para obtener perspectivas del mercado, estrategias y orientación.",
+      "academy_card_2_title_1": "Actualizaciones Diarias del Mercado",
+      "academy_card_2_desc_1": "Manténgase al día con las noticias diarias del mercado, opiniones de expertos y análisis de trading.",
+      "academy_card_3_title_1": "Análisis de Mercado Especializado",
+      "academy_card_3_desc_1": "Siga las últimas tendencias e información clave para tomar decisiones más inteligentes."
+    },
+    "chooseAccountTypes": {
+      "title1": "Elija Su ",
+      "title2": "Tipo de Cuenta",
+      "desc": "Explore nuestras opciones de cuenta y encuentre la que mejor se adapte a sus necesidades. Seleccione el plan perfecto para usted.",
+      "deposit": "Depósito Mínimo: ",
+      "acc1": {
+        "title": "Cuenta Cent",
+        "description": "Diseñada para traders principiantes, comienza con un depósito de solo $10 y proporciona un entorno de trading flexible sin comisiones ocultas.",
+        "minimumDeposit": " $10",
+        "features": [
+          {
+            "leftText": "Los ",
+            "highlight": "Spreads ",
+            "rightText": "comienzan desde 0.8 pips."
+          },
+          {
+            "leftText": "La cuenta ofrece ",
+            "highlight": "$0 comisiones ",
+            "rightText": "en las operaciones."
+          },
+          {
+            "leftText": "El requerimiento de ",
+            "highlight": "margen ",
+            "rightText": "para operar es del 1%."
+          },
+          {
+            "leftText": "El nivel de ",
+            "highlight": "stop-out ",
+            "rightText": "está fijado en el 30%."
+          },
+          {
+            "leftText": "El nivel de ",
+            "highlight": "margin call ",
+            "rightText": "es del 100%."
+          }
+        ]
+      },
+      "acc2": {
+        "title": "Cuenta Standard",
+        "minimumDeposit": " $10",
+        "description": "La Cuenta Standard es una opción preferida entre los traders debido a que no cobra tarifas de swap, ofreciendo una alta eficiencia de costos.",
+        "features": [
+          {
+            "leftText": "Los ",
+            "highlight": "Spreads ",
+            "rightText": "comienzan desde 0.8 pips."
+          },
+          {
+            "leftText": "La cuenta ofrece ",
+            "highlight": "$0 comisiones ",
+            "rightText": "en las operaciones."
+          },
+          {
+            "leftText": "El requerimiento de ",
+            "highlight": "margen ",
+            "rightText": "para operar es del 1%."
+          },
+          {
+            "leftText": "El nivel de ",
+            "highlight": "stop-out ",
+            "rightText": "está fijado en el 30%."
+          },
+          {
+            "leftText": "El nivel de ",
+            "highlight": "margin call ",
+            "rightText": "es del 100%."
+          }
+        ]
+      },
+      "acc3": {
+        "title": "Cuenta Narrow",
+        "minimumDeposit": " $1000",
+        "description": "Esta cuenta está hecha a la medida para scalpers, ofreciendo el spread más bajo para maximizar ganancias en movimientos a corto plazo.",
+        "features": [
+          {
+            "leftText": "Los ",
+            "highlight": "Spreads ",
+            "rightText": "comienzan desde 0.6 pips."
+          },
+          {
+            "leftText": "La cuenta ofrece ",
+            "highlight": "$0 comisiones ",
+            "rightText": "en las operaciones."
+          },
+          {
+            "leftText": "El requerimiento de ",
+            "highlight": "margen ",
+            "rightText": "para operar es del 1%."
+          },
+          {
+            "leftText": "El nivel de ",
+            "highlight": "stop-out ",
+            "rightText": "está fijado en el 30%."
+          },
+          {
+            "leftText": "El nivel de ",
+            "highlight": "margin call ",
+            "rightText": "es del 100%."
+          }
+        ]
+      },
+      "acc4": {
+        "title": "Cuenta Raw",
+        "minimumDeposit": " $5000",
+        "description": "La Cuenta Raw está diseñada para traders profesionales, ofreciendo un 'spread en bruto' para una experiencia de trading incomparable.",
+        "features": [
+          {
+            "leftText": "Los ",
+            "highlight": "Spreads ",
+            "rightText": "comienzan desde 0.1 pips."
+          },
+          {
+            "leftText": "La cuenta ofrece ",
+            "highlight": "$0 comisiones ",
+            "rightText": "en las operaciones."
+          },
+          {
+            "leftText": "El requerimiento de ",
+            "highlight": "margen ",
+            "rightText": "para operar es del 1%."
+          },
+          {
+            "leftText": "El nivel de ",
+            "highlight": "stop-out ",
+            "rightText": "está fijado en el 30%."
+          },
+          {
+            "leftText": "El nivel de ",
+            "highlight": "margin call ",
+            "rightText": "es del 100%."
+          }
+        ]
+      },
+      "btnText": "Abrir Cuenta"
+    },
+    "advancedTraderPlatforms": {
+      "advance_platform_title_1": "Plataforma Avanzada para ",
+      "advance_platform_title_2": "Traders Modernos",
+      "advance_platform_description": "Experimente una plataforma de vanguardia creada para traders modernos: rendimiento fluido, análisis potentes y herramientas innovadoras para elevar su éxito.",
+      "li1": "Herramientas Analíticas Avanzadas",
+      "li1_desc": "Tome decisiones más inteligentes con análisis avanzados y anticípese a las tendencias del mercado.",
+      "li2": "Plataforma Multi-Activo",
+      "li2_desc": "Acceda a múltiples mercados desde un solo lugar y opere de manera integrada y sin limitaciones.",
+      "li3": "Trading Automatizado Sólido",
+      "li3_desc": "Aumente su eficiencia con automatización inteligente que ejecuta órdenes sin problemas.",
+      "li4": "Ejecución Rápida de Órdenes",
+      "li4_desc": "Ejecute operaciones al instante con alta velocidad y disfrute de un rendimiento fluido y confiable.",
+      "li5": "Plataforma de vanguardia creada para traders modernos",
+      "li5_desc": "Comience Hoy Mismo",
+      "li6": "Capacidades de Gráficos Avanzadas",
+      "li6_desc": "Analice los movimientos de precios con claridad visual e identifique oportunidades rápidamente.",
+      "li7": "Comunidad y Soporte",
+      "li7_desc": "Conéctese con expertos y traders activos en cualquier momento que necesite orientación o soporte.",
+      "li8": "Calendario Económico Integrado",
+      "li8_desc": "Manténgase al día con los eventos del mercado en tiempo real y tome decisiones informadas.",
+      "btnTxt": "Abrir Cuenta"
     }
   },
   "webinar": {

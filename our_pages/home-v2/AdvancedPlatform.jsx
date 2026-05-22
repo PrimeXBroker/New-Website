@@ -13,7 +13,7 @@ const AdvancedPlatform = () => {
   const t = useTranslations("home.advancedTraderPlatforms");
 
   return (
-    <section className="bg-p dark:bg-p-dark py-16 sm:py-28 hidden lg:block">
+    <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
       <div className="container">
         <div className="text-center md:text-center mb-10">
           <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold">
@@ -26,12 +26,12 @@ const AdvancedPlatform = () => {
               {t("advance_platform_title_2")}
             </span>
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg mt-2 text-ts dark:text-ts-dark w-[65%] mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg mt-2 text-ts dark:text-ts-dark sm:w-[65%] mx-auto">
             {t("advance_platform_description")}
           </p>
         </div>
         <div className="grid grid-cols-12 gap-4">
-          <div className="col-span-4">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <div className="bg-cc dark:bg-cc-dark rounded-2xl px-2 pt-6 pb-2">
               <div className="mb-4 px-4">
                 <h3 className="text-tm dark:text-tm-dark text-xl font-semibold">
@@ -95,11 +95,11 @@ const AdvancedPlatform = () => {
                     : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/light/Seamless+Automated+Trading.png"
                 }
                 alt="Seamless Automated Trading"
-                className="w-full h-[239px]"
+                className="w-full h-auto lg:h-[239px]"
               />
             </div>
           </div>
-          <div className="col-span-4">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <div className="bg-cc dark:bg-cc-dark rounded-2xl px-2 pt-6 pb-2">
               <div className="mb-4 px-4">
                 <h3 className="text-tm dark:text-tm-dark text-xl font-semibold">
@@ -160,7 +160,7 @@ const AdvancedPlatform = () => {
               />
             </div>
           </div>
-          <div className="col-span-4">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <div className="bg-cc dark:bg-cc-dark rounded-2xl px-2 pb-6 pt-2">
               <Image
                 unoptimized={true}
@@ -194,7 +194,19 @@ const AdvancedPlatform = () => {
                     : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/light/Integrated+Economic+Calendar.png"
                 }
                 alt="Integrated Economic Calendar"
-                className="w-full h-[567px]"
+                className="w-full h-auto lg:h-[567px] hidden lg:block"
+              />
+              <Image
+                unoptimized={true}
+                width="500"
+                height="400"
+                src={
+                  theme === "dark"
+                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/dark/Integrated+Economic+Calendar+Dark+Mode+Mobile.png"
+                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/light/Integrated+Economic+Calendar+Mobile.png"
+                }
+                alt="Integrated Economic Calendar"
+                className="w-full h-auto lg:hidden"
               />
               <div className="mt-4 px-4">
                 <h3 className="text-tm dark:text-tm-dark text-xl font-semibold">
