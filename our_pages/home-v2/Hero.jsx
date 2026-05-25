@@ -10,20 +10,21 @@ import { Environment, OrbitControls } from "@react-three/drei";
 import { IPhoneModelSlide1 } from "./IPhoneModelSlide1";
 import { IPhoneModelSlide2 } from "./IPhoneModelSlide2";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "next-themes";
 
 const slides = [
   {
     id: 1,
-    badgeIcon:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/chip-icon-slide1.svg",
+    badgeIconDark:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Join+250%2C000%2B+traders+worldwide+icon.png",
+    badgeIconLight:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Join+250%2C000%2B+traders+worldwide+icon.png",
     badgeLabel: "Join 250,000+ traders worldwide",
     titlePrefix: "Trade in ",
     titleHighlight1: "Global ",
     titleHighlight2: "Markets ",
     titleSeparator1: "with Award",
     titleSuffix: "Winning Broker",
-    backgroundSvg:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/text-bg-slide1.png",
     description:
       "Regulated, secure, and powered by industry-leading experts to help you trade with confidence",
     buttonLink: "/",
@@ -50,8 +51,10 @@ const slides = [
   },
   {
     id: 2,
-    badgeIcon:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/chip-icon-slide2.svg",
+    badgeIconDark:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Grow+your+savings+Icon.png",
+    badgeIconLight:
+      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Grow+your+savings+Icon.png",
     badgeLabel: "Grow your savings",
     titlePrefix: "Trade ",
     titleHighlight1: "Smart ",
@@ -59,8 +62,6 @@ const slides = [
     titleHighlight2: "PrimeX ",
     titleSeparator2: "Investment",
     titleSuffix: "Fund",
-    backgroundSvg:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/text-bg-slide2.png",
     description:
       "Start investing with a minimum deposit of $500 and let PrimeX Capital experts  manage your investment",
     buttonLink: "/",
@@ -89,6 +90,7 @@ const slides = [
 
 const Hero = () => {
   const router = useRouter();
+  const { theme } = useTheme();
   const [current, setCurrent] = useState(0);
   const s = slides[current];
 
@@ -108,7 +110,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-p dark:bg-p-dark py-14 sm:py-16 md:py-20 text-white">
+    <section className="bg-p dark:bg-p-dark py-14 sm:pt-16 md:pt-20 text-white">
       <div className="relative container mt-20">
         <div className="grid grid-cols-2">
           <div>
@@ -121,7 +123,7 @@ const Hero = () => {
             >
               <Image
                 unoptimized={true}
-                src={s.badgeIcon}
+                src={theme === "dark" ? s.badgeIconDark : s.badgeIconLight}
                 width="16"
                 height="16"
                 alt="badge"
@@ -153,14 +155,22 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
             exit={{ opacity: 0, scale: 1.1, filter: "blur(10px)" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className=" flex items-center justify-center h-[493px]"
-            style={{
-              backgroundImage: `url(${s.backgroundSvg})`,
-              backgroundSize: "contain",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          />
+            className="relative flex items-center justify-center w-full overflow-hidden"
+          >
+            <Image
+              src={
+                theme === "dark"
+                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Hero+BG+Dark+Mode.png"
+                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Hero+BG+Light+Mode.png"
+              }
+              alt="Background Chart"
+              width={500}
+              height={500}
+              priority
+              unoptimized={true}
+              className="w-full h-auto"
+            />
+          </motion.div>
         </AnimatePresence>
         <div
           className="absolute inset-0 z-20"
@@ -217,7 +227,7 @@ const Hero = () => {
             </motion.div>
           </AnimatePresence>
         </div>
-        <div className="absolute inset-0 flex items-center justify-center z-10">
+        {/* <div className="absolute inset-0 flex items-center justify-center z-10">
           <Canvas camera={{ position: [0, 0, 8], fov: 25 }}>
             <Suspense fallback={null}>
               <Environment preset="city" />
@@ -244,9 +254,10 @@ const Hero = () => {
               <pointLight position={[10, 10, 10]} intensity={1.5} />
             </Suspense>
           </Canvas>
-        </div>
-        <div className="grid grid-cols-2 items-end relative -mt-32 z-30">
-          <div>
+        </div> */}
+        <div className="grid grid-cols-2 items-end relative z-30 mb-[-59px]">
+          <div></div>
+          <div className="flex flex-col items-end justify-center gap-5 ">
             <div className="flex gap-4">
               <button onClick={prevSlide} className="text-ts dark:text-ts-dark">
                 <IoArrowBackSharp size={26} />
@@ -255,8 +266,6 @@ const Hero = () => {
                 <IoArrowForwardSharp size={26} />
               </button>
             </div>
-          </div>
-          <div className="flex flex-col items-end justify-center gap-5 ">
             <motion.p
               key={`desc-${current}`}
               initial={{ opacity: 0, y: 20 }}
