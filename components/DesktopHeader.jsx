@@ -604,6 +604,15 @@ const DesktopHeader = ({ locale }) => {
                       {t("local_depositor")}
                     </LocaleLink>
                   </li>
+                  <li>
+                    <LocaleLink
+                      href="/competition"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                    >
+                      {t("competition")}
+                    </LocaleLink>
+                  </li>
                 </ul>
               )}
             </li>

@@ -95,7 +95,7 @@ const Banner = () => {
           <div className="flex lg:justify-end justify-center mt-5 lg:mt-0">
             <Image
               src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/competitions/Hero+Image.png"
-              alt="Economic Calender Hero Image"
+              alt="Competition Hero Image"
               width="550"
               height="500"
               className={`w-full sm:w-[90%] h-auto`}
