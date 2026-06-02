@@ -1461,6 +1461,88 @@
       "reward9_lots": "300,000 Lots",
       "reward10_title": "1 BHK Apartment in Dubai",
       "reward10_lots": "500,000 Lots"
+    },
+    "ibRewards": {
+      "main_title1": "IB Program",
+      "main_title2": "Rewards",
+      "main_desc": "Earn More with PrimeX",
+      "tiers": {
+        "l1": {
+          "title": "Starter L1",
+          "levelStr": "Level 1",
+          "lots": "50 lots",
+          "rewardText": "Get $100"
+        },
+        "l2": {
+          "title": "Starter L2",
+          "levelStr": "Level 2",
+          "lots": "100 lots",
+          "rewardText": "Get $150"
+        },
+        "l3": {
+          "title": "Starter L3",
+          "levelStr": "Level 3",
+          "lots": "200 lots",
+          "rewardText": "Get $175"
+        },
+        "l4": {
+          "title": "Starter L4",
+          "levelStr": "Level 4",
+          "lots": "400 lots",
+          "rewardText": "Get $200",
+          "extraGiftBadge": "Apple Watch ($400)"
+        },
+        "l5": {
+          "title": "Professional L5",
+          "levelStr": "Level 5",
+          "lots": "700 lots",
+          "rewardText": "Get $250"
+        },
+        "l6": {
+          "title": "Professional L6",
+          "levelStr": "Level 6",
+          "lots": "1100 lots",
+          "rewardText": "Get $300"
+        },
+        "l7": {
+          "title": "Professional L7",
+          "levelStr": "Level 7",
+          "lots": "1600 lots",
+          "rewardText": "Get $350"
+        },
+        "l8": {
+          "title": "Professional L8",
+          "levelStr": "Level 8",
+          "lots": "2200 lots",
+          "rewardText": "Get $425",
+          "extraGiftBadge": "Apple iPhone ($1500)"
+        },
+        "l9": {
+          "title": "Prime L9",
+          "levelStr": "Level 9",
+          "lots": "2900 lots",
+          "rewardText": "Get $475"
+        },
+        "l10": {
+          "title": "Prime L10",
+          "levelStr": "Level 10",
+          "lots": "3700 lots",
+          "rewardText": "Get $500"
+        },
+        "l11": {
+          "title": "Prime L11",
+          "levelStr": "Level 11",
+          "lots": "4600 lots",
+          "rewardText": "Get $600"
+        },
+        "l12": {
+          "title": "Prime L12",
+          "levelStr": "Level 12",
+          "lots": "6000 lots",
+          "rewardText": "Get $700",
+          "extraGiftBadge": "MG ($12,000)"
+        }
+      }
     }
   },
   "trustPilot": {

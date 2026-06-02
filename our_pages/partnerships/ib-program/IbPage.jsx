@@ -4,10 +4,9 @@ import Banner from "./Banner";
 import PartnerFeatures from "./PartnerFeatures";
 import EasySteps from "./EasySteps";
 import EasyStepsMobile from "./EasyStepsMobile";
-import IbForm from "./IbForm";
-import Rewards from "./Rewards";
-import RewardsSlider from "./RewardsSlider";
 import ClientSatisfaction from "./ClientSatisfaction";
+import IBRewards from "./IBRewards";
+import IBRewardsSlider from "./IBRewardsSlider";
 
 const IbPage = () => {
   useEffect(() => {
@@ -38,10 +37,10 @@ const IbPage = () => {
       </div>
       {/* <IbForm /> */}
       <div className="lg:block hidden">
-        <Rewards />
+        <IBRewards />
       </div>
       <div className="lg:hidden block">
-        <RewardsSlider />
+        <IBRewardsSlider />
       </div>
       <ClientSatisfaction />
     </>

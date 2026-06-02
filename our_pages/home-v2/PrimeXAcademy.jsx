@@ -1,9 +1,15 @@
 "use client";
 import { useLocale, useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import freeWebinarsDark from "@/public/animations/home-v2/dark/free-webinars.json";
+import freeWebinarsLight from "@/public/animations/home-v2/light/free-webinars.json";
+import dailyMarketUpdatesDark from "@/public/animations/home-v2/dark/daily-market-updates.json";
+import dailyMarketUpdatesLight from "@/public/animations/home-v2/light/daily-market-updates.json";
+import expertMarketAnalysisDark from "@/public/animations/home-v2/dark/expert-market-analysis.json";
+import expertMarketAnalysisLight from "@/public/animations/home-v2/light/expert-market-analysis.json";
+import Lottie from "lottie-react";
 
 const PrimeXAcademy = () => {
   const locale = useLocale();
@@ -13,10 +19,8 @@ const PrimeXAcademy = () => {
   const academyContent = [
     {
       id: 1,
-      imageDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/primex-academy/dark/Free+Webinars.png",
-      imageLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/primex-academy/light/Free+Webinars.png",
+      imageDark: freeWebinarsDark,
+      imageLight: freeWebinarsLight,
       altText: "Webinar",
       title: t("academy_card_1_title_1"),
       description: t("academy_card_1_desc_1"),
@@ -24,10 +28,8 @@ const PrimeXAcademy = () => {
     },
     {
       id: 2,
-      imageDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/primex-academy/dark/Daily+Market+Updates.png",
-      imageLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/primex-academy/light/Daily+Market+Updates.png",
+      imageDark: dailyMarketUpdatesDark,
+      imageLight: dailyMarketUpdatesLight,
       altText: "Market Updates",
       title: t("academy_card_2_title_1"),
       description: t("academy_card_2_desc_1"),
@@ -35,10 +37,8 @@ const PrimeXAcademy = () => {
     },
     {
       id: 3,
-      imageDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/primex-academy/dark/Expert+Market+Analysis.png",
-      imageLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/primex-academy/light/Expert+Market+Analysis.png",
+      imageDark: expertMarketAnalysisDark,
+      imageLight: expertMarketAnalysisLight,
       altText: "Expert Analysis",
       title: t("academy_card_3_title_1"),
       description: t("academy_card_3_desc_1"),
@@ -70,16 +70,12 @@ const PrimeXAcademy = () => {
               key={index}
               className="bg-cc dark:bg-cc-dark rounded-xl px-2 pt-2 pb-6 border-2 border-cc dark:border-cc-dark cursor-pointer"
             >
-              <div className="rounded-lg">
-                <Image
-                  unoptimized={true}
-                  src={theme === "dark" ? item.imageDark : item.imageLight}
-                  alt={item.altText}
-                  width={100}
-                  height={100}
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
+              <Lottie
+                animationData={
+                  theme === "dark" ? item.imageDark : item.imageLight
+                }
+                loop={true}
+              />
               <div className="px-4 mt-4">
                 <h3 className="text-xl font-semibold text-tm dark:text-tm-dark mb-2">
                   {item.title}

@@ -1461,6 +1461,88 @@
       "reward9_lots": "300,000 لاټونه",
       "reward10_title": "1 BHK اپارتمان په دوبۍ کې",
       "reward10_lots": "500,000 لاټونه"
+    },
+    "ibRewards": {
+      "main_title1": "IB پروګرام",
+      "main_title2": "انعامونه",
+      "main_desc": "د پرایم ایکس سره نور ګټه وکړئ",
+      "tiers": {
+        "l1": {
+          "title": "پیل L1",
+          "levelStr": "لومړی کچه",
+          "lots": "50 لاټه",
+          "rewardText": "$100 ترلاسه کړئ"
+        },
+        "l2": {
+          "title": "پیل L2",
+          "levelStr": "دویمه کچه",
+          "lots": "100 لاټه",
+          "rewardText": "$150 ترلاسه کړئ"
+        },
+        "l3": {
+          "title": "پیل L3",
+          "levelStr": "درېیمه کچه",
+          "lots": "200 لاټه",
+          "rewardText": "$175 ترلاسه کړئ"
+        },
+        "l4": {
+          "title": "پیل L4",
+          "levelStr": "څلورمه کچه",
+          "lots": "400 لاټه",
+          "rewardText": "$200 ترلاسه کړئ",
+          "extraGiftBadge": "ایپل واچ ($400)"
+        },
+        "l5": {
+          "title": "مسلکي L5",
+          "levelStr": "پنځمه کچه",
+          "lots": "700 لاټه",
+          "rewardText": "$250 ترلاسه کړئ"
+        },
+        "l6": {
+          "title": "مسلکي L6",
+          "levelStr": "شپږمه کچه",
+          "lots": "1100 لاټه",
+          "rewardText": "$300 ترلاسه کړئ"
+        },
+        "l7": {
+          "title": "مسلکي L7",
+          "levelStr": "اوومه کچه",
+          "lots": "1600 لاټه",
+          "rewardText": "$350 ترلاسه کړئ"
+        },
+        "l8": {
+          "title": "مسلکي L8",
+          "levelStr": "اتمه کچه",
+          "lots": "2200 لاټه",
+          "rewardText": "$425 ترلاسه کړئ",
+          "extraGiftBadge": "ایپل آیفون ($1500)"
+        },
+        "l9": {
+          "title": "پرایم L9",
+          "levelStr": "نهمه کچه",
+          "lots": "2900 لاټه",
+          "rewardText": "$475 ترلاسه کړئ"
+        },
+        "l10": {
+          "title": "پرایم L10",
+          "levelStr": "لسمه کچه",
+          "lots": "3700 لاټه",
+          "rewardText": "$500 ترلاسه کړئ"
+        },
+        "l11": {
+          "title": "پرایم L11",
+          "levelStr": "یوولسمه کچه",
+          "lots": "4600 لاټه",
+          "rewardText": "$600 ترلاسه کړئ"
+        },
+        "l12": {
+          "title": "پرایم L12",
+          "levelStr": "دولسمه کچه",
+          "lots": "6000 لاټه",
+          "rewardText": "$700 ترلاسه کړئ",
+          "extraGiftBadge": "MG موټر ($12,000)"
+        }
+      }
     }
   },
   "trustPilot": {

@@ -29,9 +29,9 @@ const Promotions = () => {
     {
       id: 2,
       imageDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/promotions/dark/PrimeX+Spreads.png",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/promotions/dark/IB+Program.png",
       imageLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/promotions/light/PrimeX+Spreads.png",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/promotions/dark/IB+Program.png",
       altText: "PrimeX Spread",
       title: t("promotion2.title"),
       description: t("promotion2.desc"),
@@ -42,7 +42,7 @@ const Promotions = () => {
       imageDark:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/promotions/dark/PrimeX+Spreads.png",
       imageLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/promotions/light/PrimeX+Spreads.png",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/promotions/dark/PrimeX+Spreads.png",
       altText: "IB Program",
       title: t("promotion4.title"),
       description: t("promotion4.desc"),

@@ -1461,6 +1461,88 @@
       "reward9_lots": "300.000 Lotes",
       "reward10_title": "Apartamento 1 BHK em Dubai",
       "reward10_lots": "500.000 Lotes"
+    },
+    "ibRewards": {
+      "main_title1": "Programa IB",
+      "main_title2": "Recompensas",
+      "main_desc": "Ganhe Mais com a PrimeX",
+      "tiers": {
+        "l1": {
+          "title": "Iniciante L1",
+          "levelStr": "Nível 1",
+          "lots": "50 lots",
+          "rewardText": "Ganhe $100"
+        },
+        "l2": {
+          "title": "Iniciante L2",
+          "levelStr": "Nível 2",
+          "lots": "100 lots",
+          "rewardText": "Ganhe $150"
+        },
+        "l3": {
+          "title": "Iniciante L3",
+          "levelStr": "Nível 3",
+          "lots": "200 lots",
+          "rewardText": "Ganhe $175"
+        },
+        "l4": {
+          "title": "Iniciante L4",
+          "levelStr": "Nível 4",
+          "lots": "400 lots",
+          "rewardText": "Ganhe $200",
+          "extraGiftBadge": "Apple Watch ($400)"
+        },
+        "l5": {
+          "title": "Profissional L5",
+          "levelStr": "Nível 5",
+          "lots": "700 lots",
+          "rewardText": "Ganhe $250"
+        },
+        "l6": {
+          "title": "Profissional L6",
+          "levelStr": "Nível 6",
+          "lots": "1100 lots",
+          "rewardText": "Ganhe $300"
+        },
+        "l7": {
+          "title": "Profissional L7",
+          "levelStr": "Nível 7",
+          "lots": "1600 lots",
+          "rewardText": "Ganhe $350"
+        },
+        "l8": {
+          "title": "Profissional L8",
+          "levelStr": "Nível 8",
+          "lots": "2200 lots",
+          "rewardText": "Ganhe $425",
+          "extraGiftBadge": "Apple iPhone ($1500)"
+        },
+        "l9": {
+          "title": "Prime L9",
+          "levelStr": "Nível 9",
+          "lots": "2900 lots",
+          "rewardText": "Ganhe $475"
+        },
+        "l10": {
+          "title": "Prime L10",
+          "levelStr": "Nível 10",
+          "lots": "3700 lots",
+          "rewardText": "Ganhe $500"
+        },
+        "l11": {
+          "title": "Prime L11",
+          "levelStr": "Nível 11",
+          "lots": "4600 lots",
+          "rewardText": "Ganhe $600"
+        },
+        "l12": {
+          "title": "Prime L12",
+          "levelStr": "Nível 12",
+          "lots": "6000 lots",
+          "rewardText": "Ganhe $700",
+          "extraGiftBadge": "MG ($12,000)"
+        }
+      }
     }
   },
   "trustPilot": {

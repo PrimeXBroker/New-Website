@@ -1462,6 +1462,88 @@
       "reward9_lots": "300000 لۆت",
       "reward10_title": "1 شووقەی BHK لە دوبەی",
       "reward10_lots": "500000 لۆت"
+    },
+    "ibRewards": {
+      "main_title1": "خەڵاتەکانی",
+      "main_title2": "پروگرامی IB",
+      "main_desc": "قازانجی زیاتر بکە لەگەڵ پرایم ئێکس",
+      "tiers": {
+        "l1": {
+          "title": "دەستپێک L1",
+          "levelStr": "ئاستی 1",
+          "lots": "50 لۆت",
+          "rewardText": "ببە بە خاوەنی $100"
+        },
+        "l2": {
+          "title": "دەستپێک L2",
+          "levelStr": "ئاستی 2",
+          "lots": "100 لۆت",
+          "rewardText": "ببە بە خاوەنی $150"
+        },
+        "l3": {
+          "title": "دەستپێک L3",
+          "levelStr": "ئاستی 3",
+          "lots": "200 لۆت",
+          "rewardText": "ببە بە خاوەنی $175"
+        },
+        "l4": {
+          "title": "دەستپێک L4",
+          "levelStr": "ئاستی 4",
+          "lots": "400 لۆت",
+          "rewardText": "ببە بە خاوەنی $200",
+          "extraGiftBadge": "ئەپڵ وۆچ ($400)"
+        },
+        "l5": {
+          "title": "پڕۆفیشناڵ L5",
+          "levelStr": "ئاستی 5",
+          "lots": "700 لۆت",
+          "rewardText": "ببە بە خاوەنی $250"
+        },
+        "l6": {
+          "title": "پڕۆفیشناڵ L6",
+          "levelStr": "ئاستی 6",
+          "lots": "1100 لۆت",
+          "rewardText": "ببە بە خاوەنی $300"
+        },
+        "l7": {
+          "title": "پڕۆفیشناڵ L7",
+          "levelStr": "ئاستی 7",
+          "lots": "1600 لۆت",
+          "rewardText": "ببە بە خاوەنی $350"
+        },
+        "l8": {
+          "title": "پڕۆفیشناڵ L8",
+          "levelStr": "ئاستی 8",
+          "lots": "2200 لۆت",
+          "rewardText": "ببە بە خاوەنی $425",
+          "extraGiftBadge": "ئایفۆنی ئەپڵ ($1500)"
+        },
+        "l9": {
+          "title": "پرايم L9",
+          "levelStr": "ئاستی 9",
+          "lots": "2900 لۆت",
+          "rewardText": "ببە بە خاوەنی $475"
+        },
+        "l10": {
+          "title": "پرايم L10",
+          "levelStr": "ئاستی 10",
+          "lots": "3700 لۆت",
+          "rewardText": "ببە بە خاوەنی $500"
+        },
+        "l11": {
+          "title": "پرايم L11",
+          "levelStr": "ئاستی 11",
+          "lots": "4600 لۆت",
+          "rewardText": "ببە بە خاوەنی $600"
+        },
+        "l12": {
+          "title": "پرايم L12",
+          "levelStr": "ئاستی 12",
+          "lots": "6000 لۆت",
+          "rewardText": "ببە بە خاوەنی $700",
+          "extraGiftBadge": "ئۆتۆمبێلی MG ($12,000)"
+        }
+      }
     }
   },
   "trustPilot": {

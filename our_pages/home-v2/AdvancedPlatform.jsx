@@ -5,6 +5,23 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { FiArrowUp } from "react-icons/fi";
+import advancedAnalyticalDark from "@/public/animations/home-v2/dark/advanced-analytical-tool.json";
+import advancedAnalyticalLight from "@/public/animations/home-v2/light/advanced-analytical-tool.json";
+import chartingCapabilitiesDark from "@/public/animations/home-v2/dark/charting-capabilities.json";
+import chartingCapabilitiesLight from "@/public/animations/home-v2/light/charting-capabilities.json";
+import communitySupportDark from "@/public/animations/home-v2/dark/community-support.json";
+import communitySupportLight from "@/public/animations/home-v2/light/community-support.json";
+import fastOrderDark from "@/public/animations/home-v2/dark/fast-order-execution.json";
+import fastOrderLight from "@/public/animations/home-v2/light/fast-order-execution.json";
+import integratedEconomicDark from "@/public/animations/home-v2/dark/integrated-economic-calendar.json";
+import integratedEconomicLight from "@/public/animations/home-v2/light/integrated-economic-calendar.json";
+import integratedEconomicMblDark from "@/public/animations/home-v2/dark/integrated-economic-calendar-mobile.json";
+import integratedEconomicMblLight from "@/public/animations/home-v2/light/integrated-economic-calendar-mobile.json";
+import multiAssetDark from "@/public/animations/home-v2/dark/multi-assets-platform.json";
+import multiAssetLight from "@/public/animations/home-v2/light/multi-assets-platform.json";
+import seamlessAutomatedDark from "@/public/animations/home-v2/dark/seamless-automated-trading.json";
+import seamlessAutomatedLight from "@/public/animations/home-v2/light/seamless-automated-trading.json";
+import Lottie from "lottie-react";
 
 const AdvancedPlatform = () => {
   const { theme } = useTheme();
@@ -41,17 +58,13 @@ const AdvancedPlatform = () => {
                   {t("li1_desc")}
                 </p>
               </div>
-              <Image
-                unoptimized={true}
-                width="500"
-                height="400"
-                src={
+              <Lottie
+                animationData={
                   theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/dark/Advanced+Analytical+Tool.png"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/light/Advanced+Analytical+Tool.png"
+                    ? advancedAnalyticalDark
+                    : advancedAnalyticalLight
                 }
-                alt="Advanced Analytical Tool"
-                className="w-full h-auto"
+                loop={true}
               />
             </div>
             <div className="bg-cc dark:bg-cc-dark rounded-2xl px-2 pt-6 pb-2 my-4">
@@ -63,17 +76,11 @@ const AdvancedPlatform = () => {
                   {t("li2_desc")}
                 </p>
               </div>
-              <Image
-                unoptimized={true}
-                width="500"
-                height="400"
-                src={
-                  theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/dark/Multi-Asset+Platform.png"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/light/Multi-Asset+Platform.png"
+              <Lottie
+                animationData={
+                  theme === "dark" ? multiAssetDark : multiAssetLight
                 }
-                alt="Multi-Asset Platform"
-                className="w-full h-auto"
+                loop={true}
               />
             </div>
             <div className="bg-cc dark:bg-cc-dark rounded-2xl px-2 pt-6 pb-2">
@@ -85,17 +92,13 @@ const AdvancedPlatform = () => {
                   {t("li3_desc")}
                 </p>
               </div>
-              <Image
-                unoptimized={true}
-                width="500"
-                height="400"
-                src={
+              <Lottie
+                animationData={
                   theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/dark/Seamless+Automated+Trading.png"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/light/Seamless+Automated+Trading.png"
+                    ? seamlessAutomatedDark
+                    : seamlessAutomatedLight
                 }
-                alt="Seamless Automated Trading"
-                className="w-full h-auto lg:h-[239px]"
+                loop={true}
               />
             </div>
           </div>
@@ -109,17 +112,11 @@ const AdvancedPlatform = () => {
                   {t("li4_desc")}
                 </p>
               </div>
-              <Image
-                unoptimized={true}
-                width="500"
-                height="400"
-                src={
-                  theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/dark/Fast+Order+Execution.png"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/light/Fast+Order+Execution.png"
+              <Lottie
+                animationData={
+                  theme === "dark" ? fastOrderDark : fastOrderLight
                 }
-                alt="Fast Order Execution"
-                className="w-full h-auto"
+                loop={true}
               />
             </div>
             <div className="bg-cc dark:bg-cc-dark rounded-2xl p-2 my-4">
@@ -146,33 +143,25 @@ const AdvancedPlatform = () => {
                   {t("li6_desc")}
                 </p>
               </div>
-              <Image
-                unoptimized={true}
-                width="500"
-                height="400"
-                src={
+              <Lottie
+                animationData={
                   theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/dark/Charting+Capabilities.png"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/light/Charting+Capabilities.png"
+                    ? chartingCapabilitiesDark
+                    : chartingCapabilitiesLight
                 }
-                alt="Charting Capabilities"
-                className="w-full h-auto"
+                loop={true}
               />
             </div>
           </div>
           <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <div className="bg-cc dark:bg-cc-dark rounded-2xl px-2 pb-6 pt-2">
-              <Image
-                unoptimized={true}
-                width="500"
-                height="400"
-                src={
+              <Lottie
+                animationData={
                   theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/dark/Community+%26+Support.png"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/light/Community+%26+Support.png"
+                    ? communitySupportDark
+                    : communitySupportLight
                 }
-                alt="Community & Support"
-                className="w-full h-auto"
+                loop={true}
               />
               <div className="mt-4 px-4">
                 <h3 className="text-tm dark:text-tm-dark text-xl font-semibold">
@@ -184,30 +173,27 @@ const AdvancedPlatform = () => {
               </div>
             </div>
             <div className="bg-cc dark:bg-cc-dark rounded-2xl px-2 pb-6 pt-2 mt-4">
-              <Image
-                unoptimized={true}
-                width="500"
-                height="400"
-                src={
-                  theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/dark/Integrated+Economic+Calendar.png"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/light/Integrated+Economic+Calendar.png"
-                }
-                alt="Integrated Economic Calendar"
-                className="w-full h-auto lg:h-[567px] hidden lg:block"
-              />
-              <Image
-                unoptimized={true}
-                width="500"
-                height="400"
-                src={
-                  theme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/dark/Integrated+Economic+Calendar+Dark+Mode+Mobile.png"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/advanced-platforms/light/Integrated+Economic+Calendar+Mobile.png"
-                }
-                alt="Integrated Economic Calendar"
-                className="w-full h-auto lg:hidden"
-              />
+              <div className="w-full h-auto hidden lg:block">
+                <Lottie
+                  animationData={
+                    theme === "dark"
+                      ? integratedEconomicDark
+                      : integratedEconomicLight
+                  }
+                  loop={true}
+                />
+              </div>
+
+              <div className="w-full h-auto lg:hidden">
+                <Lottie
+                  animationData={
+                    theme === "dark"
+                      ? integratedEconomicMblDark
+                      : integratedEconomicMblLight
+                  }
+                  loop={true}
+                />
+              </div>
               <div className="mt-4 px-4">
                 <h3 className="text-tm dark:text-tm-dark text-xl font-semibold">
                   {t("li8")}
