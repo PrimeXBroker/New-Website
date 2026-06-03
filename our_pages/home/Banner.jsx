@@ -1,10 +1,7 @@
 "use client";
-import Image from "next/image";
 import StatsCard from "./StatsCard";
 import { useLocale, useTranslations } from "next-intl";
-import Link from "next/link";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
-import TrustPilot from "@/components/TrustPilot";
 import { useRouter } from "next/navigation";
 
 const Banner = () => {
