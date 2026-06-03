@@ -162,11 +162,11 @@ const ClientReviews = () => {
           }}
           slidesPerView={"auto"}
           centeredSlides={true}
-          // autoplay={{
-          //   delay: 3000,
-          //   disableOnInteraction: false,
-          //   pauseOnMouseEnter: true,
-          // }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
           spaceBetween={20}
           loop
           pagination={{

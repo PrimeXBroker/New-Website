@@ -1,16 +1,17 @@
 "use client";
 import React, { Suspense, useEffect, useState } from "react";
 import Image from "next/image";
-import { IoArrowBackSharp, IoArrowForwardSharp } from "react-icons/io5";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
 import { useRouter } from "next/navigation";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
-import { IPhoneModelSlide1 } from "./IPhoneModelSlide1";
-import { IPhoneModelSlide2 } from "./IPhoneModelSlide2";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
+import { MockupSlide1Dark } from "./mockups/MockupSlide1Dark";
+import { MockupSlide2Dark } from "./mockups/MockupSlide2Dark";
+import { MockupSlide1Light } from "./mockups/MockupSlide1Light";
+import { MockupSlide2Light } from "./mockups/MockupSlide2Light";
 
 const slides = [
   {
@@ -30,20 +31,26 @@ const slides = [
     buttonLink: "/",
     coins: [
       {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/coin1-slide1.svg",
-        pos: "top-[23%] left-[31%] w-[150px]",
+        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Wheat+icon.png",
+        pos: "top-[44%] left-[30%] w-[118px]",
         dirX: -40,
         dirY: 0,
       },
       {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/coin2-slide1.svg",
-        pos: "top-[16%] right-[25%] w-[100px]",
+        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Brent+Icon.png",
+        pos: "top-[7%] right-[31%] w-[126px]",
         dirX: 0,
         dirY: -40,
       },
       {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/coin3-slide1.svg",
-        pos: "bottom-[43%] right-[30%] w-[130px]",
+        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Silver+Icon.png",
+        pos: "top-[37%] right-[29%] w-[65px]",
+        dirX: 0,
+        dirY: -40,
+      },
+      {
+        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Bitcoin+icon.png",
+        pos: "bottom-[19%] right-[30%] w-[140px]",
         dirX: 40,
         dirY: 0,
       },
@@ -67,22 +74,28 @@ const slides = [
     buttonLink: "/",
     coins: [
       {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/coin1-slide2.svg",
-        pos: "top-[23%] left-[31%] w-[150px]",
-        dirX: -120,
+        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Wheat+icon.png",
+        pos: "top-[44%] left-[30%] w-[118px]",
+        dirX: -40,
         dirY: 0,
       },
       {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/coin2-slide2.svg",
-        pos: "top-[16%] right-[25%] w-[100px]",
+        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Silver+Icon.png",
+        pos: "top-[10%] right-[29%] w-[65px]",
         dirX: 0,
-        dirY: -120,
+        dirY: -40,
       },
       {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/coin3-slide2.svg",
-        pos: "bottom-[43%] right-[30%] w-[130px]",
-        dirX: 120,
+        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Bitcoin+icon.png",
+        pos: "top-[14%] right-[31%] w-[140px]",
+        dirX: 40,
         dirY: 0,
+      },
+      {
+        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Brent+Icon.png",
+        pos: "bottom-[16%] right-[30%] w-[126px]",
+        dirX: 0,
+        dirY: -40,
       },
     ],
   },
@@ -110,9 +123,9 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-p dark:bg-p-dark py-14 sm:pt-16 md:pt-20 text-white">
+    <section className="bg-p dark:bg-p-dark pt-14 text-white">
       <div className="relative container mt-20">
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-2 pt-[25px]">
           <div>
             <motion.div
               key={`badge-${current}`}
@@ -133,19 +146,42 @@ const Hero = () => {
                 {s.badgeLabel}
               </p>
             </motion.div>
-            <motion.h1
-              key={`title-${current}`}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-              className="text-tm dark:text-tm-dark lg:text-[42px] font-bold text-start leading-tight"
-            >
-              {s.titlePrefix}
-              <span className="text-pcp dark:text-pcp-dark">
-                {s.titleHighlight1} <br /> {s.titleHighlight2}
-              </span>
-              {s.titleSeparator1} <br /> {s.titleSuffix}
-            </motion.h1>
+            {s.id === 1 && (
+              <motion.h1
+                key={`title-${current}`}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+                className="text-tm dark:text-tm-dark lg:text-[42px] font-bold text-start leading-tight"
+              >
+                {s.titlePrefix}
+                <span className="text-pcp dark:text-pcp-dark">
+                  {s.titleHighlight1} <br />
+                  {s.titleHighlight2}
+                </span>
+                {s.titleSeparator1} <br /> {s.titleSuffix}
+              </motion.h1>
+            )}
+            {s.id === 2 && (
+              <motion.h1
+                key={`title-${current}`}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+                className="text-tm dark:text-tm-dark lg:text-[42px] font-bold text-start leading-tight"
+              >
+                {s.titlePrefix}
+                <span className="text-pcp dark:text-pcp-dark">
+                  {s.titleHighlight1}
+                </span>
+                {s.titleSeparator1} <br />
+                <span className="text-pcp dark:text-pcp-dark">
+                  {s.titleHighlight2}
+                </span>
+                {s.titleSeparator2}
+                <br /> {s.titleSuffix}
+              </motion.h1>
+            )}
           </div>
         </div>
         <AnimatePresence mode="popLayout">
@@ -227,7 +263,7 @@ const Hero = () => {
             </motion.div>
           </AnimatePresence>
         </div>
-        {/* <div className="absolute inset-0 flex items-center justify-center z-10">
+        <div className="absolute inset-0 flex items-center justify-center z-10 ms-5">
           <Canvas camera={{ position: [0, 0, 8], fov: 25 }}>
             <Suspense fallback={null}>
               <Environment preset="city" />
@@ -236,34 +272,70 @@ const Hero = () => {
                 enableZoom={false}
                 enablePan={false}
               />
-              {current === 0 && (
-                <IPhoneModelSlide1
-                  visible={current === 0}
-                  scale={20}
-                  position={[0, 0.2, 0]}
-                />
-              )}
-              {current === 1 && (
-                <IPhoneModelSlide2
-                  visible={current === 1}
-                  scale={20}
-                  position={[0, 0.2, 0]}
-                />
-              )}
+              {current === 0 &&
+                (theme === "dark" ? (
+                  <MockupSlide1Dark
+                    visible={current === 0}
+                    scale={20}
+                    position={[0, 0.1, 0]}
+                  />
+                ) : (
+                  <MockupSlide1Light
+                    visible={current === 0}
+                    scale={20}
+                    position={[0, 0.1, 0]}
+                  />
+                ))}
+              {current === 1 &&
+                (theme === "dark" ? (
+                  <MockupSlide2Dark
+                    visible={current === 1}
+                    scale={20}
+                    position={[0, 0.1, 0]}
+                  />
+                ) : (
+                  <MockupSlide2Light
+                    visible={current === 1}
+                    scale={20}
+                    position={[0, 0.1, 0]}
+                  />
+                ))}
               <ambientLight intensity={0.7} />
               <pointLight position={[10, 10, 10]} intensity={1.5} />
             </Suspense>
           </Canvas>
-        </div> */}
-        <div className="grid grid-cols-2 items-end relative z-30 mb-[-59px]">
+        </div>
+        <div className="grid grid-cols-2 items-end relative z-30 mt-[-98px]">
           <div></div>
-          <div className="flex flex-col items-end justify-center gap-5 ">
-            <div className="flex gap-4">
+          <div className="flex flex-col items-end justify-center gap-5">
+            <div className="flex gap-3">
               <button onClick={prevSlide} className="text-ts dark:text-ts-dark">
-                <IoArrowBackSharp size={26} />
+                <Image
+                  unoptimized={true}
+                  src={
+                    theme === "dark"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/arrow+move+left.png"
+                      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/arrow+move+left.png"
+                  }
+                  alt="Previous"
+                  width={52}
+                  height={52}
+                  className="w-[52px] h-auto"
+                />
               </button>
               <button onClick={nextSlide} className="text-ts dark:text-ts-dark">
-                <IoArrowForwardSharp size={26} />
+                <Image
+                  unoptimized={true}
+                  src={
+                    theme === "dark"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/arrow+move+right.png"
+                      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/arrow+move+right.png"
+                  }
+                  alt="Next"
+                  width={52}
+                  height={52}
+                  className="w-[52px] h-auto"
+                />
               </button>
             </div>
             <motion.p

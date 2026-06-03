@@ -9,11 +9,13 @@ import ClientReviews from "./ClientReviews";
 import PrimeXAcademy from "./PrimeXAcademy";
 import AccountTypes from "./AccountTypes";
 import Promotions from "./Promotions";
+import StatCards from "./StatCards";
 
 const HomeWrapper = () => {
   return (
     <>
       <Hero />
+      <StatCards />
       <Promotions />
       <TradingInstruments />
       <PrimeXAcademy />
