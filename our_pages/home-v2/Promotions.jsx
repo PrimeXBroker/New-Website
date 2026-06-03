@@ -18,10 +18,10 @@ const Promotions = () => {
     {
       id: 1,
       imageDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/promotions/dark/PrimeX+Spreads.png",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/promotions/dark/Investment+Funds.png",
       imageLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/promotions/light/PrimeX+Spreads.png",
-      altText: "IB Program",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/promotions/light/Investment+Fund.png",
+      altText: "Investment Fund",
       title: t("promotion3.title"),
       description: t("promotion3.desc"),
       link: `/${locale}/investment-fund`,
@@ -31,8 +31,8 @@ const Promotions = () => {
       imageDark:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/promotions/dark/IB+Program.png",
       imageLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/promotions/dark/IB+Program.png",
-      altText: "PrimeX Spread",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/promotions/light/IB+Program.png",
+      altText: "IB Program",
       title: t("promotion2.title"),
       description: t("promotion2.desc"),
       link: `/${locale}/ib-program`,
@@ -42,8 +42,8 @@ const Promotions = () => {
       imageDark:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/promotions/dark/PrimeX+Spreads.png",
       imageLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/promotions/dark/PrimeX+Spreads.png",
-      altText: "IB Program",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/promotions/light/PrimeX+Spread.png",
+      altText: "PrimeX Spread",
       title: t("promotion4.title"),
       description: t("promotion4.desc"),
       link: `/${locale}/primex-spreads`,
@@ -188,7 +188,7 @@ const Promotions = () => {
                   ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/arrow+move+left.png"
                   : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/arrow+move+left.png"
               }
-              alt="Double Quotes"
+              alt="Previous"
               fill
               className="w-full h-auto object-cover"
             />
@@ -201,7 +201,7 @@ const Promotions = () => {
                   ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/arrow+move+right.png"
                   : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/arrow+move+right.png"
               }
-              alt="Double Quotes"
+              alt="Next"
               fill
               className="w-full h-auto object-cover"
             />

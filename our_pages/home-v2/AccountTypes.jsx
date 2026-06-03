@@ -61,6 +61,50 @@ const AccountTypes = () => {
       description: t("acc4.description"),
       features: t.raw("acc4.features"),
     },
+    {
+      id: 5,
+      title: t("acc1.title"),
+      iconDark:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Cent+Account+large+icon.png",
+      iconLight:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Cent+Account+large+icon.png",
+      minimumDeposit: t("acc1.minimumDeposit"),
+      description: t("acc1.description"),
+      features: t.raw("acc1.features"),
+    },
+    {
+      id: 6,
+      title: t("acc2.title"),
+      iconDark:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Standard+Account+large+icon.png",
+      iconLight:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Standard+Account+large+icon.png",
+      minimumDeposit: t("acc2.minimumDeposit"),
+      description: t("acc2.description"),
+      features: t.raw("acc2.features"),
+    },
+    {
+      id: 7,
+      title: t("acc3.title"),
+      iconDark:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Narrow+account+large+icon.png",
+      iconLight:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Narrow+account+large+icon.png",
+      minimumDeposit: t("acc3.minimumDeposit"),
+      description: t("acc3.description"),
+      features: t.raw("acc3.features"),
+    },
+    {
+      id: 8,
+      title: t("acc4.title"),
+      iconDark:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Raw+Account+large+icon.png",
+      iconLight:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Raw+Account+large+icon.png",
+      minimumDeposit: t("acc4.minimumDeposit"),
+      description: t("acc4.description"),
+      features: t.raw("acc4.features"),
+    },
   ];
 
   useEffect(() => {

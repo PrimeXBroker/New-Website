@@ -12,99 +12,125 @@ import { MockupSlide1Dark } from "./mockups/MockupSlide1Dark";
 import { MockupSlide2Dark } from "./mockups/MockupSlide2Dark";
 import { MockupSlide1Light } from "./mockups/MockupSlide1Light";
 import { MockupSlide2Light } from "./mockups/MockupSlide2Light";
-
-const slides = [
-  {
-    id: 1,
-    badgeIconDark:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Join+250%2C000%2B+traders+worldwide+icon.png",
-    badgeIconLight:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Join+250%2C000%2B+traders+worldwide+icon.png",
-    badgeLabel: "Join 250,000+ traders worldwide",
-    titlePrefix: "Trade in ",
-    titleHighlight1: "Global ",
-    titleHighlight2: "Markets ",
-    titleSeparator1: "with Award",
-    titleSuffix: "Winning Broker",
-    description:
-      "Regulated, secure, and powered by industry-leading experts to help you trade with confidence",
-    buttonLink: "/",
-    coins: [
-      {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Wheat+icon.png",
-        pos: "top-[44%] left-[30%] w-[118px]",
-        dirX: -40,
-        dirY: 0,
-      },
-      {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Brent+Icon.png",
-        pos: "top-[7%] right-[31%] w-[126px]",
-        dirX: 0,
-        dirY: -40,
-      },
-      {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Silver+Icon.png",
-        pos: "top-[37%] right-[29%] w-[65px]",
-        dirX: 0,
-        dirY: -40,
-      },
-      {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Bitcoin+icon.png",
-        pos: "bottom-[19%] right-[30%] w-[140px]",
-        dirX: 40,
-        dirY: 0,
-      },
-    ],
-  },
-  {
-    id: 2,
-    badgeIconDark:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Grow+your+savings+Icon.png",
-    badgeIconLight:
-      "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Grow+your+savings+Icon.png",
-    badgeLabel: "Grow your savings",
-    titlePrefix: "Trade ",
-    titleHighlight1: "Smart ",
-    titleSeparator1: "with ",
-    titleHighlight2: "PrimeX ",
-    titleSeparator2: "Investment",
-    titleSuffix: "Fund",
-    description:
-      "Start investing with a minimum deposit of $500 and let PrimeX Capital experts  manage your investment",
-    buttonLink: "/",
-    coins: [
-      {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Wheat+icon.png",
-        pos: "top-[44%] left-[30%] w-[118px]",
-        dirX: -40,
-        dirY: 0,
-      },
-      {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Silver+Icon.png",
-        pos: "top-[10%] right-[29%] w-[65px]",
-        dirX: 0,
-        dirY: -40,
-      },
-      {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Bitcoin+icon.png",
-        pos: "top-[14%] right-[31%] w-[140px]",
-        dirX: 40,
-        dirY: 0,
-      },
-      {
-        src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Brent+Icon.png",
-        pos: "bottom-[16%] right-[30%] w-[126px]",
-        dirX: 0,
-        dirY: -40,
-      },
-    ],
-  },
-];
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
   const router = useRouter();
   const { theme } = useTheme();
+  const t = useTranslations("home.heroSection");
+  const t1 = useTranslations("investmentFunds.hero");
   const [current, setCurrent] = useState(0);
+
+  const slides = [
+    {
+      id: 1,
+      badgeIconDark:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Join+250%2C000%2B+traders+worldwide+icon.png",
+      badgeIconLight:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Join+250%2C000%2B+traders+worldwide+icon.png",
+      badgeLabel: t("slide1_badgeLabel"),
+      titlePrefix: t("slide1_titlePrefix"),
+      titleHighlight1: t("slide1_titleHighlight1"),
+      titleHighlight2: t("slide1_titleHighlight2"),
+      titleSeparator1: t("slide1_titleSeparator1"),
+      titleSuffix: t("slide1_titleSuffix"),
+      description: t("slide1_description"),
+      buttonLink: "/",
+      coins: [
+        {
+          srcDark:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Wheat+icon.png",
+          srcLight:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Wheat+icon.png",
+          pos: "top-[44%] start-[30%] w-[118px]",
+          dirX: -40,
+          dirY: 0,
+        },
+        {
+          srcDark:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Brent+Icon.png",
+          srcLight:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Brent+Icon.png",
+          pos: "top-[7%] end-[31%] w-[126px]",
+          dirX: 0,
+          dirY: -40,
+        },
+        {
+          srcDark:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Silver+Icon.png",
+          srcLight:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Silver+Icon.png",
+          pos: "top-[37%] end-[29%] w-[65px]",
+          dirX: 0,
+          dirY: -40,
+        },
+        {
+          srcDark:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Bitcoin+icon.png",
+          srcLight:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Bitcoin+icon.png",
+          pos: "bottom-[19%] end-[30%] w-[140px]",
+          dirX: 40,
+          dirY: 0,
+        },
+      ],
+    },
+    {
+      id: 2,
+      badgeIconDark:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Grow+your+savings+Icon.png",
+      badgeIconLight:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Grow+your+savings+Icon.png",
+      badgeLabel: t("slide2_badgeLabel"),
+      titlePrefix: t("slide2_titlePrefix"),
+      titleHighlight1: t("slide2_titleHighlight1"),
+      titleSeparator1: t("slide2_titleSeparator1"),
+      titleHighlight2: t("slide2_titleHighlight2"),
+      titleSeparator2: t("slide2_titleSeparator2"),
+      titleSuffix: t("slide2_titleSuffix"),
+      description: t1("description"),
+      buttonLink: "/",
+      coins: [
+        {
+          srcDark:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Wheat+icon.png",
+          srcLight:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Wheat+icon.png",
+          pos: "top-[44%] start-[30%] w-[118px]",
+          dirX: -40,
+          dirY: 0,
+        },
+        {
+          srcDark:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Silver+Icon.png",
+          srcLight:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Silver+Icon.png",
+          pos: "top-[10%] end-[29%] w-[65px]",
+          dirX: 0,
+          dirY: -40,
+        },
+        {
+          srcDark:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Bitcoin+icon.png",
+          srcLight:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Bitcoin+icon.png",
+          pos: "top-[14%] end-[31%] w-[140px]",
+          dirX: 40,
+          dirY: 0,
+        },
+        {
+          srcDark:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Brent+Icon.png",
+          srcLight:
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Brent+Icon.png",
+          pos: "bottom-[16%] end-[30%] w-[126px]",
+          dirX: 0,
+          dirY: -40,
+        },
+      ],
+    },
+  ];
+
   const s = slides[current];
 
   const nextSlide = () =>
@@ -112,10 +138,10 @@ const Hero = () => {
   const prevSlide = () =>
     setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
 
-  // useEffect(() => {
-  //   const interval = setInterval(nextSlide, 10000);
-  //   return () => clearInterval(interval);
-  // }, [current]);
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 10000);
+    return () => clearInterval(interval);
+  }, [current]);
 
   const handleClick = () => {
     const url = getRegisterUrl(locale);
@@ -251,7 +277,7 @@ const Hero = () => {
                   style={{ transformStyle: "preserve-3d" }}
                 >
                   <Image
-                    src={coin.src}
+                    src={theme === "dark" ? coin.srcDark : coin.srcLight}
                     alt={`coin-${index}`}
                     width={200}
                     height={200}
@@ -308,7 +334,7 @@ const Hero = () => {
         <div className="grid grid-cols-2 items-end relative z-30 mt-[-98px]">
           <div></div>
           <div className="flex flex-col items-end justify-center gap-5">
-            <div className="flex gap-3">
+            <div className="flex gap-3" dir="ltr">
               <button onClick={prevSlide} className="text-ts dark:text-ts-dark">
                 <Image
                   unoptimized={true}
@@ -343,7 +369,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-ts dark:text-ts-dark font-medium text-lg sm:text-xl md:text-base lg:text-lg text-end w-[65%]"
+              className="text-ts dark:text-ts-dark font-medium text-lg sm:text-xl md:text-base lg:text-lg text-end w-[60%]"
             >
               {s.description}
             </motion.p>
@@ -355,7 +381,7 @@ const Hero = () => {
             >
               <CustomYellowButton
                 onClick={handleClick}
-                title="Open Account"
+                title={t("btnTxt")}
                 className="py-5 px-9 text-lg w-full sm:w-auto justify-between sm:justify-center"
               />
             </motion.div>

@@ -1,9 +1,10 @@
 "use client";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import React from "react";
 
 const StatCards = () => {
+  const locale = useLocale();
   const { theme } = useTheme();
   const t = useTranslations("home.stats");
 
@@ -31,9 +32,9 @@ const StatCards = () => {
   const rightLaurelDark =
     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Right+laurel+Branch.png";
   const leftLaurelLight =
-    "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Left+laurel+Branch.png";
+    "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Left.svg";
   const rightLaurelLight =
-    "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Right+laurel+Branch.png";
+    "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Right.svg";
 
   return (
     <div className="bg-p dark:bg-p-dark pt-16 sm:pt-28">
@@ -42,7 +43,21 @@ const StatCards = () => {
           {stats.map((stat, index) => (
             <div key={index} className="flex items-center gap-5 w-full">
               <img
-                src={leftLaurelDark}
+                src={
+                  theme === "dark"
+                    ? locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
+                      ? rightLaurelDark
+                      : leftLaurelDark
+                    : locale === "ar" ||
+                        locale === "ps" ||
+                        locale === "ku" ||
+                        locale === "fa"
+                      ? rightLaurelLight
+                      : leftLaurelLight
+                }
                 alt="Laurel Left"
                 className="w-[34px] h-auto object-contain"
               />
@@ -55,7 +70,21 @@ const StatCards = () => {
                 </span>
               </div>
               <img
-                src={rightLaurelDark}
+                src={
+                  theme === "dark"
+                    ? locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
+                      ? leftLaurelDark
+                      : rightLaurelDark
+                    : locale === "ar" ||
+                        locale === "ps" ||
+                        locale === "ku" ||
+                        locale === "fa"
+                      ? leftLaurelLight
+                      : rightLaurelLight
+                }
                 alt="Laurel Right"
                 className="w-[34px] h-auto object-contain"
               />
