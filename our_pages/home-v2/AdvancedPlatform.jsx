@@ -22,12 +22,18 @@ import multiAssetLight from "@/public/animations/home-v2/light/multi-assets-plat
 import seamlessAutomatedDark from "@/public/animations/home-v2/dark/seamless-automated-trading.json";
 import seamlessAutomatedLight from "@/public/animations/home-v2/light/seamless-automated-trading.json";
 import Lottie from "lottie-react";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const AdvancedPlatform = () => {
   const { theme } = useTheme();
   const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("home.advancedTraderPlatforms");
+
+  const handleClick = () => {
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
@@ -124,7 +130,10 @@ const AdvancedPlatform = () => {
                 <h3 className="text-tm dark:text-tm-dark text-xl font-semibold">
                   {t("li5")}
                 </h3>
-                <button className="flex items-center justify-center gap-3 mt-6 bg-pcp dark:bg-pcp-dark rounded-lg sm:rounded-xl px-6 py-4 text-nb-dark dark:text-nb-dark w-full text-base sm:text-lg lg:text-sm xl:text-lg font-bold uppercase !leading-tight">
+                <button
+                  onClick={handleClick}
+                  className="flex items-center justify-center gap-3 mt-6 bg-pcp dark:bg-pcp-dark rounded-lg sm:rounded-xl px-6 py-4 text-nb-dark dark:text-nb-dark w-full text-base sm:text-lg lg:text-sm xl:text-lg font-bold uppercase !leading-tight"
+                >
                   {t("li5_desc")}
                   <div
                     className={`w-[20px] h-[20px] flex justify-center items-center rounded-full bg-nb dark:bg-nb-dark`}
