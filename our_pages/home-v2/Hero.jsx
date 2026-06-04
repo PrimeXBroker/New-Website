@@ -12,9 +12,10 @@ import { MockupSlide1Dark } from "./mockups/MockupSlide1Dark";
 import { MockupSlide2Dark } from "./mockups/MockupSlide2Dark";
 import { MockupSlide1Light } from "./mockups/MockupSlide1Light";
 import { MockupSlide2Light } from "./mockups/MockupSlide2Light";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const Hero = () => {
+  const locale = useLocale();
   const router = useRouter();
   const { theme } = useTheme();
   const t = useTranslations("home.heroSection");

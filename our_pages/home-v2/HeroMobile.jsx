@@ -1,5 +1,5 @@
 "use client";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import React, { Suspense, useEffect, useState } from "react";
@@ -14,6 +14,7 @@ import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 
 const HeroMobile = () => {
+  const locale = useLocale();
   const router = useRouter();
   const { theme } = useTheme();
   const t = useTranslations("home.heroSection");
