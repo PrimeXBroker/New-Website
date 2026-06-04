@@ -122,12 +122,12 @@ const TradingInstruments = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {symbolList?.length
               ? symbolList.map((instrument) => {
-                  const displayPrice = instrument?.bid_price
-                    ? parseFloat(instrument.bid_price).toFixed(3)
-                    : "0.000";
-                  const displaySpeed = instrument?.speed
-                    ? parseFloat(instrument.speed).toFixed(3)
-                    : "0.000";
+                  const displayPrice = parseFloat(
+                    instrument?.bid_price,
+                  )?.toFixed(3);
+                  const displaySpread = (
+                    instrument?.ask_price - instrument.bid_price
+                  )?.toFixed(3);
                   return (
                     <div
                       key={instrument.symbol}
@@ -176,10 +176,10 @@ const TradingInstruments = () => {
                         </div>
                         <div>
                           <span className="block text-xs text-ts dark:text-ts-dark font-medium mb-[2px]">
-                            {t("speed")}
+                            {t("spread")}
                           </span>
                           <span className="text-base font-medium text-pcp dark:text-pcp-dark">
-                            {displaySpeed}
+                            {displaySpread}
                           </span>
                         </div>
                       </div>

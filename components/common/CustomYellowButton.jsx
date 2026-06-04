@@ -6,7 +6,7 @@ const CustomYellowButton = ({ title, className, onClick }) => {
   const locale = useLocale();
   return (
     <button
-      className={`${className} transition-colors duration-300 ease-in-out rounded-lg font-bold flex items-center justify-center gap-3 group bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark group`}
+      className={`${className} transition-colors duration-300 ease-in-out rounded-lg font-bold flex items-center justify-center gap-3 group bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/Button+BG.png')] bg-cover bg-center text-nb dark:text-nb-dark group`}
       onClick={onClick}
     >
       {title}

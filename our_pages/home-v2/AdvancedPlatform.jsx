@@ -60,7 +60,7 @@ const AdvancedPlatform = () => {
                 <h3 className="text-tm dark:text-tm-dark text-xl font-semibold">
                   {t("li1")}
                 </h3>
-                <p className="text-ts dark:text-ts-dark text-base font-medium mt-2">
+                <p className="text-ts dark:text-ts-dark text-base tracking-[-0.04em] font-medium mt-2">
                   {t("li1_desc")}
                 </p>
               </div>
@@ -78,7 +78,7 @@ const AdvancedPlatform = () => {
                 <h3 className="text-tm dark:text-tm-dark text-xl font-semibold">
                   {t("li2")}
                 </h3>
-                <p className="text-ts dark:text-ts-dark text-base font-medium mt-2">
+                <p className="text-ts dark:text-ts-dark text-base tracking-[-0.04em] font-medium mt-2">
                   {t("li2_desc")}
                 </p>
               </div>
@@ -94,7 +94,7 @@ const AdvancedPlatform = () => {
                 <h3 className="text-tm dark:text-tm-dark text-xl font-semibold">
                   {t("li3")}
                 </h3>
-                <p className="text-ts dark:text-ts-dark text-base font-medium mt-2">
+                <p className="text-ts dark:text-ts-dark text-base tracking-[-0.04em] font-medium mt-2">
                   {t("li3_desc")}
                 </p>
               </div>
@@ -114,7 +114,7 @@ const AdvancedPlatform = () => {
                 <h3 className="text-tm dark:text-tm-dark text-xl font-semibold">
                   {t("li4")}
                 </h3>
-                <p className="text-ts dark:text-ts-dark text-base font-medium mt-2">
+                <p className="text-ts dark:text-ts-dark text-base tracking-[-0.04em] font-medium mt-2">
                   {t("li4_desc")}
                 </p>
               </div>
@@ -132,7 +132,7 @@ const AdvancedPlatform = () => {
                 </h3>
                 <button
                   onClick={handleClick}
-                  className="flex items-center justify-center gap-3 mt-6 bg-pcp dark:bg-pcp-dark rounded-lg sm:rounded-xl px-6 py-4 text-nb-dark dark:text-nb-dark w-full text-base sm:text-lg lg:text-sm xl:text-lg font-bold uppercase !leading-tight"
+                  className="flex items-center justify-center gap-3 mt-4 bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/Button+BG.png')] bg-cover bg-center rounded-lg sm:rounded-xl px-6 py-4 text-nb-dark dark:text-nb-dark w-full text-base sm:text-lg lg:text-sm xl:text-lg font-bold uppercase !leading-tight"
                 >
                   {t("li5_desc")}
                   <div
@@ -148,10 +148,11 @@ const AdvancedPlatform = () => {
                 <h3 className="text-tm dark:text-tm-dark text-xl font-semibold">
                   {t("li6")}
                 </h3>
-                <p className="text-ts dark:text-ts-dark text-base font-medium mt-2">
+                <p className="text-ts dark:text-ts-dark text-base tracking-[-0.04em] font-medium mt-2">
                   {t("li6_desc")}
                 </p>
               </div>
+
               <Lottie
                 animationData={
                   theme === "dark"
@@ -176,13 +177,13 @@ const AdvancedPlatform = () => {
                 <h3 className="text-tm dark:text-tm-dark text-xl font-semibold">
                   {t("li7")}
                 </h3>
-                <p className="text-ts dark:text-ts-dark text-base font-medium mt-2">
+                <p className="text-ts dark:text-ts-dark text-base tracking-[-0.04em] font-medium mt-2">
                   {t("li7_desc")}
                 </p>
               </div>
             </div>
             <div className="bg-cc dark:bg-cc-dark rounded-2xl px-2 pb-6 pt-2 mt-4">
-              <div className="w-full h-auto hidden lg:block">
+              <div className="w-full h-[558px] hidden lg:block">
                 <Lottie
                   animationData={
                     theme === "dark"
@@ -192,7 +193,6 @@ const AdvancedPlatform = () => {
                   loop={true}
                 />
               </div>
-
               <div className="w-full h-auto lg:hidden">
                 <Lottie
                   animationData={
@@ -207,7 +207,7 @@ const AdvancedPlatform = () => {
                 <h3 className="text-tm dark:text-tm-dark text-xl font-semibold">
                   {t("li8")}
                 </h3>
-                <p className="text-ts dark:text-ts-dark text-base font-medium mt-2">
+                <p className="text-ts dark:text-ts-dark text-base tracking-[-0.04em] font-medium mt-2">
                   {t("li8_desc")}
                 </p>
               </div>
