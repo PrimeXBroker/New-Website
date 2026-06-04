@@ -7,6 +7,7 @@ import React from "react";
 import earnBigDark from "@/public/animations/home-v2/dark/earn-big.json";
 import earnBigLight from "@/public/animations/home-v2/light/earn-big.json";
 import Lottie from "lottie-react";
+import CustomYellowButton from "@/components/common/CustomYellowButton";
 
 const PartnershipProgram = () => {
   const locale = useLocale();
@@ -31,7 +32,7 @@ const PartnershipProgram = () => {
             </p>
             <div className="flex justify-center lg:justify-start">
               <div className="mt-6 flex flex-col md:flex-row gap-3 w-full md:w-auto">
-                <CustomWhiteButton
+                <CustomYellowButton
                   title={t("ib_btn")}
                   onClick={() => router.push(`/${locale}/ib-program`)}
                   className="py-4 px-7 w-full md:w-auto text-base justify-between md:justify-center"
