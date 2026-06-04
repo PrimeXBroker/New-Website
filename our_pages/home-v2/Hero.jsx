@@ -149,7 +149,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-p dark:bg-p-dark pt-14 text-white">
+    <section className="bg-p dark:bg-p-dark pt-14 text-white hidden lg:block">
       <div className="relative container mt-20">
         <div className="grid grid-cols-2 pt-[25px]">
           <div>
@@ -178,7 +178,7 @@ const Hero = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-                className="text-tm dark:text-tm-dark lg:text-[42px] font-bold text-start leading-tight"
+                className="text-tm dark:text-tm-dark text-[34px] xl:text-[42px] font-bold text-start leading-tight"
               >
                 {s.titlePrefix}
                 <span className="text-pcp dark:text-pcp-dark">
@@ -194,7 +194,7 @@ const Hero = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-                className="text-tm dark:text-tm-dark lg:text-[42px] font-bold text-start leading-tight"
+                className="text-tm dark:text-tm-dark text-[34px]  xl:text-[42px] font-bold text-start leading-tight"
               >
                 {s.titlePrefix}
                 <span className="text-pcp dark:text-pcp-dark">
@@ -369,7 +369,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-ts dark:text-ts-dark font-medium text-lg sm:text-xl md:text-base lg:text-lg text-end w-[60%]"
+              className="text-ts dark:text-ts-dark font-medium text-lg sm:text-xl md:text-base xl:text-lg text-end w-[60%]"
             >
               {s.description}
             </motion.p>

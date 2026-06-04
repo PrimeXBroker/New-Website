@@ -39,9 +39,12 @@ const StatCards = () => {
   return (
     <div className="bg-p dark:bg-p-dark pt-16 sm:pt-28">
       <div className="container">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap xl:flex-nowrap items-center justify-center sm:justify-between">
           {stats.map((stat, index) => (
-            <div key={index} className="flex items-center gap-5 w-full">
+            <div
+              key={index}
+              className="flex items-center gap-5 xl:w-full mb-8 lg:mb-0"
+            >
               <img
                 src={
                   theme === "dark"
@@ -62,10 +65,10 @@ const StatCards = () => {
                 className="w-[34px] h-auto object-contain"
               />
               <div className="text-center flex flex-col justify-center min-w-[120px]">
-                <span className="text-tm dark:text-tm-dark font-bold text-lg">
+                <span className="text-tm dark:text-tm-dark font-bold text-base xl:text-lg">
                   {stat.value}
                 </span>
-                <span className="text-ts dark:text-ts-dark font-semibold text-lg">
+                <span className="text-ts dark:text-ts-dark font-semibold text-base xl:text-lg">
                   {stat.label}
                 </span>
               </div>

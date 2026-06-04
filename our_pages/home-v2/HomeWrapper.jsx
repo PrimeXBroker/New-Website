@@ -10,11 +10,13 @@ import PrimeXAcademy from "./PrimeXAcademy";
 import AccountTypes from "./AccountTypes";
 import Promotions from "./Promotions";
 import StatCards from "./StatCards";
+import HeroMobile from "./HeroMobile";
 
 const HomeWrapper = () => {
   return (
     <>
       <Hero />
+      <HeroMobile />
       <StatCards />
       <Promotions />
       <TradingInstruments />
