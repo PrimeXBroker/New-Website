@@ -6,7 +6,7 @@ import * as THREE from "three";
 
 export function MockupSlide2Light({ visible, ...props }) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/mockup-slide2-light.glb");
+  const { nodes, materials } = useGLTF("/slide2-mockup-light.glb");
 
   useFrame(() => {
     if (group.current) {
@@ -155,4 +155,4 @@ export function MockupSlide2Light({ visible, ...props }) {
   );
 }
 
-useGLTF.preload("/mockup-slide2-light.glb");
+useGLTF.preload("/slide2-mockup-light.glb");
