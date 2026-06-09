@@ -1473,75 +1473,75 @@
       "main_desc": "بیشتر با PrimeX کسب کنید",
       "tiers": {
         "l1": {
-          "title": "شروع L1",
+          "title": "شروع",
           "levelStr": "سطح 1",
           "lots": "50 لات",
           "rewardText": "دریافت 100$"
         },
         "l2": {
-          "title": "شروع L2",
+          "title": "شروع",
           "levelStr": "سطح 2",
           "lots": "100 لات",
           "rewardText": "دریافت 150$"
         },
         "l3": {
-          "title": "شروع L3",
+          "title": "شروع",
           "levelStr": "سطح 3",
           "lots": "200 لات",
           "rewardText": "دریافت 175$"
         },
         "l4": {
-          "title": "شروع L4",
+          "title": "شروع",
           "levelStr": "سطح 4",
           "lots": "400 لات",
           "rewardText": "دریافت 200$",
           "extraGiftBadge": "اپل واچ (400$)"
         },
         "l5": {
-          "title": "حرفه‌ای L5",
+          "title": "حرفه‌ای",
           "levelStr": "سطح 5",
           "lots": "700 لات",
           "rewardText": "دریافت 250$"
         },
         "l6": {
-          "title": "حرفه‌ای L6",
+          "title": "حرفه‌ای",
           "levelStr": "سطح 6",
           "lots": "1100 لات",
           "rewardText": "دریافت 300$"
         },
         "l7": {
-          "title": "حرفه‌ای L7",
+          "title": "حرفه‌ای",
           "levelStr": "سطح 7",
           "lots": "1600 لات",
           "rewardText": "دریافت 350$"
         },
         "l8": {
-          "title": "حرفه‌ای L8",
+          "title": "حرفه‌ای",
           "levelStr": "سطح 8",
           "lots": "2200 لات",
           "rewardText": "دریافت 425$",
           "extraGiftBadge": "آیفون اپل (1500$)"
         },
         "l9": {
-          "title": "پرایم L9",
+          "title": "پرایم",
           "levelStr": "سطح 9",
           "lots": "2900 لات",
           "rewardText": "دریافت 475$"
         },
         "l10": {
-          "title": "پرایم L10",
+          "title": "پرایم",
           "levelStr": "سطح 10",
           "lots": "3700 لات",
           "rewardText": "دریافت 500$"
         },
         "l11": {
-          "title": "پرایم L11",
+          "title": "پرایم",
           "levelStr": "سطح 11",
           "lots": "4600 لات",
           "rewardText": "دریافت 600$"
         },
         "l12": {
-          "title": "پرایم L12",
+          "title": "پرایم",
           "levelStr": "سطح 12",
           "lots": "6000 لات",
           "rewardText": "دریافت 700$",
