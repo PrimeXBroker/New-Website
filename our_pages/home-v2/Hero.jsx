@@ -139,10 +139,10 @@ const Hero = () => {
   const prevSlide = () =>
     setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
 
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 10000);
-    return () => clearInterval(interval);
-  }, [current]);
+  // useEffect(() => {
+  //   const interval = setInterval(nextSlide, 10000);
+  //   return () => clearInterval(interval);
+  // }, [current]);
 
   const handleClick = () => {
     const url = getRegisterUrl(locale);
@@ -183,10 +183,30 @@ const Hero = () => {
               >
                 {s.titlePrefix}
                 <span className="text-pcp dark:text-pcp-dark">
-                  {s.titleHighlight1} <br />
-                  {s.titleHighlight2}
+                  {locale === "es" || locale === "pt" ? (
+                    <>
+                      <br /> {s.titleHighlight1}
+                      {s.titleHighlight2}
+                    </>
+                  ) : (
+                    <>
+                      {s.titleHighlight1} <br />
+                      {s.titleHighlight2}
+                    </>
+                  )}
                 </span>
-                {s.titleSeparator1} <br /> {s.titleSuffix}
+                {locale === "ku" ||
+                locale === "ps" ||
+                locale === "fa" ||
+                locale === "pt" ||
+                locale === "es" ? (
+                  <>
+                    <br /> {s.titleSeparator1}
+                  </>
+                ) : (
+                  <>{s.titleSeparator1}</>
+                )}
+                <br /> {s.titleSuffix}
               </motion.h1>
             )}
             {s.id === 2 && (
@@ -201,12 +221,32 @@ const Hero = () => {
                 <span className="text-pcp dark:text-pcp-dark">
                   {s.titleHighlight1}
                 </span>
-                {s.titleSeparator1} <br />
+                {locale === "ku" ? (
+                  <>
+                    <br /> {s.titleSeparator1} <br />
+                  </>
+                ) : (
+                  <>
+                    {s.titleSeparator1} <br />
+                  </>
+                )}
                 <span className="text-pcp dark:text-pcp-dark">
                   {s.titleHighlight2}
                 </span>
-                {s.titleSeparator2}
-                <br /> {s.titleSuffix}
+                {locale === "ar" ||
+                locale === "ku" ||
+                (locale === "fa") | (locale === "es") ? (
+                  <>
+                    <br />
+                    {s.titleSeparator2}
+                    <br /> {s.titleSuffix}
+                  </>
+                ) : (
+                  <>
+                    {s.titleSeparator2}
+                    <br /> {s.titleSuffix}
+                  </>
+                )}
               </motion.h1>
             )}
           </div>
@@ -370,7 +410,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-ts dark:text-ts-dark font-medium text-lg sm:text-xl md:text-base xl:text-lg text-end w-[60%]"
+              className={`text-ts dark:text-ts-dark font-medium text-lg sm:text-xl md:text-base xl:text-lg ${locale === "ar" || locale === "ku" || locale === "ps" || locale === "fa" ? "text-start ps-3" : "text-end"} w-[60%]`}
             >
               {s.description}
             </motion.p>
