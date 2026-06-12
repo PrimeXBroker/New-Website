@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { TiArrowLeftThick, TiArrowRightThick } from "react-icons/ti";
 
 const ClientReviews = () => {
   const locale = useLocale();
@@ -100,10 +101,10 @@ const ClientReviews = () => {
 
   useEffect(() => {
     const swiperPrevButton = document.querySelector(
-      ".promotions-swiper-button-prev",
+      ".reviews-swiper-button-prev",
     );
     const swiperNextButton = document.querySelector(
-      ".promotions-swiper-button-next",
+      ".reviews-swiper-button-next",
     );
 
     if (swiperPrevButton && swiperNextButton) {
@@ -173,8 +174,8 @@ const ClientReviews = () => {
             clickable: true,
           }}
           navigation={{
-            nextEl: ".promotions-swiper-button-next",
-            prevEl: ".promotions-swiper-button-prev",
+            nextEl: ".reviews-swiper-button-next",
+            prevEl: ".reviews-swiper-button-prev",
           }}
           modules={[Autoplay, Pagination, Navigation]}
           className="home-testimonial-pagination"
@@ -257,7 +258,7 @@ const ClientReviews = () => {
           ))}
         </Swiper>
         <div
-          className={`promotion-swiper-navigation-buttons flex gap-3 w-fit float-right relative bottom-[37px] z-[10] ${
+          className={`reviews-swiper-navigation-buttons flex gap-4 w-fit float-right relative bottom-[37px] z-[10] ${
             locale === "ar" ||
             locale === "ps" ||
             locale === "ku" ||
@@ -274,30 +275,15 @@ const ClientReviews = () => {
               : ""
           }
         >
-          <button className="promotions-swiper-button-prev">
-            <Image
-              unoptimized={true}
-              src={
-                theme === "dark"
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/arrow+move+left.png"
-                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/arrow+move+left.png"
-              }
-              alt="Double Quotes"
-              fill
-              className="w-full h-auto object-cover"
-            />
+          <button className="reviews-swiper-button-prev group !bg-tl dark:!bg-tl-dark hover:!bg-pcp dark:hover:!bg-pcp group transition-colors duration-300 ease-in-out">
+            <TiArrowLeftThick className="text-nw dark:text-nw-dark group-hover:text-nb dark:group-hover:text-nb-dark transition-transform duration-500 ease-in-out" />
           </button>
-          <button className="promotions-swiper-button-next">
-            <Image
-              unoptimized={true}
-              src={
-                theme === "dark"
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/arrow+move+right.png"
-                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/arrow+move+right.png"
-              }
-              alt="Double Quotes"
-              fill
-              className="w-full h-auto object-cover"
+          <button className="reviews-swiper-button-next group !bg-tl dark:!bg-tl-dark hover:!bg-pcp dark:hover:!bg-pcp group transition-colors duration-300 ease-in-out">
+            <TiArrowRightThick
+              className="text-nw dark:text-nw-dark group-hover:text-nb dark:group-hover:text-nb-dark"
+              transition-transform
+              duration-500
+              ease-in-out
             />
           </button>
         </div>

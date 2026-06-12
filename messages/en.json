@@ -426,6 +426,38 @@
           }
         ]
       },
+      "acc5": {
+        "title": "Hammurabi Account",
+        "minimumDeposit": " 14,000 IQD",
+        "description": "The first trading account designed exclusively for Iraqis.",
+        "features": [
+          {
+            "leftText": "",
+            "highlight": "Spreads ",
+            "rightText": "start from 0.8 pips."
+          },
+          {
+            "leftText": "The account offers ",
+            "highlight": "$0 commissions ",
+            "rightText": "on trades."
+          },
+          {
+            "leftText": "The ",
+            "highlight": "margin ",
+            "rightText": "requirement for trades is 1%."
+          },
+          {
+            "leftText": "The ",
+            "highlight": "stop-out level ",
+            "rightText": "is set at 30%."
+          },
+          {
+            "leftText": "The ",
+            "highlight": "margin call",
+            "rightText": " level is 100%."
+          }
+        ]
+      },
       "btnText": "Open Account"
     },
     "advancedTraderPlatforms": {

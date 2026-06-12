@@ -426,6 +426,38 @@
           }
         ]
       },
+      "acc5": {
+        "title": "حساب حمورابی ",
+        "minimumDeposit": " 14,000 IQD",
+        "description": "اولین حساب معاملاتی طراحی شده انحصاری برای عراقی‌ها.",
+        "features": [
+          {
+            "leftText": "شروع ",
+            "highlight": "اسپردها ",
+            "rightText": "از 0.8 پیپ."
+          },
+          {
+            "leftText": "این حساب ",
+            "highlight": "کمیسیون 0$ ",
+            "rightText": "را برای معاملات ارائه می‌دهد."
+          },
+          {
+            "leftText": "میزان ",
+            "highlight": "مارجین ",
+            "rightText": "مورد نیاز برای معاملات 1% است."
+          },
+          {
+            "leftText": "سطح ",
+            "highlight": "کال مارجین ",
+            "rightText": "روی 30% تنظیم شده است."
+          },
+          {
+            "leftText": "سطح ",
+            "highlight": "اخطار مارجین ",
+            "rightText": "100% است."
+          }
+        ]
+      },
       "btnText": "افتتاح حساب"
     },
     "advancedTraderPlatforms": {

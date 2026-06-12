@@ -1990,3 +1990,114 @@ html.dark .terms-checkbox:checked + .terms-label .terms-custom-checkbox {
 .animate-gold-flow {
   animation: spin-gradient 4s linear infinite;
 }
+
+.accounts-swiper-navigation-buttons .accounts-swiper-button-prev {
+  text: #111111 !important;
+  padding: 2px !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 100px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.accounts-swiper-navigation-buttons .accounts-swiper-button-next {
+  text: #111111 !important;
+  padding: 2px !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 100px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.accounts-swiper-navigation-buttons .accounts-swiper-button-next::after,
+.accounts-swiper-navigation-buttons .accounts-swiper-button-prev::after {
+  display: none !important;
+}
+
+.reviews-swiper-navigation-buttons .reviews-swiper-button-prev {
+  text: #111111 !important;
+  padding: 2px !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 100px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.reviews-swiper-navigation-buttons .reviews-swiper-button-next {
+  text: #111111 !important;
+  padding: 2px !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 100px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.reviews-swiper-navigation-buttons .reviews-swiper-button-next::after,
+.reviews-swiper-navigation-buttons .reviews-swiper-button-prev::after {
+  display: none !important;
+}
+
+.awards-swiper-navigation-buttons .awards-swiper-button-prev {
+  text: #111111 !important;
+  padding: 2px !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 100px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.awards-swiper-navigation-buttons .awards-swiper-button-next {
+  text: #111111 !important;
+  padding: 2px !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 100px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.awards-swiper-navigation-buttons .awards-swiper-button-next::after,
+.awards-swiper-navigation-buttons .awards-swiper-button-prev::after {
+  display: none !important;
+}

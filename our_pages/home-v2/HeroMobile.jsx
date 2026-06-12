@@ -261,7 +261,7 @@ const HeroMobile = () => {
           </div>
           <div className="relative w-full h-[444px] flex justify-center items-center overflow-visible">
             <div className="relative h-full aspect-[3/4] max-w-full flex justify-center items-center overflow-visible">
-              <div className="absolute inset-0 w-full h-full z-10">
+              <div className="absolute inset-0 w-full h-full z-10 pointer-events-none">
                 <Canvas camera={{ position: [0, 0, 8], fov: 25 }}>
                   <Suspense fallback={null}>
                     <Environment preset="city" />

@@ -433,6 +433,38 @@
           }
         ]
       },
+      "acc5": {
+        "title": "حساب حمورابي ",
+        "minimumDeposit": "  14,000 IQD",
+        "description": "أول حساب مصمم خصيصاً للعراقيين.",
+        "features": [
+          {
+            "leftText": "",
+            "highlight": "سبريد ",
+            "rightText": "من 0.8 بيب."
+          },
+          {
+            "leftText": "يقدم الحساب ",
+            "highlight": "صفر عمولة ",
+            "rightText": "على الصفقات."
+          },
+          {
+            "leftText": "متطلبات ",
+            "highlight": "الهامش ",
+            "rightText": " 1% للصفقات."
+          },
+          {
+            "leftText": "تحديد مستوى ",
+            "highlight": "الـ Stop-out ",
+            "rightText": "عند 30%."
+          },
+          {
+            "leftText": "مستوى ",
+            "highlight": "نداء الهامش ",
+            "rightText": "هو 100%."
+          }
+        ]
+      },
       "btnText": "افتح حسابك الآن"
     },
     "advancedTraderPlatforms": {

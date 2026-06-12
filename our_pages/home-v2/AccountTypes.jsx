@@ -10,6 +10,7 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
+import { TiArrowLeftThick, TiArrowRightThick } from "react-icons/ti";
 
 const AccountTypes = () => {
   const locale = useLocale();
@@ -63,56 +64,23 @@ const AccountTypes = () => {
     },
     {
       id: 5,
-      title: t("acc1.title"),
+      title: t("acc5.title"),
       iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Cent+Account+large+icon.png",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Hamurabi+Account.png",
       iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Cent+Account+large+icon.png",
-      minimumDeposit: t("acc1.minimumDeposit"),
-      description: t("acc1.description"),
-      features: t.raw("acc1.features"),
-    },
-    {
-      id: 6,
-      title: t("acc2.title"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Standard+Account+large+icon.png",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Standard+Account+large+icon.png",
-      minimumDeposit: t("acc2.minimumDeposit"),
-      description: t("acc2.description"),
-      features: t.raw("acc2.features"),
-    },
-    {
-      id: 7,
-      title: t("acc3.title"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Narrow+account+large+icon.png",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Narrow+account+large+icon.png",
-      minimumDeposit: t("acc3.minimumDeposit"),
-      description: t("acc3.description"),
-      features: t.raw("acc3.features"),
-    },
-    {
-      id: 8,
-      title: t("acc4.title"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Raw+Account+large+icon.png",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/light/Raw+Account+large+icon.png",
-      minimumDeposit: t("acc4.minimumDeposit"),
-      description: t("acc4.description"),
-      features: t.raw("acc4.features"),
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Hamurabi+Account.png",
+      minimumDeposit: t("acc5.minimumDeposit"),
+      description: t("acc5.description"),
+      features: t.raw("acc5.features"),
     },
   ];
 
   useEffect(() => {
     const swiperPrevButton = document.querySelector(
-      ".promotions-swiper-button-prev",
+      ".accounts-swiper-button-prev",
     );
     const swiperNextButton = document.querySelector(
-      ".promotions-swiper-button-next",
+      ".accounts-swiper-button-next",
     );
 
     if (swiperPrevButton && swiperNextButton) {
@@ -182,8 +150,8 @@ const AccountTypes = () => {
             clickable: true,
           }}
           navigation={{
-            nextEl: ".promotions-swiper-button-next",
-            prevEl: ".promotions-swiper-button-prev",
+            nextEl: ".accounts-swiper-button-next",
+            prevEl: ".accounts-swiper-button-prev",
           }}
           modules={[Autoplay, Pagination, Navigation]}
           className="home-testimonial-pagination !items-center !overflow-x-hidden !overflow-y-visible md:!pt-4"
@@ -312,7 +280,7 @@ const AccountTypes = () => {
           ))}
         </Swiper>
         <div
-          className={`promotion-swiper-navigation-buttons flex gap-3 w-fit float-right relative bottom-[37px] z-[10] ${
+          className={`accounts-swiper-navigation-buttons flex gap-4 w-fit float-right relative bottom-[37px] z-[10] ${
             locale === "ar" ||
             locale === "ps" ||
             locale === "ku" ||
@@ -329,30 +297,15 @@ const AccountTypes = () => {
               : ""
           }
         >
-          <button className="promotions-swiper-button-prev">
-            <Image
-              unoptimized={true}
-              src={
-                theme === "dark"
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/arrow+move+left.png"
-                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/arrow+move+left.png"
-              }
-              alt="Double Quotes"
-              fill
-              className="w-full h-auto object-cover"
-            />
+          <button className="accounts-swiper-button-prev group !bg-tl dark:!bg-tl-dark hover:!bg-pcp dark:hover:!bg-pcp group transition-colors duration-300 ease-in-out">
+            <TiArrowLeftThick className="text-nw dark:text-nw-dark group-hover:text-nb dark:group-hover:text-nb-dark transition-transform duration-500 ease-in-out" />
           </button>
-          <button className="promotions-swiper-button-next">
-            <Image
-              unoptimized={true}
-              src={
-                theme === "dark"
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/arrow+move+right.png"
-                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/arrow+move+right.png"
-              }
-              alt="Double Quotes"
-              fill
-              className="w-full h-auto object-cover"
+          <button className="accounts-swiper-button-next group !bg-tl dark:!bg-tl-dark hover:!bg-pcp dark:hover:!bg-pcp group transition-colors duration-300 ease-in-out">
+            <TiArrowRightThick
+              className="text-nw dark:text-nw-dark group-hover:text-nb dark:group-hover:text-nb-dark"
+              transition-transform
+              duration-500
+              ease-in-out
             />
           </button>
         </div>

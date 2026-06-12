@@ -433,6 +433,38 @@
           }
         ]
       },
+      "acc5": {
+        "title": "هەژماری حاموورابی ",
+        "minimumDeposit": " 14,000 IQD",
+        "description": "یەکەم هەژماری بازرگانی کە بە تایبەتی بۆ عێراقییەکان دیزاین کراوە.",
+        "features": [
+          {
+            "leftText": "",
+            "highlight": "سپرێدەکان ",
+            "rightText": "لە 0.8 پیپەوە دەستپێدەکەن."
+          },
+          {
+            "leftText": "حسابەکە ",
+            "highlight": "$0 کۆمیسیۆن ",
+            "rightText": "لەسەر مامەڵەکان پێشکەش دەکات."
+          },
+          {
+            "leftText": "داواکاری ",
+            "highlight": "مارجن ",
+            "rightText": "بۆ مامەڵەکان 1%ـە."
+          },
+          {
+            "leftText": "مستوى ",
+            "highlight": "ستۆپ ئاوت ",
+            "rightText": "لەسەر 30% دیاری کراوە."
+          },
+          {
+            "leftText": "مستوى ",
+            "highlight": "مارجن کاڵ ",
+            "rightText": "بریتییە لە 100%."
+          }
+        ]
+      },
       "btnText": "حساب بکەرەوە"
     },
     "advancedTraderPlatforms": {

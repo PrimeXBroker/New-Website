@@ -426,6 +426,38 @@
           }
         ]
       },
+      "acc5": {
+        "title": "د حمورابي حساب ",
+        "minimumDeposit": " 14,000 IQD",
+        "description": "د عراقیانو لپاره په ځانګړي ډول ډیزاین شوی لومړنی سوداګریز حساب.",
+        "features": [
+          {
+            "leftText": "",
+            "highlight": "سپریډز ",
+            "rightText": "پیل له 0.8 پیپس څخه کیږي."
+          },
+          {
+            "leftText": "دا حساب په معاملو باندې ",
+            "highlight": "$0 کمیشن ",
+            "rightText": "وړاندې کوي."
+          },
+          {
+            "leftText": "د معاملو لپاره د ",
+            "highlight": "مارجن ",
+            "rightText": "اړتیا 1% ده."
+          },
+          {
+            "leftText": "",
+            "highlight": "سټاپ اوټ ",
+            "rightText": "کچه په 30% ټاکل شوې ده."
+          },
+          {
+            "leftText": "",
+            "highlight": "مارجن کال ",
+            "rightText": "کچه 100% ده."
+          }
+        ]
+      },
       "btnText": "حساب خلاص کړئ"
     },
     "advancedTraderPlatforms": {

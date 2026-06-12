@@ -8,6 +8,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import { TiArrowLeftThick, TiArrowRightThick } from "react-icons/ti";
 
 const Promotions = () => {
   const locale = useLocale();
@@ -163,7 +164,7 @@ const Promotions = () => {
           ))}
         </Swiper>
         <div
-          className={`promotion-swiper-navigation-buttons flex gap-3 w-fit float-right relative bottom-[37px] z-[10] ${
+          className={`promotion-swiper-navigation-buttons flex gap-4 w-fit float-right relative bottom-[37px] z-[10] ${
             locale === "ar" ||
             locale === "ps" ||
             locale === "ku" ||
@@ -180,30 +181,15 @@ const Promotions = () => {
               : ""
           }
         >
-          <button className="promotions-swiper-button-prev">
-            <Image
-              unoptimized={true}
-              src={
-                theme === "dark"
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/arrow+move+left.png"
-                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/arrow+move+left.png"
-              }
-              alt="Previous"
-              fill
-              className="w-full h-auto object-cover"
-            />
+          <button className="promotions-swiper-button-prev group !bg-tl dark:!bg-tl-dark hover:!bg-pcp dark:hover:!bg-pcp group transition-colors duration-300 ease-in-out">
+            <TiArrowLeftThick className="text-nw dark:text-nw-dark group-hover:text-nb dark:group-hover:text-nb-dark transition-transform duration-500 ease-in-out" />
           </button>
-          <button className="promotions-swiper-button-next">
-            <Image
-              unoptimized={true}
-              src={
-                theme === "dark"
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/dark/arrow+move+right.png"
-                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/client-reviews/light/arrow+move+right.png"
-              }
-              alt="Next"
-              fill
-              className="w-full h-auto object-cover"
+          <button className="promotions-swiper-button-next group !bg-tl dark:!bg-tl-dark hover:!bg-pcp dark:hover:!bg-pcp group transition-colors duration-300 ease-in-out">
+            <TiArrowRightThick
+              className="text-nw dark:text-nw-dark group-hover:text-nb dark:group-hover:text-nb-dark"
+              transition-transform
+              duration-500
+              ease-in-out
             />
           </button>
         </div>

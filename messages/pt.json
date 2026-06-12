@@ -426,6 +426,38 @@
           }
         ]
       },
+      "acc5": {
+        "title": "Conta Hammurabi",
+        "minimumDeposit": " 14.000 IQD",
+        "description": "A primeira conta de negociação projetada exclusivamente para iraquianos.",
+        "features": [
+          {
+            "leftText": "",
+            "highlight": "Spreads ",
+            "rightText": "começam a partir de 0.8 pips."
+          },
+          {
+            "leftText": "A conta oferece ",
+            "highlight": "comissão de $0 ",
+            "rightText": "nas operações."
+          },
+          {
+            "leftText": "A exigência de ",
+            "highlight": "margem ",
+            "rightText": "para as operações é de 1%."
+          },
+          {
+            "leftText": "O nível de ",
+            "highlight": "stop-out ",
+            "rightText": "está definido em 30%."
+          },
+          {
+            "leftText": "O nível de ",
+            "highlight": "margin call ",
+            "rightText": "é de 100%."
+          }
+        ]
+      },
       "btnText": "Abrir Conta"
     },
     "advancedTraderPlatforms": {
