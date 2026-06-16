@@ -2926,8 +2926,8 @@
     },
     "values": {
       "value_1_desc1": "رأس مال مدفوع",
-      "value_1_desc2": "$330M ",
-      "value_1_desc3": "أكثر من",
+      "value_1_desc2": "أكثر من ",
+      "value_1_desc3": "330 مليون دولار",
       "value_2_desc1": "تداول آلي",
       "value_2_desc2": "فروقات تبدأ من ",
       "value_2_desc3": "0.1 نقطة",

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import overPaidUp from "@/public/animations/why-choose-us/over-paid-up-capital.json";
 import automatedTradingSpreads from "@/public/animations/why-choose-us/automated-trading-spreads-from-pips.json";
@@ -10,6 +10,7 @@ import leverageUpToMaximum from "@/public/animations/why-choose-us/leverage-up-t
 import Lottie from "lottie-react";
 
 const Values = () => {
+  const locale = useLocale();
   const { theme } = useTheme();
   const t = useTranslations("whyChooseUs.values");
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -26,7 +27,7 @@ const Values = () => {
       desc3_color: "text-ts dark:text-ts-dark",
     },
     {
-      id: 1,
+      id: 2,
       description1: t("value_2_desc1"),
       description2: t("value_2_desc2"),
       description3: t("value_2_desc3"),
@@ -87,10 +88,14 @@ sm:border-b sm:border-b-e1 sm:dark:border-b-e1-dark xs:border-b xs:border-b-e1 x
                   className={`md:text-center text-[15px] w-[173px] mt-4 ${feature.desc1_color}`}
                 >
                   {feature.description1}{" "}
-                  <span className={`${feature.desc2_color}`}>
+                  <span
+                    className={`${feature.id === 1 ? (locale === "ar" ? feature.desc3_color : feature.desc2_color) : feature.desc2_color}`}
+                  >
                     {feature.description2}
                   </span>
-                  <span className={`${feature.desc3_color}`}>
+                  <span
+                    className={`${feature.id === 1 ? (locale === "ar" ? feature.desc2_color : feature.desc3_color) : feature.desc3_color}`}
+                  >
                     {feature.description3}
                   </span>
                 </p>
