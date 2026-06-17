@@ -16,17 +16,17 @@ const Explore = () => {
   };
 
   return (
-    <section className="bg-p dark:bg-p-dark py-3">
+    <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
       <div className="container">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 py-8 bg-cc dark:bg-cc-dark border-2 border-cc dark:border-cc-dark rounded-xl">
-          <div className="grid grid-cols-2 items-center text-tm dark:text-tm-dark">
+          <div className="grid lg:grid-cols-2 items-center text-tm dark:text-tm-dark">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold">
               {h("title1")}
               <span className="text-pcp dark:text-pcp-dark"> 330+ </span>
               {h("title2")}
             </h2>
             <div className="">
-              <p>{h("description")}</p>
+              <p className="mt-4 lg:mt-0 mb-5 lg:mb-0">{h("description")}</p>
               <CustomYellowButton
                 title={h("buttonText")}
                 onClick={handleClick}

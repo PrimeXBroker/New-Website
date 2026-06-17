@@ -3167,38 +3167,48 @@
   },
   "localDepositor": {
     "metaData": {
-      "title": "Local Deposit Service Now Available in Iraq",
-      "description": "Trade easily and securely with PrimeX Capital! We offer you a variety of local deposit and withdrawal options within Iraq."
+      "title": "Local Deposit Service",
+      "description": "Trade easily and securely with PrimeX Capital! We offer you a variety of local deposit and withdrawal options within Iraq and Syria."
     },
     "hero": {
-      "title_1": "Local Deposit Service Now Available in Iraq",
-      "title_2": "",
-      "description": "Trade easily and securely with PrimeX Capital! We offer you a variety of local deposit and withdrawal options within Iraq, allowing you to manage your funds flexibly and comfortably directly from your account in the client portal."
+      "title_1": "Local Deposit",
+      "title_2": "Service currently available",
+      "title_3": "in",
+      "title_4": "Iraq and",
+      "title_5": "Syria",
+      "description": "Access a wide range of local deposit and withdrawal methods, giving you complete flexibility in managing your funds & fast transaction processing directly through the Client Area. Enjoy full control, secure payment methods, and fast execution.",
+      "btnTxt": "Start Trading Now"
     },
     "section1": {
       "title_1": "What is a Local Depositor?",
-      "title_2": "",
-      "description": "A Local Depositor is a service specifically designed to facilitate the deposit and withdrawal of funds from your trading account using payment methods available within Iraq. Instead of resorting to complicated international bank transfers, you can now use your bank account in local Iraqi banks such as Rafidain Bank or the Iraqi National Bank. The service also allows the use of transfers from approved electronic wallets in Iraq such as Zain Cash or Asia, saving you time and effort.",
-      "description2": "Now in Iraq, you can deposit funds into your trading account and withdraw through our approved local depositor.."
+      "description1": "A Local Depositor is a service designed to simplify deposits and withdrawals for your trading account using payment methods available within Iraq and Syria. Instead of relying on complex international bank transfers, you can easily manage your transactions through local banks and country-specific payment solutions.",
+      "description2": "In Iraq, you can benefit from local banks and trusted e-wallets such as Zain Cash and Asia Hawala. In Syria, a variety of options are available, including Sham Cash, local exchange offices, and cash transfers.",
+      "description3": "This service provides a faster and more flexible experience, allowing you to manage your funds with ease while saving time and effort."
     },
     "benefits": {
-      "main_title": "Benefits of Using the Local Depositor",
-      "title1": "Transfer Speed",
+      "main_title": "Benefits of the Local Depositor",
+      "title1": "Fast ",
+      "title1_1": "transfers",
       "description1": "Deposits and withdrawals are processed much faster compared to other payment methods.",
-      "title2": "Fixed Exchange Rate and Fee",
-      "description2": "A fixed rate of 1500 IQD per $1 with a fixed fee of 2500 IQD per $100 without any changes.",
-      "title3": "Ease of Use",
-      "description3": "Multiple local deposit and withdrawal methods within Iraq and from inside the client portal."
+      "title2": "Fixed ",
+      "title2_1": "exchange rate and fees",
+      "description2": "Full transparency in exchange rates and commissions before any deposit or withdrawal is executed.",
+      "title3": "Easy ",
+      "title3_1": "to use",
+      "description3": "Multiple local deposit and withdrawal methods available in Iraq and Syria, all accessible directly through the dashboard."
     },
     "paymentmethods": {
-      "heading": "Available Local Deposit and Withdrawal Methods",
+      "heading1": "Local Deposit & Withdrawal Methods In Iraq",
       "title1": "First Iraqi Bank",
       "title2": "AsiaPay",
       "title3": "Zain Cash",
       "title4": "Rafidain",
       "title5": "Al-Taif Bank",
       "title6": "Internal Exchanges",
-      "buttonText": "Start Trading Now"
+      "heading2": "Local Deposit & Withdrawal Methods In Syria",
+      "title7": "Sham Cash",
+      "title8": "Cash",
+      "title9": "Internal Exchanges"
     },
     "explore": {
       "title1": "Explore",

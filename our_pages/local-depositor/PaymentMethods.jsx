@@ -1,7 +1,6 @@
 "use client";
-import CustomYellowButton from "@/components/common/CustomYellowButton";
-import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useLocale, useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
@@ -9,14 +8,10 @@ import React from "react";
 const PaymentMethods = () => {
   const router = useRouter();
   const locale = useLocale();
+  const { theme } = useTheme();
   const t = useTranslations("localDepositor.paymentmethods");
 
-  const handleClick = () => {
-    const url = getRegisterUrl(locale);
-    router.push(url);
-  };
-
-  const paymentOptions = [
+  const iraqPaymentOptions = [
     {
       id: 1,
       name: t("title1"),
@@ -55,6 +50,33 @@ const PaymentMethods = () => {
     },
   ];
 
+  const syriaPaymentOptions = [
+    {
+      id: 1,
+      name: t("title7"),
+      imgUrlDark:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/local-depositor/Icon+3.png",
+      imgUrlLight:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/local-depositor/Icon+3.png",
+    },
+    {
+      id: 2,
+      name: t("title8"),
+      imgUrlDark:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/local-depositor/Icon+2.png",
+      imgUrlLight:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/local-depositor/Icon+2+Light+Mode.png",
+    },
+    {
+      id: 3,
+      name: t("title9"),
+      imgUrlDark:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/local-depositor/Icon+1.png",
+      imgUrlLight:
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/local-depositor/Icon+1+Light+Mode.png",
+    },
+  ];
+
   const getHomeRegisterUrl = (locale) => {
     switch (locale) {
       case "ar":
@@ -67,35 +89,56 @@ const PaymentMethods = () => {
   };
 
   return (
-    <div className="container flex flex-col items-center py-8">
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark mb-10">
-        {t("heading")}
-      </h2>
-      <div className="flex flex-wrap lg:flex-nowrap w-full justify-center gap-4 pb-12">
-        {paymentOptions.map((el) => (
-          <div
-            key={el.id}
-            className="h-28 md:w-1/6 flex flex-col justify-center items-center gap-5"
-          >
-            <div className="w-20 h-20">
-              <Image
-                src={el.imgUrl}
-                alt={el.name}
-                width={70}
-                height={80}
-                className="object-contain"
-              />
+    <section className="bg-p dark:bg-p-dark">
+      <div className="container flex flex-col items-center">
+        <h2 className="text-3xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark mb-14 text-center">
+          {t("heading1")}
+        </h2>
+        <div className="flex flex-wrap lg:flex-nowrap w-full justify-center gap-4 pb-12">
+          {iraqPaymentOptions.map((el) => (
+            <div
+              key={el.id}
+              className="h-28 md:w-1/6 flex flex-col justify-center items-center gap-5"
+            >
+              <div className="w-20 h-20">
+                <Image
+                  src={el.imgUrl}
+                  alt={el.name}
+                  width={70}
+                  height={80}
+                  className="object-contain"
+                />
+              </div>
+              <h2 className="text-ts dark:text-ts-dark">{el.name}</h2>
             </div>
-            <h2 className="text-ts dark:text-ts-dark">{el.name}</h2>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-      <CustomYellowButton
-        title={t("buttonText")}
-        onClick={handleClick}
-        className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full sm:w-auto justify-between sm:justify-center mt-4"
-      />
-    </div>
+      <div className="container flex flex-col items-center py-16 sm:py-28">
+        <h2 className="text-3xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark text-center mb-14">
+          {t("heading2")}
+        </h2>
+        <div className="flex flex-wrap lg:flex-nowrap w-full justify-center gap-4 pb-12">
+          {syriaPaymentOptions.map((el) => (
+            <div
+              key={el.id}
+              className="h-28 md:w-1/6 flex flex-col justify-center items-center gap-5"
+            >
+              <div className="w-20 h-20">
+                <Image
+                  src={theme === "dark" ? el.imgUrlDark : el.imgUrlLight}
+                  alt={el.name}
+                  width={70}
+                  height={80}
+                  className="object-contain"
+                />
+              </div>
+              <h2 className="text-ts dark:text-ts-dark">{el.name}</h2>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

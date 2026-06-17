@@ -1,49 +1,84 @@
 "use client";
-import Image from "next/image";
 import React from "react";
-import { useTranslations, useLocale } from "next-intl";
+import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 
 const DepositorSection1 = () => {
   const locale = useLocale();
-  const h = useTranslations("localDepositor.section1");
+  const t = useTranslations("localDepositor.section1");
 
   return (
-    <section className="flex flex-col-reverse md:flex-row justify-around">
-      <div className="flex-1 flex pt-5 md:mt-0">
-        <Image
-          src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/local-depositor/about.webp"
-          alt="Economic Calender Hero Image"
-          width="550"
-          height="500"
-          className={`w-full sm:w-[80%] ms:w-full`}
-        />
-      </div>
-      <div className="flex-1 flex flex-col justify-center items-enter md:items-start md:w-[70%]">
-        <h2
-          className={`text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-tm dark:text-tm-dark pb-1 ${
-            locale === "ar" ||
-            locale === "ps" ||
-            locale === "ku" ||
-            locale === "fa"
-              ? "text-center md:text-right"
-              : "text-center md:text-left"
-          }`}
-        >
-          {h("title_1")}
-        </h2>
-        <p
-          className={`text-ts dark:text-ts-dark  mt-2 text-sm sm:text-base ${
-            locale === "ar" ||
-            locale === "ps" ||
-            locale === "ku" ||
-            locale === "fa"
-              ? "text-center md:text-right"
-              : "text-center md:text-left"
-          }`}
-          style={{ letterSpacing: "0.7px" }}
-        >
-          {h("description")}
-        </p>
+    <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
+      <div className="container">
+        <div className="grid grid-cols-12 items-center">
+          <div className="col-span-12 md:col-span-6 hidden md:block">
+            <div className="">
+              <Image
+                unoptimized={true}
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/local-depositor/about.webp"
+                width="100"
+                height="100"
+                alt="About Image"
+                className={`w-full sm:w-[80%]`}
+              />
+            </div>
+          </div>
+          <div className="col-span-12 md:col-span-6">
+            <div className="text-center md:text-start">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark">
+                {t("title_1")}
+              </h2>
+              <p
+                className={`text-ts dark:text-ts-dark mt-6 w-full mx-auto md:mx-0 ${
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
+                    ? "text-center md:text-right"
+                    : "text-center md:text-left"
+                }`}
+              >
+                {t("description1")}
+              </p>
+              <p
+                className={`text-ts dark:text-ts-dark mt-6 w-full mx-auto md:mx-0 ${
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
+                    ? "text-center md:text-right"
+                    : "text-center md:text-left"
+                }`}
+              >
+                {t("description2")}
+              </p>
+              <p
+                className={`text-ts dark:text-ts-dark mt-6 w-full mx-auto md:mx-0 ${
+                  locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa"
+                    ? "text-center md:text-right"
+                    : "text-center md:text-left"
+                }`}
+              >
+                {t("description3")}
+              </p>
+            </div>
+          </div>
+          <div className="col-span-12 md:col-span-6 block md:hidden mt-5 md:mt-0">
+            <div className="flex justify-center md:justify-start">
+              <Image
+                unoptimized={true}
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/local-depositor/about.webp"
+                width="100"
+                height="100"
+                alt="About Image"
+                className={`w-full sm:w-[80%]`}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
