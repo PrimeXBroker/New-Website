@@ -1502,75 +1502,75 @@
         "l1": {
           "title": "Starter",
           "levelStr": "Level 1",
-          "lots": "50 lots",
+          "lots": "50 Point",
           "rewardText": "Get $100"
         },
         "l2": {
           "title": "Starter",
           "levelStr": "Level 2",
-          "lots": "100 lots",
+          "lots": "100 Point",
           "rewardText": "Get $150"
         },
         "l3": {
           "title": "Starter",
           "levelStr": "Level 3",
-          "lots": "200 lots",
+          "lots": "200 Point",
           "rewardText": "Get $175"
         },
         "l4": {
           "title": "Starter",
           "levelStr": "Level 4",
-          "lots": "400 lots",
+          "lots": "400 Point",
           "rewardText": "Get $200",
           "extraGiftBadge": "Apple Watch ($400)"
         },
         "l5": {
           "title": "Professional",
           "levelStr": "Level 5",
-          "lots": "700 lots",
+          "lots": "700 Point",
           "rewardText": "Get $250"
         },
         "l6": {
           "title": "Professional",
           "levelStr": "Level 6",
-          "lots": "1100 lots",
+          "lots": "1100 Point",
           "rewardText": "Get $300"
         },
         "l7": {
           "title": "Professional",
           "levelStr": "Level 7",
-          "lots": "1600 lots",
+          "lots": "1600 Point",
           "rewardText": "Get $350"
         },
         "l8": {
           "title": "Professional",
           "levelStr": "Level 8",
-          "lots": "2200 lots",
+          "lots": "2200 Point",
           "rewardText": "Get $425",
           "extraGiftBadge": "Apple iPhone ($1500)"
         },
         "l9": {
           "title": "Prime",
           "levelStr": "Level 9",
-          "lots": "2900 lots",
+          "lots": "2900 Point",
           "rewardText": "Get $475"
         },
         "l10": {
           "title": "Prime",
           "levelStr": "Level 10",
-          "lots": "3700 lots",
+          "lots": "3700 Point",
           "rewardText": "Get $500"
         },
         "l11": {
           "title": "Prime",
           "levelStr": "Level 11",
-          "lots": "4600 lots",
+          "lots": "4600 Point",
           "rewardText": "Get $600"
         },
         "l12": {
           "title": "Prime",
           "levelStr": "Level 12",
-          "lots": "6000 lots",
+          "lots": "6000 Point",
           "rewardText": "Get $700",
           "extraGiftBadge": "MG ($12,000)"
         }

@@ -1502,75 +1502,75 @@
         "l1": {
           "title": "Principiante",
           "levelStr": "Nivel 1",
-          "lots": "50 lots",
+          "lots": "50 Punto",
           "rewardText": "Consigue $100"
         },
         "l2": {
           "title": "Principiante",
           "levelStr": "Nivel 2",
-          "lots": "100 lots",
+          "lots": "100 Punto",
           "rewardText": "Consigue $150"
         },
         "l3": {
           "title": "Principiante",
           "levelStr": "Nivel 3",
-          "lots": "200 lots",
+          "lots": "200 Punto",
           "rewardText": "Consigue $175"
         },
         "l4": {
           "title": "Principiante",
           "levelStr": "Nivel 4",
-          "lots": "400 lots",
+          "lots": "400 Punto",
           "rewardText": "Consigue $200",
           "extraGiftBadge": "Apple Watch ($400)"
         },
         "l5": {
           "title": "Profesional",
           "levelStr": "Nivel 5",
-          "lots": "700 lots",
+          "lots": "700 Punto",
           "rewardText": "Consigue $250"
         },
         "l6": {
           "title": "Profesional",
           "levelStr": "Nivel 6",
-          "lots": "1100 lots",
+          "lots": "1100 Punto",
           "rewardText": "Consigue $300"
         },
         "l7": {
           "title": "Profesional",
           "levelStr": "Nivel 7",
-          "lots": "1600 lots",
+          "lots": "1600 Punto",
           "rewardText": "Consigue $350"
         },
         "l8": {
           "title": "Profesional",
           "levelStr": "Nivel 8",
-          "lots": "2200 lots",
+          "lots": "2200 Punto",
           "rewardText": "Consigue $425",
           "extraGiftBadge": "Apple iPhone ($1500)"
         },
         "l9": {
           "title": "Prime",
           "levelStr": "Nivel 9",
-          "lots": "2900 lots",
+          "lots": "2900 Punto",
           "rewardText": "Consigue $475"
         },
         "l10": {
           "title": "Prime",
           "levelStr": "Nivel 10",
-          "lots": "3700 lots",
+          "lots": "3700 Punto",
           "rewardText": "Consigue $500"
         },
         "l11": {
           "title": "Prime",
           "levelStr": "Nivel 11",
-          "lots": "4600 lots",
+          "lots": "4600 Punto",
           "rewardText": "Consigue $600"
         },
         "l12": {
           "title": "Prime",
           "levelStr": "Nivel 12",
-          "lots": "6000 lots",
+          "lots": "6000 Punto",
           "rewardText": "Consigue $700",
           "extraGiftBadge": "MG ($12,000)"
         }
