@@ -9,7 +9,7 @@ import dailyMarketUpdatesDark from "@/public/animations/home-v2/dark/daily-marke
 import dailyMarketUpdatesLight from "@/public/animations/home-v2/light/daily-market-updates.json";
 import expertMarketAnalysisDark from "@/public/animations/home-v2/dark/expert-market-analysis.json";
 import expertMarketAnalysisLight from "@/public/animations/home-v2/light/expert-market-analysis.json";
-import Lottie from "lottie-react";
+import LazyLottie from "@/components/common/LazyLottie";
 
 const PrimeXAcademy = () => {
   const locale = useLocale();
@@ -70,7 +70,7 @@ const PrimeXAcademy = () => {
               key={index}
               className="bg-cc dark:bg-cc-dark rounded-xl px-2 pt-2 pb-6 border-2 border-cc dark:border-cc-dark cursor-pointer"
             >
-              <Lottie
+              <LazyLottie
                 animationData={
                   theme === "dark" ? item.imageDark : item.imageLight
                 }

@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import customerCare from "@/public/animations/home/customer-care.json";
 import multilingualSupport from "@/public/animations/home/multilingual-support.json";
-import Lottie from "lottie-react";
+import LazyLottie from "@/components/common/LazyLottie";
 import { useTheme } from "next-themes";
 import alwaysHereDark from "@/public/animations/home-v2/dark/always-here-for-you.json";
 import alwaysHereLight from "@/public/animations/home-v2/light/always-here-for-you.json";
@@ -22,7 +22,7 @@ const Support = () => {
       <div className="container mx-auto">
         <div className="bg-cc dark:bg-cc-dark grid grid-cols-1 lg:grid-cols-12 px-4 pt-14 sm:px-10 sm:pt-10 pb-10 items-center rounded-2xl">
           <div className="col-span-1 lg:col-span-4 hidden h-full lg:block">
-            <Lottie
+            <LazyLottie
               animationData={
                 theme === "dark" ? alwaysHereDark : alwaysHereLight
               }
@@ -39,7 +39,7 @@ const Support = () => {
             <div className="flex flex-col md:flex-row gap-6 my-6 lg:my-4">
               <div className="flex items-center gap-2">
                 <div className="flex items-center justify-center w-[60px] h-[60px] bg-pcp dark:bg-pcp rounded-lg">
-                  <Lottie
+                  <LazyLottie
                     animationData={customerCare}
                     loop={true}
                     style={{ width: "52px", height: "52px" }}
@@ -56,7 +56,7 @@ const Support = () => {
               </div>
               <div className="flex items-center gap-2">
                 <div className="flex items-center justify-center w-[60px] h-[60px] bg-pcp dark:bg-pcp rounded-lg">
-                  <Lottie
+                  <LazyLottie
                     animationData={multilingualSupport}
                     loop={true}
                     style={{ width: "52px", height: "52px" }}
@@ -82,7 +82,7 @@ const Support = () => {
             />
           </div>
           <div className="col-span-1 lg:col-span-4 lg:hidden mt-6 lg:mt-0 h-full">
-            <Lottie
+            <LazyLottie
               animationData={
                 theme === "dark" ? alwaysHereDark : alwaysHereLight
               }

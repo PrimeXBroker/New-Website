@@ -8,8 +8,6 @@ export function deepLinkMiddleware(request) {
   const url = request.nextUrl;
   const isDeepLinkPath = url.pathname.includes("/community/posts/detail");
 
-  console.log("Is Deep Link Path?", isDeepLinkPath);
-
   if (isDeepLinkPath) {
     const userAgent = request.headers.get("user-agent") || "";
     const isAndroid = userAgent.includes("Android");
@@ -18,8 +16,6 @@ export function deepLinkMiddleware(request) {
     // Extract post ID from path
     const pathParts = url.pathname.split("/");
     const postId = pathParts[pathParts.length - 1];
-    console.log("User Agent:", postId);
-
     let redirectUrl = null;
 
     // 1. Check OS and set the redirect URL
@@ -28,11 +24,8 @@ export function deepLinkMiddleware(request) {
         androidStoreUrl
       )};end`;
       redirectUrl = intentUrl;
-      console.log("Android detected, redirecting to:", intentUrl);
     } else if (isIOS) {
       return NextResponse.redirect(new URL(`/deeplink/${postId}`, url));
-    } else {
-      console.log("Not a mobile device, no redirect");
     }
 
     if (redirectUrl) {
@@ -40,6 +33,5 @@ export function deepLinkMiddleware(request) {
     }
   }
 
-  console.log("No redirect needed, passing to next middleware");
   return undefined;
 }

@@ -280,10 +280,7 @@ const ClientReviews = () => {
           </button>
           <button className="reviews-swiper-button-next group !bg-tl dark:!bg-tl-dark hover:!bg-pcp dark:hover:!bg-pcp group transition-colors duration-300 ease-in-out">
             <TiArrowRightThick
-              className="text-nw dark:text-nw-dark group-hover:text-nb dark:group-hover:text-nb-dark"
-              transition-transform
-              duration-500
-              ease-in-out
+              className="text-nw dark:text-nw-dark group-hover:text-nb dark:group-hover:text-nb-dark transition-transform duration-500 ease-in-out"
             />
           </button>
         </div>

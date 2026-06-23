@@ -4,6 +4,13 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Performance optimizations
+  swcMinify: true,
+  compress: true,
+  reactStrictMode: true,
+  poweredByHeader: false,
+  generateEtags: true,
+
   images: {
     domains: ["flagcdn.com"],
     remotePatterns: [
@@ -16,7 +23,22 @@ const nextConfig = {
         hostname: "primexbroker.s3.eu-north-1.amazonaws.com",
       },
     ],
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [640, 768, 1024, 1280, 1536],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
+
+  // Enable HTTP compression
+  experimental: {
+    optimizePackageImports: [
+      "lucide-react",
+      "react-icons",
+      "framer-motion",
+      "swiper",
+      "lottie-react",
+    ],
+  },
+
   async rewrites() {
     return [
       {

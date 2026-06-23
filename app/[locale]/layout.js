@@ -6,7 +6,6 @@ import { getMessages } from "next-intl/server";
 import Footer from "@/components/Footer";
 import localFont from "@next/font/local";
 import Cookies from "@/components/Cookies";
-import "aos/dist/aos.css";
 import { Suspense } from "react";
 import { Toaster } from "react-hot-toast";
 import { FacebookPixelEvents } from "@/utilities/pixelEvent";
@@ -108,31 +107,27 @@ export default async function layout({ children, params: { locale } }) {
             __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "o4jb4ltpwi");`,
           }}
         />
+        {/* Google Analytics - library */}
         <Script
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              <!-- Global site tag (gtag.js) - Google Analytics -->
-              <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4WWRCT0TN"></script>
-              <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-            
-                gtag('config', 'G-F4WWRCT0TN', {
-                  'linker': {
-                    'domains': ['primexgrp.com', 'primexcapital.com']
-                  }
-                });
-              </script>
-            `,
-          }}
+          strategy="lazyOnload"
+          src="https://www.googletagmanager.com/gtag/js?id=G-F4WWRCT0TN"
         />
+        {/* Google Analytics - config */}
         <Script
-          id="gtag-report-conversion"
-          strategy="afterInteractive"
+          id="google-analytics"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){ dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'G-F4WWRCT0TN', {
+                'linker': {
+                  'domains': ['primexgrp.com', 'primexcapital.com']
+                }
+              });
+
+              // Helper function for conversion tracking
               function gtag_report_conversion(url) {
                 var callback = function () {
                   if (typeof(url) != 'undefined') {
@@ -147,22 +142,25 @@ export default async function layout({ children, params: { locale } }) {
                 });
                 return false;
               }
+
+              // Helper function to delay opening a URL until a gtag event is sent
+              function gtagSendEvent(url) {
+                var callback = function () {
+                  if (typeof url === 'string') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'GA4', {
+                  'event_callback': callback,
+                  'event_timeout': 2000,
+                });
+                return false;
+              }
             `,
           }}
         />
-        <Script
-          id="gtag-signup-conversion"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              gtag('event', 'conversion', {
-                  'send_to': 'AW-11492934355/UxvrCKrc_LMaENOFoegq',
-                  'value': 1.0,
-                  'currency': 'AED'
-              });
-            `,
-          }}
-        />
+
+
       </head>
       <body>
         <RedirectionHandler />
@@ -264,29 +262,7 @@ export default async function layout({ children, params: { locale } }) {
             __html: `<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7629401&fmt=gif" />`,
           }}
         />
-        <Script
-          id="gtag-send-event"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Helper function to delay opening a URL until a gtag event is sent.
-              // Call it in response to an action that should navigate to a URL.
-              function gtagSendEvent(url) {
-                var callback = function () {
-                  if (typeof url === 'string') {
-                    window.location = url;
-                  }
-                };
-                gtag('event', 'GA4', {
-                  'event_callback': callback,
-                  'event_timeout': 2000,
-                  // <event_parameters>
-                });
-                return false;
-              }
-            `,
-          }}
-        />
+
         <Script
           id="tiktok-pixel"
           strategy="afterInteractive"

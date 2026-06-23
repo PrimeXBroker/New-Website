@@ -9,30 +9,27 @@ const intlMiddleware = createMiddleware({
 });
 
 export default function middleware(request) {
-  console.log("=== MAIN MIDDLEWARE ENTRY ===");
   const { pathname } = new URL(request.url);
 
   if (pathname.startsWith("/graph")) {
     return NextResponse.next();
   }
-  // First, try deep link handling
-  const deepLinkResponse = deepLinkMiddleware(request);
-  if (deepLinkResponse) {
-    console.log("Deep link middleware returned a response");
-    return deepLinkResponse;
+
+  // Only run deep link middleware for deep link paths
+  if (pathname.includes("/community/posts/detail")) {
+    const deepLinkResponse = deepLinkMiddleware(request);
+    if (deepLinkResponse) {
+      return deepLinkResponse;
+    }
   }
 
-  console.log("Passing to intl middleware");
   // Then, handle internationalization
   return intlMiddleware(request);
 }
 
 export const config = {
   matcher: [
-    // Match all paths except static files
+    // Match all paths except static files and Next.js internals
     "/((?!_next|_vercel|.*\\..*).*)",
-    "/", // Root
-    "/(en|ar|ku|es|ps|pt|fa)/:path*", // Locale paths
-    "/community/posts/detail/:path*", // Your deep link path
   ],
 };

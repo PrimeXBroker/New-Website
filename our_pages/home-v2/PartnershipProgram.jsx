@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import earnBigDark from "@/public/animations/home-v2/dark/earn-big.json";
 import earnBigLight from "@/public/animations/home-v2/light/earn-big.json";
-import Lottie from "lottie-react";
+import LazyLottie from "@/components/common/LazyLottie";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
 
 const PartnershipProgram = () => {
@@ -46,7 +46,7 @@ const PartnershipProgram = () => {
             </div>
           </div>
           <div className="col-span-1 lg:col-span-4 mt-6 lg:mt-0">
-            <Lottie
+            <LazyLottie
               animationData={theme === "dark" ? earnBigDark : earnBigLight}
               loop={true}
             />

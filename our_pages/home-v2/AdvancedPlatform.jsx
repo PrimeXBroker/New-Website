@@ -21,7 +21,7 @@ import multiAssetDark from "@/public/animations/home-v2/dark/multi-assets-platfo
 import multiAssetLight from "@/public/animations/home-v2/light/multi-assets-platform.json";
 import seamlessAutomatedDark from "@/public/animations/home-v2/dark/seamless-automated-trading.json";
 import seamlessAutomatedLight from "@/public/animations/home-v2/light/seamless-automated-trading.json";
-import Lottie from "lottie-react";
+import LazyLottie from "@/components/common/LazyLottie";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const AdvancedPlatform = () => {
@@ -64,7 +64,7 @@ const AdvancedPlatform = () => {
                   {t("li1_desc")}
                 </p>
               </div>
-              <Lottie
+              <LazyLottie
                 animationData={
                   theme === "dark"
                     ? advancedAnalyticalDark
@@ -82,7 +82,7 @@ const AdvancedPlatform = () => {
                   {t("li2_desc")}
                 </p>
               </div>
-              <Lottie
+              <LazyLottie
                 animationData={
                   theme === "dark" ? multiAssetDark : multiAssetLight
                 }
@@ -98,7 +98,7 @@ const AdvancedPlatform = () => {
                   {t("li3_desc")}
                 </p>
               </div>
-              <Lottie
+              <LazyLottie
                 animationData={
                   theme === "dark"
                     ? seamlessAutomatedDark
@@ -118,7 +118,7 @@ const AdvancedPlatform = () => {
                   {t("li4_desc")}
                 </p>
               </div>
-              <Lottie
+              <LazyLottie
                 animationData={
                   theme === "dark" ? fastOrderDark : fastOrderLight
                 }
@@ -153,7 +153,7 @@ const AdvancedPlatform = () => {
                 </p>
               </div>
 
-              <Lottie
+              <LazyLottie
                 animationData={
                   theme === "dark"
                     ? chartingCapabilitiesDark
@@ -165,7 +165,7 @@ const AdvancedPlatform = () => {
           </div>
           <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <div className="bg-cc dark:bg-cc-dark rounded-2xl px-2 pb-6 pt-2">
-              <Lottie
+              <LazyLottie
                 animationData={
                   theme === "dark"
                     ? communitySupportDark
@@ -184,7 +184,7 @@ const AdvancedPlatform = () => {
             </div>
             <div className="bg-cc dark:bg-cc-dark rounded-2xl px-2 pb-6 pt-2 mt-4">
               <div className="w-full h-[558px] hidden lg:block">
-                <Lottie
+                <LazyLottie
                   animationData={
                     theme === "dark"
                       ? integratedEconomicDark
@@ -194,7 +194,7 @@ const AdvancedPlatform = () => {
                 />
               </div>
               <div className="w-full h-auto lg:hidden">
-                <Lottie
+                <LazyLottie
                   animationData={
                     theme === "dark"
                       ? integratedEconomicMblDark
