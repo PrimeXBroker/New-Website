@@ -159,8 +159,53 @@ export default async function layout({ children, params: { locale } }) {
             `,
           }}
         />
+        {/* Google Analytics - config */}
+        <Script
+          id="google-analytics"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-F4WWRCT0TN', {
+        'linker': {
+          'domains': ['primexgrp.com', 'primexcapital.com']
+        }
+      });
 
+      // Helper function for conversion tracking
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-11492934355/UxvrCKrc_LMaENOFoegq',
+            'value': 1.0,
+            'currency': 'AED',
+            'event_callback': callback
+        });
+        return false;
+      }
 
+      // Google tag (gtag.js) event - delayed navigation helper
+      function gtagSendEvent(url) {
+        var callback = function () {
+          if (typeof url === 'string') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'GA4', {
+          'event_callback': callback,
+          'event_timeout': 2000,
+        });
+        return false;
+      }
+    `,
+          }}
+        />
       </head>
       <body>
         <RedirectionHandler />
