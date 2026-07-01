@@ -377,7 +377,7 @@ export default function SignUpStep({
         const response = await axios(config);
         console.log(response, "response");
 
-        if (response?.statusText == "OK") {
+        if (response?.status == 200 || response?.status == 201 ) {
           console.log("test");
           await sendEmail(e);
         }
