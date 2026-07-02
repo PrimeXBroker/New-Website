@@ -30,9 +30,9 @@ const Banner = () => {
                 <h2 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-pcp dark:text-pcp-dark md:mt-0 lg:my-2">
                   {t("title2")}
                 </h2>
-                <h2 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-tm dark:text-tm-dark">
+                <p className="text-ts dark:text-ts-dark mt-4 text-xl">
                   {t("title3")}
-                </h2>
+                </p>
               </div>
               <div className="mt-10">
                 <CustomYellowButton
