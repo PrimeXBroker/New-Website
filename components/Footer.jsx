@@ -527,16 +527,16 @@ const Footer = () => {
               <Link
                 href={`${
                   locale === "ar"
-                    ? "https://www.instagram.com/primexcapital.ar"
+                    ? "https://www.instagram.com/primex.capital.ar"
                     : locale === "ku"
-                      ? "https://www.instagram.com/primexcapital.kd"
+                      ? "https://www.instagram.com/primex.capital.kd"
                       : locale === "es"
                         ? "https://www.instagram.com/primexcapital.es"
                         : locale === "ps"
                           ? "https://www.instagram.com/primexcapital.ps"
                           : locale === "pt"
                             ? "https://www.instagram.com/primexcapital.pt"
-                            : "https://www.instagram.com/primexcapital.en"
+                            : "https://www.instagram.com/primex.capital.en"
                 }`}
                 target="_blank"
               >
