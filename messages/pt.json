@@ -4312,5 +4312,94 @@
       "question_12": "Quando os resultados são anunciados?",
       "answer_12": "Após o término da competição, todas as contas são revisadas antes do anúncio oficial."
     }
+  },
+  "cashback": {
+    "metaData": {
+      "title": "Bônus de Cashback | PrimeX Capital",
+      "description": "Desfrute de cashback de 10% ilimitado sobre o spread para cada lote negociado. O oferta está disponível para clientes diretos."
+    },
+    "hero": {
+      "badgeText": "Cada lote negociado oferece 10% de cashback do custo do spread!",
+      "title1": "Receba ",
+      "title2": "10% de cashback ",
+      "title3": "sobre ",
+      "title4": "cada lote ",
+      "title5": "",
+      "title6": "",
+      "description": "Aproveite o cashback calculado automaticamente com base no seu volume total de negociação e no custo do spread pago.",
+      "disclaimer": "Disponível exclusivamente para clientes da PrimeX Capital não registrados sob nenhum Corretor de Introdução.",
+      "btn1_txt": "Registre-se Agora",
+      "btn2_txt": "Abra uma Conta Demo"
+    },
+    "rewardAutomatically": {
+      "badgeText": "Quanto maior o seu volume de negociação, maior o valor do cashback que você merece",
+      "title1": "Opere ",
+      "title2": "como de costume ",
+      "title3": "e receba sua ",
+      "title4": "recompensa ",
+      "title5": "automaticamente!",
+      "description": "O cashback é calculado com base no seu volume de negociação e no custo do spread durante as operações."
+    },
+    "tradeMore": {
+      "title1": "Opere mais. ",
+      "title2": "Maior valor.",
+      "feature_1_title1": "10% de Cashback",
+      "feature_1_title2": "do Spread",
+      "feature_1_description": "Receba 10% de cashback do custo do spread em suas operações.",
+      "feature_2_title1": "Cálculo ",
+      "feature_2_title2": "Automático e Periódico ",
+      "feature_2_description": "Não há necessidade de enviar solicitações. O cashback é calculado e adicionado automaticamente ao seu saldo.",
+      "feature_3_title1": "Cashback",
+      "feature_3_title2": "Ilimitado",
+      "feature_3_description": "Beneficie-se do cashback com a sua atividade de negociação contínua e sem limites."
+    },
+    "termsCondition": {
+      "title": "Termos & Condições",
+      "eligibility_title": "Critérios de Elegibilidade",
+      "eligibility_li1_desc": "O cliente deve estar registrado como um cliente direto e não estar vinculado a nenhum Corretor de Introdução.",
+      "eligibility_li2_desc": "O volume de negociação é calculado apenas em contas reais, não em contas demo.",
+      "eligibility_li3_desc": "O valor de qualquer operação executada através de contas de bônus e cent é excluído.",
+      "eligibility_li4_desc": "A oferta está disponível apenas em países elegíveis e não está disponível em regiões restritas.",
+      "general_rules_title": "Regras Gerais",
+      "general_rules_li1_desc": "O valor do cashback é calculado com base no volume total de negociação em lotes e no custo do spread pago.",
+      "general_rules_li2_desc": "A campanha não inclui quaisquer contas ou transações sujeitas a restrições ou revisões devido a atividades incomuns ou não em conformidade.",
+      "general_rules_li3_desc": "O cashback é calculado a cada 10 minutos automaticamente e é adicionado a uma nova carteira sob o nome de Carteira de Cashback.",
+      "general_rules_li4_desc": "A PrimeX Capital reserva-se o direito de alterar ou atualizar estes termos e condições conforme considerar apropriado, sem aviso prévio.",
+      "strategies_title": "Estratégias de Trading Proibidas",
+      "strategies_li1_desc": "Política de hedging entre contas diferentes.",
+      "strategies_li2_desc": "Negociação de Alta Frequência (HFT)."
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "title1": "",
+      "question_1": "Como o valor do cashback é calculado?",
+      "answer_1": "O cashback é calculado com base no volume total de negociação em lotes e no custo do spread pago em operações qualificadas; em seguida, você recebe 10% do valor do spread como cashback.",
+      "question_2": "Quando o valor do cashback é adicionado à minha conta?",
+      "answer_2": "O cashback é calculado automaticamente a cada 10 minutos e é adicionado a uma nova carteira dedicada chamada Carteira de Cashback.",
+      "question_3": "Onde posso encontrar o meu saldo de cashback?",
+      "answer_3": "Os valores devidos serão adicionados à sua Carteira de Cashback, e você pode acompanhar o saldo através da sua conta.",
+      "question_4": "Existe um limite máximo para o valor do cashback?",
+      "answer_4": "Não há limite máximo para o valor do cashback, e ele é calculado com base no volume de negociação e no custo do spread pago de acordo com os termos da campanha.",
+      "question_5": "A oferta está disponível para todos os clientes?",
+      "answer_5": "A oferta é limitada a clientes diretos não registrados sob nenhum Corretor de Introdução e que sejam de países elegíveis de acordo com os termos e condições.",
+      "question_6": "Preciso ativar a oferta?",
+      "answer_6": "Nenhuma ação adicional é necessária. O cashback é calculado automaticamente assim que as condições de trading são atendidas.",
+      "question_7": "Existem restrições para sacar o saldo do cashback?",
+      "answer_7": "Não há restrições para sacar o seu saldo de cashback. No entanto, certas transações podem estar sujeitas a revisão em caso de atividade suspeita ou violação dos nossos termos de trading."
+    },
+    "cashbackReward": {
+      "title_part1": "Saldo de Cashback",
+      "title_part2": "Ilimitado",
+      "description": "Beneficie-se de recompensas de cashback em suas operações qualificadas sem limites, e quanto maior o seu volume de negociação, maior o valor do cashback que você merece."
+    },
+    "tradingNow": {
+      "title1": "Cada lote ",
+      "title2": "negociado ",
+      "title3": "aproxima você de uma ",
+      "title4": "recompensa ",
+      "title5": "maior",
+      "description": "Junte-se agora e beneficie-se de cashback em cada lote negociado!",
+      "btn_txt": "Comece a Operar Agora"
+    }
   }
 }

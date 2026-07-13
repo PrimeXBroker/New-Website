@@ -4312,5 +4312,94 @@
       "question_12": "When are the results announced?",
       "answer_12": "After the competition ends, all accounts are reviewed."
     }
+  },
+  "cashback": {
+    "metaData": {
+      "title": "Cashback Bonus | PrimeX Capital",
+      "description": "Get 10% cashback on trading spreads based on your total traded lots. Enjoy unlimited cashback rewards on every eligible trade. Available for direct retail clients."
+    },
+    "hero": {
+      "badgeText": "Every lot you trade earns you 10% cashback",
+      "title1": "Earn ",
+      "title2": "10% cashback ",
+      "title3": "on ",
+      "title4": "every ",
+      "title5": "Lot ",
+      "title6": "",
+      "description": "Enjoy cashback calculated automatically based on your total trading volume and the spreads paid, giving you extra value with every single trade.",
+      "disclaimer": "Available exclusively to direct clients who are not registered under any Introducing Broker",
+      "btn1_txt": "Open New Account",
+      "btn2_txt": "Try Free Demo"
+    },
+    "rewardAutomatically": {
+      "badgeText": "Higher trading volume, Means higher cashback.",
+      "title1": "Trade as ",
+      "title2": "usual ",
+      "title3": "and receive your ",
+      "title4": "reward ",
+      "title5": "automatically!",
+      "description": "Earn 10% cashback based on your total trading volume and the spread."
+    },
+    "tradeMore": {
+      "title1": "Trade more. ",
+      "title2": "Get more value.",
+      "feature_1_title1": "10% Cashback",
+      "feature_1_title2": "on Spreads",
+      "feature_1_description": "Get 10% cashback of your spread on your trades.",
+      "feature_2_title1": "Instant,",
+      "feature_2_title2": "Automatic Calculation",
+      "feature_2_description": "No need to submit any requests. The cashback is calculated and added automatically to your balance.",
+      "feature_3_title1": "Unlimited",
+      "feature_3_title2": "Cashback",
+      "feature_3_description": "Keep benefiting from cashback as long as your trading activity continues."
+    },
+    "termsCondition": {
+      "title": "Terms & Conditions",
+      "eligibility_title": "Eligibility",
+      "eligibility_li1_desc": "The client must be registered as a direct client and not linked to any Introducing Broker.",
+      "eligibility_li2_desc": "Trading volume is calculated on live accounts only; demo accounts are excluded.",
+      "eligibility_li3_desc": "Any trading executed through bonus or cent accounts is excluded.",
+      "eligibility_li4_desc": "The offer is available only in eligible countries and is not available in restricted regions.",
+      "general_rules_title": "General Rules",
+      "general_rules_li1_desc": "The cash back value is calculated based on the total trading volume in lots and the spread costs paid.",
+      "general_rules_li2_desc": "The campaign does not include any accounts or transactions subject to restrictions or reviews due to unusual or non-compliant activity.",
+      "general_rules_li3_desc": "Cashback is calculated automatically every 10 minutes and is credited to a new wallet named \"Cashback Wallet\".",
+      "general_rules_li4_desc": "PrimeX Capital reserves the right to amend or update these terms and conditions as it deems appropriate without prior notice.",
+      "strategies_title": "Prohibited Trading Strategies",
+      "strategies_li1_desc": "Hedging policy between different accounts.",
+      "strategies_li2_desc": "High-Frequency Trading (HFT)."
+    },
+    "faq": {
+      "title": "Frequently Asked ",
+      "title1": "Questions",
+      "question_1": "How is the cash back amount calculated?",
+      "answer_1": "The cash back is calculated based on your total trading volume in lots and the spread costs paid on eligible trades; you are then granted 10% of that spread value as cash back.",
+      "question_2": "When is the cash back amount added to my account?",
+      "answer_2": "The cash back is calculated automatically every 10 minutes and is credited to a new dedicated wallet named the \"Cashback Wallet\".",
+      "question_3": "Where can I find my cash back balance?",
+      "answer_3": "The earned amounts will be credited to your Cashback Wallet, and you can track your balance directly through your account.",
+      "question_4": "Is there a maximum limit on the cash back value?",
+      "answer_4": "There is no maximum limit on the cash back value. It is calculated based on trading volume and spread costs paid, in accordance with the campaign terms.",
+      "question_5": "Is the offer available to all clients?",
+      "answer_5": "The offer is limited strictly to direct clients who are not registered under any Introducing Broker (IB), and who are from eligible countries according to the terms and conditions.",
+      "question_6": "Do I need to activate the offer?",
+      "answer_6": "No additional action is required. The cash back is calculated automatically as soon as the trading conditions are met.",
+      "question_7": "Are there any restrictions on withdrawing the cash back balance?",
+      "answer_7": "There are no restrictions on withdrawing your cash back balance. However, certain transactions may be subject to review in the event of any suspicious activity or violation of the campaign terms."
+    },
+    "cashbackReward": {
+      "title_part1": "Unlimited ",
+      "title_part2": "Cashback Reward",
+      "description": "Benefit from cashback rewards on your eligible trades with no limits. The more you trade, the higher the cashback you earn."
+    },
+    "tradingNow": {
+      "title1": "Every ",
+      "title2": "lot ",
+      "title3": "you trade brings you ",
+      "title4": "closer to a ",
+      "title5": "bigger reward",
+      "description": "Join now and enjoy instant cashback on spreads for every traded lot.",
+      "btn_txt": "Start Trading Now"
+    }
   }
 }
