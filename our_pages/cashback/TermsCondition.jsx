@@ -40,7 +40,11 @@ const TermsCondition = () => {
     {
       category: t("strategies_title"),
       icon: tradingStrategies,
-      items: [t("strategies_li1_desc"), t("strategies_li2_desc")],
+      items: [
+        t("strategies_li1_desc"),
+        t("strategies_li2_desc"),
+        t("strategies_li3_desc"),
+      ],
       imageClasses:
         "absolute -bottom-8 end-32 rotate-[14deg] w-[138px] h-[157px]",
     },
