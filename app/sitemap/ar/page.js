@@ -243,6 +243,12 @@ export default function ArSitemapPage() {
       priority: 0.8,
       changefreq: "daily",
     },
+    {
+      url: "https://primexcapital.com/ar/cashback",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
   ];
 
   return (
