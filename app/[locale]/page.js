@@ -6,7 +6,10 @@ import HomeWrapper from "@/our_pages/home-v2/HomeWrapper";
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../messages/${locale}.json`)).default;
   const t = createTranslator({ locale, messages });
-  const url = `https://www.primexcapital.com/${locale}`;
+  const isDefaultLocale = locale === "en";
+  const url = isDefaultLocale
+    ? "https://primexcapital.com/"
+    : `https://primexcapital.com/${locale}`;
 
   return {
     title: t("home.metaData.title"),
@@ -14,13 +17,13 @@ export async function generateMetadata({ params: { locale } }) {
     alternates: {
       canonical: url,
       languages: {
-        en: "https://www.primexcapital.com/en",
-        ar: "https://www.primexcapital.com/ar",
-        ku: "https://www.primexcapital.com/ku",
-        es: "https://www.primexcapital.com/es",
-        ps: "https://www.primexcapital.com/ps",
-        pt: "https://www.primexcapital.com/pt",
-        fa: "https://www.primexcapital.com/fa",
+        en: "https://primexcapital.com/",
+        ar: "https://primexcapital.com/ar",
+        ku: "https://primexcapital.com/ku",
+        es: "https://primexcapital.com/es",
+        ps: "https://primexcapital.com/ps",
+        pt: "https://primexcapital.com/pt",
+        fa: "https://primexcapital.com/fa",
       },
     },
     openGraph: {
