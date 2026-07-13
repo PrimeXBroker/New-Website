@@ -250,7 +250,6 @@ export default function PtSitemapPage() {
       changefreq: "daily",
     },
   ];
-  ];
 
   return (
     <div style={{ margin: "20px auto" }}>
