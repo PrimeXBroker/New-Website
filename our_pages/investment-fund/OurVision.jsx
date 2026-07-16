@@ -1,10 +1,12 @@
 "use client";
 import { useLocale, useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import React from "react";
 
 const OurVision = () => {
   const locale = useLocale();
+  const { theme } = useTheme();
   const t = useTranslations("investmentFunds.investmentVision");
 
   const investmentStages = [
@@ -56,14 +58,24 @@ const OurVision = () => {
                   unoptimized={true}
                   src={
                     locale === "ar"
-                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/investment-vision-ar.png"
+                      ? theme === "dark"
+                        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/dark/AR.png"
+                        : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/light/AR.png"
                       : locale === "fa"
-                        ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/investment-vision-fa.png"
+                        ? theme === "dark"
+                          ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/dark/Fa.png"
+                          : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/light/Fa.png"
                         : locale === "ku"
-                          ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/investment-vision-ku.png"
+                          ? theme === "dark"
+                            ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/dark/KR.png"
+                            : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/light/KR.png"
                           : locale === "pt"
-                            ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/investment-vision-pt.png"
-                            : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/investment-vision-en.png"
+                            ? theme === "dark"
+                              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/dark/PT.png"
+                              : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/light/PT.png"
+                            : theme === "dark"
+                              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/dark/EN.png"
+                              : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/investment-funds/light/EN.png"
                   }
                   width="100"
                   height="100"
