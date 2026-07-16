@@ -124,10 +124,10 @@ const TradingInstruments = () => {
               ? symbolList.map((instrument) => {
                   const displayPrice = parseFloat(
                     instrument?.bid_price,
-                  )?.toFixed(3);
+                  )?.toFixed(2);
                   const displaySpread = (
                     instrument?.ask_price - instrument.bid_price
-                  )?.toFixed(3);
+                  )?.toFixed(2);
                   return (
                     <div
                       key={instrument.symbol}
