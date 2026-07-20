@@ -23,6 +23,11 @@ export default function middleware(request) {
     }
   }
 
+  // Redirect root "/" to "/en" to avoid duplicate content
+  if (pathname === "/") {
+    return NextResponse.redirect(new URL("/en", request.url), 301);
+  }
+
   // Then, handle internationalization
   return intlMiddleware(request);
 }

@@ -4,11 +4,11 @@
 /node_modules
 /.pnp
 .pnp.js
-.yarn/install-state.gz
+.yarn/install-state.gzw
 
 # testing
 /coverage
-
+/.mimocode
 # next.js
 /.next/
 /out/
