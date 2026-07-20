@@ -2,7 +2,8 @@ import React from "react";
 import { createTranslator } from "next-intl";
 import Script from "next/script";
 import AcademyWrapper from "@/our_pages/education/academy/AcademyWrapper";
-import { getBlogs } from "@/actions/news";
+import { getNews } from "@/actions/news";
+import { getLocale } from "next-intl/server";
 
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../../messages/${locale}.json`))
@@ -35,16 +36,6 @@ export async function generateMetadata({ params: { locale } }) {
 }
 
 const page = async () => {
-  const response = await getBlogs(1, 9);
-
-  let initialBlogs = [];
-  let totalPages = 1;
-
-  if (response?.success) {
-    initialBlogs = response.result.data;
-    totalPages = response.result.pagination.totalPages;
-  }
-
   const hreflangLocales = [
     { lng: "en", url: "en" },
     { lng: "ar", url: "ar" },
@@ -98,10 +89,7 @@ const page = async () => {
           }),
         }}
       />
-      <AcademyWrapper
-        initialBlogs={initialBlogs}
-        initialTotalPages={totalPages}
-      />
+      <AcademyWrapper />
     </>
   );
 };

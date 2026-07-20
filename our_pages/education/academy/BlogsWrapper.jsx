@@ -1,33 +1,36 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import axios from "axios";
 import Moment from "react-moment";
 import { useLocale } from "next-intl";
 import { Pagination } from "@nextui-org/react";
 import Image from "next/image";
-import { getBlogs } from "@/actions/news";
 
-const BlogsWrapper = ({ initialBlogs, initialTotalPages }) => {
-  const [loading, setLoading] = useState(false);
+const BlogsWrapper = () => {
+  const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
-  const [blogs, setBlogs] = useState(initialBlogs || []);
-  const [totalPages, setTotalPages] = useState(initialTotalPages || 1);
+  const [blogs, setBlogs] = useState([]);
+  const [totalPages, setTotalPages] = useState(1);
   const locale = useLocale();
 
-  useEffect(() => {
-    if (page === 1) return;
-
-    const fetchMoreBlogs = async () => {
-      setLoading(true);
-      const res = await getBlogs(page, 9);
-      if (res.success) {
-        setBlogs(res.result.data);
-        setTotalPages(res.result.pagination.totalPages);
-      }
+  const fetchEnglishBlogs = async () => {
+    setLoading(true);
+    const res = await axios.get(
+      `https://primexbroker.com/api/fetch/publish/related/all-blog/${page}/9`,
+    );
+    if (res.data.success) {
+      setBlogs(res.data.data);
+      setTotalPages(res.data.pagination.totalPages);
       setLoading(false);
-    };
+    } else {
+      setLoading(false);
+    }
+  };
 
-    fetchMoreBlogs();
+  useEffect(() => {
+    setLoading(true);
+    fetchEnglishBlogs();
   }, [page]);
 
   if (loading) {

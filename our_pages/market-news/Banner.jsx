@@ -36,7 +36,7 @@ const Banner = ({ news }) => {
     setDisplayNews(updatedNews);
     setNewsDetails(updatedNews[0]);
     setProgressCounter((prevCounter) =>
-      prevCounter >= news.length ? 1 : prevCounter + 1
+      prevCounter >= news.length ? 1 : prevCounter + 1,
     );
   };
 
@@ -51,7 +51,7 @@ const Banner = ({ news }) => {
     setDisplayNews(updatedNews);
     setNewsDetails(updatedNews[0]);
     setProgressCounter((prevCounter) =>
-      prevCounter === 1 ? news.length : prevCounter - 1
+      prevCounter === 1 ? news.length : prevCounter - 1,
     );
   };
 
@@ -92,12 +92,12 @@ const Banner = ({ news }) => {
                     locale === "ar"
                       ? newsDetails?.imageAr || newsDetails?.image
                       : locale === "ku"
-                      ? newsDetails?.imageKd || newsDetails?.image
-                      : locale === "pt"
-                      ? newsDetails?.imagePt || newsDetails?.image
-                      : locale === "fa"
-                      ? newsDetails?.imageFa || newsDetails?.image
-                      : newsDetails?.image
+                        ? newsDetails?.imageKd || newsDetails?.image
+                        : locale === "pt"
+                          ? newsDetails?.imagePt || newsDetails?.image
+                          : locale === "fa"
+                            ? newsDetails?.imageFa || newsDetails?.image
+                            : newsDetails?.image
                   }
                   alt={newsDetails?.altTag}
                   className="rounded-lg w-full h-full"
@@ -113,12 +113,12 @@ const Banner = ({ news }) => {
                   {locale === "ar"
                     ? newsDetails?.titleAr
                     : locale === "ku"
-                    ? newsDetails?.titleKd || newsDetails?.titleEn
-                    : locale === "pt"
-                    ? newsDetails?.titlePt || newsDetails?.titleEn
-                    : locale === "fa"
-                    ? newsDetails?.titleFa || newsDetails?.titleEn
-                    : newsDetails?.titleEn}
+                      ? newsDetails?.titleKd || newsDetails?.titleEn
+                      : locale === "pt"
+                        ? newsDetails?.titlePt || newsDetails?.titleEn
+                        : locale === "fa"
+                          ? newsDetails?.titleFa || newsDetails?.titleEn
+                          : newsDetails?.titleEn}
                 </Link>
               )}
             </h2>
@@ -189,12 +189,12 @@ const Banner = ({ news }) => {
                           locale === "ar"
                             ? blog?.imageAr || blog?.image
                             : locale === "ku"
-                            ? blog?.imageKd || blog?.image
-                            : locale === "pt"
-                            ? blog?.imagePt || blog?.image
-                            : locale === "fa"
-                            ? blog?.imageFa || blog?.image
-                            : blog?.image
+                              ? blog?.imageKd || blog?.image
+                              : locale === "pt"
+                                ? blog?.imagePt || blog?.image
+                                : locale === "fa"
+                                  ? blog?.imageFa || blog?.image
+                                  : blog?.image
                         }
                         alt={blog?.altTag}
                         width={300}
