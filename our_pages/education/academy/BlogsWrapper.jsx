@@ -1,36 +1,33 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import axios from "axios";
 import Moment from "react-moment";
 import { useLocale } from "next-intl";
 import { Pagination } from "@nextui-org/react";
 import Image from "next/image";
+import { getBlogs } from "@/actions/news";
 
-const BlogsWrapper = () => {
-  const [loading, setLoading] = useState(true);
+const BlogsWrapper = ({ initialBlogs, initialTotalPages }) => {
+  const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
-  const [blogs, setBlogs] = useState([]);
-  const [totalPages, setTotalPages] = useState(1);
+  const [blogs, setBlogs] = useState(initialBlogs || []);
+  const [totalPages, setTotalPages] = useState(initialTotalPages || 1);
   const locale = useLocale();
 
-  const fetchEnglishBlogs = async () => {
-    setLoading(true);
-    const res = await axios.get(
-      `https://primexbroker.com/api/fetch/publish/related/all-blog/${page}/9`
-    );
-    if (res.data.success) {
-      setBlogs(res.data.data);
-      setTotalPages(res.data.pagination.totalPages);
-      setLoading(false);
-    } else {
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
-    setLoading(true);
-    fetchEnglishBlogs();
+    if (page === 1) return;
+
+    const fetchMoreBlogs = async () => {
+      setLoading(true);
+      const res = await getBlogs(page, 9);
+      if (res.success) {
+        setBlogs(res.result.data);
+        setTotalPages(res.result.pagination.totalPages);
+      }
+      setLoading(false);
+    };
+
+    fetchMoreBlogs();
   }, [page]);
 
   if (loading) {
@@ -62,12 +59,12 @@ const BlogsWrapper = () => {
                         locale === "ar"
                           ? blog?.imageAr || blog?.image
                           : locale === "ku"
-                          ? blog?.imageKd || blog?.image
-                          : locale === "pt"
-                          ? blog?.imagePt || blog?.image
-                          : locale === "fa"
-                          ? blog?.imageFa || blog?.image
-                          : blog?.image
+                            ? blog?.imageKd || blog?.image
+                            : locale === "pt"
+                              ? blog?.imagePt || blog?.image
+                              : locale === "fa"
+                                ? blog?.imageFa || blog?.image
+                                : blog?.image
                       }
                       width="100"
                       height="100"
@@ -81,12 +78,12 @@ const BlogsWrapper = () => {
                         {locale === "ar"
                           ? blog?.titleAr
                           : locale === "ku"
-                          ? blog?.titleKd || blog?.titleEn
-                          : locale === "pt"
-                          ? blog?.titlePt || blog?.titleEn
-                          : locale === "fa"
-                          ? blog?.titleFa || blog?.titleEn
-                          : blog?.titleEn}
+                            ? blog?.titleKd || blog?.titleEn
+                            : locale === "pt"
+                              ? blog?.titlePt || blog?.titleEn
+                              : locale === "fa"
+                                ? blog?.titleFa || blog?.titleEn
+                                : blog?.titleEn}
                       </h4>
                     </div>
                     <div className="mt-3">
