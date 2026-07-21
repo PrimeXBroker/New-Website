@@ -21,7 +21,7 @@ export function deepLinkMiddleware(request) {
     // 1. Check OS and set the redirect URL
     if (isAndroid) {
       const intentUrl = `intent://community/posts/detail/${postId}#Intent;scheme=${scheme};package=com.primex.primexmobileapp;S.browser_fallback_url=${encodeURIComponent(
-        androidStoreUrl
+        androidStoreUrl,
       )};end`;
       redirectUrl = intentUrl;
     } else if (isIOS) {

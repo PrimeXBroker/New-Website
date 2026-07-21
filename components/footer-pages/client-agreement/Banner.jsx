@@ -81,7 +81,7 @@ const Banner = () => {
               onClick={() =>
                 handleDownload(
                   "/assets/pdf/PrimeX_Capital_Client_Agreement.pdf",
-                  "PrimeX Capital Client Agreement"
+                  "PrimeX Capital Client Agreement",
                 )
               }
               className="font-bold py-4 sm:py-3 sm:w-1/2 rounded-lg flex justify-center items-center bg-tm dark:bg-tm-dark text-p dark:text-p-dark mb-5 sm:mb-0 cursor-pointer"
