@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -12,8 +12,18 @@ import { TiArrowLeftThick, TiArrowRightThick } from "react-icons/ti";
 
 const Promotions = () => {
   const locale = useLocale();
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const t = useTranslations("home.promotions");
+
+  // Wait for mount (hydration) before reading theme to avoid SSR/CSR mismatches
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // resolvedTheme always returns "light" or "dark" after hydration — more reliable than `theme`
+  // Before hydration, fall back to the default ("dark") to match the provider's defaultTheme
+  const currentTheme = mounted ? (resolvedTheme || theme || "dark") : "dark";
 
   const promotionsData = [
     {
@@ -69,7 +79,6 @@ const Promotions = () => {
     }
   }, []);
 
-  console.log(theme,"theme Promotions");
   return (
     <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
       <div className="container">
@@ -142,7 +151,7 @@ const Promotions = () => {
                       <Image
                         unoptimized={true}
                         src={
-                          theme === "dark" ? item.imageDark : item.imageLight
+                          currentTheme === "dark" ? item.imageDark : item.imageLight
                         }
                         alt={item.altText}
                         width={100}
