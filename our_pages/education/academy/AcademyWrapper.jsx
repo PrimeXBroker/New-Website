@@ -15,7 +15,7 @@ const AcademyWrapper = () => {
     setLoading(true);
     // Fetch with limit 9 to avoid duplicate API calls — BlogsWrapper needs 9 items per page
     const res = await axios.get(
-      `https://primexbroker.com/api/fetch/publish/related/all-blog/${page}/9`,
+      `https://primexbroker.com/api/fetch/publish/related/all-blog/${page}/6`,
     );
 
     if (res.data.success) {
