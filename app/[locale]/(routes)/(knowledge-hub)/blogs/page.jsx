@@ -2,8 +2,6 @@ import React from "react";
 import { createTranslator } from "next-intl";
 import Script from "next/script";
 import AcademyWrapper from "@/our_pages/education/academy/AcademyWrapper";
-import { getNews } from "@/actions/news";
-import { getLocale } from "next-intl/server";
 
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../../../../messages/${locale}.json`))

@@ -1,18 +1,16 @@
 "use client";
-import React, { useEffect, useState, useOptimistic } from "react";
-import { useTranslations, useLocale } from "next-intl";
+import React, { useState } from "react";
+import { useLocale } from "next-intl";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-// import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
-import axios from "axios";
 import Link from "next/link";
 import Moment from "react-moment";
 import { Pagination } from "@nextui-org/react";
 import { getNews } from "@/actions/news";
 
 const MobileMarketNews = ({ news, totalPages, lang }) => {
-  const [loading, setLoading] = useOptimistic(false);
+  const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
   const [newsList, setNews] = useState(news);
   const locale = useLocale();
@@ -23,7 +21,7 @@ const MobileMarketNews = ({ news, totalPages, lang }) => {
 
   const handleChange = async (p) => {
     setLoading(true);
-    const response = await getNews(page, lang, locale);
+    const response = await getNews(p, lang, locale);
     if (response?.success) {
       setNews(response?.result.data);
       setPage(p);

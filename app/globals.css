@@ -7,23 +7,6 @@
     scroll-behavior: smooth;
     font-family: "Montserrat", sans-serif;
   }
-
-  body {
-    background-color: #F2F2F2;
-    transition: background-color 0.3s ease;
-  }
-
-  /* Dark mode background before JS hydration */
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-color: #030303;
-    }
-  }
-
-  /* Once JS hydrates and adds the dark class, use this */
-  html.dark body {
-    background-color: #030303;
-  }
 }
 
 @layer components {

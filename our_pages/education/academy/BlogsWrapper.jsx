@@ -1,37 +1,13 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
-import axios from "axios";
 import Moment from "react-moment";
 import { useLocale } from "next-intl";
 import { Pagination } from "@nextui-org/react";
 import Image from "next/image";
 
-const BlogsWrapper = () => {
-  const [loading, setLoading] = useState(true);
-  const [page, setPage] = useState(1);
-  const [blogs, setBlogs] = useState([]);
-  const [totalPages, setTotalPages] = useState(1);
+const BlogsWrapper = ({ blogs, totalPages, page, setPage, loading }) => {
   const locale = useLocale();
-
-  const fetchEnglishBlogs = async () => {
-    setLoading(true);
-    const res = await axios.get(
-      `https://primexbroker.com/api/fetch/publish/related/all-blog/${page}/9`,
-    );
-    if (res.data.success) {
-      setBlogs(res.data.data);
-      setTotalPages(res.data.pagination.totalPages);
-      setLoading(false);
-    } else {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    setLoading(true);
-    fetchEnglishBlogs();
-  }, [page]);
 
   if (loading) {
     return (

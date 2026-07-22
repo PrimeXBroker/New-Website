@@ -1,7 +1,6 @@
 "use client";
-import React, { useEffect, useOptimistic, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import axios from "axios";
 import Moment from "react-moment";
 import { useLocale } from "next-intl";
 import { Pagination } from "@nextui-org/react";
@@ -9,7 +8,7 @@ import Image from "next/image";
 import { getNews } from "@/actions/news";
 
 const MarketNews = ({ news, totalPages, lang }) => {
-  const [loading, setLoading] = useOptimistic(false);
+  const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
   const [newsList, setNews] = useState(news);
   const locale = useLocale();
@@ -20,18 +19,13 @@ const MarketNews = ({ news, totalPages, lang }) => {
 
   const handleChange = async (p) => {
     setLoading(true);
-    const response = await getNews(page, lang, locale);
+    const response = await getNews(p, lang, locale);
     if (response?.success) {
-      console.log(response?.result.data, "response?.result.data");
       setNews(response?.result.data);
       setPage(p);
     }
     setLoading(false);
   };
-
-  useEffect(() => {
-    handleChange(page);
-  }, [page, news]);
 
   if (loading) {
     return (
@@ -44,7 +38,6 @@ const MarketNews = ({ news, totalPages, lang }) => {
       </div>
     );
   }
-  console.log(newsList?.[0], "newsList");
 
   return (
     <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
