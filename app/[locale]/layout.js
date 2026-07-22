@@ -3,24 +3,42 @@ import "../../public/venobox/magnific-popup.css";
 import { NextUIProvider } from "@nextui-org/react";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import Footer from "@/components/Footer";
 import localFont from "@next/font/local";
 import Cookies from "@/components/Cookies";
 import { Suspense } from "react";
+import dynamic from "next/dynamic";
 import { Toaster } from "react-hot-toast";
 import { FacebookPixelEvents } from "@/utilities/pixelEvent";
 import FallbackLoader from "@/components/LoadingSpinner";
 import Script from "next/script";
-import DesktopHeader from "@/components/DesktopHeader";
-import MobileHeader from "@/components/MobileHeader";
 import VideoPopup from "@/components/VideoPopup";
 import ImageView from "@/components/ImageView";
 import NotificationHandler from "@/components/NotificationHandler";
 import RedirectHandler from "@/components/RedirectHandler";
-import ThemeToggle from "@/components/common/ThemeToggle";
 import ThemeProviderWrapper from "@/context/theme-provider";
 import RedirectionHandler from "@/components/common/RedirectionHandler";
 import MousePartialEffect from "@/components/common/MousePartialEffect";
+
+// Dynamically import below-the-fold / layout components to defer their JS bundles
+const DesktopHeader = dynamic(
+  () => import("@/components/DesktopHeader"),
+  { loading: () => null }
+);
+
+const MobileHeader = dynamic(
+  () => import("@/components/MobileHeader"),
+  { loading: () => null }
+);
+
+const Footer = dynamic(
+  () => import("@/components/Footer"),
+  { loading: () => null }
+);
+
+const ThemeToggle = dynamic(
+  () => import("@/components/common/ThemeToggle"),
+  { loading: () => null }
+);
 
 const montserrat = localFont({
   src: [
@@ -159,53 +177,6 @@ export default async function layout({ children, params: { locale } }) {
             `,
           }}
         />
-        {/* Google Analytics - config */}
-        <Script
-          id="google-analytics"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{
-            __html: `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){ dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-F4WWRCT0TN', {
-        'linker': {
-          'domains': ['primexgrp.com', 'primexcapital.com']
-        }
-      });
-
-      // Helper function for conversion tracking
-      function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof(url) != 'undefined') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'conversion', {
-            'send_to': 'AW-11492934355/UxvrCKrc_LMaENOFoegq',
-            'value': 1.0,
-            'currency': 'AED',
-            'event_callback': callback
-        });
-        return false;
-      }
-
-      // Google tag (gtag.js) event - delayed navigation helper
-      function gtagSendEvent(url) {
-        var callback = function () {
-          if (typeof url === 'string') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'GA4', {
-          'event_callback': callback,
-          'event_timeout': 2000,
-        });
-        return false;
-      }
-    `,
-          }}
-        />
       </head>
       <body>
         <RedirectionHandler />
@@ -214,23 +185,66 @@ export default async function layout({ children, params: { locale } }) {
             <NextUIProvider>
               <NextIntlClientProvider messages={messages}>
                 <ThemeProviderWrapper>
-                  <RedirectHandler />
-                  <NotificationHandler />
-                  <ImageView />
-                  <VideoPopup />
-                  <MousePartialEffect />
-                  <DesktopHeader locale={locale} />
-                  <MobileHeader locale={locale} />
+                  {/* Non-critical overlays & effects — load independently */}
+                  <Suspense fallback={null}>
+                    <RedirectHandler />
+                  </Suspense>
+                  <Suspense fallback={null}>
+                    <NotificationHandler />
+                  </Suspense>
+                  <Suspense fallback={null}>
+                    <ImageView />
+                  </Suspense>
+                  <Suspense fallback={null}>
+                    <VideoPopup />
+                  </Suspense>
+                  <Suspense fallback={null}>
+                    <MousePartialEffect />
+                  </Suspense>
+
+                  {/* Header — first contentful paint */}
+                  <Suspense
+                    fallback={
+                      <div className="h-16 bg-p dark:bg-p-dark animate-pulse" />
+                    }
+                  >
+                    <DesktopHeader locale={locale} />
+                  </Suspense>
+                  <Suspense
+                    fallback={
+                      <div className="h-16 bg-p dark:bg-p-dark animate-pulse md:hidden" />
+                    }
+                  >
+                    <MobileHeader locale={locale} />
+                  </Suspense>
+
+                  {/* Main content — uses loading.js for its own state */}
                   {children}
-                  <ThemeToggle />
-                  <Toaster
-                    toastOptions={{
-                      duration: 5000,
-                    }}
-                  />
-                  <FacebookPixelEvents />
-                  <Footer />
-                  <Cookies />
+
+                  {/* Below-the-fold widgets */}
+                  <Suspense fallback={null}>
+                    <ThemeToggle />
+                  </Suspense>
+                  <Suspense fallback={null}>
+                    <Toaster
+                      toastOptions={{
+                        duration: 5000,
+                      }}
+                    />
+                  </Suspense>
+                  <Suspense fallback={null}>
+                    <FacebookPixelEvents />
+                  </Suspense>
+                  <Suspense
+                    fallback={
+                      <div className="h-40 bg-p dark:bg-p-dark animate-pulse" />
+                    }
+                  >
+                    <Footer />
+                  </Suspense>
+                  <Suspense fallback={null}>
+                    <Cookies />
+                  </Suspense>
                 </ThemeProviderWrapper>
               </NextIntlClientProvider>
             </NextUIProvider>
