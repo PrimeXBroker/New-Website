@@ -69,6 +69,7 @@ const Promotions = () => {
     }
   }, []);
 
+  console.log(theme,"theme Promotions");
   return (
     <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
       <div className="container">
