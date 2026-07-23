@@ -1,12 +1,15 @@
 // middleware.ts
 import createMiddleware from "next-intl/middleware";
+import { defineRouting } from "next-intl/routing";
 import { deepLinkMiddleware } from "./middleware/deepLinkMiddleware";
 import { NextResponse } from "next/server";
 
-const intlMiddleware = createMiddleware({
+const routing = defineRouting({
   locales: ["en", "ar", "ku", "es", "ps", "pt", "fa"],
   defaultLocale: "en",
 });
+
+const intlMiddleware = createMiddleware(routing);
 
 export default function middleware(request) {
   const { pathname } = new URL(request.url);
@@ -35,6 +38,6 @@ export default function middleware(request) {
 export const config = {
   matcher: [
     // Match all paths except static files and Next.js internals
-    "/((?!_next|_vercel|.*\\..*).*)",
+    "/((?!api|_next|_vercel|.*\\..*).*)",
   ],
 };

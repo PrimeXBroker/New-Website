@@ -5,15 +5,17 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Performance optimizations
-  swcMinify: true,
   compress: true,
-  reactStrictMode: true,
+  reactStrictMode: false,
   poweredByHeader: false,
   generateEtags: true,
 
   images: {
-    domains: ["flagcdn.com"],
     remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "flagcdn.com",
+      },
       {
         protocol: "https",
         hostname: "primexcapital.s3.eu-north-1.amazonaws.com",
@@ -28,7 +30,6 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 
-  // Enable HTTP compression
   experimental: {
     optimizePackageImports: [
       "lucide-react",
@@ -38,6 +39,12 @@ const nextConfig = {
       "lottie-react",
     ],
   },
+
+  turbopack: {
+    root: process.cwd(),
+  },
+
+  serverExternalPackages: ["@nextui-org/react"],
 
   async rewrites() {
     return [

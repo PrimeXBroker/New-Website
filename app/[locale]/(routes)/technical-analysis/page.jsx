@@ -2,7 +2,8 @@ import React from "react";
 import ExpertAnalysisWrapper from "@/our_pages/expert-analysis/ExpertAnalysisWrapper";
 import { createTranslator } from "next-intl";
 
-export async function generateMetadata({ params: { locale } }) {
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
   const messages = (await import(`../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });

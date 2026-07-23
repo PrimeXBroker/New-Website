@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useOptimistic } from "react";
+import { useEffect, useState } from "react";
 import { tradingInstrumentsTabs } from "@/utilities/tradingInstruments";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { setTokenData } from "@/redux/slices/workspaceSlice";
@@ -15,7 +15,7 @@ const TradingInstruments = () => {
   const dispatch = useAppDispatch();
   const [activeTab, setActiveTab] = useState("Trending");
   const [symbolList, setSymbolList] = useState([]);
-  const [loading, setLoading] = useOptimistic(true);
+  const [loading, setLoading] = useState(true);
 
   const handleChange = async (tab) => {
     setLoading(true);

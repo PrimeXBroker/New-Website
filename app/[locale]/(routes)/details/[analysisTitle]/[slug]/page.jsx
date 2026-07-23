@@ -2,7 +2,8 @@ import React from "react";
 import ExpertAnalysisDetailWrapper from "@/our_pages/expert-analysis-detail/ExpertAnalysisDetailWrapper";
 import axios from "axios";
 
-export async function generateMetadata({ params: { locale, slug } }) {
+export async function generateMetadata({ params }) {
+  const { locale, slug } = await params;
   try {
     const res = await axios.get(
       `https://primexbroker.com/api/fetch/one/market-news/${slug}`

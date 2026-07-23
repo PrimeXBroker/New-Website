@@ -2,7 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 // import { notFound } from "next/navigation"
-export async function generateMetadata({ params: { locale } }) {
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
   // const messages = (await import(`../messages/${locale}.json`)).default;
   // const t = createTranslator({ locale, messages });
   // const url =

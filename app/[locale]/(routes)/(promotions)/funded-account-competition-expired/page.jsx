@@ -2,7 +2,8 @@ import React from "react";
 import { createTranslator } from "next-intl";
 import DemoAccountWrapper from "@/our_pages/promotions/demo-account/DemoAccountWrapper";
 
-export async function generateMetadata({ params: { locale } }) {
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
   const messages = (await import(`../../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });

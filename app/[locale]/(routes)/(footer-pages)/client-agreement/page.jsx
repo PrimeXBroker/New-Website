@@ -2,7 +2,8 @@ import ClientAgreementPage from "@/our_pages/footer-pages/client-agreement/Clien
 import { createTranslator } from "next-intl";
 import React from "react";
 
-export async function generateMetadata({ params: { locale } }) {
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
   const messages = (await import(`../../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });
