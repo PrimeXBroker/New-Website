@@ -12,6 +12,10 @@ const Hero = dynamic(() => import("./Hero"), {
   ssr: false,
   loading: () => <div className="bg-p dark:bg-p-dark pt-14 lg:block min-h-[600px]" />,
 });
+// const HeroBanner = dynamic(() => import("./HeroBanner"), {
+//   ssr: false,
+//   loading: () => <div className="bg-p dark:bg-p-dark pt-14 lg:block min-h-[600px]" />,
+// });
 
 const HeroMobile = dynamic(() => import("./HeroMobile"), {
   ssr: false,
@@ -63,6 +67,7 @@ const HomeWrapper = () => {
   return (
     <>
       <Hero />
+      {/* <HeroBanner /> */}
       <HeroMobile />
       <StatCards />
       <Promotions />

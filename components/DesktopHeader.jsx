@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
-import Logo from "@/public/images/logos/logo-white.webp";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import LocaleLink from "./LocaleLink";
@@ -19,7 +18,6 @@ const DesktopHeader = ({ locale }) => {
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
   const pathname = usePathname();
   const [scrollProgress, setScrollProgress] = useState(0);
-  const pathnameWithoutLocale = pathname.replace(`/${locale}`, "");
   const [isSticky, setIsSticky] = useState(false);
   const [language, setLanguage] = useState({
     text:
