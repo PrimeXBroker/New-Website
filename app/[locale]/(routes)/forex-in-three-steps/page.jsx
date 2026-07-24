@@ -13,6 +13,15 @@ export async function generateMetadata({ params }) {
     description: t("tutorials.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/forex-in-three-steps",
+        ar: "https://www.primexcapital.com/ar/forex-in-three-steps",
+        ku: "https://www.primexcapital.com/ku/forex-in-three-steps",
+        es: "https://www.primexcapital.com/es/forex-in-three-steps",
+        ps: "https://www.primexcapital.com/ps/forex-in-three-steps",
+        pt: "https://www.primexcapital.com/pt/forex-in-three-steps",
+        fa: "https://www.primexcapital.com/fa/forex-in-three-steps",
+      },
     },
     openGraph: {
       type: "website",
@@ -33,31 +42,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/forex-in-three-steps`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <TutorialsWrapper />
-    </>
-  );
+  return <TutorialsWrapper />;
 };
 
 export default page;

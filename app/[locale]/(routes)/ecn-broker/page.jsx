@@ -13,6 +13,15 @@ export async function generateMetadata({ params }) {
     description: t("ecnBroker.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/ecn-broker",
+        ar: "https://www.primexcapital.com/ar/ecn-broker",
+        ku: "https://www.primexcapital.com/ku/ecn-broker",
+        es: "https://www.primexcapital.com/es/ecn-broker",
+        ps: "https://www.primexcapital.com/ps/ecn-broker",
+        pt: "https://www.primexcapital.com/pt/ecn-broker",
+        fa: "https://www.primexcapital.com/fa/ecn-broker",
+      },
     },
     openGraph: {
       type: "website",
@@ -33,30 +42,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/ecn-broker`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <ECNBrokerWrapper />
-    </>
-  );
+  return <ECNBrokerWrapper />;
 };
 
 export default page;

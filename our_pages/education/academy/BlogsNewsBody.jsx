@@ -4,7 +4,7 @@ import { EditorState, convertFromRaw, CompositeDecorator } from "draft-js";
 import { Editor as MyEditor } from "draft-js";
 import axios from "axios";
 import { useLocale } from "next-intl";
-import Moment from "react-moment";
+import moment from "moment";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
@@ -101,14 +101,7 @@ function BlogsNewsBody({ slug }) {
           </Link>
 
           <div className="text-ts dark:text-ts-dark text-sm mb-2 text-center">
-            <Moment
-              date={detail?.postedOn ? detail?.postedOn : detail?.createdOn}
-              format={
-                locale === "ar" || locale === "ku" || locale === "fa"
-                  ? "Do MMM YYYY"
-                  : "Do MMM YYYY"
-              }
-            />{" "}
+            {moment(detail?.postedOn ? detail?.postedOn : detail?.createdOn).format("Do MMM YYYY")}{" "}
             • 5 Min Read
           </div>
 

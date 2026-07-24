@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("ibProgram.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/ib-program",
+        ar: "https://www.primexcapital.com/ar/ib-program",
+        ku: "https://www.primexcapital.com/ku/ib-program",
+        es: "https://www.primexcapital.com/es/ib-program",
+        ps: "https://www.primexcapital.com/ps/ib-program",
+        pt: "https://www.primexcapital.com/pt/ib-program",
+        fa: "https://www.primexcapital.com/fa/ib-program",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,27 +43,8 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
   return (
     <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/ib-program`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
       <Script
         id="linkedin-tracking"
         strategy="afterInteractive"

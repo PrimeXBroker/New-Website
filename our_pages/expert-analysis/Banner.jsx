@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button, Card, Progress } from "@nextui-org/react";
-import Moment from "react-moment";
+import moment from "moment";
 import { IoMdArrowBack } from "react-icons/io";
 import { IoMdArrowForward } from "react-icons/io";
 import { useLocale } from "next-intl";
@@ -136,14 +136,7 @@ const Banner = ({ news, titleEn }) => {
             </h2>
             <div className="flex items-center justify-between text-ts dark:text-ts-dark py-2 lg:py-0">
               <span>
-                <Moment
-                  date={newsDetails?.createdOn}
-                  format={
-                    locale === "ar" || locale === "ku" || locale === "fa"
-                      ? "Do MMM YYYY"
-                      : "Do MMM YYYY"
-                  }
-                />
+                {moment(newsDetails?.createdOn).format("Do MMM YYYY")}
               </span>
               <span>5 Min Read</span>
             </div>

@@ -13,6 +13,15 @@ export async function generateMetadata({ params }) {
     description: t("trdaeGold.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/ramadan-contest",
+        ar: "https://www.primexcapital.com/ar/ramadan-contest",
+        ku: "https://www.primexcapital.com/ku/ramadan-contest",
+        es: "https://www.primexcapital.com/es/ramadan-contest",
+        ps: "https://www.primexcapital.com/ps/ramadan-contest",
+        pt: "https://www.primexcapital.com/pt/ramadan-contest",
+        fa: "https://www.primexcapital.com/fa/ramadan-contest",
+      },
     },
     openGraph: {
       type: "website",
@@ -33,31 +42,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/ramadan-contest`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <TradeGoldWrapper />
-    </>
-  );
+  return <TradeGoldWrapper />;
 };
 
 export default page;

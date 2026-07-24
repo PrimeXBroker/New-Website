@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("footer.amlPolicy.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/policy-of-aml",
+        ar: "https://www.primexcapital.com/ar/policy-of-aml",
+        ku: "https://www.primexcapital.com/ku/policy-of-aml",
+        es: "https://www.primexcapital.com/es/policy-of-aml",
+        ps: "https://www.primexcapital.com/ps/policy-of-aml",
+        pt: "https://www.primexcapital.com/pt/policy-of-aml",
+        fa: "https://www.primexcapital.com/fa/policy-of-aml",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,30 +43,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/policy-of-aml`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <AMLPolicyPage />
-    </>
-  );
+  return <AMLPolicyPage />;
 };
 
 export default page;

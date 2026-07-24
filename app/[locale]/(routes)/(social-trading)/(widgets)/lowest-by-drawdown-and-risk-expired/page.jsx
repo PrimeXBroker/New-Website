@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("copyProgram.lowestDDWidget.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/lowest-by-drawdown-and-risk",
+        ar: "https://www.primexcapital.com/ar/lowest-by-drawdown-and-risk",
+        ku: "https://www.primexcapital.com/ku/lowest-by-drawdown-and-risk",
+        es: "https://www.primexcapital.com/es/lowest-by-drawdown-and-risk",
+        ps: "https://www.primexcapital.com/ps/lowest-by-drawdown-and-risk",
+        pt: "https://www.primexcapital.com/pt/lowest-by-drawdown-and-risk",
+        fa: "https://www.primexcapital.com/fa/lowest-by-drawdown-and-risk",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,31 +43,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/lowest-by-drawdown-and-risk`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <LowestDDWrapper />
-    </>
-  );
+  return <LowestDDWrapper />;
 };
 
 export default page;

@@ -1,22 +1,10 @@
-import { createTranslator } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
-export async function generateMetadata({ params }) {
-  const { locale } = await params;
-  const messages = (await import(`../../../messages/${locale}.json`)).default;
-  const t = createTranslator({ locale, messages });
-  // const url =
-  // locale != "en"
-  //   ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/15-deposit-bonus`
-  //   : `${process.env.NEXT_PUBLIC_BASE_URL}/15-deposit-bonus`;
-
+export async function generateMetadata() {
   return {
     title: "PrimeX Capital | Page Not Found!",
     description: "Not Found Page Description!!",
-    // alternates: {
-    //   canonical: url,
-    // },
   };
 }
 

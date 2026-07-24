@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("footer.riskDisclosure.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/risk-disclosure",
+        ar: "https://www.primexcapital.com/ar/risk-disclosure",
+        ku: "https://www.primexcapital.com/ku/risk-disclosure",
+        es: "https://www.primexcapital.com/es/risk-disclosure",
+        ps: "https://www.primexcapital.com/ps/risk-disclosure",
+        pt: "https://www.primexcapital.com/pt/risk-disclosure",
+        fa: "https://www.primexcapital.com/fa/risk-disclosure",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,30 +43,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/risk-disclosure`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <RiskDisclosurePage />
-    </>
-  );
+  return <RiskDisclosurePage />;
 };
 
 export default page;

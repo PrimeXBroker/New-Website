@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("copyProgram.bestPerformanceWidget.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/best-by-performance-all-time",
+        ar: "https://www.primexcapital.com/ar/best-by-performance-all-time",
+        ku: "https://www.primexcapital.com/ku/best-by-performance-all-time",
+        es: "https://www.primexcapital.com/es/best-by-performance-all-time",
+        ps: "https://www.primexcapital.com/ps/best-by-performance-all-time",
+        pt: "https://www.primexcapital.com/pt/best-by-performance-all-time",
+        fa: "https://www.primexcapital.com/fa/best-by-performance-all-time",
+      },
     },
     openGraph: {
       type: "website",
@@ -43,21 +52,7 @@ const page = () => {
     { lng: "pt", url: "pt" },
     { lng: "fa", url: "fa" },
   ];
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/best-by-performance-all-time`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <BestPerformanceWrapper />
-    </>
-  );
+  return <BestPerformanceWrapper />;
 };
 
 export default page;

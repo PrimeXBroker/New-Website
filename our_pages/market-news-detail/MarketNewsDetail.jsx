@@ -4,7 +4,7 @@ import Link from "next/link";
 import NewsBody from "./NewsBody";
 import { useLocale, useTranslations } from "next-intl";
 import axios from "axios";
-import Moment from "react-moment";
+import moment from "moment";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 
 const MarketNewsDetail = ({ slug }) => {
@@ -166,19 +166,7 @@ const MarketNewsDetail = ({ slug }) => {
                     </div>
                     <div className="mt-3">
                       <p className="text-ts dark:text-ts-dark text-sm group-hover:text-tm dark:group-hover:text-tm-dark transition duration-700 ease-in-out">
-                        <Moment
-                          date={
-                            blog?.postedOn ? blog?.postedOn : blog?.createdOn
-                          }
-                          format={
-                            locale === "ar" ||
-                            locale === "fa" ||
-                            locale === "ps" ||
-                            locale === "ku"
-                              ? "Do MMM YYYY"
-                              : "Do MMM YYYY"
-                          }
-                        />
+                        {moment(blog?.postedOn ? blog?.postedOn : blog?.createdOn).format("Do MMM YYYY")}
                       </p>
                     </div>
                   </div>

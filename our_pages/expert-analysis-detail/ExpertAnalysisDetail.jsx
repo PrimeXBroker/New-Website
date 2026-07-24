@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import axios from "axios";
-import Moment from "react-moment";
+import moment from "moment";
 import AnalysisNewsBody from "./AnalysisNewsBody";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
@@ -170,10 +170,7 @@ const ExpertAnalysisDetail = ({ slug }) => {
                     </div>
                     <div className="mt-3">
                       <p className="text-[#C6C6C6] text-sm group-hover:text-white transition duration-700 ease-in-out">
-                        <Moment
-                          date={blog?.createdOn}
-                          format={locale === "ar" ? "YYYY/MM/DD" : "DD/MM/YYYY"}
-                        />
+                        {moment(blog?.createdOn).format(locale === "ar" ? "YYYY/MM/DD" : "DD/MM/YYYY")}
                       </p>
                     </div>
                   </div>

@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("economicCalender.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/economic-calendar",
+        ar: "https://www.primexcapital.com/ar/economic-calendar",
+        ku: "https://www.primexcapital.com/ku/economic-calendar",
+        es: "https://www.primexcapital.com/es/economic-calendar",
+        ps: "https://www.primexcapital.com/ps/economic-calendar",
+        pt: "https://www.primexcapital.com/pt/economic-calendar",
+        fa: "https://www.primexcapital.com/fa/economic-calendar",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,30 +43,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/economic-calendar`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <EconomicCalenderWrapper />
-    </>
-  );
+  return <EconomicCalenderWrapper />;
 };
 
 export default page;

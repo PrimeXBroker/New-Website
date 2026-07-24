@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("copyProgram.bestMonthWidget.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/best-by-performance-this-month",
+        ar: "https://www.primexcapital.com/ar/best-by-performance-this-month",
+        ku: "https://www.primexcapital.com/ku/best-by-performance-this-month",
+        es: "https://www.primexcapital.com/es/best-by-performance-this-month",
+        ps: "https://www.primexcapital.com/ps/best-by-performance-this-month",
+        pt: "https://www.primexcapital.com/pt/best-by-performance-this-month",
+        fa: "https://www.primexcapital.com/fa/best-by-performance-this-month",
+      },
     },
     openGraph: {
       type: "website",
@@ -44,21 +53,7 @@ const page = () => {
     { lng: "fa", url: "fa" },
   ];
 
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/best-by-performance-this-month`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <BestMonthWrapper />
-    </>
-  );
+  return <BestMonthWrapper />;
 };
 
 export default page;

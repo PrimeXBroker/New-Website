@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("cryptoProduct.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/crypto",
+        ar: "https://www.primexcapital.com/ar/crypto",
+        ku: "https://www.primexcapital.com/ku/crypto",
+        es: "https://www.primexcapital.com/es/crypto",
+        ps: "https://www.primexcapital.com/ps/crypto",
+        pt: "https://www.primexcapital.com/pt/crypto",
+        fa: "https://www.primexcapital.com/fa/crypto",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,30 +43,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/crypto`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <CryptoPage />
-    </>
-  );
+  return <CryptoPage />;
 };
 
 export default page;

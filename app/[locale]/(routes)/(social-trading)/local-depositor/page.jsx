@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("localDepositor.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/local-depositor",
+        ar: "https://www.primexcapital.com/ar/local-depositor",
+        ku: "https://www.primexcapital.com/ku/local-depositor",
+        es: "https://www.primexcapital.com/es/local-depositor",
+        ps: "https://www.primexcapital.com/ps/local-depositor",
+        pt: "https://www.primexcapital.com/pt/local-depositor",
+        fa: "https://www.primexcapital.com/fa/local-depositor",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,30 +43,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/local-depositor`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <LocalDepositorWrapper />
-    </>
-  );
+  return <LocalDepositorWrapper />;
 };
 
 export default page;

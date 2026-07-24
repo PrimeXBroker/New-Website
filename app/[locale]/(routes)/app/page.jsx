@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("primeXTradingApp.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/app",
+        ar: "https://www.primexcapital.com/ar/app",
+        ku: "https://www.primexcapital.com/ku/app",
+        es: "https://www.primexcapital.com/es/app",
+        ps: "https://www.primexcapital.com/ps/app",
+        pt: "https://www.primexcapital.com/pt/app",
+        fa: "https://www.primexcapital.com/fa/app",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,31 +43,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/app`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <PrimeXAppWrapper />
-    </>
-  );
+  return <PrimeXAppWrapper />;
 };
 
 export default page;

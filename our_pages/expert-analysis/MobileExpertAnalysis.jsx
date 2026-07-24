@@ -7,7 +7,7 @@ import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import axios from "axios";
 import Link from "next/link";
-import Moment from "react-moment";
+import moment from "moment";
 
 import { Pagination } from "@nextui-org/react";
 
@@ -147,14 +147,7 @@ const MobileExpertAnalysis = ({ id }) => {
                           {locale === "ar" ? blog.titleAr : blog.titleEn}
                         </h4>
                         <p className="text-[#C6C6C6] text-xs md:text-sm group-hover:text-white transition duration-700 ease-in-out mt-3">
-                          <Moment
-                            date={
-                              blog?.postedOn ? blog?.postedOn : blog?.createdOn
-                            }
-                            format={
-                              locale === "ar" ? "Do MMM YYYY" : "Do MMM YYYY"
-                            }
-                          />
+                          {moment(blog?.postedOn ? blog?.postedOn : blog?.createdOn).format("Do MMM YYYY")}
                         </p>
                       </div>
                     </div>

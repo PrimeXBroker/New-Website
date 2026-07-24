@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("footer.complaintsManagement.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/complaints-management",
+        ar: "https://www.primexcapital.com/ar/complaints-management",
+        ku: "https://www.primexcapital.com/ku/complaints-management",
+        es: "https://www.primexcapital.com/es/complaints-management",
+        ps: "https://www.primexcapital.com/ps/complaints-management",
+        pt: "https://www.primexcapital.com/pt/complaints-management",
+        fa: "https://www.primexcapital.com/fa/complaints-management",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,30 +43,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/complaints-management`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <ComplaintsManagementPage />
-    </>
-  );
+  return <ComplaintsManagementPage />;
 };
 
 export default page;

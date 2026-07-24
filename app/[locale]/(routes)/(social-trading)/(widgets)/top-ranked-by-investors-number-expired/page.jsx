@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("copyProgram.hightProvidersWidget.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/top-ranked-by-investors-number",
+        ar: "https://www.primexcapital.com/ar/top-ranked-by-investors-number",
+        ku: "https://www.primexcapital.com/ku/top-ranked-by-investors-number",
+        es: "https://www.primexcapital.com/es/top-ranked-by-investors-number",
+        ps: "https://www.primexcapital.com/ps/top-ranked-by-investors-number",
+        pt: "https://www.primexcapital.com/pt/top-ranked-by-investors-number",
+        fa: "https://www.primexcapital.com/fa/top-ranked-by-investors-number",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,31 +43,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/top-ranked-by-investors-number`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <HighProvidersWrapper />
-    </>
-  );
+  return <HighProvidersWrapper />;
 };
 
 export default page;

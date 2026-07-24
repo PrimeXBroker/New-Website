@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("footer.providerAgreement.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/provider-agreement",
+        ar: "https://www.primexcapital.com/ar/provider-agreement",
+        ku: "https://www.primexcapital.com/ku/provider-agreement",
+        es: "https://www.primexcapital.com/es/provider-agreement",
+        ps: "https://www.primexcapital.com/ps/provider-agreement",
+        pt: "https://www.primexcapital.com/pt/provider-agreement",
+        fa: "https://www.primexcapital.com/fa/provider-agreement",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,30 +43,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/provider-agreement`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <ProviderAgreementPage />
-    </>
-  );
+  return <ProviderAgreementPage />;
 };
 
 export default page;

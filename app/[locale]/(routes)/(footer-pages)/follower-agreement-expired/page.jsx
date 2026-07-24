@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("footer.followerAgreement.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/follower-agreement",
+        ar: "https://www.primexcapital.com/ar/follower-agreement",
+        ku: "https://www.primexcapital.com/ku/follower-agreement",
+        es: "https://www.primexcapital.com/es/follower-agreement",
+        ps: "https://www.primexcapital.com/ps/follower-agreement",
+        pt: "https://www.primexcapital.com/pt/follower-agreement",
+        fa: "https://www.primexcapital.com/fa/follower-agreement",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,30 +43,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/follower-agreement`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <FollowerAgreementPage />
-    </>
-  );
+  return <FollowerAgreementPage />;
 };
 
 export default page;

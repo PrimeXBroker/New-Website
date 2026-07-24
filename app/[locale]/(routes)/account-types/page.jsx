@@ -13,6 +13,15 @@ export async function generateMetadata({ params }) {
     description: t("accountTypes.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/account-types",
+        ar: "https://www.primexcapital.com/ar/account-types",
+        ku: "https://www.primexcapital.com/ku/account-types",
+        es: "https://www.primexcapital.com/es/account-types",
+        ps: "https://www.primexcapital.com/ps/account-types",
+        pt: "https://www.primexcapital.com/pt/account-types",
+        fa: "https://www.primexcapital.com/fa/account-types",
+      },
     },
     openGraph: {
       type: "website",
@@ -33,31 +42,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/account-types`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <AccountTypesWrapper />
-    </>
-  );
+  return <AccountTypesWrapper />;
 };
 
 export default page;

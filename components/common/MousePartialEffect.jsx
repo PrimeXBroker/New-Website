@@ -1,8 +1,17 @@
 "use client";
-import React from "react";
-import MouseParticles from "react-mouse-particles";
+import React, { useEffect, useState } from "react";
 
 const MousePartialEffect = () => {
+  const [MouseParticles, setMouseParticles] = useState(null);
+
+  useEffect(() => {
+    import("react-mouse-particles").then((mod) => {
+      setMouseParticles(() => mod.default);
+    });
+  }, []);
+
+  if (!MouseParticles) return null;
+
   return (
     <MouseParticles
       g={1}

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import Moment from "react-moment";
+import moment from "moment";
 import { useLocale } from "next-intl";
 import { Pagination } from "@nextui-org/react";
 import Image from "next/image";
@@ -44,13 +44,15 @@ const MarketNews = ({ news, totalPages, lang }) => {
       <div className="container">
         <div className="grid grid-cols-12">
           {newsList?.map((blog, index) => (
-            <div className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4 flex flex-col">
+            <div
+              className="lg:col-span-4 md:col-span-6  col-span-12 px-4 mb-4 flex flex-col"
+              key={index}
+            >
               <Link
                 href={`/${locale}/${convertToKebabCase(
-                  blog?.category?.title
+                  blog?.category?.title,
                 )}/${blog.slug}`}
                 className="group h-full rounded-xl bg-cc dark:bg-cc-dark"
-                key={index}
               >
                 <div className="single-blog-thumb overflow-hidden transition duration-700 ease-in-out rounded-xl flex flex-col h-full">
                   <div>
@@ -71,16 +73,9 @@ const MarketNews = ({ news, totalPages, lang }) => {
                     </div>
                     <div className="mt-3">
                       <p className="text-ts dark:text-ts-dark text-sm group-hover:text-tm dark:group-hover:text-tm-dark transition duration-700 ease-in-out">
-                        <Moment
-                          date={
-                            blog?.postedOn ? blog?.postedOn : blog?.createdOn
-                          }
-                          format={
-                            locale === "ar" || locale === "fa"
-                              ? "Do MMM YYYY"
-                              : "Do MMM YYYY"
-                          }
-                        />
+                        {moment(
+                          blog?.postedOn ? blog?.postedOn : blog?.createdOn,
+                        ).format("Do MMM YYYY")}
                       </p>
                     </div>
                   </div>

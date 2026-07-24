@@ -13,6 +13,15 @@ export async function generateMetadata({ params }) {
     description: t("spreadPage.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/primex-spreads",
+        ar: "https://www.primexcapital.com/ar/primex-spreads",
+        ku: "https://www.primexcapital.com/ku/primex-spreads",
+        es: "https://www.primexcapital.com/es/primex-spreads",
+        ps: "https://www.primexcapital.com/ps/primex-spreads",
+        pt: "https://www.primexcapital.com/pt/primex-spreads",
+        fa: "https://www.primexcapital.com/fa/primex-spreads",
+      },
     },
     openGraph: {
       type: "website",
@@ -33,30 +42,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/primex-spreads`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <SpreadWrapper />
-    </>
-  );
+  return <SpreadWrapper />;
 };
 
 export default page;

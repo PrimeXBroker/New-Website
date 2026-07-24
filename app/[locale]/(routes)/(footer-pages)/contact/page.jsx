@@ -13,6 +13,15 @@ export async function generateMetadata({ params }) {
     description: t("contactUs.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/contact",
+        ar: "https://www.primexcapital.com/ar/contact",
+        ku: "https://www.primexcapital.com/ku/contact",
+        es: "https://www.primexcapital.com/es/contact",
+        ps: "https://www.primexcapital.com/ps/contact",
+        pt: "https://www.primexcapital.com/pt/contact",
+        fa: "https://www.primexcapital.com/fa/contact",
+      },
     },
     openGraph: {
       type: "website",
@@ -33,30 +42,7 @@ export async function generateMetadata({ params }) {
 }
 
 const Contact = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/contact`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <ContactUsWrapper />
-    </>
-  );
+  return <ContactUsWrapper />;
 };
 
 export default Contact;

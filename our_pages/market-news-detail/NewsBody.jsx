@@ -11,7 +11,7 @@ import { Editor as MyEditor } from "draft-js";
 import axios from "axios";
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaLink } from "react-icons/fa";
 import { useLocale, useTranslations } from "next-intl";
-import Moment from "react-moment";
+import moment from "moment";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
@@ -145,14 +145,7 @@ function NewsBody({ slug, date }) {
           </Link>
 
           <div className="text-ts dark:text-ts-dark text-sm mb-2 text-center">
-            <Moment
-              date={detail?.postedOn ? detail?.postedOn : detail?.createdOn}
-              format={
-                locale === "ar" || locale === "fa"
-                  ? "Do MMM YYYY"
-                  : "Do MMM YYYY"
-              }
-            />{" "}
+            {moment(detail?.postedOn ? detail?.postedOn : detail?.createdOn).format("Do MMM YYYY")}{" "}
             • 5 Min Read
           </div>
 

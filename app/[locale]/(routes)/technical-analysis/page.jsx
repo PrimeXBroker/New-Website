@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("knowledgeHubTechnical.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/technical-analysis",
+        ar: "https://www.primexcapital.com/ar/technical-analysis",
+        ku: "https://www.primexcapital.com/ku/technical-analysis",
+        es: "https://www.primexcapital.com/es/technical-analysis",
+        ps: "https://www.primexcapital.com/ps/technical-analysis",
+        pt: "https://www.primexcapital.com/pt/technical-analysis",
+        fa: "https://www.primexcapital.com/fa/technical-analysis",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,31 +43,7 @@ export async function generateMetadata({ params }) {
 }
 
 const pages = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/technical-analysis`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <ExpertAnalysisWrapper />
-    </>
-  );
+  return <ExpertAnalysisWrapper />;
 };
 
 export default pages;

@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("copyProgram.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/social-trading",
+        ar: "https://www.primexcapital.com/ar/social-trading",
+        ku: "https://www.primexcapital.com/ku/social-trading",
+        es: "https://www.primexcapital.com/es/social-trading",
+        ps: "https://www.primexcapital.com/ps/social-trading",
+        pt: "https://www.primexcapital.com/pt/social-trading",
+        fa: "https://www.primexcapital.com/fa/social-trading",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,31 +43,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/social-trading`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <CopyProgramWrapper />
-    </>
-  );
+  return <CopyProgramWrapper />;
 };
 
 export default page;

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import Moment from "react-moment";
+import moment from "moment";
 import { useLocale } from "next-intl";
 import { Pagination } from "@nextui-org/react";
 import Image from "next/image";
@@ -67,18 +67,7 @@ const BlogsWrapper = ({ blogs, totalPages, page, setPage, loading }) => {
                     </div>
                     <div className="mt-3">
                       <p className="text-ts dark:text-ts-dark text-sm group-hover:text-tm dark:group-hover:text-tm-dark  transition duration-700 ease-in-out">
-                        <Moment
-                          date={
-                            blog?.postedOn ? blog?.postedOn : blog?.createdOn
-                          }
-                          format={
-                            locale === "ar" ||
-                            locale === "ku" ||
-                            locale === "fa"
-                              ? "Do MMM YYYY"
-                              : "Do MMM YYYY"
-                          }
-                        />
+                        {moment(blog?.postedOn ? blog?.postedOn : blog?.createdOn).format("Do MMM YYYY")}
                       </p>
                     </div>
                   </div>

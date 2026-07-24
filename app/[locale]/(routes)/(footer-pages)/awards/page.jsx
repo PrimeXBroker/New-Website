@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("awards.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/awards",
+        ar: "https://www.primexcapital.com/ar/awards",
+        ku: "https://www.primexcapital.com/ku/awards",
+        es: "https://www.primexcapital.com/es/awards",
+        ps: "https://www.primexcapital.com/ps/awards",
+        pt: "https://www.primexcapital.com/pt/awards",
+        fa: "https://www.primexcapital.com/fa/awards",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,31 +43,7 @@ export async function generateMetadata({ params }) {
 }
 
 const Awards = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/awards`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <AwardsPage />
-    </>
-  );
+  return <AwardsPage />;
 };
 
 export default Awards;

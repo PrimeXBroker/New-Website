@@ -13,6 +13,15 @@ export async function generateMetadata({ params }) {
     description: t("ramadanOffer.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/ramadan-contest-hide",
+        ar: "https://www.primexcapital.com/ar/ramadan-contest-hide",
+        ku: "https://www.primexcapital.com/ku/ramadan-contest-hide",
+        es: "https://www.primexcapital.com/es/ramadan-contest-hide",
+        ps: "https://www.primexcapital.com/ps/ramadan-contest-hide",
+        pt: "https://www.primexcapital.com/pt/ramadan-contest-hide",
+        fa: "https://www.primexcapital.com/fa/ramadan-contest-hide",
+      },
     },
     openGraph: {
       type: "website",
@@ -33,31 +42,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/ramadan-contest-hide`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <RamadanOfferWrappper />
-    </>
-  );
+  return <RamadanOfferWrappper />;
 };
 
 export default page;

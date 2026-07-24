@@ -13,6 +13,15 @@ export async function generateMetadata({ params }) {
     description: t("regulationCompliance.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/regulation-and-compliance",
+        ar: "https://www.primexcapital.com/ar/regulation-and-compliance",
+        ku: "https://www.primexcapital.com/ku/regulation-and-compliance",
+        es: "https://www.primexcapital.com/es/regulation-and-compliance",
+        ps: "https://www.primexcapital.com/ps/regulation-and-compliance",
+        pt: "https://www.primexcapital.com/pt/regulation-and-compliance",
+        fa: "https://www.primexcapital.com/fa/regulation-and-compliance",
+      },
     },
     openGraph: {
       type: "website",
@@ -33,31 +42,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/regulation-and-compliance`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <RNCWrapper />
-    </>
-  );
+  return <RNCWrapper />;
 };
 
 export default page;

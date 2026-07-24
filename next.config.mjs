@@ -44,7 +44,6 @@ const nextConfig = {
     root: process.cwd(),
   },
 
-  serverExternalPackages: ["@nextui-org/react"],
 
   async rewrites() {
     return [

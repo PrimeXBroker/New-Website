@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("commoditiesProduct.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/commodities",
+        ar: "https://www.primexcapital.com/ar/commodities",
+        ku: "https://www.primexcapital.com/ku/commodities",
+        es: "https://www.primexcapital.com/es/commodities",
+        ps: "https://www.primexcapital.com/ps/commodities",
+        pt: "https://www.primexcapital.com/pt/commodities",
+        fa: "https://www.primexcapital.com/fa/commodities",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,30 +43,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/commodities`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <CommoditiesPage />
-    </>
-  );
+  return <CommoditiesPage />;
 };
 
 export default page;

@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("metaTrader5.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/platform/mt5-platform",
+        ar: "https://www.primexcapital.com/ar/platform/mt5-platform",
+        ku: "https://www.primexcapital.com/ku/platform/mt5-platform",
+        es: "https://www.primexcapital.com/es/platform/mt5-platform",
+        ps: "https://www.primexcapital.com/ps/platform/mt5-platform",
+        pt: "https://www.primexcapital.com/pt/platform/mt5-platform",
+        fa: "https://www.primexcapital.com/fa/platform/mt5-platform",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,28 +43,8 @@ export async function generateMetadata({ params }) {
 }
 
 const Mt5Platform = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-
   return (
     <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/platform/mt5-platform`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
       <Script
         type="application/ld+json"
         id="breadcrumb-schema"

@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("bonusPage.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/bonus",
+        ar: "https://www.primexcapital.com/ar/bonus",
+        ku: "https://www.primexcapital.com/ku/bonus",
+        es: "https://www.primexcapital.com/es/bonus",
+        ps: "https://www.primexcapital.com/ps/bonus",
+        pt: "https://www.primexcapital.com/pt/bonus",
+        fa: "https://www.primexcapital.com/fa/bonus",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,30 +43,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/bonus`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <BonusWrapper />
-    </>
-  );
+  return <BonusWrapper />;
 };
 
 export default page;

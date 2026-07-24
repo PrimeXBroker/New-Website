@@ -67,37 +67,8 @@ const ExpertAnalysisWrapper = () => {
     }
   }, [currentCategory, page]);
 
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-
   return (
     <>
-      <head>
-        {hreflangLocales
-          .filter((item) => item.lng === locale)
-          .map((item, index) => (
-            <link
-              key={index}
-              rel="canonical"
-              href={`https://www.primexcapital.com/${item.url}/technical-analysis`}
-            />
-          ))}
-        {hreflangLocales.map((item, index) => (
-          <link
-            key={index}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/technical-analysis`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
       <Hero />
       <Banner news={bannerNewsRef.current} titleEn={currentCategory?.titleEn} />
       <ExpertAnalysis

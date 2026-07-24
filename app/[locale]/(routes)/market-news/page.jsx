@@ -20,6 +20,15 @@ export async function generateMetadata({ params }) {
     description: t("knowledgeHubMarketNews.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/market-news",
+        ar: "https://www.primexcapital.com/ar/market-news",
+        ku: "https://www.primexcapital.com/ku/market-news",
+        es: "https://www.primexcapital.com/es/market-news",
+        ps: "https://www.primexcapital.com/ps/market-news",
+        pt: "https://www.primexcapital.com/pt/market-news",
+        fa: "https://www.primexcapital.com/fa/market-news",
+      },
     },
     openGraph: {
       type: "website",
@@ -62,28 +71,8 @@ const page = async ({ params }) => {
     totalPages = response?.result.pagination.totalPages;
   }
 
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-
   return (
     <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/market-news`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
       <Hero />
       <MarketNewsBanner news={news?.slice(0, 5)} />
       <MarketNews news={news} totalPages={totalPages} lang={lang} />

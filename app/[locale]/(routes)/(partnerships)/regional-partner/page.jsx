@@ -14,6 +14,15 @@ export async function generateMetadata({ params }) {
     description: t("regionalPartnership.metaData.description"),
     alternates: {
       canonical: url,
+      languages: {
+        en: "https://www.primexcapital.com/en/regional-partner",
+        ar: "https://www.primexcapital.com/ar/regional-partner",
+        ku: "https://www.primexcapital.com/ku/regional-partner",
+        es: "https://www.primexcapital.com/es/regional-partner",
+        ps: "https://www.primexcapital.com/ps/regional-partner",
+        pt: "https://www.primexcapital.com/pt/regional-partner",
+        fa: "https://www.primexcapital.com/fa/regional-partner",
+      },
     },
     openGraph: {
       type: "website",
@@ -34,30 +43,7 @@ export async function generateMetadata({ params }) {
 }
 
 const page = () => {
-  const hreflangLocales = [
-    { lng: "en", url: "en" },
-    { lng: "ar", url: "ar" },
-    { lng: "ku", url: "ku" },
-    { lng: "es", url: "es" },
-    { lng: "ps", url: "ps" },
-    { lng: "pt", url: "pt" },
-    { lng: "fa", url: "fa" },
-  ];
-  return (
-    <>
-      <head>
-        {hreflangLocales.map((item) => (
-          <link
-            key={item.lng}
-            rel="alternate"
-            href={`https://www.primexcapital.com/${item.url}/regional-partner`}
-            hreflang={item.lng}
-          />
-        ))}
-      </head>
-      <RegionalPartnershipWrapper />
-    </>
-  );
+  return <RegionalPartnershipWrapper />;
 };
 
 export default page;
