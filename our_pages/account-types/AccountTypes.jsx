@@ -27,10 +27,10 @@ const AccountTypes = ({ accounts }) => {
           </span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {accounts.map((account) => (
+          {accounts.map((account, index) => (
             <>
               <div
-                key={account.id}
+                key={index}
                 className={`bg-cc dark:bg-cc-dark p-6 rounded-xl flex flex-col justify-between relative ${
                   account.id !== 3 ? "mb-8 md:mb-0" : ""
                 }`}

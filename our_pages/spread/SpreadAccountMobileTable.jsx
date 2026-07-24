@@ -50,9 +50,9 @@ const SpreadAccountMobileTable = () => {
       <div className="container">
         <div className="bg-cc dark:bg-cc-dark p-5">
           <div className="flex space-x-4 mb-6">
-            {["standard", "narrow", "raw"].map((tab) => (
+            {["standard", "narrow", "raw"].map((tab, index) => (
               <button
-                key={tab}
+                key={index}
                 className={`px-6 py-3 font-semibold relative ${
                   activeTab === tab
                     ? "text-tm dark:text-tm-dark border-b-4 border-pcp dark:border-pcp-dark"

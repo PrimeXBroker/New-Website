@@ -108,7 +108,7 @@ export default function CustomSelectDropdown({
             )}
             {filteredOptions.map((option, i) => (
               <div
-                key={option.value}
+                key={i}
                 onClick={() => {
                   if (flag) onChange(option);
                   else onChange(option.value);

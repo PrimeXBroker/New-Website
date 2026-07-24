@@ -88,10 +88,10 @@ const TradingInstruments = () => {
         </div>
         <div className="w-full mb-10">
           <div className="flex items-center justify-center flex-wrap gap-x-4 sm:gap-x-6">
-            {tradingInstrumentsTabs.map((tab) => {
+            {tradingInstrumentsTabs.map((tab,index) => {
               return (
                 <button
-                  key={tab.name}
+                  key={index}
                   onClick={() => handleChange(tab)}
                   className="relative text-xl md:text-2xl font-light tracking-wide transition-colors duration-200 focus:outline-none mb-2 sm:mb-0"
                 >
@@ -121,7 +121,7 @@ const TradingInstruments = () => {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {symbolList?.length
-              ? symbolList.map((instrument) => {
+              ? symbolList.map((instrument,index) => {
                   const displayPrice = parseFloat(
                     instrument?.bid_price,
                   )?.toFixed(2);
@@ -130,7 +130,7 @@ const TradingInstruments = () => {
                   )?.toFixed(2);
                   return (
                     <div
-                      key={instrument.symbol}
+                      key={index}
                       className="relative flex flex-col justify-between bg-cc dark:bg-cc-dark rounded-xl p-6 overflow-hidden"
                     >
                       <div className="absolute top-0 end-0 w-[100px] h-[113px] pointer-events-none select-none">

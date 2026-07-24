@@ -58,9 +58,9 @@ const WhyChooseHammurabi = () => {
 
           <div className="col-span-12 mt-4">
             <div className="flex flex-wrap gap-3">
-              {features.map((item) => (
+              {features.map((item, index) => (
                 <div
-                  key={item}
+                  key={index}
                   className="flex items-center bg-e1 dark:bg-e1-dark border border-e2 dark:border-e2-dark rounded-lg p-[6px]"
                 >
                   <div className="flex items-center justify-center w-7 h-7 bg-e2 dark:bg-e2-dark rounded-md me-2 text-sm">

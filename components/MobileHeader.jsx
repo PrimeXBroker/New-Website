@@ -1377,10 +1377,10 @@ const MobileHeader = ({ locale }) => {
             {activeDropdown === 10 && (
               <div className="px-4 pb-4">
                 <ul className="w-full bg-e1 dark:bg-e1-dark border border-e2 dark:border-e2-dark p-2 rounded-lg">
-                  {locations.map((loc) => {
+                  {locations.map((loc, index) => {
                     const isActive = loc.code === selectedLocation.code;
                     return (
-                      <li key={loc.code} className="mb-1 last:mb-0">
+                      <li key={index} className="mb-1 last:mb-0">
                         <button
                           onClick={() => handleLocationPick(loc)}
                           className={`w-full flex items-center justify-between p-4 rounded-md text-base

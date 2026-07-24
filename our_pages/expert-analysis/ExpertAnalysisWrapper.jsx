@@ -82,16 +82,16 @@ const ExpertAnalysisWrapper = () => {
       <head>
         {hreflangLocales
           .filter((item) => item.lng === locale)
-          .map((item) => (
+          .map((item, index) => (
             <link
-              key={item.lng}
+              key={index}
               rel="canonical"
               href={`https://www.primexcapital.com/${item.url}/technical-analysis`}
             />
           ))}
-        {hreflangLocales.map((item) => (
+        {hreflangLocales.map((item, index) => (
           <link
-            key={item.lng}
+            key={index}
             rel="alternate"
             href={`https://www.primexcapital.com/${item.url}/technical-analysis`}
             hreflang={item.lng}

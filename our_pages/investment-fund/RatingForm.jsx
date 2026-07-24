@@ -137,9 +137,9 @@ function RatingForm({ setIsSuccess }) {
               {t("modal.form.rating_label")}
             </label>
             <div className="flex items-center justify-between mt-1">
-              {[1, 2, 3, 4, 5].map((star) => (
+              {[1, 2, 3, 4, 5].map((star, index) => (
                 <button
-                  key={star}
+                  key={index}
                   type="button"
                   className={`focus:outline-none h-14 w-14 border-2 rounded-lg flex justify-center items-center transition-all duration-200 hover:scale-105 ${
                     star <= rating

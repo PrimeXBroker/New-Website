@@ -51,9 +51,9 @@ function MobileBlogWrapper({
         <div
           className={`tabs-navigation rounded-lg grid grid-cols-1 xs:grid-cols-2 gap-4`}
         >
-          {tabs.map((tab) => (
+          {tabs.map((tab, index) => (
             <button
-              key={tab.key}
+              key={index}
               onClick={() => setActive(tab.key)}
               className={`tab-title font-semibold px-4 py-3 text-xs md:text-sm w-full ${
                 active === tab.key

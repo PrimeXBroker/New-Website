@@ -386,9 +386,9 @@ function CareersApplyForm() {
               </div>
               {isOpenDropdown && (
                 <ul className="absolute left-0 right-0 mt-2 bg-[#1d1d1d] border-2 border-[#222222] rounded-[4px] z-10 max-h-[200px] overflow-y-auto text-base">
-                  {jobs.map((job) => (
+                  {jobs.map((job, index) => (
                     <li
-                      key={job.id}
+                      key={index}
                       className="py-[16px] px-[12px] cursor-pointer hover:bg-[#ffffff] hover:text-[#111111] text-[#c6c6c6] text-base"
                       onClick={() => handleOptionClick(job)}
                     >

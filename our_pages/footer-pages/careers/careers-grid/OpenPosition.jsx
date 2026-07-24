@@ -118,9 +118,9 @@ const OpenPosition = () => {
 
             {isDepartmentOpen && (
               <ul className="absolute left-0 right-0 mt-2 bg-cc dark:bg-cc-dark border border-e1 dark:border-e1-dark rounded-lg z-10 text-xs sm:text-sm">
-                {departmentOptions.map((option) => (
+                {departmentOptions.map((option, index) => (
                   <li
-                    key={option.id}
+                    key={index}
                     className="py-[12px] px-[14px] cursor-pointer hover:bg-tm dark:hover:bg-tm-dark hover:text-p dark:hover:text-p-dark text-ts dark:text-ts-dark text-xs sm:text-sm"
                     onClick={() => handleDepartmentClick(option)}
                   >
@@ -155,9 +155,9 @@ const OpenPosition = () => {
 
             {isLocationOpen && (
               <ul className="absolute left-0 right-0 mt-2 bg-cc dark:bg-cc-dark border border-e1 dark:border-e1-dark rounded-lg z-10 text-xs sm:text-sm">
-                {locationOptions.map((option) => (
+                {locationOptions.map((option, index) => (
                   <li
-                    key={option.id}
+                    key={index}
                     className="py-[12px] px-[14px] cursor-pointer hover:bg-tm dark:hover:bg-tm-dark hover:text-p dark:hover:text-p-dark text-ts dark:text-ts-dark text-xs sm:text-sm"
                     onClick={() => handleLocationClick(option)}
                   >

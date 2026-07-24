@@ -25,9 +25,9 @@ const AccountTypes = ({ accounts }) => {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
-          {accounts.map((account) => (
+          {accounts.map((account, index) => (
             <div
-              key={account.id}
+              key={index}
               className="bg-cc dark:bg-cc-dark px-4 py-5 rounded-xl border-2 border-cc dark:border-cc-dark hover:shadow-xl hover:border-tl dark:hover:border-tl-dark group transition-all duration-500 ease-in-out"
               onMouseEnter={() => setHovered(account.id)}
               onMouseLeave={() => setHovered(null)}

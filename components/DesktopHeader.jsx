@@ -1251,8 +1251,8 @@ const DesktopHeader = ({ locale }) => {
                   className="absolute top-full mt-[20px] bg-cc dark:bg-cc-dark shadow-lg p-[10px] min-w-[170px] rounded-[6px] z-50"
                   dir="ltr"
                 >
-                  {locations.map((loc) => (
-                    <li key={loc.code}>
+                  {locations.map((loc, index) => (
+                    <li key={index}>
                       <button
                         onClick={() => handleLocationPick(loc)}
                         className="w-full text-left px-4 py-2 text-tm dark:text-tm-dark text-[.8em] hover:text-nb dark:hover:text-nb-dark hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px] flex items-center"

@@ -88,9 +88,9 @@ const TutorialVideos = () => {
           </p>
         </div>
         <div className="w-full flex flex-wrap justify-center bg-cc dark:bg-cc-dark border border-e2 dark:border-e2-dark mb-10 rounded-lg p-2 gap-y-2">
-          {categories.map((cat) => (
+          {categories.map((cat, index) => (
             <button
-              key={cat.id}
+              key={index}
               onClick={() => handleTabChange(cat.id)}
               className={`w-full md:w-1/2 text-sm sm:text-base font-normal rounded-[5px] px-2 md:px-4 py-2 md:py-3 ${
                 activeTab === cat.id
@@ -112,9 +112,9 @@ const TutorialVideos = () => {
           </div>
         ) : (
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {videos.map((video) => (
+            {videos.map((video, index) => (
               <a
-                key={video.id}
+                key={index}
                 data-vbtype="youtube"
                 data-autoplay="true"
                 href={

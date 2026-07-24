@@ -149,9 +149,9 @@ const Promotions = () => {
           modules={[Autoplay, Pagination, Navigation]}
           className="home-testimonial-pagination px-6"
         >
-          {promotionsData.map((promo) => (
+          {promotionsData.map((promo, index) => (
             <SwiperSlide
-              key={promo.id}
+              key={index}
               className="!w-[85%] md:!w-[80%] xl:!w-[60%] mb-10"
             >
               <div className="grid grid-cols-12 bg-cc dark:bg-cc-dark rounded-xl overflow-hidden items-center gap-7 p-5">

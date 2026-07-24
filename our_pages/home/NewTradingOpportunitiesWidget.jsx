@@ -103,9 +103,9 @@ const TradingOpportunitiesWidget = () => {
         </div>
         <div className="bg-cc dark:bg-cc-dark py-[22px] px-[10px] sm:px-[24px] sm:py-[32px] rounded-[12px] max-w-3xl w-full md:w-[640px] lg:w-[600px] 2xl:w-[640px] mx-auto text-tm dark:text-tm-dark">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-6">
-            {tradingTabs?.map((tab) => (
+            {tradingTabs?.map((tab, index) => (
               <button
-                key={tab.name}
+                key={index}
                 className={`flex items-center justify-center border-[1px] text-[12px] rounded-[4px] sm:px-[28px] py-[12px] ${
                   activeTab === tab.name
                     ? "bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark border-pcp dark:border-pcp-dark"
@@ -158,9 +158,9 @@ const TradingOpportunitiesWidget = () => {
             ) : (
               <>
                 {symbolList?.length
-                  ? symbolList?.map((instrument) => (
+                  ? symbolList?.map((instrument, index) => (
                       <div
-                        key={instrument.symbol}
+                        key={index}
                         className="flex gap-4 px-[14px] py-[8px] bg-cc dark:bg-cc-dark text-ts dark:text-ts-dark rounded-[4px] mb-3"
                       >
                         <>
