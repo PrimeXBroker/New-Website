@@ -23,9 +23,9 @@ function CustomSelect({ label, options, value, onChange }) {
 
       {isOpen && (
         <ul className="absolute left-0 right-0 mt-2 bg-e1 dark:bg-e1-dark rounded-[4px] z-10">
-          {options.map((option) => (
+          {options.map((option, index) => (
             <li
-              key={option.id}
+              key={index}
               className="py-[16px] px-[12px] cursor-pointer hover:bg-tm dark:hover:bg-tm-dark hover:text-p dark:hover:text-p-dark text-ts dark:text-ts-dark"
               onClick={() => handleOptionClick(option)}
             >

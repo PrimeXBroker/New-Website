@@ -42,9 +42,9 @@ const WidgetCards = () => {
         </h2>
       </div>
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-tm dark:text-tm-dark">
-        {widgetData.map((widget) => (
+        {widgetData.map((widget, index) => (
           <div
-            key={widget.id}
+            key={index}
             className="bg-cc dark:bg-cc-dark border-2 border-cc dark:border-cc-dark rounded-lg p-5 lg:p-4 xl:p-5 cursor-pointer hover:border-e1 hover:dark:border-e1-dark transition-all duration-500 ease-in-out group"
             onMouseEnter={() => setHovered(widget.id)}
             onMouseLeave={() => setHovered(null)}

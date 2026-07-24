@@ -250,9 +250,9 @@ function BecomeInstructor() {
               {t("workedWithCompanies")}
             </label>
             <div className="flex space-x-4">
-              {workedBefore.map((option) => (
+              {workedBefore.map((option, index) => (
                 <label
-                  key={option.value}
+                  key={index}
                   className={`flex items-center space-x-2 rounded-md px-4 py-2 cursor-pointer transition-all ${
                     formik.values.workedWithCompanies === option.value
                       ? "bg-tm dark:bg-tm-dark text-p dark:text-p-dark"
@@ -307,9 +307,9 @@ function BecomeInstructor() {
               {t("doneWebinar")}
             </label>
             <div className="flex space-x-4">
-              {workedBefore.map((option) => (
+              {workedBefore.map((option, index) => (
                 <label
-                  key={option.value}
+                  key={index}
                   className={`flex items-center space-x-2 rounded-md px-4 py-2 cursor-pointer transition-all ${
                     formik.values.doneWebinar === option.value
                       ? "bg-tm dark:bg-tm-dark text-p dark:text-p-dark"

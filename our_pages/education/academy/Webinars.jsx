@@ -59,10 +59,10 @@ const Webinars = ({ active, setActive }) => {
                 {t("title2")}
               </h2>
             </div>
-            {upcoming.map((webinar) => {
+            {upcoming.map((webinar, index) => {
               return (
                 <div
-                  key={webinar._id}
+                  key={index}
                   className="bg-cc dark:bg-cc-dark text-rm dark:text-tm-dark rounded-lg p-6 gap-3 flex flex-col lg:flex-row mt-8 upcoming-webinar w-full md:w-[68%] lg:w-[85%] group"
                 >
                   <div className="flex flex-row lg:flex-col gap-3 lg:gap-0 lg:w-[30%] xl:w-[25%]">

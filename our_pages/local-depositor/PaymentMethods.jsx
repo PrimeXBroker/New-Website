@@ -95,9 +95,9 @@ const PaymentMethods = () => {
           {t("heading1")}
         </h2>
         <div className="flex flex-wrap lg:flex-nowrap w-full justify-center gap-4 pb-12">
-          {iraqPaymentOptions.map((el) => (
+          {iraqPaymentOptions.map((el, index) => (
             <div
-              key={el.id}
+              key={index}
               className="h-28 md:w-1/6 flex flex-col justify-center items-center gap-5"
             >
               <div className="w-20 h-20">
@@ -119,9 +119,9 @@ const PaymentMethods = () => {
           {t("heading2")}
         </h2>
         <div className="flex flex-wrap lg:flex-nowrap w-full justify-center gap-4 pb-12">
-          {syriaPaymentOptions.map((el) => (
+          {syriaPaymentOptions.map((el, index) => (
             <div
-              key={el.id}
+              key={index}
               className="h-28 md:w-1/6 flex flex-col justify-center items-center gap-5"
             >
               <div className="w-20 h-20">

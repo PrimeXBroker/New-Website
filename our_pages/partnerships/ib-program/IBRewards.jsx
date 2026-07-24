@@ -152,9 +152,9 @@ const IBRewards = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 xl:gap-6">
-          {rewardData.map((item) => (
+          {rewardData.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               className="bg-cc dark:bg-cc-dark px-2 pt-2 pb-6 rounded-xl"
             >
               <div

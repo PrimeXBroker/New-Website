@@ -13,9 +13,9 @@ const GetStarted = ({ getStarted, main_title1, main_title2 }) => {
         </h2>
       </div>
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-tm dark:text-tm-dark">
-        {getStarted.map((step) => (
+        {getStarted.map((step, index) => (
           <div
-            key={step.id}
+            key={index}
             className="flex items-center bg-cc dark:bg-cc-dark rounded-lg p-4"
           >
             <div className="flex-shrink-0 bg-e1 dark:bg-e1-dark text-center rounded-lg text-tm dark:text-tm-dark h-12 w-12 flex items-center justify-center text-3xl font-semibold">

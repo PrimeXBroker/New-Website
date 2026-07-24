@@ -17,7 +17,7 @@ const AwardsTimelineMobile = () => {
               const isEven = index % 2 === 0;
 
               return (
-                <div key={id} className="card-mobile relative">
+                <div key={index} className="card-mobile relative">
                   <div
                     className={`bg-cc dark:bg-cc-dark w-8 h-8 rounded-full absolute flex justify-center items-center ${
                       isFirst

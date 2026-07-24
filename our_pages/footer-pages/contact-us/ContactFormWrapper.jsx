@@ -288,9 +288,9 @@ const ContactFormWrapper = ({ active, setActive }) => {
             <div
               className={`tabs-navigation bg-e1 dark:bg-e1-dark rounded-lg mb-2 flex justify-between items-center w-full mx-auto`}
             >
-              {tabs.map((tab) => (
+              {tabs.map((tab, index) => (
                 <button
-                  key={tab.key}
+                  key={index}
                   onClick={() => setActive(tab.key)}
                   className={`tab-title font-semibold px-4 py-3 text-sm w-full ${
                     active === tab.key

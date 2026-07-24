@@ -114,9 +114,9 @@ const AccountTypesPricingTableMobile = () => {
             "scrollbar-width": "none",
           }}
         >
-          {["cent", "standard", "narrow", "raw"].map((tab) => (
+          {["cent", "standard", "narrow", "raw"].map((tab, index) => (
             <button
-              key={tab}
+              key={index}
               className={`px-6 py-3 font-semibold relative ${
                 activeTab === tab
                   ? "text-tm dark:text-tm-dark border-b-4 border-pcp dark:border-pcp-dark"
