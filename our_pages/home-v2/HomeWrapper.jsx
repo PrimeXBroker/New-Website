@@ -10,7 +10,9 @@ import SectionSkeleton from "@/components/common/SectionSkeleton";
 // Must be client-only (ssr: false) to prevent SSR "window is not defined" errors
 const Hero = dynamic(() => import("./Hero"), {
   ssr: false,
-  loading: () => <div className="bg-p dark:bg-p-dark pt-14 lg:block min-h-[600px]" />,
+  loading: () => (
+    <div className="bg-p dark:bg-p-dark pt-14 lg:block min-h-[600px]" />
+  ),
 });
 
 const HeroMobile = dynamic(() => import("./HeroMobile"), {
