@@ -2950,6 +2950,7 @@
       "email_validation_error": "لطفاً یک آدرس ایمیل معتبر وارد کنید.",
       "email_required_error": "ایمیل الزامی است.",
       "occupation_required_error": "شغل الزامی است!",
+      "query_required_error": "انتخاب شخصیت حقوقی الزامی است!",
       "question_required_error": "پیام الزامی است!",
       "success_title": "موفقیت",
       "success_desc": "فرم با موفقیت ارسال شد",
@@ -2971,9 +2972,10 @@
       "competition_query": "مسابقات",
       "select_entity": "نهاد را انتخاب کنید",
       "entity_required_error": "نهاد الزامی است!",
-      "lucia": "PrimeX Capital LTD - سنت لوسیا (ST. Lucia)",
-      "mauritius": "PrimeX Capital LTD - FSC موریس",
-      "south_africa": "PrimeX Broker (PTY) LTD - FSCA آفریقای جنوبی"
+      "lucia": "PrimeX Capital LTD - ST. Lucia",
+      "mauritius": "PrimeX Capital LTD - Mauritius FSC",
+      "uae": "PrimeX Capital LLC - UAE CMA",
+      "south_africa": "PrimeX Broker (PTY) LTD - South Africa FSCA"
     },
     "globalLocation": {
       "title1": "مکان‌های ",

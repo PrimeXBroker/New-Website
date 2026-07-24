@@ -32,13 +32,15 @@ function ComplaintForm() {
 
   const handleOptionClick = (option) => {
     setSelectedOption(option.name);
-    formik.setFieldValue("entity", option.name);
+    formik.setFieldValue("entity", option.value);
+    formik.setFieldTouched("entity", true, false);
     setIsOpenDropdown(false);
   };
 
   const entityTypes = [
     { id: 1, name: t("lucia"), value: "lucia" },
-    { id: 2, name: t("mauritius"), value: "mauritius" },
+    { id: 2, name: t("uae"), value: "uae" },
+    { id: 3, name: t("mauritius"), value: "mauritius" },
   ];
 
   useEffect(() => {
@@ -74,13 +76,13 @@ function ComplaintForm() {
       first_name: Yup.string()
         .matches(
           /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-          t("first_name_validation_error")
+          t("first_name_validation_error"),
         )
         .required(t("first_name_required_error")),
       last_name: Yup.string()
         .matches(
           /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-          t("last_name_validation_error")
+          t("last_name_validation_error"),
         )
         .required(t("last_name_required_error")),
       email: Yup.string()
@@ -110,7 +112,7 @@ function ComplaintForm() {
       try {
         const res = await axios.post(
           `https://primexbroker.com/api/complaints`,
-          updatedValues
+          updatedValues,
         );
         if (res.data.success) {
           formik.resetForm();
@@ -252,9 +254,9 @@ function ComplaintForm() {
               <label className="text-xs text-ts dark:text-ts-dark">
                 {t("select_entity")}
                 <div
-                  className={`text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark rounded-[4px] py-[16px] px-[12px] w-full flex justify-between items-center cursor-pointer text-base ${
+                  className={`text-ts dark:text-ts-dark bg-e1 dark:bg-e1-dark rounded-[4px] py-[16px] px-[12px] w-full flex justify-between items-center cursor-pointer text-base border border-e1 dark:border-e1-dark ${
                     formik.touched.entity && formik.errors.entity
-                      ? "border border-rc dark:border-rc-dark"
+                      ? "border-rc dark:border-rc-dark"
                       : ""
                   }`}
                   onClick={() => setIsOpenDropdown(!isOpenDropdown)}

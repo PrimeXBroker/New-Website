@@ -2874,6 +2874,7 @@
       "email_validation_error": "يرجى إدخال عنوان بريد إلكتروني صالح.",
       "email_required_error": "البريد الإلكتروني مطلوب.",
       "occupation_required_error": "المهنة مطلوبة!",
+      "query_required_error": "الكيان مطلوب!",
       "question_required_error": "الرسالة مطلوبة!",
       "success_title": "تم بنجاح",
       "success_desc": "تم إرسال النموذج بنجاح",
@@ -2897,6 +2898,7 @@
       "entity_required_error": "الكيان مطلوب!",
       "lucia": "PrimeX Capital LTD - ST. Lucia",
       "mauritius": "PrimeX Capital LTD - Mauritius FSC",
+      "uae": "PrimeX Capital LLC - UAE CMA",
       "south_africa": "PrimeX Broker (PTY) LTD - South Africa FSCA"
     },
     "globalLocation": {

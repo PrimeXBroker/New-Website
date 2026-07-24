@@ -35,19 +35,19 @@ const ContactFormWrapper = ({ active, setActive }) => {
   const complianceDetails = [
     {
       country: "St. Lucia",
-      complianceEmail: "IBCA_compliance@primexcapital.com",
+      complianceEmail: "st.compliance@primexcapital.com",
       flagUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/lucia.png",
     },
     {
-      country: "South Africa",
-      complianceEmail: "SA_compliance@primexcapital.com",
+      country: "UAE",
+      complianceEmail: "uae.compliance@primexcapital.com",
       flagUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/south-africa.png",
     },
     {
       country: "Mauritius",
-      complianceEmail: "MAU_compliance@primexcapital.com",
+      complianceEmail: "mu.compliance@primexcapital.com",
       flagUrl:
         "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/mauritius.png",
     },

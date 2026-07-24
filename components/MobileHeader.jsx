@@ -188,11 +188,11 @@ const MobileHeader = ({ locale }) => {
       code: "uae",
       flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/united-arab-emirates.png",
     },
-    // {
-    //   name: "FSC Mauritius",
-    //   code: "mu",
-    //   flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/mauritius.png",
-    // },
+    {
+      name: "FSC Mauritius",
+      code: "mu",
+      flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/mauritius.png",
+    },
     {
       name: "St. Lucia",
       code: "lc",

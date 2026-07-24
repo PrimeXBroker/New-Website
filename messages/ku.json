@@ -2946,6 +2946,7 @@
       "email_validation_error": "تکایە ناونیشانی ئیمەیڵەکی دروست دابنێ.",
       "email_required_error": "ئیمەیڵ داواکراوە!",
       "occupation_required_error": "پیشە داواکراوە!",
+      "query_required_error": "دیاریکردنی دامەزراوە هەڵبژاردنێکی پێویستە!",
       "question_required_error": "پرسیار داواکراوە!",
       "success_title": "سەرکەوتوو بوو",
       "success_desc": "فۆڕمەکە سەرکەوتووانە نێردرا",
@@ -2969,6 +2970,7 @@
       "entity_required_error": "پێویستە یەکە هەڵبژێریت!",
       "lucia": "PrimeX Capital LTD - ST. Lucia",
       "mauritius": "PrimeX Capital LTD - Mauritius FSC",
+      "uae": "PrimeX Capital LLC - UAE CMA",
       "south_africa": "PrimeX Broker (PTY) LTD - South Africa FSCA"
     },
     "globalLocation": {

@@ -2945,6 +2945,7 @@
       "email_validation_error": "Por favor, ingresa una dirección de correo electrónico válida.",
       "email_required_error": "El correo electrónico es obligatorio.",
       "occupation_required_error": "¡La ocupación es obligatoria!",
+      "query_required_error": "¡El organismo es obligatorio!",
       "question_required_error": "¡El mensaje es obligatorio!",
       "success_title": "Éxito",
       "success_desc": "Formulario enviado con éxito",
@@ -2968,6 +2969,7 @@
       "entity_required_error": "¡La entidad es obligatoria!",
       "lucia": "PrimeX Capital LTD - ST. Lucia",
       "mauritius": "PrimeX Capital LTD - Mauritius FSC",
+      "uae": "PrimeX Capital LLC - UAE CMA",
       "south_africa": "PrimeX Broker (PTY) LTD - South Africa FSCA"
     },
     "globalLocation": {

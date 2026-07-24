@@ -2945,6 +2945,7 @@
       "email_validation_error": "لطفاً یو معتبر ایمیل پته ورکړئ.",
       "email_required_error": "ایمیل اړین دی.",
       "occupation_required_error": "مسلک اړین دی!",
+      "query_required_error": "د ادارې/نهاد غوره کول اړین دي!",
       "question_required_error": "پوښتنه اړینه ده!",
       "success_title": "بریالیتوب",
       "success_desc": "فورمه په بریالیتوب سره سپارل شوې",
@@ -2968,6 +2969,7 @@
       "entity_required_error": "نهاد اړین دی!",
       "lucia": "PrimeX Capital LTD - ST. Lucia",
       "mauritius": "PrimeX Capital LTD - Mauritius FSC",
+      "uae": "PrimeX Capital LLC - UAE CMA",
       "south_africa": "PrimeX Broker (PTY) LTD - South Africa FSCA"
     },
     "globalLocation": {
