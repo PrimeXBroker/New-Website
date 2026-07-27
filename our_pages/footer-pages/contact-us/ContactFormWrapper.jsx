@@ -43,7 +43,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
       country: "UAE",
       complianceEmail: "uae.compliance@primexcapital.com",
       flagUrl:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/south-africa.png",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/united-arab-emirates.png",
     },
     {
       country: "Mauritius",
