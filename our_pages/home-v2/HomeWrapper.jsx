@@ -6,22 +6,11 @@ import StatCards from "./StatCards";
 import Promotions from "./Promotions";
 import SectionSkeleton from "@/components/common/SectionSkeleton";
 
-// Hero components use Three.js which accesses window at module level
-// Must be client-only (ssr: false) to prevent SSR "window is not defined" errors
-const Hero = dynamic(() => import("./Hero"), {
+const HeroBanner = dynamic(() => import("./HeroBanner"), {
   ssr: false,
   loading: () => (
     <div className="bg-p dark:bg-p-dark pt-14 lg:block min-h-[600px]" />
   ),
-});
-// const HeroBanner = dynamic(() => import("./HeroBanner"), {
-//   ssr: false,
-//   loading: () => <div className="bg-p dark:bg-p-dark pt-14 lg:block min-h-[600px]" />,
-// });
-
-const HeroMobile = dynamic(() => import("./HeroMobile"), {
-  ssr: false,
-  loading: () => null,
 });
 
 // Dynamically import below-the-fold components with loading placeholders
@@ -68,9 +57,9 @@ const Recognition = dynamic(() => import("./Recognition"), {
 const HomeWrapper = () => {
   return (
     <>
-      <Hero />
-      {/* <HeroBanner /> */}
-      <HeroMobile />
+      {/* <Hero /> */}
+      <HeroBanner />
+      {/* <HeroMobile /> */}
       <StatCards />
       <Promotions />
       <TradingInstruments />
