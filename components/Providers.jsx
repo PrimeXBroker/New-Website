@@ -11,7 +11,8 @@ import NotificationHandler from "@/components/NotificationHandler";
 import RedirectHandler from "@/components/RedirectHandler";
 import dynamic from "next/dynamic";
 import Cookies from "@/components/Cookies";
-import { Suspense } from "react";
+import { Suspense, useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const DesktopHeader = dynamic(
   () => import("@/components/DesktopHeader"),
@@ -33,11 +34,50 @@ const ThemeToggle = dynamic(
   { loading: () => null }
 );
 
-export default function Providers({ children, messages, locale, direction }) {
+const SUPPORTED_LOCALES = ["en", "ar", "ku", "es", "ps", "pt", "fa"];
+const RTL_LOCALES = ["ar", "ps", "ku", "fa"];
+
+export default function Providers({ children, messages: initialMessages, locale: initialLocale, direction: initialDirection }) {
+  const pathname = usePathname();
+
+  // Track locale, messages, and direction dynamically so client-side
+  // navigation to a different locale updates everything instantly
+  // (without requiring a full page refresh).
+  const [activeLocale, setActiveLocale] = useState(initialLocale);
+  const [messages, setMessages] = useState(initialMessages);
+  const [direction, setDirection] = useState(initialDirection);
+
+  useEffect(() => {
+    const pathLocale = pathname?.split("/")?.[1];
+
+    if (
+      pathLocale &&
+      SUPPORTED_LOCALES.includes(pathLocale) &&
+      pathLocale !== activeLocale
+    ) {
+      const newDirection = RTL_LOCALES.includes(pathLocale) ? "rtl" : "ltr";
+
+      // Dynamically import the messages for the new locale
+      import(`../messages/${pathLocale}.json`)
+        .then((mod) => {
+          setMessages(mod.default);
+          setActiveLocale(pathLocale);
+          setDirection(newDirection);
+
+          // Update the <html> element attributes to match the new locale
+          document.documentElement.lang = pathLocale;
+          document.documentElement.dir = newDirection;
+        })
+        .catch(() => {
+          // Fallback: keep current locale if import fails
+        });
+    }
+  }, [pathname, activeLocale]);
+
   return (
     <div dir={direction}>
       <NextUIProvider>
-        <NextIntlClientProvider messages={messages} locale={locale}>
+        <NextIntlClientProvider messages={messages} locale={activeLocale}>
           <NextThemesProvider
             defaultTheme="dark"
             attribute="class"
@@ -61,14 +101,14 @@ export default function Providers({ children, messages, locale, direction }) {
                 <div className="h-16 bg-p dark:bg-p-dark animate-pulse" />
               }
             >
-              <DesktopHeader locale={locale} />
+              <DesktopHeader locale={activeLocale} />
             </Suspense>
             <Suspense
               fallback={
                 <div className="h-16 bg-p dark:bg-p-dark animate-pulse md:hidden" />
               }
             >
-              <MobileHeader locale={locale} />
+              <MobileHeader locale={activeLocale} />
             </Suspense>
 
             {children}
