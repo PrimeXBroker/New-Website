@@ -16,14 +16,14 @@ const JoinNow = () => {
   };
 
   return (
-    <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
+    <section className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-tm dark:text-tm-dark mb-5">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-pcp dark:text-pcp-dark mb-5">
           {t("title1")}
         </h2>
-        {/* <p className="text-xl sm:text-2xl font-semibold text-pcp dark:text-pcp-dark mt-4 mb-10">
+        <p className="text-lg sm:text-xl font-medium text-tm dark:text-tm-dark mt-4 mb-10 w-full md:w-[45%] mx-auto">
           {t("subtitle")}
-        </p> */}
+        </p>
         <div className="text-center">
           <CustomYellowButton
             title={t("btnTxt")}

@@ -72,22 +72,6 @@ const BonusFaqs = () => {
         </>
       ),
     },
-    {
-      question: t("question9"),
-      answer: (
-        <>
-          <p className="mb-0">{t("answer9")}</p>
-        </>
-      ),
-    },
-    {
-      question: t("question10"),
-      answer: (
-        <>
-          <p className="mb-0">{t("answer10")}</p>
-        </>
-      ),
-    },
   ];
 
   const toggleAccordion = (index) => {
