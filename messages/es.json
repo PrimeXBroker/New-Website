@@ -1099,7 +1099,7 @@
       "heading_2": "PRIMEX BROKER (PTY) LTD",
       "para_2": "regulada y autorizada para proporcionar servicios financieros por la Autoridad de Supervisión del Sector Financiero de Sudáfrica (FSCA) bajo el número de licencia (FSP No. 51864).",
       "heading_3": "Regiones Restringidas:",
-      "para_3": "No proporcionamos servicios a ciudadanos/residentes de Corea del Norte, Estados Unidos, Canadá, Cuba, China, Hong Kong SAR China, Tailandia, Vietnam, Bangladesh, Filipinas, Corea del Sur, Japón, Indonesia, Malasia, Myanmar (Birmania), Nepal, Rusia. Los servicios de PrimeX Capital LTD no están destinados a la distribución o uso por parte de ninguna persona en cualquier país o jurisdicción donde dicha distribución o uso contravenga la ley o regulación local.",
+      "para_3": "No proporcionamos servicios a ciudadanos/residentes de Corea del Norte, Estados Unidos, Canadá, Cuba, China, Hong Kong SAR China, Tailandia, Vietnam, Bangladesh, Filipinas, Corea del Sur, Japón, Indonesia, Malasia, Myanmar (Birmania), Nepal, Rusia, Irán. Los servicios de PrimeX Capital LTD no están destinados a la distribución o uso por parte de ninguna persona en cualquier país o jurisdicción donde dicha distribución o uso contravenga la ley o regulación local.",
       "heading_4": "Advertencia de Riesgo:",
       "para_4": "Operar con CFDs de FX e Instrumentos Financieros Apalancados implica un riesgo significativo y puede resultar en la pérdida de tu capital invertido. No debes invertir más de lo que puedes permitirte perder y debes asegurarte de comprender completamente los riesgos involucrados.",
       "para_5": "Operar con CFDs y Opciones FX implica riesgo y podría resultar en la pérdida de tu capital.",
@@ -3174,13 +3174,10 @@
       "description": "¡Opere de forma fácil y segura con PrimeX Capital! Le ofrecemos una variedad de opciones locales de depósito y retiro dentro de Irak y Siria."
     },
     "hero": {
-      "title_1": "Depósito Local ",
-      "title_2": "Servicio disponible ahora",
-      "title_3": "en",
-      "title_4": "Irak y",
-      "title_5": "Siria",
-      "description": "Acceda a una amplia gama de métodos locais de depósito y retiro, lo que le brinda total flexibilidad en la gestión de sus fondos y un procesamiento rápido de las transacciones directamente a través del Área de Clientes. Disfrute de un control total, métodos de pago seguros y una ejecución rápida.",
-      "btnTxt": "Comience a Operar Ahora"
+      "title_1": "Depósitos y retiros locales sin comisiones",
+      "title_2": "Ahora disponible en Irak y Siria",
+      "description": "Disfruta de depósitos y retiros locales sin comisiones a través de una amplia variedad de métodos de pago, brindándote total flexibilidad para gestionar tus fondos y procesar tus transacciones rápidamente directamente desde el Área del Cliente. Disfruta de un control completo, métodos de pago seguros y ejecución rápida.",
+      "btnTxt": "Empieza a operar ahora"
     },
     "section1": {
       "title_1": "¿Qué es un Depositante Local?",
@@ -3190,9 +3187,9 @@
     },
     "benefits": {
       "main_title": "Beneficios del Depositante Local",
-      "title1": "Transferencias ",
-      "title1_1": "rápidas",
-      "description1": "Los depósitos y retiros se procesan de forma mucho más rápida en comparación con otros métodos de pago.",
+      "title1": "Depósito local ",
+      "title1_1": "sin comisiones",
+      "description1": "Disfruta de depósitos de fondos mediante métodos de pago locales sin cargos adicionales y comienza a operar de forma rápida y sencilla.",
       "title2": "Tipo de cambio ",
       "title2_1": "y comisiones fijas",
       "description2": "Total transparencia en los tipos de cambio y comisiones antes de que se ejecute cualquier depósito o retiro.",
