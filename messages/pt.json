@@ -3174,13 +3174,10 @@
       "description": "Negocie de forma fácil e segura com a PrimeX Capital! Oferecemos uma variedade de opções locais de depósito e saque no Iraque e na Síria."
     },
     "hero": {
-      "title_1": "Depósito Local",
-      "title_2": "Serviço disponível agora",
-      "title_3": "no",
-      "title_4": "Iraque e na",
-      "title_5": "Síria",
-      "description": "Acesse uma ampla gama de métodos locais de depósito e saque, garantindo total flexibilidade na gestão dos seus fundos e processamento rápido de transações diretamente pela Área do Cliente. Desfrute de controle total, métodos de pagamento seguros e execução rápida.",
-      "btnTxt": "Comece a Negociar Agora"
+      "title_1": "Depósitos e Saques Locais sem Taxas",
+      "title_2": "Agora disponível no Iraque e na Síria",
+      "description": "Aproveite depósitos e saques locais sem taxas através de uma ampla variedade de métodos de pagamento, oferecendo total flexibilidade para gerenciar seus fundos e processamento rápido das transações diretamente pela Área do Cliente. Tenha controle completo, métodos de pagamento seguros e execução rápida.",
+      "btnTxt": "Comece a operar agora"
     },
     "section1": {
       "title_1": "O que é um Depositante Local?",
@@ -3190,9 +3187,9 @@
     },
     "benefits": {
       "main_title": "Benefícios do Depositante Local",
-      "title1": "Transferências ",
-      "title1_1": "rápidas",
-      "description1": "Os depósitos e saques são processados de forma muito mais rápida em comparação com outros métodos de pagamento.",
+      "title1": "Depósito Local ",
+      "title1_1": "sem Taxas",
+      "description1": "Faça seus depósitos usando métodos de pagamento locais sem taxas adicionais e comece a operar de forma rápida e fácil.",
       "title2": "Taxa de câmbio ",
       "title2_1": "e taxas fixas",
       "description2": "Total transparência nas taxas de câmbio e comissões antes que qualquer depósito ou saque seja executado.",

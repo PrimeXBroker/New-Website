@@ -3174,13 +3174,10 @@
       "description": "¡Opere de forma fácil y segura con PrimeX Capital! Le ofrecemos una variedad de opciones locales de depósito y retiro dentro de Irak y Siria."
     },
     "hero": {
-      "title_1": "Depósito Local ",
-      "title_2": "Servicio disponible ahora",
-      "title_3": "en",
-      "title_4": "Irak y",
-      "title_5": "Siria",
-      "description": "Acceda a una amplia gama de métodos locais de depósito y retiro, lo que le brinda total flexibilidad en la gestión de sus fondos y un procesamiento rápido de las transacciones directamente a través del Área de Clientes. Disfrute de un control total, métodos de pago seguros y una ejecución rápida.",
-      "btnTxt": "Comience a Operar Ahora"
+      "title_1": "Depósitos y retiros locales sin comisiones",
+      "title_2": "Ahora disponible en Irak y Siria",
+      "description": "Disfruta de depósitos y retiros locales sin comisiones a través de una amplia variedad de métodos de pago, brindándote total flexibilidad para gestionar tus fondos y procesar tus transacciones rápidamente directamente desde el Área del Cliente. Disfruta de un control completo, métodos de pago seguros y ejecución rápida.",
+      "btnTxt": "Empieza a operar ahora"
     },
     "section1": {
       "title_1": "¿Qué es un Depositante Local?",
@@ -3190,9 +3187,9 @@
     },
     "benefits": {
       "main_title": "Beneficios del Depositante Local",
-      "title1": "Transferencias ",
-      "title1_1": "rápidas",
-      "description1": "Los depósitos y retiros se procesan de forma mucho más rápida en comparación con otros métodos de pago.",
+      "title1": "Depósito local ",
+      "title1_1": "sin comisiones",
+      "description1": "Disfruta de depósitos de fondos mediante métodos de pago locales sin cargos adicionales y comienza a operar de forma rápida y sencilla.",
       "title2": "Tipo de cambio ",
       "title2_1": "y comisiones fijas",
       "description2": "Total transparencia en los tipos de cambio y comisiones antes de que se ejecute cualquier depósito o retiro.",
