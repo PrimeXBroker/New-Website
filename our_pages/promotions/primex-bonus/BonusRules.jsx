@@ -41,9 +41,6 @@ const BonusRules = () => {
     <div className="bg-p dark:bg-p-dark text-tm dark:text-tm-dark">
       <div className="container mx-auto">
         <div className="text-center md:text-center mb-10">
-          <p className="text-sm sm:text-lg lg:text-xl mb-3 text-pcp dark:text-pcp-dark uppercase">
-            {t("subtitle")}
-          </p>
           <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-tm dark:text-tm-dark uppercase">
             {t("title")}
           </h2>

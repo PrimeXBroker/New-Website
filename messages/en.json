@@ -3368,44 +3368,41 @@
   },
   "bonusPage": {
     "metaData": {
-      "title": "",
-      "description": ""
+      "title": "100% Bonus | PrimeX Capital ",
+      "description": "Boost your trading power with a 100% Deposit Bonus on one deposit only. Receive up to $1,000 in bonus credit and enjoy more flexibility to explore market opportunities with PrimeX Capital."
     },
     "bonusHero": {
       "hero_title": "Double your trading power with a 100% bonus",
-      "hero_subtitle": "Celebrating our 4th anniversary with ",
-      "hero_description1": "On your first deposit up to $1,000",
-      "hero_description2": "To celebrate our fourth anniversary, we're allowing you to receive a 100% Deposit Bonus of up to $1,000 on your first deposit. Boost your trading potential with additional credit, enjoy greater flexibility in managing your trades, and experience all the benefits of the Standard Account."
+      "hero_subtitle": "Celebrating our 4th anniversary ",
+      "hero_description1": "On one deposit only up to $1,000",
+      "hero_description2": "To celebrate our fourth anniversary, we're allowing you to receive a 100% Deposit Bonus of up to $1,000 on one deposit only. Boost your trading potential with additional credit, enjoy greater flexibility in managing your trades, and experience all the benefits of the Standard Account."
     },
     "bonusPrizeBreakdown": {
-      "subtitle": "Benefits",
       "title": "Unlimited benefits",
-      "description": "Everything you need to trade with confidence  supercharged.",
+      "description": "Everything you need to trade with confidence supercharged",
       "step1": "100% Deposit Bonus up to $1,000",
       "step2": "Leverage up to 1:400",
       "step3": "All features and trading conditions of a Standard Account",
       "step4": "Additional trading credit to enhance your trading experience"
     },
     "howItWorks": {
-      "subtitle": "How it works",
       "title": "Get your bonus in 3 simple steps",
       "title1": "Open a new trading ",
       "title1_1": "account",
-      "description1": "Register a new Bonus Account type in the client area.",
+      "description1": "Register a new '100% Bonus Account' type in the client area.",
       "title2": "Make your ",
       "title2_1": "qualifying deposit",
       "description2": "Fund your account with a minimum of $50 to activate the bonus.",
       "title3": "Start trading with ",
       "title3_1": "your bonus credit",
-      "description3": "Your credit lands instantly — trade with double the firepower."
+      "description3": "Your credit lands instantly to trade with double the firepower."
     },
     "bonusRules": {
-      "subtitle": "Terms",
       "title": "Terms and Conditions",
       "trading_rules_title": "Eligibility",
       "trading_rules_li1_desc": "A new Bonus Account must be opened to qualify",
-      "trading_rules_li2_desc": "Minimum qualifying first deposit is $50",
-      "trading_rules_li3_desc": "Bonus applies to the first deposit only",
+      "trading_rules_li2_desc": "Minimum qualifying one deposit only is $50",
+      "trading_rules_li3_desc": "Bonus applies to one deposit only",
       "general_rules_title": "General Rules",
       "general_rules_li1_desc": "Maximum bonus amount is $1,000. The bonus amount is not withdrawable",
       "general_rules_li2_desc": "Bonus credit is added automatically after deposit",
@@ -3421,15 +3418,15 @@
     "bonusFaqs": {
       "title": " Frequently asked questions",
       "question1": "What is the Deposit Bonus?",
-      "answer1": "The Deposit Bonus is additional trading credit awarded on your first qualifying deposit into a Bonus Account. It is intended to support your trading activity in accordance with the promotion's terms.",
+      "answer1": "The Deposit Bonus is additional trading credit awarded on one qualifying deposit only into a Bonus Account. It is intended to support your trading activity in accordance with the promotion's terms.",
       "question2": "How much bonus can I receive?",
       "answer2": "You will receive a 100% Deposit Bonus of up to $1,000. Example: Deposit $1,000 and receive an additional $1,000 in bonus credit.",
       "question3": "Does the bonus apply to every deposit?",
-      "answer3": "No. The bonus is available only on the first qualifying deposit made into a Bonus Account.",
+      "answer3": "No. The bonus is available only on one qualifying deposit only made into a Bonus Account.",
       "question4": "What is the minimum deposit required?",
       "answer4": "The minimum qualifying deposit is $50.",
       "question5": "How do I claim the bonus?",
-      "answer5": "Simply open a new Bonus Account and make your first qualifying deposit to receive the bonus.",
+      "answer5": "Simply open a new Bonus Account and make one qualifying deposit only to receive the bonus.",
       "question6": "Can I withdraw the bonus credit?",
       "answer6": "No. Bonus credit is non-withdrawable.",
       "question7": "Can I lose the bonus credit?",
