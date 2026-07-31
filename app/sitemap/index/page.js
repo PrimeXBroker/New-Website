@@ -51,12 +51,6 @@ export default function SitemapIndexPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/en/crypto",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
       url: "https://primexcapital.com/en/account-types",
       lastModified: new Date(),
       priority: 0.8,
@@ -75,12 +69,6 @@ export default function SitemapIndexPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/en/social-trading",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
       url: "https://primexcapital.com/en/ib-program",
       lastModified: new Date(),
       priority: 0.8,
@@ -88,12 +76,6 @@ export default function SitemapIndexPage() {
     },
     {
       url: "https://primexcapital.com/en/regional-partner",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
-      url: "https://primexcapital.com/en/primex-spreads",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",
@@ -166,18 +148,6 @@ export default function SitemapIndexPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/en/follower-agreement",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
-      url: "https://primexcapital.com/en/provider-agreement",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
       url: "https://primexcapital.com/en/technical-analysis",
       lastModified: new Date(),
       priority: 0.7,
@@ -208,12 +178,6 @@ export default function SitemapIndexPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/en/ramadan-contest",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
       url: "https://primexcapital.com/en/ecn-broker",
       lastModified: new Date(),
       priority: 0.8,
@@ -238,13 +202,43 @@ export default function SitemapIndexPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/en/competition",
+      url: "https://primexcapital.com/en/cashback",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/en/cashback",
+      url: "https://primexcapital.com/en/careers",
+      lastModified: new Date(),
+      priority: 0.7,
+      changefreq: "daily",
+    },
+    {
+      url: "https://primexcapital.com/en/privacy-policy",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
+    {
+      url: "https://primexcapital.com/en/app-privacy-policy",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
+    {
+      url: "https://primexcapital.com/en/funded-account",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
+    {
+      url: "https://primexcapital.com/en/forex-in-three-steps",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
+    {
+      url: "https://primexcapital.com/en/grey-label-partnership-page",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",

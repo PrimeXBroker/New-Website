@@ -51,12 +51,6 @@ export default function KuSitemapPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/ku/crypto",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
       url: "https://primexcapital.com/ku/account-types",
       lastModified: new Date(),
       priority: 0.8,
@@ -75,12 +69,6 @@ export default function KuSitemapPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/ku/social-trading",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
       url: "https://primexcapital.com/ku/ib-program",
       lastModified: new Date(),
       priority: 0.8,
@@ -88,12 +76,6 @@ export default function KuSitemapPage() {
     },
     {
       url: "https://primexcapital.com/ku/regional-partner",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
-      url: "https://primexcapital.com/ku/primex-spreads",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",
@@ -166,18 +148,6 @@ export default function KuSitemapPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/ku/follower-agreement",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
-      url: "https://primexcapital.com/ku/provider-agreement",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
       url: "https://primexcapital.com/ku/technical-analysis",
       lastModified: new Date(),
       priority: 0.7,
@@ -208,12 +178,6 @@ export default function KuSitemapPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/ku/ramadan-contest",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
       url: "https://primexcapital.com/ku/ecn-broker",
       lastModified: new Date(),
       priority: 0.8,
@@ -238,13 +202,43 @@ export default function KuSitemapPage() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/ku/competition",
+      url: "https://primexcapital.com/ku/cashback",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/ku/cashback",
+      url: "https://primexcapital.com/ku/careers",
+      lastModified: new Date(),
+      priority: 0.7,
+      changefreq: "daily",
+    },
+    {
+      url: "https://primexcapital.com/ku/privacy-policy",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
+    {
+      url: "https://primexcapital.com/ku/app-privacy-policy",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
+    {
+      url: "https://primexcapital.com/ku/funded-account",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
+    {
+      url: "https://primexcapital.com/ku/forex-in-three-steps",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
+    {
+      url: "https://primexcapital.com/ku/grey-label-partnership-page",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",
