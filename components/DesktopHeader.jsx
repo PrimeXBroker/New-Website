@@ -566,7 +566,7 @@ const DesktopHeader = ({ locale }) => {
                       {t("ramadan-contest")}
                     </LocaleLink>
                   </li> */}
-                  {/* <li>
+                  <li>
                     <LocaleLink
                       href="/bonus"
                       onClick={closeDropdown}
@@ -574,7 +574,7 @@ const DesktopHeader = ({ locale }) => {
                     >
                       {t("bonus")}
                     </LocaleLink>
-                  </li> */}
+                  </li>
                   {/* <li>
                     <LocaleLink
                       href="/trade-gold"
