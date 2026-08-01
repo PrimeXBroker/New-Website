@@ -49,12 +49,6 @@ export async function GET() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/pt/crypto",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
       url: "https://primexcapital.com/pt/account-types",
       lastModified: new Date(),
       priority: 0.8,
@@ -73,12 +67,6 @@ export async function GET() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/pt/social-trading",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
       url: "https://primexcapital.com/pt/ib-program",
       lastModified: new Date(),
       priority: 0.8,
@@ -86,12 +74,6 @@ export async function GET() {
     },
     {
       url: "https://primexcapital.com/pt/regional-partner",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
-      url: "https://primexcapital.com/pt/primex-spreads",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",
@@ -164,18 +146,6 @@ export async function GET() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/pt/follower-agreement",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
-      url: "https://primexcapital.com/pt/provider-agreement",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
       url: "https://primexcapital.com/pt/technical-analysis",
       lastModified: new Date(),
       priority: 0.7,
@@ -206,12 +176,6 @@ export async function GET() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/pt/ramadan-contest",
-      lastModified: new Date(),
-      priority: 0.8,
-      changefreq: "daily",
-    },
-    {
       url: "https://primexcapital.com/pt/ecn-broker",
       lastModified: new Date(),
       priority: 0.8,
@@ -236,13 +200,43 @@ export async function GET() {
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/pt/competition",
+      url: "https://primexcapital.com/pt/cashback",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",
     },
     {
-      url: "https://primexcapital.com/pt/cashback",
+      url: "https://primexcapital.com/pt/careers",
+      lastModified: new Date(),
+      priority: 0.7,
+      changefreq: "daily",
+    },
+    {
+      url: "https://primexcapital.com/pt/privacy-policy",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
+    {
+      url: "https://primexcapital.com/pt/app-privacy-policy",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
+    {
+      url: "https://primexcapital.com/pt/funded-account",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
+    {
+      url: "https://primexcapital.com/pt/forex-in-three-steps",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
+    {
+      url: "https://primexcapital.com/pt/grey-label-partnership-page",
       lastModified: new Date(),
       priority: 0.8,
       changefreq: "daily",
