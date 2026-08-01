@@ -45,10 +45,10 @@ const HowItWorks = () => {
             >
               <div className="flex justify-between items-center">
                 <div>
-                  <h3 className="text-xl font-semibold text-tm dark:text-tm-dark">
+                  <h3 className="text-lg sm:text-xl font-semibold text-tm dark:text-tm-dark">
                     {benefit.title1}
                   </h3>
-                  <h3 className="text-xl font-semibold text-tm dark:text-tm-dark">
+                  <h3 className="text-lg sm:text-xl font-semibold text-tm dark:text-tm-dark">
                     {benefit.title2}
                   </h3>
                 </div>

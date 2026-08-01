@@ -62,7 +62,7 @@ const BonusRules = () => {
                     width="100"
                     height="100"
                     alt="Bonus Terms"
-                    className="w-[80%] h-auto"
+                    className="w-[70%] sm:w-[80%] h-auto"
                   />
                 </div>
               </dv>

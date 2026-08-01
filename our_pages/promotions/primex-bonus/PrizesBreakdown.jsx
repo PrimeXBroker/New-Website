@@ -46,18 +46,18 @@ const PrizesBreakdown = () => {
               key={index}
               className={`bg-cc dark:bg-cc-dark px-6 py-6 rounded-2xl shadow-xl flex flex-col sm:flex-row items-center`}
             >
-              <div className="w-full sm:w-[40%] flex items-center mb-4 sm:mb-0">
+              <div className="w-full sm:w-[40%] flex items-center justify-center sm:justify-start mb-4 sm:mb-0">
                 <Image
                   unoptimized={true}
                   src={card.imageSrc}
                   width="100"
                   height="100"
                   alt={card.title}
-                  className="w-[85%] h-full"
+                  className="w-[55%] sm:w-[85%] h-full"
                 />
               </div>
               <div className="w-full text-center sm:text-start">
-                <h3 className="text-tm dark:text-tm-dark text-lg sm:text-xl md:text-lg lg:text-xl font-semibold">
+                <h3 className="text-tm dark:text-tm-dark text-base sm:text-xl md:text-lg lg:text-xl font-semibold">
                   {card.title}
                 </h3>
               </div>

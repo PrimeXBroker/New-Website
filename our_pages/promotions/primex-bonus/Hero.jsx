@@ -29,7 +29,7 @@ const Hero = () => {
               <div className="flex justify-center">
                 <Image
                   unoptimized={true}
-                  src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/Hero+Image.svg"
+                  src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/hundred-bonus.svg"
                   width="100"
                   height="100"
                   alt="Bonus Hero"
