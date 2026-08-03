@@ -1043,6 +1043,17 @@
         "description": "This Provider Agreement outlines the terms and conditions for participating in the PrimeX Capital Social Trading Program as a Master Provider, allowing other clients to follow your trading strategies."
       }
     },
+    "investmentFundAgreement": {
+      "title_part1": "Investment Fund",
+      "title_part2": "Agreement",
+      "description": "Here, we define the terms governing your participation in the PrimeX Investment Fund, specifying the pooled capital management structure, phased investment strategies, and mutual obligations.",
+      "view_btn": "View Document",
+      "download_btn": "Download Document",
+      "metaData": {
+        "title": "Investment Fund | PrimeX Capital",
+        "description": "Here, we define the terms governing your participation in the PrimeX Investment Fund, specifying the pooled capital management structure, phased investment strategies, and mutual obligations."
+      }
+    },
     "company": {
       "title_part1": "Company",
       "title_part1_link1": "About Us",
@@ -1064,6 +1075,7 @@
       "title_part2_link7": "Policy of AML",
       "title_part2_link8": "Follower Agreement",
       "title_part2_link9": "Provider Agreement",
+      "title_part2_link10": "Investment Fund",
       "view_btn": "Click to View",
       "download_btn": "Download PDF"
     },

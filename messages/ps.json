@@ -1043,6 +1043,17 @@
         "description": "This Provider Agreement outlines the terms and conditions for participating in the پرایم ایکس کپیتال Social Trading Program as a Master Provider, allowing other clients to follow your trading strategies."
       }
     },
+    "investmentFundAgreement": {
+      "title_part1": "د پانګونې صندوق",
+      "title_part2": "هوکړه لیک",
+      "description": "دلته، موږ هغه شرایط ټاکو چې د پرایم ایکس پانګونې صندوق کې ستاسو ګډون اداره کوي، د راټول شوي سرمایې د مدیریت جوړوښت، د پړاو په پړاو پانګونې ستراتیژۍ، او متقابل مسؤلیتونه په ګوته کوو.",
+      "view_btn": "سند وګورئ",
+      "download_btn": "سند ډاونلوډ کړئ",
+      "metaData": {
+        "title": "د پانګونې صندوق | پرایم ایکس کپیتال",
+        "description": "دلته، موږ هغه شرایط ټاکو چې د پرایم ایکس پانګونې صندوق کې ستاسو ګډون اداره کوي، د راټول شوي سرمایې د مدیریت جوړوښت، د پړاو په پړاو پانګونې ستراتیژۍ، او متقابل مسؤلیتونه په ګوته کوو."
+      }
+    },
     "company": {
       "title_part1": "شرکت",
       "title_part1_link1": "زموږ په اړه",
@@ -1064,6 +1075,7 @@
       "title_part2_link7": "د AML پالیسۍ",
       "title_part2_link8": "د پیروکار هوکړه نامه",
       "title_part2_link9": "د چمتو کونکي هوکړه نامه",
+      "title_part2_link10": "د پانګونې صندوق",
       "view_btn": "د کتلو لپاره کلیک وکړئ",
       "download_btn": "PDF ډاونلوډ کړئ"
     },

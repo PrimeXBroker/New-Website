@@ -1043,6 +1043,17 @@
         "description": "Este Acordo de Fornecedor descreve os termos e condições para participar do Programa de Negociação Social da PrimeX Capital como um Master Provider, permitindo que outros clientes sigam suas estratégias de negociação."
       }
     },
+    "investmentFundAgreement": {
+      "title_part1": "Fundo de Investimento",
+      "title_part2": "Acordo",
+      "description": "Aqui, definimos os termos que regem a sua participação no Fundo de Investimento PrimeX, especificando a estrutura de gestão de capital em pool, as estratégias de investimento faseadas e as obrigações mútuas. ",
+      "view_btn": "Ver Documento",
+      "download_btn": "Baixar Documento",
+      "metaData": {
+        "title": "Fundo de Investimento | PrimeX Capital",
+        "description": "Aqui, definimos os termos que regem a sua participação no Fundo de Investimento PrimeX, especificando a estrutura de gestão de capital em pool, as estratégias de investimento faseadas e as obrigações mútuas. "
+      }
+    },
     "company": {
       "title_part1": "Empresa",
       "title_part1_link1": "Sobre Nós",
@@ -1064,6 +1075,7 @@
       "title_part2_link7": "Política de AML",
       "title_part2_link8": "Acordo de Seguidor",
       "title_part2_link9": "Acordo de Fornecedor",
+      "title_part2_link10": "Fundo de Investimento",
       "view_btn": "Clique para Ver",
       "download_btn": "Baixar PDF"
     },

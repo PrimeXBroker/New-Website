@@ -171,6 +171,10 @@ const Footer = () => {
           { name: t("Rules.title_part2_link7"), href: "/policy-of-aml" },
           // { name: t("Rules.title_part2_link8"), href: "/follower-agreement" },
           // { name: t("Rules.title_part2_link9"), href: "/provider-agreement" },
+          {
+            name: t("Rules.title_part2_link10"),
+            href: "/investment-fund-agreement",
+          },
         ],
       },
     },
@@ -313,9 +317,9 @@ const Footer = () => {
             dir="ltr"
           >
             <div className="flex w-full flex-wrap justify-center gap-y-6 lg:gap-y-0">
-          {paymentOptions.map((el, index) => (
-            <div
-              key={index}
+              {paymentOptions.map((el, index) => (
+                <div
+                  key={index}
                   className="w-1/2 sm:w-1/3 lg:w-1/5 flex justify-center items-center"
                 >
                   {el.id === 3 ? (

@@ -1043,6 +1043,17 @@
         "description": "Este Acuerdo de Proveedor detalla los términos y condiciones para participar en el Programa de Trading Social de PrimeX Capital como Proveedor Maestro, permitiendo a otros clientes seguir tus estrategias de trading."
       }
     },
+    "investmentFundAgreement": {
+      "title_part1": "Fondo de Inversión",
+      "title_part2": "Acuerdo",
+      "description": "Aquí, definimos los términos que rigen su participación en el Fondo de Inversión PrimeX, especificando la estructura de gestión de capital mancomunado, las estrategias de inversión por fases y las obligaciones mutuas.",
+      "view_btn": "Ver Documento",
+      "download_btn": "Descargar Documento",
+      "metaData": {
+        "title": "Fondo de Inversión | PrimeX Capital",
+        "description": "Aquí, definimos los términos que rigen su participación en el Fondo de Inversión PrimeX, especificando la estructura de gestión de capital mancomunado, las estrategias de inversión por fases y las obligaciones mutuas."
+      }
+    },
     "company": {
       "title_part1": "Compañía",
       "title_part1_link1": "Acerca de Nosotros",
@@ -1064,6 +1075,7 @@
       "title_part2_link7": "Política de AML",
       "title_part2_link8": "Acuerdo de Seguidor",
       "title_part2_link9": "Acuerdo de Proveedor",
+      "title_part2_link10": "Fondo de Inversión",
       "view_btn": "Haz clic para ver",
       "download_btn": "Descargar PDF"
     },
