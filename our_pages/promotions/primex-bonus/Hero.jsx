@@ -7,11 +7,11 @@ import { useRouter } from "next/navigation";
 import React from "react";
 
 const Hero = () => {
+  const router = useRouter();
   const t = useTranslations("bonusPage.bonusHero");
   const t1 = useTranslations("bonusPage.bonusJoinNow");
 
   const handleClick = () => {
-    const router = useRouter();
     const url = getRegisterUrl(locale);
     router.push(url);
   };
