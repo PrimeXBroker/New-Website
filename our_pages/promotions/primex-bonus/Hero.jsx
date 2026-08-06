@@ -1,10 +1,20 @@
 "use client";
+import CustomYellowButton from "@/components/common/CustomYellowButton";
+import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const Hero = () => {
   const t = useTranslations("bonusPage.bonusHero");
+  const t1 = useTranslations("bonusPage.bonusJoinNow");
+
+  const handleClick = () => {
+    const router = useRouter();
+    const url = getRegisterUrl(locale);
+    router.push(url);
+  };
 
   return (
     <section className="bg-p dark:bg-p-dark pt-24 sm:pt-28">
@@ -24,6 +34,13 @@ const Hero = () => {
               <p className={`font-normal text-base text-ts dark:text-ts-dark`}>
                 {t("hero_description2")}
               </p>
+              <div className="mt-8">
+                <CustomYellowButton
+                  title={t1("btnTxt")}
+                  onClick={handleClick}
+                  className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full md:w-auto justify-between sm:justify-center"
+                />
+              </div>
             </div>
             <div className="col-span-12 md:col-span-6 mt-6 md:mt-0 bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/trading-bg.svg)] bg-center bg-cover bg-no-repeat">
               <div className="flex justify-center">
