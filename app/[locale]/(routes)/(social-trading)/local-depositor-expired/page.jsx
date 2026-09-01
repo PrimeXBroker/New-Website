@@ -1,4 +1,4 @@
-import LocalDepositorWrapper from "@/our_pages/local-depositor-old/LocalDepositorWrapper";
+import LocalDepositorWrapper from "@/our_pages/local-depositor/LocalDepositorWrapper";
 import { createTranslator } from "next-intl";
 import React from "react";
 
@@ -7,7 +7,7 @@ export async function generateMetadata({ params }) {
   const messages = (await import(`../../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });
-  const url = `https://www.primexcapital.com/${locale}/local-depositor-old`;
+  const url = `https://www.primexcapital.com/${locale}/local-depositor`;
 
   return {
     title: t("localDepositor.metaData.title"),
@@ -15,13 +15,13 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: url,
       languages: {
-        en: "https://www.primexcapital.com/en/local-depositor-old",
-        ar: "https://www.primexcapital.com/ar/local-depositor-old",
-        ku: "https://www.primexcapital.com/ku/local-depositor-old",
-        es: "https://www.primexcapital.com/es/local-depositor-old",
-        ps: "https://www.primexcapital.com/ps/local-depositor-old",
-        pt: "https://www.primexcapital.com/pt/local-depositor-old",
-        fa: "https://www.primexcapital.com/fa/local-depositor-old",
+        en: "https://www.primexcapital.com/en/local-depositor",
+        ar: "https://www.primexcapital.com/ar/local-depositor",
+        ku: "https://www.primexcapital.com/ku/local-depositor",
+        es: "https://www.primexcapital.com/es/local-depositor",
+        ps: "https://www.primexcapital.com/ps/local-depositor",
+        pt: "https://www.primexcapital.com/pt/local-depositor",
+        fa: "https://www.primexcapital.com/fa/local-depositor",
       },
     },
     openGraph: {

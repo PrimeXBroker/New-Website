@@ -1,4 +1,4 @@
-import LocalDepositorWrapper from "@/our_pages/local-depositor/LocalDepositorWrapper";
+import LocalDepositorWrapper from "@/our_pages/local-depositor-old/LocalDepositorWrapper";
 import { createTranslator } from "next-intl";
 import React from "react";
 
@@ -10,8 +10,8 @@ export async function generateMetadata({ params }) {
   const url = `https://www.primexcapital.com/${locale}/local-depositor`;
 
   return {
-    title: t("localDepositor.metaData.title"),
-    description: t("localDepositor.metaData.description"),
+    title: t("localDepositorOld.metaData.title"),
+    description: t("localDepositorOld.metaData.description"),
     alternates: {
       canonical: url,
       languages: {
@@ -28,14 +28,14 @@ export async function generateMetadata({ params }) {
       type: "website",
       locale,
       url,
-      title: t("localDepositor.metaData.title"),
-      description: t("localDepositor.metaData.description"),
+      title: t("localDepositorOld.metaData.title"),
+      description: t("localDepositorOld.metaData.description"),
       images: [
         {
           url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/local-depositor/hero.webp",
           width: 1200,
           height: 630,
-          alt: t("localDepositor.metaData.title"),
+          alt: t("localDepositorOld.metaData.title"),
         },
       ],
     },
