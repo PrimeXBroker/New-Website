@@ -4390,5 +4390,57 @@
       "description": "¡Únete ahora y aprovecha el cashback en cada lote operado!",
       "btn_txt": "Empieza a Operar Ahora"
     }
+  },
+  "localDepositorOld": {
+    "metaData": {
+      "title": "Servicio de Depósito Local",
+      "description": "¡Opere de forma fácil y segura con PrimeX Capital! Le ofrecemos una variedad de opciones locales de depósito y retiro dentro de Irak y Siria."
+    },
+    "hero": {
+      "title_1": "Depósito Local ",
+      "title_2": "Servicio disponible ahora",
+      "title_3": "en",
+      "title_4": "Irak y",
+      "title_5": "Siria",
+      "description": "Acceda a una amplia gama de métodos locais de depósito y retiro, lo que le brinda total flexibilidad en la gestión de sus fondos y un procesamiento rápido de las transacciones directamente a través del Área de Clientes. Disfrute de un control total, métodos de pago seguros y una ejecución rápida.",
+      "btnTxt": "Comience a Operar Ahora"
+    },
+    "section1": {
+      "title_1": "¿Qué es un Depositante Local?",
+      "description1": "Un Depositante Local es un servicio diseñado para simplificar los depósitos y retiros en su cuenta de trading utilizando métodos de pago disponibles en Irak y Siria. En lugar de depender de complejas transferencias bancarias internacionales, puede gestionar fácilmente sus transacciones a través de bancos locales y soluciones de pago específicas de cada país.",
+      "description2": "En Irak, puede beneficiarse de bancos locales y billeteras electrónicas confiables como Zain Cash y Asia Hawala. En Siria, está disponible una variedad de opciones que incluyen Sham Cash, oficinas de cambio locales y transferencias en efectivo.",
+      "description3": "Este servicio proporciona una experiencia más rápida y flexible, lo que le permite gestionar sus fondos con facilidad al mismo tiempo que ahorra tiempo y esfuerzo."
+    },
+    "benefits": {
+      "main_title": "Beneficios del Depositante Local",
+      "title1": "Transferencias ",
+      "title1_1": "rápidas",
+      "description1": "Los depósitos y retiros se procesan de forma mucho más rápida en comparación con otros métodos de pago.",
+      "title2": "Tipo de cambio ",
+      "title2_1": "y comisiones fijas",
+      "description2": "Total transparencia en los tipos de cambio y comisiones antes de que se ejecute cualquier depósito o retiro.",
+      "title3": "Fácil ",
+      "title3_1": "de usar",
+      "description3": "Múltiples métodos locales de depósito y retiro disponibles en Irak y Siria, todos accesibles directamente a través del Área de Clientes."
+    },
+    "paymentmethods": {
+      "heading1": "Métodos Locales de Depósito y Retiro en Irak",
+      "title1": "First Iraqi Bank",
+      "title2": "AsiaPay",
+      "title3": "Zain Cash",
+      "title4": "Rafidain",
+      "title5": "Al-Taif Bank",
+      "title6": "Casas de Cambio Internas",
+      "heading2": "Métodos Locales de Depósito y Retiro en Siria",
+      "title7": "Sham Cash",
+      "title8": "Efectivo",
+      "title9": "Casas de Cambio Internas"
+    },
+    "explore": {
+      "title1": "Explore",
+      "title2": "Oportunidades de Trading",
+      "description": "Sumérjase en una amplia gama de activos que incluyen CFDs de FX, Índices, Materias Primas y Acciones.",
+      "buttonText": "Abrir Conta"
+    }
   }
 }
