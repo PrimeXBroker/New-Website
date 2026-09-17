@@ -146,7 +146,11 @@ export default async function RootLayout({ children }) {
         <ReduxProvider>
           <RedirectionHandler />
           <Suspense fallback={<FallbackLoader />}>
-            <Providers messages={messages} locale={locale} direction={direction}>
+            <Providers
+              messages={messages}
+              locale={locale}
+              direction={direction}
+            >
               <Suspense fallback={null}>
                 <MousePartialEffect />
               </Suspense>

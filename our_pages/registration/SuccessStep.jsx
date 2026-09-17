@@ -10,6 +10,15 @@ export default function SuccessStep() {
   const [countdown, setCountdown] = useState(10);
 
   useEffect(() => {
+    // Fire ChatGPT (oaiq) pixel event when user successfully lands on the registration success page
+    if (typeof window !== "undefined" && typeof window.oaiq === "function") {
+      window.oaiq("measure", "registration_completed", {
+        type: "customer_action",
+      });
+    }
+  }, []);
+
+  useEffect(() => {
     if (countdown > 0) {
       const timer = setInterval(() => {
         setCountdown((prev) => prev - 1);
