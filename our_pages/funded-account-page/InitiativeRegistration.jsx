@@ -2,11 +2,11 @@
 import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import axios from "axios";
-import { FiUploadCloud } from "react-icons/fi";
+import { FiArrowUpLeft, FiArrowUpRight, FiUploadCloud } from "react-icons/fi";
 
 import {
   Modal,
@@ -21,6 +21,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setLocation } from "@/redux/slices/locationSlice";
 
 const InitiativeRegistration = () => {
+  const locale = useLocale();
   const t = useTranslations("fundedAccountPage.initiativeRegistration");
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const dispatch = useDispatch();
@@ -106,15 +107,9 @@ const InitiativeRegistration = () => {
   };
 
   return (
-    <section className="bg-p dark:bg-p-dark pb-16 sm:pb-36">
+    <section id="initiative-registration" className="bg-p dark:bg-p-dark pb-16 sm:pb-28 scroll-mt-24">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-10">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-pcp dark:border-pcp-dark bg-pcp/[0.0784] dark:bg-pcp-dark/[0.0784] mb-5">
-            <span className="w-2 h-2 rounded-full bg-pcp dark:bg-pcp-dark inline-block"></span>
-            <span className="text-pcp dark:text-pcp-dark text-xs sm:text-sm font-semibold tracking-wider uppercase">
-              {t("badge")}
-            </span>
-          </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark text-center">
             {t("title")}
           </h2>
@@ -205,7 +200,6 @@ const InitiativeRegistration = () => {
                     onBlur={formik.handleBlur}
                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                   />
-
                   <div className="flex flex-col items-center justify-center">
                     <div className="w-12 h-12 rounded-full flex items-center justify-center mb-1 text-pcp dark:text-pcp-dark">
                       <FiUploadCloud className="w-8 h-8" />
@@ -215,7 +209,7 @@ const InitiativeRegistration = () => {
                         ? formik.values.trading_history.name
                         : t("upload_title")}
                     </span>
-                    <span className="text-xs sm:text-sm text-ts dark:text-ts-dark font-medium">
+                    <span className="text-xs sm:text-sm text-ts dark:text-ts-dark">
                       {t("upload_subtitle")}
                     </span>
                   </div>
@@ -225,15 +219,29 @@ const InitiativeRegistration = () => {
             <div className="w-full">
               <button
                 disabled={loading}
-                className="transition-colors duration-300 ease-in-out rounded-lg font-bold w-full flex items-center justify-center gap-3 group bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark group py-4 px-3"
+                className={`py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full justify-between sm:justify-center transition-colors duration-300 ease-in-out rounded-lg font-bold flex items-center gap-3 group bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/Button+BG.png')] bg-cover bg-center text-nb dark:text-nb-dark group`}
               >
-                <div className="flex gap-1 items-center justify-center">
-                  {loading ? (
-                    <div className="spinner inline-block"></div>
-                  ) : (
-                    <span>{t("apply_btn")}</span>
-                  )}
-                </div>
+                {loading ? (
+                  <div className="spinner inline-block"></div>
+                ) : (
+                  <span>{t("apply_btn")}</span>
+                )}
+                {locale === "ar" ||
+                locale === "ku" ||
+                locale === "ps" ||
+                locale === "fa" ? (
+                  <div
+                    className={`w-[20px] h-[20px] flex justify-center items-center rounded-full bg-nb dark:bg-nb-dark`}
+                  >
+                    <FiArrowUpLeft className="transition-transform duration-500 ease-in-out group-hover:rotate-[-45deg] text-pcp dark:text-pcp-dark text-xs" />
+                  </div>
+                ) : (
+                  <div
+                    className={`w-[20px] h-[20px] flex justify-center items-center rounded-full bg-nb dark:bg-nb-dark`}
+                  >
+                    <FiArrowUpRight className="transition-transform duration-500 ease-in-out group-hover:rotate-[45deg] text-pcp dark:text-pcp-dark text-xs" />
+                  </div>
+                )}
               </button>
             </div>
           </form>

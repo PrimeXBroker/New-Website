@@ -4457,8 +4457,9 @@
       "btnTxt": "Apply Now"
     },
     "journey": {
-      "badge": "Initiative Pathway",
-      "title": "The Journey to Funding",
+      "title1": "The ",
+      "title2": "Journey ",
+      "title3": "to Funding",
       "step1Title": "Apply Now",
       "step1Desc": "Complete the simple registration form to secure your entry slot into the initiative.",
       "step2Title": "Get Funded",
@@ -4469,30 +4470,41 @@
       "step4Desc": "Transfer direct real profit splits straight to your personal account with ease."
     },
     "advantages": {
-      "badge": "Exclusive Advantages",
-      "title": "Engineered for Dedicated Performers",
-      "card1Title": "$100 Sponsored Account",
-      "card1Desc": "Start your trading journey with a fully funded live account by PrimeX Capital.",
-      "card2Title": "Withdrawable Profits",
-      "card2Desc": "Hit your $200 profit target and meet terms to receive payouts directly.",
-      "card3Title": "Renewable Monthly Opportunity",
-      "card3Desc": "100 professional trader accounts are issued on the 1st of every single month."
+      "title1": "Engineered for ",
+      "title2": "Dedicated ",
+      "title3": "Performers",
+      "feature_1_title1": "$100 Sponsored",
+      "feature_1_title2": "Account",
+      "feature_1_description": "Start your trading journey with a fully funded live account by PrimeX Capital.",
+      "feature_2_title1": "Withdrawable",
+      "feature_2_title2": "Profits",
+      "feature_2_description": "Hit your $200 profit target and meet terms to receive payouts directly.",
+      "feature_3_title1": "Renewable Monthly",
+      "feature_3_title2": "Opportunity",
+      "feature_3_description": "100 professional trader accounts are issued on the 1st of every single month"
     },
     "tradingParameters": {
       "badge": "Trading Parameters",
-      "title": "The Initiative System Rules",
-      "rule1Title": "Target Growth Profile",
-      "rule1Desc": "Achieve a clean profit target of 10% on your assigned balance within the calendar active window.",
-      "rule2Title": "Daily Drawdown Maximum",
-      "rule2Desc": "Ensure active unrealized or realized equity losses do not exceed a strict daily floor of 5%.",
-      "rule3Title": "Overall Maximum Cap Limit",
-      "rule3Desc": "Cumulative total account drawdown must stay locked above an absolute floor of 10% relative to starting balance.",
-      "rule4Title": "Minimum Active Trading Days",
-      "rule4Desc": "Maintain structured risk engagement by placing active trades on at least 5 distinct calendar days.",
-      "rule5Title": "Consistent Sizing Distribution",
-      "rule5Desc": "Ensure trading sizing remains balanced to prevent massive single-lot risk exposure anomalies.",
-      "warningTitle": "Critical Prohibited Actions",
-      "warningDesc": "Violating any of these criteria causes immediate challenge forfeiture: (1) Arbitrage system manipulation, (2) Copy-trading external unauthorized institutional feeds, or (3) Exploiting pricing data feed feed delays."
+      "title": "Terms & Conditions",
+      "selection_title": "Traders Selection Criteria",
+      "selection_li1_desc": "",
+      "selection_li2_desc": "",
+      "selection_li3_desc": "",
+      "general_rules_title": "General Rules",
+      "general_rules_li1_desc": "Initiative account trades and features match standard account specs with 1:100 leverage.",
+      "general_rules_li2_desc": "Clients are limited to one initiative account; any detected manipulation triggers suspension.",
+      "general_rules_li3_desc": "The PrimeX Expert Traders Initiative is available exclusively in selected jurisdictions.",
+      "general_rules_li4_desc": "New initiative trading accounts are issued and distributed on the 1st of every month. ",
+      "general_rules_li5_desc": "PrimeX Capital reserves the right to amend these terms and conditions without notice.",
+      "strategies_title": "Prohibited Trading Strategies",
+      "strategies_li1_desc": "Internal & Cross-account hedging.",
+      "strategies_li2_desc": "High-Frequency Trading (HFT).",
+      "strategies_li3_desc": "Prohibited trading practices in the company's General Terms apply.",
+      "registration_title": "Initiative Registration Form",
+      "registration_li1_desc": "Full Name: [Text Input Field that only accept letters and spaces]",
+      "registration_li2_desc": "Email Address: [Email Input Field with condition to use @ and .xxx]",
+      "registration_li3_desc": "Phone Number: [Country Code Dropdown + Phone Input Field that only accept numbers 0-9]",
+      "registration_li4_desc": "3-Month Trading History: [File Upload Field – Accepts XLSX or XLS files only]"
     },
     "initiativeRegistration": {
       "badge": "Onboarding Portal",
@@ -4514,7 +4526,7 @@
       "contact_required_error": "Phone number is required",
       "trading_history_required_error": "Trading history file is required",
       "success_title": "Success",
-      "success_desc": "Form Submitted Successfully",
+      "success_desc": "Application submitted. We will review your details and get in touch with you upon acceptance.",
       "close_btn": "Close"
     }
   }

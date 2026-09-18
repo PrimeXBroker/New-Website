@@ -1,88 +1,130 @@
 "use client";
-import React from "react";
 import { useTranslations } from "next-intl";
-import { FiAlertTriangle } from "react-icons/fi";
-
-const rulesData = [
-  {
-    number: "01",
-    titleKey: "rule1Title",
-    descKey: "rule1Desc",
-  },
-  {
-    number: "02",
-    titleKey: "rule2Title",
-    descKey: "rule2Desc",
-  },
-  {
-    number: "03",
-    titleKey: "rule3Title",
-    descKey: "rule3Desc",
-  },
-  {
-    number: "04",
-    titleKey: "rule4Title",
-    descKey: "rule4Desc",
-  },
-  {
-    number: "05",
-    titleKey: "rule5Title",
-    descKey: "rule5Desc",
-  },
-];
+import React, { useEffect, useState } from "react";
+import bonusEligibility from "@/public/animations/bonus/bonus-eligibility.json";
+import generalRules from "@/public/animations/bonus/general-rules.json";
+import tradingStrategies from "@/public/animations/bonus/prohibited-trading-strategies.json";
+import initiativeRegistration from "@/public/animations/ib-program/transparent-reporting.json";
+import Lottie from "lottie-react";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 
 const TradingParameters = () => {
+  const { theme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const t = useTranslations("fundedAccountPage.tradingParameters");
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const currentTheme = mounted ? resolvedTheme || theme || "dark" : "dark";
+
+  const rulesData = [
+    {
+      category: t("selection_title"),
+      icon: bonusEligibility,
+      items: [
+        t("selection_li1_desc"),
+        t("selection_li2_desc"),
+        t("selection_li3_desc"),
+      ],
+      imageClasses:
+        "absolute -bottom-6 end-10 -rotate-[7deg] w-[138px] h-[157px]",
+    },
+    {
+      category: t("general_rules_title"),
+      icon: generalRules,
+      items: [
+        t("general_rules_li1_desc"),
+        t("general_rules_li2_desc"),
+        t("general_rules_li3_desc"),
+        t("general_rules_li4_desc"),
+        t("general_rules_li5_desc"),
+      ],
+      imageClasses:
+        "absolute top-1/2 -translate-y-1/2 end-80 rotate-[-35deg] w-[138px] h-[157px]",
+    },
+    {
+      category: t("strategies_title"),
+      icon: tradingStrategies,
+      items: [
+        t("strategies_li1_desc"),
+        t("strategies_li2_desc"),
+        t("strategies_li3_desc"),
+      ],
+      imageClasses:
+        "absolute -bottom-8 end-32 rotate-[14deg] w-[138px] h-[157px]",
+    },
+    {
+      category: t("registration_title"),
+      icon: initiativeRegistration,
+      items: [
+        t("registration_li1_desc"),
+        t("registration_li2_desc"),
+        t("registration_li3_desc"),
+        t("registration_li4_desc"),
+      ],
+      imageClasses:
+        "absolute -bottom-8 end-32 rotate-[14deg] w-[138px] h-[157px]",
+    },
+  ];
+
   return (
-    <section className="bg-p dark:bg-p-dark py-16 sm:py-36">
+    <div className="bg-p dark:bg-p-dark text-tm dark:text-tm-dark py-16 sm:py-28">
       <div className="container mx-auto">
-        <div className="flex flex-col items-center text-center mb-10">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-pcp dark:border-pcp-dark bg-pcp/[0.0784] dark:bg-pcp-dark/[0.0784] mb-5">
-            <span className="w-2 h-2 rounded-full bg-pcp dark:bg-pcp-dark inline-block"></span>
-            <span className="text-pcp dark:text-pcp-dark text-xs sm:text-sm font-semibold tracking-wider uppercase">
-              {t("badge")}
-            </span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark text-center uppercase">
+        <div className="text-center md:text-center mb-10">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-tm dark:text-tm-dark capitalize">
             {t("title")}
           </h2>
         </div>
-        <div className="divide-y divide-e1 dark:divide-e1-dark">
+        <div className="grid grid-cols-1 gap-8">
           {rulesData.map((rule, index) => (
             <div
               key={index}
-              className="py-6 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8"
+              className="bg-cc dark:bg-cc-dark p-8 rounded-lg min-h-[244px] relative overflow-hidden"
             >
-              <span className="text-2xl sm:text-3xl font-semibold text-pcp dark:text-pcp-dark shrink-0">
-                {rule.number}
-              </span>
-              <div className="flex flex-col">
-                <h3 className="text-lg sm:text-xl text-tm dark:text-tm-dark font-semibold mb-1">
-                  {t(rule.titleKey)}
+              <dv className="flex justify-between items-center mb-6">
+                <h3 className="text-xl sm:text-2xl font-semibold">
+                  {rule.category}
                 </h3>
-                <p className="text-ts dark:text-ts-dark text-sm sm:text-base font-medium">
-                  {t(rule.descKey)}
-                </p>
+                <div>
+                  <Lottie
+                    animationData={rule.icon}
+                    loop={true}
+                    style={{ width: "52px", height: "52px" }}
+                  />
+                </div>
+              </dv>
+              <ul className="space-y-2 list-disc ms-6">
+                {rule.items.map((item, itemIndex) => (
+                  <li
+                    key={itemIndex}
+                    className="font-medium text-sm sm:text-base md:text-sm lg:text-base text-ts dark:text-ts-dark"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div
+                className={`${rule.imageClasses} pointer-events-none select-none`}
+              >
+                <Image
+                  src={
+                    currentTheme === "dark"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/cashback/X+terms+and+conditions.svg"
+                      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/cashback/light/x+Terms+and+Conditions.png"
+                  }
+                  alt="X background"
+                  fill
+                  className="object-contain"
+                />
               </div>
             </div>
           ))}
         </div>
-        <div className="mt-6 sm:mt-12 bg-cc dark:bg-cc-dark rounded-lg p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5">
-          <div className="w-12 h-12 rounded-full bg-rb dark:bg-rb-dark flex items-center justify-center shrink-0">
-            <FiAlertTriangle className="w-5 h-5 text-rc dark:text-rc-dark" />
-          </div>
-          <div className="flex flex-col">
-            <h4 className="text-base sm:text-lg font-semibold text-tm dark:text-tm-dark uppercase tracking-wider mb-1">
-              {t("warningTitle")}
-            </h4>
-            <p className="text-ts dark:text-ts-dark text-xs sm:text-sm font-medium">
-              {t("warningDesc")}
-            </p>
-          </div>
-        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

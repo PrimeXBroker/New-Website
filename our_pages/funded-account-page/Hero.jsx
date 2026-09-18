@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
-import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -20,9 +19,10 @@ const Hero = () => {
 
   const currentTheme = mounted ? resolvedTheme || theme || "dark" : "dark";
 
-  const handleClick = () => {
-    const url = getRegisterUrl(locale);
-    router.push(url);
+  const scrollToRegistration = () => {
+    document
+      .getElementById("initiative-registration")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
@@ -31,11 +31,22 @@ const Hero = () => {
         <div className="grid grid-cols-12 items-center">
           <div className="col-span-12 md:col-span-6">
             <div className="mt-4 text-center md:text-start">
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-pcp dark:border-pcp-dark bg-pcp/[0.0784] dark:bg-pcp-dark/[0.0784] mb-5">
-                <span className="w-2 h-2 rounded-full bg-pcp dark:bg-pcp-dark inline-block"></span>
-                <span className="text-pcp dark:text-pcp-dark text-xs sm:text-sm tracking-wider uppercase">
+              <div className="inline-flex items-center justify-center mx-auto gap-2 bg-[#f5f5f5] dark:bg-white dark:bg-opacity-[0.12] w-fit px-3 py-[6px] rounded-lg mb-5 border-[0.7px] border-[#f5f5f5] dark:border-white dark:border-opacity-[0.15]">
+                <Image
+                  unoptimized={true}
+                  src={
+                    theme === "dark"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Join+250%2C000%2B+traders+worldwide+icon.png"
+                      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Join+250%2C000%2B+traders+worldwide+icon.png"
+                  }
+                  width="16"
+                  height="16"
+                  alt="badge"
+                  className="w-[24px] h-auto"
+                />
+                <p className="text-tm dark:text-tm-dark font-medium text-sm text-start">
                   {t("badge")}
-                </span>
+                </p>
               </div>
               <h1 className="text-4xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-[44px] font-semibold text-tm dark:text-tm-dark !leading-[1.15]">
                 {t("title1")}
@@ -44,15 +55,15 @@ const Hero = () => {
                 </span>
                 {t("title3")}
               </h1>
-              <p className="text-tm dark:text-ts-dark font-medium mt-5">
+              <p className="text-tm dark:text-ts-dark text-sm sm:text-base mt-5">
                 {t("description")}
               </p>
             </div>
             <div className="mt-8">
               <CustomYellowButton
                 title={t("btnTxt")}
-                onClick={handleClick}
                 className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full md:w-auto justify-between sm:justify-center"
+                onClick={scrollToRegistration}
               />
             </div>
           </div>

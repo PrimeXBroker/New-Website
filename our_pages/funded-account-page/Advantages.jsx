@@ -1,66 +1,97 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import { FiStar, FiCheckCircle, FiRefreshCw } from "react-icons/fi";
-
-const advantagesData = [
-  {
-    icon: FiStar,
-    titleKey: "card1Title",
-    descKey: "card1Desc",
-  },
-  {
-    icon: FiCheckCircle,
-    titleKey: "card2Title",
-    descKey: "card2Desc",
-  },
-  {
-    icon: FiRefreshCw,
-    titleKey: "card3Title",
-    descKey: "card3Desc",
-  },
-];
+import overPaidUp from "@/public/animations/why-choose-us/over-paid-up-capital.json";
+import automatedTradingSpreads from "@/public/animations/why-choose-us/automated-trading-spreads-from-pips.json";
+import lucrativePartnership from "@/public/animations/why-choose-us/lucrative-partnership-programs.json";
+import Lottie from "lottie-react";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 
 const Advantages = () => {
+  const { theme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const t = useTranslations("fundedAccountPage.advantages");
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const currentTheme = mounted ? resolvedTheme || theme || "dark" : "dark";
+
+  const advantagesData = [
+    {
+      title1: t("feature_1_title1"),
+      title2: t("feature_1_title2"),
+      description: t("feature_1_description"),
+      icon: overPaidUp,
+    },
+    {
+      title1: t("feature_2_title1"),
+      title2: t("feature_2_title2"),
+      description: t("feature_2_description"),
+      icon: automatedTradingSpreads,
+    },
+    {
+      title1: t("feature_3_title1"),
+      title2: t("feature_3_title2"),
+      description: t("feature_3_description"),
+      icon: lucrativePartnership,
+    },
+  ];
+
   return (
-    <section className="bg-p dark:bg-p-dark">
+    <div className="bg-p dark:bg-p-dark">
       <div className="container mx-auto">
-        <div className="flex flex-col items-center text-center mb-10">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-pcp dark:border-pcp-dark bg-pcp/[0.0784] dark:bg-pcp-dark/[0.0784] mb-5">
-            <span className="w-2 h-2 rounded-full bg-pcp dark:bg-pcp-dark inline-block"></span>
-            <span className="text-pcp dark:text-pcp-dark text-xs sm:text-sm font-semibold tracking-wider uppercase">
-              {t("badge")}
-            </span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark text-center">
-            {t("title")}
+        <div className="text-center md:text-center mb-10">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark text-center capitalize">
+            {t("title1")}{" "}
+            <span className="text-pcp dark:text-pcp-dark">{t("title2")}</span>
+            {t("title3")}
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {advantagesData.map((item, index) => {
-            const IconComponent = item.icon;
-            return (
-              <div
-                key={index}
-                className="bg-cc dark:bg-cc-dark rounded-lg flex flex-col items-start text-left p-6"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-pcp/[0.102] dark:bg-pcp-dark/[0.102] flex items-center justify-center shrink-0 mb-6">
-                  <IconComponent className="w-7 h-7 text-pcp dark:text-pcp-dark" />
-                </div>
-                <h3 className="text-xl text-tm dark:text-tm-dark font-semibold mb-3">
-                  {t(item.titleKey)}
-                </h3>
-                <p className="text-ts dark:text-ts-dark text-sm sm:text-base font-medium">
-                  {t(item.descKey)}
-                </p>
+        <div className="flex flex-wrap justify-center gap-4">
+          {advantagesData.map((benefit, index) => (
+            <div
+              key={index}
+              className="w-full sm:w-[48%] lg:w-[32%] bg-cc dark:bg-cc-dark p-6 rounded-lg text-tm dark:text-tm-dark flex flex-col relative overflow-hidden"
+            >
+              <div className="flex justify-center items-center w-14 h-14 bg-e1 dark:bg-white/15 border border-e2 dark:border-white/15 rounded-lg">
+                <Lottie
+                  animationData={benefit.icon}
+                  loop={true}
+                  style={{ width: "52px", height: "52px" }}
+                />
               </div>
-            );
-          })}
+              <div className="mt-6 mb-3">
+                <h3 className="text-xl font-semibold text-pcp dark:text-pcp-dark">
+                  {benefit.title1}
+                </h3>
+                <h3 className="text-xl font-semibold text-tm dark:text-tm-dark">
+                  {benefit.title2}
+                </h3>
+              </div>
+              <p className="text-ts dark:text-ts-dark text-sm sm:text-base">
+                {benefit.description}
+              </p>
+              <div className="absolute top-6 end-6 pointer-events-none select-none">
+                <Image
+                  src={
+                    currentTheme === "dark"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/cashback/X+Trade+more.+Get+more+value..svg"
+                      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/cashback/light/x+Trade+more.+Get+more+value..png"
+                  }
+                  alt="X background"
+                  width={100}
+                  height={113}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
