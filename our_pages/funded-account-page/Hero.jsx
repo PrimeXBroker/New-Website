@@ -5,12 +5,20 @@ import { useRouter } from "next/navigation";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
 import { getRegisterUrl } from "@/utilities/getRegisterUrl";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
   const router = useRouter();
   const locale = useLocale();
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const t = useTranslations("fundedAccountPage.banner");
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const currentTheme = mounted ? resolvedTheme || theme || "dark" : "dark";
 
   const handleClick = () => {
     const url = getRegisterUrl(locale);
@@ -53,7 +61,7 @@ const Hero = () => {
               <Image
                 unoptimized={true}
                 src={
-                  theme === "dark"
+                  currentTheme === "dark"
                     ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/funded-account-page/funded-account-hero-dark.png"
                     : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/funded-account-page/funded-account-hero-light.png"
                 }
