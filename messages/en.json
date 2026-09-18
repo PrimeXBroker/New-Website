@@ -4442,5 +4442,80 @@
       "description": "Immerse yourself in a diverse range of assets including FX CFDs, Indices, Commodities, and Stocks.",
       "buttonText": "Open Account"
     }
+  },
+  "fundedAccountPage": {
+    "metaData": {
+      "title": "",
+      "description": ""
+    },
+    "banner": {
+      "badge": "Expert Traders Initiative",
+      "title1": "Prove Your Edge: Trade ",
+      "title2": "Risk-Free ",
+      "title3": "with the PrimeX Expert Traders Initiative!",
+      "description": "Join the elite tier of traders, claim your funded $100 account, and achieve your trading objectives.",
+      "btnTxt": "Apply Now"
+    },
+    "journey": {
+      "badge": "Initiative Pathway",
+      "title": "The Journey to Funding",
+      "step1Title": "Apply Now",
+      "step1Desc": "Complete the simple registration form to secure your entry slot into the initiative.",
+      "step2Title": "Get Funded",
+      "step2Desc": "Receive immediate credentials to a pre-funded $100 sponsored sandbox trading account.",
+      "step3Title": "Earn $200",
+      "step3Desc": "Meet target trading parameters cleanly within the standard assessment period.",
+      "step4Title": "Withdraw Profits",
+      "step4Desc": "Transfer direct real profit splits straight to your personal account with ease."
+    },
+    "advantages": {
+      "badge": "Exclusive Advantages",
+      "title": "Engineered for Dedicated Performers",
+      "card1Title": "$100 Sponsored Account",
+      "card1Desc": "Start your trading journey with a fully funded live account by PrimeX Capital.",
+      "card2Title": "Withdrawable Profits",
+      "card2Desc": "Hit your $200 profit target and meet terms to receive payouts directly.",
+      "card3Title": "Renewable Monthly Opportunity",
+      "card3Desc": "100 professional trader accounts are issued on the 1st of every single month."
+    },
+    "tradingParameters": {
+      "badge": "Trading Parameters",
+      "title": "The Initiative System Rules",
+      "rule1Title": "Target Growth Profile",
+      "rule1Desc": "Achieve a clean profit target of 10% on your assigned balance within the calendar active window.",
+      "rule2Title": "Daily Drawdown Maximum",
+      "rule2Desc": "Ensure active unrealized or realized equity losses do not exceed a strict daily floor of 5%.",
+      "rule3Title": "Overall Maximum Cap Limit",
+      "rule3Desc": "Cumulative total account drawdown must stay locked above an absolute floor of 10% relative to starting balance.",
+      "rule4Title": "Minimum Active Trading Days",
+      "rule4Desc": "Maintain structured risk engagement by placing active trades on at least 5 distinct calendar days.",
+      "rule5Title": "Consistent Sizing Distribution",
+      "rule5Desc": "Ensure trading sizing remains balanced to prevent massive single-lot risk exposure anomalies.",
+      "warningTitle": "Critical Prohibited Actions",
+      "warningDesc": "Violating any of these criteria causes immediate challenge forfeiture: (1) Arbitrage system manipulation, (2) Copy-trading external unauthorized institutional feeds, or (3) Exploiting pricing data feed feed delays."
+    },
+    "initiativeRegistration": {
+      "badge": "Onboarding Portal",
+      "title": "Initiative Registration",
+      "full_name_label": "Full Name",
+      "full_name_placeholder": "Enter your full name",
+      "email_label": "Email Address",
+      "email_placeholder": "your.email@example.com",
+      "contact_label": "Phone Number",
+      "contact_placeholder": "Enter Your Number",
+      "trading_history_label": "3-Month Trading History",
+      "upload_title": "Drag & Drop or Click to Upload",
+      "upload_subtitle": "Accepts XLSX or XLS files only",
+      "apply_btn": "Apply Now",
+      "full_name_validation_error": "Please enter a valid name",
+      "full_name_required_error": "Full name is required",
+      "email_validation_error": "Please enter a valid email address",
+      "email_required_error": "Email address is required",
+      "contact_required_error": "Phone number is required",
+      "trading_history_required_error": "Trading history file is required",
+      "success_title": "Success",
+      "success_desc": "Form Submitted Successfully",
+      "close_btn": "Close"
+    }
   }
 }
