@@ -46,31 +46,47 @@ const InitiativeRegistration = () => {
     fetchLocation();
   }, []);
 
+  const ALLOWED_FILE_TYPES = [
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "application/vnd.ms-excel",
+  ];
+
   const formik = useFormik({
     initialValues: {
       full_name: "",
       email: "",
       contact: "",
-      trading_history: "",
+      trading_history: null,
     },
     validationSchema: Yup.object({
       full_name: Yup.string()
-        .matches(
-          /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-          t("full_name_validation_error"),
-        )
+        .matches(/^[A-Za-z\s]+$/, t("full_name_validation_error"))
         .required(t("full_name_required_error")),
       email: Yup.string()
-        .email(t("email_validation_error"))
+        .matches(
+          /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+          t("email_validation_error"),
+        )
         .required(t("email_required_error")),
-      trading_history: Yup.string().required(
-        t("trading_history_required_error"),
-      ),
+      trading_history: Yup.mixed()
+        .required(t("trading_history_required_error"))
+        .test("fileType", t("upload_subtitle"), (value) => {
+          if (!value) return false;
+          const fileName = value.name || "";
+          const isValidExtension = /\.(xlsx|xls)$/i.test(fileName);
+          const isValidMime = ALLOWED_FILE_TYPES.includes(value.type);
+          return isValidExtension || isValidMime;
+        }),
     }),
     validate: (values) => {
       const errors = {};
       if (!values.contact) {
         errors.contact = t("contact_required_error");
+      } else {
+        const cleanNumber = values.contact.replace(/^\+/, "");
+        if (!/^\d+$/.test(cleanNumber)) {
+          errors.contact = t("contact_required_error");
+        }
       }
       return errors;
     },
@@ -98,16 +114,43 @@ const InitiativeRegistration = () => {
     },
   });
 
+  const handleNameChange = (e) => {
+    const cleanValue = e.target.value.replace(/[^A-Za-z\s]/g, "");
+    formik.setFieldValue("full_name", cleanValue);
+  };
+
+  const handlePhoneKeyDown = (e) => {
+    const allowedKeys = [
+      "Backspace",
+      "Delete",
+      "Tab",
+      "Escape",
+      "Enter",
+      "ArrowLeft",
+      "ArrowRight",
+    ];
+    if (allowedKeys.includes(e.key) || e.ctrlKey || e.metaKey) {
+      return;
+    }
+    if (!/^[0-9]$/.test(e.key)) {
+      e.preventDefault();
+    }
+  };
+
   const handleFileDrop = (e) => {
     e.preventDefault();
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
       const file = e.dataTransfer.files[0];
       formik.setFieldValue("trading_history", file);
+      formik.setFieldTouched("trading_history", true);
     }
   };
 
   return (
-    <section id="initiative-registration" className="bg-p dark:bg-p-dark pb-16 sm:pb-28 scroll-mt-24">
+    <section
+      id="initiative-registration"
+      className="bg-p dark:bg-p-dark scroll-mt-24"
+    >
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-10">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-tm dark:text-tm-dark text-center">
@@ -119,13 +162,14 @@ const InitiativeRegistration = () => {
             onSubmit={formik.handleSubmit}
             className="flex flex-col justify-center items-center relative gap-4"
           >
+            {/* Full Name */}
             <div className="w-full mb-3">
               <label className="text-xs text-ts dark:text-ts-dark">
                 {t("full_name_label")}
                 <input
                   type="text"
                   name="full_name"
-                  onChange={formik.handleChange}
+                  onChange={handleNameChange}
                   onBlur={formik.handleBlur}
                   value={formik.values.full_name}
                   placeholder={t("full_name_placeholder")}
@@ -136,7 +180,14 @@ const InitiativeRegistration = () => {
                   }`}
                 />
               </label>
+              {formik.touched.full_name && formik.errors.full_name && (
+                <p className="text-xs text-rc dark:text-rc-dark mt-1">
+                  {formik.errors.full_name}
+                </p>
+              )}
             </div>
+
+            {/* Email Address */}
             <div className="w-full mb-3">
               <label className="text-xs text-ts dark:text-ts-dark">
                 {t("email_label")}
@@ -154,7 +205,14 @@ const InitiativeRegistration = () => {
                   }`}
                 />
               </label>
+              {formik.touched.email && formik.errors.email && (
+                <p className="text-xs text-rc dark:text-rc-dark mt-1">
+                  {formik.errors.email}
+                </p>
+              )}
             </div>
+
+            {/* Phone Number */}
             <div className="w-full mb-3 ib-contact">
               <label className="text-xs text-ts dark:text-ts-dark">
                 {t("contact_label")}
@@ -162,7 +220,8 @@ const InitiativeRegistration = () => {
                   international
                   defaultCountry={countryCode}
                   onChange={(value) => formik.setFieldValue("contact", value)}
-                  onBlur={formik.handleBlur}
+                  onBlur={() => formik.setFieldTouched("contact", true)}
+                  onKeyDown={handlePhoneKeyDown}
                   name="contact"
                   value={formik.values.contact}
                   className={`ib-phone-input appearance-none mt-1 border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
@@ -173,7 +232,14 @@ const InitiativeRegistration = () => {
                   placeholder={t("contact_placeholder")}
                 />
               </label>
+              {formik.touched.contact && formik.errors.contact && (
+                <p className="text-xs text-rc dark:text-rc-dark mt-1">
+                  {formik.errors.contact}
+                </p>
+              )}
             </div>
+
+            {/* 3-Month Trading History */}
             <div className="w-full mb-3">
               <label className="text-xs text-ts dark:text-ts-dark">
                 {t("trading_history_label")}
@@ -196,6 +262,7 @@ const InitiativeRegistration = () => {
                         "trading_history",
                         event.currentTarget.files[0],
                       );
+                      formik.setFieldTouched("trading_history", true);
                     }}
                     onBlur={formik.handleBlur}
                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
@@ -215,10 +282,18 @@ const InitiativeRegistration = () => {
                   </div>
                 </div>
               </label>
+              {formik.touched.trading_history &&
+                formik.errors.trading_history && (
+                  <p className="text-xs text-rc dark:text-rc-dark mt-1">
+                    {formik.errors.trading_history}
+                  </p>
+                )}
             </div>
+
             <div className="w-full">
               <button
                 disabled={loading}
+                type="submit"
                 className={`py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full justify-between sm:justify-center transition-colors duration-300 ease-in-out rounded-lg font-bold flex items-center gap-3 group bg-[url('https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/Button+BG.png')] bg-cover bg-center text-nb dark:text-nb-dark group`}
               >
                 {loading ? (

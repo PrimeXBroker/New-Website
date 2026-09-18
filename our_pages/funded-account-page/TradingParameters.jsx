@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import bonusEligibility from "@/public/animations/bonus/bonus-eligibility.json";
 import generalRules from "@/public/animations/bonus/general-rules.json";
 import tradingStrategies from "@/public/animations/bonus/prohibited-trading-strategies.json";
-import initiativeRegistration from "@/public/animations/ib-program/transparent-reporting.json";
 import Lottie from "lottie-react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
@@ -22,17 +21,6 @@ const TradingParameters = () => {
 
   const rulesData = [
     {
-      category: t("selection_title"),
-      icon: bonusEligibility,
-      items: [
-        t("selection_li1_desc"),
-        t("selection_li2_desc"),
-        t("selection_li3_desc"),
-      ],
-      imageClasses:
-        "absolute -bottom-6 end-10 -rotate-[7deg] w-[138px] h-[157px]",
-    },
-    {
       category: t("general_rules_title"),
       icon: generalRules,
       items: [
@@ -41,6 +29,7 @@ const TradingParameters = () => {
         t("general_rules_li3_desc"),
         t("general_rules_li4_desc"),
         t("general_rules_li5_desc"),
+        t("general_rules_li6_desc"),
       ],
       imageClasses:
         "absolute top-1/2 -translate-y-1/2 end-80 rotate-[-35deg] w-[138px] h-[157px]",
@@ -52,18 +41,6 @@ const TradingParameters = () => {
         t("strategies_li1_desc"),
         t("strategies_li2_desc"),
         t("strategies_li3_desc"),
-      ],
-      imageClasses:
-        "absolute -bottom-8 end-32 rotate-[14deg] w-[138px] h-[157px]",
-    },
-    {
-      category: t("registration_title"),
-      icon: initiativeRegistration,
-      items: [
-        t("registration_li1_desc"),
-        t("registration_li2_desc"),
-        t("registration_li3_desc"),
-        t("registration_li4_desc"),
       ],
       imageClasses:
         "absolute -bottom-8 end-32 rotate-[14deg] w-[138px] h-[157px]",

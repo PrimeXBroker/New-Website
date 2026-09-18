@@ -1,14 +1,11 @@
 "use client";
 import Image from "next/image";
-import { useLocale, useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
-  const router = useRouter();
-  const locale = useLocale();
   const { theme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const t = useTranslations("fundedAccountPage.banner");

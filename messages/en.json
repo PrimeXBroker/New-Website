@@ -4487,24 +4487,17 @@
       "badge": "Trading Parameters",
       "title": "Terms & Conditions",
       "selection_title": "Traders Selection Criteria",
-      "selection_li1_desc": "",
-      "selection_li2_desc": "",
-      "selection_li3_desc": "",
       "general_rules_title": "General Rules",
-      "general_rules_li1_desc": "Initiative account trades and features match standard account specs with 1:100 leverage.",
-      "general_rules_li2_desc": "Clients are limited to one initiative account; any detected manipulation triggers suspension.",
-      "general_rules_li3_desc": "The PrimeX Expert Traders Initiative is available exclusively in selected jurisdictions.",
-      "general_rules_li4_desc": "New initiative trading accounts are issued and distributed on the 1st of every month. ",
-      "general_rules_li5_desc": "PrimeX Capital reserves the right to amend these terms and conditions without notice.",
+      "general_rules_li1_desc": "Traders are selected based on a trading history that aligns with our terms.",
+      "general_rules_li2_desc": "Initiative account trades and features match standard account specs with 1:100 leverage.",
+      "general_rules_li3_desc": "Clients are limited to one initiative account; any detected manipulation triggers suspension.",
+      "general_rules_li4_desc": "The PrimeX Expert Traders Initiative is available exclusively in selected jurisdictions.",
+      "general_rules_li5_desc": "New initiative trading accounts are issued and distributed on the 1st of every month.",
+      "general_rules_li6_desc": "PrimeX Capital reserves the right to amend these terms and conditions without notice.",
       "strategies_title": "Prohibited Trading Strategies",
       "strategies_li1_desc": "Internal & Cross-account hedging.",
       "strategies_li2_desc": "High-Frequency Trading (HFT).",
-      "strategies_li3_desc": "Prohibited trading practices in the company's General Terms apply.",
-      "registration_title": "Initiative Registration Form",
-      "registration_li1_desc": "Full Name: [Text Input Field that only accept letters and spaces]",
-      "registration_li2_desc": "Email Address: [Email Input Field with condition to use @ and .xxx]",
-      "registration_li3_desc": "Phone Number: [Country Code Dropdown + Phone Input Field that only accept numbers 0-9]",
-      "registration_li4_desc": "3-Month Trading History: [File Upload Field – Accepts XLSX or XLS files only]"
+      "strategies_li3_desc": "Prohibited trading practices in the company's General Terms apply."
     },
     "initiativeRegistration": {
       "badge": "Onboarding Portal",
@@ -4528,6 +4521,20 @@
       "success_title": "Success",
       "success_desc": "Application submitted. We will review your details and get in touch with you upon acceptance.",
       "close_btn": "Close"
+    },
+    "faq": {
+      "title": "Frequently Asked ",
+      "title1": "Questions",
+      "question_1": "",
+      "answer_1": "",
+      "question_2": "",
+      "answer_2": "",
+      "question_3": "",
+      "answer_3": "",
+      "question_4": "",
+      "answer_4": "",
+      "question_5": "",
+      "answer_5": ""
     }
   }
 }
