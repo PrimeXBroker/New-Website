@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
       description: t("fundedAccountPage.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/funded-account-page/funded-account-hero-dark.png",
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/funded-account-page/funded-account-hero.webp",
           width: 1200,
           height: 630,
           alt: t("fundedAccountPage.metaData.title"),

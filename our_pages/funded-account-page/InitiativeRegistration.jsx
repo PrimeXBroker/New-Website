@@ -92,14 +92,22 @@ const InitiativeRegistration = () => {
     },
     onSubmit: async (values) => {
       setLoading(true);
-      const updatedValues = {
-        name: values.full_name,
-        email: values.email,
-        contact: values.contact,
-        message: values.trading_history,
-      };
+      const formData = new FormData();
+      formData.append("full_name", values.full_name);
+      formData.append("email", values.email);
+      formData.append("contact", values.contact);
+      formData.append("trading_history", values.trading_history);
       try {
-        const res = await axios.post(``, updatedValues);
+        const res = await axios.post(
+          "https://primexbroker.com/api/add/funded-account",
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          },
+        );
+        console.log(res, "funded account form");
         if (res.data.success) {
           formik.resetForm();
           setLoading(false);
@@ -141,8 +149,7 @@ const InitiativeRegistration = () => {
     e.preventDefault();
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
       const file = e.dataTransfer.files[0];
-      formik.setFieldValue("trading_history", file);
-      formik.setFieldTouched("trading_history", true);
+      formik.setFieldValue("trading_history", file, true);
     }
   };
 
@@ -258,11 +265,10 @@ const InitiativeRegistration = () => {
                     type="file"
                     accept=".xlsx, .xls"
                     onChange={(event) => {
-                      formik.setFieldValue(
-                        "trading_history",
-                        event.currentTarget.files[0],
-                      );
-                      formik.setFieldTouched("trading_history", true);
+                      const file = event.currentTarget.files[0];
+                      if (file) {
+                        formik.setFieldValue("trading_history", file, true);
+                      }
                     }}
                     onBlur={formik.handleBlur}
                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"

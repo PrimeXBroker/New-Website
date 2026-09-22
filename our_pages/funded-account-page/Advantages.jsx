@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import overPaidUp from "@/public/animations/why-choose-us/over-paid-up-capital.json";
-import automatedTradingSpreads from "@/public/animations/why-choose-us/automated-trading-spreads-from-pips.json";
+import withdrawableProfits from "@/public/animations/funded-account/withdrawable-profits.json";
+import automatedTradingSpreads from "@/public/animations/funded-account/sponsored-account.json";
 import lucrativePartnership from "@/public/animations/why-choose-us/lucrative-partnership-programs.json";
 import Lottie from "lottie-react";
 import Image from "next/image";
@@ -24,7 +24,7 @@ const Advantages = () => {
       title1: t("feature_1_title1"),
       title2: t("feature_1_title2"),
       description: t("feature_1_description"),
-      icon: overPaidUp,
+      icon: withdrawableProfits,
     },
     {
       title1: t("feature_2_title1"),

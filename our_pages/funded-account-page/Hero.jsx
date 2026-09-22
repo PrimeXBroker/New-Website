@@ -32,7 +32,7 @@ const Hero = () => {
                 <Image
                   unoptimized={true}
                   src={
-                    theme === "dark"
+                    currentTheme === "dark"
                       ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/dark/Join+250%2C000%2B+traders+worldwide+icon.png"
                       : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/hero/light/Join+250%2C000%2B+traders+worldwide+icon.png"
                   }
@@ -68,15 +68,11 @@ const Hero = () => {
             <div className="flex justify-center md:justify-end mt-6 md:mt-0">
               <Image
                 unoptimized={true}
-                src={
-                  currentTheme === "dark"
-                    ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/funded-account-page/funded-account-hero-dark.png"
-                    : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/funded-account-page/funded-account-hero-light.png"
-                }
+                src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/funded-account-page/funded-account-hero.webp"
                 width="100"
                 height="100"
                 alt="Funded Account"
-                className="w-full h-auto sm:w-[92%]"
+                className="w-full sm:w-[80%] h-auto"
               />
             </div>
           </div>
