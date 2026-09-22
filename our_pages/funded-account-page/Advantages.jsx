@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import withdrawableProfits from "@/public/animations/funded-account/withdrawable-profits.json";
 import automatedTradingSpreads from "@/public/animations/funded-account/sponsored-account.json";
-import lucrativePartnership from "@/public/animations/why-choose-us/lucrative-partnership-programs.json";
+import renewableMonthly from "@/public/animations/funded-account/renewable-monthly.json";
 import Lottie from "lottie-react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
@@ -36,7 +36,7 @@ const Advantages = () => {
       title1: t("feature_3_title1"),
       title2: t("feature_3_title2"),
       description: t("feature_3_description"),
-      icon: lucrativePartnership,
+      icon: renewableMonthly,
     },
   ];
 
