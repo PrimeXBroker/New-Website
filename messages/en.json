@@ -4486,7 +4486,11 @@
     "tradingParameters": {
       "badge": "Trading Parameters",
       "title": "Terms & Conditions",
-      "selection_title": "Traders Selection Criteria",
+      "selection_title": "Selection Criteria",
+      "selection_li1_desc": "",
+      "selection_li2_desc": "",
+      "selection_li3_desc": "",
+      "selection_li4_desc": "",
       "general_rules_title": "General Rules",
       "general_rules_li1_desc": "Traders are selected based on a trading history that aligns with our terms.",
       "general_rules_li2_desc": "Initiative account trades and features match standard account specs with 1:100 leverage.",
@@ -4521,20 +4525,6 @@
       "success_title": "Success",
       "success_desc": "Application submitted. We will review your details and get in touch with you upon acceptance.",
       "close_btn": "Close"
-    },
-    "faq": {
-      "title": "Frequently Asked ",
-      "title1": "Questions",
-      "question_1": "",
-      "answer_1": "",
-      "question_2": "",
-      "answer_2": "",
-      "question_3": "",
-      "answer_3": "",
-      "question_4": "",
-      "answer_4": "",
-      "question_5": "",
-      "answer_5": ""
     }
   }
 }

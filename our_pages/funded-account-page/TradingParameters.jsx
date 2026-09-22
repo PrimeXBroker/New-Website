@@ -21,6 +21,18 @@ const TradingParameters = () => {
 
   const rulesData = [
     {
+      category: t("selection_title"),
+      icon: bonusEligibility,
+      items: [
+        t("selection_li1_desc"),
+        t("selection_li2_desc"),
+        t("selection_li3_desc"),
+        t("selection_li4_desc"),
+      ],
+      imageClasses:
+        "absolute -bottom-8 end-32 rotate-[14deg] w-[138px] h-[157px]",
+    },
+    {
       category: t("general_rules_title"),
       icon: generalRules,
       items: [

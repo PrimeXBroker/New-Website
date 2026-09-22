@@ -52,11 +52,13 @@ const InitiativeRegistration = () => {
   ];
 
   const formik = useFormik({
+    enableReinitialize: true,
     initialValues: {
       full_name: "",
       email: "",
       contact: "",
       trading_history: null,
+      language: locale,
     },
     validationSchema: Yup.object({
       full_name: Yup.string()
@@ -97,6 +99,7 @@ const InitiativeRegistration = () => {
       formData.append("email", values.email);
       formData.append("contact", values.contact);
       formData.append("trading_history", values.trading_history);
+      formData.append("language", locale || values.language);
       try {
         const res = await axios.post(
           "https://primexbroker.com/api/add/funded-account",
@@ -121,6 +124,12 @@ const InitiativeRegistration = () => {
       }
     },
   });
+
+  useEffect(() => {
+    if (locale) {
+      formik.setFieldValue("language", locale);
+    }
+  }, [locale]);
 
   const handleNameChange = (e) => {
     const cleanValue = e.target.value.replace(/[^A-Za-z\s]/g, "");
