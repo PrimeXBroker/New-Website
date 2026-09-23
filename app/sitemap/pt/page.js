@@ -249,6 +249,12 @@ export default function PtSitemapPage() {
       priority: 0.8,
       changefreq: "daily",
     },
+    {
+      url: "https://primexcapital.com/pt/traders-initiative",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
   ];
 
   return (

@@ -6,7 +6,7 @@ export async function generateMetadata({ params }) {
   const messages = (await import(`../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });
-  const url = `https://www.primexcapital.com/${locale}/funded-account`;
+  const url = `https://www.primexcapital.com/${locale}/traders-initiative`;
 
   return {
     title: t("fundedAccountPage.metaData.title"),
@@ -14,13 +14,13 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: url,
       languages: {
-        en: "https://www.primexcapital.com/en/funded-account",
-        ar: "https://www.primexcapital.com/ar/funded-account",
-        ku: "https://www.primexcapital.com/ku/funded-account",
-        es: "https://www.primexcapital.com/es/funded-account",
-        ps: "https://www.primexcapital.com/ps/funded-account",
-        pt: "https://www.primexcapital.com/pt/funded-account",
-        fa: "https://www.primexcapital.com/fa/funded-account",
+        en: "https://www.primexcapital.com/en/traders-initiative",
+        ar: "https://www.primexcapital.com/ar/traders-initiative",
+        ku: "https://www.primexcapital.com/ku/traders-initiative",
+        es: "https://www.primexcapital.com/es/traders-initiative",
+        ps: "https://www.primexcapital.com/ps/traders-initiative",
+        pt: "https://www.primexcapital.com/pt/traders-initiative",
+        fa: "https://www.primexcapital.com/fa/traders-initiative",
       },
     },
     openGraph: {

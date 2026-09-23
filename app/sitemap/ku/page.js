@@ -249,6 +249,12 @@ export default function KuSitemapPage() {
       priority: 0.8,
       changefreq: "daily",
     },
+    {
+      url: "https://primexcapital.com/ku/traders-initiative",
+      lastModified: new Date(),
+      priority: 0.8,
+      changefreq: "daily",
+    },
   ];
 
   return (
