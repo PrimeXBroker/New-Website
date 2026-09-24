@@ -4463,14 +4463,14 @@
       "step1Title": "Apply",
       "step1Desc": "Complete the registration form to secure your selection chance.",
       "step2Title": "Get Funded",
-      "step2Desc": "Receive your funded live account details with a $200 credit.",
-      "step3Title": "Earn $200",
-      "step3Desc": "Start trading with no timelimit & meet your profit target.",
+      "step2Desc": "Receive your funded live account details with a $100 credit.",
+      "step3Title": "Trade",
+      "step3Desc": "Reach your $200 profit target flexibly with no time limit.",
       "step4Title": "Withdraw",
-      "step4Desc": "Get your profits trasnfered directly to your account wallet."
+      "step4Desc": "Get your profits transferred directly to your wallet."
     },
     "advantages": {
-      "title1": "Empowing your ",
+      "title1": "Empowering your ",
       "title2": "Trading ",
       "title3": "Journey",
       "feature_1_title1": "$100 Sponsored",
@@ -4480,7 +4480,7 @@
       "feature_2_title2": "Profits",
       "feature_2_description": "Hit your $200 profit target and withdraw your profits!",
       "feature_3_title1": "Monthly",
-      "feature_3_title2": "Cahce",
+      "feature_3_title2": "chance",
       "feature_3_description": "100 performing trader will be selected every month."
     },
     "tradingParameters": {

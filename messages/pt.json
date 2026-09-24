@@ -4442,5 +4442,89 @@
       "description": "Explore uma gama diversificada de ativos, incluindo CFDs de FX, Índices, Commodities e Ações.",
       "buttonText": "Abrir Conta"
     }
+  },
+  "fundedAccountPage": {
+    "metaData": {
+      "title": "Iniciativa de Traders | PrimeX Capital",
+      "description": "Participe da Iniciativa de Traders da PrimeX e opere sem risco com uma conta patrocinada e com suporte financeiro. Envie seu histórico de trading, atinja suas metas de lucro e saque seus ganhos hoje mesmo!"
+    },
+    "banner": {
+      "badge": "Iniciativa de Traders PrimeX",
+      "title1": "Mostre seu potencial: Opere ",
+      "title2": "sem risco ",
+      "title3": "com a Iniciativa de Traders da PrimeX!",
+      "description": "Garanta a chance de obter sua conta patrocinada de $100 e alcance seus objetivos operacionais hoje!",
+      "btnTxt": "Inscreva-se Agora"
+    },
+    "journey": {
+      "title1": "A jornada ",
+      "title2": "da iniciativa ",
+      "title3": "passo a passo",
+      "step1Title": "Inscrição",
+      "step1Desc": "Preencha o formulário para garantir sua chance de seleção",
+      "step2Title": "Receba o Suporte",
+      "step2Desc": "Receba os dados da sua conta real patrocinada com saldo de $100",
+      "step3Title": "Opere",
+      "step3Desc": "Alcance sua meta de $200 de lucro com flexibilidade e sem limite de tempo",
+      "step4Title": "Saque",
+      "step4Desc": "Transfira seus lucros diretamente para sua carteira"
+    },
+    "advantages": {
+      "title1": "Evolua ",
+      "title2": "sua experiência ",
+      "title3": "no trading",
+      "feature_1_title1": "Conta patrocinada",
+      "feature_1_title2": "de $100",
+      "feature_1_description": "Inicie sua jornada no mercado com uma conta real com suporte de saldo",
+      "feature_2_title1": "Lucros",
+      "feature_2_title2": "sacáveis",
+      "feature_2_description": "Alcance sua meta de lucro de $200 e retire seus ganhos!",
+      "feature_3_title1": "Oportunidade",
+      "feature_3_title2": "mensal",
+      "feature_3_description": "100 traders de alto desempenho serão selecionados mensalmente"
+    },
+    "tradingParameters": {
+      "badge": "Parâmetros Operacionais",
+      "title": "Termos e Condições da Iniciativa",
+      "selection_title": "Critérios de Seleção dos Traders",
+      "selection_li1_desc": "Esta iniciativa é válida tanto para clientes atuais quanto para novos clientes verificados",
+      "selection_li2_desc": "A Iniciativa de Traders da PrimeX está disponível exclusivamente em países selecionados",
+      "selection_li3_desc": "Os participantes serão selecionados com base no histórico de operações enviado no formulário",
+      "selection_li4_desc": "Após a pré-seleção do trader, apenas contas devidamente verificadas serão aprovadas",
+      "general_rules_title": "Regras Gerais",
+      "general_rules_li1_desc": "A conta da iniciativa segue os parâmetros da conta Standard",
+      "general_rules_li2_desc": "A alavancagem aplicada à conta da iniciativa será de 1:100",
+      "general_rules_li3_desc": "A meta estipulada para qualificação ao saque é de $200 de lucro",
+      "general_rules_li4_desc": "Permite-se apenas uma conta por cliente; fraudes acarretarão suspensão imediata",
+      "general_rules_li5_desc": "As contas operacionais da iniciativa são concedidas e distribuídas no dia 1 de cada mês",
+      "general_rules_li6_desc": "A PrimeX Capital reserva-se o direito de alterar estes termos e condições sem aviso prévio",
+      "strategies_title": "Estratégias Operacionais Proibidas",
+      "strategies_li1_desc": "Hedging interno e entre contas distintas",
+      "strategies_li2_desc": "Negociação de Alta Frequência (HFT)",
+      "strategies_li3_desc": "Aplicam-se todas as restrições operacionais descritas nos Termos Gerais da empresa"
+    },
+    "initiativeRegistration": {
+      "badge": "Portal de Cadastro",
+      "title": "Formulário de Inscrição da Iniciativa",
+      "full_name_label": "Nome Completo",
+      "full_name_placeholder": "Digite seu nome completo",
+      "email_label": "E-mail",
+      "email_placeholder": "seu.email@exemplo.com",
+      "contact_label": "Telefone",
+      "contact_placeholder": "Digite seu número de telefone",
+      "trading_history_label": "Histórico Operacional (2 a 3 meses)",
+      "upload_title": "Arraste e solte o arquivo aqui ou clique para enviar",
+      "upload_subtitle": "Somente arquivos .XLSX ou .XLS",
+      "apply_btn": "Inscreva-se Agora",
+      "full_name_validation_error": "Insira um nome válido",
+      "full_name_required_error": "O nome completo é obrigatório",
+      "email_validation_error": "Insira um endereço de e-mail válido",
+      "email_required_error": "O e-mail é obrigatório",
+      "contact_required_error": "O telefone é obrigatório",
+      "trading_history_required_error": "O arquivo de histórico operacional é obrigatório",
+      "success_title": "Muito obrigado!",
+      "success_desc": "Solicitação enviada com sucesso! Analisaremos os dados e entraremos em contato após a aprovação.",
+      "close_btn": "Fechar"
+    }
   }
 }

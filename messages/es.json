@@ -4442,5 +4442,89 @@
       "description": "Sumérjase en una amplia gama de activos que incluyen CFDs de FX, Índices, Materias Primas y Acciones.",
       "buttonText": "Abrir Conta"
     }
+  },
+  "fundedAccountPage": {
+    "metaData": {
+      "title": "Iniciativa para Traders | PrimeX Capital",
+      "description": "Únete a la Iniciativa para Traders de PrimeX y opera sin riesgo con una cuenta respaldada y patrocinada. ¡Aplica con tu historial de trading, alcanza tus objetivos de ganancias y retira tus fondos hoy mismo!"
+    },
+    "banner": {
+      "badge": "Iniciativa para Traders de PrimeX",
+      "title1": "Demuestra tu potencial: Opera ",
+      "title2": "sin riesgo ",
+      "title3": "con la Iniciativa para Traders de PrimeX!",
+      "description": "¡Aprovecha la oportunidad de obtener tu cuenta respaldada con $100 y alcanza tus metas de trading hoy!",
+      "btnTxt": "Aplica ahora"
+    },
+    "journey": {
+      "title1": "El camino ",
+      "title2": "de la ",
+      "title3": "iniciativa paso a paso",
+      "step1Title": "Aplica",
+      "step1Desc": "Completa el formulario de registro para asegurar tu oportunidad de selección",
+      "step2Title": "Obtén respaldo",
+      "step2Desc": "Recibe los datos de tu cuenta real respaldada con un saldo de $100",
+      "step3Title": "Opera",
+      "step3Desc": "Alcanza tu objetivo de $200 de ganancia de forma flexible y sin límite de tiempo",
+      "step4Title": "Retira",
+      "step4Desc": "Transfiere tus ganancias directamente a tu billetera"
+    },
+    "advantages": {
+      "title1": "Mejora ",
+      "title2": "tu experiencia ",
+      "title3": "de trading",
+      "feature_1_title1": "Cuenta respaldada",
+      "feature_1_title2": "de $100",
+      "feature_1_description": "Inicia tu camino en el trading con una cuenta real con fondos asignados",
+      "feature_2_title1": "Ganancias",
+      "feature_2_title2": "retirables",
+      "feature_2_description": "¡Alcanza tu objetivo de $200 de ganancia y retira tus beneficios!",
+      "feature_3_title1": "Oportunidad",
+      "feature_3_title2": "mensual",
+      "feature_3_description": "Se seleccionarán 100 traders destacados cada mes"
+    },
+    "tradingParameters": {
+      "badge": "Parámetros de trading",
+      "title": "Términos y condiciones de la iniciativa",
+      "selection_title": "Criterios de selección de traders",
+      "selection_li1_desc": "Esta iniciativa está disponible tanto para clientes actuales como para nuevos clientes verificados",
+      "selection_li2_desc": "La Iniciativa para Traders de PrimeX está disponible exclusivamente en países seleccionados",
+      "selection_li3_desc": "Los traders serán seleccionados con base en el historial de trading adjunto en el formulario de registro",
+      "selection_li4_desc": "Una vez seleccionado el trader, solo se considerarán clientes verificados para continuar",
+      "general_rules_title": "Reglas generales",
+      "general_rules_li1_desc": "La cuenta de la iniciativa coincide con las especificaciones de la cuenta Estándar (Standard)",
+      "general_rules_li2_desc": "El apalancamiento de la cuenta de la iniciativa será de 1:100",
+      "general_rules_li3_desc": "El objetivo a alcanzar es una ganancia de $200 para calificar al retiro",
+      "general_rules_li4_desc": "Cada cliente tiene derecho a una sola cuenta de la iniciativa; cualquier manipulación conllevará la suspensión",
+      "general_rules_li5_desc": "Las cuentas de trading de la iniciativa se emiten y distribuyen el día 1 de cada mes",
+      "general_rules_li6_desc": "PrimeX Capital se reserva el derecho de modificar estos términos y condiciones sin previo aviso",
+      "strategies_title": "Estrategias de trading prohibidas",
+      "strategies_li1_desc": "Cobertura interna y entre cuentas cruzadas (Hedging)",
+      "strategies_li2_desc": "Trading de alta frecuencia (HFT)",
+      "strategies_li3_desc": "Se aplican las prácticas de trading prohibidas establecidas en los Términos Generales de la empresa"
+    },
+    "initiativeRegistration": {
+      "badge": "Portal de registro",
+      "title": "Formulario de registro en la iniciativa",
+      "full_name_label": "Nombre completo",
+      "full_name_placeholder": "Ingresa tu nombre completo",
+      "email_label": "Correo electrónico",
+      "email_placeholder": "tu.correo@ejemplo.com",
+      "contact_label": "Número de teléfono",
+      "contact_placeholder": "Ingresa tu número de teléfono",
+      "trading_history_label": "Historial de trading de 2-3 meses",
+      "upload_title": "Arrastra y suelta el archivo aquí o haz clic para subirlo",
+      "upload_subtitle": "Solo archivos .XLSX o .XLS",
+      "apply_btn": "Aplica ahora",
+      "full_name_validation_error": "Por favor, ingresa un nombre válido",
+      "full_name_required_error": "El nombre completo es obligatorio",
+      "email_validation_error": "Por favor, ingresa un correo electrónico válido",
+      "email_required_error": "El correo electrónico es obligatorio",
+      "contact_required_error": "El número de teléfono es obligatorio",
+      "trading_history_required_error": "El archivo del historial de trading es obligatorio",
+      "success_title": "¡Muchas gracias!",
+      "success_desc": "¡Solicitud enviada con éxito! La revisaremos y nos pondremos en contacto contigo tras la aceptación.",
+      "close_btn": "Cerrar"
+    }
   }
 }
