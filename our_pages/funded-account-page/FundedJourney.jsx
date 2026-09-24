@@ -48,7 +48,7 @@ const FundedJourney = () => {
               {index < steps.length - 1 && (
                 <div
                   aria-hidden="true"
-                  className="hidden md:block absolute top-[35px] left-12 -right-12 h-[1px] -translate-y-1/2 bg-pcp/45 dark:bg-pcp-dark/45"
+                  className="hidden md:block absolute top-[35px] start-12 -end-12 h-[1px] -translate-y-1/2 bg-pcp/45 dark:bg-pcp-dark/45"
                 />
               )}
               <div className="relative mb-5 w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] rounded-full border-[2px] border-pcp dark:border-pcp-dark bg-p dark:bg-p-dark flex items-center justify-center shrink-0">
