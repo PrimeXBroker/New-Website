@@ -43,7 +43,7 @@ const FundedJourney = () => {
           {steps.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-start text-left relative pr-0 md:pr-6"
+              className="flex flex-col items-start text-start relative pr-0 md:pr-6"
             >
               {index < steps.length - 1 && (
                 <div
