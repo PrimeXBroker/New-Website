@@ -529,7 +529,7 @@ const Footer = () => {
                 />
               </Link>
               <Link
-                href="https://www.instagram.com/primexcapital.ltd"
+                href="https://www.instagram.com/primex.capital.ltd"
                 target="_blank"
               >
                 <FaInstagram

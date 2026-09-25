@@ -85,7 +85,7 @@ export default async function RootLayout({ children }) {
           id="openai-chatgpt-pixel"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: `!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"Mm2Pz4FWZM8xHV5eFpADh8",debug:true});`,
+            __html: `!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"L2erm1UtZoSNoSF5BcV79Q",debug:true});`,
           }}
         />
       </head>

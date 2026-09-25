@@ -57,7 +57,8 @@
     "regulations": "التراخيص",
     "investment": "صندوق الاستثمار",
     "competition": "مسابقة التداول",
-    "cashback": "كاش باك"
+    "cashback": "كاش باك",
+    "traders_initiative": "مبادرة المتداولين"
   },
   "home": {
     "metaData": {
@@ -4444,7 +4445,7 @@
       "email_placeholder": "your.email@example.com",
       "contact_label": "رقم الهاتف",
       "contact_placeholder": "ادخل رقم هاتفك",
-      "trading_history_label": "سجل تداول من 2-3 أشهر",
+      "trading_history_label": "2-3 أشهر من سجل تداولاتك",
       "upload_title": "اضغط هنا لرفع الملف أو اسحب الملف هنا",
       "upload_subtitle": "ملفات .XLSX أو .XLS فقط",
       "apply_btn": "قدّم الآن",
