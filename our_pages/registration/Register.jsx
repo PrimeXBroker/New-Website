@@ -35,6 +35,7 @@ export default function Register({ step, setStep }) {
   const url = new URL(window.location.href);
   const pidParam = url.searchParams.get("pid");
   const lid = url.searchParams.get("lid");
+  const utmParams = url.search ? url.search.substring(1) : "";
 
   const t = useTranslations("registration.register");
   const p = useTranslations("registration.app");
@@ -67,6 +68,7 @@ export default function Register({ step, setStep }) {
           phone: `${selectedPhone?.code}${formData?.phone}`,
           ...(pidParam && { partnerId: parseInt(pidParam) }),
           ...(lid && { referralLinkId: parseInt(lid) }),
+          ...(utmParams && { utmParams: utmParams }),
         };
         const config = {
           method: "put",
@@ -97,7 +99,7 @@ export default function Register({ step, setStep }) {
 
             console.log(
               JSON.stringify(response, null, 2),
-              "response send email"
+              "response send email",
             );
             if (response) {
               setFormData({
