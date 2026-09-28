@@ -12,6 +12,10 @@ import { useState } from "react";
 import axios from "axios";
 import moment from "moment-timezone";
 import { phoneOptions } from "@/utils/data";
+import {
+  getTrackingQueryString,
+  readStoredTrackingParams,
+} from "@/utilities/trackingParams";
 
 export default function Register({ step, setStep }) {
   const locale = useLocale();
@@ -32,11 +36,6 @@ export default function Register({ step, setStep }) {
   const [selectedPhone, setSelectedPhone] = useState(phoneOptions[0]);
   const [isChecked, setIsChecked] = useState(true);
 
-  const url = new URL(window.location.href);
-  const pidParam = url.searchParams.get("pid");
-  const lid = url.searchParams.get("lid");
-  const utmParams = url.search ? url.search.substring(1) : "";
-
   const t = useTranslations("registration.register");
   const p = useTranslations("registration.app");
   const d = useTranslations("primeXTradingApp.downloadAppToady");
@@ -52,6 +51,23 @@ export default function Register({ step, setStep }) {
 
     if (isChecked) {
       try {
+        // Query params client par hi parhne hain (SSR me `window` nahi hota)
+        // aur URL me na hone par session me stored tracking params fallback hain.
+        const origin =
+          typeof window !== "undefined"
+            ? window.location.origin
+            : "https://primexcapital.com";
+        const search =
+          typeof window !== "undefined" ? window.location.search : "";
+        const queryString = search
+          ? search.substring(1)
+          : getTrackingQueryString();
+        const url = new URL(queryString ? `/?${queryString}` : "/", origin);
+        const storedParams = readStoredTrackingParams();
+        const pidParam = url.searchParams.get("pid") || storedParams.get("pid");
+        const lid = url.searchParams.get("lid") || storedParams.get("lid");
+        const utmParams = queryString || getTrackingQueryString();
+
         const birthDateObj =
           formData.birthDate instanceof Date
             ? formData.birthDate

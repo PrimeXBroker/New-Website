@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import Script from "next/script";
 import FallbackLoader from "@/components/LoadingSpinner";
 import RedirectionHandler from "@/components/common/RedirectionHandler";
+import QueryParamsPreserver from "@/components/common/QueryParamsPreserver";
 import MousePartialEffect from "@/components/common/MousePartialEffect";
 import ReduxProvider from "@/redux/ReduxProvider";
 import Providers from "@/components/Providers";
@@ -92,6 +93,7 @@ export default async function RootLayout({ children }) {
       <body>
         <ReduxProvider>
           <RedirectionHandler />
+          <QueryParamsPreserver />
           <Suspense fallback={<FallbackLoader />}>
             <Providers
               messages={messages}
