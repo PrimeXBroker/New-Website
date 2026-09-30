@@ -62,17 +62,17 @@ const AccountTypes = () => {
       description: t("acc4.description"),
       features: t.raw("acc4.features"),
     },
-    {
-      id: 5,
-      title: t("acc5.title"),
-      iconDark:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Hamurabi+Account.png",
-      iconLight:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Hamurabi+Account.png",
-      minimumDeposit: t("acc5.minimumDeposit"),
-      description: t("acc5.description"),
-      features: t.raw("acc5.features"),
-    },
+    // {
+    //   id: 5,
+    //   title: t("acc5.title"),
+    //   iconDark:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Hamurabi+Account.png",
+    //   iconLight:
+    //     "https://primexcapital.s3.eu-north-1.amazonaws.com/website/home-v2/account-types/dark/Hamurabi+Account.png",
+    //   minimumDeposit: t("acc5.minimumDeposit"),
+    //   description: t("acc5.description"),
+    //   features: t.raw("acc5.features"),
+    // },
   ];
 
   useEffect(() => {
@@ -301,9 +301,7 @@ const AccountTypes = () => {
             <TiArrowLeftThick className="text-nw dark:text-nw-dark group-hover:text-nb dark:group-hover:text-nb-dark transition-transform duration-500 ease-in-out" />
           </button>
           <button className="accounts-swiper-button-next group !bg-tl dark:!bg-tl-dark hover:!bg-pcp dark:hover:!bg-pcp group transition-colors duration-300 ease-in-out">
-            <TiArrowRightThick
-              className="text-nw dark:text-nw-dark group-hover:text-nb dark:group-hover:text-nb-dark transition-transform duration-500 ease-in-out"
-            />
+            <TiArrowRightThick className="text-nw dark:text-nw-dark group-hover:text-nb dark:group-hover:text-nb-dark transition-transform duration-500 ease-in-out" />
           </button>
         </div>
       </div>

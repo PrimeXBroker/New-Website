@@ -955,13 +955,13 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("account_types")}
                 </LocaleLink>
-                <LocaleLink
+                {/* <LocaleLink
                   href="/hammurabi-account"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
                   {t("hammurabi_account")}
-                </LocaleLink>
+                </LocaleLink> */}
                 <LocaleLink
                   href="/primex-spreads"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"

@@ -488,7 +488,7 @@ const DesktopHeader = ({ locale }) => {
                       {t("account_types")}
                     </LocaleLink>
                   </li>
-                  <li>
+                  {/* <li>
                     <LocaleLink
                       href="/hammurabi-account"
                       onClick={closeDropdown}
@@ -496,7 +496,7 @@ const DesktopHeader = ({ locale }) => {
                     >
                       {t("hammurabi_account")}
                     </LocaleLink>
-                  </li>
+                  </li> */}
                   <li>
                     <LocaleLink
                       href="/primex-spreads"
