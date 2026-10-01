@@ -57,6 +57,7 @@ const InitiativeRegistration = () => {
       full_name: "",
       email: "",
       contact: "",
+      referred_by: "",
       trading_history: null,
       language: locale,
     },
@@ -70,6 +71,7 @@ const InitiativeRegistration = () => {
           t("email_validation_error"),
         )
         .required(t("email_required_error")),
+      referred_by: Yup.string().matches(/^\d*$/, "Only digits are allowed"),
       trading_history: Yup.mixed()
         .required(t("trading_history_required_error"))
         .test("fileType", t("upload_subtitle"), (value) => {
@@ -98,6 +100,7 @@ const InitiativeRegistration = () => {
       formData.append("full_name", values.full_name);
       formData.append("email", values.email);
       formData.append("contact", values.contact);
+      formData.append("referred_by", values.referred_by || "");
       formData.append("trading_history", values.trading_history);
       formData.append("language", locale || values.language);
       try {
@@ -134,6 +137,11 @@ const InitiativeRegistration = () => {
   const handleNameChange = (e) => {
     const cleanValue = e.target.value.replace(/[^A-Za-z\s]/g, "");
     formik.setFieldValue("full_name", cleanValue);
+  };
+
+  const handleReferredByChange = (e) => {
+    const cleanValue = e.target.value.replace(/\D/g, "");
+    formik.setFieldValue("referred_by", cleanValue);
   };
 
   const handlePhoneKeyDown = (e) => {
@@ -251,6 +259,32 @@ const InitiativeRegistration = () => {
               {formik.touched.contact && formik.errors.contact && (
                 <p className="text-xs text-rc dark:text-rc-dark mt-1">
                   {formik.errors.contact}
+                </p>
+              )}
+            </div>
+
+            {/* Referred By (Optional - Digits Only) */}
+            <div className="w-full mb-3">
+              <label className="text-xs text-ts dark:text-ts-dark">
+                {t("referred_by_label") || "Referred By"}
+                <input
+                  type="text"
+                  name="referred_by"
+                  inputMode="numeric"
+                  onChange={handleReferredByChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.referred_by}
+                  placeholder={t("referred_by_placeholder") || "e.g. 12345"}
+                  className={`appearance-none mt-1 border border-e1 dark:border-e1-dark rounded-[4px] w-full py-[16px] px-[12px] text-ts dark:text-ts-dark placeholder:text-ts dark:placeholder:text-ts-dark bg-e1 dark:bg-e1-dark focus:outline-none text-base ${
+                    formik.touched.referred_by && formik.errors.referred_by
+                      ? "border border-rc dark:border-rc-dark"
+                      : ""
+                  }`}
+                />
+              </label>
+              {formik.touched.referred_by && formik.errors.referred_by && (
+                <p className="text-xs text-rc dark:text-rc-dark mt-1">
+                  {formik.errors.referred_by}
                 </p>
               )}
             </div>

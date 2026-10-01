@@ -4523,6 +4523,9 @@
       "email_required_error": "Email address is required",
       "contact_required_error": "Phone number is required",
       "trading_history_required_error": "Trading history file is required",
+      "referred_by_label": "Referred By",
+      "referred_by_placeholder": "Enter referral code",
+      "referred_by_validation_error": "Please enter digits only",
       "success_title": "Thank you!",
       "success_desc": "Application submitted successfully! We'll review it and get in touch upon acceptance.",
       "close_btn": "Close"
