@@ -4455,6 +4455,9 @@
       "email_required_error": "عنوان البريد الإلكتروني مطلوب",
       "contact_required_error": "رقم الهاتف مطلوب",
       "trading_history_required_error": "ملف سجل التداول مطلوب",
+      "referred_by_label": "كود الإحالة",
+      "referred_by_placeholder": "أدخل رمز الإحالة",
+      "referred_by_validation_error": "الرجاء إدخال أرقام فقط",
       "success_title": "شكراً لك!",
       "success_desc": "تم إرسال الطلب بنجاح! سنقوم بمراجعته والتواصل معك فور القبول.",
       "close_btn": "إغلاق"

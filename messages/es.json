@@ -4523,6 +4523,9 @@
       "email_required_error": "El correo electrónico es obligatorio",
       "contact_required_error": "El número de teléfono es obligatorio",
       "trading_history_required_error": "El archivo del historial de trading es obligatorio",
+      "referred_by_label": "Referido por",
+      "referred_by_placeholder": "Ingrese el código de referencia",
+      "referred_by_validation_error": "Por favor ingrese solo números",
       "success_title": "¡Muchas gracias!",
       "success_desc": "¡Solicitud enviada con éxito! La revisaremos y nos pondremos en contacto contigo tras la aceptación.",
       "close_btn": "Cerrar"

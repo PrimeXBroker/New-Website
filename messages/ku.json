@@ -4525,6 +4525,9 @@
       "email_required_error": "ئیمەیڵ پێویستە",
       "contact_required_error": "ژمارەی تەلەفۆن پێویستە",
       "trading_history_required_error": "فایلی مێژووی مامەڵەکردن پێویستە",
+      "referred_by_label": "ئاماژەکراوە لەلایەن",
+      "referred_by_placeholder": "کۆدی ئاماژەکردن بنووسە",
+      "referred_by_validation_error": "تکایە تەنها ژمارە بنووسە",
       "success_title": "سوپاس!",
       "success_desc": "داواکارییەکە بە سەرکەوتوویی نێردرا! پێداچوونەوەی بۆ دەکەین و لە کاتی وەرگرتندا پەیوەندیت پێوە دەکەین.",
       "close_btn": "داخستن"

@@ -4529,6 +4529,9 @@
       "email_required_error": "آدرس ایمیل الزامی است",
       "contact_required_error": "شماره تلفن الزامی است",
       "trading_history_required_error": "فایل سابقه معاملاتی الزامی است",
+      "referred_by_label": "معرفی شده توسط",
+      "referred_by_placeholder": "کد معرف را وارد کنید",
+      "referred_by_validation_error": "لطفاً فقط عدد وارد کنید",
       "success_title": "سپاسگزاریم!",
       "success_desc": "درخواست شما با موفقیت ارسال شد! مدارک بررسی شده و پس از تأیید با شما تماس خواهیم گرفت.",
       "close_btn": "بستن"

@@ -4523,6 +4523,9 @@
       "email_required_error": "بریښنالیک اړین دی",
       "contact_required_error": "د تلیفون شمیره اړینه ده",
       "trading_history_required_error": "د سوداګرۍ تاریخچې فایل اړین دی",
+      "referred_by_label": "د چا لخوا معرفي شوی",
+      "referred_by_placeholder": "د معرفي کولو کوډ داخل کړئ",
+      "referred_by_validation_error": "مهرباني وکړئ یوازې ارقام داخل کړئ",
       "success_title": "مننه!",
       "success_desc": "ستاسو غوښتنه په بریا سره وسپارل شوه! موږ به یې وڅېړو او د منل کېدو پر مهال به تاسو سره اړیکه ونیسو.",
       "close_btn": "بندول"
