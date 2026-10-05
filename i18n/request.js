@@ -3,7 +3,7 @@ import { getRequestConfig } from "next-intl/server";
 import { hasLocale } from "next-intl";
 
 // Can be imported from a shared config
-const locales = ["en", "ar", "ku", "es", "ps", "pt", "fa"];
+const locales = ["en", "ar", "ku"];
 
 export default getRequestConfig(async ({ requestLocale }) => {
   const requested = await requestLocale;

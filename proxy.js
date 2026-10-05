@@ -5,7 +5,7 @@ import { deepLinkMiddleware } from "./middleware/deepLinkMiddleware";
 import { NextResponse } from "next/server";
 
 const routing = defineRouting({
-  locales: ["en", "ar", "ku", "es", "ps", "pt", "fa"],
+  locales: ["en", "ar", "ku"],
   defaultLocale: "en",
 });
 

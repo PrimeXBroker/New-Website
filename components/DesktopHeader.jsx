@@ -23,31 +23,31 @@ const DesktopHeader = ({ locale }) => {
     text:
       locale === "ar"
         ? "عربي"
-        : locale === "es"
-          ? "Español"
-          : locale === "ps"
-            ? "پښتو"
-            : locale === "ku"
-              ? "کوردی"
-              : locale === "pt"
-                ? "Português"
-                : locale === "fa"
-                  ? "Persian"
-                  : "English",
+        : // : locale === "es"
+          //   ? "Español"
+          //   : locale === "ps"
+          //     ? "پښتو"
+          locale === "ku"
+          ? "کوردی"
+          : // : locale === "pt"
+            //   ? "Português"
+            //   : locale === "fa"
+            //     ? "Persian"
+            "English",
     flag:
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
-        : locale === "es"
-          ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
-          : locale === "ps"
-            ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
-            : locale === "ku"
-              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
-              : locale === "pt"
-                ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
-                : locale === "fa"
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
-                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
+        : // : locale === "es"
+          //   ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
+          //   : locale === "ps"
+          //     ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
+          locale === "ku"
+          ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
+          : // : locale === "pt"
+            //   ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
+            //   : locale === "fa"
+            //     ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg",
   });
   const [selectedLocation, setSelectedLocation] = useState({
     name: "CMA UAE",
@@ -123,31 +123,31 @@ const DesktopHeader = ({ locale }) => {
     const text =
       locale === "ar"
         ? "عربي"
-        : locale === "es"
-          ? "Español"
-          : locale === "ps"
-            ? "پښتو"
-            : locale === "ku"
-              ? "کوردی"
-              : locale === "pt"
-                ? "Português"
-                : locale === "fa"
-                  ? "Persian"
-                  : "English";
+        : // : locale === "es"
+          //   ? "Español"
+          //   : locale === "ps"
+          //     ? "پښتو"
+          locale === "ku"
+          ? "کوردی"
+          : // : locale === "pt"
+            //   ? "Português"
+            //   : locale === "fa"
+            //     ? "Persian"
+            "English";
     const flag =
       locale === "ar"
         ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/ar-flag.svg"
-        : locale === "es"
-          ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
-          : locale === "ps"
-            ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
-            : locale === "ku"
-              ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
-              : locale === "pt"
-                ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
-                : locale === "fa"
-                  ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
-                  : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg";
+        : // : locale === "es"
+          //   ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/expanol.png"
+          //   : locale === "ps"
+          //     ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/afghanistan.png"
+          locale === "ku"
+          ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/Khurdish.webp"
+          : // : locale === "pt"
+            //   ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/portugal.png"
+            //   : locale === "fa"
+            //     ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/iran.png"
+            "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/en-flag.svg";
     const initialLanguage = { text, flag };
     setLanguage(initialLanguage);
     localStorage.setItem("language", JSON.stringify(initialLanguage));
@@ -1102,7 +1102,7 @@ const DesktopHeader = ({ locale }) => {
                       <span className="ml-[5px]">کوردی</span>
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href={
                         currentLocale === "es"
@@ -1127,8 +1127,8 @@ const DesktopHeader = ({ locale }) => {
                       />
                       <span className="ml-[5px]">Español</span>
                     </Link>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <Link
                       href={
                         currentLocale === "ps"
@@ -1153,8 +1153,8 @@ const DesktopHeader = ({ locale }) => {
                       />
                       <span className="ml-[5px]">پښتو</span>
                     </Link>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <Link
                       href={
                         currentLocale === "pt"
@@ -1179,8 +1179,8 @@ const DesktopHeader = ({ locale }) => {
                       />
                       <span className="ml-[5px]">Português</span>
                     </Link>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <Link
                       href={
                         currentLocale === "fa"
@@ -1205,7 +1205,7 @@ const DesktopHeader = ({ locale }) => {
                       />
                       <span className="ml-[5px]">Persian</span>
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               )}
             </li>
