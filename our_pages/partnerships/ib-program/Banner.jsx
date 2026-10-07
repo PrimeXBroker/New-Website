@@ -1,20 +1,18 @@
 "use client";
 import Image from "next/image";
-import { useLocale, useTranslations } from "next-intl";
-import { getRegisterUrl } from "@/utilities/getRegisterUrl";
+import { useTranslations } from "next-intl";
 import CustomYellowButton from "@/components/common/CustomYellowButton";
 import { useTheme } from "next-themes";
-import { useRouter } from "next/navigation";
 
 const Banner = () => {
-  const router = useRouter();
-  const locale = useLocale();
   const { theme } = useTheme();
   const t = useTranslations("ibProgram.banner");
 
   const handleClick = () => {
-    const url = getRegisterUrl(locale);
-    router.push(url);
+    const formElement = document.getElementById("ib-form");
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
