@@ -57,7 +57,7 @@ function WebinarForm() {
 
   const fetchUpcomingWebinars = async () => {
     const res = await axios.get(
-      "https://primexbroker.com/api/upcoming-webinars"
+      "https://primexbroker.com/api/upcoming-webinars",
     );
     if (res.data.success) {
       setUpcoming(
@@ -67,7 +67,7 @@ function WebinarForm() {
             name: locale === "ar" ? web.agendaAr : web.agenda,
             value: web.id,
           };
-        })
+        }),
       );
     }
   };
@@ -88,13 +88,13 @@ function WebinarForm() {
       first_name: Yup.string()
         .matches(
           /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-          t("first_name_validation_error")
+          t("first_name_validation_error"),
         )
         .required(t("first_name_required_error")),
       last_name: Yup.string()
         .matches(
           /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-          t("last_name_validation_error")
+          t("last_name_validation_error"),
         )
         .required(t("last_name_required_error")),
       email: Yup.string()
@@ -120,7 +120,7 @@ function WebinarForm() {
 
         const res = await axios.post(
           "https://primexbroker.com/api/zoom/register/participant",
-          values
+          values,
         );
         if (res.data.success) {
           formik.resetForm();
@@ -279,7 +279,10 @@ function WebinarForm() {
                 <p>{t("webinar_success_desc")}</p>
               </ModalBody>
               <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
+                <Button
+                  className="bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark"
+                  onPress={onClose}
+                >
                   {t("close_btn")}
                 </Button>
               </ModalFooter>

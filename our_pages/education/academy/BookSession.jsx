@@ -74,7 +74,7 @@ function BookSession() {
     let slots = webinarTypes;
     if (selectedDay === 5) {
       slots = webinarTypes.filter(
-        (slot) => slot.value !== "3:00 PM - 4:00 PM ( GST + 3 Time )"
+        (slot) => slot.value !== "3:00 PM - 4:00 PM ( GST + 3 Time )",
       );
     }
     setAvailableSlots(slots);
@@ -95,7 +95,7 @@ function BookSession() {
       fullName: Yup.string()
         .matches(
           /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-          t("full_name_validation_error")
+          t("full_name_validation_error"),
         )
         .required(t("full_name_required_error")),
       email: Yup.string()
@@ -118,7 +118,7 @@ function BookSession() {
         setLoading(true);
         const res = await axios.post(
           "https://primexbroker.com/api/book-schedule",
-          values
+          values,
         );
         if (res.data.success) {
           formik.resetForm();
@@ -244,7 +244,7 @@ function BookSession() {
                 setSelectedDate(newDate);
                 formik.setFieldValue(
                   "selectedDate",
-                  moment(newDate).format("YYYY-MM-DD")
+                  moment(newDate).format("YYYY-MM-DD"),
                 );
               }}
             />
@@ -321,7 +321,10 @@ function BookSession() {
                 <p>{t("session_success_desc2")}</p>
               </ModalBody>
               <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
+                <Button
+                  className="bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark"
+                  onPress={onClose}
+                >
                   {t("close_btn")}
                 </Button>
               </ModalFooter>

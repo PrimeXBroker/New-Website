@@ -63,7 +63,7 @@ function CareersApplyForm() {
       setLoading(true);
       try {
         const response = await axios.get(
-          "https://primexbroker.com/api/get/jobs/category"
+          "https://primexbroker.com/api/get/jobs/category",
         );
         const fetchedJobs = response.data.data;
         const jobOptions = fetchedJobs.map((job) => ({
@@ -99,13 +99,13 @@ function CareersApplyForm() {
       first_name: Yup.string()
         .matches(
           /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-          t("first_name_validation_error")
+          t("first_name_validation_error"),
         )
         .required(t("first_name_required_error")),
       last_name: Yup.string()
         .matches(
           /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-          t("last_name_validation_error")
+          t("last_name_validation_error"),
         )
         .required(t("last_name_required_error")),
       email: Yup.string()
@@ -116,10 +116,10 @@ function CareersApplyForm() {
       portfolio: Yup.mixed().required(t("portfolio_required_error")),
       current_salary: Yup.number().required(t("current_salary_required_error")),
       expected_salary: Yup.number().required(
-        t("expected_salary_required_error")
+        t("expected_salary_required_error"),
       ),
       years_of_experience: Yup.number().required(
-        t("experience_required_error")
+        t("experience_required_error"),
       ),
       job_title: Yup.string().required(t("job_title_required_error")),
     }),
@@ -148,7 +148,7 @@ function CareersApplyForm() {
       try {
         const res = await axios.post(
           `https://primexbroker.com/api/add/candidate`,
-          updatedValues
+          updatedValues,
         );
         if (res.data.success) {
           setFormSubmitted(true);
@@ -181,7 +181,7 @@ function CareersApplyForm() {
             headers: {
               "Content-Type": "multipart/form-data",
             },
-          }
+          },
         );
         formik.setFieldValue("resume", imageSendRes.data.result.file_path);
       } catch (err) {
@@ -481,7 +481,10 @@ function CareersApplyForm() {
                 {/* <p>Thank you for choosing PrimeX Capital</p> */}
               </ModalBody>
               <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
+                <Button
+                  className="bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark"
+                  onPress={onClose}
+                >
                   {t("close_btn")}
                 </Button>
                 {/* <Button color="primary" onPress={onClose}>

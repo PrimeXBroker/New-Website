@@ -66,7 +66,7 @@ function CareersForm({ jobTitle, formId, jobId }) {
     setIsFormIdInvalid(false);
     try {
       const response = await axios.get(
-        `https://primexbroker.com/api/get/form/structure/${formId}`
+        `https://primexbroker.com/api/get/form/structure/${formId}`,
       );
       if (
         response.data.success &&
@@ -78,7 +78,7 @@ function CareersForm({ jobTitle, formId, jobId }) {
       } else {
         console.error(
           "Failed to fetch job form structure or structure is empty:",
-          response.data
+          response.data,
         );
         setIsFormStructureLoaded(true);
       }
@@ -110,7 +110,7 @@ function CareersForm({ jobTitle, formId, jobId }) {
         if (field.name.toLowerCase().includes("name")) {
           schema = schema.matches(
             /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-            `${field.name} can only contain letters and spaces`
+            `${field.name} can only contain letters and spaces`,
           );
         }
       } else if (field.type === FieldTypes.DROPDOWN) {
@@ -123,7 +123,7 @@ function CareersForm({ jobTitle, formId, jobId }) {
             .notRequired()
             .nullable(true)
             .transform((value, originalValue) =>
-              String(originalValue).trim() === "" ? null : value
+              String(originalValue).trim() === "" ? null : value,
             );
         }
       } else if (field.type === FieldTypes.EMAIL) {
@@ -162,7 +162,7 @@ function CareersForm({ jobTitle, formId, jobId }) {
       try {
         const res = await axios.post(
           `https://primexbroker.com/api/add/candidate`,
-          submissionPayload
+          submissionPayload,
         );
         if (res.data.success) {
           setFormSubmitted(true);
@@ -195,7 +195,7 @@ function CareersForm({ jobTitle, formId, jobId }) {
             headers: {
               "Content-Type": "multipart/form-data",
             },
-          }
+          },
         );
         formik.setFieldValue("resume", imageSendRes.data.result.file_path);
       } catch (err) {
@@ -469,7 +469,10 @@ function CareersForm({ jobTitle, formId, jobId }) {
                 <p>{t("success_desc")}</p>
               </ModalBody>
               <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
+                <Button
+                  className="bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark"
+                  onPress={onClose}
+                >
                   {t("close_btn")}
                 </Button>
               </ModalFooter>

@@ -66,7 +66,7 @@ function BecomeInstructor() {
       fullName: Yup.string()
         .matches(
           /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-          t("full_name_validation_error")
+          t("full_name_validation_error"),
         )
         .required(t("full_name_required_error")),
       email: Yup.string()
@@ -76,7 +76,7 @@ function BecomeInstructor() {
       specialty: Yup.string().required(t("speciality_error")),
       advantages: Yup.string().required(t("advantages_error")),
       workedWithCompanies: Yup.string().required(
-        t("workedWithCompanies_error")
+        t("workedWithCompanies_error"),
       ),
       doneWebinar: Yup.string().required(t("doneWebinar_error")),
     }),
@@ -92,7 +92,7 @@ function BecomeInstructor() {
       try {
         const res = await axios.post(
           "https://primexbroker.com/api/instructor",
-          values
+          values,
         );
         if (res.data.success) {
           formik.resetForm();
@@ -385,7 +385,10 @@ function BecomeInstructor() {
                 <p>{t("instructor_success_desc")}</p>
               </ModalBody>
               <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
+                <Button
+                  className="bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark"
+                  onPress={onClose}
+                >
                   {t("close_btn")}
                 </Button>
               </ModalFooter>

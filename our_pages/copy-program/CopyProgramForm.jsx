@@ -59,7 +59,7 @@ function CopyProgramForm() {
       full_name: Yup.string()
         .matches(
           /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-          t("full_name_validation_error")
+          t("full_name_validation_error"),
         )
         .required(t("full_name_required_error")),
       email: Yup.string()
@@ -89,7 +89,7 @@ function CopyProgramForm() {
       try {
         const res = await axios.post(
           "https://primexbroker.com/api/copy-program",
-          updatedValues
+          updatedValues,
         );
         if (res.data.success) {
           formik.resetForm();
@@ -292,7 +292,10 @@ function CopyProgramForm() {
                 {/* <p>Thank you for choosing PrimeX Capital</p> */}
               </ModalBody>
               <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
+                <Button
+                  className="bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark"
+                  onPress={onClose}
+                >
                   {t("close_btn")}
                 </Button>
                 {/* <Button color="primary" onPress={onClose}>

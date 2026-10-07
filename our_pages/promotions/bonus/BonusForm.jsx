@@ -40,7 +40,7 @@ function BonusForm() {
       name: Yup.string()
         .matches(
           /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-          "name can only contain letters."
+          "name can only contain letters.",
         )
         .required("full name is required!"),
       email: Yup.string()
@@ -50,7 +50,7 @@ function BonusForm() {
       requestedAmount: Yup.string().required("deposit amount is required!"),
       terms: Yup.bool().oneOf(
         [true],
-        "Please agree to the terms and conditions to proceed."
+        "Please agree to the terms and conditions to proceed.",
       ),
     }),
     onSubmit: async (values) => {
@@ -64,7 +64,7 @@ function BonusForm() {
       try {
         const res = await axios.post(
           `https://primexbroker.com/api/create/bonus/request`,
-          updatedValues
+          updatedValues,
         );
         if (res.data.success) {
           formik.resetForm();
@@ -227,7 +227,10 @@ function BonusForm() {
                 {/* <p>Thank you for choosing PrimeX Capital</p> */}
               </ModalBody>
               <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
+                <Button
+                  className="bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark"
+                  onPress={onClose}
+                >
                   {t("close_btn")}
                 </Button>
                 {/* <Button color="primary" onPress={onClose}>
