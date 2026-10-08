@@ -538,7 +538,7 @@ const Footer = () => {
                   className="fill-tm dark:fill-tm-dark hover:fill-[#8146ba] dark:hover:fill-[#8146ba] transition-all hover:translate-y-[-5px] duration-500"
                 />
               </Link>
-              <Link
+              {/* <Link
                 href={`${
                   locale === "ar"
                     ? "https://whatsapp.com/channel/0029Vb7M9j5EawdyFPPOWh3L"
@@ -559,7 +559,7 @@ const Footer = () => {
                   size={30}
                   className="fill-tm dark:fill-tm-dark hover:fill-[#2cd46b] dark:hover:fill-[#2cd46b] transition-all hover:translate-y-[-5px] duration-500"
                 />
-              </Link>
+              </Link> */}
               <Link
                 href={`${
                   locale === "ar"
