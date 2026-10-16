@@ -12,7 +12,7 @@ const IbForm = () => {
             {t("main_title1")}
           </h2>
         </div>
-        <div className="w-[50%] mx-auto">
+        <div className="w-full md:w-[80%] lg:w-[60%] xl:w-[50%] mx-auto">
           <Form />
         </div>
       </div>
