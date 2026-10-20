@@ -19,7 +19,7 @@ const ExpertAnalysisDetail = ({ slug }) => {
 
   const fetchRelatedBlogs = async () => {
     const res = await axios.get(
-      `https://primexbroker.com/api/fetch/publish/related/market-news/1/3/${detail._id}`
+      `https://primexbroker.com/api/fetch/publish/related/market-news/1/3/${detail._id}`,
     );
     if (res?.data?.success) {
       setRelated(res?.data?.data);
@@ -31,7 +31,7 @@ const ExpertAnalysisDetail = ({ slug }) => {
     try {
       const res = await axios.get(
         `https://primexbroker.com/api/fetch/one/market-news/${slug}`,
-        { cache: "no-store" }
+        { cache: "no-store" },
       );
       console.log(res?.data?.data, "res?.data?.data");
       if (res?.data?.success) {
@@ -99,12 +99,12 @@ const ExpertAnalysisDetail = ({ slug }) => {
               {locale === "ar"
                 ? "هل أنت مستعد للاستثمار؟"
                 : locale === "ku"
-                ? "ئامادە بۆ سەرمایەکەردن"
-                : locale === "pt"
-                ? "Pronto para Investir"
-                : locale === "fa"
-                ? "آماده برای سرمایه‌گذاری"
-                : "Ready to Invest"}
+                  ? "ئامادە بۆ سەرمایەکەردن"
+                  : locale === "pt"
+                    ? "Pronto para Investir"
+                    : locale === "fa"
+                      ? "آماده برای سرمایه‌گذاری"
+                      : "Ready to Invest"}
             </h2>
             <p
               className={` text-ts dark:text-ts-dark text-sm sm:text-base ${
@@ -116,12 +116,12 @@ const ExpertAnalysisDetail = ({ slug }) => {
               {locale === "ar"
                 ? "افتح حسابًا حقيقيًا وابدأ الاستثمار الآن! تداول أكثر من 500 من الأدوات المالية العالمية دون أي متاعب."
                 : locale === "ku"
-                ? "حسابە کە بەرەوە بکە و ئێستا سەرمایەکەردن پەڕە بکە! 330+ دارایی جیهانی بە بێ مەشقی فەرمی فڕۆشە."
-                : locale === "pt"
-                ? "Abra uma conta real e comece a investir AGORA! Negocie mais de 330 ativos globais sem complicação."
-                : locale === "fa"
-                ? "اکانت زنده باز کنید و همین حالا سرمایه‌گذاری را شروع کنید! بیش از ۳۳۰ دارایی جهانی را بدون دردسر معامله کنید."
-                : "Open live account & Start investing NOW! Trade 330+ global assets hassle-free."}
+                  ? "حسابە کە بەرەوە بکە و ئێستا سەرمایەکەردن پەڕە بکە! 330+ دارایی جیهانی بە بێ مەشقی فەرمی فڕۆشە."
+                  : locale === "pt"
+                    ? "Abra uma conta real e comece a investir AGORA! Negocie mais de 330 ativos globais sem complicação."
+                    : locale === "fa"
+                      ? "اکانت زنده باز کنید و همین حالا سرمایه‌گذاری را شروع کنید! بیش از ۳۳۰ دارایی جهانی را بدون دردسر معامله کنید."
+                      : "Open live account & Start investing NOW! Trade 330+ global assets hassle-free."}
             </p>
           </div>
           <div className="w-full lg:w-[30%] flex justify-center md:justify-end items-center">
@@ -130,12 +130,12 @@ const ExpertAnalysisDetail = ({ slug }) => {
                 locale === "ar"
                   ? "ابدأ"
                   : locale === "ku"
-                  ? "دەست پێ بکە"
-                  : locale === "pt"
-                  ? "Começar"
-                  : locale === "fa"
-                  ? "شروع کنید"
-                  : "Get Started"
+                    ? "دەست پێ بکە"
+                    : locale === "pt"
+                      ? "Começar"
+                      : locale === "fa"
+                        ? "شروع کنید"
+                        : "Get Started"
               }
               onClick={handleClick}
               className="py-5 px-9 md:py-4 md:px-7 lg:py-4 lg:px-9 text-lg w-full sm:w-auto justify-between sm:justify-center"

@@ -15,6 +15,8 @@ import moment from "moment";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 function NewsBody({ slug, date }) {
   const t = useTranslations("marketNewsDetail");
@@ -84,7 +86,7 @@ function NewsBody({ slug, date }) {
     try {
       const res = await axios.get(
         `https://primexbroker.com/api/fetch/one/blog/${slug}`,
-        { cache: "no-store" }
+        { cache: "no-store" },
       );
       console.log(res?.data?.data, "market-blogs");
       if (res?.data?.success) {
@@ -92,11 +94,11 @@ function NewsBody({ slug, date }) {
         // const currentUrl = router.asPath;
         // if (currentUrl) {
         const contentState = convertFromRaw(
-          JSON.parse(res?.data?.data?.content)
+          JSON.parse(res?.data?.data?.content),
         );
         const editorState = EditorState.createWithContent(
           contentState,
-          decorator
+          decorator,
         );
         setContent(editorState);
         // }
@@ -138,14 +140,16 @@ function NewsBody({ slug, date }) {
                 ? "العودة إلى أخبار السوق"
                 : "Back to Market News"
               : locale === "ar"
-              ? "العودة إلى المدونات"
-              : locale === "ar"
-              ? "بازگشت به بلاگ‌ها"
-              : "Back to Blogs"}
+                ? "العودة إلى المدونات"
+                : locale === "ar"
+                  ? "بازگشت به بلاگ‌ها"
+                  : "Back to Blogs"}
           </Link>
 
           <div className="text-ts dark:text-ts-dark text-sm mb-2 text-center">
-            {moment(detail?.postedOn ? detail?.postedOn : detail?.createdOn).format("Do MMM YYYY")}{" "}
+            {moment(
+              detail?.postedOn ? detail?.postedOn : detail?.createdOn,
+            ).format("Do MMM YYYY")}{" "}
             • 5 Min Read
           </div>
 
@@ -181,7 +185,13 @@ function NewsBody({ slug, date }) {
           </div> */}
         </div>
         <div className="text-tm dark:text-tm-dark">
-          <img src={detail.image} alt="PrimeX Capital" className="mb-7" />
+          <Zoom>
+            <img
+              src={detail.image}
+              alt="PrimeX Capital"
+              className="mb-7 cursor-zoom-in"
+            />
+          </Zoom>
           <div className="mb-7">{/* {detail?.title} */}</div>
           <MyEditor
             editorState={content}

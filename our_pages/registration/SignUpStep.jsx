@@ -15,6 +15,7 @@ import {
 } from "react-icons/md";
 import { LuCheck } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
+import { getRegistrationTrackingData } from "@/utilities/registrationTracking";
 
 const languageOptions = [
   { label: "English", value: "en" },
@@ -355,6 +356,7 @@ export default function SignUpStep({
           day: birthDateObj.getDate(),
         },
         password: formData?.password,
+        ...getRegistrationTrackingData(),
       };
 
       setFormData({
@@ -377,7 +379,7 @@ export default function SignUpStep({
         const response = await axios(config);
         console.log(response, "response");
 
-        if (response?.status == 200 || response?.status == 201 ) {
+        if (response?.status == 200 || response?.status == 201) {
           console.log("test");
           await sendEmail(e);
         }

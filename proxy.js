@@ -18,6 +18,16 @@ export default function middleware(request) {
     return NextResponse.next();
   }
 
+  // /registration/success par saare query params hata do
+  if (
+    /^\/[a-z]{2}\/registration\/success\/?$/.test(pathname) &&
+    request.nextUrl.search
+  ) {
+    const cleanUrl = request.nextUrl.clone();
+    cleanUrl.search = "";
+    return NextResponse.redirect(cleanUrl);
+  }
+
   // Only run deep link middleware for deep link paths
   if (pathname.includes("/community/posts/detail")) {
     const deepLinkResponse = deepLinkMiddleware(request);

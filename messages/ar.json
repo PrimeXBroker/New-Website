@@ -4432,7 +4432,7 @@
       "contact_placeholder": "ادخل رقم هاتفك",
       "trading_history_label": "2-3 أشهر من سجل تداولاتك",
       "upload_title": "اضغط هنا لرفع الملف أو اسحب الملف هنا",
-      "upload_subtitle": "ملفات .XLSX أو .XLS فقط",
+      "upload_subtitle": "ملفات .XLSX أو .XLS أو .PDF فقط",
       "apply_btn": "قدّم الآن",
       "full_name_validation_error": "يرجى إدخال اسم صحيح",
       "full_name_required_error": "الاسم الكامل مطلوب",

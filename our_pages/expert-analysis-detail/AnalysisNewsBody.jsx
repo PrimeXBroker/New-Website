@@ -8,6 +8,8 @@ import moment from "moment";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 function AnalysisNewsBody({ slug }) {
   const locale = useLocale();
@@ -76,54 +78,60 @@ function AnalysisNewsBody({ slug }) {
     try {
       const res = await axios.get(
         `https://primexbroker.com/api/fetch/one/market-news/${slug}`,
-        { cache: "no-store" }
+        { cache: "no-store" },
       );
       console.log(res?.data?.data, "analysisblog");
       if (res?.data?.success) {
         setDetail(res?.data?.data);
         if (locale === "ar") {
           const contentState = convertFromRaw(
-            JSON.parse(res?.data?.data?.contentAr)
+            JSON.parse(res?.data?.data?.contentAr),
           );
           const editorState = EditorState.createWithContent(
             contentState,
-            decorator
+            decorator,
           );
           setContent(editorState);
         } else if (locale === "ku") {
           const contentState = convertFromRaw(
-            JSON.parse(res?.data?.data?.contentKd || res?.data?.data?.contentEn)
+            JSON.parse(
+              res?.data?.data?.contentKd || res?.data?.data?.contentEn,
+            ),
           );
           const editorState = EditorState.createWithContent(
             contentState,
-            decorator
+            decorator,
           );
           setContent(editorState);
         } else if (locale === "pt") {
           const contentState = convertFromRaw(
-            JSON.parse(res?.data?.data?.contentPt || res?.data?.data?.contentEn)
+            JSON.parse(
+              res?.data?.data?.contentPt || res?.data?.data?.contentEn,
+            ),
           );
           const editorState = EditorState.createWithContent(
             contentState,
-            decorator
+            decorator,
           );
           setContent(editorState);
         } else if (locale === "fa") {
           const contentState = convertFromRaw(
-            JSON.parse(res?.data?.data?.contentFa || res?.data?.data?.contentEn)
+            JSON.parse(
+              res?.data?.data?.contentFa || res?.data?.data?.contentEn,
+            ),
           );
           const editorState = EditorState.createWithContent(
             contentState,
-            decorator
+            decorator,
           );
           setContent(editorState);
         } else {
           const contentState = convertFromRaw(
-            JSON.parse(res?.data?.data?.contentEn)
+            JSON.parse(res?.data?.data?.contentEn),
           );
           const editorState = EditorState.createWithContent(
             contentState,
-            decorator
+            decorator,
           );
           setContent(editorState);
         }
@@ -176,19 +184,21 @@ function AnalysisNewsBody({ slug }) {
               ? locale === "ar"
                 ? "العودة إلى التحليل الفني"
                 : locale === "ku"
-                ? "گەڕاندن بۆ تێبینی فنی"
-                : "Back to Technical Analysis"
+                  ? "گەڕاندن بۆ تێبینی فنی"
+                  : "Back to Technical Analysis"
               : locale === "ar"
-              ? "العودة إلى المدونات"
-              : locale === "pt"
-              ? "De volta à Análise Técnica"
-              : locale === "fa"
-              ? "بازگشت به بلاگ‌ها"
-              : "Back to Blogs"}
+                ? "العودة إلى المدونات"
+                : locale === "pt"
+                  ? "De volta à Análise Técnica"
+                  : locale === "fa"
+                    ? "بازگشت به بلاگ‌ها"
+                    : "Back to Blogs"}
           </Link>
 
           <div className="text-ts dark:text-ts-dark text-sm mb-2 text-center">
-            {moment(detail?.postedOn ? detail?.postedOn : detail?.createdOn).format("Do MMM YYYY")}{" "}
+            {moment(
+              detail?.postedOn ? detail?.postedOn : detail?.createdOn,
+            ).format("Do MMM YYYY")}{" "}
             • 5 Min Read
           </div>
 
@@ -196,12 +206,12 @@ function AnalysisNewsBody({ slug }) {
             {locale === "ar"
               ? detail?.titleAr
               : locale === "ku"
-              ? detail?.titleKd || detail?.titleEn
-              : locale === "pt"
-              ? detail?.titlePt || detail?.titleEn
-              : locale === "fa"
-              ? detail?.titleFa || detail?.titleEn
-              : detail?.titleEn}
+                ? detail?.titleKd || detail?.titleEn
+                : locale === "pt"
+                  ? detail?.titlePt || detail?.titleEn
+                  : locale === "fa"
+                    ? detail?.titleFa || detail?.titleEn
+                    : detail?.titleEn}
           </h2>
           {/* <div className="flex items-center space-x-4">
             <span className="text-gray-300">Share Article</span>
@@ -233,21 +243,23 @@ function AnalysisNewsBody({ slug }) {
         </div>
 
         <div className="text-tm dark:text-tm-dark">
-          <img
-            src={
-              locale === "ar"
-                ? detail?.imageAr || detail?.image
-                : locale === "ku"
-                ? detail?.imageKd || detail?.image
-                : locale === "pt"
-                ? detail?.imagePt || detail?.image
-                : locale === "fa"
-                ? detail?.imageFa || detail?.image
-                : detail?.image
-            }
-            alt="PrimeX Capital"
-            className="mb-4"
-          />
+          <Zoom>
+            <img
+              src={
+                locale === "ar"
+                  ? detail?.imageAr || detail?.image
+                  : locale === "ku"
+                    ? detail?.imageKd || detail?.image
+                    : locale === "pt"
+                      ? detail?.imagePt || detail?.image
+                      : locale === "fa"
+                        ? detail?.imageFa || detail?.image
+                        : detail?.image
+              }
+              alt="PrimeX Capital cursor-zoom-in"
+              className="mb-4"
+            />
+          </Zoom>
           <div className="mb-7">
             {/* {" "}
             {locale === "ar" ? detail.titleAr : detail.titleEn} */}

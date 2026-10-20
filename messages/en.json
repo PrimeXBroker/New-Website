@@ -4500,7 +4500,7 @@
       "contact_placeholder": "Enter Your phone Number",
       "trading_history_label": "2-3 Months Trading History",
       "upload_title": "Drag & Drop or Click to Upload",
-      "upload_subtitle": ".XLSX or .XLS files only",
+      "upload_subtitle": ".XLSX .XLS or .PDF files only",
       "apply_btn": "Apply Now",
       "full_name_validation_error": "Please enter a valid name",
       "full_name_required_error": "Full name is required",

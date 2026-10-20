@@ -9,6 +9,8 @@ import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import ReadOnlyEditor from "@/components/common/ReadOnlyEditor";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 function BlogsNewsBody({ slug }) {
   const locale = useLocale();
@@ -20,7 +22,7 @@ function BlogsNewsBody({ slug }) {
     try {
       const res = await axios.get(
         `https://primexbroker.com/api/fetch/one/all-blog/${slug}`,
-        { cache: "no-store" }
+        { cache: "no-store" },
       );
       console.log(res?.data?.data, "analysisblog");
       if (res?.data?.success) {
@@ -31,19 +33,19 @@ function BlogsNewsBody({ slug }) {
           setContent(
             res?.data?.data?.contentKd
               ? res?.data?.data?.contentKd
-              : res?.data?.data?.contentEn
+              : res?.data?.data?.contentEn,
           );
         } else if (locale === "pt") {
           setContent(
             res?.data?.data?.contentPt
               ? res?.data?.data?.contentPt
-              : res?.data?.data?.contentEn
+              : res?.data?.data?.contentEn,
           );
         } else if (locale === "fa") {
           setContent(
             res?.data?.data?.contentFa
               ? res?.data?.data?.contentFa
-              : res?.data?.data?.contentEn
+              : res?.data?.data?.contentEn,
           );
         } else {
           setContent(res?.data?.data?.contentEn);
@@ -92,16 +94,18 @@ function BlogsNewsBody({ slug }) {
             {locale === "ar"
               ? "العودة إلى المدونات"
               : locale === "ku"
-              ? "گەڕانەوە بۆ بڵاگ"
-              : locale === "pt"
-              ? "Voltar aos Blogs"
-              : locale === "fa"
-              ? "بازگشت به بلاگ‌ها"
-              : "Back to Blogs"}
+                ? "گەڕانەوە بۆ بڵاگ"
+                : locale === "pt"
+                  ? "Voltar aos Blogs"
+                  : locale === "fa"
+                    ? "بازگشت به بلاگ‌ها"
+                    : "Back to Blogs"}
           </Link>
 
           <div className="text-ts dark:text-ts-dark text-sm mb-2 text-center">
-            {moment(detail?.postedOn ? detail?.postedOn : detail?.createdOn).format("Do MMM YYYY")}{" "}
+            {moment(
+              detail?.postedOn ? detail?.postedOn : detail?.createdOn,
+            ).format("Do MMM YYYY")}{" "}
             • 5 Min Read
           </div>
 
@@ -109,30 +113,32 @@ function BlogsNewsBody({ slug }) {
             {locale === "ar"
               ? detail?.titleAr
               : locale === "ku"
-              ? detail?.titleKd || detail?.titleEn
-              : locale === "pt"
-              ? detail?.titlePt || detail?.titleEn
-              : locale === "fa"
-              ? detail?.titleFa || detail?.titleEn
-              : detail?.titleEn}
+                ? detail?.titleKd || detail?.titleEn
+                : locale === "pt"
+                  ? detail?.titlePt || detail?.titleEn
+                  : locale === "fa"
+                    ? detail?.titleFa || detail?.titleEn
+                    : detail?.titleEn}
           </h2>
         </div>
         <div className="text-tm dark:text-tm-dark">
-          <img
-            src={
-              locale === "ar"
-                ? detail?.imageAr || detail?.image
-                : locale === "ku"
-                ? detail?.imageKd || detail?.image
-                : locale === "pt"
-                ? detail?.imagePt || detail?.image
-                : locale === "fa"
-                ? detail?.imageFa || detail?.image
-                : detail?.image
-            }
-            alt={detail?.altTag}
-            className="mb-4"
-          />
+          <Zoom>
+            <img
+              src={
+                locale === "ar"
+                  ? detail?.imageAr || detail?.image
+                  : locale === "ku"
+                    ? detail?.imageKd || detail?.image
+                    : locale === "pt"
+                      ? detail?.imagePt || detail?.image
+                      : locale === "fa"
+                        ? detail?.imageFa || detail?.image
+                        : detail?.image
+              }
+              alt={detail?.altTag}
+              className="mb-4 cursor-zoom-in"
+            />
+          </Zoom>
           <div className="mb-7 blog-detail-styling">
             <ReadOnlyEditor content={content} />
           </div>

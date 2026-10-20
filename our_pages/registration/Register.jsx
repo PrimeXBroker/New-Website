@@ -12,10 +12,7 @@ import { useState } from "react";
 import axios from "axios";
 import moment from "moment-timezone";
 import { phoneOptions } from "@/utils/data";
-import {
-  getTrackingQueryString,
-  readStoredTrackingParams,
-} from "@/utilities/trackingParams";
+import { getRegistrationTrackingData } from "@/utilities/registrationTracking";
 
 export default function Register({ step, setStep }) {
   const locale = useLocale();
@@ -51,27 +48,12 @@ export default function Register({ step, setStep }) {
 
     if (isChecked) {
       try {
-        // Query params client par hi parhne hain (SSR me `window` nahi hota)
-        // aur URL me na hone par session me stored tracking params fallback hain.
-        const origin =
-          typeof window !== "undefined"
-            ? window.location.origin
-            : "https://primexcapital.com";
-        const search =
-          typeof window !== "undefined" ? window.location.search : "";
-        const queryString = search
-          ? search.substring(1)
-          : getTrackingQueryString();
-        const url = new URL(queryString ? `/?${queryString}` : "/", origin);
-        const storedParams = readStoredTrackingParams();
-        const pidParam = url.searchParams.get("pid") || storedParams.get("pid");
-        const lid = url.searchParams.get("lid") || storedParams.get("lid");
-        const utmParams = queryString || getTrackingQueryString();
-
         const birthDateObj =
           formData.birthDate instanceof Date
             ? formData.birthDate
             : new Date(formData.birthDate);
+
+        const tracking = getRegistrationTrackingData();
 
         const data = {
           ...formData,
@@ -82,9 +64,7 @@ export default function Register({ step, setStep }) {
           },
           country: formData?.country?.isoCode,
           phone: `${selectedPhone?.code}${formData?.phone}`,
-          ...(pidParam && { partnerId: parseInt(pidParam) }),
-          ...(lid && { referralLinkId: parseInt(lid) }),
-          ...(utmParams && { utmParams: utmParams }),
+          ...tracking,
         };
         const config = {
           method: "put",
@@ -127,6 +107,8 @@ export default function Register({ step, setStep }) {
           }
         } catch (error) {
           console.log(error, "error");
+          // API ka exact error message dekhne ke liye
+          console.log(error?.response?.data, "error response data");
         }
       } catch (error) {
         console.log(error, "error 1");
