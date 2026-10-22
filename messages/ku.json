@@ -4527,6 +4527,19 @@
         "security_location": "ئاسایش و شوێن",
         "entity_setup": "کۆمپانیا و ڕێکخستن"
       },
+      "errors": {
+        "first_name_required": "ناوی یەکەم پێویستە",
+        "last_name_required": "ناوی دووەم پێویستە",
+        "email_required": "ئیمەیڵ پێویستە",
+        "email_invalid": "تکایە ئیمەیڵێکی دروست بنووسە",
+        "phone_required": "ژمارەی مۆبایل پێویستە",
+        "phone_min": "ژمارەی مۆبایل دەبێت لانیکەم 9 ژمارە بێت",
+        "birth_date_required": "تکایە بەرواری لەدایکبوونت هەڵبژێرە",
+        "country_required": "تکایە وڵات هەڵبژێرە",
+        "city_required": "تکایە شار هەڵبژێرە",
+        "language_required": "تکایە زمان هەڵبژێرە",
+        "password_required": "وشەی نهێنی پێویستە"
+      },
       "basicInfo": {
         "title": "با لە تۆوە دەست پێبکەین",
         "description": "زانیاری کەسی خۆت بنووسە بۆ دروستکردنی هەژمارەکەت.",

@@ -4457,6 +4457,19 @@
         "security_location": "الأمان والموقع",
         "entity_setup": "الكيان والإعداد"
       },
+      "errors": {
+        "first_name_required": "الاسم الأول مطلوب",
+        "last_name_required": "اسم العائلة مطلوب",
+        "email_required": "البريد الإلكتروني مطلوب",
+        "email_invalid": "يرجى إدخال بريد إلكتروني صالح",
+        "phone_required": "رقم الهاتف مطلوب",
+        "phone_min": "يجب أن يتكون رقم الهاتف من 9 أرقام على الأقل",
+        "birth_date_required": "يرجى تحديد تاريخ الميلاد",
+        "country_required": "يرجى اختيار البلد",
+        "city_required": "يرجى اختيار المدينة",
+        "language_required": "يرجى اختيار اللغة",
+        "password_required": "كلمة المرور مطلوبة"
+      },
       "basicInfo": {
         "title": "لنبدأ بك",
         "description": "أدخل بياناتك الشخصية لإنشاء حسابك.",

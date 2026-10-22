@@ -4525,6 +4525,19 @@
       "security_location": "Security & Location",
       "entity_setup": "Entity & Setup"
     },
+    "errors": {
+      "first_name_required": "First Name is required",
+      "last_name_required": "Last Name is required",
+      "email_required": "Email is required",
+      "email_invalid": "Please enter a valid email",
+      "phone_required": "Phone Number is required",
+      "phone_min": "Phone Number must be at least 9 digits",
+      "birth_date_required": "Please select your date of birth",
+      "country_required": "Please select your country",
+      "city_required": "Please select your city",
+      "language_required": "Please select your language",
+      "password_required": "Password is required"
+    },
     "basicInfo": {
       "title": "Let's start with you",
       "description": "Enter your personal details to create your account.",

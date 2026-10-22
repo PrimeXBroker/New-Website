@@ -12,7 +12,6 @@ export default function RegistrationModal({
   onClose,
   stateType,
   email,
-  onPrimaryAction,
   onSecondaryAction,
 }) {
   const locale = useLocale();
@@ -117,17 +116,6 @@ export default function RegistrationModal({
           </div>
         </div>
         <div className="space-y-3">
-          <button
-            onClick={onPrimaryAction}
-            className="w-full py-4 rounded-lg bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark group font-semibold text-base flex items-center justify-center gap-2"
-          >
-            {config.primaryText}
-            {["ar", "ku", "ps", "fa"].includes(locale) ? (
-              <HiOutlineArrowLeft className="transition-transform duration-500 ease-in-out group-hover:-translate-x-1.5 text-nb dark:text-nb-dark text-xl" />
-            ) : (
-              <HiOutlineArrowRight className="transition-transform duration-500 ease-in-out group-hover:translate-x-1.5 text-nb dark:text-nb-dark text-xl" />
-            )}
-          </button>
           <button
             onClick={onSecondaryAction}
             className="w-full py-4 border border-e2 dark:border-e2-dark text-tm dark:text-tm-dark bg-transparent text-base rounded-lg"

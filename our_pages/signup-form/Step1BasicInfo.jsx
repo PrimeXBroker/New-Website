@@ -31,7 +31,7 @@ export default function Step1BasicInfo({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4" noValidate>
       <div className="!mb-6">
         <h2 className="text-lg font-semibold text-tm dark:text-tm-dark">
           {t("title")}

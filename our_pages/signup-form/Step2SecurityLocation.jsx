@@ -95,6 +95,11 @@ export default function Step2SecurityLocation({
           />
         </div>
       </div>
+      {errors?.birthDate && (
+        <p className="text-rc dark:text-rc-dark text-xs mt-1">
+          {errors.birthDate}
+        </p>
+      )}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="w-full">
           <CustomSelectDropdown

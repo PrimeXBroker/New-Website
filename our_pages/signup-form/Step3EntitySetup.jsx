@@ -5,12 +5,15 @@ import CustomSelectDropdown from "./CustomSelectDropdown";
 import { LuUserRoundCheck, LuCheck } from "react-icons/lu";
 import { HiOutlineArrowLeft, HiOutlineArrowRight } from "react-icons/hi";
 import { useLocale, useTranslations } from "next-intl";
+import { Spinner } from "@nextui-org/react";
 
 export default function Step3EntitySetup({
   formData,
   updateFormData,
   onPrev,
   onSubmit,
+  errors,
+  isSubmitting,
 }) {
   const locale = useLocale();
   const t = useTranslations("signUpForm.entitySetup");
@@ -61,7 +64,7 @@ export default function Step3EntitySetup({
     /[^A-Za-z0-9]/.test(password);
 
   return (
-    <form onSubmit={handleFinalSubmit} className="space-y-4">
+    <form onSubmit={handleFinalSubmit} className="space-y-4" noValidate>
       <div className="!mb-6">
         <h2 className="text-lg font-semibold text-tm dark:text-tm-dark">
           {t("title")}
@@ -123,6 +126,11 @@ export default function Step3EntitySetup({
             )}
           </button>
         </div>
+        {errors?.password && (
+          <p className="text-rc dark:text-rc-dark text-xs mt-1">
+            {errors.password}
+          </p>
+        )}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 text-xs pt-2 sm:pt-1 pb-1">
           <button
             type="button"
@@ -199,13 +207,23 @@ export default function Step3EntitySetup({
         </button>
         <button
           type="submit"
+          disabled={isSubmitting}
           className="transition-colors duration-300 ease-in-out rounded-lg flex items-center gap-3 group bg-pcp dark:bg-pcp-dark text-nb dark:text-nb-dark py-3 px-5 text-sm sm:text-base w-auto justify-between sm:justify-center"
         >
-          {t("submit_button")}
-          {["ar", "ku", "ps", "fa"].includes(locale) ? (
-            <HiOutlineArrowLeft className="transition-transform duration-500 ease-in-out group-hover:-translate-x-1.5 text-nb dark:text-nb-dark text-xl" />
+          {isSubmitting ? (
+            <>
+              {t("submit_button")}{" "}
+              <Spinner variant="spinner" color="default" size="sm" />
+            </>
           ) : (
-            <HiOutlineArrowRight className="transition-transform duration-500 ease-in-out group-hover:translate-x-1.5 text-nb dark:text-nb-dark text-xl" />
+            <>
+              {t("submit_button")}
+              {["ar", "ku", "ps", "fa"].includes(locale) ? (
+                <HiOutlineArrowLeft className="transition-transform duration-500 ease-in-out group-hover:-translate-x-1.5 text-nb dark:text-nb-dark text-xl" />
+              ) : (
+                <HiOutlineArrowRight className="transition-transform duration-500 ease-in-out group-hover:translate-x-1.5 text-nb dark:text-nb-dark text-xl" />
+              )}
+            </>
           )}
         </button>
       </div>
