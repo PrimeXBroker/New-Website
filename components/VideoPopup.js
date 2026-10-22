@@ -9,7 +9,7 @@ const VideoPopup_ = ({ close, videoID }) => {
 
   function extractYouTubeID(url) {
     const parts = url.split("/");
-    return parts.pop(); // This gets the last segment after the last slash
+    return parts.pop();
   }
 
   const video = extractYouTubeID(videoID);

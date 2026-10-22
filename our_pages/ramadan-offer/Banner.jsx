@@ -22,15 +22,6 @@ const Banner = () => {
       <div className="bg-[#000000] pt-[40px] lg:pt-10">
         <div className="container flex flex-col md:flex-row justify-around py-16">
           <div className="max-w-2xl flex flex-col justify-center items-center md:items-start md:w-[70%]">
-            {/* <div
-              className={`text-center md:text-start relative ${
-                locale === "ar" || locale === "ps" || locale === "ku" || locale === "fa"
-                  ? "left-[137px]"
-                  : "right-[137px]"
-              }`}
-            >
-              <TrustPilot />
-            </div> */}
             <h2
               className={`text-base sm:text-lg md:text-base lg:text-lg xl:text-lg text-[#ffffff] ${
                 locale === "ar" ||
