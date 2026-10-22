@@ -4515,5 +4515,119 @@
       "success_desc": "Application submitted successfully! We'll review it and get in touch upon acceptance.",
       "close_btn": "Close"
     }
+  },
+  "signUpForm": {
+    "title": "Sign up",
+    "step_counter": "Step {current} of {total}",
+    "subtitle": "Register your trading account on PrimeX Capital",
+    "steps": {
+      "basic_info": "Basic Info",
+      "security_location": "Security & Location",
+      "entity_setup": "Entity & Setup"
+    },
+    "basicInfo": {
+      "title": "Let's start with you",
+      "description": "Enter your personal details to create your account.",
+      "first_name_label": "First Name",
+      "first_name_placeholder": "First Name",
+      "last_name_label": "Last Name",
+      "last_name_placeholder": "Last Name",
+      "email_label": "Email",
+      "email_placeholder": "Email",
+      "phone_number_label": "Phone Number",
+      "time_estimate": "About 1 minute",
+      "next_button": "Next Step"
+    },
+    "securityLocation": {
+      "title": "Make your account yours",
+      "description": "Tell us where you live and set a secure password.",
+      "day_label": "Day",
+      "month_label": "Month",
+      "year_label": "Year",
+      "country_label": "Country",
+      "city_label": "City",
+      "language_label": "Preferred Language",
+      "previous_button": "Previous",
+      "next_button": "Next Step",
+      "months": {
+        "january": "January",
+        "february": "February",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June",
+        "july": "July",
+        "august": "August",
+        "september": "September",
+        "october": "October",
+        "november": "November",
+        "december": "December"
+      },
+      "languages": {
+        "english": "English",
+        "arabic": "Arabic",
+        "kurdish": "Kurdish"
+      }
+    },
+    "entitySetup": {
+      "title": "You're almost ready",
+      "description": "Choose your preferences and complete your registration.",
+      "entity_label": "Select Entity",
+      "password_label": "Password",
+      "password_placeholder": "Password",
+      "generate_password": "Generate random password",
+      "strong_password": "Strong password",
+      "password_hint": "Use 8 or more characters, including uppercase, lowercase, numbers and symbols.",
+      "newsletter_agreement": "I agree to receive newsletters, marketing materials, company news, and product updates.",
+      "name_placeholder": "Your Name",
+      "email_placeholder": "your.email@email.com",
+      "previous_button": "Previous",
+      "submit_button": "Sign Up",
+      "entities": {
+        "lucia": "PrimeX Capital LTD - ST. Lucia",
+        "mauritius": "PrimeX Capital Mauritius"
+      }
+    },
+    "phoneInput": {
+      "placeholder": "Phone Number",
+      "search_placeholder": "Search",
+      "no_results": "No results found"
+    },
+    "selectDropdown": {
+      "search_placeholder": "Search"
+    },
+    "modal": {
+      "fallback_email": "james.morgan@email.com",
+      "success": {
+        "title": "Account successfully created",
+        "description": "For verification, check your email address to verify your account.",
+        "card_description": "Open the verification link in your inbox to activate your account. Can't find it? Check your spam folder.",
+        "primary_button": "Continue to login",
+        "secondary_button": "Resend verification email"
+      },
+      "exists": {
+        "title": "Email already registered",
+        "description": "An account with this email address already exists. Log in to your existing account or sign up with a different email.",
+        "card_description": "Forgot your password? Choose \"Forgot password\" on the login screen to reset it.",
+        "primary_button": "Log in",
+        "secondary_button": "Use another email"
+      },
+      "server_error": {
+        "title": "We couldn't create your account",
+        "description": "We're having a temporary problem on our side. Your account hasn't been created. Please try again in a few minutes.",
+        "card_title": "Your details are still here",
+        "card_description": "You don't need to fill out the form again. If the issue continues, our support team can help.",
+        "primary_button": "Try again",
+        "secondary_button": "Contact support"
+      },
+      "timeout": {
+        "title": "Connection timed out",
+        "description": "The request took too long, so we couldn't confirm your signup. Check your internet connection before trying again.",
+        "card_title": "Check your inbox first",
+        "card_description": "If a verification email has arrived, follow its link. Otherwise, reconnect and try signing up again.",
+        "primary_button": "Try again",
+        "secondary_button": "Back to signup"
+      }
+    }
   }
 }

@@ -1,0 +1,44 @@
+import React from "react";
+import { createTranslator } from "next-intl";
+import SignUpForm from "@/our_pages/signup-form/SignUpForm";
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const messages = (await import(`../../../../messages/${locale}.json`))
+    .default;
+  const t = createTranslator({ locale, messages });
+  const url = `https://www.primexcapital.com/${locale}/registration`;
+
+  return {
+    title: t("registration.metaData.title"),
+    description: t("registration.metaData.description"),
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      type: "website",
+      locale: locale,
+      url: url,
+      title: t("registration.metaData.title"),
+      description: t("registration.metaData.description"),
+      images: [
+        {
+          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-registeration/mockup-en.webp",
+          width: 1200,
+          height: 630,
+          alt: t("registration.metaData.title"),
+        },
+      ],
+    },
+  };
+}
+
+const page = () => {
+  return (
+    <>
+      <SignUpForm />
+    </>
+  );
+};
+
+export default page;

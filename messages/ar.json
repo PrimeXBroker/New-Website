@@ -4447,5 +4447,119 @@
       "success_desc": "تم إرسال الطلب بنجاح! سنقوم بمراجعته والتواصل معك فور القبول.",
       "close_btn": "إغلاق"
     }
-  }
+  },
+  "signUpForm": {
+      "title": "التسجيل",
+      "step_counter": "الخطوة {current} من {total}",
+      "subtitle": "سجل حساب التداول الخاص بك على برايم اكس كابيتال",
+      "steps": {
+        "basic_info": "المعلومات الأساسية",
+        "security_location": "الأمان والموقع",
+        "entity_setup": "الكيان والإعداد"
+      },
+      "basicInfo": {
+        "title": "لنبدأ بك",
+        "description": "أدخل بياناتك الشخصية لإنشاء حسابك.",
+        "first_name_label": "الاسم الأول",
+        "first_name_placeholder": "الاسم الأول",
+        "last_name_label": "اسم العائلة",
+        "last_name_placeholder": "اسم العائلة",
+        "email_label": "البريد الإلكتروني",
+        "email_placeholder": "البريد الإلكتروني",
+        "phone_number_label": "رقم الهاتف",
+        "time_estimate": "حوالي دقيقة واحدة",
+        "next_button": "الخطوة التالية"
+      },
+      "securityLocation": {
+        "title": "اجعل حسابك خاصاً بك",
+        "description": "أخبرنا أين تعيش وقم بتعيين كلمة مرور آمنة.",
+        "day_label": "اليوم",
+        "month_label": "الشهر",
+        "year_label": "السنة",
+        "country_label": "البلد",
+        "city_label": "المدينة",
+        "language_label": "اللغة المفضلة",
+        "previous_button": "السابق",
+        "next_button": "الخطوة التالية",
+        "months": {
+          "january": "يناير",
+          "february": "فبراير",
+          "march": "مارس",
+          "april": "أبريل",
+          "may": "مايو",
+          "june": "يونيو",
+          "july": "يوليو",
+          "august": "أغسطس",
+          "september": "سبتمبر",
+          "october": "أكتوبر",
+          "november": "نوفمبر",
+          "december": "ديسمبر"
+        },
+        "languages": {
+          "english": "الإنجليزية",
+          "arabic": "العربية",
+          "kurdish": "الكردية"
+        }
+      },
+      "entitySetup": {
+        "title": "أنت على وشك الانتهاء",
+        "description": "اختر تفضيلاتك وأكمل تسجيلك.",
+        "entity_label": "اختر الكيان",
+        "password_label": "كلمة المرور",
+        "password_placeholder": "كلمة المرور",
+        "generate_password": "إنشاء كلمة مرور عشوائية",
+        "strong_password": "كلمة مرور قوية",
+        "password_hint": "استخدم 8 أحرف أو أكثر، بما في ذلك الأحرف الكبيرة والصغيرة والأرقام والرموز.",
+        "newsletter_agreement": "أوافق على استلام النشرات الإخبارية، والمواد التسويقية، وأخبار الشركة، وتحديثات المنتجات.",
+        "name_placeholder": "اسمك",
+        "email_placeholder": "your.email@email.com",
+        "previous_button": "السابق",
+        "submit_button": "التسجيل",
+        "entities": {
+          "lucia": "PrimeX Capital LTD - ST. Lucia",
+          "mauritius": "PrimeX Capital Mauritius"
+        }
+      },
+      "phoneInput": {
+        "placeholder": "رقم الهاتف",
+        "search_placeholder": "بحث",
+        "no_results": "لا توجد نتائج"
+      },
+      "selectDropdown": {
+        "search_placeholder": "بحث"
+      },
+      "modal": {
+        "fallback_email": "james.morgan@email.com",
+        "success": {
+          "title": "تم إنشاء الحساب بنجاح",
+          "description": "للتحقق، افحص بريدك الإلكتروني لتأكيد حسابك.",
+          "card_description": "افتح رابط التحقق في صندوق الوارد لتفعيل حسابك. لم تجده؟ تحقق من مجلد البريد العشوائي.",
+          "primary_button": "المتابعة إلى تسجيل الدخول",
+          "secondary_button": "إعادة إرسال بريد التحقق"
+        },
+        "exists": {
+          "title": "البريد الإلكتروني مسجل بالفعل",
+          "description": "يوجد حساب بهذا البريد الإلكتروني بالفعل. سجل الدخول إلى حسابك الحالي أو سجل باستخدام بريد إلكتروني مختلف.",
+          "card_description": "هل نسيت كلمة المرور؟ اختر \"نسيت كلمة المرور\" في شاشة تسجيل الدخول لإعادة تعيينها.",
+          "primary_button": "تسجيل الدخول",
+          "secondary_button": "استخدم بريداً إلكترونياً آخر"
+        },
+        "server_error": {
+          "title": "لم نتمكن من إنشاء حسابك",
+          "description": "نواجه مشكلة مؤقتة من جانبنا. لم يتم إنشاء حسابك. يرجى المحاولة مرة أخرى بعد بضع دقائق.",
+          "card_title": "بياناتك لا تزال محفوظة",
+          "card_description": "لا تحتاج إلى ملء النموذج مرة أخرى. إذا استمرت المشكلة، يمكن لفريق الدعم مساعدتك.",
+          "primary_button": "حاول مرة أخرى",
+          "secondary_button": "اتصل بالدعم"
+        },
+        "timeout": {
+          "title": "انتهت مهلة الاتصال",
+          "description": "استغرق الطلب وقتاً طويلاً، لذلك لم نتمكن من تأكيد تسجيلك. تحقق من اتصالك بالإنترنت قبل المحاولة مرة أخرى.",
+          "card_title": "تحقق من بريدك الوارد أولاً",
+          "card_description": "إذا وصل بريد التحقق، فاتبع رابطه. وإلا، أعد الاتصال وحاول التسجيل مرة أخرى.",
+          "primary_button": "حاول مرة أخرى",
+          "secondary_button": "العودة إلى التسجيل"
+        }
+      }
+    }
 }
