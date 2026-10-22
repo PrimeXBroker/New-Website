@@ -297,8 +297,6 @@ export default function SignUpForm() {
         timeout: REQUEST_TIMEOUT,
       });
 
-      console.log(result, "result");
-
       const token = result?.data?.registrationToken;
       if (!token) {
         setModalState("server_error");
