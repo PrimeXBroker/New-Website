@@ -41,6 +41,21 @@ const EMPTY_ERRORS = {
   language: "",
   password: "",
 };
+const INITIAL_FORM_DATA = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  day: null,
+  month: null,
+  year: null,
+  country: null,
+  city: null,
+  language: { label: "English", value: "en" },
+  entity: { label: "PrimeX Capital LTD - ST. Lucia", value: "lucia" },
+  password: "",
+  newsletter: false,
+};
 
 export default function SignUpForm() {
   const t = useTranslations("signUpForm");
@@ -54,22 +69,9 @@ export default function SignUpForm() {
   const [errors, setErrors] = useState({ ...EMPTY_ERRORS });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [registrationToken, setRegistrationToken] = useState("");
+  const [registeredEmail, setRegisteredEmail] = useState("");
 
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    day: null,
-    month: null,
-    year: null,
-    country: null,
-    city: null,
-    language: { label: "English", value: "en" },
-    entity: { label: "PrimeX Capital LTD - ST. Lucia", value: "lucia" },
-    password: "",
-    newsletter: false,
-  });
+  const [formData, setFormData] = useState({ ...INITIAL_FORM_DATA });
 
   useEffect(() => {
     const countriesData = csc.getCountries();
@@ -254,6 +256,14 @@ export default function SignUpForm() {
     setIsModalOpen(true);
   };
 
+  const resetSignUpForm = () => {
+    setFormData({
+      ...INITIAL_FORM_DATA,
+      country: countries[0] ?? null,
+    });
+    setErrors({ ...EMPTY_ERRORS });
+  };
+
   const handleSubmit = async () => {
     if (isSubmitting) return;
 
@@ -313,8 +323,10 @@ export default function SignUpForm() {
       });
 
       setRegistrationToken(token);
+      setRegisteredEmail(formData.email.trim());
       setModalState("success");
       setIsModalOpen(true);
+      resetSignUpForm();
     } catch (error) {
       handleApiError(error);
     } finally {
@@ -336,12 +348,18 @@ export default function SignUpForm() {
         headers: JSON_HEADERS,
         timeout: REQUEST_TIMEOUT,
       });
-      setIsModalOpen(false);
     } catch (error) {
       const timedOut =
         error?.code === "ECONNABORTED" || error?.code === "ETIMEDOUT";
       setModalState(timedOut ? "timeout" : "server_error");
     }
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+    setCurrentStep(1);
+    setRegistrationToken("");
+    setRegisteredEmail("");
   };
 
   const handleModalPrimaryAction = () => {
@@ -484,9 +502,9 @@ export default function SignUpForm() {
       </div>
       <RegistrationModal
         isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        onClose={handleModalClose}
         stateType={modalState}
-        email={formData.email}
+        email={registeredEmail || formData.email}
         onPrimaryAction={handleModalPrimaryAction}
         onSecondaryAction={handleModalSecondaryAction}
       />

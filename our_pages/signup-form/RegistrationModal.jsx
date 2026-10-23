@@ -1,9 +1,8 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { FiCheck, FiAlertTriangle, FiShieldOff } from "react-icons/fi";
 import { MdOutlineEmail, MdErrorOutline } from "react-icons/md";
-import { HiOutlineArrowLeft, HiOutlineArrowRight } from "react-icons/hi";
 import { useLocale, useTranslations } from "next-intl";
 import { LuUserRoundX } from "react-icons/lu";
 
@@ -16,8 +15,31 @@ export default function RegistrationModal({
 }) {
   const locale = useLocale();
   const t = useTranslations("signUpForm.modal");
+  const resendT = useTranslations("registration.confirmEmailStep");
+  const [timer, setTimer] = useState(59);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    setTimer(59);
+  }, [isOpen, stateType]);
+
+  useEffect(() => {
+    if (!isOpen || stateType !== "success" || timer <= 0) return;
+    const interval = setInterval(() => {
+      setTimer((prev) => prev - 1);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [isOpen, stateType, timer]);
 
   if (!isOpen) return null;
+
+  const isResendCounting = stateType === "success" && timer > 0;
+
+  const handleSecondaryClick = async () => {
+    if (isResendCounting) return;
+    if (stateType === "success") setTimer(59);
+    await onSecondaryAction?.();
+  };
 
   const stateConfigs = {
     success: {
@@ -115,14 +137,19 @@ export default function RegistrationModal({
             </p>
           </div>
         </div>
-        <div className="space-y-3">
-          <button
-            onClick={onSecondaryAction}
-            className="w-full py-4 border border-e2 dark:border-e2-dark text-tm dark:text-tm-dark bg-transparent text-base rounded-lg"
-          >
-            {config.secondaryText}
-          </button>
-        </div>
+        {stateType !== "server_error" && stateType !== "timeout" && (
+          <div className="space-y-3">
+            <button
+              onClick={handleSecondaryClick}
+              disabled={isResendCounting}
+              className="w-full py-4 border border-e2 dark:border-e2-dark text-tm dark:text-tm-dark bg-transparent text-base rounded-lg"
+            >
+              {isResendCounting
+                ? `${resendT("timer_text")} 00:${timer.toString().padStart(2, "0")}`
+                : config.secondaryText}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
