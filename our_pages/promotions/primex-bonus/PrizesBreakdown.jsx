@@ -10,22 +10,22 @@ const PrizesBreakdown = () => {
     {
       title: t("step1"),
       imageSrc:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/Benefits+Icon+1.svg",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/benefit-1.webp",
     },
     {
       title: t("step2"),
       imageSrc:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/Benefits+Icon+2.svg",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/benefit-2.webp",
     },
     {
       title: t("step3"),
       imageSrc:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/Benefits+Icon+3.svg",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/benefit-3.webp",
     },
     {
       title: t("step4"),
       imageSrc:
-        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/Benefits+Icon+4.svg",
+        "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/benefit-4.webp",
     },
   ];
 

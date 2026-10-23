@@ -82,25 +82,15 @@ export default function SignUpForm() {
       flag: `https://flagcdn.com/w40/${countryData?.shortName?.toLowerCase()}.png`,
     }));
     setCountries(countriesList);
-    setSelectedPhone(phoneOptions?.[0] ?? countriesList[0]);
-    if (countriesList.length > 0 && !formData.country) {
-      setFormData((prev) => ({ ...prev, country: countriesList[0] }));
+    const defaultCountry =
+      countriesList.find((c) => c.isoCode === "IQ") ??
+      countriesList[0] ??
+      phoneOptions?.[0] ??
+      null;
+    setSelectedPhone(defaultCountry);
+    if (defaultCountry && !formData.country) {
+      setFormData((prev) => ({ ...prev, country: defaultCountry }));
     }
-    axios
-      .get("https://ipapi.co/country/")
-      .then((res) => {
-        const userCountryCode = res.data?.trim().toUpperCase();
-        const detectedCountry = countriesList.find(
-          (c) => c.isoCode === userCountryCode,
-        );
-        if (detectedCountry) {
-          setSelectedPhone(detectedCountry);
-          setFormData((prev) => ({ ...prev, country: detectedCountry }));
-        }
-      })
-      .catch((err) => {
-        console.warn("Could not detect country:", err);
-      });
   }, []);
 
   useEffect(() => {
@@ -259,7 +249,8 @@ export default function SignUpForm() {
   const resetSignUpForm = () => {
     setFormData({
       ...INITIAL_FORM_DATA,
-      country: countries[0] ?? null,
+      country:
+        countries.find((c) => c.isoCode === "IQ") ?? countries[0] ?? null,
     });
     setErrors({ ...EMPTY_ERRORS });
   };

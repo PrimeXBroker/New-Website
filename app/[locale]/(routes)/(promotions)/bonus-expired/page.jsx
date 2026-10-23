@@ -9,6 +9,11 @@ export async function generateMetadata({ params }) {
   const t = createTranslator({ locale, messages });
   const url = `https://www.primexcapital.com/${locale}/bonus`;
 
+  const imageUrl =
+    locale === "ar"
+      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/bonus-hero-ar.webp"
+      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/bonus-hero-en.webp";
+
   return {
     title: t("bonusPage.metaData.title"),
     description: t("bonusPage.metaData.description"),
@@ -32,7 +37,7 @@ export async function generateMetadata({ params }) {
       description: t("bonusPage.metaData.description"),
       images: [
         {
-          url: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/hundred-bonus.svg",
+          url: imageUrl,
           width: 1200,
           height: 630,
           alt: t("bonusPage.metaData.title"),
