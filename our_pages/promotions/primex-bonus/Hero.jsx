@@ -22,6 +22,18 @@ const Hero = () => {
       <div className="container">
         <div className="bg-cc dark:bg-cc-dark rounded-2xl py-8 sm:py-10 md:py-0">
           <div className="grid grid-cols-12 items-center md:py-10 lg:py-0 lg:h-[600px]">
+            <div className="col-span-12 md:col-span-6 bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/trading-bg.svg)] bg-center bg-cover bg-no-repeat sm:hidden">
+              <div className="flex justify-center">
+                <Image
+                  unoptimized={true}
+                  src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/hundred-bonus.svg"
+                  width="100"
+                  height="100"
+                  alt="Bonus Hero"
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
             <div className="col-span-12 md:col-span-6 ps-3 pe-3 sm:ps-12 sm:pe-12 md:pe-0 text-center md:text-start">
               <div className="text-tm dark:text-tm-dark font-normal text-sm sm:text-xl md:text-base lg:text-xl uppercase">
                 {t("hero_subtitle")}
@@ -43,7 +55,7 @@ const Hero = () => {
                 />
               </div>
             </div>
-            <div className="col-span-12 md:col-span-6 mt-6 md:mt-0 bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/trading-bg.svg)] bg-center bg-cover bg-no-repeat">
+            <div className="col-span-12 md:col-span-6 mt-6 md:mt-0 bg-[url(https://primexcapital.s3.eu-north-1.amazonaws.com/website/primex-bonus/trading-bg.svg)] bg-center bg-cover bg-no-repeat hidden sm:block">
               <div className="flex justify-center">
                 <Image
                   unoptimized={true}

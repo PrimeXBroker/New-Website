@@ -165,7 +165,7 @@ export default function SignUpForm() {
     if (!lastName) next.lastName = t("errors.last_name_required");
     if (!email) {
       next.email = t("errors.email_required");
-    } else if (!EMAIL_REGEX.test(email)) {
+    } else if (/\s/.test(formData?.email || "") || !EMAIL_REGEX.test(email)) {
       next.email = t("errors.email_invalid");
     }
     if (!formData?.phone) {

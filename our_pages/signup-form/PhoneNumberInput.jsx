@@ -48,9 +48,13 @@ export default function PhoneNumberField({
         </div>
         <input
           type="tel"
+          inputMode="numeric"
+          pattern="[0-9]*"
           placeholder={t("placeholder")}
           value={value}
-          onChange={(e) => handleInputChange("phone", `${e.target.value}`)}
+          onChange={(e) =>
+            handleInputChange("phone", e.target.value.replace(/\D/g, ""))
+          }
           className={`w-full p-4 text-sm sm:text-[15px] font-medium bg-p dark:bg-p-dark text-tm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts-dark focus:outline-none ${
             isOpen ? "rounded-tr-lg" : "rounded-e-lg"
           }`}

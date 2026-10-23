@@ -28,7 +28,7 @@ export default function Step2SecurityLocation({
   };
 
   const days = Array.from({ length: 31 }, (_, i) => {
-    const val = String(i + 1).padStart(2, "0");
+    const val = String(i + 1);
     return { label: val, value: val };
   });
 
@@ -48,10 +48,15 @@ export default function Step2SecurityLocation({
   ];
 
   const currentYear = new Date().getFullYear();
-  const years = Array.from({ length: currentYear - 1920 + 1 }, (_, i) => {
-    const y = String(currentYear - i);
-    return { label: y, value: y };
-  });
+  const youngestAllowedYear = currentYear - 18;
+  const oldestYear = 1920;
+  const years = Array.from(
+    { length: youngestAllowedYear - oldestYear + 1 },
+    (_, i) => {
+      const y = String(youngestAllowedYear - i);
+      return { label: y, value: y };
+    },
+  );
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -90,7 +95,7 @@ export default function Step2SecurityLocation({
             options={years}
             selected={formData.year}
             onChange={(value) => updateFormData({ year: value })}
-            searchInput={true}
+            searchInput={false}
             flag={false}
           />
         </div>

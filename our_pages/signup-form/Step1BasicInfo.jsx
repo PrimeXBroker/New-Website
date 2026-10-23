@@ -21,6 +21,12 @@ export default function Step1BasicInfo({
     updateFormData({ [e.target.name]: e.target.value });
   };
 
+  const handleNameChange = (e) => {
+    // Allow only letters and spaces in name fields
+    const value = e.target.value.replace(/[^\p{L} ]/gu, "");
+    updateFormData({ [e.target.name]: value });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     onNext();
@@ -28,6 +34,11 @@ export default function Step1BasicInfo({
 
   const handlePhoneInputChange = (field, value) => {
     updateFormData({ [field]: value });
+  };
+
+  const handleEmailKeyDown = (e) => {
+    // Email must not accept spaces
+    if (e.key === " ") e.preventDefault();
   };
 
   return (
@@ -50,7 +61,7 @@ export default function Step1BasicInfo({
           required
           placeholder={t("first_name_placeholder")}
           value={formData.firstName || ""}
-          onChange={handleChange}
+          onChange={handleNameChange}
           className="appearance-none w-full bg-p dark:bg-p-dark border border-e1 dark:border-e1-dark rounded-lg px-4 py-4 text-tm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts text-sm sm:text-[15px] font-medium focus:outline-none"
         />
         {errors?.firstName && (
@@ -69,7 +80,7 @@ export default function Step1BasicInfo({
           required
           placeholder={t("last_name_placeholder")}
           value={formData.lastName || ""}
-          onChange={handleChange}
+          onChange={handleNameChange}
           className="appearance-none w-full bg-p dark:bg-p-dark border border-e1 dark:border-e1-dark rounded-lg px-4 py-4 text-tm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts text-sm sm:text-[15px] font-medium focus:outline-none"
         />
         {errors?.lastName && (
@@ -89,6 +100,7 @@ export default function Step1BasicInfo({
           placeholder={t("email_placeholder")}
           value={formData.email || ""}
           onChange={handleChange}
+          onKeyDown={handleEmailKeyDown}
           className="appearance-none w-full bg-p dark:bg-p-dark border border-e1 dark:border-e1-dark rounded-lg px-4 py-4 text-tm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts text-sm sm:text-[15px] font-medium focus:outline-none"
         />
         {errors?.email && (
