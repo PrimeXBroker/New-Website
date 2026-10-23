@@ -3363,76 +3363,76 @@
   },
   "bonusPage": {
     "metaData": {
-      "title": "100% Bonus | PrimeX Capital ",
-      "description": "Boost your trading power with a 100% Deposit Bonus on one deposit only. Receive up to $1,000 in bonus credit and enjoy more flexibility to explore market opportunities with PrimeX Capital."
+      "title": "Bonus | PrimeX Capital",
+      "description": "Boost your trading power with a 30% Deposit Bonus on your first deposit. Get a bonus balance of up to $3,000 and enjoy greater flexibility to seize market opportunities with PrimeX Capital."
     },
     "bonusHero": {
-      "hero_title": "Double your trading power with a 100% bonus",
-      "hero_subtitle": "Celebrating our 4th anniversary ",
-      "hero_description1": "On one deposit only up to $1,000",
-      "hero_description2": "To celebrate our fourth anniversary, we're allowing you to receive a 100% Deposit Bonus of up to $1,000 on one deposit only. Boost your trading potential with additional credit, enjoy greater flexibility in managing your trades, and experience all the benefits of the Standard Account."
+      "hero_subtitle": "PrimeX Capital Bonus",
+      "hero_title": "Boost Your Trading Power with a 30% Bonus",
+      "hero_description1": "A Real Bonus of up to $3,000",
+      "hero_description2": "Get an instant 30% bonus on your deposit. It is tradable, lossable, and added directly to your account margin up to a maximum of $3,000, to elvate your trades and give you greater capital management flexibility."
     },
     "bonusPrizeBreakdown": {
-      "title": "Unlimited benefits",
-      "description": "Everything you need to trade with confidence supercharged",
-      "step1": "100% Deposit Bonus up to $1,000",
-      "step2": "Leverage up to 1:400",
-      "step3": "All features and trading conditions of a Standard Account",
-      "step4": "Additional trading credit to enhance your trading experience"
+      "title": "Bonus Benefits",
+      "description": "Everything you need to trade with ultimate confidence",
+      "step1": "30% deposit bonus up to $3,000",
+      "step2": "Leverage up to 1:200",
+      "step3": "All the features and trading environment of a Standard account",
+      "step4": "Tradable, lossable, and supports your account margin"
     },
     "howItWorks": {
-      "title": "Get your bonus in 3 simple steps",
-      "title1": "Open a new trading ",
-      "title1_1": "account",
-      "description1": "Register a new '100% Bonus Account' type in the client area.",
-      "title2": "Make your ",
-      "title2_1": "qualifying deposit",
-      "description2": "Fund your account with a minimum of $50 to activate the bonus.",
-      "title3": "Start trading with ",
-      "title3_1": "your bonus credit",
-      "description3": "Your credit lands instantly to trade with double the firepower."
+      "title": "How Do I Get the Bonus?",
+      "title1": "Open an Account ",
+      "title1_1": "",
+      "description1": "Open a new 30% Bonus Account from within client Area dashboard",
+      "title2": "Deposit",
+      "title2_1": "",
+      "description2": "Deposit a minimum of $100 to receive the bonus",
+      "title3": "Trade",
+      "title3_1": "",
+      "description3": "The bonus is added to your account immediately after your deposit"
     },
     "bonusRules": {
-      "title": "Terms and Conditions",
-      "trading_rules_title": "Eligibility",
-      "trading_rules_li1_desc": "A new Bonus Account must be opened to qualify",
-      "trading_rules_li2_desc": "Minimum qualifying one deposit only is $50",
-      "trading_rules_li3_desc": "Bonus applies to one deposit only",
+      "title": "General Terms & Conditions",
+      "trading_rules_title": "Eligibility Requirements",
+      "trading_rules_li1_desc": "A new account of the 30% Bonus Account type must be opened",
+      "trading_rules_li2_desc": "The bonus is available to the new and existing clients who meet the requirements",
+      "trading_rules_li3_desc": "Existing clients must submit a request through their account manager to receive the bonus",
       "general_rules_title": "General Rules",
-      "general_rules_li1_desc": "Maximum bonus amount is $1,000. The bonus amount is not withdrawable",
-      "general_rules_li2_desc": "Bonus credit is added automatically after deposit",
-      "timeline_title": "Trading Conditions",
-      "timeline_li1_desc": "Leverage up to 1:400 on the Bonus Account",
-      "timeline_li2_desc": "Standard accounts instruments and spreads apply",
-      "timeline_li3_desc": "Bonus credit can be used for margin",
-      "works_title": "Withdrawal & Forfeit",
-      "works_li1_desc": "Bonus credit is non-withdrawable",
-      "works_li2_desc": "Withdrawing funds may result in the complete removal of your bonus balance",
-      "works_li3_desc": "PrimeX Capital reserves the right to amend or cancel the promotion"
+      "general_rules_li1_desc": "The maximum total bonus amount is $3,000 with a deposit of $10,000 or more",
+      "general_rules_li2_desc": "The bonus is automatically added for clients with the first new deposit into the account",
+      "timeline_title": "Bonus Removal/Revoke",
+      "timeline_li1_desc": "Making any withdrawal from the account",
+      "timeline_li2_desc": "90 days having passed since the bonus was credited",
+      "timeline_li3_desc": "30 days of account inactivity",
+      "works_title": "Prohibited Trading Strategies",
+      "works_li1_desc": "High-Frequency Trading (HFT)",
+      "works_li2_desc": "Internal or cross hedging across different accounts",
+      "works_li3_desc": "Prohibited trading practices specified in the Terms and Conditions agreement"
     },
     "bonusFaqs": {
-      "title": " Frequently asked questions",
-      "question1": "What is the Deposit Bonus?",
-      "answer1": "The Deposit Bonus is additional trading credit awarded on one qualifying deposit only into a Bonus Account. It is intended to support your trading activity in accordance with the promotion's terms.",
-      "question2": "How much bonus can I receive?",
-      "answer2": "You will receive a 100% Deposit Bonus of up to $1,000. Example: Deposit $1,000 and receive an additional $1,000 in bonus credit.",
-      "question3": "Does the bonus apply to every deposit?",
-      "answer3": "No. The bonus is available only on one qualifying deposit only made into a Bonus Account.",
-      "question4": "What is the minimum deposit required?",
-      "answer4": "The minimum qualifying deposit is $50.",
-      "question5": "How do I claim the bonus?",
-      "answer5": "Simply open a new Bonus Account and make one qualifying deposit only to receive the bonus.",
-      "question6": "Can I withdraw the bonus credit?",
-      "answer6": "No. Bonus credit is non-withdrawable.",
-      "question7": "Can I lose the bonus credit?",
-      "answer7": "No. Bonus credit cannot be lost.",
-      "question8": "What leverage is available on the Bonus Account?",
-      "answer8": "You can trade with leverage of up to 1:400."
+      "title": " Frequently Asked Questions",
+      "question1": "What is the deposit bonus?",
+      "answer1": "It is a credit added to your actual account deposit to increase your available margin. It is tradable and lossable bonus",
+      "question2": "How much is the bonus?",
+      "answer2": "The bonus starts at $30 with a minimum deposit of $100 and reaches up to $3,000 with a deposit of $10,000 or more",
+      "question3": "Is the bonus added to every deposit?",
+      "answer3": "No, the bonus applies to the first deposit in the '30% Bonus Account'",
+      "question4": "Is there a minimum deposit to benefit from the bonus?",
+      "answer4": "The minimum deposit to qualify for the deposit bonus is $100",
+      "question5": "How can I get the bonus?",
+      "answer5": "You need to open a new '30% Bonus Account', then deposit using one of the available deposit methods we offer to receive the bonus instantly",
+      "question6": "Can I withdraw the bonus amount?",
+      "answer6": "No, the bonus amount cannot be withdrawn. However, you can withdraw your capital and your generated trading profits",
+      "question7": "Can the bonus balance be lost?",
+      "answer7": "Yes, the bonus may be removed if any of the bonus removal/revoke conditions are met",
+      "question8": "What leverage is available for the bonus account?",
+      "answer8": "The leverage assigned to the 30% Bonus Account is 1:200"
     },
     "bonusJoinNow": {
-      "title1": "Ready to Trade with More Power?",
-      "subtitle": "Open your Bonus Account today and claim your 100% Deposit Bonus.",
-      "btnTxt": "Claim Your Bonus"
+      "title1": "Ready for a Stronger Trading Move?",
+      "subtitle": "Open your account now and enjoy an instant 30% bonus on your deposit",
+      "btnTxt": "Register Now"
     }
   },
   "primeXTradingApp": {
@@ -4517,13 +4517,13 @@
     }
   },
   "signUpForm": {
-    "title": "Sign up",
+    "title": "Create Account",
     "step_counter": "Step {current} of {total}",
-    "subtitle": "Register your trading account on PrimeX Capital",
+    "subtitle": "Create your account on PrimeX Capital",
     "steps": {
-      "basic_info": "Basic Info",
-      "security_location": "Security & Location",
-      "entity_setup": "Entity & Setup"
+      "basic_info": "Basic Information",
+      "security_location": "Country & Date of Birth",
+      "entity_setup": "Password"
     },
     "errors": {
       "first_name_required": "First Name is required",
@@ -4539,29 +4539,29 @@
       "password_required": "Password is required"
     },
     "basicInfo": {
-      "title": "Let's start with you",
-      "description": "Enter your personal details to create your account.",
+      "title": "Let's start with some basic details",
+      "description": "Make sure to enter your personal information accurately.",
       "first_name_label": "First Name",
-      "first_name_placeholder": "First Name",
+      "first_name_placeholder": "Enter your first name",
       "last_name_label": "Last Name",
-      "last_name_placeholder": "Last Name",
-      "email_label": "Email",
-      "email_placeholder": "Email",
+      "last_name_placeholder": "Enter your last name",
+      "email_label": "Email Address",
+      "email_placeholder": "Enter your email address",
       "phone_number_label": "Phone Number",
-      "time_estimate": "About 1 minute",
-      "next_button": "Next Step"
+      "time_estimate": "Registration takes approximately 1 minute",
+      "next_button": "Next"
     },
     "securityLocation": {
-      "title": "Make your account yours",
-      "description": "Tell us where you live and set a secure password.",
+      "title": "Now, complete some additional details",
+      "description": "Select your date of birth, country, and choose your preferred language.",
       "day_label": "Day",
       "month_label": "Month",
       "year_label": "Year",
       "country_label": "Country",
       "city_label": "City",
       "language_label": "Preferred Language",
-      "previous_button": "Previous",
-      "next_button": "Next Step",
+      "previous_button": "Back",
+      "next_button": "Next",
       "months": {
         "january": "January",
         "february": "February",
@@ -4583,21 +4583,21 @@
       }
     },
     "entitySetup": {
-      "title": "You're almost ready",
-      "description": "Choose your preferences and complete your registration.",
-      "entity_label": "Select Entity",
+      "title": "Final Step",
+      "description": "Select the regulatory entity (if desired) and set a secure password.",
+      "entity_label": "Select Regulatory Entity",
       "password_label": "Password",
-      "password_placeholder": "Password",
-      "generate_password": "Generate random password",
+      "password_placeholder": "Enter your password",
+      "generate_password": "Generate a strong random password",
       "strong_password": "Strong password",
-      "password_hint": "Use 8 or more characters, including uppercase, lowercase, numbers and symbols.",
-      "newsletter_agreement": "I agree to receive newsletters, marketing materials, company news, and product updates.",
-      "name_placeholder": "Your Name",
+      "password_hint": "Use 8 or more characters with a mix of upper and lower case letters, numbers, and symbols.",
+      "newsletter_agreement": "I agree to receive marketing materials and product updates.",
+      "name_placeholder": "Your name",
       "email_placeholder": "your.email@email.com",
       "previous_button": "Previous",
-      "submit_button": "Sign Up",
+      "submit_button": "Complete Registration",
       "entities": {
-        "lucia": "PrimeX Capital LTD - ST. Lucia",
+        "lucia": "PrimeX Capital LTD - St. Lucia",
         "mauritius": "PrimeX Capital Mauritius"
       }
     },
@@ -4610,36 +4610,36 @@
       "search_placeholder": "Search"
     },
     "modal": {
-      "fallback_email": "james.morgan@email.com",
+      "fallback_email": "you.email@email.com",
       "success": {
-        "title": "Account successfully created",
-        "description": "For verification, check your email address to verify your account.",
-        "card_description": "Open the verification link in your inbox to activate your account. Can't find it? Check your spam folder.",
-        "primary_button": "Continue to login",
-        "secondary_button": "Resend verification email"
+        "title": "Account Created Successfully!",
+        "description": "To complete your registration, please check your email and complete the verification there.",
+        "card_description": "Open the verification link sent to your email. If you don't find the message, please check your Spam or Junk folder.",
+        "primary_button": "Continue to Sign In",
+        "secondary_button": "Resend Verification Email"
       },
       "exists": {
-        "title": "Email already registered",
-        "description": "An account with this email address already exists. Log in to your existing account or sign up with a different email.",
-        "card_description": "Forgot your password? Choose \"Forgot password\" on the login screen to reset it.",
-        "primary_button": "Log in",
-        "secondary_button": "Use another email"
+        "title": "This Email is Already Registered",
+        "description": "An account with this email address already exists. Please log in to your existing account or use a different email address.",
+        "card_description": "Forgot your password? Select \"Forgot Password\" on the sign-in screen to reset it.",
+        "primary_button": "Sign In",
+        "secondary_button": "Use Another Email"
       },
       "server_error": {
-        "title": "We couldn't create your account",
-        "description": "We're having a temporary problem on our side. Your account hasn't been created. Please try again in a few minutes.",
-        "card_title": "Your details are still here",
-        "card_description": "You don't need to fill out the form again. If the issue continues, our support team can help.",
-        "primary_button": "Try again",
-        "secondary_button": "Contact support"
+        "title": "We Couldn't Create Your Account.",
+        "description": "We are experiencing a temporary issue on our end. Your account was not created. Please try again shortly.",
+        "card_title": "Your Data is Saved Here",
+        "card_description": "No need to refill the form. If the problem persists, our support team can help you.",
+        "primary_button": "Try Again",
+        "secondary_button": "Contact Support"
       },
       "timeout": {
-        "title": "Connection timed out",
-        "description": "The request took too long, so we couldn't confirm your signup. Check your internet connection before trying again.",
-        "card_title": "Check your inbox first",
-        "card_description": "If a verification email has arrived, follow its link. Otherwise, reconnect and try signing up again.",
-        "primary_button": "Try again",
-        "secondary_button": "Back to signup"
+        "title": "Registration Timed Out",
+        "description": "The request took longer than expected, so we couldn't confirm your registration. Please check your internet connection and try again.",
+        "card_title": "Check Your Inbox First",
+        "card_description": "If you received a verification email, click the confirmation link inside. Or reconnect and try registering again.",
+        "primary_button": "Try Again",
+        "secondary_button": "Return to Registration"
       }
     }
   }

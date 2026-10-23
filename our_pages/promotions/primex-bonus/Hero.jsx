@@ -28,8 +28,8 @@ const Hero = () => {
                   unoptimized={true}
                   src={
                     locale === "ar"
-                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/bonus-hero-ar.webp"
-                      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/bonus-hero-en.webp"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/hero-ar.webp"
+                      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/hero-en.webp"
                   }
                   width="100"
                   height="100"
@@ -65,13 +65,13 @@ const Hero = () => {
                   unoptimized={true}
                   src={
                     locale === "ar"
-                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/bonus-hero-ar.webp"
-                      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/bonus-hero-en.webp"
+                      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/hero-ar.webp"
+                      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/hero-en.webp"
                   }
                   width="100"
                   height="100"
                   alt="Bonus Hero"
-                  className="w-full sm:w-[70%] h-auto"
+                  className="w-full sm:w-[75%] h-auto"
                 />
               </div>
             </div>

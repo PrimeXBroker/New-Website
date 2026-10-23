@@ -11,8 +11,8 @@ export async function generateMetadata({ params }) {
 
   const imageUrl =
     locale === "ar"
-      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/bonus-hero-ar.webp"
-      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/bonus-hero-en.webp";
+      ? "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/hero-ar.webp"
+      : "https://primexcapital.s3.eu-north-1.amazonaws.com/website/30%25-deposit-bonus/hero-en.webp";
 
   return {
     title: t("bonusPage.metaData.title"),
