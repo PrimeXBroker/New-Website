@@ -31,6 +31,9 @@ const nextConfig = {
   },
 
   experimental: {
+    // Turbopack emits server source maps by default (~110MB here), which pushes
+    // the Amplify build output past its 220MB limit.
+    turbopackSourceMaps: false,
     optimizePackageImports: [
       "lucide-react",
       "react-icons",
