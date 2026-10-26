@@ -3382,15 +3382,20 @@
     },
     "howItWorks": {
       "title": "How Do I Get the Bonus?",
-      "title1": "Open an Account ",
-      "title1_1": "",
-      "description1": "Open a new 30% Bonus Account from within client Area dashboard",
+      "subtitle1": "For New Clients",
+      "subtitle2": "For Existing Clients",
+      "title1": "Open",
+      "description1": "Open a new 30% Bonus Account from within your Client Area dashboard",
       "title2": "Deposit",
-      "title2_1": "",
-      "description2": "Deposit a minimum of $100 to receive the bonus",
-      "title3": "Trade",
-      "title3_1": "",
-      "description3": "The bonus is added to your account immediately after your deposit"
+      "description2": "Deposit a minimum of $100 to be eligible for the bonus",
+      "title3": "Get",
+      "description3": "The bonus amount will be added to your account immediately after your deposit",
+      "title4": "Contact",
+      "description4": "Get in touch with your account manager to request the bonus account",
+      "title5": "Deposit",
+      "description5": "Make a new deposit of at least $100 to be eligible for the bonus",
+      "title6": "Get",
+      "description6": "Once approved, the bonus amount will be added to your account immediately"
     },
     "bonusRules": {
       "title": "General Terms & Conditions",
