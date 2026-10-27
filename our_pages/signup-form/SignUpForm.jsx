@@ -28,7 +28,7 @@ const STEPS = [1, 2, 3];
 const STEP_FIELDS = {
   1: ["firstName", "lastName", "email", "phone"],
   2: ["birthDate", "country", "city", "language"],
-  3: ["password"],
+  3: ["password", "newsletter"],
 };
 const EMPTY_ERRORS = {
   firstName: "",
@@ -40,6 +40,7 @@ const EMPTY_ERRORS = {
   city: "",
   language: "",
   password: "",
+  newsletter: "",
 };
 const INITIAL_FORM_DATA = {
   firstName: "",
@@ -170,6 +171,8 @@ export default function SignUpForm() {
     if (!formData?.city) next.city = t("errors.city_required");
     if (!formData?.language) next.language = t("errors.language_required");
     if (!formData?.password) next.password = t("errors.password_required");
+    if (!formData?.newsletter)
+      next.newsletter = t("errors.newsletter_required");
 
     return next;
   };

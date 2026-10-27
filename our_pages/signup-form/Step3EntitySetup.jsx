@@ -166,16 +166,25 @@ export default function Step3EntitySetup({
           type="checkbox"
           id="newsletter"
           name="newsletter"
+          required
+          aria-invalid={errors?.newsletter ? "true" : "false"}
           checked={formData.newsletter || false}
           onChange={handleChange}
-          className="mt-1 w-4 h-4 accent-pcp dark:accent-pcp-dark rounded bg-transparent border border-e2 dark:border-e2-dark"
+          className={`mt-1 w-4 h-4 accent-pcp dark:accent-pcp-dark rounded bg-transparent border ${errors?.newsletter ? "border-rc-dark dark:border-rc-dark" : "border-e2-dark dark:border-e2-dark"}`}
         />
-        <label
-          htmlFor="newsletter"
-          className="text-xs text-ts dark:text-ts-dark font-medium leading-relaxed cursor-pointer"
-        >
-          {t("newsletter_agreement")}
-        </label>
+        <div>
+          <label
+            htmlFor="newsletter"
+            className="text-xs text-ts dark:text-ts-dark font-medium leading-relaxed cursor-pointer"
+          >
+            {t("newsletter_agreement")}
+          </label>
+          {errors?.newsletter && (
+            <p className="text-rc dark:text-rc-dark text-xs mt-1">
+              {errors.newsletter}
+            </p>
+          )}
+        </div>
       </div>
       <div className="bg-transparent border border-e2 dark:border-e2-dark rounded-lg p-4 flex items-center justify-between">
         <div className="flex items-center gap-3">

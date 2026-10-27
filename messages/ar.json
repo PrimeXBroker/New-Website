@@ -4473,7 +4473,8 @@
       "country_required": "الدولة مطلوبة",
       "city_required": "المدينة مطلوبة",
       "language_required": "اللغة المفضلة مطلوبة",
-      "password_required": "كلمة المرور مطلوبة"
+      "password_required": "كلمة المرور مطلوبة",
+      "newsletter_required": "يرجى الموافقة على اتفاقية النشرة البريدية للمتابعة"
     },
     "basicInfo": {
       "title": "لنبدأ ببعض البيانات الأساسية",

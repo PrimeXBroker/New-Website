@@ -4543,7 +4543,8 @@
       "country_required": "وڵات پێویستە",
       "city_required": "شار پێویستە",
       "language_required": "زمانی خواستراو پێویستە",
-      "password_required": "وشەی تێپەڕ پێویستە"
+      "password_required": "وشەی تێپەڕ پێویستە",
+      "newsletter_required": "تکایە ڕەزامەندی لەسەر ڕێککەوتنی نامەی هەواڵەکان بکە بۆ بەردەوامبوون"
     },
     "basicInfo": {
       "title": "با بە هەندێک زانیاریی بنەڕەتی دەست پێ بکەین",

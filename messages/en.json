@@ -4541,7 +4541,8 @@
       "country_required": "Please select your country",
       "city_required": "Please select your city",
       "language_required": "Please select your language",
-      "password_required": "Password is required"
+      "password_required": "Password is required",
+      "newsletter_required": "Please accept the newsletter agreement to continue"
     },
     "basicInfo": {
       "title": "Let's start with some basic details",
