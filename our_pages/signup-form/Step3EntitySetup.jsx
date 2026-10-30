@@ -34,10 +34,6 @@ export default function Step3EntitySetup({
     updateFormData({ [e.target.name]: value });
   };
 
-  const handlePasswordChange = (pass) => {
-    updateFormData({ password: pass });
-  };
-
   const generateRandomPassword = () => {
     const minLength = 10;
     const lowercase = "abcdefghijklmnopqrstuvwxyz";
@@ -59,7 +55,7 @@ export default function Step3EntitySetup({
       .split("")
       .sort(() => 0.5 - Math.random())
       .join("");
-    handlePasswordChange(shuffledPassword);
+    handleChange(shuffledPassword);
   };
 
   const copyToClipboard = () => {
@@ -77,12 +73,6 @@ export default function Step3EntitySetup({
   };
 
   const password = formData.password || "";
-  const isStrongPassword =
-    password.length >= 8 &&
-    /[A-Z]/.test(password) &&
-    /[a-z]/.test(password) &&
-    /\d/.test(password) &&
-    /[^A-Za-z0-9]/.test(password);
 
   const criteria = [
     {
@@ -95,7 +85,7 @@ export default function Step3EntitySetup({
     },
     {
       text: t2("password_criteria_3"),
-      valid: password.length >= 8,
+      valid: password?.length >= 8,
     },
   ];
 
@@ -180,22 +170,6 @@ export default function Step3EntitySetup({
             <FiRefreshCw className="w-3.5 h-3.5" />
             <span>{t("generate_password")}</span>
           </button>
-          <div
-            className={`flex items-center gap-1 font-medium transition-colors duration-300 ${
-              isStrongPassword
-                ? "text-gc dark:text-gc-dark"
-                : "text-ts dark:text-ts-dark"
-            }`}
-          >
-            <FiCheck
-              className={`w-3.5 h-3.5 ${
-                isStrongPassword
-                  ? "text-gc dark:text-gc-dark"
-                  : "text-ts dark:text-ts-dark"
-              }`}
-            />
-            <span>{t("strong_password")}</span>
-          </div>
         </div>
         {showCriteria && (
           <div className="flex flex-wrap gap-2 my-4 sm:my-6">

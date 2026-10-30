@@ -4474,6 +4474,7 @@
       "city_required": "المدينة مطلوبة",
       "language_required": "اللغة المفضلة مطلوبة",
       "password_required": "كلمة المرور مطلوبة",
+      "password_criteria_required": "كلمة المرور ليست قوية بما يكفي",
       "newsletter_required": "يرجى الموافقة على اتفاقية النشرة البريدية للمتابعة"
     },
     "basicInfo": {

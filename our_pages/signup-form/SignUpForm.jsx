@@ -170,7 +170,17 @@ export default function SignUpForm() {
     if (!formData?.country) next.country = t("errors.country_required");
     if (!formData?.city) next.city = t("errors.city_required");
     if (!formData?.language) next.language = t("errors.language_required");
-    if (!formData?.password) next.password = t("errors.password_required");
+    const password = formData?.password || "";
+    const isPasswordValid =
+      /(?=.*[a-z])(?=.*[A-Z])/.test(password) &&
+      /\d/.test(password) &&
+      password.length >= 8;
+
+    if (!password) {
+      next.password = t("errors.password_required");
+    } else if (!isPasswordValid) {
+      next.password = t("errors.password_criteria_required");
+    }
     if (!formData?.newsletter)
       next.newsletter = t("errors.newsletter_required");
 

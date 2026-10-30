@@ -4542,6 +4542,7 @@
       "city_required": "Please select your city",
       "language_required": "Please select your language",
       "password_required": "Password is required",
+      "password_criteria_required": "Password is not strong enough",
       "newsletter_required": "Please accept the newsletter agreement to continue"
     },
     "basicInfo": {
