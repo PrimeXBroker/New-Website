@@ -337,6 +337,11 @@ export default function SignUpForm() {
         timeout: REQUEST_TIMEOUT,
       });
 
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "user_registration_submitted",
+      });
+
       setRegistrationToken(token);
       setRegisteredEmail(formData.email.trim());
       setModalState("success");

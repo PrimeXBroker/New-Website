@@ -1,10 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import {
-  MdOutlineVisibilityOff,
-  MdOutlineVisibility,
-  MdOutlineContentCopy,
-} from "react-icons/md";
 import CustomSelectDropdown from "./CustomSelectDropdown";
 import { LuUserRoundCheck, LuCheck } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
