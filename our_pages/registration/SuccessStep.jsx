@@ -16,6 +16,13 @@ export default function SuccessStep() {
         type: "customer_action",
       });
     }
+    // Fire Google Tag Manager (GTM) dataLayer event
+    if (typeof window !== "undefined") {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "user_registration_submitted",
+      });
+    }
   }, []);
 
   useEffect(() => {
