@@ -1,8 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FiEye, FiEyeOff, FiCopy, FiRefreshCw, FiCheck } from "react-icons/fi";
 import CustomSelectDropdown from "./CustomSelectDropdown";
 import { LuUserRoundCheck, LuCheck } from "react-icons/lu";
+import { RxCross2 } from "react-icons/rx";
 import { HiOutlineArrowLeft, HiOutlineArrowRight } from "react-icons/hi";
 import { useLocale, useTranslations } from "next-intl";
 import { Spinner } from "@nextui-org/react";
@@ -17,12 +18,14 @@ export default function Step3EntitySetup({
 }) {
   const locale = useLocale();
   const t = useTranslations("signUpForm.entitySetup");
+  const t2 = useTranslations("registration.createPassword");
 
   const entityOptions = [
     { label: t("entities.lucia"), value: "lucia" },
     { label: t("entities.mauritius"), value: "mauritius" },
   ];
   const [showPassword, setShowPassword] = useState(false);
+  const [showCriteria, setShowCriteria] = useState(false);
   const [copied, setCopied] = useState(false);
 
   const handleChange = (e) => {
@@ -31,14 +34,32 @@ export default function Step3EntitySetup({
     updateFormData({ [e.target.name]: value });
   };
 
-  const generateRandomPassword = () => {
-    const chars =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
-    let pass = "";
-    for (let i = 0; i < 12; i++) {
-      pass += chars.charAt(Math.floor(Math.random() * chars.length));
-    }
+  const handlePasswordChange = (pass) => {
     updateFormData({ password: pass });
+  };
+
+  const generateRandomPassword = () => {
+    const minLength = 10;
+    const lowercase = "abcdefghijklmnopqrstuvwxyz";
+    const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const numbers = "0123456789";
+
+    let password =
+      lowercase[Math.floor(Math.random() * lowercase.length)] +
+      uppercase[Math.floor(Math.random() * uppercase.length)] +
+      numbers[Math.floor(Math.random() * numbers.length)];
+
+    const allOptions = lowercase + uppercase + numbers;
+
+    for (let i = password.length; i < minLength; i++) {
+      password += allOptions[Math.floor(Math.random() * allOptions.length)];
+    }
+
+    const shuffledPassword = password
+      .split("")
+      .sort(() => 0.5 - Math.random())
+      .join("");
+    handlePasswordChange(shuffledPassword);
   };
 
   const copyToClipboard = () => {
@@ -62,6 +83,25 @@ export default function Step3EntitySetup({
     /[a-z]/.test(password) &&
     /\d/.test(password) &&
     /[^A-Za-z0-9]/.test(password);
+
+  const criteria = [
+    {
+      text: t2("password_criteria_1"),
+      valid: /(?=.*[a-z])(?=.*[A-Z])/.test(password),
+    },
+    {
+      text: t2("password_criteria_2"),
+      valid: /\d/.test(password),
+    },
+    {
+      text: t2("password_criteria_3"),
+      valid: password.length >= 8,
+    },
+  ];
+
+  useEffect(() => {
+    setShowCriteria(password.length > 0);
+  }, [password]);
 
   return (
     <form onSubmit={handleFinalSubmit} className="space-y-4" noValidate>
@@ -157,6 +197,30 @@ export default function Step3EntitySetup({
             <span>{t("strong_password")}</span>
           </div>
         </div>
+        {showCriteria && (
+          <div className="flex flex-wrap gap-2 my-4 sm:my-6">
+            {criteria.map((item, index) => (
+              <div
+                key={index}
+                className={`flex items-center px-2 py-1 rounded-sm ${
+                  item.valid
+                    ? "text-gc-dark bg-gb-dark"
+                    : "text-rc-dark bg-rb-dark"
+                }`}
+                style={{ width: "auto" }}
+              >
+                {item.valid ? (
+                  <LuCheck className="flex-shrink-0 me-1 text-xs sm:text-sm" />
+                ) : (
+                  <RxCross2 className="flex-shrink-0 me-1 text-xs sm:text-sm" />
+                )}
+                <span className="text-xs sm:text-sm font-medium leading-snug">
+                  {item.text}
+                </span>
+              </div>
+            ))}
+          </div>
+        )}
         <p className="text-xs text-ts dark:text-ts-dark font-medium">
           {t("password_hint")}
         </p>

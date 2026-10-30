@@ -195,10 +195,22 @@ export default function SignUpForm() {
 
   const handleApiError = (error) => {
     const apiErrors = error?.response?.data?.errors?.children || {};
-    const readFieldError = (field) =>
-      Array.isArray(apiErrors?.[field]?.errors)
+    const readFieldError = (field) => {
+      // password errors come back nested: password.children.first/second.errors
+      if (field === "password") {
+        const nested = apiErrors?.[field]?.children;
+        const messages = [
+          ...(nested?.first?.errors || []),
+          ...(nested?.second?.errors || []),
+        ].filter(Boolean);
+        const uniqueMessages = Array.from(new Set(messages));
+        if (uniqueMessages.length) return uniqueMessages.join(", ");
+      }
+
+      return Array.isArray(apiErrors?.[field]?.errors)
         ? apiErrors[field].errors.join(", ")
         : "";
+    };
 
     const emailError = readFieldError("email");
     if (EMAIL_EXISTS_REGEX.test(emailError)) {
