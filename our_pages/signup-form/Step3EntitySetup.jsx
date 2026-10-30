@@ -1,12 +1,17 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { FiEye, FiEyeOff, FiCopy, FiRefreshCw, FiCheck } from "react-icons/fi";
+import {
+  MdOutlineVisibilityOff,
+  MdOutlineVisibility,
+  MdOutlineContentCopy,
+} from "react-icons/md";
 import CustomSelectDropdown from "./CustomSelectDropdown";
 import { LuUserRoundCheck, LuCheck } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
 import { HiOutlineArrowLeft, HiOutlineArrowRight } from "react-icons/hi";
 import { useLocale, useTranslations } from "next-intl";
 import { Spinner } from "@nextui-org/react";
+import { FiCopy, FiEye, FiEyeOff, FiRefreshCw } from "react-icons/fi";
 
 export default function Step3EntitySetup({
   formData,
@@ -24,7 +29,7 @@ export default function Step3EntitySetup({
     { label: t("entities.lucia"), value: "lucia" },
     { label: t("entities.mauritius"), value: "mauritius" },
   ];
-  const [showPassword, setShowPassword] = useState(false);
+  const [passwordVisible, setPasswordVisible] = useState(false);
   const [showCriteria, setShowCriteria] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -32,6 +37,10 @@ export default function Step3EntitySetup({
     const value =
       e.target.type === "checkbox" ? e.target.checked : e.target.value;
     updateFormData({ [e.target.name]: value });
+  };
+
+  const handlePasswordChange = (pass) => {
+    updateFormData({ password: pass });
   };
 
   const generateRandomPassword = () => {
@@ -55,7 +64,7 @@ export default function Step3EntitySetup({
       .split("")
       .sort(() => 0.5 - Math.random())
       .join("");
-    handleChange(shuffledPassword);
+    handlePasswordChange(shuffledPassword);
   };
 
   const copyToClipboard = () => {
@@ -72,26 +81,24 @@ export default function Step3EntitySetup({
     onSubmit();
   };
 
-  const password = formData.password || "";
-
   const criteria = [
     {
       text: t2("password_criteria_1"),
-      valid: /(?=.*[a-z])(?=.*[A-Z])/.test(password),
+      valid: /(?=.*[a-z])(?=.*[A-Z])/.test(formData?.password || ""),
     },
     {
       text: t2("password_criteria_2"),
-      valid: /\d/.test(password),
+      valid: /\d/.test(formData?.password || ""),
     },
     {
       text: t2("password_criteria_3"),
-      valid: password?.length >= 8,
+      valid: formData?.password?.length >= 8,
     },
   ];
 
   useEffect(() => {
-    setShowCriteria(password.length > 0);
-  }, [password]);
+    setShowCriteria(formData?.password?.length > 0);
+  }, [formData?.password]);
 
   return (
     <form onSubmit={handleFinalSubmit} className="space-y-4" noValidate>
@@ -118,23 +125,22 @@ export default function Step3EntitySetup({
           {t("password_label")}
         </label>
         <div className="flex gap-1 sm:gap-2">
-          <div className="relative flex-1">
+          <div className="relative w-full">
             <input
-              type={showPassword ? "text" : "password"}
-              name="password"
-              required
-              placeholder={t("password_placeholder")}
-              value={formData.password || ""}
-              onChange={handleChange}
+              id="passwordInput"
+              type={passwordVisible ? "text" : "password"}
+              placeholder={t2("password_label")}
+              value={formData?.password || ""}
+              onChange={(e) => handlePasswordChange(e.target.value)}
               className="appearance-none w-full bg-p dark:bg-p-dark border border-e1 dark:border-e1-dark rounded-lg px-4 py-4 text-tm dark:text-tm-dark placeholder:text-ts dark:placeholder:text-ts text-sm sm:text-[15px] font-medium focus:outline-none"
             />
           </div>
           <button
             type="button"
-            onClick={() => setShowPassword(!showPassword)}
+            onClick={() => setPasswordVisible(!passwordVisible)}
             className="bg-p dark:bg-p-dark border border-e1 dark:border-e1-dark p-4 rounded-lg text-ts dark:text-ts-dark"
           >
-            {showPassword ? (
+            {passwordVisible ? (
               <FiEyeOff className="w-4 h-4" />
             ) : (
               <FiEye className="w-4 h-4" />
@@ -161,16 +167,14 @@ export default function Step3EntitySetup({
             {errors.password}
           </p>
         )}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 text-xs pt-2 sm:pt-1 pb-1">
-          <button
-            type="button"
-            onClick={generateRandomPassword}
-            className="flex items-center gap-2 text-tm dark:text-tm-dark underline hover:text-pcp dark:hover:text-pcp-dark transition-all duration-500 ease-in-out"
-          >
-            <FiRefreshCw className="w-3.5 h-3.5" />
-            <span>{t("generate_password")}</span>
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={generateRandomPassword}
+          className="flex items-center text-xs gap-2 text-tm dark:text-tm-dark underline hover:text-pcp dark:hover:text-pcp-dark transition-all duration-500 ease-in-out"
+        >
+          <FiRefreshCw className="w-3 h-3" />
+          <span>{t("generate_password")}</span>
+        </button>
         {showCriteria && (
           <div className="flex flex-wrap gap-2 my-4 sm:my-6">
             {criteria.map((item, index) => (
@@ -178,8 +182,8 @@ export default function Step3EntitySetup({
                 key={index}
                 className={`flex items-center px-2 py-1 rounded-sm ${
                   item.valid
-                    ? "text-gc-dark bg-gb-dark"
-                    : "text-rc-dark bg-rb-dark"
+                    ? "text-gc dark:text-gc-dark bg-gb dark:bg-gb-dark"
+                    : "text-rc dark:text-rc-dark bg-rb dark:bg-rb-dark"
                 }`}
                 style={{ width: "auto" }}
               >
@@ -195,9 +199,6 @@ export default function Step3EntitySetup({
             ))}
           </div>
         )}
-        <p className="text-xs text-ts dark:text-ts-dark font-medium">
-          {t("password_hint")}
-        </p>
       </div>
       <div className="flex items-start gap-3 pt-2">
         <input

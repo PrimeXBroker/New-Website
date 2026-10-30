@@ -206,7 +206,6 @@ export default function SignUpForm() {
   const handleApiError = (error) => {
     const apiErrors = error?.response?.data?.errors?.children || {};
     const readFieldError = (field) => {
-      // password errors come back nested: password.children.first/second.errors
       if (field === "password") {
         const nested = apiErrors?.[field]?.children;
         const messages = [
