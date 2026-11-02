@@ -1,6 +1,6 @@
-import RegistrationWrapper from "@/our_pages/registration/RegistrationWrapper";
 import React from "react";
 import { createTranslator } from "next-intl";
+import SignUpForm from "@/our_pages/signup-form/SignUpForm";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }) {
 const page = () => {
   return (
     <>
-      <RegistrationWrapper />
+      <SignUpForm />
     </>
   );
 };
