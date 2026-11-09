@@ -3364,7 +3364,7 @@
   "bonusPage": {
     "metaData": {
       "title": "Bonus | PrimeX Capital",
-      "description": "Boost your trading power with a 30% Deposit Bonus on your first deposit. Get a bonus balance of up to $3,000 and enjoy greater flexibility to seize market opportunities with PrimeX Capital."
+      "description": "Boost your trading power with a 30% Deposit Bonus on your New deposits. Get a bonus balance of up to $3,000 and enjoy greater flexibility to seize market opportunities with PrimeX Capital."
     },
     "bonusHero": {
       "hero_subtitle": "PrimeX Capital Bonus",
@@ -3405,7 +3405,7 @@
       "trading_rules_li3_desc": "Existing clients must submit a request through their account manager to receive the bonus",
       "general_rules_title": "General Rules",
       "general_rules_li1_desc": "The maximum total bonus amount is $3,000 with a deposit of $10,000 or more",
-      "general_rules_li2_desc": "The bonus is automatically added for clients with the first new deposit into the account",
+      "general_rules_li2_desc": "The bonus is automatically added for clients with their new deposits into the account",
       "timeline_title": "Bonus Removal/Revoke",
       "timeline_li1_desc": "Making any withdrawal from the account",
       "timeline_li2_desc": "90 days having passed since the bonus was credited",
@@ -3422,7 +3422,7 @@
       "question2": "How much is the bonus?",
       "answer2": "The bonus starts at $30 with a minimum deposit of $100 and reaches up to $3,000 with a deposit of $10,000 or more",
       "question3": "Is the bonus added to every deposit?",
-      "answer3": "No, the bonus applies to the first deposit in the '30% Bonus Account'",
+      "answer3": "Yes, the bonus applies to all the new deposits in the '30% Bonus Account'",
       "question4": "Is there a minimum deposit to benefit from the bonus?",
       "answer4": "The minimum deposit to qualify for the deposit bonus is $100",
       "question5": "How can I get the bonus?",
