@@ -47,7 +47,7 @@ const PrimeXAcademy = () => {
   ];
 
   return (
-    <section className="bg-p dark:bg-p-dark py-16 sm:py-28">
+    <section className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
       <div className="container">
         <div className="text-center md:text-center mb-10">
           <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold">

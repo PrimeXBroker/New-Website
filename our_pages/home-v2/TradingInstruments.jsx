@@ -88,7 +88,7 @@ const TradingInstruments = () => {
         </div>
         <div className="w-full mb-10">
           <div className="flex items-center justify-center flex-wrap gap-x-4 sm:gap-x-6">
-            {tradingInstrumentsTabs.map((tab,index) => {
+            {tradingInstrumentsTabs.map((tab, index) => {
               return (
                 <button
                   key={index}
@@ -121,7 +121,7 @@ const TradingInstruments = () => {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {symbolList?.length
-              ? symbolList.map((instrument,index) => {
+              ? symbolList.map((instrument, index) => {
                   const displayPrice = parseFloat(
                     instrument?.bid_price,
                   )?.toFixed(2);

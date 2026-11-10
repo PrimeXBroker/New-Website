@@ -62,7 +62,7 @@ const HomeWrapper = () => {
       {/* <HeroMobile /> */}
       <StatCards />
       <Promotions />
-      <TradingInstruments />
+      {/* <TradingInstruments /> */}
       <PrimeXAcademy />
       <AccountTypes />
       <ClientReviews />
