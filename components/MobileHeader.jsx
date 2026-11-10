@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import LocaleLink from "./LocaleLink";
 import { useTranslations } from "next-intl";
 import Logo from "@/public/images/logos/logo-white.webp";
@@ -62,19 +62,19 @@ const MobileHeader = ({ locale }) => {
     flag: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/flags/united-arab-emirates.png",
   });
 
-  let dropdownTimeout;
+  const dropdownTimeout = useRef(null);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
   const openDropdown = useCallback((index) => {
-    clearTimeout(dropdownTimeout);
+    clearTimeout(dropdownTimeout.current);
     setActiveDropdown(index);
   }, []);
 
   const closeDropdown = useCallback(() => {
-    dropdownTimeout = setTimeout(() => {
+    dropdownTimeout.current = setTimeout(() => {
       setActiveDropdown(null);
     }, 200);
   }, []);
@@ -140,6 +140,7 @@ const MobileHeader = ({ locale }) => {
     const selectedLanguage = { text, flag };
     setLanguage(selectedLanguage);
     localStorage.setItem("language", JSON.stringify(selectedLanguage));
+    setActiveDropdown(null);
   };
 
   useEffect(() => {
@@ -254,7 +255,10 @@ const MobileHeader = ({ locale }) => {
                 onMouseEnter={() => openDropdown(1)}
                 onMouseLeave={closeDropdown}
               >
-                <button className="text-tm dark:text-tm-dark text-[.8em] flex items-center">
+                <button
+                  onClick={() => openDropdown(1)}
+                  className="text-tm dark:text-tm-dark text-[.8em] flex items-center"
+                >
                   <Image
                     unoptimized={true}
                     width="15"
@@ -535,7 +539,10 @@ const MobileHeader = ({ locale }) => {
                   onMouseEnter={() => openDropdown(1)}
                   onMouseLeave={closeDropdown}
                 >
-                  <button className="text-tm dark:text-tm-dark text-[.8em] flex items-center">
+                  <button
+                    onClick={() => openDropdown(1)}
+                    className="text-tm dark:text-tm-dark text-[.8em] flex items-center"
+                  >
                     <Image
                       unoptimized={true}
                       width="15"
