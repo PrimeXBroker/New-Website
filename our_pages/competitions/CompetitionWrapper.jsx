@@ -7,6 +7,9 @@ import Banner from "./Banner";
 import CompetitionRules from "./CompetitionRules";
 import ParticipateSteps from "./ParticipateSteps";
 import PrizeDistribution from "./PrizeDistribution";
+import WinningCriteria from "./WinningCriteria";
+import AccountDetails from "./AccountDetails";
+import CompetitionSchedule from "./CompetitionSchedule";
 
 const CompetitionWrapper = () => {
   const f = useTranslations("competitions");
@@ -79,7 +82,10 @@ const CompetitionWrapper = () => {
     <>
       <Banner />
       <PrizeDistribution />
+      <CompetitionSchedule />
       <ParticipateSteps />
+      <AccountDetails />
+      <WinningCriteria />
       <CompetitionRules />
       <FAQ faqs={faqs} />
       <div className="bg-p dark:bg-p-dark py-16 sm:py-28">
