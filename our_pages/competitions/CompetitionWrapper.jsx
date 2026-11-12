@@ -72,18 +72,13 @@ const CompetitionWrapper = () => {
       question: f("faq.question_11"),
       answer: f("faq.answer_11"),
     },
-    {
-      key: 12,
-      question: f("faq.question_12"),
-      answer: f("faq.answer_12"),
-    },
   ];
 
   return (
     <>
       <Banner />
-      <CompetitionWidget />
       <PrizeDistribution />
+      <CompetitionWidget />
       <CompetitionSchedule />
       <ParticipateSteps />
       <AccountDetails />
