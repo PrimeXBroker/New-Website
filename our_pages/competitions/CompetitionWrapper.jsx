@@ -4,6 +4,7 @@ import WhyBonusIconic from "../promotions/new-year-bonus/WhyBonusIconic";
 import FAQ from "@/components/NewFaq";
 import { useTranslations } from "next-intl";
 import Banner from "./Banner";
+import CompetitionWidget from "./CompetitionWidget";
 import CompetitionRules from "./CompetitionRules";
 import ParticipateSteps from "./ParticipateSteps";
 import PrizeDistribution from "./PrizeDistribution";
@@ -81,6 +82,7 @@ const CompetitionWrapper = () => {
   return (
     <>
       <Banner />
+      <CompetitionWidget />
       <PrizeDistribution />
       <CompetitionSchedule />
       <ParticipateSteps />
