@@ -201,9 +201,9 @@ const PrizeDistribution = () => {
             </div>
           </div>
         </div>
-        <p className="text-ts dark:text-ts-dark text-sm sm:text-base text-center w-full sm:w-[90%] lg:w-[86%] mx-auto pt-16 sm:pt-28">
+        {/* <p className="text-ts dark:text-ts-dark text-sm sm:text-base text-center w-full sm:w-[90%] lg:w-[86%] mx-auto pt-16 sm:pt-28">
           {t("noteTxt")}
-        </p>
+        </p> */}
       </div>
     </section>
   );
