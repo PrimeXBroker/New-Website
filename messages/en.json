@@ -3364,19 +3364,19 @@
   "bonusPage": {
     "metaData": {
       "title": "Bonus | PrimeX Capital",
-      "description": "Boost your trading power with a 30% Deposit Bonus on your New deposits. Get a bonus balance of up to $3,000 and enjoy greater flexibility to seize market opportunities with PrimeX Capital."
+      "description": "Boost your trading power with a 30% Deposit Bonus on your New deposits. Get a bonus balance up to $15,000 and enjoy greater flexibility to seize market opportunities with PrimeX Capital"
     },
     "bonusHero": {
       "hero_subtitle": "PrimeX Capital Bonus",
       "hero_title": "Boost Your Trading Power with a 30% Bonus",
-      "hero_description1": "A Real Bonus of up to $3,000",
-      "hero_description2": "Get an instant 30% bonus on your deposit. It is tradable, lossable, and added directly to your account margin up to a maximum of $3,000, to elvate your trades and give you greater capital management flexibility."
+      "hero_description1": "A Real Bonus up to $15,000",
+      "hero_description2": "Get an instant 30% bonus on your deposit. It is tradable, lossable, and added directly to your account margin up to a maximum of $15,000, to elvate your trades and give you greater capital management flexibility."
     },
     "bonusPrizeBreakdown": {
       "title": "Bonus Benefits",
       "description": "Everything you need to trade with ultimate confidence",
-      "step1": "30% deposit bonus up to $3,000",
-      "step2": "Leverage up to 1:200",
+      "step1": "30% deposit bonus up to $15,000",
+      "step2": "Leverage up to 1:400",
       "step3": "All the features and trading environment of a Standard account",
       "step4": "Tradable, lossable, and supports your account margin"
     },
@@ -3404,23 +3404,23 @@
       "trading_rules_li2_desc": "The bonus is available to the new and existing clients who meet the requirements",
       "trading_rules_li3_desc": "Existing clients must submit a request through their account manager to receive the bonus",
       "general_rules_title": "General Rules",
-      "general_rules_li1_desc": "The maximum total bonus amount is $3,000 with a deposit of $10,000 or more",
+      "general_rules_li1_desc": "The maximum total bonus amount is $3,000 per single deposit and $15,000 in total",
       "general_rules_li2_desc": "The bonus is automatically added for clients with their new deposits into the account",
       "timeline_title": "Bonus Removal/Revoke",
       "timeline_li1_desc": "Making any withdrawal from the account",
       "timeline_li2_desc": "90 days having passed since the bonus was credited",
       "timeline_li3_desc": "30 days of account inactivity",
       "works_title": "Prohibited Trading Strategies",
-      "works_li1_desc": "High-Frequency Trading (HFT)",
-      "works_li2_desc": "Internal or cross hedging across different accounts",
-      "works_li3_desc": "Prohibited trading practices specified in the Terms and Conditions agreement"
+      "works_li1_desc": "High-frequency trading & hedging strategies are strictly prohibited",
+      "works_li2_desc": "Full-margin trading will completely revoke & block future bonuses",
+      "works_li3_desc": "Prohibited trading practices specified in the terms and conditions agreement"
     },
     "bonusFaqs": {
       "title": " Frequently Asked Questions",
       "question1": "What is the deposit bonus?",
       "answer1": "It is a credit added to your actual account deposit to increase your available margin. It is tradable and lossable bonus",
       "question2": "How much is the bonus?",
-      "answer2": "The bonus starts at $30 with a minimum deposit of $100 and reaches up to $3,000 with a deposit of $10,000 or more",
+      "answer2": "The bonus starts at 30% with a minimum deposit of $100 and reaches up to $15,000",
       "question3": "Is the bonus added to every deposit?",
       "answer3": "Yes, the bonus applies to all the new deposits in the '30% Bonus Account'",
       "question4": "Is there a minimum deposit to benefit from the bonus?",
@@ -3432,7 +3432,7 @@
       "question7": "Can the bonus balance be lost?",
       "answer7": "Yes, the bonus may be removed if any of the bonus removal/revoke conditions are met",
       "question8": "What leverage is available for the bonus account?",
-      "answer8": "The leverage assigned to the 30% Bonus Account is 1:200"
+      "answer8": "The leverage assigned to the 30% Bonus Account is 1:400"
     },
     "bonusJoinNow": {
       "title1": "Ready for a Stronger Trading Move?",
