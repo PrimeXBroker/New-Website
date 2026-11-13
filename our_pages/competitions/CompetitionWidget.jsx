@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import { useTranslations } from "next-intl";
 
@@ -10,7 +10,41 @@ const DARK_WIDGET_URL = "https://main.d2q4mq7ofspgp.amplifyapp.com/?theme=dark";
 const CompetitionWidget = () => {
   const t = useTranslations("competitions.widget");
   const { theme } = useTheme();
+  const iframeRef = useRef(null);
+  const [isScriptLoaded, setIsScriptLoaded] = useState(false);
   const widgetUrl = theme === "light" ? LIGHT_WIDGET_URL : DARK_WIDGET_URL;
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src =
+      "https://ratings.primexcapital.com/widgets/assets/js/iframeResizer.js";
+    script.async = true;
+
+    script.onload = () => {
+      setIsScriptLoaded(true);
+      if (iframeRef.current) {
+        window.iFrameResize(
+          { heightCalculationMethod: "max", checkOrigin: false },
+          iframeRef.current,
+        );
+      }
+    };
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  const handleIframeLoad = () => {
+    if (isScriptLoaded && iframeRef.current) {
+      window.iFrameResize(
+        { heightCalculationMethod: "max", checkOrigin: false },
+        iframeRef.current,
+      );
+    }
+  };
 
   return (
     <section className="bg-p dark:bg-p-dark pt-16 sm:pt-28">
@@ -21,16 +55,22 @@ const CompetitionWidget = () => {
             {t("title_part2")}
           </span>
         </h2>
-        <div className="overflow-hidden rounded-2xl border border-cc dark:border-cc-dark">
-          <iframe
-            src={widgetUrl}
-            title="Competition widget"
-            className="block w-full h-auto"
-            style={{ border: 0 }}
-            loading="lazy"
-            allowFullScreen
-          ></iframe>
-        </div>
+        <iframe
+          ref={iframeRef}
+          id="widgetFrame"
+          src={widgetUrl}
+          title="Competition widget"
+          className="block w-full"
+          style={{
+            minWidth: "100%",
+            visibility: "visible",
+            border: 0,
+            overflow: "hidden",
+          }}
+          loading="lazy"
+          onLoad={handleIframeLoad}
+          allowFullScreen
+        ></iframe>
       </div>
     </section>
   );
