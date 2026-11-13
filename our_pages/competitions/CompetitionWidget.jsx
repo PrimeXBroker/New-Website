@@ -3,48 +3,57 @@ import React, { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import { useTranslations } from "next-intl";
 
-const LIGHT_WIDGET_URL =
-  "https://main.d2q4mq7ofspgp.amplifyapp.com/?theme=light";
-const DARK_WIDGET_URL = "https://main.d2q4mq7ofspgp.amplifyapp.com/?theme=dark";
+const WIDGET_ORIGIN = "https://main.d2q4mq7ofspgp.amplifyapp.com";
+const LIGHT_WIDGET_URL = `${WIDGET_ORIGIN}/?theme=light`;
+const DARK_WIDGET_URL = `${WIDGET_ORIGIN}/?theme=dark`;
+
+const HEIGHT_MESSAGE_TYPE = "competition-widget:height";
+
+const parseHeight = (data) => {
+  if (typeof data === "number") return data;
+  if (typeof data === "string") {
+    const value = Number.parseFloat(data);
+    return Number.isFinite(value) ? value : null;
+  }
+  if (data && typeof data === "object") {
+    const value = [data.height, data.scrollHeight, data.iframeHeight].find(
+      (item) => typeof item === "number",
+    );
+    return typeof value === "number" ? value : null;
+  }
+  return null;
+};
 
 const CompetitionWidget = () => {
   const t = useTranslations("competitions.widget");
   const { theme } = useTheme();
   const iframeRef = useRef(null);
-  const [isScriptLoaded, setIsScriptLoaded] = useState(false);
+  const [widgetHeight, setWidgetHeight] = useState(null);
   const widgetUrl = theme === "light" ? LIGHT_WIDGET_URL : DARK_WIDGET_URL;
 
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src =
-      "https://ratings.primexcapital.com/widgets/assets/js/iframeResizer.js";
-    script.async = true;
+    const handleMessage = (event) => {
+      if (event.origin !== WIDGET_ORIGIN) return;
 
-    script.onload = () => {
-      setIsScriptLoaded(true);
-      if (iframeRef.current) {
-        window.iFrameResize(
-          { heightCalculationMethod: "max", checkOrigin: false },
-          iframeRef.current,
-        );
+      const { data } = event;
+      if (
+        data &&
+        typeof data === "object" &&
+        data.type &&
+        data.type !== HEIGHT_MESSAGE_TYPE
+      ) {
+        return;
       }
+
+      const height = parseHeight(data);
+      if (!height || height <= 0) return;
+
+      setWidgetHeight(Math.ceil(height));
     };
 
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
   }, []);
-
-  const handleIframeLoad = () => {
-    if (isScriptLoaded && iframeRef.current) {
-      window.iFrameResize(
-        { heightCalculationMethod: "max", checkOrigin: false },
-        iframeRef.current,
-      );
-    }
-  };
 
   return (
     <section className="bg-p dark:bg-p-dark pt-16 sm:pt-28">
@@ -62,13 +71,15 @@ const CompetitionWidget = () => {
           title="Competition widget"
           className="block w-full"
           style={{
-            minWidth: "100%",
-            visibility: "visible",
+            width: "100%",
+            maxWidth: "100%",
+            height: widgetHeight ? `${widgetHeight}px` : "100vh",
             border: 0,
             overflow: "hidden",
           }}
+          scrolling={widgetHeight ? "no" : "auto"}
+          frameBorder="0"
           loading="lazy"
-          onLoad={handleIframeLoad}
           allowFullScreen
         ></iframe>
       </div>
