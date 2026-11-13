@@ -73,11 +73,12 @@ const CompetitionWidget = () => {
           style={{
             width: "100%",
             maxWidth: "100%",
-            height: widgetHeight ? `${widgetHeight}px` : "100vh",
+            height: widgetHeight ? `${widgetHeight}px` : "auto",
+            minHeight: "150px",
             border: 0,
             overflow: "hidden",
           }}
-          scrolling={widgetHeight ? "no" : "auto"}
+          scrolling="no"
           frameBorder="0"
           loading="lazy"
           allowFullScreen
