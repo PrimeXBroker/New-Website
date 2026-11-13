@@ -8,19 +8,19 @@ const ParticipateSteps = () => {
 
   const steps = [
     {
-      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/competitions/illustration-1.png",
+      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/competitions/step-1.webp",
       alt: "Step 1",
       count: t("count1"),
       label: t("step1"),
     },
     {
-      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/competitions/illustration-2.png",
+      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/competitions/step-2.webp",
       alt: "Step 2",
       count: t("count2"),
       label: t("step2"),
     },
     {
-      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/competitions/illustration-3.png",
+      src: "https://primexcapital.s3.eu-north-1.amazonaws.com/website/competitions/step-3.webp",
       alt: "Step 3",
       count: t("count3"),
       label: t("step3"),
