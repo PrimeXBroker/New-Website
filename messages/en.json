@@ -4284,9 +4284,9 @@
       "count1": "01",
       "step1": "Register & verify your PrimeX Capital account to get started",
       "count2": "02",
-      "step2": "Join the competition via your client portal or PrimeX App",
+      "step2": "Join the competition via your Client Portal",
       "count3": "03",
-      "step3": "Log in to your MT5 trading account & get redy to compete!"
+      "step3": "Log in to your MT5 trading account & get ready to compete!"
     },
     "competitionRules": {
       "title": "Terms & Conditions",
@@ -4327,7 +4327,7 @@
       "item3_title": "Total Drawdown",
       "item3_desc": "Keep your maximum total drawdown within 30%",
       "item4_title": "Active Days",
-      "item4_desc": "Complete a minimum of 2 active trading days weekly",
+      "item4_desc": "Complete a minimum of 3 active trading days weekly",
       "item5_title": "Balanced Lots",
       "item5_desc": "Maintain a balanced average lot size on all trades",
       "item6_title": "Instruments",

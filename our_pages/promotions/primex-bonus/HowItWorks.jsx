@@ -53,9 +53,9 @@ const HowItWorks = () => {
       </div>
       <div className="container mx-auto flex flex-col gap-10">
         <div>
-          <h3 className="text-base font-semibold text-tm dark:text-tm-dark mb-4 text-start capitalize">
+          {/* <h3 className="text-base font-semibold text-tm dark:text-tm-dark mb-4 text-start capitalize">
             {t("subtitle1")}
-          </h3>
+          </h3> */}
           <div className="flex flex-wrap justify-center gap-4">
             {newClientBenefits.map((benefit, index) => (
               <div
@@ -86,7 +86,7 @@ const HowItWorks = () => {
             ))}
           </div>
         </div>
-        <div>
+        {/* <div>
           <h3 className="text-base font-semibold text-tm dark:text-tm-dark mb-4 text-start capitalize">
             {t("subtitle2")}
           </h3>
@@ -119,7 +119,7 @@ const HowItWorks = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
