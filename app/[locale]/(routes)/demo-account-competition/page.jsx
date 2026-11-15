@@ -6,7 +6,7 @@ export async function generateMetadata({ params }) {
   const messages = (await import(`../../../../messages/${locale}.json`))
     .default;
   const t = createTranslator({ locale, messages });
-  const url = `https://www.primexcapital.com/${locale}/competition`;
+  const url = `https://www.primexcapital.com/${locale}/demo-account-competition`;
 
   return {
     title: t("competitions.metaData.title"),
@@ -14,13 +14,13 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: url,
       languages: {
-        en: "https://www.primexcapital.com/en/competition",
-        ar: "https://www.primexcapital.com/ar/competition",
-        ku: "https://www.primexcapital.com/ku/competition",
-        es: "https://www.primexcapital.com/es/competition",
-        ps: "https://www.primexcapital.com/ps/competition",
-        pt: "https://www.primexcapital.com/pt/competition",
-        fa: "https://www.primexcapital.com/fa/competition",
+        en: "https://www.primexcapital.com/en/demo-account-competition",
+        ar: "https://www.primexcapital.com/ar/demo-account-competition",
+        ku: "https://www.primexcapital.com/ku/demo-account-competition",
+        es: "https://www.primexcapital.com/es/demo-account-competition",
+        ps: "https://www.primexcapital.com/ps/demo-account-competition",
+        pt: "https://www.primexcapital.com/pt/demo-account-competition",
+        fa: "https://www.primexcapital.com/fa/demo-account-competition",
       },
     },
     openGraph: {

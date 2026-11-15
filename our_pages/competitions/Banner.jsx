@@ -21,16 +21,7 @@ const Banner = () => {
       <div className="container flex flex-col lg:flex-row justify-around pt-16">
         <div className="grid grid-cols-12 items-center">
           <div className="col-span-12 md:col-span-7">
-            <div
-              className={`mb-5 w-full flex ${
-                locale === "ar" ||
-                locale === "ps" ||
-                locale === "ku" ||
-                locale === "fa"
-                  ? "justify-center lg:justify-end"
-                  : "justify-center lg:justify-start"
-              }`}
-            >
+            <div className={`mb-5 w-full flex justify-center lg:justify-start`}>
               <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-pcp dark:border-pcp-dark bg-cc dark:bg-cc-dark">
                 <span className="text-xs sm:text-sm font-medium text-pcp dark:text-pcp-dark">
                   {t("badgeTxt")}

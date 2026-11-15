@@ -1016,6 +1016,13 @@ const MobileHeader = ({ locale }) => {
                   {t("ramadan-contest")}
                 </LocaleLink> */}
                 <LocaleLink
+                  href="/demo-account-competition"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {t("competition")}
+                </LocaleLink>
+                <LocaleLink
                   href="/bonus"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                   onClick={toggleDrawer}
@@ -1050,13 +1057,6 @@ const MobileHeader = ({ locale }) => {
                 >
                   {t("local_depositor")}
                 </LocaleLink>
-                {/* <LocaleLink
-                  href="/competition"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("competition")}
-                </LocaleLink> */}
                 <LocaleLink
                   href="/cashback"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"

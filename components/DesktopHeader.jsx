@@ -553,8 +553,8 @@ const DesktopHeader = ({ locale }) => {
                     locale === "ps" ||
                     locale === "ku" ||
                     locale === "fa"
-                      ? "min-w-[180px]"
-                      : "min-w-[180px]"
+                      ? "min-w-[240px]"
+                      : "min-w-[240px]"
                   } rounded-[6px]`}
                 >
                   {/* <li>
@@ -566,6 +566,15 @@ const DesktopHeader = ({ locale }) => {
                       {t("ramadan-contest")}
                     </LocaleLink>
                   </li> */}
+                  <li>
+                    <LocaleLink
+                      href="/demo-account-competition"
+                      onClick={closeDropdown}
+                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
+                    >
+                      {t("competition")}
+                    </LocaleLink>
+                  </li>
                   <li>
                     <LocaleLink
                       href="/bonus"
@@ -611,15 +620,6 @@ const DesktopHeader = ({ locale }) => {
                       {t("local_depositor")}
                     </LocaleLink>
                   </li>
-                  {/* <li>
-                    <LocaleLink
-                      href="/competition"
-                      onClick={closeDropdown}
-                      className="block px-4 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
-                    >
-                      {t("competition")}
-                    </LocaleLink>
-                  </li> */}
                   <li>
                     <LocaleLink
                       href="/cashback"
