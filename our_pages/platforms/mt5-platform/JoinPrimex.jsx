@@ -10,7 +10,10 @@ const JoinPrimex = () => {
   const t = useTranslations("metaTrader5.joinPrimex");
 
   return (
-    <section className="bg-p dark:bg-p-dark pb-16 sm:pb-28">
+    <section
+      id="join-primex"
+      className="bg-p dark:bg-p-dark py-16 sm:py-28 scroll-mt-24"
+    >
       <div className="container">
         <div
           className={`grid grid-cols-12 py-10 bg-cc dark:bg-cc-dark rounded-[20px] ${

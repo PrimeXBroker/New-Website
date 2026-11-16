@@ -574,7 +574,14 @@ const Footer = () => {
                   className="fill-tm dark:fill-tm-dark hover:fill-[#ff0033] dark:hover:fill-[#ff0033] transition-all hover:translate-y-[-5px] duration-500"
                 />
               </Link>
-              <Link href="https://x.com/PrimeXCapital" target="_blank">
+              <Link
+                href={`${
+                  locale === "ar"
+                    ? "https://x.com/PrimeXCapitalar"
+                    : "https://x.com/PrimeXCapital"
+                }`}
+                target="_blank"
+              >
                 <FaXTwitter
                   color="#FFF"
                   size={30}

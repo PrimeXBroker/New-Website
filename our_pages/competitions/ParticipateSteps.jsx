@@ -44,7 +44,7 @@ const ParticipateSteps = () => {
                   alt={step.alt}
                   width={128}
                   height={128}
-                  className="mx-auto w-full h-[260px] rounded-xl"
+                  className="mx-auto w-full h-auto rounded-xl"
                 />
                 <p className="text-ts dark:text-ts-dark font-semibold text-sm sm:text-base mt-4 mb-1">
                   {step.count}

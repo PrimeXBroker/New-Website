@@ -108,8 +108,9 @@ const MT5PlatformWrapper = () => {
   return (
     <>
       <Banner />
+      <JoinPrimex />
       <div>
-        <div className="bg-p dark:bg-p-dark pt-16 sm:pt-28">
+        <div className="bg-p dark:bg-p-dark">
           <div className="container">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-pcp dark:text-pcp-dark text-center pb-10">
               {t("title1")}{" "}
@@ -185,7 +186,6 @@ const MT5PlatformWrapper = () => {
         />
       </div>
       <GetStarted />
-      <JoinPrimex />
     </>
   );
 };
