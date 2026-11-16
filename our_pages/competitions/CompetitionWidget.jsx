@@ -73,7 +73,9 @@ const CompetitionWidget = () => {
           style={{
             width: "100%",
             maxWidth: "100%",
-            height: widgetHeight ? `${widgetHeight}px` : "auto",
+            height: widgetHeight
+              ? `${Math.max(widgetHeight - 6, 150)}px`
+              : "auto",
             minHeight: "150px",
             border: 0,
             overflow: "hidden",

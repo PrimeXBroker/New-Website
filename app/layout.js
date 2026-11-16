@@ -6,7 +6,7 @@ import Script from "next/script";
 import FallbackLoader from "@/components/LoadingSpinner";
 import RedirectionHandler from "@/components/common/RedirectionHandler";
 import QueryParamsPreserver from "@/components/common/QueryParamsPreserver";
-import MousePartialEffect from "@/components/common/MousePartialEffect";
+// import MousePartialEffect from "@/components/common/MousePartialEffect";
 import ReduxProvider from "@/redux/ReduxProvider";
 import Providers from "@/components/Providers";
 import { getMessages, getLocale } from "next-intl/server";
@@ -101,7 +101,7 @@ export default async function RootLayout({ children }) {
               direction={direction}
             >
               <Suspense fallback={null}>
-                <MousePartialEffect />
+                {/* <MousePartialEffect /> */}
               </Suspense>
               {children}
             </Providers>
