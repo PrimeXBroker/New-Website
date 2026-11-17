@@ -1007,7 +1007,17 @@ const MobileHeader = ({ locale }) => {
                           onClick={toggleDrawer}
                           className="block text-tm dark:text-tm-dark text-base pt-[10px]"
                         >
-                          {nav("demoAccountContest")}
+                          <span className="flex items-center gap-2">
+                            {nav("demoAccountContest")}
+                            <Image
+                              unoptimized={true}
+                              width="20"
+                              height="20"
+                              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
+                              alt="Hot"
+                              className="h-4 w-auto object-contain"
+                            />
+                          </span>
                         </LocaleLink>
                       </li>
                       <li>

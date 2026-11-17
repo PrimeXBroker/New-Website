@@ -184,7 +184,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
                     />
                   )}
                 </a>
-                <a
+                {/* <a
                   href="https://wa.me/971502344067"
                   target="_blank"
                   className="bg-cc dark:bg-cc-dark text-tm dark:text-tm-dark py-2 px-4 flex items-center rounded-lg border-2 border-cc dark:border-cc-dark hover:border-e1 dark:hover:border-e1-dark group transition-all duration-500 ease-in-out"
@@ -232,7 +232,7 @@ const ContactFormWrapper = ({ active, setActive }) => {
                       }`}
                     />
                   )}
-                </a>
+                </a> */}
               </div>
             </div>
           )}

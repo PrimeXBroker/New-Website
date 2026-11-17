@@ -492,7 +492,7 @@ const DesktopHeader = ({ locale }) => {
                           <ul
                             onMouseEnter={() => setActiveSubDropdown("offers")}
                             onMouseLeave={() => setActiveSubDropdown(null)}
-                            className="absolute top-0 start-full ms-2 bg-cc dark:bg-cc-dark shadow-lg p-[10px] min-w-[210px] rounded-[6px] z-50"
+                            className="absolute top-0 start-full ms-2 bg-cc dark:bg-cc-dark shadow-lg p-[10px] min-w-[245px] rounded-[6px] z-50"
                           >
                             <li>
                               <LocaleLink
@@ -503,7 +503,17 @@ const DesktopHeader = ({ locale }) => {
                                 }}
                                 className="block px-3 py-2 text-tm dark:text-tm-dark hover:text-nb dark:hover:text-nb-dark text-[.8em] hover:bg-pcp dark:hover:bg-pcp-dark rounded-[6px]"
                               >
-                                {t("demoAccountContest")}
+                                <span className="flex items-center gap-2">
+                                  {t("demoAccountContest")}
+                                  <Image
+                                    unoptimized={true}
+                                    width="20"
+                                    height="20"
+                                    src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
+                                    alt="Hot"
+                                    className="h-4 w-auto object-contain"
+                                  />
+                                </span>
                               </LocaleLink>
                             </li>
                             <li>
