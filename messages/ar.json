@@ -2888,7 +2888,8 @@
       "live_chat": "الدردشة المباشرة",
       "suggestion_form_title": "اقتراح",
       "complaint_form_title": "شكوى",
-      "email_copied_message": "تم نسخ البريد الإلكتروني!"
+      "email_copied_message": "تم نسخ البريد الإلكتروني!",
+      "whatsapp": "واتساب"
     },
     "suggestionForm": {
       "title": "اكتب لنا",

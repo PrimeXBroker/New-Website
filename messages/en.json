@@ -2959,7 +2959,8 @@
       "contact_via_email": "Contact us via Email",
       "live_chat": "Live Chat",
       "suggestion_form_title": "Suggestion",
-      "complaint_form_title": "Complaint"
+      "complaint_form_title": "Complaint",
+      "whatsapp": "Whatsapp"
     },
     "suggestionForm": {
       "title": "Write to Us",

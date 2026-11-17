@@ -1928,3 +1928,42 @@ html.dark .terms-checkbox:checked + .terms-label .terms-custom-checkbox {
 .awards-swiper-navigation-buttons .awards-swiper-button-prev::after {
   display: none !important;
 }
+
+/* Floating WhatsApp button */
+@keyframes waEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes waPing {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  70%,
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+.wa-fab {
+  animation: waEnter 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.wa-fab-ping {
+  animation: waPing 2.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-fab,
+  .wa-fab-ping {
+    animation: none;
+  }
+}

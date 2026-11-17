@@ -9,6 +9,7 @@ import QueryParamsPreserver from "@/components/common/QueryParamsPreserver";
 // import MousePartialEffect from "@/components/common/MousePartialEffect";
 import ReduxProvider from "@/redux/ReduxProvider";
 import Providers from "@/components/Providers";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { getMessages, getLocale } from "next-intl/server";
 import "./globals.css";
 
@@ -148,6 +149,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
             LiveChat
           </a>
         </noscript>
+        <WhatsAppButton />
       </body>
     </html>
   );

@@ -6,6 +6,7 @@ import Image from "next/image";
 import ComplaintForm from "./ComplaintForm";
 import copyEmail from "@/public/animations/contact-us/copy-email.json";
 import liveChat from "@/public/animations/contact-us/live-chat.json";
+import whatsapp from "@/public/animations/contact-us/whatsapp.json";
 import Lottie from "lottie-react";
 import { MdContentCopy } from "react-icons/md";
 import { FaCheck } from "react-icons/fa6";
@@ -156,6 +157,55 @@ const ContactFormWrapper = ({ active, setActive }) => {
                     />
                   </span>
                   {t("live_chat")}
+                  {locale === "ar" ||
+                  locale === "ps" ||
+                  locale === "ku" ||
+                  locale === "fa" ? (
+                    <FaArrowLeft
+                      className={`text-xl text-ts dark:text-ts-dark ${
+                        locale === "ar" ||
+                        locale === "ps" ||
+                        locale === "ku" ||
+                        locale === "fa"
+                          ? "mr-3"
+                          : "ml-3"
+                      }`}
+                    />
+                  ) : (
+                    <FaArrowRight
+                      className={`text-xl text-ts dark:text-ts-dark ${
+                        locale === "ar" ||
+                        locale === "ps" ||
+                        locale === "ku" ||
+                        locale === "fa"
+                          ? "mr-3"
+                          : "ml-3"
+                      }`}
+                    />
+                  )}
+                </a>
+                <a
+                  href="https://wa.me/971553941777"
+                  target="_blank"
+                  className="bg-cc dark:bg-cc-dark text-tm dark:text-tm-dark py-2 px-4 flex items-center rounded-lg border-2 border-cc dark:border-cc-dark hover:border-e1 dark:hover:border-e1-dark group transition-all duration-500 ease-in-out"
+                >
+                  <span
+                    className={`${
+                      locale === "ar" ||
+                      locale === "ps" ||
+                      locale === "ku" ||
+                      locale === "fa"
+                        ? "ml-3"
+                        : "mr-3"
+                    }`}
+                  >
+                    <Lottie
+                      animationData={whatsapp}
+                      loop={true}
+                      style={{ width: "52px", height: "52px" }}
+                    />
+                  </span>
+                  {t("whatsapp")}
                   {locale === "ar" ||
                   locale === "ps" ||
                   locale === "ku" ||
