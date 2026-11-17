@@ -15,12 +15,13 @@ const MobileHeader = ({ locale }) => {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const t = useTranslations("menu");
-  const foo = useTranslations("footer");
+  const nav = useTranslations("navMenu");
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
   const [platformsOpen, setPlatformsOpen] = useState(false);
   const [marketOpen, setMarketOpen] = useState(false);
+  const [subGroupOpen, setSubGroupOpen] = useState(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isSticky, setIsSticky] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -87,6 +88,10 @@ const MobileHeader = ({ locale }) => {
   const toggleMarket = () => {
     setMarketOpen(!marketOpen);
     if (platformsOpen) setPlatformsOpen(false);
+  };
+
+  const toggleSubGroup = (key) => {
+    setSubGroupOpen(subGroupOpen === key ? null : key);
   };
 
   const toggleDrawer = () => {
@@ -822,7 +827,7 @@ const MobileHeader = ({ locale }) => {
               onClick={() => toggleSubMenu(0)}
               className="text-tm dark:text-tm-dark text-base flex justify-between items-center w-full pt-[3px]"
             >
-              {t("trading")}
+              {nav("trading")}
               {openSubMenu === 0 ? (
                 <FaChevronUp size={16} />
               ) : (
@@ -832,11 +837,20 @@ const MobileHeader = ({ locale }) => {
             {openSubMenu === 0 && (
               <ul className="pl-4 mt-2">
                 <li>
+                  <LocaleLink
+                    href="/account-types"
+                    onClick={toggleDrawer}
+                    className="block text-tm dark:text-tm-dark text-base pt-[10px]"
+                  >
+                    {nav("accountTypes")}
+                  </LocaleLink>
+                </li>
+                <li className="mt-2">
                   <button
                     onClick={togglePlatforms}
                     className="text-tm dark:text-tm-dark text-base flex justify-between items-center w-full pt-[3px]"
                   >
-                    {t("platforms")}
+                    {nav("tradingPlatforms")}
                     {platformsOpen ? (
                       <FaChevronUp size={16} />
                     ) : (
@@ -847,20 +861,20 @@ const MobileHeader = ({ locale }) => {
                     <ul className="pl-4">
                       <li>
                         <LocaleLink
-                          href="/app"
+                          href="/platform/mt5-platform"
                           onClick={toggleDrawer}
                           className="block text-tm dark:text-tm-dark text-base pt-[10px]"
                         >
-                          {t("primex-app")}
+                          {nav("metaTrader5")}
                         </LocaleLink>
                       </li>
                       <li>
                         <LocaleLink
-                          href="/platform/mt5-platform"
+                          href="/app"
                           onClick={toggleDrawer}
                           className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                         >
-                          {t("platform")}
+                          {nav("primexMobileApp")}
                         </LocaleLink>
                       </li>
                     </ul>
@@ -872,7 +886,7 @@ const MobileHeader = ({ locale }) => {
                     onClick={toggleMarket}
                     className="text-tm dark:text-tm-dark text-base flex justify-between items-center w-full pt-[3px]"
                   >
-                    {t("market")}
+                    {nav("markets")}
                     {marketOpen ? (
                       <FaChevronUp size={16} />
                     ) : (
@@ -887,7 +901,7 @@ const MobileHeader = ({ locale }) => {
                           onClick={toggleDrawer}
                           className="block text-tm dark:text-tm-dark text-base pt-[10px]"
                         >
-                          {t("forex")}
+                          {nav("fxCfds")}
                         </LocaleLink>
                       </li>
                       <li>
@@ -896,7 +910,7 @@ const MobileHeader = ({ locale }) => {
                           onClick={toggleDrawer}
                           className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                         >
-                          {t("metals")}
+                          {nav("metals")}
                         </LocaleLink>
                       </li>
                       <li>
@@ -905,7 +919,7 @@ const MobileHeader = ({ locale }) => {
                           onClick={toggleDrawer}
                           className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                         >
-                          {t("indices")}
+                          {nav("indices")}
                         </LocaleLink>
                       </li>
                       <li>
@@ -914,7 +928,7 @@ const MobileHeader = ({ locale }) => {
                           onClick={toggleDrawer}
                           className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                         >
-                          {t("commodities")}
+                          {nav("commodities")}
                         </LocaleLink>
                       </li>
                       <li>
@@ -923,7 +937,7 @@ const MobileHeader = ({ locale }) => {
                           onClick={toggleDrawer}
                           className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                         >
-                          {t("stocks")}
+                          {nav("stocks")}
                         </LocaleLink>
                       </li>
                       {/* <li>
@@ -938,160 +952,151 @@ const MobileHeader = ({ locale }) => {
                     </ul>
                   )}
                 </li>
+                <li>
+                  <LocaleLink
+                    href="/primex-spreads"
+                    onClick={toggleDrawer}
+                    className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  >
+                    {nav("primexSpread")}
+                  </LocaleLink>
+                </li>
+                <li>
+                  <LocaleLink
+                    href="/local-depositor"
+                    onClick={toggleDrawer}
+                    className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  >
+                    {nav("localDeposit")}
+                  </LocaleLink>
+                </li>
               </ul>
             )}
           </div>
           <div>
             <button
-              onClick={() => toggleSubMenu(7)}
-              className="text-tm dark:text-tm-dark text-base flex justify-between items-center w-full pt-[3px]"
+              onClick={() => toggleSubMenu(1)}
+              className="text-tm dark:text-tm-dark text-base relative flex justify-between items-center w-full pt-[3px]"
             >
-              {t("accounts")}
-              {openSubMenu === 7 ? (
+              {nav("offersAndInvestment")}
+              {openSubMenu === 1 ? (
                 <FaChevronUp size={16} />
               ) : (
                 <FaChevronDown size={16} />
               )}
             </button>
-            {openSubMenu === 7 && (
-              <div className="">
+            {openSubMenu === 1 && (
+              <ul className="pl-4 mt-2">
+                <li>
+                  <button
+                    onClick={() => toggleSubGroup("promotions")}
+                    className="text-tm dark:text-tm-dark text-base flex justify-between items-center w-full pt-[3px]"
+                  >
+                    {nav("promotionsAndRewards")}
+                    {subGroupOpen === "promotions" ? (
+                      <FaChevronUp size={16} />
+                    ) : (
+                      <FaChevronDown size={16} />
+                    )}
+                  </button>
+                  {subGroupOpen === "promotions" && (
+                    <ul className="pl-4">
+                      <li>
+                        <LocaleLink
+                          href="/demo-account-competition"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[10px]"
+                        >
+                          {nav("demoAccountContest")}
+                        </LocaleLink>
+                      </li>
+                      <li>
+                        <LocaleLink
+                          href="/bonus"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                        >
+                          {nav("thirtyPercentDepositBonus")}
+                        </LocaleLink>
+                      </li>
+                      <li>
+                        <LocaleLink
+                          href="/cashback"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                        >
+                          {nav("cashbackProgram")}
+                        </LocaleLink>
+                      </li>
+                    </ul>
+                  )}
+                </li>
+                <li className="mt-2">
+                  <button
+                    onClick={() => toggleSubGroup("managed")}
+                    className="text-tm dark:text-tm-dark text-base flex justify-between items-center w-full pt-[3px]"
+                  >
+                    {nav("managedAccounts")}
+                    {subGroupOpen === "managed" ? (
+                      <FaChevronUp size={16} />
+                    ) : (
+                      <FaChevronDown size={16} />
+                    )}
+                  </button>
+                  {subGroupOpen === "managed" && (
+                    <ul className="pl-4">
+                      <li>
+                        <LocaleLink
+                          href="/investment-fund"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[10px]"
+                        >
+                          {nav("primexInvestmentFund")}
+                        </LocaleLink>
+                      </li>
+                    </ul>
+                  )}
+                </li>
+              </ul>
+            )}
+          </div>
+          <div>
+            <button
+              onClick={() => toggleSubMenu(2)}
+              className="text-tm dark:text-tm-dark text-base flex justify-between items-center w-full pt-[3px]"
+            >
+              {nav("partners")}
+              {openSubMenu === 2 ? (
+                <FaChevronUp size={16} />
+              ) : (
+                <FaChevronDown size={16} />
+              )}
+            </button>
+            {openSubMenu === 2 && (
+              <div className="mt-2">
                 <LocaleLink
-                  href="/account-types"
+                  href="/ib-program"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
-                  {t("account_types")}
+                  {nav("introducingBroker")}
                 </LocaleLink>
-                {/* <LocaleLink
-                  href="/hammurabi-account"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("hammurabi_account")}
-                </LocaleLink> */}
                 <LocaleLink
-                  href="/primex-spreads"
+                  href="/regional-partner"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
-                  {foo("company.title_part1_link7")}
+                  {nav("regionalPartnerProgram")}
                 </LocaleLink>
               </div>
             )}
           </div>
           <div className="relative">
-            <Image
-              unoptimized={true}
-              width="20"
-              height="20"
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
-              alt="Hot Image"
-              className={`absolute ${
-                locale === "ar" ||
-                locale === "ps" ||
-                locale === "ku" ||
-                locale === "fa"
-                  ? "right-[41px]"
-                  : "left-[59px]"
-              }`}
-            />
-            <button
-              onClick={() => toggleSubMenu(8)}
-              className="text-tm dark:text-tm-dark text-base relative flex justify-between items-center w-full pt-[3px]"
-            >
-              {t("offers")}
-              {openSubMenu === 7 ? (
-                <FaChevronUp size={16} />
-              ) : (
-                <FaChevronDown size={16} />
-              )}
-            </button>
-            {openSubMenu === 8 && (
-              <div className="">
-                {/* <LocaleLink
-                  href="/ramadan-contest"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("ramadan-contest")}
-                </LocaleLink> */}
-                <LocaleLink
-                  href="/demo-account-competition"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("competition")}
-                </LocaleLink>
-                <LocaleLink
-                  href="/bonus"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("bonus")}
-                </LocaleLink>
-                {/* <LocaleLink
-                  href="/trade-gold"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("contest")}
-                </LocaleLink> */}
-                {/* <LocaleLink
-                  href="/traders-initiative"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("traders_initiative")}
-                </LocaleLink> */}
-                <LocaleLink
-                  href="/investment-fund"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("investment")}
-                </LocaleLink>
-                <LocaleLink
-                  href="/local-depositor"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("local_depositor")}
-                </LocaleLink>
-                <LocaleLink
-                  href="/cashback"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("cashback")}
-                </LocaleLink>
-              </div>
-            )}
-          </div>
-          {/* <LocaleLink
-            href="/ramadan-contest"
-            className="text-tm dark:text-tm-dark text-base relative"
-            onClick={toggleDrawer}
-          >
-            <Image
-              unoptimized={true}
-              width="20"
-              height="20"
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
-              alt="Hot Image"
-              className={`absolute top-[-15px] ${
-                locale === "ar" || locale === "ps" || locale === "ku" || locale === "fa"
-                  ? "right-[60px]"
-                  : "left-[124px]"
-              }`}
-            />
-            {t("ramadan-contest")}
-          </LocaleLink> */}
-          <div>
             <button
               onClick={() => toggleSubMenu(3)}
               className="text-tm dark:text-tm-dark text-base flex justify-between items-center w-full pt-[3px]"
             >
-              {t("partners")}
+              {nav("researchAndEducation")}
               {openSubMenu === 3 ? (
                 <FaChevronUp size={16} />
               ) : (
@@ -1099,260 +1104,147 @@ const MobileHeader = ({ locale }) => {
               )}
             </button>
             {openSubMenu === 3 && (
-              <div className="mt-2">
-                <LocaleLink
-                  href="/ib-program"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("ib_program")}
-                </LocaleLink>
-                <LocaleLink
-                  href="/regional-partner"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("regional")}
-                </LocaleLink>
-                {/* <LocaleLink
-                  href="/social-trading"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("social_trading")}
-                </LocaleLink> */}
-                {/* <LocaleLink
-                  href="/grey-label-partner"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("grey_label")}
-                </LocaleLink> */}
-                {/* <LocaleLink
-                  href="/liquidity-providing"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("liquidity")}
-                </LocaleLink> */}
-              </div>
+              <ul className="pl-4 mt-2">
+                <li>
+                  <button
+                    onClick={() => toggleSubGroup("insights")}
+                    className="text-tm dark:text-tm-dark text-base flex justify-between items-center w-full pt-[3px]"
+                  >
+                    {nav("marketInsights")}
+                    {subGroupOpen === "insights" ? (
+                      <FaChevronUp size={16} />
+                    ) : (
+                      <FaChevronDown size={16} />
+                    )}
+                  </button>
+                  {subGroupOpen === "insights" && (
+                    <ul className="pl-4">
+                      <li>
+                        <LocaleLink
+                          href="/technical-analysis"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[10px]"
+                        >
+                          {nav("dailyAnalysis")}
+                        </LocaleLink>
+                      </li>
+                      <li>
+                        <LocaleLink
+                          href="/economic-calendar"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                        >
+                          {nav("economicCalendar")}
+                        </LocaleLink>
+                      </li>
+                      <li>
+                        <LocaleLink
+                          href="/market-news"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                        >
+                          {nav("marketNews")}
+                        </LocaleLink>
+                      </li>
+                      <li>
+                        <LocaleLink
+                          href="/blogs"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                        >
+                          {nav("blog")}
+                        </LocaleLink>
+                      </li>
+                    </ul>
+                  )}
+                </li>
+                <li className="mt-2">
+                  <button
+                    onClick={() => toggleSubGroup("academy")}
+                    className="text-tm dark:text-tm-dark text-base flex justify-between items-center w-full pt-[3px]"
+                  >
+                    {nav("traderAcademy")}
+                    {subGroupOpen === "academy" ? (
+                      <FaChevronUp size={16} />
+                    ) : (
+                      <FaChevronDown size={16} />
+                    )}
+                  </button>
+                  {subGroupOpen === "academy" && (
+                    <ul className="pl-4">
+                      <li>
+                        <LocaleLink
+                          href="/forex-in-three-steps"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[10px]"
+                        >
+                          {nav("educationalCourses")}
+                        </LocaleLink>
+                      </li>
+                      <li>
+                        <LocaleLink
+                          href="/webinars"
+                          onClick={toggleDrawer}
+                          className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                        >
+                          {nav("webinars")}
+                        </LocaleLink>
+                      </li>
+                    </ul>
+                  )}
+                </li>
+              </ul>
             )}
           </div>
-          {/* <LocaleLink
-            href="/academy"
-            className="text-tm dark:text-tm-dark text-base"
-            onClick={toggleDrawer}
-          >
-            {t("academy")}
-          </LocaleLink> */}
-          <div className="relative">
-            <button
-              onClick={() => toggleSubMenu(5)}
-              className="text-tm dark:text-tm-dark text-base flex justify-between items-center w-full pt-[3px]"
-            >
-              {t("knowledge-hub")}
-              {openSubMenu === 5 ? (
-                <FaChevronUp size={16} />
-              ) : (
-                <FaChevronDown size={16} />
-              )}
-            </button>
-            {/* <Image
-              unoptimized={true}
-              width="20"
-              height="20"
-              src="https://primexcapital.s3.eu-north-1.amazonaws.com/website/homepage/Hot.webp"
-              alt="Hot Image"
-              className={`absolute top-[-15px] ${
-                locale === "ar" || locale === "ps" || locale === "ku" || locale === "fa"
-                  ? "right-[60px]"
-                  : "left-[59px]"
-              }`}
-            /> */}
-            {openSubMenu === 5 && (
-              <div className="mt-2">
-                {/* {(locale === "en" || locale === "ar" || locale === "ku") && ( */}
-                <>
-                  <LocaleLink
-                    href="/technical-analysis"
-                    className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                    onClick={toggleDrawer}
-                  >
-                    {t("technical-analysis")}
-                  </LocaleLink>
-                  <LocaleLink
-                    href="/market-news"
-                    className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                    onClick={toggleDrawer}
-                  >
-                    {t("market-news")}
-                  </LocaleLink>
-                </>
-                {/* )} */}
-                <LocaleLink
-                  href="/webinars"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("webinars")}
-                </LocaleLink>
-                <LocaleLink
-                  href="/economic-calendar"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("economic-calendar")}
-                </LocaleLink>
-                {/* {(locale === "en" || locale === "ar" || locale === "ku") && ( */}
-                <LocaleLink
-                  href="/blogs"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("blog")}
-                </LocaleLink>
-                {/* )} */}
-                <LocaleLink
-                  href="/ecn-broker"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("ecn_broker")}
-                </LocaleLink>
-                <LocaleLink
-                  href="/forex-in-three-steps"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("courses")}
-                </LocaleLink>
-              </div>
-            )}
-          </div>
-          {/* <div>
-            <button
-              onClick={() => toggleSubMenu(6)}
-              className="text-tm dark:text-tm-dark text-base flex justify-between items-center w-full pt-[3px]"
-            >
-              {buttonText}
-              {openSubMenu === 6 ? (
-                <FaChevronUp size={16} />
-              ) : (
-                <FaChevronDown size={16} />
-              )}
-            </button>
-            {openSubMenu === 6 && (
-              <div className="mt-2">
-                <Link
-                  href={
-                    currentLocale === "en"
-                      ? `/${currentLocale}/${restOfPath}`
-                      : `/en/${restOfPath}`
-                  }
-                  onClick={() => {
-                    handleClick("English");
-                    toggleDrawer();
-                  }}
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                >
-                  English
-                </Link>
-                <Link
-                  href={
-                    currentLocale === "ar"
-                      ? `/${currentLocale}/${restOfPath}`
-                      : `/ar/${restOfPath}`
-                  }
-                  onClick={() => {
-                    handleClick("عربي");
-                    toggleDrawer();
-                  }}
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                >
-                  عربي
-                </Link>
-                <Link
-                  href={
-                    currentLocale === "es"
-                      ? `/${currentLocale}/${restOfPath}`
-                      : `/es/${restOfPath}`
-                  }
-                  onClick={() => {
-                    handleClick("Español");
-                    toggleDrawer();
-                  }}
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                >
-                  Español
-                </Link>
-              </div>
-            )}
-          </div> */}
           <div>
             <button
-              onClick={() => toggleSubMenu(6)}
+              onClick={() => toggleSubMenu(4)}
               className="text-tm dark:text-tm-dark text-base flex justify-between items-center w-full pt-[3px]"
             >
-              {t("company")}
-              {openSubMenu === 6 ? (
+              {nav("aboutUs")}
+              {openSubMenu === 4 ? (
                 <FaChevronUp size={16} />
               ) : (
                 <FaChevronDown size={16} />
               )}
             </button>
-            {openSubMenu === 6 && (
-              <div className="">
-                <LocaleLink
-                  href="/why-choose-us"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("choose_us")}
-                </LocaleLink>
+            {openSubMenu === 4 && (
+              <div className="mt-2">
                 <LocaleLink
                   href="/about"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
-                  {t("about")}
+                  {nav("aboutUs")}
                 </LocaleLink>
                 <LocaleLink
-                  href="/awards"
+                  href="/why-choose-us"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
-                  {t("awards")}
-                </LocaleLink>
-                <LocaleLink
-                  href="/contact"
-                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                  onClick={toggleDrawer}
-                >
-                  {t("contact")}
+                  {nav("whyPrimexCapital")}
                 </LocaleLink>
                 <LocaleLink
                   href="/regulation-and-compliance"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
-                  {t("regulations")}
+                  {nav("regulationsAndLicensing")}
                 </LocaleLink>
-                {/* <LocaleLink
-                  href="/press-release/66544954f5b226a0bd9b5813/665448dcf5b226a0bd9b574e"
+                <LocaleLink
+                  href="/awards"
                   className="block text-tm dark:text-tm-dark text-base pt-[16px]"
                   onClick={toggleDrawer}
                 >
-                  {t("press_release")}
-                </LocaleLink> */}
-                {/* {locale === "en" && (
-                  <LocaleLink
-                    href="/careers"
-                    className="block text-tm dark:text-tm-dark text-base pt-[16px]"
-                    onClick={toggleDrawer}
-                  >
-                    {t("careers")}
-                  </LocaleLink>
-                )} */}
+                  {nav("awardsAndRecognition")}
+                </LocaleLink>
+                <LocaleLink
+                  href="/contact"
+                  className="block text-tm dark:text-tm-dark text-base pt-[16px]"
+                  onClick={toggleDrawer}
+                >
+                  {nav("contactUs")}
+                </LocaleLink>
               </div>
             )}
           </div>
